@@ -8,7 +8,7 @@ This is a brand new, empty repo. The only file is README.md with a one-line desc
 
 The AI Resource Hub is planned to be a public-facing website tracking AI models, pricing, benchmarks, and value rankings — the go-to independent resource for AI model comparison. Think of it as an independent alternative to sites like Artificial Analysis but with a focus on practical value for money.
 
-There is a detailed Gemini Deep Think prompt at W:\Agent Workspace 2\prompts\14-ai-resource-hub.md that covers the complete architecture, design system, data pipeline, page designs, and revenue model. READ THIS FIRST — it is the bible for this project. No response has been generated for it yet.
+There is a detailed Gemini Deep Think prompt at docs/DEEP-THINK-PROMPT.md in this repo that covers the complete architecture, design system, data pipeline, page designs, and revenue model. READ THIS FIRST — it is the bible for this project.
 
 Planned tech stack (from Prompt 14):
 - Framework: Astro 5 (static generation + React islands for interactive components)
@@ -35,7 +35,7 @@ Revenue model: Tasteful affiliate links to AI platforms (referral tracking witho
 
 Your tasks for this session, in priority order:
 
-1. READ PROMPT 14 — Read W:\Agent Workspace 2\prompts\14-ai-resource-hub.md thoroughly. This is your specification.
+1. READ PROMPT 14 — Read docs/DEEP-THINK-PROMPT.md thoroughly. This is your specification.
 
 2. PROJECT SCAFFOLDING — Initialise the Astro 5 project with Tailwind CSS v4. Set up the basic project structure, theme configuration, and layout components. Get the dev server running.
 
