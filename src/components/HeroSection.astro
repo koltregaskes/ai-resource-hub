@@ -5,6 +5,8 @@ interface Props {
 }
 
 const { modelCount, lastUpdated } = Astro.props;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 ---
 
 <section class="relative overflow-hidden">
@@ -31,7 +33,7 @@ const { modelCount, lastUpdated } = Astro.props;
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a
-          href="/compare/llm"
+          href={`${base}compare/llm/`}
           class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold transition-colors accent-glow"
         >
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

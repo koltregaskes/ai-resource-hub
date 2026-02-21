@@ -6,6 +6,8 @@ interface Props {
 }
 
 const { models } = Astro.props;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 // Show top 5 by value score
 const topModels = [...models]
@@ -30,7 +32,7 @@ function formatContext(tokens: number): string {
       <p class="text-sm text-(--color-text-secondary) mt-1">Ranked by quality-to-cost ratio</p>
     </div>
     <a
-      href="/compare/llm"
+      href={`${base}compare/llm/`}
       class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors flex items-center gap-1"
     >
       View all

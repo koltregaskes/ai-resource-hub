@@ -6,6 +6,8 @@ import TopModelsPreview from '../components/TopModelsPreview.astro';
 import { getLLMModels } from '../data/llm-models';
 
 const models = getLLMModels();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const lastUpdated = new Date().toLocaleDateString('en-GB', {
   day: 'numeric',
   month: 'short',
@@ -16,7 +18,7 @@ const categories = [
   {
     title: 'Large Language Models',
     description: 'Compare GPT, Claude, Gemini, Llama, and more. Sort by price, speed, quality, or value.',
-    href: '/compare/llm',
+    href: `${base}compare/llm/`,
     modelCount: models.length,
     icon: '💬',
     available: true,
@@ -24,7 +26,7 @@ const categories = [
   {
     title: 'Image Generation',
     description: 'DALL-E, Midjourney, Stable Diffusion, Flux, and other image generators compared.',
-    href: '/compare/image',
+    href: `${base}compare/image/`,
     modelCount: 0,
     icon: '🎨',
     available: false,
@@ -32,7 +34,7 @@ const categories = [
   {
     title: 'Video Generation',
     description: 'Sora, Runway, Kling, and emerging video AI models side by side.',
-    href: '/compare/video',
+    href: `${base}compare/video/`,
     modelCount: 0,
     icon: '🎬',
     available: false,
@@ -40,7 +42,7 @@ const categories = [
   {
     title: 'Audio & Music',
     description: 'Text-to-speech, music generation, and audio AI tools compared.',
-    href: '/compare/audio',
+    href: `${base}compare/audio/`,
     modelCount: 0,
     icon: '🎵',
     available: false,
