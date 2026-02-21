@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import TopModelsPreview from '../components/TopModelsPreview.astro';
+import { getLLMModels } from '../data/llm-models';
+
+const models = getLLMModels();
+const lastUpdated = new Date().toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+
+const categories = [
+  {
+    title: 'Large Language Models',
+    description: 'Compare GPT, Claude, Gemini, Llama, and more. Sort by price, speed, quality, or value.',
+    href: '/compare/llm',
+    modelCount: models.length,
+    icon: '💬',
+    available: true,
+  },
+  {
+    title: 'Image Generation',
+    description: 'DALL-E, Midjourney, Stable Diffusion, Flux, and other image generators compared.',
+    href: '/compare/image',
+    modelCount: 0,
+    icon: '🎨',
+    available: false,
+  },
+  {
+    title: 'Video Generation',
+    description: 'Sora, Runway, Kling, and emerging video AI models side by side.',
+    href: '/compare/video',
+    modelCount: 0,
+    icon: '🎬',
+    available: false,
+  },
+  {
+    title: 'Audio & Music',
+    description: 'Text-to-speech, music generation, and audio AI tools compared.',
+    href: '/compare/audio',
+    modelCount: 0,
+    icon: '🎵',
+    available: false,
+  },
+];
+---
+
+<BaseLayout title="AI Resource Hub — Independent AI Model Comparison">
+  <HeroSection modelCount={models.length} lastUpdated={lastUpdated} />
+
+  <TopModelsPreview models={models} />
+
+  <!-- Category cards -->
+  <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Browse by Category</h2>
+    <p class="text-sm text-(--color-text-secondary) mb-8">Explore AI models across different domains</p>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      {categories.map((cat) => (
+        <CategoryCard {...cat} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">{models.length}</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">LLMs Tracked</p>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">{new Set(models.map(m => m.provider)).size}</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">Providers</p>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">Weekly</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">Price Updates</p>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">Free</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">No Paywalls</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

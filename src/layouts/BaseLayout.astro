@@ -1,0 +1,129 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+
+    <title>{title}</title>
+  </head>
+  <body class="bg-(--color-bg-primary) text-(--color-text-primary) min-h-screen flex flex-col">
+    <header class="border-b border-(--color-border) bg-(--color-bg-secondary)/80 backdrop-blur-md sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-lg bg-(--color-accent) flex items-center justify-center text-white font-bold text-sm accent-glow">
+            AI
+          </div>
+          <span class="text-lg font-bold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+            AI Resource Hub
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/" class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Home
+          </a>
+          <a href="/compare/llm" class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            LLM Compare
+          </a>
+          <a href="/compare/image" class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Image Models
+          </a>
+          <a href="/compare/video" class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Video Models
+          </a>
+          <a href="/compare/audio" class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Audio Models
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 text-(--color-text-secondary) hover:text-(--color-text-primary)"
+          aria-label="Toggle navigation menu"
+        >
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden border-t border-(--color-border) bg-(--color-bg-secondary)">
+        <div class="px-4 py-3 space-y-2">
+          <a href="/" class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Home</a>
+          <a href="/compare/llm" class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">LLM Compare</a>
+          <a href="/compare/image" class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Image Models</a>
+          <a href="/compare/video" class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Video Models</a>
+          <a href="/compare/audio" class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Audio Models</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-(--color-border) bg-(--color-bg-secondary) mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded bg-(--color-accent) flex items-center justify-center text-white font-bold text-xs">
+              AI
+            </div>
+            <span class="text-sm text-(--color-text-secondary)">AI Resource Hub</span>
+          </div>
+          <p class="text-xs text-(--color-text-muted)">
+            Independent AI model comparison. Prices updated weekly. Not affiliated with any AI provider.
+          </p>
+          <p class="text-xs text-(--color-text-muted)">
+            &copy; {new Date().getFullYear()} AI Resource Hub
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

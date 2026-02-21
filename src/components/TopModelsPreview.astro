@@ -1,0 +1,88 @@
+---
+import type { LLMModel } from '../types/models';
+
+interface Props {
+  models: LLMModel[];
+}
+
+const { models } = Astro.props;
+
+// Show top 5 by value score
+const topModels = [...models]
+  .sort((a, b) => b.valueScore - a.valueScore)
+  .slice(0, 5);
+
+function formatPrice(price: number): string {
+  if (price < 1) return `$${price.toFixed(2)}`;
+  return `$${price.toFixed(2)}`;
+}
+
+function formatContext(tokens: number): string {
+  if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(1)}M`;
+  return `${Math.round(tokens / 1_000)}K`;
+}
+---
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="flex items-center justify-between mb-8">
+    <div>
+      <h2 class="text-2xl font-bold text-(--color-text-primary)">Top Value LLMs</h2>
+      <p class="text-sm text-(--color-text-secondary) mt-1">Ranked by quality-to-cost ratio</p>
+    </div>
+    <a
+      href="/compare/llm"
+      class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors flex items-center gap-1"
+    >
+      View all
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="grid gap-3">
+    {topModels.map((model, index) => (
+      <div class="flex items-center gap-4 p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors">
+        <div class="w-8 h-8 rounded-full bg-(--color-bg-tertiary) flex items-center justify-center text-sm font-bold text-(--color-text-secondary) shrink-0">
+          {index + 1}
+        </div>
+
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2">
+            <h3 class="font-semibold text-(--color-text-primary) truncate">{model.name}</h3>
+            {model.openSource && (
+              <span class="text-xs px-1.5 py-0.5 rounded bg-(--color-success)/10 text-(--color-success)">
+                Open
+              </span>
+            )}
+          </div>
+          <p class="text-xs text-(--color-text-muted)">{model.provider}</p>
+        </div>
+
+        <div class="hidden sm:flex items-center gap-6 text-right">
+          <div>
+            <p class="text-xs text-(--color-text-muted)">Input</p>
+            <p class="text-sm font-mono text-(--color-text-secondary)">{formatPrice(model.inputPrice)}</p>
+          </div>
+          <div>
+            <p class="text-xs text-(--color-text-muted)">Output</p>
+            <p class="text-sm font-mono text-(--color-text-secondary)">{formatPrice(model.outputPrice)}</p>
+          </div>
+          <div>
+            <p class="text-xs text-(--color-text-muted)">Context</p>
+            <p class="text-sm font-mono text-(--color-text-secondary)">{formatContext(model.contextWindow)}</p>
+          </div>
+          <div>
+            <p class="text-xs text-(--color-text-muted)">Quality</p>
+            <p class="text-sm font-bold text-(--color-accent)">{model.qualityScore}</p>
+          </div>
+        </div>
+
+        <div class="text-right">
+          <p class="text-xs text-(--color-text-muted)">Value</p>
+          <p class="text-lg font-bold text-(--color-success)">{model.valueScore}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
