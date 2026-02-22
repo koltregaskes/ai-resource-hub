@@ -134,6 +134,51 @@ function initSchema(db: Database.Database): void {
       updated_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
+    -- YouTube creators covering AI topics
+    CREATE TABLE IF NOT EXISTS youtube_creators (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      channel_name TEXT NOT NULL,
+      youtube_handle TEXT,
+      subscribers INTEGER NOT NULL DEFAULT 0,
+      category TEXT NOT NULL DEFAULT 'general',
+      description TEXT,
+      twitter TEXT,
+      website TEXT,
+      person_id TEXT REFERENCES people(id),
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Tags for cross-cutting categorisation
+    CREATE TABLE IF NOT EXISTS tags (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      category TEXT NOT NULL DEFAULT 'topic',
+      description TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Many-to-many tag assignments (polymorphic)
+    CREATE TABLE IF NOT EXISTS taggables (
+      tag_id TEXT NOT NULL REFERENCES tags(id),
+      taggable_id TEXT NOT NULL,
+      taggable_type TEXT NOT NULL,
+      PRIMARY KEY (tag_id, taggable_id, taggable_type)
+    );
+
+    -- News articles (populated by external aggregator)
+    CREATE TABLE IF NOT EXISTS news (
+      id TEXT PRIMARY KEY,
+      title TEXT NOT NULL,
+      url TEXT NOT NULL,
+      source TEXT NOT NULL,
+      summary TEXT,
+      image_url TEXT,
+      published_at TEXT NOT NULL,
+      category TEXT NOT NULL DEFAULT 'general',
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
     -- Indexes
     CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);
@@ -141,6 +186,11 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_benchmark_scores_benchmark ON benchmark_scores(benchmark_id);
     CREATE INDEX IF NOT EXISTS idx_price_history_model ON price_history(model_id);
     CREATE INDEX IF NOT EXISTS idx_people_provider ON people(provider_id);
+    CREATE INDEX IF NOT EXISTS idx_youtube_creators_category ON youtube_creators(category);
+    CREATE INDEX IF NOT EXISTS idx_taggables_tag ON taggables(tag_id);
+    CREATE INDEX IF NOT EXISTS idx_taggables_target ON taggables(taggable_id, taggable_type);
+    CREATE INDEX IF NOT EXISTS idx_news_published ON news(published_at);
+    CREATE INDEX IF NOT EXISTS idx_news_category ON news(category);
   `);
 }
 

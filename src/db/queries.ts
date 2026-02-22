@@ -652,3 +652,113 @@ export function getBenchmarkMatrix(): BenchmarkMatrix {
     models: Array.from(modelMap.values()),
   };
 }
+
+// ─── YouTube Creators ────────────────────────────────────────────
+
+export interface DBYouTubeCreator {
+  id: string;
+  name: string;
+  channel_name: string;
+  youtube_handle: string | null;
+  subscribers: number;
+  category: string;
+  description: string | null;
+  twitter: string | null;
+  website: string | null;
+  person_id: string | null;
+}
+
+export function getYouTubeCreators(): DBYouTubeCreator[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM youtube_creators ORDER BY subscribers DESC').all() as DBYouTubeCreator[];
+}
+
+export function getYouTubeCreatorsByCategory(category: string): DBYouTubeCreator[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM youtube_creators WHERE category = ? ORDER BY subscribers DESC').all(category) as DBYouTubeCreator[];
+}
+
+export function getYouTubeCreatorCategories(): Array<{ category: string; count: number }> {
+  const db = getDB();
+  return db.prepare('SELECT category, COUNT(*) as count FROM youtube_creators GROUP BY category ORDER BY count DESC').all() as Array<{ category: string; count: number }>;
+}
+
+// ─── Tags ────────────────────────────────────────────────────────
+
+export interface DBTag {
+  id: string;
+  name: string;
+  category: string;
+  description: string | null;
+}
+
+export function getTags(): DBTag[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM tags ORDER BY category, name').all() as DBTag[];
+}
+
+export function getTagById(tagId: string): DBTag | null {
+  const db = getDB();
+  return (db.prepare('SELECT * FROM tags WHERE id = ?').get(tagId) as DBTag | undefined) ?? null;
+}
+
+export function getAllTagIds(): string[] {
+  const db = getDB();
+  return (db.prepare('SELECT id FROM tags').all() as Array<{ id: string }>).map(r => r.id);
+}
+
+export function getTagsForItem(taggableId: string, taggableType: string): DBTag[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT t.* FROM tags t
+    JOIN taggables tg ON t.id = tg.tag_id
+    WHERE tg.taggable_id = ? AND tg.taggable_type = ?
+    ORDER BY t.name
+  `).all(taggableId, taggableType) as DBTag[];
+}
+
+export function getItemsByTag(tagId: string, taggableType: string): string[] {
+  const db = getDB();
+  return (db.prepare(`
+    SELECT taggable_id FROM taggables WHERE tag_id = ? AND taggable_type = ?
+  `).all(tagId, taggableType) as Array<{ taggable_id: string }>).map(r => r.taggable_id);
+}
+
+export function getTagsWithCounts(): Array<DBTag & { count: number }> {
+  const db = getDB();
+  return db.prepare(`
+    SELECT t.*, COUNT(tg.taggable_id) as count
+    FROM tags t
+    LEFT JOIN taggables tg ON t.id = tg.tag_id
+    GROUP BY t.id
+    ORDER BY count DESC, t.name
+  `).all() as Array<DBTag & { count: number }>;
+}
+
+// ─── News ────────────────────────────────────────────────────────
+
+export interface DBNews {
+  id: string;
+  title: string;
+  url: string;
+  source: string;
+  summary: string | null;
+  image_url: string | null;
+  published_at: string;
+  category: string;
+}
+
+export function getNews(limit: number = 50): DBNews[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM news ORDER BY published_at DESC LIMIT ?').all(limit) as DBNews[];
+}
+
+export function getNewsByCategory(category: string, limit: number = 50): DBNews[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM news WHERE category = ? ORDER BY published_at DESC LIMIT ?').all(category, limit) as DBNews[];
+}
+
+export function getNewsCategories(): Array<{ category: string; count: number }> {
+  const db = getDB();
+  return db.prepare('SELECT category, COUNT(*) as count FROM news GROUP BY category ORDER BY count DESC').all() as Array<{ category: string; count: number }>;
+}

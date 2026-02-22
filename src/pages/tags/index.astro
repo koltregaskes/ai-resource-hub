@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTagsWithCounts } from '../../db/queries';
+
+const tags = getTagsWithCounts();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Group tags by category
+const byCategory = new Map<string, typeof tags>();
+for (const tag of tags) {
+  const cat = tag.category;
+  if (!byCategory.has(cat)) byCategory.set(cat, []);
+  byCategory.get(cat)!.push(tag);
+}
+
+const categoryLabels: Record<string, string> = {
+  'topic': 'Topics',
+  'technology': 'Technologies',
+  'use-case': 'Use Cases',
+  'provider': 'Providers',
+  'capability': 'Capabilities',
+};
+---
+
+<BaseLayout
+  title="Tags — The AI Resource Hub"
+  description="Browse AI topics, technologies, and use cases. Find models, people, and resources by tag."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Tags</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Browse by Tag
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {tags.length} tags across AI topics, technologies, use cases, and more.
+      </p>
+    </div>
+
+    {Array.from(byCategory.entries()).map(([category, catTags]) => (
+      <div class="mb-10">
+        <h2 class="text-lg font-bold text-(--color-text-primary) mb-4">
+          {categoryLabels[category] ?? category}
+        </h2>
+        <div class="flex flex-wrap gap-2">
+          {catTags.map((tag) => (
+            <a
+              href={`${base}tags/${tag.id}/`}
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent) hover:text-(--color-accent) transition-colors text-sm text-(--color-text-secondary)"
+            >
+              {tag.name}
+              <span class="text-xs text-(--color-text-muted) font-mono">({tag.count})</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    {tags.length === 0 && (
+      <div class="p-8 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center text-(--color-text-muted)">
+        No tags yet. Tags will be populated as content is categorised.
+      </div>
+    )}
+  </section>
+</BaseLayout>

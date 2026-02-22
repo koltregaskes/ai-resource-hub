@@ -133,12 +133,62 @@ db.exec(`
     updated_at TEXT NOT NULL DEFAULT (datetime('now'))
   );
 
+  -- YouTube creators
+  CREATE TABLE IF NOT EXISTS youtube_creators (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    channel_name TEXT NOT NULL,
+    youtube_handle TEXT,
+    subscribers INTEGER NOT NULL DEFAULT 0,
+    category TEXT NOT NULL DEFAULT 'general',
+    description TEXT,
+    twitter TEXT,
+    website TEXT,
+    person_id TEXT REFERENCES people(id),
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  -- Tags for cross-cutting categorisation
+  CREATE TABLE IF NOT EXISTS tags (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    category TEXT NOT NULL DEFAULT 'topic',
+    description TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  -- Many-to-many tag assignments
+  CREATE TABLE IF NOT EXISTS taggables (
+    tag_id TEXT NOT NULL REFERENCES tags(id),
+    taggable_id TEXT NOT NULL,
+    taggable_type TEXT NOT NULL,
+    PRIMARY KEY (tag_id, taggable_id, taggable_type)
+  );
+
+  -- News articles
+  CREATE TABLE IF NOT EXISTS news (
+    id TEXT PRIMARY KEY,
+    title TEXT NOT NULL,
+    url TEXT NOT NULL,
+    source TEXT NOT NULL,
+    summary TEXT,
+    image_url TEXT,
+    published_at TEXT NOT NULL,
+    category TEXT NOT NULL DEFAULT 'general',
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
   CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
   CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);
   CREATE INDEX IF NOT EXISTS idx_benchmark_scores_model ON benchmark_scores(model_id);
   CREATE INDEX IF NOT EXISTS idx_benchmark_scores_benchmark ON benchmark_scores(benchmark_id);
   CREATE INDEX IF NOT EXISTS idx_price_history_model ON price_history(model_id);
   CREATE INDEX IF NOT EXISTS idx_people_provider ON people(provider_id);
+  CREATE INDEX IF NOT EXISTS idx_youtube_creators_category ON youtube_creators(category);
+  CREATE INDEX IF NOT EXISTS idx_taggables_tag ON taggables(tag_id);
+  CREATE INDEX IF NOT EXISTS idx_taggables_target ON taggables(taggable_id, taggable_type);
+  CREATE INDEX IF NOT EXISTS idx_news_published ON news(published_at);
+  CREATE INDEX IF NOT EXISTS idx_news_category ON news(category);
 `);
 
 // ─── Providers ──────────────────────────────────────────────────
@@ -775,12 +825,196 @@ const insertPriceHistory = db.prepare(`
 `);
 insertPriceHistory.run();
 
+// ─── Tags ─────────────────────────────────────────────────────────
+const insertTag = db.prepare(`
+  INSERT INTO tags (id, name, category, description)
+  VALUES (?, ?, ?, ?)
+`);
+
+const tags = [
+  // Topics
+  ['llm', 'Large Language Models', 'topic', 'Models that process and generate text'],
+  ['image-generation', 'Image Generation', 'topic', 'AI models that create images from text or other inputs'],
+  ['video-generation', 'Video Generation', 'topic', 'AI models that generate video content'],
+  ['speech-recognition', 'Speech Recognition', 'topic', 'Converting speech to text'],
+  ['text-to-speech', 'Text-to-Speech', 'topic', 'Converting text to spoken audio'],
+  ['music-generation', 'Music Generation', 'topic', 'AI models that compose music and sound'],
+  ['ai-safety', 'AI Safety', 'topic', 'Research and practices for safe AI development'],
+  ['multimodal', 'Multimodal AI', 'topic', 'Models that handle multiple input/output types'],
+  ['reasoning', 'Reasoning', 'topic', 'Models with advanced logical and mathematical reasoning'],
+  ['coding', 'Coding & Programming', 'topic', 'AI for code generation, review, and debugging'],
+  ['open-source', 'Open Source', 'topic', 'Openly available models and tools'],
+  ['agents', 'AI Agents', 'topic', 'Autonomous AI systems that can take actions'],
+
+  // Technologies
+  ['transformer', 'Transformer Architecture', 'technology', 'The dominant architecture behind modern AI models'],
+  ['diffusion', 'Diffusion Models', 'technology', 'Generative models that learn by denoising'],
+  ['rlhf', 'RLHF', 'technology', 'Reinforcement Learning from Human Feedback'],
+  ['rag', 'RAG', 'technology', 'Retrieval-Augmented Generation'],
+  ['fine-tuning', 'Fine-Tuning', 'technology', 'Adapting pre-trained models for specific tasks'],
+  ['quantisation', 'Quantisation', 'technology', 'Reducing model size for efficient inference'],
+
+  // Use cases
+  ['writing', 'Writing & Content', 'use-case', 'Using AI for writing, editing, and content creation'],
+  ['research', 'Research', 'use-case', 'Using AI to accelerate research and analysis'],
+  ['customer-service', 'Customer Service', 'use-case', 'AI for customer support and chatbots'],
+  ['education', 'Education', 'use-case', 'AI in learning and teaching'],
+  ['healthcare', 'Healthcare', 'use-case', 'AI applications in medicine and health'],
+  ['creative', 'Creative Tools', 'use-case', 'AI for art, design, music, and creative workflows'],
+
+  // Capabilities
+  ['vision', 'Computer Vision', 'capability', 'Understanding and processing images'],
+  ['function-calling', 'Function Calling', 'capability', 'Models that can invoke external tools'],
+  ['structured-output', 'Structured Output', 'capability', 'Models that produce formatted JSON or schemas'],
+  ['long-context', 'Long Context', 'capability', 'Models with very large context windows (100K+ tokens)'],
+];
+
+const insertTags = db.transaction(() => {
+  for (const t of tags) {
+    insertTag.run(...t);
+  }
+});
+insertTags();
+
+// ─── Tag Assignments ──────────────────────────────────────────────
+const insertTaggable = db.prepare(`
+  INSERT INTO taggables (tag_id, taggable_id, taggable_type)
+  VALUES (?, ?, ?)
+`);
+
+const tagAssignments: [string, string, string][] = [
+  // Tag LLM models
+  ...['gpt-5.2', 'gpt-5', 'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano', 'gpt-4o', 'gpt-4o-mini',
+    'claude-opus-4', 'claude-sonnet-4', 'claude-haiku-3.5',
+    'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash',
+    'llama-4-maverick', 'llama-4-scout', 'llama-3.3-70b',
+    'deepseek-v3', 'deepseek-r1',
+  ].map(id => ['llm', id, 'model'] as [string, string, string]),
+
+  // Tag open-source models
+  ...['llama-4-maverick', 'llama-4-scout', 'llama-3.3-70b',
+    'deepseek-v3', 'deepseek-v3.2', 'deepseek-r1', 'deepseek-r1-0528',
+    'qwen-2.5-72b', 'qwen-qwq-32b', 'mistral-nemo',
+  ].map(id => ['open-source', id, 'model'] as [string, string, string]),
+
+  // Tag reasoning models
+  ...['o3', 'o3-mini', 'o3-pro', 'o4-mini',
+    'deepseek-r1', 'deepseek-r1-0528', 'qwen-qwq-32b',
+    'gemini-2.5-pro', 'gpt-5.2', 'gpt-5',
+  ].map(id => ['reasoning', id, 'model'] as [string, string, string]),
+
+  // Tag coding models
+  ...['codestral', 'gpt-4.1', 'claude-sonnet-4', 'deepseek-v3.2', 'gemini-2.5-pro',
+  ].map(id => ['coding', id, 'model'] as [string, string, string]),
+
+  // Tag multimodal models
+  ...['gpt-4o', 'gpt-5', 'gpt-5.2', 'claude-opus-4', 'claude-sonnet-4',
+    'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash',
+  ].map(id => ['multimodal', id, 'model'] as [string, string, string]),
+
+  // Tag long-context models
+  ...['gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.0-flash-lite',
+    'claude-opus-4', 'claude-sonnet-4', 'jamba-1.5-large',
+  ].map(id => ['long-context', id, 'model'] as [string, string, string]),
+
+  // Tag image-gen models
+  ...['dall-e-3', 'midjourney-v7', 'flux-1.1-pro', 'stable-diffusion-3.5', 'imagen-3',
+  ].map(id => ['image-generation', id, 'model'] as [string, string, string]),
+
+  // Tag video-gen models
+  ...['sora-turbo', 'veo-3', 'runway-gen4', 'kling-2.0', 'pika-2.1',
+  ].map(id => ['video-generation', id, 'model'] as [string, string, string]),
+
+  // Tag people with AI safety
+  ...['geoffrey-hinton', 'yoshua-bengio', 'dario-amodei', 'chris-olah',
+  ].map(id => ['ai-safety', id, 'person'] as [string, string, string]),
+
+  // Tag people with open source
+  ...['yann-lecun', 'mark-zuckerberg', 'liang-wenfeng',
+  ].map(id => ['open-source', id, 'person'] as [string, string, string]),
+
+  // Tag benchmarks
+  ['reasoning', 'gpqa-diamond', 'benchmark'],
+  ['reasoning', 'math-500', 'benchmark'],
+  ['reasoning', 'aime-2025', 'benchmark'],
+  ['reasoning', 'arc-challenge', 'benchmark'],
+  ['coding', 'humaneval', 'benchmark'],
+  ['coding', 'swe-bench-verified', 'benchmark'],
+  ['coding', 'livecodebench', 'benchmark'],
+  ['coding', 'bigcodebench', 'benchmark'],
+  ['multimodal', 'mmmu', 'benchmark'],
+];
+
+const insertTagAssignments = db.transaction(() => {
+  for (const ta of tagAssignments) {
+    insertTaggable.run(...ta);
+  }
+});
+insertTagAssignments();
+
+// ─── YouTube Creators ─────────────────────────────────────────────
+const insertYouTubeCreator = db.prepare(`
+  INSERT INTO youtube_creators (id, name, channel_name, youtube_handle, subscribers, category, description, twitter)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+const youtubeCreators = [
+  // AI News & Analysis
+  ['matt-wolfe', 'Matt Wolfe', 'Matt Wolfe', 'maboroshii', 900000, 'news', 'Covers the latest AI tools, news, and trends weekly. Founder of Future Tools.', '@maboroshii'],
+  ['matt-berman', 'Matt Berman', 'Matthew Berman', 'matthew_berman', 450000, 'news', 'Daily AI news, model reviews, and tutorials. Clear explanations of complex AI topics.', '@mattshumer_'],
+  ['ai-explained', 'Philip', 'AI Explained', 'aiexplained-official', 450000, 'news', 'In-depth analysis of AI papers, model releases, and industry developments.', null],
+  ['fireship', 'Jeff Delaney', 'Fireship', 'Fireship', 3200000, 'news', '100-second explainers on AI, web dev, and tech. Fast-paced and entertaining.', '@firaboroshii'],
+  ['two-minute-papers', 'Karoly Zsolnai-Feher', 'Two Minute Papers', 'TwoMinutePapers', 1600000, 'news', 'Bite-sized summaries of groundbreaking AI research papers.', '@twominutepapers'],
+  ['theaigrid', 'The AI Grid', 'TheAIGRID', 'TheAIGRID', 300000, 'news', 'Daily AI news covering model releases, industry shifts, and practical applications.', null],
+  ['wes-roth', 'Wes Roth', 'Wes Roth', 'WesRoth', 450000, 'news', 'AI news, AGI discussions, and analysis of AI developments and their implications.', '@WesRothAI'],
+
+  // Tutorials & Education
+  ['3blue1brown', 'Grant Sanderson', '3Blue1Brown', '3blue1brown', 6500000, 'tutorials', 'Beautiful mathematical animations explaining neural networks, transformers, and more.', '@3blue1brown'],
+  ['sentdex', 'Harrison Kinsley', 'sentdex', 'sentdex', 1300000, 'tutorials', 'Python and machine learning tutorials. Long-running AI education channel.', '@Sentdex'],
+  ['nicholas-renotte', 'Nicholas Renotte', 'Nicholas Renotte', 'NicholasRenotte', 600000, 'tutorials', 'Hands-on AI and ML tutorials for beginners and intermediates.', null],
+  ['sam-witteveen', 'Sam Witteveen', 'Sam Witteveen', 'samwitteveen', 60000, 'tutorials', 'Practical tutorials on LLMs, RAG, agents, and AI development.', '@samwitteveen'],
+  ['james-briggs', 'James Briggs', 'James Briggs', 'jamesbriggs', 250000, 'tutorials', 'RAG, vector databases, LangChain, and practical AI engineering tutorials.', '@jamaboroshii'],
+  ['dave-ebbelaar', 'Dave Ebbelaar', 'Dave Ebbelaar', 'daboroshii', 100000, 'tutorials', 'AI engineering tutorials focused on building production LLM applications.', null],
+
+  // AI Research
+  ['yannic-kilcher', 'Yannic Kilcher', 'Yannic Kilcher', 'YannicKilcher', 300000, 'research', 'In-depth paper reviews and analysis of cutting-edge AI research.', '@yaboroshii'],
+  ['andrej-karpathy-yt', 'Andrej Karpathy', 'Andrej Karpathy', 'AndrejKarpathy', 700000, 'research', 'Deep technical content from former Tesla AI director. Neural network fundamentals.', '@karpathy'],
+  ['machine-learning-street-talk', 'Tim Scarfe', 'Machine Learning Street Talk', 'MachineLearningStreetTalk', 170000, 'research', 'Long-form interviews with leading AI researchers and deep paper discussions.', '@MLStreetTalk'],
+  ['aleksa-gordic', 'Aleksa Gordic', 'Aleksa Gordic', 'TheAIEpiphany', 90000, 'research', 'Detailed walkthroughs of transformer architectures and AI research papers.', '@gordic_aleksa'],
+
+  // AI Coding
+  ['ai-jason', 'Jason Zhou', 'AI Jason', 'AIJason', 200000, 'coding', 'Practical AI coding tutorials: agents, function calling, and AI app development.', '@jasonzhou1993'],
+  ['all-about-ai', 'All About AI', 'All About AI', 'AllAboutAI', 350000, 'coding', 'Hands-on tutorials for AI tools, local LLMs, and building AI applications.', null],
+  ['david-ondrej', 'David Ondrej', 'David Ondrej', 'DavidOndrej', 200000, 'coding', 'AI tool reviews and tutorials for developers. Focus on practical applications.', null],
+  ['cole-medin', 'Cole Medin', 'Cole Medin', 'ColeMedin', 150000, 'coding', 'AI agent development, local AI setups, and developer-focused AI content.', null],
+
+  // AI Art & Creative
+  ['olivio-sarikas', 'Olivio Sarikas', 'Olivio Sarikas', 'OlivioSarikas', 250000, 'creative', 'AI art tutorials covering Stable Diffusion, Midjourney, FLUX, and creative workflows.', null],
+  ['aitrepreneur', 'AItrepreneur', 'Aitrepreneur', 'Aitrepreneur', 300000, 'creative', 'AI image and video generation tutorials. Local AI setup guides.', null],
+  ['theoretically-media', 'Tim', 'Theoretically Media', 'TheoreticallyMedia', 180000, 'creative', 'AI filmmaking, video generation, and creative AI tool reviews.', null],
+
+  // Business & Strategy
+  ['ai-advantage', 'Igor Pogany', 'The AI Advantage', 'AIAdvantage', 500000, 'business', 'Practical AI strategies for productivity, business, and personal use.', null],
+  ['skills-gap-trainer', 'Skills Gap Trainer', 'Skills Gap Trainer', 'SkillGapTrainer', 70000, 'business', 'AI impact on jobs, skills development, and career strategy.', null],
+  ['ai-search', 'Liam Ottley', 'AI Search', 'LiamOttley', 400000, 'business', 'Building AI agencies and businesses. Practical AI entrepreneurship.', '@LiamOttley'],
+];
+
+const insertYouTubeCreators = db.transaction(() => {
+  for (const c of youtubeCreators) {
+    insertYouTubeCreator.run(...c);
+  }
+});
+insertYouTubeCreators();
+
 // ─── Done ───────────────────────────────────────────────────────
 const modelCount = (db.prepare('SELECT COUNT(*) AS c FROM models').get() as { c: number }).c;
 const providerCount = (db.prepare('SELECT COUNT(*) AS c FROM providers').get() as { c: number }).c;
 const benchmarkCount = (db.prepare('SELECT COUNT(*) AS c FROM benchmarks').get() as { c: number }).c;
 const scoreCount = (db.prepare('SELECT COUNT(*) AS c FROM benchmark_scores').get() as { c: number }).c;
 const peopleCount = (db.prepare('SELECT COUNT(*) AS c FROM people').get() as { c: number }).c;
+const tagCount = (db.prepare('SELECT COUNT(*) AS c FROM tags').get() as { c: number }).c;
+const taggableCount = (db.prepare('SELECT COUNT(*) AS c FROM taggables').get() as { c: number }).c;
+const ytCreatorCount = (db.prepare('SELECT COUNT(*) AS c FROM youtube_creators').get() as { c: number }).c;
 
 // Count by category
 const categoryCounts = db.prepare(`
@@ -796,6 +1030,8 @@ for (const cat of categoryCounts) {
 console.log(`  Benchmarks: ${benchmarkCount}`);
 console.log(`  Scores:     ${scoreCount}`);
 console.log(`  People:     ${peopleCount}`);
+console.log(`  Tags:       ${tagCount} (${taggableCount} assignments)`);
+console.log(`  YouTube:    ${ytCreatorCount}`);
 console.log(`  DB path:    ${DB_PATH}`);
 
 db.close();

@@ -147,6 +147,55 @@ export function getSearchIndex(base: string): SearchItem[] {
     });
   }
 
+  // YouTube creators
+  const ytCreators = db.prepare(`
+    SELECT id, name, channel_name, category, description FROM youtube_creators ORDER BY subscribers DESC
+  `).all() as Array<{ id: string; name: string; channel_name: string; category: string; description: string | null }>;
+
+  for (const c of ytCreators) {
+    items.push({
+      id: c.id,
+      title: c.channel_name,
+      type: 'youtube',
+      category: c.category,
+      description: c.description ?? `YouTube channel by ${c.name}`,
+      url: `${base}youtube/`,
+    });
+  }
+
+  // Tags
+  const tags = db.prepare(`
+    SELECT id, name, category, description FROM tags ORDER BY name
+  `).all() as Array<{ id: string; name: string; category: string; description: string | null }>;
+
+  for (const t of tags) {
+    items.push({
+      id: t.id,
+      title: t.name,
+      type: 'tag',
+      category: t.category,
+      description: t.description ?? `Tag: ${t.name}`,
+      url: `${base}tags/${t.id}/`,
+    });
+  }
+
+  // Static section pages
+  const sectionPages = [
+    { id: 'news', title: 'AI News', description: 'Latest AI news — model releases, research, funding, and industry updates' },
+    { id: 'youtube', title: 'AI YouTube Channels', description: 'Curated list of the best YouTube channels covering AI' },
+    { id: 'tags', title: 'Browse by Tag', description: 'Browse AI topics, technologies, and use cases' },
+  ];
+
+  for (const s of sectionPages) {
+    items.push({
+      id: s.id,
+      title: s.title,
+      type: 'page',
+      description: s.description,
+      url: `${base}${s.id}/`,
+    });
+  }
+
   _cachedIndex = items;
   return items;
 }

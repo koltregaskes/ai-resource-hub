@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getNews, getNewsCategories } from '../../db/queries';
+
+const news = getNews(100);
+const categories = getNewsCategories();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const categoryLabels: Record<string, string> = {
+  'general': 'General',
+  'models': 'Model Releases',
+  'research': 'Research',
+  'industry': 'Industry',
+  'funding': 'Funding & Deals',
+  'policy': 'Policy & Regulation',
+  'tools': 'Tools & Products',
+  'open-source': 'Open Source',
+};
+
+function timeAgo(dateStr: string): string {
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffMins = Math.floor(diffMs / 60_000);
+  const diffHours = Math.floor(diffMs / 3_600_000);
+  const diffDays = Math.floor(diffMs / 86_400_000);
+
+  if (diffMins < 60) return `${diffMins}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+}
+---
+
+<BaseLayout
+  title="AI News — The AI Resource Hub"
+  description="Latest AI news — model releases, research breakthroughs, funding rounds, and industry updates."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">News</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI News
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Latest AI news — model releases, research breakthroughs, funding rounds, and industry updates. Updated daily.
+      </p>
+    </div>
+
+    <!-- Category filters -->
+    {categories.length > 0 && (
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="text-xs px-3 py-1.5 rounded-full font-medium bg-(--color-accent)/20 text-(--color-accent)">
+          All ({news.length})
+        </span>
+        {categories.map((cat) => (
+          <span class="text-xs px-3 py-1.5 rounded-full font-medium bg-(--color-bg-tertiary) text-(--color-text-secondary)">
+            {categoryLabels[cat.category] ?? cat.category} ({cat.count})
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- News list -->
+    {news.length > 0 ? (
+      <div class="space-y-3">
+        {news.map((item) => (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block p-4 sm:p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors group"
+          >
+            <div class="flex items-start gap-4">
+              {item.image_url && (
+                <img
+                  src={item.image_url}
+                  alt=""
+                  class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover shrink-0 hidden sm:block"
+                  loading="lazy"
+                />
+              )}
+              <div class="flex-1 min-w-0">
+                <h2 class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors line-clamp-2">
+                  {item.title}
+                </h2>
+                {item.summary && (
+                  <p class="text-sm text-(--color-text-secondary) mt-1 line-clamp-2">{item.summary}</p>
+                )}
+                <div class="flex items-center gap-3 mt-2 text-xs text-(--color-text-muted)">
+                  <span>{item.source}</span>
+                  <span>{timeAgo(item.published_at)}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-(--color-bg-tertiary)">
+                    {categoryLabels[item.category] ?? item.category}
+                  </span>
+                </div>
+              </div>
+              <svg class="w-4 h-4 text-(--color-text-muted) group-hover:text-(--color-accent) transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div class="p-8 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center text-(--color-text-muted)">
+        <p class="text-lg mb-2">No news articles yet</p>
+        <p class="text-sm">News will be populated by the daily aggregator. Check back soon!</p>
+      </div>
+    )}
+  </section>
+</BaseLayout>
