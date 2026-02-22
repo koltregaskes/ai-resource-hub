@@ -56,10 +56,8 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
   <body class="bg-(--color-bg-primary) text-(--color-text-primary) min-h-screen flex flex-col">
     <header class="border-b border-(--color-border) bg-(--color-bg-secondary)/80 backdrop-blur-md sticky top-0 z-50">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href={base} class="flex items-center gap-2 group">
-          <div class="w-8 h-8 rounded-lg bg-(--color-accent) flex items-center justify-center text-white font-bold text-sm accent-glow">
-            AI
-          </div>
+        <a href={base} class="flex items-center gap-2.5 group">
+          <img src={`${base}favicon.svg`} alt="" class="w-8 h-8 accent-glow" width="32" height="32" />
           <span class="text-lg font-bold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
             The AI Resource Hub
           </span>
@@ -133,9 +131,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
           <div class="flex items-center gap-2">
-            <div class="w-6 h-6 rounded bg-(--color-accent) flex items-center justify-center text-white font-bold text-xs">
-              AI
-            </div>
+            <img src={`${base}favicon.svg`} alt="" class="w-6 h-6" width="24" height="24" />
             <span class="text-sm text-(--color-text-secondary)">The AI Resource Hub</span>
           </div>
           <p class="text-xs text-(--color-text-muted)">
