@@ -524,6 +524,31 @@ const benchmarks = [
   ['livebench', 'LiveBench', 'reasoning', 'Contamination-free benchmark using recent questions from math, coding, and reasoning', 'https://livebench.ai', 0, 100, 1, 1.3],
   ['bigcodebench', 'BigCodeBench', 'coding', 'Challenging code generation tasks with complex function calls and libraries', 'https://bigcode-bench.github.io', 0, 100, 1, 1.1],
   ['humanitys-last-exam', 'Humanity\'s Last Exam', 'reasoning', 'Ultra-hard questions from experts across 100+ academic subjects', 'https://lastexam.ai', 0, 100, 1, 1.5],
+
+  // Safety & alignment
+  ['simpleqa', 'SimpleQA', 'safety', 'Factual accuracy on straightforward questions — measures hallucination rate', null, 0, 100, 1, 1.0],
+  ['air-bench', 'AIR-Bench', 'safety', 'AI safety aligned with regulations — 5,694 tests across 314 risk categories', null, 0, 100, 1, 0.8],
+  ['trustllm', 'TrustLLM', 'safety', 'Comprehensive trustworthiness: truthfulness, safety, fairness, robustness, privacy', null, 0, 100, 1, 0.8],
+
+  // Agent benchmarks
+  ['gaia', 'GAIA', 'agent', 'General AI Assistant tasks requiring web browsing, reasoning, and tool use', 'https://huggingface.co/spaces/gaia-benchmark/leaderboard', 0, 100, 1, 1.3],
+  ['webarena', 'WebArena', 'agent', 'Autonomous web navigation and task completion in realistic environments', 'https://webarena.dev', 0, 100, 1, 1.1],
+  ['tau-bench', 'TAU-bench', 'agent', 'Tool-Agent-User interaction quality across multi-step scenarios', null, 0, 100, 1, 1.0],
+
+  // Coding (additional)
+  ['aider-polyglot', 'Aider Polyglot', 'coding', 'Multi-language coding: 225 exercises across C++, Go, Java, JS, Python, Rust', 'https://aider.chat/docs/leaderboards/', 0, 100, 1, 1.1],
+  ['bfcl', 'BFCL', 'coding', 'Berkeley Function Calling Leaderboard — tool/function invocation accuracy', 'https://gorilla.cs.berkeley.edu/leaderboard.html', 0, 100, 1, 1.0],
+
+  // Multimodal (additional)
+  ['mmmu-pro', 'MMMU-Pro', 'multimodal', 'Enhanced multimodal understanding — harder than MMMU with no shortcut strategies', null, 0, 100, 1, 1.2],
+  ['mathvista', 'MathVista', 'multimodal', 'Mathematical reasoning in visual contexts — diagrams, charts, figures', 'https://mathvista.github.io', 0, 100, 1, 1.0],
+
+  // Domain-specific
+  ['medqa', 'MedQA', 'domain', 'US Medical Licensing Exam questions — medical knowledge and reasoning', null, 0, 100, 1, 0.8],
+  ['legalbench', 'LegalBench', 'domain', 'Legal reasoning across 162 tasks: issue-spotting, rule-recall, interpretation', null, 0, 100, 1, 0.8],
+
+  // Multilingual
+  ['mgsm', 'MGSM', 'multilingual', 'Multilingual Grade School Math — 250 problems in 10 languages', null, 0, 100, 1, 0.7],
 ];
 
 const insertBenchmarks = db.transaction(() => {
@@ -733,6 +758,58 @@ const scores: [string, string, number, string, string][] = [
   ['gemini-3.1-pro', 'humanitys-last-exam', 25.0, 'Google', '2026-02-01'],
   ['grok-4', 'humanitys-last-exam', 21.0, 'xAI', '2025-07-09'],
   ['deepseek-r1', 'humanitys-last-exam', 18.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── New Benchmarks: SimpleQA (factual accuracy) ──────────
+  ['gpt-5.2', 'simpleqa', 58.0, 'OpenAI', '2025-12-10'],
+  ['gpt-5', 'simpleqa', 52.0, 'OpenAI', '2025-08-07'],
+  ['o3', 'simpleqa', 49.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4', 'simpleqa', 44.0, 'Anthropic', '2025-05-22'],
+  ['claude-sonnet-4', 'simpleqa', 41.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'simpleqa', 47.0, 'Google', '2025-03-25'],
+  ['gpt-4o', 'simpleqa', 38.2, 'OpenAI', '2024-11-20'],
+
+  // ─── New Benchmarks: GAIA (general AI assistant) ──────────
+  ['gpt-5.2', 'gaia', 78.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4.6', 'gaia', 75.0, 'Anthropic', '2026-02-05'],
+  ['o3', 'gaia', 72.0, 'OpenAI', '2025-04-16'],
+  ['gemini-2.5-pro', 'gaia', 68.0, 'Google', '2025-03-25'],
+  ['grok-4', 'gaia', 70.0, 'xAI', '2025-07-09'],
+
+  // ─── New Benchmarks: Aider Polyglot (multi-language coding)
+  ['claude-opus-4.6', 'aider-polyglot', 82.0, 'Anthropic', '2026-02-05'],
+  ['claude-sonnet-4.6', 'aider-polyglot', 79.0, 'Anthropic', '2026-02-17'],
+  ['gpt-5.2', 'aider-polyglot', 80.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'aider-polyglot', 76.0, 'OpenAI', '2025-04-16'],
+  ['gemini-2.5-pro', 'aider-polyglot', 72.0, 'Google', '2025-03-25'],
+  ['deepseek-r1', 'aider-polyglot', 65.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── New Benchmarks: BFCL (function calling) ──────────────
+  ['gpt-5.2', 'bfcl', 92.0, 'OpenAI', '2025-12-10'],
+  ['claude-sonnet-4', 'bfcl', 88.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'bfcl', 85.0, 'OpenAI', '2024-05-13'],
+  ['gemini-2.5-pro', 'bfcl', 87.0, 'Google', '2025-03-25'],
+  ['grok-3', 'bfcl', 82.0, 'xAI', '2025-02-17'],
+
+  // ─── New Benchmarks: MMMU-Pro (hard multimodal) ───────────
+  ['gpt-5.2', 'mmmu-pro', 72.0, 'OpenAI', '2025-12-10'],
+  ['gemini-2.5-pro', 'mmmu-pro', 68.0, 'Google', '2025-03-25'],
+  ['claude-opus-4', 'mmmu-pro', 64.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'mmmu-pro', 51.0, 'OpenAI', '2024-05-13'],
+
+  // ─── New Benchmarks: MedQA (medical) ──────────────────────
+  ['gpt-5.2', 'medqa', 94.0, 'OpenAI', '2025-12-10'],
+  ['gemini-2.5-pro', 'medqa', 91.0, 'Google', '2025-03-25'],
+  ['claude-opus-4', 'medqa', 89.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'medqa', 86.1, 'OpenAI', '2024-05-13'],
+  ['o3', 'medqa', 92.0, 'OpenAI', '2025-04-16'],
+
+  // ─── New Benchmarks: MGSM (multilingual math) ────────────
+  ['gpt-5.2', 'mgsm', 95.0, 'OpenAI', '2025-12-10'],
+  ['gemini-2.5-pro', 'mgsm', 92.0, 'Google', '2025-03-25'],
+  ['claude-opus-4', 'mgsm', 90.0, 'Anthropic', '2025-05-22'],
+  ['o3', 'mgsm', 93.0, 'OpenAI', '2025-04-16'],
+  ['gpt-4o', 'mgsm', 86.5, 'OpenAI', '2024-05-13'],
+  ['llama-4-maverick', 'mgsm', 84.0, 'Meta', '2025-04-05'],
 ];
 
 const insertScores = db.transaction(() => {
@@ -943,6 +1020,17 @@ const tagAssignments: [string, string, string][] = [
   ['coding', 'livecodebench', 'benchmark'],
   ['coding', 'bigcodebench', 'benchmark'],
   ['multimodal', 'mmmu', 'benchmark'],
+  ['multimodal', 'mmmu-pro', 'benchmark'],
+  ['multimodal', 'mathvista', 'benchmark'],
+  ['coding', 'aider-polyglot', 'benchmark'],
+  ['coding', 'bfcl', 'benchmark'],
+  ['agents', 'gaia', 'benchmark'],
+  ['agents', 'webarena', 'benchmark'],
+  ['agents', 'tau-bench', 'benchmark'],
+  ['ai-safety', 'simpleqa', 'benchmark'],
+  ['ai-safety', 'air-bench', 'benchmark'],
+  ['ai-safety', 'trustllm', 'benchmark'],
+  ['healthcare', 'medqa', 'benchmark'],
 ];
 
 const insertTagAssignments = db.transaction(() => {
