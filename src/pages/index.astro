@@ -245,11 +245,11 @@ const learnCategories = [
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'The AI Resource Hub',
-    url: 'https://theairesourcehub.com',
+    url: new URL(base, Astro.site).toString(),
     description: 'Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://theairesourcehub.com/?q={search_term_string}',
+      target: `${new URL(base, Astro.site).toString()}?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   })} />

@@ -18,7 +18,7 @@ const { id } = Astro.params;
 const provider = getProviderById(id);
 
 if (!provider) {
-  return Astro.redirect('/404');
+  return Astro.redirect(`${import.meta.env.BASE_URL}404`);
 }
 
 const models = getModelsByProvider(id);

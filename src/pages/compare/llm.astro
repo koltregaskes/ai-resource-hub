@@ -18,7 +18,7 @@ const structuredData = {
   '@type': 'Dataset',
   name: 'AI Large Language Model Comparison',
   description: 'Independent comparison of LLM pricing, performance benchmarks, and value rankings.',
-  url: new URL('/compare/llm', Astro.site).toString(),
+  url: new URL(`${base}compare/llm`, Astro.site).toString(),
   variableMeasured: [
     { '@type': 'PropertyValue', name: 'Input Price', unitText: 'USD per 1M tokens' },
     { '@type': 'PropertyValue', name: 'Output Price', unitText: 'USD per 1M tokens' },
