@@ -4,12 +4,13 @@ import HeroSection from '../components/HeroSection.astro';
 import CategoryCard from '../components/CategoryCard.astro';
 import TopModelsPreview from '../components/TopModelsPreview.astro';
 import { getLLMModels } from '../data/llm-models';
-import { getProvidersWithCounts, getPeople, getBenchmarkMatrix } from '../db/queries';
+import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms } from '../db/queries';
 
 const models = getLLMModels();
 const providers = getProvidersWithCounts();
 const people = getPeople();
 const benchmarkMatrix = getBenchmarkMatrix();
+const glossaryTerms = getGlossaryTerms();
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const lastUpdated = new Date().toLocaleDateString('en-GB', {
@@ -18,7 +19,7 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
   year: 'numeric',
 });
 
-const categories = [
+const dataCategories = [
   {
     title: 'Large Language Models',
     description: 'Compare GPT, Claude, Gemini, Llama, and more. Sort by price, speed, quality, or value.',
@@ -56,6 +57,45 @@ const categories = [
     countLabel: 'people profiled',
   },
 ];
+
+const learnCategories = [
+  {
+    title: 'AI Guides',
+    description: 'Practical, jargon-free guides to help you get the most out of AI tools.',
+    href: `${base}guides/`,
+    modelCount: 6,
+    icon: '📖',
+    available: true,
+    countLabel: 'guides available',
+  },
+  {
+    title: 'AI Glossary',
+    description: `${glossaryTerms.length} AI terms explained in plain English. No PhD required.`,
+    href: `${base}glossary/`,
+    modelCount: glossaryTerms.length,
+    icon: '📚',
+    available: true,
+    countLabel: 'terms defined',
+  },
+  {
+    title: 'Which AI Should I Use?',
+    description: 'Answer 6 quick questions and get a personalised AI recommendation.',
+    href: `${base}quiz/`,
+    modelCount: 6,
+    icon: '🎯',
+    available: true,
+    countLabel: 'AI tools compared',
+  },
+  {
+    title: 'Prompting Basics',
+    description: 'Learn the fundamentals of writing effective AI prompts in 8 minutes.',
+    href: `${base}guides/prompting-basics/`,
+    modelCount: 6,
+    icon: '✍️',
+    available: true,
+    countLabel: 'core techniques',
+  },
+];
 ---
 
 <BaseLayout title="The AI Resource Hub — Independent AI Model Comparison">
@@ -63,13 +103,25 @@ const categories = [
 
   <TopModelsPreview models={models} />
 
-  <!-- Category cards -->
+  <!-- Data & Comparison -->
   <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Browse by Category</h2>
-    <p class="text-sm text-(--color-text-secondary) mb-8">Explore AI models across different domains</p>
+    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Compare & Explore</h2>
+    <p class="text-sm text-(--color-text-secondary) mb-8">Data-driven comparison of AI models, benchmarks, and providers</p>
 
     <div class="grid sm:grid-cols-2 gap-4">
-      {categories.map((cat) => (
+      {dataCategories.map((cat) => (
+        <CategoryCard {...cat} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Learn & Discover -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Learn & Discover</h2>
+    <p class="text-sm text-(--color-text-secondary) mb-8">Beginner-friendly guides, glossary, and tools to help you navigate AI</p>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      {learnCategories.map((cat) => (
         <CategoryCard {...cat} />
       ))}
     </div>

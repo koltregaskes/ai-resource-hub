@@ -216,6 +216,195 @@ export interface BenchmarkMatrix {
   }>;
 }
 
+/**
+ * Get a single model by ID with full details.
+ */
+export interface DBModelDetail {
+  id: string;
+  name: string;
+  provider_id: string;
+  provider_name: string;
+  provider_colour: string;
+  provider_website: string | null;
+  input_price: number;
+  output_price: number;
+  context_window: number;
+  max_output: number;
+  speed: number;
+  quality_score: number;
+  released: string | null;
+  open_source: number;
+  modality: string;
+  api_available: number;
+  notes: string | null;
+  pricing_source: string | null;
+  pricing_updated: string | null;
+}
+
+export function getModelById(modelId: string): DBModelDetail | null {
+  const db = getDB();
+  const row = db.prepare(`
+    SELECT
+      m.*,
+      p.name AS provider_name,
+      p.colour AS provider_colour,
+      p.website AS provider_website
+    FROM models m
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.id = ? AND m.status = 'active'
+  `).get(modelId) as DBModelDetail | undefined;
+  return row ?? null;
+}
+
+/**
+ * Get all active model IDs for static path generation.
+ */
+export function getAllModelIds(): string[] {
+  const db = getDB();
+  const rows = db.prepare("SELECT id FROM models WHERE status = 'active'").all() as Array<{ id: string }>;
+  return rows.map(r => r.id);
+}
+
+/**
+ * Get all models for a given provider.
+ */
+export function getModelsByProvider(providerId: string): LLMModel[] {
+  const db = getDB();
+  const rows = db.prepare(`
+    SELECT
+      m.id,
+      m.name,
+      p.name AS provider,
+      p.colour AS providerColour,
+      m.input_price AS inputPrice,
+      m.output_price AS outputPrice,
+      m.context_window AS contextWindow,
+      m.max_output AS maxOutput,
+      m.speed,
+      m.quality_score AS qualityScore,
+      m.released,
+      m.open_source AS openSource,
+      m.modality,
+      m.api_available AS apiAvailable,
+      m.notes
+    FROM models m
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.provider_id = ? AND m.status = 'active'
+    ORDER BY m.quality_score DESC
+  `).all(providerId) as Array<Record<string, unknown>>;
+
+  return rows.map((row) => {
+    const inputPrice = row.inputPrice as number;
+    const outputPrice = row.outputPrice as number;
+    const qualityScore = row.qualityScore as number;
+    const blendedCostPer1M = (inputPrice + 3 * outputPrice) / 4;
+    const valueScore = blendedCostPer1M > 0
+      ? Math.round((qualityScore / blendedCostPer1M) * 10)
+      : 0;
+
+    return {
+      id: row.id as string,
+      name: row.name as string,
+      provider: row.provider as string,
+      providerColour: row.providerColour as string,
+      inputPrice,
+      outputPrice,
+      contextWindow: row.contextWindow as number,
+      maxOutput: row.maxOutput as number,
+      speed: row.speed as number,
+      qualityScore,
+      valueScore,
+      released: row.released as string,
+      openSource: (row.openSource as number) === 1,
+      modality: (row.modality as string).split(',').map((m: string) => m.trim()),
+      apiAvailable: (row.apiAvailable as number) === 1,
+      notes: (row.notes as string) || undefined,
+    };
+  });
+}
+
+/**
+ * Get a single provider by ID.
+ */
+export function getProviderById(providerId: string): DBProvider | null {
+  const db = getDB();
+  const row = db.prepare('SELECT * FROM providers WHERE id = ?').get(providerId) as DBProvider | undefined;
+  return row ?? null;
+}
+
+/**
+ * Get all provider IDs for static path generation.
+ */
+export function getAllProviderIds(): string[] {
+  const db = getDB();
+  const rows = db.prepare('SELECT id FROM providers').all() as Array<{ id: string }>;
+  return rows.map(r => r.id);
+}
+
+/**
+ * Get people associated with a provider.
+ */
+export function getPeopleByProvider(providerId: string): DBPerson[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT p.*, pr.name AS organisation
+    FROM people p
+    LEFT JOIN providers pr ON p.provider_id = pr.id
+    WHERE p.provider_id = ?
+    ORDER BY p.name
+  `).all(providerId) as DBPerson[];
+}
+
+/**
+ * Get price history for a model.
+ */
+export interface DBPriceHistory {
+  input_price: number;
+  output_price: number;
+  recorded_at: string;
+  source: string | null;
+}
+
+export function getModelPriceHistory(modelId: string): DBPriceHistory[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT input_price, output_price, recorded_at, source
+    FROM price_history
+    WHERE model_id = ?
+    ORDER BY recorded_at ASC
+  `).all(modelId) as DBPriceHistory[];
+}
+
+/**
+ * Get all glossary terms.
+ */
+export interface DBGlossaryTerm {
+  id: string;
+  term: string;
+  definition: string;
+  plain_english: string | null;
+  category: string;
+  related_terms: string | null;
+  see_also: string | null;
+}
+
+export function getGlossaryTerms(): DBGlossaryTerm[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM glossary ORDER BY term').all() as DBGlossaryTerm[];
+}
+
+export function getGlossaryTermById(termId: string): DBGlossaryTerm | null {
+  const db = getDB();
+  const row = db.prepare('SELECT * FROM glossary WHERE id = ?').get(termId) as DBGlossaryTerm | undefined;
+  return row ?? null;
+}
+
+export function getAllGlossaryIds(): string[] {
+  const db = getDB();
+  const rows = db.prepare('SELECT id FROM glossary').all() as Array<{ id: string }>;
+  return rows.map(r => r.id);
+}
+
 export function getBenchmarkMatrix(): BenchmarkMatrix {
   const db = getDB();
 

@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const guides = [
+  {
+    slug: 'prompting-basics',
+    title: 'Prompting Basics: How to Talk to AI',
+    description: 'Learn the fundamentals of writing effective prompts. No technical background needed — just clear thinking and these simple techniques.',
+    category: 'Beginner',
+    readTime: '8 min read',
+    icon: '💬',
+  },
+  {
+    slug: 'choosing-an-ai-model',
+    title: 'How to Choose the Right AI Model',
+    description: 'ChatGPT, Claude, Gemini, Copilot — which one is right for you? A practical guide to picking the best AI for your needs and budget.',
+    category: 'Beginner',
+    readTime: '10 min read',
+    icon: '🎯',
+  },
+  {
+    slug: 'advanced-prompting',
+    title: 'Advanced Prompting Techniques',
+    description: 'Chain-of-thought, few-shot learning, role prompting, and more. Level up your AI interactions with these proven techniques.',
+    category: 'Intermediate',
+    readTime: '12 min read',
+    icon: '🧠',
+  },
+  {
+    slug: 'ai-for-writing',
+    title: 'Using AI for Writing & Content Creation',
+    description: 'From blog posts to emails to creative fiction — how to use AI as a writing partner without losing your voice.',
+    category: 'Practical',
+    readTime: '10 min read',
+    icon: '✍️',
+  },
+  {
+    slug: 'ai-for-research',
+    title: 'Using AI for Research & Analysis',
+    description: 'How to use AI to research topics, summarise documents, analyse data, and fact-check — plus pitfalls to avoid.',
+    category: 'Practical',
+    readTime: '10 min read',
+    icon: '🔍',
+  },
+  {
+    slug: 'understanding-ai-pricing',
+    title: 'Understanding AI Pricing: Tokens, Tiers & Value',
+    description: 'What are tokens? Why does AI cost money? Free vs paid tiers explained. How to estimate your costs and find the best value.',
+    category: 'Beginner',
+    readTime: '7 min read',
+    icon: '💰',
+  },
+];
+
+const categoryColours: Record<string, string> = {
+  Beginner: 'bg-green-500/10 text-green-400',
+  Intermediate: 'bg-blue-500/10 text-blue-400',
+  Practical: 'bg-purple-500/10 text-purple-400',
+  Advanced: 'bg-orange-500/10 text-orange-400',
+};
+---
+
+<BaseLayout
+  title="AI Guides & Tutorials — The AI Resource Hub"
+  description="Learn to use AI effectively. Beginner-friendly guides on prompting, choosing models, writing with AI, and understanding pricing."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Guides</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Guides & Tutorials
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Practical, jargon-free guides to help you get the most out of AI.
+        Whether you're just getting started or looking to level up — we've got you covered.
+      </p>
+    </div>
+
+    <!-- Category filters -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <span class="px-3 py-1.5 rounded-lg bg-(--color-accent)/10 text-(--color-accent) text-sm font-medium">
+        All Guides
+      </span>
+      {['Beginner', 'Intermediate', 'Practical'].map((cat) => (
+        <span class={`px-3 py-1.5 rounded-lg text-sm font-medium ${categoryColours[cat]}`}>
+          {cat}
+        </span>
+      ))}
+    </div>
+
+    <!-- Guide cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {guides.map((guide) => (
+        <a
+          href={`${base}guides/${guide.slug}/`}
+          class="block p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-all hover:translate-y-[-2px] group"
+        >
+          <div class="text-3xl mb-4">{guide.icon}</div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class={`text-xs px-2 py-0.5 rounded-full ${categoryColours[guide.category] || 'bg-(--color-bg-tertiary) text-(--color-text-muted)'}`}>
+              {guide.category}
+            </span>
+            <span class="text-xs text-(--color-text-muted)">{guide.readTime}</span>
+          </div>
+          <h2 class="text-lg font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors mb-2">
+            {guide.title}
+          </h2>
+          <p class="text-sm text-(--color-text-secondary) line-clamp-3">
+            {guide.description}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

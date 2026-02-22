@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  getAllProviderIds,
+  getProviderById,
+  getModelsByProvider,
+  getModelBenchmarks,
+  getPeopleByProvider,
+} from '../../db/queries';
+
+export function getStaticPaths() {
+  const ids = getAllProviderIds();
+  return ids.map((id) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+const provider = getProviderById(id);
+
+if (!provider) {
+  return Astro.redirect('/404');
+}
+
+const models = getModelsByProvider(id);
+const people = getPeopleByProvider(id);
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+function formatPrice(price: number): string {
+  if (price === 0) return 'Free';
+  if (price < 0.01) return `$${price.toFixed(4)}`;
+  if (price < 1) return `$${price.toFixed(3)}`;
+  return `$${price.toFixed(2)}`;
+}
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+
+// Find the cheapest and best quality models
+const cheapestModel = models.length > 0
+  ? models.reduce((prev, curr) => {
+      const prevCost = (prev.inputPrice + 3 * prev.outputPrice) / 4;
+      const currCost = (curr.inputPrice + 3 * curr.outputPrice) / 4;
+      return currCost < prevCost ? curr : prev;
+    })
+  : null;
+
+const bestModel = models.length > 0
+  ? models.reduce((prev, curr) => curr.qualityScore > prev.qualityScore ? curr : prev)
+  : null;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: provider.name,
+  url: provider.website,
+  description: provider.description,
+  foundingDate: provider.founded,
+  location: provider.headquarters,
+};
+---
+
+<BaseLayout
+  title={`${provider.name} — AI Models & Pricing — The AI Resource Hub`}
+  description={`${provider.name} AI models: pricing, benchmarks, and comparisons. ${models.length} models tracked including ${bestModel?.name ?? 'their latest'}.`}
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}labs/`} class="hover:text-(--color-text-secondary) transition-colors">Labs & Providers</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">{provider.name}</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row items-start gap-4 mb-8">
+      <div
+        class="w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-xl shrink-0"
+        style={`background-color: ${provider.colour}`}
+      >
+        {provider.name.slice(0, 2).toUpperCase()}
+      </div>
+      <div class="flex-1">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-2">
+          {provider.name}
+        </h1>
+        {provider.description && (
+          <p class="text-(--color-text-secondary) max-w-2xl mb-3">{provider.description}</p>
+        )}
+        {provider.website && (
+          <a
+            href={provider.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1 text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+          >
+            {provider.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        )}
+      </div>
+    </div>
+
+    <!-- Company info -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      {provider.founded && (
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <p class="text-xs text-(--color-text-muted) mb-1">Founded</p>
+          <p class="text-lg font-bold text-(--color-text-primary)">{new Date(provider.founded).getFullYear()}</p>
+        </div>
+      )}
+      {provider.headquarters && (
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <p class="text-xs text-(--color-text-muted) mb-1">Headquarters</p>
+          <p class="text-lg font-bold text-(--color-text-primary) truncate" title={provider.headquarters}>{provider.headquarters}</p>
+        </div>
+      )}
+      {provider.ceo && (
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <p class="text-xs text-(--color-text-muted) mb-1">CEO</p>
+          <p class="text-lg font-bold text-(--color-text-primary)">{provider.ceo}</p>
+        </div>
+      )}
+      {provider.funding && (
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <p class="text-xs text-(--color-text-muted) mb-1">Funding</p>
+          <p class="text-lg font-bold text-(--color-text-primary) truncate" title={provider.funding}>{provider.funding}</p>
+        </div>
+      )}
+    </div>
+
+    <!-- Quick stats -->
+    {models.length > 0 && (
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+          <p class="text-3xl font-bold text-(--color-accent)">{models.length}</p>
+          <p class="text-xs text-(--color-text-muted) mt-1">Active Models</p>
+        </div>
+        {cheapestModel && (
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+            <p class="text-lg font-bold text-(--color-success)">{formatPrice(cheapestModel.inputPrice)}/{formatPrice(cheapestModel.outputPrice)}</p>
+            <p class="text-xs text-(--color-text-muted) mt-1">Cheapest (in/out per 1M)</p>
+          </div>
+        )}
+        {bestModel && (
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+            <p class="text-lg font-bold text-(--color-accent)">{bestModel.qualityScore}/100</p>
+            <p class="text-xs text-(--color-text-muted) mt-1">Top Quality Score</p>
+          </div>
+        )}
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+          <p class="text-lg font-bold text-(--color-text-primary)">{models.filter(m => m.openSource).length}</p>
+          <p class="text-xs text-(--color-text-muted) mt-1">Open Source</p>
+        </div>
+      </div>
+    )}
+
+    <!-- Models table -->
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">
+        {provider.name} Models ({models.length})
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Input $/1M</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Output $/1M</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Context</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Value</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Released</th>
+            </tr>
+          </thead>
+          <tbody>
+            {models.map((model) => (
+              <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                <td class="py-3 px-3">
+                  <a
+                    href={`${base}models/${model.id}/`}
+                    class="font-medium text-(--color-text-primary) hover:text-(--color-accent) transition-colors"
+                  >
+                    {model.name}
+                  </a>
+                  <div class="flex gap-1 mt-1">
+                    {model.openSource && <span class="badge badge-oss">OSS</span>}
+                  </div>
+                </td>
+                <td class="py-3 px-3 text-right text-(--color-text-primary) font-mono text-xs">{formatPrice(model.inputPrice)}</td>
+                <td class="py-3 px-3 text-right text-(--color-text-primary) font-mono text-xs">{formatPrice(model.outputPrice)}</td>
+                <td class="py-3 px-3 text-right text-(--color-text-secondary)">{formatTokens(model.contextWindow)}</td>
+                <td class="py-3 px-3 text-right">
+                  <span class="font-semibold text-(--color-accent)">{model.qualityScore}</span>
+                </td>
+                <td class="py-3 px-3 text-right">
+                  <span class="font-semibold text-(--color-success)">{model.valueScore}</span>
+                </td>
+                <td class="py-3 px-3 text-right text-(--color-text-muted) text-xs">
+                  {model.released
+                    ? new Date(model.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })
+                    : '—'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Key people -->
+    {people.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">
+          Key People at {provider.name}
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {people.map((person) => (
+            <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-(--color-bg-tertiary) flex items-center justify-center text-(--color-text-secondary) font-semibold text-sm shrink-0">
+                  {person.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
+                </div>
+                <div>
+                  <h3 class="font-semibold text-(--color-text-primary)">{person.name}</h3>
+                  {person.role && <p class="text-xs text-(--color-text-muted)">{person.role}</p>}
+                </div>
+              </div>
+              {person.notable_for && (
+                <div class="flex flex-wrap gap-1 mt-3">
+                  {person.notable_for.split(',').map((item: string) => (
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary)">
+                      {item.trim()}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Back -->
+    <a
+      href={`${base}labs/`}
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+    >
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      All Labs & Providers
+    </a>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

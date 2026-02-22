@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Advanced Prompting Techniques — The AI Resource Hub"
+  description="Chain-of-thought, few-shot learning, role prompting, and structured output. Level up your AI prompts with these proven techniques."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}guides/`} class="hover:text-(--color-text-secondary) transition-colors">Guides</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Advanced Prompting</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Intermediate</span>
+        <span class="text-xs text-(--color-text-muted)">12 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        Advanced Prompting Techniques
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        You've mastered the basics. Now learn the techniques that professionals use to get consistently
+        excellent results from AI models.
+      </p>
+    </header>
+
+    <div class="space-y-10">
+      <!-- Chain of Thought -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">1. Chain-of-Thought Prompting</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Chain-of-thought (CoT) prompting asks the AI to think through a problem step by step before giving
+          its final answer. This dramatically improves accuracy on maths, logic, and multi-step reasoning tasks.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mb-4">
+          <div class="p-4 rounded-xl bg-red-500/5 border border-red-500/20">
+            <p class="text-xs font-semibold text-red-400 uppercase tracking-wider mb-2">Without CoT</p>
+            <p class="text-sm text-(--color-text-secondary) italic">"If a shop sells 3 shirts at $12 each and 2 trousers at $25 each, and there's a 10% discount on the total, what's the final price?"</p>
+            <p class="text-xs text-(--color-text-muted) mt-2">AI might jump to an answer and get it wrong</p>
+          </div>
+          <div class="p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+            <p class="text-xs font-semibold text-green-400 uppercase tracking-wider mb-2">With CoT</p>
+            <p class="text-sm text-(--color-text-secondary) italic">"If a shop sells 3 shirts at $12 each and 2 trousers at $25 each, and there's a 10% discount on the total, what's the final price? Think through this step by step, showing your calculations."</p>
+            <p class="text-xs text-(--color-text-muted) mt-2">AI breaks it down: shirts total, trousers total, subtotal, discount, final</p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-accent-glow) border border-(--color-accent)/20">
+          <p class="text-sm text-(--color-text-primary)">
+            <strong>Magic phrases:</strong> "Think step by step", "Show your reasoning", "Walk me through your thought process",
+            "Break this down into steps before answering"
+          </p>
+        </div>
+      </section>
+
+      <!-- Few-Shot -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. Few-Shot Prompting</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Instead of explaining what you want, show the AI 2-3 examples. This is often more effective
+          than lengthy instructions — the AI pattern-matches from your examples.
+        </p>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-3">Example: Generating Product Descriptions</p>
+          <div class="text-sm text-(--color-text-secondary) space-y-3 font-mono">
+            <p><strong>Input:</strong> Red wool scarf, 180cm, handmade in Scotland</p>
+            <p><strong>Output:</strong> Wrap yourself in warmth with this handcrafted Scottish wool scarf. At 180cm, it's generous enough to style multiple ways — whether draped casually or wound snugly against the Highland winds. The rich red hue adds a pop of colour to any winter outfit.</p>
+            <p class="border-t border-(--color-border) pt-3"><strong>Input:</strong> Blue ceramic mug, 350ml, dishwasher safe</p>
+            <p><strong>Output:</strong> Start your morning right with this ocean-blue ceramic mug. Holding a generous 350ml, it's the perfect size for your favourite brew. Best of all? It's dishwasher safe, so you can spend less time washing up and more time enjoying your cuppa.</p>
+            <p class="border-t border-(--color-border) pt-3"><strong>Input:</strong> Black leather wallet, RFID blocking, 12 card slots</p>
+            <p><strong>Output:</strong> [AI generates in the same style]</p>
+          </div>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          Notice how the AI picks up on the style (conversational, benefit-focused), length (3 sentences),
+          and structure (feature → benefit → personality) from your examples.
+        </p>
+      </section>
+
+      <!-- Structured Output -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">3. Structured Output Requests</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          When you need data in a specific format, tell the AI exactly what structure to use. This is
+          especially useful when you'll be copying the output into a spreadsheet, document, or application.
+        </p>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-3">Example</p>
+          <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+            "Analyse this job description and extract the key requirements. Return as a table with these columns:
+            | Requirement | Type (must-have/nice-to-have) | Your Match (yes/partial/no) |
+            Base the 'Your Match' column on this CV: [paste CV]"
+          </p>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          You can request JSON, CSV, Markdown tables, bullet lists, numbered steps — any structured format.
+          The more explicitly you define it, the more consistent the output.
+        </p>
+      </section>
+
+      <!-- Persona Stacking -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. Persona Stacking</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Combine multiple perspectives in a single prompt to get richer, more nuanced output.
+        </p>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-3">Example</p>
+          <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+            "Review this business proposal from three perspectives:
+            1. As a venture capitalist evaluating investment potential
+            2. As a sceptical customer who has seen similar products fail
+            3. As a technical architect assessing feasibility
+            For each perspective, give 3 strengths and 3 concerns."
+          </p>
+        </div>
+      </section>
+
+      <!-- Constraint Setting -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. Strategic Constraints</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Constraints aren't limitations — they're creative tools. The right constraints force the AI to
+          produce exactly what you need.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-3 mb-4">
+          <div class="p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-sm text-(--color-text-primary)"><strong>Length:</strong> "In exactly 3 sentences..."</p>
+          </div>
+          <div class="p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-sm text-(--color-text-primary)"><strong>Audience:</strong> "Explain to a 10-year-old..."</p>
+          </div>
+          <div class="p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-sm text-(--color-text-primary)"><strong>Style:</strong> "In the style of a BBC News article..."</p>
+          </div>
+          <div class="p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-sm text-(--color-text-primary)"><strong>Exclusion:</strong> "Without using the word 'innovative'..."</p>
+          </div>
+          <div class="p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-sm text-(--color-text-primary)"><strong>Format:</strong> "As a pros/cons table..."</p>
+          </div>
+          <div class="p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-sm text-(--color-text-primary)"><strong>Honesty:</strong> "If you're not sure, say so..."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meta-prompting -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">6. Meta-Prompting (Ask AI to Help You Prompt)</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          One of the most powerful techniques: ask the AI to help you write a better prompt. The AI knows
+          what information it needs to give you the best answer.
+        </p>
+
+        <div class="p-4 rounded-xl bg-(--color-accent-glow) border border-(--color-accent)/20 mb-4">
+          <p class="text-sm text-(--color-text-primary) italic">
+            "I want to use AI to help me plan a website redesign. Before I give you the task,
+            ask me the 10 most important questions you'd need answered to give me the best possible
+            advice. Ask them one at a time."
+          </p>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          This flips the conversation — instead of you guessing what information to provide, the AI tells
+          you what it needs. The result is usually much better than going straight to the question.
+        </p>
+      </section>
+
+      <!-- Quick reference -->
+      <section class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Technique Quick Reference</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Technique</th>
+                <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Best For</th>
+                <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Key Phrase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-2 px-3 text-(--color-text-primary)">Chain-of-Thought</td>
+                <td class="py-2 px-3 text-(--color-text-secondary)">Maths, logic, analysis</td>
+                <td class="py-2 px-3 text-(--color-accent) font-mono text-xs">"Think step by step"</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-2 px-3 text-(--color-text-primary)">Few-Shot</td>
+                <td class="py-2 px-3 text-(--color-text-secondary)">Consistent formatting</td>
+                <td class="py-2 px-3 text-(--color-accent) font-mono text-xs">"Here are 2 examples..."</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-2 px-3 text-(--color-text-primary)">Structured Output</td>
+                <td class="py-2 px-3 text-(--color-text-secondary)">Data extraction</td>
+                <td class="py-2 px-3 text-(--color-accent) font-mono text-xs">"Return as a table..."</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-2 px-3 text-(--color-text-primary)">Persona Stacking</td>
+                <td class="py-2 px-3 text-(--color-text-secondary)">Balanced analysis</td>
+                <td class="py-2 px-3 text-(--color-accent) font-mono text-xs">"From 3 perspectives..."</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-2 px-3 text-(--color-text-primary)">Constraints</td>
+                <td class="py-2 px-3 text-(--color-text-secondary)">Focused output</td>
+                <td class="py-2 px-3 text-(--color-accent) font-mono text-xs">"In exactly 3 sentences..."</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 text-(--color-text-primary)">Meta-Prompting</td>
+                <td class="py-2 px-3 text-(--color-text-secondary)">Complex tasks</td>
+                <td class="py-2 px-3 text-(--color-accent) font-mono text-xs">"Ask me 10 questions first..."</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <div class="flex gap-3 mt-8">
+      <a
+        href={`${base}guides/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Guides
+      </a>
+      <a
+        href={`${base}glossary/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-accent)/10 text-(--color-accent) hover:bg-(--color-accent)/20 transition-colors text-sm"
+      >
+        AI Glossary
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </article>
+</BaseLayout>

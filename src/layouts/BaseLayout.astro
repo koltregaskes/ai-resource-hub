@@ -63,18 +63,24 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           </span>
         </a>
 
-        <div class="hidden md:flex items-center gap-8">
-          <a href={base} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
-            Home
-          </a>
+        <div class="hidden md:flex items-center gap-6">
           <a href={`${base}compare/llm/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
-            LLM Compare
+            Models
           </a>
           <a href={`${base}benchmarks/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
             Benchmarks
           </a>
           <a href={`${base}labs/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
             Labs
+          </a>
+          <a href={`${base}guides/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Guides
+          </a>
+          <a href={`${base}glossary/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Glossary
+          </a>
+          <a href={`${base}quiz/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Quiz
           </a>
           <a href={`${base}people/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
             People
@@ -115,9 +121,12 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
       <div id="mobile-menu" class="md:hidden hidden border-t border-(--color-border) bg-(--color-bg-secondary)">
         <div class="px-4 py-3 space-y-2">
           <a href={base} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Home</a>
-          <a href={`${base}compare/llm/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">LLM Compare</a>
+          <a href={`${base}compare/llm/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Models</a>
           <a href={`${base}benchmarks/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Benchmarks</a>
           <a href={`${base}labs/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Labs & Providers</a>
+          <a href={`${base}guides/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Guides</a>
+          <a href={`${base}glossary/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">AI Glossary</a>
+          <a href={`${base}quiz/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Which AI Should I Use?</a>
           <a href={`${base}people/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">People in AI</a>
         </div>
       </div>
@@ -128,17 +137,50 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
     </main>
 
     <footer class="border-t border-(--color-border) bg-(--color-bg-secondary) mt-auto">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Data</h3>
+            <div class="space-y-2">
+              <a href={`${base}compare/llm/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">LLM Comparison</a>
+              <a href={`${base}benchmarks/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Benchmarks</a>
+              <a href={`${base}labs/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Labs & Providers</a>
+              <a href={`${base}people/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">People in AI</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Learn</h3>
+            <div class="space-y-2">
+              <a href={`${base}guides/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Guides</a>
+              <a href={`${base}glossary/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI Glossary</a>
+              <a href={`${base}quiz/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Which AI Should I Use?</a>
+              <a href={`${base}guides/prompting-basics/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Prompting Basics</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Guides</h3>
+            <div class="space-y-2">
+              <a href={`${base}guides/choosing-an-ai-model/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Choosing an AI Model</a>
+              <a href={`${base}guides/advanced-prompting/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Advanced Prompting</a>
+              <a href={`${base}guides/understanding-ai-pricing/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Understanding Pricing</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">About</h3>
+            <div class="space-y-2">
+              <p class="text-xs text-(--color-text-muted)">Independent AI resource.</p>
+              <p class="text-xs text-(--color-text-muted)">Not affiliated with any AI provider.</p>
+              <p class="text-xs text-(--color-text-muted)">Prices updated weekly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-(--color-border)">
           <div class="flex items-center gap-2">
-            <img src={`${base}favicon.svg`} alt="" class="w-6 h-6" width="24" height="24" />
-            <span class="text-sm text-(--color-text-secondary)">The AI Resource Hub</span>
+            <img src={`${base}favicon.svg`} alt="" class="w-5 h-5" width="20" height="20" />
+            <span class="text-xs text-(--color-text-muted)">The AI Resource Hub</span>
           </div>
           <p class="text-xs text-(--color-text-muted)">
-            Independent AI model comparison. Prices updated weekly. Not affiliated with any AI provider.
-          </p>
-          <p class="text-xs text-(--color-text-muted)">
-            &copy; {new Date().getFullYear()} The AI Resource Hub
+            &copy; {new Date().getFullYear()} The AI Resource Hub. All data is provided for informational purposes only.
           </p>
         </div>
       </div>

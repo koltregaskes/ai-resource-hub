@@ -122,6 +122,18 @@ function initSchema(db: Database.Database): void {
       finished_at TEXT
     );
 
+    -- Glossary of AI terms
+    CREATE TABLE IF NOT EXISTS glossary (
+      id TEXT PRIMARY KEY,
+      term TEXT NOT NULL,
+      definition TEXT NOT NULL,
+      plain_english TEXT,
+      category TEXT NOT NULL DEFAULT 'general',
+      related_terms TEXT,
+      see_also TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
     -- Indexes
     CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);

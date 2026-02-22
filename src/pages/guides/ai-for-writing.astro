@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Using AI for Writing & Content Creation — The AI Resource Hub"
+  description="How to use AI as a writing partner for blog posts, emails, and creative work — without losing your voice."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}guides/`} class="hover:text-(--color-text-secondary) transition-colors">Guides</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI for Writing</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400">Practical</span>
+        <span class="text-xs text-(--color-text-muted)">10 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        Using AI for Writing & Content Creation
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        AI is a powerful writing partner — but only if you use it right. Here's how to get the most out of
+        AI for everything from emails to blog posts to creative fiction, without losing your voice.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">AI as Writing Partner, Not Replacement</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          The best approach to AI writing isn't "write this for me" — it's "help me write this better."
+          Use AI to brainstorm, outline, draft, edit, and refine. But keep your voice, your ideas, and your judgement in the driver's seat.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+            <h3 class="font-semibold text-green-400 text-sm mb-2">AI Excels At</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-1">
+              <li>Overcoming blank page syndrome</li>
+              <li>Generating outlines and structure</li>
+              <li>Rephrasing awkward sentences</li>
+              <li>Adjusting tone and formality</li>
+              <li>Expanding bullet points into prose</li>
+              <li>Proofreading and grammar</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl bg-red-500/5 border border-red-500/20">
+            <h3 class="font-semibold text-red-400 text-sm mb-2">AI Struggles With</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-1">
+              <li>Original opinions and hot takes</li>
+              <li>Personal anecdotes and experiences</li>
+              <li>Unique voice and personality</li>
+              <li>Factual accuracy (always verify!)</li>
+              <li>Nuanced humour and cultural context</li>
+              <li>Avoiding generic, corporate tone</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Workflow: The AI Writing Process</h2>
+        <div class="space-y-3">
+          <div class="flex gap-4 p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <span class="text-2xl font-bold text-(--color-accent) shrink-0">1</span>
+            <div>
+              <h3 class="font-semibold text-(--color-text-primary)">Brainstorm with AI</h3>
+              <p class="text-sm text-(--color-text-secondary) mt-1">"Give me 10 angles for a blog post about [topic]" — let AI generate ideas, then pick the best ones.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <span class="text-2xl font-bold text-(--color-accent) shrink-0">2</span>
+            <div>
+              <h3 class="font-semibold text-(--color-text-primary)">Outline Together</h3>
+              <p class="text-sm text-(--color-text-secondary) mt-1">"Create an outline for a post about [angle]. Include an intro, 4 main sections, and a conclusion." Then edit the outline before writing.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <span class="text-2xl font-bold text-(--color-accent) shrink-0">3</span>
+            <div>
+              <h3 class="font-semibold text-(--color-text-primary)">Draft Section by Section</h3>
+              <p class="text-sm text-(--color-text-secondary) mt-1">Write one section at a time. Give AI your key points as bullets and ask it to expand, or draft it yourself and ask AI to improve.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <span class="text-2xl font-bold text-(--color-accent) shrink-0">4</span>
+            <div>
+              <h3 class="font-semibold text-(--color-text-primary)">Edit and Refine</h3>
+              <p class="text-sm text-(--color-text-secondary) mt-1">"Make this more conversational" / "Shorten this paragraph" / "Remove cliches" / "Add a concrete example"</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <span class="text-2xl font-bold text-(--color-accent) shrink-0">5</span>
+            <div>
+              <h3 class="font-semibold text-(--color-text-primary)">Final Human Pass</h3>
+              <p class="text-sm text-(--color-text-secondary) mt-1">Always do a final read-through yourself. Add your personal touches, verify facts, and make sure it sounds like you — not like a robot.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Killer Prompts for Writing</h2>
+        <div class="space-y-3">
+          <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-1">Email</p>
+            <p class="text-sm text-(--color-text-secondary) italic">"Write a professional but warm email declining a meeting invitation. Keep it under 4 sentences. Suggest an alternative — a 15-minute call next week."</p>
+          </div>
+          <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-1">Blog post</p>
+            <p class="text-sm text-(--color-text-secondary) italic">"I'm writing a blog post about [topic]. Here are my 5 main points: [list them]. Write a compelling introduction that hooks the reader with a surprising statistic or question. Tone: conversational but authoritative. Audience: small business owners."</p>
+          </div>
+          <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-1">Editing</p>
+            <p class="text-sm text-(--color-text-secondary) italic">"Edit this text to be 30% shorter while keeping all key information. Remove filler words, cliches, and passive voice. Keep the tone casual: [paste text]"</p>
+          </div>
+          <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-1">Social media</p>
+            <p class="text-sm text-(--color-text-secondary) italic">"Turn this blog post into 5 LinkedIn posts. Each should be standalone, start with a hook, and end with a question to drive engagement. No hashtags. Max 150 words each."</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}guides/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Guides
+      </a>
+    </div>
+  </article>
+</BaseLayout>

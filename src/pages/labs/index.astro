@@ -30,7 +30,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {providers.map((provider) => (
-        <div class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors">
+        <a href={`${base}labs/${provider.id}/`} class="block p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors group">
           <div class="flex items-start gap-3 mb-4">
             <div
               class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm shrink-0"
@@ -40,7 +40,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
             </div>
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2">
-                <h2 class="text-lg font-semibold text-(--color-text-primary) truncate">{provider.name}</h2>
+                <h2 class="text-lg font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors truncate">{provider.name}</h2>
                 <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted) shrink-0">
                   {provider.modelCount} model{provider.modelCount !== 1 ? 's' : ''}
                 </span>
@@ -100,7 +100,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
               </div>
             )}
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </section>

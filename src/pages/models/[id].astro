@@ -1,0 +1,335 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllModelIds, getModelById, getModelBenchmarks, getModelPriceHistory } from '../../db/queries';
+
+export function getStaticPaths() {
+  const ids = getAllModelIds();
+  return ids.map((id) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+const model = getModelById(id);
+
+if (!model) {
+  return Astro.redirect('/404');
+}
+
+const benchmarks = getModelBenchmarks(id);
+const priceHistory = getModelPriceHistory(id);
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Computed values
+const inputPrice = model.input_price;
+const outputPrice = model.output_price;
+const blendedCostPer1M = (inputPrice + 3 * outputPrice) / 4;
+const valueScore = blendedCostPer1M > 0
+  ? Math.round((model.quality_score / blendedCostPer1M) * 10)
+  : 0;
+const modalities = model.modality.split(',').map((m: string) => m.trim());
+const releaseDateFormatted = model.released
+  ? new Date(model.released).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  : 'Unknown';
+
+// Format price
+function formatPrice(price: number): string {
+  if (price === 0) return 'Free';
+  if (price < 0.01) return `$${price.toFixed(4)}`;
+  if (price < 1) return `$${price.toFixed(3)}`;
+  return `$${price.toFixed(2)}`;
+}
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+
+// Structured data
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: model.name,
+  applicationCategory: 'AI Language Model',
+  operatingSystem: 'Cloud',
+  offers: {
+    '@type': 'Offer',
+    price: blendedCostPer1M.toFixed(2),
+    priceCurrency: 'USD',
+    description: `Input: ${formatPrice(inputPrice)}/1M tokens, Output: ${formatPrice(outputPrice)}/1M tokens`,
+  },
+  author: {
+    '@type': 'Organization',
+    name: model.provider_name,
+  },
+};
+---
+
+<BaseLayout
+  title={`${model.name} — The AI Resource Hub`}
+  description={`${model.name} by ${model.provider_name}. Pricing: ${formatPrice(inputPrice)}/${formatPrice(outputPrice)} per 1M tokens. Context: ${formatTokens(model.context_window)} tokens. Quality score: ${model.quality_score}/100.`}
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}compare/llm/`} class="hover:text-(--color-text-secondary) transition-colors">LLM Compare</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">{model.name}</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row items-start gap-4 mb-8">
+      <div
+        class="w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold text-lg shrink-0"
+        style={`background-color: ${model.provider_colour}`}
+      >
+        {model.provider_name.slice(0, 2).toUpperCase()}
+      </div>
+      <div class="flex-1">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-1">
+          {model.name}
+        </h1>
+        <p class="text-(--color-text-secondary)">
+          by <a
+            href={`${base}labs/${model.provider_id}/`}
+            class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+          >{model.provider_name}</a>
+        </p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          {modalities.map((mod: string) => (
+            <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) capitalize">
+              {mod}
+            </span>
+          ))}
+          {model.open_source === 1 && (
+            <span class="badge badge-oss">Open Source</span>
+          )}
+          {model.api_available === 1 && (
+            <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-accent-glow) text-(--color-accent)">
+              API Available
+            </span>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Input Price</p>
+        <p class="text-xl font-bold text-(--color-text-primary)">{formatPrice(inputPrice)}</p>
+        <p class="text-xs text-(--color-text-muted)">per 1M tokens</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Output Price</p>
+        <p class="text-xl font-bold text-(--color-text-primary)">{formatPrice(outputPrice)}</p>
+        <p class="text-xs text-(--color-text-muted)">per 1M tokens</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Context Window</p>
+        <p class="text-xl font-bold text-(--color-text-primary)">{formatTokens(model.context_window)}</p>
+        <p class="text-xs text-(--color-text-muted)">tokens</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Max Output</p>
+        <p class="text-xl font-bold text-(--color-text-primary)">{formatTokens(model.max_output)}</p>
+        <p class="text-xs text-(--color-text-muted)">tokens</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Quality Score</p>
+        <p class="text-xl font-bold text-(--color-accent)">{model.quality_score}</p>
+        <p class="text-xs text-(--color-text-muted)">out of 100</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Value Score</p>
+        <p class="text-xl font-bold text-(--color-success)">{valueScore}</p>
+        <p class="text-xs text-(--color-text-muted)">quality per $</p>
+      </div>
+    </div>
+
+    <!-- Details row -->
+    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+      <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-lg font-semibold text-(--color-text-primary) mb-4">Details</h2>
+        <dl class="space-y-3">
+          <div class="flex justify-between">
+            <dt class="text-sm text-(--color-text-muted)">Provider</dt>
+            <dd class="text-sm text-(--color-text-primary)">
+              <a href={`${base}labs/${model.provider_id}/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                {model.provider_name}
+              </a>
+            </dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-sm text-(--color-text-muted)">Released</dt>
+            <dd class="text-sm text-(--color-text-primary)">{releaseDateFormatted}</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-sm text-(--color-text-muted)">Speed</dt>
+            <dd class="text-sm text-(--color-text-primary)">{model.speed > 0 ? `${model.speed} tok/s` : 'N/A'}</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-sm text-(--color-text-muted)">Open Source</dt>
+            <dd class="text-sm text-(--color-text-primary)">{model.open_source === 1 ? 'Yes' : 'No'}</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="text-sm text-(--color-text-muted)">API Available</dt>
+            <dd class="text-sm text-(--color-text-primary)">{model.api_available === 1 ? 'Yes' : 'No'}</dd>
+          </div>
+          {model.pricing_source && (
+            <div class="flex justify-between">
+              <dt class="text-sm text-(--color-text-muted)">Pricing Source</dt>
+              <dd class="text-sm text-(--color-text-primary)">{model.pricing_source}</dd>
+            </div>
+          )}
+          {model.pricing_updated && (
+            <div class="flex justify-between">
+              <dt class="text-sm text-(--color-text-muted)">Price Updated</dt>
+              <dd class="text-sm text-(--color-text-primary)">
+                {new Date(model.pricing_updated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+              </dd>
+            </div>
+          )}
+        </dl>
+      </div>
+
+      {model.notes && (
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h2 class="text-lg font-semibold text-(--color-text-primary) mb-4">Notes</h2>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">{model.notes}</p>
+        </div>
+      )}
+
+      {!model.notes && (
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h2 class="text-lg font-semibold text-(--color-text-primary) mb-4">Pricing Breakdown</h2>
+          <dl class="space-y-3">
+            <div class="flex justify-between">
+              <dt class="text-sm text-(--color-text-muted)">Input (1K tokens)</dt>
+              <dd class="text-sm text-(--color-text-primary)">{formatPrice(inputPrice / 1000)}</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-sm text-(--color-text-muted)">Output (1K tokens)</dt>
+              <dd class="text-sm text-(--color-text-primary)">{formatPrice(outputPrice / 1000)}</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-sm text-(--color-text-muted)">Blended (1M tokens)</dt>
+              <dd class="text-sm text-(--color-text-primary)">{formatPrice(blendedCostPer1M)}</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-sm text-(--color-text-muted)">Est. cost per 1K requests</dt>
+              <dd class="text-sm text-(--color-text-primary)">
+                {formatPrice(((inputPrice * 2000 + outputPrice * 1000) / 1_000_000) * 1000)}
+              </dd>
+            </div>
+          </dl>
+          <p class="text-xs text-(--color-text-muted) mt-3">
+            Estimate assumes ~2K input tokens and ~1K output tokens per request.
+          </p>
+        </div>
+      )}
+    </div>
+
+    <!-- Benchmarks -->
+    {benchmarks.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Benchmark Scores</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {benchmarks.map((b) => (
+            <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-sm font-semibold text-(--color-text-primary)">{b.benchmark_name}</h3>
+                <span class="text-lg font-bold text-(--color-accent)">{b.score}</span>
+              </div>
+              <div class="w-full h-2 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
+                <div
+                  class="h-full rounded-full"
+                  style={`width: ${Math.min(b.score, 100)}%; background-color: var(--color-accent);`}
+                />
+              </div>
+              {b.source && (
+                <p class="text-xs text-(--color-text-muted) mt-1.5">Source: {b.source}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Price History -->
+    {priceHistory.length > 1 && (
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Price History</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Date</th>
+                <th class="text-right py-2 px-3 text-(--color-text-muted) font-medium">Input $/1M</th>
+                <th class="text-right py-2 px-3 text-(--color-text-muted) font-medium">Output $/1M</th>
+                <th class="text-right py-2 px-3 text-(--color-text-muted) font-medium">Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              {priceHistory.map((ph, i) => {
+                const prevBlended = i > 0
+                  ? (priceHistory[i - 1].input_price + 3 * priceHistory[i - 1].output_price) / 4
+                  : null;
+                const currBlended = (ph.input_price + 3 * ph.output_price) / 4;
+                const pctChange = prevBlended
+                  ? ((currBlended - prevBlended) / prevBlended * 100)
+                  : null;
+
+                return (
+                  <tr class="border-b border-(--color-border)/50">
+                    <td class="py-2 px-3 text-(--color-text-secondary)">
+                      {new Date(ph.recorded_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                    </td>
+                    <td class="py-2 px-3 text-right text-(--color-text-primary)">{formatPrice(ph.input_price)}</td>
+                    <td class="py-2 px-3 text-right text-(--color-text-primary)">{formatPrice(ph.output_price)}</td>
+                    <td class="py-2 px-3 text-right">
+                      {pctChange !== null ? (
+                        <span class={pctChange < 0 ? 'text-(--color-success)' : pctChange > 0 ? 'text-(--color-danger)' : 'text-(--color-text-muted)'}>
+                          {pctChange > 0 ? '+' : ''}{pctChange.toFixed(1)}%
+                        </span>
+                      ) : (
+                        <span class="text-(--color-text-muted)">—</span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    <!-- Back to compare -->
+    <div class="flex gap-3">
+      <a
+        href={`${base}compare/llm/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to LLM Compare
+      </a>
+      <a
+        href={`${base}labs/${model.provider_id}/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-accent)/10 text-(--color-accent) hover:bg-(--color-accent)/20 transition-colors text-sm"
+      >
+        View all {model.provider_name} models
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>
