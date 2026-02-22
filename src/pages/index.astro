@@ -133,6 +133,63 @@ const dataCategories = [
   },
 ];
 
+const toolsAndFeatures = [
+  {
+    title: 'Head-to-Head Compare',
+    description: 'Select 2–4 models and compare them side by side across every metric.',
+    href: `${base}compare/head-to-head/`,
+    modelCount: models.length,
+    icon: '⚔️',
+    available: true,
+    countLabel: 'models to compare',
+  },
+  {
+    title: 'Model Leaderboard',
+    description: 'Ranked by quality, value, and price. See which LLM comes out on top.',
+    href: `${base}leaderboard/`,
+    modelCount: 20,
+    icon: '🏆',
+    available: true,
+    countLabel: 'top models ranked',
+  },
+  {
+    title: 'Coding Models',
+    description: 'Best AI models for software development — ranked by HumanEval, SWE-bench, and more.',
+    href: `${base}coding/`,
+    modelCount: models.filter(m => m.qualityScore > 0).length,
+    icon: '💻',
+    available: true,
+    countLabel: 'models evaluated',
+  },
+  {
+    title: 'Pricing Calculator',
+    description: 'Estimate your monthly API costs across every model with usage presets.',
+    href: `${base}calculator/`,
+    modelCount: models.length,
+    icon: '🧮',
+    available: true,
+    countLabel: 'models compared',
+  },
+  {
+    title: 'Pricing Trends',
+    description: 'How AI model pricing has dropped 90%+ in two years — charts, milestones, and analysis.',
+    href: `${base}pricing-trends/`,
+    modelCount: models.filter(m => m.inputPrice > 0).length,
+    icon: '📉',
+    available: true,
+    countLabel: 'paid models tracked',
+  },
+  {
+    title: 'Open Source Models',
+    description: 'Directory of open-source and open-weight AI models you can self-host and fine-tune.',
+    href: `${base}open-source/`,
+    modelCount: models.filter(m => m.openSource).length,
+    icon: '🔓',
+    available: true,
+    countLabel: 'open source models',
+  },
+];
+
 const learnCategories = [
   {
     title: 'AI Guides',
@@ -185,6 +242,18 @@ const learnCategories = [
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {dataCategories.map((cat) => (
+        <CategoryCard {...cat} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Tools & Features -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Tools & Analysis</h2>
+    <p class="text-sm text-(--color-text-secondary) mb-8">Interactive tools for comparing, calculating, and understanding AI models</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {toolsAndFeatures.map((cat) => (
         <CategoryCard {...cat} />
       ))}
     </div>

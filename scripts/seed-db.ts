@@ -232,6 +232,13 @@ const providers = [
   ['hailuo', 'Hailuo AI', '#00bcd4', 'https://hailuoai.com', null, null, 'MiniMax\'s consumer video generation platform.', '2024-01-01', 'Shanghai, China', 'Yan Junjie', 'MiniMax subsidiary'],
   ['veo', 'Google Veo', '#34a853', 'https://deepmind.google/technologies/veo', 'https://status.cloud.google.com', null, 'Google DeepMind\'s video generation model family.', '2024-05-01', 'London, UK', 'Demis Hassabis', 'Alphabet subsidiary'],
 
+  // Additional LLM providers
+  ['microsoft', 'Microsoft', '#00a4ef', 'https://azure.microsoft.com/en-us/products/phi', null, 'https://learn.microsoft.com/en-us/azure/ai-services/', 'Creator of Phi small language models. Azure AI and GitHub Copilot.', '1975-04-04', 'Redmond, WA', 'Satya Nadella', 'Public company'],
+  ['01ai', '01.AI', '#ff3366', 'https://www.lingyiwanwu.com/en', null, null, 'Chinese AI company founded by Kai-Fu Lee. Creator of Yi model series.', '2023-03-01', 'Beijing, China', 'Kai-Fu Lee', '$1B+'],
+  ['nvidia', 'NVIDIA', '#76b900', 'https://www.nvidia.com/en-us/ai/', null, 'https://docs.nvidia.com/nim/', 'Leading GPU maker and AI infrastructure provider. Creator of Nemotron models.', '1993-01-01', 'Santa Clara, CA', 'Jensen Huang', 'Public company'],
+  ['inflection', 'Inflection AI', '#ff6b35', 'https://inflection.ai', null, 'https://docs.inflection.ai', 'Creator of Pi personal AI assistant and Inflection models.', '2022-01-01', 'Palo Alto, CA', 'Sean White', '$1.5B+'],
+  ['ssi', 'Safe Superintelligence', '#000000', 'https://ssi.inc', null, null, 'AI safety startup founded by Ilya Sutskever. Focused solely on safe superintelligence.', '2024-06-19', 'Palo Alto, CA', 'Ilya Sutskever', '$1B+'],
+
   // Audio, speech, voice, and sound providers
   ['elevenlabs', 'ElevenLabs', '#2563eb', 'https://elevenlabs.io', 'https://status.elevenlabs.io', 'https://elevenlabs.io/docs', 'Leading AI voice synthesis and cloning platform. Realistic speech generation.', '2022-01-01', 'New York, NY', 'Mati Staniszewski', '$101M+'],
   ['assemblyai', 'AssemblyAI', '#ef4444', 'https://www.assemblyai.com', null, 'https://www.assemblyai.com/docs', 'AI speech-to-text and audio intelligence API platform.', '2017-01-01', 'San Francisco, CA', 'Dylan Fox', '$115M'],
@@ -371,6 +378,47 @@ const models = [
   // ── Reka ──
   ['reka-core', 'Reka Core', 'reka', 3.00, 15.00, 128000, 4096, 40, 78, '2024-04-15', 0, 'text,vision,audio,video', 1, 'Natively multimodal (text, image, video, audio)', 'reka.ai/pricing'],
   ['reka-flash-3', 'Reka Flash 3', 'reka', 0.35, 0.35, 128000, 4096, 80, 74, '2025-06-01', 0, 'text,vision,audio,video', 1, 'Fast/cheap multimodal', 'reka.ai/pricing'],
+
+  // ── OpenAI (missing models) ──
+  ['gpt-4.5', 'GPT-4.5', 'openai', 75.00, 150.00, 128000, 16384, 50, 88, '2025-02-27', 0, 'text,vision', 1, 'Codenamed Orion; improved EQ and reduced hallucinations; deprecated Aug 2025', 'openai.com/api/pricing'],
+  ['o1', 'o1', 'openai', 15.00, 60.00, 200000, 100000, 40, 91, '2024-12-17', 0, 'text,vision', 1, 'First-gen reasoning model; chain-of-thought', 'openai.com/api/pricing'],
+  ['o1-mini', 'o1-mini', 'openai', 3.00, 12.00, 128000, 65536, 80, 85, '2024-09-12', 0, 'text', 1, 'Cost-efficient reasoning; excels at STEM', 'openai.com/api/pricing'],
+
+  // ── Anthropic (missing models) ──
+  ['claude-3.5-sonnet', 'Claude 3.5 Sonnet', 'anthropic', 3.00, 15.00, 200000, 8192, 80, 89, '2024-10-22', 0, 'text,vision', 1, 'Updated Oct 2024; computer use beta; SWE-bench 49%', 'anthropic.com/pricing'],
+  ['claude-3-opus', 'Claude 3 Opus', 'anthropic', 15.00, 75.00, 200000, 4096, 30, 85, '2024-03-04', 0, 'text,vision', 1, 'Previous generation flagship; superseded by Claude 4', 'anthropic.com/pricing'],
+  ['claude-3.7-sonnet', 'Claude 3.7 Sonnet', 'anthropic', 3.00, 15.00, 200000, 64000, 70, 90, '2025-02-24', 0, 'text,vision', 1, 'First hybrid reasoning model; extended thinking', 'anthropic.com/pricing'],
+
+  // ── Google (missing models) ──
+  ['gemini-2.0-flash-lite', 'Gemini 2.0 Flash Lite', 'google', 0.075, 0.30, 1048576, 8192, 250, 75, '2025-02-25', 0, 'text,vision', 1, 'Ultra-fast and cheap; Gemini 2.0 tier', 'ai.google.dev/pricing'],
+  ['gemini-1.5-pro', 'Gemini 1.5 Pro', 'google', 1.25, 5.00, 2097152, 8192, 60, 83, '2024-02-15', 0, 'text,vision,audio,video', 1, '2M context window; strong multimodal', 'ai.google.dev/pricing'],
+  ['gemini-1.5-flash', 'Gemini 1.5 Flash', 'google', 0.075, 0.30, 1048576, 8192, 150, 78, '2024-05-24', 0, 'text,vision,audio', 1, 'Previous gen fast model; widely adopted', 'ai.google.dev/pricing'],
+
+  // ── Meta (missing models) ──
+  ['llama-3.1-70b', 'Llama 3.1 70B', 'meta', 0.18, 0.50, 131072, 32768, 80, 77, '2024-07-23', 1, 'text', 1, 'Strong open-weight 70B model', 'together.ai/pricing'],
+  ['llama-3.1-8b', 'Llama 3.1 8B', 'meta', 0.05, 0.08, 131072, 32768, 200, 68, '2024-07-23', 1, 'text', 1, 'Smallest Llama 3.1; edge deployment', 'together.ai/pricing'],
+
+  // ── DeepSeek (missing models) ──
+  ['deepseek-v2.5', 'DeepSeek V2.5', 'deepseek', 0.14, 0.28, 128000, 8192, 50, 81, '2024-09-05', 1, 'text', 1, 'Merged chat and coder capabilities', 'deepseek.com/pricing'],
+
+  // ── Mistral (missing models) ──
+  ['mistral-large-2', 'Mistral Large 2', 'mistral', 2.00, 6.00, 128000, 16384, 60, 82, '2024-07-24', 1, 'text', 1, '123B params; 80+ coding languages; competitive with GPT-4o', 'mistral.ai/pricing'],
+
+  // ── xAI (missing models) ──
+  ['grok-2', 'Grok 2', 'xai', 2.00, 10.00, 131072, 32768, 70, 83, '2024-08-13', 0, 'text,vision', 1, 'Previous gen flagship; Colossus trained', 'docs.x.ai'],
+
+  // ── Microsoft / Phi ──
+  ['phi-4', 'Phi-4', 'microsoft', 0.07, 0.14, 16384, 16384, 120, 78, '2024-12-12', 1, 'text', 1, '14B params; excels at math reasoning; MIT license', 'azure.microsoft.com'],
+  ['phi-4-multimodal', 'Phi-4 Multimodal', 'microsoft', 0.10, 0.20, 128000, 16384, 100, 76, '2025-02-26', 1, 'text,vision,audio', 1, '5.6B params; text, image, and audio input', 'azure.microsoft.com'],
+  ['phi-4-reasoning', 'Phi-4 Reasoning', 'microsoft', 0.07, 0.14, 32768, 32768, 80, 82, '2025-05-01', 1, 'text', 1, '14B params with chain-of-thought; approaches DeepSeek R1', 'azure.microsoft.com'],
+
+  // ── Alibaba / Qwen (missing models) ──
+  ['qwen-2.5-coder-32b', 'Qwen 2.5 Coder 32B', 'alibaba', 0.07, 0.14, 131072, 16384, 80, 82, '2024-11-12', 1, 'text', 1, 'SOTA open-source code model; matches GPT-4o on coding', 'together.ai/pricing'],
+  ['qwen3-30b', 'Qwen3 30B', 'alibaba', 0.10, 0.30, 131072, 32768, 80, 82, '2025-04-29', 1, 'text', 1, 'MoE with 30B total / 3B active; thinking mode', 'together.ai/pricing'],
+  ['qwen3-32b', 'Qwen3 32B', 'alibaba', 0.10, 0.30, 131072, 32768, 80, 83, '2025-04-29', 1, 'text', 1, 'Dense 32B; strong reasoning and multilingual', 'together.ai/pricing'],
+
+  // ── NVIDIA ──
+  ['nemotron-70b', 'Nemotron 70B', 'nvidia', 0.20, 0.40, 131072, 16384, 60, 80, '2024-10-01', 1, 'text', 1, 'Llama 3.1 based; RLHF fine-tuned for helpfulness', 'build.nvidia.com'],
 ];
 
 const insertModels = db.transaction(() => {
@@ -813,6 +861,206 @@ const scores: [string, string, number, string, string][] = [
   ['o3', 'mgsm', 93.0, 'OpenAI', '2025-04-16'],
   ['gpt-4o', 'mgsm', 86.5, 'OpenAI', '2024-05-13'],
   ['llama-4-maverick', 'mgsm', 84.0, 'Meta', '2025-04-05'],
+
+  // ─── GPT-4.5 ──────────────────────────────────────────────
+  ['gpt-4.5', 'mmlu', 90.2, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'gpqa-diamond', 62.0, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'humaneval', 91.0, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'simpleqa', 62.5, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'chatbot-arena-elo', 1300, 'LMSYS', '2025-03-15'],
+  ['gpt-4.5', 'math-500', 82.0, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'mt-bench', 8.8, 'OpenAI', '2025-02-27'],
+
+  // ─── o1 ───────────────────────────────────────────────────
+  ['o1', 'mmlu', 91.8, 'OpenAI', '2024-12-17'],
+  ['o1', 'gpqa-diamond', 78.0, 'OpenAI', '2024-12-17'],
+  ['o1', 'math-500', 96.4, 'OpenAI', '2024-12-17'],
+  ['o1', 'humaneval', 94.0, 'OpenAI', '2024-12-17'],
+  ['o1', 'swe-bench-verified', 48.9, 'OpenAI', '2024-12-17'],
+  ['o1', 'chatbot-arena-elo', 1335, 'LMSYS', '2025-01-15'],
+
+  // ─── o1-mini ──────────────────────────────────────────────
+  ['o1-mini', 'math-500', 90.0, 'OpenAI', '2024-09-12'],
+  ['o1-mini', 'humaneval', 92.4, 'OpenAI', '2024-09-12'],
+  ['o1-mini', 'gpqa-diamond', 60.0, 'OpenAI', '2024-09-12'],
+
+  // ─── Claude 3.5 Sonnet (Oct) ──────────────────────────────
+  ['claude-3.5-sonnet', 'mmlu', 88.7, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'gpqa-diamond', 65.0, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'humaneval', 93.7, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'swe-bench-verified', 49.0, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'math-500', 78.3, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'chatbot-arena-elo', 1285, 'LMSYS', '2024-11-01'],
+  ['claude-3.5-sonnet', 'mt-bench', 8.7, 'Anthropic', '2024-10-22'],
+
+  // ─── Claude 3.7 Sonnet ────────────────────────────────────
+  ['claude-3.7-sonnet', 'swe-bench-verified', 62.3, 'Anthropic', '2025-02-24'],
+  ['claude-3.7-sonnet', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-03-01'],
+  ['claude-3.7-sonnet', 'gpqa-diamond', 68.0, 'Anthropic', '2025-02-24'],
+  ['claude-3.7-sonnet', 'math-500', 86.0, 'Anthropic', '2025-02-24'],
+
+  // ─── Claude 3 Opus ────────────────────────────────────────
+  ['claude-3-opus', 'mmlu', 86.8, 'Anthropic', '2024-03-04'],
+  ['claude-3-opus', 'gpqa-diamond', 50.4, 'Anthropic', '2024-03-04'],
+  ['claude-3-opus', 'humaneval', 84.9, 'Anthropic', '2024-03-04'],
+  ['claude-3-opus', 'math-500', 60.1, 'Anthropic', '2024-03-04'],
+  ['claude-3-opus', 'chatbot-arena-elo', 1253, 'LMSYS', '2024-06-01'],
+
+  // ─── Claude Opus 4.5 ─────────────────────────────────────
+  ['claude-opus-4.5', 'swe-bench-verified', 75.0, 'Anthropic', '2025-11-24'],
+  ['claude-opus-4.5', 'chatbot-arena-elo', 1355, 'LMSYS', '2025-12-01'],
+  ['claude-opus-4.5', 'gpqa-diamond', 78.0, 'Anthropic', '2025-11-24'],
+  ['claude-opus-4.5', 'humaneval', 95.5, 'Anthropic', '2025-11-24'],
+
+  // ─── Claude Sonnet 4.5 ───────────────────────────────────
+  ['claude-sonnet-4.5', 'swe-bench-verified', 68.0, 'Anthropic', '2025-09-29'],
+  ['claude-sonnet-4.5', 'chatbot-arena-elo', 1340, 'LMSYS', '2025-10-15'],
+  ['claude-sonnet-4.5', 'gpqa-diamond', 72.0, 'Anthropic', '2025-09-29'],
+
+  // ─── Claude Haiku 4.5 ────────────────────────────────────
+  ['claude-haiku-4.5', 'chatbot-arena-elo', 1295, 'LMSYS', '2025-11-01'],
+  ['claude-haiku-4.5', 'swe-bench-verified', 52.0, 'Anthropic', '2025-10-15'],
+  ['claude-haiku-4.5', 'humaneval', 90.0, 'Anthropic', '2025-10-15'],
+
+  // ─── Gemini 3 Pro ─────────────────────────────────────────
+  ['gemini-3-pro', 'chatbot-arena-elo', 1362, 'LMSYS', '2025-12-01'],
+  ['gemini-3-pro', 'swe-bench-verified', 70.0, 'Google', '2025-11-18'],
+  ['gemini-3-pro', 'gpqa-diamond', 80.0, 'Google', '2025-11-18'],
+
+  // ─── Gemini 3 Flash ───────────────────────────────────────
+  ['gemini-3-flash', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-12-01'],
+  ['gemini-3-flash', 'swe-bench-verified', 55.0, 'Google', '2025-11-18'],
+  ['gemini-3-flash', 'humaneval', 89.0, 'Google', '2025-11-18'],
+
+  // ─── Gemini 1.5 Pro ───────────────────────────────────────
+  ['gemini-1.5-pro', 'mmlu', 85.9, 'Google', '2024-02-15'],
+  ['gemini-1.5-pro', 'humaneval', 84.1, 'Google', '2024-02-15'],
+  ['gemini-1.5-pro', 'math-500', 67.7, 'Google', '2024-02-15'],
+  ['gemini-1.5-pro', 'chatbot-arena-elo', 1260, 'LMSYS', '2024-06-01'],
+
+  // ─── DeepSeek R1 0528 ─────────────────────────────────────
+  ['deepseek-r1-0528', 'gpqa-diamond', 76.0, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'math-500', 97.8, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'aime-2025', 87.5, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'humaneval', 94.0, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'swe-bench-verified', 57.6, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'chatbot-arena-elo', 1328, 'LMSYS', '2025-06-15'],
+
+  // ─── Grok 3 Mini ──────────────────────────────────────────
+  ['grok-3-mini', 'chatbot-arena-elo', 1305, 'LMSYS', '2025-07-01'],
+  ['grok-3-mini', 'math-500', 85.0, 'xAI', '2025-06-10'],
+  ['grok-3-mini', 'humaneval', 88.0, 'xAI', '2025-06-10'],
+
+  // ─── Grok 2 ───────────────────────────────────────────────
+  ['grok-2', 'mmlu', 87.5, 'xAI', '2024-08-13'],
+  ['grok-2', 'chatbot-arena-elo', 1270, 'LMSYS', '2024-09-01'],
+
+  // ─── Grok 4 Fast ──────────────────────────────────────────
+  ['grok-4-fast', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-10-01'],
+  ['grok-4-fast', 'humaneval', 90.0, 'xAI', '2025-09-19'],
+
+  // ─── GPT-5 Pro ────────────────────────────────────────────
+  ['gpt-5-pro', 'gpqa-diamond', 88.0, 'OpenAI', '2025-10-06'],
+  ['gpt-5-pro', 'swe-bench-verified', 76.5, 'OpenAI', '2025-10-06'],
+  ['gpt-5-pro', 'math-500', 97.5, 'OpenAI', '2025-10-06'],
+  ['gpt-5-pro', 'chatbot-arena-elo', 1360, 'LMSYS', '2025-10-15'],
+
+  // ─── GPT-4.1 Mini ─────────────────────────────────────────
+  ['gpt-4.1-mini', 'mmlu', 87.5, 'OpenAI', '2025-04-14'],
+  ['gpt-4.1-mini', 'humaneval', 90.5, 'OpenAI', '2025-04-14'],
+  ['gpt-4.1-mini', 'swe-bench-verified', 42.0, 'OpenAI', '2025-04-14'],
+  ['gpt-4.1-mini', 'chatbot-arena-elo', 1275, 'LMSYS', '2025-05-01'],
+
+  // ─── o3-mini ──────────────────────────────────────────────
+  ['o3-mini', 'gpqa-diamond', 75.0, 'OpenAI', '2025-01-31'],
+  ['o3-mini', 'math-500', 94.0, 'OpenAI', '2025-01-31'],
+  ['o3-mini', 'humaneval', 94.5, 'OpenAI', '2025-01-31'],
+  ['o3-mini', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-02-15'],
+
+  // ─── Llama 4 Scout ────────────────────────────────────────
+  ['llama-4-scout', 'mmlu', 83.0, 'Meta', '2025-04-05'],
+  ['llama-4-scout', 'humaneval', 85.0, 'Meta', '2025-04-05'],
+  ['llama-4-scout', 'chatbot-arena-elo', 1275, 'LMSYS', '2025-05-01'],
+
+  // ─── Llama 3.3 70B ────────────────────────────────────────
+  ['llama-3.3-70b', 'mmlu', 86.0, 'Meta', '2024-12-06'],
+  ['llama-3.3-70b', 'humaneval', 88.4, 'Meta', '2024-12-06'],
+  ['llama-3.3-70b', 'chatbot-arena-elo', 1262, 'LMSYS', '2025-01-01'],
+  ['llama-3.3-70b', 'gpqa-diamond', 50.7, 'Meta', '2024-12-06'],
+
+  // ─── Llama 3.1 405B ───────────────────────────────────────
+  ['llama-3.1-405b', 'mmlu', 88.6, 'Meta', '2024-07-23'],
+  ['llama-3.1-405b', 'humaneval', 89.0, 'Meta', '2024-07-23'],
+  ['llama-3.1-405b', 'gpqa-diamond', 51.1, 'Meta', '2024-07-23'],
+  ['llama-3.1-405b', 'chatbot-arena-elo', 1253, 'LMSYS', '2024-08-01'],
+
+  // ─── Qwen3 Max ────────────────────────────────────────────
+  ['qwen3-max', 'chatbot-arena-elo', 1335, 'LMSYS', '2025-10-01'],
+  ['qwen3-max', 'gpqa-diamond', 72.0, 'Alibaba', '2025-09-01'],
+  ['qwen3-max', 'humaneval', 93.0, 'Alibaba', '2025-09-01'],
+  ['qwen3-max', 'math-500', 93.5, 'Alibaba', '2025-09-01'],
+
+  // ─── Mistral Large 3 ─────────────────────────────────────
+  ['mistral-large-3', 'mmlu', 87.0, 'Mistral', '2025-06-01'],
+  ['mistral-large-3', 'gpqa-diamond', 58.0, 'Mistral', '2025-06-01'],
+  ['mistral-large-3', 'humaneval', 89.5, 'Mistral', '2025-06-01'],
+  ['mistral-large-3', 'swe-bench-verified', 45.0, 'Mistral', '2025-06-01'],
+
+  // ─── Phi-4 ────────────────────────────────────────────────
+  ['phi-4', 'mmlu', 84.8, 'Microsoft', '2024-12-12'],
+  ['phi-4', 'gpqa-diamond', 56.1, 'Microsoft', '2024-12-12'],
+  ['phi-4', 'humaneval', 82.6, 'Microsoft', '2024-12-12'],
+  ['phi-4', 'math-500', 80.4, 'Microsoft', '2024-12-12'],
+
+  // ─── Phi-4 Reasoning ─────────────────────────────────────
+  ['phi-4-reasoning', 'math-500', 94.3, 'Microsoft', '2025-05-01'],
+  ['phi-4-reasoning', 'gpqa-diamond', 65.8, 'Microsoft', '2025-05-01'],
+  ['phi-4-reasoning', 'humaneval', 89.0, 'Microsoft', '2025-05-01'],
+  ['phi-4-reasoning', 'aime-2025', 75.3, 'Microsoft', '2025-05-01'],
+
+  // ─── GPT-4o Mini ──────────────────────────────────────────
+  ['gpt-4o-mini', 'mmlu', 82.0, 'OpenAI', '2024-07-18'],
+  ['gpt-4o-mini', 'humaneval', 87.2, 'OpenAI', '2024-07-18'],
+  ['gpt-4o-mini', 'chatbot-arena-elo', 1248, 'LMSYS', '2024-08-01'],
+  ['gpt-4o-mini', 'math-500', 70.2, 'OpenAI', '2024-07-18'],
+
+  // ─── Claude 3.5 Haiku ─────────────────────────────────────
+  ['claude-haiku-3.5', 'mmlu', 83.0, 'Anthropic', '2024-10-22'],
+  ['claude-haiku-3.5', 'humaneval', 88.1, 'Anthropic', '2024-10-22'],
+  ['claude-haiku-3.5', 'chatbot-arena-elo', 1255, 'LMSYS', '2024-11-15'],
+  ['claude-haiku-3.5', 'math-500', 69.3, 'Anthropic', '2024-10-22'],
+
+  // ─── Qwen 2.5 Coder 32B ──────────────────────────────────
+  ['qwen-2.5-coder-32b', 'humaneval', 92.7, 'Alibaba', '2024-11-12'],
+  ['qwen-2.5-coder-32b', 'aider-polyglot', 73.7, 'Alibaba', '2024-11-12'],
+
+  // ─── Command A ────────────────────────────────────────────
+  ['command-a', 'mmlu', 83.5, 'Cohere', '2025-03-13'],
+  ['command-a', 'humaneval', 85.0, 'Cohere', '2025-03-13'],
+
+  // ─── Nemotron 70B ─────────────────────────────────────────
+  ['nemotron-70b', 'mmlu', 85.0, 'NVIDIA', '2024-10-01'],
+  ['nemotron-70b', 'chatbot-arena-elo', 1265, 'LMSYS', '2024-11-01'],
+
+  // ─── Gemini 2.5 Flash Lite ────────────────────────────────
+  ['gemini-2.5-flash-lite', 'mmlu', 80.0, 'Google', '2025-05-01'],
+  ['gemini-2.5-flash-lite', 'humaneval', 82.0, 'Google', '2025-05-01'],
+  ['gemini-2.5-flash-lite', 'chatbot-arena-elo', 1240, 'LMSYS', '2025-06-01'],
+
+  // ─── Mistral Small 3.1 ───────────────────────────────────
+  ['mistral-small-3.1', 'mmlu', 78.0, 'Mistral', '2025-03-18'],
+  ['mistral-small-3.1', 'humaneval', 80.0, 'Mistral', '2025-03-18'],
+
+  // ─── GPT-5.2 Pro ──────────────────────────────────────────
+  ['gpt-5.2-pro', 'gpqa-diamond', 91.0, 'OpenAI', '2025-12-10'],
+  ['gpt-5.2-pro', 'swe-bench-verified', 80.0, 'OpenAI', '2025-12-10'],
+  ['gpt-5.2-pro', 'math-500', 98.5, 'OpenAI', '2025-12-10'],
+  ['gpt-5.2-pro', 'chatbot-arena-elo', 1380, 'LMSYS', '2026-01-15'],
+
+  // ─── DeepSeek V3.2 (additional) ──────────────────────────
+  ['deepseek-v3.2', 'gpqa-diamond', 62.0, 'DeepSeek', '2025-09-29'],
+  ['deepseek-v3.2', 'math-500', 84.0, 'DeepSeek', '2025-09-29'],
+  ['deepseek-v3.2', 'swe-bench-verified', 50.0, 'DeepSeek', '2025-09-29'],
 ];
 
 const insertScores = db.transaction(() => {
@@ -889,6 +1137,35 @@ const people = [
 
   // Perplexity
   ['aravind-srinivas', 'Aravind Srinivas', 'CEO', 'Perplexity', 'perplexity', 'Co-founder and CEO of Perplexity AI. Former AI researcher at OpenAI and Google.', '@AravSrinivas', 'Perplexity AI search, Sonar models'],
+
+  // ── Additional Important AI Figures ──
+
+  // Research pioneers & academics
+  ['andrew-ng', 'Andrew Ng', 'Founder', 'DeepLearning.AI / Landing AI', null, 'Co-founder of Google Brain. Former VP and Chief Scientist at Baidu. Stanford professor and pioneer in online AI education.', '@AndrewYNg', 'Google Brain co-founder, Coursera AI courses, deeplearning.ai'],
+  ['stuart-russell', 'Stuart Russell', 'Professor', 'UC Berkeley', null, 'Computer science professor at UC Berkeley. Co-author of the definitive AI textbook "Artificial Intelligence: A Modern Approach." Leading voice on AI existential risk.', '@StuartJRussell', 'AI textbook co-author, AI safety advocacy, beneficial AI'],
+  ['timnit-gebru', 'Timnit Gebru', 'Founder', 'DAIR Institute', null, 'Founder of the Distributed AI Research Institute. Former Google AI ethics researcher. Pioneer in AI fairness and accountability.', '@timaboroshii', 'AI ethics, algorithmic bias research, DAIR Institute'],
+  ['percy-liang', 'Percy Liang', 'Professor', 'Stanford University', null, 'Associate professor at Stanford. Director of the Center for Research on Foundation Models. Creator of HELM benchmarks.', '@percyliang', 'HELM benchmarks, foundation model evaluation, Stanford CRFM'],
+  ['sasha-luccioni', 'Sasha Luccioni', 'AI & Climate Lead', 'Hugging Face', null, 'Leading researcher on the environmental impact of AI at Hugging Face. National Geographic Explorer. Advocates for sustainable AI development.', '@SashaMTL', 'AI environmental impact, sustainable AI, Hugging Face'],
+  ['jan-leike', 'Jan Leike', 'Head of Alignment', 'Anthropic', 'anthropic', 'Co-leads Alignment Science at Anthropic. Former leader of OpenAI superalignment team. Focuses on scalable oversight and interpretability.', '@janleike', 'AI alignment research, scalable oversight, superalignment'],
+  ['noam-brown', 'Noam Brown', 'Research Scientist', 'OpenAI', 'openai', 'AI researcher at OpenAI. Creator of Libratus (poker AI) and Cicero (Diplomacy AI). Pioneer in strategic reasoning AI.', '@polyaboroshii', 'Libratus, Cicero, strategic reasoning, o1/o3 reasoning models'],
+
+  // Industry leaders
+  ['jensen-huang', 'Jensen Huang', 'CEO', 'NVIDIA', 'nvidia', 'Co-founder and CEO of NVIDIA. Built the dominant AI hardware platform. NVIDIA GPUs power most AI training.', null, 'NVIDIA GPUs, CUDA, AI hardware revolution'],
+  ['satya-nadella', 'Satya Nadella', 'CEO', 'Microsoft', 'microsoft', 'CEO of Microsoft. Led major AI investments including OpenAI partnership and Copilot integration across Microsoft products.', '@sataboroshii', 'Microsoft-OpenAI partnership, Copilot, Azure AI'],
+  ['sundar-pichai', 'Sundar Pichai', 'CEO', 'Google / Alphabet', 'google', 'CEO of Alphabet and Google. Oversees Google DeepMind and the Gemini model family.', '@sundarpichai', 'Google DeepMind, Gemini launch, Alphabet AI strategy'],
+  ['kai-fu-lee', 'Kai-Fu Lee', 'CEO', '01.AI', '01ai', 'Former Microsoft and Google executive. Founded 01.AI and Sinovation Ventures. Leading voice on AI in China.', '@kaaboroshii', '01.AI, Yi models, AI Superpowers author, Sinovation Ventures'],
+  ['clement-delangue', 'Clement Delangue', 'CEO', 'Hugging Face', null, 'Co-founder and CEO of Hugging Face. Built the largest open-source AI community and model hub.', '@ClementDelangue', 'Hugging Face platform, open-source AI community'],
+  ['mustafa-suleyman', 'Mustafa Suleyman', 'CEO', 'Microsoft AI', 'microsoft', 'CEO of Microsoft AI. Co-founder of DeepMind. Previously founded Inflection AI.', '@mustaboroshii', 'DeepMind co-founder, Inflection AI, Microsoft AI'],
+  ['jason-wei', 'Jason Wei', 'Research Scientist', 'OpenAI', 'openai', 'AI researcher known for discovering chain-of-thought prompting and scaling laws for emergent abilities in LLMs.', '@_jasonwei', 'Chain-of-thought prompting, emergent abilities, scaling laws'],
+
+  // Transformer / foundational researchers
+  ['ashish-vaswani', 'Ashish Vaswani', 'Co-founder', 'Essential AI', null, 'Co-author of the Transformer paper ("Attention Is All You Need"). Co-founded Essential AI.', null, 'Transformer architecture co-inventor, Essential AI'],
+  ['noam-shazeer', 'Noam Shazeer', 'VP Engineering', 'Google DeepMind', 'google', 'Co-author of the Transformer paper. Co-founded Character.AI, which was acquired by Google. Key contributor to PaLM and Gemini.', null, 'Transformer co-inventor, Character.AI, PaLM, Gemini'],
+  ['jakob-uszkoreit', 'Jakob Uszkoreit', 'Co-founder', 'Inceptive', null, 'Co-author of the Transformer paper. Founded Inceptive, applying AI to RNA drug design.', null, 'Transformer co-inventor, Inceptive, RNA drug design'],
+  ['niki-parmar', 'Niki Parmar', 'Co-founder', 'Essential AI', null, 'Co-author of the Transformer paper. Co-founded Essential AI with Ashish Vaswani.', null, 'Transformer co-inventor, Essential AI'],
+
+  // Safety & policy
+  ['connor-leahy', 'Connor Leahy', 'CEO', 'Conjecture', null, 'CEO of Conjecture. Former EleutherAI lead. Prominent AI safety advocate and policy commentator.', '@NPCollapse', 'EleutherAI, Conjecture, AI safety advocacy'],
 ];
 
 const insertPeople = db.transaction(() => {
@@ -964,37 +1241,55 @@ const insertTaggable = db.prepare(`
 
 const tagAssignments: [string, string, string][] = [
   // Tag LLM models
-  ...['gpt-5.2', 'gpt-5', 'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano', 'gpt-4o', 'gpt-4o-mini',
-    'claude-opus-4', 'claude-sonnet-4', 'claude-haiku-3.5',
-    'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash',
-    'llama-4-maverick', 'llama-4-scout', 'llama-3.3-70b',
-    'deepseek-v3', 'deepseek-r1',
+  ...['gpt-5.2', 'gpt-5', 'gpt-4.5', 'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano', 'gpt-4o', 'gpt-4o-mini',
+    'o1', 'o1-mini', 'o3', 'o3-mini', 'o3-pro', 'o4-mini',
+    'claude-opus-4', 'claude-opus-4.5', 'claude-opus-4.6', 'claude-sonnet-4', 'claude-sonnet-4.5', 'claude-sonnet-4.6', 'claude-haiku-3.5', 'claude-haiku-4.5',
+    'claude-3.5-sonnet', 'claude-3.7-sonnet', 'claude-3-opus',
+    'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-3-pro', 'gemini-3-flash', 'gemini-3.1-pro',
+    'gemini-1.5-pro', 'gemini-1.5-flash',
+    'llama-4-maverick', 'llama-4-scout', 'llama-3.3-70b', 'llama-3.1-405b', 'llama-3.1-70b', 'llama-3.1-8b',
+    'deepseek-v3', 'deepseek-v3.2', 'deepseek-r1', 'deepseek-r1-0528',
+    'phi-4', 'phi-4-reasoning', 'nemotron-70b',
+    'qwen3-max', 'qwen3-235b', 'qwen3-30b', 'qwen3-32b',
   ].map(id => ['llm', id, 'model'] as [string, string, string]),
 
   // Tag open-source models
-  ...['llama-4-maverick', 'llama-4-scout', 'llama-3.3-70b',
-    'deepseek-v3', 'deepseek-v3.2', 'deepseek-r1', 'deepseek-r1-0528',
-    'qwen-2.5-72b', 'qwen-qwq-32b', 'mistral-nemo',
+  ...['llama-4-maverick', 'llama-4-scout', 'llama-3.3-70b', 'llama-3.1-405b', 'llama-3.1-70b', 'llama-3.1-8b',
+    'deepseek-v3', 'deepseek-v3.2', 'deepseek-r1', 'deepseek-r1-0528', 'deepseek-v2.5',
+    'qwen-2.5-72b', 'qwen-qwq-32b', 'qwen-2.5-coder-32b', 'qwen3-30b', 'qwen3-32b', 'qwen3-235b',
+    'mistral-nemo', 'mistral-large-2', 'mistral-large-3', 'mistral-small-3.1',
+    'phi-4', 'phi-4-multimodal', 'phi-4-reasoning',
+    'nemotron-70b',
   ].map(id => ['open-source', id, 'model'] as [string, string, string]),
 
   // Tag reasoning models
-  ...['o3', 'o3-mini', 'o3-pro', 'o4-mini',
+  ...['o1', 'o1-mini', 'o3', 'o3-mini', 'o3-pro', 'o4-mini',
     'deepseek-r1', 'deepseek-r1-0528', 'qwen-qwq-32b',
     'gemini-2.5-pro', 'gpt-5.2', 'gpt-5',
+    'claude-3.7-sonnet',
+    'phi-4-reasoning',
+    'grok-4',
   ].map(id => ['reasoning', id, 'model'] as [string, string, string]),
 
   // Tag coding models
   ...['codestral', 'gpt-4.1', 'claude-sonnet-4', 'deepseek-v3.2', 'gemini-2.5-pro',
+    'qwen-2.5-coder-32b', 'qwen3-coder-480b',
   ].map(id => ['coding', id, 'model'] as [string, string, string]),
 
   // Tag multimodal models
   ...['gpt-4o', 'gpt-5', 'gpt-5.2', 'claude-opus-4', 'claude-sonnet-4',
     'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash',
+    'gemini-3-pro', 'gemini-3-flash', 'gemini-3.1-pro',
+    'llama-4-maverick', 'llama-4-scout',
+    'phi-4-multimodal',
   ].map(id => ['multimodal', id, 'model'] as [string, string, string]),
 
   // Tag long-context models
   ...['gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.0-flash-lite',
+    'gemini-1.5-pro', 'gemini-3-pro', 'gemini-3.1-pro',
     'claude-opus-4', 'claude-sonnet-4', 'jamba-1.5-large',
+    'llama-4-scout', 'grok-4.1-fast', 'grok-4-fast',
+    'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano',
   ].map(id => ['long-context', id, 'model'] as [string, string, string]),
 
   // Tag image-gen models
@@ -1007,11 +1302,18 @@ const tagAssignments: [string, string, string][] = [
 
   // Tag people with AI safety
   ...['geoffrey-hinton', 'yoshua-bengio', 'dario-amodei', 'chris-olah',
+    'jan-leike', 'stuart-russell', 'connor-leahy', 'timnit-gebru', 'sasha-luccioni',
   ].map(id => ['ai-safety', id, 'person'] as [string, string, string]),
 
   // Tag people with open source
   ...['yann-lecun', 'mark-zuckerberg', 'liang-wenfeng',
+    'clement-delangue', 'sasha-luccioni',
   ].map(id => ['open-source', id, 'person'] as [string, string, string]),
+
+  // Tag people with research
+  ...['percy-liang', 'andrew-ng', 'noam-brown', 'jason-wei',
+    'ashish-vaswani', 'noam-shazeer', 'jakob-uszkoreit', 'niki-parmar',
+  ].map(id => ['research', id, 'person'] as [string, string, string]),
 
   // Tag benchmarks
   ['reasoning', 'gpqa-diamond', 'benchmark'],
@@ -1096,6 +1398,14 @@ const insertYouTubeCreators = db.transaction(() => {
   }
 });
 insertYouTubeCreators();
+
+// ─── Run supplemental seed.sql ──────────────────────────────────
+const seedSqlPath = path.join(process.cwd(), 'src', 'db', 'seed.sql');
+if (fs.existsSync(seedSqlPath)) {
+  const seedSql = fs.readFileSync(seedSqlPath, 'utf8');
+  db.exec(seedSql);
+  console.log('Applied supplemental seed.sql');
+}
 
 // ─── Done ───────────────────────────────────────────────────────
 const modelCount = (db.prepare('SELECT COUNT(*) AS c FROM models').get() as { c: number }).c;
