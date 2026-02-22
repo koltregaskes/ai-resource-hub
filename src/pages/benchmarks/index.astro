@@ -42,7 +42,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         {matrix.benchmarks.map((b) => (
           <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
             <div class="flex items-center gap-2 mb-1">
-              <h3 class="font-semibold text-(--color-text-primary) text-sm">{b.name}</h3>
+              <a href={`${base}benchmarks/${b.id}/`} class="font-semibold text-(--color-text-primary) text-sm hover:text-(--color-accent) transition-colors">{b.name}</a>
               <span class="text-xs px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-muted)">
                 {b.category}
               </span>
@@ -53,20 +53,24 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
             <div class="flex items-center gap-3 mt-2 text-xs text-(--color-text-muted)">
               <span>Scale: {b.scale_min}–{b.scale_max}</span>
               <span>Weight: {b.weight}x</span>
-              {b.url && (
-                <a
-                  href={b.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
-                >
-                  Paper
-                </a>
-              )}
+              <a
+                href={`${base}benchmarks/${b.id}/`}
+                class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+              >
+                View details
+              </a>
             </div>
           </div>
         ))}
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'AI Model Benchmarks',
+    description: `Compare ${matrix.models.length} AI models across ${matrix.benchmarks.length} benchmarks including MMLU, GPQA, HumanEval, SWE-bench, and Chatbot Arena.`,
+    creator: { '@type': 'Organization', name: 'The AI Resource Hub' },
+  })} />
 </BaseLayout>

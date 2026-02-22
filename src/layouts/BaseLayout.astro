@@ -36,6 +36,7 @@ const searchIndex = getSearchIndex(base);
     />
 
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="alternate" type="application/rss+xml" title="The AI Resource Hub RSS" href={`${base}rss.xml`} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Open Graph -->
@@ -103,6 +104,9 @@ const searchIndex = getSearchIndex(base);
           <a href={`${base}people/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
             People
           </a>
+          <a href={`${base}blog/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Blog
+          </a>
         </div>
 
         <div class="flex items-center gap-2">
@@ -155,6 +159,7 @@ const searchIndex = getSearchIndex(base);
           <a href={`${base}glossary/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">AI Glossary</a>
           <a href={`${base}quiz/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Which AI Should I Use?</a>
           <a href={`${base}people/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">People in AI</a>
+          <a href={`${base}blog/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Blog</a>
         </div>
       </div>
     </header>
@@ -203,11 +208,12 @@ const searchIndex = getSearchIndex(base);
             </div>
           </div>
           <div>
-            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">About</h3>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">More</h3>
             <div class="space-y-2">
-              <p class="text-xs text-(--color-text-muted)">Independent AI resource.</p>
-              <p class="text-xs text-(--color-text-muted)">Not affiliated with any AI provider.</p>
-              <p class="text-xs text-(--color-text-muted)">Prices updated weekly.</p>
+              <a href={`${base}blog/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Blog</a>
+              <a href={`${base}rss.xml`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">RSS Feed</a>
+              <p class="text-xs text-(--color-text-muted) mt-2">Independent. Not affiliated with any AI provider.</p>
+              <p class="text-xs text-(--color-text-muted)">Data updated daily via automated scrapers.</p>
             </div>
           </div>
         </div>

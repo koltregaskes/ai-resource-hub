@@ -10,7 +10,8 @@
     "check": "astro check",
     "seed": "tsx scripts/seed-db.ts",
     "scrape": "tsx scripts/scrape-all.ts",
-    "scrape:pricing": "tsx scripts/scrapers/pricing.ts"
+    "scrape:pricing": "tsx scripts/scrapers/pricing.ts",
+    "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

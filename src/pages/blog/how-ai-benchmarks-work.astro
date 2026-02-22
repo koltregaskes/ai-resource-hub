@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getBenchmarks } from '../../db/queries';
+
+const benchmarks = getBenchmarks();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'How AI Benchmarks Work (And Why You Should Care)',
+  datePublished: '2026-02-20',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+  description: 'A plain-English guide to AI benchmarks.',
+};
+---
+
+<BaseLayout
+  title="How AI Benchmarks Work — Blog — The AI Resource Hub"
+  description="A plain-English guide to MMLU, GPQA, HumanEval, SWE-bench, and Chatbot Arena — the tests that determine which AI models are actually good."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">How AI Benchmarks Work</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 font-medium">Explainer</span>
+        <span class="text-xs text-(--color-text-muted)">20 Feb 2026</span>
+        <span class="text-xs text-(--color-text-muted)">8 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        How AI Benchmarks Work<br />(And Why You Should Care)
+      </h1>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
+      <p class="text-lg">
+        Every time a new AI model launches, the press release is filled with numbers: "92.3% on MMLU", "1370 ELO on Chatbot Arena", "78% on SWE-bench". But what do these numbers actually mean? And should you trust them?
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">What Are AI Benchmarks?</h2>
+      <p>
+        AI benchmarks are standardised tests that measure how well a model performs at specific tasks. Think of them like exams for AI — each benchmark tests a different skill, from general knowledge to code generation to following instructions.
+      </p>
+      <p>
+        Just as you wouldn't judge a student by a single exam, you shouldn't judge an AI model by a single benchmark. The best approach is to look at performance across multiple benchmarks that test different capabilities.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Key Benchmarks Explained</h2>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">Knowledge: MMLU & MMLU-Pro</h3>
+      <p>
+        <strong class="text-(--color-text-primary)">MMLU</strong> (Massive Multitask Language Understanding) is the "general knowledge exam" of AI. It tests models across 57 subjects — everything from abstract algebra to world religions. Each question is multiple choice with 4 options.
+      </p>
+      <p>
+        The problem? Top models now score over 90%, so MMLU is getting less useful for telling the best apart. That's why <strong class="text-(--color-text-primary)">MMLU-Pro</strong> was created — it uses 10 answer choices instead of 4 and harder questions.
+      </p>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">Reasoning: GPQA Diamond & MATH-500</h3>
+      <p>
+        <strong class="text-(--color-text-primary)">GPQA Diamond</strong> is the hardest academic benchmark. Questions are so difficult that PhD experts in the relevant field get less than 65% right. If a model scores well here, it genuinely understands deep scientific concepts.
+      </p>
+      <p>
+        <strong class="text-(--color-text-primary)">MATH-500</strong> tests competition-level mathematics — problems from AMC, AIME, and other maths competitions. These require multi-step logical reasoning that can't be solved by pattern matching.
+      </p>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">Coding: HumanEval & SWE-bench</h3>
+      <p>
+        <strong class="text-(--color-text-primary)">HumanEval</strong> tests whether a model can write correct Python functions. It's 164 problems with test cases — the model either passes the tests or doesn't.
+      </p>
+      <p>
+        <strong class="text-(--color-text-primary)">SWE-bench Verified</strong> is much harder. It gives the model a real GitHub issue and an entire codebase, and asks it to produce a working fix. This is the gold standard for "can this AI actually do real software engineering?"
+      </p>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">The People's Choice: Chatbot Arena</h3>
+      <p>
+        <strong class="text-(--color-text-primary)">Chatbot Arena</strong> by LMSYS is different from all the others. Instead of automated tests, real users have conversations with two anonymous models side by side and vote for which one they prefer. The results are compiled into an ELO rating (like chess rankings).
+      </p>
+      <p>
+        With over 2 million human votes, it's widely considered the most reliable indicator of overall model quality. It captures things that automated benchmarks can't — like writing style, helpfulness, and common sense.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Why Benchmarks Aren't Perfect</h2>
+      <p>
+        Every benchmark has limitations:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Data contamination:</strong> Models may have seen benchmark questions during training, inflating scores.</li>
+        <li><strong class="text-(--color-text-primary)">Narrow testing:</strong> Each benchmark tests a specific skill. High scores don't guarantee good performance on your specific use case.</li>
+        <li><strong class="text-(--color-text-primary)">Gaming:</strong> Companies can optimise models to score well on specific benchmarks without improving general capability.</li>
+        <li><strong class="text-(--color-text-primary)">Saturation:</strong> When all top models score 95%+, the benchmark stops being useful for comparison.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">How to Use Benchmarks Wisely</h2>
+      <ol class="list-decimal pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Look at multiple benchmarks</strong> — no single number tells the whole story.</li>
+        <li><strong class="text-(--color-text-primary)">Prioritise benchmarks relevant to your use case</strong> — if you need a coding assistant, SWE-bench matters more than MMLU.</li>
+        <li><strong class="text-(--color-text-primary)">Check Chatbot Arena</strong> — it's the closest thing to "which model do real people actually prefer?"</li>
+        <li><strong class="text-(--color-text-primary)">Try the models yourself</strong> — benchmarks are a starting point, not the final answer.</li>
+      </ol>
+
+      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Explore Benchmarks on The AI Resource Hub</h3>
+        <p class="text-sm mb-4">We track {benchmarks.length} benchmarks across all major AI models. See the data for yourself.</p>
+        <div class="flex flex-wrap gap-2">
+          {benchmarks.slice(0, 6).map((b) => (
+            <a
+              href={`${base}benchmarks/${b.id}/`}
+              class="text-xs px-3 py-1.5 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors"
+            >
+              {b.name}
+            </a>
+          ))}
+          <a
+            href={`${base}benchmarks/`}
+            class="text-xs px-3 py-1.5 rounded-lg bg-(--color-accent)/10 text-(--color-accent) hover:bg-(--color-accent)/20 transition-colors"
+          >
+            View all benchmarks
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back -->
+    <div class="mt-8">
+      <a
+        href={`${base}blog/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

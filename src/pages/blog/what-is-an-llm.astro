@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'What Is an LLM? A Non-Technical Guide',
+  datePublished: '2026-02-05',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+};
+---
+
+<BaseLayout
+  title="What Is an LLM? A Non-Technical Guide — Blog — The AI Resource Hub"
+  description="Large Language Models explained for everyone — what they are, how they work, and why they matter. No jargon, no PhD required."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">What Is an LLM?</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400 font-medium">Beginner</span>
+        <span class="text-xs text-(--color-text-muted)">5 Feb 2026</span>
+        <span class="text-xs text-(--color-text-muted)">5 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        What Is an LLM?<br />A Non-Technical Guide
+      </h1>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
+      <p class="text-lg">
+        You've heard of ChatGPT, Claude, and Gemini. They're all powered by something called a "Large Language Model" or LLM. Here's what that means in plain English.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Simple Explanation</h2>
+      <p>
+        An LLM is a computer program that has read a huge amount of text — books, websites, code, conversations — and learned the patterns of language from it. When you ask it a question, it predicts what a helpful response should look like, word by word.
+      </p>
+      <p>
+        Think of it like a very sophisticated autocomplete. Your phone's keyboard predicts the next word you'll type. An LLM does the same thing, but trained on trillions of words, making its predictions remarkably good.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">What "Large" Means</h2>
+      <p>
+        The "Large" in LLM refers to two things:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Training data:</strong> Trillions of words from books, websites, code repositories, and more.</li>
+        <li><strong class="text-(--color-text-primary)">Model size:</strong> Billions or trillions of "parameters" — adjustable numbers that store what the model has learned. GPT-4 is estimated to have over 1 trillion parameters.</li>
+      </ul>
+      <p>
+        More parameters generally means the model can capture more nuanced patterns, but it also means it costs more to run.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">What LLMs Can Do</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Write and edit text:</strong> Emails, articles, reports, creative writing.</li>
+        <li><strong class="text-(--color-text-primary)">Answer questions:</strong> From trivia to complex technical questions.</li>
+        <li><strong class="text-(--color-text-primary)">Write code:</strong> Create, debug, and explain programming code.</li>
+        <li><strong class="text-(--color-text-primary)">Analyse data:</strong> Summarise documents, extract information, compare options.</li>
+        <li><strong class="text-(--color-text-primary)">Translate languages:</strong> Between dozens of languages with high accuracy.</li>
+        <li><strong class="text-(--color-text-primary)">Reason through problems:</strong> Newer models can break down complex problems step by step.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">What LLMs Cannot Do</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Know facts with certainty:</strong> They can "hallucinate" — generate plausible but incorrect information.</li>
+        <li><strong class="text-(--color-text-primary)">Access the internet in real time:</strong> Unless specifically given that ability, they only know what they were trained on.</li>
+        <li><strong class="text-(--color-text-primary)">Feel emotions or have opinions:</strong> Despite sounding natural, they don't have feelings or consciousness.</li>
+        <li><strong class="text-(--color-text-primary)">Replace human judgement:</strong> They're tools to help you think, not to think for you.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Main LLMs in 2026</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-1">GPT (OpenAI)</h3>
+          <p class="text-sm">Powers ChatGPT. The model that started the AI revolution. Known for broad general ability.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-1">Claude (Anthropic)</h3>
+          <p class="text-sm">Known for safety research and long context. Excellent at writing and coding.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-1">Gemini (Google)</h3>
+          <p class="text-sm">Multimodal from the ground up — handles text, images, audio, and video.</p>
+        </div>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-1">Llama (Meta)</h3>
+          <p class="text-sm">Open-source. Free to download and run on your own hardware. Huge community.</p>
+        </div>
+      </div>
+
+      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Ready to Explore?</h3>
+        <p class="text-sm mb-3">Compare all the major LLMs by price, quality, and speed on our comparison table.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Compare LLMs &rarr;</a>
+          <a href={`${base}quiz/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Take the AI Quiz &rarr;</a>
+          <a href={`${base}glossary/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">AI Glossary &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}blog/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

@@ -88,4 +88,22 @@ for (const person of people) {
       ))}
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Key People in AI',
+    description: `${people.length} researchers, founders, and leaders shaping the future of artificial intelligence.`,
+    numberOfItems: people.length,
+    itemListElement: people.slice(0, 20).map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Person',
+        name: p.name,
+        jobTitle: p.role,
+        worksFor: p.organisation ? { '@type': 'Organization', name: p.organisation } : undefined,
+      },
+    })),
+  })} />
 </BaseLayout>

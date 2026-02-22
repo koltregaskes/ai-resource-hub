@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Blog posts defined here — add new posts by adding to this array
+// Posts are ordered newest first
+const posts = [
+  {
+    slug: 'how-ai-benchmarks-work',
+    title: 'How AI Benchmarks Work (And Why You Should Care)',
+    description: 'A plain-English guide to MMLU, GPQA, HumanEval, SWE-bench, and Chatbot Arena — the tests that determine which AI models are actually good.',
+    date: '2026-02-20',
+    category: 'Explainer',
+    readTime: '8 min',
+  },
+  {
+    slug: 'ai-pricing-race-to-zero',
+    title: 'The AI Pricing Race to Zero',
+    description: 'AI model pricing has dropped over 90% in two years. We tracked every price change and here is what the data shows about where pricing is heading.',
+    date: '2026-02-15',
+    category: 'Analysis',
+    readTime: '6 min',
+  },
+  {
+    slug: 'open-source-vs-closed-ai',
+    title: 'Open Source vs Closed AI Models in 2026',
+    description: 'DeepSeek, Llama, Mistral, and Qwen are closing the gap. We compare the latest open-source models against GPT, Claude, and Gemini on every benchmark.',
+    date: '2026-02-10',
+    category: 'Comparison',
+    readTime: '10 min',
+  },
+  {
+    slug: 'what-is-an-llm',
+    title: 'What Is an LLM? A Non-Technical Guide',
+    description: 'Large Language Models explained for everyone — what they are, how they work, and why they matter. No jargon, no PhD required.',
+    date: '2026-02-05',
+    category: 'Beginner',
+    readTime: '5 min',
+  },
+];
+
+const categoryColours: Record<string, string> = {
+  Explainer: 'bg-blue-500/20 text-blue-400',
+  Analysis: 'bg-purple-500/20 text-purple-400',
+  Comparison: 'bg-green-500/20 text-green-400',
+  Beginner: 'bg-yellow-500/20 text-yellow-400',
+  News: 'bg-pink-500/20 text-pink-400',
+};
+---
+
+<BaseLayout
+  title="Blog — The AI Resource Hub"
+  description="Articles, analysis, and explainers about AI models, benchmarks, pricing trends, and the AI industry."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Blog</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Blog
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Analysis, explainers, and commentary on AI models, benchmarks, and pricing trends.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {posts.map((post) => (
+        <a
+          href={`${base}blog/${post.slug}/`}
+          class="block p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/40 transition-all group"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <span class={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColours[post.category] ?? 'bg-gray-500/20 text-gray-400'}`}>
+              {post.category}
+            </span>
+            <span class="text-xs text-(--color-text-muted)">{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+            <span class="text-xs text-(--color-text-muted)">{post.readTime} read</span>
+          </div>
+          <h2 class="text-xl font-bold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors mb-2">
+            {post.title}
+          </h2>
+          <p class="text-sm text-(--color-text-secondary)">{post.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

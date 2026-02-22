@@ -17,25 +17,29 @@ async function main() {
   console.log(`  ${new Date().toISOString()}`);
   console.log('═══════════════════════════════════════════════\n');
 
-  // Run pricing scraper
-  console.log('▶ Running pricing scraper...');
-  try {
-    execSync('npx tsx scripts/scrapers/pricing.ts', {
-      cwd: ROOT,
-      stdio: 'inherit',
-      timeout: 120_000,
-    });
-    console.log('✓ Pricing scraper complete\n');
-  } catch (err) {
-    console.error('✗ Pricing scraper failed\n');
+  const scrapers = [
+    { name: 'Pricing', script: 'scripts/scrapers/pricing.ts' },
+    { name: 'Benchmarks', script: 'scripts/scrapers/benchmarks.ts' },
+  ];
+
+  for (const { name, script } of scrapers) {
+    console.log(`▶ Running ${name} scraper...`);
+    try {
+      execSync(`npx tsx ${script}`, {
+        cwd: ROOT,
+        stdio: 'inherit',
+        timeout: 120_000,
+      });
+      console.log(`✓ ${name} scraper complete\n`);
+    } catch (err) {
+      console.error(`✗ ${name} scraper failed\n`);
+    }
   }
 
   // Future scrapers:
-  // - Benchmark scraper (LMSYS Arena ELO)
   // - New model detection (scan provider pages for new model announcements)
   // - Image model pricing scraper (Stability, Replicate)
   // - Video model pricing scraper (Runway, Pika)
-  // - TTS pricing scraper (ElevenLabs, Cartesia, Deepgram)
 
   console.log('═══════════════════════════════════════════════');
   console.log('  All scrapers complete');

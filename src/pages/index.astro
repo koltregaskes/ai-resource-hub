@@ -5,7 +5,7 @@ import CategoryCard from '../components/CategoryCard.astro';
 import TopModelsPreview from '../components/TopModelsPreview.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getLLMModels } from '../data/llm-models';
-import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms, getModelsByCategory, getModelCounts } from '../db/queries';
+import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms, getModelsByCategory, getModelCounts, getRecentModels } from '../db/queries';
 
 const models = getLLMModels();
 const providers = getProvidersWithCounts();
@@ -18,6 +18,8 @@ const videoModels = getModelsByCategory('video');
 const speechModels = getModelsByCategory('speech');
 const voiceModels = getModelsByCategory('voice');
 const soundModels = getModelsByCategory('sound');
+const recentModels = getRecentModels(8);
+const catLabels = { llm: 'LLM', image: 'Image', video: 'Video', voice: 'Voice', speech: 'Speech', sound: 'Sound' } as Record<string, string>;
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const lastUpdated = new Date().toLocaleDateString('en-GB', {
@@ -170,6 +172,46 @@ const learnCategories = [
     </div>
   </section>
 
+  <!-- Recently Added Models -->
+  {recentModels.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Recently Added</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-6">The latest AI models added to our database</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {recentModels.map((model) => {
+          return (
+            <a
+              href={`${base}models/${model.id}/`}
+              class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/40 transition-all group"
+            >
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="w-2 h-2 rounded-full shrink-0"
+                  style={`background-color: ${model.providerColour}`}
+                />
+                <span class="text-xs text-(--color-text-muted) truncate">{model.provider}</span>
+                <span class="text-xs px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-muted) ml-auto">
+                  {catLabels[model.category] ?? model.category}
+                </span>
+              </div>
+              <h3 class="font-semibold text-sm text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors truncate">
+                {model.name}
+              </h3>
+              <div class="flex items-center justify-between mt-2">
+                <span class="text-xs text-(--color-accent)">{model.qualityScore}/100</span>
+                {model.released && (
+                  <span class="text-xs text-(--color-text-muted)">
+                    {new Date(model.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}
+                  </span>
+                )}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
   <!-- Newsletter -->
   <NewsletterSignup variant="card" />
 
@@ -198,4 +240,17 @@ const learnCategories = [
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'The AI Resource Hub',
+    url: 'https://theairesourcehub.com',
+    description: 'Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://theairesourcehub.com/?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  })} />
 </BaseLayout>

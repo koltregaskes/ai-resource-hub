@@ -113,6 +113,40 @@ export function getSearchIndex(base: string): SearchItem[] {
     });
   }
 
+  // Benchmarks
+  const benchmarks = db.prepare(`
+    SELECT id, name, category, description FROM benchmarks ORDER BY name
+  `).all() as Array<{ id: string; name: string; category: string; description: string | null }>;
+
+  for (const b of benchmarks) {
+    items.push({
+      id: b.id,
+      title: b.name,
+      type: 'benchmark',
+      category: b.category,
+      description: b.description ?? `AI benchmark in the ${b.category} category`,
+      url: `${base}benchmarks/${b.id}/`,
+    });
+  }
+
+  // Blog posts
+  const blogPosts = [
+    { id: 'how-ai-benchmarks-work', title: 'How AI Benchmarks Work', description: 'A plain-English guide to MMLU, GPQA, HumanEval, and more' },
+    { id: 'ai-pricing-race-to-zero', title: 'The AI Pricing Race to Zero', description: 'AI model pricing has dropped over 90% in two years' },
+    { id: 'open-source-vs-closed-ai', title: 'Open Source vs Closed AI Models', description: 'Comparing open-source and closed AI models on every benchmark' },
+    { id: 'what-is-an-llm', title: 'What Is an LLM?', description: 'Large Language Models explained for everyone' },
+  ];
+
+  for (const post of blogPosts) {
+    items.push({
+      id: post.id,
+      title: post.title,
+      type: 'blog',
+      description: post.description,
+      url: `${base}blog/${post.id}/`,
+    });
+  }
+
   _cachedIndex = items;
   return items;
 }

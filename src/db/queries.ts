@@ -471,6 +471,132 @@ export function getModelsByCategory(category: string): CategoryModel[] {
   }));
 }
 
+/**
+ * Get a single benchmark by ID with all its scores.
+ */
+export interface BenchmarkDetail {
+  id: string;
+  name: string;
+  category: string;
+  description: string | null;
+  url: string | null;
+  scale_min: number;
+  scale_max: number;
+  higher_is_better: number;
+  weight: number;
+}
+
+export interface BenchmarkModelScore {
+  model_id: string;
+  model_name: string;
+  provider: string;
+  provider_id: string;
+  providerColour: string;
+  score: number;
+  source: string | null;
+  source_url: string | null;
+  measured_at: string | null;
+  category: string;
+}
+
+export function getBenchmarkById(benchmarkId: string): BenchmarkDetail | null {
+  const db = getDB();
+  const row = db.prepare('SELECT * FROM benchmarks WHERE id = ?').get(benchmarkId) as BenchmarkDetail | undefined;
+  return row ?? null;
+}
+
+export function getScoresForBenchmark(benchmarkId: string): BenchmarkModelScore[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT
+      bs.model_id, m.name AS model_name, p.name AS provider, m.provider_id,
+      p.colour AS providerColour, bs.score, bs.source, bs.source_url, bs.measured_at,
+      m.category
+    FROM benchmark_scores bs
+    JOIN models m ON bs.model_id = m.id
+    JOIN providers p ON m.provider_id = p.id
+    WHERE bs.benchmark_id = ? AND m.status = 'active'
+    ORDER BY bs.score DESC
+  `).all(benchmarkId) as BenchmarkModelScore[];
+}
+
+export function getAllBenchmarkIds(): string[] {
+  const db = getDB();
+  const rows = db.prepare('SELECT id FROM benchmarks').all() as Array<{ id: string }>;
+  return rows.map(r => r.id);
+}
+
+/**
+ * Get recently added/updated models across all categories.
+ */
+export interface RecentModel {
+  id: string;
+  name: string;
+  provider: string;
+  providerColour: string;
+  category: string;
+  released: string | null;
+  qualityScore: number;
+}
+
+export function getRecentModels(limit: number = 12): RecentModel[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT m.id, m.name, p.name AS provider, p.colour AS providerColour,
+           m.category, m.released, m.quality_score AS qualityScore
+    FROM models m
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.status = 'active' AND m.released IS NOT NULL
+    ORDER BY m.released DESC
+    LIMIT ?
+  `).all(limit) as RecentModel[];
+}
+
+/**
+ * Get models by provider across all categories.
+ */
+export function getModelsByProviderGrouped(providerId: string): Record<string, Array<CategoryModel & { category: string }>> {
+  const db = getDB();
+  const rows = db.prepare(`
+    SELECT
+      m.id, m.name, p.name AS provider, p.colour AS providerColour,
+      m.input_price AS inputPrice, m.output_price AS outputPrice,
+      m.context_window AS contextWindow, m.max_output AS maxOutput,
+      m.speed, m.quality_score AS qualityScore, m.released,
+      m.open_source AS openSource, m.modality,
+      m.api_available AS apiAvailable, m.notes, m.category
+    FROM models m
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.provider_id = ? AND m.status = 'active'
+    ORDER BY m.quality_score DESC
+  `).all(providerId) as Array<Record<string, unknown>>;
+
+  const grouped: Record<string, Array<CategoryModel & { category: string }>> = {};
+  for (const row of rows) {
+    const cat = row.category as string;
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push({
+      id: row.id as string,
+      name: row.name as string,
+      provider: row.provider as string,
+      providerColour: row.providerColour as string,
+      inputPrice: row.inputPrice as number,
+      outputPrice: row.outputPrice as number,
+      contextWindow: row.contextWindow as number,
+      maxOutput: row.maxOutput as number,
+      speed: row.speed as number,
+      qualityScore: row.qualityScore as number,
+      released: row.released as string,
+      openSource: (row.openSource as number) === 1,
+      modality: row.modality as string,
+      apiAvailable: (row.apiAvailable as number) === 1,
+      notes: (row.notes as string) || undefined,
+      category: cat,
+    });
+  }
+  return grouped;
+}
+
 export function getBenchmarkMatrix(): BenchmarkMatrix {
   const db = getDB();
 

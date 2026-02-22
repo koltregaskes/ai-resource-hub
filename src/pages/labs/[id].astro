@@ -4,6 +4,7 @@ import {
   getAllProviderIds,
   getProviderById,
   getModelsByProvider,
+  getModelsByProviderGrouped,
   getModelBenchmarks,
   getPeopleByProvider,
 } from '../../db/queries';
@@ -21,7 +22,18 @@ if (!provider) {
 }
 
 const models = getModelsByProvider(id);
+const groupedModels = getModelsByProviderGrouped(id);
 const people = getPeopleByProvider(id);
+
+const categoryLabels: Record<string, { label: string; href: string; priceUnit: string }> = {
+  llm: { label: 'Language Models', href: `compare/llm/`, priceUnit: '$/1M tokens' },
+  image: { label: 'Image Generation', href: `compare/image/`, priceUnit: '$/image' },
+  video: { label: 'Video Generation', href: `compare/video/`, priceUnit: '$/second' },
+  voice: { label: 'Voice & TTS', href: `compare/voice/`, priceUnit: '$/1M chars' },
+  speech: { label: 'Speech-to-Text', href: `compare/speech/`, priceUnit: '$/minute' },
+  sound: { label: 'Music & Sound', href: `compare/sound/`, priceUnit: '$/song' },
+};
+const modelCategories = Object.keys(groupedModels);
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -162,58 +174,66 @@ const structuredData = {
       </div>
     )}
 
-    <!-- Models table -->
-    <div class="mb-8">
-      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">
-        {provider.name} Models ({models.length})
-      </h2>
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-(--color-border)">
-              <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Model</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Input $/1M</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Output $/1M</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Context</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Quality</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Value</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Released</th>
-            </tr>
-          </thead>
-          <tbody>
-            {models.map((model) => (
-              <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
-                <td class="py-3 px-3">
-                  <a
-                    href={`${base}models/${model.id}/`}
-                    class="font-medium text-(--color-text-primary) hover:text-(--color-accent) transition-colors"
-                  >
-                    {model.name}
-                  </a>
-                  <div class="flex gap-1 mt-1">
-                    {model.openSource && <span class="badge badge-oss">OSS</span>}
-                  </div>
-                </td>
-                <td class="py-3 px-3 text-right text-(--color-text-primary) font-mono text-xs">{formatPrice(model.inputPrice)}</td>
-                <td class="py-3 px-3 text-right text-(--color-text-primary) font-mono text-xs">{formatPrice(model.outputPrice)}</td>
-                <td class="py-3 px-3 text-right text-(--color-text-secondary)">{formatTokens(model.contextWindow)}</td>
-                <td class="py-3 px-3 text-right">
-                  <span class="font-semibold text-(--color-accent)">{model.qualityScore}</span>
-                </td>
-                <td class="py-3 px-3 text-right">
-                  <span class="font-semibold text-(--color-success)">{model.valueScore}</span>
-                </td>
-                <td class="py-3 px-3 text-right text-(--color-text-muted) text-xs">
-                  {model.released
-                    ? new Date(model.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })
-                    : '—'}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <!-- Models by category -->
+    {modelCategories.map((cat) => {
+      const catInfo = categoryLabels[cat] ?? { label: cat, href: '#', priceUnit: '$/unit' };
+      const catModels = groupedModels[cat] ?? [];
+      return (
+        <div class="mb-8">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-bold text-(--color-text-primary)">
+              {catInfo.label} ({catModels.length})
+            </h2>
+            <a
+              href={`${base}${catInfo.href}`}
+              class="text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+            >
+              Compare all {catInfo.label.toLowerCase()} &rarr;
+            </a>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-(--color-border)">
+                  <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Model</th>
+                  <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Input Price</th>
+                  <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Output Price</th>
+                  <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Quality</th>
+                  <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Released</th>
+                </tr>
+              </thead>
+              <tbody>
+                {catModels.map((model) => (
+                  <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                    <td class="py-3 px-3">
+                      <a
+                        href={`${base}models/${model.id}/`}
+                        class="font-medium text-(--color-text-primary) hover:text-(--color-accent) transition-colors"
+                      >
+                        {model.name}
+                      </a>
+                      <div class="flex gap-1 mt-1">
+                        {model.openSource && <span class="badge badge-oss">OSS</span>}
+                      </div>
+                    </td>
+                    <td class="py-3 px-3 text-right text-(--color-text-primary) font-mono text-xs">{formatPrice(model.inputPrice)}</td>
+                    <td class="py-3 px-3 text-right text-(--color-text-primary) font-mono text-xs">{formatPrice(model.outputPrice)}</td>
+                    <td class="py-3 px-3 text-right">
+                      <span class="font-semibold text-(--color-accent)">{model.qualityScore}</span>
+                    </td>
+                    <td class="py-3 px-3 text-right text-(--color-text-muted) text-xs">
+                      {model.released
+                        ? new Date(model.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })
+                        : '—'}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
+    })}
 
     <!-- Key people -->
     {people.length > 0 && (
