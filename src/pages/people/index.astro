@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPeople } from '../../db/queries';
+
+const people = getPeople();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Group people by organisation for display
+const byOrg = new Map<string, typeof people>();
+for (const person of people) {
+  const org = person.organisation ?? 'Independent';
+  if (!byOrg.has(org)) byOrg.set(org, []);
+  byOrg.get(org)!.push(person);
+}
+---
+
+<BaseLayout
+  title="Key People in AI — AI Resource Hub"
+  description="Notable researchers, founders, and leaders shaping the AI industry. From Turing Award winners to startup CEOs."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Key People in AI</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Key People in AI
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {people.length} researchers, founders, and leaders shaping the future of artificial intelligence.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {people.map((person) => (
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-(--color-bg-tertiary) flex items-center justify-center text-(--color-text-secondary) font-semibold text-sm shrink-0">
+              {person.name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
+            </div>
+            <div class="flex-1 min-w-0">
+              <h2 class="font-semibold text-(--color-text-primary) truncate">{person.name}</h2>
+              <p class="text-xs text-(--color-text-muted)">
+                {person.role}{person.organisation ? ` at ${person.organisation}` : ''}
+              </p>
+            </div>
+          </div>
+
+          {person.bio && (
+            <p class="text-sm text-(--color-text-secondary) mt-3 line-clamp-3">
+              {person.bio}
+            </p>
+          )}
+
+          {person.notable_for && (
+            <div class="mt-3">
+              <p class="text-xs text-(--color-text-muted) mb-1">Known for</p>
+              <div class="flex flex-wrap gap-1">
+                {person.notable_for.split(',').map((item: string) => (
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary)">
+                    {item.trim()}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {person.twitter && (
+            <div class="mt-3">
+              <a
+                href={`https://x.com/${person.twitter.replace('@', '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+              >
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                {person.twitter}
+              </a>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

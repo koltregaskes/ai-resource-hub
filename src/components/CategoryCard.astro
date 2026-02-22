@@ -6,9 +6,10 @@ interface Props {
   modelCount: number;
   icon: string;
   available: boolean;
+  countLabel?: string;
 }
 
-const { title, description, href, modelCount, icon, available } = Astro.props;
+const { title, description, href, modelCount, icon, available, countLabel = 'tracked' } = Astro.props;
 ---
 
 <a
@@ -41,7 +42,7 @@ const { title, description, href, modelCount, icon, available } = Astro.props;
       </div>
       <p class="text-sm text-(--color-text-secondary) mb-3">{description}</p>
       <div class="text-xs text-(--color-text-muted)">
-        {available ? `${modelCount} models tracked` : 'In development'}
+        {available ? `${modelCount} ${countLabel}` : 'In development'}
       </div>
     </div>
     {available && (

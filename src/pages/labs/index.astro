@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getProvidersWithCounts } from '../../db/queries';
+
+const providers = getProvidersWithCounts();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="AI Labs & Providers — AI Resource Hub"
+  description="All major AI labs and model providers. OpenAI, Anthropic, Google DeepMind, Meta, Mistral, xAI, DeepSeek, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Labs & Providers</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Labs & Providers
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {providers.length} companies and research labs building the AI models we track.
+        From Silicon Valley giants to European and Chinese challengers.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {providers.map((provider) => (
+        <div class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors">
+          <div class="flex items-start gap-3 mb-4">
+            <div
+              class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm shrink-0"
+              style={`background-color: ${provider.colour}`}
+            >
+              {provider.name.slice(0, 2).toUpperCase()}
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2">
+                <h2 class="text-lg font-semibold text-(--color-text-primary) truncate">{provider.name}</h2>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted) shrink-0">
+                  {provider.modelCount} model{provider.modelCount !== 1 ? 's' : ''}
+                </span>
+              </div>
+              {provider.ceo && (
+                <p class="text-xs text-(--color-text-muted) mt-0.5">
+                  Led by {provider.ceo}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {provider.description && (
+            <p class="text-sm text-(--color-text-secondary) mb-4 line-clamp-3">
+              {provider.description}
+            </p>
+          )}
+
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            {provider.founded && (
+              <div>
+                <span class="text-(--color-text-muted)">Founded</span>
+                <p class="text-(--color-text-secondary) font-medium">
+                  {new Date(provider.founded).getFullYear()}
+                </p>
+              </div>
+            )}
+            {provider.headquarters && (
+              <div>
+                <span class="text-(--color-text-muted)">HQ</span>
+                <p class="text-(--color-text-secondary) font-medium truncate" title={provider.headquarters}>
+                  {provider.headquarters}
+                </p>
+              </div>
+            )}
+            {provider.funding && (
+              <div>
+                <span class="text-(--color-text-muted)">Funding</span>
+                <p class="text-(--color-text-secondary) font-medium truncate" title={provider.funding}>
+                  {provider.funding}
+                </p>
+              </div>
+            )}
+            {provider.website && (
+              <div>
+                <span class="text-(--color-text-muted)">Website</span>
+                <p>
+                  <a
+                    href={provider.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors font-medium truncate block"
+                  >
+                    {provider.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                  </a>
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

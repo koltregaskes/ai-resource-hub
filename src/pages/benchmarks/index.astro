@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BenchmarkTable from '../../components/BenchmarkTable';
+import { getBenchmarkMatrix } from '../../db/queries';
+
+const matrix = getBenchmarkMatrix();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="AI Benchmarks — AI Resource Hub"
+  description="Compare AI model benchmark scores across MMLU, GPQA, HumanEval, SWE-bench, MATH-500, Chatbot Arena, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Benchmarks</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Model Benchmarks
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Compare {matrix.models.length} models across {matrix.benchmarks.length} benchmarks.
+        Scores sourced from official model cards, technical reports, and LMSYS Chatbot Arena.
+      </p>
+    </div>
+
+    <BenchmarkTable
+      client:load
+      benchmarks={matrix.benchmarks}
+      models={matrix.models}
+    />
+
+    <!-- Benchmark descriptions -->
+    <div class="mt-12">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Benchmark Descriptions</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {matrix.benchmarks.map((b) => (
+          <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-semibold text-(--color-text-primary) text-sm">{b.name}</h3>
+              <span class="text-xs px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-muted)">
+                {b.category}
+              </span>
+            </div>
+            {b.description && (
+              <p class="text-xs text-(--color-text-secondary)">{b.description}</p>
+            )}
+            <div class="flex items-center gap-3 mt-2 text-xs text-(--color-text-muted)">
+              <span>Scale: {b.scale_min}–{b.scale_max}</span>
+              <span>Weight: {b.weight}x</span>
+              {b.url && (
+                <a
+                  href={b.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+                >
+                  Paper
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

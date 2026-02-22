@@ -187,3 +187,87 @@ export function getModelCounts(): Record<string, number> {
   }
   return counts;
 }
+
+/**
+ * Get providers with their model counts.
+ */
+export function getProvidersWithCounts(): Array<DBProvider & { modelCount: number }> {
+  const db = getDB();
+  return db.prepare(`
+    SELECT p.*, COUNT(m.id) AS modelCount
+    FROM providers p
+    LEFT JOIN models m ON m.provider_id = p.id AND m.status = 'active'
+    GROUP BY p.id
+    ORDER BY modelCount DESC, p.name
+  `).all() as Array<DBProvider & { modelCount: number }>;
+}
+
+/**
+ * Get all benchmark scores for all models, joined with model and benchmark info.
+ */
+export interface BenchmarkMatrix {
+  benchmarks: DBBenchmark[];
+  models: Array<{
+    id: string;
+    name: string;
+    provider: string;
+    providerColour: string;
+    scores: Record<string, number>;
+  }>;
+}
+
+export function getBenchmarkMatrix(): BenchmarkMatrix {
+  const db = getDB();
+
+  const benchmarks = db.prepare(
+    'SELECT * FROM benchmarks ORDER BY category, name'
+  ).all() as DBBenchmark[];
+
+  const rows = db.prepare(`
+    SELECT
+      bs.model_id,
+      bs.benchmark_id,
+      bs.score,
+      m.name AS model_name,
+      p.name AS provider,
+      p.colour AS providerColour
+    FROM benchmark_scores bs
+    JOIN models m ON bs.model_id = m.id
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.status = 'active'
+    ORDER BY m.quality_score DESC
+  `).all() as Array<{
+    model_id: string;
+    benchmark_id: string;
+    score: number;
+    model_name: string;
+    provider: string;
+    providerColour: string;
+  }>;
+
+  const modelMap = new Map<string, {
+    id: string;
+    name: string;
+    provider: string;
+    providerColour: string;
+    scores: Record<string, number>;
+  }>();
+
+  for (const row of rows) {
+    if (!modelMap.has(row.model_id)) {
+      modelMap.set(row.model_id, {
+        id: row.model_id,
+        name: row.model_name,
+        provider: row.provider,
+        providerColour: row.providerColour,
+        scores: {},
+      });
+    }
+    modelMap.get(row.model_id)!.scores[row.benchmark_id] = row.score;
+  }
+
+  return {
+    benchmarks,
+    models: Array.from(modelMap.values()),
+  };
+}

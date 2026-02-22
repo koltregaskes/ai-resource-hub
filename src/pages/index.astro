@@ -4,8 +4,12 @@ import HeroSection from '../components/HeroSection.astro';
 import CategoryCard from '../components/CategoryCard.astro';
 import TopModelsPreview from '../components/TopModelsPreview.astro';
 import { getLLMModels } from '../data/llm-models';
+import { getProvidersWithCounts, getPeople, getBenchmarkMatrix } from '../db/queries';
 
 const models = getLLMModels();
+const providers = getProvidersWithCounts();
+const people = getPeople();
+const benchmarkMatrix = getBenchmarkMatrix();
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const lastUpdated = new Date().toLocaleDateString('en-GB', {
@@ -22,30 +26,34 @@ const categories = [
     modelCount: models.length,
     icon: '💬',
     available: true,
+    countLabel: 'models tracked',
   },
   {
-    title: 'Image Generation',
-    description: 'DALL-E, Midjourney, Stable Diffusion, Flux, and other image generators compared.',
-    href: `${base}compare/image/`,
-    modelCount: 0,
-    icon: '🎨',
-    available: false,
+    title: 'Benchmarks',
+    description: `${benchmarkMatrix.benchmarks.length} benchmarks across ${benchmarkMatrix.models.length} models — MMLU, GPQA, HumanEval, SWE-bench, and more.`,
+    href: `${base}benchmarks/`,
+    modelCount: benchmarkMatrix.benchmarks.length,
+    icon: '📊',
+    available: true,
+    countLabel: 'benchmarks tracked',
   },
   {
-    title: 'Video Generation',
-    description: 'Sora, Runway, Kling, and emerging video AI models side by side.',
-    href: `${base}compare/video/`,
-    modelCount: 0,
-    icon: '🎬',
-    available: false,
+    title: 'Labs & Providers',
+    description: `${providers.length} AI companies and research labs building the models we track.`,
+    href: `${base}labs/`,
+    modelCount: providers.length,
+    icon: '🏢',
+    available: true,
+    countLabel: 'companies listed',
   },
   {
-    title: 'Audio & Music',
-    description: 'Text-to-speech, music generation, and audio AI tools compared.',
-    href: `${base}compare/audio/`,
-    modelCount: 0,
-    icon: '🎵',
-    available: false,
+    title: 'People in AI',
+    description: `${people.length} researchers, founders, and leaders shaping the future of AI.`,
+    href: `${base}people/`,
+    modelCount: people.length,
+    icon: '👤',
+    available: true,
+    countLabel: 'people profiled',
   },
 ];
 ---
@@ -69,18 +77,22 @@ const categories = [
 
   <!-- Stats bar -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
       <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-3xl font-bold text-(--color-accent)">{models.length}</p>
         <p class="text-sm text-(--color-text-secondary) mt-1">LLMs Tracked</p>
       </div>
       <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <p class="text-3xl font-bold text-(--color-accent)">{new Set(models.map(m => m.provider)).size}</p>
+        <p class="text-3xl font-bold text-(--color-accent)">{providers.length}</p>
         <p class="text-sm text-(--color-text-secondary) mt-1">Providers</p>
       </div>
       <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <p class="text-3xl font-bold text-(--color-accent)">Weekly</p>
-        <p class="text-sm text-(--color-text-secondary) mt-1">Price Updates</p>
+        <p class="text-3xl font-bold text-(--color-accent)">{benchmarkMatrix.benchmarks.length}</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">Benchmarks</p>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">{people.length}</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">People Profiled</p>
       </div>
       <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-3xl font-bold text-(--color-accent)">Free</p>
