@@ -170,62 +170,97 @@ const insertModel = db.prepare(`
 
 const models = [
   // ── OpenAI ──
-  ['gpt-4o', 'GPT-4o', 'openai', 2.50, 10.00, 128000, 16384, 100, 87, '2024-05-13', 0, 'text,vision', 1, 'Flagship multimodal model', 'openai.com/api/pricing'],
-  ['gpt-4o-mini', 'GPT-4o Mini', 'openai', 0.15, 0.60, 128000, 16384, 150, 80, '2024-07-18', 0, 'text,vision', 1, 'Cost-efficient small model', 'openai.com/api/pricing'],
-  ['gpt-4.1', 'GPT-4.1', 'openai', 2.00, 8.00, 1047576, 32768, 110, 90, '2025-04-14', 0, 'text,vision', 1, 'Enhanced coding and instruction following', 'openai.com/api/pricing'],
-  ['gpt-4.1-mini', 'GPT-4.1 Mini', 'openai', 0.40, 1.60, 1047576, 32768, 160, 83, '2025-04-14', 0, 'text,vision', 1, 'Balanced performance and cost', 'openai.com/api/pricing'],
-  ['gpt-4.1-nano', 'GPT-4.1 Nano', 'openai', 0.10, 0.40, 1047576, 32768, 200, 75, '2025-04-14', 0, 'text,vision', 1, 'Fastest and cheapest GPT-4.1', 'openai.com/api/pricing'],
-  ['o3', 'o3', 'openai', 10.00, 40.00, 200000, 100000, 15, 95, '2025-04-16', 0, 'text,vision', 1, 'Reasoning model with extended thinking', 'openai.com/api/pricing'],
-  ['o3-mini', 'o3-mini', 'openai', 1.10, 4.40, 200000, 100000, 60, 88, '2025-01-31', 0, 'text', 1, 'Efficient reasoning model', 'openai.com/api/pricing'],
-  ['o4-mini', 'o4-mini', 'openai', 1.10, 4.40, 200000, 100000, 65, 90, '2025-04-16', 0, 'text,vision', 1, 'Compact reasoning with vision', 'openai.com/api/pricing'],
-  ['o3-pro', 'o3-pro', 'openai', 20.00, 80.00, 200000, 100000, 8, 96, '2025-06-10', 0, 'text,vision', 1, 'Highest capability reasoning model', 'openai.com/api/pricing'],
+  // Source: openai.com/api/pricing (Feb 2026)
+  ['gpt-5.2', 'GPT-5.2', 'openai', 1.75, 14.00, 400000, 32768, 50, 96, '2025-12-10', 0, 'text,vision', 1, 'Newest flagship; 90% off cached input', 'openai.com/api/pricing'],
+  ['gpt-5.2-pro', 'GPT-5.2 Pro', 'openai', 21.00, 168.00, 400000, 32768, 30, 97, '2025-12-10', 0, 'text,vision', 1, 'Premium reasoning tier', 'openai.com/api/pricing'],
+  ['gpt-5', 'GPT-5', 'openai', 1.25, 10.00, 400000, 32768, 50, 94, '2025-08-07', 0, 'text,vision', 1, 'Batch: $0.625/$5.00', 'openai.com/api/pricing'],
+  ['gpt-5-pro', 'GPT-5 Pro', 'openai', 15.00, 120.00, 400000, 32768, 30, 96, '2025-10-06', 0, 'text,vision', 1, 'Highest-capability variant', 'openai.com/api/pricing'],
+  ['gpt-5-nano', 'GPT-5 Nano', 'openai', 0.05, 0.40, 400000, 32768, 120, 78, '2025-08-07', 0, 'text', 1, 'Ultra-cheap budget model', 'openai.com/api/pricing'],
+  ['gpt-4.1', 'GPT-4.1', 'openai', 2.00, 8.00, 1047576, 32768, 60, 90, '2025-04-14', 0, 'text,vision', 1, 'Enhanced coding and instruction following', 'openai.com/api/pricing'],
+  ['gpt-4.1-mini', 'GPT-4.1 Mini', 'openai', 0.40, 1.60, 1047576, 32768, 72, 83, '2025-04-14', 0, 'text,vision', 1, 'Exceeds GPT-4o at 83% less cost', 'openai.com/api/pricing'],
+  ['gpt-4.1-nano', 'GPT-4.1 Nano', 'openai', 0.10, 0.40, 1047576, 32768, 110, 75, '2025-04-14', 0, 'text', 1, 'Fastest and cheapest GPT-4.1', 'openai.com/api/pricing'],
+  ['gpt-4o', 'GPT-4o', 'openai', 2.50, 10.00, 128000, 16384, 80, 87, '2024-05-13', 0, 'text,vision,audio', 1, 'Multimodal flagship (legacy)', 'openai.com/api/pricing'],
+  ['gpt-4o-mini', 'GPT-4o Mini', 'openai', 0.15, 0.60, 128000, 16384, 100, 80, '2024-07-18', 0, 'text,vision', 1, 'Cost-efficient small model', 'openai.com/api/pricing'],
+  ['o3', 'o3', 'openai', 2.00, 8.00, 200000, 100000, 115, 95, '2025-04-16', 0, 'text,vision', 1, 'Reasoning model; 80% price cut from launch', 'openai.com/api/pricing'],
+  ['o3-pro', 'o3-pro', 'openai', 20.00, 80.00, 200000, 100000, 32, 96, '2025-06-10', 0, 'text,vision', 1, 'Highest reasoning quality', 'openai.com/api/pricing'],
+  ['o3-mini', 'o3-mini', 'openai', 1.10, 4.40, 200000, 100000, 130, 88, '2025-01-31', 0, 'text', 1, 'Cost-efficient reasoning', 'openai.com/api/pricing'],
+  ['o4-mini', 'o4-mini', 'openai', 1.10, 4.40, 200000, 100000, 179, 90, '2025-04-16', 0, 'text,vision', 1, 'Fast reasoning; excels at math/code', 'openai.com/api/pricing'],
 
   // ── Anthropic ──
-  ['claude-sonnet-4', 'Claude Sonnet 4', 'anthropic', 3.00, 15.00, 200000, 64000, 80, 91, '2025-05-22', 0, 'text,vision', 1, 'Flagship balanced model', 'anthropic.com/pricing'],
-  ['claude-haiku-3.5', 'Claude 3.5 Haiku', 'anthropic', 0.80, 4.00, 200000, 8192, 120, 82, '2024-10-22', 0, 'text,vision', 1, 'Fast and affordable', 'anthropic.com/pricing'],
-  ['claude-opus-4', 'Claude Opus 4', 'anthropic', 15.00, 75.00, 200000, 32000, 30, 93, '2025-05-22', 0, 'text,vision', 1, 'Most capable Claude model', 'anthropic.com/pricing'],
+  // Source: anthropic.com/pricing (Feb 2026)
+  ['claude-opus-4.6', 'Claude Opus 4.6', 'anthropic', 5.00, 25.00, 200000, 128000, 40, 97, '2026-02-05', 0, 'text,vision', 1, 'Most capable; 1M context beta; adaptive thinking', 'anthropic.com/pricing'],
+  ['claude-sonnet-4.6', 'Claude Sonnet 4.6', 'anthropic', 3.00, 15.00, 200000, 64000, 80, 95, '2026-02-17', 0, 'text,vision', 1, 'Default model; extended thinking', 'anthropic.com/pricing'],
+  ['claude-opus-4.5', 'Claude Opus 4.5', 'anthropic', 5.00, 25.00, 200000, 64000, 40, 95, '2025-11-24', 0, 'text,vision', 1, 'Previous generation Opus', 'anthropic.com/pricing'],
+  ['claude-sonnet-4.5', 'Claude Sonnet 4.5', 'anthropic', 3.00, 15.00, 200000, 64000, 80, 93, '2025-09-29', 0, 'text,vision', 1, 'Balanced performance', 'anthropic.com/pricing'],
+  ['claude-haiku-4.5', 'Claude Haiku 4.5', 'anthropic', 1.00, 5.00, 200000, 64000, 120, 87, '2025-10-15', 0, 'text,vision', 1, 'Fast frontier model', 'anthropic.com/pricing'],
+  ['claude-sonnet-4', 'Claude Sonnet 4', 'anthropic', 3.00, 15.00, 200000, 32000, 70, 91, '2025-05-22', 0, 'text,vision', 1, 'Superseded by 4.5/4.6', 'anthropic.com/pricing'],
+  ['claude-opus-4', 'Claude Opus 4', 'anthropic', 15.00, 75.00, 200000, 32000, 30, 93, '2025-05-22', 0, 'text,vision', 1, 'Legacy; 3x more expensive than Opus 4.5+', 'anthropic.com/pricing'],
+  ['claude-haiku-3.5', 'Claude 3.5 Haiku', 'anthropic', 0.80, 4.00, 200000, 8192, 100, 82, '2024-10-22', 0, 'text,vision', 1, 'Retiring Apr 2026', 'anthropic.com/pricing'],
 
   // ── Google ──
-  ['gemini-2.5-pro', 'Gemini 2.5 Pro', 'google', 1.25, 10.00, 1048576, 65536, 90, 92, '2025-03-25', 0, 'text,vision,audio', 1, 'Thinking model with 1M context', 'ai.google.dev/pricing'],
-  ['gemini-2.5-flash', 'Gemini 2.5 Flash', 'google', 0.15, 0.60, 1048576, 65536, 350, 85, '2025-04-17', 0, 'text,vision,audio', 1, 'Fast and cost-effective thinking model', 'ai.google.dev/pricing'],
-  ['gemini-2.0-flash', 'Gemini 2.0 Flash', 'google', 0.10, 0.40, 1048576, 8192, 400, 81, '2025-02-05', 0, 'text,vision,audio', 1, 'Speed-optimised multimodal', 'ai.google.dev/pricing'],
-  ['gemini-2.0-flash-lite', 'Gemini 2.0 Flash Lite', 'google', 0.075, 0.30, 1048576, 8192, 450, 76, '2025-02-25', 0, 'text,vision,audio', 1, 'Cheapest Gemini model', 'ai.google.dev/pricing'],
+  // Source: ai.google.dev/pricing (Feb 2026)
+  ['gemini-3.1-pro', 'Gemini 3.1 Pro', 'google', 2.00, 12.00, 1048576, 65536, 50, 96, '2026-02-01', 0, 'text,vision,audio,video', 1, 'Latest; ARC-AGI-2: 77.1%; >200K: $4/$18', 'ai.google.dev/pricing'],
+  ['gemini-3-pro', 'Gemini 3 Pro', 'google', 2.00, 12.00, 1048576, 65536, 50, 94, '2025-11-18', 0, 'text,vision,audio,video', 1, 'Computer Use support', 'ai.google.dev/pricing'],
+  ['gemini-3-flash', 'Gemini 3 Flash', 'google', 0.50, 3.00, 200000, 32768, 150, 88, '2025-11-18', 0, 'text,vision,audio,video', 1, 'Free tier available; Computer Use', 'ai.google.dev/pricing'],
+  ['gemini-2.5-pro', 'Gemini 2.5 Pro', 'google', 1.25, 10.00, 1048576, 65536, 70, 92, '2025-03-25', 0, 'text,vision,audio', 1, 'Thinking model with 1M context', 'ai.google.dev/pricing'],
+  ['gemini-2.5-flash', 'Gemini 2.5 Flash', 'google', 0.15, 0.60, 1048576, 65536, 200, 85, '2025-05-01', 0, 'text,vision,audio', 1, 'With thinking: $3.50 output', 'ai.google.dev/pricing'],
+  ['gemini-2.5-flash-lite', 'Gemini 2.5 Flash Lite', 'google', 0.10, 0.40, 1048576, 8192, 250, 78, '2025-05-01', 0, 'text,vision,audio', 1, 'Most budget-friendly Gemini', 'ai.google.dev/pricing'],
+  ['gemini-2.0-flash', 'Gemini 2.0 Flash', 'google', 0.10, 0.40, 1048576, 8192, 200, 81, '2024-12-01', 0, 'text,vision,audio', 1, 'Retiring Mar 2026', 'ai.google.dev/pricing'],
 
   // ── Meta / Llama ──
-  ['llama-4-maverick', 'Llama 4 Maverick', 'meta', 0.20, 0.60, 1048576, 65536, 120, 85, '2025-04-05', 1, 'text,vision', 1, 'Open-weight MoE (17B active / 400B total)', 'together.ai/pricing'],
-  ['llama-4-scout', 'Llama 4 Scout', 'meta', 0.15, 0.40, 10485760, 65536, 140, 80, '2025-04-05', 1, 'text,vision', 1, 'Open-weight with 10M context window', 'together.ai/pricing'],
+  // Source: together.ai/pricing, fireworks.ai/pricing (Feb 2026)
+  ['llama-4-maverick', 'Llama 4 Maverick', 'meta', 0.27, 0.85, 1048576, 32768, 80, 85, '2025-04-05', 1, 'text,vision', 1, 'Open-weight MoE (17B active / 128 experts)', 'together.ai/pricing'],
+  ['llama-4-scout', 'Llama 4 Scout', 'meta', 0.18, 0.59, 10485760, 32768, 100, 80, '2025-04-05', 1, 'text,vision', 1, 'Open-weight with 10M context; fits single GPU', 'together.ai/pricing'],
   ['llama-3.3-70b', 'Llama 3.3 70B', 'meta', 0.18, 0.50, 131072, 32768, 100, 79, '2024-12-06', 1, 'text', 1, 'Open-weight general purpose', 'together.ai/pricing'],
   ['llama-3.1-405b', 'Llama 3.1 405B', 'meta', 3.00, 3.00, 131072, 32768, 30, 84, '2024-07-23', 1, 'text', 1, 'Largest open-weight model', 'together.ai/pricing'],
 
   // ── DeepSeek ──
-  ['deepseek-v3', 'DeepSeek V3', 'deepseek', 0.27, 1.10, 131072, 8192, 60, 84, '2025-01-20', 1, 'text', 1, 'Open-weight MoE model', 'deepseek.com/pricing'],
-  ['deepseek-r1', 'DeepSeek R1', 'deepseek', 0.55, 2.19, 131072, 8192, 30, 89, '2025-01-20', 1, 'text', 1, 'Open-weight reasoning model', 'deepseek.com/pricing'],
+  // Source: deepseek.com/pricing (Feb 2026)
+  ['deepseek-v3.2', 'DeepSeek V3.2', 'deepseek', 0.14, 0.28, 128000, 8192, 49, 87, '2025-09-29', 1, 'text', 1, '685B params (37B active) MoE; 90% off cache hits', 'deepseek.com/pricing'],
+  ['deepseek-r1', 'DeepSeek R1', 'deepseek', 0.55, 2.19, 128000, 8192, 30, 89, '2025-01-20', 1, 'text', 1, 'Open-weight reasoning; CoT tokens billed as output', 'deepseek.com/pricing'],
+  ['deepseek-r1-0528', 'DeepSeek R1 0528', 'deepseek', 1.35, 4.20, 128000, 8192, 30, 91, '2025-05-28', 1, 'text', 1, 'Updated R1 with improved reasoning', 'deepseek.com/pricing'],
+  ['deepseek-v3', 'DeepSeek V3', 'deepseek', 0.14, 0.28, 64000, 8192, 40, 84, '2024-12-25', 1, 'text', 1, 'Original V3; 671B params (37B active)', 'deepseek.com/pricing'],
 
   // ── Mistral ──
-  ['mistral-large', 'Mistral Large 2', 'mistral', 2.00, 6.00, 131072, 32768, 70, 83, '2024-07-24', 0, 'text', 1, 'Flagship Mistral model', 'mistral.ai/products'],
-  ['codestral', 'Codestral', 'mistral', 0.30, 0.90, 262144, 32768, 90, 81, '2025-01-14', 0, 'text', 1, 'Specialised for code generation', 'mistral.ai/products'],
-  ['mistral-small', 'Mistral Small 3.1', 'mistral', 0.10, 0.30, 131072, 32768, 150, 76, '2025-03-18', 1, 'text,vision', 1, 'Efficient open-weight with vision', 'mistral.ai/products'],
-  ['mistral-nemo', 'Mistral Nemo', 'mistral', 0.13, 0.13, 131072, 32768, 130, 72, '2024-07-18', 1, 'text', 1, 'Open-weight 12B model', 'mistral.ai/products'],
-  ['pixtral-large', 'Pixtral Large', 'mistral', 2.00, 6.00, 131072, 32768, 50, 82, '2024-11-18', 0, 'text,vision', 1, 'Vision-specialised flagship', 'mistral.ai/products'],
+  // Source: mistral.ai/pricing (Feb 2026)
+  ['mistral-large-3', 'Mistral Large 3', 'mistral', 0.50, 1.50, 256000, 32768, 80, 86, '2025-06-01', 1, 'text,vision', 1, 'Excellent value for flagship tier', 'mistral.ai/pricing'],
+  ['mistral-medium-3', 'Mistral Medium 3', 'mistral', 0.40, 2.00, 131072, 16384, 90, 82, '2025-06-01', 1, 'text', 1, 'GPT-4 class at low cost', 'mistral.ai/pricing'],
+  ['mistral-small-3.1', 'Mistral Small 3.1', 'mistral', 0.03, 0.11, 128000, 16384, 150, 76, '2025-03-18', 1, 'text,vision', 1, 'Ultra-cheap open-weight with vision', 'mistral.ai/pricing'],
+  ['codestral', 'Codestral', 'mistral', 0.30, 0.90, 262144, 32768, 80, 81, '2025-01-14', 0, 'text', 1, 'Dedicated coding model', 'mistral.ai/pricing'],
+  ['mistral-nemo', 'Mistral Nemo', 'mistral', 0.02, 0.04, 131072, 16384, 120, 72, '2024-07-18', 1, 'text', 1, 'Cheapest Mistral model', 'mistral.ai/pricing'],
+  ['pixtral-large', 'Pixtral Large', 'mistral', 2.00, 6.00, 131072, 32768, 50, 82, '2024-11-18', 0, 'text,vision', 1, 'Vision-specialised flagship', 'mistral.ai/pricing'],
 
   // ── xAI ──
-  ['grok-3', 'Grok 3', 'xai', 3.00, 15.00, 131072, 32768, 75, 90, '2025-02-18', 0, 'text', 1, 'xAI flagship reasoning model', 'x.ai/api'],
-  ['grok-3-mini', 'Grok 3 Mini', 'xai', 0.30, 0.50, 131072, 32768, 180, 82, '2025-02-18', 0, 'text', 1, 'Lightweight reasoning model', 'x.ai/api'],
+  // Source: docs.x.ai/developers/models (Feb 2026)
+  ['grok-4', 'Grok 4', 'xai', 3.00, 15.00, 256000, 32768, 50, 95, '2025-07-09', 0, 'text', 1, 'Frontier reasoning (matches o3 quality)', 'docs.x.ai'],
+  ['grok-4-fast', 'Grok 4 Fast', 'xai', 0.20, 0.50, 2097152, 32768, 150, 85, '2025-09-19', 0, 'text', 1, '2M context; fast reasoning', 'docs.x.ai'],
+  ['grok-4.1-fast', 'Grok 4.1 Fast', 'xai', 0.20, 0.50, 2097152, 32768, 150, 86, '2025-11-01', 0, 'text', 1, 'Largest context window in industry', 'docs.x.ai'],
+  ['grok-3', 'Grok 3', 'xai', 3.00, 15.00, 131072, 32768, 70, 90, '2025-06-10', 0, 'text,vision', 1, 'Previous flagship', 'docs.x.ai'],
+  ['grok-3-mini', 'Grok 3 Mini', 'xai', 0.30, 0.50, 131072, 32768, 120, 82, '2025-06-10', 0, 'text', 1, 'Outperforms Grok 3 at 90% less', 'docs.x.ai'],
 
   // ── Amazon ──
-  ['nova-pro', 'Amazon Nova Pro', 'amazon', 0.80, 3.20, 300000, 5120, 80, 78, '2024-12-03', 0, 'text,vision,video', 1, 'Balanced multimodal model', 'aws.amazon.com/bedrock/pricing'],
-  ['nova-lite', 'Amazon Nova Lite', 'amazon', 0.06, 0.24, 300000, 5120, 200, 72, '2024-12-03', 0, 'text,vision,video', 1, 'Low-cost multimodal', 'aws.amazon.com/bedrock/pricing'],
-  ['nova-micro', 'Amazon Nova Micro', 'amazon', 0.035, 0.14, 128000, 5120, 250, 68, '2024-12-03', 0, 'text', 1, 'Text-only ultra low cost', 'aws.amazon.com/bedrock/pricing'],
+  // Source: aws.amazon.com/nova/pricing (Feb 2026)
+  ['nova-2-lite', 'Amazon Nova 2 Lite', 'amazon', 0.30, 2.50, 1048576, 16384, 100, 82, '2025-12-02', 0, 'text,vision,video', 1, 'Reasoning model; 3 thinking levels', 'aws.amazon.com/nova/pricing'],
+  ['nova-premier', 'Amazon Nova Premier', 'amazon', 2.50, 12.50, 300000, 5120, 50, 80, '2025-03-01', 0, 'text,vision,video', 1, 'Best for distillation', 'aws.amazon.com/nova/pricing'],
+  ['nova-pro', 'Amazon Nova Pro', 'amazon', 0.80, 3.20, 300000, 5120, 80, 78, '2024-12-03', 0, 'text,vision,video', 1, 'Balanced multimodal', 'aws.amazon.com/nova/pricing'],
+  ['nova-lite', 'Amazon Nova Lite', 'amazon', 0.06, 0.24, 300000, 5120, 150, 72, '2024-12-03', 0, 'text,vision,video', 1, 'Very low cost multimodal', 'aws.amazon.com/nova/pricing'],
+  ['nova-micro', 'Amazon Nova Micro', 'amazon', 0.035, 0.14, 128000, 5120, 210, 68, '2024-12-03', 0, 'text', 1, 'Fastest Nova; text-only', 'aws.amazon.com/nova/pricing'],
 
   // ── Cohere ──
-  ['command-r-plus', 'Command R+', 'cohere', 2.50, 10.00, 128000, 4096, 50, 79, '2024-04-04', 0, 'text', 1, 'Enterprise RAG-optimised model', 'cohere.com/pricing'],
-  ['command-r', 'Command R', 'cohere', 0.15, 0.60, 128000, 4096, 80, 73, '2024-03-11', 0, 'text', 1, 'Efficient retrieval-augmented model', 'cohere.com/pricing'],
-  ['command-a', 'Command A', 'cohere', 2.50, 10.00, 256000, 8192, 60, 82, '2025-03-13', 0, 'text', 1, 'Latest enterprise model with agentic capabilities', 'cohere.com/pricing'],
+  // Source: cohere.com/pricing (Feb 2026)
+  ['command-a', 'Command A', 'cohere', 2.50, 10.00, 256000, 32768, 60, 82, '2025-03-13', 1, 'text', 1, '111B params; 23 languages; agentic', 'cohere.com/pricing'],
+  ['command-a-reasoning', 'Command A Reasoning', 'cohere', 2.50, 10.00, 256000, 32768, 50, 84, '2025-08-01', 1, 'text', 1, 'Hybrid reasoning variant', 'cohere.com/pricing'],
+  ['command-r-plus', 'Command R+', 'cohere', 2.50, 10.00, 128000, 4096, 40, 79, '2024-08-01', 1, 'text', 1, 'Enterprise RAG/tool use', 'cohere.com/pricing'],
+  ['command-r', 'Command R', 'cohere', 0.15, 0.60, 128000, 4096, 60, 73, '2024-03-11', 1, 'text', 1, 'Budget option; 94% cheaper than R+', 'cohere.com/pricing'],
+  ['command-r7b', 'Command R7B', 'cohere', 0.0375, 0.15, 128000, 4096, 100, 65, '2024-06-01', 1, 'text', 1, 'Smallest; ideal for high-volume', 'cohere.com/pricing'],
 
   // ── Alibaba / Qwen ──
-  ['qwen-2.5-72b', 'Qwen 2.5 72B', 'alibaba', 0.40, 1.20, 131072, 8192, 70, 82, '2024-09-19', 1, 'text', 1, 'Open-weight competitive with GPT-4o', 'together.ai/pricing'],
-  ['qwen-2.5-coder-32b', 'Qwen 2.5 Coder 32B', 'alibaba', 0.20, 0.60, 131072, 8192, 90, 78, '2024-11-12', 1, 'text', 1, 'Specialised coding model', 'together.ai/pricing'],
-  ['qwen-qwq-32b', 'QwQ 32B', 'alibaba', 0.20, 0.60, 131072, 32768, 80, 83, '2025-03-06', 1, 'text', 1, 'Open-weight reasoning model', 'together.ai/pricing'],
+  // Source: together.ai/pricing, qwen.ai (Feb 2026)
+  ['qwen3-max', 'Qwen3 Max', 'alibaba', 1.20, 6.00, 256000, 32768, 60, 90, '2025-09-01', 1, 'text', 1, 'Flagship Qwen model', 'qwen.ai/apiplatform'],
+  ['qwen3-coder-480b', 'Qwen3 Coder 480B', 'alibaba', 2.00, 2.00, 256000, 32768, 40, 88, '2025-09-01', 1, 'text', 1, '480B params; coding specialist', 'together.ai/pricing'],
+  ['qwen3-235b', 'Qwen3 235B', 'alibaba', 0.20, 0.60, 256000, 32768, 60, 86, '2025-04-01', 1, 'text', 1, 'Thinking mode: $0.65/$3.00', 'together.ai/pricing'],
+  ['qwen-qwq-32b', 'QwQ 32B', 'alibaba', 1.20, 1.20, 131072, 32768, 80, 83, '2025-03-06', 1, 'text', 1, 'Reasoning model on Qwen2.5 base', 'together.ai/pricing'],
+  ['qwen-2.5-72b', 'Qwen 2.5 72B', 'alibaba', 0.23, 0.23, 128000, 16384, 70, 82, '2024-09-19', 1, 'text', 1, '1/10th cost of GPT-4o', 'deepinfra.com/pricing'],
 
   // ── AI21 ──
   ['jamba-1.5-large', 'Jamba 1.5 Large', 'ai21', 2.00, 8.00, 256000, 4096, 60, 76, '2024-08-22', 0, 'text', 1, 'Mamba-Transformer hybrid with 256K context', 'ai21.com/pricing'],
@@ -240,6 +275,7 @@ const models = [
 
   // ── Reka ──
   ['reka-core', 'Reka Core', 'reka', 3.00, 15.00, 128000, 4096, 40, 78, '2024-04-15', 0, 'text,vision,audio,video', 1, 'Natively multimodal (text, image, video, audio)', 'reka.ai/pricing'],
+  ['reka-flash-3', 'Reka Flash 3', 'reka', 0.35, 0.35, 128000, 4096, 80, 74, '2025-06-01', 0, 'text,vision,audio,video', 1, 'Fast/cheap multimodal', 'reka.ai/pricing'],
 ];
 
 const insertModels = db.transaction(() => {
@@ -296,12 +332,15 @@ const insertScore = db.prepare(`
 `);
 
 const scores: [string, string, number, string, string][] = [
-  // GPT-4o
-  ['gpt-4o', 'mmlu', 88.7, 'OpenAI', '2024-05-13'],
-  ['gpt-4o', 'gpqa-diamond', 53.6, 'OpenAI', '2024-05-13'],
-  ['gpt-4o', 'humaneval', 90.2, 'OpenAI', '2024-05-13'],
-  ['gpt-4o', 'math-500', 76.6, 'OpenAI', '2024-05-13'],
-  ['gpt-4o', 'chatbot-arena-elo', 1285, 'LMSYS', '2025-01-15'],
+  // GPT-5.2
+  ['gpt-5.2', 'chatbot-arena-elo', 1370, 'LMSYS', '2026-01-01'],
+  ['gpt-5.2', 'gpqa-diamond', 89.0, 'OpenAI', '2025-12-10'],
+  ['gpt-5.2', 'swe-bench-verified', 78.0, 'OpenAI', '2025-12-10'],
+
+  // GPT-5
+  ['gpt-5', 'gpqa-diamond', 86.0, 'OpenAI', '2025-08-07'],
+  ['gpt-5', 'swe-bench-verified', 75.0, 'OpenAI', '2025-08-07'],
+  ['gpt-5', 'chatbot-arena-elo', 1355, 'LMSYS', '2025-09-01'],
 
   // GPT-4.1
   ['gpt-4.1', 'mmlu', 90.2, 'OpenAI', '2025-04-14'],
@@ -309,6 +348,13 @@ const scores: [string, string, number, string, string][] = [
   ['gpt-4.1', 'humaneval', 93.4, 'OpenAI', '2025-04-14'],
   ['gpt-4.1', 'swe-bench-verified', 54.6, 'OpenAI', '2025-04-14'],
   ['gpt-4.1', 'math-500', 83.0, 'OpenAI', '2025-04-14'],
+
+  // GPT-4o
+  ['gpt-4o', 'mmlu', 88.7, 'OpenAI', '2024-05-13'],
+  ['gpt-4o', 'gpqa-diamond', 53.6, 'OpenAI', '2024-05-13'],
+  ['gpt-4o', 'humaneval', 90.2, 'OpenAI', '2024-05-13'],
+  ['gpt-4o', 'math-500', 76.6, 'OpenAI', '2024-05-13'],
+  ['gpt-4o', 'chatbot-arena-elo', 1285, 'LMSYS', '2025-01-15'],
 
   // o3
   ['o3', 'mmlu', 92.0, 'OpenAI', '2025-04-16'],
@@ -331,6 +377,14 @@ const scores: [string, string, number, string, string][] = [
   ['o4-mini', 'aime-2025', 92.7, 'OpenAI', '2025-04-16'],
   ['o4-mini', 'humaneval', 96.0, 'OpenAI', '2025-04-16'],
 
+  // Claude Opus 4.6
+  ['claude-opus-4.6', 'swe-bench-verified', 78.0, 'Anthropic', '2026-02-05'],
+  ['claude-opus-4.6', 'chatbot-arena-elo', 1365, 'LMSYS', '2026-02-10'],
+
+  // Claude Sonnet 4.6
+  ['claude-sonnet-4.6', 'swe-bench-verified', 72.0, 'Anthropic', '2026-02-17'],
+  ['claude-sonnet-4.6', 'chatbot-arena-elo', 1350, 'LMSYS', '2026-02-20'],
+
   // Claude Sonnet 4
   ['claude-sonnet-4', 'mmlu', 88.0, 'Anthropic', '2025-05-22'],
   ['claude-sonnet-4', 'gpqa-diamond', 67.5, 'Anthropic', '2025-05-22'],
@@ -347,6 +401,9 @@ const scores: [string, string, number, string, string][] = [
   ['claude-opus-4', 'math-500', 88.7, 'Anthropic', '2025-05-22'],
   ['claude-opus-4', 'chatbot-arena-elo', 1330, 'LMSYS', '2025-06-01'],
 
+  // Gemini 3.1 Pro
+  ['gemini-3.1-pro', 'chatbot-arena-elo', 1375, 'LMSYS', '2026-02-15'],
+
   // Gemini 2.5 Pro
   ['gemini-2.5-pro', 'mmlu', 90.5, 'Google', '2025-03-25'],
   ['gemini-2.5-pro', 'gpqa-diamond', 68.4, 'Google', '2025-03-25'],
@@ -357,10 +414,10 @@ const scores: [string, string, number, string, string][] = [
   ['gemini-2.5-pro', 'chatbot-arena-elo', 1340, 'LMSYS', '2025-06-01'],
 
   // Gemini 2.5 Flash
-  ['gemini-2.5-flash', 'mmlu', 86.5, 'Google', '2025-04-17'],
-  ['gemini-2.5-flash', 'gpqa-diamond', 59.2, 'Google', '2025-04-17'],
-  ['gemini-2.5-flash', 'math-500', 82.3, 'Google', '2025-04-17'],
-  ['gemini-2.5-flash', 'humaneval', 88.5, 'Google', '2025-04-17'],
+  ['gemini-2.5-flash', 'mmlu', 86.5, 'Google', '2025-05-01'],
+  ['gemini-2.5-flash', 'gpqa-diamond', 59.2, 'Google', '2025-05-01'],
+  ['gemini-2.5-flash', 'math-500', 82.3, 'Google', '2025-05-01'],
+  ['gemini-2.5-flash', 'humaneval', 88.5, 'Google', '2025-05-01'],
   ['gemini-2.5-flash', 'chatbot-arena-elo', 1300, 'LMSYS', '2025-05-01'],
 
   // DeepSeek R1
@@ -371,25 +428,39 @@ const scores: [string, string, number, string, string][] = [
   ['deepseek-r1', 'humaneval', 92.5, 'DeepSeek', '2025-01-20'],
   ['deepseek-r1', 'chatbot-arena-elo', 1318, 'LMSYS', '2025-04-01'],
 
+  // DeepSeek V3.2
+  ['deepseek-v3.2', 'mmlu', 89.5, 'DeepSeek', '2025-09-29'],
+  ['deepseek-v3.2', 'humaneval', 91.0, 'DeepSeek', '2025-09-29'],
+  ['deepseek-v3.2', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-10-01'],
+
   // DeepSeek V3
-  ['deepseek-v3', 'mmlu', 88.5, 'DeepSeek', '2025-01-20'],
-  ['deepseek-v3', 'gpqa-diamond', 59.1, 'DeepSeek', '2025-01-20'],
-  ['deepseek-v3', 'math-500', 78.3, 'DeepSeek', '2025-01-20'],
-  ['deepseek-v3', 'humaneval', 89.5, 'DeepSeek', '2025-01-20'],
+  ['deepseek-v3', 'mmlu', 88.5, 'DeepSeek', '2024-12-25'],
+  ['deepseek-v3', 'gpqa-diamond', 59.1, 'DeepSeek', '2024-12-25'],
+  ['deepseek-v3', 'math-500', 78.3, 'DeepSeek', '2024-12-25'],
+  ['deepseek-v3', 'humaneval', 89.5, 'DeepSeek', '2024-12-25'],
+
+  // Grok 4
+  ['grok-4', 'chatbot-arena-elo', 1345, 'LMSYS', '2025-08-01'],
+  ['grok-4', 'gpqa-diamond', 82.0, 'xAI', '2025-07-09'],
+  ['grok-4', 'math-500', 95.0, 'xAI', '2025-07-09'],
 
   // Grok 3
-  ['grok-3', 'mmlu', 91.0, 'xAI', '2025-02-18'],
-  ['grok-3', 'gpqa-diamond', 68.2, 'xAI', '2025-02-18'],
-  ['grok-3', 'math-500', 91.5, 'xAI', '2025-02-18'],
-  ['grok-3', 'aime-2025', 83.9, 'xAI', '2025-02-18'],
-  ['grok-3', 'humaneval', 93.8, 'xAI', '2025-02-18'],
-  ['grok-3', 'chatbot-arena-elo', 1329, 'LMSYS', '2025-04-01'],
+  ['grok-3', 'mmlu', 91.0, 'xAI', '2025-06-10'],
+  ['grok-3', 'gpqa-diamond', 68.2, 'xAI', '2025-06-10'],
+  ['grok-3', 'math-500', 91.5, 'xAI', '2025-06-10'],
+  ['grok-3', 'aime-2025', 83.9, 'xAI', '2025-06-10'],
+  ['grok-3', 'humaneval', 93.8, 'xAI', '2025-06-10'],
+  ['grok-3', 'chatbot-arena-elo', 1329, 'LMSYS', '2025-07-01'],
 
   // Llama 4 Maverick
   ['llama-4-maverick', 'mmlu', 85.5, 'Meta', '2025-04-05'],
   ['llama-4-maverick', 'gpqa-diamond', 56.0, 'Meta', '2025-04-05'],
   ['llama-4-maverick', 'humaneval', 87.5, 'Meta', '2025-04-05'],
   ['llama-4-maverick', 'chatbot-arena-elo', 1290, 'LMSYS', '2025-05-01'],
+
+  // Qwen3 235B
+  ['qwen3-235b', 'chatbot-arena-elo', 1320, 'LMSYS', '2025-05-01'],
+  ['qwen3-235b', 'math-500', 92.0, 'Alibaba', '2025-04-01'],
 
   // Qwen QwQ
   ['qwen-qwq-32b', 'gpqa-diamond', 63.0, 'Alibaba', '2025-03-06'],
@@ -402,6 +473,12 @@ const scores: [string, string, number, string, string][] = [
   ['qwen-2.5-72b', 'gpqa-diamond', 49.0, 'Alibaba', '2024-09-19'],
   ['qwen-2.5-72b', 'humaneval', 86.6, 'Alibaba', '2024-09-19'],
   ['qwen-2.5-72b', 'math-500', 80.0, 'Alibaba', '2024-09-19'],
+
+  // Mistral Large 3
+  ['mistral-large-3', 'chatbot-arena-elo', 1295, 'LMSYS', '2025-07-01'],
+
+  // Command A
+  ['command-a', 'chatbot-arena-elo', 1280, 'LMSYS', '2025-04-01'],
 ];
 
 const insertScores = db.transaction(() => {
