@@ -5,7 +5,7 @@ import CategoryCard from '../components/CategoryCard.astro';
 import TopModelsPreview from '../components/TopModelsPreview.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getLLMModels } from '../data/llm-models';
-import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms, getModelsByCategory, getModelCounts, getRecentModels } from '../db/queries';
+import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms, getModelsByCategory, getModelCounts, getRecentModels, getYouTubeCreators, getTagsWithCounts, getNews } from '../db/queries';
 
 const models = getLLMModels();
 const providers = getProvidersWithCounts();
@@ -19,6 +19,9 @@ const speechModels = getModelsByCategory('speech');
 const voiceModels = getModelsByCategory('voice');
 const soundModels = getModelsByCategory('sound');
 const recentModels = getRecentModels(8);
+const youtubeCreators = getYouTubeCreators();
+const allTags = getTagsWithCounts();
+const latestNews = getNews(5);
 const catLabels = { llm: 'LLM', image: 'Image', video: 'Video', voice: 'Voice', speech: 'Speech', sound: 'Sound' } as Record<string, string>;
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -100,6 +103,33 @@ const dataCategories = [
     icon: '🏢',
     available: true,
     countLabel: 'companies listed',
+  },
+  {
+    title: 'AI News',
+    description: 'Latest AI news — model releases, research breakthroughs, funding rounds, and industry updates.',
+    href: `${base}news/`,
+    modelCount: latestNews.length,
+    icon: '📰',
+    available: true,
+    countLabel: 'latest articles',
+  },
+  {
+    title: 'YouTube Channels',
+    description: `${youtubeCreators.length} curated AI YouTube channels — news, tutorials, research, and creative.`,
+    href: `${base}youtube/`,
+    modelCount: youtubeCreators.length,
+    icon: '🎥',
+    available: true,
+    countLabel: 'channels listed',
+  },
+  {
+    title: 'People in AI',
+    description: `${people.length} researchers, founders, and leaders shaping the AI industry.`,
+    href: `${base}people/`,
+    modelCount: people.length,
+    icon: '👤',
+    available: true,
+    countLabel: 'profiles',
   },
 ];
 
