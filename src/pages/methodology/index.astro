@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getProviders, getBenchmarks } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const providers = getProviders();
+const benchmarks = getBenchmarks();
+---
+
+<BaseLayout
+  title="Methodology — How We Score AI Models — The AI Resource Hub"
+  description="Transparent methodology for how The AI Resource Hub scores, ranks, and compares AI models. Data sources, scoring formula, and update frequency."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Methodology</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Methodology
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        How we score, rank, and compare AI models. Full transparency on our data sources, scoring methodology, and update frequency.
+      </p>
+    </div>
+
+    <!-- Independence -->
+    <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20 mb-8">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Independence Statement</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        The AI Resource Hub is <strong>fully independent</strong>. We are not affiliated with, sponsored by, or funded by any AI provider. We do not accept payment for rankings or reviews. Our goal is to provide accurate, unbiased data to help you make informed decisions.
+      </p>
+    </div>
+
+    <!-- Data Sources -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Data Sources</h2>
+      <div class="space-y-4">
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-1">Pricing Data</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Primary source: <strong>OpenRouter API</strong> (<code>/api/v1/models</code>) — providing real-time pricing for 500+ models with 8 pricing dimensions (prompt, completion, image, request, cache read/write, web search, internal reasoning). Cross-referenced against official provider pricing pages.
+          </p>
+          <p class="text-xs text-(--color-text-muted) mt-1">Updated: Daily via automated GitHub Actions scraper</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-1">Benchmark Scores</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Sourced from official model cards, research papers, and provider announcements. We track {benchmarks.length} benchmarks across categories: general intelligence, coding, math, reasoning, safety, agent capabilities, domain-specific, multilingual, and multimodal.
+          </p>
+          <p class="text-xs text-(--color-text-muted) mt-1">Updated: When new benchmark results are published by providers or researchers</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-1">Provider Information</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Company details, founding dates, headquarters, leadership, and funding data sourced from official websites, press releases, and verified reporting. Currently tracking {providers.length} AI providers.
+          </p>
+          <p class="text-xs text-(--color-text-muted) mt-1">Updated: As changes are announced</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-1">News Articles</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Aggregated daily from major AI news sources including TechCrunch, Reuters, AI News, and curated YouTube channels. Processed through our News Scout system which filters junk items and categorises articles.
+          </p>
+          <p class="text-xs text-(--color-text-muted) mt-1">Updated: Daily at 06:00 UTC via GitHub Actions</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quality Score -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Quality Score</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-4">
+        Each model receives a <strong>quality score</strong> from 0–100 based on a weighted combination of factors:
+      </p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Factor</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Weight</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Benchmark performance (avg across available benchmarks)</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">40%</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">MMLU, GPQA, HumanEval, MATH, etc.</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Capability breadth (modalities, tools, features)</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">20%</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Official documentation</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Context window and output capacity</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">15%</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">API specifications</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Community and expert consensus</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">15%</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Arena Elo, community feedback</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-(--color-text-primary)">Recency and update status</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">10%</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Release date, active status</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Value Score -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Value Score</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-3">
+        The <strong>value score</strong> measures quality-per-dollar — how much capability you get for your money. Calculated as:
+      </p>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) font-mono text-sm text-(--color-accent) text-center">
+        Value Score = (Quality Score / Blended Price) &times; 10
+      </div>
+      <p class="text-sm text-(--color-text-secondary) mt-3">
+        Where <strong>blended price</strong> uses a 3:1 output-to-input ratio: <code>(input_price + 3 &times; output_price) / 4</code>. This ratio reflects typical API usage patterns where output tokens cost more and represent 75% of total spend.
+      </p>
+    </div>
+
+    <!-- Update Frequency -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Update Frequency</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) text-sm">Daily (Automated)</h3>
+          <ul class="text-xs text-(--color-text-secondary) mt-2 space-y-1 list-disc list-inside">
+            <li>API pricing from OpenRouter</li>
+            <li>News digest import</li>
+            <li>Site rebuild and deployment</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) text-sm">As Published</h3>
+          <ul class="text-xs text-(--color-text-secondary) mt-2 space-y-1 list-disc list-inside">
+            <li>New model releases</li>
+            <li>Benchmark scores</li>
+            <li>Provider information changes</li>
+            <li>People, tools, and content</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Limitations -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Limitations</h2>
+      <ul class="text-sm text-(--color-text-secondary) space-y-2 list-disc list-inside">
+        <li><strong>Benchmarks have known issues</strong> — data contamination, narrow evaluation, and saturation effects mean no single benchmark tells the full story. We use multiple benchmarks and flag known issues.</li>
+        <li><strong>Pricing changes frequently</strong> — AI model pricing can change without notice. We update daily but prices may lag by up to 24 hours.</li>
+        <li><strong>Speed data is limited</strong> — we track relative speed ratings rather than real-time latency measurements. For production speed data, we recommend <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a>.</li>
+        <li><strong>Coverage is curated</strong> — we focus on models available via API and major consumer products. Some niche or regional models may not be listed.</li>
+        <li><strong>Quality scores are editorial</strong> — while based on benchmark data, final quality scores involve editorial judgement. See our scoring breakdown above for transparency.</li>
+      </ul>
+    </div>
+
+    <!-- Corrections -->
+    <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Found an Error?</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        If you spot incorrect data, outdated pricing, or missing models, please open an issue on our <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub repository</a>. We take accuracy seriously and will update within 24 hours of verified corrections.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
