@@ -17,18 +17,25 @@ interface OpenRouterModel {
   id: string;
   name: string;
   pricing: {
-    prompt: string;      // cost per prompt token (e.g. "0.0000025")
-    completion: string;  // cost per completion token
-    image?: string;      // cost per image (for vision inputs)
-    request?: string;    // flat per-request cost
+    prompt: string;              // cost per 1 prompt token (e.g. "0.0000025" = $2.50/1M)
+    completion: string;          // cost per 1 completion token
+    image?: string;              // cost per image input
+    request?: string;            // flat per-request cost
+    input_cache_read?: string;   // cost per cached input token read
+    input_cache_write?: string;  // cost per cached input token write
+    web_search?: string;         // cost per web search
+    internal_reasoning?: string; // cost per internal reasoning token
   };
   context_length: number;
   top_provider?: {
+    context_length?: number;
     max_completion_tokens?: number;
     is_moderated?: boolean;
   };
   architecture?: {
-    modality?: string;     // e.g. "text+image->text"
+    modality?: string;              // legacy: "text+image->text"
+    input_modalities?: string[];    // e.g. ["text", "image"]
+    output_modalities?: string[];   // e.g. ["text"]
     tokenizer?: string;
     instruct_type?: string;
   };
@@ -185,7 +192,7 @@ async function scrapeOpenRouter(): Promise<ScrapedModel[]> {
     if (inputPrice === 0 && outputPrice === 0) continue;
 
     // Parse modality from architecture
-    const modality = parseModality(orModel.architecture?.modality);
+    const modality = parseModality(orModel.architecture);
 
     const providerId = DB_ID_TO_PROVIDER[dbId];
 
@@ -204,15 +211,38 @@ async function scrapeOpenRouter(): Promise<ScrapedModel[]> {
   }
 
   console.log(`    Matched ${matched} models to our database (${skipped} untracked)`);
+
+  // Log price summary for matched models
+  if (models.length > 0) {
+    console.log('    Price summary (per 1M tokens):');
+    for (const m of models.slice(0, 10)) {
+      console.log(`      ${m.id}: $${m.inputPrice.toFixed(2)} in / $${m.outputPrice.toFixed(2)} out`);
+    }
+    if (models.length > 10) {
+      console.log(`      ... and ${models.length - 10} more`);
+    }
+  }
+
   return models;
 }
 
-function parseModality(orModality?: string): string {
-  if (!orModality) return 'text';
-  // OpenRouter format: "text+image->text" or "text->text"
+function parseModality(architecture?: OpenRouterModel['architecture']): string {
+  if (!architecture) return 'text';
+
+  // Prefer structured modality arrays (newer API format)
+  if (architecture.input_modalities && architecture.input_modalities.length > 0) {
+    const parts: string[] = ['text'];
+    if (architecture.input_modalities.includes('image')) parts.push('vision');
+    if (architecture.input_modalities.includes('audio')) parts.push('audio');
+    return parts.join(',');
+  }
+
+  // Fall back to legacy modality string: "text+image->text"
+  const legacy = architecture.modality;
+  if (!legacy) return 'text';
   const parts: string[] = ['text'];
-  if (orModality.includes('image')) parts.push('vision');
-  if (orModality.includes('audio')) parts.push('audio');
+  if (legacy.includes('image')) parts.push('vision');
+  if (legacy.includes('audio')) parts.push('audio');
   return parts.join(',');
 }
 
