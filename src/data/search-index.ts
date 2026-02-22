@@ -186,6 +186,10 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'twitter', title: 'AI on X/Twitter', description: 'Curated list of the top AI accounts to follow on X/Twitter' },
     { id: 'tags', title: 'Browse by Tag', description: 'Browse AI topics, technologies, and use cases' },
     { id: 'status', title: 'Provider Status Dashboard', description: 'Check if AI services are up — all provider status pages in one place' },
+    { id: 'tools', title: 'AI Tools Directory', description: 'Comprehensive directory of the best AI tools — chatbots, coding assistants, image generators' },
+    { id: 'timeline', title: 'AI Timeline', description: 'Key moments in AI history — from the Transformer paper to modern LLMs' },
+    { id: 'leaderboard', title: 'AI Model Leaderboard', description: 'Ranked leaderboard of AI models by quality, value, and price' },
+    { id: 'calculator', title: 'API Pricing Calculator', description: 'Calculate and compare AI API costs across different models' },
   ];
 
   for (const s of sectionPages) {

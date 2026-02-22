@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory, getModelBenchmarks } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+
+// Calculate composite scores for each model
+interface RankedModel {
+  id: string;
+  name: string;
+  provider: string;
+  colour: string;
+  qualityScore: number;
+  inputPrice: number;
+  outputPrice: number;
+  contextWindow: number;
+  benchmarkCount: number;
+  avgBenchmark: number;
+  valueScore: number;
+  released: string | null;
+}
+
+const rankedModels: RankedModel[] = models.map(m => {
+  const scores = getModelBenchmarks(m.id);
+  const avgBenchmark = scores.length > 0 ? scores.reduce((sum, s) => sum + s.score, 0) / scores.length : 0;
+
+  // Value score: quality per dollar (higher is better)
+  const avgPrice = (m.inputPrice + m.outputPrice) / 2;
+  const valueScore = avgPrice > 0 ? (m.qualityScore / avgPrice) * 10 : 0;
+
+  return {
+    id: m.id,
+    name: m.name,
+    provider: m.provider,
+    colour: m.providerColour,
+    qualityScore: m.qualityScore,
+    inputPrice: m.inputPrice,
+    outputPrice: m.outputPrice,
+    contextWindow: m.contextWindow,
+    benchmarkCount: scores.length,
+    avgBenchmark,
+    valueScore,
+    released: m.released,
+  };
+}).sort((a, b) => b.qualityScore - a.qualityScore);
+
+// Top models by different metrics
+const topQuality = [...rankedModels].slice(0, 20);
+const topValue = [...rankedModels].filter(m => m.inputPrice > 0).sort((a, b) => b.valueScore - a.valueScore).slice(0, 20);
+const topCheapest = [...rankedModels].filter(m => m.inputPrice > 0).sort((a, b) => a.inputPrice - b.inputPrice).slice(0, 20);
+---
+
+<BaseLayout
+  title="AI Model Leaderboard — The AI Resource Hub"
+  description="Ranked leaderboard of AI models by quality, value, and price. See which LLM is best for your needs."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Leaderboard</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Model Leaderboard
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {rankedModels.length} LLMs ranked by quality score, benchmark performance, and value. Updated daily.
+      </p>
+    </div>
+
+    <!-- Tab navigation -->
+    <div class="flex gap-2 mb-6 border-b border-(--color-border) pb-2">
+      <button class="leaderboard-tab active px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="quality">
+        Top Quality
+      </button>
+      <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="value">
+        Best Value
+      </button>
+      <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="cheapest">
+        Cheapest
+      </button>
+    </div>
+
+    <!-- Quality tab -->
+    <div class="leaderboard-panel" id="panel-quality">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Benchmarks</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price (in/out)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {topQuality.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono font-medium text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{m.benchmarkCount > 0 ? `${m.avgBenchmark.toFixed(1)} avg (${m.benchmarkCount})` : '—'}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden md:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? `${(m.contextWindow / 1000).toFixed(0)}K` : '—'}</span>
+                </td>
+                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                  {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)} / $${m.outputPrice.toFixed(2)}` : 'Free / Open'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Value tab -->
+    <div class="leaderboard-panel hidden" id="panel-value">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Value Score</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price (in/out)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {topValue.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono font-medium text-green-400">{m.valueScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                  ${m.inputPrice.toFixed(2)} / ${m.outputPrice.toFixed(2)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cheapest tab -->
+    <div class="leaderboard-panel hidden" id="panel-cheapest">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Input $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Output $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+            </tr>
+          </thead>
+          <tbody>
+            {topCheapest.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right font-mono text-sm font-medium text-green-400">
+                  ${m.inputPrice.toFixed(3)}
+                </td>
+                <td class="py-3 px-4 text-right font-mono text-sm text-(--color-text-secondary)">
+                  ${m.outputPrice.toFixed(3)}
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono text-xs text-(--color-text-muted)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center">
+      <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        View full LLM comparison table →
+      </a>
+    </div>
+  </section>
+
+  <script>
+    const tabs = document.querySelectorAll('.leaderboard-tab');
+    const panels = document.querySelectorAll('.leaderboard-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = (tab as HTMLElement).dataset.tab;
+
+        tabs.forEach(t => t.classList.remove('active', 'bg-(--color-accent)/20', 'text-(--color-accent)'));
+        tab.classList.add('active', 'bg-(--color-accent)/20', 'text-(--color-accent)');
+
+        panels.forEach(p => p.classList.add('hidden'));
+        document.getElementById(`panel-${target}`)?.classList.remove('hidden');
+      });
+    });
+
+    // Style initial active tab
+    tabs[0]?.classList.add('bg-(--color-accent)/20', 'text-(--color-accent)');
+  </script>
+</BaseLayout>
