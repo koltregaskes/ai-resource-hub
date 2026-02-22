@@ -1,0 +1,260 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+
+// Models with context data, ranked by context window size
+const contextModels = models
+  .filter(m => m.contextWindow > 0)
+  .sort((a, b) => b.contextWindow - a.contextWindow);
+
+const maxContext = contextModels.length > 0 ? contextModels[0].contextWindow : 1;
+
+// Context tiers
+const million = contextModels.filter(m => m.contextWindow >= 1_000_000);
+const longContext = contextModels.filter(m => m.contextWindow >= 200_000 && m.contextWindow < 1_000_000);
+const standard = contextModels.filter(m => m.contextWindow >= 32_000 && m.contextWindow < 200_000);
+const small = contextModels.filter(m => m.contextWindow < 32_000);
+
+// Best quality at each context tier
+const bestMillion = million.length > 0 ? million.reduce((a, b) => a.qualityScore > b.qualityScore ? a : b) : null;
+const bestLong = longContext.length > 0 ? longContext.reduce((a, b) => a.qualityScore > b.qualityScore ? a : b) : null;
+const bestStandard = standard.length > 0 ? standard.reduce((a, b) => a.qualityScore > b.qualityScore ? a : b) : null;
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+
+function formatTokensFull(n: number): string {
+  return n.toLocaleString();
+}
+
+// Rough word/page equivalents
+function contextToWords(tokens: number): string {
+  const words = Math.round(tokens * 0.75);
+  if (words >= 1_000_000) return `~${(words / 1_000_000).toFixed(1)}M words`;
+  if (words >= 1_000) return `~${Math.round(words / 1_000)}K words`;
+  return `~${words} words`;
+}
+
+function contextToPages(tokens: number): string {
+  const pages = Math.round(tokens * 0.75 / 250); // ~250 words per page
+  if (pages >= 1_000) return `~${(pages / 1_000).toFixed(1)}K pages`;
+  return `~${pages} pages`;
+}
+---
+
+<BaseLayout
+  title="AI Model Context Windows Compared — The AI Resource Hub"
+  description="Compare AI model context window sizes. From 4K to 4M+ tokens — find models that can process entire codebases, books, and document collections."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}compare/llm/`} class="hover:text-(--color-text-secondary) transition-colors">LLMs</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Context Windows</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Context Window Comparison
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {contextModels.length} LLMs ranked by context window size. Larger context means more text can be processed in a single conversation — crucial for analysing long documents, codebases, and research papers.
+      </p>
+    </div>
+
+    <!-- Context tier summary -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">{million.length}</p>
+        <p class="text-xs text-(--color-text-muted)">1M+ tokens</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-accent)">{longContext.length}</p>
+        <p class="text-xs text-(--color-text-muted)">200K–999K</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{standard.length}</p>
+        <p class="text-xs text-(--color-text-muted)">32K–199K</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-muted)">{small.length}</p>
+        <p class="text-xs text-(--color-text-muted)">&lt;32K tokens</p>
+      </div>
+    </div>
+
+    <!-- Best picks per context tier -->
+    {(bestMillion || bestLong || bestStandard) && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Best Quality by Context Size</h2>
+        <div class="grid sm:grid-cols-3 gap-3">
+          {bestMillion && (
+            <a href={`${base}models/${bestMillion.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-green-400 font-medium mb-1">Best 1M+ Context</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${bestMillion.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{bestMillion.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{bestMillion.provider}</p>
+              <div class="flex justify-between">
+                <span class="font-mono text-sm text-green-400">{formatTokens(bestMillion.contextWindow)}</span>
+                <span class="font-mono text-sm text-(--color-accent)">{bestMillion.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+          {bestLong && (
+            <a href={`${base}models/${bestLong.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-(--color-accent) font-medium mb-1">Best 200K+ Context</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${bestLong.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{bestLong.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{bestLong.provider}</p>
+              <div class="flex justify-between">
+                <span class="font-mono text-sm text-green-400">{formatTokens(bestLong.contextWindow)}</span>
+                <span class="font-mono text-sm text-(--color-accent)">{bestLong.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+          {bestStandard && (
+            <a href={`${base}models/${bestStandard.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-(--color-text-secondary) font-medium mb-1">Best 32K+ Context</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${bestStandard.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{bestStandard.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{bestStandard.provider}</p>
+              <div class="flex justify-between">
+                <span class="font-mono text-sm text-green-400">{formatTokens(bestStandard.contextWindow)}</span>
+                <span class="font-mono text-sm text-(--color-accent)">{bestStandard.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Visual context bars -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Context Size Ranking</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 space-y-2">
+        {contextModels.slice(0, 25).map((m, i) => {
+          const pct = maxContext > 0 ? (Math.log10(m.contextWindow) / Math.log10(maxContext) * 100) : 0;
+          const tier = m.contextWindow >= 1_000_000 ? 'text-green-400' : m.contextWindow >= 200_000 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)';
+          return (
+            <div class="flex items-center gap-3">
+              <span class={`w-6 text-center text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                {i + 1}
+              </span>
+              <a href={`${base}models/${m.id}/`} class="w-36 text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors truncate">
+                {m.name}
+              </a>
+              <div class="flex-1 h-5 bg-(--color-bg-tertiary) rounded-full overflow-hidden relative">
+                <div class="h-full rounded-full" style={`width: ${pct}%; background-color: ${m.providerColour}; opacity: 0.7`}></div>
+              </div>
+              <span class={`font-mono text-sm font-medium w-16 text-right ${tier}`}>
+                {formatTokens(m.contextWindow)}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- Full table -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Full Table</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Context</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Approx.</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Max Output</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {contextModels.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                    {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class={`font-mono font-bold ${m.contextWindow >= 1_000_000 ? 'text-green-400' : m.contextWindow >= 200_000 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'}`}>
+                    {formatTokens(m.contextWindow)}
+                  </span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{contextToPages(m.contextWindow)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="font-mono text-xs text-(--color-text-muted)">{m.maxOutput > 0 ? formatTokens(m.maxOutput) : '—'}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden md:table-cell font-mono text-xs text-(--color-text-secondary)">
+                  {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- What does context window mean? -->
+    <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-8">
+      <h2 class="text-lg font-semibold text-(--color-text-primary) mb-2">What is a context window?</h2>
+      <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
+        The context window is the maximum amount of text a model can process in a single request — including both your input and its response. It's measured in tokens (roughly 0.75 words per token).
+      </p>
+      <div class="grid sm:grid-cols-3 gap-3 text-sm">
+        <div class="p-3 rounded-lg bg-(--color-bg-tertiary)">
+          <p class="font-medium text-(--color-text-primary) mb-1">32K tokens</p>
+          <p class="text-xs text-(--color-text-muted)">~24,000 words / ~96 pages. Enough for a long article or short story.</p>
+        </div>
+        <div class="p-3 rounded-lg bg-(--color-bg-tertiary)">
+          <p class="font-medium text-(--color-text-primary) mb-1">200K tokens</p>
+          <p class="text-xs text-(--color-text-muted)">~150,000 words / ~600 pages. Enough for a full novel or large codebase.</p>
+        </div>
+        <div class="p-3 rounded-lg bg-(--color-bg-tertiary)">
+          <p class="font-medium text-(--color-text-primary) mb-1">1M+ tokens</p>
+          <p class="text-xs text-(--color-text-muted)">~750,000+ words / ~3,000+ pages. Entire book series, repos, or document collections.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        All LLMs &rarr;
+      </a>
+      <a href={`${base}compare/head-to-head/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Compare head-to-head &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+
+// Parse modality strings
+const multimodalModels = models
+  .filter(m => m.modality && m.modality.includes(','))
+  .map(m => ({
+    ...m,
+    modalities: m.modality.split(',').map(mod => mod.trim()),
+    modalityCount: m.modality.split(',').length,
+  }))
+  .sort((a, b) => b.modalityCount - a.modalityCount || b.qualityScore - a.qualityScore);
+
+const textOnlyModels = models
+  .filter(m => !m.modality || !m.modality.includes(','))
+  .sort((a, b) => b.qualityScore - a.qualityScore);
+
+// Count by modality support
+const supportsImage = multimodalModels.filter(m => m.modalities.includes('image'));
+const supportsAudio = multimodalModels.filter(m => m.modalities.includes('audio'));
+const supportsVideo = multimodalModels.filter(m => m.modalities.includes('video'));
+
+const modalityLabel: Record<string, string> = {
+  text: 'Text',
+  image: 'Vision',
+  audio: 'Audio',
+  video: 'Video',
+  code: 'Code',
+};
+
+const modalityColour: Record<string, string> = {
+  text: 'bg-blue-500/20 text-blue-400',
+  image: 'bg-purple-500/20 text-purple-400',
+  audio: 'bg-green-500/20 text-green-400',
+  video: 'bg-red-500/20 text-red-400',
+  code: 'bg-amber-500/20 text-amber-400',
+};
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+---
+
+<BaseLayout
+  title="Multimodal AI Models — The AI Resource Hub"
+  description="Compare multimodal AI models that understand text, images, audio, and video. Find models supporting vision, audio input, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}compare/llm/`} class="hover:text-(--color-text-secondary) transition-colors">LLMs</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Multimodal Models</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Multimodal AI Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {multimodalModels.length} LLMs that can process more than just text — vision, audio, video, and more. Ranked by capability breadth and quality.
+      </p>
+    </div>
+
+    <!-- Capability summary -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-purple-400">{supportsImage.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Vision (Image Input)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">{supportsAudio.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Audio Input</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-red-400">{supportsVideo.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Video Input</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-muted)">{textOnlyModels.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Text Only</p>
+      </div>
+    </div>
+
+    <!-- Multimodal models table -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Multimodal Models</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Modalities</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Price</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            {multimodalModels.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                    {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4">
+                  <div class="flex flex-wrap gap-1">
+                    {m.modalities.map(mod => (
+                      <span class={`text-[9px] px-1.5 py-0.5 rounded ${modalityColour[mod] || 'bg-(--color-bg-tertiary) text-(--color-text-muted)'}`}>
+                        {modalityLabel[mod] || mod}
+                      </span>
+                    ))}
+                  </div>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono text-sm text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">
+                    {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}
+                  </span>
+                </td>
+                <td class="py-3 px-4 text-right hidden md:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? formatTokens(m.contextWindow) : '—'}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Text-only models -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Text-Only Models</h2>
+      <p class="text-xs text-(--color-text-muted) mb-3">These models process text input only. Ranked by quality score.</p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Price</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            {textOnlyModels.map((m, i) => (
+              <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                <td class="py-3 px-2 text-center text-sm text-(--color-text-muted)">{i + 1}</td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                    {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">
+                    {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}
+                  </span>
+                </td>
+                <td class="py-3 px-4 text-right hidden md:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? formatTokens(m.contextWindow) : '—'}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- What is multimodal? -->
+    <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-8">
+      <h2 class="text-lg font-semibold text-(--color-text-primary) mb-2">What are multimodal AI models?</h2>
+      <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
+        Multimodal models can process multiple types of input — not just text, but also images, audio, and video. This enables use cases like:
+      </p>
+      <ul class="text-sm text-(--color-text-secondary) space-y-1 list-disc list-inside">
+        <li><strong class="text-(--color-text-primary)">Vision:</strong> Analyse images, read charts, describe photos, OCR documents</li>
+        <li><strong class="text-(--color-text-primary)">Audio:</strong> Transcribe speech, understand tone, process music</li>
+        <li><strong class="text-(--color-text-primary)">Video:</strong> Summarise videos, extract key frames, answer questions about video content</li>
+      </ul>
+    </div>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        All LLMs &rarr;
+      </a>
+      <a href={`${base}compare/head-to-head/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Compare head-to-head &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

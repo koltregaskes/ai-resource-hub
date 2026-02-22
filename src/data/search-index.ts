@@ -198,6 +198,10 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'changelog', title: 'Changelog', description: 'What\'s new — changelog of features, data updates, and improvements' },
     { id: 'pricing-trends', title: 'AI Pricing Trends', description: 'Track AI model pricing trends — how costs have dropped and where pricing is heading' },
     { id: 'fastest', title: 'Fastest AI Models', description: 'Ranked list of the fastest AI language models by tokens per second' },
+    { id: 'cheapest', title: 'Cheapest AI Models', description: 'Find the most affordable AI language models ranked by price per million tokens' },
+    { id: 'best-value', title: 'Best Value AI Models', description: 'AI models ranked by quality per dollar — find the best bang for your buck' },
+    { id: 'multimodal', title: 'Multimodal AI Models', description: 'AI models that can process text, images, audio, and video' },
+    { id: 'context-window', title: 'Context Window Comparison', description: 'Compare AI model context window sizes from 4K to 4M+ tokens' },
   ];
 
   // Custom URL pages

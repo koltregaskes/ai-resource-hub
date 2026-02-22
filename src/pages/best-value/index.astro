@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory, getModelBenchmarks } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+
+// Calculate value score for each model
+const valueModels = models
+  .filter(m => m.inputPrice > 0 || m.outputPrice > 0)
+  .map(m => {
+    const blendedPrice = (m.inputPrice + 3 * m.outputPrice) / 4;
+    const valueScore = blendedPrice > 0 ? Math.round((m.qualityScore / blendedPrice) * 10) : 0;
+    return { ...m, blendedPrice, valueScore };
+  })
+  .filter(m => m.valueScore > 0)
+  .sort((a, b) => b.valueScore - a.valueScore);
+
+const maxValue = valueModels.length > 0 ? valueModels[0].valueScore : 1;
+
+// Value tiers
+const exceptional = valueModels.filter(m => m.valueScore >= 500);
+const great = valueModels.filter(m => m.valueScore >= 200 && m.valueScore < 500);
+const good = valueModels.filter(m => m.valueScore >= 50 && m.valueScore < 200);
+const low = valueModels.filter(m => m.valueScore < 50);
+
+// Quality brackets - best value in each quality tier
+const frontier = valueModels.filter(m => m.qualityScore >= 85).sort((a, b) => b.valueScore - a.valueScore)[0];
+const highQuality = valueModels.filter(m => m.qualityScore >= 75 && m.qualityScore < 85).sort((a, b) => b.valueScore - a.valueScore)[0];
+const midQuality = valueModels.filter(m => m.qualityScore >= 60 && m.qualityScore < 75).sort((a, b) => b.valueScore - a.valueScore)[0];
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+---
+
+<BaseLayout
+  title="Best Value AI Models — The AI Resource Hub"
+  description="Find the AI models that give you the most quality per dollar. Value rankings combining quality scores with pricing data."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}leaderboard/`} class="hover:text-(--color-text-secondary) transition-colors">Leaderboard</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Best Value</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Best Value AI Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {valueModels.length} LLMs ranked by value — quality per dollar spent. Find models that punch above their weight class.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Value Score = (Quality Score / Blended Price) &times; 10. Higher is better. See our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">methodology</a>.
+      </p>
+    </div>
+
+    <!-- Value tier summary -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">{exceptional.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Exceptional (500+)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-accent)">{great.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Great (200–499)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{good.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Good (50–199)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-muted)">{low.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Low Value (&lt;50)</p>
+      </div>
+    </div>
+
+    <!-- Best value per quality tier -->
+    {(frontier || highQuality || midQuality) && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Best Value by Quality Tier</h2>
+        <div class="grid sm:grid-cols-3 gap-3">
+          {frontier && (
+            <a href={`${base}models/${frontier.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-amber-400 font-medium mb-1">Best Value Frontier (85+ quality)</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${frontier.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{frontier.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{frontier.provider}</p>
+              <div class="flex justify-between items-baseline">
+                <span class="font-mono text-sm text-green-400">Value: {frontier.valueScore}</span>
+                <span class="font-mono text-xs text-(--color-text-muted)">${frontier.blendedPrice.toFixed(2)}/M &middot; {frontier.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+          {highQuality && (
+            <a href={`${base}models/${highQuality.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-(--color-accent) font-medium mb-1">Best Value High Quality (75–84)</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${highQuality.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{highQuality.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{highQuality.provider}</p>
+              <div class="flex justify-between items-baseline">
+                <span class="font-mono text-sm text-green-400">Value: {highQuality.valueScore}</span>
+                <span class="font-mono text-xs text-(--color-text-muted)">${highQuality.blendedPrice.toFixed(2)}/M &middot; {highQuality.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+          {midQuality && (
+            <a href={`${base}models/${midQuality.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-(--color-text-secondary) font-medium mb-1">Best Value Mid-Tier (60–74)</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${midQuality.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{midQuality.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{midQuality.provider}</p>
+              <div class="flex justify-between items-baseline">
+                <span class="font-mono text-sm text-green-400">Value: {midQuality.valueScore}</span>
+                <span class="font-mono text-xs text-(--color-text-muted)">${midQuality.blendedPrice.toFixed(2)}/M &middot; {midQuality.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Value bars -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Value Ranking</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 space-y-2">
+        {valueModels.slice(0, 20).map((m, i) => {
+          const pct = maxValue > 0 ? (m.valueScore / maxValue * 100) : 0;
+          const tier = m.valueScore >= 500 ? 'text-green-400' : m.valueScore >= 200 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)';
+          return (
+            <div class="flex items-center gap-3">
+              <span class={`w-6 text-center text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                {i + 1}
+              </span>
+              <a href={`${base}models/${m.id}/`} class="w-36 text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors truncate">
+                {m.name}
+              </a>
+              <div class="flex-1 h-5 bg-(--color-bg-tertiary) rounded-full overflow-hidden relative">
+                <div class="h-full rounded-full" style={`width: ${pct}%; background-color: ${m.providerColour}; opacity: 0.7`}></div>
+              </div>
+              <span class={`font-mono text-sm font-medium w-16 text-right ${tier}`}>
+                {m.valueScore}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- Full table -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Full Table</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Value</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Blended $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Speed</th>
+            </tr>
+          </thead>
+          <tbody>
+            {valueModels.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                    {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class={`font-mono font-bold ${m.valueScore >= 500 ? 'text-green-400' : m.valueScore >= 200 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'}`}>
+                    {m.valueScore}
+                  </span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">${m.blendedPrice.toFixed(2)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden md:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? formatTokens(m.contextWindow) : '—'}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden md:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{m.speed > 0 ? `${m.speed} tok/s` : '—'}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href={`${base}leaderboard/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Full leaderboard &rarr;
+      </a>
+      <a href={`${base}cheapest/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Cheapest models &rarr;
+      </a>
+      <a href={`${base}fastest/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Fastest models &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>
