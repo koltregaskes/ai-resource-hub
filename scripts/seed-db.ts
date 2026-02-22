@@ -35,6 +35,8 @@ db.exec(`
     name TEXT NOT NULL,
     colour TEXT NOT NULL DEFAULT '#888888',
     website TEXT,
+    status_url TEXT,
+    api_docs_url TEXT,
     description TEXT,
     founded TEXT,
     headquarters TEXT,
@@ -193,51 +195,52 @@ db.exec(`
 
 // ─── Providers ──────────────────────────────────────────────────
 const insertProvider = db.prepare(`
-  INSERT INTO providers (id, name, colour, website, description, founded, headquarters, ceo, funding)
-  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+  INSERT INTO providers (id, name, colour, website, status_url, api_docs_url, description, founded, headquarters, ceo, funding)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 `);
 
 const providers = [
-  ['openai', 'OpenAI', '#10a37f', 'https://openai.com', 'Creator of GPT and ChatGPT. Pioneer in large language models and AI safety research.', '2015-12-11', 'San Francisco, CA', 'Sam Altman', '$13B+'],
-  ['anthropic', 'Anthropic', '#d97706', 'https://anthropic.com', 'AI safety company building Claude. Founded by former OpenAI researchers.', '2021-01-28', 'San Francisco, CA', 'Dario Amodei', '$7.6B+'],
-  ['google', 'Google', '#4285f4', 'https://deepmind.google', 'Google DeepMind, creator of Gemini models. Merged from Google Brain and DeepMind.', '2010-01-01', 'London / Mountain View', 'Demis Hassabis', 'Alphabet subsidiary'],
-  ['meta', 'Meta', '#0668e1', 'https://ai.meta.com', 'Creator of Llama open-weight models. Committed to open-source AI development.', '2013-09-01', 'Menlo Park, CA', 'Mark Zuckerberg', 'Meta subsidiary'],
-  ['mistral', 'Mistral', '#ff7000', 'https://mistral.ai', 'French AI lab building efficient open and commercial models.', '2023-04-01', 'Paris, France', 'Arthur Mensch', '€600M+'],
-  ['xai', 'xAI', '#1da1f2', 'https://x.ai', 'Elon Musk\'s AI company building Grok models.', '2023-07-12', 'Austin, TX', 'Elon Musk', '$6B+'],
-  ['deepseek', 'DeepSeek', '#5b6ef7', 'https://deepseek.com', 'Chinese AI lab known for efficient open-weight models with strong reasoning.', '2023-07-01', 'Hangzhou, China', 'Liang Wenfeng', 'High-Flyer Capital'],
-  ['amazon', 'Amazon', '#ff9900', 'https://aws.amazon.com/bedrock', 'Amazon\'s Nova foundation models, available through AWS Bedrock.', '1994-07-05', 'Seattle, WA', 'Andy Jassy', 'Amazon subsidiary'],
-  ['cohere', 'Cohere', '#39c0ed', 'https://cohere.com', 'Enterprise-focused AI company building Command models with RAG capabilities.', '2019-01-01', 'Toronto, Canada', 'Aidan Gomez', '$445M+'],
-  ['alibaba', 'Alibaba', '#ff6a00', 'https://www.alibabacloud.com/solutions/generative-ai', 'Creator of Qwen (Tongyi Qianwen) series of open-weight models.', '2023-04-01', 'Hangzhou, China', 'Daniel Zhang', 'Alibaba subsidiary'],
-  ['ai21', 'AI21 Labs', '#6c5ce7', 'https://www.ai21.com', 'Creator of Jamba models using Mamba-Transformer hybrid architecture.', '2017-01-01', 'Tel Aviv, Israel', 'Yoav Shoham', '$336M'],
-  ['zhipu', 'Zhipu AI', '#00b4d8', 'https://www.zhipuai.cn', 'Chinese AI company building GLM series models.', '2019-01-01', 'Beijing, China', 'Tang Jie', '$400M+'],
-  ['minimax', 'MiniMax', '#e040fb', 'https://www.minimaxi.com', 'Chinese AI company building multimodal models and applications.', '2021-12-01', 'Shanghai, China', 'Yan Junjie', '$600M+'],
-  ['perplexity', 'Perplexity', '#20b2aa', 'https://www.perplexity.ai', 'AI-powered search engine with its own Sonar models.', '2022-08-01', 'San Francisco, CA', 'Aravind Srinivas', '$500M+'],
-  ['reka', 'Reka', '#e74c3c', 'https://www.reka.ai', 'Multimodal AI lab building natively multimodal models.', '2023-01-01', 'London, UK', 'Dani Yogatama', '$58M'],
+  // id, name, colour, website, status_url, api_docs_url, description, founded, hq, ceo, funding
+  ['openai', 'OpenAI', '#10a37f', 'https://openai.com', 'https://status.openai.com', 'https://platform.openai.com/docs', 'Creator of GPT and ChatGPT. Pioneer in large language models and AI safety research.', '2015-12-11', 'San Francisco, CA', 'Sam Altman', '$13B+'],
+  ['anthropic', 'Anthropic', '#d97706', 'https://anthropic.com', 'https://status.anthropic.com', 'https://docs.anthropic.com', 'AI safety company building Claude. Founded by former OpenAI researchers.', '2021-01-28', 'San Francisco, CA', 'Dario Amodei', '$7.6B+'],
+  ['google', 'Google', '#4285f4', 'https://deepmind.google', 'https://status.cloud.google.com', 'https://ai.google.dev/docs', 'Google DeepMind, creator of Gemini models. Merged from Google Brain and DeepMind.', '2010-01-01', 'London / Mountain View', 'Demis Hassabis', 'Alphabet subsidiary'],
+  ['meta', 'Meta', '#0668e1', 'https://ai.meta.com', null, 'https://llama.meta.com/docs', 'Creator of Llama open-weight models. Committed to open-source AI development.', '2013-09-01', 'Menlo Park, CA', 'Mark Zuckerberg', 'Meta subsidiary'],
+  ['mistral', 'Mistral', '#ff7000', 'https://mistral.ai', 'https://status.mistral.ai', 'https://docs.mistral.ai', 'French AI lab building efficient open and commercial models.', '2023-04-01', 'Paris, France', 'Arthur Mensch', '€600M+'],
+  ['xai', 'xAI', '#1da1f2', 'https://x.ai', null, 'https://docs.x.ai', 'Elon Musk\'s AI company building Grok models.', '2023-07-12', 'Austin, TX', 'Elon Musk', '$6B+'],
+  ['deepseek', 'DeepSeek', '#5b6ef7', 'https://deepseek.com', null, 'https://api-docs.deepseek.com', 'Chinese AI lab known for efficient open-weight models with strong reasoning.', '2023-07-01', 'Hangzhou, China', 'Liang Wenfeng', 'High-Flyer Capital'],
+  ['amazon', 'Amazon', '#ff9900', 'https://aws.amazon.com/bedrock', 'https://health.aws.amazon.com', 'https://docs.aws.amazon.com/bedrock', 'Amazon\'s Nova foundation models, available through AWS Bedrock.', '1994-07-05', 'Seattle, WA', 'Andy Jassy', 'Amazon subsidiary'],
+  ['cohere', 'Cohere', '#39c0ed', 'https://cohere.com', 'https://status.cohere.com', 'https://docs.cohere.com', 'Enterprise-focused AI company building Command models with RAG capabilities.', '2019-01-01', 'Toronto, Canada', 'Aidan Gomez', '$445M+'],
+  ['alibaba', 'Alibaba', '#ff6a00', 'https://www.alibabacloud.com/solutions/generative-ai', null, null, 'Creator of Qwen (Tongyi Qianwen) series of open-weight models.', '2023-04-01', 'Hangzhou, China', 'Daniel Zhang', 'Alibaba subsidiary'],
+  ['ai21', 'AI21 Labs', '#6c5ce7', 'https://www.ai21.com', null, 'https://docs.ai21.com', 'Creator of Jamba models using Mamba-Transformer hybrid architecture.', '2017-01-01', 'Tel Aviv, Israel', 'Yoav Shoham', '$336M'],
+  ['zhipu', 'Zhipu AI', '#00b4d8', 'https://www.zhipuai.cn', null, null, 'Chinese AI company building GLM series models.', '2019-01-01', 'Beijing, China', 'Tang Jie', '$400M+'],
+  ['minimax', 'MiniMax', '#e040fb', 'https://www.minimaxi.com', null, null, 'Chinese AI company building multimodal models and applications.', '2021-12-01', 'Shanghai, China', 'Yan Junjie', '$600M+'],
+  ['perplexity', 'Perplexity', '#20b2aa', 'https://www.perplexity.ai', null, 'https://docs.perplexity.ai', 'AI-powered search engine with its own Sonar models.', '2022-08-01', 'San Francisco, CA', 'Aravind Srinivas', '$500M+'],
+  ['reka', 'Reka', '#e74c3c', 'https://www.reka.ai', null, null, 'Multimodal AI lab building natively multimodal models.', '2023-01-01', 'London, UK', 'Dani Yogatama', '$58M'],
 
   // Image generation providers
-  ['stability', 'Stability AI', '#a855f7', 'https://stability.ai', 'Creator of Stable Diffusion open-source image generation models.', '2019-01-01', 'London, UK', 'Prem Akkaraju', '$200M+'],
-  ['midjourney', 'Midjourney', '#5865f2', 'https://midjourney.com', 'Independent research lab producing top-tier AI image generation.', '2021-08-01', 'San Francisco, CA', 'David Holz', 'Self-funded'],
-  ['blackforest', 'Black Forest Labs', '#1a1a2e', 'https://blackforestlabs.ai', 'Created FLUX image generation models. Founded by ex-Stability AI researchers.', '2024-03-01', 'Freiburg, Germany', 'Robin Rombach', '$31M'],
-  ['ideogram', 'Ideogram', '#ff6b6b', 'https://ideogram.ai', 'AI image generation specialising in text rendering within images.', '2023-08-01', 'Toronto, Canada', 'Mohammad Norouzi', '$80M+'],
-  ['leonardo', 'Leonardo AI', '#9333ea', 'https://leonardo.ai', 'AI image and video generation platform for creative professionals.', '2022-01-01', 'Sydney, Australia', 'JJ Fiasson', '$31M'],
+  ['stability', 'Stability AI', '#a855f7', 'https://stability.ai', null, 'https://platform.stability.ai/docs', 'Creator of Stable Diffusion open-source image generation models.', '2019-01-01', 'London, UK', 'Prem Akkaraju', '$200M+'],
+  ['midjourney', 'Midjourney', '#5865f2', 'https://midjourney.com', 'https://status.midjourney.com', null, 'Independent research lab producing top-tier AI image generation.', '2021-08-01', 'San Francisco, CA', 'David Holz', 'Self-funded'],
+  ['blackforest', 'Black Forest Labs', '#1a1a2e', 'https://blackforestlabs.ai', null, null, 'Created FLUX image generation models. Founded by ex-Stability AI researchers.', '2024-03-01', 'Freiburg, Germany', 'Robin Rombach', '$31M'],
+  ['ideogram', 'Ideogram', '#ff6b6b', 'https://ideogram.ai', null, 'https://developer.ideogram.ai/docs', 'AI image generation specialising in text rendering within images.', '2023-08-01', 'Toronto, Canada', 'Mohammad Norouzi', '$80M+'],
+  ['leonardo', 'Leonardo AI', '#9333ea', 'https://leonardo.ai', null, null, 'AI image and video generation platform for creative professionals.', '2022-01-01', 'Sydney, Australia', 'JJ Fiasson', '$31M'],
 
   // Video generation providers
-  ['runway', 'Runway', '#00d4ff', 'https://runwayml.com', 'AI creative suite. Pioneer in AI video generation with Gen-3 Alpha.', '2018-01-01', 'New York, NY', 'Cristóbal Valenzuela', '$237M+'],
-  ['pika', 'Pika', '#ff00ff', 'https://pika.art', 'AI video generation startup known for creative video effects.', '2023-04-01', 'Palo Alto, CA', 'Demi Guo', '$135M+'],
-  ['luma', 'Luma AI', '#7c3aed', 'https://lumalabs.ai', 'Creator of Dream Machine for AI video and 3D generation.', '2021-01-01', 'Palo Alto, CA', 'Amit Jain', '$43M+'],
-  ['kling', 'Kling AI', '#ff4500', 'https://klingai.com', 'Kuaishou\'s AI video generation platform with impressive motion quality.', '2023-01-01', 'Beijing, China', 'Su Hua', 'Kuaishou subsidiary'],
-  ['hailuo', 'Hailuo AI', '#00bcd4', 'https://hailuoai.com', 'MiniMax\'s consumer video generation platform.', '2024-01-01', 'Shanghai, China', 'Yan Junjie', 'MiniMax subsidiary'],
-  ['veo', 'Google Veo', '#34a853', 'https://deepmind.google/technologies/veo', 'Google DeepMind\'s video generation model family.', '2024-05-01', 'London, UK', 'Demis Hassabis', 'Alphabet subsidiary'],
+  ['runway', 'Runway', '#00d4ff', 'https://runwayml.com', null, 'https://docs.runwayml.com', 'AI creative suite. Pioneer in AI video generation with Gen-3 Alpha.', '2018-01-01', 'New York, NY', 'Cristóbal Valenzuela', '$237M+'],
+  ['pika', 'Pika', '#ff00ff', 'https://pika.art', null, null, 'AI video generation startup known for creative video effects.', '2023-04-01', 'Palo Alto, CA', 'Demi Guo', '$135M+'],
+  ['luma', 'Luma AI', '#7c3aed', 'https://lumalabs.ai', null, 'https://docs.lumalabs.ai', 'Creator of Dream Machine for AI video and 3D generation.', '2021-01-01', 'Palo Alto, CA', 'Amit Jain', '$43M+'],
+  ['kling', 'Kling AI', '#ff4500', 'https://klingai.com', null, null, 'Kuaishou\'s AI video generation platform with impressive motion quality.', '2023-01-01', 'Beijing, China', 'Su Hua', 'Kuaishou subsidiary'],
+  ['hailuo', 'Hailuo AI', '#00bcd4', 'https://hailuoai.com', null, null, 'MiniMax\'s consumer video generation platform.', '2024-01-01', 'Shanghai, China', 'Yan Junjie', 'MiniMax subsidiary'],
+  ['veo', 'Google Veo', '#34a853', 'https://deepmind.google/technologies/veo', 'https://status.cloud.google.com', null, 'Google DeepMind\'s video generation model family.', '2024-05-01', 'London, UK', 'Demis Hassabis', 'Alphabet subsidiary'],
 
   // Audio, speech, voice, and sound providers
-  ['elevenlabs', 'ElevenLabs', '#2563eb', 'https://elevenlabs.io', 'Leading AI voice synthesis and cloning platform. Realistic speech generation.', '2022-01-01', 'New York, NY', 'Mati Staniszewski', '$101M+'],
-  ['assemblyai', 'AssemblyAI', '#ef4444', 'https://www.assemblyai.com', 'AI speech-to-text and audio intelligence API platform.', '2017-01-01', 'San Francisco, CA', 'Dylan Fox', '$115M'],
-  ['deepgram', 'Deepgram', '#13ef93', 'https://deepgram.com', 'Enterprise speech recognition and text-to-speech AI.', '2015-01-01', 'San Francisco, CA', 'Scott Stephenson', '$86M+'],
-  ['cartesia', 'Cartesia', '#6366f1', 'https://cartesia.ai', 'State-space model AI for ultra-low-latency voice synthesis.', '2023-01-01', 'San Francisco, CA', 'Karan Goel', '$27M'],
-  ['suno', 'Suno', '#f97316', 'https://suno.com', 'AI music and sound generation platform. Create full songs from text.', '2023-01-01', 'Cambridge, MA', 'Mikey Shulman', '$125M+'],
-  ['udio', 'Udio', '#8b5cf6', 'https://udio.com', 'AI music generation with high-quality audio output.', '2024-01-01', 'New York, NY', 'David Ding', '$10M+'],
-  ['resemble', 'Resemble AI', '#f43f5e', 'https://www.resemble.ai', 'AI voice cloning and synthesis for enterprises.', '2019-01-01', 'Toronto, Canada', 'Zohaib Ahmed', '$28M'],
-  ['play-ht', 'PlayHT', '#0ea5e9', 'https://play.ht', 'AI voice generation platform with natural conversational voices.', '2016-01-01', 'San Francisco, CA', 'Hammad Syed', '$20M+'],
+  ['elevenlabs', 'ElevenLabs', '#2563eb', 'https://elevenlabs.io', 'https://status.elevenlabs.io', 'https://elevenlabs.io/docs', 'Leading AI voice synthesis and cloning platform. Realistic speech generation.', '2022-01-01', 'New York, NY', 'Mati Staniszewski', '$101M+'],
+  ['assemblyai', 'AssemblyAI', '#ef4444', 'https://www.assemblyai.com', null, 'https://www.assemblyai.com/docs', 'AI speech-to-text and audio intelligence API platform.', '2017-01-01', 'San Francisco, CA', 'Dylan Fox', '$115M'],
+  ['deepgram', 'Deepgram', '#13ef93', 'https://deepgram.com', 'https://status.deepgram.com', 'https://developers.deepgram.com', 'Enterprise speech recognition and text-to-speech AI.', '2015-01-01', 'San Francisco, CA', 'Scott Stephenson', '$86M+'],
+  ['cartesia', 'Cartesia', '#6366f1', 'https://cartesia.ai', null, 'https://docs.cartesia.ai', 'State-space model AI for ultra-low-latency voice synthesis.', '2023-01-01', 'San Francisco, CA', 'Karan Goel', '$27M'],
+  ['suno', 'Suno', '#f97316', 'https://suno.com', null, null, 'AI music and sound generation platform. Create full songs from text.', '2023-01-01', 'Cambridge, MA', 'Mikey Shulman', '$125M+'],
+  ['udio', 'Udio', '#8b5cf6', 'https://udio.com', null, null, 'AI music generation with high-quality audio output.', '2024-01-01', 'New York, NY', 'David Ding', '$10M+'],
+  ['resemble', 'Resemble AI', '#f43f5e', 'https://www.resemble.ai', null, 'https://docs.resemble.ai', 'AI voice cloning and synthesis for enterprises.', '2019-01-01', 'Toronto, Canada', 'Zohaib Ahmed', '$28M'],
+  ['play-ht', 'PlayHT', '#0ea5e9', 'https://play.ht', null, 'https://docs.play.ht', 'AI voice generation platform with natural conversational voices.', '2016-01-01', 'San Francisco, CA', 'Hammad Syed', '$20M+'],
 ];
 
 const insertProviders = db.transaction(() => {

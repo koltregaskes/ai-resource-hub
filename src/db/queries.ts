@@ -10,6 +10,8 @@ export interface DBProvider {
   name: string;
   colour: string;
   website: string | null;
+  status_url: string | null;
+  api_docs_url: string | null;
   description: string | null;
   founded: string | null;
   headquarters: string | null;

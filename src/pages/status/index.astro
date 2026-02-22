@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getProviders } from '../../db/queries';
+
+const allProviders = getProviders();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Only show providers that have a status URL
+const providersWithStatus = allProviders.filter(p => p.status_url);
+const providersWithoutStatus = allProviders.filter(p => !p.status_url);
+---
+
+<BaseLayout
+  title="AI Provider Status Dashboard — The AI Resource Hub"
+  description="Check the operational status of all major AI providers — OpenAI, Anthropic, Google, Mistral, and more. All status pages in one place."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Provider Status</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Provider Status Dashboard
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        All major AI provider status pages in one place. Check if your AI service is up and running, or if there are known outages.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Links go directly to each provider's official status page. Check back during outages to quickly identify which service is affected.
+      </p>
+    </div>
+
+    <!-- Providers with status pages -->
+    <div class="mb-10">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-4">
+        Providers with Status Pages ({providersWithStatus.length})
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {providersWithStatus.map((provider) => (
+          <a
+            href={provider.status_url!}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors group"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-3 h-3 rounded-full shrink-0"
+                style={`background-color: ${provider.colour}`}
+              ></div>
+              <h3 class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+                {provider.name}
+              </h3>
+              <svg class="w-4 h-4 text-(--color-text-muted) group-hover:text-(--color-accent) transition-colors ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
+            <p class="text-xs text-(--color-text-muted) truncate">
+              {provider.status_url}
+            </p>
+            <div class="flex items-center gap-3 mt-3">
+              {provider.api_docs_url && (
+                <span class="text-xs px-2 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-muted)">
+                  API Docs
+                </span>
+              )}
+              {provider.website && (
+                <span class="text-xs px-2 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-muted)">
+                  {provider.founded ? `Since ${new Date(provider.founded).getFullYear()}` : 'Active'}
+                </span>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Quick links to API docs -->
+    <div class="mb-10">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-4">
+        API Documentation Quick Links
+      </h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Provider</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Status Page</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">API Docs</th>
+            </tr>
+          </thead>
+          <tbody>
+            {allProviders.filter(p => p.api_docs_url || p.status_url).map((p) => (
+              <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                <td class="py-3 px-4">
+                  <a href={`${base}labs/${p.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full" style={`background-color: ${p.colour}`}></span>
+                    {p.name}
+                  </a>
+                </td>
+                <td class="py-3 px-4">
+                  {p.status_url ? (
+                    <a
+                      href={p.status_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+                    >
+                      Status page
+                    </a>
+                  ) : (
+                    <span class="text-xs text-(--color-text-muted)">—</span>
+                  )}
+                </td>
+                <td class="py-3 px-4">
+                  {p.api_docs_url ? (
+                    <a
+                      href={p.api_docs_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+                    >
+                      Documentation
+                    </a>
+                  ) : (
+                    <span class="text-xs text-(--color-text-muted)">—</span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Tips During Outages</h2>
+      <ul class="text-sm text-(--color-text-secondary) space-y-1 list-disc list-inside">
+        <li>Check the official status page first — most providers update within minutes</li>
+        <li>Follow providers on X/Twitter for real-time outage updates</li>
+        <li>Consider using <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">alternative models</a> as fallback during outages</li>
+        <li>OpenRouter aggregates multiple providers — if one is down, it can automatically route to another</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

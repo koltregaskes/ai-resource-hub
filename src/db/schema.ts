@@ -30,6 +30,8 @@ function initSchema(db: Database.Database): void {
       name TEXT NOT NULL,
       colour TEXT NOT NULL DEFAULT '#888888',
       website TEXT,
+      status_url TEXT,
+      api_docs_url TEXT,
       description TEXT,
       founded TEXT,
       headquarters TEXT,
