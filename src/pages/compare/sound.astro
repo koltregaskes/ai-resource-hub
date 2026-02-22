@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ModelComparisonTable from '../../components/ModelComparisonTable';
+import { getModelsByCategory } from '../../db/queries';
+
+const models = getModelsByCategory('sound');
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const lastUpdated = new Date().toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+
+function formatPrice(v: unknown): string {
+  const price = v as number;
+  if (price === 0) return 'Free';
+  return `$${price.toFixed(2)}`;
+}
+
+function formatDuration(v: unknown): string {
+  const sec = v as number;
+  if (sec >= 60) return `${Math.round(sec / 60)}min`;
+  return `${sec}s`;
+}
+
+function formatGenTime(v: unknown): string {
+  return `${v}s`;
+}
+
+const columns = [
+  { field: 'name' as const, label: 'Model', shortLabel: 'Model', format: (v: unknown) => String(v), align: 'left' as const, defaultSort: 'asc' as const },
+  { field: 'provider' as const, label: 'Provider', shortLabel: 'Provider', format: (v: unknown) => String(v), align: 'left' as const, defaultSort: 'asc' as const },
+  { field: 'inputPrice' as const, label: 'Cost / Song', shortLabel: '$/song', format: formatPrice, align: 'right' as const, defaultSort: 'asc' as const },
+  { field: 'maxOutput' as const, label: 'Max Duration', shortLabel: 'Max Dur.', format: formatDuration, align: 'right' as const, defaultSort: 'desc' as const },
+  { field: 'speed' as const, label: 'Gen Time', shortLabel: 'Gen Time', format: formatGenTime, align: 'right' as const, defaultSort: 'asc' as const },
+  { field: 'qualityScore' as const, label: 'Quality', shortLabel: 'Qual.', format: (v: unknown) => String(v), align: 'right' as const, defaultSort: 'desc' as const },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'AI Music & Sound Generation Model Comparison',
+  description: 'Independent comparison of AI music and sound generation models — Suno, Udio, MusicGen, and more.',
+  url: new URL('/compare/sound', Astro.site).toString(),
+};
+---
+
+<BaseLayout
+  title="Music & Sound Model Comparison — The AI Resource Hub"
+  description="Compare AI music and sound generation models by price, quality, duration, and speed. Suno v4, Udio v2, MusicGen, Stable Audio, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-8">
+      <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+        <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-(--color-text-secondary)">Music & Sound Models</span>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Music & Sound Generation Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Compare {models.length} music and sound generation models across pricing, max duration,
+        generation speed, and quality. Click any column header to sort.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Last updated: {lastUpdated} &middot; Prices per song/clip generated
+      </p>
+    </div>
+
+    <ModelComparisonTable
+      client:load
+      models={models}
+      columns={columns}
+      category="sound"
+      baseUrl={base}
+      priceLabel="Cost per song or clip (USD)"
+      priceUnit="standard quality"
+    />
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

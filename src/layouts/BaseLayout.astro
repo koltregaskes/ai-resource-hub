@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import GlobalSearch from '../components/GlobalSearch';
+import { getSearchIndex } from '../data/search-index';
 
 interface Props {
   title: string;
@@ -14,6 +16,7 @@ const {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const searchIndex = getSearchIndex(base);
 ---
 
 <!doctype html>
@@ -64,9 +67,24 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         </a>
 
         <div class="hidden md:flex items-center gap-6">
-          <a href={`${base}compare/llm/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
-            Models
-          </a>
+          <div class="relative group">
+            <button class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors flex items-center gap-1">
+              Models
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute top-full left-0 mt-1 w-48 rounded-lg bg-(--color-bg-secondary) border border-(--color-border) shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+              <div class="py-2">
+                <a href={`${base}compare/llm/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">LLMs</a>
+                <a href={`${base}compare/image/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Image Generation</a>
+                <a href={`${base}compare/video/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Video Generation</a>
+                <a href={`${base}compare/voice/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Voice & TTS</a>
+                <a href={`${base}compare/speech/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Speech-to-Text</a>
+                <a href={`${base}compare/sound/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Music & Sound</a>
+              </div>
+            </div>
+          </div>
           <a href={`${base}benchmarks/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
             Benchmarks
           </a>
@@ -88,6 +106,9 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         </div>
 
         <div class="flex items-center gap-2">
+          <!-- Global search -->
+          <GlobalSearch client:load items={searchIndex} baseUrl={base} />
+
           <!-- Theme toggle -->
           <button
             id="theme-toggle"
@@ -121,7 +142,13 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
       <div id="mobile-menu" class="md:hidden hidden border-t border-(--color-border) bg-(--color-bg-secondary)">
         <div class="px-4 py-3 space-y-2">
           <a href={base} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Home</a>
-          <a href={`${base}compare/llm/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Models</a>
+          <p class="text-xs font-semibold text-(--color-text-muted) pt-2 uppercase tracking-wider">Models</p>
+          <a href={`${base}compare/llm/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">LLMs</a>
+          <a href={`${base}compare/image/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Image Generation</a>
+          <a href={`${base}compare/video/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Video Generation</a>
+          <a href={`${base}compare/voice/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Voice & TTS</a>
+          <a href={`${base}compare/speech/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Speech-to-Text</a>
+          <a href={`${base}compare/sound/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Music & Sound</a>
           <a href={`${base}benchmarks/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Benchmarks</a>
           <a href={`${base}labs/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Labs & Providers</a>
           <a href={`${base}guides/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Guides</a>
@@ -140,9 +167,19 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Data</h3>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Models</h3>
             <div class="space-y-2">
               <a href={`${base}compare/llm/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">LLM Comparison</a>
+              <a href={`${base}compare/image/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Image Generation</a>
+              <a href={`${base}compare/video/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Video Generation</a>
+              <a href={`${base}compare/voice/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Voice & TTS</a>
+              <a href={`${base}compare/speech/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Speech-to-Text</a>
+              <a href={`${base}compare/sound/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Music & Sound</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Data</h3>
+            <div class="space-y-2">
               <a href={`${base}benchmarks/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Benchmarks</a>
               <a href={`${base}labs/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Labs & Providers</a>
               <a href={`${base}people/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">People in AI</a>

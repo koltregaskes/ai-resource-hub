@@ -30,10 +30,12 @@ async function main() {
     console.error('✗ Pricing scraper failed\n');
   }
 
-  // Future scrapers would go here:
-  // - Benchmark scraper
-  // - Model listing scraper
-  // - Arena ELO scraper
+  // Future scrapers:
+  // - Benchmark scraper (LMSYS Arena ELO)
+  // - New model detection (scan provider pages for new model announcements)
+  // - Image model pricing scraper (Stability, Replicate)
+  // - Video model pricing scraper (Runway, Pika)
+  // - TTS pricing scraper (ElevenLabs, Cartesia, Deepgram)
 
   console.log('═══════════════════════════════════════════════');
   console.log('  All scrapers complete');

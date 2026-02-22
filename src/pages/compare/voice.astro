@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ModelComparisonTable from '../../components/ModelComparisonTable';
+import { getModelsByCategory } from '../../db/queries';
+
+const models = getModelsByCategory('voice');
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const lastUpdated = new Date().toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+
+function formatPrice(v: unknown): string {
+  const price = v as number;
+  if (price === 0) return 'Free';
+  return `$${price.toFixed(2)}`;
+}
+
+function formatLatency(v: unknown): string {
+  const factor = v as number;
+  if (factor < 1) return `${Math.round(factor * 1000)}ms`;
+  return `${factor}s`;
+}
+
+const columns = [
+  { field: 'name' as const, label: 'Model', shortLabel: 'Model', format: (v: unknown) => String(v), align: 'left' as const, defaultSort: 'asc' as const },
+  { field: 'provider' as const, label: 'Provider', shortLabel: 'Provider', format: (v: unknown) => String(v), align: 'left' as const, defaultSort: 'asc' as const },
+  { field: 'inputPrice' as const, label: 'Cost / 1M chars', shortLabel: '$/1M ch', format: formatPrice, align: 'right' as const, defaultSort: 'asc' as const },
+  { field: 'speed' as const, label: 'Latency', shortLabel: 'Latency', format: formatLatency, align: 'right' as const, defaultSort: 'asc' as const },
+  { field: 'qualityScore' as const, label: 'Quality', shortLabel: 'Qual.', format: (v: unknown) => String(v), align: 'right' as const, defaultSort: 'desc' as const },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'AI Text-to-Speech Model Comparison',
+  description: 'Independent comparison of AI text-to-speech and voice synthesis models — ElevenLabs, OpenAI TTS, Cartesia, and more.',
+  url: new URL('/compare/voice', Astro.site).toString(),
+};
+---
+
+<BaseLayout
+  title="Voice & TTS Comparison — The AI Resource Hub"
+  description="Compare AI text-to-speech and voice synthesis models. ElevenLabs, OpenAI TTS, Cartesia Sonic, Deepgram Aura, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-8">
+      <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+        <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-(--color-text-secondary)">Voice & TTS Models</span>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Voice & Text-to-Speech Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Compare {models.length} text-to-speech and voice synthesis models across pricing, latency,
+        and quality. Click any column header to sort.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Last updated: {lastUpdated} &middot; Prices per 1M characters
+      </p>
+    </div>
+
+    <ModelComparisonTable
+      client:load
+      models={models}
+      columns={columns}
+      category="voice"
+      baseUrl={base}
+      priceLabel="Cost per 1M characters (USD)"
+      priceUnit="standard tier"
+    />
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

@@ -51,7 +51,7 @@ function formatContext(tokens: number): string {
 
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-2">
-            <h3 class="font-semibold text-(--color-text-primary) truncate">{model.name}</h3>
+            <a href={`${base}models/${model.id}/`} class="font-semibold text-(--color-text-primary) truncate hover:text-(--color-accent) transition-colors">{model.name}</a>
             {model.openSource && (
               <span class="text-xs px-1.5 py-0.5 rounded bg-(--color-success)/10 text-(--color-success)">
                 Open

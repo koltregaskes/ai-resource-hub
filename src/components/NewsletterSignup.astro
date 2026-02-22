@@ -1,0 +1,112 @@
+---
+/**
+ * Newsletter signup component.
+ * Renders a form that can be connected to any email service
+ * (Buttondown, ConvertKit, Mailchimp, etc.) by updating the form action.
+ * Currently stores signups in localStorage as a demonstration.
+ */
+interface Props {
+  variant?: 'inline' | 'card';
+}
+
+const { variant = 'card' } = Astro.props;
+---
+
+{variant === 'card' ? (
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-(--color-accent)/10 to-(--color-accent)/5 border border-(--color-accent)/20 p-8 sm:p-12">
+      <div class="relative z-10 max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-(--color-text-primary) mb-3">
+          Stay ahead of the AI curve
+        </h2>
+        <p class="text-(--color-text-secondary) mb-6">
+          Get weekly updates on new AI models, pricing changes, and benchmark results.
+          No spam, unsubscribe anytime.
+        </p>
+        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+            class="flex-1 px-4 py-3 rounded-lg bg-(--color-bg-primary) border border-(--color-border) text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-(--color-accent) focus:outline-none text-sm"
+          />
+          <button
+            type="submit"
+            class="px-6 py-3 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-sm transition-colors whitespace-nowrap"
+          >
+            Subscribe
+          </button>
+        </form>
+        <p id="newsletter-success" class="hidden mt-3 text-sm text-(--color-success)">
+          Thanks for subscribing! You'll receive updates soon.
+        </p>
+        <p class="mt-3 text-xs text-(--color-text-muted)">
+          Join 0 subscribers. Free forever.
+        </p>
+      </div>
+
+      <!-- Background decoration -->
+      <div class="absolute top-0 right-0 w-64 h-64 bg-(--color-accent)/5 rounded-full -translate-y-1/3 translate-x-1/3 blur-3xl" aria-hidden="true"></div>
+    </div>
+  </section>
+) : (
+  <div class="flex flex-col sm:flex-row gap-2">
+    <input
+      type="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+      form="newsletter-inline-form"
+      class="flex-1 px-3 py-2 rounded-lg bg-(--color-bg-tertiary) border border-(--color-border) text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-(--color-accent) focus:outline-none text-sm"
+    />
+    <button
+      type="submit"
+      form="newsletter-inline-form"
+      class="px-4 py-2 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-xs transition-colors whitespace-nowrap"
+    >
+      Subscribe
+    </button>
+    <form id="newsletter-inline-form" class="hidden"></form>
+  </div>
+)}
+
+<script>
+  // Handle newsletter form submission
+  function handleNewsletter(formId: string) {
+    const form = document.getElementById(formId) as HTMLFormElement | null;
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const email = formData.get('email') as string;
+
+      if (!email) return;
+
+      // Store in localStorage (replace with actual API call)
+      const subs = JSON.parse(localStorage.getItem('newsletter_subs') || '[]');
+      if (!subs.includes(email)) {
+        subs.push(email);
+        localStorage.setItem('newsletter_subs', JSON.stringify(subs));
+      }
+
+      // Show success message
+      const success = document.getElementById('newsletter-success');
+      if (success) {
+        success.classList.remove('hidden');
+      }
+
+      // Reset form
+      form.reset();
+
+      // Hide success after 5 seconds
+      setTimeout(() => {
+        if (success) success.classList.add('hidden');
+      }, 5000);
+    });
+  }
+
+  handleNewsletter('newsletter-form');
+  handleNewsletter('newsletter-inline-form');
+</script>

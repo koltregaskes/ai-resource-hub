@@ -3,6 +3,7 @@ import type { LLMModel, SortField, SortDirection, SortConfig, ColumnDef } from '
 
 interface Props {
   models: LLMModel[];
+  baseUrl?: string;
 }
 
 function formatPrice(price: number): string {
@@ -183,7 +184,8 @@ function ModelBadges({ model, isBestValue }: { model: LLMModel; isBestValue: boo
   return <>{badges}</>;
 }
 
-export default function LLMComparisonTable({ models }: Props) {
+export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
+  const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
   const [sort, setSort] = useState<SortConfig>({
     field: 'valueScore',
     direction: 'desc',
@@ -404,7 +406,12 @@ export default function LLMComparisonTable({ models }: Props) {
                 {/* Model name + badges */}
                 <td className="px-4 py-3 font-medium text-[var(--color-text-primary)] whitespace-nowrap">
                   <div className="flex items-center gap-2">
-                    {model.name}
+                    <a
+                      href={`${base}models/${model.id}/`}
+                      className="hover:text-[var(--color-accent)] transition-colors"
+                    >
+                      {model.name}
+                    </a>
                     <ModelBadges
                       model={model}
                       isBestValue={model.id === bestValueId}

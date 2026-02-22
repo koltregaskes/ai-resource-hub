@@ -237,6 +237,7 @@ export interface DBModelDetail {
   modality: string;
   api_available: number;
   notes: string | null;
+  category: string;
   pricing_source: string | null;
   pricing_updated: string | null;
 }
@@ -403,6 +404,71 @@ export function getAllGlossaryIds(): string[] {
   const db = getDB();
   const rows = db.prepare('SELECT id FROM glossary').all() as Array<{ id: string }>;
   return rows.map(r => r.id);
+}
+
+/**
+ * Generic model query by category, returning a simplified model list.
+ */
+export interface CategoryModel {
+  id: string;
+  name: string;
+  provider: string;
+  providerColour: string;
+  inputPrice: number;
+  outputPrice: number;
+  contextWindow: number;
+  maxOutput: number;
+  speed: number;
+  qualityScore: number;
+  released: string;
+  openSource: boolean;
+  modality: string;
+  apiAvailable: boolean;
+  notes: string | undefined;
+}
+
+export function getModelsByCategory(category: string): CategoryModel[] {
+  const db = getDB();
+  const rows = db.prepare(`
+    SELECT
+      m.id,
+      m.name,
+      p.name AS provider,
+      p.colour AS providerColour,
+      m.input_price AS inputPrice,
+      m.output_price AS outputPrice,
+      m.context_window AS contextWindow,
+      m.max_output AS maxOutput,
+      m.speed,
+      m.quality_score AS qualityScore,
+      m.released,
+      m.open_source AS openSource,
+      m.modality,
+      m.api_available AS apiAvailable,
+      m.notes
+    FROM models m
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.category = ? AND m.status = 'active'
+    ORDER BY m.quality_score DESC
+  `).all(category) as Array<Record<string, unknown>>;
+
+  return rows.map((row) => ({
+    id: row.id as string,
+    name: row.name as string,
+    provider: row.provider as string,
+    providerColour: row.providerColour as string,
+    inputPrice: row.inputPrice as number,
+    outputPrice: row.outputPrice as number,
+    contextWindow: row.contextWindow as number,
+    maxOutput: row.maxOutput as number,
+    speed: row.speed as number,
+    qualityScore: row.qualityScore as number,
+    released: row.released as string,
+    openSource: (row.openSource as number) === 1,
+    modality: row.modality as string,
+    apiAvailable: (row.apiAvailable as number) === 1,
+    notes: (row.notes as string) || undefined,
+  }));
 }
 
 export function getBenchmarkMatrix(): BenchmarkMatrix {

@@ -121,6 +121,18 @@ db.exec(`
     finished_at TEXT
   );
 
+  -- Glossary of AI terms
+  CREATE TABLE IF NOT EXISTS glossary (
+    id TEXT PRIMARY KEY,
+    term TEXT NOT NULL,
+    definition TEXT NOT NULL,
+    plain_english TEXT,
+    category TEXT NOT NULL DEFAULT 'general',
+    related_terms TEXT,
+    see_also TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
   CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
   CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);
   CREATE INDEX IF NOT EXISTS idx_benchmark_scores_model ON benchmark_scores(model_id);
@@ -151,6 +163,31 @@ const providers = [
   ['minimax', 'MiniMax', '#e040fb', 'https://www.minimaxi.com', 'Chinese AI company building multimodal models and applications.', '2021-12-01', 'Shanghai, China', 'Yan Junjie', '$600M+'],
   ['perplexity', 'Perplexity', '#20b2aa', 'https://www.perplexity.ai', 'AI-powered search engine with its own Sonar models.', '2022-08-01', 'San Francisco, CA', 'Aravind Srinivas', '$500M+'],
   ['reka', 'Reka', '#e74c3c', 'https://www.reka.ai', 'Multimodal AI lab building natively multimodal models.', '2023-01-01', 'London, UK', 'Dani Yogatama', '$58M'],
+
+  // Image generation providers
+  ['stability', 'Stability AI', '#a855f7', 'https://stability.ai', 'Creator of Stable Diffusion open-source image generation models.', '2019-01-01', 'London, UK', 'Prem Akkaraju', '$200M+'],
+  ['midjourney', 'Midjourney', '#5865f2', 'https://midjourney.com', 'Independent research lab producing top-tier AI image generation.', '2021-08-01', 'San Francisco, CA', 'David Holz', 'Self-funded'],
+  ['blackforest', 'Black Forest Labs', '#1a1a2e', 'https://blackforestlabs.ai', 'Created FLUX image generation models. Founded by ex-Stability AI researchers.', '2024-03-01', 'Freiburg, Germany', 'Robin Rombach', '$31M'],
+  ['ideogram', 'Ideogram', '#ff6b6b', 'https://ideogram.ai', 'AI image generation specialising in text rendering within images.', '2023-08-01', 'Toronto, Canada', 'Mohammad Norouzi', '$80M+'],
+  ['leonardo', 'Leonardo AI', '#9333ea', 'https://leonardo.ai', 'AI image and video generation platform for creative professionals.', '2022-01-01', 'Sydney, Australia', 'JJ Fiasson', '$31M'],
+
+  // Video generation providers
+  ['runway', 'Runway', '#00d4ff', 'https://runwayml.com', 'AI creative suite. Pioneer in AI video generation with Gen-3 Alpha.', '2018-01-01', 'New York, NY', 'Cristóbal Valenzuela', '$237M+'],
+  ['pika', 'Pika', '#ff00ff', 'https://pika.art', 'AI video generation startup known for creative video effects.', '2023-04-01', 'Palo Alto, CA', 'Demi Guo', '$135M+'],
+  ['luma', 'Luma AI', '#7c3aed', 'https://lumalabs.ai', 'Creator of Dream Machine for AI video and 3D generation.', '2021-01-01', 'Palo Alto, CA', 'Amit Jain', '$43M+'],
+  ['kling', 'Kling AI', '#ff4500', 'https://klingai.com', 'Kuaishou\'s AI video generation platform with impressive motion quality.', '2023-01-01', 'Beijing, China', 'Su Hua', 'Kuaishou subsidiary'],
+  ['hailuo', 'Hailuo AI', '#00bcd4', 'https://hailuoai.com', 'MiniMax\'s consumer video generation platform.', '2024-01-01', 'Shanghai, China', 'Yan Junjie', 'MiniMax subsidiary'],
+  ['veo', 'Google Veo', '#34a853', 'https://deepmind.google/technologies/veo', 'Google DeepMind\'s video generation model family.', '2024-05-01', 'London, UK', 'Demis Hassabis', 'Alphabet subsidiary'],
+
+  // Audio, speech, voice, and sound providers
+  ['elevenlabs', 'ElevenLabs', '#2563eb', 'https://elevenlabs.io', 'Leading AI voice synthesis and cloning platform. Realistic speech generation.', '2022-01-01', 'New York, NY', 'Mati Staniszewski', '$101M+'],
+  ['assemblyai', 'AssemblyAI', '#ef4444', 'https://www.assemblyai.com', 'AI speech-to-text and audio intelligence API platform.', '2017-01-01', 'San Francisco, CA', 'Dylan Fox', '$115M'],
+  ['deepgram', 'Deepgram', '#13ef93', 'https://deepgram.com', 'Enterprise speech recognition and text-to-speech AI.', '2015-01-01', 'San Francisco, CA', 'Scott Stephenson', '$86M+'],
+  ['cartesia', 'Cartesia', '#6366f1', 'https://cartesia.ai', 'State-space model AI for ultra-low-latency voice synthesis.', '2023-01-01', 'San Francisco, CA', 'Karan Goel', '$27M'],
+  ['suno', 'Suno', '#f97316', 'https://suno.com', 'AI music and sound generation platform. Create full songs from text.', '2023-01-01', 'Cambridge, MA', 'Mikey Shulman', '$125M+'],
+  ['udio', 'Udio', '#8b5cf6', 'https://udio.com', 'AI music generation with high-quality audio output.', '2024-01-01', 'New York, NY', 'David Ding', '$10M+'],
+  ['resemble', 'Resemble AI', '#f43f5e', 'https://www.resemble.ai', 'AI voice cloning and synthesis for enterprises.', '2019-01-01', 'Toronto, Canada', 'Zohaib Ahmed', '$28M'],
+  ['play-ht', 'PlayHT', '#0ea5e9', 'https://play.ht', 'AI voice generation platform with natural conversational voices.', '2016-01-01', 'San Francisco, CA', 'Hammad Syed', '$20M+'],
 ];
 
 const insertProviders = db.transaction(() => {
@@ -166,6 +203,11 @@ insertProviders();
 const insertModel = db.prepare(`
   INSERT INTO models (id, name, provider_id, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, category, status, pricing_source)
   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'llm', 'active', ?)
+`);
+
+const insertModelWithCategory = db.prepare(`
+  INSERT INTO models (id, name, provider_id, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, category, status, pricing_source)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?)
 `);
 
 const models = [
@@ -284,6 +326,116 @@ const insertModels = db.transaction(() => {
   }
 });
 insertModels();
+
+// ─── Image Generation Models ─────────────────────────────────
+// Pricing: per image or per API call, stored as cost per 1 image (input_price = cost/image, output_price = 0)
+// quality_score: subjective composite of aesthetics, coherence, text rendering, prompt adherence
+// context_window: max prompt length in characters, max_output: max resolution, speed: seconds per image
+const imageModels: (string | number | null)[][] = [
+  // id, name, provider_id, input_price ($/image), output_price, context_window (chars), max_output (px), speed (s/img), quality_score, released, open_source, modality, api_available, notes, category, pricing_source
+  ['dall-e-3', 'DALL-E 3', 'openai', 0.040, 0, 4000, 1024, 15, 82, '2023-10-01', 0, 'image', 1, 'HD: $0.080/img; integrated with ChatGPT', 'image', 'openai.com/api/pricing'],
+  ['dall-e-3-hd', 'DALL-E 3 HD', 'openai', 0.080, 0, 4000, 1792, 20, 85, '2023-10-01', 0, 'image', 1, '1792x1024 max resolution', 'image', 'openai.com/api/pricing'],
+  ['gpt-image-1', 'GPT Image 1', 'openai', 0.011, 0, 32000, 1024, 10, 90, '2025-04-23', 0, 'image', 1, 'Native image gen in GPT-4o+; transparent backgrounds', 'image', 'openai.com/api/pricing'],
+  ['imagen-3', 'Imagen 3', 'google', 0.040, 0, 4000, 1024, 8, 87, '2024-08-01', 0, 'image', 1, 'Google\'s latest; excellent photorealism', 'image', 'ai.google.dev/pricing'],
+  ['imagen-4', 'Imagen 4', 'google', 0.040, 0, 4000, 2048, 10, 92, '2025-05-20', 0, 'image', 1, 'State-of-art; Gemini-powered generation', 'image', 'ai.google.dev/pricing'],
+  ['stable-diffusion-3.5', 'Stable Diffusion 3.5', 'stability', 0.000, 0, 4000, 1024, 5, 80, '2024-10-22', 1, 'image', 1, 'Open-weight; multiple sizes (Large/Medium/Turbo)', 'image', 'stability.ai/pricing'],
+  ['stable-diffusion-xl', 'Stable Diffusion XL', 'stability', 0.000, 0, 2000, 1024, 3, 75, '2023-07-26', 1, 'image', 1, 'Most widely deployed open image model', 'image', 'stability.ai/pricing'],
+  ['stable-image-ultra', 'Stable Image Ultra', 'stability', 0.080, 0, 4000, 1536, 12, 83, '2024-04-01', 0, 'image', 1, 'Stability API premium quality tier', 'image', 'stability.ai/pricing'],
+  ['flux-1.1-pro', 'FLUX 1.1 Pro', 'blackforest', 0.040, 0, 4000, 1024, 4, 88, '2024-10-01', 0, 'image', 1, 'Fast and high-quality; 6x faster than FLUX.1 Pro', 'image', 'blackforestlabs.ai/pricing'],
+  ['flux-1-dev', 'FLUX.1 Dev', 'blackforest', 0.000, 0, 4000, 1024, 8, 84, '2024-08-01', 1, 'image', 1, 'Open-weight distilled model', 'image', 'blackforestlabs.ai/pricing'],
+  ['flux-1-schnell', 'FLUX.1 Schnell', 'blackforest', 0.000, 0, 4000, 1024, 2, 78, '2024-08-01', 1, 'image', 1, 'Fastest FLUX variant; Apache 2.0 license', 'image', 'blackforestlabs.ai/pricing'],
+  ['flux-kontext', 'FLUX Kontext', 'blackforest', 0.040, 0, 8000, 1024, 6, 89, '2025-06-18', 0, 'image', 1, 'Context-aware editing and generation', 'image', 'blackforestlabs.ai/pricing'],
+  ['midjourney-v6.1', 'Midjourney v6.1', 'midjourney', 0.010, 0, 6000, 2048, 20, 92, '2024-12-01', 0, 'image', 0, 'Subscription-based; $10-$120/mo; aesthetic leader', 'image', 'midjourney.com/pricing'],
+  ['midjourney-v7', 'Midjourney v7', 'midjourney', 0.010, 0, 6000, 2048, 15, 95, '2025-05-25', 0, 'image', 0, 'Latest; native person generation; text-in-image', 'image', 'midjourney.com/pricing'],
+  ['ideogram-3', 'Ideogram 3', 'ideogram', 0.020, 0, 8000, 1536, 10, 88, '2025-04-23', 0, 'image', 1, 'Best text-in-image; style reference support', 'image', 'ideogram.ai/pricing'],
+  ['ideogram-2', 'Ideogram 2', 'ideogram', 0.010, 0, 4000, 1280, 8, 83, '2024-08-19', 0, 'image', 1, 'Strong text rendering at lower cost', 'image', 'ideogram.ai/pricing'],
+  ['leonardo-phoenix', 'Leonardo Phoenix', 'leonardo', 0.015, 0, 4000, 1472, 5, 82, '2024-08-01', 0, 'image', 1, 'Fast creative generation', 'image', 'leonardo.ai/pricing'],
+  ['recraft-v3', 'Recraft v3', 'reka', 0.040, 0, 4000, 2048, 8, 85, '2024-10-29', 0, 'image', 1, '#1 on Hugging Face text-to-image arena', 'image', 'recraft.ai/pricing'],
+];
+
+const insertImageModels = db.transaction(() => {
+  for (const m of imageModels) {
+    insertModelWithCategory.run(...m);
+  }
+});
+insertImageModels();
+
+// ─── Video Generation Models ─────────────────────────────────
+// input_price: cost per second of video; output_price: 0
+// context_window: max prompt chars; max_output: max video duration in seconds; speed: generation time in seconds
+const videoModels: (string | number | null)[][] = [
+  ['sora', 'Sora', 'openai', 0.15, 0, 4000, 20, 120, 88, '2025-02-01', 0, 'video', 1, 'Text/image-to-video; 1080p; up to 20s', 'video', 'openai.com/sora'],
+  ['sora-turbo', 'Sora Turbo', 'openai', 0.06, 0, 4000, 10, 30, 82, '2025-02-01', 0, 'video', 1, 'Faster variant; 480p-720p', 'video', 'openai.com/sora'],
+  ['veo-2', 'Veo 2', 'google', 0.15, 0, 4000, 8, 60, 90, '2024-12-01', 0, 'video', 1, 'Google DeepMind; 4K capable; realistic physics', 'video', 'deepmind.google/technologies/veo'],
+  ['veo-3', 'Veo 3', 'google', 0.20, 0, 4000, 8, 90, 93, '2025-05-20', 0, 'video', 1, 'Native audio generation; highest quality', 'video', 'deepmind.google/technologies/veo'],
+  ['gen-3-alpha', 'Gen-3 Alpha', 'runway', 0.05, 0, 4000, 10, 30, 82, '2024-06-17', 0, 'video', 1, '$0.25/5s clip; fast generation', 'video', 'runwayml.com/pricing'],
+  ['gen-4', 'Gen-4', 'runway', 0.10, 0, 4000, 10, 45, 87, '2025-06-02', 0, 'video', 1, 'Multi-shot consistency; camera control', 'video', 'runwayml.com/pricing'],
+  ['gen-4-turbo', 'Gen-4 Turbo', 'runway', 0.06, 0, 4000, 5, 15, 83, '2025-08-01', 0, 'video', 1, 'Fast mode for iterating', 'video', 'runwayml.com/pricing'],
+  ['pika-2.2', 'Pika 2.2', 'pika', 0.05, 0, 4000, 10, 30, 81, '2025-05-01', 0, 'video', 1, 'Scene ingredients; Pikaffects; text-in-video', 'video', 'pika.art/pricing'],
+  ['pika-2', 'Pika 2', 'pika', 0.04, 0, 4000, 5, 20, 78, '2024-12-09', 0, 'video', 1, 'Crush It, Inflate, effects system', 'video', 'pika.art/pricing'],
+  ['dream-machine', 'Dream Machine', 'luma', 0.04, 0, 4000, 5, 20, 80, '2024-06-12', 0, 'video', 1, 'Free tier; good motion quality', 'video', 'lumalabs.ai/pricing'],
+  ['ray-2', 'Ray 2', 'luma', 0.08, 0, 4000, 10, 40, 86, '2025-03-01', 0, 'video', 1, 'Image-to-video; camera control; 2M+ frames/day', 'video', 'lumalabs.ai/pricing'],
+  ['kling-1.6', 'Kling 1.6', 'kling', 0.04, 0, 4000, 10, 30, 84, '2025-02-01', 0, 'video', 1, 'Professional mode; impressive motion quality', 'video', 'klingai.com/pricing'],
+  ['kling-2', 'Kling 2', 'kling', 0.06, 0, 4000, 10, 25, 88, '2025-08-01', 0, 'video', 1, 'Top-ranked in VBench; Kuaishou flagship', 'video', 'klingai.com/pricing'],
+  ['hailuo-i2v-01-live', 'Hailuo I2V-01 Live', 'hailuo', 0.03, 0, 4000, 6, 20, 79, '2024-10-01', 0, 'video', 1, 'MiniMax video gen; 6-second clips', 'video', 'hailuoai.com/pricing'],
+  ['wan-2.1', 'Wan 2.1', 'alibaba', 0.00, 0, 4000, 5, 30, 80, '2025-02-25', 1, 'video', 1, 'Open-weight; 14B and 1.3B variants', 'video', 'github.com/Wan-Video'],
+  ['cogvideox-1.5', 'CogVideoX 1.5', 'zhipu', 0.00, 0, 4000, 10, 30, 76, '2024-12-01', 1, 'video', 1, 'Open-weight video generation by Zhipu AI', 'video', 'github.com/THUDM/CogVideo'],
+  ['nova-reel', 'Amazon Nova Reel', 'amazon', 0.08, 0, 4000, 6, 45, 74, '2024-12-02', 0, 'video', 1, 'AWS Bedrock video generation', 'video', 'aws.amazon.com/nova/pricing'],
+];
+
+const insertVideoModels = db.transaction(() => {
+  for (const m of videoModels) {
+    insertModelWithCategory.run(...m);
+  }
+});
+insertVideoModels();
+
+// ─── Audio & Speech Models ───────────────────────────────────
+// Speech-to-text (STT): input_price = $/minute of audio; output_price = 0
+// Text-to-speech (TTS): input_price = $/1M characters; output_price = 0
+// Voice cloning: input_price = $/minute generated; output_price = 0
+// Music/Sound: input_price = $/song or $/minute
+// context_window: max input duration (seconds for STT, characters for TTS)
+// max_output: max output duration in seconds
+// speed: real-time factor (1x = real-time)
+const audioModels: (string | number | null)[][] = [
+  // ── Speech-to-Text (STT) ──
+  ['whisper-large-v3', 'Whisper Large v3', 'openai', 0.006, 0, 7200, 7200, 10, 88, '2023-11-06', 1, 'speech-to-text', 1, '$0.006/min; 99 languages; open-weight', 'speech', 'openai.com/api/pricing'],
+  ['gpt-4o-transcribe', 'GPT-4o Transcribe', 'openai', 0.006, 0, 7200, 7200, 5, 92, '2025-03-14', 0, 'speech-to-text', 1, 'Powered by GPT-4o; superior accuracy', 'speech', 'openai.com/api/pricing'],
+  ['gemini-stt', 'Gemini Audio (STT)', 'google', 0.003, 0, 34200, 34200, 3, 90, '2025-01-01', 0, 'speech-to-text', 1, 'Native audio input in Gemini models; 9.5hr limit', 'speech', 'ai.google.dev/pricing'],
+  ['assemblyai-best', 'AssemblyAI Best', 'assemblyai', 0.0065, 0, 36000, 36000, 2, 93, '2024-01-01', 0, 'speech-to-text', 1, 'Highest accuracy STT; Universal-2 model', 'speech', 'assemblyai.com/pricing'],
+  ['assemblyai-nano', 'AssemblyAI Nano', 'assemblyai', 0.002, 0, 36000, 36000, 5, 85, '2024-01-01', 0, 'speech-to-text', 1, 'Budget tier; 4x cheaper than Best', 'speech', 'assemblyai.com/pricing'],
+  ['deepgram-nova-3', 'Deepgram Nova 3', 'deepgram', 0.0043, 0, 36000, 36000, 3, 91, '2025-03-01', 0, 'speech-to-text', 1, 'Agentic-grade STT; 6x lower hallucination', 'speech', 'deepgram.com/pricing'],
+  ['deepgram-nova-2', 'Deepgram Nova 2', 'deepgram', 0.0036, 0, 36000, 36000, 3, 87, '2024-01-01', 0, 'speech-to-text', 1, 'Mainstream STT; 50+ languages', 'speech', 'deepgram.com/pricing'],
+
+  // ── Text-to-Speech (TTS) ──
+  ['openai-tts-1', 'OpenAI TTS-1', 'openai', 15.00, 0, 4096, 600, 1, 78, '2023-11-06', 0, 'text-to-speech', 1, '$15/1M chars; 6 preset voices; real-time', 'voice', 'openai.com/api/pricing'],
+  ['openai-tts-1-hd', 'OpenAI TTS-1 HD', 'openai', 30.00, 0, 4096, 600, 2, 83, '2023-11-06', 0, 'text-to-speech', 1, '$30/1M chars; higher quality audio', 'voice', 'openai.com/api/pricing'],
+  ['gpt-4o-mini-tts', 'GPT-4o Mini TTS', 'openai', 12.00, 0, 4096, 600, 1, 86, '2025-03-20', 0, 'text-to-speech', 1, 'Instruction-following TTS; natural prosody', 'voice', 'openai.com/api/pricing'],
+  ['elevenlabs-multilingual-v2', 'ElevenLabs Multilingual v2', 'elevenlabs', 24.00, 0, 5000, 600, 1, 94, '2024-01-01', 0, 'text-to-speech', 1, 'Industry-leading quality; 32 languages; voice cloning', 'voice', 'elevenlabs.io/pricing'],
+  ['elevenlabs-turbo-v2.5', 'ElevenLabs Turbo v2.5', 'elevenlabs', 18.00, 0, 5000, 600, 0.5, 90, '2024-06-01', 0, 'text-to-speech', 1, '~300ms latency; ideal for conversational AI', 'voice', 'elevenlabs.io/pricing'],
+  ['elevenlabs-flash', 'ElevenLabs Flash', 'elevenlabs', 12.00, 0, 5000, 600, 0.3, 85, '2025-01-01', 0, 'text-to-speech', 1, 'Lowest latency; ~75ms', 'voice', 'elevenlabs.io/pricing'],
+  ['deepgram-aura-2', 'Deepgram Aura 2', 'deepgram', 15.00, 0, 2000, 600, 0.5, 82, '2025-03-01', 0, 'text-to-speech', 1, 'Enterprise TTS; low-latency streaming', 'voice', 'deepgram.com/pricing'],
+  ['cartesia-sonic-2', 'Cartesia Sonic 2', 'cartesia', 15.00, 0, 4000, 600, 0.3, 88, '2025-01-29', 0, 'text-to-speech', 1, 'State-space model; 40+ languages; streaming', 'voice', 'cartesia.ai/pricing'],
+  ['cartesia-sonic-mini', 'Cartesia Sonic Mini', 'cartesia', 8.00, 0, 4000, 600, 0.2, 80, '2025-06-01', 0, 'text-to-speech', 1, 'Cheapest low-latency TTS', 'voice', 'cartesia.ai/pricing'],
+  ['play-ht-2.0', 'PlayHT 2.0', 'play-ht', 18.00, 0, 3000, 600, 0.5, 82, '2024-01-01', 0, 'text-to-speech', 1, 'Voice cloning; conversation mode', 'voice', 'play.ht/pricing'],
+  ['resemble-v3', 'Resemble v3', 'resemble', 20.00, 0, 3000, 600, 0.5, 83, '2024-06-01', 0, 'text-to-speech', 1, 'Enterprise voice cloning; watermarking', 'voice', 'resemble.ai/pricing'],
+
+  // ── Music & Sound Generation ──
+  ['suno-v4', 'Suno v4', 'suno', 0.05, 0, 3000, 240, 30, 90, '2024-11-01', 0, 'music', 1, 'Full songs from text; lyrics generation; $0.05/song', 'sound', 'suno.com/pricing'],
+  ['suno-v3.5', 'Suno v3.5', 'suno', 0.04, 0, 3000, 240, 30, 85, '2024-07-01', 0, 'music', 1, 'Previous generation; widely used', 'sound', 'suno.com/pricing'],
+  ['udio-v2', 'Udio v2', 'udio', 0.04, 0, 3000, 180, 25, 87, '2024-10-01', 0, 'music', 1, 'High-fidelity music; excellent vocals', 'sound', 'udio.com/pricing'],
+  ['udio-v1.5', 'Udio v1.5', 'udio', 0.03, 0, 3000, 120, 20, 80, '2024-06-01', 0, 'music', 1, 'Original release; strong instrumentals', 'sound', 'udio.com/pricing'],
+  ['musicgen-large', 'MusicGen Large', 'meta', 0.00, 0, 2000, 30, 15, 72, '2023-06-01', 1, 'music', 1, 'Open-weight by Meta; 30s max; melody conditioning', 'sound', 'github.com/facebookresearch/audiocraft'],
+  ['stable-audio-2', 'Stable Audio 2', 'stability', 0.00, 0, 2000, 180, 20, 78, '2024-04-03', 1, 'music', 1, 'Open-weight music + sound FX; 3min tracks', 'sound', 'stability.ai/stable-audio'],
+];
+
+const insertAudioModels = db.transaction(() => {
+  for (const m of audioModels) {
+    insertModelWithCategory.run(...m);
+  }
+});
+insertAudioModels();
 
 // ─── Benchmarks ─────────────────────────────────────────────────
 const insertBenchmark = db.prepare(`
@@ -554,9 +706,17 @@ const benchmarkCount = (db.prepare('SELECT COUNT(*) AS c FROM benchmarks').get()
 const scoreCount = (db.prepare('SELECT COUNT(*) AS c FROM benchmark_scores').get() as { c: number }).c;
 const peopleCount = (db.prepare('SELECT COUNT(*) AS c FROM people').get() as { c: number }).c;
 
+// Count by category
+const categoryCounts = db.prepare(`
+  SELECT category, COUNT(*) AS c FROM models WHERE status = 'active' GROUP BY category ORDER BY category
+`).all() as Array<{ category: string; c: number }>;
+
 console.log('Database seeded successfully!');
 console.log(`  Providers:  ${providerCount}`);
 console.log(`  Models:     ${modelCount}`);
+for (const cat of categoryCounts) {
+  console.log(`    ${cat.category}: ${cat.c}`);
+}
 console.log(`  Benchmarks: ${benchmarkCount}`);
 console.log(`  Scores:     ${scoreCount}`);
 console.log(`  People:     ${peopleCount}`);

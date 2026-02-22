@@ -20,6 +20,18 @@ const priceHistory = getModelPriceHistory(id);
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
+// Category info for breadcrumbs
+const categoryLabels: Record<string, { label: string; href: string }> = {
+  llm: { label: 'LLM Compare', href: `${base}compare/llm/` },
+  image: { label: 'Image Models', href: `${base}compare/image/` },
+  video: { label: 'Video Models', href: `${base}compare/video/` },
+  voice: { label: 'Voice & TTS', href: `${base}compare/voice/` },
+  speech: { label: 'Speech-to-Text', href: `${base}compare/speech/` },
+  sound: { label: 'Music & Sound', href: `${base}compare/sound/` },
+};
+const categoryInfo = categoryLabels[model.category] ?? categoryLabels.llm;
+const isLLM = model.category === 'llm';
+
 // Computed values
 const inputPrice = model.input_price;
 const outputPrice = model.output_price;
@@ -75,7 +87,7 @@ const structuredData = {
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
       <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
       <span class="mx-2">/</span>
-      <a href={`${base}compare/llm/`} class="hover:text-(--color-text-secondary) transition-colors">LLM Compare</a>
+      <a href={categoryInfo.href} class="hover:text-(--color-text-secondary) transition-colors">{categoryInfo.label}</a>
       <span class="mx-2">/</span>
       <span class="text-(--color-text-secondary)">{model.name}</span>
     </nav>
@@ -311,13 +323,13 @@ const structuredData = {
     <!-- Back to compare -->
     <div class="flex gap-3">
       <a
-        href={`${base}compare/llm/`}
+        href={categoryInfo.href}
         class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
       >
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
-        Back to LLM Compare
+        Back to {categoryInfo.label}
       </a>
       <a
         href={`${base}labs/${model.provider_id}/`}

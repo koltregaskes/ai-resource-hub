@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ModelComparisonTable from '../../components/ModelComparisonTable';
+import { getModelsByCategory } from '../../db/queries';
+
+const models = getModelsByCategory('image');
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const lastUpdated = new Date().toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+
+function formatPrice(v: unknown): string {
+  const price = v as number;
+  if (price === 0) return 'Free';
+  if (price < 0.01) return `$${price.toFixed(4)}`;
+  return `$${price.toFixed(3)}`;
+}
+
+function formatRes(v: unknown): string {
+  const px = v as number;
+  return `${px}px`;
+}
+
+function formatSpeed(v: unknown): string {
+  return `${v}s`;
+}
+
+const columns = [
+  { field: 'name' as const, label: 'Model', shortLabel: 'Model', format: (v: unknown) => String(v), align: 'left' as const, defaultSort: 'asc' as const },
+  { field: 'provider' as const, label: 'Provider', shortLabel: 'Provider', format: (v: unknown) => String(v), align: 'left' as const, defaultSort: 'asc' as const },
+  { field: 'inputPrice' as const, label: 'Cost / Image', shortLabel: '$/Img', format: formatPrice, align: 'right' as const, defaultSort: 'asc' as const },
+  { field: 'maxOutput' as const, label: 'Max Resolution', shortLabel: 'Max Res', format: formatRes, align: 'right' as const, defaultSort: 'desc' as const },
+  { field: 'speed' as const, label: 'Gen Time', shortLabel: 'Time', format: formatSpeed, align: 'right' as const, defaultSort: 'asc' as const },
+  { field: 'qualityScore' as const, label: 'Quality', shortLabel: 'Qual.', format: (v: unknown) => String(v), align: 'right' as const, defaultSort: 'desc' as const },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'AI Image Generation Model Comparison',
+  description: 'Independent comparison of AI image generation models — DALL-E, Midjourney, Stable Diffusion, FLUX, and more.',
+  url: new URL('/compare/image', Astro.site).toString(),
+};
+---
+
+<BaseLayout
+  title="Image Model Comparison — The AI Resource Hub"
+  description="Compare AI image generation models by price, quality, speed, and resolution. DALL-E 3, Midjourney v7, FLUX, Stable Diffusion, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="mb-8">
+      <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+        <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-(--color-text-secondary)">Image Models</span>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Image Generation Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Compare {models.length} image generation models across pricing, resolution, generation speed,
+        and quality. Click any column header to sort.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Last updated: {lastUpdated} &middot; Prices from official documentation
+      </p>
+    </div>
+
+    <ModelComparisonTable
+      client:load
+      models={models}
+      columns={columns}
+      category="image"
+      baseUrl={base}
+      priceLabel="Cost per image (USD)"
+      priceUnit="standard resolution"
+    />
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>
