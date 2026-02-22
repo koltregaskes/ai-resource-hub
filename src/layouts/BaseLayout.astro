@@ -42,6 +42,16 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
     <meta property="og:url" content={canonicalURL} />
 
     <title>{title}</title>
+
+    <!-- Prevent FOUC: apply saved theme before first paint -->
+    <script is:inline>
+      (function() {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
   </head>
   <body class="bg-(--color-bg-primary) text-(--color-text-primary) min-h-screen flex flex-col">
     <header class="border-b border-(--color-border) bg-(--color-bg-secondary)/80 backdrop-blur-md sticky top-0 z-50">
@@ -73,16 +83,34 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           </a>
         </div>
 
-        <!-- Mobile menu button -->
-        <button
-          id="mobile-menu-btn"
-          class="md:hidden p-2 text-(--color-text-secondary) hover:text-(--color-text-primary)"
-          aria-label="Toggle navigation menu"
-        >
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <div class="flex items-center gap-2">
+          <!-- Theme toggle -->
+          <button
+            id="theme-toggle"
+            class="p-2 rounded-lg text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors"
+            aria-label="Toggle theme"
+          >
+            <!-- Moon icon (visible in dark mode) -->
+            <svg id="theme-icon-moon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <!-- Sun icon (visible in light mode) -->
+            <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 text-(--color-text-secondary) hover:text-(--color-text-primary)"
+            aria-label="Toggle navigation menu"
+          >
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       <!-- Mobile menu -->
@@ -121,10 +149,37 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
     </footer>
 
     <script>
+      // Mobile menu toggle
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
       btn?.addEventListener('click', () => {
         menu?.classList.toggle('hidden');
+      });
+
+      // Theme toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const moonIcon = document.getElementById('theme-icon-moon');
+      const sunIcon = document.getElementById('theme-icon-sun');
+
+      function updateThemeIcons() {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        moonIcon?.classList.toggle('hidden', isLight);
+        sunIcon?.classList.toggle('hidden', !isLight);
+      }
+
+      // Set initial icon state
+      updateThemeIcons();
+
+      themeToggle?.addEventListener('click', () => {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+        updateThemeIcons();
       });
     </script>
   </body>

@@ -19,6 +19,45 @@ function formatSpeed(tps: number): string {
   return `${tps} t/s`;
 }
 
+/** Determine if a model is "new" (released within the last 60 days) */
+function isNewModel(released: string): boolean {
+  const releaseDate = new Date(released);
+  const sixtyDaysAgo = new Date();
+  sixtyDaysAgo.setDate(sixtyDaysAgo.getDate() - 60);
+  return releaseDate > sixtyDaysAgo;
+}
+
+/** Export filtered models to CSV */
+function exportCSV(models: LLMModel[]): void {
+  const headers = ['Name', 'Provider', 'Input $/1M', 'Output $/1M', 'Context', 'Max Output', 'Speed (t/s)', 'Quality', 'Value', 'Released', 'Open Source', 'Modality'];
+  const rows = models.map((m) => [
+    m.name,
+    m.provider,
+    m.inputPrice.toFixed(2),
+    m.outputPrice.toFixed(2),
+    m.contextWindow.toString(),
+    m.maxOutput.toString(),
+    m.speed.toString(),
+    m.qualityScore.toString(),
+    m.valueScore.toString(),
+    m.released,
+    m.openSource ? 'Yes' : 'No',
+    m.modality.join('; '),
+  ]);
+
+  const csv = [headers, ...rows].map((row) =>
+    row.map((cell) => `"${cell.replace(/"/g, '""')}"`).join(',')
+  ).join('\n');
+
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `ai-models-${new Date().toISOString().slice(0, 10)}.csv`;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
 const columns: ColumnDef[] = [
   {
     field: 'name',
@@ -109,9 +148,7 @@ function SortIcon({ active, direction }: { active: boolean; direction: SortDirec
 
 function ProviderBadge({ provider, colour }: { provider: string; colour: string }) {
   return (
-    <span
-      className="inline-flex items-center gap-1.5 text-xs"
-    >
+    <span className="inline-flex items-center gap-1.5 text-xs">
       <span
         className="w-2 h-2 rounded-full shrink-0"
         style={{ backgroundColor: colour }}
@@ -121,6 +158,31 @@ function ProviderBadge({ provider, colour }: { provider: string; colour: string 
   );
 }
 
+function ModelBadges({ model, isBestValue }: { model: LLMModel; isBestValue: boolean }) {
+  const badges: JSX.Element[] = [];
+
+  if (isBestValue) {
+    badges.push(
+      <span key="best" className="badge badge-best-value">BEST VALUE</span>
+    );
+  }
+
+  if (isNewModel(model.released)) {
+    badges.push(
+      <span key="new" className="badge badge-new">NEW</span>
+    );
+  }
+
+  if (model.openSource) {
+    badges.push(
+      <span key="oss" className="badge badge-oss">OSS</span>
+    );
+  }
+
+  if (badges.length === 0) return null;
+  return <>{badges}</>;
+}
+
 export default function LLMComparisonTable({ models }: Props) {
   const [sort, setSort] = useState<SortConfig>({
     field: 'valueScore',
@@ -128,10 +190,18 @@ export default function LLMComparisonTable({ models }: Props) {
   });
   const [search, setSearch] = useState('');
   const [providerFilter, setProviderFilter] = useState<string>('all');
+  const [modalityFilter, setModalityFilter] = useState<string>('all');
+  const [ossFilter, setOssFilter] = useState<boolean>(false);
 
   const providers = useMemo(() => {
     const unique = [...new Set(models.map((m) => m.provider))];
     return unique.sort();
+  }, [models]);
+
+  // Find the best value model ID for badging
+  const bestValueId = useMemo(() => {
+    const sorted = [...models].sort((a, b) => b.valueScore - a.valueScore);
+    return sorted[0]?.id;
   }, [models]);
 
   const handleSort = useCallback(
@@ -166,6 +236,16 @@ export default function LLMComparisonTable({ models }: Props) {
       result = result.filter((m) => m.provider === providerFilter);
     }
 
+    // Filter by modality
+    if (modalityFilter !== 'all') {
+      result = result.filter((m) => m.modality.includes(modalityFilter));
+    }
+
+    // Filter by open source
+    if (ossFilter) {
+      result = result.filter((m) => m.openSource);
+    }
+
     // Sort
     result.sort((a, b) => {
       const aVal = a[sort.field];
@@ -182,52 +262,99 @@ export default function LLMComparisonTable({ models }: Props) {
     });
 
     return result;
-  }, [models, search, providerFilter, sort]);
+  }, [models, search, providerFilter, modalityFilter, ossFilter, sort]);
+
+  const hasActiveFilters = search || providerFilter !== 'all' || modalityFilter !== 'all' || ossFilter;
 
   return (
     <div>
       {/* Controls */}
-      <div className="flex flex-col sm:flex-row gap-3 mb-6">
-        <div className="relative flex-1">
-          <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-text-muted)]"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+      <div className="flex flex-col gap-3 mb-6">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <div className="relative flex-1">
+            <svg
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-text-muted)]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search models..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-accent)] focus:outline-none text-sm"
             />
-          </svg>
-          <input
-            type="text"
-            placeholder="Search models..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-accent)] focus:outline-none text-sm"
-          />
+          </div>
+          <select
+            value={providerFilter}
+            onChange={(e) => setProviderFilter(e.target.value)}
+            className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[160px]"
+          >
+            <option value="all">All Providers</option>
+            {providers.map((p) => (
+              <option key={p} value={p}>
+                {p}
+              </option>
+            ))}
+          </select>
+          <select
+            value={modalityFilter}
+            onChange={(e) => setModalityFilter(e.target.value)}
+            className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[140px]"
+          >
+            <option value="all">All Modalities</option>
+            <option value="text">Text</option>
+            <option value="vision">Vision</option>
+            <option value="audio">Audio</option>
+            <option value="video">Video</option>
+          </select>
         </div>
-        <select
-          value={providerFilter}
-          onChange={(e) => setProviderFilter(e.target.value)}
-          className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[160px]"
-        >
-          <option value="all">All Providers</option>
-          {providers.map((p) => (
-            <option key={p} value={p}>
-              {p}
-            </option>
-          ))}
-        </select>
+
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <label className="flex items-center gap-2 text-xs text-[var(--color-text-secondary)] cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={ossFilter}
+                onChange={(e) => setOssFilter(e.target.checked)}
+                className="rounded border-[var(--color-border)] accent-[var(--color-accent)]"
+              />
+              Open source only
+            </label>
+            {hasActiveFilters && (
+              <button
+                onClick={() => { setSearch(''); setProviderFilter('all'); setModalityFilter('all'); setOssFilter(false); }}
+                className="text-xs text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+              >
+                Clear filters
+              </button>
+            )}
+          </div>
+
+          <button
+            onClick={() => exportCSV(filteredAndSorted)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] transition-colors"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Export CSV
+          </button>
+        </div>
       </div>
 
       {/* Results count */}
       <div className="text-xs text-[var(--color-text-muted)] mb-3">
         {filteredAndSorted.length} model{filteredAndSorted.length !== 1 ? 's' : ''}
-        {search || providerFilter !== 'all' ? ' matching filters' : ''}
+        {hasActiveFilters ? ' matching filters' : ''}
       </div>
 
       {/* Table */}
@@ -274,15 +401,14 @@ export default function LLMComparisonTable({ models }: Props) {
                 key={model.id}
                 className="border-b border-[var(--color-border)] last:border-b-0 hover:bg-[var(--color-bg-hover)] transition-colors"
               >
-                {/* Model name */}
+                {/* Model name + badges */}
                 <td className="px-4 py-3 font-medium text-[var(--color-text-primary)] whitespace-nowrap">
                   <div className="flex items-center gap-2">
                     {model.name}
-                    {model.openSource && (
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-[rgba(34,197,94,0.1)] text-[var(--color-success)] font-medium">
-                        OSS
-                      </span>
-                    )}
+                    <ModelBadges
+                      model={model}
+                      isBestValue={model.id === bestValueId}
+                    />
                   </div>
                 </td>
 
@@ -339,7 +465,7 @@ export default function LLMComparisonTable({ models }: Props) {
       <div className="mt-4 flex flex-wrap gap-4 text-xs text-[var(--color-text-muted)]">
         <span>Prices per 1M tokens (USD)</span>
         <span>Speed in output tokens/second</span>
-        <span>Quality: composite benchmark score (0–100)</span>
+        <span>Quality: composite benchmark score (0-100)</span>
         <span>Value: quality per unit cost</span>
       </div>
     </div>
