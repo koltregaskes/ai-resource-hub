@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getProvidersWithCounts, getModelsByCategory, getBenchmarks, getModelBenchmarks, getPeople, getGlossaryTerms, getNews, getYouTubeCreators, getTags } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const providers = getProvidersWithCounts();
+const benchmarks = getBenchmarks();
+const people = getPeople();
+const glossaryTerms = getGlossaryTerms();
+const newsArticles = getNews(10000);
+const ytCreators = getYouTubeCreators();
+const tags = getTags();
+
+// Count models by category
+const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
+const categoryCounts: Record<string, number> = {};
+const categoryModels: Record<string, ReturnType<typeof getModelsByCategory>> = {};
+let totalModels = 0;
+
+for (const cat of categories) {
+  const models = getModelsByCategory(cat);
+  categoryCounts[cat] = models.length;
+  categoryModels[cat] = models;
+  totalModels += models.length;
+}
+
+const llmModels = categoryModels['llm'] || [];
+
+// Pricing stats
+const paidModels = llmModels.filter(m => m.inputPrice > 0);
+const avgInputPrice = paidModels.length > 0 ? paidModels.reduce((s, m) => s + m.inputPrice, 0) / paidModels.length : 0;
+const avgOutputPrice = paidModels.length > 0 ? paidModels.reduce((s, m) => s + m.outputPrice, 0) / paidModels.length : 0;
+const cheapestModel = paidModels.length > 0 ? [...paidModels].sort((a, b) => a.inputPrice - b.inputPrice)[0] : null;
+const expensiveModel = paidModels.length > 0 ? [...paidModels].sort((a, b) => b.inputPrice - a.inputPrice)[0] : null;
+
+// Context window stats
+const modelsWithContext = llmModels.filter(m => m.contextWindow > 0);
+const avgContext = modelsWithContext.length > 0 ? modelsWithContext.reduce((s, m) => s + m.contextWindow, 0) / modelsWithContext.length : 0;
+const largestContext = modelsWithContext.length > 0 ? [...modelsWithContext].sort((a, b) => b.contextWindow - a.contextWindow)[0] : null;
+
+// Open source stats
+const ossModels = llmModels.filter(m => m.openSource);
+const ossPercentage = llmModels.length > 0 ? (ossModels.length / llmModels.length * 100) : 0;
+
+// Quality stats
+const topQuality = [...llmModels].sort((a, b) => b.qualityScore - a.qualityScore)[0];
+
+// Benchmark coverage
+let totalScores = 0;
+for (const m of llmModels) {
+  const scores = getModelBenchmarks(m.id);
+  totalScores += scores.length;
+}
+
+// Provider ranking by model count
+const topProviders = [...providers].sort((a, b) => b.modelCount - a.modelCount).slice(0, 10);
+
+const categoryLabels: Record<string, string> = {
+  llm: 'Language Models',
+  image: 'Image Generation',
+  video: 'Video Generation',
+  voice: 'Voice & TTS',
+  speech: 'Speech-to-Text',
+  sound: 'Music & Sound',
+};
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+---
+
+<BaseLayout
+  title="AI Industry Statistics — The AI Resource Hub"
+  description="Comprehensive statistics on the AI model landscape — pricing trends, model counts, provider rankings, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Statistics</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Industry Statistics
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        A snapshot of the AI model landscape based on our database of {totalModels} models, {providers.length} providers, and {benchmarks.length} benchmarks.
+      </p>
+    </div>
+
+    <!-- Key metrics -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-accent)">{totalModels}</p>
+        <p class="text-xs text-(--color-text-muted)">Active Models</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{providers.length}</p>
+        <p class="text-xs text-(--color-text-muted)">AI Providers</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{benchmarks.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Benchmarks</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{totalScores}</p>
+        <p class="text-xs text-(--color-text-muted)">Benchmark Scores</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{people.length}</p>
+        <p class="text-xs text-(--color-text-muted)">People Tracked</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{newsArticles.length}</p>
+        <p class="text-xs text-(--color-text-muted)">News Articles</p>
+      </div>
+    </div>
+
+    <!-- Models by Category -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Models by Category</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <div class="space-y-3">
+          {Object.entries(categoryCounts).sort(([,a], [,b]) => b - a).map(([cat, count]) => {
+            const pct = totalModels > 0 ? (count / totalModels * 100) : 0;
+            return (
+              <div>
+                <div class="flex items-center justify-between text-sm mb-1">
+                  <span class="text-(--color-text-secondary)">{categoryLabels[cat] || cat}</span>
+                  <span class="font-mono text-(--color-text-primary)">{count} <span class="text-(--color-text-muted)">({pct.toFixed(0)}%)</span></span>
+                </div>
+                <div class="w-full h-3 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-(--color-accent)" style={`width: ${pct}%`}></div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6 mb-10">
+      <!-- Pricing stats -->
+      <div>
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">LLM Pricing Stats</h2>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 space-y-4">
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-(--color-text-muted)">Avg. Input Price</span>
+            <span class="font-mono text-sm text-(--color-text-primary)">${avgInputPrice.toFixed(2)}/1M tokens</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-(--color-text-muted)">Avg. Output Price</span>
+            <span class="font-mono text-sm text-(--color-text-primary)">${avgOutputPrice.toFixed(2)}/1M tokens</span>
+          </div>
+          {cheapestModel && (
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-(--color-text-muted)">Cheapest Model</span>
+              <a href={`${base}models/${cheapestModel.id}/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                {cheapestModel.name} (${cheapestModel.inputPrice.toFixed(3)}/M)
+              </a>
+            </div>
+          )}
+          {expensiveModel && (
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-(--color-text-muted)">Most Expensive</span>
+              <a href={`${base}models/${expensiveModel.id}/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                {expensiveModel.name} (${expensiveModel.inputPrice.toFixed(2)}/M)
+              </a>
+            </div>
+          )}
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-(--color-text-muted)">Free / Open Models</span>
+            <span class="font-mono text-sm text-(--color-text-primary)">{llmModels.filter(m => m.inputPrice === 0).length}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Context & capability stats -->
+      <div>
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Capability Stats</h2>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 space-y-4">
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-(--color-text-muted)">Avg. Context Window</span>
+            <span class="font-mono text-sm text-(--color-text-primary)">{formatTokens(Math.round(avgContext))}</span>
+          </div>
+          {largestContext && (
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-(--color-text-muted)">Largest Context</span>
+              <a href={`${base}models/${largestContext.id}/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                {largestContext.name} ({formatTokens(largestContext.contextWindow)})
+              </a>
+            </div>
+          )}
+          {topQuality && (
+            <div class="flex justify-between items-center">
+              <span class="text-sm text-(--color-text-muted)">Highest Quality Score</span>
+              <a href={`${base}models/${topQuality.id}/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                {topQuality.name} ({topQuality.qualityScore}/100)
+              </a>
+            </div>
+          )}
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-(--color-text-muted)">Open Source %</span>
+            <span class="font-mono text-sm text-(--color-text-primary)">{ossPercentage.toFixed(0)}% ({ossModels.length} models)</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-(--color-text-muted)">Benchmark Coverage</span>
+            <span class="font-mono text-sm text-(--color-text-primary)">{totalScores} scores across {benchmarks.length} benchmarks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top providers -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Top Providers by Model Count</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <div class="space-y-3">
+          {topProviders.map((p, i) => {
+            const maxModels = topProviders[0].modelCount;
+            const pct = maxModels > 0 ? (p.modelCount / maxModels * 100) : 0;
+            return (
+              <div class="flex items-center gap-3">
+                <span class={`w-6 text-center text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                  {i + 1}
+                </span>
+                <a href={`${base}labs/${p.id}/`} class="w-32 text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors truncate">
+                  {p.name}
+                </a>
+                <div class="flex-1 h-4 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
+                  <div class="h-full rounded-full" style={`width: ${pct}%; background-color: ${p.colour}`}></div>
+                </div>
+                <span class="font-mono text-sm text-(--color-text-secondary) w-12 text-right">{p.modelCount}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+
+    <!-- Content stats -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Content Library</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <p class="text-2xl font-bold text-(--color-text-primary)">{glossaryTerms.length}</p>
+          <p class="text-xs text-(--color-text-muted)">Glossary Terms</p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <p class="text-2xl font-bold text-(--color-text-primary)">{ytCreators.length}</p>
+          <p class="text-xs text-(--color-text-muted)">YouTube Channels</p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <p class="text-2xl font-bold text-(--color-text-primary)">{tags.length}</p>
+          <p class="text-xs text-(--color-text-muted)">Tags</p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <p class="text-2xl font-bold text-(--color-text-primary)">6</p>
+          <p class="text-xs text-(--color-text-muted)">Guides</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href={`${base}methodology/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Learn about our methodology &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

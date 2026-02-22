@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const entries = [
+  {
+    date: '2026-02-22',
+    version: '1.0',
+    title: 'Initial Launch',
+    items: [
+      'Launched with 129+ AI models across 6 categories (LLM, Image, Video, Voice, Speech, Sound)',
+      '34 AI providers with company details, funding, and leadership data',
+      '30 benchmarks with 171 scores across coding, math, reasoning, safety, and more',
+      'LLM Comparison Table with real-time sorting and filtering',
+      'Individual model pages with pricing, benchmarks, and price history',
+      'Provider ("Lab") pages with grouped model listings',
+      'Head-to-Head model comparison tool with visual bars',
+      'Model Leaderboard with Quality, Value, and Cheapest rankings',
+      'Coding Models leaderboard — best AI models for software development',
+      'Open Source Models directory',
+      'API Pricing Calculator with usage presets',
+      'AI Industry Statistics dashboard',
+      'AI Tools Directory with 55+ tools across 9 categories',
+      'AI Timeline with 37 key events from 2012 to 2026',
+      'AI News page with 814+ curated articles from daily digests',
+      'AI Glossary with detailed term definitions',
+      'AI People directory with 31 key figures',
+      '27 curated YouTube channels covering AI',
+      '68 curated X/Twitter AI accounts',
+      'Provider Status Dashboard with real-time status page links',
+      '6 in-depth guides (prompting, choosing models, pricing, writing, research)',
+      '4 blog posts (benchmarks explained, pricing trends, open source vs closed, what is an LLM)',
+      '"Which AI Should I Use?" interactive quiz',
+      '28 tags for browsing by topic',
+      'Full-text search across all content',
+      'Dark/light theme toggle',
+      'SEO optimised with structured data, sitemaps, and meta tags',
+      'RSS feed for blog posts',
+      'Responsive design for mobile, tablet, and desktop',
+      'Transparent methodology page with scoring details',
+      'Automated daily pricing updates via GitHub Actions',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Changelog — The AI Resource Hub"
+  description="What's new on The AI Resource Hub. Changelog of features, data updates, and improvements."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Changelog</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Changelog
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        All notable changes, new features, and data updates for The AI Resource Hub.
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      {entries.map(entry => (
+        <article class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <div class="p-5 border-b border-(--color-border) bg-(--color-bg-tertiary)/50">
+            <div class="flex items-center gap-3">
+              <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-accent)/20 text-(--color-accent) font-mono font-medium">
+                v{entry.version}
+              </span>
+              <time class="text-sm text-(--color-text-muted)">{new Date(entry.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+            </div>
+            <h2 class="text-xl font-bold text-(--color-text-primary) mt-2">{entry.title}</h2>
+          </div>
+          <div class="p-5">
+            <ul class="space-y-2">
+              {entry.items.map(item => (
+                <li class="flex gap-2 text-sm text-(--color-text-secondary)">
+                  <span class="text-(--color-accent) shrink-0 mt-1">+</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

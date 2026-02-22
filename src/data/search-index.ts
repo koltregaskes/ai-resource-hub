@@ -190,7 +190,23 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'timeline', title: 'AI Timeline', description: 'Key moments in AI history — from the Transformer paper to modern LLMs' },
     { id: 'leaderboard', title: 'AI Model Leaderboard', description: 'Ranked leaderboard of AI models by quality, value, and price' },
     { id: 'calculator', title: 'API Pricing Calculator', description: 'Calculate and compare AI API costs across different models' },
+    { id: 'methodology', title: 'Methodology', description: 'How we score, rank, and compare AI models — full transparency' },
+    { id: 'open-source', title: 'Open Source AI Models', description: 'Directory of open-source and open-weight AI models ranked by quality' },
+    { id: 'coding', title: 'Best AI Models for Coding', description: 'Ranked leaderboard of the best AI models for coding and software development' },
+    { id: 'stats', title: 'AI Industry Statistics', description: 'Comprehensive statistics on the AI model landscape — pricing, model counts, and more' },
+    { id: 'about', title: 'About', description: 'About The AI Resource Hub — independent AI model comparison and pricing data' },
+    { id: 'changelog', title: 'Changelog', description: 'What\'s new — changelog of features, data updates, and improvements' },
+    { id: 'pricing-trends', title: 'AI Pricing Trends', description: 'Track AI model pricing trends — how costs have dropped and where pricing is heading' },
   ];
+
+  // Custom URL pages
+  items.push({
+    id: 'head-to-head',
+    title: 'Head-to-Head Model Comparison',
+    type: 'page',
+    description: 'Compare 2–4 AI models side by side across pricing, benchmarks, and capabilities',
+    url: `${base}compare/head-to-head/`,
+  });
 
   for (const s of sectionPages) {
     items.push({

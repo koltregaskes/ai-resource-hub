@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory, getModelBenchmarks, getBenchmarks } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+const allBenchmarks = getBenchmarks();
+
+// Find coding-related benchmarks
+const codingBenchmarkIds = allBenchmarks
+  .filter(b => b.category === 'coding')
+  .map(b => b.id);
+
+const codingBenchmarkNames = Object.fromEntries(
+  allBenchmarks.filter(b => b.category === 'coding').map(b => [b.id, b.name])
+);
+
+// Build coding leaderboard
+interface CodingModel {
+  id: string;
+  name: string;
+  provider: string;
+  colour: string;
+  qualityScore: number;
+  inputPrice: number;
+  outputPrice: number;
+  contextWindow: number;
+  codingAvg: number;
+  codingScores: Record<string, number>;
+  benchmarkCount: number;
+  released: string | null;
+  openSource: boolean;
+}
+
+const codingModels: CodingModel[] = [];
+
+for (const m of models) {
+  const scores = getModelBenchmarks(m.id);
+  const codingScores: Record<string, number> = {};
+  let codingSum = 0;
+  let codingCount = 0;
+
+  for (const s of scores) {
+    if (codingBenchmarkIds.includes(s.benchmark_id)) {
+      codingScores[s.benchmark_id] = s.score;
+      codingSum += s.score;
+      codingCount++;
+    }
+  }
+
+  codingModels.push({
+    id: m.id,
+    name: m.name,
+    provider: m.provider,
+    colour: m.providerColour,
+    qualityScore: m.qualityScore,
+    inputPrice: m.inputPrice,
+    outputPrice: m.outputPrice,
+    contextWindow: m.contextWindow,
+    codingAvg: codingCount > 0 ? codingSum / codingCount : 0,
+    codingScores,
+    benchmarkCount: codingCount,
+    released: m.released,
+    openSource: m.openSource,
+  });
+}
+
+// Sort by coding average (models with coding scores first, then by quality)
+const ranked = codingModels
+  .filter(m => m.benchmarkCount > 0)
+  .sort((a, b) => b.codingAvg - a.codingAvg);
+
+const noScores = codingModels
+  .filter(m => m.benchmarkCount === 0)
+  .sort((a, b) => b.qualityScore - a.qualityScore)
+  .slice(0, 10);
+
+// Best for different use cases
+const bestOverall = ranked[0];
+const bestBudget = [...ranked].filter(m => m.inputPrice > 0).sort((a, b) => {
+  const va = a.codingAvg / ((a.inputPrice + 3 * a.outputPrice) / 4);
+  const vb = b.codingAvg / ((b.inputPrice + 3 * b.outputPrice) / 4);
+  return vb - va;
+})[0];
+const bestOSS = ranked.filter(m => m.openSource)[0];
+---
+
+<BaseLayout
+  title="Best AI Models for Coding — The AI Resource Hub"
+  description="Ranked leaderboard of the best AI models for coding and software development. Compare HumanEval, SWE-bench, and other coding benchmarks."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}leaderboard/`} class="hover:text-(--color-text-secondary) transition-colors">Leaderboard</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Coding</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Best AI Models for Coding
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {ranked.length} models ranked by coding benchmark performance across HumanEval, SWE-bench, and other coding evaluations.
+      </p>
+    </div>
+
+    <!-- Picks -->
+    {(bestOverall || bestBudget || bestOSS) && (
+      <div class="grid sm:grid-cols-3 gap-3 mb-8">
+        {bestOverall && (
+          <a href={`${base}models/${bestOverall.id}/`} class="p-4 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20 hover:border-(--color-accent)/40 transition-colors group">
+            <p class="text-[10px] uppercase tracking-wider text-(--color-accent) mb-1">Best Overall</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-2 h-2 rounded-full" style={`background-color: ${bestOverall.colour}`}></span>
+              <h3 class="font-bold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">{bestOverall.name}</h3>
+            </div>
+            <p class="text-xs text-(--color-text-muted)">{bestOverall.provider} &middot; Avg: {bestOverall.codingAvg.toFixed(1)}</p>
+          </a>
+        )}
+        {bestBudget && (
+          <a href={`${base}models/${bestBudget.id}/`} class="p-4 rounded-xl bg-green-500/10 border border-green-500/20 hover:border-green-500/40 transition-colors group">
+            <p class="text-[10px] uppercase tracking-wider text-green-400 mb-1">Best Value for Coding</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-2 h-2 rounded-full" style={`background-color: ${bestBudget.colour}`}></span>
+              <h3 class="font-bold text-(--color-text-primary) group-hover:text-green-400 transition-colors">{bestBudget.name}</h3>
+            </div>
+            <p class="text-xs text-(--color-text-muted)">{bestBudget.provider} &middot; ${bestBudget.inputPrice.toFixed(2)}/M in</p>
+          </a>
+        )}
+        {bestOSS && (
+          <a href={`${base}models/${bestOSS.id}/`} class="p-4 rounded-xl bg-purple-500/10 border border-purple-500/20 hover:border-purple-500/40 transition-colors group">
+            <p class="text-[10px] uppercase tracking-wider text-purple-400 mb-1">Best Open Source</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-2 h-2 rounded-full" style={`background-color: ${bestOSS.colour}`}></span>
+              <h3 class="font-bold text-(--color-text-primary) group-hover:text-purple-400 transition-colors">{bestOSS.name}</h3>
+            </div>
+            <p class="text-xs text-(--color-text-muted)">{bestOSS.provider} &middot; Avg: {bestOSS.codingAvg.toFixed(1)}</p>
+          </a>
+        )}
+      </div>
+    )}
+
+    <!-- Main table -->
+    <div class="mb-10">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Coding Avg</th>
+              {Object.entries(codingBenchmarkNames).map(([_, name]) => (
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium text-xs hidden lg:table-cell">{name}</th>
+              ))}
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ranked.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                    {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono font-bold text-(--color-accent)">{m.codingAvg.toFixed(1)}</span>
+                </td>
+                {Object.keys(codingBenchmarkNames).map(bid => (
+                  <td class="py-3 px-4 text-right text-xs font-mono hidden lg:table-cell">
+                    {m.codingScores[bid] !== undefined ? (
+                      <span class="text-(--color-text-primary)">{m.codingScores[bid].toFixed(1)}</span>
+                    ) : (
+                      <span class="text-(--color-text-muted)">—</span>
+                    )}
+                  </td>
+                ))}
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                  {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Models without coding scores -->
+    {noScores.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Other Notable Models</h2>
+        <p class="text-xs text-(--color-text-muted) mb-3">These models don't have published coding benchmark scores yet but are commonly used for coding tasks.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {noScores.map(m => (
+            <a href={`${base}models/${m.id}/`} class="p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors truncate">{m.name}</p>
+                <p class="text-[10px] text-(--color-text-muted)">{m.provider} &middot; Quality: {m.qualityScore}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="mt-6 flex justify-center gap-4">
+      <a href={`${base}leaderboard/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        View full leaderboard &rarr;
+      </a>
+      <a href={`${base}compare/head-to-head/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Compare models head-to-head &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

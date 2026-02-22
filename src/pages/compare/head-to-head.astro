@@ -1,0 +1,547 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory, getModelBenchmarks, getBenchmarks } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+const allBenchmarks = getBenchmarks();
+
+// Pre-fetch all benchmark scores for all models
+const modelBenchmarks: Record<string, Record<string, number>> = {};
+for (const m of models) {
+  const scores = getModelBenchmarks(m.id);
+  if (scores.length > 0) {
+    modelBenchmarks[m.id] = {};
+    for (const s of scores) {
+      modelBenchmarks[m.id][s.benchmark_id] = s.score;
+    }
+  }
+}
+
+// Serialise data for client-side JS
+const modelsJSON = JSON.stringify(models.map(m => ({
+  id: m.id,
+  name: m.name,
+  provider: m.provider,
+  colour: m.providerColour,
+  inputPrice: m.inputPrice,
+  outputPrice: m.outputPrice,
+  contextWindow: m.contextWindow,
+  maxOutput: m.maxOutput,
+  speed: m.speed,
+  qualityScore: m.qualityScore,
+  released: m.released,
+  openSource: m.openSource,
+  modality: m.modality,
+  apiAvailable: m.apiAvailable,
+  notes: m.notes || '',
+})));
+
+const benchmarksJSON = JSON.stringify(modelBenchmarks);
+const benchmarkNamesJSON = JSON.stringify(
+  Object.fromEntries(allBenchmarks.map(b => [b.id, { name: b.name, category: b.category, max: b.scale_max }]))
+);
+---
+
+<BaseLayout
+  title="Head-to-Head Model Comparison — The AI Resource Hub"
+  description="Compare AI models side by side. Select 2–4 models to compare pricing, benchmarks, context windows, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}compare/llm/`} class="hover:text-(--color-text-secondary) transition-colors">LLM Comparison</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Head-to-Head</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Head-to-Head Comparison
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Select 2–4 models to compare side by side across pricing, performance, benchmarks, and capabilities.
+      </p>
+    </div>
+
+    <!-- Model selectors -->
+    <div class="mb-6" id="model-selectors">
+      <div class="flex flex-wrap gap-3 items-end">
+        <div class="flex-1 min-w-[200px]">
+          <label class="text-xs text-(--color-text-muted) mb-1 block">Model A</label>
+          <select class="model-select w-full px-3 py-2.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm focus:outline-none focus:border-(--color-accent)" data-slot="0">
+            <option value="">Select a model...</option>
+          </select>
+        </div>
+        <div class="flex-1 min-w-[200px]">
+          <label class="text-xs text-(--color-text-muted) mb-1 block">Model B</label>
+          <select class="model-select w-full px-3 py-2.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm focus:outline-none focus:border-(--color-accent)" data-slot="1">
+            <option value="">Select a model...</option>
+          </select>
+        </div>
+        <div class="flex-1 min-w-[200px] hidden" id="slot-2-wrap">
+          <label class="text-xs text-(--color-text-muted) mb-1 block">Model C</label>
+          <select class="model-select w-full px-3 py-2.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm focus:outline-none focus:border-(--color-accent)" data-slot="2">
+            <option value="">Select a model...</option>
+          </select>
+        </div>
+        <div class="flex-1 min-w-[200px] hidden" id="slot-3-wrap">
+          <label class="text-xs text-(--color-text-muted) mb-1 block">Model D</label>
+          <select class="model-select w-full px-3 py-2.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm focus:outline-none focus:border-(--color-accent)" data-slot="3">
+            <option value="">Select a model...</option>
+          </select>
+        </div>
+        <button
+          id="add-model-btn"
+          class="px-3 py-2.5 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-muted) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+          title="Add another model"
+        >+ Add</button>
+      </div>
+      <!-- Quick presets -->
+      <div class="mt-4 flex flex-wrap gap-2">
+        <span class="text-xs text-(--color-text-muted) py-1">Quick:</span>
+        <button class="preset-btn text-xs px-3 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors" data-preset="frontier">
+          Frontier Models
+        </button>
+        <button class="preset-btn text-xs px-3 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors" data-preset="value">
+          Best Value
+        </button>
+        <button class="preset-btn text-xs px-3 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors" data-preset="budget">
+          Budget Picks
+        </button>
+        <button class="preset-btn text-xs px-3 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors" data-preset="coding">
+          Coding Models
+        </button>
+        <button class="preset-btn text-xs px-3 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors" data-preset="opensource">
+          Open Source
+        </button>
+      </div>
+    </div>
+
+    <!-- Comparison results -->
+    <div id="comparison-results" class="hidden">
+      <!-- Overview cards -->
+      <div id="overview-cards" class="grid gap-4 mb-8"></div>
+
+      <!-- Pricing comparison -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Pricing Comparison</h2>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm" id="pricing-table">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Metric</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Capabilities comparison -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Capabilities</h2>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm" id="capabilities-table">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Feature</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Benchmark comparison -->
+      <div class="mb-8" id="benchmark-section">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Benchmark Scores</h2>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm" id="benchmark-table">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Benchmark</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Visual bar comparison -->
+      <div class="mb-8" id="visual-comparison">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Visual Comparison</h2>
+        <div class="space-y-6" id="visual-bars"></div>
+      </div>
+
+      <!-- Verdict -->
+      <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20" id="verdict-box">
+        <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Summary</h2>
+        <p class="text-sm text-(--color-text-secondary)" id="verdict-text"></p>
+      </div>
+    </div>
+
+    <!-- Empty state -->
+    <div id="empty-state" class="text-center py-16">
+      <div class="text-6xl mb-4 opacity-30">&#x2194;</div>
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">Select Models to Compare</h2>
+      <p class="text-(--color-text-secondary) max-w-md mx-auto">
+        Choose at least 2 models above to see a detailed side-by-side comparison of pricing, capabilities, and benchmark performance.
+      </p>
+    </div>
+  </section>
+
+  <script define:vars={{ modelsJSON, benchmarksJSON, benchmarkNamesJSON, base }}>
+    const models = JSON.parse(modelsJSON);
+    const benchmarkScores = JSON.parse(benchmarksJSON);
+    const benchmarkNames = JSON.parse(benchmarkNamesJSON);
+
+    const selects = document.querySelectorAll('.model-select');
+    const addBtn = document.getElementById('add-model-btn');
+    let visibleSlots = 2;
+
+    // Populate selects
+    function populateSelects() {
+      selects.forEach(sel => {
+        const current = sel.value;
+        const opts = '<option value="">Select a model...</option>' +
+          models.map(m => `<option value="${m.id}" ${m.id === current ? 'selected' : ''}>${m.name} (${m.provider})</option>`).join('');
+        sel.innerHTML = opts;
+      });
+    }
+    populateSelects();
+
+    // Show/hide additional slots
+    addBtn.addEventListener('click', () => {
+      if (visibleSlots < 4) {
+        document.getElementById(`slot-${visibleSlots}-wrap`).classList.remove('hidden');
+        visibleSlots++;
+        if (visibleSlots >= 4) addBtn.classList.add('hidden');
+      }
+    });
+
+    // Quick presets
+    const presets = {
+      frontier: () => {
+        const names = ['claude-opus-4', 'gpt-4.1', 'gemini-2.5-pro', 'grok-3'];
+        return findModelsByPartial(names);
+      },
+      value: () => {
+        const sorted = [...models].filter(m => m.inputPrice > 0).sort((a, b) => {
+          const va = a.qualityScore / ((a.inputPrice + 3 * a.outputPrice) / 4);
+          const vb = b.qualityScore / ((b.inputPrice + 3 * b.outputPrice) / 4);
+          return vb - va;
+        });
+        return sorted.slice(0, 4).map(m => m.id);
+      },
+      budget: () => {
+        const sorted = [...models].filter(m => m.inputPrice > 0).sort((a, b) => a.inputPrice - b.inputPrice);
+        return sorted.slice(0, 4).map(m => m.id);
+      },
+      coding: () => {
+        const names = ['claude-sonnet-4', 'gpt-4.1', 'gemini-2.5-pro', 'deepseek-v3'];
+        return findModelsByPartial(names);
+      },
+      opensource: () => {
+        const oss = models.filter(m => m.openSource).sort((a, b) => b.qualityScore - a.qualityScore);
+        return oss.slice(0, 4).map(m => m.id);
+      },
+    };
+
+    function findModelsByPartial(partials) {
+      return partials.map(p => {
+        const found = models.find(m => m.id === p) || models.find(m => m.id.includes(p));
+        return found ? found.id : null;
+      }).filter(Boolean);
+    }
+
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const preset = btn.dataset.preset;
+        const ids = presets[preset]();
+        // Show enough slots
+        while (visibleSlots < Math.min(ids.length, 4)) {
+          document.getElementById(`slot-${visibleSlots}-wrap`).classList.remove('hidden');
+          visibleSlots++;
+        }
+        if (visibleSlots >= 4) addBtn.classList.add('hidden');
+        // Set values
+        ids.forEach((id, i) => {
+          if (i < selects.length) selects[i].value = id;
+        });
+        updateComparison();
+      });
+    });
+
+    // Listen for changes
+    selects.forEach(sel => sel.addEventListener('change', updateComparison));
+
+    function formatPrice(p) {
+      if (p === 0) return 'Free';
+      if (p < 0.01) return '$' + p.toFixed(4);
+      if (p < 1) return '$' + p.toFixed(3);
+      return '$' + p.toFixed(2);
+    }
+
+    function formatTokens(n) {
+      if (n >= 1000000) return (n / 1000000).toFixed(n % 1000000 === 0 ? 0 : 1) + 'M';
+      if (n >= 1000) return (n / 1000).toFixed(n % 1000 === 0 ? 0 : 1) + 'K';
+      return n.toString();
+    }
+
+    function updateComparison() {
+      const selected = [];
+      selects.forEach((sel, i) => {
+        if (i < visibleSlots && sel.value) {
+          const m = models.find(x => x.id === sel.value);
+          if (m) selected.push(m);
+        }
+      });
+
+      const results = document.getElementById('comparison-results');
+      const empty = document.getElementById('empty-state');
+
+      if (selected.length < 2) {
+        results.classList.add('hidden');
+        empty.classList.remove('hidden');
+        return;
+      }
+
+      results.classList.remove('hidden');
+      empty.classList.add('hidden');
+
+      renderOverviewCards(selected);
+      renderPricingTable(selected);
+      renderCapabilitiesTable(selected);
+      renderBenchmarkTable(selected);
+      renderVisualBars(selected);
+      renderVerdict(selected);
+    }
+
+    function bestCell(values, higherIsBetter = true) {
+      const best = higherIsBetter ? Math.max(...values) : Math.min(...values.filter(v => v > 0));
+      return values.map(v => v === best && v > 0 ? 'text-(--color-accent) font-bold' : '');
+    }
+
+    function renderOverviewCards(selected) {
+      const container = document.getElementById('overview-cards');
+      container.style.gridTemplateColumns = `repeat(${selected.length}, 1fr)`;
+      container.innerHTML = selected.map(m => {
+        const blended = (m.inputPrice + 3 * m.outputPrice) / 4;
+        const value = blended > 0 ? ((m.qualityScore / blended) * 10).toFixed(1) : '0';
+        return `
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-3 h-3 rounded-full shrink-0" style="background-color: ${m.colour}"></span>
+              <h3 class="font-bold text-(--color-text-primary) text-sm truncate">${m.name}</h3>
+            </div>
+            <p class="text-xs text-(--color-text-muted) mb-3">${m.provider}</p>
+            <div class="grid grid-cols-2 gap-2 text-center">
+              <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
+                <p class="text-lg font-bold text-(--color-accent)">${m.qualityScore}</p>
+                <p class="text-[10px] text-(--color-text-muted)">Quality</p>
+              </div>
+              <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
+                <p class="text-lg font-bold text-green-400">${value}</p>
+                <p class="text-[10px] text-(--color-text-muted)">Value</p>
+              </div>
+            </div>
+            <a href="${base}models/${m.id}/" class="block mt-3 text-xs text-(--color-accent) hover:text-(--color-accent-hover) text-center transition-colors">
+              View details &rarr;
+            </a>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderPricingTable(selected) {
+      const table = document.getElementById('pricing-table');
+      const thead = table.querySelector('thead tr');
+      thead.innerHTML = '<th class="text-left py-3 px-4 text-(--color-text-muted) font-medium w-40">Metric</th>' +
+        selected.map(m => `<th class="text-right py-3 px-4 font-medium text-(--color-text-primary) text-sm"><span class="inline-block w-2 h-2 rounded-full mr-1" style="background-color:${m.colour}"></span>${m.name}</th>`).join('');
+
+      const inputPrices = selected.map(m => m.inputPrice);
+      const outputPrices = selected.map(m => m.outputPrice);
+      const blended = selected.map(m => (m.inputPrice + 3 * m.outputPrice) / 4);
+      const daily1k = selected.map(m => ((m.inputPrice * 2000 + m.outputPrice * 1000) / 1000000) * 1000);
+
+      const inputBest = bestCell(inputPrices, false);
+      const outputBest = bestCell(outputPrices, false);
+      const blendedBest = bestCell(blended, false);
+      const dailyBest = bestCell(daily1k, false);
+
+      const rows = [
+        ['Input $/1M tokens', inputPrices.map((p, i) => `<span class="${inputBest[i]}">${formatPrice(p)}</span>`)],
+        ['Output $/1M tokens', outputPrices.map((p, i) => `<span class="${outputBest[i]}">${formatPrice(p)}</span>`)],
+        ['Blended $/1M tokens', blended.map((p, i) => `<span class="${blendedBest[i]}">${formatPrice(p)}</span>`)],
+        ['Est. cost per 1K requests', daily1k.map((p, i) => `<span class="${dailyBest[i]}">${formatPrice(p)}</span>`)],
+      ];
+
+      const tbody = table.querySelector('tbody');
+      tbody.innerHTML = rows.map(([label, vals]) =>
+        `<tr class="border-b border-(--color-border)/50">
+          <td class="py-3 px-4 text-sm text-(--color-text-secondary)">${label}</td>
+          ${vals.map(v => `<td class="py-3 px-4 text-right text-sm font-mono">${v}</td>`).join('')}
+        </tr>`
+      ).join('');
+    }
+
+    function renderCapabilitiesTable(selected) {
+      const table = document.getElementById('capabilities-table');
+      const thead = table.querySelector('thead tr');
+      thead.innerHTML = '<th class="text-left py-3 px-4 text-(--color-text-muted) font-medium w-40">Feature</th>' +
+        selected.map(m => `<th class="text-right py-3 px-4 font-medium text-(--color-text-primary) text-sm">${m.name}</th>`).join('');
+
+      const ctxBest = bestCell(selected.map(m => m.contextWindow), true);
+      const outBest = bestCell(selected.map(m => m.maxOutput), true);
+      const speedBest = bestCell(selected.map(m => m.speed), true);
+      const qualBest = bestCell(selected.map(m => m.qualityScore), true);
+
+      const rows = [
+        ['Context Window', selected.map((m, i) => `<span class="${ctxBest[i]}">${formatTokens(m.contextWindow)}</span>`)],
+        ['Max Output', selected.map((m, i) => `<span class="${outBest[i]}">${formatTokens(m.maxOutput)}</span>`)],
+        ['Speed', selected.map((m, i) => `<span class="${speedBest[i]}">${m.speed > 0 ? m.speed + ' tok/s' : 'N/A'}</span>`)],
+        ['Quality Score', selected.map((m, i) => `<span class="${qualBest[i]}">${m.qualityScore}/100</span>`)],
+        ['Open Source', selected.map(m => m.openSource ? '<span class="text-green-400">Yes</span>' : '<span class="text-(--color-text-muted)">No</span>')],
+        ['API Available', selected.map(m => m.apiAvailable ? '<span class="text-green-400">Yes</span>' : '<span class="text-(--color-text-muted)">No</span>')],
+        ['Modality', selected.map(m => `<span class="text-xs">${m.modality}</span>`)],
+        ['Released', selected.map(m => m.released ? `<span class="text-xs">${new Date(m.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</span>` : '<span class="text-(--color-text-muted)">—</span>')],
+      ];
+
+      const tbody = table.querySelector('tbody');
+      tbody.innerHTML = rows.map(([label, vals]) =>
+        `<tr class="border-b border-(--color-border)/50">
+          <td class="py-3 px-4 text-sm text-(--color-text-secondary)">${label}</td>
+          ${vals.map(v => `<td class="py-3 px-4 text-right text-sm">${v}</td>`).join('')}
+        </tr>`
+      ).join('');
+    }
+
+    function renderBenchmarkTable(selected) {
+      const section = document.getElementById('benchmark-section');
+      const table = document.getElementById('benchmark-table');
+      const thead = table.querySelector('thead tr');
+
+      // Find all benchmarks that any selected model has
+      const allBenchIds = new Set();
+      selected.forEach(m => {
+        const scores = benchmarkScores[m.id];
+        if (scores) Object.keys(scores).forEach(k => allBenchIds.add(k));
+      });
+
+      if (allBenchIds.size === 0) {
+        section.classList.add('hidden');
+        return;
+      }
+      section.classList.remove('hidden');
+
+      thead.innerHTML = '<th class="text-left py-3 px-4 text-(--color-text-muted) font-medium w-48">Benchmark</th>' +
+        selected.map(m => `<th class="text-right py-3 px-4 font-medium text-(--color-text-primary) text-sm">${m.name}</th>`).join('');
+
+      // Group benchmarks by category
+      const grouped = {};
+      allBenchIds.forEach(bid => {
+        const info = benchmarkNames[bid];
+        if (!info) return;
+        if (!grouped[info.category]) grouped[info.category] = [];
+        grouped[info.category].push({ id: bid, name: info.name, max: info.max });
+      });
+
+      const tbody = table.querySelector('tbody');
+      let html = '';
+
+      Object.entries(grouped).sort(([a], [b]) => a.localeCompare(b)).forEach(([cat, benches]) => {
+        html += `<tr class="bg-(--color-bg-tertiary)/50"><td colspan="${selected.length + 1}" class="py-2 px-4 text-xs font-semibold text-(--color-text-muted) uppercase tracking-wider">${cat}</td></tr>`;
+
+        benches.sort((a, b) => a.name.localeCompare(b.name)).forEach(bench => {
+          const scores = selected.map(m => {
+            const s = benchmarkScores[m.id];
+            return s ? (s[bench.id] ?? null) : null;
+          });
+
+          const validScores = scores.filter(s => s !== null);
+          const best = validScores.length > 0 ? Math.max(...validScores) : null;
+
+          html += `<tr class="border-b border-(--color-border)/50">
+            <td class="py-3 px-4 text-sm text-(--color-text-secondary)">
+              <a href="${base}benchmarks/${bench.id}/" class="hover:text-(--color-accent) transition-colors">${bench.name}</a>
+            </td>
+            ${scores.map(s => {
+              if (s === null) return '<td class="py-3 px-4 text-right text-sm text-(--color-text-muted)">—</td>';
+              const isBest = s === best && validScores.length > 1;
+              return `<td class="py-3 px-4 text-right text-sm font-mono ${isBest ? 'text-(--color-accent) font-bold' : 'text-(--color-text-primary)'}">
+                ${s.toFixed(1)}${bench.max ? `<span class="text-(--color-text-muted)">/${bench.max}</span>` : ''}
+              </td>`;
+            }).join('')}
+          </tr>`;
+        });
+      });
+
+      tbody.innerHTML = html;
+    }
+
+    function renderVisualBars(selected) {
+      const container = document.getElementById('visual-bars');
+      const metrics = [
+        { label: 'Quality Score', key: 'qualityScore', max: 100 },
+        { label: 'Context Window', key: 'contextWindow', max: Math.max(...selected.map(m => m.contextWindow)) },
+        { label: 'Max Output', key: 'maxOutput', max: Math.max(...selected.map(m => m.maxOutput)) },
+      ];
+
+      container.innerHTML = metrics.map(metric => `
+        <div class="rounded-xl bg-(--color-bg-card) border border-(--color-border) p-4">
+          <h3 class="text-sm font-medium text-(--color-text-muted) mb-3">${metric.label}</h3>
+          <div class="space-y-2">
+            ${selected.map(m => {
+              const val = m[metric.key];
+              const pct = metric.max > 0 ? (val / metric.max * 100) : 0;
+              const display = metric.key === 'qualityScore' ? val + '/100' : formatTokens(val);
+              return `
+                <div class="flex items-center gap-3">
+                  <span class="text-xs text-(--color-text-secondary) w-28 truncate">${m.name}</span>
+                  <div class="flex-1 h-6 bg-(--color-bg-tertiary) rounded-full overflow-hidden relative">
+                    <div class="h-full rounded-full transition-all duration-500" style="width: ${pct}%; background-color: ${m.colour}; opacity: 0.8"></div>
+                    <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-mono text-(--color-text-primary)">${display}</span>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderVerdict(selected) {
+      const sorted = [...selected].sort((a, b) => b.qualityScore - a.qualityScore);
+      const cheapest = [...selected].filter(m => m.inputPrice > 0).sort((a, b) => {
+        const ba = (a.inputPrice + 3 * a.outputPrice) / 4;
+        const bb = (b.inputPrice + 3 * b.outputPrice) / 4;
+        return ba - bb;
+      });
+      const bestValue = [...selected].filter(m => m.inputPrice > 0).sort((a, b) => {
+        const va = a.qualityScore / ((a.inputPrice + 3 * a.outputPrice) / 4);
+        const vb = b.qualityScore / ((b.inputPrice + 3 * b.outputPrice) / 4);
+        return vb - va;
+      });
+
+      let text = `<strong>${sorted[0].name}</strong> leads in quality score (${sorted[0].qualityScore}/100).`;
+      if (cheapest.length > 0 && cheapest[0].id !== sorted[0].id) {
+        text += ` <strong>${cheapest[0].name}</strong> is the most affordable option.`;
+      }
+      if (bestValue.length > 0 && bestValue[0].id !== sorted[0].id && bestValue[0].id !== cheapest[0]?.id) {
+        text += ` <strong>${bestValue[0].name}</strong> offers the best quality-per-dollar value.`;
+      }
+      if (sorted.length > 1) {
+        const diff = sorted[0].qualityScore - sorted[sorted.length - 1].qualityScore;
+        if (diff < 5) {
+          text += ` These models are very close in quality — pricing and specific benchmark performance may be the deciding factor.`;
+        }
+      }
+
+      document.getElementById('verdict-text').innerHTML = text;
+    }
+  </script>
+</BaseLayout>

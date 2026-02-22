@@ -1,0 +1,297 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+const paidModels = models.filter(m => m.inputPrice > 0);
+
+// Sort by different criteria
+const byInputCheapest = [...paidModels].sort((a, b) => a.inputPrice - b.inputPrice);
+const byOutputCheapest = [...paidModels].sort((a, b) => a.outputPrice - b.outputPrice);
+const byInputExpensive = [...paidModels].sort((a, b) => b.inputPrice - a.inputPrice);
+
+// Price ranges
+const ranges = [
+  { label: '$0–$0.50/M', min: 0, max: 0.5 },
+  { label: '$0.50–$2/M', min: 0.5, max: 2 },
+  { label: '$2–$5/M', min: 2, max: 5 },
+  { label: '$5–$15/M', min: 5, max: 15 },
+  { label: '$15–$30/M', min: 15, max: 30 },
+  { label: '$30+/M', min: 30, max: Infinity },
+];
+
+const priceDistribution = ranges.map(r => ({
+  ...r,
+  count: paidModels.filter(m => m.inputPrice >= r.min && m.inputPrice < r.max).length,
+}));
+
+const maxCount = Math.max(...priceDistribution.map(d => d.count));
+
+// Average prices by provider
+const providerPrices: Record<string, { provider: string; colour: string; avgInput: number; avgOutput: number; count: number }> = {};
+for (const m of paidModels) {
+  if (!providerPrices[m.provider]) {
+    providerPrices[m.provider] = { provider: m.provider, colour: m.providerColour, avgInput: 0, avgOutput: 0, count: 0 };
+  }
+  providerPrices[m.provider].avgInput += m.inputPrice;
+  providerPrices[m.provider].avgOutput += m.outputPrice;
+  providerPrices[m.provider].count++;
+}
+
+const providerAvgs = Object.values(providerPrices)
+  .map(p => ({
+    ...p,
+    avgInput: p.avgInput / p.count,
+    avgOutput: p.avgOutput / p.count,
+  }))
+  .filter(p => p.count >= 2) // Only show providers with 2+ models
+  .sort((a, b) => a.avgInput - b.avgInput);
+
+// Key pricing milestones
+const milestones = [
+  { date: 'Mar 2023', event: 'GPT-4 launches', inputPrice: 30.00, outputPrice: 60.00 },
+  { date: 'Nov 2023', event: 'GPT-4 Turbo cuts price 3x', inputPrice: 10.00, outputPrice: 30.00 },
+  { date: 'May 2024', event: 'GPT-4o launches at 60% less', inputPrice: 5.00, outputPrice: 15.00 },
+  { date: 'Jun 2024', event: 'Claude 3.5 Sonnet', inputPrice: 3.00, outputPrice: 15.00 },
+  { date: 'Dec 2024', event: 'Gemini 2.0 Flash free preview', inputPrice: 0, outputPrice: 0 },
+  { date: 'Jan 2025', event: 'DeepSeek V3 at $0.27/M', inputPrice: 0.27, outputPrice: 1.10 },
+  { date: 'Feb 2025', event: 'GPT-4.5 at $75/M input', inputPrice: 75.00, outputPrice: 150.00 },
+  { date: 'May 2025', event: 'Claude Sonnet 4 at $3/M', inputPrice: 3.00, outputPrice: 15.00 },
+  { date: 'Jun 2025', event: 'GPT-4.1 at $2/M input', inputPrice: 2.00, outputPrice: 8.00 },
+];
+
+// Price-to-quality scatter data
+const scatterData = JSON.stringify(paidModels.map(m => ({
+  name: m.name,
+  provider: m.provider,
+  colour: m.providerColour,
+  x: Math.log10((m.inputPrice + 3 * m.outputPrice) / 4), // log blended price
+  y: m.qualityScore,
+  price: ((m.inputPrice + 3 * m.outputPrice) / 4).toFixed(2),
+  id: m.id,
+})));
+---
+
+<BaseLayout
+  title="AI Pricing Trends — The AI Resource Hub"
+  description="Track AI model pricing trends. See how LLM API costs have changed over time and compare pricing across providers."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Pricing Trends</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Pricing Trends
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        How AI model pricing has evolved. Track trends, compare providers, and understand where pricing is heading.
+      </p>
+    </div>
+
+    <!-- Key stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">${byInputCheapest[0]?.inputPrice.toFixed(3)}</p>
+        <p class="text-xs text-(--color-text-muted)">Cheapest Input $/M</p>
+        <p class="text-[10px] text-(--color-text-muted) mt-1">{byInputCheapest[0]?.name}</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">${(paidModels.reduce((s, m) => s + m.inputPrice, 0) / paidModels.length).toFixed(2)}</p>
+        <p class="text-xs text-(--color-text-muted)">Avg Input $/M</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">${(paidModels.reduce((s, m) => s + m.outputPrice, 0) / paidModels.length).toFixed(2)}</p>
+        <p class="text-xs text-(--color-text-muted)">Avg Output $/M</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-red-400">${byInputExpensive[0]?.inputPrice.toFixed(2)}</p>
+        <p class="text-xs text-(--color-text-muted)">Most Expensive $/M</p>
+        <p class="text-[10px] text-(--color-text-muted) mt-1">{byInputExpensive[0]?.name}</p>
+      </div>
+    </div>
+
+    <!-- Price distribution -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Price Distribution (Input Price)</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <div class="space-y-3">
+          {priceDistribution.map(d => (
+            <div>
+              <div class="flex items-center justify-between text-sm mb-1">
+                <span class="text-(--color-text-secondary) font-mono text-xs w-24">{d.label}</span>
+                <span class="text-(--color-text-muted) text-xs">{d.count} models</span>
+              </div>
+              <div class="w-full h-6 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
+                <div
+                  class="h-full rounded-full bg-(--color-accent) flex items-center justify-end pr-2"
+                  style={`width: ${maxCount > 0 ? (d.count / maxCount * 100) : 0}%`}
+                >
+                  {d.count > 0 && <span class="text-[10px] font-bold text-white">{d.count}</span>}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing milestones -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Pricing Milestones</h2>
+      <p class="text-xs text-(--color-text-muted) mb-4">Key moments in AI model pricing history.</p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Date</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Event</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Input $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Output $/M</th>
+            </tr>
+          </thead>
+          <tbody>
+            {milestones.map((m, i) => (
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-4 text-(--color-text-muted) font-mono text-xs">{m.date}</td>
+                <td class="py-3 px-4 text-(--color-text-primary)">{m.event}</td>
+                <td class="py-3 px-4 text-right font-mono">
+                  {m.inputPrice > 0 ? (
+                    <span class={m.inputPrice > 10 ? 'text-red-400' : m.inputPrice < 1 ? 'text-green-400' : 'text-(--color-text-primary)'}>
+                      ${m.inputPrice.toFixed(2)}
+                    </span>
+                  ) : (
+                    <span class="text-green-400">Free</span>
+                  )}
+                </td>
+                <td class="py-3 px-4 text-right font-mono">
+                  {m.outputPrice > 0 ? (
+                    <span class="text-(--color-text-secondary)">${m.outputPrice.toFixed(2)}</span>
+                  ) : (
+                    <span class="text-green-400">Free</span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Provider average pricing -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Average Pricing by Provider</h2>
+      <p class="text-xs text-(--color-text-muted) mb-4">Average input price across all paid models per provider (min. 2 models).</p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <div class="space-y-3">
+          {providerAvgs.map(p => {
+            const maxAvg = Math.max(...providerAvgs.map(x => x.avgInput));
+            const pct = maxAvg > 0 ? (p.avgInput / maxAvg * 100) : 0;
+            return (
+              <div class="flex items-center gap-3">
+                <span class="text-sm text-(--color-text-secondary) w-28 truncate">{p.provider}</span>
+                <div class="flex-1 h-5 bg-(--color-bg-tertiary) rounded-full overflow-hidden relative">
+                  <div class="h-full rounded-full" style={`width: ${pct}%; background-color: ${p.colour}; opacity: 0.7`}></div>
+                  <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-mono text-(--color-text-primary)">${p.avgInput.toFixed(2)}/M</span>
+                </div>
+                <span class="text-xs text-(--color-text-muted) w-10 text-right">{p.count}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+
+    <!-- Price vs Quality scatter (CSS-based) -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Price vs Quality</h2>
+      <p class="text-xs text-(--color-text-muted) mb-4">Each dot represents a model. Higher quality score (Y axis) with lower price (left) = better value.</p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <div class="relative w-full" style="height: 400px;" id="scatter-chart">
+          <div class="absolute inset-0 grid grid-cols-4 grid-rows-4" style="pointer-events: none;">
+            {[...Array(4)].map((_, i) => (
+              <div class="border-b border-r border-(--color-border)/20"></div>
+            ))}
+          </div>
+          <div class="absolute bottom-0 left-0 text-[10px] text-(--color-text-muted)">Cheap</div>
+          <div class="absolute bottom-0 right-0 text-[10px] text-(--color-text-muted)">Expensive</div>
+          <div class="absolute top-0 left-0 text-[10px] text-(--color-text-muted)">High Quality</div>
+          <div class="absolute bottom-0 left-0 text-[10px] text-(--color-text-muted) mb-3">Low Quality</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top cheapest models -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Top 10 Cheapest Models</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-8">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Input $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Output $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+            </tr>
+          </thead>
+          <tbody>
+            {byInputCheapest.slice(0, 10).map((m, i) => (
+              <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                <td class="py-3 px-2 text-center text-sm font-bold text-(--color-text-muted)">{i + 1}</td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="font-medium">{m.name}</span>
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted) ml-1">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right font-mono text-sm text-green-400 font-medium">${m.inputPrice.toFixed(3)}</td>
+                <td class="py-3 px-4 text-right font-mono text-sm text-(--color-text-secondary)">${m.outputPrice.toFixed(3)}</td>
+                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-muted)">{m.qualityScore.toFixed(1)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-6 flex justify-center gap-4">
+      <a href={`${base}calculator/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        API Pricing Calculator &rarr;
+      </a>
+      <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Full LLM Comparison &rarr;
+      </a>
+    </div>
+  </section>
+
+  <script define:vars={{ scatterData, base }}>
+    const data = JSON.parse(scatterData);
+    const chart = document.getElementById('scatter-chart');
+    if (chart && data.length > 0) {
+      const minX = Math.min(...data.map(d => d.x));
+      const maxX = Math.max(...data.map(d => d.x));
+      const minY = Math.min(...data.map(d => d.y));
+      const maxY = Math.max(...data.map(d => d.y));
+      const rangeX = maxX - minX || 1;
+      const rangeY = maxY - minY || 1;
+
+      data.forEach(d => {
+        const dot = document.createElement('a');
+        dot.href = `${base}models/${d.id}/`;
+        const left = ((d.x - minX) / rangeX * 90 + 5);
+        const bottom = ((d.y - minY) / rangeY * 85 + 5);
+        dot.className = 'absolute w-3 h-3 rounded-full hover:w-4 hover:h-4 transition-all cursor-pointer group';
+        dot.style.cssText = `left: ${left}%; bottom: ${bottom}%; background-color: ${d.colour}; opacity: 0.7; transform: translate(-50%, 50%);`;
+        dot.title = `${d.name} (${d.provider}) — Quality: ${d.y}, Blended: $${d.price}/M`;
+        chart.appendChild(dot);
+      });
+    }
+  </script>
+</BaseLayout>
