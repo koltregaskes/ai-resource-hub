@@ -13,7 +13,7 @@ const ROOT = process.cwd();
 
 async function main() {
   console.log('═══════════════════════════════════════════════');
-  console.log('  AI Resource Hub — Automated Data Scraper');
+  console.log('  The AI Resource Hub — Automated Data Scraper');
   console.log(`  ${new Date().toISOString()}`);
   console.log('═══════════════════════════════════════════════\n');
 

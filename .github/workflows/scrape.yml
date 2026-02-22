@@ -33,13 +33,13 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet data/ai-resource-hub.db || echo "changed=true" >> "$GITHUB_OUTPUT"
+          git diff --quiet data/the-ai-resource-hub.db || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated data
         if: steps.changes.outputs.changed == 'true'
         run: |
-          git config user.name "AI Resource Hub Bot"
-          git config user.email "bot@ai-resource-hub.dev"
-          git add data/ai-resource-hub.db
+          git config user.name "The AI Resource Hub Bot"
+          git config user.email "bot@theairesourcehub.com"
+          git add data/the-ai-resource-hub.db
           git commit -m "chore: update pricing data [automated]"
           git push

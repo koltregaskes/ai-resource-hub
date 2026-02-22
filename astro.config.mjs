@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://koltregaskes.github.io',
-  base: '/ai-resource-hub',
+  site: 'https://theairesourcehub.com',
+  base: '/',
   integrations: [
     react(),
     sitemap(),

@@ -1,5 +1,5 @@
 /**
- * Database query functions for the AI Resource Hub.
+ * Database query functions for The AI Resource Hub.
  * Used at Astro build time to read data for static page generation.
  */
 import { getDB } from './schema';

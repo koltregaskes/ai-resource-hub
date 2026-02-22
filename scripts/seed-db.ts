@@ -11,7 +11,7 @@ import Database from 'better-sqlite3';
 import path from 'node:path';
 import fs from 'node:fs';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'ai-resource-hub.db');
+const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
 
 // Ensure data directory exists
 fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });

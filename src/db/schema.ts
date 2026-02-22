@@ -1,5 +1,5 @@
 /**
- * Database schema definition and initialisation for the AI Resource Hub.
+ * Database schema definition and initialisation for The AI Resource Hub.
  *
  * Uses SQLite (via better-sqlite3) as a build-time database.
  * Scrapers write to the DB, Astro reads from it during static generation.
@@ -7,7 +7,7 @@
 import Database from 'better-sqlite3';
 import path from 'node:path';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'ai-resource-hub.db');
+const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
 
 let _db: Database.Database | null = null;
 

@@ -5,7 +5,7 @@
 import Database from 'better-sqlite3';
 import path from 'node:path';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'ai-resource-hub.db');
+const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
 
 export function getDB(): Database.Database {
   const db = new Database(DB_PATH);
@@ -107,7 +107,7 @@ export function logScrapeRun(
 export async function fetchPage(url: string): Promise<string> {
   const response = await fetch(url, {
     headers: {
-      'User-Agent': 'AI-Resource-Hub-Bot/1.0 (https://github.com/koltregaskes/ai-resource-hub)',
+      'User-Agent': 'The-AI-Resource-Hub-Bot/1.0 (https://github.com/koltregaskes/ai-resource-hub)',
       'Accept': 'text/html,application/json,*/*',
     },
   });

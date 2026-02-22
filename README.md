@@ -1,4 +1,4 @@
-# AI Resource Hub
+# The AI Resource Hub
 
 Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.
 
