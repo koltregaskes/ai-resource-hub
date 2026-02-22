@@ -1,0 +1,249 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPeople } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const allPeople = getPeople();
+
+// Build curated X/Twitter accounts organised by category
+// Based on @koltregaskes curated lists (~117 top AI accounts)
+interface XAccount {
+  handle: string;
+  name: string;
+  role: string;
+  category: string;
+  description?: string;
+}
+
+const curatedAccounts: XAccount[] = [
+  // AI Company Leaders
+  { handle: 'sama', name: 'Sam Altman', role: 'CEO, OpenAI', category: 'leaders', description: 'Leading OpenAI. Key voice on AGI development.' },
+  { handle: 'DarioAmodei', name: 'Dario Amodei', role: 'CEO, Anthropic', category: 'leaders', description: 'AI safety pioneer. Creator of Claude.' },
+  { handle: 'DanielaAmodei', name: 'Daniela Amodei', role: 'President, Anthropic', category: 'leaders', description: 'Co-founder and business lead at Anthropic.' },
+  { handle: 'demaboroshii', name: 'Demis Hassabis', role: 'CEO, Google DeepMind', category: 'leaders', description: 'Nobel Prize laureate. AlphaFold, Gemini.' },
+  { handle: 'ylecun', name: 'Yann LeCun', role: 'Chief AI Scientist, Meta', category: 'leaders', description: 'Turing Award winner. Open-source AI advocate.' },
+  { handle: 'elonmusk', name: 'Elon Musk', role: 'CEO, xAI & Tesla', category: 'leaders', description: 'Founder of xAI/Grok. Also Tesla, SpaceX.' },
+  { handle: 'arthurmensch', name: 'Arthur Mensch', role: 'CEO, Mistral', category: 'leaders', description: 'European AI leader. Former DeepMind.' },
+  { handle: 'AravSrinivas', name: 'Aravind Srinivas', role: 'CEO, Perplexity', category: 'leaders', description: 'AI search pioneer. Former OpenAI/Google.' },
+  { handle: 'aidangomez', name: 'Aidan Gomez', role: 'CEO, Cohere', category: 'leaders', description: 'Transformer paper co-author. Enterprise AI.' },
+  { handle: 'sataboroshii', name: 'Satya Nadella', role: 'CEO, Microsoft', category: 'leaders', description: 'Leading Microsoft AI strategy with Copilot.' },
+  { handle: 'sundarpichai', name: 'Sundar Pichai', role: 'CEO, Google/Alphabet', category: 'leaders', description: 'Overseeing Google AI and DeepMind.' },
+  { handle: 'mustaboroshii', name: 'Mustafa Suleyman', role: 'CEO, Microsoft AI', category: 'leaders', description: 'DeepMind co-founder. Now leading Microsoft AI.' },
+  { handle: 'JenHsunHuang', name: 'Jensen Huang', role: 'CEO, NVIDIA', category: 'leaders', description: 'GPU revolution leader. Powers all of AI.' },
+
+  // AI Researchers & Scientists
+  { handle: 'karpathy', name: 'Andrej Karpathy', role: 'Founder, Eureka Labs', category: 'researchers', description: 'Former Tesla AI Director. Legendary AI educator.' },
+  { handle: 'geoffreyhinton', name: 'Geoffrey Hinton', role: 'Prof Emeritus, U of Toronto', category: 'researchers', description: 'Godfather of deep learning. Nobel Prize.' },
+  { handle: 'JeffDean', name: 'Jeff Dean', role: 'Chief Scientist, Google DeepMind', category: 'researchers', description: 'TensorFlow creator. Google infrastructure legend.' },
+  { handle: 'ch402', name: 'Chris Olah', role: 'Co-founder, Anthropic', category: 'researchers', description: 'Mechanistic interpretability pioneer.' },
+  { handle: 'drfeifei', name: 'Fei-Fei Li', role: 'Prof, Stanford University', category: 'researchers', description: 'ImageNet creator. Stanford HAI co-director.' },
+  { handle: 'ilyasut', name: 'Ilya Sutskever', role: 'Co-founder, SSI', category: 'researchers', description: 'OpenAI co-founder. Safe Superintelligence Inc.' },
+  { handle: 'goodfellow_ian', name: 'Ian Goodfellow', role: 'Researcher', category: 'researchers', description: 'Inventor of Generative Adversarial Networks (GANs).' },
+  { handle: 'hardmaru', name: 'David Ha', role: 'CEO, Sakana AI', category: 'researchers', description: 'Former Google Brain. Creative AI research.' },
+  { handle: 'jackclarkSF', name: 'Jack Clark', role: 'Co-founder, Anthropic', category: 'researchers', description: 'Import AI newsletter. AI policy expert.' },
+  { handle: 'noaboroshii', name: 'Noam Shazeer', role: 'Co-founder, Character.AI', category: 'researchers', description: 'Transformer paper co-author. Attention pioneer.' },
+
+  // AI News & Commentary
+  { handle: 'koltregaskes', name: 'Kol Tregaskes', role: 'AI Curator', category: 'news', description: 'AI, Tech & Science news curator. AI art creator.' },
+  { handle: 'emollick', name: 'Ethan Mollick', role: 'Prof, Wharton', category: 'news', description: 'Best AI takes for business. Author of Co-Intelligence.' },
+  { handle: 'simonw', name: 'Simon Willison', role: 'Developer', category: 'news', description: 'LLM tools expert. Creator of Datasette.' },
+  { handle: 'swyx', name: 'Shawn Wang', role: 'Founder, Latent Space', category: 'news', description: 'AI engineering podcast and newsletter.' },
+  { handle: 'dylan522p', name: 'Dylan Patel', role: 'Chief Analyst, SemiAnalysis', category: 'news', description: 'Semiconductor and AI compute analysis.' },
+  { handle: 'bindureddy', name: 'Bindu Reddy', role: 'CEO, Abacus.AI', category: 'news', description: 'AI product leader. Practical AI insights.' },
+  { handle: 'alexalbert__', name: 'Alex Albert', role: 'Head of Claude, Anthropic', category: 'news', description: 'Leading Claude relations at Anthropic.' },
+  { handle: 'mmitchell_ai', name: 'Margaret Mitchell', role: 'Chief Ethics Scientist, Hugging Face', category: 'news', description: 'AI ethics. Former Google AI lead.' },
+  { handle: 'delaboroshii', name: 'Nathan Lambert', role: 'Researcher, Allen AI', category: 'news', description: 'RLHF expert. Open-source AI researcher.' },
+
+  // AI Developers & Labs
+  { handle: 'LangChainAI', name: 'LangChain', role: 'AI Framework', category: 'developers', description: 'Leading framework for LLM applications.' },
+  { handle: 'llama_index', name: 'LlamaIndex', role: 'AI Framework', category: 'developers', description: 'Data framework for LLM applications.' },
+  { handle: 'huggingface', name: 'Hugging Face', role: 'AI Platform', category: 'developers', description: 'The GitHub of machine learning.' },
+  { handle: 'AnthropicAI', name: 'Anthropic', role: 'AI Lab', category: 'developers', description: 'Official Anthropic account. Claude updates.' },
+  { handle: 'OpenAI', name: 'OpenAI', role: 'AI Lab', category: 'developers', description: 'Official OpenAI account. GPT updates.' },
+  { handle: 'GoogleDeepMind', name: 'Google DeepMind', role: 'AI Lab', category: 'developers', description: 'Official DeepMind account. Gemini updates.' },
+  { handle: 'xaboroshii', name: 'xAI', role: 'AI Lab', category: 'developers', description: 'Official xAI account. Grok updates.' },
+  { handle: 'MistralAI', name: 'Mistral AI', role: 'AI Lab', category: 'developers', description: 'Official Mistral account. Open-weight models.' },
+  { handle: 'AIatMeta', name: 'AI at Meta', role: 'AI Lab', category: 'developers', description: 'Official Meta AI account. Llama updates.' },
+  { handle: 'CohereAI', name: 'Cohere', role: 'AI Lab', category: 'developers', description: 'Enterprise AI models and RAG.' },
+  { handle: 'peraboroshii', name: 'Perplexity', role: 'AI Search', category: 'developers', description: 'AI-powered search engine.' },
+  { handle: 'replaboroshii', name: 'Replicate', role: 'AI Platform', category: 'developers', description: 'Run AI models in the cloud via API.' },
+
+  // AI Art & Creative
+  { handle: 'midjourney', name: 'Midjourney', role: 'AI Image Generation', category: 'creative', description: 'Leading AI art generation platform.' },
+  { handle: 'runwayml', name: 'Runway', role: 'AI Video Generation', category: 'creative', description: 'Pioneer in AI-assisted creative tools.' },
+  { handle: 'paboroshii', name: 'Pika', role: 'AI Video Generation', category: 'creative', description: 'AI video effects and generation.' },
+  { handle: 'elevenlabsio', name: 'ElevenLabs', role: 'AI Voice', category: 'creative', description: 'Industry-leading voice synthesis.' },
+  { handle: 'saboroshii', name: 'Suno', role: 'AI Music', category: 'creative', description: 'Create full songs from text prompts.' },
+  { handle: 'stability_ai', name: 'Stability AI', role: 'AI Image Generation', category: 'creative', description: 'Creators of Stable Diffusion.' },
+  { handle: 'ideaboroshii', name: 'Ideogram', role: 'AI Image Generation', category: 'creative', description: 'Best-in-class text rendering in AI images.' },
+  { handle: 'lumaaboroshii', name: 'Luma AI', role: 'AI 3D/Video', category: 'creative', description: 'Dream Machine video and 3D generation.' },
+
+  // AI Policy & Safety
+  { handle: 'yoshaboroshii', name: 'Yoshua Bengio', role: 'Prof, Mila', category: 'safety', description: 'Turing Award winner. AI governance advocate.' },
+  { handle: 'GaryMarcus', name: 'Gary Marcus', role: 'AI Critic', category: 'safety', description: 'Leading AI sceptic. Author of Rebooting AI.' },
+  { handle: 'tegmark', name: 'Max Tegmark', role: 'Prof, MIT', category: 'safety', description: 'Future of Life Institute. AI existential risk.' },
+  { handle: 'connaboroshii', name: 'Connor Leahy', role: 'CEO, Conjecture', category: 'safety', description: 'AI alignment and safety research.' },
+  { handle: 'DanHendrycks', name: 'Dan Hendrycks', role: 'Director, Center for AI Safety', category: 'safety', description: 'MMLU creator. AI safety benchmarks.' },
+
+  // AI Investors & Business
+  { handle: 'naval', name: 'Naval Ravikant', role: 'Investor', category: 'business', description: 'AngelList founder. AI investment insights.' },
+  { handle: 'a16z', name: 'a16z', role: 'VC Firm', category: 'business', description: 'Andreessen Horowitz. Major AI investor.' },
+  { handle: 'sequoia', name: 'Sequoia Capital', role: 'VC Firm', category: 'business', description: 'Early investors in many AI companies.' },
+  { handle: 'lexfridman', name: 'Lex Fridman', role: 'Podcaster & Researcher', category: 'business', description: 'Deep AI conversations. MIT researcher.' },
+  { handle: 'dwaboroshii', name: 'Dwarkesh Patel', role: 'Podcaster', category: 'business', description: 'In-depth AI interviews with top researchers.' },
+];
+
+// Group by category
+const categoryLabels: Record<string, string> = {
+  leaders: 'AI Company Leaders',
+  researchers: 'Researchers & Scientists',
+  news: 'News & Commentary',
+  developers: 'AI Labs & Developer Tools',
+  creative: 'AI Art, Video & Audio',
+  safety: 'AI Safety & Policy',
+  business: 'AI Investors & Business',
+};
+
+const categoryOrder = ['leaders', 'researchers', 'news', 'developers', 'creative', 'safety', 'business'];
+const grouped = categoryOrder.map(cat => ({
+  category: cat,
+  label: categoryLabels[cat],
+  accounts: curatedAccounts.filter(a => a.category === cat),
+})).filter(g => g.accounts.length > 0);
+
+// People from DB with Twitter handles (for cross-referencing)
+const peopleWithTwitter = allPeople.filter(p => p.twitter);
+---
+
+<BaseLayout
+  title="Top AI Accounts on X/Twitter — The AI Resource Hub"
+  description="Curated list of the top AI accounts to follow on X/Twitter — company leaders, researchers, developers, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI on X/Twitter</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Top AI Accounts on X
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Curated list of the most important AI accounts to follow on X/Twitter. Company leaders, researchers, developers, artists, and commentators — all in one place.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Based on <a href="https://x.com/koltregaskes/lists" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">@koltregaskes</a>'s curated AI lists. {curatedAccounts.length} accounts across {categoryOrder.length} categories.
+      </p>
+    </div>
+
+    <!-- Quick stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      {grouped.map(g => (
+        <div class="p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-center">
+          <div class="text-2xl font-bold text-(--color-accent)">{g.accounts.length}</div>
+          <div class="text-xs text-(--color-text-muted)">{g.label}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Account groups -->
+    {grouped.map(group => (
+      <div class="mb-10">
+        <h2 class="text-lg font-bold text-(--color-text-primary) mb-4 flex items-center gap-2">
+          <span>{group.label}</span>
+          <span class="text-sm font-normal text-(--color-text-muted)">({group.accounts.length})</span>
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {group.accounts.map(account => (
+            <a
+              href={`https://x.com/${account.handle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors group"
+            >
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-(--color-bg-tertiary) flex items-center justify-center text-sm font-bold text-(--color-text-primary) shrink-0">
+                  {account.name.charAt(0)}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors truncate">
+                      {account.name}
+                    </h3>
+                    <svg class="w-4 h-4 text-(--color-text-muted) group-hover:text-(--color-accent) transition-colors shrink-0 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                  <p class="text-xs text-(--color-text-muted)">@{account.handle}</p>
+                  <p class="text-xs text-(--color-text-secondary) mt-0.5">{account.role}</p>
+                  {account.description && (
+                    <p class="text-xs text-(--color-text-muted) mt-1 line-clamp-2">{account.description}</p>
+                  )}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <!-- People from DB with Twitter -->
+    <div class="mb-10">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-4">
+        All People in Our Database with X Accounts ({peopleWithTwitter.length})
+      </h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Name</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Role</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">X Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            {peopleWithTwitter.map(person => (
+              <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                <td class="py-3 px-4">
+                  <span class="text-(--color-text-primary)">{person.name}</span>
+                </td>
+                <td class="py-3 px-4">
+                  <span class="text-(--color-text-secondary) text-xs">
+                    {[person.role, person.organisation].filter(Boolean).join(' at ')}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  {person.twitter && (
+                    <a
+                      href={`https://x.com/${person.twitter.replace('@', '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+                    >
+                      {person.twitter}
+                    </a>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tips -->
+    <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Tips for Following AI on X</h2>
+      <ul class="text-sm text-(--color-text-secondary) space-y-1 list-disc list-inside">
+        <li>Create a dedicated <strong>AI list</strong> on X to keep AI content separate from your main feed</li>
+        <li>Turn on <strong>notifications</strong> for key accounts like @AnthropicAI, @OpenAI, and @GoogleDeepMind for breaking model releases</li>
+        <li>Follow researchers like @karpathy and @emollick for thoughtful analysis beyond the hype</li>
+        <li>Check out <a href="https://x.com/koltregaskes/lists" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">@koltregaskes's curated lists</a> for the full collection of 117+ accounts</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

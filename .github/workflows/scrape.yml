@@ -40,6 +40,10 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         timeout-minutes: 5
 
+      - name: Import news digests
+        run: npx tsx scripts/import-news-digests.ts
+        timeout-minutes: 2
+
       - name: Check for changes
         id: changes
         run: |

@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getNews, getNewsCategories } from '../../db/queries';
 
-const news = getNews(100);
+const news = getNews(500);
 const categories = getNewsCategories();
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;

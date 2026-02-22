@@ -183,7 +183,9 @@ export function getSearchIndex(base: string): SearchItem[] {
   const sectionPages = [
     { id: 'news', title: 'AI News', description: 'Latest AI news — model releases, research, funding, and industry updates' },
     { id: 'youtube', title: 'AI YouTube Channels', description: 'Curated list of the best YouTube channels covering AI' },
+    { id: 'twitter', title: 'AI on X/Twitter', description: 'Curated list of the top AI accounts to follow on X/Twitter' },
     { id: 'tags', title: 'Browse by Tag', description: 'Browse AI topics, technologies, and use cases' },
+    { id: 'status', title: 'Provider Status Dashboard', description: 'Check if AI services are up — all provider status pages in one place' },
   ];
 
   for (const s of sectionPages) {

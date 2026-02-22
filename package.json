@@ -12,7 +12,8 @@
     "scrape": "tsx scripts/scrape-all.ts",
     "scrape:pricing": "tsx scripts/scrapers/pricing.ts",
     "scrape:openrouter": "tsx scripts/scrapers/openrouter.ts",
-    "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts"
+    "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts",
+    "import:news": "tsx scripts/import-news-digests.ts"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
