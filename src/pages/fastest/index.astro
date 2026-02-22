@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory, getModelBenchmarks } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+
+// Models with speed data, ranked
+const fastModels = models
+  .filter(m => m.speed > 0)
+  .sort((a, b) => b.speed - a.speed);
+
+const maxSpeed = fastModels.length > 0 ? fastModels[0].speed : 1;
+
+// Speed tiers
+const ultraFast = fastModels.filter(m => m.speed >= 100);
+const fast = fastModels.filter(m => m.speed >= 50 && m.speed < 100);
+const moderate = fastModels.filter(m => m.speed >= 20 && m.speed < 50);
+const slow = fastModels.filter(m => m.speed < 20);
+
+// Best speed + quality combo
+const speedQuality = [...fastModels]
+  .filter(m => m.qualityScore >= 70)
+  .sort((a, b) => (b.speed * b.qualityScore) - (a.speed * a.qualityScore));
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+---
+
+<BaseLayout
+  title="Fastest AI Models — The AI Resource Hub"
+  description="Ranked list of the fastest AI language models by tokens per second. Find the quickest LLM for your real-time applications."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}leaderboard/`} class="hover:text-(--color-text-secondary) transition-colors">Leaderboard</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Fastest Models</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Fastest AI Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {fastModels.length} LLMs ranked by speed (tokens per second). For latency-sensitive applications like chatbots, real-time coding, and interactive agents.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Note: Speed ratings are relative estimates. For production latency data, we recommend <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a>.
+      </p>
+    </div>
+
+    <!-- Speed tier summary -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">{ultraFast.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Ultra Fast (100+ tok/s)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-accent)">{fast.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Fast (50–99 tok/s)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{moderate.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Moderate (20–49 tok/s)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-muted)">{slow.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Slower (&lt;20 tok/s)</p>
+      </div>
+    </div>
+
+    <!-- Visual speed bars -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Speed Ranking</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 space-y-2">
+        {fastModels.slice(0, 25).map((m, i) => {
+          const pct = maxSpeed > 0 ? (m.speed / maxSpeed * 100) : 0;
+          const tier = m.speed >= 100 ? 'text-green-400' : m.speed >= 50 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)';
+          return (
+            <div class="flex items-center gap-3">
+              <span class={`w-6 text-center text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                {i + 1}
+              </span>
+              <a href={`${base}models/${m.id}/`} class="w-36 text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors truncate">
+                {m.name}
+              </a>
+              <div class="flex-1 h-5 bg-(--color-bg-tertiary) rounded-full overflow-hidden relative">
+                <div class="h-full rounded-full" style={`width: ${pct}%; background-color: ${m.providerColour}; opacity: 0.7`}></div>
+              </div>
+              <span class={`font-mono text-sm font-medium w-20 text-right ${tier}`}>
+                {m.speed} tok/s
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- Full table -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Full Table</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Speed</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {fastModels.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                    {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class={`font-mono font-bold ${m.speed >= 100 ? 'text-green-400' : m.speed >= 50 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'}`}>
+                    {m.speed} <span class="text-xs font-normal">tok/s</span>
+                  </span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden md:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? formatTokens(m.contextWindow) : '—'}</span>
+                </td>
+                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                  {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Speed + Quality sweet spot -->
+    {speedQuality.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Speed + Quality Sweet Spot</h2>
+        <p class="text-xs text-(--color-text-muted) mb-3">Models scoring 70+ quality AND offering good speed. Ranked by speed x quality product.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {speedQuality.slice(0, 6).map((m, i) => (
+            <a href={`${base}models/${m.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <div class="flex items-center gap-2 mb-2">
+                <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                  #{i + 1}
+                </span>
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm truncate">{m.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{m.provider}</p>
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-sm text-green-400">{m.speed} tok/s</span>
+                <span class="font-mono text-sm text-(--color-accent)">{m.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="mt-6 flex justify-center gap-4">
+      <a href={`${base}leaderboard/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Full leaderboard &rarr;
+      </a>
+      <a href={`${base}compare/head-to-head/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Compare models head-to-head &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

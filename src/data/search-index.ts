@@ -197,6 +197,7 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'about', title: 'About', description: 'About The AI Resource Hub — independent AI model comparison and pricing data' },
     { id: 'changelog', title: 'Changelog', description: 'What\'s new — changelog of features, data updates, and improvements' },
     { id: 'pricing-trends', title: 'AI Pricing Trends', description: 'Track AI model pricing trends — how costs have dropped and where pricing is heading' },
+    { id: 'fastest', title: 'Fastest AI Models', description: 'Ranked list of the fastest AI language models by tokens per second' },
   ];
 
   // Custom URL pages
