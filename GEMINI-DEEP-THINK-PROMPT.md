@@ -12,25 +12,32 @@ You are a senior product strategist and web architect. I need your deep analysis
 
 The AI Resource Hub is an Astro-based static site with a SQLite build-time database, deployed on GitHub Pages. It uses Tailwind CSS v4, React components for interactive features, and automated daily data scrapers via GitHub Actions.
 
-**Current inventory (254 pages):**
-- **34 AI providers** with detail pages (OpenAI, Anthropic, Google, Meta, Mistral, xAI, Cohere, etc.)
-- **129 AI models** across 6 categories: LLMs (70), image generation (18), video (17), voice/TTS (11), speech-to-text (7), music/sound (6)
-- **30 AI benchmarks** with 171 model scores — covering general, coding, math, reasoning, safety, agent, domain, multilingual, and multimodal
+**Current inventory (303 pages):**
+- **39 AI providers** with detail pages (OpenAI, Anthropic, Google, Meta, Mistral, xAI, Cohere, DeepSeek, 01.AI, NVIDIA, etc.)
+- **158 AI models** across 6 categories: LLMs (99), image generation (18), video (17), voice/TTS (11), speech-to-text (7), music/sound (6)
+- **30 AI benchmarks** with 303 model scores — covering general, coding, math, reasoning, safety, agent, domain, multilingual, and multimodal
 - **6 comparison tables** (LLM, image, video, voice, speech, sound) — sortable by price, quality, speed, value
+- **Head-to-Head model comparison tool** — select 2–4 models for side-by-side comparison with presets (frontier, value, budget, coding, open source)
 - **AI Model Leaderboard** — ranked by quality, best value, and cheapest, with tabs
+- **Coding Models Leaderboard** — specialised ranking by coding benchmark performance
+- **Open Source Models directory** — all open-weight models ranked by quality
 - **API Pricing Calculator** — interactive cost estimator with usage presets (light/medium/heavy/enterprise)
+- **AI Pricing Trends** — price distribution, milestones, provider averages, price-vs-quality scatter chart
+- **AI Industry Statistics** — comprehensive dashboard of model counts, pricing stats, provider rankings
 - **AI Tools Directory** — 55 tools across 9 categories (chatbots, coding assistants, image generators, video tools, voice/audio, writing, research, developer tools, productivity)
 - **AI Timeline** — 37 key events from 2012 (AlexNet) to 2026 (Opus 4.6)
 - **AI News** — 814 articles imported from daily digest system (runs daily via GitHub Actions, reads markdown digest files)
 - **Provider Status Dashboard** — all major AI provider status pages aggregated in one place
-- **31 people profiles** with bios, roles, Twitter handles, and "notable for" descriptions
+- **59 people profiles** with bios, roles, Twitter handles, and "notable for" descriptions
 - **27 YouTube channels** across 6 categories (news, tutorials, research, coding, creative, business)
 - **68 curated X/Twitter accounts** across 7 categories (leaders, researchers, news, developers, creative, safety, business)
-- **28 tags** with 95 tag assignments (topic, technology, use-case, capability)
+- **35 tags** with topic, technology, use-case, capability, and architecture categories
 - **AI Glossary** with plain-English definitions
 - **6 educational guides** (prompting basics, advanced prompting, choosing a model, understanding pricing, AI for writing, AI for research)
 - **4 blog articles** (how benchmarks work, pricing race to zero, open vs closed AI, what is an LLM)
 - **Interactive quiz** — "Which AI Should I Use?"
+- **About page** and **Changelog**
+- **Methodology page** — full transparency on scoring, data sources, and limitations
 - **Global search** across all content types
 - **RSS feed, sitemap, SEO structured data**
 - **Dark/light theme toggle**
@@ -56,17 +63,22 @@ We analysed these competitors:
 5. **There's An AI For That** — 12,000+ tools directory, AI Job Impact Index, smart AI search
 6. **OpenRouter** — 500+ models via single API, usage-based rankings, real adoption data
 
-**Key gaps we've identified:**
-1. No interactive data visualizations/charts (price trends, scatter plots)
-2. No side-by-side model comparison tool
-3. No methodology/transparency page explaining our scoring
-4. No specialized domain leaderboards (coding-specific, open-source-only)
-5. No speed/latency data beyond a single integer
-6. No per-provider endpoint comparison
-7. Limited compared to 12,000-tool directories
-8. No community features (voting, reviews)
-9. No public API for programmatic data access
-10. No AI trends/market analysis page
+**Gaps we've already addressed (since initial analysis):**
+- ✅ Built interactive price-vs-quality scatter chart and pricing trends page
+- ✅ Built Head-to-Head model comparison tool with presets
+- ✅ Built methodology/transparency page with full scoring breakdown
+- ✅ Built coding-specific and open-source leaderboards
+- ✅ Built AI industry statistics dashboard with pricing analysis
+
+**Remaining gaps to discuss:**
+1. No speed/latency data beyond a single integer rating
+2. No per-provider endpoint comparison (e.g., OpenAI via Azure vs direct)
+3. Limited tool directory compared to 12,000-tool directories like TAAFT
+4. No community features (voting, reviews, comments)
+5. No public API for programmatic data access
+6. No animated trend charts over time (only current-state visualizations)
+7. No domain-specific leaderboards beyond coding (healthcare, legal, finance)
+8. No newsletter/email digest system
 
 ### What I need from you
 
