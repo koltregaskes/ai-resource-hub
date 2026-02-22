@@ -202,6 +202,8 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'best-value', title: 'Best Value AI Models', description: 'AI models ranked by quality per dollar — find the best bang for your buck' },
     { id: 'multimodal', title: 'Multimodal AI Models', description: 'AI models that can process text, images, audio, and video' },
     { id: 'context-window', title: 'Context Window Comparison', description: 'Compare AI model context window sizes from 4K to 4M+ tokens' },
+    { id: 'reasoning', title: 'AI Reasoning Models', description: 'Compare reasoning models ranked by math, logic, and reasoning benchmarks' },
+    { id: 'new', title: 'New AI Models', description: 'Recently released AI models across all categories — track the latest launches' },
   ];
 
   // Custom URL pages
