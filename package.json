@@ -11,6 +11,7 @@
     "seed": "tsx scripts/seed-db.ts",
     "scrape": "tsx scripts/scrape-all.ts",
     "scrape:pricing": "tsx scripts/scrapers/pricing.ts",
+    "scrape:openrouter": "tsx scripts/scrapers/openrouter.ts",
     "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts"
   },
   "dependencies": {

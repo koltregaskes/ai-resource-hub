@@ -467,6 +467,13 @@ const benchmarks = [
 
   // Multimodal
   ['mmmu', 'MMMU', 'multimodal', 'Massive Multi-discipline Multimodal Understanding', 'https://arxiv.org/abs/2311.16502', 0, 100, 1, 1.0],
+
+  // Additional benchmarks
+  ['arena-hard', 'Arena-Hard', 'conversational', 'Automated benchmark using GPT-4 as judge on challenging Arena questions', 'https://github.com/lm-sys/arena-hard-auto', 0, 100, 1, 1.2],
+  ['mt-bench', 'MT-Bench', 'conversational', 'Multi-turn conversation benchmark judged by GPT-4', 'https://arxiv.org/abs/2306.05685', 0, 10, 1, 0.8],
+  ['livebench', 'LiveBench', 'reasoning', 'Contamination-free benchmark using recent questions from math, coding, and reasoning', 'https://livebench.ai', 0, 100, 1, 1.3],
+  ['bigcodebench', 'BigCodeBench', 'coding', 'Challenging code generation tasks with complex function calls and libraries', 'https://bigcode-bench.github.io', 0, 100, 1, 1.1],
+  ['humanitys-last-exam', 'Humanity\'s Last Exam', 'reasoning', 'Ultra-hard questions from experts across 100+ academic subjects', 'https://lastexam.ai', 0, 100, 1, 1.5],
 ];
 
 const insertBenchmarks = db.transaction(() => {
@@ -631,6 +638,51 @@ const scores: [string, string, number, string, string][] = [
 
   // Command A
   ['command-a', 'chatbot-arena-elo', 1280, 'LMSYS', '2025-04-01'],
+
+  // ─── New Benchmarks: Arena-Hard ──────────────────────────
+  ['gpt-5.2', 'arena-hard', 92.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'arena-hard', 88.5, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'arena-hard', 90.0, 'Anthropic', '2026-02-05'],
+  ['claude-sonnet-4.6', 'arena-hard', 86.0, 'Anthropic', '2026-02-17'],
+  ['gemini-2.5-pro', 'arena-hard', 85.5, 'Google', '2025-03-25'],
+  ['grok-4', 'arena-hard', 89.0, 'xAI', '2025-07-09'],
+  ['deepseek-r1', 'arena-hard', 82.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── New Benchmarks: MT-Bench ────────────────────────────
+  ['gpt-5.2', 'mt-bench', 9.5, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4.6', 'mt-bench', 9.4, 'Anthropic', '2026-02-05'],
+  ['gemini-2.5-pro', 'mt-bench', 9.2, 'Google', '2025-03-25'],
+  ['grok-4', 'mt-bench', 9.3, 'xAI', '2025-07-09'],
+  ['o3', 'mt-bench', 9.1, 'OpenAI', '2025-04-16'],
+  ['deepseek-r1', 'mt-bench', 8.9, 'DeepSeek', '2025-01-20'],
+  ['claude-sonnet-4', 'mt-bench', 8.8, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'mt-bench', 8.6, 'OpenAI', '2024-05-13'],
+  ['llama-4-maverick', 'mt-bench', 8.5, 'Meta', '2025-04-05'],
+
+  // ─── New Benchmarks: LiveBench ───────────────────────────
+  ['gpt-5.2', 'livebench', 88.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'livebench', 85.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'livebench', 86.5, 'Anthropic', '2026-02-05'],
+  ['gemini-2.5-pro', 'livebench', 82.0, 'Google', '2025-03-25'],
+  ['grok-4', 'livebench', 84.0, 'xAI', '2025-07-09'],
+  ['deepseek-r1', 'livebench', 80.0, 'DeepSeek', '2025-01-20'],
+  ['claude-sonnet-4.6', 'livebench', 83.0, 'Anthropic', '2026-02-17'],
+  ['qwen3-235b', 'livebench', 78.0, 'Alibaba', '2025-04-01'],
+
+  // ─── New Benchmarks: BigCodeBench ────────────────────────
+  ['o3', 'bigcodebench', 74.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'bigcodebench', 72.0, 'Anthropic', '2026-02-05'],
+  ['gpt-5.2', 'bigcodebench', 73.0, 'OpenAI', '2025-12-10'],
+  ['gemini-2.5-pro', 'bigcodebench', 68.0, 'Google', '2025-03-25'],
+  ['deepseek-r1', 'bigcodebench', 65.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── New Benchmarks: Humanity's Last Exam ────────────────
+  ['o3-pro', 'humanitys-last-exam', 26.6, 'OpenAI', '2025-06-10'],
+  ['gpt-5.2', 'humanitys-last-exam', 24.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4.6', 'humanitys-last-exam', 22.0, 'Anthropic', '2026-02-05'],
+  ['gemini-3.1-pro', 'humanitys-last-exam', 25.0, 'Google', '2026-02-01'],
+  ['grok-4', 'humanitys-last-exam', 21.0, 'xAI', '2025-07-09'],
+  ['deepseek-r1', 'humanitys-last-exam', 18.0, 'DeepSeek', '2025-01-20'],
 ];
 
 const insertScores = db.transaction(() => {
@@ -683,6 +735,30 @@ const people = [
 
   // Cohere
   ['aidan-gomez', 'Aidan Gomez', 'CEO', 'Cohere', 'cohere', 'Co-founder and CEO of Cohere. Co-author of the Transformer paper.', '@aidangomez', 'Transformer paper co-author, Cohere'],
+
+  // Stability AI
+  ['emad-mostaque', 'Emad Mostaque', 'Founder', 'Stability AI', 'stability', 'Founder of Stability AI. Led the development and open-sourcing of Stable Diffusion.', '@EMostaque', 'Stable Diffusion, open-source image generation'],
+  ['robin-rombach', 'Robin Rombach', 'CEO', 'Black Forest Labs', 'blackforest', 'Co-founder of Black Forest Labs. Lead researcher behind Latent Diffusion and Stable Diffusion.', null, 'Latent Diffusion, Stable Diffusion, FLUX'],
+
+  // Midjourney
+  ['david-holz', 'David Holz', 'CEO', 'Midjourney', 'midjourney', 'Founder of Midjourney. Previously co-founded Leap Motion.', null, 'Midjourney, AI art generation pioneer'],
+
+  // Video generation
+  ['cristobal-valenzuela', 'Cristobal Valenzuela', 'CEO', 'Runway', 'runway', 'Co-founder and CEO of Runway. Pioneer in AI-assisted creative tools.', '@c_valenzuelab', 'Runway Gen-3/Gen-4, AI video generation'],
+  ['demi-guo', 'Demi Guo', 'CEO', 'Pika', 'pika', 'Co-founder and CEO of Pika. Former Stanford AI researcher.', null, 'Pika video generation'],
+  ['amit-jain', 'Amit Jain', 'CEO', 'Luma AI', 'luma', 'Co-founder and CEO of Luma AI. Pioneer in 3D and video AI.', null, 'Dream Machine, Ray 2, AI video/3D'],
+
+  // Audio/Voice
+  ['mati-staniszewski', 'Mati Staniszewski', 'CEO', 'ElevenLabs', 'elevenlabs', 'Co-founder and CEO of ElevenLabs. Leading voice AI company.', '@maboroshii_s', 'ElevenLabs, AI voice synthesis leader'],
+  ['dylan-fox', 'Dylan Fox', 'CEO', 'AssemblyAI', 'assemblyai', 'Founder and CEO of AssemblyAI. Built leading speech-to-text platform.', '@dylanjamesfox', 'AssemblyAI, Universal-2 speech model'],
+  ['scott-stephenson', 'Scott Stephenson', 'CEO', 'Deepgram', 'deepgram', 'Co-founder and CEO of Deepgram. Enterprise speech AI pioneer.', '@scottste', 'Deepgram Nova, enterprise speech recognition'],
+  ['mikey-shulman', 'Mikey Shulman', 'CEO', 'Suno', 'suno', 'CEO and co-founder of Suno. Building AI music generation.', null, 'Suno v4, AI music generation'],
+
+  // Alibaba / Qwen
+  ['jinze-bai', 'Jinze Bai', 'Lead Researcher', 'Alibaba', 'alibaba', 'Lead researcher of the Qwen (Tongyi Qianwen) model series at Alibaba Cloud.', null, 'Qwen model series, open-weight LLMs'],
+
+  // Perplexity
+  ['aravind-srinivas', 'Aravind Srinivas', 'CEO', 'Perplexity', 'perplexity', 'Co-founder and CEO of Perplexity AI. Former AI researcher at OpenAI and Google.', '@AravSrinivas', 'Perplexity AI search, Sonar models'],
 ];
 
 const insertPeople = db.transaction(() => {

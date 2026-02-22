@@ -18,7 +18,8 @@ async function main() {
   console.log('═══════════════════════════════════════════════\n');
 
   const scrapers = [
-    { name: 'Pricing', script: 'scripts/scrapers/pricing.ts' },
+    { name: 'OpenRouter Pricing', script: 'scripts/scrapers/openrouter.ts' },
+    { name: 'Provider Pricing', script: 'scripts/scrapers/pricing.ts' },
     { name: 'Benchmarks', script: 'scripts/scrapers/benchmarks.ts' },
   ];
 

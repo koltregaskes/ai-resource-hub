@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a3a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="0" x2="0" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="60" y1="0" x2="60" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="120" y1="0" x2="120" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="180" y1="0" x2="180" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="240" y1="0" x2="240" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="360" y1="0" x2="360" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="420" y1="0" x2="420" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="480" y1="0" x2="480" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="540" y1="0" x2="540" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="660" y1="0" x2="660" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="720" y1="0" x2="720" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="780" y1="0" x2="780" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="840" y1="0" x2="840" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="960" y1="0" x2="960" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="1020" y1="0" x2="1020" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="1080" y1="0" x2="1080" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="1140" y1="0" x2="1140" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="1200" y1="0" x2="1200" y2="630" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="63" x2="1200" y2="63" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="126" x2="1200" y2="126" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="189" x2="1200" y2="189" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="252" x2="1200" y2="252" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="315" x2="1200" y2="315" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="378" x2="1200" y2="378" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="441" x2="1200" y2="441" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="504" x2="1200" y2="504" stroke="#fff" stroke-width="1" />
+    <line x1="0" y1="567" x2="1200" y2="567" stroke="#fff" stroke-width="1" />
+  </g>
+  <!-- Accent glow -->
+  <circle cx="900" cy="200" r="200" fill="#6366f1" opacity="0.08"/>
+  <circle cx="300" cy="450" r="150" fill="#818cf8" opacity="0.06"/>
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
+  <!-- Title -->
+  <text x="80" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="#ffffff">The AI Resource Hub</text>
+  <!-- Subtitle -->
+  <text x="80" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#a1a1aa">Independent AI Model Comparison</text>
+  <!-- Stats -->
+  <text x="80" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#818cf8">Pricing  |  Benchmarks  |  Quality Scores  |  Value Rankings</text>
+  <!-- Categories -->
+  <g transform="translate(80, 450)">
+    <rect x="0" y="0" width="80" height="32" rx="8" fill="#6366f1" opacity="0.2"/>
+    <text x="40" y="21" font-family="system-ui, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">LLMs</text>
+    <rect x="96" y="0" width="90" height="32" rx="8" fill="#6366f1" opacity="0.2"/>
+    <text x="141" y="21" font-family="system-ui, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">Image</text>
+    <rect x="202" y="0" width="90" height="32" rx="8" fill="#6366f1" opacity="0.2"/>
+    <text x="247" y="21" font-family="system-ui, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">Video</text>
+    <rect x="308" y="0" width="90" height="32" rx="8" fill="#6366f1" opacity="0.2"/>
+    <text x="353" y="21" font-family="system-ui, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">Voice</text>
+    <rect x="414" y="0" width="100" height="32" rx="8" fill="#6366f1" opacity="0.2"/>
+    <text x="464" y="21" font-family="system-ui, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">Speech</text>
+    <rect x="530" y="0" width="90" height="32" rx="8" fill="#6366f1" opacity="0.2"/>
+    <text x="575" y="21" font-family="system-ui, sans-serif" font-size="14" fill="#818cf8" text-anchor="middle">Sound</text>
+  </g>
+  <!-- URL -->
+  <text x="80" y="560" font-family="system-ui, sans-serif" font-size="18" fill="#71717a">theairesourcehub.com</text>
+</svg>

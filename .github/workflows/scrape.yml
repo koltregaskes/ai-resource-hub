@@ -34,10 +34,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run all scrapers (pricing + benchmarks)
+      - name: Run all scrapers (OpenRouter + provider pricing + benchmarks)
         run: npm run scrape
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        timeout-minutes: 5
 
       - name: Check for changes
         id: changes
@@ -50,5 +51,5 @@ jobs:
           git config user.name "The AI Resource Hub Bot"
           git config user.email "bot@theairesourcehub.com"
           git add data/the-ai-resource-hub.db
-          git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data [automated]"
+          git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
           git push
