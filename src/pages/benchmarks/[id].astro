@@ -1,0 +1,337 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllBenchmarkIds, getBenchmarkById, getScoresForBenchmark } from '../../db/queries';
+
+export function getStaticPaths() {
+  const ids = getAllBenchmarkIds();
+  return ids.map((id) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+const benchmark = getBenchmarkById(id);
+
+if (!benchmark) {
+  return Astro.redirect(`${import.meta.env.BASE_URL}404`);
+}
+
+const scores = getScoresForBenchmark(id);
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const bestScore = scores.length > 0 ? scores[0] : null;
+const avgScore = scores.length > 0
+  ? (scores.reduce((sum, s) => sum + s.score, 0) / scores.length)
+  : 0;
+
+// Extended descriptions for each benchmark
+const benchmarkInfo: Record<string, { what: string; how: string; why: string; limitations: string }> = {
+  'mmlu': {
+    what: 'MMLU (Massive Multitask Language Understanding) tests a model across 57 academic subjects including STEM, humanities, social sciences, and more. It measures breadth of knowledge from elementary to professional level.',
+    how: 'The model is given multiple-choice questions (4 options) across 57 subjects. Questions range from elementary mathematics to professional medicine and law. The test uses a few-shot format where the model sees examples before answering.',
+    why: 'MMLU is one of the most widely-cited benchmarks because it tests general knowledge breadth. A model that scores well on MMLU demonstrates broad competence across many domains, making it a useful proxy for general intelligence.',
+    limitations: 'MMLU relies on multiple-choice format which can be gamed. Some questions are ambiguous or have contested answers. It tests recall more than reasoning. Many modern models now saturate the benchmark (>90%), reducing its discriminative power.',
+  },
+  'mmlu-pro': {
+    what: 'MMLU-Pro is a harder version of MMLU with 10 answer choices instead of 4, reducing the chance of guessing correctly. It focuses on more challenging questions that require deeper reasoning.',
+    how: 'Similar to MMLU but with 10 answer choices per question and harder questions that require multi-step reasoning. The increased number of options makes random guessing far less effective (10% vs 25% baseline).',
+    why: 'As models began saturating the original MMLU benchmark, MMLU-Pro was created to better differentiate between top-performing models. It provides a more reliable signal of genuine understanding.',
+    limitations: 'Still relies on multiple-choice format. Being newer, it has less historical data for trend analysis. Some questions may still be solvable through pattern matching rather than true understanding.',
+  },
+  'gpqa-diamond': {
+    what: 'GPQA Diamond (Graduate-Level Google-Proof Q&A) contains extremely difficult science questions that even domain experts find challenging. "Diamond" refers to the hardest subset where expert validators achieved less than 65% accuracy.',
+    how: 'Models answer open-ended graduate-level questions in physics, chemistry, and biology. Questions are designed to be "Google-proof" — they cannot be answered by simply searching the internet. Expert validators with PhDs in the relevant field verify question difficulty.',
+    why: 'GPQA Diamond is one of the most reliable indicators of deep scientific reasoning. Because even domain experts struggle with these questions, high scores genuinely indicate advanced reasoning capabilities rather than memorisation.',
+    limitations: 'Small dataset size (~200 questions) means scores can be noisy. Heavy STEM focus doesn\'t capture humanities or creative reasoning. Expert disagreement on some answers.',
+  },
+  'arc-challenge': {
+    what: 'ARC (AI2 Reasoning Challenge) tests grade-school level science reasoning. The "Challenge" set contains questions that are difficult for retrieval-based and word co-occurrence methods.',
+    how: 'Multiple-choice science questions from 3rd to 9th grade standardised tests. The Challenge set specifically includes questions that simple statistical methods and retrieval systems get wrong.',
+    why: 'ARC tests fundamental scientific reasoning ability — the kind of common-sense understanding that humans develop early. It helps identify whether models can reason about cause and effect in the physical world.',
+    limitations: 'Most modern LLMs now score very highly (>95%), making it less useful for differentiating frontier models. Questions are US-centric.',
+  },
+  'math-500': {
+    what: 'MATH-500 evaluates mathematical problem-solving on 500 competition-level problems spanning algebra, geometry, number theory, counting, and probability from AMC, AIME, and other competitions.',
+    how: 'Models must solve competition-level mathematics problems and produce exact final answers. Problems require multi-step reasoning, creative problem-solving, and precise calculation. Answers are verified exactly — no partial credit.',
+    why: 'Mathematical reasoning is a core capability for AI systems. Competition-level problems require chained logical reasoning that cannot be solved by pattern matching alone, making this a strong test of genuine reasoning ability.',
+    limitations: 'Focuses on competition-style maths which may not reflect practical mathematical ability. Models may have seen similar problems in training data. Does not test ability to formulate problems, only solve them.',
+  },
+  'aime-2025': {
+    what: 'AIME (American Invitational Mathematics Examination) 2025 consists of 15 extremely challenging mathematics problems. AIME is a prestigious competition that serves as a qualifier for the USA Mathematical Olympiad.',
+    how: 'Models solve 15 problems where each answer is an integer from 0 to 999. Problems require sophisticated mathematical reasoning across algebra, geometry, number theory, and combinatorics. Being from 2025, these problems were unlikely to appear in training data.',
+    why: 'AIME 2025 is particularly valuable because the problems are recent enough to avoid data contamination. The difficulty level (top 5% of US high school mathematicians qualify) makes it an excellent discriminator for frontier model reasoning.',
+    limitations: 'Only 15 problems means high variance in scores. Integer-only answers miss the reasoning process. Problems are specifically designed for mathematical competition style, not real-world maths applications.',
+  },
+  'humaneval': {
+    what: 'HumanEval measures code generation ability by asking models to complete Python functions given a docstring description. It consists of 164 hand-crafted programming problems.',
+    how: 'The model receives a function signature and docstring, then must generate the function body. Each solution is tested against a suite of unit tests. The primary metric is pass@1 — the percentage of problems solved correctly on the first attempt.',
+    why: 'Code generation is one of the most practical and measurable AI capabilities. HumanEval provides a standardised way to compare models on programming tasks that range from simple string manipulation to algorithmic problem-solving.',
+    limitations: 'Only tests Python. Problems are relatively simple compared to real software engineering. Models may have memorised solutions from training data. Does not test debugging, code review, or working with existing codebases.',
+  },
+  'swe-bench-verified': {
+    what: 'SWE-bench Verified tests whether AI can resolve real GitHub issues from popular open-source Python repositories. "Verified" means human annotators confirmed each task is solvable and has correct test cases.',
+    how: 'The model receives a GitHub issue description and the repository state. It must generate a code patch that resolves the issue. Success is measured by whether the generated patch passes the repository\'s test suite.',
+    why: 'SWE-bench is the gold standard for real-world coding ability. Unlike HumanEval\'s isolated functions, SWE-bench requires understanding large codebases, diagnosing bugs, and writing patches that work within existing architecture.',
+    limitations: 'Only tests Python repositories. Setup and execution is computationally expensive. Some issues require domain-specific knowledge beyond pure coding ability.',
+  },
+  'livecodebench': {
+    what: 'LiveCodeBench evaluates coding ability on competitive programming problems sourced from live contests (LeetCode, Codeforces, AtCoder) that post-date model training cutoffs.',
+    how: 'Models solve algorithmic programming problems with exact test case verification. Problems are continuously updated from recent programming contests, ensuring they are truly novel for each model being tested.',
+    why: 'By using problems from recent contests, LiveCodeBench minimises data contamination — a major issue with older coding benchmarks. It provides a more honest assessment of a model\'s algorithmic reasoning ability.',
+    limitations: 'Competition programming is a specific skill that doesn\'t fully represent general software engineering ability. Continuous updates make historical comparisons tricky.',
+  },
+  'ifeval': {
+    what: 'IFEval (Instruction Following Evaluation) tests whether models can precisely follow formatting and constraint instructions, such as "write exactly 3 paragraphs" or "include the word \'hello\' at least 5 times".',
+    how: 'Models receive prompts with specific verifiable constraints (word count, format, inclusion/exclusion of specific elements). Each constraint is checked programmatically, giving a precise pass/fail score.',
+    why: 'Instruction following is crucial for practical AI applications. Users need to trust that models will follow their specifications precisely. IFEval tests this in a way that is objectively verifiable.',
+    limitations: 'Tests surface-level instruction following rather than deeper understanding of intent. Some constraints are artificial and don\'t reflect real-world usage patterns.',
+  },
+  'chatbot-arena-elo': {
+    what: 'Chatbot Arena (by LMSYS) is a crowdsourced evaluation where real users have blind conversations with two anonymous models and vote for which response they prefer. Results are compiled into an ELO rating system.',
+    how: 'Users interact with two anonymous models side-by-side and pick the better response. Votes are aggregated using the Bradley-Terry model (similar to chess ELO) to produce a ranking. Over 2 million human votes have been collected.',
+    why: 'Chatbot Arena is widely considered the most reliable benchmark for overall model quality because it captures real human preferences across diverse, unconstrained conversations — not just narrow academic tasks.',
+    limitations: 'Ratings reflect crowd preferences which may favour style over substance. English-language biased. User base may not be representative of all use cases. Models can be optimised for arena-style short conversations.',
+  },
+  'mmmu': {
+    what: 'MMMU (Massive Multi-discipline Multimodal Understanding) tests multimodal AI models on college-level problems that require understanding both images and text across 30 subjects.',
+    how: 'Models receive questions that include images (diagrams, charts, photos, mathematical figures) and must reason about them. Subjects span art, business, science, engineering, medicine, and humanities.',
+    why: 'As AI models become multimodal, MMMU provides a rigorous way to test whether they can truly understand and reason about visual information in academic contexts, not just describe images.',
+    limitations: 'Requires multimodal input so cannot be used for text-only models. Image quality and format can affect results. Some questions are US-centric in cultural context.',
+  },
+  'arena-hard': {
+    what: 'Arena-Hard is an automated benchmark that uses GPT-4 as a judge to evaluate model responses on 500 challenging user queries from Chatbot Arena. It approximates human preferences at a fraction of the cost.',
+    how: 'Models generate responses to 500 difficult prompts sourced from Chatbot Arena. GPT-4-Turbo then judges each response in head-to-head comparisons against a baseline model. Win rates are calculated using the Bradley-Terry model.',
+    why: 'Arena-Hard provides a fast, reproducible proxy for Chatbot Arena rankings without requiring thousands of human votes. It correlates strongly (>0.9) with actual Arena ELO ratings, making it valuable for rapid model evaluation.',
+    limitations: 'Relies on GPT-4 as judge, which may have biases toward certain response styles. Cannot capture the full diversity of human preferences. May not accurately evaluate models that are stronger than the judge model.',
+  },
+  'mt-bench': {
+    what: 'MT-Bench (Multi-Turn Benchmark) evaluates conversational ability through 80 carefully designed multi-turn questions across 8 categories including writing, roleplay, reasoning, math, coding, STEM, humanities, and extraction.',
+    how: 'Models engage in two-turn conversations (question → response → follow-up → response). GPT-4 scores each turn on a scale of 1-10. The benchmark tests whether models can maintain coherence and quality across multiple exchanges.',
+    why: 'Real conversations are multi-turn, but most benchmarks only test single-turn responses. MT-Bench specifically evaluates the ability to build on previous context, handle follow-ups, and maintain consistency.',
+    limitations: 'Only 80 questions limits statistical power. GPT-4 judging introduces bias. Two turns is still relatively short compared to real conversations. The 1-10 scale makes most good models cluster around 8-9.',
+  },
+  'livebench': {
+    what: 'LiveBench is a contamination-free benchmark that sources fresh questions monthly from recent mathematical competitions, coding contests, scientific papers, and news articles that post-date model training cutoffs.',
+    how: 'New questions are generated each month from recently published sources. Models answer questions across 6 categories: math, coding, reasoning, language, data analysis, and instruction following. All answers are verified objectively — no LLM-as-judge.',
+    why: 'Data contamination is one of the biggest problems in AI evaluation — models may have memorised benchmark answers during training. LiveBench solves this by continuously using new questions, giving a more honest picture of true capability.',
+    limitations: 'Monthly updates make historical comparisons complex. Question difficulty may vary between months. Newer models may still have indirect exposure through similar (not identical) training examples.',
+  },
+  'bigcodebench': {
+    what: 'BigCodeBench evaluates practical code generation with 1,140 challenging tasks that require using libraries like NumPy, Pandas, and Matplotlib — going beyond simple algorithmic puzzles to test real-world software development.',
+    how: 'Models must generate complete Python functions that use complex library APIs correctly. Each solution is tested against comprehensive unit tests. Tasks involve data processing, visualisation, file I/O, and multi-library integration.',
+    why: 'Real programming involves using libraries and frameworks, not just writing algorithms from scratch. BigCodeBench tests whether models can write the kind of code that developers actually write every day.',
+    limitations: 'Python-only. Library versions and API changes can affect results over time. Some tasks may be solvable through pattern matching of common library usage patterns.',
+  },
+  'humanitys-last-exam': {
+    what: 'Humanity\'s Last Exam is an ultra-hard benchmark containing questions from 100+ experts across every academic discipline — questions so difficult that they represent the frontier of human knowledge.',
+    how: 'Experts from fields like quantum physics, advanced mathematics, constitutional law, and ancient history contribute questions that are at the very limit of human expertise. Models answer in a free-form format with expert validation.',
+    why: 'As AI models saturate existing benchmarks, we need harder tests. Humanity\'s Last Exam tests whether models can match the very best human experts. Current top scores are around 25%, showing significant room for improvement.',
+    limitations: 'Very small question set from each domain. Expert disagreement on correct answers. Some questions may be more about niche knowledge than general intelligence. Top scores of ~25% mean most results are noisy.',
+  },
+};
+
+const info = benchmarkInfo[id] ?? {
+  what: benchmark.description ?? `${benchmark.name} is a benchmark for evaluating AI models.`,
+  how: 'Models are evaluated according to the benchmark\'s standardised protocol.',
+  why: 'This benchmark helps compare AI model capabilities in a standardised way.',
+  limitations: 'All benchmarks have limitations and should be considered alongside other evaluations.',
+};
+
+// Category badge colour
+const categoryColours: Record<string, string> = {
+  knowledge: 'bg-blue-500/20 text-blue-400',
+  reasoning: 'bg-purple-500/20 text-purple-400',
+  coding: 'bg-green-500/20 text-green-400',
+  instruction: 'bg-yellow-500/20 text-yellow-400',
+  conversational: 'bg-pink-500/20 text-pink-400',
+  multimodal: 'bg-orange-500/20 text-orange-400',
+};
+const categoryClass = categoryColours[benchmark.category] ?? 'bg-gray-500/20 text-gray-400';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: benchmark.name,
+  description: info.what,
+  url: benchmark.url ?? undefined,
+  measurementTechnique: info.how,
+  creator: { '@type': 'Organization', name: 'The AI Resource Hub' },
+};
+---
+
+<BaseLayout
+  title={`${benchmark.name} Benchmark — AI Model Scores — The AI Resource Hub`}
+  description={`${benchmark.name}: ${info.what.slice(0, 150)}... See how ${scores.length} AI models score on this benchmark.`}
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}benchmarks/`} class="hover:text-(--color-text-secondary) transition-colors">Benchmarks</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">{benchmark.name}</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">
+          {benchmark.name}
+        </h1>
+        <span class={`text-xs px-2.5 py-1 rounded-full font-medium ${categoryClass}`}>
+          {benchmark.category}
+        </span>
+      </div>
+      <p class="text-(--color-text-secondary) max-w-3xl">{info.what}</p>
+      {benchmark.url && (
+        <a
+          href={benchmark.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 mt-2 text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+        >
+          View paper / source
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      )}
+    </div>
+
+    <!-- Quick stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-accent)">{scores.length}</p>
+        <p class="text-xs text-(--color-text-muted) mt-1">Models Tested</p>
+      </div>
+      {bestScore && (
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+          <p class="text-2xl font-bold text-(--color-success)">{bestScore.score.toFixed(1)}</p>
+          <p class="text-xs text-(--color-text-muted) mt-1">Best Score</p>
+        </div>
+      )}
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{avgScore.toFixed(1)}</p>
+        <p class="text-xs text-(--color-text-muted) mt-1">Average Score</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{benchmark.scale_min}–{benchmark.scale_max}</p>
+        <p class="text-xs text-(--color-text-muted) mt-1">Scale Range</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{benchmark.weight}x</p>
+        <p class="text-xs text-(--color-text-muted) mt-1">Weight</p>
+      </div>
+    </div>
+
+    <!-- How / Why / Limitations -->
+    <div class="grid sm:grid-cols-3 gap-4 mb-8">
+      <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-sm font-semibold text-(--color-accent) mb-2">How It Works</h2>
+        <p class="text-sm text-(--color-text-secondary) leading-relaxed">{info.how}</p>
+      </div>
+      <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-sm font-semibold text-(--color-success) mb-2">Why It Matters</h2>
+        <p class="text-sm text-(--color-text-secondary) leading-relaxed">{info.why}</p>
+      </div>
+      <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-sm font-semibold text-(--color-warning) mb-2">Limitations</h2>
+        <p class="text-sm text-(--color-text-secondary) leading-relaxed">{info.limitations}</p>
+      </div>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">
+        Leaderboard — {benchmark.name}
+      </h2>
+
+      {scores.length > 0 ? (
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium w-12">#</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Provider</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Score</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Source</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Measured</th>
+                <th class="py-3 px-4 w-24"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {scores.map((s, i) => {
+                const ratio = (s.score - benchmark.scale_min) / (benchmark.scale_max - benchmark.scale_min);
+                const barWidth = Math.max(0, Math.min(100, ratio * 100));
+                return (
+                  <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                    <td class="py-3 px-4 text-(--color-text-muted) font-mono">
+                      {i === 0 ? (
+                        <span class="text-(--color-warning) font-bold" title="Best score">🥇</span>
+                      ) : i === 1 ? (
+                        <span title="2nd place">🥈</span>
+                      ) : i === 2 ? (
+                        <span title="3rd place">🥉</span>
+                      ) : (
+                        <span>{i + 1}</span>
+                      )}
+                    </td>
+                    <td class="py-3 px-4">
+                      <a
+                        href={`${base}models/${s.model_id}/`}
+                        class="font-medium text-(--color-text-primary) hover:text-(--color-accent) transition-colors"
+                      >
+                        {s.model_name}
+                      </a>
+                    </td>
+                    <td class="py-3 px-4">
+                      <a
+                        href={`${base}labs/${s.provider_id}/`}
+                        class="inline-flex items-center gap-1.5 text-xs text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors"
+                      >
+                        <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${s.providerColour}`}></span>
+                        {s.provider}
+                      </a>
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <span class={`font-bold font-mono ${i === 0 ? 'text-(--color-success)' : 'text-(--color-accent)'}`}>
+                        {id === 'chatbot-arena-elo' ? s.score.toFixed(0) : s.score.toFixed(1)}
+                      </span>
+                    </td>
+                    <td class="py-3 px-4 text-xs text-(--color-text-muted) hidden sm:table-cell">{s.source ?? '—'}</td>
+                    <td class="py-3 px-4 text-xs text-(--color-text-muted) hidden md:table-cell">
+                      {s.measured_at ? new Date(s.measured_at).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }) : '—'}
+                    </td>
+                    <td class="py-3 px-4">
+                      <div class="w-full h-1.5 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
+                        <div class="h-full rounded-full bg-(--color-accent)" style={`width: ${barWidth}%`}></div>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <div class="p-8 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center text-(--color-text-muted)">
+          No model scores recorded yet for this benchmark.
+        </div>
+      )}
+    </div>
+
+    <!-- Back -->
+    <a
+      href={`${base}benchmarks/`}
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+    >
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      All Benchmarks
+    </a>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

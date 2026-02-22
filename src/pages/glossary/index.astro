@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getGlossaryTerms } from '../../db/queries';
+
+const terms = getGlossaryTerms();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Group by category
+const categories = new Map<string, typeof terms>();
+for (const term of terms) {
+  if (!categories.has(term.category)) categories.set(term.category, []);
+  categories.get(term.category)!.push(term);
+}
+
+const categoryLabels: Record<string, string> = {
+  core: 'Core Concepts',
+  technical: 'Technical Terms',
+  techniques: 'Techniques & Methods',
+  concepts: 'AI Concepts',
+  parameters: 'Parameters & Settings',
+  models: 'Models & Products',
+  products: 'Products & Services',
+  infrastructure: 'Infrastructure & Tools',
+};
+
+// Alphabet for jump navigation
+const letters = [...new Set(terms.map(t => t.term[0].toUpperCase()))].sort();
+---
+
+<BaseLayout
+  title="AI Glossary — The AI Resource Hub"
+  description="Plain-English definitions of AI terms. From tokens and transformers to RAG and RLHF — understand AI without the jargon."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Glossary</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Glossary
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {terms.length} AI terms explained in plain English. No jargon, no PhD required.
+        Click any term for the full definition with real-world analogies.
+      </p>
+    </div>
+
+    <!-- Alphabet jump -->
+    <div class="flex flex-wrap gap-1 mb-8">
+      {letters.map((letter) => (
+        <a
+          href={`#letter-${letter}`}
+          class="w-8 h-8 flex items-center justify-center rounded text-sm font-medium bg-(--color-bg-card) border border-(--color-border) text-(--color-text-secondary) hover:text-(--color-accent) hover:border-(--color-accent) transition-colors"
+        >
+          {letter}
+        </a>
+      ))}
+    </div>
+
+    <!-- Terms by letter -->
+    {letters.map((letter) => {
+      const letterTerms = terms.filter(t => t.term[0].toUpperCase() === letter);
+      return (
+        <div id={`letter-${letter}`} class="mb-8">
+          <h2 class="text-2xl font-bold text-(--color-accent) mb-4 sticky top-16 bg-(--color-bg-primary) py-2 z-10">
+            {letter}
+          </h2>
+          <div class="space-y-3">
+            {letterTerms.map((term) => (
+              <a
+                href={`${base}glossary/${term.id}/`}
+                class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors group"
+              >
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex-1">
+                    <h3 class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+                      {term.term}
+                    </h3>
+                    <p class="text-sm text-(--color-text-secondary) mt-1 line-clamp-2">
+                      {term.plain_english || term.definition}
+                    </p>
+                  </div>
+                  <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted) shrink-0 mt-1">
+                    {categoryLabels[term.category] || term.category}
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </section>
+</BaseLayout>

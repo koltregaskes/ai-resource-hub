@@ -1,12 +1,12 @@
-# ai-resource-hub — Session Handoff Prompt
+# the-ai-resource-hub — Session Handoff Prompt
 
 Use the prompt below to start a new Claude Code session pointed at this repo.
 
 ---
 
-This is a brand new, empty repo. The only file is README.md with a one-line description: "AI Resource Hub - Curated collection of AI tools, resources, and references."
+This is a brand new, empty repo. The only file is README.md with a one-line description: "The AI Resource Hub - Curated collection of AI tools, resources, and references."
 
-The AI Resource Hub is planned to be a public-facing website tracking AI models, pricing, benchmarks, and value rankings — the go-to independent resource for AI model comparison. Think of it as an independent alternative to sites like Artificial Analysis but with a focus on practical value for money.
+The AI Resource Hub is planned to be a public-facing website (theairesourcehub.com) tracking AI models, pricing, benchmarks, and value rankings — the go-to independent resource for AI model comparison. Think of it as an independent alternative to sites like Artificial Analysis but with a focus on practical value for money.
 
 There is a detailed Gemini Deep Think prompt at docs/DEEP-THINK-PROMPT.md in this repo that covers the complete architecture, design system, data pipeline, page designs, and revenue model. READ THIS FIRST — it is the bible for this project.
 

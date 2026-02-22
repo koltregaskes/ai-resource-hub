@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AIQuiz from '../components/AIQuiz';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Which AI Should I Use? — The AI Resource Hub"
+  description="Take our quick quiz to find the best AI tool for your needs. ChatGPT, Claude, Gemini, Perplexity, or Copilot — answer 6 questions and get a personalised recommendation."
+>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Which AI Should I Use?</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Which AI Should I Use?
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Answer 6 quick questions and we'll recommend the best AI tool for your specific needs.
+        No account needed, no data collected — just honest recommendations.
+      </p>
+    </div>
+
+    <AIQuiz client:load />
+
+    <div class="mt-12 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+      <h2 class="text-lg font-semibold text-(--color-text-primary) mb-2">How this quiz works</h2>
+      <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+        Each answer adds points to different AI products based on how well they match your needs.
+        The final ranking shows which tools are the best fit for your specific situation.
+        This quiz is completely independent — we're not affiliated with any AI company and receive
+        no compensation for recommendations.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

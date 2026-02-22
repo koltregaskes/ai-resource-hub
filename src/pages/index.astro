@@ -1,0 +1,256 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import TopModelsPreview from '../components/TopModelsPreview.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+import { getLLMModels } from '../data/llm-models';
+import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms, getModelsByCategory, getModelCounts, getRecentModels } from '../db/queries';
+
+const models = getLLMModels();
+const providers = getProvidersWithCounts();
+const people = getPeople();
+const benchmarkMatrix = getBenchmarkMatrix();
+const glossaryTerms = getGlossaryTerms();
+const modelCounts = getModelCounts();
+const imageModels = getModelsByCategory('image');
+const videoModels = getModelsByCategory('video');
+const speechModels = getModelsByCategory('speech');
+const voiceModels = getModelsByCategory('voice');
+const soundModels = getModelsByCategory('sound');
+const recentModels = getRecentModels(8);
+const catLabels = { llm: 'LLM', image: 'Image', video: 'Video', voice: 'Voice', speech: 'Speech', sound: 'Sound' } as Record<string, string>;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const lastUpdated = new Date().toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+
+const dataCategories = [
+  {
+    title: 'Large Language Models',
+    description: 'Compare GPT, Claude, Gemini, Llama, and more. Sort by price, speed, quality, or value.',
+    href: `${base}compare/llm/`,
+    modelCount: models.length,
+    icon: '💬',
+    available: true,
+    countLabel: 'models tracked',
+  },
+  {
+    title: 'Image Generation',
+    description: 'DALL-E, Midjourney, FLUX, Stable Diffusion — compare pricing, resolution, and quality.',
+    href: `${base}compare/image/`,
+    modelCount: imageModels.length,
+    icon: '🎨',
+    available: true,
+    countLabel: 'models tracked',
+  },
+  {
+    title: 'Video Generation',
+    description: 'Sora, Veo, Runway, Kling — compare AI video models by cost, duration, and quality.',
+    href: `${base}compare/video/`,
+    modelCount: videoModels.length,
+    icon: '🎬',
+    available: true,
+    countLabel: 'models tracked',
+  },
+  {
+    title: 'Voice & TTS',
+    description: 'ElevenLabs, OpenAI TTS, Cartesia — compare text-to-speech models by cost and quality.',
+    href: `${base}compare/voice/`,
+    modelCount: voiceModels.length,
+    icon: '🗣️',
+    available: true,
+    countLabel: 'models tracked',
+  },
+  {
+    title: 'Speech-to-Text',
+    description: 'Whisper, AssemblyAI, Deepgram — compare speech recognition by accuracy and price.',
+    href: `${base}compare/speech/`,
+    modelCount: speechModels.length,
+    icon: '🎙️',
+    available: true,
+    countLabel: 'models tracked',
+  },
+  {
+    title: 'Music & Sound',
+    description: 'Suno, Udio, MusicGen — compare AI music generation models by cost and quality.',
+    href: `${base}compare/sound/`,
+    modelCount: soundModels.length,
+    icon: '🎵',
+    available: true,
+    countLabel: 'models tracked',
+  },
+  {
+    title: 'Benchmarks',
+    description: `${benchmarkMatrix.benchmarks.length} benchmarks across ${benchmarkMatrix.models.length} models — MMLU, GPQA, HumanEval, SWE-bench, and more.`,
+    href: `${base}benchmarks/`,
+    modelCount: benchmarkMatrix.benchmarks.length,
+    icon: '📊',
+    available: true,
+    countLabel: 'benchmarks tracked',
+  },
+  {
+    title: 'Labs & Providers',
+    description: `${providers.length} AI companies and research labs building the models we track.`,
+    href: `${base}labs/`,
+    modelCount: providers.length,
+    icon: '🏢',
+    available: true,
+    countLabel: 'companies listed',
+  },
+];
+
+const learnCategories = [
+  {
+    title: 'AI Guides',
+    description: 'Practical, jargon-free guides to help you get the most out of AI tools.',
+    href: `${base}guides/`,
+    modelCount: 6,
+    icon: '📖',
+    available: true,
+    countLabel: 'guides available',
+  },
+  {
+    title: 'AI Glossary',
+    description: `${glossaryTerms.length} AI terms explained in plain English. No PhD required.`,
+    href: `${base}glossary/`,
+    modelCount: glossaryTerms.length,
+    icon: '📚',
+    available: true,
+    countLabel: 'terms defined',
+  },
+  {
+    title: 'Which AI Should I Use?',
+    description: 'Answer 6 quick questions and get a personalised AI recommendation.',
+    href: `${base}quiz/`,
+    modelCount: 6,
+    icon: '🎯',
+    available: true,
+    countLabel: 'AI tools compared',
+  },
+  {
+    title: 'Prompting Basics',
+    description: 'Learn the fundamentals of writing effective AI prompts in 8 minutes.',
+    href: `${base}guides/prompting-basics/`,
+    modelCount: 6,
+    icon: '✍️',
+    available: true,
+    countLabel: 'core techniques',
+  },
+];
+---
+
+<BaseLayout title="The AI Resource Hub — Independent AI Model Comparison">
+  <HeroSection modelCount={models.length} lastUpdated={lastUpdated} />
+
+  <TopModelsPreview models={models} />
+
+  <!-- Data & Comparison -->
+  <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Compare & Explore</h2>
+    <p class="text-sm text-(--color-text-secondary) mb-8">Data-driven comparison of AI models, benchmarks, and providers</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {dataCategories.map((cat) => (
+        <CategoryCard {...cat} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Learn & Discover -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Learn & Discover</h2>
+    <p class="text-sm text-(--color-text-secondary) mb-8">Beginner-friendly guides, glossary, and tools to help you navigate AI</p>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      {learnCategories.map((cat) => (
+        <CategoryCard {...cat} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Recently Added Models -->
+  {recentModels.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Recently Added</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-6">The latest AI models added to our database</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {recentModels.map((model) => {
+          return (
+            <a
+              href={`${base}models/${model.id}/`}
+              class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/40 transition-all group"
+            >
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="w-2 h-2 rounded-full shrink-0"
+                  style={`background-color: ${model.providerColour}`}
+                />
+                <span class="text-xs text-(--color-text-muted) truncate">{model.provider}</span>
+                <span class="text-xs px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-muted) ml-auto">
+                  {catLabels[model.category] ?? model.category}
+                </span>
+              </div>
+              <h3 class="font-semibold text-sm text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors truncate">
+                {model.name}
+              </h3>
+              <div class="flex items-center justify-between mt-2">
+                <span class="text-xs text-(--color-accent)">{model.qualityScore}/100</span>
+                {model.released && (
+                  <span class="text-xs text-(--color-text-muted)">
+                    {new Date(model.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}
+                  </span>
+                )}
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  <!-- Newsletter -->
+  <NewsletterSignup variant="card" />
+
+  <!-- Stats bar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">{models.length + imageModels.length + videoModels.length + speechModels.length + voiceModels.length + soundModels.length}</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">AI Models Tracked</p>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">{providers.length}</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">Providers</p>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">{benchmarkMatrix.benchmarks.length}</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">Benchmarks</p>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">{people.length}</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">People Profiled</p>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-3xl font-bold text-(--color-accent)">Free</p>
+        <p class="text-sm text-(--color-text-secondary) mt-1">No Paywalls</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'The AI Resource Hub',
+    url: new URL(base, Astro.site).toString(),
+    description: 'Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${new URL(base, Astro.site).toString()}?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  })} />
+</BaseLayout>

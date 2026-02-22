@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'Open Source vs Closed AI Models in 2026',
+  datePublished: '2026-02-10',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+};
+---
+
+<BaseLayout
+  title="Open Source vs Closed AI Models in 2026 — Blog — The AI Resource Hub"
+  description="DeepSeek, Llama, Mistral, and Qwen are closing the gap. We compare open-source vs closed models on every benchmark."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Open Source vs Closed AI</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/20 text-green-400 font-medium">Comparison</span>
+        <span class="text-xs text-(--color-text-muted)">10 Feb 2026</span>
+        <span class="text-xs text-(--color-text-muted)">10 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        Open Source vs Closed AI Models in 2026
+      </h1>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
+      <p class="text-lg">
+        The gap between open-source and closed AI models has been shrinking rapidly. In some areas, open models are now competitive with or surpass their closed counterparts. Here's the current state of play.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Contenders</h2>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">Open Source Champions</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">DeepSeek R1 / V3.2</strong> — From the Chinese lab that proved you don't need billions in compute to build top-tier models. R1's reasoning capabilities rival o3.</li>
+        <li><strong class="text-(--color-text-primary)">Llama 4 Maverick</strong> — Meta's latest open-source entry. Huge context window (1M tokens) and strong general performance.</li>
+        <li><strong class="text-(--color-text-primary)">Qwen 3 235B</strong> — Alibaba's powerhouse. Excellent at maths and coding, and the largest open-weight model available.</li>
+        <li><strong class="text-(--color-text-primary)">Mistral Large 3</strong> — European AI at its finest. Strong all-round performance with 256K context.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">Closed Source Leaders</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">GPT-5 / o3-pro</strong> — OpenAI's latest. Still leads on many benchmarks, but the margin is thin.</li>
+        <li><strong class="text-(--color-text-primary)">Claude Opus 4</strong> — Anthropic's flagship. Best-in-class for coding (SWE-bench) and nuanced reasoning.</li>
+        <li><strong class="text-(--color-text-primary)">Gemini 2.5 Pro</strong> — Google's model with the largest context window (1M tokens) and strong multimodal capabilities.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Where Open Source Wins</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Mathematics:</strong> DeepSeek R1 scores 97.3% on MATH-500, beating every closed model except o3-pro.</li>
+        <li><strong class="text-(--color-text-primary)">Cost:</strong> You can run open models on your own hardware for effectively free per query. No API costs, no rate limits.</li>
+        <li><strong class="text-(--color-text-primary)">Privacy:</strong> Data never leaves your server. Essential for healthcare, legal, and financial applications.</li>
+        <li><strong class="text-(--color-text-primary)">Customisation:</strong> Fine-tune on your specific data. Closed models offer limited customisation.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Where Closed Source Still Leads</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Overall quality:</strong> Chatbot Arena still ranks closed models higher for general conversation quality.</li>
+        <li><strong class="text-(--color-text-primary)">Real-world coding:</strong> Claude Opus 4 and o3-pro lead on SWE-bench Verified, the most practical coding benchmark.</li>
+        <li><strong class="text-(--color-text-primary)">Ease of use:</strong> API access is simpler than self-hosting. No GPU management, no scaling headaches.</li>
+        <li><strong class="text-(--color-text-primary)">Safety features:</strong> Closed providers invest heavily in content filtering and alignment.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Verdict</h2>
+      <p>
+        In 2026, the answer to "open or closed?" depends entirely on your specific needs:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Building a startup with an AI feature?</strong> Start with APIs (Claude, GPT), switch to open-source when you have scale.</li>
+        <li><strong class="text-(--color-text-primary)">Need maximum privacy?</strong> Open-source, self-hosted, no question.</li>
+        <li><strong class="text-(--color-text-primary)">Need the absolute best quality?</strong> Closed models still win, but the gap is now months, not years.</li>
+        <li><strong class="text-(--color-text-primary)">On a tight budget?</strong> DeepSeek V3.2 at $0.14/$0.28 per 1M tokens is hard to beat.</li>
+      </ul>
+
+      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Compare for Yourself</h3>
+        <p class="text-sm mb-3">Our comparison tables let you filter by open-source status and sort by any metric.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">LLM Comparison &rarr;</a>
+          <a href={`${base}benchmarks/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Benchmark Scores &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}blog/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

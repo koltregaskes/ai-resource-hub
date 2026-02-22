@@ -1,0 +1,24 @@
+id,name,provider,providerColour,inputPrice,outputPrice,contextWindow,maxOutput,speed,qualityScore,released,openSource,modality,apiAvailable,notes
+gpt-4o,GPT-4o,OpenAI,#10a37f,2.50,10.00,128000,16384,100,87,2024-05-13,false,"text,vision",true,Flagship multimodal model
+gpt-4o-mini,GPT-4o Mini,OpenAI,#10a37f,0.15,0.60,128000,16384,150,80,2024-07-18,false,"text,vision",true,Cost-efficient small model
+gpt-4.1,GPT-4.1,OpenAI,#10a37f,2.00,8.00,1047576,32768,110,90,2025-04-14,false,"text,vision",true,Enhanced coding and instruction following
+gpt-4.1-mini,GPT-4.1 Mini,OpenAI,#10a37f,0.40,1.60,1047576,32768,160,83,2025-04-14,false,"text,vision",true,Balanced performance and cost
+gpt-4.1-nano,GPT-4.1 Nano,OpenAI,#10a37f,0.10,0.40,1047576,32768,200,75,2025-04-14,false,"text,vision",true,Fastest and cheapest GPT-4.1
+o3,o3,OpenAI,#10a37f,10.00,40.00,200000,100000,15,95,2025-04-16,false,"text,vision",true,Reasoning model with extended thinking
+o3-mini,o3-mini,OpenAI,#10a37f,1.10,4.40,200000,100000,60,88,2025-01-31,false,text,true,Efficient reasoning model
+o4-mini,o4-mini,OpenAI,#10a37f,1.10,4.40,200000,100000,65,90,2025-04-16,false,"text,vision",true,Compact reasoning with vision
+claude-sonnet-4,Claude Sonnet 4,Anthropic,#d97706,3.00,15.00,200000,64000,80,91,2025-05-22,false,"text,vision",true,Flagship balanced model
+claude-haiku-3.5,Claude 3.5 Haiku,Anthropic,#d97706,0.80,4.00,200000,8192,120,82,2024-10-22,false,"text,vision",true,Fast and affordable
+claude-opus-4,Claude Opus 4,Anthropic,#d97706,15.00,75.00,200000,32000,30,93,2025-05-22,false,"text,vision",true,Most capable Claude model
+gemini-2.5-pro,Gemini 2.5 Pro,Google,#4285f4,1.25,10.00,1048576,65536,90,92,2025-03-25,false,"text,vision,audio",true,Thinking model with 1M context
+gemini-2.5-flash,Gemini 2.5 Flash,Google,#4285f4,0.15,0.60,1048576,65536,350,85,2025-04-17,false,"text,vision,audio",true,Fast and cost-effective thinking model
+gemini-2.0-flash,Gemini 2.0 Flash,Google,#4285f4,0.10,0.40,1048576,8192,400,81,2025-02-05,false,"text,vision,audio",true,Speed-optimised multimodal
+llama-4-maverick,Llama 4 Maverick,Meta,#0668e1,0.20,0.60,1048576,65536,120,85,2025-04-05,true,"text,vision",true,Open-weight MoE model (17B active / 400B)
+llama-4-scout,Llama 4 Scout,Meta,#0668e1,0.15,0.40,10485760,65536,140,80,2025-04-05,true,"text,vision",true,Open-weight with 10M context window
+llama-3.3-70b,Llama 3.3 70B,Meta,#0668e1,0.18,0.50,131072,32768,100,79,2024-12-06,true,text,true,Open-weight general purpose
+deepseek-v3,DeepSeek V3,DeepSeek,#5b6ef7,0.27,1.10,131072,8192,60,84,2025-01-20,true,text,true,Open-weight MoE model
+deepseek-r1,DeepSeek R1,DeepSeek,#5b6ef7,0.55,2.19,131072,8192,30,89,2025-01-20,true,text,true,Open-weight reasoning model
+mistral-large,Mistral Large 2,Mistral,#ff7000,2.00,6.00,131072,32768,70,83,2024-07-24,false,text,true,Flagship Mistral model
+codestral,Codestral,Mistral,#ff7000,0.30,0.90,262144,32768,90,81,2025-01-14,false,text,true,Specialised for code generation
+grok-3,Grok 3,xAI,#1da1f2,3.00,15.00,131072,32768,75,90,2025-02-18,false,text,true,xAI flagship reasoning model
+grok-3-mini,Grok 3 Mini,xAI,#1da1f2,0.30,0.50,131072,32768,180,82,2025-02-18,false,text,true,Lightweight reasoning model

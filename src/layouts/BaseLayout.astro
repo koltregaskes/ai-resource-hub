@@ -1,0 +1,282 @@
+---
+import '../styles/global.css';
+import GlobalSearch from '../components/GlobalSearch';
+import { getSearchIndex } from '../data/search-index';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.',
+  ogImage,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const searchIndex = getSearchIndex(base);
+const ogImageUrl = ogImage
+  ? new URL(ogImage, Astro.site).href
+  : new URL(`${base}og-default.svg`, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="alternate" type="application/rss+xml" title="The AI Resource Hub RSS" href={`${base}rss.xml`} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="The AI Resource Hub" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <title>{title}</title>
+
+    <!-- Prevent FOUC: apply saved theme before first paint -->
+    <script is:inline>
+      (function() {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-(--color-bg-primary) text-(--color-text-primary) min-h-screen flex flex-col">
+    <header class="border-b border-(--color-border) bg-(--color-bg-secondary)/80 backdrop-blur-md sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href={base} class="flex items-center gap-2.5 group">
+          <img src={`${base}favicon.svg`} alt="" class="w-8 h-8 accent-glow" width="32" height="32" />
+          <span class="text-lg font-bold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+            The AI Resource Hub
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-6">
+          <div class="relative group">
+            <button class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors flex items-center gap-1">
+              Models
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute top-full left-0 mt-1 w-48 rounded-lg bg-(--color-bg-secondary) border border-(--color-border) shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+              <div class="py-2">
+                <a href={`${base}compare/llm/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">LLMs</a>
+                <a href={`${base}compare/image/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Image Generation</a>
+                <a href={`${base}compare/video/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Video Generation</a>
+                <a href={`${base}compare/voice/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Voice & TTS</a>
+                <a href={`${base}compare/speech/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Speech-to-Text</a>
+                <a href={`${base}compare/sound/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Music & Sound</a>
+              </div>
+            </div>
+          </div>
+          <a href={`${base}benchmarks/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Benchmarks
+          </a>
+          <a href={`${base}labs/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Labs
+          </a>
+          <a href={`${base}guides/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Guides
+          </a>
+          <a href={`${base}glossary/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Glossary
+          </a>
+          <a href={`${base}quiz/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Quiz
+          </a>
+          <a href={`${base}people/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            People
+          </a>
+          <a href={`${base}blog/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
+            Blog
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Global search -->
+          <GlobalSearch client:load items={searchIndex} baseUrl={base} />
+
+          <!-- Theme toggle -->
+          <button
+            id="theme-toggle"
+            class="p-2 rounded-lg text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors"
+            aria-label="Toggle theme"
+          >
+            <!-- Moon icon (visible in dark mode) -->
+            <svg id="theme-icon-moon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <!-- Sun icon (visible in light mode) -->
+            <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 text-(--color-text-secondary) hover:text-(--color-text-primary)"
+            aria-label="Toggle navigation menu"
+          >
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden border-t border-(--color-border) bg-(--color-bg-secondary)">
+        <div class="px-4 py-3 space-y-2">
+          <a href={base} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Home</a>
+          <p class="text-xs font-semibold text-(--color-text-muted) pt-2 uppercase tracking-wider">Models</p>
+          <a href={`${base}compare/llm/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">LLMs</a>
+          <a href={`${base}compare/image/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Image Generation</a>
+          <a href={`${base}compare/video/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Video Generation</a>
+          <a href={`${base}compare/voice/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Voice & TTS</a>
+          <a href={`${base}compare/speech/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Speech-to-Text</a>
+          <a href={`${base}compare/sound/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Music & Sound</a>
+          <a href={`${base}benchmarks/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Benchmarks</a>
+          <a href={`${base}labs/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Labs & Providers</a>
+          <a href={`${base}guides/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Guides</a>
+          <a href={`${base}glossary/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">AI Glossary</a>
+          <a href={`${base}quiz/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Which AI Should I Use?</a>
+          <a href={`${base}people/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">People in AI</a>
+          <a href={`${base}blog/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Blog</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-(--color-border) bg-(--color-bg-secondary) mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Models</h3>
+            <div class="space-y-2">
+              <a href={`${base}compare/llm/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">LLM Comparison</a>
+              <a href={`${base}compare/image/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Image Generation</a>
+              <a href={`${base}compare/video/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Video Generation</a>
+              <a href={`${base}compare/voice/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Voice & TTS</a>
+              <a href={`${base}compare/speech/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Speech-to-Text</a>
+              <a href={`${base}compare/sound/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Music & Sound</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Data</h3>
+            <div class="space-y-2">
+              <a href={`${base}benchmarks/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Benchmarks</a>
+              <a href={`${base}labs/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Labs & Providers</a>
+              <a href={`${base}people/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">People in AI</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Learn</h3>
+            <div class="space-y-2">
+              <a href={`${base}guides/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Guides</a>
+              <a href={`${base}glossary/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI Glossary</a>
+              <a href={`${base}quiz/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Which AI Should I Use?</a>
+              <a href={`${base}guides/prompting-basics/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Prompting Basics</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Guides</h3>
+            <div class="space-y-2">
+              <a href={`${base}guides/choosing-an-ai-model/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Choosing an AI Model</a>
+              <a href={`${base}guides/advanced-prompting/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Advanced Prompting</a>
+              <a href={`${base}guides/understanding-ai-pricing/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Understanding Pricing</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">More</h3>
+            <div class="space-y-2">
+              <a href={`${base}blog/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Blog</a>
+              <a href={`${base}rss.xml`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">RSS Feed</a>
+              <p class="text-xs text-(--color-text-muted) mt-2">Independent. Not affiliated with any AI provider.</p>
+              <p class="text-xs text-(--color-text-muted)">Data updated daily via automated scrapers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-(--color-border)">
+          <div class="flex items-center gap-2">
+            <img src={`${base}favicon.svg`} alt="" class="w-5 h-5" width="20" height="20" />
+            <span class="text-xs text-(--color-text-muted)">The AI Resource Hub</span>
+          </div>
+          <p class="text-xs text-(--color-text-muted)">
+            &copy; {new Date().getFullYear()} The AI Resource Hub. All data is provided for informational purposes only.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+      });
+
+      // Theme toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const moonIcon = document.getElementById('theme-icon-moon');
+      const sunIcon = document.getElementById('theme-icon-sun');
+
+      function updateThemeIcons() {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        moonIcon?.classList.toggle('hidden', isLight);
+        sunIcon?.classList.toggle('hidden', !isLight);
+      }
+
+      // Set initial icon state
+      updateThemeIcons();
+
+      themeToggle?.addEventListener('click', () => {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+        updateThemeIcons();
+      });
+    </script>
+  </body>
+</html>

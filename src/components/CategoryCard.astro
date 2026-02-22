@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  modelCount: number;
+  icon: string;
+  available: boolean;
+  countLabel?: string;
+}
+
+const { title, description, href, modelCount, icon, available, countLabel = 'tracked' } = Astro.props;
+---
+
+<a
+  href={available ? href : undefined}
+  class:list={[
+    'block p-6 rounded-xl border transition-all duration-200',
+    available
+      ? 'bg-(--color-bg-card) border-(--color-border) hover:border-(--color-accent)/50 hover:bg-(--color-bg-hover) cursor-pointer group'
+      : 'bg-(--color-bg-card)/50 border-(--color-border)/50 opacity-60 cursor-default',
+  ]}
+  aria-disabled={!available}
+>
+  <div class="flex items-start gap-4">
+    <div class:list={[
+      'w-12 h-12 rounded-lg flex items-center justify-center text-2xl shrink-0',
+      available ? 'bg-(--color-accent)/10' : 'bg-(--color-bg-tertiary)',
+    ]}>
+      {icon}
+    </div>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-1">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+          {title}
+        </h3>
+        {!available && (
+          <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted)">
+            Coming soon
+          </span>
+        )}
+      </div>
+      <p class="text-sm text-(--color-text-secondary) mb-3">{description}</p>
+      <div class="text-xs text-(--color-text-muted)">
+        {available ? `${modelCount} ${countLabel}` : 'In development'}
+      </div>
+    </div>
+    {available && (
+      <svg class="w-5 h-5 text-(--color-text-muted) group-hover:text-(--color-accent) transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    )}
+  </div>
+</a>

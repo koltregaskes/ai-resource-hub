@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLLMModels } from '../../data/llm-models';
+
+const models = getLLMModels();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Pick representative models for recommendations
+const topQuality = [...models].sort((a, b) => b.qualityScore - a.qualityScore).slice(0, 3);
+const topValue = [...models].sort((a, b) => b.valueScore - a.valueScore).slice(0, 3);
+const cheapest = [...models].filter(m => m.inputPrice > 0).sort((a, b) => {
+  const aCost = (a.inputPrice + 3 * a.outputPrice) / 4;
+  const bCost = (b.inputPrice + 3 * b.outputPrice) / 4;
+  return aCost - bCost;
+}).slice(0, 3);
+
+function formatPrice(price: number): string {
+  if (price === 0) return 'Free';
+  if (price < 0.01) return `$${price.toFixed(4)}`;
+  if (price < 1) return `$${price.toFixed(3)}`;
+  return `$${price.toFixed(2)}`;
+}
+---
+
+<BaseLayout
+  title="How to Choose the Right AI Model — The AI Resource Hub"
+  description="ChatGPT, Claude, Gemini, Copilot — which AI is right for you? A practical, jargon-free guide to picking the best AI model."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}guides/`} class="hover:text-(--color-text-secondary) transition-colors">Guides</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Choosing an AI Model</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Beginner</span>
+        <span class="text-xs text-(--color-text-muted)">10 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        How to Choose the Right AI Model
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        There are dozens of AI models available today. Here's how to pick the right one for what
+        you actually need — without getting lost in the technical details.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <!-- The big 3 consumer AI products -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">The Three Main Options</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          If you're a regular user (not a developer), your main choices come down to three AI assistants.
+          Each has a free tier, and each has different strengths.
+        </p>
+
+        <div class="grid gap-4 mb-4">
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm" style="background-color: #10a37f">OA</div>
+              <div>
+                <h3 class="font-semibold text-(--color-text-primary)">ChatGPT (OpenAI)</h3>
+                <p class="text-xs text-(--color-text-muted)">Free / $20/month for Plus</p>
+              </div>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) mb-3">
+              The most popular AI chatbot. Great all-rounder with excellent creative writing, image generation
+              (DALL-E), and a massive plugin ecosystem. Best for: general use, creative tasks, and image generation.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Best for beginners</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Image generation</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400">Largest ecosystem</span>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm" style="background-color: #d97706">AN</div>
+              <div>
+                <h3 class="font-semibold text-(--color-text-primary)">Claude (Anthropic)</h3>
+                <p class="text-xs text-(--color-text-muted)">Free / $20/month for Pro</p>
+              </div>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) mb-3">
+              Excellent at complex reasoning, analysis, and following nuanced instructions. Has a very large
+              context window — can process entire books. Best for: long documents, analysis, coding, and careful reasoning.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Best for analysis</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Long documents</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400">Strong reasoning</span>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm" style="background-color: #4285f4">GO</div>
+              <div>
+                <h3 class="font-semibold text-(--color-text-primary)">Gemini (Google)</h3>
+                <p class="text-xs text-(--color-text-muted)">Free / $20/month for AI Ultra</p>
+              </div>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) mb-3">
+              Deeply integrated with Google services (Gmail, Drive, Docs, Search). Has excellent Deep Research
+              mode for comprehensive research tasks. Best for: research, Google ecosystem users, and multimodal tasks.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Best for research</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Google integration</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400">Deep Research mode</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Decision framework -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Choose Based on What You Need</h2>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">If you need...</th>
+                <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Use this</th>
+                <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-3 text-(--color-text-primary)">General everyday tasks</td>
+                <td class="py-3 px-3 text-(--color-accent)">ChatGPT</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Most versatile, huge ecosystem</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-3 text-(--color-text-primary)">Writing & editing</td>
+                <td class="py-3 px-3 text-(--color-accent)">Claude or ChatGPT</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Both excellent — Claude is more nuanced</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-3 text-(--color-text-primary)">Analysing long documents</td>
+                <td class="py-3 px-3 text-(--color-accent)">Claude</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Largest context window, thorough analysis</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-3 text-(--color-text-primary)">Coding help</td>
+                <td class="py-3 px-3 text-(--color-accent)">Claude or ChatGPT</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Both top-tier for code generation</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-3 text-(--color-text-primary)">In-depth research</td>
+                <td class="py-3 px-3 text-(--color-accent)">Gemini (Deep Research)</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Browses hundreds of sources automatically</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-3 text-(--color-text-primary)">Image generation</td>
+                <td class="py-3 px-3 text-(--color-accent)">ChatGPT (DALL-E)</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Built-in image generation</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-3 text-(--color-text-primary)">Quick web search answers</td>
+                <td class="py-3 px-3 text-(--color-accent)">Perplexity</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Purpose-built for search with citations</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="py-3 px-3 text-(--color-text-primary)">Maximum privacy</td>
+                <td class="py-3 px-3 text-(--color-accent)">Local models (Llama via Ollama)</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Runs on your computer — data never leaves</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-3 text-(--color-text-primary)">Minimum cost</td>
+                <td class="py-3 px-3 text-(--color-accent)">Free tiers of any</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">All three offer generous free access</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Current rankings from our data -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Current Model Rankings (from Our Data)</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Here's what our data says about the top models right now. These rankings are based on benchmark scores
+          and pricing data we track across {models.length} models.
+        </p>
+
+        <div class="grid sm:grid-cols-3 gap-4 mb-4">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-sm font-semibold text-(--color-accent) mb-3">Highest Quality</h3>
+            {topQuality.map((m, i) => (
+              <div class="flex items-center justify-between py-1.5">
+                <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                  {i + 1}. {m.name}
+                </a>
+                <span class="text-xs text-(--color-text-muted)">{m.qualityScore}/100</span>
+              </div>
+            ))}
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-sm font-semibold text-(--color-success) mb-3">Best Value</h3>
+            {topValue.map((m, i) => (
+              <div class="flex items-center justify-between py-1.5">
+                <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                  {i + 1}. {m.name}
+                </a>
+                <span class="text-xs text-(--color-text-muted)">value: {m.valueScore}</span>
+              </div>
+            ))}
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-sm font-semibold text-(--color-warning) mb-3">Most Affordable</h3>
+            {cheapest.map((m, i) => (
+              <div class="flex items-center justify-between py-1.5">
+                <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                  {i + 1}. {m.name}
+                </a>
+                <span class="text-xs text-(--color-text-muted)">{formatPrice(m.inputPrice)}/{formatPrice(m.outputPrice)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <p class="text-sm text-(--color-text-muted)">
+          See the full comparison: <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">LLM Comparison Table</a>
+        </p>
+      </section>
+
+      <!-- Free vs paid -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Do You Need to Pay?</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Honestly? The free tiers are excellent for most people. Here's when upgrading makes sense:
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-success) mb-3">Free tier is enough if you...</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-2">
+              <li>Use AI a few times a day</li>
+              <li>Don't need the absolute best model</li>
+              <li>Can handle occasional usage limits</li>
+              <li>Don't need advanced features (Deep Research, image gen, etc.)</li>
+            </ul>
+          </div>
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-accent) mb-3">Consider paying if you...</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-2">
+              <li>Use AI heavily for work</li>
+              <li>Need the smartest models consistently</li>
+              <li>Want image generation or deep research</li>
+              <li>Hit free tier limits frequently</li>
+              <li>Need priority access during peak times</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <section>
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Related Guides</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <a href={`${base}guides/prompting-basics/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors group">
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Prompting Basics</p>
+            <p class="text-sm text-(--color-text-muted) mt-1">Get better results from any AI</p>
+          </a>
+          <a href={`${base}guides/understanding-ai-pricing/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors group">
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Understanding AI Pricing</p>
+            <p class="text-sm text-(--color-text-muted) mt-1">Tokens, tiers, and value explained</p>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}guides/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Guides
+      </a>
+    </div>
+  </article>
+</BaseLayout>

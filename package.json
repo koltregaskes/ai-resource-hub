@@ -1,0 +1,34 @@
+{
+  "name": "the-ai-resource-hub",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "seed": "tsx scripts/seed-db.ts",
+    "scrape": "tsx scripts/scrape-all.ts",
+    "scrape:pricing": "tsx scripts/scrapers/pricing.ts",
+    "scrape:openrouter": "tsx scripts/scrapers/openrouter.ts",
+    "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/sitemap": "^3.7.0",
+    "@tailwindcss/vite": "^4.2.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.17.3",
+    "better-sqlite3": "^12.6.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "tsx": "^4.21.0"
+  }
+}

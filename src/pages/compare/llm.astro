@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LLMComparisonTable from '../../components/LLMComparisonTable';
+import { getLLMModels } from '../../data/llm-models';
+
+const models = getLLMModels();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const lastUpdated = new Date().toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+
+// Structured data for SEO
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'AI Large Language Model Comparison',
+  description: 'Independent comparison of LLM pricing, performance benchmarks, and value rankings.',
+  url: new URL(`${base}compare/llm`, Astro.site).toString(),
+  variableMeasured: [
+    { '@type': 'PropertyValue', name: 'Input Price', unitText: 'USD per 1M tokens' },
+    { '@type': 'PropertyValue', name: 'Output Price', unitText: 'USD per 1M tokens' },
+    { '@type': 'PropertyValue', name: 'Context Window', unitText: 'tokens' },
+    { '@type': 'PropertyValue', name: 'Speed', unitText: 'tokens per second' },
+    { '@type': 'PropertyValue', name: 'Quality Score', unitText: 'points (0-100)' },
+  ],
+};
+---
+
+<BaseLayout
+  title="LLM Comparison — The AI Resource Hub"
+  description="Compare large language models by price, speed, quality, and value. GPT-4o, Claude Sonnet 4, Gemini 2.5 Pro, Llama 4, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Page header -->
+    <div class="mb-8">
+      <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+        <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-(--color-text-secondary)">LLM Comparison</span>
+      </nav>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        LLM Comparison Table
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Compare {models.length} large language models across pricing, context window, speed,
+        and quality benchmarks. Click any column header to sort.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Last updated: {lastUpdated} &middot; Prices from official API documentation
+      </p>
+    </div>
+
+    <!-- Interactive table (React island) -->
+    <LLMComparisonTable client:load models={models} baseUrl={base} />
+  </section>
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

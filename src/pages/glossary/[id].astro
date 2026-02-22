@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllGlossaryIds, getGlossaryTermById, getGlossaryTerms } from '../../db/queries';
+
+export function getStaticPaths() {
+  const ids = getAllGlossaryIds();
+  return ids.map((id) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+const term = getGlossaryTermById(id);
+
+if (!term) {
+  return Astro.redirect(`${import.meta.env.BASE_URL}404`);
+}
+
+const allTerms = getGlossaryTerms();
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Resolve related terms and see also
+const relatedIds = term.related_terms ? term.related_terms.split(',').map(s => s.trim()) : [];
+const seeAlsoIds = term.see_also ? term.see_also.split(',').map(s => s.trim()) : [];
+
+const relatedTerms = relatedIds
+  .map(rid => allTerms.find(t => t.id === rid))
+  .filter((t): t is typeof term => t !== undefined);
+
+const seeAlsoTerms = seeAlsoIds
+  .map(rid => allTerms.find(t => t.id === rid))
+  .filter((t): t is typeof term => t !== undefined);
+
+const categoryLabels: Record<string, string> = {
+  core: 'Core Concepts',
+  technical: 'Technical Terms',
+  techniques: 'Techniques & Methods',
+  concepts: 'AI Concepts',
+  parameters: 'Parameters & Settings',
+  models: 'Models & Products',
+  products: 'Products & Services',
+  infrastructure: 'Infrastructure & Tools',
+};
+
+// Structured data
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  name: term.term,
+  description: term.definition,
+  inDefinedTermSet: {
+    '@type': 'DefinedTermSet',
+    name: 'AI Glossary — The AI Resource Hub',
+  },
+};
+---
+
+<BaseLayout
+  title={`${term.term} — AI Glossary — The AI Resource Hub`}
+  description={term.plain_english || term.definition}
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}glossary/`} class="hover:text-(--color-text-secondary) transition-colors">AI Glossary</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">{term.term}</span>
+    </nav>
+
+    <!-- Term header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted)">
+          {categoryLabels[term.category] || term.category}
+        </span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">
+        {term.term}
+      </h1>
+    </div>
+
+    <!-- Technical definition -->
+    <div class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-6">
+      <h2 class="text-sm font-semibold text-(--color-text-muted) uppercase tracking-wider mb-3">Definition</h2>
+      <p class="text-(--color-text-primary) leading-relaxed">
+        {term.definition}
+      </p>
+    </div>
+
+    <!-- Plain English -->
+    {term.plain_english && (
+      <div class="p-6 rounded-xl bg-(--color-accent-glow) border border-(--color-accent)/20 mb-6">
+        <h2 class="text-sm font-semibold text-(--color-accent) uppercase tracking-wider mb-3 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          In Plain English
+        </h2>
+        <p class="text-(--color-text-primary) leading-relaxed">
+          {term.plain_english}
+        </p>
+      </div>
+    )}
+
+    <!-- Related terms -->
+    {relatedTerms.length > 0 && (
+      <div class="mb-6">
+        <h2 class="text-lg font-semibold text-(--color-text-primary) mb-3">Related Terms</h2>
+        <div class="flex flex-wrap gap-2">
+          {relatedTerms.map((rt) => (
+            <a
+              href={`${base}glossary/${rt.id}/`}
+              class="px-3 py-1.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-sm text-(--color-text-secondary) hover:text-(--color-accent) hover:border-(--color-accent)/50 transition-colors"
+            >
+              {rt.term}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- See also -->
+    {seeAlsoTerms.length > 0 && (
+      <div class="mb-6">
+        <h2 class="text-lg font-semibold text-(--color-text-primary) mb-3">See Also</h2>
+        <div class="flex flex-wrap gap-2">
+          {seeAlsoTerms.map((sa) => (
+            <a
+              href={`${base}glossary/${sa.id}/`}
+              class="px-3 py-1.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-sm text-(--color-text-secondary) hover:text-(--color-accent) hover:border-(--color-accent)/50 transition-colors"
+            >
+              {sa.term}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Navigation -->
+    <div class="flex gap-3 mt-8">
+      <a
+        href={`${base}glossary/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Glossary Terms
+      </a>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

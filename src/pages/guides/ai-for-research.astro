@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Using AI for Research & Analysis — The AI Resource Hub"
+  description="How to use AI to research topics, summarise documents, analyse data, and fact-check — plus pitfalls to avoid."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}guides/`} class="hover:text-(--color-text-secondary) transition-colors">Guides</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI for Research</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400">Practical</span>
+        <span class="text-xs text-(--color-text-muted)">10 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        Using AI for Research & Analysis
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        AI can be a powerful research assistant — summarising documents, finding patterns, and helping you
+        understand complex topics. But you need to know its limitations. Here's how to research effectively with AI.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">The Golden Rule: Trust but Verify</h2>
+        <div class="p-5 rounded-xl bg-(--color-accent-glow) border border-(--color-accent)/20 mb-4">
+          <p class="text-(--color-text-primary) leading-relaxed">
+            <strong>AI models can and do make things up.</strong> They can cite books that don't exist, invent
+            statistics, and state falsehoods with complete confidence. Never treat AI research output as fact
+            without independent verification — especially for dates, statistics, quotes, and scientific claims.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Best Tools for Research</h2>
+        <div class="space-y-3">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">Perplexity AI</h3>
+            <p class="text-sm text-(--color-text-secondary)">Purpose-built for research. Always cites sources. Best for fact-checking and quick research.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">Gemini Deep Research</h3>
+            <p class="text-sm text-(--color-text-secondary)">Browses hundreds of websites and produces multi-page reports with citations. Best for comprehensive research.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">Claude (Long Context)</h3>
+            <p class="text-sm text-(--color-text-secondary)">Excellent at analysing long documents — upload a PDF and ask detailed questions. Best for document analysis.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">ChatGPT with Browse</h3>
+            <p class="text-sm text-(--color-text-secondary)">Can search the web in real-time. Good for general research with current information.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Research Workflows</h2>
+
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Summarising a Long Document</h3>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <ol class="text-sm text-(--color-text-secondary) space-y-2 list-decimal list-inside">
+            <li>Upload the document (PDF, paste text, or share a link)</li>
+            <li>Ask for a high-level summary first: "Summarise the key points of this document in 5 bullet points"</li>
+            <li>Then drill into specific sections: "What does section 3 say about [topic]?"</li>
+            <li>Extract structured data: "Create a table of all recommendations with their rationale"</li>
+          </ol>
+        </div>
+
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Learning a New Topic</h3>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <ol class="text-sm text-(--color-text-secondary) space-y-2 list-decimal list-inside">
+            <li>Start broad: "Explain [topic] like I'm a smart 15-year-old"</li>
+            <li>Get the landscape: "What are the 5 most important things to understand about [topic]?"</li>
+            <li>Go deeper: "Now explain [specific aspect] in more detail"</li>
+            <li>Test understanding: "I think [your understanding]. Am I right, or what am I missing?"</li>
+            <li>Get resources: "What are the best books/articles/courses to learn more about this?"</li>
+          </ol>
+        </div>
+
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Competitive Analysis</h3>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <p class="text-sm text-(--color-text-secondary) italic">
+            "I run a [type of business] in [location]. My main competitors are [list them].
+            Analyse their strengths and weaknesses compared to us. Present as a comparison table
+            with columns for: Company, Strengths, Weaknesses, Pricing, and Unique Selling Point.
+            Use information you know about these companies — and clearly flag anything you're not sure about."
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Common Mistakes</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="p-4 rounded-lg bg-red-500/5 border border-red-500/20">
+            <h3 class="font-semibold text-red-400 text-sm mb-2">Don't</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-1">
+              <li>Trust AI statistics without checking</li>
+              <li>Use AI citations without verifying they exist</li>
+              <li>Ask one model and treat it as definitive</li>
+              <li>Rely on AI for medical, legal, or financial advice</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-lg bg-green-500/5 border border-green-500/20">
+            <h3 class="font-semibold text-green-400 text-sm mb-2">Do</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-1">
+              <li>Cross-reference key claims with real sources</li>
+              <li>Ask AI to flag things it's uncertain about</li>
+              <li>Use AI to find leads, then verify yourself</li>
+              <li>Prefer tools that cite sources (Perplexity, Gemini)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}guides/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Guides
+      </a>
+    </div>
+  </article>
+</BaseLayout>

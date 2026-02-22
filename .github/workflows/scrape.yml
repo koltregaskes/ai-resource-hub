@@ -1,0 +1,55 @@
+name: Update data (scrape + rebuild)
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      force_rebuild:
+        description: 'Force rebuild even if no data changes'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run all scrapers (OpenRouter + provider pricing + benchmarks)
+        run: npm run scrape
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        timeout-minutes: 5
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet data/the-ai-resource-hub.db || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit updated data
+        if: steps.changes.outputs.changed == 'true' || inputs.force_rebuild == 'true'
+        run: |
+          git config user.name "The AI Resource Hub Bot"
+          git config user.email "bot@theairesourcehub.com"
+          git add data/the-ai-resource-hub.db
+          git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
+          git push
