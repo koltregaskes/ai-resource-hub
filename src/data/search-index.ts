@@ -215,6 +215,14 @@ export function getSearchIndex(base: string): SearchItem[] {
     url: `${base}compare/head-to-head/`,
   });
 
+  items.push({
+    id: 'compare-providers',
+    title: 'Compare AI Providers',
+    type: 'page',
+    description: 'Side-by-side comparison of all major AI providers by quality, pricing, and model lineup',
+    url: `${base}compare/providers/`,
+  });
+
   for (const s of sectionPages) {
     items.push({
       id: s.id,
