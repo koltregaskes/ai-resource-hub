@@ -12,14 +12,22 @@ You are a senior product strategist and web architect. I need your deep analysis
 
 The AI Resource Hub is an Astro-based static site with a SQLite build-time database, deployed on GitHub Pages. It uses Tailwind CSS v4, React components for interactive features, and automated daily data scrapers via GitHub Actions.
 
-**Current inventory (303 pages):**
+**Current inventory (330+ pages):**
 - **39 AI providers** with detail pages (OpenAI, Anthropic, Google, Meta, Mistral, xAI, Cohere, DeepSeek, 01.AI, NVIDIA, etc.)
-- **158 AI models** across 6 categories: LLMs (99), image generation (18), video (17), voice/TTS (11), speech-to-text (7), music/sound (6)
+- **158+ AI models** across 6 categories: LLMs (99+), image generation (18), video (17), voice/TTS (11), speech-to-text (7), music/sound (6)
 - **30 AI benchmarks** with 303 model scores — covering general, coding, math, reasoning, safety, agent, domain, multilingual, and multimodal
 - **6 comparison tables** (LLM, image, video, voice, speech, sound) — sortable by price, quality, speed, value
 - **Head-to-Head model comparison tool** — select 2–4 models for side-by-side comparison with presets (frontier, value, budget, coding, open source)
-- **AI Model Leaderboard** — ranked by quality, best value, and cheapest, with tabs
+- **Compare AI Providers page** — side-by-side provider comparison across 6 dimensions (scale, quality, pricing, open source, specialisation, trust)
+- **Model Leaderboard** — ranked by quality, best value, and cheapest, with tabs
 - **Coding Models Leaderboard** — specialised ranking by coding benchmark performance
+- **Fastest AI Models** — speed rankings with tokens-per-second estimates
+- **Cheapest AI Models** — ranked by price with free-tier and paid sections
+- **Best Value AI Models** — quality-per-dollar value score rankings
+- **Multimodal Models** — models supporting vision, audio, and video inputs
+- **Context Window Comparison** — from 4K to 4M+ token context sizes
+- **Reasoning Models** — ranked by math, logic, and reasoning benchmark performance
+- **New Releases** — timeline of model releases grouped by month
 - **Open Source Models directory** — all open-weight models ranked by quality
 - **API Pricing Calculator** — interactive cost estimator with usage presets (light/medium/heavy/enterprise)
 - **AI Pricing Trends** — price distribution, milestones, provider averages, price-vs-quality scatter chart
@@ -35,9 +43,8 @@ The AI Resource Hub is an Astro-based static site with a SQLite build-time datab
 - **AI Glossary** with plain-English definitions
 - **6 educational guides** (prompting basics, advanced prompting, choosing a model, understanding pricing, AI for writing, AI for research)
 - **4 blog articles** (how benchmarks work, pricing race to zero, open vs closed AI, what is an LLM)
-- **Interactive quiz** — "Which AI Should I Use?"
-- **About page** and **Changelog**
-- **Methodology page** — full transparency on scoring, data sources, and limitations
+- **Interactive "Which AI Should I Use?" quiz** — 8-question personalised model recommender
+- **About page**, **Changelog**, and **Methodology page** (full transparency on scoring, data sources, and limitations)
 - **Global search** across all content types
 - **RSS feed, sitemap, SEO structured data**
 - **Dark/light theme toggle**
@@ -63,22 +70,26 @@ We analysed these competitors:
 5. **There's An AI For That** — 12,000+ tools directory, AI Job Impact Index, smart AI search
 6. **OpenRouter** — 500+ models via single API, usage-based rankings, real adoption data
 
-**Gaps we've already addressed (since initial analysis):**
+**Gaps we've already addressed:**
 - ✅ Built interactive price-vs-quality scatter chart and pricing trends page
 - ✅ Built Head-to-Head model comparison tool with presets
 - ✅ Built methodology/transparency page with full scoring breakdown
 - ✅ Built coding-specific and open-source leaderboards
 - ✅ Built AI industry statistics dashboard with pricing analysis
+- ✅ Built specialised leaderboards: fastest, cheapest, best value, multimodal, context window, reasoning, new releases
+- ✅ Built interactive "Which AI Should I Use?" quiz
+- ✅ Built Compare AI Providers page
 
 **Remaining gaps to discuss:**
-1. No speed/latency data beyond a single integer rating
+1. No real-time speed/latency data (TTFT, actual measured output speed)
 2. No per-provider endpoint comparison (e.g., OpenAI via Azure vs direct)
 3. Limited tool directory compared to 12,000-tool directories like TAAFT
 4. No community features (voting, reviews, comments)
 5. No public API for programmatic data access
-6. No animated trend charts over time (only current-state visualizations)
+6. No animated trend charts over time (only current-state visualisations)
 7. No domain-specific leaderboards beyond coding (healthcare, legal, finance)
 8. No newsletter/email digest system
+9. No user accounts or personalisation beyond the quiz
 
 ### What I need from you
 
@@ -97,13 +108,3 @@ Please provide a comprehensive strategic analysis covering:
 6. **Technical architecture recommendations**: Given our static site constraint, what architectural decisions would scale best? Should we consider moving to Vercel/Netlify for edge functions? Should we add a real-time component?
 
 7. **SEO and growth strategy**: What are the highest-value keywords and pages we should target? How should we structure our internal linking? What pages would get the most organic traffic?
-
-8. **Community building**: How could we build an engaged audience around this resource? Newsletter, Discord, social media strategy?
-
-9. **Missing features only we could do well**: Based on our unique position (comprehensive multi-category coverage, not a tool vendor, not a cloud provider), what features would we uniquely excel at?
-
-10. **90-day roadmap**: Give us a concrete 90-day plan with weekly milestones. What should we ship first, second, third?
-
-Please be specific, actionable, and opinionated. I want a strategic vision, not a generic list. Think about what would make this THE definitive AI resource hub that everyone in the AI industry bookmarks.
-
-## PROMPT END
