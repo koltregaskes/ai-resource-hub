@@ -40,38 +40,129 @@ const benchmarks = getBenchmarks();
     <!-- Data Sources -->
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Data Sources</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-4">
+        We maintain a public record of every external source used to build and update this site. If you spot a source that should be added or corrected, please open an issue on our <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub repository</a>.
+      </p>
       <div class="space-y-4">
+
+        {/* Pricing */}
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-          <h3 class="font-semibold text-(--color-text-primary) mb-1">Pricing Data</h3>
-          <p class="text-sm text-(--color-text-secondary)">
-            Primary source: <strong>OpenRouter API</strong> (<code>/api/v1/models</code>) — providing real-time pricing for 500+ models with 8 pricing dimensions (prompt, completion, image, request, cache read/write, web search, internal reasoning). Cross-referenced against official provider pricing pages.
-          </p>
-          <p class="text-xs text-(--color-text-muted) mt-1">Updated: Daily via automated GitHub Actions scraper</p>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">Model Pricing</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Daily</span>
+          </div>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><a href="https://openrouter.ai/api/v1/models" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">OpenRouter API</a> — primary pricing source; 500+ models, 8 pricing dimensions (prompt, completion, image, request, cache read/write, web search, internal reasoning). Scraped daily via GitHub Actions.</li>
+            <li><a href="https://openai.com/api/pricing" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">OpenAI API Pricing</a> — cross-reference for GPT and o-series models</li>
+            <li><a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Anthropic Pricing</a> — cross-reference for Claude models</li>
+            <li><a href="https://ai.google.dev/pricing" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Google AI Pricing</a> — cross-reference for Gemini models</li>
+            <li><a href="https://docs.mistral.ai/getting-started/pricing/" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Mistral Pricing</a> — cross-reference for Mistral models</li>
+          </ul>
         </div>
 
+        {/* Benchmark scores */}
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-          <h3 class="font-semibold text-(--color-text-primary) mb-1">Benchmark Scores</h3>
-          <p class="text-sm text-(--color-text-secondary)">
-            Sourced from official model cards, research papers, and provider announcements. We track {benchmarks.length} benchmarks across categories: general intelligence, coding, math, reasoning, safety, agent capabilities, domain-specific, multilingual, and multimodal.
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">Benchmark Scores</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">As published</span>
+          </div>
+          <p class="text-sm text-(--color-text-secondary) mb-2">
+            We track {benchmarks.length} benchmarks across general intelligence, coding, math, reasoning, safety, agent capabilities, domain-specific, multilingual, and multimodal categories. Scores are sourced from:
           </p>
-          <p class="text-xs text-(--color-text-muted) mt-1">Updated: When new benchmark results are published by providers or researchers</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li>Official model technical reports and blog posts (OpenAI, Anthropic, Google DeepMind, Meta, Mistral, etc.)</li>
+            <li><a href="https://paperswithcode.com/sota" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Papers With Code — State of the Art</a> — aggregated benchmark leaderboards</li>
+            <li><a href="https://arxiv.org" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">arXiv preprints</a> — research papers reporting model evaluations</li>
+            <li><a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">HuggingFace Open LLM Leaderboard</a> — standardised evals for open-weight models</li>
+            <li><a href="https://crfm.stanford.edu/helm/" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Stanford HELM</a> — holistic evaluation of language models</li>
+            <li><a href="https://github.com/openai/human-eval" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">HumanEval (OpenAI)</a>, <a href="https://github.com/google-deepmind/math_dataset" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">MATH (DeepMind)</a>, <a href="https://github.com/hendrycks/test" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">MMLU</a>, <a href="https://github.com/idavidrein/gpqa" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GPQA</a> — individual benchmark repositories</li>
+          </ul>
         </div>
 
+        {/* Community ratings */}
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-          <h3 class="font-semibold text-(--color-text-primary) mb-1">Provider Information</h3>
-          <p class="text-sm text-(--color-text-secondary)">
-            Company details, founding dates, headquarters, leadership, and funding data sourced from official websites, press releases, and verified reporting. Currently tracking {providers.length} AI providers.
-          </p>
-          <p class="text-xs text-(--color-text-muted) mt-1">Updated: As changes are announced</p>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">Community &amp; Consensus Ratings</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">As published</span>
+          </div>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><a href="https://lmarena.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">LMSYS Chatbot Arena</a> — crowdsourced Elo ratings from 5M+ human preference votes; informs community consensus factor in quality scores</li>
+            <li><a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a> — real-time speed and quality benchmarks; referenced for speed data and Intelligence Index rankings</li>
+            <li><a href="https://scale.com/leaderboard" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Scale AI SEAL</a> — expert-driven evaluations and safety benchmarks</li>
+          </ul>
         </div>
 
+        {/* Model discovery */}
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-          <h3 class="font-semibold text-(--color-text-primary) mb-1">News Articles</h3>
-          <p class="text-sm text-(--color-text-secondary)">
-            Aggregated daily from major AI news sources including TechCrunch, Reuters, AI News, and curated YouTube channels. Processed through our News Scout system which filters junk items and categorises articles.
-          </p>
-          <p class="text-xs text-(--color-text-muted) mt-1">Updated: Daily at 06:00 UTC via GitHub Actions</p>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">Model Discovery &amp; New Releases</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Weekly</span>
+          </div>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><a href="https://huggingface.co/Presidentlin/collections" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">HuggingFace — Presidentlin's Collections</a> — weekly curated "AI Release Week Thread" collections tracking every notable model, dataset, and paper release across the HuggingFace ecosystem</li>
+            <li><a href="https://huggingface.co/models?sort=created" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">HuggingFace Model Hub</a> — model cards for open-weight models; parameter counts, licences, release dates</li>
+            <li>Official provider announcements and release blogs (OpenAI, Anthropic, Google, Meta, Mistral, xAI, etc.)</li>
+          </ul>
         </div>
+
+        {/* Provider information */}
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">Provider &amp; Company Information</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">As announced</span>
+          </div>
+          <p class="text-sm text-(--color-text-secondary) mb-2">Currently tracking {providers.length} AI providers. Company data is sourced from:</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li>Official company websites, about pages, and investor relations sections</li>
+            <li>Press releases, funding announcements, and SEC filings</li>
+            <li>Verified reporting from TechCrunch, Reuters, The Information, Bloomberg, and Financial Times</li>
+            <li><a href="https://www.crunchbase.com" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Crunchbase</a> — funding rounds and company details</li>
+          </ul>
+        </div>
+
+        {/* News */}
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">News &amp; Articles</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Daily</span>
+          </div>
+          <p class="text-sm text-(--color-text-secondary) mb-2">News is aggregated daily via our News Scout system and imported from digest files. Sources include:</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li>TechCrunch AI, Reuters Technology, The Verge, Ars Technica, VentureBeat AI</li>
+            <li>AI-specialist publications: The Decoder, Import AI (Jack Clark), Interconnects (Nathan Lambert)</li>
+            <li>Provider engineering blogs: OpenAI, Anthropic, Google DeepMind, Meta AI Research</li>
+            <li>arXiv paper announcements (cs.AI, cs.LG, cs.CL)</li>
+          </ul>
+          <p class="text-xs text-(--color-text-muted) mt-2">Updated: Daily at 06:00 UTC via GitHub Actions</p>
+        </div>
+
+        {/* People */}
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">People &amp; Key Figures</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">As announced</span>
+          </div>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li>Official bios and LinkedIn profiles</li>
+            <li>Wikipedia for public figures with verified career histories</li>
+            <li>X/Twitter profiles for roles and affiliations</li>
+            <li>Published interviews, podcasts, and conference talks</li>
+          </ul>
+        </div>
+
+        {/* Tools */}
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">AI Tools Directory</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Curated</span>
+          </div>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li>Official product websites and documentation</li>
+            <li><a href="https://www.producthunt.com/topics/artificial-intelligence" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Product Hunt — AI</a> — discovery of new AI tools</li>
+            <li>Editorial curation by The AI Resource Hub team</li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
