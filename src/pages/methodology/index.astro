@@ -75,6 +75,11 @@ const benchmarks = getBenchmarks();
             <li><a href="https://arxiv.org" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">arXiv preprints</a> — research papers reporting model evaluations</li>
             <li><a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">HuggingFace Open LLM Leaderboard</a> — standardised evals for open-weight models</li>
             <li><a href="https://crfm.stanford.edu/helm/" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Stanford HELM</a> — holistic evaluation of language models</li>
+            <li><a href="https://epoch.ai/benchmarks" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Epoch AI Benchmarks</a> — benchmark results evaluated internally and collected from external sources, with historical trend data</li>
+            <li><a href="https://livebench.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">LiveBench</a> — contamination-free benchmark with monthly question refresh; covers math, coding, reasoning, data analysis, instruction following</li>
+            <li><a href="https://arcprize.org" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">ARC Prize / ARC-AGI</a> — abstract reasoning benchmark measuring fluid intelligence; adopted by Anthropic, Google DeepMind, OpenAI, and xAI in model cards</li>
+            <li><a href="https://www.swebench.com" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">SWE-bench</a> — real-world GitHub issue resolution benchmark for software engineering capability</li>
+            <li><a href="https://github.com/bigcode-project/bigcodebench" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">BigCodeBench</a> — code generation benchmark with complex instructions and diverse function calls</li>
             <li><a href="https://github.com/openai/human-eval" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">HumanEval (OpenAI)</a>, <a href="https://github.com/google-deepmind/math_dataset" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">MATH (DeepMind)</a>, <a href="https://github.com/hendrycks/test" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">MMLU</a>, <a href="https://github.com/idavidrein/gpqa" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GPQA</a> — individual benchmark repositories</li>
           </ul>
         </div>
@@ -89,6 +94,32 @@ const benchmarks = getBenchmarks();
             <li><a href="https://lmarena.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">LMSYS Chatbot Arena</a> — crowdsourced Elo ratings from 5M+ human preference votes; informs community consensus factor in quality scores</li>
             <li><a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a> — real-time speed and quality benchmarks; referenced for speed data and Intelligence Index rankings</li>
             <li><a href="https://scale.com/leaderboard" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Scale AI SEAL</a> — expert-driven evaluations and safety benchmarks</li>
+          </ul>
+        </div>
+
+        {/* Research & trend data */}
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">Research &amp; Trend Data</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Ongoing</span>
+          </div>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><a href="https://epoch.ai/data" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Epoch AI</a> — largest public database of notable ML models (3,200+ from 1950–present); training compute estimates, parameter counts, training costs. <a href="https://epoch.ai/data/notable-ai-models" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Notable AI Models database</a> tracks 900+ models chosen for historical significance. CC-BY licensed.</li>
+            <li><a href="https://hai.stanford.edu/ai-index" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Stanford HAI AI Index</a> — annual comprehensive report tracking AI across technical, economic, and societal dimensions; referenced for industry-wide statistics and trends</li>
+            <li><a href="https://ourworldindata.org/artificial-intelligence" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Our World in Data — AI</a> — interactive visualisations of AI model counts, compute growth, and country-level trends (primarily sourced from Epoch AI data)</li>
+          </ul>
+        </div>
+
+        {/* Safety & frontier evaluations */}
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="font-semibold text-(--color-text-primary)">Safety &amp; Frontier Evaluations</h3>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">As published</span>
+          </div>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><a href="https://metr.org" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">METR (Model Evaluation &amp; Threat Research)</a> — nonprofit evaluating frontier AI models for autonomous capabilities; publishes task completion time horizons and RE-Bench. Pre-deployment evaluator for OpenAI and Anthropic.</li>
+            <li><a href="https://www.aisi.gov.uk" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">UK AI Security Institute (AISI)</a> — has evaluated 30+ frontier models since 2023 across cyber, biology, and autonomy domains; publishes the <a href="https://www.aisi.gov.uk/frontier-ai-trends-report" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Frontier AI Trends Report</a></li>
+            <li><a href="https://www.apolloresearch.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Apollo Research</a> — AI safety evaluations focused on scheming, deception detection, and interpretability; collaborates with AISI and frontier labs</li>
           </ul>
         </div>
 
