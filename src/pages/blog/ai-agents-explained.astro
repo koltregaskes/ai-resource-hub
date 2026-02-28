@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'AI Agents Explained: What They Are and How They Work',
+  datePublished: '2026-02-22',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+  description: 'AI agents are models that can plan, use tools, and take actions autonomously. Here is what that actually means in practice.',
+};
+---
+
+<BaseLayout
+  title="AI Agents Explained — Blog — The AI Resource Hub"
+  description="AI agents are models that can plan, use tools, and take actions autonomously. Here is what that actually means in practice."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Agents Explained</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 font-medium">Explainer</span>
+        <span class="text-xs text-(--color-text-muted)">22 Feb 2026</span>
+        <span class="text-xs text-(--color-text-muted)">8 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        AI Agents Explained:<br />What They Are and How They Work
+      </h1>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
+      <p class="text-lg">
+        For most of its existence, using an AI model has worked like this: you send a message, you get a response. One turn. The model answers your question and then waits for the next one. It does not take actions, it does not follow up, and it certainly does not open a browser or run a command on your behalf.
+      </p>
+      <p>
+        AI agents change that. An agent is an AI system that can plan a sequence of steps, use external tools, observe the results, and decide what to do next — all without you telling it exactly how at each stage.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Chat vs Agent: What Is the Difference?</h2>
+      <p>
+        A regular chatbot is reactive. You ask, it answers. An agent is proactive. You give it a goal, and it figures out the steps.
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4 my-6">
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-2">Chatbot</h3>
+          <ul class="text-sm space-y-1">
+            <li>Single turn: question in, answer out</li>
+            <li>No tools — just text generation</li>
+            <li>Cannot take real-world actions</li>
+            <li>No memory between sessions</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-accent)/30">
+          <h3 class="font-semibold text-(--color-accent) mb-2">Agent</h3>
+          <ul class="text-sm space-y-1">
+            <li>Multi-step: plans and executes</li>
+            <li>Uses tools (search, code, APIs)</li>
+            <li>Can browse, edit files, run commands</li>
+            <li>Observes results and adjusts its plan</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">How Agents Work</h2>
+      <p>
+        At a high level, every agent follows the same loop:
+      </p>
+      <ol class="list-decimal pl-6 space-y-3">
+        <li>
+          <strong class="text-(--color-text-primary)">Receive a goal.</strong> "Find all the failing tests in this codebase and fix them." The user defines what success looks like, not how to get there.
+        </li>
+        <li>
+          <strong class="text-(--color-text-primary)">Plan.</strong> The model breaks the goal into steps. "First, I need to find the test files. Then run the test suite. Then read the failures. Then edit the code."
+        </li>
+        <li>
+          <strong class="text-(--color-text-primary)">Act.</strong> The agent calls a tool — runs a shell command, reads a file, makes an API request. This is the key difference from a chatbot. It does not just talk about what it would do; it does it.
+        </li>
+        <li>
+          <strong class="text-(--color-text-primary)">Observe.</strong> The tool returns a result. The agent reads it, updates its understanding of the situation, and decides the next step.
+        </li>
+        <li>
+          <strong class="text-(--color-text-primary)">Repeat.</strong> Steps 2–4 loop until the goal is achieved or the agent determines it cannot proceed.
+        </li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">What Tools Can Agents Use?</h2>
+      <p>
+        The power of an agent depends entirely on the tools it has access to. Common ones include:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Web search.</strong> Look up current information the model was not trained on.</li>
+        <li><strong class="text-(--color-text-primary)">Code execution.</strong> Write and run Python, JavaScript, or shell commands.</li>
+        <li><strong class="text-(--color-text-primary)">File system access.</strong> Read, write, and edit files on disk.</li>
+        <li><strong class="text-(--color-text-primary)">API calls.</strong> Interact with external services — databases, calendars, messaging platforms.</li>
+        <li><strong class="text-(--color-text-primary)">Browser control.</strong> Navigate websites, fill forms, extract data.</li>
+      </ul>
+      <p>
+        Each tool is defined with a description and a schema. The model decides which tool to call and what arguments to pass, based on the current state of its plan.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Real-World Agent Examples</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Coding agents</strong> (Claude Code, GitHub Copilot, Cursor) — read your codebase, make changes, run tests, fix failures, commit.</li>
+        <li><strong class="text-(--color-text-primary)">Research agents</strong> (Perplexity, ChatGPT with browsing) — search the web, read multiple sources, synthesise a summary.</li>
+        <li><strong class="text-(--color-text-primary)">Customer support agents</strong> — look up a customer's account, check order status, process refunds, all through API integrations.</li>
+        <li><strong class="text-(--color-text-primary)">Data analysis agents</strong> — read a spreadsheet, write analysis code, run it, generate charts, present findings.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Challenges</h2>
+      <p>
+        Agents are powerful but not without problems:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Error compounding.</strong> A wrong decision early in the plan can cascade. The agent confidently pursues the wrong path for 15 steps before anyone notices.</li>
+        <li><strong class="text-(--color-text-primary)">Cost.</strong> Each tool call is another API request. A complex agent task might involve 50+ model calls — that adds up fast.</li>
+        <li><strong class="text-(--color-text-primary)">Safety.</strong> An agent with file system access and shell commands can delete things. Guardrails and human-in-the-loop approval are essential.</li>
+        <li><strong class="text-(--color-text-primary)">Reliability.</strong> Agents fail more often than simple chat. The plan might be good, but a tool returns an unexpected result and the agent does not recover gracefully.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Which Models Are Best for Agents?</h2>
+      <p>
+        Not all models are equally good at agentic tasks. The key capabilities are:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Tool use.</strong> The model needs to reliably generate correctly-formatted tool calls.</li>
+        <li><strong class="text-(--color-text-primary)">Planning.</strong> The model needs to break complex goals into logical steps.</li>
+        <li><strong class="text-(--color-text-primary)">Error recovery.</strong> When a tool call fails, the model needs to diagnose the issue and try an alternative.</li>
+        <li><strong class="text-(--color-text-primary)">Long context.</strong> Agent loops generate a lot of text — the conversation between the agent and its tools can easily exceed 100K tokens.</li>
+      </ul>
+      <p>
+        SWE-bench is the most relevant benchmark here — it measures whether a model can autonomously fix real GitHub issues. The top performers on SWE-bench are generally the best agent models.
+      </p>
+
+      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Compare Agent-Capable Models</h3>
+        <p class="text-sm mb-3">See which models lead on SWE-bench and coding benchmarks — the best indicators of agentic ability.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href={`${base}coding/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Coding Model Rankings &rarr;</a>
+          <a href={`${base}benchmarks/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">All Benchmarks &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}blog/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

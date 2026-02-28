@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'Temperature, Top-p, and the Inference Settings Nobody Explains',
+  datePublished: '2026-02-24',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+  description: 'A practical guide to temperature, top-p, frequency penalty, and other generation settings — what they do, when to change them, and when to leave them alone.',
+};
+---
+
+<BaseLayout
+  title="Temperature, Top-p, and Inference Settings — Blog — The AI Resource Hub"
+  description="A practical guide to temperature, top-p, frequency penalty, and other generation settings — what they do and when to change them."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Temperature, Top-p & Inference Settings</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 font-medium">Explainer</span>
+        <span class="text-xs text-(--color-text-muted)">24 Feb 2026</span>
+        <span class="text-xs text-(--color-text-muted)">6 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        Temperature, Top-p, and the Inference<br />Settings Nobody Explains
+      </h1>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
+      <p class="text-lg">
+        Every AI API has a set of parameters you can tweak when you send a request — temperature, top-p, frequency penalty, max tokens. Most people either leave them at their defaults or change them randomly. Here is what they actually do.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Temperature</h2>
+      <p>
+        Temperature controls how "random" the model's output is. At each step, the model calculates a probability for every possible next token. Temperature scales those probabilities.
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Temperature 0:</strong> The model always picks the most probable next token. Output is deterministic (or near-deterministic). Good for factual tasks, code generation, data extraction.</li>
+        <li><strong class="text-(--color-text-primary)">Temperature 0.5–0.7:</strong> A moderate amount of randomness. The model mostly picks high-probability tokens but occasionally tries something less obvious. This is the sweet spot for most general tasks.</li>
+        <li><strong class="text-(--color-text-primary)">Temperature 1.0:</strong> The model uses its raw probability distribution as-is. More varied, more creative, more likely to surprise you — and more likely to say something odd.</li>
+        <li><strong class="text-(--color-text-primary)">Temperature > 1.0:</strong> The probability distribution gets flattened. Even low-probability tokens become viable. Useful for brainstorming. Unreliable for anything that needs to be correct.</li>
+      </ul>
+
+      <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) my-6">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-2">Rule of thumb:</p>
+        <p class="text-sm">Use temperature 0 for tasks where there is one right answer (code, maths, classification). Use 0.5–0.7 for general-purpose tasks. Use 0.8–1.0 for creative writing or brainstorming.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Top-p (Nucleus Sampling)</h2>
+      <p>
+        Top-p is another way to control randomness, but it works differently from temperature. Instead of scaling all probabilities, it sets a cumulative probability threshold.
+      </p>
+      <p>
+        With top-p = 0.9, the model only considers tokens whose combined probability adds up to 90%. Everything else is excluded before sampling. This means that when the model is confident (one token has 95% probability), it effectively acts deterministically. When it is uncertain, it has more options.
+      </p>
+      <p>
+        Most APIs recommend using temperature or top-p, not both at once. Stacking them can produce unpredictable results.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Frequency Penalty & Presence Penalty</h2>
+      <p>
+        These two settings discourage the model from repeating itself.
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Frequency penalty</strong> reduces the probability of a token proportionally to how many times it has already appeared. A word that has been used 5 times gets penalised more than one that has been used once.</li>
+        <li><strong class="text-(--color-text-primary)">Presence penalty</strong> applies a flat penalty to any token that has appeared at least once, regardless of how often. It encourages the model to introduce new topics rather than revisit old ones.</li>
+      </ul>
+      <p>
+        These are mainly useful for long-form generation. For short tasks (a few sentences), the defaults are fine and changing them is unlikely to help.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Max Tokens</h2>
+      <p>
+        This sets the maximum number of tokens the model will generate in its response. It does not make the response longer — it just puts a hard cap on it. If the model would naturally finish in 200 tokens, setting max_tokens to 4000 will not force it to write more.
+      </p>
+      <p>
+        Set this to a reasonable upper bound for your use case. Too low and the response gets cut off. Too high and you risk paying for an unnecessarily long output if the model rambles.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Stop Sequences</h2>
+      <p>
+        A list of strings that, when generated, cause the model to immediately stop. Useful for structured outputs — for example, if you want the model to generate a single JSON object, you can set a stop sequence of <code class="text-xs px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-accent)">"\n\n"</code> to prevent it from generating commentary after the JSON.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Practical Recommendations</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-(--color-border) rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-(--color-bg-tertiary)">
+              <th class="text-left py-2 px-3 text-(--color-text-muted)">Use case</th>
+              <th class="text-center py-2 px-3 text-(--color-text-muted)">Temperature</th>
+              <th class="text-center py-2 px-3 text-(--color-text-muted)">Top-p</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted)">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Code generation</td>
+              <td class="py-2 px-3 text-center">0</td>
+              <td class="py-2 px-3 text-center">—</td>
+              <td class="py-2 px-3">You want the most probable (correct) code</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Data extraction</td>
+              <td class="py-2 px-3 text-center">0</td>
+              <td class="py-2 px-3 text-center">—</td>
+              <td class="py-2 px-3">Structured output, no creativity needed</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">General chat</td>
+              <td class="py-2 px-3 text-center">0.7</td>
+              <td class="py-2 px-3 text-center">0.9</td>
+              <td class="py-2 px-3">Balanced: helpful but not robotic</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Creative writing</td>
+              <td class="py-2 px-3 text-center">0.9–1.0</td>
+              <td class="py-2 px-3 text-center">0.95</td>
+              <td class="py-2 px-3">More variety, more surprises</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Brainstorming</td>
+              <td class="py-2 px-3 text-center">1.0–1.2</td>
+              <td class="py-2 px-3 text-center">1.0</td>
+              <td class="py-2 px-3">Maximum diversity, expect some odd ones</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Try It Yourself</h3>
+        <p class="text-sm mb-3">Use our pricing calculator to estimate costs at different token lengths, or compare models to find the best fit for your workload.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href={`${base}calculator/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Pricing Calculator &rarr;</a>
+          <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Compare LLMs &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}blog/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

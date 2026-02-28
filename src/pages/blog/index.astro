@@ -8,12 +8,44 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 // Posts are ordered newest first
 const posts = [
   {
+    slug: 'what-is-rag',
+    title: 'What Is RAG? Retrieval-Augmented Generation Explained',
+    description: 'A plain-English guide to RAG — the technique that lets AI models pull in real data instead of guessing. When to use it, when not to, and how it actually works.',
+    date: '2026-02-27',
+    category: 'Explainer',
+    readTime: '7 min',
+  },
+  {
+    slug: 'context-windows-explained',
+    title: 'Context Windows Explained: Why Bigger Is Not Always Better',
+    description: 'What context windows actually are, why very large ones can degrade quality, and how to think about them when choosing a model.',
+    date: '2026-02-26',
+    category: 'Explainer',
+    readTime: '7 min',
+  },
+  {
     slug: 'bench-maxing-personal-benchmarks',
     title: 'Bench-Maxing and Why You Should Test AI Models on Your Actual Work',
     description: 'Formal benchmarks are increasingly gamed by AI labs. Here is the case for building a small personal test suite based on the work you actually do — and why community signal often beats published scores.',
     date: '2026-02-25',
     category: 'Analysis',
     readTime: '9 min',
+  },
+  {
+    slug: 'temperature-top-p-and-inference-settings',
+    title: 'Temperature, Top-p, and the Inference Settings Nobody Explains',
+    description: 'A practical guide to temperature, top-p, frequency penalty, and other generation settings — what they do, when to change them, and when to leave them alone.',
+    date: '2026-02-24',
+    category: 'Explainer',
+    readTime: '6 min',
+  },
+  {
+    slug: 'ai-agents-explained',
+    title: 'AI Agents Explained: What They Are and How They Work',
+    description: 'AI agents are models that can plan, use tools, and take actions autonomously. Here is what that actually means in practice — and which models are best at it.',
+    date: '2026-02-22',
+    category: 'Explainer',
+    readTime: '8 min',
   },
   {
     slug: 'how-ai-benchmarks-work',

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Tooltip from '../../components/Tooltip.astro';
 import LLMComparisonTable from '../../components/LLMComparisonTable';
 import { getLLMModels } from '../../data/llm-models';
 
@@ -46,8 +47,12 @@ const structuredData = {
         LLM Comparison Table
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        Compare {models.length} large language models across pricing, context window, speed,
-        and quality benchmarks. Click any column header to sort.
+        Compare {models.length} large language models across
+        <Tooltip term="pricing" tip="Cost per 1 million tokens for input and output. Input tokens are what you send; output tokens are what the model generates." />,
+        <Tooltip term="context window" tip="The maximum number of tokens (roughly ¾ of a word each) a model can process in a single request — including your prompt, conversation history, and the model's response." />,
+        <Tooltip term="speed" tip="Tokens generated per second. Higher means faster responses. Varies by provider load and prompt length." />, and
+        <Tooltip term="quality benchmarks" tip="Standardised tests like MMLU (knowledge), GPQA (reasoning), HumanEval (coding), and Chatbot Arena (human preference)." />.
+        Click any column header to sort.
       </p>
       <p class="text-xs text-(--color-text-muted) mt-2">
         Last updated: {lastUpdated} &middot; Prices from official API documentation

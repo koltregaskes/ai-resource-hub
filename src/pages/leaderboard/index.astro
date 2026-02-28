@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Tooltip from '../../components/Tooltip.astro';
 import { getModelsByCategory, getModelBenchmarks } from '../../db/queries';
 
 const rawBase = import.meta.env.BASE_URL;
@@ -69,7 +70,10 @@ const topCheapest = [...rankedModels].filter(m => m.inputPrice > 0).sort((a, b) 
         AI Model Leaderboard
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        {rankedModels.length} LLMs ranked by quality score, benchmark performance, and value. Updated daily.
+        {rankedModels.length} LLMs ranked by
+        <Tooltip term="quality score" tip="A composite score (0–100) based on benchmark performance, capabilities, and independent evaluations." />,
+        <Tooltip term="benchmark performance" tip="Average score across standardised tests like MMLU, GPQA, HumanEval, and SWE-bench." />, and
+        <Tooltip term="value" tip="Quality per dollar — calculated as quality score divided by blended token cost. Higher means you get more capability per pound spent." />. Updated daily.
       </p>
     </div>
 

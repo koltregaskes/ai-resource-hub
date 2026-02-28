@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Tooltip from '../../components/Tooltip.astro';
 import BenchmarkTable from '../../components/BenchmarkTable';
 import { getBenchmarkMatrix } from '../../db/queries';
 
@@ -24,8 +25,12 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         AI Model Benchmarks
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        Compare {matrix.models.length} models across {matrix.benchmarks.length} benchmarks.
-        Scores sourced from official model cards, technical reports, and LMSYS Chatbot Arena.
+        Compare {matrix.models.length} models across {matrix.benchmarks.length}
+        <Tooltip term="benchmarks" tip="Standardised tests that measure specific AI capabilities — knowledge, reasoning, coding, maths, and human preference. Each benchmark tests a different skill." />.
+        Scores sourced from official
+        <Tooltip term="model cards" tip="Technical documents published alongside a model release, detailing its capabilities, limitations, and benchmark results." />,
+        technical reports, and
+        <Tooltip term="LMSYS Chatbot Arena" tip="A crowdsourced platform where real users compare two anonymous AI models side-by-side and vote for the better one. Over 2 million votes make it the most trusted human preference benchmark." />.
       </p>
     </div>
 
