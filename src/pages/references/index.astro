@@ -1,0 +1,291 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// ─── Data Sources ───────────────────────────────────────────
+const dataSources = [
+  {
+    category: 'Model Pricing & Availability',
+    frequency: 'Every 12 hours',
+    sources: [
+      { name: 'OpenRouter API', url: 'https://openrouter.ai/api/v1/models', description: 'Primary pricing source; 500+ models with 8 pricing dimensions. No authentication required.' },
+      { name: 'OpenAI API Pricing', url: 'https://openai.com/api/pricing', description: 'Official GPT and o-series model pricing.' },
+      { name: 'Anthropic Pricing', url: 'https://www.anthropic.com/pricing', description: 'Official Claude model pricing.' },
+      { name: 'Google AI Pricing', url: 'https://ai.google.dev/pricing', description: 'Official Gemini model pricing.' },
+      { name: 'Mistral Pricing', url: 'https://docs.mistral.ai/getting-started/pricing/', description: 'Official Mistral model pricing.' },
+      { name: 'DeepSeek Pricing', url: 'https://deepseek.com', description: 'Official DeepSeek model pricing.' },
+      { name: 'xAI Documentation', url: 'https://docs.x.ai', description: 'Official Grok model pricing.' },
+    ],
+  },
+  {
+    category: 'Benchmark Scores',
+    frequency: 'As published',
+    sources: [
+      { name: 'LMSYS Chatbot Arena', url: 'https://lmarena.ai', description: 'Crowdsourced Elo ratings from 5M+ human preference votes.' },
+      { name: 'Papers With Code', url: 'https://paperswithcode.com/sota', description: 'Aggregated benchmark leaderboards across ML tasks.' },
+      { name: 'HuggingFace Open LLM Leaderboard', url: 'https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard', description: 'Standardised evaluations for open-weight models.' },
+      { name: 'Stanford HELM', url: 'https://crfm.stanford.edu/helm/', description: 'Holistic Evaluation of Language Models.' },
+      { name: 'Epoch AI Benchmarks', url: 'https://epoch.ai/benchmarks', description: 'Benchmark results with historical trend data.' },
+      { name: 'LiveBench', url: 'https://livebench.ai', description: 'Contamination-free benchmark with monthly question refresh.' },
+      { name: 'ARC Prize / ARC-AGI', url: 'https://arcprize.org', description: 'Abstract reasoning benchmark measuring fluid intelligence.' },
+      { name: 'SWE-bench Verified', url: 'https://www.swebench.com', description: 'Real-world GitHub issue resolution benchmark.' },
+      { name: 'SWE-bench Pro (Scale AI SEAL)', url: 'https://scale.com/leaderboard/swe_bench_pro_public', description: '1,865 long-horizon tasks across 41 repos; harder successor to SWE-bench.' },
+      { name: 'BigCodeBench', url: 'https://github.com/bigcode-project/bigcodebench', description: 'Code generation benchmark with complex instructions.' },
+      { name: 'Artificial Analysis', url: 'https://artificialanalysis.ai', description: 'Independent speed and quality benchmarks; source for TTFT and output speed data.' },
+      { name: 'Scale AI SEAL', url: 'https://scale.com/leaderboard', description: 'Expert-driven evaluations and safety benchmarks.' },
+    ],
+  },
+  {
+    category: 'Speed & Latency',
+    frequency: 'Every 12 hours',
+    sources: [
+      { name: 'Artificial Analysis', url: 'https://artificialanalysis.ai', description: 'Primary source for TTFT (time to first token) and output speed measurements.' },
+      { name: 'Provider benchmarks', url: '', description: 'Official performance data published by OpenAI, Anthropic, Google, and others.' },
+    ],
+  },
+  {
+    category: 'Research & Trend Data',
+    frequency: 'Ongoing',
+    sources: [
+      { name: 'Epoch AI', url: 'https://epoch.ai/data', description: 'Largest public database of notable ML models (3,200+ from 1950–present). Training compute estimates, parameter counts, training costs. CC-BY licensed.' },
+      { name: 'Stanford HAI AI Index', url: 'https://hai.stanford.edu/ai-index', description: 'Annual comprehensive report tracking AI across technical, economic, and societal dimensions.' },
+      { name: 'Our World in Data — AI', url: 'https://ourworldindata.org/artificial-intelligence', description: 'Interactive visualisations of AI model counts, compute growth, and country-level trends.' },
+    ],
+  },
+  {
+    category: 'Safety & Frontier Evaluations',
+    frequency: 'As published',
+    sources: [
+      { name: 'METR', url: 'https://metr.org', description: 'Model Evaluation & Threat Research. Pre-deployment evaluator for frontier models; publishes RE-Bench.' },
+      { name: 'UK AI Security Institute (AISI)', url: 'https://www.aisi.gov.uk', description: 'Evaluated 30+ frontier models across cyber, biology, and autonomy domains.' },
+      { name: 'Apollo Research', url: 'https://www.apolloresearch.ai', description: 'AI safety evaluations focused on scheming and deception detection.' },
+    ],
+  },
+  {
+    category: 'Model Discovery & News',
+    frequency: 'Daily',
+    sources: [
+      { name: 'HuggingFace Model Hub', url: 'https://huggingface.co/models?sort=created', description: 'Model cards for open-weight models; parameter counts, licences, release dates.' },
+      { name: 'arXiv', url: 'https://arxiv.org', description: 'Research papers in cs.AI, cs.LG, and cs.CL.' },
+      { name: 'TechCrunch AI', url: 'https://techcrunch.com/category/artificial-intelligence/', description: 'Industry news and analysis.' },
+      { name: 'The Decoder', url: 'https://the-decoder.com', description: 'AI-specialist news publication.' },
+      { name: 'Import AI (Jack Clark)', url: 'https://importai.substack.com', description: 'Weekly AI newsletter covering research and industry.' },
+      { name: 'Provider blogs', url: '', description: 'Official engineering blogs from OpenAI, Anthropic, Google DeepMind, Meta AI Research, Mistral, and others.' },
+    ],
+  },
+];
+
+// ─── Academic Papers & Citations ────────────────────────────
+const papers = [
+  // Foundational
+  {
+    category: 'Foundational Research',
+    entries: [
+      { authors: 'Vaswani, A., Shazeer, N., Parmar, N., et al.', title: 'Attention Is All You Need', year: 2017, venue: 'NeurIPS 2017', url: 'https://arxiv.org/abs/1706.03762', note: 'The Transformer architecture paper.' },
+      { authors: 'Radford, A., Narasimhan, K., Salimans, T., Sutskever, I.', title: 'Improving Language Understanding by Generative Pre-Training', year: 2018, venue: 'OpenAI', url: 'https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf', note: 'GPT-1.' },
+      { authors: 'Radford, A., Wu, J., Child, R., et al.', title: 'Language Models are Unsupervised Multitask Learners', year: 2019, venue: 'OpenAI', url: 'https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf', note: 'GPT-2.' },
+      { authors: 'Brown, T., Mann, B., Ryder, N., et al.', title: 'Language Models are Few-Shot Learners', year: 2020, venue: 'NeurIPS 2020', url: 'https://arxiv.org/abs/2005.14165', note: 'GPT-3; introduced in-context learning.' },
+      { authors: 'Ouyang, L., Wu, J., Jiang, X., et al.', title: 'Training language models to follow instructions with human feedback', year: 2022, venue: 'NeurIPS 2022', url: 'https://arxiv.org/abs/2203.02155', note: 'InstructGPT / RLHF paper.' },
+    ],
+  },
+  // Benchmarks
+  {
+    category: 'Benchmark Methodologies',
+    entries: [
+      { authors: 'Hendrycks, D., Burns, C., Basart, S., et al.', title: 'Measuring Massive Multitask Language Understanding', year: 2021, venue: 'ICLR 2021', url: 'https://arxiv.org/abs/2009.03300', note: 'MMLU benchmark.' },
+      { authors: 'Rein, D., Hou, B.L., Stickland, A.C., et al.', title: 'GPQA: A Graduate-Level Google-Proof Q&A Benchmark', year: 2023, venue: 'arXiv', url: 'https://arxiv.org/abs/2311.12022', note: 'GPQA benchmark; expert-level questions.' },
+      { authors: 'Chen, M., Tworek, J., Jun, H., et al.', title: 'Evaluating Large Language Models Trained on Code', year: 2021, venue: 'arXiv', url: 'https://arxiv.org/abs/2107.03374', note: 'HumanEval benchmark for code generation.' },
+      { authors: 'Hendrycks, D., Burns, C., Kadavath, S., et al.', title: 'Measuring Mathematical Problem Solving With the MATH Dataset', year: 2021, venue: 'NeurIPS 2021', url: 'https://arxiv.org/abs/2103.03874', note: 'MATH benchmark.' },
+      { authors: 'Jimenez, C.E., Yang, J., Wettig, A., et al.', title: 'SWE-bench: Can Language Models Resolve Real-World GitHub Issues?', year: 2024, venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2310.06770', note: 'SWE-bench benchmark for software engineering.' },
+      { authors: 'Chollet, F.', title: 'On the Measure of Intelligence', year: 2019, venue: 'arXiv', url: 'https://arxiv.org/abs/1911.01547', note: 'ARC benchmark; abstract reasoning corpus.' },
+      { authors: 'Chiang, W.-L., Zheng, L., Sheng, Y., et al.', title: 'Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference', year: 2024, venue: 'ICML 2024', url: 'https://arxiv.org/abs/2403.04132', note: 'LMSYS Chatbot Arena methodology.' },
+      { authors: 'Zhuo, T.Y., Vu, M.C., Chim, J., et al.', title: 'BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions', year: 2024, venue: 'arXiv', url: 'https://arxiv.org/abs/2406.15877', note: 'BigCodeBench methodology.' },
+      { authors: 'White, C., Dooley, S., Roberts, M., et al.', title: 'LiveBench: A Challenging, Contamination-Free LLM Benchmark', year: 2024, venue: 'arXiv', url: 'https://arxiv.org/abs/2406.19314', note: 'LiveBench methodology.' },
+    ],
+  },
+  // Domain-specific benchmarks
+  {
+    category: 'Domain-Specific Benchmarks',
+    entries: [
+      { authors: 'Jin, D., Pan, E., Oufattole, N., et al.', title: 'What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams', year: 2021, venue: 'Applied Sciences', url: 'https://arxiv.org/abs/2009.13081', note: 'MedQA benchmark used in our Healthcare leaderboard.' },
+      { authors: 'Guha, N., Nyarko, J., Ho, D., et al.', title: 'LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models', year: 2024, venue: 'NeurIPS 2023 Datasets & Benchmarks Track', url: 'https://arxiv.org/abs/2308.11462', note: 'LegalBench benchmark used in our Legal leaderboard.' },
+      { authors: 'Chen, Z., Chen, W., Smiley, C., et al.', title: 'FinQA: A Dataset of Numerical Reasoning over Financial Data', year: 2021, venue: 'EMNLP 2021', url: 'https://arxiv.org/abs/2109.00122', note: 'FinQA benchmark used in our Finance leaderboard.' },
+      { authors: 'Islam, A., Keung, P., Gupta, D., et al.', title: 'FinanceBench: A New Benchmark for Financial Question Answering', year: 2023, venue: 'arXiv', url: 'https://arxiv.org/abs/2311.11944', note: 'FinanceBench used in our Finance leaderboard.' },
+      { authors: 'Zhou, J., Lu, T., Mishra, S., et al.', title: 'WebArena: A Realistic Web Environment for Building Autonomous Agents', year: 2024, venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2307.13854', note: 'WebArena benchmark used in our AI Agents leaderboard.' },
+      { authors: 'Mialon, G., Dessì, R., Lomeli, M., et al.', title: 'GAIA: A Benchmark for General AI Assistants', year: 2024, venue: 'ICLR 2024', url: 'https://arxiv.org/abs/2311.12983', note: 'GAIA benchmark used in our AI Agents leaderboard.' },
+    ],
+  },
+  // Model technical reports
+  {
+    category: 'Model Technical Reports',
+    entries: [
+      { authors: 'OpenAI', title: 'GPT-4 Technical Report', year: 2023, venue: 'arXiv', url: 'https://arxiv.org/abs/2303.08774', note: 'Foundation for GPT-4o and successors.' },
+      { authors: 'Anthropic', title: 'The Claude 3 Model Family: A New Standard for Intelligence', year: 2024, venue: 'Anthropic', url: 'https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3_Addendum.pdf', note: 'Claude 3 model card and capabilities.' },
+      { authors: 'Google DeepMind', title: 'Gemini: A Family of Highly Capable Multimodal Models', year: 2024, venue: 'arXiv', url: 'https://arxiv.org/abs/2312.11805', note: 'Gemini model family.' },
+      { authors: 'Meta AI', title: 'The Llama 3 Herd of Models', year: 2024, venue: 'arXiv', url: 'https://arxiv.org/abs/2407.21783', note: 'Llama 3 technical report.' },
+      { authors: 'DeepSeek AI', title: 'DeepSeek-V3 Technical Report', year: 2024, venue: 'arXiv', url: 'https://arxiv.org/abs/2412.19437', note: 'DeepSeek V3 MoE architecture.' },
+      { authors: 'DeepSeek AI', title: 'DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning', year: 2025, venue: 'arXiv', url: 'https://arxiv.org/abs/2501.12948', note: 'DeepSeek R1 reasoning model.' },
+      { authors: 'Mistral AI', title: 'Mixtral of Experts', year: 2024, venue: 'arXiv', url: 'https://arxiv.org/abs/2401.04088', note: 'Mixture-of-Experts architecture.' },
+    ],
+  },
+  // Safety & alignment
+  {
+    category: 'Safety & Alignment',
+    entries: [
+      { authors: 'Bai, Y., Jones, A., Ndousse, K., et al.', title: 'Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback', year: 2022, venue: 'arXiv', url: 'https://arxiv.org/abs/2204.05862', note: 'Anthropic RLHF methodology.' },
+      { authors: 'Christiano, P., Leike, J., Brown, T., et al.', title: 'Deep reinforcement learning from human preferences', year: 2017, venue: 'NeurIPS 2017', url: 'https://arxiv.org/abs/1706.03741', note: 'Foundational RLHF paper.' },
+      { authors: 'UK AI Security Institute', title: 'Frontier AI Trends Report', year: 2025, venue: 'AISI', url: 'https://www.aisi.gov.uk/frontier-ai-trends-report', note: 'Evaluations of 30+ frontier models.' },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="References & Sources — The AI Resource Hub"
+  description="Complete list of data sources, academic papers, benchmark methodologies, and citations used by The AI Resource Hub. Full transparency on where our data comes from."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">References</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        References & Sources
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Every data point on this site has a source. This page lists all external data sources, academic papers, and benchmark methodologies we reference. See our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">methodology page</a> for how we score and rank models.
+      </p>
+    </div>
+
+    <!-- Quick nav -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="#data-sources" class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Data Sources</a>
+      <a href="#papers" class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Academic Papers</a>
+      <a href="#compliance" class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Compliance & TOS</a>
+    </div>
+
+    <!-- Data Sources -->
+    <div id="data-sources" class="mb-12">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Data Sources</h2>
+      <p class="text-sm text-(--color-text-muted) mb-6">
+        We scrape and validate data every 12 hours via automated GitHub Actions. All scraping respects robots.txt, uses identified User-Agent strings, and accesses only public API endpoints or documentation pages.
+      </p>
+
+      <div class="space-y-6">
+        {dataSources.map((group) => (
+          <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+            <div class="px-4 py-3 border-b border-(--color-border) flex items-center justify-between">
+              <h3 class="font-semibold text-(--color-text-primary)">{group.category}</h3>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">{group.frequency}</span>
+            </div>
+            <div class="divide-y divide-(--color-border)/50">
+              {group.sources.map((source) => (
+                <div class="px-4 py-3">
+                  <div class="flex items-start gap-2">
+                    {source.url ? (
+                      <a href={source.url} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-hover) transition-colors shrink-0">
+                        {source.name}
+                      </a>
+                    ) : (
+                      <span class="text-sm font-medium text-(--color-text-primary) shrink-0">{source.name}</span>
+                    )}
+                  </div>
+                  <p class="text-xs text-(--color-text-muted) mt-0.5">{source.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Academic Papers -->
+    <div id="papers" class="mb-12">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Academic Papers & Citations</h2>
+      <p class="text-sm text-(--color-text-muted) mb-6">
+        Research papers referenced in our benchmark scores, blog posts, guides, and model evaluations. Sorted by category and year.
+      </p>
+
+      <div class="space-y-8">
+        {papers.map((group) => (
+          <div>
+            <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">{group.category}</h3>
+            <div class="space-y-3">
+              {group.entries.map((paper) => (
+                <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+                  <a href={paper.url} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                    {paper.title}
+                  </a>
+                  <p class="text-xs text-(--color-text-secondary) mt-1">
+                    {paper.authors} ({paper.year}). <em>{paper.venue}</em>.
+                  </p>
+                  {paper.note && (
+                    <p class="text-xs text-(--color-text-muted) mt-1">{paper.note}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Compliance & TOS -->
+    <div id="compliance" class="mb-12">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Compliance & Terms of Service</h2>
+
+      <div class="space-y-4">
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) text-sm mb-2">API Usage</h3>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5 list-disc list-inside">
+            <li><strong>OpenRouter API</strong> — public endpoint, no authentication required. We use their <code>/api/v1/models</code> endpoint which is explicitly designed for programmatic access.</li>
+            <li><strong>OpenAI API</strong> — we optionally use the models list endpoint to verify model availability. Requires an API key when configured.</li>
+            <li><strong>HuggingFace Spaces</strong> — we access public Gradio API endpoints for Chatbot Arena and Open LLM Leaderboard data.</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) text-sm mb-2">Web Scraping Practices</h3>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5 list-disc list-inside">
+            <li>All scrapers use an identified User-Agent: <code>The-AI-Resource-Hub-Bot/1.0</code></li>
+            <li>We respect <code>robots.txt</code> directives on all sites</li>
+            <li>Scraping frequency is limited to every 12 hours — well below any rate limits</li>
+            <li>We only access publicly available pages and API endpoints</li>
+            <li>We do not circumvent paywalls, authentication, or access controls</li>
+            <li>Pricing data is factual information used for comparison purposes</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) text-sm mb-2">Data Licensing</h3>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5 list-disc list-inside">
+            <li><strong>Epoch AI</strong> — data used under CC-BY 4.0 licence. Attribution: <a href="https://epoch.ai/data" target="_blank" rel="noopener noreferrer" class="text-(--color-accent)">epoch.ai/data</a></li>
+            <li><strong>Academic papers</strong> — cited under fair use for commentary, comparison, and educational purposes</li>
+            <li><strong>Benchmark scores</strong> — factual data reported from official sources with full attribution</li>
+            <li><strong>Provider logos/names</strong> — used nominatively for identification and comparison</li>
+          </ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) text-sm mb-2">Corrections & Takedowns</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            If you represent a data source listed here and have concerns about how we use your data, please contact us via <a href="https://github.com/koltregaskes/ai-resource-hub/issues" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub Issues</a>. We take accuracy and compliance seriously and will respond within 48 hours.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methodology link -->
+    <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">How We Use This Data</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        For details on our scoring formula, quality metrics, and update frequency, see our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover) font-medium">Methodology page</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

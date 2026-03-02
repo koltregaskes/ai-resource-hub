@@ -262,9 +262,13 @@ const benchmarks = getBenchmarks();
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Update Frequency</h2>
       <div class="grid sm:grid-cols-2 gap-3">
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-          <h3 class="font-semibold text-(--color-text-primary) text-sm">Daily (Automated)</h3>
+          <h3 class="font-semibold text-(--color-text-primary) text-sm">Every 12 Hours (Automated)</h3>
           <ul class="text-xs text-(--color-text-secondary) mt-2 space-y-1 list-disc list-inside">
-            <li>API pricing from OpenRouter</li>
+            <li>API pricing from OpenRouter + provider pages</li>
+            <li>Speed & TTFT data from Artificial Analysis</li>
+            <li>Benchmark score validation</li>
+            <li>Cross-validation: provider vs OpenRouter pricing</li>
+            <li>Data staleness report</li>
             <li>News digest import</li>
             <li>Site rebuild and deployment</li>
           </ul>
@@ -298,6 +302,9 @@ const benchmarks = getBenchmarks();
       <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Found an Error?</h2>
       <p class="text-sm text-(--color-text-secondary)">
         If you spot incorrect data, outdated pricing, or missing models, please open an issue on our <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub repository</a>. We take accuracy seriously and will update within 24 hours of verified corrections.
+      </p>
+      <p class="text-sm text-(--color-text-secondary) mt-2">
+        For a complete list of all data sources, academic citations, and compliance details, see our <a href={`${base}references/`} class="text-(--color-accent) hover:text-(--color-accent-hover) font-medium">References & Sources</a> page.
       </p>
     </div>
   </section>

@@ -194,6 +194,7 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'open-source', title: 'Open Source AI Models', description: 'Directory of open-source and open-weight AI models ranked by quality' },
     { id: 'coding', title: 'Best AI Models for Coding', description: 'Ranked leaderboard of the best AI models for coding and software development' },
     { id: 'stats', title: 'AI Industry Statistics', description: 'Comprehensive statistics on the AI model landscape — pricing, model counts, and more' },
+    { id: 'references', title: 'References & Sources', description: 'Complete list of data sources, academic papers, benchmark methodologies, and citations' },
     { id: 'about', title: 'About', description: 'About The AI Resource Hub — independent AI model comparison and pricing data' },
     { id: 'changelog', title: 'Changelog', description: 'What\'s new — changelog of features, data updates, and improvements' },
     { id: 'pricing-trends', title: 'AI Pricing Trends', description: 'Track AI model pricing trends — how costs have dropped and where pricing is heading' },

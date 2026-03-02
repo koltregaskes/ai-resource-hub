@@ -171,6 +171,69 @@ async function main() {
     }
   }
 
+  // ─── Cross-validation: compare provider-direct prices against last OpenRouter scrape ───
+  console.log('\n▶ Cross-validating prices...');
+  const orLog = db.prepare(`
+    SELECT models_updated, finished_at FROM scrape_log
+    WHERE scraper = 'pricing:openrouter' AND status = 'success'
+    ORDER BY finished_at DESC LIMIT 1
+  `).get() as { models_updated: number; finished_at: string } | undefined;
+
+  if (orLog && orLog.models_updated > 0) {
+    // Get the most recent price history entries from each source
+    const providerPrices = db.prepare(`
+      SELECT ph.model_id, m.name, ph.input_price, ph.output_price, ph.source, ph.recorded_at
+      FROM price_history ph
+      JOIN models m ON ph.model_id = m.id
+      WHERE ph.source != 'openrouter.ai/api/v1/models'
+      AND ph.recorded_at > datetime('now', '-24 hours')
+      ORDER BY ph.recorded_at DESC
+    `).all() as Array<{ model_id: string; name: string; input_price: number; output_price: number; source: string; recorded_at: string }>;
+
+    const orPrices = db.prepare(`
+      SELECT ph.model_id, ph.input_price, ph.output_price
+      FROM price_history ph
+      WHERE ph.source = 'openrouter.ai/api/v1/models'
+      AND ph.recorded_at > datetime('now', '-24 hours')
+      ORDER BY ph.recorded_at DESC
+    `).all() as Array<{ model_id: string; input_price: number; output_price: number }>;
+
+    const orPriceMap = new Map<string, { input_price: number; output_price: number }>();
+    for (const p of orPrices) {
+      if (!orPriceMap.has(p.model_id)) orPriceMap.set(p.model_id, p);
+    }
+
+    let discrepancies = 0;
+    const seen = new Set<string>();
+    for (const p of providerPrices) {
+      if (seen.has(p.model_id)) continue;
+      seen.add(p.model_id);
+
+      const orPrice = orPriceMap.get(p.model_id);
+      if (!orPrice) continue;
+
+      // Check for >10% discrepancy in blended price
+      const providerBlended = (p.input_price + 3 * p.output_price) / 4;
+      const orBlended = (orPrice.input_price + 3 * orPrice.output_price) / 4;
+
+      if (providerBlended > 0 && orBlended > 0) {
+        const pctDiff = Math.abs(providerBlended - orBlended) / providerBlended * 100;
+        if (pctDiff > 10) {
+          console.log(`  ⚠ ${p.name}: provider=$${providerBlended.toFixed(2)} vs OR=$${orBlended.toFixed(2)} (${pctDiff.toFixed(1)}% diff)`);
+          discrepancies++;
+        }
+      }
+    }
+
+    if (discrepancies === 0) {
+      console.log('  ✓ No significant price discrepancies detected');
+    } else {
+      console.log(`  ⚠ ${discrepancies} price discrepancies found (>10% difference)`);
+    }
+  } else {
+    console.log('  Skipped — no recent OpenRouter data to compare against');
+  }
+
   console.log(`\nPricing scraper complete. ${totalUpdated} total models updated.`);
   db.close();
 }
