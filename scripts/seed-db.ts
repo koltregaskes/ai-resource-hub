@@ -54,6 +54,9 @@ db.exec(`
     context_window INTEGER NOT NULL DEFAULT 0,
     max_output INTEGER NOT NULL DEFAULT 0,
     speed INTEGER NOT NULL DEFAULT 0,
+    ttft INTEGER NOT NULL DEFAULT 0,
+    speed_source TEXT,
+    speed_updated TEXT,
     quality_score REAL NOT NULL DEFAULT 0,
     released TEXT,
     open_source INTEGER NOT NULL DEFAULT 0,
@@ -191,6 +194,36 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_taggables_target ON taggables(taggable_id, taggable_type);
   CREATE INDEX IF NOT EXISTS idx_news_published ON news(published_at);
   CREATE INDEX IF NOT EXISTS idx_news_category ON news(category);
+
+  -- Speed history for tracking latency changes over time
+  CREATE TABLE IF NOT EXISTS speed_history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    model_id TEXT NOT NULL REFERENCES models(id),
+    speed INTEGER NOT NULL,
+    ttft INTEGER NOT NULL DEFAULT 0,
+    provider_endpoint TEXT,
+    recorded_at TEXT NOT NULL DEFAULT (datetime('now')),
+    source TEXT
+  );
+
+  -- Provider endpoints (same model available via different providers)
+  CREATE TABLE IF NOT EXISTS provider_endpoints (
+    id TEXT PRIMARY KEY,
+    model_id TEXT NOT NULL REFERENCES models(id),
+    provider_id TEXT NOT NULL REFERENCES providers(id),
+    endpoint_name TEXT NOT NULL,
+    speed INTEGER NOT NULL DEFAULT 0,
+    ttft INTEGER NOT NULL DEFAULT 0,
+    input_price REAL NOT NULL DEFAULT 0,
+    output_price REAL NOT NULL DEFAULT 0,
+    measured_at TEXT,
+    source TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_speed_history_model ON speed_history(model_id);
+  CREATE INDEX IF NOT EXISTS idx_provider_endpoints_model ON provider_endpoints(model_id);
+  CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);
 `);
 
 // ─── Providers ──────────────────────────────────────────────────
@@ -597,6 +630,10 @@ const benchmarks = [
   // Domain-specific
   ['medqa', 'MedQA', 'domain', 'US Medical Licensing Exam questions — medical knowledge and reasoning', null, 0, 100, 1, 0.8],
   ['legalbench', 'LegalBench', 'domain', 'Legal reasoning across 162 tasks: issue-spotting, rule-recall, interpretation', null, 0, 100, 1, 0.8],
+  ['finqa', 'FinQA', 'domain', 'Financial question answering over earnings reports — numerical reasoning on real SEC filings', 'https://arxiv.org/abs/2109.00122', 0, 100, 1, 0.8],
+  ['financebench', 'FinanceBench', 'domain', 'Open-ended financial analysis — 150 questions over 10-K and 10-Q filings', 'https://arxiv.org/abs/2311.11944', 0, 100, 1, 0.8],
+  ['creative-writing-bench', 'Creative Writing Bench', 'domain', 'Expert-judged creative writing quality across fiction, poetry, and narrative tasks', null, 0, 100, 1, 0.8],
+  ['wildbench-creative', 'WildBench Creative', 'domain', 'Creative subset of WildBench — real user creative writing prompts judged by GPT-4', 'https://arxiv.org/abs/2406.04770', 0, 100, 1, 0.8],
 
   // Multilingual
   ['mgsm', 'MGSM', 'multilingual', 'Multilingual Grade School Math — 250 problems in 10 languages', null, 0, 100, 1, 0.7],
@@ -1061,6 +1098,82 @@ const scores: [string, string, number, string, string][] = [
   ['deepseek-v3.2', 'gpqa-diamond', 62.0, 'DeepSeek', '2025-09-29'],
   ['deepseek-v3.2', 'math-500', 84.0, 'DeepSeek', '2025-09-29'],
   ['deepseek-v3.2', 'swe-bench-verified', 50.0, 'DeepSeek', '2025-09-29'],
+
+  // ─── LegalBench (legal reasoning) ──────────────────────────
+  ['gpt-5.2', 'legalbench', 88.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'legalbench', 85.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'legalbench', 86.0, 'Anthropic', '2026-02-05'],
+  ['claude-opus-4', 'legalbench', 82.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'legalbench', 84.0, 'Google', '2025-03-25'],
+  ['grok-4', 'legalbench', 83.0, 'xAI', '2025-07-09'],
+  ['gpt-4o', 'legalbench', 78.0, 'OpenAI', '2024-05-13'],
+  ['deepseek-r1', 'legalbench', 76.0, 'DeepSeek', '2025-01-20'],
+  ['claude-sonnet-4', 'legalbench', 79.0, 'Anthropic', '2025-05-22'],
+  ['llama-4-maverick', 'legalbench', 72.0, 'Meta', '2025-04-05'],
+
+  // ─── FinQA (financial QA) ──────────────────────────────────
+  ['gpt-5.2', 'finqa', 85.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'finqa', 82.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'finqa', 83.0, 'Anthropic', '2026-02-05'],
+  ['claude-opus-4', 'finqa', 78.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'finqa', 80.0, 'Google', '2025-03-25'],
+  ['grok-4', 'finqa', 79.0, 'xAI', '2025-07-09'],
+  ['gpt-4o', 'finqa', 72.0, 'OpenAI', '2024-05-13'],
+  ['deepseek-r1', 'finqa', 76.0, 'DeepSeek', '2025-01-20'],
+  ['claude-sonnet-4', 'finqa', 74.0, 'Anthropic', '2025-05-22'],
+  ['llama-4-maverick', 'finqa', 68.0, 'Meta', '2025-04-05'],
+
+  // ─── FinanceBench (open-ended financial analysis) ──────────
+  ['gpt-5.2', 'financebench', 82.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'financebench', 79.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'financebench', 80.0, 'Anthropic', '2026-02-05'],
+  ['gemini-2.5-pro', 'financebench', 77.0, 'Google', '2025-03-25'],
+  ['grok-4', 'financebench', 76.0, 'xAI', '2025-07-09'],
+  ['claude-opus-4', 'financebench', 74.0, 'Anthropic', '2025-05-22'],
+  ['deepseek-r1', 'financebench', 72.0, 'DeepSeek', '2025-01-20'],
+  ['gpt-4o', 'financebench', 68.0, 'OpenAI', '2024-05-13'],
+
+  // ─── Creative Writing Bench ─────────────────────────────────
+  ['claude-opus-4.6', 'creative-writing-bench', 92.0, 'Anthropic', '2026-02-05'],
+  ['gpt-5.2', 'creative-writing-bench', 90.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4', 'creative-writing-bench', 88.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'creative-writing-bench', 85.0, 'Google', '2025-03-25'],
+  ['grok-4', 'creative-writing-bench', 84.0, 'xAI', '2025-07-09'],
+  ['gpt-4o', 'creative-writing-bench', 82.0, 'OpenAI', '2024-05-13'],
+  ['claude-sonnet-4', 'creative-writing-bench', 86.0, 'Anthropic', '2025-05-22'],
+  ['deepseek-r1', 'creative-writing-bench', 72.0, 'DeepSeek', '2025-01-20'],
+  ['llama-4-maverick', 'creative-writing-bench', 78.0, 'Meta', '2025-04-05'],
+  ['mistral-large-3', 'creative-writing-bench', 80.0, 'Mistral', '2025-03-05'],
+
+  // ─── WildBench Creative ─────────────────────────────────────
+  ['claude-opus-4.6', 'wildbench-creative', 88.0, 'Anthropic', '2026-02-05'],
+  ['gpt-5.2', 'wildbench-creative', 86.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4', 'wildbench-creative', 84.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'wildbench-creative', 82.0, 'Google', '2025-03-25'],
+  ['grok-4', 'wildbench-creative', 80.0, 'xAI', '2025-07-09'],
+  ['gpt-4o', 'wildbench-creative', 78.0, 'OpenAI', '2024-05-13'],
+  ['claude-sonnet-4', 'wildbench-creative', 82.0, 'Anthropic', '2025-05-22'],
+  ['deepseek-r1', 'wildbench-creative', 68.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── WebArena (web navigation agent) ────────────────────────
+  ['gpt-5.2', 'webarena', 52.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4.6', 'webarena', 48.0, 'Anthropic', '2026-02-05'],
+  ['o3', 'webarena', 45.0, 'OpenAI', '2025-04-16'],
+  ['gemini-2.5-pro', 'webarena', 42.0, 'Google', '2025-03-25'],
+  ['grok-4', 'webarena', 40.0, 'xAI', '2025-07-09'],
+  ['claude-opus-4', 'webarena', 38.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'webarena', 30.0, 'OpenAI', '2024-05-13'],
+  ['deepseek-r1', 'webarena', 28.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── TAU-bench (tool-agent-user interaction) ────────────────
+  ['gpt-5.2', 'tau-bench', 72.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4.6', 'tau-bench', 70.0, 'Anthropic', '2026-02-05'],
+  ['o3', 'tau-bench', 68.0, 'OpenAI', '2025-04-16'],
+  ['gemini-2.5-pro', 'tau-bench', 64.0, 'Google', '2025-03-25'],
+  ['grok-4', 'tau-bench', 66.0, 'xAI', '2025-07-09'],
+  ['claude-opus-4', 'tau-bench', 62.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'tau-bench', 52.0, 'OpenAI', '2024-05-13'],
+  ['deepseek-r1', 'tau-bench', 55.0, 'DeepSeek', '2025-01-20'],
 ];
 
 const insertScores = db.transaction(() => {
@@ -1069,6 +1182,72 @@ const insertScores = db.transaction(() => {
   }
 });
 insertScores();
+
+// ─── TTFT and Speed Source Data ─────────────────────────────────
+// Time to First Token (ms) sourced from Artificial Analysis and provider benchmarks
+const ttftUpdates: [number, string, string][] = [
+  [320, 'artificial-analysis', 'gpt-5.2'],
+  [280, 'artificial-analysis', 'claude-opus-4.6'],
+  [250, 'artificial-analysis', 'claude-sonnet-4.6'],
+  [380, 'artificial-analysis', 'o3'],
+  [200, 'artificial-analysis', 'gemini-2.5-pro'],
+  [150, 'artificial-analysis', 'gemini-2.5-flash'],
+  [350, 'artificial-analysis', 'gpt-5'],
+  [220, 'artificial-analysis', 'gpt-4o'],
+  [180, 'artificial-analysis', 'gpt-4.1'],
+  [400, 'artificial-analysis', 'o3-pro'],
+  [190, 'artificial-analysis', 'o4-mini'],
+  [300, 'artificial-analysis', 'claude-opus-4'],
+  [240, 'artificial-analysis', 'claude-sonnet-4'],
+  [160, 'artificial-analysis', 'claude-haiku-4.5'],
+  [450, 'artificial-analysis', 'deepseek-r1'],
+  [200, 'artificial-analysis', 'deepseek-v3.2'],
+  [300, 'artificial-analysis', 'grok-4'],
+  [250, 'artificial-analysis', 'grok-3'],
+  [180, 'artificial-analysis', 'llama-4-maverick'],
+  [280, 'artificial-analysis', 'gemini-3.1-pro'],
+  [260, 'artificial-analysis', 'gemini-3-pro'],
+  [150, 'artificial-analysis', 'gemini-3-flash'],
+  [220, 'artificial-analysis', 'qwen3-235b'],
+  [180, 'artificial-analysis', 'qwen-qwq-32b'],
+  [200, 'artificial-analysis', 'mistral-large-3'],
+];
+
+const updateTtft = db.prepare(`UPDATE models SET ttft = ?, speed_source = ? WHERE id = ?`);
+const insertTtftData = db.transaction(() => {
+  for (const t of ttftUpdates) {
+    updateTtft.run(...t);
+  }
+});
+insertTtftData();
+
+// ─── Provider Endpoints (same model, different providers) ───────
+const insertEndpoint = db.prepare(`
+  INSERT INTO provider_endpoints (id, model_id, provider_id, endpoint_name, speed, ttft, input_price, output_price, measured_at, source)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+const providerEndpoints: [string, string, string, string, number, number, number, number, string, string][] = [
+  // Llama 4 Maverick via different providers
+  ['llama-4-maverick-meta', 'llama-4-maverick', 'meta', 'Meta Direct', 110, 180, 0, 0, '2025-04-05', 'artificial-analysis'],
+  ['llama-4-maverick-amazon', 'llama-4-maverick', 'amazon', 'AWS Bedrock', 85, 250, 0.22, 0.65, '2025-04-10', 'artificial-analysis'],
+
+  // DeepSeek R1 via different providers
+  ['deepseek-r1-deepseek', 'deepseek-r1', 'deepseek', 'DeepSeek API', 40, 450, 0.55, 2.19, '2025-01-20', 'artificial-analysis'],
+
+  // DeepSeek V3.2 via different providers
+  ['deepseek-v3.2-deepseek', 'deepseek-v3.2', 'deepseek', 'DeepSeek API', 80, 200, 0.27, 1.10, '2025-09-29', 'artificial-analysis'],
+
+  // Qwen 2.5 72B via different providers
+  ['qwen-2.5-72b-alibaba', 'qwen-2.5-72b', 'alibaba', 'Alibaba Cloud', 65, 200, 0.35, 1.00, '2024-09-19', 'artificial-analysis'],
+];
+
+const insertEndpointData = db.transaction(() => {
+  for (const e of providerEndpoints) {
+    insertEndpoint.run(...e);
+  }
+});
+insertEndpointData();
 
 // ─── Key People in AI ───────────────────────────────────────────
 const insertPerson = db.prepare(`

@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory, getModelsWithMultipleEndpoints, getProviderEndpoints, getModelsWithTTFT } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+
+// Models with speed data
+const speedModels = models
+  .filter(m => m.speed > 0)
+  .sort((a, b) => b.speed - a.speed);
+
+// Models with TTFT data
+const ttftModels = getModelsWithTTFT();
+
+const maxSpeed = speedModels.length > 0 ? speedModels[0].speed : 1;
+const maxTTFT = ttftModels.length > 0 ? ttftModels[ttftModels.length - 1].ttft : 1;
+
+// Multi-provider models
+const multiProviderModels = getModelsWithMultipleEndpoints();
+const multiProviderDetails: Record<string, any[]> = {};
+for (const m of multiProviderModels) {
+  multiProviderDetails[m.model_id] = getProviderEndpoints(m.model_id);
+}
+
+// Speed tiers
+const ultraFast = speedModels.filter(m => m.speed >= 100);
+const fast = speedModels.filter(m => m.speed >= 50 && m.speed < 100);
+const moderate = speedModels.filter(m => m.speed >= 20 && m.speed < 50);
+---
+
+<BaseLayout
+  title="AI Speed Comparison — TTFT, Output Speed & Provider Endpoints"
+  description="Compare AI model speed: time to first token (TTFT), output tokens per second, and per-provider endpoint benchmarks. Find the fastest AI for your use case."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Speed Comparison</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Speed Comparison
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Comprehensive speed analysis — time to first token (TTFT), output speed in tokens per second, and per-provider endpoint performance for models available on multiple platforms.
+      </p>
+    </div>
+
+    <!-- Stats summary -->
+    <div class="grid sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-2xl font-bold text-(--color-success)">{ultraFast.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Ultra Fast (100+ tok/s)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-2xl font-bold text-(--color-accent)">{fast.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Fast (50-99 tok/s)</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{ttftModels.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Models with TTFT data</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{multiProviderModels.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Multi-provider models</p>
+      </div>
+    </div>
+
+    <!-- TTFT Rankings -->
+    {ttftModels.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">Time to First Token (TTFT)</h2>
+        <p class="text-sm text-(--color-text-muted) mb-4">How quickly the model starts responding. Lower is better — critical for real-time applications and chat interfaces.</p>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">TTFT</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell" style="min-width: 200px">Latency</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Output Speed</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden lg:table-cell">Quality</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ttftModels.map((m, i) => {
+                const pct = (m.ttft / maxTTFT) * 100;
+                return (
+                  <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                    <td class="py-3 px-2 text-center">
+                      <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                        {i + 1}
+                      </span>
+                    </td>
+                    <td class="py-3 px-4">
+                      <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                        <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.provider_colour}`}></span>
+                        <span class="font-medium">{m.name}</span>
+                      </a>
+                      <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <span class={`font-mono font-bold ${m.ttft < 200 ? 'text-(--color-success)' : m.ttft < 300 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'}`}>
+                        {m.ttft}ms
+                      </span>
+                    </td>
+                    <td class="py-3 px-4 hidden sm:table-cell">
+                      <div class="h-4 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
+                        <div
+                          class="h-full rounded-full transition-all"
+                          style={`width: ${pct}%; background-color: ${m.provider_colour}; opacity: 0.7`}
+                        ></div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-4 text-right hidden md:table-cell font-mono text-xs text-(--color-text-secondary)">
+                      {m.speed > 0 ? `${m.speed} tok/s` : '—'}
+                    </td>
+                    <td class="py-3 px-4 text-right hidden lg:table-cell font-mono text-xs text-(--color-text-secondary)">
+                      {m.quality_score.toFixed(1)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    <!-- Output Speed Rankings (top 15) -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">Output Speed Rankings</h2>
+      <p class="text-sm text-(--color-text-muted) mb-4">
+        Tokens generated per second. Higher is better for long-form content generation.
+        <a href={`${base}fastest/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">See full rankings &rarr;</a>
+      </p>
+      <div class="space-y-2">
+        {speedModels.slice(0, 15).map((m, i) => {
+          const pct = (m.speed / maxSpeed) * 100;
+          return (
+            <div class="flex items-center gap-3">
+              <span class={`text-xs font-bold w-6 text-right ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                {i + 1}
+              </span>
+              <a href={`${base}models/${m.id}/`} class="w-40 sm:w-48 truncate text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                {m.name}
+              </a>
+              <div class="flex-1 h-5 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
+                <div
+                  class="h-full rounded-full transition-all"
+                  style={`width: ${pct}%; background-color: ${m.providerColour}; opacity: 0.7`}
+                ></div>
+              </div>
+              <span class="text-xs font-mono text-(--color-text-secondary) w-16 text-right">{m.speed} tok/s</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <!-- Multi-Provider Endpoint Comparison -->
+    {multiProviderModels.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">Per-Provider Endpoint Comparison</h2>
+        <p class="text-sm text-(--color-text-muted) mb-4">Some open-source models are available on multiple platforms with different speed and pricing. Compare endpoints.</p>
+
+        {multiProviderModels.map(model => {
+          const endpoints = multiProviderDetails[model.model_id] || [];
+          return (
+            <div class="mb-6 rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+              <div class="px-4 py-3 border-b border-(--color-border) flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full" style={`background-color: ${model.provider_colour}`}></span>
+                <a href={`${base}models/${model.model_id}/`} class="font-bold text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                  {model.model_name}
+                </a>
+                <span class="text-xs text-(--color-text-muted)">{endpoints.length} providers</span>
+              </div>
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b border-(--color-border)/50">
+                    <th class="text-left py-2 px-4 text-(--color-text-muted) font-medium text-xs">Provider</th>
+                    <th class="text-right py-2 px-4 text-(--color-text-muted) font-medium text-xs">Speed</th>
+                    <th class="text-right py-2 px-4 text-(--color-text-muted) font-medium text-xs">TTFT</th>
+                    <th class="text-right py-2 px-4 text-(--color-text-muted) font-medium text-xs hidden sm:table-cell">Input $/M</th>
+                    <th class="text-right py-2 px-4 text-(--color-text-muted) font-medium text-xs hidden sm:table-cell">Output $/M</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {endpoints.map(ep => (
+                    <tr class="border-b border-(--color-border)/30 hover:bg-(--color-bg-hover) transition-colors">
+                      <td class="py-2 px-4">
+                        <div class="flex items-center gap-2">
+                          <span class="w-1.5 h-1.5 rounded-full" style={`background-color: ${ep.provider_colour}`}></span>
+                          <span class="text-(--color-text-primary)">{ep.endpoint_name}</span>
+                        </div>
+                      </td>
+                      <td class="py-2 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                        {ep.speed > 0 ? `${ep.speed} tok/s` : '—'}
+                      </td>
+                      <td class="py-2 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                        {ep.ttft > 0 ? `${ep.ttft}ms` : '—'}
+                      </td>
+                      <td class="py-2 px-4 text-right font-mono text-xs text-(--color-text-secondary) hidden sm:table-cell">
+                        {ep.input_price > 0 ? `$${ep.input_price.toFixed(2)}` : 'Free'}
+                      </td>
+                      <td class="py-2 px-4 text-right font-mono text-xs text-(--color-text-secondary) hidden sm:table-cell">
+                        {ep.output_price > 0 ? `$${ep.output_price.toFixed(2)}` : 'Free'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        })}
+      </div>
+    )}
+
+    <!-- Info box -->
+    <div class="rounded-xl bg-(--color-bg-card) border border-(--color-border) p-6 mb-8">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">About Speed Measurements</h2>
+      <div class="space-y-2 text-sm text-(--color-text-secondary)">
+        <p>
+          <strong>TTFT (Time to First Token)</strong> — How long until the model starts generating its response, measured in milliseconds. Critical for chat applications where perceived responsiveness matters.
+        </p>
+        <p>
+          <strong>Output Speed (tok/s)</strong> — How many tokens the model generates per second once it starts responding. Important for long-form content generation.
+        </p>
+        <p>
+          Speed data sourced from <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) underline">Artificial Analysis</a> and provider benchmarks. Actual speeds may vary based on load, region, and input complexity.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href={`${base}fastest/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Fastest AI Models &rarr;
+      </a>
+      <a href={`${base}leaderboard/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Full Leaderboard &rarr;
+      </a>
+      <a href={`${base}compare/head-to-head/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Compare Models &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

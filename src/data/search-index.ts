@@ -204,6 +204,12 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'context-window', title: 'Context Window Comparison', description: 'Compare AI model context window sizes from 4K to 4M+ tokens' },
     { id: 'reasoning', title: 'AI Reasoning Models', description: 'Compare reasoning models ranked by math, logic, and reasoning benchmarks' },
     { id: 'new', title: 'New AI Models', description: 'Recently released AI models across all categories — track the latest launches' },
+    { id: 'healthcare', title: 'Healthcare AI Models', description: 'AI models ranked by medical benchmark performance — MedQA scores for clinical reasoning' },
+    { id: 'legal', title: 'Legal AI Models', description: 'AI models ranked by legal reasoning — LegalBench scores for issue-spotting and interpretation' },
+    { id: 'finance', title: 'Finance AI Models', description: 'AI models ranked by financial analysis — FinQA and FinanceBench scores' },
+    { id: 'creative-writing', title: 'Creative Writing AI Models', description: 'AI models ranked by creative writing quality — fiction, poetry, and narrative evaluation' },
+    { id: 'agents', title: 'AI Agent Models', description: 'AI models ranked by agent performance — GAIA, WebArena, and TAU-bench for browser and tool use' },
+    { id: 'speed', title: 'AI Speed Comparison', description: 'Compare AI model speed — TTFT, output tokens per second, and provider endpoint benchmarks' },
   ];
 
   // Custom URL pages

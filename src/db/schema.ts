@@ -181,6 +181,32 @@ function initSchema(db: Database.Database): void {
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
+    -- Speed history for tracking latency changes over time
+    CREATE TABLE IF NOT EXISTS speed_history (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      model_id TEXT NOT NULL REFERENCES models(id),
+      speed INTEGER NOT NULL,
+      ttft INTEGER NOT NULL DEFAULT 0,
+      provider_endpoint TEXT,
+      recorded_at TEXT NOT NULL DEFAULT (datetime('now')),
+      source TEXT
+    );
+
+    -- Provider endpoints (same model available via different providers)
+    CREATE TABLE IF NOT EXISTS provider_endpoints (
+      id TEXT PRIMARY KEY,
+      model_id TEXT NOT NULL REFERENCES models(id),
+      provider_id TEXT NOT NULL REFERENCES providers(id),
+      endpoint_name TEXT NOT NULL,
+      speed INTEGER NOT NULL DEFAULT 0,
+      ttft INTEGER NOT NULL DEFAULT 0,
+      input_price REAL NOT NULL DEFAULT 0,
+      output_price REAL NOT NULL DEFAULT 0,
+      measured_at TEXT,
+      source TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
     -- Indexes
     CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);
@@ -193,6 +219,9 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_taggables_target ON taggables(taggable_id, taggable_type);
     CREATE INDEX IF NOT EXISTS idx_news_published ON news(published_at);
     CREATE INDEX IF NOT EXISTS idx_news_category ON news(category);
+    CREATE INDEX IF NOT EXISTS idx_speed_history_model ON speed_history(model_id);
+    CREATE INDEX IF NOT EXISTS idx_provider_endpoints_model ON provider_endpoints(model_id);
+    CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);
   `);
 }
 

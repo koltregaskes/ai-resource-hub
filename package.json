@@ -23,7 +23,9 @@
     "@types/react-dom": "^19.2.3",
     "astro": "^5.17.3",
     "better-sqlite3": "^12.6.2",
+    "chart.js": "^4.5.1",
     "react": "^19.2.4",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.4",
     "tailwindcss": "^4.2.0",
     "typescript": "^5.9.3"

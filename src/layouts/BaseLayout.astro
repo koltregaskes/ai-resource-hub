@@ -115,12 +115,21 @@ const ogImageUrl = ogImage
                 <a href={`${base}leaderboard/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Leaderboard</a>
                 <a href={`${base}coding/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Coding Models</a>
                 <a href={`${base}fastest/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Fastest Models</a>
+                <a href={`${base}speed/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Speed Comparison</a>
                 <a href={`${base}cheapest/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Cheapest Models</a>
                 <a href={`${base}best-value/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Best Value</a>
                 <a href={`${base}open-source/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Open Source</a>
                 <a href={`${base}multimodal/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Multimodal</a>
                 <a href={`${base}context-window/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Context Windows</a>
                 <a href={`${base}reasoning/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Reasoning Models</a>
+                <a href={`${base}agents/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">AI Agents</a>
+                <div class="border-t border-(--color-border) my-1"></div>
+                <p class="px-4 py-1 text-[10px] uppercase tracking-wider text-(--color-text-muted)">Domain</p>
+                <a href={`${base}healthcare/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Healthcare AI</a>
+                <a href={`${base}legal/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Legal AI</a>
+                <a href={`${base}finance/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Finance AI</a>
+                <a href={`${base}creative-writing/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Creative Writing</a>
+                <div class="border-t border-(--color-border) my-1"></div>
                 <a href={`${base}new/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">New Releases</a>
                 <a href={`${base}benchmarks/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Benchmarks</a>
                 <a href={`${base}calculator/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Pricing Calculator</a>
@@ -215,6 +224,12 @@ const ogImageUrl = ogImage
           <a href={`${base}multimodal/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Multimodal</a>
           <a href={`${base}context-window/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Context Windows</a>
           <a href={`${base}reasoning/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Reasoning Models</a>
+          <a href={`${base}agents/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">AI Agents</a>
+          <p class="text-[10px] font-semibold text-(--color-text-muted) pt-1 uppercase tracking-wider pl-3">Domain</p>
+          <a href={`${base}healthcare/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Healthcare AI</a>
+          <a href={`${base}legal/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Legal AI</a>
+          <a href={`${base}finance/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Finance AI</a>
+          <a href={`${base}creative-writing/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Creative Writing</a>
           <a href={`${base}new/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">New Releases</a>
           <a href={`${base}benchmarks/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Benchmarks</a>
           <a href={`${base}calculator/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Pricing Calculator</a>
@@ -270,6 +285,11 @@ const ogImageUrl = ogImage
               <a href={`${base}open-source/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Open Source</a>
               <a href={`${base}multimodal/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Multimodal</a>
               <a href={`${base}context-window/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Context Windows</a>
+              <a href={`${base}agents/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI Agents</a>
+              <a href={`${base}healthcare/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Healthcare AI</a>
+              <a href={`${base}legal/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Legal AI</a>
+              <a href={`${base}finance/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Finance AI</a>
+              <a href={`${base}creative-writing/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Creative Writing</a>
               <a href={`${base}benchmarks/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Benchmarks</a>
               <a href={`${base}calculator/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Pricing Calculator</a>
               <a href={`${base}stats/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Statistics</a>

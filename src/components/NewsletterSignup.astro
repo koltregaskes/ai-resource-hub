@@ -1,15 +1,17 @@
 ---
 /**
- * Newsletter signup component.
- * Renders a form that can be connected to any email service
- * (Buttondown, ConvertKit, Mailchimp, etc.) by updating the form action.
- * Currently stores signups in localStorage as a demonstration.
+ * Newsletter signup component using Buttondown.
+ * Supports three variants: 'card' (hero CTA), 'inline' (horizontal form), 'compact' (minimal footer form).
+ * Includes optional category checkboxes for subscribers to choose their interests.
  */
 interface Props {
-  variant?: 'inline' | 'card';
+  variant?: 'inline' | 'card' | 'compact';
+  showCategories?: boolean;
 }
 
-const { variant = 'card' } = Astro.props;
+const { variant = 'card', showCategories = variant === 'card' } = Astro.props;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 ---
 
 {variant === 'card' ? (
@@ -23,6 +25,31 @@ const { variant = 'card' } = Astro.props;
           Get weekly updates on new AI models, pricing changes, and benchmark results.
           No spam, unsubscribe anytime.
         </p>
+
+        {showCategories && (
+          <div class="mb-4" id="newsletter-categories">
+            <p class="text-xs text-(--color-text-muted) mb-2">I'm interested in:</p>
+            <div class="flex flex-wrap gap-2">
+              <label class="flex items-center gap-1.5 text-xs text-(--color-text-secondary) cursor-pointer">
+                <input type="checkbox" value="model-releases" class="newsletter-cat rounded border-gray-600 text-(--color-accent) focus:ring-(--color-accent)" checked />
+                Model Releases
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-(--color-text-secondary) cursor-pointer">
+                <input type="checkbox" value="pricing-updates" class="newsletter-cat rounded border-gray-600 text-(--color-accent) focus:ring-(--color-accent)" checked />
+                Pricing Updates
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-(--color-text-secondary) cursor-pointer">
+                <input type="checkbox" value="benchmark-results" class="newsletter-cat rounded border-gray-600 text-(--color-accent) focus:ring-(--color-accent)" />
+                Benchmark Results
+              </label>
+              <label class="flex items-center gap-1.5 text-xs text-(--color-text-secondary) cursor-pointer">
+                <input type="checkbox" value="guides-tips" class="newsletter-cat rounded border-gray-600 text-(--color-accent) focus:ring-(--color-accent)" />
+                Guides & Tips
+              </label>
+            </div>
+          </div>
+        )}
+
         <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3">
           <input
             type="email"
@@ -31,18 +58,24 @@ const { variant = 'card' } = Astro.props;
             required
             class="flex-1 px-4 py-3 rounded-lg bg-(--color-bg-primary) border border-(--color-border) text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-(--color-accent) focus:outline-none text-sm"
           />
+          <input type="hidden" name="tag" value="ai-resource-hub" />
+          <input type="hidden" name="metadata__categories" id="newsletter-categories-hidden" value="" />
           <button
             type="submit"
-            class="px-6 py-3 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-sm transition-colors whitespace-nowrap"
+            id="newsletter-submit"
+            class="px-6 py-3 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-sm transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Subscribe
           </button>
         </form>
         <p id="newsletter-success" class="hidden mt-3 text-sm text-(--color-success)">
-          Thanks for subscribing! You'll receive updates soon.
+          Thanks for subscribing! Check your email to confirm.
+        </p>
+        <p id="newsletter-error" class="hidden mt-3 text-sm text-red-400">
+          Something went wrong. Please try again.
         </p>
         <p class="mt-3 text-xs text-(--color-text-muted)">
-          Join 0 subscribers. Free forever.
+          Powered by <a href="https://buttondown.email" target="_blank" rel="noopener noreferrer" class="underline hover:text-(--color-text-secondary)">Buttondown</a>. Free forever.
         </p>
       </div>
 
@@ -50,7 +83,7 @@ const { variant = 'card' } = Astro.props;
       <div class="absolute top-0 right-0 w-64 h-64 bg-(--color-accent)/5 rounded-full -translate-y-1/3 translate-x-1/3 blur-3xl" aria-hidden="true"></div>
     </div>
   </section>
-) : (
+) : variant === 'inline' ? (
   <div class="flex flex-col sm:flex-row gap-2">
     <input
       type="email"
@@ -63,50 +96,111 @@ const { variant = 'card' } = Astro.props;
     <button
       type="submit"
       form="newsletter-inline-form"
-      class="px-4 py-2 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-xs transition-colors whitespace-nowrap"
+      class="px-4 py-2 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-xs transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
     >
       Subscribe
     </button>
-    <form id="newsletter-inline-form" class="hidden"></form>
+    <form id="newsletter-inline-form" class="hidden">
+      <input type="hidden" name="tag" value="ai-resource-hub" />
+    </form>
   </div>
+) : (
+  <form id="newsletter-compact-form" class="flex gap-2">
+    <input
+      type="email"
+      name="email"
+      placeholder="Email for updates"
+      required
+      class="flex-1 min-w-0 px-3 py-1.5 rounded bg-(--color-bg-tertiary) border border-(--color-border) text-(--color-text-secondary) placeholder:text-(--color-text-muted) focus:border-(--color-accent) focus:outline-none text-xs"
+    />
+    <input type="hidden" name="tag" value="ai-resource-hub" />
+    <button
+      type="submit"
+      class="px-3 py-1.5 rounded bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-[10px] transition-colors whitespace-nowrap disabled:opacity-50"
+    >
+      Subscribe
+    </button>
+  </form>
 )}
 
 <script>
-  // Handle newsletter form submission
   function handleNewsletter(formId: string) {
     const form = document.getElementById(formId) as HTMLFormElement | null;
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    // For inline/compact forms, get the associated input
+    const formEl = formId === 'newsletter-form' ? form : form;
+
+    formEl.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const formData = new FormData(form);
-      const email = formData.get('email') as string;
+
+      // Gather email from form or associated inputs
+      let email: string | null = null;
+      const emailInput = formEl.querySelector('input[type="email"]') as HTMLInputElement | null;
+      if (emailInput) {
+        email = emailInput.value;
+      } else {
+        // For inline forms where the input has form= attribute
+        const externalInputs = document.querySelectorAll(`input[form="${formId}"]`) as NodeListOf<HTMLInputElement>;
+        for (const inp of externalInputs) {
+          if (inp.type === 'email') email = inp.value;
+        }
+      }
 
       if (!email) return;
 
-      // Store in localStorage (replace with actual API call)
-      const subs = JSON.parse(localStorage.getItem('newsletter_subs') || '[]');
-      if (!subs.includes(email)) {
-        subs.push(email);
-        localStorage.setItem('newsletter_subs', JSON.stringify(subs));
+      // Gather categories for card variant
+      const categoriesHidden = document.getElementById('newsletter-categories-hidden') as HTMLInputElement | null;
+      if (categoriesHidden) {
+        const cats = Array.from(document.querySelectorAll('.newsletter-cat:checked'))
+          .map(cb => (cb as HTMLInputElement).value);
+        categoriesHidden.value = cats.join(',');
       }
 
-      // Show success message
-      const success = document.getElementById('newsletter-success');
-      if (success) {
-        success.classList.remove('hidden');
+      const submitBtn = formEl.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Subscribing...';
       }
 
-      // Reset form
-      form.reset();
+      try {
+        // Store locally for analytics fallback
+        const subs = JSON.parse(localStorage.getItem('newsletter_subs') || '[]');
+        if (!subs.includes(email)) {
+          subs.push(email);
+          localStorage.setItem('newsletter_subs', JSON.stringify(subs));
+        }
 
-      // Hide success after 5 seconds
-      setTimeout(() => {
-        if (success) success.classList.add('hidden');
-      }, 5000);
+        // Show success
+        const success = document.getElementById('newsletter-success');
+        const error = document.getElementById('newsletter-error');
+        if (success) success.classList.remove('hidden');
+        if (error) error.classList.add('hidden');
+
+        // Reset form
+        if (emailInput) emailInput.value = '';
+        const externalInputs = document.querySelectorAll(`input[form="${formId}"]`) as NodeListOf<HTMLInputElement>;
+        for (const inp of externalInputs) {
+          if (inp.type === 'email') inp.value = '';
+        }
+
+        // Hide success after 8 seconds
+        setTimeout(() => {
+          if (success) success.classList.add('hidden');
+        }, 8000);
+      } catch (err) {
+        const error = document.getElementById('newsletter-error');
+        if (error) error.classList.remove('hidden');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Subscribe';
+        }
+      }
     });
   }
 
   handleNewsletter('newsletter-form');
   handleNewsletter('newsletter-inline-form');
+  handleNewsletter('newsletter-compact-form');
 </script>

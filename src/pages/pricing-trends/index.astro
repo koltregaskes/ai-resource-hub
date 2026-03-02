@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getModelsByCategory } from '../../db/queries';
+import PriceTrendChart from '../../components/PriceTrendChart';
+import { getModelsByCategory, getModelsWithPriceHistory } from '../../db/queries';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -62,6 +63,31 @@ const milestones = [
   { date: 'May 2025', event: 'Claude Sonnet 4 at $3/M', inputPrice: 3.00, outputPrice: 15.00 },
   { date: 'Jun 2025', event: 'GPT-4.1 at $2/M input', inputPrice: 2.00, outputPrice: 8.00 },
 ];
+
+// Price history for trend charts
+const allPriceHistory = getModelsWithPriceHistory();
+const priceHistoryByModel: Record<string, { modelName: string; providerColour: string; data: Array<{ date: string; inputPrice: number; outputPrice: number }> }> = {};
+
+for (const ph of allPriceHistory) {
+  if (!priceHistoryByModel[ph.model_id]) {
+    priceHistoryByModel[ph.model_id] = {
+      modelName: ph.model_name,
+      providerColour: ph.provider_colour,
+      data: [],
+    };
+  }
+  priceHistoryByModel[ph.model_id].data.push({
+    date: ph.recorded_at,
+    inputPrice: ph.input_price,
+    outputPrice: ph.output_price,
+  });
+}
+
+// Only show models with 2+ price history records
+const modelsWithTrends = Object.entries(priceHistoryByModel)
+  .filter(([_, v]) => v.data.length >= 2)
+  .sort((a, b) => b[1].data.length - a[1].data.length)
+  .slice(0, 8);
 
 // Price-to-quality scatter data
 const scatterData = JSON.stringify(paidModels.map(m => ({
@@ -294,4 +320,24 @@ const scatterData = JSON.stringify(paidModels.map(m => ({
       });
     }
   </script>
+
+  <!-- Price Trend Charts (interactive, Chart.js) -->
+  {modelsWithTrends.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Price Trends Over Time</h2>
+      <p class="text-sm text-(--color-text-muted) mb-6">Interactive charts showing how model pricing has changed. Hover for details.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        {modelsWithTrends.map(([modelId, info]) => (
+          <div class="rounded-xl bg-(--color-bg-card) border border-(--color-border) p-4">
+            <PriceTrendChart
+              client:visible
+              data={info.data}
+              modelName={info.modelName}
+              providerColour={info.providerColour}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
 </BaseLayout>

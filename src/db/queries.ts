@@ -233,6 +233,9 @@ export interface DBModelDetail {
   context_window: number;
   max_output: number;
   speed: number;
+  ttft: number;
+  speed_source: string | null;
+  speed_updated: string | null;
   quality_score: number;
   released: string | null;
   open_source: number;
@@ -376,6 +379,108 @@ export function getModelPriceHistory(modelId: string): DBPriceHistory[] {
     WHERE model_id = ?
     ORDER BY recorded_at ASC
   `).all(modelId) as DBPriceHistory[];
+}
+
+/**
+ * Get models that have price history records, grouped.
+ */
+export interface PriceHistoryWithModel {
+  model_id: string;
+  model_name: string;
+  provider: string;
+  provider_colour: string;
+  input_price: number;
+  output_price: number;
+  recorded_at: string;
+}
+
+export function getModelsWithPriceHistory(): PriceHistoryWithModel[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT ph.model_id, m.name AS model_name, p.name AS provider, p.colour AS provider_colour,
+           ph.input_price, ph.output_price, ph.recorded_at
+    FROM price_history ph
+    JOIN models m ON ph.model_id = m.id
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.status = 'active'
+    ORDER BY ph.model_id, ph.recorded_at ASC
+  `).all() as PriceHistoryWithModel[];
+}
+
+/**
+ * Get provider endpoints for a specific model (multi-provider comparison).
+ */
+export interface DBProviderEndpoint {
+  id: string;
+  model_id: string;
+  provider_id: string;
+  provider_name: string;
+  provider_colour: string;
+  endpoint_name: string;
+  speed: number;
+  ttft: number;
+  input_price: number;
+  output_price: number;
+  measured_at: string | null;
+  source: string | null;
+}
+
+export function getProviderEndpoints(modelId: string): DBProviderEndpoint[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT pe.id, pe.model_id, pe.provider_id, p.name AS provider_name, p.colour AS provider_colour,
+           pe.endpoint_name, pe.speed, pe.ttft, pe.input_price, pe.output_price, pe.measured_at, pe.source
+    FROM provider_endpoints pe
+    JOIN providers p ON pe.provider_id = p.id
+    WHERE pe.model_id = ?
+    ORDER BY pe.speed DESC
+  `).all(modelId) as DBProviderEndpoint[];
+}
+
+/**
+ * Get all models that have multi-provider endpoints.
+ */
+export function getModelsWithMultipleEndpoints(): Array<{ model_id: string; model_name: string; provider: string; provider_colour: string; endpoint_count: number }> {
+  const db = getDB();
+  return db.prepare(`
+    SELECT pe.model_id, m.name AS model_name, p.name AS provider, p.colour AS provider_colour,
+           COUNT(*) AS endpoint_count
+    FROM provider_endpoints pe
+    JOIN models m ON pe.model_id = m.id
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.status = 'active'
+    GROUP BY pe.model_id
+    HAVING COUNT(*) >= 2
+    ORDER BY endpoint_count DESC
+  `).all() as Array<{ model_id: string; model_name: string; provider: string; provider_colour: string; endpoint_count: number }>;
+}
+
+/**
+ * Get all LLM models with TTFT data, sorted by lowest TTFT first.
+ */
+export interface DBModelTTFT {
+  id: string;
+  name: string;
+  ttft: number;
+  speed: number;
+  provider: string;
+  provider_colour: string;
+  quality_score: number;
+  input_price: number;
+  output_price: number;
+  speed_source: string | null;
+}
+
+export function getModelsWithTTFT(): DBModelTTFT[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT m.id, m.name, m.ttft, m.speed, p.name AS provider, p.colour AS provider_colour,
+           m.quality_score, m.input_price, m.output_price, m.speed_source
+    FROM models m
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.ttft > 0 AND m.status = 'active' AND m.category = 'llm'
+    ORDER BY m.ttft ASC
+  `).all() as DBModelTTFT[];
 }
 
 /**
