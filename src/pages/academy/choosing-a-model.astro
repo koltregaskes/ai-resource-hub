@@ -1,0 +1,496 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : rawBase + '/';
+---
+
+<BaseLayout
+  title="How to Choose the Right AI Model — AI Academy Part 4 — The AI Resource Hub"
+  description="GPT, Claude, Gemini, Llama — there are hundreds of models. Learn how to pick the right one for your task, budget, and skill level."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}academy/`} class="hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Part 4</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Intermediate</span>
+        <span class="text-xs text-(--color-text-muted)">8 min read</span>
+        <span class="text-xs text-(--color-text-muted)">Part 4 of 5</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        How to Choose the Right AI Model
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        There are hundreds of AI models available today, from free chatbots to powerful paid APIs.
+        Picking the right one doesn't require deep technical knowledge — just an understanding of what each does well,
+        what it costs, and what trade-offs you're making. This guide gives you a practical framework for choosing.
+      </p>
+    </header>
+
+    <div class="space-y-10">
+
+      <!-- Section 1: The Major Model Families -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">1. The Major Model Families</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          The AI landscape is dominated by a handful of companies, each with their own model families. Understanding
+          who makes what — and the general personality of each — is the first step to making a good choice.
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">OpenAI (GPT and o-series)</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              The company behind ChatGPT. Their GPT series (GPT-4o, GPT-4.1) are strong all-rounders, excellent at
+              following instructions and coding. The o-series (o3, o4-mini) are reasoning models that "think" before
+              answering, making them particularly good at maths, logic, and complex analysis. The largest ecosystem
+              and the most third-party integrations.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">Anthropic (Claude)</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Known for careful, nuanced responses and strong safety practices. Claude excels at long-form writing,
+              creative tasks, and detailed analysis. The Opus tier is their most capable model, while Sonnet offers
+              an excellent balance of quality and speed. Haiku is their fast, lightweight option. Claude tends to be
+              more thoughtful and less likely to produce filler content.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">Google (Gemini)</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Google's Gemini family includes Pro (their flagship) and Flash (fast and cheap). Gemini's key strength is
+              its massive context window — it can process extremely long documents. Deeply integrated with Google's
+              ecosystem (Search, Docs, Gmail). Strong at research tasks, summarisation, and multimodal work
+              with images and video.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">Meta (Llama)</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Meta releases their Llama models as open-weight, meaning anyone can download and run them locally or
+              fine-tune them. This is the go-to choice if you need data privacy, offline access, or want to customise
+              a model for a specific task. Performance has improved dramatically with each release.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">DeepSeek</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              A Chinese AI lab producing highly competitive open-weight models at remarkably low cost. DeepSeek R1
+              introduced chain-of-thought reasoning at a fraction of the price of competitors. Strong at coding and
+              maths. An important player in making advanced AI accessible.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">Mistral</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              A French company offering both open-weight and commercial models. Known for efficiency — their models
+              often punch above their weight relative to size. Good options for European users concerned about data
+              sovereignty. Strong multilingual support.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">xAI (Grok)</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Built by Elon Musk's xAI and integrated into the X (formerly Twitter) platform. Grok has real-time
+              access to X posts and takes a less filtered approach to responses. Available to X Premium subscribers.
+              Competitive on benchmarks, though with a smaller ecosystem than the established players.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Free vs Paid -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. Free vs Paid: What You Get at Each Tier</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          You can accomplish a surprising amount with free AI tools. Here is what's available at no cost,
+          and when it makes sense to pay.
+        </p>
+
+        <div class="space-y-4 mb-6">
+          <div class="p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+            <h3 class="font-semibold text-green-400 text-sm mb-2">Free Tiers</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-2">
+              <li><strong>ChatGPT Free</strong> — Access to GPT-4o-mini and limited GPT-4o usage. Good for everyday tasks. Includes basic image generation.</li>
+              <li><strong>Claude.ai Free</strong> — Access to Claude Sonnet with daily message limits. Excellent for writing and analysis when you have quota.</li>
+              <li><strong>Gemini Free</strong> — Access to Gemini Flash and limited Pro usage. Strong for research and Google Workspace integration.</li>
+              <li><strong>Microsoft Copilot</strong> — GPT-4o access through Bing. Free, with web search built in. Useful for quick factual queries.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+            <h3 class="font-semibold text-(--color-accent) text-sm mb-2">When You Need Paid</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-2">
+              <li><strong>Higher usage limits</strong> — Free tiers throttle you after a certain number of messages per day or per time window.</li>
+              <li><strong>Access to top-tier models</strong> — The most capable models (GPT-4.1, Claude Opus, Gemini Ultra) are typically paid-only or have very limited free access.</li>
+              <li><strong>Longer conversations</strong> — Paid tiers usually offer larger context windows and more turns per conversation.</li>
+              <li><strong>Advanced features</strong> — File uploads, image generation, code execution, and custom instructions are often paid features.</li>
+              <li><strong>API access</strong> — If you want to build applications or automate tasks, API access is pay-per-use.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          For a detailed breakdown of which models offer the best value at each price point, see our
+          <a href={`${base}cheapest/`} class="text-(--color-accent) hover:underline">cheapest models</a> rankings.
+        </p>
+      </section>
+
+      <!-- Section 3: Quality-Speed-Cost Triangle -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">3. The Quality-Speed-Cost Triangle</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          Every AI model makes trade-offs between three things: how good the output is, how fast it responds,
+          and how much it costs. The fundamental rule is: you can optimise for two, but the third will suffer.
+        </p>
+
+        <div class="grid sm:grid-cols-3 gap-4 mb-6">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+            <p class="text-sm font-semibold text-(--color-text-primary) mb-2">Fast + Cheap</p>
+            <p class="text-xs text-(--color-text-muted)">Lower quality output. Good for simple, high-volume tasks.</p>
+            <p class="text-xs text-(--color-accent) mt-2">GPT-4o-mini, Gemini Flash, Haiku</p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+            <p class="text-sm font-semibold text-(--color-text-primary) mb-2">High Quality + Fast</p>
+            <p class="text-xs text-(--color-text-muted)">Expensive. Premium models with fast inference.</p>
+            <p class="text-xs text-(--color-accent) mt-2">GPT-4.1, Claude Sonnet, Gemini Pro</p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+            <p class="text-sm font-semibold text-(--color-text-primary) mb-2">High Quality + Cheap</p>
+            <p class="text-xs text-(--color-text-muted)">Slower. Reasoning models or batch processing.</p>
+            <p class="text-xs text-(--color-accent) mt-2">o4-mini, DeepSeek R1, open-weight local</p>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto rounded-xl border border-(--color-border)">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-(--color-bg-card)">
+                <th class="text-left p-3 text-(--color-text-primary) font-semibold border-b border-(--color-border)">Model</th>
+                <th class="text-left p-3 text-(--color-text-primary) font-semibold border-b border-(--color-border)">Quality</th>
+                <th class="text-left p-3 text-(--color-text-primary) font-semibold border-b border-(--color-border)">Speed</th>
+                <th class="text-left p-3 text-(--color-text-primary) font-semibold border-b border-(--color-border)">Cost</th>
+                <th class="text-left p-3 text-(--color-text-primary) font-semibold border-b border-(--color-border)">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="text-(--color-text-secondary)">
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">GPT-4.1</td>
+                <td class="p-3">High</td>
+                <td class="p-3">Fast</td>
+                <td class="p-3">$$</td>
+                <td class="p-3">Coding, instruction-following</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">GPT-4o-mini</td>
+                <td class="p-3">Good</td>
+                <td class="p-3">Very fast</td>
+                <td class="p-3">$</td>
+                <td class="p-3">Quick tasks, high volume</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">o3</td>
+                <td class="p-3">Very high</td>
+                <td class="p-3">Slow</td>
+                <td class="p-3">$$$</td>
+                <td class="p-3">Complex reasoning, maths</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">Claude Opus</td>
+                <td class="p-3">Very high</td>
+                <td class="p-3">Moderate</td>
+                <td class="p-3">$$$</td>
+                <td class="p-3">Nuanced writing, deep analysis</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">Claude Sonnet</td>
+                <td class="p-3">High</td>
+                <td class="p-3">Fast</td>
+                <td class="p-3">$$</td>
+                <td class="p-3">All-rounder, coding</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">Claude Haiku</td>
+                <td class="p-3">Good</td>
+                <td class="p-3">Very fast</td>
+                <td class="p-3">$</td>
+                <td class="p-3">Fast tasks, classification</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">Gemini Pro</td>
+                <td class="p-3">High</td>
+                <td class="p-3">Fast</td>
+                <td class="p-3">$$</td>
+                <td class="p-3">Research, long documents</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">Gemini Flash</td>
+                <td class="p-3">Good</td>
+                <td class="p-3">Very fast</td>
+                <td class="p-3">$</td>
+                <td class="p-3">Summarisation, quick queries</td>
+              </tr>
+              <tr class="border-b border-(--color-border)/50">
+                <td class="p-3 font-medium text-(--color-text-primary)">DeepSeek R1</td>
+                <td class="p-3">High</td>
+                <td class="p-3">Moderate</td>
+                <td class="p-3">$</td>
+                <td class="p-3">Reasoning on a budget</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium text-(--color-text-primary)">Llama 3 (local)</td>
+                <td class="p-3">Good</td>
+                <td class="p-3">Varies</td>
+                <td class="p-3">Free</td>
+                <td class="p-3">Privacy, offline use</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-xs text-(--color-text-muted) mt-3">
+          Cost symbols are approximate and relative. Actual pricing changes frequently. Check our
+          <a href={`${base}cheapest/`} class="text-(--color-accent) hover:underline">pricing pages</a> for current numbers.
+        </p>
+      </section>
+
+      <!-- Section 4: When to Use Which Model -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. When to Use Which Model</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          Different models have different strengths. Here is a practical guide for matching your task to the right model.
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Creative Writing and Long-Form Content</h3>
+            <p class="text-sm text-(--color-text-secondary) mb-2">
+              Claude (Opus or Sonnet) tends to produce the most natural, nuanced writing. It avoids the formulaic
+              patterns that other models sometimes fall into. For fiction, essays, or any writing where voice matters,
+              Claude is consistently the top recommendation from professional writers.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Recommended: Claude Opus, Claude Sonnet</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Coding and Software Development</h3>
+            <p class="text-sm text-(--color-text-secondary) mb-2">
+              GPT-4.1 and Claude Sonnet are the current leaders for code generation, debugging, and code review.
+              GPT-4.1 is particularly strong at following complex coding instructions precisely. Claude Sonnet
+              excels at understanding existing codebases and making thoughtful changes. For reasoning-heavy
+              coding problems, o3 and o4-mini are excellent choices.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Recommended: GPT-4.1, Claude Sonnet, o3/o4-mini</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Research and Analysis</h3>
+            <p class="text-sm text-(--color-text-secondary) mb-2">
+              Gemini Pro stands out here thanks to its enormous context window — you can feed it entire documents
+              or research papers. Google's integration with Search also helps for tasks that need up-to-date information.
+              For deep analytical reasoning, the o-series models and Claude Opus are strong choices.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Recommended: Gemini Pro, Claude Opus, o3</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Quick, Everyday Tasks</h3>
+            <p class="text-sm text-(--color-text-secondary) mb-2">
+              For simple questions, rewording an email, or basic summarisation, you don't need a flagship model.
+              The smaller, faster models are perfectly capable and will respond almost instantly. They are also
+              significantly cheaper if you are using the API.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Recommended: GPT-4o-mini, Gemini Flash, Claude Haiku</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Privacy-Sensitive or Offline Work</h3>
+            <p class="text-sm text-(--color-text-secondary) mb-2">
+              If your data cannot leave your machine — legal documents, medical records, proprietary code — open-weight
+              models that run locally are the answer. Llama and DeepSeek models can be run entirely on your own hardware,
+              meaning no data is sent to any external server. The trade-off is that you need a reasonably powerful computer,
+              and setup is more involved.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Recommended: Llama 3, DeepSeek R1 (local), Mistral</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: How to Evaluate Models Yourself -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. How to Evaluate Models Yourself</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          Benchmarks and leaderboards are useful starting points, but they don't tell the whole story.
+          A model that scores highest on a coding benchmark might not write the best marketing copy.
+          Here is how to find what works for you.
+        </p>
+
+        <div class="space-y-4 mb-6">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Don't Trust Benchmarks Alone</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Benchmarks measure specific capabilities under controlled conditions. Real-world performance often
+              differs significantly. Some models are optimised specifically for benchmark performance ("bench-maxing"),
+              which can inflate their scores beyond what you'll experience in practice. Use benchmarks to narrow
+              your shortlist, not to make the final decision.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Try the Same Prompt on Three Models</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              The single best way to choose a model is to take a real task you actually need done and run
+              the exact same prompt through two or three different models. Compare the outputs side by side.
+              You'll often be surprised — the "best" model on paper isn't always the best for your specific use case.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Use Head-to-Head Comparisons</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Our <a href={`${base}compare/head-to-head/`} class="text-(--color-accent) hover:underline">head-to-head comparison tool</a> lets
+              you compare any two models across benchmarks, pricing, and capabilities. For broader rankings,
+              the <a href={`${base}leaderboard/`} class="text-(--color-accent) hover:underline">leaderboard</a> shows
+              how models stack up across multiple dimensions.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Reassess Regularly</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              The AI landscape changes rapidly. A model that was the best choice three months ago may have been
+              surpassed by a newer release. Check back periodically, especially when providers announce new versions.
+              What you read in a review from six months ago may already be outdated.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Quick Decision Flowchart -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">6. Quick Decision Flowchart</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          Use this step-by-step guide to narrow down your choice quickly.
+        </p>
+
+        <div class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border) space-y-4">
+          <div class="flex items-start gap-3">
+            <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded shrink-0 mt-0.5">Q1</span>
+            <div>
+              <p class="text-sm font-semibold text-(--color-text-primary)">Does your data need to stay on your machine?</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Yes: Use an open-weight model locally (Llama, DeepSeek). Skip to Q5.</p>
+              <p class="text-xs text-(--color-text-muted)">No: Continue to Q2.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded shrink-0 mt-0.5">Q2</span>
+            <div>
+              <p class="text-sm font-semibold text-(--color-text-primary)">Are you willing to pay?</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">No: Use ChatGPT Free, Claude.ai Free, or Gemini Free. Pick based on your primary task (writing = Claude, research = Gemini, general = ChatGPT).</p>
+              <p class="text-xs text-(--color-text-muted)">Yes: Continue to Q3.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded shrink-0 mt-0.5">Q3</span>
+            <div>
+              <p class="text-sm font-semibold text-(--color-text-primary)">What is your primary use case?</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Creative writing: Claude Opus or Sonnet.</p>
+              <p class="text-xs text-(--color-text-muted)">Coding: GPT-4.1 or Claude Sonnet.</p>
+              <p class="text-xs text-(--color-text-muted)">Research and analysis: Gemini Pro or Claude Opus.</p>
+              <p class="text-xs text-(--color-text-muted)">Maths and reasoning: o3 or o4-mini.</p>
+              <p class="text-xs text-(--color-text-muted)">Mixed / general: Continue to Q4.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded shrink-0 mt-0.5">Q4</span>
+            <div>
+              <p class="text-sm font-semibold text-(--color-text-primary)">Do you need the absolute best quality, or is "good enough" fine?</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Best quality: Claude Opus, GPT-4.1, or o3 depending on the task.</p>
+              <p class="text-xs text-(--color-text-muted)">Good enough and fast: GPT-4o-mini, Gemini Flash, or Claude Haiku.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded shrink-0 mt-0.5">Q5</span>
+            <div>
+              <p class="text-sm font-semibold text-(--color-text-primary)">Still unsure?</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Take your most common task, run it through the free tiers of ChatGPT, Claude, and Gemini, and compare the results. The best model is the one that works best for <em>your</em> specific needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Takeaways -->
+      <section class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Key Takeaways</h2>
+        <div class="space-y-2">
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>There is no single "best" model — the right choice depends on your task, budget, and priorities.</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>Free tiers are genuinely useful. Start there before paying for a subscription.</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>Quality, speed, and cost are always in tension. Know which two matter most to you.</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>Test models yourself with your real tasks. Benchmarks are starting points, not verdicts.</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>The landscape changes fast. Reassess your choice every few months.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <section>
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Continue the Academy</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <a href={`${base}academy/your-first-prompt/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group">
+            <p class="text-xs text-(--color-text-muted) mb-1">Previous</p>
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Part 3: Writing Your First Prompt</p>
+          </a>
+          <a href={`${base}academy/beyond-chat/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group text-right">
+            <p class="text-xs text-(--color-text-muted) mb-1">Next</p>
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Part 5: Beyond Chat: APIs, Agents & What's Next</p>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}academy/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        AI Academy
+      </a>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// A-List models with detailed use cases
+const alist = [
+  {
+    category: 'Best for Creative Writing',
+    picks: [
+      { model: 'Claude Opus 4 / 4.6', provider: 'Anthropic', colour: '#d4a574', why: 'Consistently praised for the most natural, nuanced prose. Understands subtlety, maintains voice across long pieces, and follows stylistic direction precisely. The go-to for fiction, poetry, and narrative non-fiction.', link: 'claude-opus-4' },
+      { model: 'GPT-4o', provider: 'OpenAI', colour: '#10a37f', why: 'Strong creative range with good dialogue and structure. More formulaic than Claude but very reliable. Better at genre fiction and commercial writing styles.', link: 'gpt-4o' },
+    ],
+    tip: 'For creative work, use the highest-capability model you can afford. Smaller models tend to produce generic prose. Give the model a writing sample to match your voice.',
+  },
+  {
+    category: 'Best for Coding',
+    picks: [
+      { model: 'Claude Sonnet 4 / 4.6', provider: 'Anthropic', colour: '#d4a574', why: 'The dominant coding model. Highest SWE-bench scores, excellent at full-file edits, understands large codebases, and writes production-ready code with proper error handling. Powers Claude Code (Anthropic\'s CLI agent).', link: 'claude-sonnet-4' },
+      { model: 'GPT-4.1', provider: 'OpenAI', colour: '#10a37f', why: 'Strong alternative with 1M token context for large repos. Good at explaining code and debugging. Codex (GPT-4.1-based) powers GitHub Copilot agent mode.', link: 'gpt-4.1' },
+      { model: 'DeepSeek R1', provider: 'DeepSeek', colour: '#4d6bfe', why: 'Open-source reasoning model that rivals frontier models on coding benchmarks. Can be run locally for privacy. Excellent at complex algorithmic problems.', link: 'deepseek-r1' },
+    ],
+    tip: 'For coding, context matters enormously. Models that can see your full codebase (large context windows) produce much better results than those working with snippets.',
+  },
+  {
+    category: 'Best for Complex Reasoning & Maths',
+    picks: [
+      { model: 'o3 / o3-pro', provider: 'OpenAI', colour: '#10a37f', why: 'Purpose-built reasoning models that "think" before responding. Top scores on GPQA Diamond, MATH, and ARC-AGI. Use for problems that need multi-step logic, proofs, or deep analysis.', link: 'o3' },
+      { model: 'Gemini 2.5 Pro', provider: 'Google', colour: '#4285f4', why: 'Built-in thinking with strong maths performance. The 1M context window lets it reason over massive datasets. ARC-AGI-2 score of 77.1% — highest reported.', link: 'gemini-2.5-pro' },
+      { model: 'DeepSeek R1', provider: 'DeepSeek', colour: '#4d6bfe', why: 'Open-source reasoning model. Shows its chain-of-thought, so you can verify the logic. Remarkably strong for its cost.', link: 'deepseek-r1' },
+    ],
+    tip: 'For reasoning models (o3, R1), keep your prompt concise and focused. Don\'t say "think step by step" — they already do. Let the model do the thinking.',
+  },
+  {
+    category: 'Best for Long Documents & Research',
+    picks: [
+      { model: 'Gemini 2.5 Pro', provider: 'Google', colour: '#4285f4', why: 'The largest context window (1M+ tokens) — can process entire books, codebases, or multi-hour transcripts in a single prompt. Best for "needle-in-a-haystack" retrieval across huge documents.', link: 'gemini-2.5-pro' },
+      { model: 'Claude Opus 4', provider: 'Anthropic', colour: '#d4a574', why: '200K context with excellent comprehension. While smaller than Gemini\'s window, Claude\'s understanding of nuance in long texts is exceptional. Best for analysis that requires interpretation, not just retrieval.', link: 'claude-opus-4' },
+    ],
+    tip: 'For research, paste the full source material rather than summarising it yourself. The model can find relevant details you might miss.',
+  },
+  {
+    category: 'Best for Speed & High Volume',
+    picks: [
+      { model: 'Gemini 2.5 Flash', provider: 'Google', colour: '#4285f4', why: '350+ tokens/second with built-in thinking. The fastest model that\'s still genuinely smart. Ideal for real-time applications, chatbots, and high-throughput pipelines.', link: 'gemini-2.5-flash' },
+      { model: 'GPT-4.1 Nano', provider: 'OpenAI', colour: '#10a37f', why: '$0.10/$0.40 per million tokens — one of the cheapest capable models. 200+ tok/s. Perfect for classification, extraction, and simple transformations at scale.', link: 'gpt-4.1-nano' },
+      { model: 'Claude Haiku 3.5', provider: 'Anthropic', colour: '#d4a574', why: 'Fast and cheap with strong instruction-following. Good balance of speed and quality for tasks that need more than a tiny model.', link: 'claude-haiku-3.5' },
+    ],
+    tip: 'For high-volume tasks, start with the cheapest model and only upgrade if quality is insufficient. The cost difference between nano/flash and pro models is 10-100x.',
+  },
+  {
+    category: 'Best for Privacy & Self-Hosting',
+    picks: [
+      { model: 'Llama 4 Maverick', provider: 'Meta', colour: '#0668E1', why: 'Meta\'s open-weight flagship. Strong general performance, can be hosted on your own infrastructure. No data leaves your servers.', link: 'llama-4-maverick' },
+      { model: 'DeepSeek V3.2', provider: 'DeepSeek', colour: '#4d6bfe', why: '685B-parameter MoE model (37B active) that rivals GPT-4o. Open-source with MIT licence. Runs on consumer GPUs via quantisation.', link: 'deepseek-v3.2' },
+      { model: 'Mistral Large 3', provider: 'Mistral', colour: '#ff7000', why: 'European-built, open-weight, strong multilingual support. Good for EU compliance requirements. Excellent function calling.', link: 'mistral-large-3' },
+    ],
+    tip: 'Use Ollama to run these models locally. For production, consider Together AI, Fireworks, or your own GPU cluster. Check our provider endpoints comparison on each model\'s page.',
+  },
+  {
+    category: 'Best for Multimodal (Images, Audio, Video)',
+    picks: [
+      { model: 'GPT-4o', provider: 'OpenAI', colour: '#10a37f', why: 'Native multimodal — accepts text, images, and audio in a single request. Strong at image analysis, chart reading, and OCR. Powers the ChatGPT voice mode.', link: 'gpt-4o' },
+      { model: 'Gemini 2.5 Pro', provider: 'Google', colour: '#4285f4', why: 'The broadest multimodal support: text, images, audio, video, and PDF. Can process hours of video or thousands of images. Unmatched for multimedia analysis.', link: 'gemini-2.5-pro' },
+    ],
+    tip: 'For image analysis, be specific about what you want the model to look at. "Describe this image" is weaker than "Extract all text from this receipt and list each item with its price."',
+  },
+];
+---
+
+<BaseLayout
+  title="Best AI Models by Use Case — The A-List — The AI Resource Hub"
+  description="Which AI model is best for your task? Detailed use case guide covering creative writing, coding, reasoning, research, speed, privacy, and multimodal — with specific model recommendations and why."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Use Cases</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        The A-List: Best AI Models by Use Case
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Not all models are equal. Each has strengths that make it the best choice for specific tasks. This guide tells you exactly which model to use for what — and why.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      {alist.map((section) => (
+        <a href={`#${section.category.toLowerCase().replace(/[^a-z]+/g, '-')}`} class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">
+          {section.category.replace('Best for ', '')}
+        </a>
+      ))}
+    </div>
+
+    <div class="space-y-10">
+      {alist.map((section) => (
+        <div id={section.category.toLowerCase().replace(/[^a-z]+/g, '-')} class="scroll-mt-20">
+          <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">{section.category}</h2>
+
+          <div class="space-y-3 mb-4">
+            {section.picks.map((pick, i) => (
+              <div class={`p-4 rounded-xl border ${i === 0 ? 'bg-(--color-accent)/5 border-(--color-accent)/30' : 'bg-(--color-bg-card) border-(--color-border)'}`}>
+                <div class="flex items-center gap-2 mb-2">
+                  {i === 0 && <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/20 text-(--color-accent) font-medium">Top Pick</span>}
+                  <a href={`${base}models/${pick.link}/`} class="font-semibold text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    {pick.model}
+                  </a>
+                  <span class="text-xs text-(--color-text-muted)">by {pick.provider}</span>
+                  <span class="w-2 h-2 rounded-full ml-auto shrink-0" style={`background-color: ${pick.colour}`}></span>
+                </div>
+                <p class="text-sm text-(--color-text-secondary)">{pick.why}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="p-3 rounded-lg bg-(--color-bg-tertiary)">
+            <p class="text-xs text-(--color-text-muted)"><strong class="text-(--color-text-secondary)">Tip:</strong> {section.tip}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Decision helper -->
+    <div class="mt-12 p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Not sure which to pick?</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-3">
+        Try the same prompt on 2-3 models and compare the results. Our head-to-head comparison tool makes this easy.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href={`${base}compare/head-to-head/`} class="text-xs px-3 py-1.5 rounded-full bg-(--color-accent) text-white hover:opacity-90 transition-opacity">Compare Models</a>
+        <a href={`${base}quiz/`} class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-card) border border-(--color-border) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Take the Quiz</a>
+        <a href={`${base}leaderboard/`} class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-card) border border-(--color-border) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Full Leaderboard</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

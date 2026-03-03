@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const lessons = [
+  {
+    part: 1,
+    slug: 'what-is-ai',
+    title: 'What Is AI? (And What It Isn\'t)',
+    description: 'Cut through the hype. Learn what artificial intelligence actually means, how it works at a high level, and why everyone is talking about it.',
+    readTime: '6 min read',
+    topics: ['AI vs automation', 'Machine learning basics', 'Neural networks in plain English', 'What AI can and can\'t do'],
+  },
+  {
+    part: 2,
+    slug: 'how-llms-work',
+    title: 'How Large Language Models Work',
+    description: 'Understand how ChatGPT, Claude, and Gemini actually generate text — tokens, training, and the Transformer architecture explained simply.',
+    readTime: '8 min read',
+    topics: ['Tokens and tokenisation', 'Training on text data', 'The Transformer architecture', 'Why models "hallucinate"'],
+  },
+  {
+    part: 3,
+    slug: 'your-first-prompt',
+    title: 'Writing Your First Prompt',
+    description: 'Start talking to AI effectively. Learn the anatomy of a good prompt, common mistakes, and how to get useful results immediately.',
+    readTime: '7 min read',
+    topics: ['The anatomy of a prompt', 'Context, instruction, format', 'Common beginner mistakes', 'Your first 10 prompts'],
+  },
+  {
+    part: 4,
+    slug: 'choosing-a-model',
+    title: 'How to Choose the Right AI Model',
+    description: 'GPT, Claude, Gemini, Llama — there are hundreds of models. Learn how to pick the right one for your task, budget, and skill level.',
+    readTime: '8 min read',
+    topics: ['Model families explained', 'Free vs paid models', 'Quality vs speed vs cost', 'When to use which model'],
+  },
+  {
+    part: 5,
+    slug: 'beyond-chat',
+    title: 'Beyond Chat: APIs, Agents & What\'s Next',
+    description: 'Graduate from chat interfaces to building with AI. Understand APIs, tokens, pricing, agents, and where the technology is heading.',
+    readTime: '9 min read',
+    topics: ['Chat vs API', 'Understanding token pricing', 'AI agents explained', 'The road ahead'],
+  },
+];
+---
+
+<BaseLayout
+  title="AI Academy — Learn AI From Scratch — The AI Resource Hub"
+  description="A free, structured 5-part course to understand AI from the ground up. No jargon, no prerequisites — just clear explanations of how AI works, how to use it, and how to choose the right model."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Academy</span>
+    </nav>
+
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-full bg-green-500/10 text-green-400 font-medium">Free Course</span>
+        <span class="text-xs text-(--color-text-muted)">5 parts &middot; ~38 min total</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Academy
+      </h1>
+      <p class="text-lg text-(--color-text-secondary) max-w-2xl">
+        Learn AI from scratch. A structured 5-part course that takes you from "What is AI?" to building with APIs — no jargon, no prerequisites.
+      </p>
+    </div>
+
+    <!-- Who this is for -->
+    <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20 mb-8">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Who is this for?</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        Anyone curious about AI who wants to understand what's actually happening — not just use it, but <em>get</em> it. No coding experience required. Each part builds on the last, but you can jump to any section.
+      </p>
+    </div>
+
+    <!-- Lesson cards -->
+    <div class="space-y-4 mb-10">
+      {lessons.map((lesson) => (
+        <a
+          href={`${base}academy/${lesson.slug}/`}
+          class="block p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 hover:bg-(--color-bg-hover) transition-all group"
+        >
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-(--color-accent)/15 flex items-center justify-center text-(--color-accent) font-bold text-sm shrink-0 group-hover:bg-(--color-accent)/25 transition-colors">
+              {lesson.part}
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <h3 class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+                  Part {lesson.part}: {lesson.title}
+                </h3>
+              </div>
+              <p class="text-sm text-(--color-text-secondary) mb-2">{lesson.description}</p>
+              <div class="flex flex-wrap gap-2">
+                {lesson.topics.map((topic) => (
+                  <span class="text-[10px] px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted)">{topic}</span>
+                ))}
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted)">{lesson.readTime}</span>
+              </div>
+            </div>
+            <svg class="w-5 h-5 text-(--color-text-muted) group-hover:text-(--color-accent) transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- After the course -->
+    <div class="mb-8">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">After the Course</h2>
+      <div class="grid sm:grid-cols-3 gap-3">
+        <a href={`${base}guides/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+          <p class="text-sm font-medium text-(--color-text-primary) mb-1">Practical Guides</p>
+          <p class="text-xs text-(--color-text-muted)">Deep dives into prompting, writing, research, and pricing</p>
+        </a>
+        <a href={`${base}api-guides/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+          <p class="text-sm font-medium text-(--color-text-primary) mb-1">API Getting Started</p>
+          <p class="text-xs text-(--color-text-muted)">Code snippets for OpenAI, Anthropic, Google, and more</p>
+        </a>
+        <a href={`${base}prompts/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+          <p class="text-sm font-medium text-(--color-text-primary) mb-1">Prompt Library</p>
+          <p class="text-xs text-(--color-text-muted)">Model-specific prompting guides with official best practices</p>
+        </a>
+      </div>
+    </div>
+
+    <a
+      href={`${base}academy/what-is-ai/`}
+      class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-(--color-accent) text-white font-medium hover:opacity-90 transition-opacity"
+    >
+      Start Part 1
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </a>
+  </section>
+</BaseLayout>

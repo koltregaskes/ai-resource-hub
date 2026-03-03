@@ -1,0 +1,348 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Model-specific prompting guides with official documentation links
+const modelGuides = [
+  {
+    family: 'OpenAI (GPT & o-series)',
+    colour: '#10a37f',
+    docsUrl: 'https://platform.openai.com/docs/guides/prompt-engineering',
+    bestPracticesUrl: 'https://platform.openai.com/docs/guides/reasoning/advice-on-prompting',
+    models: [
+      { name: 'GPT-4o / GPT-4.1', bestFor: 'General tasks, analysis, multimodal', notes: 'Excels at following detailed instructions. Supports system messages, vision, and structured outputs. Use the system message for persistent context.' },
+      { name: 'o3 / o4-mini', bestFor: 'Complex reasoning, maths, code', notes: 'Reasoning models think before responding. Do NOT use system messages — use the "developer" role instead. Keep prompts concise; the model handles chain-of-thought internally. Do not say "think step by step" — it already does.' },
+      { name: 'GPT-4o-mini / GPT-4.1-nano', bestFor: 'Quick tasks, high volume, low cost', notes: 'Same format as GPT-4o but benefits from more explicit instructions. Be specific about output format since smaller models need clearer guidance.' },
+    ],
+    tips: [
+      'Use system messages to set persistent behaviour (except o-series)',
+      'Provide examples in the prompt (few-shot) for consistent formatting',
+      'Request structured output with JSON mode for reliable parsing',
+      'For o-series reasoning models, give the problem clearly and let the model think',
+    ],
+  },
+  {
+    family: 'Anthropic (Claude)',
+    colour: '#d4a574',
+    docsUrl: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview',
+    bestPracticesUrl: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/be-clear-and-direct',
+    models: [
+      { name: 'Claude Opus 4 / 4.6', bestFor: 'Complex analysis, agentic tasks, long documents', notes: 'The most capable Claude. Handles 200K context. Use XML tags to structure complex prompts. Supports extended thinking for deep reasoning tasks.' },
+      { name: 'Claude Sonnet 4 / 4.6', bestFor: 'Balanced tasks, coding, writing', notes: 'Best value for most tasks. Fast and capable. Use clear, direct language — Claude responds well to straightforward instructions rather than elaborate role-play.' },
+      { name: 'Claude Haiku 3.5 / 4.5', bestFor: 'Quick tasks, classification, extraction', notes: 'Optimised for speed. Be very explicit about what you want — smaller models need less ambiguity.' },
+    ],
+    tips: [
+      'Use XML tags to separate sections: <context>, <instructions>, <examples>',
+      'Be direct — Claude prefers clear instructions over elaborate framing',
+      'Put the most important instruction at the end of the prompt',
+      'Use "Here is the document:" followed by content in tags for analysis tasks',
+      'For coding: specify the language, framework, and any constraints upfront',
+    ],
+  },
+  {
+    family: 'Google (Gemini)',
+    colour: '#4285f4',
+    docsUrl: 'https://ai.google.dev/gemini-api/docs/prompting-strategies',
+    bestPracticesUrl: 'https://ai.google.dev/gemini-api/docs/prompting-intro',
+    models: [
+      { name: 'Gemini 2.5 Pro', bestFor: 'Complex reasoning, long documents, multimodal', notes: '1M+ token context window. Excellent at analysing very long documents, codebases, and multi-image inputs. Supports built-in thinking for complex tasks.' },
+      { name: 'Gemini 2.5 Flash', bestFor: 'Fast tasks, high volume, multimodal', notes: 'Extremely fast with built-in thinking. Great for tasks that need both speed and reasoning. Use for real-time applications.' },
+      { name: 'Gemini 2.0 Flash Lite', bestFor: 'Simple tasks, maximum speed, lowest cost', notes: 'Cheapest option. Best for straightforward tasks with clear instructions.' },
+    ],
+    tips: [
+      'Gemini handles multimodal inputs natively — mix text, images, audio, and video',
+      'For long documents, use the full context window rather than summarising first',
+      'System instructions persist across turns — use them for consistent behaviour',
+      'Use Google AI Studio to prototype prompts before coding',
+    ],
+  },
+  {
+    family: 'Open-Source (Llama, DeepSeek, Mistral)',
+    colour: '#8b5cf6',
+    docsUrl: 'https://llama.meta.com/docs/how-to-guides/prompting/',
+    bestPracticesUrl: 'https://docs.mistral.ai/capabilities/prompting/',
+    models: [
+      { name: 'Llama 4 Maverick / Scout', bestFor: 'General tasks, self-hosted, privacy', notes: 'Uses the standard chat template. Supports system messages. Available through many providers (Together, Fireworks, Groq) with different performance characteristics.' },
+      { name: 'DeepSeek R1', bestFor: 'Reasoning, maths, coding', notes: 'Reasoning model like o3 but open-source. Shows its thinking process. Do not prompt it to think step-by-step — it does so automatically.' },
+      { name: 'Mistral Large 3', bestFor: 'Multilingual, function calling, European compliance', notes: 'Strong multilingual performance. Supports structured function calling natively. Good at following precise instructions.' },
+    ],
+    tips: [
+      'Prompt format matters — each model has its own chat template',
+      'When using via Ollama locally, the standard OpenAI format works',
+      'Open-source models may need more explicit instructions than frontier models',
+      'Test the same prompt on multiple providers — speed and cost vary significantly',
+    ],
+  },
+];
+
+// Task-based prompt templates
+const promptTemplates = [
+  {
+    category: 'Analysis',
+    templates: [
+      {
+        title: 'Document Analysis',
+        prompt: `Analyse the following document and provide:
+1. A one-paragraph summary
+2. The three most important points
+3. Any claims that need verification
+4. Questions the document leaves unanswered
+
+Document:
+[paste your document here]`,
+        bestModels: 'Claude Opus, Gemini Pro (for long docs)',
+        tip: 'For very long documents, Gemini\'s 1M context window avoids the need to chunk.',
+      },
+      {
+        title: 'Data Interpretation',
+        prompt: `Here is a dataset:
+[paste data or table here]
+
+Please:
+1. Identify the key trends
+2. Flag any outliers or anomalies
+3. Suggest three conclusions supported by the data
+4. Note any limitations in drawing conclusions from this data`,
+        bestModels: 'GPT-4o (with vision for charts), Claude Sonnet',
+        tip: 'You can paste screenshots of charts into GPT-4o or Gemini for visual analysis.',
+      },
+    ],
+  },
+  {
+    category: 'Writing',
+    templates: [
+      {
+        title: 'Professional Email',
+        prompt: `Write a professional email with the following details:
+- To: [recipient and their role]
+- Purpose: [what you need]
+- Tone: [formal/friendly/urgent]
+- Key points to include: [list them]
+- Desired outcome: [what action you want them to take]
+
+Keep it concise — under 200 words.`,
+        bestModels: 'Claude Sonnet, GPT-4o',
+        tip: 'Specifying word count prevents AI verbosity. Always review before sending.',
+      },
+      {
+        title: 'Technical Documentation',
+        prompt: `Write documentation for the following:
+- What it is: [component/API/feature name]
+- What it does: [brief description]
+- Target audience: [developers/users/admins]
+
+Include:
+1. Overview (2-3 sentences)
+2. Prerequisites
+3. Step-by-step usage guide
+4. Common issues and solutions
+5. Example code (if applicable)
+
+Use clear, direct language. Avoid jargon unless the audience is technical.`,
+        bestModels: 'Claude Sonnet (coding docs), GPT-4.1 (general docs)',
+        tip: 'For API docs, paste your actual code and ask the model to generate docs from it.',
+      },
+    ],
+  },
+  {
+    category: 'Coding',
+    templates: [
+      {
+        title: 'Code Review',
+        prompt: `Review this code for:
+1. Bugs or potential errors
+2. Security vulnerabilities
+3. Performance issues
+4. Code style and readability improvements
+
+Be specific — reference line numbers and explain why each suggestion matters.
+
+\`\`\`[language]
+[paste code here]
+\`\`\``,
+        bestModels: 'Claude Sonnet/Opus, GPT-4.1, DeepSeek R1',
+        tip: 'Include the language and framework context. "This is a Next.js API route using Prisma" helps enormously.',
+      },
+      {
+        title: 'Debug This Error',
+        prompt: `I'm getting this error:
+\`\`\`
+[paste error message]
+\`\`\`
+
+Here's the relevant code:
+\`\`\`[language]
+[paste code]
+\`\`\`
+
+Environment: [language version, framework, OS]
+
+What's causing this and how do I fix it?`,
+        bestModels: 'Claude Sonnet, GPT-4.1, o4-mini (for complex bugs)',
+        tip: 'Always include the full error message and stack trace. Context about your environment prevents wrong-language solutions.',
+      },
+    ],
+  },
+  {
+    category: 'Research',
+    templates: [
+      {
+        title: 'Topic Deep Dive',
+        prompt: `I need to understand [topic] at an intermediate level.
+
+Please provide:
+1. A clear explanation (assume I know the basics but not the details)
+2. The key concepts and how they relate to each other
+3. Common misconceptions
+4. Practical implications — why this matters
+5. Recommended resources for further reading (books, papers, courses)
+
+Be specific and cite sources where possible. Flag anything where experts disagree.`,
+        bestModels: 'Claude Opus, GPT-4o, Gemini Pro',
+        tip: 'Always verify citations — models may generate plausible but incorrect references.',
+      },
+      {
+        title: 'Compare and Contrast',
+        prompt: `Compare [option A] and [option B] for [specific use case].
+
+Structure your comparison as:
+1. Overview of each option (2-3 sentences)
+2. Key differences (as a table)
+3. Strengths of each
+4. Weaknesses of each
+5. My recommendation for [your specific situation]
+
+Be balanced — don't favour either option without evidence.`,
+        bestModels: 'Claude Sonnet, GPT-4o',
+        tip: 'Specifying "be balanced" helps prevent the model from defaulting to the more popular option.',
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="AI Prompt Library — Model-Specific Prompting Guides — The AI Resource Hub"
+  description="Prompting guides tailored to each AI model family with official best practices. Task-based prompt templates for analysis, writing, coding, and research."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Prompt Library</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Prompt Library
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Prompting isn't one-size-fits-all. Each model family has different strengths and best practices. This library gives you model-specific guidance backed by official documentation, plus task-based templates you can adapt.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-10">
+      <a href="#model-guides" class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Model-Specific Guides</a>
+      <a href="#templates" class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Prompt Templates</a>
+    </div>
+
+    <!-- Model-specific guides -->
+    <div id="model-guides" class="mb-12">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">Model-Specific Prompting Guides</h2>
+      <p class="text-sm text-(--color-text-muted) mb-6">
+        Each model family responds differently to prompts. What works for GPT may not work for Claude or Gemini. These guides link to the official best practices — which are updated with every new model release.
+      </p>
+
+      <div class="space-y-8">
+        {modelGuides.map((guide) => (
+          <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+            <div class="px-5 py-4 border-b border-(--color-border) flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full" style={`background-color: ${guide.colour}`}></div>
+                <h3 class="font-bold text-(--color-text-primary)">{guide.family}</h3>
+              </div>
+              <div class="flex gap-2">
+                <a href={guide.docsUrl} target="_blank" rel="noopener noreferrer" class="text-xs px-2.5 py-1 rounded-full bg-(--color-accent)/10 text-(--color-accent) hover:bg-(--color-accent)/20 transition-colors">
+                  Official Docs
+                </a>
+                <a href={guide.bestPracticesUrl} target="_blank" rel="noopener noreferrer" class="text-xs px-2.5 py-1 rounded-full bg-(--color-accent)/10 text-(--color-accent) hover:bg-(--color-accent)/20 transition-colors">
+                  Best Practices
+                </a>
+              </div>
+            </div>
+
+            <div class="p-5">
+              {/* Models */}
+              <div class="space-y-3 mb-4">
+                {guide.models.map((model) => (
+                  <div class="p-3 rounded-lg bg-(--color-bg-tertiary)">
+                    <div class="flex items-center justify-between mb-1">
+                      <span class="text-sm font-semibold text-(--color-text-primary)">{model.name}</span>
+                      <span class="text-[10px] px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">{model.bestFor}</span>
+                    </div>
+                    <p class="text-xs text-(--color-text-secondary)">{model.notes}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Tips */}
+              <h4 class="text-xs font-semibold text-(--color-text-muted) uppercase tracking-wider mb-2">Key Tips</h4>
+              <ul class="text-xs text-(--color-text-secondary) space-y-1.5">
+                {guide.tips.map((tip) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-(--color-success) mt-0.5 shrink-0">&#10003;</span>
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Task-based templates -->
+    <div id="templates" class="mb-12">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">Task-Based Prompt Templates</h2>
+      <p class="text-sm text-(--color-text-muted) mb-6">
+        Ready-to-use prompts organised by task. Copy, replace the bracketed placeholders with your content, and paste into any model.
+      </p>
+
+      <div class="space-y-8">
+        {promptTemplates.map((category) => (
+          <div>
+            <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">{category.category}</h3>
+            <div class="space-y-4">
+              {category.templates.map((template) => (
+                <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+                  <div class="px-4 py-3 border-b border-(--color-border) flex items-center justify-between">
+                    <h4 class="text-sm font-semibold text-(--color-text-primary)">{template.title}</h4>
+                    <span class="text-[10px] text-(--color-text-muted)">Best: {template.bestModels}</span>
+                  </div>
+                  <pre class="text-xs p-4 overflow-x-auto bg-(--color-bg-tertiary) whitespace-pre-wrap"><code class="text-(--color-text-secondary)">{template.prompt}</code></pre>
+                  <div class="px-4 py-2 border-t border-(--color-border)/50">
+                    <p class="text-[10px] text-(--color-text-muted)">Tip: {template.tip}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Cross-links -->
+    <div class="grid sm:grid-cols-2 gap-3">
+      <a href={`${base}academy/your-first-prompt/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">AI Academy: Your First Prompt</p>
+        <p class="text-xs text-(--color-text-muted)">New to prompting? Start with the basics</p>
+      </a>
+      <a href={`${base}guides/advanced-prompting/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Advanced Prompting Techniques</p>
+        <p class="text-xs text-(--color-text-muted)">Chain-of-thought, few-shot, and more</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

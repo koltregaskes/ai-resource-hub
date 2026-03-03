@@ -1,0 +1,226 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Get LLM models for pricing estimates
+const models = getModelsByCategory('llm')
+  .filter(m => m.inputPrice > 0 || m.outputPrice > 0)
+  .sort((a, b) => {
+    const blendA = (a.inputPrice + 3 * a.outputPrice) / 4;
+    const blendB = (b.inputPrice + 3 * b.outputPrice) / 4;
+    return blendA - blendB;
+  })
+  .slice(0, 20);
+
+const modelsJSON = JSON.stringify(models.map(m => ({
+  id: m.id,
+  name: m.name,
+  provider: m.providerName,
+  colour: m.providerColour,
+  inputPrice: m.inputPrice,
+  outputPrice: m.outputPrice,
+})));
+---
+
+<BaseLayout
+  title="Token Counter — Estimate Tokens & API Cost — The AI Resource Hub"
+  description="Paste text and instantly see token count estimates across AI models. Calculate API costs for OpenAI GPT, Anthropic Claude, Google Gemini, and more."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Token Counter</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Token Counter
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Paste your text to estimate how many tokens it contains and what it would cost across different AI models. Useful for budgeting API calls and checking context window limits.
+      </p>
+    </div>
+
+    <!-- Input -->
+    <div class="mb-6">
+      <label for="text-input" class="text-sm font-medium text-(--color-text-primary) mb-2 block">Your Text</label>
+      <textarea
+        id="text-input"
+        rows="8"
+        placeholder="Paste your text here to count tokens..."
+        class="w-full rounded-xl bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm p-4 focus:outline-none focus:border-(--color-accent) transition-colors resize-y placeholder:text-(--color-text-muted)"
+      ></textarea>
+    </div>
+
+    <!-- Stats cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Characters</p>
+        <p id="stat-chars" class="text-2xl font-bold text-(--color-text-primary)">0</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Words</p>
+        <p id="stat-words" class="text-2xl font-bold text-(--color-text-primary)">0</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Estimated Tokens</p>
+        <p id="stat-tokens" class="text-2xl font-bold text-(--color-accent)">0</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Lines</p>
+        <p id="stat-lines" class="text-2xl font-bold text-(--color-text-primary)">0</p>
+      </div>
+    </div>
+
+    <!-- Token estimation method -->
+    <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-8">
+      <h2 class="text-sm font-semibold text-(--color-text-primary) mb-2">How We Estimate Tokens</h2>
+      <p class="text-xs text-(--color-text-secondary) mb-2">
+        Different models use different tokenisers (GPT uses <code>cl100k_base</code>, Claude uses its own, etc.), so exact counts vary. Our estimate uses the widely-accepted approximation:
+      </p>
+      <div class="flex items-center gap-4 text-xs">
+        <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
+          <span class="font-mono text-(--color-accent)">1 token ≈ 4 characters</span> (English text)
+        </div>
+        <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
+          <span class="font-mono text-(--color-accent)">1 token ≈ 0.75 words</span>
+        </div>
+      </div>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        For exact counts, use the provider's tokeniser: <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">OpenAI Tokenizer</a> or <a href="https://console.anthropic.com/workbench" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Anthropic Workbench</a>.
+      </p>
+    </div>
+
+    <!-- Cost estimates table -->
+    <div class="mb-8">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Cost Estimates (as Input)</h2>
+      <p class="text-xs text-(--color-text-muted) mb-3">
+        What this text would cost as input tokens across different models. Output tokens (the model's response) are typically 2-5x more expensive.
+      </p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Input $/1M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Cost for this text</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">x1000 requests</th>
+            </tr>
+          </thead>
+          <tbody id="cost-table-body">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Context window check -->
+    <div class="mb-8">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Context Window Check</h2>
+      <p class="text-xs text-(--color-text-muted) mb-3">Does your text fit within common context windows?</p>
+      <div id="context-checks" class="grid sm:grid-cols-3 gap-3">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Cross-links -->
+    <div class="grid sm:grid-cols-3 gap-3">
+      <a href={`${base}calculator/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Pricing Calculator</p>
+        <p class="text-xs text-(--color-text-muted)">Full cost calculator with usage presets</p>
+      </a>
+      <a href={`${base}context-window/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Context Window Comparison</p>
+        <p class="text-xs text-(--color-text-muted)">Compare context sizes across all models</p>
+      </a>
+      <a href={`${base}academy/how-llms-work/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">What Are Tokens?</p>
+        <p class="text-xs text-(--color-text-muted)">Learn about tokenisation in our Academy</p>
+      </a>
+    </div>
+  </section>
+
+  <script define:vars={{ modelsJSON }}>
+    const models = JSON.parse(modelsJSON);
+
+    const contextWindows = [
+      { name: 'GPT-4o / Claude Haiku', tokens: 128000 },
+      { name: 'Claude Opus / Sonnet', tokens: 200000 },
+      { name: 'Gemini Pro', tokens: 1048576 },
+    ];
+
+    function estimateTokens(text) {
+      if (!text) return 0;
+      // Heuristic: ~4 chars per token for English, adjusted for whitespace and punctuation
+      return Math.ceil(text.length / 4);
+    }
+
+    function formatCost(cost) {
+      if (cost === 0) return 'Free';
+      if (cost < 0.0001) return '<$0.0001';
+      if (cost < 0.01) return '$' + cost.toFixed(4);
+      if (cost < 1) return '$' + cost.toFixed(3);
+      return '$' + cost.toFixed(2);
+    }
+
+    function formatNumber(n) {
+      if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+      if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
+      return n.toLocaleString();
+    }
+
+    function update() {
+      const text = document.getElementById('text-input').value;
+      const chars = text.length;
+      const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+      const tokens = estimateTokens(text);
+      const lines = text ? text.split('\n').length : 0;
+
+      document.getElementById('stat-chars').textContent = chars.toLocaleString();
+      document.getElementById('stat-words').textContent = words.toLocaleString();
+      document.getElementById('stat-tokens').textContent = tokens.toLocaleString();
+      document.getElementById('stat-lines').textContent = lines.toLocaleString();
+
+      // Cost table
+      const tbody = document.getElementById('cost-table-body');
+      tbody.innerHTML = models.map(m => {
+        const cost = (tokens / 1000000) * m.inputPrice;
+        const cost1k = cost * 1000;
+        return `<tr class="border-b border-[var(--color-border)]/50 hover:bg-[var(--color-bg-hover)] transition-colors">
+          <td class="py-2 px-4">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full shrink-0" style="background-color: ${m.colour}"></span>
+              <span class="text-[var(--color-text-primary)]">${m.name}</span>
+            </span>
+            <span class="text-[10px] text-[var(--color-text-muted)]">${m.provider}</span>
+          </td>
+          <td class="py-2 px-4 text-right font-mono text-xs text-[var(--color-text-secondary)]">$${m.inputPrice.toFixed(2)}</td>
+          <td class="py-2 px-4 text-right font-mono text-xs ${tokens > 0 ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-muted)]'}">${tokens > 0 ? formatCost(cost) : '—'}</td>
+          <td class="py-2 px-4 text-right font-mono text-xs text-[var(--color-text-secondary)] hidden sm:table-cell">${tokens > 0 ? formatCost(cost1k) : '—'}</td>
+        </tr>`;
+      }).join('');
+
+      // Context window checks
+      const checksEl = document.getElementById('context-checks');
+      checksEl.innerHTML = contextWindows.map(cw => {
+        const fits = tokens <= cw.tokens;
+        const pct = tokens > 0 ? Math.min((tokens / cw.tokens) * 100, 100) : 0;
+        return `<div class="p-3 rounded-xl border ${fits ? 'bg-[var(--color-bg-card)] border-[var(--color-border)]' : 'bg-red-500/5 border-red-500/20'}">
+          <p class="text-xs font-medium ${fits ? 'text-[var(--color-text-primary)]' : 'text-red-400'}">${cw.name}</p>
+          <p class="text-xs text-[var(--color-text-muted)]">${formatNumber(cw.tokens)} tokens</p>
+          <div class="mt-2 h-1.5 bg-[var(--color-bg-tertiary)] rounded-full overflow-hidden">
+            <div class="h-full rounded-full transition-all" style="width: ${pct}%; background-color: ${fits ? 'var(--color-success)' : '#ef4444'}"></div>
+          </div>
+          <p class="text-[10px] mt-1 ${fits ? 'text-[var(--color-success)]' : 'text-red-400'}">${fits ? `Fits (${pct.toFixed(1)}% used)` : 'Exceeds limit'}</p>
+        </div>`;
+      }).join('');
+    }
+
+    document.getElementById('text-input').addEventListener('input', update);
+    update();
+  </script>
+</BaseLayout>

@@ -1,0 +1,309 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const providers = [
+  {
+    id: 'openai',
+    name: 'OpenAI',
+    models: 'GPT-4o, GPT-4.1, o3, o4-mini',
+    colour: '#10a37f',
+    docsUrl: 'https://platform.openai.com/docs/api-reference',
+    sdkInstall: 'pip install openai',
+    sdkInstallJs: 'npm install openai',
+    pythonExample: `from openai import OpenAI
+
+client = OpenAI()  # uses OPENAI_API_KEY env var
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Explain quantum computing in two sentences."}
+    ]
+)
+
+print(response.choices[0].message.content)`,
+    jsExample: `import OpenAI from "openai";
+
+const client = new OpenAI();  // uses OPENAI_API_KEY env var
+
+const response = await client.chat.completions.create({
+  model: "gpt-4o",
+  messages: [
+    { role: "system", content: "You are a helpful assistant." },
+    { role: "user", content: "Explain quantum computing in two sentences." }
+  ],
+});
+
+console.log(response.choices[0].message.content);`,
+    curlExample: `curl https://api.openai.com/v1/chat/completions \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer $OPENAI_API_KEY" \\
+  -d '{
+    "model": "gpt-4o",
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "Explain quantum computing in two sentences."}
+    ]
+  }'`,
+    keyUrl: 'https://platform.openai.com/api-keys',
+    notes: 'OpenAI uses the standard Chat Completions format. Most third-party tools and frameworks support it natively. For reasoning models (o3, o4-mini), omit the system message and use the "developer" role instead.',
+  },
+  {
+    id: 'anthropic',
+    name: 'Anthropic',
+    models: 'Claude Opus 4, Sonnet 4, Haiku 3.5',
+    colour: '#d4a574',
+    docsUrl: 'https://docs.anthropic.com/en/docs/initial-setup',
+    sdkInstall: 'pip install anthropic',
+    sdkInstallJs: 'npm install @anthropic-ai/sdk',
+    pythonExample: `import anthropic
+
+client = anthropic.Anthropic()  # uses ANTHROPIC_API_KEY env var
+
+message = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=1024,
+    system="You are a helpful assistant.",
+    messages=[
+        {"role": "user", "content": "Explain quantum computing in two sentences."}
+    ]
+)
+
+print(message.content[0].text)`,
+    jsExample: `import Anthropic from "@anthropic-ai/sdk";
+
+const client = new Anthropic();  // uses ANTHROPIC_API_KEY env var
+
+const message = await client.messages.create({
+  model: "claude-sonnet-4-20250514",
+  max_tokens: 1024,
+  system: "You are a helpful assistant.",
+  messages: [
+    { role: "user", content: "Explain quantum computing in two sentences." }
+  ],
+});
+
+console.log(message.content[0].text);`,
+    curlExample: `curl https://api.anthropic.com/v1/messages \\
+  -H "Content-Type: application/json" \\
+  -H "x-api-key: $ANTHROPIC_API_KEY" \\
+  -H "anthropic-version: 2023-06-01" \\
+  -d '{
+    "model": "claude-sonnet-4-20250514",
+    "max_tokens": 1024,
+    "system": "You are a helpful assistant.",
+    "messages": [
+      {"role": "user", "content": "Explain quantum computing in two sentences."}
+    ]
+  }'`,
+    keyUrl: 'https://console.anthropic.com/settings/keys',
+    notes: 'Anthropic uses the Messages API (not Chat Completions). The system prompt is a top-level parameter, not a message role. Extended thinking is available on Claude models — add "thinking": {"type": "enabled", "budget_tokens": 10000} for complex reasoning tasks.',
+  },
+  {
+    id: 'google',
+    name: 'Google',
+    models: 'Gemini 2.5 Pro, 2.5 Flash, 2.0 Flash',
+    colour: '#4285f4',
+    docsUrl: 'https://ai.google.dev/gemini-api/docs/quickstart',
+    sdkInstall: 'pip install google-genai',
+    sdkInstallJs: 'npm install @google/genai',
+    pythonExample: `from google import genai
+
+client = genai.Client()  # uses GOOGLE_API_KEY env var
+
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents="Explain quantum computing in two sentences."
+)
+
+print(response.text)`,
+    jsExample: `import { GoogleGenAI } from "@google/genai";
+
+const ai = new GoogleGenAI({});  // uses GOOGLE_API_KEY env var
+
+const response = await ai.models.generateContent({
+  model: "gemini-2.5-flash",
+  contents: "Explain quantum computing in two sentences.",
+});
+
+console.log(response.text);`,
+    curlExample: `curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=$GOOGLE_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "contents": [{
+      "parts": [{"text": "Explain quantum computing in two sentences."}]
+    }]
+  }'`,
+    keyUrl: 'https://aistudio.google.com/apikey',
+    notes: 'Gemini has a generous free tier. The API supports text, images, audio, and video in a single request. Gemini 2.5 models include built-in "thinking" for complex tasks. Use Google AI Studio for quick prototyping.',
+  },
+  {
+    id: 'ollama',
+    name: 'Ollama (Local)',
+    models: 'Llama 3.3, DeepSeek R1, Qwen, Mistral',
+    colour: '#ffffff',
+    docsUrl: 'https://ollama.com',
+    sdkInstall: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull llama3.3',
+    sdkInstallJs: 'npm install ollama',
+    pythonExample: `import ollama
+
+# Make sure Ollama is running: ollama serve
+# Pull a model first: ollama pull llama3.3
+
+response = ollama.chat(
+    model="llama3.3",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Explain quantum computing in two sentences."}
+    ]
+)
+
+print(response["message"]["content"])`,
+    jsExample: `import ollama from "ollama";
+
+// Make sure Ollama is running: ollama serve
+// Pull a model first: ollama pull llama3.3
+
+const response = await ollama.chat({
+  model: "llama3.3",
+  messages: [
+    { role: "system", content: "You are a helpful assistant." },
+    { role: "user", content: "Explain quantum computing in two sentences." }
+  ],
+});
+
+console.log(response.message.content);`,
+    curlExample: `# Ollama uses the OpenAI-compatible endpoint locally
+curl http://localhost:11434/v1/chat/completions \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "model": "llama3.3",
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "Explain quantum computing in two sentences."}
+    ]
+  }'`,
+    keyUrl: '',
+    notes: 'Ollama runs models locally on your machine — no API key needed, no data leaves your device. It supports the OpenAI-compatible API format, so most tools that work with OpenAI work with Ollama too. Requires a decent GPU (8GB+ VRAM) for larger models.',
+  },
+];
+---
+
+<BaseLayout
+  title="API Getting Started — Code Snippets for Every AI Provider — The AI Resource Hub"
+  description="Ready-to-use code snippets for OpenAI, Anthropic Claude, Google Gemini, and Ollama. Python, JavaScript, and cURL examples that work out of the box."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">API Getting Started</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        API Getting Started
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Copy-paste code snippets for every major AI provider. Python, JavaScript, and cURL — tested and working. Pick a provider and start building.
+      </p>
+    </div>
+
+    <!-- Quick jump -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      {providers.map((p) => (
+        <a href={`#${p.id}`} class="text-xs px-3 py-1.5 rounded-full border border-(--color-border) text-(--color-text-secondary) hover:text-(--color-accent) hover:border-(--color-accent)/50 transition-colors">
+          {p.name}
+        </a>
+      ))}
+    </div>
+
+    <div class="space-y-12">
+      {providers.map((provider) => (
+        <div id={provider.id} class="scroll-mt-20">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-xs" style={`background-color: ${provider.colour}`}>
+              {provider.name.slice(0, 2).toUpperCase()}
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-(--color-text-primary)">{provider.name}</h2>
+              <p class="text-xs text-(--color-text-muted)">{provider.models}</p>
+            </div>
+          </div>
+
+          {/* Setup */}
+          <div class="mb-4 p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-2">Setup</h3>
+            <div class="space-y-2">
+              <div>
+                <p class="text-xs text-(--color-text-muted) mb-1">Install:</p>
+                <pre class="text-xs bg-(--color-bg-tertiary) rounded-lg p-2 overflow-x-auto"><code class="text-(--color-text-secondary)">{provider.sdkInstall}</code></pre>
+              </div>
+              {provider.sdkInstallJs && provider.sdkInstallJs !== provider.sdkInstall && (
+                <div>
+                  <p class="text-xs text-(--color-text-muted) mb-1">JavaScript:</p>
+                  <pre class="text-xs bg-(--color-bg-tertiary) rounded-lg p-2 overflow-x-auto"><code class="text-(--color-text-secondary)">{provider.sdkInstallJs}</code></pre>
+                </div>
+              )}
+              {provider.keyUrl && (
+                <p class="text-xs text-(--color-text-muted)">
+                  Get your API key: <a href={provider.keyUrl} target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">{provider.keyUrl.replace('https://', '')}</a>
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Code tabs */}
+          <div class="rounded-xl border border-(--color-border) overflow-hidden mb-4">
+            <div class="border-b border-(--color-border) bg-(--color-bg-card) px-4 py-2 flex gap-4">
+              <span class="text-xs font-medium text-(--color-accent)">Python</span>
+            </div>
+            <pre class="text-xs p-4 overflow-x-auto bg-(--color-bg-tertiary)"><code class="text-(--color-text-secondary)">{provider.pythonExample}</code></pre>
+          </div>
+
+          <div class="rounded-xl border border-(--color-border) overflow-hidden mb-4">
+            <div class="border-b border-(--color-border) bg-(--color-bg-card) px-4 py-2 flex gap-4">
+              <span class="text-xs font-medium text-(--color-accent)">JavaScript</span>
+            </div>
+            <pre class="text-xs p-4 overflow-x-auto bg-(--color-bg-tertiary)"><code class="text-(--color-text-secondary)">{provider.jsExample}</code></pre>
+          </div>
+
+          <div class="rounded-xl border border-(--color-border) overflow-hidden mb-4">
+            <div class="border-b border-(--color-border) bg-(--color-bg-card) px-4 py-2 flex gap-4">
+              <span class="text-xs font-medium text-(--color-accent)">cURL</span>
+            </div>
+            <pre class="text-xs p-4 overflow-x-auto bg-(--color-bg-tertiary)"><code class="text-(--color-text-secondary)">{provider.curlExample}</code></pre>
+          </div>
+
+          {/* Notes */}
+          <div class="p-3 rounded-lg bg-(--color-accent)/5 border border-(--color-accent)/10">
+            <p class="text-xs text-(--color-text-secondary)">{provider.notes}</p>
+            <a href={provider.docsUrl} target="_blank" rel="noopener noreferrer" class="text-xs text-(--color-accent) hover:text-(--color-accent-hover) mt-1 inline-block">
+              Full documentation &rarr;
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Cross-links -->
+    <div class="mt-12 grid sm:grid-cols-3 gap-3">
+      <a href={`${base}calculator/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Pricing Calculator</p>
+        <p class="text-xs text-(--color-text-muted)">Estimate API costs for your use case</p>
+      </a>
+      <a href={`${base}token-counter/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Token Counter</p>
+        <p class="text-xs text-(--color-text-muted)">See how many tokens your text uses</p>
+      </a>
+      <a href={`${base}academy/beyond-chat/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">AI Academy: Beyond Chat</p>
+        <p class="text-xs text-(--color-text-muted)">Learn about APIs, tokens, and pricing</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

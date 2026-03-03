@@ -221,6 +221,21 @@ db.exec(`
     updated_at TEXT NOT NULL DEFAULT (datetime('now'))
   );
 
+  -- Stealth / rumoured model sightings
+  CREATE TABLE IF NOT EXISTS rumoured_models (
+    id TEXT PRIMARY KEY,
+    codename TEXT NOT NULL,
+    provider_id TEXT REFERENCES providers(id),
+    status TEXT NOT NULL DEFAULT 'rumoured',
+    first_seen TEXT NOT NULL,
+    confirmed_as TEXT,
+    confirmed_name TEXT,
+    sources TEXT,
+    notes TEXT,
+    category TEXT DEFAULT 'llm',
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
   CREATE INDEX IF NOT EXISTS idx_speed_history_model ON speed_history(model_id);
   CREATE INDEX IF NOT EXISTS idx_provider_endpoints_model ON provider_endpoints(model_id);
   CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);
@@ -1585,6 +1600,33 @@ if (fs.existsSync(seedSqlPath)) {
   db.exec(seedSql);
   console.log('Applied supplemental seed.sql');
 }
+
+// ─── Rumoured / Stealth Models ──────────────────────────────────
+console.log('Seeding rumoured models...');
+
+const insertRumour = db.prepare(`
+  INSERT OR REPLACE INTO rumoured_models (id, codename, provider_id, status, first_seen, confirmed_as, confirmed_name, sources, notes, category)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+const rumours: Array<[string, string, string | null, string, string, string | null, string | null, string, string, string]> = [
+  // [id, codename, provider_id, status, first_seen, confirmed_as, confirmed_name, sources_json, notes, category]
+  ['rumour-gpt-5-orion', 'Orion', 'openai', 'confirmed', '2024-10-01', 'gpt-5', 'GPT-5', '["https://openai.com/blog"]', 'Originally codenamed "Orion" in internal OpenAI documents. Confirmed as GPT-5 at launch.', 'llm'],
+  ['rumour-claude-4-opus', 'Delphi', 'anthropic', 'confirmed', '2025-01-15', 'claude-opus-4', 'Claude Opus 4', '["https://anthropic.com"]', 'Internal codename "Delphi" referenced in early API testing. Released as Claude Opus 4 in May 2025.', 'llm'],
+  ['rumour-gemini-ultra-2', 'Ultra 2.0', 'google', 'rumoured', '2025-11-01', null, null, '["https://the-decoder.com"]', 'References to a Gemini Ultra 2.0 variant spotted in Google API responses. Likely a higher-tier Gemini model for enterprise.', 'llm'],
+  ['rumour-gpt-5.5', 'GPT-5.5', 'openai', 'rumoured', '2026-01-10', null, null, '["https://openrouter.ai"]', 'Model ID "gpt-5.5" briefly appeared in OpenRouter\'s model list before being removed. Likely an intermediate release between GPT-5.2 and GPT-6.', 'llm'],
+  ['rumour-claude-5', 'Claude 5', 'anthropic', 'rumoured', '2026-02-01', null, null, '["https://the-decoder.com", "https://twitter.com"]', 'Multiple sources indicate Anthropic is testing a next-generation model family internally. No confirmed timeline.', 'llm'],
+  ['rumour-llama-5', 'Llama 5', 'meta', 'rumoured', '2025-12-15', null, null, '["https://techcrunch.com"]', 'Meta confirmed development of next-generation Llama models. Expected to be significantly larger than Llama 4.', 'llm'],
+  ['rumour-deepseek-r2', 'DeepSeek R2', 'deepseek', 'rumoured', '2026-01-20', null, null, '["https://arxiv.org"]', 'References to "R2" training runs spotted in DeepSeek research papers. Expected to improve on R1\'s reasoning capabilities.', 'llm'],
+  ['rumour-grok-5', 'Grok 5', 'xai', 'rumoured', '2026-02-15', null, null, '["https://x.com"]', 'Elon Musk referenced "Grok 5" in posts on X. No confirmed specs or timeline.', 'llm'],
+  ['rumour-mistral-next', 'Mistral Next', 'mistral', 'rumoured', '2026-01-05', null, null, '["https://mistral.ai"]', 'Mistral AI hiring postings reference a "next-gen" flagship model. Likely successor to Mistral Large 3.', 'llm'],
+  ['rumour-gemini-3', 'Gemini 3.0', 'google', 'rumoured', '2026-02-20', null, null, '["https://9to5google.com"]', 'Android code references suggest a "Gemini 3.0" model family. May debut at Google I/O 2026.', 'llm'],
+];
+
+for (const r of rumours) {
+  insertRumour.run(...r);
+}
+console.log(`  ${rumours.length} rumoured models seeded`);
 
 // ─── Done ───────────────────────────────────────────────────────
 const modelCount = (db.prepare('SELECT COUNT(*) AS c FROM models').get() as { c: number }).c;

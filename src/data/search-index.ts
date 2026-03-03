@@ -211,6 +211,12 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'creative-writing', title: 'Creative Writing AI Models', description: 'AI models ranked by creative writing quality — fiction, poetry, and narrative evaluation' },
     { id: 'agents', title: 'AI Agent Models', description: 'AI models ranked by agent performance — GAIA, WebArena, and TAU-bench for browser and tool use' },
     { id: 'speed', title: 'AI Speed Comparison', description: 'Compare AI model speed — TTFT, output tokens per second, and provider endpoint benchmarks' },
+    { id: 'academy', title: 'AI Academy', description: 'Free 5-part beginner course — learn AI from scratch, no technical background required' },
+    { id: 'prompts', title: 'Prompt Library', description: 'Model-specific prompting guides and task-based templates with official documentation links' },
+    { id: 'api-guides', title: 'API Getting Started', description: 'Code snippets and setup guides for OpenAI, Anthropic, Google, and Ollama APIs' },
+    { id: 'use-cases', title: 'Best Models by Use Case', description: 'The A-list — best AI models for coding, writing, reasoning, speed, privacy, and more' },
+    { id: 'token-counter', title: 'Token Counter', description: 'Estimate token counts and API costs — paste text and see pricing across all models' },
+    { id: 'rumours', title: 'Rumours & Leaks', description: 'Track stealth AI models, codenames, and leaks — unverified sightings from across the industry' },
   ];
 
   // Custom URL pages

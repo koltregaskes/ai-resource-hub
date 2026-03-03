@@ -207,6 +207,21 @@ function initSchema(db: Database.Database): void {
       updated_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
+    -- Stealth / rumoured model sightings
+    CREATE TABLE IF NOT EXISTS rumoured_models (
+      id TEXT PRIMARY KEY,
+      codename TEXT NOT NULL,
+      provider_id TEXT REFERENCES providers(id),
+      status TEXT NOT NULL DEFAULT 'rumoured',  -- rumoured, confirmed, released, debunked
+      first_seen TEXT NOT NULL,
+      confirmed_as TEXT,                         -- model ID once confirmed (e.g., 'gpt-5.2')
+      confirmed_name TEXT,                       -- human-readable name once known
+      sources TEXT,                               -- JSON array of source URLs
+      notes TEXT,
+      category TEXT DEFAULT 'llm',
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
     -- Indexes
     CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);

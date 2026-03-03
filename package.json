@@ -15,7 +15,8 @@
     "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts",
     "scrape:speed": "tsx scripts/scrapers/speed.ts",
     "check:staleness": "tsx scripts/check-staleness.ts",
-    "import:news": "tsx scripts/import-news-digests.ts"
+    "import:news": "tsx scripts/import-news-digests.ts",
+    "generate:digest": "tsx scripts/generate-digest.ts"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

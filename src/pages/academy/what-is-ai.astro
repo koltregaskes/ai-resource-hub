@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="What Is AI? (And What It Isn't) — AI Academy Part 1 — The AI Resource Hub"
+  description="Cut through the hype. Learn what artificial intelligence actually means, how machine learning works, what neural networks do, and what AI can and can't do — explained from scratch."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}academy/`} class="hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Part 1</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Beginner</span>
+        <span class="text-xs text-(--color-text-muted)">6 min read</span>
+        <span class="text-xs text-(--color-text-muted)">Part 1 of 5</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        What Is AI? (And What It Isn't)
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        Artificial intelligence is everywhere in the headlines, but most explanations either dumb it down too much or drown you in jargon. This guide walks you through what AI actually is, how the core technology works, and where its real strengths and limitations lie — no prior knowledge required.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+
+      <!-- Section 1: What AI Actually Means -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">1. What AI Actually Means</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          At its core, artificial intelligence is software that can perform tasks that normally require human judgement. That definition is deliberately broad because AI itself is broad — it is an umbrella term that covers everything from the spam filter in your email to the chatbot that writes poetry on demand.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          A useful way to think about it is as a spectrum. On one end, you have simple rule-based systems: "if the email contains these words, move it to spam." These follow instructions written by a programmer and never deviate. On the other end, you have systems that learn their own rules by studying data — these are the AI systems making headlines today.
+        </p>
+
+        <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Key Concept: Narrow AI vs General AI</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            Every AI system you can use today is <strong class="text-(--color-text-primary)">narrow AI</strong> — it excels at one specific type of task (translating languages, generating images, answering questions) but cannot do anything outside that scope. A chatbot cannot drive a car. An image generator cannot book your flights. <strong class="text-(--color-text-primary)">General AI</strong> (sometimes called AGI) would be a system that can learn and perform any intellectual task a human can. It does not exist yet, and researchers disagree on when — or whether — it will.
+          </p>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          So when someone says "AI," they almost always mean narrow AI — a system trained to be very good at a particular job. The magic is that modern narrow AI has become so capable at language, images, and code that it can feel general-purpose, even though it is not.
+        </p>
+      </section>
+
+      <!-- Section 2: Machine Learning in Plain English -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. Machine Learning in Plain English</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Machine learning (ML) is the technique behind nearly all modern AI. The core idea is simple: instead of telling a computer exactly what to do, you show it thousands (or millions) of examples and let it figure out the patterns itself.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Think of it like teaching a child to recognise cats. You do not hand them a rulebook that says "cats have pointed ears, whiskers, and a tail." Instead, you point at hundreds of cats and say "cat" each time. Eventually, the child builds an internal sense of what "cat-ness" looks like — including cats they have never seen before. Machine learning works the same way, except the "child" is a mathematical model and the "pointing" is feeding it labelled data.
+        </p>
+
+        <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">The Two Phases: Training and Inference</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+            <strong class="text-(--color-text-primary)">Training</strong> is the learning phase. The model is shown enormous amounts of data — text, images, numbers — and adjusts its internal settings to get better at predicting patterns. Training a large model can take weeks on thousands of specialised chips and cost millions of dollars. This phase happens once (or is repeated when the model is updated).
+          </p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            <strong class="text-(--color-text-primary)">Inference</strong> is when you actually use the model. Every time you type a question into ChatGPT or Claude and get a response, that is inference — the trained model applying what it learned to your specific input. Inference is fast and cheap compared to training.
+          </p>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          Here is a practical example: an email spam filter trained with machine learning has been shown millions of emails labelled "spam" or "not spam." It learned patterns — certain phrases, sender behaviours, link structures — that predict spam. When a new email arrives, it applies those learned patterns to decide where the email goes. You never wrote a single rule. The model found the rules in the data.
+        </p>
+      </section>
+
+      <!-- Section 3: Neural Networks Simplified -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">3. Neural Networks Simplified</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          You will often hear AI described as a "neural network" or even a "digital brain." The brain analogy is catchy, but it is also misleading. Let us clear it up.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          A neural network is a specific type of machine learning model. It is made up of layers of small mathematical functions called "neurons" (named after brain cells, but they work nothing like them). Each neuron takes in numbers, multiplies them by a set of <strong class="text-(--color-text-primary)">weights</strong>, adds them up, and passes the result to the next layer. That is it — at the most basic level, it is just multiplication and addition happening millions of times.
+        </p>
+
+        <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">How a Neural Network Learns</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-2">
+            <li><strong class="text-(--color-text-primary)">Step 1:</strong> Data goes into the first layer. For a language model, this is text converted into numbers.</li>
+            <li><strong class="text-(--color-text-primary)">Step 2:</strong> Each layer transforms the data by applying its weights — adjustable numbers that control how the input is processed.</li>
+            <li><strong class="text-(--color-text-primary)">Step 3:</strong> The output comes out the other end. At first, it is basically random.</li>
+            <li><strong class="text-(--color-text-primary)">Step 4:</strong> The model compares its output to the correct answer and calculates how wrong it was (this is called the "loss").</li>
+            <li><strong class="text-(--color-text-primary)">Step 5:</strong> It adjusts its weights slightly to be less wrong next time. Then it repeats — millions or billions of times.</li>
+          </ul>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          The structure typically has three parts: an <strong class="text-(--color-text-primary)">input layer</strong> (where data enters), one or more <strong class="text-(--color-text-primary)">hidden layers</strong> (where the real processing happens), and an <strong class="text-(--color-text-primary)">output layer</strong> (where the result comes out). "Deep learning" simply means a neural network with many hidden layers — modern language models have dozens or even over a hundred.
+        </p>
+
+        <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Why the "Brain" Analogy Misleads</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            The human brain has roughly 86 billion neurons forming trillions of connections, operates on electrochemistry, and is shaped by evolution, sleep, emotion, and lived experience. A neural network is a mathematical function with adjustable numbers, optimised to minimise errors on a dataset. The name "neural network" was inspired by biology, but the resemblance ends there. Thinking of AI as a "brain" leads people to assume it understands, feels, or reasons the way humans do. It does not. It finds statistical patterns in data — extraordinarily well, but that is a fundamentally different process.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: What AI Can and Can't Do -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. What AI Can and Can't Do</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Understanding AI's real capabilities — and its genuine limitations — is the most valuable thing you can learn as a beginner. It protects you from both hype and fear.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mb-4">
+          <div class="p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+            <p class="text-xs font-semibold text-green-400 uppercase tracking-wider mb-3">What AI Does Well</p>
+            <ul class="text-sm text-(--color-text-secondary) space-y-2">
+              <li><strong class="text-(--color-text-primary)">Pattern recognition:</strong> Spotting trends in data that humans would miss or take weeks to find — medical scans, financial anomalies, language patterns.</li>
+              <li><strong class="text-(--color-text-primary)">Language tasks:</strong> Writing, summarising, translating, reformatting, and answering questions about text. This is where large language models (LLMs) like ChatGPT and Claude excel.</li>
+              <li><strong class="text-(--color-text-primary)">Generation:</strong> Creating new text, images, code, and audio that did not exist before, based on patterns learned from training data.</li>
+              <li><strong class="text-(--color-text-primary)">Speed and scale:</strong> Processing thousands of documents, images, or data points in seconds — tasks that would take a human team days.</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl bg-red-500/5 border border-red-500/20">
+            <p class="text-xs font-semibold text-red-400 uppercase tracking-wider mb-3">Where AI Falls Short</p>
+            <ul class="text-sm text-(--color-text-secondary) space-y-2">
+              <li><strong class="text-(--color-text-primary)">Factual accuracy:</strong> AI models can and do state things confidently that are completely wrong. This is called "hallucination." They generate plausible-sounding text, not verified truth.</li>
+              <li><strong class="text-(--color-text-primary)">Real reasoning:</strong> AI can mimic reasoning patterns it has seen in its training data, but it does not truly "think through" problems the way humans do. It is pattern-matching, not logic.</li>
+              <li><strong class="text-(--color-text-primary)">Understanding context:</strong> AI has no lived experience, no common sense, and no actual understanding of the world. It processes text statistically, not meaningfully.</li>
+              <li><strong class="text-(--color-text-primary)">Anything after its training data:</strong> A model only knows what was in its training dataset. It has no awareness of events that happened after its training cutoff date unless given tools to search the web.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Practical Rule of Thumb</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            Use AI as a <strong class="text-(--color-text-primary)">first draft tool</strong>, not a final answer machine. It is excellent at generating starting points, brainstorming options, and handling tedious formatting work. But always verify facts, review its logic, and apply your own judgement before relying on any output for anything important. The people who get the most value from AI treat it like a very fast, very knowledgeable — but sometimes confidently wrong — assistant.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 5: Why This Matters Now -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. Why This Matters Now</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          The ideas behind AI are not new. Neural networks were first proposed in the 1940s. Machine learning has been a field of research since the 1950s. So why has everything exploded in the last few years? The answer is a convergence of three things that all reached critical mass around the same time.
+        </p>
+
+        <div class="space-y-3 mb-4">
+          <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl">
+            <p class="text-sm font-semibold text-(--color-text-primary) mb-1">Data at Scale</p>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              The internet created an unprecedented ocean of text, images, and video. By the 2010s, there was enough digitised human knowledge to train models on billions of examples. Without this data, even the best algorithms would have nothing to learn from.
+            </p>
+          </div>
+          <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl">
+            <p class="text-sm font-semibold text-(--color-text-primary) mb-1">Compute Power</p>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Graphics processing units (GPUs), originally built for video games, turned out to be perfect for the parallel mathematical operations neural networks require. Companies like NVIDIA began building chips specifically for AI training. What would have taken years to compute in the 2000s now takes weeks.
+            </p>
+          </div>
+          <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl">
+            <p class="text-sm font-semibold text-(--color-text-primary) mb-1">Algorithmic Breakthroughs</p>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              In 2017, researchers at Google published a paper called "Attention Is All You Need," introducing the Transformer architecture. This new design allowed models to process language far more effectively than anything before it. Nearly every major AI system you hear about today — GPT, Claude, Gemini, Llama — is built on Transformers.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          These three ingredients — massive data, powerful hardware, and smarter algorithms — came together and unlocked capabilities that surprised even the researchers building them. That is why AI went from a niche academic topic to front-page news seemingly overnight. It was not one breakthrough; it was the compounding effect of decades of progress in data, compute, and mathematics all paying off at once.
+        </p>
+      </section>
+
+      <!-- Key Takeaways -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Key Takeaways</h2>
+        <div class="bg-(--color-bg-card) border border-(--color-border) p-4 rounded-xl">
+          <ul class="text-sm text-(--color-text-secondary) space-y-2">
+            <li><strong class="text-(--color-text-primary)">AI is software that learns from data</strong> rather than following hand-written rules. All AI you can use today is narrow AI — very good at specific tasks, not a general-purpose intelligence.</li>
+            <li><strong class="text-(--color-text-primary)">Machine learning works by example:</strong> show the model data, let it find patterns, then apply those patterns to new inputs. The two phases are training (expensive, done once) and inference (cheap, done every time you use it).</li>
+            <li><strong class="text-(--color-text-primary)">Neural networks are maths, not brains.</strong> They are layers of simple calculations with adjustable weights, optimised over millions of iterations. The "brain" analogy is a metaphor, not a description.</li>
+            <li><strong class="text-(--color-text-primary)">AI is powerful but flawed.</strong> It is great at pattern recognition, language, and generation. It is bad at factual accuracy, genuine reasoning, and anything outside its training data.</li>
+            <li><strong class="text-(--color-text-primary)">The current boom happened</strong> because massive datasets, powerful GPUs, and the Transformer architecture all matured at the same time.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- What's Next -->
+      <section class="mt-4">
+        <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20">
+          <h2 class="text-lg font-bold text-(--color-text-primary) mb-2">What's Next?</h2>
+          <p class="text-sm text-(--color-text-secondary) mb-3">
+            Now that you understand what AI is and how it learns, the next step is to look under the hood of the specific AI systems you interact with every day: large language models. In Part 2, you will learn how ChatGPT, Claude, and Gemini actually generate text — including why they sometimes make things up.
+          </p>
+          <a
+            href={`${base}academy/how-llms-work/`}
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-(--color-accent) text-white font-medium text-sm hover:opacity-90 transition-opacity"
+          >
+            Part 2: How Large Language Models Work
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Back to Academy -->
+      <div class="pt-4">
+        <a
+          href={`${base}academy/`}
+          class="inline-flex items-center gap-2 text-sm text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to AI Academy
+        </a>
+      </div>
+
+    </div>
+  </article>
+</BaseLayout>

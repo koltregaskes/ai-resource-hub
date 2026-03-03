@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getRumouredModels } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const allRumours = getRumouredModels();
+const rumoured = allRumours.filter(r => r.status === 'rumoured');
+const confirmed = allRumours.filter(r => r.status === 'confirmed');
+const released = allRumours.filter(r => r.status === 'released');
+const debunked = allRumours.filter(r => r.status === 'debunked');
+
+const statusColours: Record<string, { bg: string; text: string; label: string }> = {
+  rumoured: { bg: 'bg-yellow-500/10', text: 'text-yellow-400', label: 'Rumoured' },
+  confirmed: { bg: 'bg-blue-500/10', text: 'text-blue-400', label: 'Confirmed' },
+  released: { bg: 'bg-green-500/10', text: 'text-green-400', label: 'Released' },
+  debunked: { bg: 'bg-red-500/10', text: 'text-red-400', label: 'Debunked' },
+};
+
+function parseSources(sourcesJson: string | null): string[] {
+  if (!sourcesJson) return [];
+  try { return JSON.parse(sourcesJson); } catch { return []; }
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+---
+
+<BaseLayout
+  title="AI Model Rumours & Leaks — Stealth Models Tracker — The AI Resource Hub"
+  description="Track rumoured, leaked, and stealth AI models. Codenames, first sightings, and confirmed identities for upcoming models from OpenAI, Anthropic, Google, Meta, and more."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Rumours & Leaks</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Model Rumours & Leaks
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Tracking stealth models, codenames, and leaks across the AI industry. When a mysterious model appears on OpenRouter or a codename surfaces in API responses, we log it here. Some turn out to be real; some don't.
+      </p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="p-4 rounded-xl bg-yellow-500/5 border border-yellow-500/20 mb-8">
+      <p class="text-xs text-(--color-text-secondary)">
+        <strong class="text-yellow-400">Disclaimer:</strong> Information on this page is unverified unless marked as "Confirmed" or "Released". Rumours come from API sightings, code references, leaks, and industry sources. We do not guarantee accuracy and will update entries as information becomes available.
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-3 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-yellow-400">{rumoured.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Rumoured</p>
+      </div>
+      <div class="p-3 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-blue-400">{confirmed.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Confirmed</p>
+      </div>
+      <div class="p-3 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">{released.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Released</p>
+      </div>
+      <div class="p-3 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-red-400">{debunked.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Debunked</p>
+      </div>
+    </div>
+
+    <!-- Active rumours -->
+    {rumoured.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Active Rumours</h2>
+        <div class="space-y-3">
+          {rumoured.map((r) => {
+            const sources = parseSources(r.sources);
+            return (
+              <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-yellow-500/30 transition-colors">
+                <div class="flex items-center gap-2 mb-2">
+                  {r.provider_colour && (
+                    <span class="w-2.5 h-2.5 rounded-full" style={`background-color: ${r.provider_colour}`}></span>
+                  )}
+                  <span class="font-bold text-(--color-text-primary)">{r.codename}</span>
+                  <span class={`text-[10px] px-2 py-0.5 rounded-full ${statusColours[r.status].bg} ${statusColours[r.status].text}`}>
+                    {statusColours[r.status].label}
+                  </span>
+                  {r.provider_name && (
+                    <span class="text-xs text-(--color-text-muted)">by {r.provider_name}</span>
+                  )}
+                  <span class="text-xs text-(--color-text-muted) ml-auto">First seen: {formatDate(r.first_seen)}</span>
+                </div>
+                {r.notes && <p class="text-sm text-(--color-text-secondary) mb-2">{r.notes}</p>}
+                {sources.length > 0 && (
+                  <div class="flex flex-wrap gap-2">
+                    {sources.map((url, i) => (
+                      <a href={url} target="_blank" rel="noopener noreferrer" class="text-[10px] text-(--color-accent) hover:text-(--color-accent-hover)">
+                        Source {i + 1}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    )}
+
+    <!-- Confirmed / Released -->
+    {confirmed.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Confirmed Identities</h2>
+        <p class="text-sm text-(--color-text-muted) mb-3">Models that started as rumours and were later confirmed.</p>
+        <div class="space-y-3">
+          {confirmed.map((r) => (
+            <div class="p-4 rounded-xl bg-(--color-bg-card) border border-blue-500/20">
+              <div class="flex items-center gap-2 mb-2">
+                {r.provider_colour && (
+                  <span class="w-2.5 h-2.5 rounded-full" style={`background-color: ${r.provider_colour}`}></span>
+                )}
+                <span class="font-bold text-(--color-text-primary)">{r.codename}</span>
+                <svg class="w-4 h-4 text-(--color-text-muted)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+                {r.confirmed_as ? (
+                  <a href={`${base}models/${r.confirmed_as}/`} class="font-bold text-(--color-accent) hover:text-(--color-accent-hover)">
+                    {r.confirmed_name || r.confirmed_as}
+                  </a>
+                ) : (
+                  <span class="font-bold text-blue-400">{r.confirmed_name || 'Confirmed'}</span>
+                )}
+                <span class={`text-[10px] px-2 py-0.5 rounded-full ${statusColours[r.status].bg} ${statusColours[r.status].text}`}>
+                  {statusColours[r.status].label}
+                </span>
+              </div>
+              {r.notes && <p class="text-sm text-(--color-text-secondary)">{r.notes}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Submit a tip -->
+    <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Got a Tip?</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        If you've spotted a stealth model on OpenRouter, a codename in API responses, or heard reliable industry rumours, let us know via <a href="https://github.com/koltregaskes/ai-resource-hub/issues" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub Issues</a>. We verify all submissions before publishing.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

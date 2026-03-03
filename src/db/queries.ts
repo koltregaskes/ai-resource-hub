@@ -484,6 +484,41 @@ export function getModelsWithTTFT(): DBModelTTFT[] {
 }
 
 /**
+ * Get all rumoured/stealth models.
+ */
+export interface DBRumouredModel {
+  id: string;
+  codename: string;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  status: string;
+  first_seen: string;
+  confirmed_as: string | null;
+  confirmed_name: string | null;
+  sources: string | null;
+  notes: string | null;
+  category: string;
+}
+
+export function getRumouredModels(): DBRumouredModel[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT rm.*, p.name AS provider_name, p.colour AS provider_colour
+    FROM rumoured_models rm
+    LEFT JOIN providers p ON rm.provider_id = p.id
+    ORDER BY
+      CASE rm.status
+        WHEN 'rumoured' THEN 1
+        WHEN 'confirmed' THEN 2
+        WHEN 'released' THEN 3
+        WHEN 'debunked' THEN 4
+      END,
+      rm.first_seen DESC
+  `).all() as DBRumouredModel[];
+}
+
+/**
  * Get all glossary terms.
  */
 export interface DBGlossaryTerm {
