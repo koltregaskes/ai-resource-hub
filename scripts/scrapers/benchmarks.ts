@@ -5,9 +5,10 @@
  * Run: npx tsx scripts/scrapers/benchmarks.ts
  *
  * Data sources:
- * 1. LMSYS Chatbot Arena (ELO rankings) via HuggingFace datasets API
- * 2. Open LLM Leaderboard v2 via HuggingFace datasets API
- * 3. Fallback to validated known data when APIs are inaccessible
+ * 1. Artificial Analysis API (MMLU-Pro, GPQA, MATH-500 etc.) — saved by speed scraper
+ * 2. LMSYS Chatbot Arena (ELO rankings) via HuggingFace datasets API
+ * 3. Open LLM Leaderboard v2 via HuggingFace datasets API
+ * 4. Fallback to validated known data when APIs are inaccessible
  *
  * Strategy:
  * - Try live data first from HuggingFace
@@ -16,6 +17,8 @@
  */
 import { getDB, logScrapeRun } from './base';
 import type Database from 'better-sqlite3';
+import fs from 'node:fs';
+import path from 'node:path';
 
 interface ScrapedScore {
   modelId: string;
@@ -263,6 +266,84 @@ function upsertScores(db: Database.Database, scores: ScrapedScore[]): number {
   return updated;
 }
 
+// ─── Artificial Analysis benchmark data ─────────────────────────
+// The speed scraper saves AA benchmark scores to data/reports/aa-benchmarks-latest.json.
+// We import those scores here to keep benchmark data fresh from a live source.
+
+const AA_SLUG_TO_DB: Record<string, string> = {
+  'gpt-4o': 'gpt-4o', 'gpt-4o-mini': 'gpt-4o-mini',
+  'gpt-4.1': 'gpt-4.1', 'gpt-4.1-mini': 'gpt-4.1-mini', 'gpt-4.1-nano': 'gpt-4.1-nano',
+  'gpt-5': 'gpt-5', 'gpt-5.2': 'gpt-5.2',
+  'o3': 'o3', 'o3-mini': 'o3-mini', 'o4-mini': 'o4-mini',
+  'claude-opus-4.6': 'claude-opus-4.6', 'claude-sonnet-4.6': 'claude-sonnet-4.6',
+  'claude-opus-4': 'claude-opus-4', 'claude-sonnet-4': 'claude-sonnet-4',
+  'claude-3.5-haiku': 'claude-haiku-3.5',
+  'gemini-3.1-pro': 'gemini-3.1-pro', 'gemini-2.5-pro': 'gemini-2.5-pro',
+  'gemini-2.5-flash': 'gemini-2.5-flash', 'gemini-2.0-flash': 'gemini-2.0-flash',
+  'deepseek-r1': 'deepseek-r1', 'deepseek-v3': 'deepseek-v3', 'deepseek-v3.2': 'deepseek-v3.2',
+  'mistral-large': 'mistral-large-3', 'mistral-small': 'mistral-small-3.1',
+  'grok-4': 'grok-4', 'grok-3': 'grok-3',
+  'llama-4-maverick': 'llama-4-maverick', 'llama-3.3-70b': 'llama-3.3-70b',
+  'qwen3-235b': 'qwen3-235b', 'qwen-2.5-72b': 'qwen-2.5-72b',
+  'command-a': 'command-a',
+};
+
+function loadAABenchmarks(): ScrapedScore[] {
+  const reportPath = path.join(process.cwd(), 'data', 'reports', 'aa-benchmarks-latest.json');
+  if (!fs.existsSync(reportPath)) {
+    console.log('  ⊘ Artificial Analysis benchmarks: no data file (run speed scraper first with AA_API_KEY)');
+    return [];
+  }
+
+  console.log('  Loading Artificial Analysis benchmark scores...');
+  const data: Array<{
+    modelSlug: string;
+    modelName: string;
+    intelligenceIndex?: number;
+    mmluPro?: number;
+    gpqa?: number;
+    math500?: number;
+    hle?: number;
+    livecodebench?: number;
+  }> = JSON.parse(fs.readFileSync(reportPath, 'utf-8'));
+
+  const scores: ScrapedScore[] = [];
+  const today = new Date().toISOString().split('T')[0];
+  const source = 'Artificial Analysis (live)';
+  const sourceUrl = 'https://artificialanalysis.ai/leaderboards/models';
+
+  // Benchmark ID mapping (AA field → our benchmark ID in DB)
+  const benchmarkMap: Array<{ field: string; benchmarkId: string }> = [
+    { field: 'mmluPro', benchmarkId: 'mmlu-pro' },
+    { field: 'gpqa', benchmarkId: 'gpqa-diamond' },
+    { field: 'math500', benchmarkId: 'math-500' },
+    { field: 'hle', benchmarkId: 'humanitys-last-exam' },
+    { field: 'livecodebench', benchmarkId: 'livecodebench' },
+  ];
+
+  for (const m of data) {
+    const dbId = AA_SLUG_TO_DB[m.modelSlug];
+    if (!dbId) continue;
+
+    for (const { field, benchmarkId } of benchmarkMap) {
+      const score = (m as Record<string, unknown>)[field];
+      if (typeof score === 'number' && score > 0) {
+        scores.push({
+          modelId: dbId,
+          benchmarkId,
+          score,
+          source,
+          sourceUrl,
+          measuredAt: today,
+        });
+      }
+    }
+  }
+
+  console.log(`    ${scores.length} benchmark scores from ${data.length} models`);
+  return scores;
+}
+
 // ─── Main ───────────────────────────────────────────────────────
 async function main() {
   console.log('Starting benchmark scraper...');
@@ -274,7 +355,22 @@ async function main() {
 
   let totalUpdated = 0;
 
-  // Chatbot Arena ELO
+  // 1. Artificial Analysis benchmark scores (from speed scraper data)
+  try {
+    const aaScores = loadAABenchmarks();
+    if (aaScores.length > 0) {
+      const updated = upsertScores(db, aaScores);
+      totalUpdated += updated;
+      logScrapeRun(db, 'benchmarks:artificial-analysis', 'success', updated);
+      console.log(`  ✓ Artificial Analysis: ${updated} benchmark scores updated (LIVE)`);
+    }
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    logScrapeRun(db, 'benchmarks:artificial-analysis', 'error', 0, message);
+    console.error(`  ✗ Artificial Analysis benchmarks: ${message}`);
+  }
+
+  // 2. Chatbot Arena ELO
   try {
     const { scores, isLive } = await scrapeChatbotArena(existingModels);
     if (scores.length > 0) {

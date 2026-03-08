@@ -63,11 +63,11 @@ async function main() {
   // Show data source summary
   console.log('\n  Data sources used:');
   console.log('  ├─ OpenRouter API (live, no key) ✓');
+  console.log(`  ├─ Artificial Analysis API (${process.env.AA_API_KEY ? 'live, key set ✓' : 'skipped, no AA_API_KEY — free at artificialanalysis.ai'})`);
   console.log(`  ├─ Together AI API (${process.env.TOGETHER_API_KEY ? 'live, key set ✓' : 'skipped, no TOGETHER_API_KEY'})`);
   console.log(`  ├─ Google Gemini API (${process.env.GOOGLE_API_KEY ? 'live, key set ✓' : 'skipped, no GOOGLE_API_KEY'})`);
   console.log(`  ├─ Groq API (${process.env.GROQ_API_KEY ? 'live, key set ✓' : 'skipped, no GROQ_API_KEY'})`);
-  console.log('  ├─ LMSYS Chatbot Arena (attempted live, fallback to cached)');
-  console.log('  └─ Artificial Analysis (checked for API, using cached data)');
+  console.log('  └─ LMSYS Chatbot Arena (attempted live, fallback to cached)');
 
   if (failures > 0) process.exit(1);
 }

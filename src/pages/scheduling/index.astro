@@ -84,9 +84,15 @@ const base = import.meta.env.BASE_URL;
             </tr>
             <tr>
               <td class="px-4 py-2 text-(--color-text-primary) font-medium">Speed / TTFT</td>
-              <td class="px-4 py-2 text-(--color-text-secondary)">Artificial Analysis</td>
-              <td class="px-4 py-2"><span class="text-orange-400 font-mono text-xs">CACHED</span></td>
-              <td class="px-4 py-2 text-(--color-text-secondary)">No (API not yet public)</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Artificial Analysis API</td>
+              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Yes — AA_API_KEY (free)</td>
+            </tr>
+            <tr class="bg-(--color-bg-secondary)">
+              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Benchmark scores</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Artificial Analysis API</td>
+              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Yes — AA_API_KEY (same key)</td>
             </tr>
             <tr class="bg-(--color-bg-secondary)">
               <td class="px-4 py-2 text-(--color-text-primary) font-medium">New model detection</td>
@@ -105,7 +111,9 @@ const base = import.meta.env.BASE_URL;
       <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-2">
         <p class="text-(--color-text-muted)"># Run the full data pipeline (works without any API keys)</p>
         <p>npm run scrape</p>
-        <p class="text-(--color-text-muted) mt-4"># Optional: set API keys for multi-source validation</p>
+        <p class="text-(--color-text-muted) mt-4"># Recommended: Artificial Analysis for live speed + benchmarks</p>
+        <p>set AA_API_KEY=your_key_here</p>
+        <p class="text-(--color-text-muted) mt-2"># Optional: additional sources for cross-validation</p>
         <p>set TOGETHER_API_KEY=your_key_here</p>
         <p>set GOOGLE_API_KEY=your_key_here</p>
         <p>set GROQ_API_KEY=your_key_here</p>
@@ -231,6 +239,10 @@ const base = import.meta.env.BASE_URL;
         Adding keys enables multi-source cross-validation for higher accuracy.
       </p>
       <div class="space-y-3">
+        <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
+          <code class="text-sm text-blue-400 font-mono">AA_API_KEY</code>
+          <p class="text-sm text-(--color-text-secondary) mt-1"><strong>Recommended.</strong> Live speed, TTFT, and benchmark scores (MMLU-Pro, GPQA, MATH-500, etc.) from Artificial Analysis. Free at <a href="https://artificialanalysis.ai" class="text-blue-400 hover:underline" target="_blank" rel="noopener">artificialanalysis.ai</a> (1000 req/day)</p>
+        </div>
         <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
           <code class="text-sm text-blue-400 font-mono">TOGETHER_API_KEY</code>
           <p class="text-sm text-(--color-text-secondary) mt-1">Cross-validates pricing for open-source models. Free tier available at <a href="https://api.together.xyz" class="text-blue-400 hover:underline" target="_blank" rel="noopener">api.together.xyz</a></p>
