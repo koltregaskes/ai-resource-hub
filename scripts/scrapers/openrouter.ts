@@ -1,30 +1,37 @@
 #!/usr/bin/env npx tsx
 /**
- * OpenRouter API scraper — fetches live pricing from openrouter.ai/api/v1/models
+ * OpenRouter API scraper — PRIMARY data source for live pricing.
  *
  * Run: npx tsx scripts/scrapers/openrouter.ts
  *
  * OpenRouter aggregates 400+ models from all major providers with real-time
  * pricing data. No API key required for the models endpoint.
  *
+ * This scraper:
+ * 1. Fetches live pricing for all mapped models
+ * 2. Detects NEW models not yet in our database
+ * 3. Writes a new-models report for manual review
+ *
  * Pricing format: OpenRouter returns per-token costs as strings.
  * We convert to per-1M-tokens (our standard format).
  */
 import { getDB, upsertModels, logScrapeRun, type ScrapedModel } from './base';
+import fs from 'node:fs';
+import path from 'node:path';
 
 // ─── OpenRouter API types ──────────────────────────────────────
 interface OpenRouterModel {
   id: string;
   name: string;
   pricing: {
-    prompt: string;              // cost per 1 prompt token (e.g. "0.0000025" = $2.50/1M)
-    completion: string;          // cost per 1 completion token
-    image?: string;              // cost per image input
-    request?: string;            // flat per-request cost
-    input_cache_read?: string;   // cost per cached input token read
-    input_cache_write?: string;  // cost per cached input token write
-    web_search?: string;         // cost per web search
-    internal_reasoning?: string; // cost per internal reasoning token
+    prompt: string;
+    completion: string;
+    image?: string;
+    request?: string;
+    input_cache_read?: string;
+    input_cache_write?: string;
+    web_search?: string;
+    internal_reasoning?: string;
   };
   context_length: number;
   top_provider?: {
@@ -33,13 +40,13 @@ interface OpenRouterModel {
     is_moderated?: boolean;
   };
   architecture?: {
-    modality?: string;              // legacy: "text+image->text"
-    input_modalities?: string[];    // e.g. ["text", "image"]
-    output_modalities?: string[];   // e.g. ["text"]
+    modality?: string;
+    input_modalities?: string[];
+    output_modalities?: string[];
     tokenizer?: string;
     instruct_type?: string;
   };
-  created?: number;        // Unix timestamp
+  created?: number;
 }
 
 interface OpenRouterResponse {
@@ -48,108 +55,193 @@ interface OpenRouterResponse {
 
 // ─── Model ID mapping ──────────────────────────────────────────
 // Maps OpenRouter model IDs to our database model IDs.
-// Only models we already track are mapped — we don't auto-add new models
-// because they need quality scores and metadata that can't be scraped.
+// This is the COMPLETE mapping for all ~99 LLM models we track.
+// OpenRouter IDs use the format "provider/model-name".
+// Our DB IDs are simpler slugs.
+//
+// When OpenRouter lists a model we DON'T have here, it gets reported
+// as a new/untracked model in the detection report.
 const MODEL_MAP: Record<string, string> = {
-  // OpenAI
+  // ── OpenAI ───────────────────────────────────────────────────
   'openai/gpt-4o': 'gpt-4o',
   'openai/gpt-4o-mini': 'gpt-4o-mini',
   'openai/gpt-4.1': 'gpt-4.1',
   'openai/gpt-4.1-mini': 'gpt-4.1-mini',
   'openai/gpt-4.1-nano': 'gpt-4.1-nano',
+  'openai/gpt-4.5-preview': 'gpt-4.5',
+  'openai/gpt-5': 'gpt-5',
+  'openai/gpt-5-pro': 'gpt-5-pro',
+  'openai/gpt-5-nano': 'gpt-5-nano',
+  'openai/gpt-5.2': 'gpt-5.2',
+  'openai/gpt-5.2-pro': 'gpt-5.2-pro',
+  'openai/o1': 'o1',
+  'openai/o1-mini': 'o1-mini',
   'openai/o3': 'o3',
   'openai/o3-mini': 'o3-mini',
   'openai/o3-pro': 'o3-pro',
   'openai/o4-mini': 'o4-mini',
 
-  // Anthropic
+  // ── Anthropic ────────────────────────────────────────────────
+  'anthropic/claude-3-opus': 'claude-3-opus',
+  'anthropic/claude-3.5-sonnet': 'claude-3.5-sonnet',
+  'anthropic/claude-3.7-sonnet': 'claude-3.7-sonnet',
+  'anthropic/claude-3.5-haiku': 'claude-haiku-3.5',
+  'anthropic/claude-haiku-4': 'claude-haiku-4',
+  'anthropic/claude-haiku-4.5': 'claude-haiku-4.5',
   'anthropic/claude-opus-4': 'claude-opus-4',
   'anthropic/claude-sonnet-4': 'claude-sonnet-4',
-  'anthropic/claude-3.5-haiku': 'claude-haiku-3.5',
-  'anthropic/claude-haiku-4.5': 'claude-haiku-4.5',
-  'anthropic/claude-sonnet-4.5': 'claude-sonnet-4.5',
   'anthropic/claude-opus-4.5': 'claude-opus-4.5',
-  'anthropic/claude-sonnet-4.6': 'claude-sonnet-4.6',
+  'anthropic/claude-sonnet-4.5': 'claude-sonnet-4.5',
   'anthropic/claude-opus-4.6': 'claude-opus-4.6',
+  'anthropic/claude-sonnet-4.6': 'claude-sonnet-4.6',
 
-  // Google
-  'google/gemini-2.5-pro': 'gemini-2.5-pro',
-  'google/gemini-2.5-flash': 'gemini-2.5-flash',
+  // ── Google ───────────────────────────────────────────────────
+  'google/gemini-1.5-pro': 'gemini-1.5-pro',
+  'google/gemini-1.5-flash': 'gemini-1.5-flash',
   'google/gemini-2.0-flash': 'gemini-2.0-flash',
   'google/gemini-2.0-flash-lite': 'gemini-2.0-flash-lite',
+  'google/gemini-2.5-pro': 'gemini-2.5-pro',
+  'google/gemini-2.5-flash': 'gemini-2.5-flash',
   'google/gemini-2.5-flash-lite': 'gemini-2.5-flash-lite',
+  'google/gemini-3-pro': 'gemini-3-pro',
+  'google/gemini-3-flash': 'gemini-3-flash',
+  'google/gemini-3.1-pro': 'gemini-3.1-pro',
 
-  // Meta
+  // ── Meta / Llama ─────────────────────────────────────────────
   'meta-llama/llama-4-maverick': 'llama-4-maverick',
   'meta-llama/llama-4-scout': 'llama-4-scout',
   'meta-llama/llama-3.3-70b-instruct': 'llama-3.3-70b',
+  'meta-llama/llama-3.1-405b-instruct': 'llama-3.1-405b',
+  'meta-llama/llama-3.1-70b-instruct': 'llama-3.1-70b',
+  'meta-llama/llama-3.1-8b-instruct': 'llama-3.1-8b',
 
-  // DeepSeek
-  'deepseek/deepseek-chat-v3': 'deepseek-v3',
+  // ── DeepSeek ─────────────────────────────────────────────────
+  'deepseek/deepseek-chat': 'deepseek-v3',
   'deepseek/deepseek-chat-v3-0324': 'deepseek-v3.2',
   'deepseek/deepseek-r1': 'deepseek-r1',
   'deepseek/deepseek-r1-0528': 'deepseek-r1-0528',
+  'deepseek/deepseek-chat-v2.5': 'deepseek-v2.5',
 
-  // Mistral
+  // ── Mistral ──────────────────────────────────────────────────
   'mistralai/mistral-large': 'mistral-large-3',
+  'mistralai/mistral-large-2407': 'mistral-large-2',
   'mistralai/mistral-medium': 'mistral-medium-3',
   'mistralai/mistral-small': 'mistral-small-3.1',
   'mistralai/codestral': 'codestral',
+  'mistralai/codestral-2501': 'codestral-25.01',
   'mistralai/mistral-nemo': 'mistral-nemo',
   'mistralai/pixtral-large': 'pixtral-large',
 
-  // xAI
+  // ── xAI / Grok ──────────────────────────────────────────────
+  'x-ai/grok-2': 'grok-2',
   'x-ai/grok-3': 'grok-3',
   'x-ai/grok-3-mini': 'grok-3-mini',
+  'x-ai/grok-4': 'grok-4',
+  'x-ai/grok-4-fast': 'grok-4-fast',
+  'x-ai/grok-4.1-fast': 'grok-4.1-fast',
 
-  // Cohere
+  // ── Cohere ───────────────────────────────────────────────────
   'cohere/command-a': 'command-a',
+  'cohere/command-a-reasoning': 'command-a-reasoning',
   'cohere/command-r-plus': 'command-r-plus',
   'cohere/command-r': 'command-r',
   'cohere/command-r7b': 'command-r7b',
 
-  // Alibaba
+  // ── Alibaba / Qwen ──────────────────────────────────────────
   'qwen/qwen-2.5-72b-instruct': 'qwen-2.5-72b',
+  'qwen/qwen-2.5-coder-32b-instruct': 'qwen-2.5-coder-32b',
   'qwen/qwq-32b': 'qwen-qwq-32b',
+  'qwen/qwen3-235b-a22b': 'qwen3-235b',
+  'qwen/qwen3-32b': 'qwen3-32b',
+  'qwen/qwen3-30b-a3b': 'qwen3-30b',
+  'qwen/qwen3-coder-480b': 'qwen3-coder-480b',
+  'qwen/qwen3-max': 'qwen3-max',
 
-  // Perplexity
+  // ── Perplexity ───────────────────────────────────────────────
   'perplexity/sonar-pro': 'sonar-pro',
   'perplexity/sonar': 'sonar',
 
-  // AI21
+  // ── AI21 Labs ────────────────────────────────────────────────
   'ai21/jamba-1.5-large': 'jamba-1.5-large',
   'ai21/jamba-1.5-mini': 'jamba-1.5-mini',
 
-  // Amazon
+  // ── Amazon ───────────────────────────────────────────────────
+  'amazon/nova-premier': 'nova-premier',
   'amazon/nova-pro': 'nova-pro',
   'amazon/nova-lite': 'nova-lite',
   'amazon/nova-micro': 'nova-micro',
+  'amazon/nova-2-lite': 'nova-2-lite',
+
+  // ── Microsoft ────────────────────────────────────────────────
+  'microsoft/phi-4': 'phi-4',
+  'microsoft/phi-4-multimodal': 'phi-4-multimodal',
+  'microsoft/phi-4-reasoning': 'phi-4-reasoning',
+
+  // ── NVIDIA ───────────────────────────────────────────────────
+  'nvidia/llama-3.1-nemotron-70b-instruct': 'nemotron-70b',
+  'nvidia/nemotron-ultra': 'nemotron-ultra',
+
+  // ── MiniMax ──────────────────────────────────────────────────
+  'minimax/minimax-01': 'minimax-01',
+
+  // ── Inflection ───────────────────────────────────────────────
+  'inflection/inflection-3-0': 'inflection-3',
+  'inflection/inflection-2.5': 'inflection-2.5',
+
+  // ── Reka ─────────────────────────────────────────────────────
+  'rekaai/reka-core': 'reka-core',
+  'rekaai/reka-flash-3': 'reka-flash-3',
+
+  // ── 01.AI / Yi ───────────────────────────────────────────────
+  '01-ai/yi-large': 'yi-large',
+  '01-ai/yi-lightning': 'yi-lightning',
+  '01-ai/yi-vision': 'yi-vision',
+};
+
+// ─── Provider prefix → DB provider ID ─────────────────────────
+const PROVIDER_PREFIX_MAP: Record<string, string> = {
+  'openai': 'openai',
+  'anthropic': 'anthropic',
+  'google': 'google',
+  'meta-llama': 'meta',
+  'deepseek': 'deepseek',
+  'mistralai': 'mistral',
+  'x-ai': 'xai',
+  'cohere': 'cohere',
+  'qwen': 'alibaba',
+  'perplexity': 'perplexity',
+  'ai21': 'ai21',
+  'amazon': 'amazon',
+  'microsoft': 'microsoft',
+  'nvidia': 'nvidia',
+  'minimax': 'minimax',
+  'inflection': 'inflection',
+  'rekaai': 'reka',
+  '01-ai': '01ai',
+  'zhipuai': 'zhipu',
 };
 
 // Reverse lookup: our DB ID → provider ID for the model
 const DB_ID_TO_PROVIDER: Record<string, string> = {};
 for (const [orId, dbId] of Object.entries(MODEL_MAP)) {
-  const provider = orId.split('/')[0];
-  // Map OpenRouter provider prefixes to our DB provider IDs
-  const providerMap: Record<string, string> = {
-    'openai': 'openai',
-    'anthropic': 'anthropic',
-    'google': 'google',
-    'meta-llama': 'meta',
-    'deepseek': 'deepseek',
-    'mistralai': 'mistral',
-    'x-ai': 'xai',
-    'cohere': 'cohere',
-    'qwen': 'alibaba',
-    'perplexity': 'perplexity',
-    'ai21': 'ai21',
-    'amazon': 'amazon',
-  };
-  DB_ID_TO_PROVIDER[dbId] = providerMap[provider] ?? provider;
+  const prefix = orId.split('/')[0];
+  DB_ID_TO_PROVIDER[dbId] = PROVIDER_PREFIX_MAP[prefix] ?? prefix;
 }
 
+// ─── Providers we care about for new model detection ──────────
+// Only flag new models from these major providers (ignore niche/community models)
+const WATCHED_PROVIDERS = new Set([
+  'openai', 'anthropic', 'google', 'meta-llama', 'deepseek',
+  'mistralai', 'x-ai', 'cohere', 'qwen', 'amazon', 'microsoft',
+  'nvidia', 'minimax', 'ai21', 'inflection', 'rekaai', '01-ai',
+]);
+
 // ─── Fetch and transform ───────────────────────────────────────
-async function scrapeOpenRouter(): Promise<ScrapedModel[]> {
+async function scrapeOpenRouter(): Promise<{
+  models: ScrapedModel[];
+  newModels: OpenRouterModel[];
+  totalOnOpenRouter: number;
+}> {
   console.log('  Fetching OpenRouter API...');
 
   const response = await fetch('https://openrouter.ai/api/v1/models', {
@@ -167,13 +259,26 @@ async function scrapeOpenRouter(): Promise<ScrapedModel[]> {
   console.log(`    Received ${data.data.length} models from OpenRouter`);
 
   const models: ScrapedModel[] = [];
+  const newModels: OpenRouterModel[] = [];
   let matched = 0;
-  let skipped = 0;
 
   for (const orModel of data.data) {
     const dbId = MODEL_MAP[orModel.id];
+
     if (!dbId) {
-      skipped++;
+      // New model detection: is this from a provider we watch?
+      const prefix = orModel.id.split('/')[0];
+      if (WATCHED_PROVIDERS.has(prefix)) {
+        // Skip free/community variants (typically have ":free" suffix)
+        if (!orModel.id.includes(':free') && !orModel.id.includes(':extended')) {
+          const prompt = parseFloat(orModel.pricing.prompt);
+          const completion = parseFloat(orModel.pricing.completion);
+          // Only flag paid models (free tier variants aren't new models)
+          if (!isNaN(prompt) && !isNaN(completion) && (prompt > 0 || completion > 0)) {
+            newModels.push(orModel);
+          }
+        }
+      }
       continue;
     }
 
@@ -181,26 +286,22 @@ async function scrapeOpenRouter(): Promise<ScrapedModel[]> {
     const promptPerToken = parseFloat(orModel.pricing.prompt);
     const completionPerToken = parseFloat(orModel.pricing.completion);
 
-    // Skip free models that we track as paid (probably rate-limited free tier)
     if (isNaN(promptPerToken) || isNaN(completionPerToken)) continue;
 
     const inputPrice = promptPerToken * 1_000_000;
     const outputPrice = completionPerToken * 1_000_000;
 
-    // Skip if pricing is $0 for models we know are paid
-    // (OpenRouter sometimes lists free rate-limited variants)
+    // Skip $0 pricing (free tier variants)
     if (inputPrice === 0 && outputPrice === 0) continue;
 
-    // Parse modality from architecture
     const modality = parseModality(orModel.architecture);
-
     const providerId = DB_ID_TO_PROVIDER[dbId];
 
     models.push({
       id: dbId,
-      name: orModel.name.replace(/^[^:]+:\s*/, ''), // Remove "Provider: " prefix
+      name: orModel.name.replace(/^[^:]+:\s*/, ''),
       providerId,
-      inputPrice: Math.round(inputPrice * 1000) / 1000, // Round to 3 decimal places
+      inputPrice: Math.round(inputPrice * 1000) / 1000,
       outputPrice: Math.round(outputPrice * 1000) / 1000,
       contextWindow: orModel.context_length || undefined,
       maxOutput: orModel.top_provider?.max_completion_tokens || undefined,
@@ -210,26 +311,17 @@ async function scrapeOpenRouter(): Promise<ScrapedModel[]> {
     matched++;
   }
 
-  console.log(`    Matched ${matched} models to our database (${skipped} untracked)`);
-
-  // Log price summary for matched models
-  if (models.length > 0) {
-    console.log('    Price summary (per 1M tokens):');
-    for (const m of models.slice(0, 10)) {
-      console.log(`      ${m.id}: $${m.inputPrice.toFixed(2)} in / $${m.outputPrice.toFixed(2)} out`);
-    }
-    if (models.length > 10) {
-      console.log(`      ... and ${models.length - 10} more`);
-    }
+  console.log(`    Matched ${matched} models to our database`);
+  if (newModels.length > 0) {
+    console.log(`    ⚠ Found ${newModels.length} NEW untracked models from watched providers`);
   }
 
-  return models;
+  return { models, newModels, totalOnOpenRouter: data.data.length };
 }
 
 function parseModality(architecture?: OpenRouterModel['architecture']): string {
   if (!architecture) return 'text';
 
-  // Prefer structured modality arrays (newer API format)
   if (architecture.input_modalities && architecture.input_modalities.length > 0) {
     const parts: string[] = ['text'];
     if (architecture.input_modalities.includes('image')) parts.push('vision');
@@ -237,7 +329,6 @@ function parseModality(architecture?: OpenRouterModel['architecture']): string {
     return parts.join(',');
   }
 
-  // Fall back to legacy modality string: "text+image->text"
   const legacy = architecture.modality;
   if (!legacy) return 'text';
   const parts: string[] = ['text'];
@@ -246,22 +337,88 @@ function parseModality(architecture?: OpenRouterModel['architecture']): string {
   return parts.join(',');
 }
 
+// ─── New Model Detection Report ─────────────────────────────────
+function writeNewModelsReport(newModels: OpenRouterModel[]): void {
+  if (newModels.length === 0) return;
+
+  const reportDir = path.join(process.cwd(), 'data', 'reports');
+  fs.mkdirSync(reportDir, { recursive: true });
+
+  const date = new Date().toISOString().split('T')[0];
+  const reportPath = path.join(reportDir, `new-models-${date}.json`);
+
+  // Group by provider
+  const byProvider: Record<string, Array<{
+    openrouterId: string;
+    name: string;
+    inputPrice: number;
+    outputPrice: number;
+    contextWindow: number;
+    created: string | null;
+  }>> = {};
+
+  for (const m of newModels) {
+    const prefix = m.id.split('/')[0];
+    const provider = PROVIDER_PREFIX_MAP[prefix] ?? prefix;
+    if (!byProvider[provider]) byProvider[provider] = [];
+
+    const inputPrice = parseFloat(m.pricing.prompt) * 1_000_000;
+    const outputPrice = parseFloat(m.pricing.completion) * 1_000_000;
+
+    byProvider[provider].push({
+      openrouterId: m.id,
+      name: m.name,
+      inputPrice: Math.round(inputPrice * 1000) / 1000,
+      outputPrice: Math.round(outputPrice * 1000) / 1000,
+      contextWindow: m.context_length,
+      created: m.created ? new Date(m.created * 1000).toISOString().split('T')[0] : null,
+    });
+  }
+
+  const report = {
+    generated: new Date().toISOString(),
+    totalNewModels: newModels.length,
+    byProvider,
+    instructions: 'Add models to MODEL_MAP in openrouter.ts and seed-db.ts to start tracking them.',
+  };
+
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  console.log(`    Report written to ${reportPath}`);
+
+  // Print summary to console
+  console.log('\n  ┌─ NEW MODELS DETECTED ──────────────────────────');
+  for (const [provider, models] of Object.entries(byProvider)) {
+    console.log(`  │ ${provider} (${models.length} new):`);
+    for (const m of models.slice(0, 5)) {
+      console.log(`  │   ${m.openrouterId} — $${m.inputPrice.toFixed(2)}/$${m.outputPrice.toFixed(2)} per 1M tok`);
+    }
+    if (models.length > 5) {
+      console.log(`  │   ... and ${models.length - 5} more`);
+    }
+  }
+  console.log('  └──────────────────────────────────────────────────');
+}
+
 // ─── Main ──────────────────────────────────────────────────────
 async function main() {
   console.log('Starting OpenRouter pricing scraper...');
   const db = getDB();
 
   try {
-    const models = await scrapeOpenRouter();
+    const { models, newModels, totalOnOpenRouter } = await scrapeOpenRouter();
 
     if (models.length > 0) {
       const updated = upsertModels(db, models);
       logScrapeRun(db, 'pricing:openrouter', 'success', updated);
-      console.log(`  ✓ OpenRouter: ${updated} models updated`);
+      console.log(`  ✓ OpenRouter: ${updated} models updated (${totalOnOpenRouter} total on platform)`);
     } else {
       logScrapeRun(db, 'pricing:openrouter', 'success', 0);
       console.log('  ✓ OpenRouter: no matching models found');
     }
+
+    // Write new model detection report
+    writeNewModelsReport(newModels);
+
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     logScrapeRun(db, 'pricing:openrouter', 'error', 0, message);

@@ -217,6 +217,7 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'use-cases', title: 'Best Models by Use Case', description: 'The A-list — best AI models for coding, writing, reasoning, speed, privacy, and more' },
     { id: 'token-counter', title: 'Token Counter', description: 'Estimate token counts and API costs — paste text and see pricing across all models' },
     { id: 'rumours', title: 'Rumours & Leaks', description: 'Track stealth AI models, codenames, and leaks — unverified sightings from across the industry' },
+    { id: 'scheduling', title: 'Scheduling Guide', description: 'Set up automated daily data updates on Windows, macOS, or Linux' },
   ];
 
   // Custom URL pages

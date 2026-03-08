@@ -1,0 +1,272 @@
+---
+/**
+ * Scheduling Guide — how to run automated data updates locally.
+ *
+ * Covers:
+ * - GitHub Actions (already running)
+ * - Windows Task Scheduler
+ * - macOS/Linux cron
+ * - Environment variables (API keys)
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Scheduling Guide — How to Run Daily Updates"
+  description="Set up automated daily data updates for The AI Resource Hub on Windows, macOS, or Linux."
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+
+    <h1 class="text-3xl font-bold text-(--color-text-primary) mb-2">Scheduling Automated Updates</h1>
+    <p class="text-(--color-text-secondary) mb-8">
+      How to keep pricing, benchmarks, and model data fresh with automated daily runs.
+    </p>
+
+    <!-- Current Status -->
+    <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-xl p-6 mb-8">
+      <h2 class="text-lg font-semibold text-(--color-text-primary) mb-3">Current Automation Status</h2>
+      <div class="space-y-2 text-sm">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-green-500"></span>
+          <span class="text-(--color-text-secondary)"><strong>GitHub Actions</strong> — runs every 12 hours (06:00 & 18:00 UTC)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+          <span class="text-(--color-text-secondary)"><strong>Local scheduling</strong> — optional, for faster updates or redundancy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- What Gets Updated -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">What Gets Updated</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-(--color-border) rounded-lg overflow-hidden">
+          <thead class="bg-(--color-bg-tertiary)">
+            <tr>
+              <th class="text-left px-4 py-2 text-(--color-text-secondary)">Data</th>
+              <th class="text-left px-4 py-2 text-(--color-text-secondary)">Source</th>
+              <th class="text-left px-4 py-2 text-(--color-text-secondary)">Method</th>
+              <th class="text-left px-4 py-2 text-(--color-text-secondary)">API Key?</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-(--color-border)">
+            <tr class="bg-(--color-bg-secondary)">
+              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Pricing (all models)</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">OpenRouter API</td>
+              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">No</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Pricing (cross-check)</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Together AI API</td>
+              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Yes — TOGETHER_API_KEY</td>
+            </tr>
+            <tr class="bg-(--color-bg-secondary)">
+              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Context windows</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Google Gemini API</td>
+              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Yes — GOOGLE_API_KEY</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Context windows</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Groq API</td>
+              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Yes — GROQ_API_KEY</td>
+            </tr>
+            <tr class="bg-(--color-bg-secondary)">
+              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Chatbot Arena ELO</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">LMSYS / HuggingFace</td>
+              <td class="px-4 py-2"><span class="text-yellow-400 font-mono text-xs">LIVE+CACHED</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">No</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Speed / TTFT</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Artificial Analysis</td>
+              <td class="px-4 py-2"><span class="text-orange-400 font-mono text-xs">CACHED</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">No (API not yet public)</td>
+            </tr>
+            <tr class="bg-(--color-bg-secondary)">
+              <td class="px-4 py-2 text-(--color-text-primary) font-medium">New model detection</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">OpenRouter API</td>
+              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">Quick Start — Run Manually</h2>
+      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-2">
+        <p class="text-(--color-text-muted)"># Run the full data pipeline (works without any API keys)</p>
+        <p>npm run scrape</p>
+        <p class="text-(--color-text-muted) mt-4"># Optional: set API keys for multi-source validation</p>
+        <p>set TOGETHER_API_KEY=your_key_here</p>
+        <p>set GOOGLE_API_KEY=your_key_here</p>
+        <p>set GROQ_API_KEY=your_key_here</p>
+        <p>npm run scrape</p>
+        <p class="text-(--color-text-muted) mt-4"># Run individual scrapers</p>
+        <p>npm run scrape:openrouter &nbsp;&nbsp;# pricing from OpenRouter</p>
+        <p>npm run scrape:pricing &nbsp;&nbsp;&nbsp;&nbsp;# cross-validation</p>
+        <p>npm run scrape:benchmarks &nbsp;# ELO scores</p>
+        <p>npm run scrape:speed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# speed/TTFT data</p>
+        <p class="text-(--color-text-muted) mt-4"># Check for stale data</p>
+        <p>npm run check:staleness</p>
+        <p class="text-(--color-text-muted) mt-4"># Rebuild the site with fresh data</p>
+        <p>npm run build</p>
+      </div>
+    </section>
+
+    <!-- Windows Task Scheduler -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">Windows Task Scheduler</h2>
+      <p class="text-(--color-text-secondary) mb-4">
+        Set up a daily task that runs the scraper pipeline automatically on your Windows machine.
+      </p>
+
+      <h3 class="text-base font-semibold text-(--color-text-primary) mt-6 mb-3">Step 1: Create a batch script</h3>
+      <p class="text-(--color-text-secondary) mb-2">
+        Save this as <code class="text-xs bg-(--color-bg-tertiary) px-1 py-0.5 rounded">update-data.bat</code> in your project root:
+      </p>
+      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-1 mb-4">
+        <p>@echo off</p>
+        <p>cd /d "C:\Users\YourName\ai-resource-hub"</p>
+        <p>&nbsp;</p>
+        <p>REM Optional: set API keys for multi-source validation</p>
+        <p>REM set TOGETHER_API_KEY=your_key_here</p>
+        <p>REM set GOOGLE_API_KEY=your_key_here</p>
+        <p>&nbsp;</p>
+        <p>echo [%date% %time%] Starting data update... &gt;&gt; logs\scrape.log</p>
+        <p>call npm run scrape &gt;&gt; logs\scrape.log 2&gt;&amp;1</p>
+        <p>call npm run check:staleness &gt;&gt; logs\scrape.log 2&gt;&amp;1</p>
+        <p>call npm run build &gt;&gt; logs\scrape.log 2&gt;&amp;1</p>
+        <p>echo [%date% %time%] Done. &gt;&gt; logs\scrape.log</p>
+      </div>
+
+      <h3 class="text-base font-semibold text-(--color-text-primary) mt-6 mb-3">Step 2: Create the scheduled task</h3>
+      <p class="text-(--color-text-secondary) mb-2">
+        Open PowerShell as Administrator and run:
+      </p>
+      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-1 mb-4">
+        <p class="text-(--color-text-muted)"># Create a daily task at 7am and 7pm</p>
+        <p>$action = New-ScheduledTaskAction `</p>
+        <p>&nbsp;&nbsp;-Execute "C:\Users\YourName\ai-resource-hub\update-data.bat"</p>
+        <p>&nbsp;</p>
+        <p>$trigger1 = New-ScheduledTaskTrigger -Daily -At 7:00AM</p>
+        <p>$trigger2 = New-ScheduledTaskTrigger -Daily -At 7:00PM</p>
+        <p>&nbsp;</p>
+        <p>Register-ScheduledTask `</p>
+        <p>&nbsp;&nbsp;-TaskName "AI Resource Hub - Update Data" `</p>
+        <p>&nbsp;&nbsp;-Action $action `</p>
+        <p>&nbsp;&nbsp;-Trigger $trigger1,$trigger2 `</p>
+        <p>&nbsp;&nbsp;-Description "Scrape latest AI model pricing and benchmarks"</p>
+      </div>
+
+      <h3 class="text-base font-semibold text-(--color-text-primary) mt-6 mb-3">Step 3: Verify it works</h3>
+      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-1">
+        <p class="text-(--color-text-muted)"># Test the task manually</p>
+        <p>Start-ScheduledTask -TaskName "AI Resource Hub - Update Data"</p>
+        <p>&nbsp;</p>
+        <p class="text-(--color-text-muted)"># Check the log</p>
+        <p>Get-Content .\logs\scrape.log -Tail 50</p>
+        <p>&nbsp;</p>
+        <p class="text-(--color-text-muted)"># View task status</p>
+        <p>Get-ScheduledTask -TaskName "AI Resource Hub - Update Data" | Format-List</p>
+      </div>
+    </section>
+
+    <!-- macOS / Linux -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">macOS / Linux (cron)</h2>
+      <p class="text-(--color-text-secondary) mb-4">
+        Use cron for automated runs on macOS or Linux.
+      </p>
+      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-1">
+        <p class="text-(--color-text-muted)"># Open crontab editor</p>
+        <p>crontab -e</p>
+        <p>&nbsp;</p>
+        <p class="text-(--color-text-muted)"># Add these lines (runs at 7am and 7pm):</p>
+        <p>0 7,19 * * * cd /home/user/ai-resource-hub && npm run scrape &gt;&gt; logs/scrape.log 2&gt;&amp;1</p>
+        <p>5 7,19 * * * cd /home/user/ai-resource-hub && npm run build &gt;&gt; logs/build.log 2&gt;&amp;1</p>
+      </div>
+    </section>
+
+    <!-- GitHub Actions -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">GitHub Actions (Already Running)</h2>
+      <p class="text-(--color-text-secondary) mb-4">
+        The repository has a GitHub Actions workflow that runs automatically every 12 hours.
+        It runs all scrapers, checks for data changes, and auto-commits updates.
+      </p>
+      <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4 text-sm space-y-3">
+        <div>
+          <span class="text-(--color-text-muted)">File:</span>
+          <code class="text-(--color-text-secondary) text-xs">.github/workflows/scrape.yml</code>
+        </div>
+        <div>
+          <span class="text-(--color-text-muted)">Schedule:</span>
+          <span class="text-(--color-text-secondary)">Every 12 hours (06:00 & 18:00 UTC)</span>
+        </div>
+        <div>
+          <span class="text-(--color-text-muted)">Auto-commit:</span>
+          <span class="text-(--color-text-secondary)">Yes — commits DB changes automatically</span>
+        </div>
+        <div>
+          <span class="text-(--color-text-muted)">Manual trigger:</span>
+          <span class="text-(--color-text-secondary)">Yes — via "Run workflow" button in GitHub Actions</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Environment Variables -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">API Keys (Optional)</h2>
+      <p class="text-(--color-text-secondary) mb-4">
+        The pipeline works without any API keys (OpenRouter doesn't require one).
+        Adding keys enables multi-source cross-validation for higher accuracy.
+      </p>
+      <div class="space-y-3">
+        <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
+          <code class="text-sm text-blue-400 font-mono">TOGETHER_API_KEY</code>
+          <p class="text-sm text-(--color-text-secondary) mt-1">Cross-validates pricing for open-source models. Free tier available at <a href="https://api.together.xyz" class="text-blue-400 hover:underline" target="_blank" rel="noopener">api.together.xyz</a></p>
+        </div>
+        <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
+          <code class="text-sm text-blue-400 font-mono">GOOGLE_API_KEY</code>
+          <p class="text-sm text-(--color-text-secondary) mt-1">Validates Gemini context windows directly from Google. Free at <a href="https://aistudio.google.com" class="text-blue-400 hover:underline" target="_blank" rel="noopener">aistudio.google.com</a></p>
+        </div>
+        <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
+          <code class="text-sm text-blue-400 font-mono">GROQ_API_KEY</code>
+          <p class="text-sm text-(--color-text-secondary) mt-1">Validates context windows for Groq-hosted models. Free at <a href="https://console.groq.com" class="text-blue-400 hover:underline" target="_blank" rel="noopener">console.groq.com</a></p>
+        </div>
+      </div>
+      <p class="text-xs text-(--color-text-muted) mt-4">
+        For GitHub Actions, add these as Repository Secrets under Settings → Secrets and variables → Actions.
+      </p>
+    </section>
+
+    <!-- Troubleshooting -->
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">Troubleshooting</h2>
+      <div class="space-y-4 text-sm">
+        <div>
+          <p class="text-(--color-text-primary) font-medium">Scraper shows "0 models updated"</p>
+          <p class="text-(--color-text-secondary)">The OpenRouter API may have changed its model naming. Check <code class="text-xs bg-(--color-bg-tertiary) px-1 py-0.5 rounded">data/reports/new-models-*.json</code> for untracked models and update the MODEL_MAP in <code class="text-xs bg-(--color-bg-tertiary) px-1 py-0.5 rounded">scripts/scrapers/openrouter.ts</code>.</p>
+        </div>
+        <div>
+          <p class="text-(--color-text-primary) font-medium">Staleness check shows warnings</p>
+          <p class="text-(--color-text-secondary)">Run <code class="text-xs bg-(--color-bg-tertiary) px-1 py-0.5 rounded">npm run check:staleness</code> to see which data is out of date. Speed data is expected to be cached (Artificial Analysis has no public API yet).</p>
+        </div>
+        <div>
+          <p class="text-(--color-text-primary) font-medium">Windows Task Scheduler not running</p>
+          <p class="text-(--color-text-secondary)">Make sure the task is set to "Run whether user is logged on or not" and that the Node.js path is in the system PATH. Check Event Viewer → Windows Logs → System for errors.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
