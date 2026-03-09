@@ -29,8 +29,9 @@ async function main() {
 
   const scrapers = [
     { name: 'OpenRouter Pricing (PRIMARY)', script: 'scripts/scrapers/openrouter.ts' },
+    { name: 'Official Provider Pricing', script: 'scripts/scrapers/official-pricing.ts' },
     { name: 'Multi-Source Validator', script: 'scripts/scrapers/pricing.ts' },
-    { name: 'Benchmarks (LMSYS + HuggingFace)', script: 'scripts/scrapers/benchmarks.ts' },
+    { name: 'Benchmarks (AA + LMSYS + HuggingFace)', script: 'scripts/scrapers/benchmarks.ts' },
     { name: 'Speed & TTFT', script: 'scripts/scrapers/speed.ts' },
   ];
 
@@ -63,6 +64,7 @@ async function main() {
   // Show data source summary
   console.log('\n  Data sources used:');
   console.log('  ├─ OpenRouter API (live, no key) ✓');
+  console.log('  ├─ Official provider pricing pages (OpenAI, Anthropic, Google, DeepSeek, Mistral) ✓');
   console.log(`  ├─ Artificial Analysis API (${process.env.AA_API_KEY ? 'live, key set ✓' : 'skipped, no AA_API_KEY — free at artificialanalysis.ai'})`);
   console.log(`  ├─ Together AI API (${process.env.TOGETHER_API_KEY ? 'live, key set ✓' : 'skipped, no TOGETHER_API_KEY'})`);
   console.log(`  ├─ Google Gemini API (${process.env.GOOGLE_API_KEY ? 'live, key set ✓' : 'skipped, no GOOGLE_API_KEY'})`);

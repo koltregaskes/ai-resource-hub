@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MiniPriceChart from '../../components/MiniPriceChart';
-import { getAllModelIds, getModelById, getModelBenchmarks, getModelPriceHistory, getProviderEndpoints } from '../../db/queries';
+import { getAllModelIds, getModelById, getModelBenchmarks, getModelPriceHistory, getProviderEndpoints, getModelMessageLimits } from '../../db/queries';
 
 export function getStaticPaths() {
   const ids = getAllModelIds();
@@ -18,6 +18,7 @@ if (!model) {
 const benchmarks = getModelBenchmarks(id);
 const priceHistory = getModelPriceHistory(id);
 const providerEndpoints = getProviderEndpoints(id);
+const messageLimits = getModelMessageLimits(id);
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -252,6 +253,49 @@ const structuredData = {
         </div>
       )}
     </div>
+
+    <!-- Subscription Message Limits -->
+    {messageLimits.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Messages Per Plan</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Plan</th>
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Price</th>
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Messages</th>
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Period</th>
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {messageLimits.map((limit, i) => (
+                <tr class={i % 2 === 0 ? '' : 'bg-(--color-bg-secondary)'}>
+                  <td class="px-4 py-2 text-(--color-text-primary) font-medium">{limit.plan_name}</td>
+                  <td class="px-4 py-2 text-(--color-text-secondary)">
+                    {limit.price_monthly != null ? `$${limit.price_monthly}/mo` : 'Custom'}
+                  </td>
+                  <td class="px-4 py-2 text-(--color-text-primary) font-mono">
+                    {limit.messages_low == null && limit.messages_high == null
+                      ? 'Unlimited'
+                      : limit.messages_low === limit.messages_high
+                        ? limit.messages_low?.toLocaleString()
+                        : `${limit.messages_low?.toLocaleString()}-${limit.messages_high?.toLocaleString()}`
+                    }
+                  </td>
+                  <td class="px-4 py-2 text-(--color-text-secondary)">per {limit.message_period}</td>
+                  <td class="px-4 py-2 text-(--color-text-muted) text-xs">{limit.notes || ''}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-(--color-text-muted) mt-2">
+          Message counts vary by task complexity. Source: official provider pricing pages.
+        </p>
+      </div>
+    )}
 
     <!-- Benchmarks -->
     {benchmarks.length > 0 && (

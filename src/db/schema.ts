@@ -222,7 +222,35 @@ function initSchema(db: Database.Database): void {
       updated_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
+    -- Subscription plans and message limits
+    CREATE TABLE IF NOT EXISTS subscription_plans (
+      id TEXT PRIMARY KEY,
+      provider_id TEXT NOT NULL REFERENCES providers(id),
+      plan_name TEXT NOT NULL,
+      price_monthly REAL,
+      price_yearly_monthly REAL,
+      tier_level INTEGER NOT NULL DEFAULT 0,
+      source_url TEXT,
+      notes TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    CREATE TABLE IF NOT EXISTS plan_model_limits (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      plan_id TEXT NOT NULL REFERENCES subscription_plans(id),
+      model_id TEXT REFERENCES models(id),
+      model_tier TEXT,
+      messages_low INTEGER,
+      messages_high INTEGER,
+      message_period TEXT NOT NULL DEFAULT '5 hours',
+      notes TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
     -- Indexes
+    CREATE INDEX IF NOT EXISTS idx_subscription_plans_provider ON subscription_plans(provider_id);
+    CREATE INDEX IF NOT EXISTS idx_plan_model_limits_plan ON plan_model_limits(plan_id);
+    CREATE INDEX IF NOT EXISTS idx_plan_model_limits_model ON plan_model_limits(model_id);
     CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);
     CREATE INDEX IF NOT EXISTS idx_benchmark_scores_model ON benchmark_scores(model_id);

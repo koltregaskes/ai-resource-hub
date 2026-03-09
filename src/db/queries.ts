@@ -904,3 +904,91 @@ export function getNewsCategories(): Array<{ category: string; count: number }> 
   const db = getDB();
   return db.prepare('SELECT category, COUNT(*) as count FROM news GROUP BY category ORDER BY count DESC').all() as Array<{ category: string; count: number }>;
 }
+
+// ─── Subscription Plans & Message Limits ──────────────────────────
+
+export interface DBSubscriptionPlan {
+  id: string;
+  provider_id: string;
+  plan_name: string;
+  price_monthly: number | null;
+  price_yearly_monthly: number | null;
+  tier_level: number;
+  source_url: string | null;
+  notes: string | null;
+}
+
+export interface DBPlanModelLimit {
+  plan_id: string;
+  plan_name: string;
+  price_monthly: number | null;
+  model_id: string | null;
+  model_tier: string | null;
+  model_name: string | null;
+  messages_low: number | null;
+  messages_high: number | null;
+  message_period: string;
+  notes: string | null;
+}
+
+/**
+ * Get all subscription plans for a provider, ordered by tier.
+ */
+export function getProviderPlans(providerId: string): DBSubscriptionPlan[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT * FROM subscription_plans
+    WHERE provider_id = ?
+    ORDER BY tier_level ASC
+  `).all(providerId) as DBSubscriptionPlan[];
+}
+
+/**
+ * Get message limits for a specific model across all plans.
+ */
+export function getModelMessageLimits(modelId: string): DBPlanModelLimit[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT pml.plan_id, sp.plan_name, sp.price_monthly,
+           pml.model_id, pml.model_tier, m.name AS model_name,
+           pml.messages_low, pml.messages_high,
+           pml.message_period, pml.notes
+    FROM plan_model_limits pml
+    JOIN subscription_plans sp ON pml.plan_id = sp.id
+    LEFT JOIN models m ON pml.model_id = m.id
+    WHERE pml.model_id = ?
+    ORDER BY sp.tier_level ASC
+  `).all(modelId) as DBPlanModelLimit[];
+}
+
+/**
+ * Get all message limits for a plan.
+ */
+export function getPlanLimits(planId: string): DBPlanModelLimit[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT pml.plan_id, sp.plan_name, sp.price_monthly,
+           pml.model_id, pml.model_tier, m.name AS model_name,
+           pml.messages_low, pml.messages_high,
+           pml.message_period, pml.notes
+    FROM plan_model_limits pml
+    JOIN subscription_plans sp ON pml.plan_id = sp.id
+    LEFT JOIN models m ON pml.model_id = m.id
+    WHERE pml.plan_id = ?
+    ORDER BY pml.messages_high DESC
+  `).all(planId) as DBPlanModelLimit[];
+}
+
+/**
+ * Get all subscription plans across all providers.
+ */
+export function getAllSubscriptionPlans(): Array<DBSubscriptionPlan & { provider_name: string; provider_colour: string; limit_count: number }> {
+  const db = getDB();
+  return db.prepare(`
+    SELECT sp.*, p.name AS provider_name, p.colour AS provider_colour,
+           (SELECT COUNT(*) FROM plan_model_limits WHERE plan_id = sp.id) AS limit_count
+    FROM subscription_plans sp
+    JOIN providers p ON sp.provider_id = p.id
+    ORDER BY p.name, sp.tier_level ASC
+  `).all() as Array<DBSubscriptionPlan & { provider_name: string; provider_colour: string; limit_count: number }>;
+}

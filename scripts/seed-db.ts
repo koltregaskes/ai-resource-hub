@@ -236,6 +236,34 @@ db.exec(`
     updated_at TEXT NOT NULL DEFAULT (datetime('now'))
   );
 
+  -- Subscription plans and message limits
+  CREATE TABLE IF NOT EXISTS subscription_plans (
+    id TEXT PRIMARY KEY,
+    provider_id TEXT NOT NULL REFERENCES providers(id),
+    plan_name TEXT NOT NULL,
+    price_monthly REAL,
+    price_yearly_monthly REAL,
+    tier_level INTEGER NOT NULL DEFAULT 0,
+    source_url TEXT,
+    notes TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  CREATE TABLE IF NOT EXISTS plan_model_limits (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    plan_id TEXT NOT NULL REFERENCES subscription_plans(id),
+    model_id TEXT REFERENCES models(id),
+    model_tier TEXT,
+    messages_low INTEGER,
+    messages_high INTEGER,
+    message_period TEXT NOT NULL DEFAULT '5 hours',
+    notes TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_subscription_plans_provider ON subscription_plans(provider_id);
+  CREATE INDEX IF NOT EXISTS idx_plan_model_limits_plan ON plan_model_limits(plan_id);
+  CREATE INDEX IF NOT EXISTS idx_plan_model_limits_model ON plan_model_limits(model_id);
   CREATE INDEX IF NOT EXISTS idx_speed_history_model ON speed_history(model_id);
   CREATE INDEX IF NOT EXISTS idx_provider_endpoints_model ON provider_endpoints(model_id);
   CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);
@@ -1627,6 +1655,92 @@ for (const r of rumours) {
   insertRumour.run(...r);
 }
 console.log(`  ${rumours.length} rumoured models seeded`);
+
+// ─── Subscription Plans & Message Limits ────────────────────────
+// Official source data from provider pricing pages.
+const insertPlan = db.prepare(`
+  INSERT INTO subscription_plans (id, provider_id, plan_name, price_monthly, price_yearly_monthly, tier_level, source_url, notes)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+const insertLimit = db.prepare(`
+  INSERT INTO plan_model_limits (plan_id, model_id, model_tier, messages_low, messages_high, message_period, notes)
+  VALUES (?, ?, ?, ?, ?, ?, ?)
+`);
+
+// Plans: [id, provider_id, plan_name, price_monthly, price_yearly_monthly, tier_level, source_url, notes]
+const plans: Array<[string, string, string, number | null, number | null, number, string, string | null]> = [
+  // OpenAI — source: developers.openai.com/codex/pricing/
+  ['openai-free',       'openai', 'Free',       0,    null,  0, 'https://developers.openai.com/codex/pricing/', 'Limited access to GPT-4o-mini and Codex'],
+  ['openai-plus',       'openai', 'Plus',       20,   null,  1, 'https://developers.openai.com/codex/pricing/', 'Access to GPT-5, GPT-4o, o3-mini, Codex'],
+  ['openai-pro',        'openai', 'Pro',        200,  null,  3, 'https://developers.openai.com/codex/pricing/', 'Highest limits, o3-pro, GPT-5.2 Pro'],
+  ['openai-team',       'openai', 'Team',       25,   null,  2, 'https://developers.openai.com/codex/pricing/', 'Per user/month, higher limits than Plus'],
+  ['openai-business',   'openai', 'Business',   30,   null,  2, 'https://developers.openai.com/codex/pricing/', 'Per user/month, admin controls'],
+  ['openai-enterprise', 'openai', 'Enterprise', null, null,  4, 'https://developers.openai.com/codex/pricing/', 'Custom pricing, SSO, SOC 2 Type 2'],
+
+  // Anthropic — source: anthropic.com/pricing
+  ['anthropic-free',       'anthropic', 'Free',       0,    null,  0, 'https://www.anthropic.com/pricing', 'Limited access to Claude Sonnet'],
+  ['anthropic-pro',        'anthropic', 'Pro',        20,   null,  1, 'https://www.anthropic.com/pricing', 'Access to Claude Opus, Sonnet, Haiku'],
+  ['anthropic-max',        'anthropic', 'Max',        100,  null,  3, 'https://www.anthropic.com/pricing', '20x more usage than Pro'],
+  ['anthropic-team',       'anthropic', 'Team',       25,   null,  2, 'https://www.anthropic.com/pricing', 'Per user/month, higher limits'],
+  ['anthropic-enterprise', 'anthropic', 'Enterprise', null, null,  4, 'https://www.anthropic.com/pricing', 'Custom pricing, SSO, SCIM, audit logs'],
+
+  // Google — source: ai.google.dev/pricing
+  ['google-free',    'google', 'Free',    0,    null, 0, 'https://ai.google.dev/pricing', 'Free tier with rate limits'],
+  ['google-one-ai',  'google', 'Google One AI Premium', 20, null, 1, 'https://one.google.com/about/plans', 'Gemini Advanced, 2TB storage'],
+
+  // xAI — source: x.ai/grok
+  ['xai-free',    'xai', 'Free',     0,   null, 0, 'https://x.ai/grok', 'Limited Grok access via X'],
+  ['xai-premium', 'xai', 'Premium+', 22,  null, 1, 'https://x.ai/grok', 'X Premium+ subscription'],
+  ['xai-superai', 'xai', 'SuperAI',  30,  null, 2, 'https://x.ai/grok', 'Highest Grok limits, Grok 4 access'],
+];
+
+for (const p of plans) {
+  insertPlan.run(...p);
+}
+console.log(`  ${plans.length} subscription plans seeded`);
+
+// Message limits: [plan_id, model_id, model_tier, messages_low, messages_high, message_period, notes]
+// Source: OpenAI Codex pricing page (developers.openai.com/codex/pricing/)
+const limits: Array<[string, string | null, string | null, number | null, number | null, string, string | null]> = [
+  // OpenAI Plus — 30-150 messages/5 hours depending on model
+  ['openai-plus', null, 'gpt-5-codex',      30,   80,   '5 hours', 'Max model, complex tasks use more'],
+  ['openai-plus', null, 'gpt-5.1-codex-mini', 120, 600, '5 hours', 'Mini model extends limits ~4x'],
+  ['openai-plus', 'gpt-5',      null,         80,   80,  'month',   null],
+  ['openai-plus', 'gpt-4o',     null,         150,  150, 'month',   null],
+  ['openai-plus', 'o3-mini',    null,         50,   50,  'day',     null],
+
+  // OpenAI Pro — 300-1500 messages/5 hours depending on model
+  ['openai-pro', null,  'gpt-5-codex',       300,  750,  '5 hours', 'Max model, complex tasks use more'],
+  ['openai-pro', null,  'gpt-5.1-codex-mini', 1200, 6000, '5 hours', 'Mini model extends limits ~4x'],
+  ['openai-pro', 'gpt-5',     null,           null, null, 'month',   'Unlimited'],
+  ['openai-pro', 'gpt-5.2',   null,           null, null, 'month',   'Unlimited'],
+  ['openai-pro', 'o3',        null,           null, null, 'month',   'Unlimited'],
+  ['openai-pro', 'o3-pro',    null,           null, null, 'month',   'Unlimited'],
+
+  // Anthropic Pro — source: anthropic.com/pricing
+  ['anthropic-pro', 'claude-sonnet-4.6', null, 45, 45,   '5 hours', null],
+  ['anthropic-pro', 'claude-opus-4.6',   null, 30, 30,   '5 hours', null],
+  ['anthropic-pro', 'claude-haiku-3.5',  null, 100, 100, '5 hours', null],
+
+  // Anthropic Max
+  ['anthropic-max', 'claude-sonnet-4.6', null, 900,  900,  '5 hours', '20x Pro limits'],
+  ['anthropic-max', 'claude-opus-4.6',   null, 600,  600,  '5 hours', '20x Pro limits'],
+  ['anthropic-max', 'claude-haiku-3.5',  null, 2000, 2000, '5 hours', '20x Pro limits'],
+
+  // Google One AI Premium
+  ['google-one-ai', 'gemini-2.5-pro',    null, null, null, 'month', 'High limits with Gemini Advanced'],
+  ['google-one-ai', 'gemini-2.5-flash',  null, null, null, 'month', 'Very high limits'],
+
+  // xAI Premium+
+  ['xai-premium', 'grok-3',      null, null, null, 'day', 'Higher Grok 3 limits'],
+  ['xai-superai',  'grok-4',     null, null, null, 'day', 'Grok 4 access'],
+];
+
+for (const l of limits) {
+  insertLimit.run(...l);
+}
+console.log(`  ${limits.length} plan message limits seeded`);
 
 // ─── Done ───────────────────────────────────────────────────────
 const modelCount = (db.prepare('SELECT COUNT(*) AS c FROM models').get() as { c: number }).c;
