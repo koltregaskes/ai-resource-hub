@@ -247,10 +247,38 @@ function initSchema(db: Database.Database): void {
       updated_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
+    -- AI CLI coding tools
+    CREATE TABLE IF NOT EXISTS cli_tools (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      provider_id TEXT REFERENCES providers(id),
+      maker TEXT NOT NULL,
+      description TEXT,
+      default_model TEXT,
+      supported_models TEXT,
+      context_window INTEGER NOT NULL DEFAULT 0,
+      open_source INTEGER NOT NULL DEFAULT 0,
+      license TEXT,
+      github_url TEXT,
+      website TEXT,
+      install_command TEXT,
+      pricing_type TEXT NOT NULL DEFAULT 'free',
+      pricing_note TEXT,
+      mcp_support INTEGER NOT NULL DEFAULT 0,
+      multi_file INTEGER NOT NULL DEFAULT 0,
+      git_integration INTEGER NOT NULL DEFAULT 0,
+      platforms TEXT NOT NULL DEFAULT 'macOS, Linux',
+      released TEXT,
+      status TEXT NOT NULL DEFAULT 'active',
+      notes TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
     -- Indexes
     CREATE INDEX IF NOT EXISTS idx_subscription_plans_provider ON subscription_plans(provider_id);
     CREATE INDEX IF NOT EXISTS idx_plan_model_limits_plan ON plan_model_limits(plan_id);
     CREATE INDEX IF NOT EXISTS idx_plan_model_limits_model ON plan_model_limits(model_id);
+    CREATE INDEX IF NOT EXISTS idx_cli_tools_provider ON cli_tools(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);
     CREATE INDEX IF NOT EXISTS idx_benchmark_scores_model ON benchmark_scores(model_id);

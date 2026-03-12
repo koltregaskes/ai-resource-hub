@@ -13,6 +13,13 @@ Tasks that require manual action or follow-up outside of automated tooling.
 - **Added:** 2026-03-11
 - **Status:** Pending
 
+### New CLI tool announcement from X/Twitter
+- **URL:** https://x.com/i/status/2032113487510716717
+- **What:** New AI coding CLI tool announced. Need to identify it and add to our cli_tools table.
+- **Action:** Log into X, read the post, identify the tool name/maker/features, then add to seed-db.ts cli_tools section
+- **Added:** 2026-03-12
+- **Status:** Pending
+
 ---
 
 ## Notes

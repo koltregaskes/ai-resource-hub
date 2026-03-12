@@ -905,6 +905,64 @@ export function getNewsCategories(): Array<{ category: string; count: number }> 
   return db.prepare('SELECT category, COUNT(*) as count FROM news GROUP BY category ORDER BY count DESC').all() as Array<{ category: string; count: number }>;
 }
 
+// ─── CLI Tools ────────────────────────────────────────────────────
+
+export interface DBCLITool {
+  id: string;
+  name: string;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  maker: string;
+  description: string | null;
+  default_model: string | null;
+  supported_models: string | null;
+  context_window: number;
+  open_source: number;
+  license: string | null;
+  github_url: string | null;
+  website: string | null;
+  install_command: string | null;
+  pricing_type: string;
+  pricing_note: string | null;
+  mcp_support: number;
+  multi_file: number;
+  git_integration: number;
+  platforms: string;
+  released: string | null;
+  status: string;
+  notes: string | null;
+}
+
+export function getCLITools(): DBCLITool[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT ct.*, p.name AS provider_name, p.colour AS provider_colour
+    FROM cli_tools ct
+    LEFT JOIN providers p ON ct.provider_id = p.id
+    WHERE ct.status = 'active'
+    ORDER BY
+      CASE WHEN ct.id IN ('claude-code', 'openai-codex', 'gemini-cli') THEN 0 ELSE 1 END,
+      ct.name
+  `).all() as DBCLITool[];
+}
+
+export function getCLIToolById(toolId: string): DBCLITool | null {
+  const db = getDB();
+  const row = db.prepare(`
+    SELECT ct.*, p.name AS provider_name, p.colour AS provider_colour
+    FROM cli_tools ct
+    LEFT JOIN providers p ON ct.provider_id = p.id
+    WHERE ct.id = ?
+  `).get(toolId) as DBCLITool | undefined;
+  return row ?? null;
+}
+
+export function getAllCLIToolIds(): string[] {
+  const db = getDB();
+  return (db.prepare('SELECT id FROM cli_tools WHERE status = ?').all('active') as Array<{ id: string }>).map(r => r.id);
+}
+
 // ─── Subscription Plans & Message Limits ──────────────────────────
 
 export interface DBSubscriptionPlan {

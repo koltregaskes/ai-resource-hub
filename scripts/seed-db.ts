@@ -261,6 +261,34 @@ db.exec(`
     updated_at TEXT NOT NULL DEFAULT (datetime('now'))
   );
 
+  -- AI CLI coding tools
+  CREATE TABLE IF NOT EXISTS cli_tools (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    provider_id TEXT REFERENCES providers(id),
+    maker TEXT NOT NULL,
+    description TEXT,
+    default_model TEXT,
+    supported_models TEXT,
+    context_window INTEGER NOT NULL DEFAULT 0,
+    open_source INTEGER NOT NULL DEFAULT 0,
+    license TEXT,
+    github_url TEXT,
+    website TEXT,
+    install_command TEXT,
+    pricing_type TEXT NOT NULL DEFAULT 'free',
+    pricing_note TEXT,
+    mcp_support INTEGER NOT NULL DEFAULT 0,
+    multi_file INTEGER NOT NULL DEFAULT 0,
+    git_integration INTEGER NOT NULL DEFAULT 0,
+    platforms TEXT NOT NULL DEFAULT 'macOS, Linux',
+    released TEXT,
+    status TEXT NOT NULL DEFAULT 'active',
+    notes TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_cli_tools_provider ON cli_tools(provider_id);
   CREATE INDEX IF NOT EXISTS idx_subscription_plans_provider ON subscription_plans(provider_id);
   CREATE INDEX IF NOT EXISTS idx_plan_model_limits_plan ON plan_model_limits(plan_id);
   CREATE INDEX IF NOT EXISTS idx_plan_model_limits_model ON plan_model_limits(model_id);
@@ -1741,6 +1769,166 @@ for (const l of limits) {
   insertLimit.run(...l);
 }
 console.log(`  ${limits.length} plan message limits seeded`);
+
+// ─── CLI Tools ──────────────────────────────────────────────────
+const insertCLI = db.prepare(`
+  INSERT INTO cli_tools (id, name, provider_id, maker, description, default_model, supported_models, context_window, open_source, license, github_url, website, install_command, pricing_type, pricing_note, mcp_support, multi_file, git_integration, platforms, released, notes)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+// [id, name, provider_id, maker, description, default_model, supported_models, context_window,
+//  open_source, license, github_url, website, install_command, pricing_type, pricing_note,
+//  mcp_support, multi_file, git_integration, platforms, released, notes]
+const cliTools: Array<[string, string, string | null, string, string, string, string, number, number, string | null, string | null, string, string | null, string, string | null, number, number, number, string, string | null, string | null]> = [
+  [
+    'claude-code', 'Claude Code', 'anthropic', 'Anthropic',
+    'Agentic coding tool that lives in your terminal. Understands your entire codebase, handles multi-file edits, runs commands, and manages git — all through natural language.',
+    'Claude Opus 4.6', 'Claude Opus 4.6, Claude Sonnet 4.6, Claude Haiku 3.5',
+    200000, 0, null,
+    null, 'https://claude.ai/code',
+    'npm install -g @anthropic-ai/claude-code',
+    'subscription', 'Included with Claude Pro ($20/mo), Max ($100/mo), or API usage',
+    1, 1, 1, 'macOS, Linux, Windows (WSL)', '2025-02-24',
+    'Pioneer of the agentic CLI category. $1B+ ARR. Deep integration with Claude models for autonomous task completion.',
+  ],
+  [
+    'openai-codex', 'Codex CLI', 'openai', 'OpenAI',
+    'Multi-agent coding CLI with parallel execution. Runs multiple AI agents simultaneously, each on an isolated Git worktree.',
+    'GPT-5.1-Codex', 'GPT-5.2, GPT-5, GPT-4.1, GPT-4.1-mini',
+    128000, 1, 'Apache-2.0',
+    'https://github.com/openai/codex', 'https://openai.com/index/introducing-codex/',
+    'npm install -g @openai/codex',
+    'subscription', 'Included with ChatGPT Plus ($20/mo), Pro ($200/mo), or API usage',
+    1, 1, 1, 'macOS, Linux', '2025-04-16',
+    'Multi-agent parallelism with isolated worktrees. Each agent works on its own branch.',
+  ],
+  [
+    'gemini-cli', 'Gemini CLI', 'google', 'Google',
+    'Terminal-first AI coding assistant with the largest context window. Brings Gemini models into the shell for code generation, refactoring, and multi-file reasoning.',
+    'Gemini 2.5 Pro', 'Gemini 2.5 Pro, Gemini 2.5 Flash, Gemini 2.0 Flash',
+    1000000, 1, 'Apache-2.0',
+    'https://github.com/google-gemini/gemini-cli', 'https://cli.gemini.google.dev/',
+    'npm install -g @anthropic-ai/gemini-cli',
+    'free', 'Generous free tier with Gemini API; paid via Google AI Studio',
+    1, 1, 1, 'macOS, Linux, Windows', '2025-06-25',
+    'Largest context window (1M tokens) — 5x Claude Code, 8x Codex. Ideal for large codebases.',
+  ],
+  [
+    'aider', 'Aider', null, 'Paul Gauthier',
+    'AI pair programming in your terminal. Works directly with Git, proposing commits instead of raw code changes. Connects to multiple AI models.',
+    'Claude Sonnet 4.6', 'Claude, GPT-5, Gemini, DeepSeek, Llama, and 30+ models via API',
+    200000, 1, 'Apache-2.0',
+    'https://github.com/Aider-AI/aider', 'https://aider.chat',
+    'pip install aider-chat',
+    'free', 'Free and open source; pay for model API usage',
+    0, 1, 1, 'macOS, Linux, Windows', '2023-06-08',
+    'One of the earliest AI CLI tools. Git-native workflow — all changes are proposed as commits.',
+  ],
+  [
+    'goose', 'Goose', null, 'Block (Square)',
+    'Fully open-source AI agent that goes beyond code suggestions. Executes full development workflows — building, running, debugging, and orchestrating multi-step tasks.',
+    'Claude Sonnet 4.6', 'Claude, GPT, Gemini, Ollama — model-agnostic',
+    200000, 1, 'Apache-2.0',
+    'https://github.com/block/goose', 'https://block.github.io/goose/',
+    'brew install goose',
+    'free', 'Free and open source; pay for model API usage',
+    1, 1, 1, 'macOS, Linux, Windows', '2024-11-01',
+    'Co-designed MCP with Anthropic. Block backing gives enterprise credibility. Desktop app + CLI.',
+  ],
+  [
+    'warp', 'Warp', null, 'Warp',
+    'Modern terminal that blends GPU-accelerated UI with AI assistance and multi-agent orchestration. Runs Claude Code, Codex, and Gemini CLI within the same interface.',
+    'Multiple', 'Claude Code, Codex CLI, Gemini CLI + own agents',
+    0, 0, null,
+    null, 'https://www.warp.dev',
+    'brew install --cask warp',
+    'freemium', 'Free for individuals; Team $22/user/mo',
+    0, 1, 1, 'macOS, Linux', '2022-04-05',
+    'Meta-tool: orchestrates multiple AI agents in one terminal. Written in Rust, GPU-accelerated.',
+  ],
+  [
+    'crush-cli', 'Crush', null, 'Charmbracelet',
+    'LSP-enhanced, MCP-extensible AI coding agent with the broadest platform support. Beautiful terminal UI built on the Charm ecosystem.',
+    'Claude Sonnet 4.6', 'Claude, GPT, Gemini, Ollama — model-agnostic',
+    200000, 1, 'MIT',
+    'https://github.com/charmbracelet/crush', 'https://charm.sh/crush',
+    'brew install charmbracelet/tap/crush',
+    'free', 'Free and open source; pay for model API usage',
+    1, 1, 1, 'macOS, Linux, Windows, Android, FreeBSD, OpenBSD, NetBSD', '2025-06-01',
+    'Broadest platform support of any CLI tool. Mid-session model switching. LSP integration.',
+  ],
+  [
+    'amazon-q-cli', 'Amazon Q Developer CLI', 'amazon', 'Amazon',
+    'AI coding assistant for command-line workflows, optimised for AWS. Helps with AWS CLI commands, infrastructure as code, and cloud best practices.',
+    'Amazon Q', 'Amazon Q, Amazon Nova',
+    200000, 0, null,
+    null, 'https://aws.amazon.com/q/developer/',
+    'brew install amazon-q',
+    'freemium', 'Free tier; Pro $19/user/mo',
+    0, 1, 1, 'macOS, Linux', '2024-04-30',
+    'Best for AWS-heavy workflows. Deep integration with AWS services, IAM, CloudFormation.',
+  ],
+  [
+    'coderabbit-cli', 'CodeRabbit CLI', null, 'CodeRabbit',
+    'AI code review tool in the terminal. Context-aware feedback, line-by-line suggestions, and best practices enforcement.',
+    'Multiple', 'Claude, GPT — uses multiple models',
+    200000, 0, null,
+    null, 'https://www.coderabbit.ai/cli',
+    'npm install -g coderabbit',
+    'freemium', 'Free for open source; Pro from $15/user/mo',
+    0, 1, 1, 'macOS, Linux, Windows', '2024-01-01',
+    'Focused on code review rather than code generation. Integrates with CI/CD pipelines.',
+  ],
+  [
+    'codebuff', 'Codebuff', null, 'Codebuff',
+    'Terminal-first coding assistant that makes changes inside real repos. Context-aware with "knowledge" files for repo conventions.',
+    'Claude Sonnet 4.6', 'Claude, GPT, Gemini',
+    200000, 0, null,
+    null, 'https://codebuff.com',
+    'npm install -g codebuff',
+    'freemium', 'Free tier with limits; Pro from $20/mo',
+    0, 1, 1, 'macOS, Linux, Windows', '2024-09-01',
+    'Knowledge files keep it aligned with repo conventions. No IDE dependency.',
+  ],
+  [
+    'firecrawl-cli', 'Firecrawl CLI', null, 'Firecrawl',
+    'Web data toolkit for AI agents. Scrapes, searches, and browses the web from the terminal. Turns websites into clean LLM-ready markdown.',
+    'N/A', 'Tool — works with any AI agent (Claude Code, Codex, etc.)',
+    0, 1, 'Apache-2.0',
+    'https://github.com/firecrawl/firecrawl', 'https://www.firecrawl.dev',
+    'npx -y firecrawl-cli@latest init --all --browser',
+    'freemium', 'Free: 500 pages; Paid from $16/mo (credit-based)',
+    1, 0, 0, 'macOS, Linux, Windows', '2024-06-01',
+    'Not a coding agent — a web data tool for agents. Scrape, search, crawl, browse. FIRE-1 autonomous agent.',
+  ],
+  [
+    'plandex', 'Plandex', null, 'Plandex',
+    'AI coding agent that breaks large tasks into structured plans and executes them step by step. Massive effective context with Tree-sitter indexing.',
+    'Claude Sonnet 4.6', 'Claude, GPT, Gemini, DeepSeek',
+    2000000, 1, 'AGPL-3.0',
+    'https://github.com/plandex-ai/plandex', 'https://plandex.ai',
+    'curl -sL https://plandex.ai/install.sh | bash',
+    'freemium', 'Free self-hosted; Cloud from $19/mo',
+    0, 1, 1, 'macOS, Linux', '2024-03-08',
+    '2M token effective context via Tree-sitter indexing. Plan-first approach to large tasks.',
+  ],
+  [
+    'qwen-code', 'Qwen Code', 'alibaba', 'Alibaba',
+    'Command-line AI coding agent adapted from Gemini CLI, optimised for Qwen3-Coder models. 480B parameter MoE architecture.',
+    'Qwen3-Coder', 'Qwen3-Coder, Qwen3-235B, Qwen3-32B',
+    128000, 1, 'Apache-2.0',
+    'https://github.com/QwenLM/qwen-code', 'https://qwenlm.github.io/blog/qwen-code/',
+    'npm install -g @anthropic-ai/qwen-code',
+    'free', 'Free and open source; use with local or API models',
+    1, 1, 1, 'macOS, Linux, Windows', '2025-07-15',
+    'Based on Gemini CLI architecture. Optimised for Qwen3-Coder (480B MoE). Fully free.',
+  ],
+];
+
+for (const t of cliTools) {
+  insertCLI.run(...t);
+}
+console.log(`  ${cliTools.length} CLI tools seeded`);
 
 // ─── Done ───────────────────────────────────────────────────────
 const modelCount = (db.prepare('SELECT COUNT(*) AS c FROM models').get() as { c: number }).c;
