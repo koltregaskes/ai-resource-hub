@@ -68,7 +68,11 @@ function Ensure-SafeDirectory {
 }
 
 function Get-WorkingTreeChanges {
-  return @(Invoke-Captured 'git' @('status', '--porcelain') | Where-Object { $_ -and $_.Trim() })
+  return @(
+    Invoke-Captured 'git' @('status', '--porcelain') |
+      ForEach-Object { "$_" } |
+      Where-Object { $_.Trim().Length -gt 0 }
+  )
 }
 
 Push-Location $repoRoot
@@ -86,9 +90,9 @@ try {
     exit 0
   }
 
-  $headBeforePull = (Invoke-Captured 'git' @('rev-parse', 'HEAD'))[-1].Trim()
+  $headBeforePull = ((Invoke-Captured 'git' @('rev-parse', 'HEAD') | Select-Object -Last 1).ToString()).Trim()
   Invoke-Logged 'git' @('pull', '--ff-only', 'origin', 'main')
-  $headAfterPull = (Invoke-Captured 'git' @('rev-parse', 'HEAD'))[-1].Trim()
+  $headAfterPull = ((Invoke-Captured 'git' @('rev-parse', 'HEAD') | Select-Object -Last 1).ToString()).Trim()
 
   $needsInstall = -not (Test-Path $nodeModulesMarker)
   if ($headBeforePull -ne $headAfterPull) {
