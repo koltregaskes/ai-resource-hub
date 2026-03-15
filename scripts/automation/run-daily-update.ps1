@@ -29,7 +29,10 @@ function Invoke-Logged {
   $argumentText = if ($Arguments) { $Arguments -join ' ' } else { '' }
   Write-Log "Running: $Command $argumentText" 'STEP'
 
+  $previousErrorActionPreference = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'
   $output = & $Command @Arguments 2>&1
+  $ErrorActionPreference = $previousErrorActionPreference
   $exitCode = $LASTEXITCODE
 
   @($output | ForEach-Object { "$_" }) | ForEach-Object {
@@ -47,7 +50,10 @@ function Invoke-Captured {
     [string[]]$Arguments
   )
 
+  $previousErrorActionPreference = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'
   $output = & $Command @Arguments 2>&1
+  $ErrorActionPreference = $previousErrorActionPreference
   if ($LASTEXITCODE -ne 0) {
     $argumentText = if ($Arguments) { $Arguments -join ' ' } else { '' }
     throw "Command failed with exit code ${LASTEXITCODE}: $Command $argumentText"
