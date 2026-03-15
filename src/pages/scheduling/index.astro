@@ -26,11 +26,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="space-y-2 text-sm">
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-green-500"></span>
-          <span class="text-(--color-text-secondary)"><strong>GitHub Actions</strong> - runs daily at 06:00 UTC</span>
+          <span class="text-(--color-text-secondary)"><strong>Windows scheduler</strong> - primary daily automation on the local machine</span>
         </div>
         <div class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
-          <span class="text-(--color-text-secondary)"><strong>Local scheduling</strong> - optional, for redundancy or faster manual control</span>
+          <span class="text-(--color-text-secondary)"><strong>GitHub Actions</strong> - manual fallback for on-demand refreshes</span>
         </div>
       </div>
     </div>
@@ -162,8 +162,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section class="mb-10">
       <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">GitHub Actions</h2>
       <p class="text-(--color-text-secondary) mb-4">
-        The repository includes a GitHub Actions workflow that runs automatically once per day.
-        It refreshes data, checks for changes, and commits updated database output when needed.
+        GitHub still supports manual refreshes, but the main scheduled automation now lives on the always-on Windows machine.
       </p>
       <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4 text-sm space-y-3">
         <div>
@@ -172,7 +171,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div>
           <span class="text-(--color-text-muted)">Schedule:</span>
-          <span class="text-(--color-text-secondary)">Daily at 06:00 UTC</span>
+          <span class="text-(--color-text-secondary)">Manual only</span>
         </div>
         <div>
           <span class="text-(--color-text-muted)">Manual trigger:</span>

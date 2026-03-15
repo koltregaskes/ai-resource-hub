@@ -7,15 +7,15 @@ This file is the plain-English operations guide for The AI Resource Hub.
 The repository already has two GitHub Actions workflows:
 
 - `deploy.yml` publishes the site to GitHub Pages whenever `main` changes.
-- `scrape.yml` refreshes tracked data on a schedule and can also be run manually from the Actions tab.
+- `scrape.yml` can refresh tracked data manually from the Actions tab if needed.
 
 ## Starting Schedule
 
-To keep the setup simple, the scrape workflow should run once per day to begin with.
+To keep the setup simple, the main update pipeline should run once per day to begin with.
 
 Recommended starting time:
 
-- `06:00 UTC` every day
+- `07:00` local machine time every day on the Windows mini PC
 
 Once the pipeline is stable, it can be moved to twice daily without changing the overall approach.
 
@@ -92,7 +92,7 @@ Start with this small set:
    - Optional for now
    - Generates a newsletter or summary page from the latest data
 
-In the current repo, the daily scrape and the staleness check already live in the same GitHub workflow, which is a good starting point.
+In the current setup, the Windows machine is the primary scheduler and GitHub Actions is the manual fallback.
 
 ## GitHub Setup Checklist
 
@@ -106,8 +106,8 @@ If you want the repo to run cleanly on GitHub Pages, these are the steps:
    - `TOGETHER_API_KEY`
    - `GOOGLE_API_KEY`
    - `GROQ_API_KEY`
-5. Open the `Actions` tab and run the scrape workflow once manually.
-6. Confirm that a data update commit is created and that Pages deploys successfully.
+5. Open the `Actions` tab and run the scrape workflow manually only if the local scheduler fails or you want an on-demand refresh.
+6. Confirm that Pages deploys successfully after local or manual updates are pushed.
 
 ## Important Note About News Digests
 
