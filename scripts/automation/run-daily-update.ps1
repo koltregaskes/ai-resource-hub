@@ -50,7 +50,7 @@ function Invoke-Captured {
     throw "Command failed with exit code ${LASTEXITCODE}: $Command $argumentText"
   }
 
-  return @($output)
+  return @($output | ForEach-Object { "$_" })
 }
 
 function Ensure-SafeDirectory {
