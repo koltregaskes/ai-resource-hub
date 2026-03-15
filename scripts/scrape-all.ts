@@ -5,7 +5,7 @@
  * Run: npx tsx scripts/scrape-all.ts
  *
  * Used by:
- * - GitHub Actions cron (every 12 hours)
+ * - GitHub Actions cron (daily)
  * - Windows Task Scheduler (daily)
  * - Manual runs (npm run scrape)
  *

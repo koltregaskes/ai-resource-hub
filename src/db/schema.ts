@@ -50,6 +50,9 @@ function initSchema(db: Database.Database): void {
       context_window INTEGER NOT NULL DEFAULT 0,
       max_output INTEGER NOT NULL DEFAULT 0,
       speed INTEGER NOT NULL DEFAULT 0,
+      ttft INTEGER NOT NULL DEFAULT 0,
+      speed_source TEXT,
+      speed_updated TEXT,
       quality_score REAL NOT NULL DEFAULT 0,
       released TEXT,
       open_source INTEGER NOT NULL DEFAULT 0,
@@ -294,6 +297,25 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_provider_endpoints_model ON provider_endpoints(model_id);
     CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);
   `);
+
+  ensureModelColumns(db);
+}
+
+function ensureModelColumns(db: Database.Database): void {
+  const columns = db.prepare('PRAGMA table_info(models)').all() as Array<{ name: string }>;
+  const existing = new Set(columns.map((column) => column.name));
+
+  const missingColumns = [
+    { name: 'ttft', sql: "ALTER TABLE models ADD COLUMN ttft INTEGER NOT NULL DEFAULT 0" },
+    { name: 'speed_source', sql: 'ALTER TABLE models ADD COLUMN speed_source TEXT' },
+    { name: 'speed_updated', sql: 'ALTER TABLE models ADD COLUMN speed_updated TEXT' },
+  ];
+
+  for (const column of missingColumns) {
+    if (!existing.has(column.name)) {
+      db.exec(column.sql);
+    }
+  }
 }
 
 export { DB_PATH };

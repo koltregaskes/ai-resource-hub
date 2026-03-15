@@ -2,8 +2,8 @@ name: Update data (scrape + rebuild)
 
 on:
   schedule:
-    # Run twice daily at 06:00 and 18:00 UTC (every 12 hours)
-    - cron: '0 6,18 * * *'
+    # Run daily at 06:00 UTC
+    - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       force_rebuild:

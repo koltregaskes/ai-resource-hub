@@ -1,37 +1,31 @@
 # The AI Resource Hub
 
-Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.
+The AI Resource Hub is a public reference site for people trying to make sense of modern AI tools and models.
 
-## Tech Stack
+It brings together benchmark results, pricing, model specs, speed data, news, guides, glossaries, comparison pages, and practical reference material in one place. The aim is to make AI easier to compare, easier to understand, and easier to use well.
 
-- **Framework:** Astro 5 (static generation + React islands)
-- **Styling:** Tailwind CSS v4
-- **Language:** TypeScript
-- **Data:** CSV source compiled to JSON at build time
+## What The Site Covers
 
-## Getting Started
+- AI model benchmarks and leaderboards
+- Pricing and value comparisons
+- Model, provider, and benchmark reference pages
+- AI news and curated digests
+- Beginner-friendly guides and explainer content
+- Tools, people, timelines, prompts, and supporting resources
 
-```bash
-npm install
-npm run dev      # Start dev server
-npm run build    # Production build
-npm run preview  # Preview production build
-```
+## How It Works
 
-## Project Structure
+This repository is the source for a static Astro website deployed with GitHub Pages.
 
-```
-src/
-├── components/    # Astro + React components
-├── data/          # Data loading utilities
-├── layouts/       # Page layouts
-├── pages/         # Astro pages (file-based routing)
-├── styles/        # Global CSS and theme
-└── types/         # TypeScript type definitions
-data/
-└── llm-models.csv # Source data for LLM comparison
-```
+The site is built from a mixture of structured data, editorial content, and scheduled updates. A lightweight data pipeline refreshes key information such as pricing, benchmark coverage, and model metadata, while the frontend turns that information into searchable, linkable reference pages.
 
-## Data
+## Principles
 
-Model data is stored in CSV format in the `data/` directory and parsed at build time. Prices are per 1M tokens in USD, sourced from official API documentation.
+- Independent and reference-first
+- Useful to both technical and non-technical readers
+- Transparent about sources and methodology
+- Designed to grow into a broad AI resource hub over time
+
+## Operations
+
+Repository and data collection notes live in [docs/DATA-COLLECTION-PLAN.md](docs/DATA-COLLECTION-PLAN.md).
