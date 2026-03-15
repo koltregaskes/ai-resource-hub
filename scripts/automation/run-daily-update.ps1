@@ -29,12 +29,15 @@ function Invoke-Logged {
   $argumentText = if ($Arguments) { $Arguments -join ' ' } else { '' }
   Write-Log "Running: $Command $argumentText" 'STEP'
 
-  & $Command @Arguments 2>&1 | ForEach-Object {
+  $output = & $Command @Arguments 2>&1
+  $exitCode = $LASTEXITCODE
+
+  @($output | ForEach-Object { "$_" }) | ForEach-Object {
     Write-Log "$_"
   }
 
-  if ($LASTEXITCODE -ne 0) {
-    throw "Command failed with exit code ${LASTEXITCODE}: $Command $argumentText"
+  if ($exitCode -ne 0) {
+    throw "Command failed with exit code ${exitCode}: $Command $argumentText"
   }
 }
 
