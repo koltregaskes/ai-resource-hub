@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'What Is RAG? Retrieval-Augmented Generation Explained',
+  datePublished: '2026-02-27',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+  description: 'A plain-English guide to RAG — the technique that lets AI models pull in real data instead of guessing.',
+};
+---
+
+<BaseLayout
+  title="What Is RAG? Retrieval-Augmented Generation Explained — Blog — The AI Resource Hub"
+  description="A plain-English guide to RAG — the technique that lets AI models pull in real data instead of guessing. When to use it, when not to, and how it actually works."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">What Is RAG?</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 font-medium">Explainer</span>
+        <span class="text-xs text-(--color-text-muted)">27 Feb 2026</span>
+        <span class="text-xs text-(--color-text-muted)">7 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        What Is RAG?<br />Retrieval-Augmented Generation Explained
+      </h1>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
+      <p class="text-lg">
+        AI models are trained on a snapshot of the internet. Once that training finishes, the model's knowledge is frozen. Ask it about something that happened yesterday, something buried in your company's internal docs, or a niche topic it never encountered during training — and it will either refuse to answer or, worse, confidently make something up.
+      </p>
+      <p>
+        Retrieval-Augmented Generation — RAG — is the most widely used technique for solving this problem. Instead of relying purely on what the model memorised during training, RAG fetches relevant documents at query time and feeds them directly into the prompt. The model then generates its answer based on that retrieved context.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">How RAG Works in Three Steps</h2>
+      <ol class="list-decimal pl-6 space-y-4">
+        <li>
+          <strong class="text-(--color-text-primary)">You ask a question.</strong> The system takes your query and converts it into an embedding — a numerical representation that captures its meaning.
+        </li>
+        <li>
+          <strong class="text-(--color-text-primary)">Relevant documents are retrieved.</strong> That embedding is compared against a pre-indexed collection of documents (your knowledge base). The most semantically similar chunks are pulled back — typically 3 to 10 passages.
+        </li>
+        <li>
+          <strong class="text-(--color-text-primary)">The model generates an answer.</strong> Those retrieved chunks are injected into the prompt alongside your original question. The model reads them and produces a grounded response.
+        </li>
+      </ol>
+
+      <p>
+        The key insight: the model is not searching its memory. It is reading fresh documents that were handed to it moments before answering. This means its response can be based on data the model has never seen during training.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Why RAG Matters</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Reduces hallucination.</strong> When the model has actual source material to work from, it is far less likely to fabricate facts. Not impossible — but significantly reduced.</li>
+        <li><strong class="text-(--color-text-primary)">Keeps answers current.</strong> Your knowledge base can be updated daily or even in real time. The model always works with the latest information.</li>
+        <li><strong class="text-(--color-text-primary)">Works with private data.</strong> Company documents, internal wikis, customer records — data that could never be part of a public training set.</li>
+        <li><strong class="text-(--color-text-primary)">Cheaper than fine-tuning.</strong> Fine-tuning a model on your data requires compute, expertise, and maintenance. RAG just requires indexing your documents and adding a retrieval step.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">When RAG Works Well</h2>
+      <p>RAG is the right choice when:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>You have a specific knowledge base — product docs, legal contracts, research papers, internal policies.</li>
+        <li>Accuracy matters more than creativity. RAG grounds the model in source material.</li>
+        <li>Your data changes frequently. Re-index weekly or daily; no retraining needed.</li>
+        <li>You need citations. Because the retrieved chunks are known, you can point the user back to the original source.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">When RAG Is the Wrong Tool</h2>
+      <p>RAG is not a magic fix for everything:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">General conversation.</strong> If you just want a chatbot that talks naturally, RAG adds latency and complexity for no gain.</li>
+        <li><strong class="text-(--color-text-primary)">Creative writing.</strong> You want the model to generate freely, not be constrained by retrieved passages.</li>
+        <li><strong class="text-(--color-text-primary)">Tiny datasets.</strong> If your entire knowledge base fits in a single prompt, just paste it in. No retrieval pipeline needed.</li>
+        <li><strong class="text-(--color-text-primary)">When the question is about reasoning, not facts.</strong> "Solve this maths problem" does not benefit from document retrieval.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Common RAG Pitfalls</h2>
+      <p>Building a RAG system is straightforward. Building a good one is harder.</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Bad chunking.</strong> If your documents are split in the wrong places — mid-sentence, mid-paragraph — the retrieved context is incoherent and the model's answer suffers.</li>
+        <li><strong class="text-(--color-text-primary)">Irrelevant retrieval.</strong> The embedding search might return documents that are semantically close but actually off-topic. Garbage in, garbage out.</li>
+        <li><strong class="text-(--color-text-primary)">Too many chunks.</strong> Stuffing 20 passages into the prompt can confuse the model. It may pick up on the wrong one or lose focus.</li>
+        <li><strong class="text-(--color-text-primary)">Ignoring the retrieval quality.</strong> Most teams spend 90% of their effort on the generation side and 10% on retrieval. It should be the opposite.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">RAG vs Fine-Tuning vs Long Context</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-(--color-border) rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-(--color-bg-tertiary)">
+              <th class="text-left py-2 px-3 text-(--color-text-muted)">Approach</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted)">Best for</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted)">Drawbacks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">RAG</td>
+              <td class="py-2 px-3">Large, changing knowledge bases</td>
+              <td class="py-2 px-3">Retrieval quality is the bottleneck</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Fine-tuning</td>
+              <td class="py-2 px-3">Teaching a model a specific style, format, or domain</td>
+              <td class="py-2 px-3">Expensive, needs retraining when data changes</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Long context</td>
+              <td class="py-2 px-3">Small datasets that fit in one prompt</td>
+              <td class="py-2 px-3">Slow, expensive, degrades with very long inputs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Learn More</h3>
+        <p class="text-sm mb-3">RAG works best with models that have strong instruction-following ability. See how the top models compare.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Compare LLMs &rarr;</a>
+          <a href={`${base}glossary/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">AI Glossary &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}blog/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

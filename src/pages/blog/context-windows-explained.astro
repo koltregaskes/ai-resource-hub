@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'Context Windows Explained: Why Bigger Is Not Always Better',
+  datePublished: '2026-02-26',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+  description: 'What context windows actually are, why very large ones can degrade quality, and how to think about them when choosing a model.',
+};
+---
+
+<BaseLayout
+  title="Context Windows Explained — Blog — The AI Resource Hub"
+  description="What context windows actually are, why very large ones can degrade quality, and how to think about them when choosing a model."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Context Windows Explained</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 font-medium">Explainer</span>
+        <span class="text-xs text-(--color-text-muted)">26 Feb 2026</span>
+        <span class="text-xs text-(--color-text-muted)">7 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        Context Windows Explained:<br />Why Bigger Is Not Always Better
+      </h1>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
+      <p class="text-lg">
+        Every AI model has a context window — a hard limit on how much text it can process in a single conversation. Some models handle 4,000 tokens. Others claim 1 million or more. The marketing suggests bigger is always better, but the reality is more nuanced than that.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">What Is a Context Window?</h2>
+      <p>
+        A context window is measured in tokens. One token is roughly three-quarters of a word in English — so 128,000 tokens is approximately 96,000 words, or a 300-page book.
+      </p>
+      <p>
+        The context window includes everything: the system prompt, the conversation history, any documents you paste in, and the model's own response. It all has to fit within that limit.
+      </p>
+      <p>
+        Think of it as the model's working memory. Outside this window, the model has no access to what came before. It cannot scroll back. Once text falls out of the window, it is gone.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Current Landscape</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border border-(--color-border) rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-(--color-bg-tertiary)">
+              <th class="text-left py-2 px-3 text-(--color-text-muted)">Model</th>
+              <th class="text-right py-2 px-3 text-(--color-text-muted)">Context</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted)">Roughly equivalent to</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">GPT-4.1</td>
+              <td class="py-2 px-3 text-right">1M tokens</td>
+              <td class="py-2 px-3">~6 novels</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Gemini 2.5 Pro</td>
+              <td class="py-2 px-3 text-right">1M tokens</td>
+              <td class="py-2 px-3">~6 novels</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Claude Opus 4</td>
+              <td class="py-2 px-3 text-right">200K tokens</td>
+              <td class="py-2 px-3">~1 novel</td>
+            </tr>
+            <tr class="border-t border-(--color-border)/50">
+              <td class="py-2 px-3 font-medium text-(--color-text-primary)">DeepSeek V3</td>
+              <td class="py-2 px-3 text-right">128K tokens</td>
+              <td class="py-2 px-3">~300 pages</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The "Lost in the Middle" Problem</h2>
+      <p>
+        Research has shown that most language models struggle with information placed in the middle of long contexts. They handle the beginning well. They handle the end well. But details buried in the middle of a 100,000-token prompt are more likely to be missed or misrepresented.
+      </p>
+      <p>
+        This is not a theoretical concern. It means that a model with a 1 million token context window may not actually be processing all 1 million tokens with equal attention. Having the capacity to accept a long input is not the same as reliably using every piece of information in it.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Bigger Context = Higher Cost</h2>
+      <p>
+        Context window usage directly affects your bill. Most AI APIs charge per token — both input and output. Dumping an entire codebase into the context when you only need a single file means paying for tokens the model probably will not use effectively anyway.
+      </p>
+      <p>
+        A 1 million token prompt on GPT-4.1 costs around $2 in input tokens alone. Do that 100 times a day and you are spending $200/day just on context — before the model has generated a single word of output.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">When Big Context Windows Genuinely Help</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Analysing entire documents.</strong> Legal contracts, research papers, earnings reports — where you need the model to cross-reference different sections.</li>
+        <li><strong class="text-(--color-text-primary)">Long conversations.</strong> Extended back-and-forth where losing earlier context would break the flow.</li>
+        <li><strong class="text-(--color-text-primary)">Multi-file code review.</strong> When the model needs to understand how files relate to each other.</li>
+        <li><strong class="text-(--color-text-primary)">Translation of long documents.</strong> Where splitting the document would lose coherence.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">When to Use Smaller Context Instead</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Single-turn tasks.</strong> Summarise this paragraph. Fix this function. Translate this sentence. No context history needed.</li>
+        <li><strong class="text-(--color-text-primary)">When RAG is a better fit.</strong> Instead of pasting your entire knowledge base into the prompt, retrieve only the relevant chunks.</li>
+        <li><strong class="text-(--color-text-primary)">High-volume workloads.</strong> If you are processing 10,000 requests/day, smaller context = lower cost and faster responses.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">How to Think About Context Windows</h2>
+      <ol class="list-decimal pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Match the window to your task.</strong> 128K is enough for almost everything most people do.</li>
+        <li><strong class="text-(--color-text-primary)">Put critical information at the start or end.</strong> Not the middle.</li>
+        <li><strong class="text-(--color-text-primary)">Watch the "needle in a haystack" benchmarks.</strong> They test whether models can find a specific fact buried in a long context. These scores vary widely between models.</li>
+        <li><strong class="text-(--color-text-primary)">Consider cost per task, not just capability.</strong> A model with a smaller context window at a lower price per token may be the better practical choice.</li>
+      </ol>
+
+      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Compare Context Windows</h3>
+        <p class="text-sm mb-3">See context window sizes across all models on our dedicated ranking page.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href={`${base}context-window/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Context Window Rankings &rarr;</a>
+          <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Full LLM Comparison &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}blog/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

@@ -1,177 +1,349 @@
 #!/usr/bin/env npx tsx
 /**
- * Pricing scraper — fetches latest pricing from provider API documentation.
+ * Multi-source pricing validator — cross-checks pricing across multiple APIs.
  *
  * Run: npx tsx scripts/scrapers/pricing.ts
  *
- * This scraper fetches publicly available pricing pages and extracts
- * model pricing data. It updates the database with any price changes
- * and records a price history entry.
+ * This scraper fetches pricing from SECONDARY sources and cross-validates
+ * against our primary source (OpenRouter). It does NOT use hardcoded prices.
  *
- * Currently supported providers:
- * - OpenAI (via API)
- * - Anthropic (via docs)
- * - Google (via docs)
+ * Sources:
+ * 1. Together AI API (TOGETHER_API_KEY) — pricing for open-source models
+ * 2. Google Gemini API (GOOGLE_API_KEY) — context windows for Gemini models
+ * 3. Groq API (GROQ_API_KEY) — context windows for supported models
  *
- * Note: Many providers don't have machine-readable pricing pages,
- * so this scraper uses a combination of API endpoints and HTML parsing.
- * For providers without scrapable pricing, we rely on manual updates
- * via the seed script.
+ * All API keys are optional. The scraper will skip sources without keys
+ * and log what was checked vs. skipped.
  */
-import { getDB, upsertModels, logScrapeRun, fetchPage, type ScrapedModel } from './base';
+import { getDB, logScrapeRun } from './base';
+import type Database from 'better-sqlite3';
 
-// ─── OpenAI Pricing ─────────────────────────────────────────────
-// OpenAI publishes pricing at openai.com/api/pricing
-// We maintain a known pricing table that the scraper validates against
+interface PricePoint {
+  modelId: string;
+  inputPrice: number;   // per 1M tokens
+  outputPrice: number;
+  contextWindow?: number;
+  maxOutput?: number;
+  source: string;
+}
 
-async function scrapeOpenAI(): Promise<ScrapedModel[]> {
-  console.log('  Scraping OpenAI pricing...');
+// ─── Together AI ────────────────────────────────────────────────
+// Together AI returns pricing + context windows for open-source models.
+// Endpoint: GET https://api.together.xyz/v1/models
+// Returns: id, display_name, context_length, pricing.input, pricing.output
 
-  // OpenAI's pricing page is JavaScript-rendered, so we can't easily scrape it.
-  // Instead we maintain known prices and the scraper validates/updates them.
-  // In production, this would use the OpenAI API to check available models
-  // and cross-reference with the pricing page.
+// Map Together AI model IDs → our DB IDs
+const TOGETHER_MODEL_MAP: Record<string, string> = {
+  'meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8': 'llama-4-maverick',
+  'meta-llama/Llama-4-Scout-17B-16E-Instruct': 'llama-4-scout',
+  'meta-llama/Meta-Llama-3.3-70B-Instruct-Turbo': 'llama-3.3-70b',
+  'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo': 'llama-3.1-405b',
+  'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo': 'llama-3.1-70b',
+  'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo': 'llama-3.1-8b',
+  'deepseek-ai/DeepSeek-R1': 'deepseek-r1',
+  'deepseek-ai/DeepSeek-V3': 'deepseek-v3',
+  'Qwen/Qwen2.5-72B-Instruct-Turbo': 'qwen-2.5-72b',
+  'Qwen/QwQ-32B': 'qwen-qwq-32b',
+  'Qwen/Qwen2.5-Coder-32B-Instruct': 'qwen-2.5-coder-32b',
+  'mistralai/Mistral-Small-24B-Instruct-2501': 'mistral-small-3.1',
+  'mistralai/Mistral-Nemo-Instruct-2407': 'mistral-nemo',
+  'microsoft/phi-4': 'phi-4',
+  'nvidia/Llama-3.1-Nemotron-70B-Instruct-HF': 'nemotron-70b',
+};
 
-  try {
-    // Try to fetch the models list from OpenAI API (public endpoint)
-    const response = await fetch('https://api.openai.com/v1/models', {
-      headers: {
-        'Authorization': `Bearer ${process.env.OPENAI_API_KEY || 'none'}`,
-      },
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      console.log(`    Found ${data.data?.length ?? 0} models via API`);
-      // API doesn't include pricing, but confirms which models are available
-    }
-  } catch {
-    console.log('    API check skipped (no API key)');
+async function fetchTogetherAI(): Promise<PricePoint[]> {
+  const apiKey = process.env.TOGETHER_API_KEY;
+  if (!apiKey) {
+    console.log('  ⊘ Together AI: skipped (no TOGETHER_API_KEY)');
+    return [];
   }
 
-  // Known pricing as of Feb 2026 — validated against openai.com/api/pricing
-  const source = 'openai.com/api/pricing';
-  return [
-    { id: 'gpt-4o', name: 'GPT-4o', providerId: 'openai', inputPrice: 2.50, outputPrice: 10.00, contextWindow: 128000, maxOutput: 16384, speed: 100, qualityScore: 87, released: '2024-05-13', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'gpt-4o-mini', name: 'GPT-4o Mini', providerId: 'openai', inputPrice: 0.15, outputPrice: 0.60, contextWindow: 128000, maxOutput: 16384, speed: 150, qualityScore: 80, released: '2024-07-18', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'gpt-4.1', name: 'GPT-4.1', providerId: 'openai', inputPrice: 2.00, outputPrice: 8.00, contextWindow: 1047576, maxOutput: 32768, speed: 110, qualityScore: 90, released: '2025-04-14', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'gpt-4.1-mini', name: 'GPT-4.1 Mini', providerId: 'openai', inputPrice: 0.40, outputPrice: 1.60, contextWindow: 1047576, maxOutput: 32768, speed: 160, qualityScore: 83, released: '2025-04-14', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'gpt-4.1-nano', name: 'GPT-4.1 Nano', providerId: 'openai', inputPrice: 0.10, outputPrice: 0.40, contextWindow: 1047576, maxOutput: 32768, speed: 200, qualityScore: 75, released: '2025-04-14', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'o3', name: 'o3', providerId: 'openai', inputPrice: 10.00, outputPrice: 40.00, contextWindow: 200000, maxOutput: 100000, speed: 15, qualityScore: 95, released: '2025-04-16', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'o3-mini', name: 'o3-mini', providerId: 'openai', inputPrice: 1.10, outputPrice: 4.40, contextWindow: 200000, maxOutput: 100000, speed: 60, qualityScore: 88, released: '2025-01-31', openSource: false, modality: 'text', pricingSource: source },
-    { id: 'o4-mini', name: 'o4-mini', providerId: 'openai', inputPrice: 1.10, outputPrice: 4.40, contextWindow: 200000, maxOutput: 100000, speed: 65, qualityScore: 90, released: '2025-04-16', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'o3-pro', name: 'o3-pro', providerId: 'openai', inputPrice: 20.00, outputPrice: 80.00, contextWindow: 200000, maxOutput: 100000, speed: 8, qualityScore: 96, released: '2025-06-10', openSource: false, modality: 'text,vision', pricingSource: source },
-  ];
+  console.log('  Fetching Together AI models...');
+  const response = await fetch('https://api.together.xyz/v1/models', {
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Accept': 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Together AI API returned ${response.status}`);
+  }
+
+  const models = await response.json() as Array<{
+    id: string;
+    display_name?: string;
+    context_length?: number;
+    pricing?: { input?: number; output?: number };
+  }>;
+
+  console.log(`    Received ${models.length} models from Together AI`);
+
+  const prices: PricePoint[] = [];
+  for (const m of models) {
+    const dbId = TOGETHER_MODEL_MAP[m.id];
+    if (!dbId || !m.pricing) continue;
+
+    // Together AI returns per-token pricing, convert to per-1M
+    const inputPrice = (m.pricing.input ?? 0) * 1_000_000;
+    const outputPrice = (m.pricing.output ?? 0) * 1_000_000;
+
+    if (inputPrice === 0 && outputPrice === 0) continue;
+
+    prices.push({
+      modelId: dbId,
+      inputPrice: Math.round(inputPrice * 1000) / 1000,
+      outputPrice: Math.round(outputPrice * 1000) / 1000,
+      contextWindow: m.context_length,
+      source: 'together.ai',
+    });
+  }
+
+  console.log(`    Matched ${prices.length} models to our database`);
+  return prices;
 }
 
-// ─── Anthropic Pricing ──────────────────────────────────────────
-async function scrapeAnthropic(): Promise<ScrapedModel[]> {
-  console.log('  Scraping Anthropic pricing...');
-  const source = 'anthropic.com/pricing';
+// ─── Google Gemini API ──────────────────────────────────────────
+// Returns context windows (inputTokenLimit / outputTokenLimit) but NOT pricing.
+// Endpoint: GET https://generativelanguage.googleapis.com/v1beta/models?key=KEY
 
-  return [
-    { id: 'claude-sonnet-4', name: 'Claude Sonnet 4', providerId: 'anthropic', inputPrice: 3.00, outputPrice: 15.00, contextWindow: 200000, maxOutput: 64000, speed: 80, qualityScore: 91, released: '2025-05-22', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'claude-haiku-3.5', name: 'Claude 3.5 Haiku', providerId: 'anthropic', inputPrice: 0.80, outputPrice: 4.00, contextWindow: 200000, maxOutput: 8192, speed: 120, qualityScore: 82, released: '2024-10-22', openSource: false, modality: 'text,vision', pricingSource: source },
-    { id: 'claude-opus-4', name: 'Claude Opus 4', providerId: 'anthropic', inputPrice: 15.00, outputPrice: 75.00, contextWindow: 200000, maxOutput: 32000, speed: 30, qualityScore: 93, released: '2025-05-22', openSource: false, modality: 'text,vision', pricingSource: source },
-  ];
+const GOOGLE_MODEL_MAP: Record<string, string> = {
+  'models/gemini-2.5-pro-latest': 'gemini-2.5-pro',
+  'models/gemini-2.5-flash-latest': 'gemini-2.5-flash',
+  'models/gemini-2.0-flash': 'gemini-2.0-flash',
+  'models/gemini-2.0-flash-lite': 'gemini-2.0-flash-lite',
+  'models/gemini-1.5-pro-latest': 'gemini-1.5-pro',
+  'models/gemini-1.5-flash-latest': 'gemini-1.5-flash',
+};
+
+interface GoogleModel {
+  name: string;
+  displayName: string;
+  inputTokenLimit?: number;
+  outputTokenLimit?: number;
 }
 
-// ─── Google Pricing ─────────────────────────────────────────────
-async function scrapeGoogle(): Promise<ScrapedModel[]> {
-  console.log('  Scraping Google pricing...');
-  const source = 'ai.google.dev/pricing';
+async function fetchGoogleContextWindows(): Promise<Map<string, { input: number; output: number }>> {
+  const apiKey = process.env.GOOGLE_API_KEY;
+  if (!apiKey) {
+    console.log('  ⊘ Google Gemini API: skipped (no GOOGLE_API_KEY)');
+    return new Map();
+  }
 
-  return [
-    { id: 'gemini-2.5-pro', name: 'Gemini 2.5 Pro', providerId: 'google', inputPrice: 1.25, outputPrice: 10.00, contextWindow: 1048576, maxOutput: 65536, speed: 90, qualityScore: 92, released: '2025-03-25', openSource: false, modality: 'text,vision,audio', pricingSource: source },
-    { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash', providerId: 'google', inputPrice: 0.15, outputPrice: 0.60, contextWindow: 1048576, maxOutput: 65536, speed: 350, qualityScore: 85, released: '2025-04-17', openSource: false, modality: 'text,vision,audio', pricingSource: source },
-    { id: 'gemini-2.0-flash', name: 'Gemini 2.0 Flash', providerId: 'google', inputPrice: 0.10, outputPrice: 0.40, contextWindow: 1048576, maxOutput: 8192, speed: 400, qualityScore: 81, released: '2025-02-05', openSource: false, modality: 'text,vision,audio', pricingSource: source },
-    { id: 'gemini-2.0-flash-lite', name: 'Gemini 2.0 Flash Lite', providerId: 'google', inputPrice: 0.075, outputPrice: 0.30, contextWindow: 1048576, maxOutput: 8192, speed: 450, qualityScore: 76, released: '2025-02-25', openSource: false, modality: 'text,vision,audio', pricingSource: source },
-  ];
+  console.log('  Fetching Google Gemini model metadata...');
+  const response = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`,
+    { headers: { 'Accept': 'application/json' } }
+  );
+
+  if (!response.ok) {
+    console.log(`    Google API returned ${response.status}, skipping`);
+    return new Map();
+  }
+
+  const data = await response.json() as { models: GoogleModel[] };
+  const result = new Map<string, { input: number; output: number }>();
+
+  for (const m of data.models) {
+    const dbId = GOOGLE_MODEL_MAP[m.name];
+    if (!dbId) continue;
+    if (m.inputTokenLimit && m.outputTokenLimit) {
+      result.set(dbId, { input: m.inputTokenLimit, output: m.outputTokenLimit });
+    }
+  }
+
+  console.log(`    Got context windows for ${result.size} Gemini models`);
+  return result;
 }
 
-// ─── DeepSeek Pricing ──────────────────────────────────────────
-async function scrapeDeepSeek(): Promise<ScrapedModel[]> {
-  console.log('  Scraping DeepSeek pricing...');
-  const source = 'deepseek.com/pricing';
+// ─── Groq API ───────────────────────────────────────────────────
+// Returns context_window and max_completion_tokens but NOT pricing.
+// Useful for validating context windows on models hosted by Groq.
 
-  return [
-    { id: 'deepseek-v3.2', name: 'DeepSeek V3.2', providerId: 'deepseek', inputPrice: 0.14, outputPrice: 0.28, contextWindow: 128000, maxOutput: 8192, speed: 49, qualityScore: 87, released: '2025-09-29', openSource: true, modality: 'text', pricingSource: source },
-    { id: 'deepseek-r1', name: 'DeepSeek R1', providerId: 'deepseek', inputPrice: 0.55, outputPrice: 2.19, contextWindow: 128000, maxOutput: 8192, speed: 30, qualityScore: 89, released: '2025-01-20', openSource: true, modality: 'text', pricingSource: source },
-    { id: 'deepseek-r1-0528', name: 'DeepSeek R1 0528', providerId: 'deepseek', inputPrice: 1.35, outputPrice: 4.20, contextWindow: 128000, maxOutput: 8192, speed: 30, qualityScore: 91, released: '2025-05-28', openSource: true, modality: 'text', pricingSource: source },
-    { id: 'deepseek-v3', name: 'DeepSeek V3', providerId: 'deepseek', inputPrice: 0.14, outputPrice: 0.28, contextWindow: 64000, maxOutput: 8192, speed: 40, qualityScore: 84, released: '2024-12-25', openSource: true, modality: 'text', pricingSource: source },
-  ];
+async function fetchGroqContextWindows(): Promise<Map<string, { context: number; maxOutput: number }>> {
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) {
+    console.log('  ⊘ Groq API: skipped (no GROQ_API_KEY)');
+    return new Map();
+  }
+
+  console.log('  Fetching Groq model metadata...');
+  const response = await fetch('https://api.groq.com/openai/v1/models', {
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Accept': 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    console.log(`    Groq API returned ${response.status}, skipping`);
+    return new Map();
+  }
+
+  const data = await response.json() as { data: Array<{
+    id: string;
+    context_window?: number;
+    max_completion_tokens?: number;
+    active?: boolean;
+  }> };
+
+  const GROQ_MAP: Record<string, string> = {
+    'llama-3.3-70b-versatile': 'llama-3.3-70b',
+    'llama-3.1-8b-instant': 'llama-3.1-8b',
+    'gemma2-9b-it': 'gemma-2-9b', // if we track it
+    'deepseek-r1-distill-llama-70b': 'deepseek-r1',
+    'mistral-saba-24b': 'mistral-small-3.1',
+    'qwen-qwq-32b': 'qwen-qwq-32b',
+  };
+
+  const result = new Map<string, { context: number; maxOutput: number }>();
+  for (const m of data.data) {
+    if (!m.active) continue;
+    const dbId = GROQ_MAP[m.id];
+    if (!dbId) continue;
+    if (m.context_window) {
+      result.set(dbId, {
+        context: m.context_window,
+        maxOutput: m.max_completion_tokens ?? 0,
+      });
+    }
+  }
+
+  console.log(`    Got context windows for ${result.size} Groq-hosted models`);
+  return result;
 }
 
-// ─── Mistral Pricing ───────────────────────────────────────────
-async function scrapeMistral(): Promise<ScrapedModel[]> {
-  console.log('  Scraping Mistral pricing...');
-  const source = 'mistral.ai/pricing';
+// ─── Cross-validation ──────────────────────────────────────────
+function crossValidate(
+  db: Database.Database,
+  secondaryPrices: PricePoint[],
+  googleContexts: Map<string, { input: number; output: number }>,
+  groqContexts: Map<string, { context: number; maxOutput: number }>,
+): void {
+  if (secondaryPrices.length === 0 && googleContexts.size === 0 && groqContexts.size === 0) {
+    console.log('\n  No secondary sources available for cross-validation');
+    console.log('  Set TOGETHER_API_KEY, GOOGLE_API_KEY, or GROQ_API_KEY to enable');
+    return;
+  }
 
-  return [
-    { id: 'mistral-large-3', name: 'Mistral Large 3', providerId: 'mistral', inputPrice: 0.50, outputPrice: 1.50, contextWindow: 256000, maxOutput: 32768, speed: 80, qualityScore: 86, released: '2025-06-01', openSource: true, modality: 'text,vision', pricingSource: source },
-    { id: 'mistral-medium-3', name: 'Mistral Medium 3', providerId: 'mistral', inputPrice: 0.40, outputPrice: 2.00, contextWindow: 131072, maxOutput: 16384, speed: 90, qualityScore: 82, released: '2025-06-01', openSource: true, modality: 'text', pricingSource: source },
-    { id: 'mistral-small-3.1', name: 'Mistral Small 3.1', providerId: 'mistral', inputPrice: 0.03, outputPrice: 0.11, contextWindow: 128000, maxOutput: 16384, speed: 150, qualityScore: 76, released: '2025-03-18', openSource: true, modality: 'text,vision', pricingSource: source },
-    { id: 'codestral', name: 'Codestral', providerId: 'mistral', inputPrice: 0.30, outputPrice: 0.90, contextWindow: 262144, maxOutput: 32768, speed: 80, qualityScore: 81, released: '2025-01-14', openSource: false, modality: 'text', pricingSource: source },
-  ];
-}
+  console.log('\n▶ Cross-validating against secondary sources...');
 
-// ─── xAI Pricing ───────────────────────────────────────────────
-async function scrapeXAI(): Promise<ScrapedModel[]> {
-  console.log('  Scraping xAI pricing...');
-  const source = 'docs.x.ai';
+  // Get current DB prices (from OpenRouter primary scrape)
+  const dbModels = db.prepare(`
+    SELECT id, name, input_price, output_price, context_window, max_output
+    FROM models WHERE category = 'llm'
+  `).all() as Array<{
+    id: string; name: string;
+    input_price: number; output_price: number;
+    context_window: number; max_output: number;
+  }>;
 
-  return [
-    { id: 'grok-4', name: 'Grok 4', providerId: 'xai', inputPrice: 3.00, outputPrice: 15.00, contextWindow: 256000, maxOutput: 32768, speed: 50, qualityScore: 95, released: '2025-07-09', openSource: false, modality: 'text', pricingSource: source },
-    { id: 'grok-4-fast', name: 'Grok 4 Fast', providerId: 'xai', inputPrice: 0.20, outputPrice: 0.50, contextWindow: 2097152, maxOutput: 32768, speed: 150, qualityScore: 85, released: '2025-09-19', openSource: false, modality: 'text', pricingSource: source },
-    { id: 'grok-4.1-fast', name: 'Grok 4.1 Fast', providerId: 'xai', inputPrice: 0.20, outputPrice: 0.50, contextWindow: 2097152, maxOutput: 32768, speed: 150, qualityScore: 86, released: '2025-11-01', openSource: false, modality: 'text', pricingSource: source },
-    { id: 'grok-3', name: 'Grok 3', providerId: 'xai', inputPrice: 3.00, outputPrice: 15.00, contextWindow: 131072, maxOutput: 32768, speed: 70, qualityScore: 90, released: '2025-06-10', openSource: false, modality: 'text,vision', pricingSource: source },
-  ];
-}
+  const dbMap = new Map(dbModels.map(m => [m.id, m]));
 
-// ─── ElevenLabs Pricing ────────────────────────────────────────
-async function scrapeElevenLabs(): Promise<ScrapedModel[]> {
-  console.log('  Scraping ElevenLabs pricing...');
-  const source = 'elevenlabs.io/pricing';
+  // Check pricing discrepancies vs Together AI
+  let priceDiscrepancies = 0;
+  for (const secondary of secondaryPrices) {
+    const primary = dbMap.get(secondary.modelId);
+    if (!primary) continue;
+    if (primary.input_price === 0) continue; // Skip models without primary pricing
 
-  return [
-    { id: 'elevenlabs-multilingual-v2', name: 'ElevenLabs Multilingual v2', providerId: 'elevenlabs', inputPrice: 24.00, outputPrice: 0, contextWindow: 5000, maxOutput: 600, speed: 1, qualityScore: 94, released: '2024-01-01', openSource: false, modality: 'text-to-speech', pricingSource: source },
-    { id: 'elevenlabs-turbo-v2.5', name: 'ElevenLabs Turbo v2.5', providerId: 'elevenlabs', inputPrice: 18.00, outputPrice: 0, contextWindow: 5000, maxOutput: 600, speed: 0.5, qualityScore: 90, released: '2024-06-01', openSource: false, modality: 'text-to-speech', pricingSource: source },
-    { id: 'elevenlabs-flash', name: 'ElevenLabs Flash', providerId: 'elevenlabs', inputPrice: 12.00, outputPrice: 0, contextWindow: 5000, maxOutput: 600, speed: 0.3, qualityScore: 85, released: '2025-01-01', openSource: false, modality: 'text-to-speech', pricingSource: source },
-  ];
+    const primaryBlended = (primary.input_price + 3 * primary.output_price) / 4;
+    const secondaryBlended = (secondary.inputPrice + 3 * secondary.outputPrice) / 4;
+
+    if (primaryBlended > 0 && secondaryBlended > 0) {
+      const pctDiff = Math.abs(primaryBlended - secondaryBlended) / primaryBlended * 100;
+      if (pctDiff > 15) {
+        console.log(`  ⚠ ${primary.name}: OpenRouter=$${primaryBlended.toFixed(2)} vs ${secondary.source}=$${secondaryBlended.toFixed(2)} (${pctDiff.toFixed(0)}% diff)`);
+        priceDiscrepancies++;
+      }
+    }
+  }
+
+  if (secondaryPrices.length > 0 && priceDiscrepancies === 0) {
+    console.log(`  ✓ No significant price discrepancies (${secondaryPrices.length} models checked)`);
+  }
+
+  // Check context window discrepancies vs Google
+  let contextDiscrepancies = 0;
+  for (const [modelId, googleCtx] of googleContexts) {
+    const primary = dbMap.get(modelId);
+    if (!primary) continue;
+
+    if (primary.context_window > 0 && googleCtx.input !== primary.context_window) {
+      console.log(`  ⚠ ${primary.name}: DB context=${primary.context_window.toLocaleString()} vs Google API=${googleCtx.input.toLocaleString()}`);
+      contextDiscrepancies++;
+
+      // Auto-fix context windows from Google (they're authoritative for their own models)
+      db.prepare('UPDATE models SET context_window = ?, max_output = ?, updated_at = datetime(\'now\') WHERE id = ?')
+        .run(googleCtx.input, googleCtx.output, modelId);
+      console.log(`    → Auto-corrected to Google's values`);
+    }
+  }
+
+  // Log summary
+  const sourcesUsed = [];
+  if (secondaryPrices.length > 0) sourcesUsed.push('Together AI');
+  if (googleContexts.size > 0) sourcesUsed.push('Google Gemini API');
+  if (groqContexts.size > 0) sourcesUsed.push('Groq API');
+  console.log(`  Sources used: ${sourcesUsed.join(', ')}`);
 }
 
 // ─── Main ───────────────────────────────────────────────────────
 async function main() {
-  console.log('Starting pricing scraper...');
+  console.log('Starting multi-source pricing validator...');
   const db = getDB();
 
-  const scrapers = [
-    { name: 'openai', fn: scrapeOpenAI },
-    { name: 'anthropic', fn: scrapeAnthropic },
-    { name: 'google', fn: scrapeGoogle },
-    { name: 'deepseek', fn: scrapeDeepSeek },
-    { name: 'mistral', fn: scrapeMistral },
-    { name: 'xai', fn: scrapeXAI },
-    { name: 'elevenlabs', fn: scrapeElevenLabs },
-  ];
+  let totalChecked = 0;
 
-  let totalUpdated = 0;
+  try {
+    // Fetch from all secondary sources (in parallel)
+    const [togetherPrices, googleContexts, groqContexts] = await Promise.all([
+      fetchTogetherAI().catch(err => {
+        console.log(`  ✗ Together AI: ${err instanceof Error ? err.message : err}`);
+        return [] as PricePoint[];
+      }),
+      fetchGoogleContextWindows().catch(err => {
+        console.log(`  ✗ Google: ${err instanceof Error ? err.message : err}`);
+        return new Map() as Map<string, { input: number; output: number }>;
+      }),
+      fetchGroqContextWindows().catch(err => {
+        console.log(`  ✗ Groq: ${err instanceof Error ? err.message : err}`);
+        return new Map() as Map<string, { context: number; maxOutput: number }>;
+      }),
+    ]);
 
-  for (const scraper of scrapers) {
-    try {
-      const models = await scraper.fn();
-      const updated = upsertModels(db, models);
-      totalUpdated += updated;
-      logScrapeRun(db, `pricing:${scraper.name}`, 'success', updated);
-      console.log(`  ✓ ${scraper.name}: ${updated} models updated`);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      logScrapeRun(db, `pricing:${scraper.name}`, 'error', 0, message);
-      console.error(`  ✗ ${scraper.name}: ${message}`);
+    totalChecked = togetherPrices.length + googleContexts.size + groqContexts.size;
+
+    // Record Together AI prices in price_history for tracking
+    if (togetherPrices.length > 0) {
+      const insertHistory = db.prepare(
+        'INSERT INTO price_history (model_id, input_price, output_price, source) VALUES (?, ?, ?, ?)'
+      );
+      const existingModels = new Set(
+        (db.prepare('SELECT id FROM models').all() as Array<{ id: string }>).map(r => r.id)
+      );
+
+      const insertAll = db.transaction(() => {
+        for (const p of togetherPrices) {
+          if (existingModels.has(p.modelId)) {
+            insertHistory.run(p.modelId, p.inputPrice, p.outputPrice, p.source);
+          }
+        }
+      });
+      insertAll();
     }
+
+    // Cross-validate
+    crossValidate(db, togetherPrices, googleContexts, groqContexts);
+
+    logScrapeRun(db, 'pricing:validator', 'success', totalChecked);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    logScrapeRun(db, 'pricing:validator', 'error', 0, message);
+    console.error(`  ✗ Pricing validator: ${message}`);
   }
 
-  console.log(`\nPricing scraper complete. ${totalUpdated} total models updated.`);
+  console.log(`\nPricing validator complete. ${totalChecked} data points checked.`);
   db.close();
 }
 

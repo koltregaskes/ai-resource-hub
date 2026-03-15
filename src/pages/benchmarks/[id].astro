@@ -127,6 +127,84 @@ const benchmarkInfo: Record<string, { what: string; how: string; why: string; li
     why: 'As AI models saturate existing benchmarks, we need harder tests. Humanity\'s Last Exam tests whether models can match the very best human experts. Current top scores are around 25%, showing significant room for improvement.',
     limitations: 'Very small question set from each domain. Expert disagreement on correct answers. Some questions may be more about niche knowledge than general intelligence. Top scores of ~25% mean most results are noisy.',
   },
+  'simpleqa': {
+    what: 'SimpleQA tests factual accuracy on straightforward questions that should have clear, verifiable answers. It measures how often models hallucinate or confabulate when answering simple factual queries.',
+    how: 'Models are asked simple factual questions (e.g. "Who directed Inception?") and answers are verified against ground truth. The score represents the percentage of correct, non-hallucinated responses.',
+    why: 'Hallucination is one of the biggest practical problems with LLMs. SimpleQA directly measures this by testing whether models can reliably provide accurate information on questions with unambiguous answers.',
+    limitations: 'Only tests factual recall, not reasoning. Questions are relatively simple — models may hallucinate more on complex topics. English-centric. Does not test the model\'s ability to say "I don\'t know".',
+  },
+  'gaia': {
+    what: 'GAIA (General AI Assistants) tests real-world assistant tasks requiring reasoning, web browsing, multimodality, and tool use. Questions are easy for humans (~92% accuracy) but very hard for AI (~15% for GPT-4 at launch).',
+    how: 'Models receive tasks that require multiple steps: searching the web, reading documents, performing calculations, and synthesising information. Tasks are graded on final answer correctness.',
+    why: 'GAIA tests practical AI assistant capability rather than academic knowledge. The large gap between human and AI performance makes it an excellent discriminator for real-world usefulness.',
+    limitations: 'Requires tool access (web browsing, code execution) which varies by implementation. Some tasks may be time-sensitive. The gap between human and AI performance is closing rapidly.',
+  },
+  'aider-polyglot': {
+    what: 'Aider Polyglot evaluates coding ability across 225 Exercism exercises in 6 languages: C++, Go, Java, JavaScript, Python, and Rust. Models get two attempts per problem with test error feedback.',
+    how: 'Models solve programming exercises and run them against test suites. If the first attempt fails, models receive the error output and can try again. The benchmark uniquely tracks both accuracy and cost per task.',
+    why: 'Real software engineering requires proficiency across multiple languages, not just Python. Aider Polyglot tests breadth of coding ability and the practical skill of debugging from test failures.',
+    limitations: 'Exercism problems are relatively contained — they don\'t test working with large codebases. Only 6 languages are covered. Two-attempt format may not reflect real-world usage patterns.',
+  },
+  'bfcl': {
+    what: 'The Berkeley Function Calling Leaderboard (BFCL) tests how well models can invoke tools and functions correctly, covering simple calls, parallel calls, multi-turn conversations, and knowing when NOT to call a function.',
+    how: 'Models receive function definitions and user queries, then must generate correct function calls. Tests include simple single-function calls, parallel execution, nested calls, and relevance detection (avoiding unnecessary calls).',
+    why: 'Function calling is critical for AI agents and tool use. BFCL is the most comprehensive benchmark for this capability, directly measuring whether models can reliably interact with external APIs and tools.',
+    limitations: 'Function calling formats vary between providers, which can affect scores. Does not test execution of the functions themselves, only the call generation. Simulated environment may not capture all real-world edge cases.',
+  },
+  'mmmu-pro': {
+    what: 'MMMU-Pro is a harder version of MMMU that eliminates shortcut strategies. It tests multimodal understanding across 30 subjects and 6 disciplines with 30 different image types including charts, diagrams, and chemical structures.',
+    how: 'Models answer questions about images that require genuine understanding — not just pattern matching. The "Pro" version removes answer choices that could be eliminated without understanding the image, making it a purer test.',
+    why: 'As models get better at MMMU through shortcuts, MMMU-Pro ensures scores reflect genuine multimodal understanding. It\'s the gold standard for testing whether AI truly comprehends visual academic content.',
+    limitations: 'Requires multimodal input so text-only models cannot be tested. Newer benchmark with less historical data. Some image types (e.g. music sheets) may be underrepresented in training data.',
+  },
+  'mathvista': {
+    what: 'MathVista tests mathematical reasoning in visual contexts using 6,141 examples from 31 datasets. It evaluates whether models can solve maths problems involving diagrams, graphs, charts, and geometric figures.',
+    how: 'Models receive images containing mathematical content (function plots, geometry diagrams, statistical charts) and must solve problems that require both visual understanding and mathematical reasoning.',
+    why: 'Mathematical reasoning with visual inputs is a critical skill for STEM applications. MathVista uniquely combines vision and mathematics, testing a capability that pure text benchmarks miss entirely.',
+    limitations: 'Image quality and format can affect results. Some problems may be solvable from text descriptions alone. The dataset draws from existing sources which may appear in training data.',
+  },
+  'medqa': {
+    what: 'MedQA contains US Medical Licensing Exam (USMLE)-style questions — 11,450 multiple-choice problems testing medical knowledge and clinical reasoning. It\'s the gold standard for medical AI evaluation.',
+    how: 'Models answer USMLE-style multiple-choice questions covering basic science, clinical medicine, and patient management. Questions require integrating knowledge across anatomy, pharmacology, pathology, and clinical practice.',
+    why: 'Healthcare is one of the highest-stakes applications for AI. MedQA provides a rigorous, standardised way to evaluate whether AI models have the medical knowledge needed to assist healthcare professionals.',
+    limitations: 'US-centric medical curriculum. Multiple-choice format doesn\'t capture real clinical reasoning complexity. High scores don\'t mean the model is safe for clinical use — it only tests knowledge, not judgement.',
+  },
+  'legalbench': {
+    what: 'LegalBench tests legal reasoning across 162 tasks designed by legal professionals, covering issue-spotting, rule-recall, rule-application, interpretation, and rhetorical understanding.',
+    how: 'Models perform diverse legal tasks: identifying relevant legal issues, recalling specific rules, applying rules to fact patterns, interpreting statutes, and analysing legal rhetoric. Tasks are hand-crafted by practising lawyers.',
+    why: 'Legal AI is a rapidly growing field but poorly benchmarked. LegalBench provides the first comprehensive evaluation of legal reasoning capabilities, created by legal domain experts rather than AI researchers.',
+    limitations: 'Focused on US/common law legal systems. Tasks are simplified compared to real legal practice. Does not test legal writing, case strategy, or client interaction skills.',
+  },
+  'mgsm': {
+    what: 'MGSM (Multilingual Grade School Math) tests mathematical reasoning across 10 typologically diverse languages: Bengali, Chinese, French, German, Japanese, Russian, Spanish, Swahili, Telugu, and Thai.',
+    how: 'Models solve 250 grade-school math word problems (from GSM8K) translated into 10 languages. Success requires both language understanding and mathematical reasoning, testing cross-lingual chain-of-thought transfer.',
+    why: 'Most AI benchmarks are English-only, but AI models serve a global audience. MGSM reveals whether mathematical reasoning transfers across languages or drops significantly in non-English contexts.',
+    limitations: 'Only 250 problems means higher variance. Translation quality may vary. Grade-school level maths is relatively simple for frontier models. Does not test culturally-specific mathematical concepts.',
+  },
+  'air-bench': {
+    what: 'AIR-Bench 2024 evaluates AI safety through 5,694 tests across 314 granular risk categories, aligned with government regulations and company safety policies. Covers system risks, content safety, societal risks, and legal compliance.',
+    how: 'Models are tested against a comprehensive taxonomy of risks including harmful content generation, privacy violations, bias, and regulatory non-compliance. Each test maps to specific safety policies from major AI companies.',
+    why: 'As AI regulation increases globally, models need standardised safety evaluation. AIR-Bench provides the most comprehensive safety assessment aligned with real-world regulatory requirements.',
+    limitations: 'Risk taxonomies evolve faster than benchmarks can update. May not cover emerging risk categories. Passing AIR-Bench doesn\'t guarantee safety in deployment — real-world scenarios are more complex.',
+  },
+  'trustllm': {
+    what: 'TrustLLM evaluates comprehensive trustworthiness across 6 dimensions: truthfulness, safety, fairness, robustness, privacy, and machine ethics. Provides a holistic trust profile rather than a single score.',
+    how: 'Models are evaluated on each trust dimension independently through targeted tests. Truthfulness tests check factual accuracy, safety tests probe harmful outputs, fairness tests measure demographic bias, and privacy tests check for data leakage.',
+    why: 'Trust is multidimensional — a model can be truthful but unfair, or safe but not robust. TrustLLM provides the first holistic view of model trustworthiness across all the dimensions that matter for deployment.',
+    limitations: 'Aggregating 6 dimensions into a single trust score is inherently reductive. Some dimensions (like fairness) are culturally dependent. Trust requirements vary dramatically by use case.',
+  },
+  'webarena': {
+    what: 'WebArena tests autonomous web agents on real tasks in self-hosted realistic environments: e-commerce sites, social media platforms, GitLab instances, and content management systems.',
+    how: 'Models must navigate real web interfaces to complete tasks like "Find the cheapest laptop under $500 on the store" or "Create a new repository and add a README". Success is measured by task completion.',
+    why: 'Web interaction is one of the most practical agent capabilities. WebArena tests whether AI can actually use the internet effectively — not just answer questions about it.',
+    limitations: 'Self-hosted environments may not perfectly replicate real websites. Tasks are predefined and may not capture the full complexity of web navigation. Setup is resource-intensive.',
+  },
+  'tau-bench': {
+    what: 'TAU-bench evaluates Tool-Agent-User interaction quality in real-world domains, testing whether agents correctly chain tool calls, handle errors, and maintain conversation coherence across multi-step scenarios.',
+    how: 'Agents interact with simulated users and tools across domains like customer service, data analysis, and scheduling. Evaluation measures both task completion and interaction quality (e.g. not making unnecessary tool calls).',
+    why: 'Real-world agent deployment requires not just tool proficiency but good interaction patterns. TAU-bench uniquely evaluates the full loop of user understanding, tool selection, execution, and response quality.',
+    limitations: 'Simulated users may not capture real human behaviour. Domain-specific scenarios may not generalise. Interaction quality is partially subjective to evaluate.',
+  },
 };
 
 const info = benchmarkInfo[id] ?? {
@@ -144,6 +222,10 @@ const categoryColours: Record<string, string> = {
   instruction: 'bg-yellow-500/20 text-yellow-400',
   conversational: 'bg-pink-500/20 text-pink-400',
   multimodal: 'bg-orange-500/20 text-orange-400',
+  safety: 'bg-red-500/20 text-red-400',
+  agent: 'bg-cyan-500/20 text-cyan-400',
+  domain: 'bg-amber-500/20 text-amber-400',
+  multilingual: 'bg-teal-500/20 text-teal-400',
 };
 const categoryClass = categoryColours[benchmark.category] ?? 'bg-gray-500/20 text-gray-400';
 

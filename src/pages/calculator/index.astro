@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm').filter(m => m.input_price > 0 || m.output_price > 0);
+
+
+// Build model data for the calculator
+const modelData = models.map(m => ({
+  id: m.id,
+  name: m.name,
+  provider: m.provider,
+  colour: m.providerColour,
+  inputPrice: m.inputPrice,
+  outputPrice: m.outputPrice,
+  contextWindow: m.contextWindow,
+})).sort((a, b) => a.inputPrice - b.inputPrice);
+---
+
+<BaseLayout
+  title="AI API Pricing Calculator — The AI Resource Hub"
+  description="Calculate and compare AI API costs. Estimate your monthly spend across ChatGPT, Claude, Gemini, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Pricing Calculator</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI API Pricing Calculator
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Estimate your monthly AI API costs. Enter your usage and instantly see what each model would cost. All prices in USD per million tokens.
+      </p>
+    </div>
+
+    <!-- Calculator -->
+    <div class="grid lg:grid-cols-3 gap-6 mb-8">
+      <div class="lg:col-span-1">
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) sticky top-20">
+          <h2 class="font-semibold text-(--color-text-primary) mb-4">Your Usage</h2>
+
+          <div class="space-y-4">
+            <div>
+              <label class="text-xs text-(--color-text-muted) block mb-1">Requests per day</label>
+              <input
+                type="number"
+                id="calc-requests"
+                value="100"
+                min="1"
+                class="w-full px-3 py-2 rounded-lg bg-(--color-bg-tertiary) border border-(--color-border) text-(--color-text-primary) text-sm"
+              />
+            </div>
+            <div>
+              <label class="text-xs text-(--color-text-muted) block mb-1">Avg input tokens per request</label>
+              <input
+                type="number"
+                id="calc-input-tokens"
+                value="1000"
+                min="1"
+                class="w-full px-3 py-2 rounded-lg bg-(--color-bg-tertiary) border border-(--color-border) text-(--color-text-primary) text-sm"
+              />
+            </div>
+            <div>
+              <label class="text-xs text-(--color-text-muted) block mb-1">Avg output tokens per request</label>
+              <input
+                type="number"
+                id="calc-output-tokens"
+                value="500"
+                min="1"
+                class="w-full px-3 py-2 rounded-lg bg-(--color-bg-tertiary) border border-(--color-border) text-(--color-text-primary) text-sm"
+              />
+            </div>
+          </div>
+
+          <div class="mt-4 p-3 rounded-lg bg-(--color-bg-tertiary)">
+            <div class="text-xs text-(--color-text-muted)">Monthly tokens</div>
+            <div class="text-sm font-medium text-(--color-text-primary)" id="calc-monthly-tokens">—</div>
+          </div>
+
+          <div class="mt-3 text-xs text-(--color-text-muted)">
+            <p><strong>Quick presets:</strong></p>
+            <div class="flex flex-wrap gap-1 mt-1">
+              <button class="calc-preset px-2 py-1 rounded bg-(--color-bg-tertiary) hover:bg-(--color-accent)/20 transition-colors" data-requests="10" data-input="500" data-output="200">Light use</button>
+              <button class="calc-preset px-2 py-1 rounded bg-(--color-bg-tertiary) hover:bg-(--color-accent)/20 transition-colors" data-requests="100" data-input="1000" data-output="500">Medium</button>
+              <button class="calc-preset px-2 py-1 rounded bg-(--color-bg-tertiary) hover:bg-(--color-accent)/20 transition-colors" data-requests="1000" data-input="2000" data-output="1000">Heavy</button>
+              <button class="calc-preset px-2 py-1 rounded bg-(--color-bg-tertiary) hover:bg-(--color-accent)/20 transition-colors" data-requests="10000" data-input="4000" data-output="2000">Enterprise</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2">
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Input $/M</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Output $/M</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Monthly Cost</th>
+              </tr>
+            </thead>
+            <tbody id="calc-results">
+              {modelData.map(m => (
+                <tr
+                  class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors calc-row"
+                  data-input-price={m.inputPrice}
+                  data-output-price={m.outputPrice}
+                >
+                  <td class="py-3 px-4">
+                    <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                      <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
+                      <span class="truncate">{m.name}</span>
+                    </a>
+                    <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                    ${m.inputPrice.toFixed(2)}
+                  </td>
+                  <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                    ${m.outputPrice.toFixed(2)}
+                  </td>
+                  <td class="py-3 px-4 text-right font-mono text-sm font-medium calc-cost text-(--color-accent)">
+                    —
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function updateCalculator() {
+      const requests = parseInt((document.getElementById('calc-requests') as HTMLInputElement)?.value || '100');
+      const inputTokens = parseInt((document.getElementById('calc-input-tokens') as HTMLInputElement)?.value || '1000');
+      const outputTokens = parseInt((document.getElementById('calc-output-tokens') as HTMLInputElement)?.value || '500');
+
+      const daysPerMonth = 30;
+      const monthlyRequests = requests * daysPerMonth;
+      const monthlyInputTokens = monthlyRequests * inputTokens;
+      const monthlyOutputTokens = monthlyRequests * outputTokens;
+      const totalMonthlyTokens = monthlyInputTokens + monthlyOutputTokens;
+
+      // Update monthly tokens display
+      const tokensEl = document.getElementById('calc-monthly-tokens');
+      if (tokensEl) {
+        if (totalMonthlyTokens >= 1_000_000_000) {
+          tokensEl.textContent = `${(totalMonthlyTokens / 1_000_000_000).toFixed(1)}B tokens`;
+        } else if (totalMonthlyTokens >= 1_000_000) {
+          tokensEl.textContent = `${(totalMonthlyTokens / 1_000_000).toFixed(1)}M tokens`;
+        } else {
+          tokensEl.textContent = `${(totalMonthlyTokens / 1000).toFixed(0)}K tokens`;
+        }
+      }
+
+      // Update each row
+      const rows = document.querySelectorAll('.calc-row');
+      const costs: { row: Element; cost: number }[] = [];
+      rows.forEach(row => {
+        const inputPrice = parseFloat((row as HTMLElement).dataset.inputPrice || '0');
+        const outputPrice = parseFloat((row as HTMLElement).dataset.outputPrice || '0');
+        const cost = (monthlyInputTokens / 1_000_000) * inputPrice + (monthlyOutputTokens / 1_000_000) * outputPrice;
+
+        const costEl = row.querySelector('.calc-cost');
+        if (costEl) {
+          if (cost < 0.01) {
+            costEl.textContent = '<$0.01';
+          } else if (cost < 1) {
+            costEl.textContent = `$${cost.toFixed(2)}`;
+          } else if (cost < 100) {
+            costEl.textContent = `$${cost.toFixed(2)}`;
+          } else {
+            costEl.textContent = `$${cost.toFixed(0)}`;
+          }
+        }
+        costs.push({ row, cost });
+      });
+
+      // Sort rows by cost (cheapest first)
+      costs.sort((a, b) => a.cost - b.cost);
+      const tbody = document.getElementById('calc-results');
+      if (tbody) {
+        costs.forEach(({ row }) => tbody.appendChild(row));
+      }
+    }
+
+    // Listen for input changes
+    ['calc-requests', 'calc-input-tokens', 'calc-output-tokens'].forEach(id => {
+      document.getElementById(id)?.addEventListener('input', updateCalculator);
+    });
+
+    // Preset buttons
+    document.querySelectorAll('.calc-preset').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const el = btn as HTMLElement;
+        (document.getElementById('calc-requests') as HTMLInputElement).value = el.dataset.requests || '100';
+        (document.getElementById('calc-input-tokens') as HTMLInputElement).value = el.dataset.input || '1000';
+        (document.getElementById('calc-output-tokens') as HTMLInputElement).value = el.dataset.output || '500';
+        updateCalculator();
+      });
+    });
+
+    // Initial calculation
+    updateCalculator();
+  </script>
+</BaseLayout>

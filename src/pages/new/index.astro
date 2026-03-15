@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory, getRecentModels } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Get all categories for a comprehensive view
+const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
+const allModels: Array<{
+  id: string; name: string; provider: string; providerColour: string;
+  category: string; released: string; qualityScore: number;
+  inputPrice: number; outputPrice: number; openSource: boolean;
+  speed: number; contextWindow: number; notes: string | undefined;
+}> = [];
+
+for (const cat of categories) {
+  const models = getModelsByCategory(cat);
+  for (const m of models) {
+    allModels.push({ ...m, category: cat });
+  }
+}
+
+// Sort by release date descending
+const sortedModels = allModels
+  .filter(m => m.released)
+  .sort((a, b) => (b.released || '').localeCompare(a.released || ''));
+
+// Group by year-month
+const grouped = new Map<string, typeof sortedModels>();
+for (const m of sortedModels) {
+  const key = m.released.slice(0, 7); // YYYY-MM
+  if (!grouped.has(key)) grouped.set(key, []);
+  grouped.get(key)!.push(m);
+}
+
+const months = Array.from(grouped.entries());
+
+// Recent (last 6 months)
+const sixMonthsAgo = new Date();
+sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+const cutoff = sixMonthsAgo.toISOString().slice(0, 7);
+const recentMonths = months.filter(([key]) => key >= cutoff);
+const olderMonths = months.filter(([key]) => key < cutoff);
+
+// Stats
+const thisYear = sortedModels.filter(m => m.released >= '2025');
+const lastYear = sortedModels.filter(m => m.released >= '2024' && m.released < '2025');
+
+const categoryLabels: Record<string, string> = {
+  llm: 'LLM',
+  image: 'Image',
+  video: 'Video',
+  voice: 'Voice',
+  speech: 'Speech',
+  sound: 'Sound',
+};
+
+const categoryColour: Record<string, string> = {
+  llm: 'bg-blue-500/20 text-blue-400',
+  image: 'bg-purple-500/20 text-purple-400',
+  video: 'bg-red-500/20 text-red-400',
+  voice: 'bg-green-500/20 text-green-400',
+  speech: 'bg-amber-500/20 text-amber-400',
+  sound: 'bg-pink-500/20 text-pink-400',
+};
+
+function formatMonth(ym: string): string {
+  const [year, month] = ym.split('-');
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${months[parseInt(month) - 1]} ${year}`;
+}
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+---
+
+<BaseLayout
+  title="New AI Models — The AI Resource Hub"
+  description="Recently released AI models across all categories. Track the latest LLMs, image generators, video models, and more."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">New Models</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        New & Recently Released Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Track the latest AI model releases across all categories. {sortedModels.length} models with release dates, sorted by recency.
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">{thisYear.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Released in 2025</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-accent)">{lastYear.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Released in 2024</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{sortedModels.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Total with dates</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-muted)">{months.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Months covered</p>
+      </div>
+    </div>
+
+    <!-- Recent months timeline -->
+    <div class="space-y-8 mb-12">
+      {recentMonths.map(([monthKey, models]) => (
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-3 h-3 rounded-full bg-(--color-accent)"></div>
+            <h2 class="text-lg font-bold text-(--color-text-primary)">{formatMonth(monthKey)}</h2>
+            <span class="text-xs text-(--color-text-muted) bg-(--color-bg-tertiary) px-2 py-0.5 rounded-full">{models.length} models</span>
+          </div>
+          <div class="ml-6 border-l-2 border-(--color-border) pl-6 space-y-3">
+            {models.map(m => (
+              <a href={`${base}models/${m.id}/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                      <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm truncate">{m.name}</h3>
+                      <span class={`text-[9px] px-1.5 py-0.5 rounded ${categoryColour[m.category] || 'bg-(--color-bg-tertiary) text-(--color-text-muted)'}`}>
+                        {categoryLabels[m.category] || m.category}
+                      </span>
+                      {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
+                    </div>
+                    <p class="text-xs text-(--color-text-muted)">{m.provider}</p>
+                    {m.notes && <p class="text-xs text-(--color-text-muted) mt-1 line-clamp-1">{m.notes}</p>}
+                  </div>
+                  <div class="text-right shrink-0">
+                    <span class="font-mono text-sm text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                    <p class="text-[10px] text-(--color-text-muted)">
+                      {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}/M` : 'Free'}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Older months (collapsed) -->
+    {olderMonths.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Older Releases</h2>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Month</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Models</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              {olderMonths.map(([monthKey, models]) => (
+                <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                  <td class="py-3 px-4 font-medium text-(--color-text-primary)">{formatMonth(monthKey)}</td>
+                  <td class="py-3 px-4 text-xs text-(--color-text-muted)">
+                    {models.slice(0, 5).map(m => m.name).join(', ')}
+                    {models.length > 5 && ` +${models.length - 5} more`}
+                  </td>
+                  <td class="py-3 px-4 text-right">
+                    <span class="font-mono text-sm text-(--color-text-secondary)">{models.length}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href={`${base}leaderboard/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Leaderboard &rarr;
+      </a>
+      <a href={`${base}timeline/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        AI Timeline &rarr;
+      </a>
+      <a href={`${base}news/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        AI News &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

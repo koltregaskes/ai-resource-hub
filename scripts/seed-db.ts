@@ -35,6 +35,8 @@ db.exec(`
     name TEXT NOT NULL,
     colour TEXT NOT NULL DEFAULT '#888888',
     website TEXT,
+    status_url TEXT,
+    api_docs_url TEXT,
     description TEXT,
     founded TEXT,
     headquarters TEXT,
@@ -52,6 +54,9 @@ db.exec(`
     context_window INTEGER NOT NULL DEFAULT 0,
     max_output INTEGER NOT NULL DEFAULT 0,
     speed INTEGER NOT NULL DEFAULT 0,
+    ttft INTEGER NOT NULL DEFAULT 0,
+    speed_source TEXT,
+    speed_updated TEXT,
     quality_score REAL NOT NULL DEFAULT 0,
     released TEXT,
     open_source INTEGER NOT NULL DEFAULT 0,
@@ -133,61 +138,220 @@ db.exec(`
     updated_at TEXT NOT NULL DEFAULT (datetime('now'))
   );
 
+  -- YouTube creators
+  CREATE TABLE IF NOT EXISTS youtube_creators (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    channel_name TEXT NOT NULL,
+    youtube_handle TEXT,
+    subscribers INTEGER NOT NULL DEFAULT 0,
+    category TEXT NOT NULL DEFAULT 'general',
+    description TEXT,
+    twitter TEXT,
+    website TEXT,
+    person_id TEXT REFERENCES people(id),
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  -- Tags for cross-cutting categorisation
+  CREATE TABLE IF NOT EXISTS tags (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    category TEXT NOT NULL DEFAULT 'topic',
+    description TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  -- Many-to-many tag assignments
+  CREATE TABLE IF NOT EXISTS taggables (
+    tag_id TEXT NOT NULL REFERENCES tags(id),
+    taggable_id TEXT NOT NULL,
+    taggable_type TEXT NOT NULL,
+    PRIMARY KEY (tag_id, taggable_id, taggable_type)
+  );
+
+  -- News articles
+  CREATE TABLE IF NOT EXISTS news (
+    id TEXT PRIMARY KEY,
+    title TEXT NOT NULL,
+    url TEXT NOT NULL,
+    source TEXT NOT NULL,
+    summary TEXT,
+    image_url TEXT,
+    published_at TEXT NOT NULL,
+    category TEXT NOT NULL DEFAULT 'general',
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
   CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
   CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);
   CREATE INDEX IF NOT EXISTS idx_benchmark_scores_model ON benchmark_scores(model_id);
   CREATE INDEX IF NOT EXISTS idx_benchmark_scores_benchmark ON benchmark_scores(benchmark_id);
   CREATE INDEX IF NOT EXISTS idx_price_history_model ON price_history(model_id);
   CREATE INDEX IF NOT EXISTS idx_people_provider ON people(provider_id);
+  CREATE INDEX IF NOT EXISTS idx_youtube_creators_category ON youtube_creators(category);
+  CREATE INDEX IF NOT EXISTS idx_taggables_tag ON taggables(tag_id);
+  CREATE INDEX IF NOT EXISTS idx_taggables_target ON taggables(taggable_id, taggable_type);
+  CREATE INDEX IF NOT EXISTS idx_news_published ON news(published_at);
+  CREATE INDEX IF NOT EXISTS idx_news_category ON news(category);
+
+  -- Speed history for tracking latency changes over time
+  CREATE TABLE IF NOT EXISTS speed_history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    model_id TEXT NOT NULL REFERENCES models(id),
+    speed INTEGER NOT NULL,
+    ttft INTEGER NOT NULL DEFAULT 0,
+    provider_endpoint TEXT,
+    recorded_at TEXT NOT NULL DEFAULT (datetime('now')),
+    source TEXT
+  );
+
+  -- Provider endpoints (same model available via different providers)
+  CREATE TABLE IF NOT EXISTS provider_endpoints (
+    id TEXT PRIMARY KEY,
+    model_id TEXT NOT NULL REFERENCES models(id),
+    provider_id TEXT NOT NULL REFERENCES providers(id),
+    endpoint_name TEXT NOT NULL,
+    speed INTEGER NOT NULL DEFAULT 0,
+    ttft INTEGER NOT NULL DEFAULT 0,
+    input_price REAL NOT NULL DEFAULT 0,
+    output_price REAL NOT NULL DEFAULT 0,
+    measured_at TEXT,
+    source TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  -- Stealth / rumoured model sightings
+  CREATE TABLE IF NOT EXISTS rumoured_models (
+    id TEXT PRIMARY KEY,
+    codename TEXT NOT NULL,
+    provider_id TEXT REFERENCES providers(id),
+    status TEXT NOT NULL DEFAULT 'rumoured',
+    first_seen TEXT NOT NULL,
+    confirmed_as TEXT,
+    confirmed_name TEXT,
+    sources TEXT,
+    notes TEXT,
+    category TEXT DEFAULT 'llm',
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  -- Subscription plans and message limits
+  CREATE TABLE IF NOT EXISTS subscription_plans (
+    id TEXT PRIMARY KEY,
+    provider_id TEXT NOT NULL REFERENCES providers(id),
+    plan_name TEXT NOT NULL,
+    price_monthly REAL,
+    price_yearly_monthly REAL,
+    tier_level INTEGER NOT NULL DEFAULT 0,
+    source_url TEXT,
+    notes TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  CREATE TABLE IF NOT EXISTS plan_model_limits (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    plan_id TEXT NOT NULL REFERENCES subscription_plans(id),
+    model_id TEXT REFERENCES models(id),
+    model_tier TEXT,
+    messages_low INTEGER,
+    messages_high INTEGER,
+    message_period TEXT NOT NULL DEFAULT '5 hours',
+    notes TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  -- AI CLI coding tools
+  CREATE TABLE IF NOT EXISTS cli_tools (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    provider_id TEXT REFERENCES providers(id),
+    maker TEXT NOT NULL,
+    description TEXT,
+    default_model TEXT,
+    supported_models TEXT,
+    context_window INTEGER NOT NULL DEFAULT 0,
+    open_source INTEGER NOT NULL DEFAULT 0,
+    license TEXT,
+    github_url TEXT,
+    website TEXT,
+    install_command TEXT,
+    pricing_type TEXT NOT NULL DEFAULT 'free',
+    pricing_note TEXT,
+    mcp_support INTEGER NOT NULL DEFAULT 0,
+    multi_file INTEGER NOT NULL DEFAULT 0,
+    git_integration INTEGER NOT NULL DEFAULT 0,
+    platforms TEXT NOT NULL DEFAULT 'macOS, Linux',
+    released TEXT,
+    status TEXT NOT NULL DEFAULT 'active',
+    notes TEXT,
+    updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_cli_tools_provider ON cli_tools(provider_id);
+  CREATE INDEX IF NOT EXISTS idx_subscription_plans_provider ON subscription_plans(provider_id);
+  CREATE INDEX IF NOT EXISTS idx_plan_model_limits_plan ON plan_model_limits(plan_id);
+  CREATE INDEX IF NOT EXISTS idx_plan_model_limits_model ON plan_model_limits(model_id);
+  CREATE INDEX IF NOT EXISTS idx_speed_history_model ON speed_history(model_id);
+  CREATE INDEX IF NOT EXISTS idx_provider_endpoints_model ON provider_endpoints(model_id);
+  CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);
 `);
 
 // ─── Providers ──────────────────────────────────────────────────
 const insertProvider = db.prepare(`
-  INSERT INTO providers (id, name, colour, website, description, founded, headquarters, ceo, funding)
-  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+  INSERT INTO providers (id, name, colour, website, status_url, api_docs_url, description, founded, headquarters, ceo, funding)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 `);
 
 const providers = [
-  ['openai', 'OpenAI', '#10a37f', 'https://openai.com', 'Creator of GPT and ChatGPT. Pioneer in large language models and AI safety research.', '2015-12-11', 'San Francisco, CA', 'Sam Altman', '$13B+'],
-  ['anthropic', 'Anthropic', '#d97706', 'https://anthropic.com', 'AI safety company building Claude. Founded by former OpenAI researchers.', '2021-01-28', 'San Francisco, CA', 'Dario Amodei', '$7.6B+'],
-  ['google', 'Google', '#4285f4', 'https://deepmind.google', 'Google DeepMind, creator of Gemini models. Merged from Google Brain and DeepMind.', '2010-01-01', 'London / Mountain View', 'Demis Hassabis', 'Alphabet subsidiary'],
-  ['meta', 'Meta', '#0668e1', 'https://ai.meta.com', 'Creator of Llama open-weight models. Committed to open-source AI development.', '2013-09-01', 'Menlo Park, CA', 'Mark Zuckerberg', 'Meta subsidiary'],
-  ['mistral', 'Mistral', '#ff7000', 'https://mistral.ai', 'French AI lab building efficient open and commercial models.', '2023-04-01', 'Paris, France', 'Arthur Mensch', '€600M+'],
-  ['xai', 'xAI', '#1da1f2', 'https://x.ai', 'Elon Musk\'s AI company building Grok models.', '2023-07-12', 'Austin, TX', 'Elon Musk', '$6B+'],
-  ['deepseek', 'DeepSeek', '#5b6ef7', 'https://deepseek.com', 'Chinese AI lab known for efficient open-weight models with strong reasoning.', '2023-07-01', 'Hangzhou, China', 'Liang Wenfeng', 'High-Flyer Capital'],
-  ['amazon', 'Amazon', '#ff9900', 'https://aws.amazon.com/bedrock', 'Amazon\'s Nova foundation models, available through AWS Bedrock.', '1994-07-05', 'Seattle, WA', 'Andy Jassy', 'Amazon subsidiary'],
-  ['cohere', 'Cohere', '#39c0ed', 'https://cohere.com', 'Enterprise-focused AI company building Command models with RAG capabilities.', '2019-01-01', 'Toronto, Canada', 'Aidan Gomez', '$445M+'],
-  ['alibaba', 'Alibaba', '#ff6a00', 'https://www.alibabacloud.com/solutions/generative-ai', 'Creator of Qwen (Tongyi Qianwen) series of open-weight models.', '2023-04-01', 'Hangzhou, China', 'Daniel Zhang', 'Alibaba subsidiary'],
-  ['ai21', 'AI21 Labs', '#6c5ce7', 'https://www.ai21.com', 'Creator of Jamba models using Mamba-Transformer hybrid architecture.', '2017-01-01', 'Tel Aviv, Israel', 'Yoav Shoham', '$336M'],
-  ['zhipu', 'Zhipu AI', '#00b4d8', 'https://www.zhipuai.cn', 'Chinese AI company building GLM series models.', '2019-01-01', 'Beijing, China', 'Tang Jie', '$400M+'],
-  ['minimax', 'MiniMax', '#e040fb', 'https://www.minimaxi.com', 'Chinese AI company building multimodal models and applications.', '2021-12-01', 'Shanghai, China', 'Yan Junjie', '$600M+'],
-  ['perplexity', 'Perplexity', '#20b2aa', 'https://www.perplexity.ai', 'AI-powered search engine with its own Sonar models.', '2022-08-01', 'San Francisco, CA', 'Aravind Srinivas', '$500M+'],
-  ['reka', 'Reka', '#e74c3c', 'https://www.reka.ai', 'Multimodal AI lab building natively multimodal models.', '2023-01-01', 'London, UK', 'Dani Yogatama', '$58M'],
+  // id, name, colour, website, status_url, api_docs_url, description, founded, hq, ceo, funding
+  ['openai', 'OpenAI', '#10a37f', 'https://openai.com', 'https://status.openai.com', 'https://platform.openai.com/docs', 'Creator of GPT and ChatGPT. Pioneer in large language models and AI safety research.', '2015-12-11', 'San Francisco, CA', 'Sam Altman', '$13B+'],
+  ['anthropic', 'Anthropic', '#d97706', 'https://anthropic.com', 'https://status.anthropic.com', 'https://docs.anthropic.com', 'AI safety company building Claude. Founded by former OpenAI researchers.', '2021-01-28', 'San Francisco, CA', 'Dario Amodei', '$7.6B+'],
+  ['google', 'Google', '#4285f4', 'https://deepmind.google', 'https://status.cloud.google.com', 'https://ai.google.dev/docs', 'Google DeepMind, creator of Gemini models. Merged from Google Brain and DeepMind.', '2010-01-01', 'London / Mountain View', 'Demis Hassabis', 'Alphabet subsidiary'],
+  ['meta', 'Meta', '#0668e1', 'https://ai.meta.com', null, 'https://llama.meta.com/docs', 'Creator of Llama open-weight models. Committed to open-source AI development.', '2013-09-01', 'Menlo Park, CA', 'Mark Zuckerberg', 'Meta subsidiary'],
+  ['mistral', 'Mistral', '#ff7000', 'https://mistral.ai', 'https://status.mistral.ai', 'https://docs.mistral.ai', 'French AI lab building efficient open and commercial models.', '2023-04-01', 'Paris, France', 'Arthur Mensch', '€600M+'],
+  ['xai', 'xAI', '#1da1f2', 'https://x.ai', null, 'https://docs.x.ai', 'Elon Musk\'s AI company building Grok models.', '2023-07-12', 'Austin, TX', 'Elon Musk', '$6B+'],
+  ['deepseek', 'DeepSeek', '#5b6ef7', 'https://deepseek.com', null, 'https://api-docs.deepseek.com', 'Chinese AI lab known for efficient open-weight models with strong reasoning.', '2023-07-01', 'Hangzhou, China', 'Liang Wenfeng', 'High-Flyer Capital'],
+  ['amazon', 'Amazon', '#ff9900', 'https://aws.amazon.com/bedrock', 'https://health.aws.amazon.com', 'https://docs.aws.amazon.com/bedrock', 'Amazon\'s Nova foundation models, available through AWS Bedrock.', '1994-07-05', 'Seattle, WA', 'Andy Jassy', 'Amazon subsidiary'],
+  ['cohere', 'Cohere', '#39c0ed', 'https://cohere.com', 'https://status.cohere.com', 'https://docs.cohere.com', 'Enterprise-focused AI company building Command models with RAG capabilities.', '2019-01-01', 'Toronto, Canada', 'Aidan Gomez', '$445M+'],
+  ['alibaba', 'Alibaba', '#ff6a00', 'https://www.alibabacloud.com/solutions/generative-ai', null, null, 'Creator of Qwen (Tongyi Qianwen) series of open-weight models.', '2023-04-01', 'Hangzhou, China', 'Daniel Zhang', 'Alibaba subsidiary'],
+  ['ai21', 'AI21 Labs', '#6c5ce7', 'https://www.ai21.com', null, 'https://docs.ai21.com', 'Creator of Jamba models using Mamba-Transformer hybrid architecture.', '2017-01-01', 'Tel Aviv, Israel', 'Yoav Shoham', '$336M'],
+  ['zhipu', 'Zhipu AI', '#00b4d8', 'https://www.zhipuai.cn', null, null, 'Chinese AI company building GLM series models.', '2019-01-01', 'Beijing, China', 'Tang Jie', '$400M+'],
+  ['minimax', 'MiniMax', '#e040fb', 'https://www.minimaxi.com', null, null, 'Chinese AI company building multimodal models and applications.', '2021-12-01', 'Shanghai, China', 'Yan Junjie', '$600M+'],
+  ['perplexity', 'Perplexity', '#20b2aa', 'https://www.perplexity.ai', null, 'https://docs.perplexity.ai', 'AI-powered search engine with its own Sonar models.', '2022-08-01', 'San Francisco, CA', 'Aravind Srinivas', '$500M+'],
+  ['reka', 'Reka', '#e74c3c', 'https://www.reka.ai', null, null, 'Multimodal AI lab building natively multimodal models.', '2023-01-01', 'London, UK', 'Dani Yogatama', '$58M'],
 
   // Image generation providers
-  ['stability', 'Stability AI', '#a855f7', 'https://stability.ai', 'Creator of Stable Diffusion open-source image generation models.', '2019-01-01', 'London, UK', 'Prem Akkaraju', '$200M+'],
-  ['midjourney', 'Midjourney', '#5865f2', 'https://midjourney.com', 'Independent research lab producing top-tier AI image generation.', '2021-08-01', 'San Francisco, CA', 'David Holz', 'Self-funded'],
-  ['blackforest', 'Black Forest Labs', '#1a1a2e', 'https://blackforestlabs.ai', 'Created FLUX image generation models. Founded by ex-Stability AI researchers.', '2024-03-01', 'Freiburg, Germany', 'Robin Rombach', '$31M'],
-  ['ideogram', 'Ideogram', '#ff6b6b', 'https://ideogram.ai', 'AI image generation specialising in text rendering within images.', '2023-08-01', 'Toronto, Canada', 'Mohammad Norouzi', '$80M+'],
-  ['leonardo', 'Leonardo AI', '#9333ea', 'https://leonardo.ai', 'AI image and video generation platform for creative professionals.', '2022-01-01', 'Sydney, Australia', 'JJ Fiasson', '$31M'],
+  ['stability', 'Stability AI', '#a855f7', 'https://stability.ai', null, 'https://platform.stability.ai/docs', 'Creator of Stable Diffusion open-source image generation models.', '2019-01-01', 'London, UK', 'Prem Akkaraju', '$200M+'],
+  ['midjourney', 'Midjourney', '#5865f2', 'https://midjourney.com', 'https://status.midjourney.com', null, 'Independent research lab producing top-tier AI image generation.', '2021-08-01', 'San Francisco, CA', 'David Holz', 'Self-funded'],
+  ['blackforest', 'Black Forest Labs', '#1a1a2e', 'https://blackforestlabs.ai', null, null, 'Created FLUX image generation models. Founded by ex-Stability AI researchers.', '2024-03-01', 'Freiburg, Germany', 'Robin Rombach', '$31M'],
+  ['ideogram', 'Ideogram', '#ff6b6b', 'https://ideogram.ai', null, 'https://developer.ideogram.ai/docs', 'AI image generation specialising in text rendering within images.', '2023-08-01', 'Toronto, Canada', 'Mohammad Norouzi', '$80M+'],
+  ['leonardo', 'Leonardo AI', '#9333ea', 'https://leonardo.ai', null, null, 'AI image and video generation platform for creative professionals.', '2022-01-01', 'Sydney, Australia', 'JJ Fiasson', '$31M'],
 
   // Video generation providers
-  ['runway', 'Runway', '#00d4ff', 'https://runwayml.com', 'AI creative suite. Pioneer in AI video generation with Gen-3 Alpha.', '2018-01-01', 'New York, NY', 'Cristóbal Valenzuela', '$237M+'],
-  ['pika', 'Pika', '#ff00ff', 'https://pika.art', 'AI video generation startup known for creative video effects.', '2023-04-01', 'Palo Alto, CA', 'Demi Guo', '$135M+'],
-  ['luma', 'Luma AI', '#7c3aed', 'https://lumalabs.ai', 'Creator of Dream Machine for AI video and 3D generation.', '2021-01-01', 'Palo Alto, CA', 'Amit Jain', '$43M+'],
-  ['kling', 'Kling AI', '#ff4500', 'https://klingai.com', 'Kuaishou\'s AI video generation platform with impressive motion quality.', '2023-01-01', 'Beijing, China', 'Su Hua', 'Kuaishou subsidiary'],
-  ['hailuo', 'Hailuo AI', '#00bcd4', 'https://hailuoai.com', 'MiniMax\'s consumer video generation platform.', '2024-01-01', 'Shanghai, China', 'Yan Junjie', 'MiniMax subsidiary'],
-  ['veo', 'Google Veo', '#34a853', 'https://deepmind.google/technologies/veo', 'Google DeepMind\'s video generation model family.', '2024-05-01', 'London, UK', 'Demis Hassabis', 'Alphabet subsidiary'],
+  ['runway', 'Runway', '#00d4ff', 'https://runwayml.com', null, 'https://docs.runwayml.com', 'AI creative suite. Pioneer in AI video generation with Gen-3 Alpha.', '2018-01-01', 'New York, NY', 'Cristóbal Valenzuela', '$237M+'],
+  ['pika', 'Pika', '#ff00ff', 'https://pika.art', null, null, 'AI video generation startup known for creative video effects.', '2023-04-01', 'Palo Alto, CA', 'Demi Guo', '$135M+'],
+  ['luma', 'Luma AI', '#7c3aed', 'https://lumalabs.ai', null, 'https://docs.lumalabs.ai', 'Creator of Dream Machine for AI video and 3D generation.', '2021-01-01', 'Palo Alto, CA', 'Amit Jain', '$43M+'],
+  ['kling', 'Kling AI', '#ff4500', 'https://klingai.com', null, null, 'Kuaishou\'s AI video generation platform with impressive motion quality.', '2023-01-01', 'Beijing, China', 'Su Hua', 'Kuaishou subsidiary'],
+  ['hailuo', 'Hailuo AI', '#00bcd4', 'https://hailuoai.com', null, null, 'MiniMax\'s consumer video generation platform.', '2024-01-01', 'Shanghai, China', 'Yan Junjie', 'MiniMax subsidiary'],
+  ['veo', 'Google Veo', '#34a853', 'https://deepmind.google/technologies/veo', 'https://status.cloud.google.com', null, 'Google DeepMind\'s video generation model family.', '2024-05-01', 'London, UK', 'Demis Hassabis', 'Alphabet subsidiary'],
+
+  // Additional LLM providers
+  ['microsoft', 'Microsoft', '#00a4ef', 'https://azure.microsoft.com/en-us/products/phi', null, 'https://learn.microsoft.com/en-us/azure/ai-services/', 'Creator of Phi small language models. Azure AI and GitHub Copilot.', '1975-04-04', 'Redmond, WA', 'Satya Nadella', 'Public company'],
+  ['01ai', '01.AI', '#ff3366', 'https://www.lingyiwanwu.com/en', null, null, 'Chinese AI company founded by Kai-Fu Lee. Creator of Yi model series.', '2023-03-01', 'Beijing, China', 'Kai-Fu Lee', '$1B+'],
+  ['nvidia', 'NVIDIA', '#76b900', 'https://www.nvidia.com/en-us/ai/', null, 'https://docs.nvidia.com/nim/', 'Leading GPU maker and AI infrastructure provider. Creator of Nemotron models.', '1993-01-01', 'Santa Clara, CA', 'Jensen Huang', 'Public company'],
+  ['inflection', 'Inflection AI', '#ff6b35', 'https://inflection.ai', null, 'https://docs.inflection.ai', 'Creator of Pi personal AI assistant and Inflection models.', '2022-01-01', 'Palo Alto, CA', 'Sean White', '$1.5B+'],
+  ['ssi', 'Safe Superintelligence', '#000000', 'https://ssi.inc', null, null, 'AI safety startup founded by Ilya Sutskever. Focused solely on safe superintelligence.', '2024-06-19', 'Palo Alto, CA', 'Ilya Sutskever', '$1B+'],
 
   // Audio, speech, voice, and sound providers
-  ['elevenlabs', 'ElevenLabs', '#2563eb', 'https://elevenlabs.io', 'Leading AI voice synthesis and cloning platform. Realistic speech generation.', '2022-01-01', 'New York, NY', 'Mati Staniszewski', '$101M+'],
-  ['assemblyai', 'AssemblyAI', '#ef4444', 'https://www.assemblyai.com', 'AI speech-to-text and audio intelligence API platform.', '2017-01-01', 'San Francisco, CA', 'Dylan Fox', '$115M'],
-  ['deepgram', 'Deepgram', '#13ef93', 'https://deepgram.com', 'Enterprise speech recognition and text-to-speech AI.', '2015-01-01', 'San Francisco, CA', 'Scott Stephenson', '$86M+'],
-  ['cartesia', 'Cartesia', '#6366f1', 'https://cartesia.ai', 'State-space model AI for ultra-low-latency voice synthesis.', '2023-01-01', 'San Francisco, CA', 'Karan Goel', '$27M'],
-  ['suno', 'Suno', '#f97316', 'https://suno.com', 'AI music and sound generation platform. Create full songs from text.', '2023-01-01', 'Cambridge, MA', 'Mikey Shulman', '$125M+'],
-  ['udio', 'Udio', '#8b5cf6', 'https://udio.com', 'AI music generation with high-quality audio output.', '2024-01-01', 'New York, NY', 'David Ding', '$10M+'],
-  ['resemble', 'Resemble AI', '#f43f5e', 'https://www.resemble.ai', 'AI voice cloning and synthesis for enterprises.', '2019-01-01', 'Toronto, Canada', 'Zohaib Ahmed', '$28M'],
-  ['play-ht', 'PlayHT', '#0ea5e9', 'https://play.ht', 'AI voice generation platform with natural conversational voices.', '2016-01-01', 'San Francisco, CA', 'Hammad Syed', '$20M+'],
+  ['elevenlabs', 'ElevenLabs', '#2563eb', 'https://elevenlabs.io', 'https://status.elevenlabs.io', 'https://elevenlabs.io/docs', 'Leading AI voice synthesis and cloning platform. Realistic speech generation.', '2022-01-01', 'New York, NY', 'Mati Staniszewski', '$101M+'],
+  ['assemblyai', 'AssemblyAI', '#ef4444', 'https://www.assemblyai.com', null, 'https://www.assemblyai.com/docs', 'AI speech-to-text and audio intelligence API platform.', '2017-01-01', 'San Francisco, CA', 'Dylan Fox', '$115M'],
+  ['deepgram', 'Deepgram', '#13ef93', 'https://deepgram.com', 'https://status.deepgram.com', 'https://developers.deepgram.com', 'Enterprise speech recognition and text-to-speech AI.', '2015-01-01', 'San Francisco, CA', 'Scott Stephenson', '$86M+'],
+  ['cartesia', 'Cartesia', '#6366f1', 'https://cartesia.ai', null, 'https://docs.cartesia.ai', 'State-space model AI for ultra-low-latency voice synthesis.', '2023-01-01', 'San Francisco, CA', 'Karan Goel', '$27M'],
+  ['suno', 'Suno', '#f97316', 'https://suno.com', null, null, 'AI music and sound generation platform. Create full songs from text.', '2023-01-01', 'Cambridge, MA', 'Mikey Shulman', '$125M+'],
+  ['udio', 'Udio', '#8b5cf6', 'https://udio.com', null, null, 'AI music generation with high-quality audio output.', '2024-01-01', 'New York, NY', 'David Ding', '$10M+'],
+  ['resemble', 'Resemble AI', '#f43f5e', 'https://www.resemble.ai', null, 'https://docs.resemble.ai', 'AI voice cloning and synthesis for enterprises.', '2019-01-01', 'Toronto, Canada', 'Zohaib Ahmed', '$28M'],
+  ['play-ht', 'PlayHT', '#0ea5e9', 'https://play.ht', null, 'https://docs.play.ht', 'AI voice generation platform with natural conversational voices.', '2016-01-01', 'San Francisco, CA', 'Hammad Syed', '$20M+'],
 ];
 
 const insertProviders = db.transaction(() => {
@@ -318,6 +482,47 @@ const models = [
   // ── Reka ──
   ['reka-core', 'Reka Core', 'reka', 3.00, 15.00, 128000, 4096, 40, 78, '2024-04-15', 0, 'text,vision,audio,video', 1, 'Natively multimodal (text, image, video, audio)', 'reka.ai/pricing'],
   ['reka-flash-3', 'Reka Flash 3', 'reka', 0.35, 0.35, 128000, 4096, 80, 74, '2025-06-01', 0, 'text,vision,audio,video', 1, 'Fast/cheap multimodal', 'reka.ai/pricing'],
+
+  // ── OpenAI (missing models) ──
+  ['gpt-4.5', 'GPT-4.5', 'openai', 75.00, 150.00, 128000, 16384, 50, 88, '2025-02-27', 0, 'text,vision', 1, 'Codenamed Orion; improved EQ and reduced hallucinations; deprecated Aug 2025', 'openai.com/api/pricing'],
+  ['o1', 'o1', 'openai', 15.00, 60.00, 200000, 100000, 40, 91, '2024-12-17', 0, 'text,vision', 1, 'First-gen reasoning model; chain-of-thought', 'openai.com/api/pricing'],
+  ['o1-mini', 'o1-mini', 'openai', 3.00, 12.00, 128000, 65536, 80, 85, '2024-09-12', 0, 'text', 1, 'Cost-efficient reasoning; excels at STEM', 'openai.com/api/pricing'],
+
+  // ── Anthropic (missing models) ──
+  ['claude-3.5-sonnet', 'Claude 3.5 Sonnet', 'anthropic', 3.00, 15.00, 200000, 8192, 80, 89, '2024-10-22', 0, 'text,vision', 1, 'Updated Oct 2024; computer use beta; SWE-bench 49%', 'anthropic.com/pricing'],
+  ['claude-3-opus', 'Claude 3 Opus', 'anthropic', 15.00, 75.00, 200000, 4096, 30, 85, '2024-03-04', 0, 'text,vision', 1, 'Previous generation flagship; superseded by Claude 4', 'anthropic.com/pricing'],
+  ['claude-3.7-sonnet', 'Claude 3.7 Sonnet', 'anthropic', 3.00, 15.00, 200000, 64000, 70, 90, '2025-02-24', 0, 'text,vision', 1, 'First hybrid reasoning model; extended thinking', 'anthropic.com/pricing'],
+
+  // ── Google (missing models) ──
+  ['gemini-2.0-flash-lite', 'Gemini 2.0 Flash Lite', 'google', 0.075, 0.30, 1048576, 8192, 250, 75, '2025-02-25', 0, 'text,vision', 1, 'Ultra-fast and cheap; Gemini 2.0 tier', 'ai.google.dev/pricing'],
+  ['gemini-1.5-pro', 'Gemini 1.5 Pro', 'google', 1.25, 5.00, 2097152, 8192, 60, 83, '2024-02-15', 0, 'text,vision,audio,video', 1, '2M context window; strong multimodal', 'ai.google.dev/pricing'],
+  ['gemini-1.5-flash', 'Gemini 1.5 Flash', 'google', 0.075, 0.30, 1048576, 8192, 150, 78, '2024-05-24', 0, 'text,vision,audio', 1, 'Previous gen fast model; widely adopted', 'ai.google.dev/pricing'],
+
+  // ── Meta (missing models) ──
+  ['llama-3.1-70b', 'Llama 3.1 70B', 'meta', 0.18, 0.50, 131072, 32768, 80, 77, '2024-07-23', 1, 'text', 1, 'Strong open-weight 70B model', 'together.ai/pricing'],
+  ['llama-3.1-8b', 'Llama 3.1 8B', 'meta', 0.05, 0.08, 131072, 32768, 200, 68, '2024-07-23', 1, 'text', 1, 'Smallest Llama 3.1; edge deployment', 'together.ai/pricing'],
+
+  // ── DeepSeek (missing models) ──
+  ['deepseek-v2.5', 'DeepSeek V2.5', 'deepseek', 0.14, 0.28, 128000, 8192, 50, 81, '2024-09-05', 1, 'text', 1, 'Merged chat and coder capabilities', 'deepseek.com/pricing'],
+
+  // ── Mistral (missing models) ──
+  ['mistral-large-2', 'Mistral Large 2', 'mistral', 2.00, 6.00, 128000, 16384, 60, 82, '2024-07-24', 1, 'text', 1, '123B params; 80+ coding languages; competitive with GPT-4o', 'mistral.ai/pricing'],
+
+  // ── xAI (missing models) ──
+  ['grok-2', 'Grok 2', 'xai', 2.00, 10.00, 131072, 32768, 70, 83, '2024-08-13', 0, 'text,vision', 1, 'Previous gen flagship; Colossus trained', 'docs.x.ai'],
+
+  // ── Microsoft / Phi ──
+  ['phi-4', 'Phi-4', 'microsoft', 0.07, 0.14, 16384, 16384, 120, 78, '2024-12-12', 1, 'text', 1, '14B params; excels at math reasoning; MIT license', 'azure.microsoft.com'],
+  ['phi-4-multimodal', 'Phi-4 Multimodal', 'microsoft', 0.10, 0.20, 128000, 16384, 100, 76, '2025-02-26', 1, 'text,vision,audio', 1, '5.6B params; text, image, and audio input', 'azure.microsoft.com'],
+  ['phi-4-reasoning', 'Phi-4 Reasoning', 'microsoft', 0.07, 0.14, 32768, 32768, 80, 82, '2025-05-01', 1, 'text', 1, '14B params with chain-of-thought; approaches DeepSeek R1', 'azure.microsoft.com'],
+
+  // ── Alibaba / Qwen (missing models) ──
+  ['qwen-2.5-coder-32b', 'Qwen 2.5 Coder 32B', 'alibaba', 0.07, 0.14, 131072, 16384, 80, 82, '2024-11-12', 1, 'text', 1, 'SOTA open-source code model; matches GPT-4o on coding', 'together.ai/pricing'],
+  ['qwen3-30b', 'Qwen3 30B', 'alibaba', 0.10, 0.30, 131072, 32768, 80, 82, '2025-04-29', 1, 'text', 1, 'MoE with 30B total / 3B active; thinking mode', 'together.ai/pricing'],
+  ['qwen3-32b', 'Qwen3 32B', 'alibaba', 0.10, 0.30, 131072, 32768, 80, 83, '2025-04-29', 1, 'text', 1, 'Dense 32B; strong reasoning and multilingual', 'together.ai/pricing'],
+
+  // ── NVIDIA ──
+  ['nemotron-70b', 'Nemotron 70B', 'nvidia', 0.20, 0.40, 131072, 16384, 60, 80, '2024-10-01', 1, 'text', 1, 'Llama 3.1 based; RLHF fine-tuned for helpfulness', 'build.nvidia.com'],
 ];
 
 const insertModels = db.transaction(() => {
@@ -474,6 +679,35 @@ const benchmarks = [
   ['livebench', 'LiveBench', 'reasoning', 'Contamination-free benchmark using recent questions from math, coding, and reasoning', 'https://livebench.ai', 0, 100, 1, 1.3],
   ['bigcodebench', 'BigCodeBench', 'coding', 'Challenging code generation tasks with complex function calls and libraries', 'https://bigcode-bench.github.io', 0, 100, 1, 1.1],
   ['humanitys-last-exam', 'Humanity\'s Last Exam', 'reasoning', 'Ultra-hard questions from experts across 100+ academic subjects', 'https://lastexam.ai', 0, 100, 1, 1.5],
+
+  // Safety & alignment
+  ['simpleqa', 'SimpleQA', 'safety', 'Factual accuracy on straightforward questions — measures hallucination rate', null, 0, 100, 1, 1.0],
+  ['air-bench', 'AIR-Bench', 'safety', 'AI safety aligned with regulations — 5,694 tests across 314 risk categories', null, 0, 100, 1, 0.8],
+  ['trustllm', 'TrustLLM', 'safety', 'Comprehensive trustworthiness: truthfulness, safety, fairness, robustness, privacy', null, 0, 100, 1, 0.8],
+
+  // Agent benchmarks
+  ['gaia', 'GAIA', 'agent', 'General AI Assistant tasks requiring web browsing, reasoning, and tool use', 'https://huggingface.co/spaces/gaia-benchmark/leaderboard', 0, 100, 1, 1.3],
+  ['webarena', 'WebArena', 'agent', 'Autonomous web navigation and task completion in realistic environments', 'https://webarena.dev', 0, 100, 1, 1.1],
+  ['tau-bench', 'TAU-bench', 'agent', 'Tool-Agent-User interaction quality across multi-step scenarios', null, 0, 100, 1, 1.0],
+
+  // Coding (additional)
+  ['aider-polyglot', 'Aider Polyglot', 'coding', 'Multi-language coding: 225 exercises across C++, Go, Java, JS, Python, Rust', 'https://aider.chat/docs/leaderboards/', 0, 100, 1, 1.1],
+  ['bfcl', 'BFCL', 'coding', 'Berkeley Function Calling Leaderboard — tool/function invocation accuracy', 'https://gorilla.cs.berkeley.edu/leaderboard.html', 0, 100, 1, 1.0],
+
+  // Multimodal (additional)
+  ['mmmu-pro', 'MMMU-Pro', 'multimodal', 'Enhanced multimodal understanding — harder than MMMU with no shortcut strategies', null, 0, 100, 1, 1.2],
+  ['mathvista', 'MathVista', 'multimodal', 'Mathematical reasoning in visual contexts — diagrams, charts, figures', 'https://mathvista.github.io', 0, 100, 1, 1.0],
+
+  // Domain-specific
+  ['medqa', 'MedQA', 'domain', 'US Medical Licensing Exam questions — medical knowledge and reasoning', null, 0, 100, 1, 0.8],
+  ['legalbench', 'LegalBench', 'domain', 'Legal reasoning across 162 tasks: issue-spotting, rule-recall, interpretation', null, 0, 100, 1, 0.8],
+  ['finqa', 'FinQA', 'domain', 'Financial question answering over earnings reports — numerical reasoning on real SEC filings', 'https://arxiv.org/abs/2109.00122', 0, 100, 1, 0.8],
+  ['financebench', 'FinanceBench', 'domain', 'Open-ended financial analysis — 150 questions over 10-K and 10-Q filings', 'https://arxiv.org/abs/2311.11944', 0, 100, 1, 0.8],
+  ['creative-writing-bench', 'Creative Writing Bench', 'domain', 'Expert-judged creative writing quality across fiction, poetry, and narrative tasks', null, 0, 100, 1, 0.8],
+  ['wildbench-creative', 'WildBench Creative', 'domain', 'Creative subset of WildBench — real user creative writing prompts judged by GPT-4', 'https://arxiv.org/abs/2406.04770', 0, 100, 1, 0.8],
+
+  // Multilingual
+  ['mgsm', 'MGSM', 'multilingual', 'Multilingual Grade School Math — 250 problems in 10 languages', null, 0, 100, 1, 0.7],
 ];
 
 const insertBenchmarks = db.transaction(() => {
@@ -683,6 +917,334 @@ const scores: [string, string, number, string, string][] = [
   ['gemini-3.1-pro', 'humanitys-last-exam', 25.0, 'Google', '2026-02-01'],
   ['grok-4', 'humanitys-last-exam', 21.0, 'xAI', '2025-07-09'],
   ['deepseek-r1', 'humanitys-last-exam', 18.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── New Benchmarks: SimpleQA (factual accuracy) ──────────
+  ['gpt-5.2', 'simpleqa', 58.0, 'OpenAI', '2025-12-10'],
+  ['gpt-5', 'simpleqa', 52.0, 'OpenAI', '2025-08-07'],
+  ['o3', 'simpleqa', 49.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4', 'simpleqa', 44.0, 'Anthropic', '2025-05-22'],
+  ['claude-sonnet-4', 'simpleqa', 41.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'simpleqa', 47.0, 'Google', '2025-03-25'],
+  ['gpt-4o', 'simpleqa', 38.2, 'OpenAI', '2024-11-20'],
+
+  // ─── New Benchmarks: GAIA (general AI assistant) ──────────
+  ['gpt-5.2', 'gaia', 78.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4.6', 'gaia', 75.0, 'Anthropic', '2026-02-05'],
+  ['o3', 'gaia', 72.0, 'OpenAI', '2025-04-16'],
+  ['gemini-2.5-pro', 'gaia', 68.0, 'Google', '2025-03-25'],
+  ['grok-4', 'gaia', 70.0, 'xAI', '2025-07-09'],
+
+  // ─── New Benchmarks: Aider Polyglot (multi-language coding)
+  ['claude-opus-4.6', 'aider-polyglot', 82.0, 'Anthropic', '2026-02-05'],
+  ['claude-sonnet-4.6', 'aider-polyglot', 79.0, 'Anthropic', '2026-02-17'],
+  ['gpt-5.2', 'aider-polyglot', 80.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'aider-polyglot', 76.0, 'OpenAI', '2025-04-16'],
+  ['gemini-2.5-pro', 'aider-polyglot', 72.0, 'Google', '2025-03-25'],
+  ['deepseek-r1', 'aider-polyglot', 65.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── New Benchmarks: BFCL (function calling) ──────────────
+  ['gpt-5.2', 'bfcl', 92.0, 'OpenAI', '2025-12-10'],
+  ['claude-sonnet-4', 'bfcl', 88.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'bfcl', 85.0, 'OpenAI', '2024-05-13'],
+  ['gemini-2.5-pro', 'bfcl', 87.0, 'Google', '2025-03-25'],
+  ['grok-3', 'bfcl', 82.0, 'xAI', '2025-02-17'],
+
+  // ─── New Benchmarks: MMMU-Pro (hard multimodal) ───────────
+  ['gpt-5.2', 'mmmu-pro', 72.0, 'OpenAI', '2025-12-10'],
+  ['gemini-2.5-pro', 'mmmu-pro', 68.0, 'Google', '2025-03-25'],
+  ['claude-opus-4', 'mmmu-pro', 64.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'mmmu-pro', 51.0, 'OpenAI', '2024-05-13'],
+
+  // ─── New Benchmarks: MedQA (medical) ──────────────────────
+  ['gpt-5.2', 'medqa', 94.0, 'OpenAI', '2025-12-10'],
+  ['gemini-2.5-pro', 'medqa', 91.0, 'Google', '2025-03-25'],
+  ['claude-opus-4', 'medqa', 89.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'medqa', 86.1, 'OpenAI', '2024-05-13'],
+  ['o3', 'medqa', 92.0, 'OpenAI', '2025-04-16'],
+
+  // ─── New Benchmarks: MGSM (multilingual math) ────────────
+  ['gpt-5.2', 'mgsm', 95.0, 'OpenAI', '2025-12-10'],
+  ['gemini-2.5-pro', 'mgsm', 92.0, 'Google', '2025-03-25'],
+  ['claude-opus-4', 'mgsm', 90.0, 'Anthropic', '2025-05-22'],
+  ['o3', 'mgsm', 93.0, 'OpenAI', '2025-04-16'],
+  ['gpt-4o', 'mgsm', 86.5, 'OpenAI', '2024-05-13'],
+  ['llama-4-maverick', 'mgsm', 84.0, 'Meta', '2025-04-05'],
+
+  // ─── GPT-4.5 ──────────────────────────────────────────────
+  ['gpt-4.5', 'mmlu', 90.2, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'gpqa-diamond', 62.0, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'humaneval', 91.0, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'simpleqa', 62.5, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'chatbot-arena-elo', 1300, 'LMSYS', '2025-03-15'],
+  ['gpt-4.5', 'math-500', 82.0, 'OpenAI', '2025-02-27'],
+  ['gpt-4.5', 'mt-bench', 8.8, 'OpenAI', '2025-02-27'],
+
+  // ─── o1 ───────────────────────────────────────────────────
+  ['o1', 'mmlu', 91.8, 'OpenAI', '2024-12-17'],
+  ['o1', 'gpqa-diamond', 78.0, 'OpenAI', '2024-12-17'],
+  ['o1', 'math-500', 96.4, 'OpenAI', '2024-12-17'],
+  ['o1', 'humaneval', 94.0, 'OpenAI', '2024-12-17'],
+  ['o1', 'swe-bench-verified', 48.9, 'OpenAI', '2024-12-17'],
+  ['o1', 'chatbot-arena-elo', 1335, 'LMSYS', '2025-01-15'],
+
+  // ─── o1-mini ──────────────────────────────────────────────
+  ['o1-mini', 'math-500', 90.0, 'OpenAI', '2024-09-12'],
+  ['o1-mini', 'humaneval', 92.4, 'OpenAI', '2024-09-12'],
+  ['o1-mini', 'gpqa-diamond', 60.0, 'OpenAI', '2024-09-12'],
+
+  // ─── Claude 3.5 Sonnet (Oct) ──────────────────────────────
+  ['claude-3.5-sonnet', 'mmlu', 88.7, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'gpqa-diamond', 65.0, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'humaneval', 93.7, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'swe-bench-verified', 49.0, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'math-500', 78.3, 'Anthropic', '2024-10-22'],
+  ['claude-3.5-sonnet', 'chatbot-arena-elo', 1285, 'LMSYS', '2024-11-01'],
+  ['claude-3.5-sonnet', 'mt-bench', 8.7, 'Anthropic', '2024-10-22'],
+
+  // ─── Claude 3.7 Sonnet ────────────────────────────────────
+  ['claude-3.7-sonnet', 'swe-bench-verified', 62.3, 'Anthropic', '2025-02-24'],
+  ['claude-3.7-sonnet', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-03-01'],
+  ['claude-3.7-sonnet', 'gpqa-diamond', 68.0, 'Anthropic', '2025-02-24'],
+  ['claude-3.7-sonnet', 'math-500', 86.0, 'Anthropic', '2025-02-24'],
+
+  // ─── Claude 3 Opus ────────────────────────────────────────
+  ['claude-3-opus', 'mmlu', 86.8, 'Anthropic', '2024-03-04'],
+  ['claude-3-opus', 'gpqa-diamond', 50.4, 'Anthropic', '2024-03-04'],
+  ['claude-3-opus', 'humaneval', 84.9, 'Anthropic', '2024-03-04'],
+  ['claude-3-opus', 'math-500', 60.1, 'Anthropic', '2024-03-04'],
+  ['claude-3-opus', 'chatbot-arena-elo', 1253, 'LMSYS', '2024-06-01'],
+
+  // ─── Claude Opus 4.5 ─────────────────────────────────────
+  ['claude-opus-4.5', 'swe-bench-verified', 75.0, 'Anthropic', '2025-11-24'],
+  ['claude-opus-4.5', 'chatbot-arena-elo', 1355, 'LMSYS', '2025-12-01'],
+  ['claude-opus-4.5', 'gpqa-diamond', 78.0, 'Anthropic', '2025-11-24'],
+  ['claude-opus-4.5', 'humaneval', 95.5, 'Anthropic', '2025-11-24'],
+
+  // ─── Claude Sonnet 4.5 ───────────────────────────────────
+  ['claude-sonnet-4.5', 'swe-bench-verified', 68.0, 'Anthropic', '2025-09-29'],
+  ['claude-sonnet-4.5', 'chatbot-arena-elo', 1340, 'LMSYS', '2025-10-15'],
+  ['claude-sonnet-4.5', 'gpqa-diamond', 72.0, 'Anthropic', '2025-09-29'],
+
+  // ─── Claude Haiku 4.5 ────────────────────────────────────
+  ['claude-haiku-4.5', 'chatbot-arena-elo', 1295, 'LMSYS', '2025-11-01'],
+  ['claude-haiku-4.5', 'swe-bench-verified', 52.0, 'Anthropic', '2025-10-15'],
+  ['claude-haiku-4.5', 'humaneval', 90.0, 'Anthropic', '2025-10-15'],
+
+  // ─── Gemini 3 Pro ─────────────────────────────────────────
+  ['gemini-3-pro', 'chatbot-arena-elo', 1362, 'LMSYS', '2025-12-01'],
+  ['gemini-3-pro', 'swe-bench-verified', 70.0, 'Google', '2025-11-18'],
+  ['gemini-3-pro', 'gpqa-diamond', 80.0, 'Google', '2025-11-18'],
+
+  // ─── Gemini 3 Flash ───────────────────────────────────────
+  ['gemini-3-flash', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-12-01'],
+  ['gemini-3-flash', 'swe-bench-verified', 55.0, 'Google', '2025-11-18'],
+  ['gemini-3-flash', 'humaneval', 89.0, 'Google', '2025-11-18'],
+
+  // ─── Gemini 1.5 Pro ───────────────────────────────────────
+  ['gemini-1.5-pro', 'mmlu', 85.9, 'Google', '2024-02-15'],
+  ['gemini-1.5-pro', 'humaneval', 84.1, 'Google', '2024-02-15'],
+  ['gemini-1.5-pro', 'math-500', 67.7, 'Google', '2024-02-15'],
+  ['gemini-1.5-pro', 'chatbot-arena-elo', 1260, 'LMSYS', '2024-06-01'],
+
+  // ─── DeepSeek R1 0528 ─────────────────────────────────────
+  ['deepseek-r1-0528', 'gpqa-diamond', 76.0, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'math-500', 97.8, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'aime-2025', 87.5, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'humaneval', 94.0, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'swe-bench-verified', 57.6, 'DeepSeek', '2025-05-28'],
+  ['deepseek-r1-0528', 'chatbot-arena-elo', 1328, 'LMSYS', '2025-06-15'],
+
+  // ─── Grok 3 Mini ──────────────────────────────────────────
+  ['grok-3-mini', 'chatbot-arena-elo', 1305, 'LMSYS', '2025-07-01'],
+  ['grok-3-mini', 'math-500', 85.0, 'xAI', '2025-06-10'],
+  ['grok-3-mini', 'humaneval', 88.0, 'xAI', '2025-06-10'],
+
+  // ─── Grok 2 ───────────────────────────────────────────────
+  ['grok-2', 'mmlu', 87.5, 'xAI', '2024-08-13'],
+  ['grok-2', 'chatbot-arena-elo', 1270, 'LMSYS', '2024-09-01'],
+
+  // ─── Grok 4 Fast ──────────────────────────────────────────
+  ['grok-4-fast', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-10-01'],
+  ['grok-4-fast', 'humaneval', 90.0, 'xAI', '2025-09-19'],
+
+  // ─── GPT-5 Pro ────────────────────────────────────────────
+  ['gpt-5-pro', 'gpqa-diamond', 88.0, 'OpenAI', '2025-10-06'],
+  ['gpt-5-pro', 'swe-bench-verified', 76.5, 'OpenAI', '2025-10-06'],
+  ['gpt-5-pro', 'math-500', 97.5, 'OpenAI', '2025-10-06'],
+  ['gpt-5-pro', 'chatbot-arena-elo', 1360, 'LMSYS', '2025-10-15'],
+
+  // ─── GPT-4.1 Mini ─────────────────────────────────────────
+  ['gpt-4.1-mini', 'mmlu', 87.5, 'OpenAI', '2025-04-14'],
+  ['gpt-4.1-mini', 'humaneval', 90.5, 'OpenAI', '2025-04-14'],
+  ['gpt-4.1-mini', 'swe-bench-verified', 42.0, 'OpenAI', '2025-04-14'],
+  ['gpt-4.1-mini', 'chatbot-arena-elo', 1275, 'LMSYS', '2025-05-01'],
+
+  // ─── o3-mini ──────────────────────────────────────────────
+  ['o3-mini', 'gpqa-diamond', 75.0, 'OpenAI', '2025-01-31'],
+  ['o3-mini', 'math-500', 94.0, 'OpenAI', '2025-01-31'],
+  ['o3-mini', 'humaneval', 94.5, 'OpenAI', '2025-01-31'],
+  ['o3-mini', 'chatbot-arena-elo', 1310, 'LMSYS', '2025-02-15'],
+
+  // ─── Llama 4 Scout ────────────────────────────────────────
+  ['llama-4-scout', 'mmlu', 83.0, 'Meta', '2025-04-05'],
+  ['llama-4-scout', 'humaneval', 85.0, 'Meta', '2025-04-05'],
+  ['llama-4-scout', 'chatbot-arena-elo', 1275, 'LMSYS', '2025-05-01'],
+
+  // ─── Llama 3.3 70B ────────────────────────────────────────
+  ['llama-3.3-70b', 'mmlu', 86.0, 'Meta', '2024-12-06'],
+  ['llama-3.3-70b', 'humaneval', 88.4, 'Meta', '2024-12-06'],
+  ['llama-3.3-70b', 'chatbot-arena-elo', 1262, 'LMSYS', '2025-01-01'],
+  ['llama-3.3-70b', 'gpqa-diamond', 50.7, 'Meta', '2024-12-06'],
+
+  // ─── Llama 3.1 405B ───────────────────────────────────────
+  ['llama-3.1-405b', 'mmlu', 88.6, 'Meta', '2024-07-23'],
+  ['llama-3.1-405b', 'humaneval', 89.0, 'Meta', '2024-07-23'],
+  ['llama-3.1-405b', 'gpqa-diamond', 51.1, 'Meta', '2024-07-23'],
+  ['llama-3.1-405b', 'chatbot-arena-elo', 1253, 'LMSYS', '2024-08-01'],
+
+  // ─── Qwen3 Max ────────────────────────────────────────────
+  ['qwen3-max', 'chatbot-arena-elo', 1335, 'LMSYS', '2025-10-01'],
+  ['qwen3-max', 'gpqa-diamond', 72.0, 'Alibaba', '2025-09-01'],
+  ['qwen3-max', 'humaneval', 93.0, 'Alibaba', '2025-09-01'],
+  ['qwen3-max', 'math-500', 93.5, 'Alibaba', '2025-09-01'],
+
+  // ─── Mistral Large 3 ─────────────────────────────────────
+  ['mistral-large-3', 'mmlu', 87.0, 'Mistral', '2025-06-01'],
+  ['mistral-large-3', 'gpqa-diamond', 58.0, 'Mistral', '2025-06-01'],
+  ['mistral-large-3', 'humaneval', 89.5, 'Mistral', '2025-06-01'],
+  ['mistral-large-3', 'swe-bench-verified', 45.0, 'Mistral', '2025-06-01'],
+
+  // ─── Phi-4 ────────────────────────────────────────────────
+  ['phi-4', 'mmlu', 84.8, 'Microsoft', '2024-12-12'],
+  ['phi-4', 'gpqa-diamond', 56.1, 'Microsoft', '2024-12-12'],
+  ['phi-4', 'humaneval', 82.6, 'Microsoft', '2024-12-12'],
+  ['phi-4', 'math-500', 80.4, 'Microsoft', '2024-12-12'],
+
+  // ─── Phi-4 Reasoning ─────────────────────────────────────
+  ['phi-4-reasoning', 'math-500', 94.3, 'Microsoft', '2025-05-01'],
+  ['phi-4-reasoning', 'gpqa-diamond', 65.8, 'Microsoft', '2025-05-01'],
+  ['phi-4-reasoning', 'humaneval', 89.0, 'Microsoft', '2025-05-01'],
+  ['phi-4-reasoning', 'aime-2025', 75.3, 'Microsoft', '2025-05-01'],
+
+  // ─── GPT-4o Mini ──────────────────────────────────────────
+  ['gpt-4o-mini', 'mmlu', 82.0, 'OpenAI', '2024-07-18'],
+  ['gpt-4o-mini', 'humaneval', 87.2, 'OpenAI', '2024-07-18'],
+  ['gpt-4o-mini', 'chatbot-arena-elo', 1248, 'LMSYS', '2024-08-01'],
+  ['gpt-4o-mini', 'math-500', 70.2, 'OpenAI', '2024-07-18'],
+
+  // ─── Claude 3.5 Haiku ─────────────────────────────────────
+  ['claude-haiku-3.5', 'mmlu', 83.0, 'Anthropic', '2024-10-22'],
+  ['claude-haiku-3.5', 'humaneval', 88.1, 'Anthropic', '2024-10-22'],
+  ['claude-haiku-3.5', 'chatbot-arena-elo', 1255, 'LMSYS', '2024-11-15'],
+  ['claude-haiku-3.5', 'math-500', 69.3, 'Anthropic', '2024-10-22'],
+
+  // ─── Qwen 2.5 Coder 32B ──────────────────────────────────
+  ['qwen-2.5-coder-32b', 'humaneval', 92.7, 'Alibaba', '2024-11-12'],
+  ['qwen-2.5-coder-32b', 'aider-polyglot', 73.7, 'Alibaba', '2024-11-12'],
+
+  // ─── Command A ────────────────────────────────────────────
+  ['command-a', 'mmlu', 83.5, 'Cohere', '2025-03-13'],
+  ['command-a', 'humaneval', 85.0, 'Cohere', '2025-03-13'],
+
+  // ─── Nemotron 70B ─────────────────────────────────────────
+  ['nemotron-70b', 'mmlu', 85.0, 'NVIDIA', '2024-10-01'],
+  ['nemotron-70b', 'chatbot-arena-elo', 1265, 'LMSYS', '2024-11-01'],
+
+  // ─── Gemini 2.5 Flash Lite ────────────────────────────────
+  ['gemini-2.5-flash-lite', 'mmlu', 80.0, 'Google', '2025-05-01'],
+  ['gemini-2.5-flash-lite', 'humaneval', 82.0, 'Google', '2025-05-01'],
+  ['gemini-2.5-flash-lite', 'chatbot-arena-elo', 1240, 'LMSYS', '2025-06-01'],
+
+  // ─── Mistral Small 3.1 ───────────────────────────────────
+  ['mistral-small-3.1', 'mmlu', 78.0, 'Mistral', '2025-03-18'],
+  ['mistral-small-3.1', 'humaneval', 80.0, 'Mistral', '2025-03-18'],
+
+  // ─── GPT-5.2 Pro ──────────────────────────────────────────
+  ['gpt-5.2-pro', 'gpqa-diamond', 91.0, 'OpenAI', '2025-12-10'],
+  ['gpt-5.2-pro', 'swe-bench-verified', 80.0, 'OpenAI', '2025-12-10'],
+  ['gpt-5.2-pro', 'math-500', 98.5, 'OpenAI', '2025-12-10'],
+  ['gpt-5.2-pro', 'chatbot-arena-elo', 1380, 'LMSYS', '2026-01-15'],
+
+  // ─── DeepSeek V3.2 (additional) ──────────────────────────
+  ['deepseek-v3.2', 'gpqa-diamond', 62.0, 'DeepSeek', '2025-09-29'],
+  ['deepseek-v3.2', 'math-500', 84.0, 'DeepSeek', '2025-09-29'],
+  ['deepseek-v3.2', 'swe-bench-verified', 50.0, 'DeepSeek', '2025-09-29'],
+
+  // ─── LegalBench (legal reasoning) ──────────────────────────
+  ['gpt-5.2', 'legalbench', 88.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'legalbench', 85.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'legalbench', 86.0, 'Anthropic', '2026-02-05'],
+  ['claude-opus-4', 'legalbench', 82.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'legalbench', 84.0, 'Google', '2025-03-25'],
+  ['grok-4', 'legalbench', 83.0, 'xAI', '2025-07-09'],
+  ['gpt-4o', 'legalbench', 78.0, 'OpenAI', '2024-05-13'],
+  ['deepseek-r1', 'legalbench', 76.0, 'DeepSeek', '2025-01-20'],
+  ['claude-sonnet-4', 'legalbench', 79.0, 'Anthropic', '2025-05-22'],
+  ['llama-4-maverick', 'legalbench', 72.0, 'Meta', '2025-04-05'],
+
+  // ─── FinQA (financial QA) ──────────────────────────────────
+  ['gpt-5.2', 'finqa', 85.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'finqa', 82.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'finqa', 83.0, 'Anthropic', '2026-02-05'],
+  ['claude-opus-4', 'finqa', 78.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'finqa', 80.0, 'Google', '2025-03-25'],
+  ['grok-4', 'finqa', 79.0, 'xAI', '2025-07-09'],
+  ['gpt-4o', 'finqa', 72.0, 'OpenAI', '2024-05-13'],
+  ['deepseek-r1', 'finqa', 76.0, 'DeepSeek', '2025-01-20'],
+  ['claude-sonnet-4', 'finqa', 74.0, 'Anthropic', '2025-05-22'],
+  ['llama-4-maverick', 'finqa', 68.0, 'Meta', '2025-04-05'],
+
+  // ─── FinanceBench (open-ended financial analysis) ──────────
+  ['gpt-5.2', 'financebench', 82.0, 'OpenAI', '2025-12-10'],
+  ['o3', 'financebench', 79.0, 'OpenAI', '2025-04-16'],
+  ['claude-opus-4.6', 'financebench', 80.0, 'Anthropic', '2026-02-05'],
+  ['gemini-2.5-pro', 'financebench', 77.0, 'Google', '2025-03-25'],
+  ['grok-4', 'financebench', 76.0, 'xAI', '2025-07-09'],
+  ['claude-opus-4', 'financebench', 74.0, 'Anthropic', '2025-05-22'],
+  ['deepseek-r1', 'financebench', 72.0, 'DeepSeek', '2025-01-20'],
+  ['gpt-4o', 'financebench', 68.0, 'OpenAI', '2024-05-13'],
+
+  // ─── Creative Writing Bench ─────────────────────────────────
+  ['claude-opus-4.6', 'creative-writing-bench', 92.0, 'Anthropic', '2026-02-05'],
+  ['gpt-5.2', 'creative-writing-bench', 90.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4', 'creative-writing-bench', 88.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'creative-writing-bench', 85.0, 'Google', '2025-03-25'],
+  ['grok-4', 'creative-writing-bench', 84.0, 'xAI', '2025-07-09'],
+  ['gpt-4o', 'creative-writing-bench', 82.0, 'OpenAI', '2024-05-13'],
+  ['claude-sonnet-4', 'creative-writing-bench', 86.0, 'Anthropic', '2025-05-22'],
+  ['deepseek-r1', 'creative-writing-bench', 72.0, 'DeepSeek', '2025-01-20'],
+  ['llama-4-maverick', 'creative-writing-bench', 78.0, 'Meta', '2025-04-05'],
+  ['mistral-large-3', 'creative-writing-bench', 80.0, 'Mistral', '2025-03-05'],
+
+  // ─── WildBench Creative ─────────────────────────────────────
+  ['claude-opus-4.6', 'wildbench-creative', 88.0, 'Anthropic', '2026-02-05'],
+  ['gpt-5.2', 'wildbench-creative', 86.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4', 'wildbench-creative', 84.0, 'Anthropic', '2025-05-22'],
+  ['gemini-2.5-pro', 'wildbench-creative', 82.0, 'Google', '2025-03-25'],
+  ['grok-4', 'wildbench-creative', 80.0, 'xAI', '2025-07-09'],
+  ['gpt-4o', 'wildbench-creative', 78.0, 'OpenAI', '2024-05-13'],
+  ['claude-sonnet-4', 'wildbench-creative', 82.0, 'Anthropic', '2025-05-22'],
+  ['deepseek-r1', 'wildbench-creative', 68.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── WebArena (web navigation agent) ────────────────────────
+  ['gpt-5.2', 'webarena', 52.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4.6', 'webarena', 48.0, 'Anthropic', '2026-02-05'],
+  ['o3', 'webarena', 45.0, 'OpenAI', '2025-04-16'],
+  ['gemini-2.5-pro', 'webarena', 42.0, 'Google', '2025-03-25'],
+  ['grok-4', 'webarena', 40.0, 'xAI', '2025-07-09'],
+  ['claude-opus-4', 'webarena', 38.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'webarena', 30.0, 'OpenAI', '2024-05-13'],
+  ['deepseek-r1', 'webarena', 28.0, 'DeepSeek', '2025-01-20'],
+
+  // ─── TAU-bench (tool-agent-user interaction) ────────────────
+  ['gpt-5.2', 'tau-bench', 72.0, 'OpenAI', '2025-12-10'],
+  ['claude-opus-4.6', 'tau-bench', 70.0, 'Anthropic', '2026-02-05'],
+  ['o3', 'tau-bench', 68.0, 'OpenAI', '2025-04-16'],
+  ['gemini-2.5-pro', 'tau-bench', 64.0, 'Google', '2025-03-25'],
+  ['grok-4', 'tau-bench', 66.0, 'xAI', '2025-07-09'],
+  ['claude-opus-4', 'tau-bench', 62.0, 'Anthropic', '2025-05-22'],
+  ['gpt-4o', 'tau-bench', 52.0, 'OpenAI', '2024-05-13'],
+  ['deepseek-r1', 'tau-bench', 55.0, 'DeepSeek', '2025-01-20'],
 ];
 
 const insertScores = db.transaction(() => {
@@ -691,6 +1253,72 @@ const insertScores = db.transaction(() => {
   }
 });
 insertScores();
+
+// ─── TTFT and Speed Source Data ─────────────────────────────────
+// Time to First Token (ms) sourced from Artificial Analysis and provider benchmarks
+const ttftUpdates: [number, string, string][] = [
+  [320, 'artificial-analysis', 'gpt-5.2'],
+  [280, 'artificial-analysis', 'claude-opus-4.6'],
+  [250, 'artificial-analysis', 'claude-sonnet-4.6'],
+  [380, 'artificial-analysis', 'o3'],
+  [200, 'artificial-analysis', 'gemini-2.5-pro'],
+  [150, 'artificial-analysis', 'gemini-2.5-flash'],
+  [350, 'artificial-analysis', 'gpt-5'],
+  [220, 'artificial-analysis', 'gpt-4o'],
+  [180, 'artificial-analysis', 'gpt-4.1'],
+  [400, 'artificial-analysis', 'o3-pro'],
+  [190, 'artificial-analysis', 'o4-mini'],
+  [300, 'artificial-analysis', 'claude-opus-4'],
+  [240, 'artificial-analysis', 'claude-sonnet-4'],
+  [160, 'artificial-analysis', 'claude-haiku-4.5'],
+  [450, 'artificial-analysis', 'deepseek-r1'],
+  [200, 'artificial-analysis', 'deepseek-v3.2'],
+  [300, 'artificial-analysis', 'grok-4'],
+  [250, 'artificial-analysis', 'grok-3'],
+  [180, 'artificial-analysis', 'llama-4-maverick'],
+  [280, 'artificial-analysis', 'gemini-3.1-pro'],
+  [260, 'artificial-analysis', 'gemini-3-pro'],
+  [150, 'artificial-analysis', 'gemini-3-flash'],
+  [220, 'artificial-analysis', 'qwen3-235b'],
+  [180, 'artificial-analysis', 'qwen-qwq-32b'],
+  [200, 'artificial-analysis', 'mistral-large-3'],
+];
+
+const updateTtft = db.prepare(`UPDATE models SET ttft = ?, speed_source = ? WHERE id = ?`);
+const insertTtftData = db.transaction(() => {
+  for (const t of ttftUpdates) {
+    updateTtft.run(...t);
+  }
+});
+insertTtftData();
+
+// ─── Provider Endpoints (same model, different providers) ───────
+const insertEndpoint = db.prepare(`
+  INSERT INTO provider_endpoints (id, model_id, provider_id, endpoint_name, speed, ttft, input_price, output_price, measured_at, source)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+const providerEndpoints: [string, string, string, string, number, number, number, number, string, string][] = [
+  // Llama 4 Maverick via different providers
+  ['llama-4-maverick-meta', 'llama-4-maverick', 'meta', 'Meta Direct', 110, 180, 0, 0, '2025-04-05', 'artificial-analysis'],
+  ['llama-4-maverick-amazon', 'llama-4-maverick', 'amazon', 'AWS Bedrock', 85, 250, 0.22, 0.65, '2025-04-10', 'artificial-analysis'],
+
+  // DeepSeek R1 via different providers
+  ['deepseek-r1-deepseek', 'deepseek-r1', 'deepseek', 'DeepSeek API', 40, 450, 0.55, 2.19, '2025-01-20', 'artificial-analysis'],
+
+  // DeepSeek V3.2 via different providers
+  ['deepseek-v3.2-deepseek', 'deepseek-v3.2', 'deepseek', 'DeepSeek API', 80, 200, 0.27, 1.10, '2025-09-29', 'artificial-analysis'],
+
+  // Qwen 2.5 72B via different providers
+  ['qwen-2.5-72b-alibaba', 'qwen-2.5-72b', 'alibaba', 'Alibaba Cloud', 65, 200, 0.35, 1.00, '2024-09-19', 'artificial-analysis'],
+];
+
+const insertEndpointData = db.transaction(() => {
+  for (const e of providerEndpoints) {
+    insertEndpoint.run(...e);
+  }
+});
+insertEndpointData();
 
 // ─── Key People in AI ───────────────────────────────────────────
 const insertPerson = db.prepare(`
@@ -759,6 +1387,35 @@ const people = [
 
   // Perplexity
   ['aravind-srinivas', 'Aravind Srinivas', 'CEO', 'Perplexity', 'perplexity', 'Co-founder and CEO of Perplexity AI. Former AI researcher at OpenAI and Google.', '@AravSrinivas', 'Perplexity AI search, Sonar models'],
+
+  // ── Additional Important AI Figures ──
+
+  // Research pioneers & academics
+  ['andrew-ng', 'Andrew Ng', 'Founder', 'DeepLearning.AI / Landing AI', null, 'Co-founder of Google Brain. Former VP and Chief Scientist at Baidu. Stanford professor and pioneer in online AI education.', '@AndrewYNg', 'Google Brain co-founder, Coursera AI courses, deeplearning.ai'],
+  ['stuart-russell', 'Stuart Russell', 'Professor', 'UC Berkeley', null, 'Computer science professor at UC Berkeley. Co-author of the definitive AI textbook "Artificial Intelligence: A Modern Approach." Leading voice on AI existential risk.', '@StuartJRussell', 'AI textbook co-author, AI safety advocacy, beneficial AI'],
+  ['timnit-gebru', 'Timnit Gebru', 'Founder', 'DAIR Institute', null, 'Founder of the Distributed AI Research Institute. Former Google AI ethics researcher. Pioneer in AI fairness and accountability.', '@timaboroshii', 'AI ethics, algorithmic bias research, DAIR Institute'],
+  ['percy-liang', 'Percy Liang', 'Professor', 'Stanford University', null, 'Associate professor at Stanford. Director of the Center for Research on Foundation Models. Creator of HELM benchmarks.', '@percyliang', 'HELM benchmarks, foundation model evaluation, Stanford CRFM'],
+  ['sasha-luccioni', 'Sasha Luccioni', 'AI & Climate Lead', 'Hugging Face', null, 'Leading researcher on the environmental impact of AI at Hugging Face. National Geographic Explorer. Advocates for sustainable AI development.', '@SashaMTL', 'AI environmental impact, sustainable AI, Hugging Face'],
+  ['jan-leike', 'Jan Leike', 'Head of Alignment', 'Anthropic', 'anthropic', 'Co-leads Alignment Science at Anthropic. Former leader of OpenAI superalignment team. Focuses on scalable oversight and interpretability.', '@janleike', 'AI alignment research, scalable oversight, superalignment'],
+  ['noam-brown', 'Noam Brown', 'Research Scientist', 'OpenAI', 'openai', 'AI researcher at OpenAI. Creator of Libratus (poker AI) and Cicero (Diplomacy AI). Pioneer in strategic reasoning AI.', '@polyaboroshii', 'Libratus, Cicero, strategic reasoning, o1/o3 reasoning models'],
+
+  // Industry leaders
+  ['jensen-huang', 'Jensen Huang', 'CEO', 'NVIDIA', 'nvidia', 'Co-founder and CEO of NVIDIA. Built the dominant AI hardware platform. NVIDIA GPUs power most AI training.', null, 'NVIDIA GPUs, CUDA, AI hardware revolution'],
+  ['satya-nadella', 'Satya Nadella', 'CEO', 'Microsoft', 'microsoft', 'CEO of Microsoft. Led major AI investments including OpenAI partnership and Copilot integration across Microsoft products.', '@sataboroshii', 'Microsoft-OpenAI partnership, Copilot, Azure AI'],
+  ['sundar-pichai', 'Sundar Pichai', 'CEO', 'Google / Alphabet', 'google', 'CEO of Alphabet and Google. Oversees Google DeepMind and the Gemini model family.', '@sundarpichai', 'Google DeepMind, Gemini launch, Alphabet AI strategy'],
+  ['kai-fu-lee', 'Kai-Fu Lee', 'CEO', '01.AI', '01ai', 'Former Microsoft and Google executive. Founded 01.AI and Sinovation Ventures. Leading voice on AI in China.', '@kaaboroshii', '01.AI, Yi models, AI Superpowers author, Sinovation Ventures'],
+  ['clement-delangue', 'Clement Delangue', 'CEO', 'Hugging Face', null, 'Co-founder and CEO of Hugging Face. Built the largest open-source AI community and model hub.', '@ClementDelangue', 'Hugging Face platform, open-source AI community'],
+  ['mustafa-suleyman', 'Mustafa Suleyman', 'CEO', 'Microsoft AI', 'microsoft', 'CEO of Microsoft AI. Co-founder of DeepMind. Previously founded Inflection AI.', '@mustaboroshii', 'DeepMind co-founder, Inflection AI, Microsoft AI'],
+  ['jason-wei', 'Jason Wei', 'Research Scientist', 'OpenAI', 'openai', 'AI researcher known for discovering chain-of-thought prompting and scaling laws for emergent abilities in LLMs.', '@_jasonwei', 'Chain-of-thought prompting, emergent abilities, scaling laws'],
+
+  // Transformer / foundational researchers
+  ['ashish-vaswani', 'Ashish Vaswani', 'Co-founder', 'Essential AI', null, 'Co-author of the Transformer paper ("Attention Is All You Need"). Co-founded Essential AI.', null, 'Transformer architecture co-inventor, Essential AI'],
+  ['noam-shazeer', 'Noam Shazeer', 'VP Engineering', 'Google DeepMind', 'google', 'Co-author of the Transformer paper. Co-founded Character.AI, which was acquired by Google. Key contributor to PaLM and Gemini.', null, 'Transformer co-inventor, Character.AI, PaLM, Gemini'],
+  ['jakob-uszkoreit', 'Jakob Uszkoreit', 'Co-founder', 'Inceptive', null, 'Co-author of the Transformer paper. Founded Inceptive, applying AI to RNA drug design.', null, 'Transformer co-inventor, Inceptive, RNA drug design'],
+  ['niki-parmar', 'Niki Parmar', 'Co-founder', 'Essential AI', null, 'Co-author of the Transformer paper. Co-founded Essential AI with Ashish Vaswani.', null, 'Transformer co-inventor, Essential AI'],
+
+  // Safety & policy
+  ['connor-leahy', 'Connor Leahy', 'CEO', 'Conjecture', null, 'CEO of Conjecture. Former EleutherAI lead. Prominent AI safety advocate and policy commentator.', '@NPCollapse', 'EleutherAI, Conjecture, AI safety advocacy'],
 ];
 
 const insertPeople = db.transaction(() => {
@@ -775,12 +1432,513 @@ const insertPriceHistory = db.prepare(`
 `);
 insertPriceHistory.run();
 
+// ─── Tags ─────────────────────────────────────────────────────────
+const insertTag = db.prepare(`
+  INSERT INTO tags (id, name, category, description)
+  VALUES (?, ?, ?, ?)
+`);
+
+const tags = [
+  // Topics
+  ['llm', 'Large Language Models', 'topic', 'Models that process and generate text'],
+  ['image-generation', 'Image Generation', 'topic', 'AI models that create images from text or other inputs'],
+  ['video-generation', 'Video Generation', 'topic', 'AI models that generate video content'],
+  ['speech-recognition', 'Speech Recognition', 'topic', 'Converting speech to text'],
+  ['text-to-speech', 'Text-to-Speech', 'topic', 'Converting text to spoken audio'],
+  ['music-generation', 'Music Generation', 'topic', 'AI models that compose music and sound'],
+  ['ai-safety', 'AI Safety', 'topic', 'Research and practices for safe AI development'],
+  ['multimodal', 'Multimodal AI', 'topic', 'Models that handle multiple input/output types'],
+  ['reasoning', 'Reasoning', 'topic', 'Models with advanced logical and mathematical reasoning'],
+  ['coding', 'Coding & Programming', 'topic', 'AI for code generation, review, and debugging'],
+  ['open-source', 'Open Source', 'topic', 'Openly available models and tools'],
+  ['agents', 'AI Agents', 'topic', 'Autonomous AI systems that can take actions'],
+
+  // Technologies
+  ['transformer', 'Transformer Architecture', 'technology', 'The dominant architecture behind modern AI models'],
+  ['diffusion', 'Diffusion Models', 'technology', 'Generative models that learn by denoising'],
+  ['rlhf', 'RLHF', 'technology', 'Reinforcement Learning from Human Feedback'],
+  ['rag', 'RAG', 'technology', 'Retrieval-Augmented Generation'],
+  ['fine-tuning', 'Fine-Tuning', 'technology', 'Adapting pre-trained models for specific tasks'],
+  ['quantisation', 'Quantisation', 'technology', 'Reducing model size for efficient inference'],
+
+  // Use cases
+  ['writing', 'Writing & Content', 'use-case', 'Using AI for writing, editing, and content creation'],
+  ['research', 'Research', 'use-case', 'Using AI to accelerate research and analysis'],
+  ['customer-service', 'Customer Service', 'use-case', 'AI for customer support and chatbots'],
+  ['education', 'Education', 'use-case', 'AI in learning and teaching'],
+  ['healthcare', 'Healthcare', 'use-case', 'AI applications in medicine and health'],
+  ['creative', 'Creative Tools', 'use-case', 'AI for art, design, music, and creative workflows'],
+
+  // Capabilities
+  ['vision', 'Computer Vision', 'capability', 'Understanding and processing images'],
+  ['function-calling', 'Function Calling', 'capability', 'Models that can invoke external tools'],
+  ['structured-output', 'Structured Output', 'capability', 'Models that produce formatted JSON or schemas'],
+  ['long-context', 'Long Context', 'capability', 'Models with very large context windows (100K+ tokens)'],
+];
+
+const insertTags = db.transaction(() => {
+  for (const t of tags) {
+    insertTag.run(...t);
+  }
+});
+insertTags();
+
+// ─── Tag Assignments ──────────────────────────────────────────────
+const insertTaggable = db.prepare(`
+  INSERT INTO taggables (tag_id, taggable_id, taggable_type)
+  VALUES (?, ?, ?)
+`);
+
+const tagAssignments: [string, string, string][] = [
+  // Tag LLM models
+  ...['gpt-5.2', 'gpt-5', 'gpt-4.5', 'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano', 'gpt-4o', 'gpt-4o-mini',
+    'o1', 'o1-mini', 'o3', 'o3-mini', 'o3-pro', 'o4-mini',
+    'claude-opus-4', 'claude-opus-4.5', 'claude-opus-4.6', 'claude-sonnet-4', 'claude-sonnet-4.5', 'claude-sonnet-4.6', 'claude-haiku-3.5', 'claude-haiku-4.5',
+    'claude-3.5-sonnet', 'claude-3.7-sonnet', 'claude-3-opus',
+    'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-3-pro', 'gemini-3-flash', 'gemini-3.1-pro',
+    'gemini-1.5-pro', 'gemini-1.5-flash',
+    'llama-4-maverick', 'llama-4-scout', 'llama-3.3-70b', 'llama-3.1-405b', 'llama-3.1-70b', 'llama-3.1-8b',
+    'deepseek-v3', 'deepseek-v3.2', 'deepseek-r1', 'deepseek-r1-0528',
+    'phi-4', 'phi-4-reasoning', 'nemotron-70b',
+    'qwen3-max', 'qwen3-235b', 'qwen3-30b', 'qwen3-32b',
+  ].map(id => ['llm', id, 'model'] as [string, string, string]),
+
+  // Tag open-source models
+  ...['llama-4-maverick', 'llama-4-scout', 'llama-3.3-70b', 'llama-3.1-405b', 'llama-3.1-70b', 'llama-3.1-8b',
+    'deepseek-v3', 'deepseek-v3.2', 'deepseek-r1', 'deepseek-r1-0528', 'deepseek-v2.5',
+    'qwen-2.5-72b', 'qwen-qwq-32b', 'qwen-2.5-coder-32b', 'qwen3-30b', 'qwen3-32b', 'qwen3-235b',
+    'mistral-nemo', 'mistral-large-2', 'mistral-large-3', 'mistral-small-3.1',
+    'phi-4', 'phi-4-multimodal', 'phi-4-reasoning',
+    'nemotron-70b',
+  ].map(id => ['open-source', id, 'model'] as [string, string, string]),
+
+  // Tag reasoning models
+  ...['o1', 'o1-mini', 'o3', 'o3-mini', 'o3-pro', 'o4-mini',
+    'deepseek-r1', 'deepseek-r1-0528', 'qwen-qwq-32b',
+    'gemini-2.5-pro', 'gpt-5.2', 'gpt-5',
+    'claude-3.7-sonnet',
+    'phi-4-reasoning',
+    'grok-4',
+  ].map(id => ['reasoning', id, 'model'] as [string, string, string]),
+
+  // Tag coding models
+  ...['codestral', 'gpt-4.1', 'claude-sonnet-4', 'deepseek-v3.2', 'gemini-2.5-pro',
+    'qwen-2.5-coder-32b', 'qwen3-coder-480b',
+  ].map(id => ['coding', id, 'model'] as [string, string, string]),
+
+  // Tag multimodal models
+  ...['gpt-4o', 'gpt-5', 'gpt-5.2', 'claude-opus-4', 'claude-sonnet-4',
+    'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash',
+    'gemini-3-pro', 'gemini-3-flash', 'gemini-3.1-pro',
+    'llama-4-maverick', 'llama-4-scout',
+    'phi-4-multimodal',
+  ].map(id => ['multimodal', id, 'model'] as [string, string, string]),
+
+  // Tag long-context models
+  ...['gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.0-flash-lite',
+    'gemini-1.5-pro', 'gemini-3-pro', 'gemini-3.1-pro',
+    'claude-opus-4', 'claude-sonnet-4', 'jamba-1.5-large',
+    'llama-4-scout', 'grok-4.1-fast', 'grok-4-fast',
+    'gpt-4.1', 'gpt-4.1-mini', 'gpt-4.1-nano',
+  ].map(id => ['long-context', id, 'model'] as [string, string, string]),
+
+  // Tag image-gen models
+  ...['dall-e-3', 'midjourney-v7', 'flux-1.1-pro', 'stable-diffusion-3.5', 'imagen-3',
+  ].map(id => ['image-generation', id, 'model'] as [string, string, string]),
+
+  // Tag video-gen models
+  ...['sora-turbo', 'veo-3', 'runway-gen4', 'kling-2.0', 'pika-2.1',
+  ].map(id => ['video-generation', id, 'model'] as [string, string, string]),
+
+  // Tag people with AI safety
+  ...['geoffrey-hinton', 'yoshua-bengio', 'dario-amodei', 'chris-olah',
+    'jan-leike', 'stuart-russell', 'connor-leahy', 'timnit-gebru', 'sasha-luccioni',
+  ].map(id => ['ai-safety', id, 'person'] as [string, string, string]),
+
+  // Tag people with open source
+  ...['yann-lecun', 'mark-zuckerberg', 'liang-wenfeng',
+    'clement-delangue', 'sasha-luccioni',
+  ].map(id => ['open-source', id, 'person'] as [string, string, string]),
+
+  // Tag people with research
+  ...['percy-liang', 'andrew-ng', 'noam-brown', 'jason-wei',
+    'ashish-vaswani', 'noam-shazeer', 'jakob-uszkoreit', 'niki-parmar',
+  ].map(id => ['research', id, 'person'] as [string, string, string]),
+
+  // Tag benchmarks
+  ['reasoning', 'gpqa-diamond', 'benchmark'],
+  ['reasoning', 'math-500', 'benchmark'],
+  ['reasoning', 'aime-2025', 'benchmark'],
+  ['reasoning', 'arc-challenge', 'benchmark'],
+  ['coding', 'humaneval', 'benchmark'],
+  ['coding', 'swe-bench-verified', 'benchmark'],
+  ['coding', 'livecodebench', 'benchmark'],
+  ['coding', 'bigcodebench', 'benchmark'],
+  ['multimodal', 'mmmu', 'benchmark'],
+  ['multimodal', 'mmmu-pro', 'benchmark'],
+  ['multimodal', 'mathvista', 'benchmark'],
+  ['coding', 'aider-polyglot', 'benchmark'],
+  ['coding', 'bfcl', 'benchmark'],
+  ['agents', 'gaia', 'benchmark'],
+  ['agents', 'webarena', 'benchmark'],
+  ['agents', 'tau-bench', 'benchmark'],
+  ['ai-safety', 'simpleqa', 'benchmark'],
+  ['ai-safety', 'air-bench', 'benchmark'],
+  ['ai-safety', 'trustllm', 'benchmark'],
+  ['healthcare', 'medqa', 'benchmark'],
+];
+
+const insertTagAssignments = db.transaction(() => {
+  for (const ta of tagAssignments) {
+    insertTaggable.run(...ta);
+  }
+});
+insertTagAssignments();
+
+// ─── YouTube Creators ─────────────────────────────────────────────
+const insertYouTubeCreator = db.prepare(`
+  INSERT INTO youtube_creators (id, name, channel_name, youtube_handle, subscribers, category, description, twitter)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+const youtubeCreators = [
+  // AI News & Analysis
+  ['matt-wolfe', 'Matt Wolfe', 'Matt Wolfe', 'maboroshii', 900000, 'news', 'Covers the latest AI tools, news, and trends weekly. Founder of Future Tools.', '@maboroshii'],
+  ['matt-berman', 'Matt Berman', 'Matthew Berman', 'matthew_berman', 450000, 'news', 'Daily AI news, model reviews, and tutorials. Clear explanations of complex AI topics.', '@mattshumer_'],
+  ['ai-explained', 'Philip', 'AI Explained', 'aiexplained-official', 450000, 'news', 'In-depth analysis of AI papers, model releases, and industry developments.', null],
+  ['fireship', 'Jeff Delaney', 'Fireship', 'Fireship', 3200000, 'news', '100-second explainers on AI, web dev, and tech. Fast-paced and entertaining.', '@firaboroshii'],
+  ['two-minute-papers', 'Karoly Zsolnai-Feher', 'Two Minute Papers', 'TwoMinutePapers', 1600000, 'news', 'Bite-sized summaries of groundbreaking AI research papers.', '@twominutepapers'],
+  ['theaigrid', 'The AI Grid', 'TheAIGRID', 'TheAIGRID', 300000, 'news', 'Daily AI news covering model releases, industry shifts, and practical applications.', null],
+  ['wes-roth', 'Wes Roth', 'Wes Roth', 'WesRoth', 450000, 'news', 'AI news, AGI discussions, and analysis of AI developments and their implications.', '@WesRothAI'],
+
+  // Tutorials & Education
+  ['3blue1brown', 'Grant Sanderson', '3Blue1Brown', '3blue1brown', 6500000, 'tutorials', 'Beautiful mathematical animations explaining neural networks, transformers, and more.', '@3blue1brown'],
+  ['sentdex', 'Harrison Kinsley', 'sentdex', 'sentdex', 1300000, 'tutorials', 'Python and machine learning tutorials. Long-running AI education channel.', '@Sentdex'],
+  ['nicholas-renotte', 'Nicholas Renotte', 'Nicholas Renotte', 'NicholasRenotte', 600000, 'tutorials', 'Hands-on AI and ML tutorials for beginners and intermediates.', null],
+  ['sam-witteveen', 'Sam Witteveen', 'Sam Witteveen', 'samwitteveen', 60000, 'tutorials', 'Practical tutorials on LLMs, RAG, agents, and AI development.', '@samwitteveen'],
+  ['james-briggs', 'James Briggs', 'James Briggs', 'jamesbriggs', 250000, 'tutorials', 'RAG, vector databases, LangChain, and practical AI engineering tutorials.', '@jamaboroshii'],
+  ['dave-ebbelaar', 'Dave Ebbelaar', 'Dave Ebbelaar', 'daboroshii', 100000, 'tutorials', 'AI engineering tutorials focused on building production LLM applications.', null],
+
+  // AI Research
+  ['yannic-kilcher', 'Yannic Kilcher', 'Yannic Kilcher', 'YannicKilcher', 300000, 'research', 'In-depth paper reviews and analysis of cutting-edge AI research.', '@yaboroshii'],
+  ['andrej-karpathy-yt', 'Andrej Karpathy', 'Andrej Karpathy', 'AndrejKarpathy', 700000, 'research', 'Deep technical content from former Tesla AI director. Neural network fundamentals.', '@karpathy'],
+  ['machine-learning-street-talk', 'Tim Scarfe', 'Machine Learning Street Talk', 'MachineLearningStreetTalk', 170000, 'research', 'Long-form interviews with leading AI researchers and deep paper discussions.', '@MLStreetTalk'],
+  ['aleksa-gordic', 'Aleksa Gordic', 'Aleksa Gordic', 'TheAIEpiphany', 90000, 'research', 'Detailed walkthroughs of transformer architectures and AI research papers.', '@gordic_aleksa'],
+
+  // AI Coding
+  ['ai-jason', 'Jason Zhou', 'AI Jason', 'AIJason', 200000, 'coding', 'Practical AI coding tutorials: agents, function calling, and AI app development.', '@jasonzhou1993'],
+  ['all-about-ai', 'All About AI', 'All About AI', 'AllAboutAI', 350000, 'coding', 'Hands-on tutorials for AI tools, local LLMs, and building AI applications.', null],
+  ['david-ondrej', 'David Ondrej', 'David Ondrej', 'DavidOndrej', 200000, 'coding', 'AI tool reviews and tutorials for developers. Focus on practical applications.', null],
+  ['cole-medin', 'Cole Medin', 'Cole Medin', 'ColeMedin', 150000, 'coding', 'AI agent development, local AI setups, and developer-focused AI content.', null],
+
+  // AI Art & Creative
+  ['olivio-sarikas', 'Olivio Sarikas', 'Olivio Sarikas', 'OlivioSarikas', 250000, 'creative', 'AI art tutorials covering Stable Diffusion, Midjourney, FLUX, and creative workflows.', null],
+  ['aitrepreneur', 'AItrepreneur', 'Aitrepreneur', 'Aitrepreneur', 300000, 'creative', 'AI image and video generation tutorials. Local AI setup guides.', null],
+  ['theoretically-media', 'Tim', 'Theoretically Media', 'TheoreticallyMedia', 180000, 'creative', 'AI filmmaking, video generation, and creative AI tool reviews.', null],
+
+  // Business & Strategy
+  ['ai-advantage', 'Igor Pogany', 'The AI Advantage', 'AIAdvantage', 500000, 'business', 'Practical AI strategies for productivity, business, and personal use.', null],
+  ['skills-gap-trainer', 'Skills Gap Trainer', 'Skills Gap Trainer', 'SkillGapTrainer', 70000, 'business', 'AI impact on jobs, skills development, and career strategy.', null],
+  ['ai-search', 'Liam Ottley', 'AI Search', 'LiamOttley', 400000, 'business', 'Building AI agencies and businesses. Practical AI entrepreneurship.', '@LiamOttley'],
+];
+
+const insertYouTubeCreators = db.transaction(() => {
+  for (const c of youtubeCreators) {
+    insertYouTubeCreator.run(...c);
+  }
+});
+insertYouTubeCreators();
+
+// ─── Run supplemental seed.sql ──────────────────────────────────
+const seedSqlPath = path.join(process.cwd(), 'src', 'db', 'seed.sql');
+if (fs.existsSync(seedSqlPath)) {
+  const seedSql = fs.readFileSync(seedSqlPath, 'utf8');
+  db.exec(seedSql);
+  console.log('Applied supplemental seed.sql');
+}
+
+// ─── Rumoured / Stealth Models ──────────────────────────────────
+console.log('Seeding rumoured models...');
+
+const insertRumour = db.prepare(`
+  INSERT OR REPLACE INTO rumoured_models (id, codename, provider_id, status, first_seen, confirmed_as, confirmed_name, sources, notes, category)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+const rumours: Array<[string, string, string | null, string, string, string | null, string | null, string, string, string]> = [
+  // [id, codename, provider_id, status, first_seen, confirmed_as, confirmed_name, sources_json, notes, category]
+  ['rumour-gpt-5-orion', 'Orion', 'openai', 'confirmed', '2024-10-01', 'gpt-5', 'GPT-5', '["https://openai.com/blog"]', 'Originally codenamed "Orion" in internal OpenAI documents. Confirmed as GPT-5 at launch.', 'llm'],
+  ['rumour-claude-4-opus', 'Delphi', 'anthropic', 'confirmed', '2025-01-15', 'claude-opus-4', 'Claude Opus 4', '["https://anthropic.com"]', 'Internal codename "Delphi" referenced in early API testing. Released as Claude Opus 4 in May 2025.', 'llm'],
+  ['rumour-gemini-ultra-2', 'Ultra 2.0', 'google', 'rumoured', '2025-11-01', null, null, '["https://the-decoder.com"]', 'References to a Gemini Ultra 2.0 variant spotted in Google API responses. Likely a higher-tier Gemini model for enterprise.', 'llm'],
+  ['rumour-gpt-5.5', 'GPT-5.5', 'openai', 'rumoured', '2026-01-10', null, null, '["https://openrouter.ai"]', 'Model ID "gpt-5.5" briefly appeared in OpenRouter\'s model list before being removed. Likely an intermediate release between GPT-5.2 and GPT-6.', 'llm'],
+  ['rumour-claude-5', 'Claude 5', 'anthropic', 'rumoured', '2026-02-01', null, null, '["https://the-decoder.com", "https://twitter.com"]', 'Multiple sources indicate Anthropic is testing a next-generation model family internally. No confirmed timeline.', 'llm'],
+  ['rumour-llama-5', 'Llama 5', 'meta', 'rumoured', '2025-12-15', null, null, '["https://techcrunch.com"]', 'Meta confirmed development of next-generation Llama models. Expected to be significantly larger than Llama 4.', 'llm'],
+  ['rumour-deepseek-r2', 'DeepSeek R2', 'deepseek', 'rumoured', '2026-01-20', null, null, '["https://arxiv.org"]', 'References to "R2" training runs spotted in DeepSeek research papers. Expected to improve on R1\'s reasoning capabilities.', 'llm'],
+  ['rumour-grok-5', 'Grok 5', 'xai', 'rumoured', '2026-02-15', null, null, '["https://x.com"]', 'Elon Musk referenced "Grok 5" in posts on X. No confirmed specs or timeline.', 'llm'],
+  ['rumour-mistral-next', 'Mistral Next', 'mistral', 'rumoured', '2026-01-05', null, null, '["https://mistral.ai"]', 'Mistral AI hiring postings reference a "next-gen" flagship model. Likely successor to Mistral Large 3.', 'llm'],
+  ['rumour-gemini-3', 'Gemini 3.0', 'google', 'rumoured', '2026-02-20', null, null, '["https://9to5google.com"]', 'Android code references suggest a "Gemini 3.0" model family. May debut at Google I/O 2026.', 'llm'],
+];
+
+for (const r of rumours) {
+  insertRumour.run(...r);
+}
+console.log(`  ${rumours.length} rumoured models seeded`);
+
+// ─── Subscription Plans & Message Limits ────────────────────────
+// Official source data from provider pricing pages.
+const insertPlan = db.prepare(`
+  INSERT INTO subscription_plans (id, provider_id, plan_name, price_monthly, price_yearly_monthly, tier_level, source_url, notes)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+const insertLimit = db.prepare(`
+  INSERT INTO plan_model_limits (plan_id, model_id, model_tier, messages_low, messages_high, message_period, notes)
+  VALUES (?, ?, ?, ?, ?, ?, ?)
+`);
+
+// Plans: [id, provider_id, plan_name, price_monthly, price_yearly_monthly, tier_level, source_url, notes]
+const plans: Array<[string, string, string, number | null, number | null, number, string, string | null]> = [
+  // OpenAI — source: developers.openai.com/codex/pricing/
+  ['openai-free',       'openai', 'Free',       0,    null,  0, 'https://developers.openai.com/codex/pricing/', 'Limited access to GPT-4o-mini and Codex'],
+  ['openai-plus',       'openai', 'Plus',       20,   null,  1, 'https://developers.openai.com/codex/pricing/', 'Access to GPT-5, GPT-4o, o3-mini, Codex'],
+  ['openai-pro',        'openai', 'Pro',        200,  null,  3, 'https://developers.openai.com/codex/pricing/', 'Highest limits, o3-pro, GPT-5.2 Pro'],
+  ['openai-team',       'openai', 'Team',       25,   null,  2, 'https://developers.openai.com/codex/pricing/', 'Per user/month, higher limits than Plus'],
+  ['openai-business',   'openai', 'Business',   30,   null,  2, 'https://developers.openai.com/codex/pricing/', 'Per user/month, admin controls'],
+  ['openai-enterprise', 'openai', 'Enterprise', null, null,  4, 'https://developers.openai.com/codex/pricing/', 'Custom pricing, SSO, SOC 2 Type 2'],
+
+  // Anthropic — source: anthropic.com/pricing
+  ['anthropic-free',       'anthropic', 'Free',       0,    null,  0, 'https://www.anthropic.com/pricing', 'Limited access to Claude Sonnet'],
+  ['anthropic-pro',        'anthropic', 'Pro',        20,   null,  1, 'https://www.anthropic.com/pricing', 'Access to Claude Opus, Sonnet, Haiku'],
+  ['anthropic-max',        'anthropic', 'Max',        100,  null,  3, 'https://www.anthropic.com/pricing', '20x more usage than Pro'],
+  ['anthropic-team',       'anthropic', 'Team',       25,   null,  2, 'https://www.anthropic.com/pricing', 'Per user/month, higher limits'],
+  ['anthropic-enterprise', 'anthropic', 'Enterprise', null, null,  4, 'https://www.anthropic.com/pricing', 'Custom pricing, SSO, SCIM, audit logs'],
+
+  // Google — source: ai.google.dev/pricing
+  ['google-free',    'google', 'Free',    0,    null, 0, 'https://ai.google.dev/pricing', 'Free tier with rate limits'],
+  ['google-one-ai',  'google', 'Google One AI Premium', 20, null, 1, 'https://one.google.com/about/plans', 'Gemini Advanced, 2TB storage'],
+
+  // xAI — source: x.ai/grok
+  ['xai-free',    'xai', 'Free',     0,   null, 0, 'https://x.ai/grok', 'Limited Grok access via X'],
+  ['xai-premium', 'xai', 'Premium+', 22,  null, 1, 'https://x.ai/grok', 'X Premium+ subscription'],
+  ['xai-superai', 'xai', 'SuperAI',  30,  null, 2, 'https://x.ai/grok', 'Highest Grok limits, Grok 4 access'],
+];
+
+for (const p of plans) {
+  insertPlan.run(...p);
+}
+console.log(`  ${plans.length} subscription plans seeded`);
+
+// Message limits: [plan_id, model_id, model_tier, messages_low, messages_high, message_period, notes]
+// Source: OpenAI Codex pricing page (developers.openai.com/codex/pricing/)
+const limits: Array<[string, string | null, string | null, number | null, number | null, string, string | null]> = [
+  // OpenAI Plus — 30-150 messages/5 hours depending on model
+  ['openai-plus', null, 'gpt-5-codex',      30,   80,   '5 hours', 'Max model, complex tasks use more'],
+  ['openai-plus', null, 'gpt-5.1-codex-mini', 120, 600, '5 hours', 'Mini model extends limits ~4x'],
+  ['openai-plus', 'gpt-5',      null,         80,   80,  'month',   null],
+  ['openai-plus', 'gpt-4o',     null,         150,  150, 'month',   null],
+  ['openai-plus', 'o3-mini',    null,         50,   50,  'day',     null],
+
+  // OpenAI Pro — 300-1500 messages/5 hours depending on model
+  ['openai-pro', null,  'gpt-5-codex',       300,  750,  '5 hours', 'Max model, complex tasks use more'],
+  ['openai-pro', null,  'gpt-5.1-codex-mini', 1200, 6000, '5 hours', 'Mini model extends limits ~4x'],
+  ['openai-pro', 'gpt-5',     null,           null, null, 'month',   'Unlimited'],
+  ['openai-pro', 'gpt-5.2',   null,           null, null, 'month',   'Unlimited'],
+  ['openai-pro', 'o3',        null,           null, null, 'month',   'Unlimited'],
+  ['openai-pro', 'o3-pro',    null,           null, null, 'month',   'Unlimited'],
+
+  // Anthropic Pro — source: anthropic.com/pricing
+  ['anthropic-pro', 'claude-sonnet-4.6', null, 45, 45,   '5 hours', null],
+  ['anthropic-pro', 'claude-opus-4.6',   null, 30, 30,   '5 hours', null],
+  ['anthropic-pro', 'claude-haiku-3.5',  null, 100, 100, '5 hours', null],
+
+  // Anthropic Max
+  ['anthropic-max', 'claude-sonnet-4.6', null, 900,  900,  '5 hours', '20x Pro limits'],
+  ['anthropic-max', 'claude-opus-4.6',   null, 600,  600,  '5 hours', '20x Pro limits'],
+  ['anthropic-max', 'claude-haiku-3.5',  null, 2000, 2000, '5 hours', '20x Pro limits'],
+
+  // Google One AI Premium
+  ['google-one-ai', 'gemini-2.5-pro',    null, null, null, 'month', 'High limits with Gemini Advanced'],
+  ['google-one-ai', 'gemini-2.5-flash',  null, null, null, 'month', 'Very high limits'],
+
+  // xAI Premium+
+  ['xai-premium', 'grok-3',      null, null, null, 'day', 'Higher Grok 3 limits'],
+  ['xai-superai',  'grok-4',     null, null, null, 'day', 'Grok 4 access'],
+];
+
+for (const l of limits) {
+  insertLimit.run(...l);
+}
+console.log(`  ${limits.length} plan message limits seeded`);
+
+// ─── CLI Tools ──────────────────────────────────────────────────
+const insertCLI = db.prepare(`
+  INSERT INTO cli_tools (id, name, provider_id, maker, description, default_model, supported_models, context_window, open_source, license, github_url, website, install_command, pricing_type, pricing_note, mcp_support, multi_file, git_integration, platforms, released, notes)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+// [id, name, provider_id, maker, description, default_model, supported_models, context_window,
+//  open_source, license, github_url, website, install_command, pricing_type, pricing_note,
+//  mcp_support, multi_file, git_integration, platforms, released, notes]
+const cliTools: Array<[string, string, string | null, string, string, string, string, number, number, string | null, string | null, string, string | null, string, string | null, number, number, number, string, string | null, string | null]> = [
+  [
+    'claude-code', 'Claude Code', 'anthropic', 'Anthropic',
+    'Agentic coding tool that lives in your terminal. Understands your entire codebase, handles multi-file edits, runs commands, and manages git — all through natural language.',
+    'Claude Opus 4.6', 'Claude Opus 4.6, Claude Sonnet 4.6, Claude Haiku 3.5',
+    200000, 0, null,
+    null, 'https://claude.ai/code',
+    'npm install -g @anthropic-ai/claude-code',
+    'subscription', 'Included with Claude Pro ($20/mo), Max ($100/mo), or API usage',
+    1, 1, 1, 'macOS, Linux, Windows (WSL)', '2025-02-24',
+    'Pioneer of the agentic CLI category. $1B+ ARR. Deep integration with Claude models for autonomous task completion.',
+  ],
+  [
+    'openai-codex', 'Codex CLI', 'openai', 'OpenAI',
+    'Multi-agent coding CLI with parallel execution. Runs multiple AI agents simultaneously, each on an isolated Git worktree.',
+    'GPT-5.1-Codex', 'GPT-5.2, GPT-5, GPT-4.1, GPT-4.1-mini',
+    128000, 1, 'Apache-2.0',
+    'https://github.com/openai/codex', 'https://openai.com/index/introducing-codex/',
+    'npm install -g @openai/codex',
+    'subscription', 'Included with ChatGPT Plus ($20/mo), Pro ($200/mo), or API usage',
+    1, 1, 1, 'macOS, Linux', '2025-04-16',
+    'Multi-agent parallelism with isolated worktrees. Each agent works on its own branch.',
+  ],
+  [
+    'gemini-cli', 'Gemini CLI', 'google', 'Google',
+    'Terminal-first AI coding assistant with the largest context window. Brings Gemini models into the shell for code generation, refactoring, and multi-file reasoning.',
+    'Gemini 2.5 Pro', 'Gemini 2.5 Pro, Gemini 2.5 Flash, Gemini 2.0 Flash',
+    1000000, 1, 'Apache-2.0',
+    'https://github.com/google-gemini/gemini-cli', 'https://cli.gemini.google.dev/',
+    'npm install -g @anthropic-ai/gemini-cli',
+    'free', 'Generous free tier with Gemini API; paid via Google AI Studio',
+    1, 1, 1, 'macOS, Linux, Windows', '2025-06-25',
+    'Largest context window (1M tokens) — 5x Claude Code, 8x Codex. Ideal for large codebases.',
+  ],
+  [
+    'aider', 'Aider', null, 'Paul Gauthier',
+    'AI pair programming in your terminal. Works directly with Git, proposing commits instead of raw code changes. Connects to multiple AI models.',
+    'Claude Sonnet 4.6', 'Claude, GPT-5, Gemini, DeepSeek, Llama, and 30+ models via API',
+    200000, 1, 'Apache-2.0',
+    'https://github.com/Aider-AI/aider', 'https://aider.chat',
+    'pip install aider-chat',
+    'free', 'Free and open source; pay for model API usage',
+    0, 1, 1, 'macOS, Linux, Windows', '2023-06-08',
+    'One of the earliest AI CLI tools. Git-native workflow — all changes are proposed as commits.',
+  ],
+  [
+    'goose', 'Goose', null, 'Block (Square)',
+    'Fully open-source AI agent that goes beyond code suggestions. Executes full development workflows — building, running, debugging, and orchestrating multi-step tasks.',
+    'Claude Sonnet 4.6', 'Claude, GPT, Gemini, Ollama — model-agnostic',
+    200000, 1, 'Apache-2.0',
+    'https://github.com/block/goose', 'https://block.github.io/goose/',
+    'brew install goose',
+    'free', 'Free and open source; pay for model API usage',
+    1, 1, 1, 'macOS, Linux, Windows', '2024-11-01',
+    'Co-designed MCP with Anthropic. Block backing gives enterprise credibility. Desktop app + CLI.',
+  ],
+  [
+    'warp', 'Warp', null, 'Warp',
+    'Modern terminal that blends GPU-accelerated UI with AI assistance and multi-agent orchestration. Runs Claude Code, Codex, and Gemini CLI within the same interface.',
+    'Multiple', 'Claude Code, Codex CLI, Gemini CLI + own agents',
+    0, 0, null,
+    null, 'https://www.warp.dev',
+    'brew install --cask warp',
+    'freemium', 'Free for individuals; Team $22/user/mo',
+    0, 1, 1, 'macOS, Linux', '2022-04-05',
+    'Meta-tool: orchestrates multiple AI agents in one terminal. Written in Rust, GPU-accelerated.',
+  ],
+  [
+    'crush-cli', 'Crush', null, 'Charmbracelet',
+    'LSP-enhanced, MCP-extensible AI coding agent with the broadest platform support. Beautiful terminal UI built on the Charm ecosystem.',
+    'Claude Sonnet 4.6', 'Claude, GPT, Gemini, Ollama — model-agnostic',
+    200000, 1, 'MIT',
+    'https://github.com/charmbracelet/crush', 'https://charm.sh/crush',
+    'brew install charmbracelet/tap/crush',
+    'free', 'Free and open source; pay for model API usage',
+    1, 1, 1, 'macOS, Linux, Windows, Android, FreeBSD, OpenBSD, NetBSD', '2025-06-01',
+    'Broadest platform support of any CLI tool. Mid-session model switching. LSP integration.',
+  ],
+  [
+    'amazon-q-cli', 'Amazon Q Developer CLI', 'amazon', 'Amazon',
+    'AI coding assistant for command-line workflows, optimised for AWS. Helps with AWS CLI commands, infrastructure as code, and cloud best practices.',
+    'Amazon Q', 'Amazon Q, Amazon Nova',
+    200000, 0, null,
+    null, 'https://aws.amazon.com/q/developer/',
+    'brew install amazon-q',
+    'freemium', 'Free tier; Pro $19/user/mo',
+    0, 1, 1, 'macOS, Linux', '2024-04-30',
+    'Best for AWS-heavy workflows. Deep integration with AWS services, IAM, CloudFormation.',
+  ],
+  [
+    'coderabbit-cli', 'CodeRabbit CLI', null, 'CodeRabbit',
+    'AI code review tool in the terminal. Context-aware feedback, line-by-line suggestions, and best practices enforcement.',
+    'Multiple', 'Claude, GPT — uses multiple models',
+    200000, 0, null,
+    null, 'https://www.coderabbit.ai/cli',
+    'npm install -g coderabbit',
+    'freemium', 'Free for open source; Pro from $15/user/mo',
+    0, 1, 1, 'macOS, Linux, Windows', '2024-01-01',
+    'Focused on code review rather than code generation. Integrates with CI/CD pipelines.',
+  ],
+  [
+    'codebuff', 'Codebuff', null, 'Codebuff',
+    'Terminal-first coding assistant that makes changes inside real repos. Context-aware with "knowledge" files for repo conventions.',
+    'Claude Sonnet 4.6', 'Claude, GPT, Gemini',
+    200000, 0, null,
+    null, 'https://codebuff.com',
+    'npm install -g codebuff',
+    'freemium', 'Free tier with limits; Pro from $20/mo',
+    0, 1, 1, 'macOS, Linux, Windows', '2024-09-01',
+    'Knowledge files keep it aligned with repo conventions. No IDE dependency.',
+  ],
+  [
+    'firecrawl-cli', 'Firecrawl CLI', null, 'Firecrawl',
+    'Web data toolkit for AI agents. Scrapes, searches, and browses the web from the terminal. Turns websites into clean LLM-ready markdown.',
+    'N/A', 'Tool — works with any AI agent (Claude Code, Codex, etc.)',
+    0, 1, 'Apache-2.0',
+    'https://github.com/firecrawl/firecrawl', 'https://www.firecrawl.dev',
+    'npx -y firecrawl-cli@latest init --all --browser',
+    'freemium', 'Free: 500 pages; Paid from $16/mo (credit-based)',
+    1, 0, 0, 'macOS, Linux, Windows', '2024-06-01',
+    'Not a coding agent — a web data tool for agents. Scrape, search, crawl, browse. FIRE-1 autonomous agent.',
+  ],
+  [
+    'plandex', 'Plandex', null, 'Plandex',
+    'AI coding agent that breaks large tasks into structured plans and executes them step by step. Massive effective context with Tree-sitter indexing.',
+    'Claude Sonnet 4.6', 'Claude, GPT, Gemini, DeepSeek',
+    2000000, 1, 'AGPL-3.0',
+    'https://github.com/plandex-ai/plandex', 'https://plandex.ai',
+    'curl -sL https://plandex.ai/install.sh | bash',
+    'freemium', 'Free self-hosted; Cloud from $19/mo',
+    0, 1, 1, 'macOS, Linux', '2024-03-08',
+    '2M token effective context via Tree-sitter indexing. Plan-first approach to large tasks.',
+  ],
+  [
+    'qwen-code', 'Qwen Code', 'alibaba', 'Alibaba',
+    'Command-line AI coding agent adapted from Gemini CLI, optimised for Qwen3-Coder models. 480B parameter MoE architecture.',
+    'Qwen3-Coder', 'Qwen3-Coder, Qwen3-235B, Qwen3-32B',
+    128000, 1, 'Apache-2.0',
+    'https://github.com/QwenLM/qwen-code', 'https://qwenlm.github.io/blog/qwen-code/',
+    'npm install -g @anthropic-ai/qwen-code',
+    'free', 'Free and open source; use with local or API models',
+    1, 1, 1, 'macOS, Linux, Windows', '2025-07-15',
+    'Based on Gemini CLI architecture. Optimised for Qwen3-Coder (480B MoE). Fully free.',
+  ],
+];
+
+for (const t of cliTools) {
+  insertCLI.run(...t);
+}
+console.log(`  ${cliTools.length} CLI tools seeded`);
+
 // ─── Done ───────────────────────────────────────────────────────
 const modelCount = (db.prepare('SELECT COUNT(*) AS c FROM models').get() as { c: number }).c;
 const providerCount = (db.prepare('SELECT COUNT(*) AS c FROM providers').get() as { c: number }).c;
 const benchmarkCount = (db.prepare('SELECT COUNT(*) AS c FROM benchmarks').get() as { c: number }).c;
 const scoreCount = (db.prepare('SELECT COUNT(*) AS c FROM benchmark_scores').get() as { c: number }).c;
 const peopleCount = (db.prepare('SELECT COUNT(*) AS c FROM people').get() as { c: number }).c;
+const tagCount = (db.prepare('SELECT COUNT(*) AS c FROM tags').get() as { c: number }).c;
+const taggableCount = (db.prepare('SELECT COUNT(*) AS c FROM taggables').get() as { c: number }).c;
+const ytCreatorCount = (db.prepare('SELECT COUNT(*) AS c FROM youtube_creators').get() as { c: number }).c;
 
 // Count by category
 const categoryCounts = db.prepare(`
@@ -796,6 +1954,8 @@ for (const cat of categoryCounts) {
 console.log(`  Benchmarks: ${benchmarkCount}`);
 console.log(`  Scores:     ${scoreCount}`);
 console.log(`  People:     ${peopleCount}`);
+console.log(`  Tags:       ${tagCount} (${taggableCount} assignments)`);
+console.log(`  YouTube:    ${ytCreatorCount}`);
 console.log(`  DB path:    ${DB_PATH}`);
 
 db.close();

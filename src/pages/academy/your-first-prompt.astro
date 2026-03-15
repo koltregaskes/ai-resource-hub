@@ -1,0 +1,513 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Writing Your First Prompt — AI Academy Part 3 — The AI Resource Hub"
+  description="Learn the anatomy of a good prompt, avoid common beginner mistakes, and get 10 ready-to-use prompts you can try right now. Part 3 of the AI Academy."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}academy/`} class="hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Part 3</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Beginner</span>
+        <span class="text-xs text-(--color-text-muted)">7 min read</span>
+        <span class="text-xs text-(--color-text-muted)">Part 3 of 5</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        Writing Your First Prompt
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        You have access to one of the most capable tools ever built -- but it only works as well as your instructions.
+        This lesson teaches you how to write prompts that get useful, accurate, and relevant results on the first try.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <!-- Section 1: Anatomy of a Good Prompt -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">The Anatomy of a Good Prompt</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Every effective prompt has three core ingredients: <strong class="text-(--color-text-primary)">context</strong>,
+          <strong class="text-(--color-text-primary)">instruction</strong>, and
+          <strong class="text-(--color-text-primary)">format</strong>. Miss any one of these and the AI is left guessing
+          -- which means you get generic, unfocused output. Include all three and the result is dramatically better.
+        </p>
+
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-6">
+          <p class="text-sm font-semibold text-(--color-accent) uppercase tracking-wider mb-4">Prompt breakdown</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="shrink-0 w-20 text-xs font-semibold text-(--color-accent) bg-(--color-accent)/10 px-2 py-1 rounded text-center">Context</span>
+              <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+                "I run a small online bookshop and I need to send a follow-up email to customers who abandoned their cart."
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="shrink-0 w-20 text-xs font-semibold text-(--color-accent) bg-(--color-accent)/10 px-2 py-1 rounded text-center">Instruction</span>
+              <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+                "Write a friendly, low-pressure email that reminds them what they left behind and offers a 10% discount code."
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="shrink-0 w-20 text-xs font-semibold text-(--color-accent) bg-(--color-accent)/10 px-2 py-1 rounded text-center">Format</span>
+              <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+                "Keep it under 150 words. Use a subject line, body, and a clear call-to-action button label."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          When you combine all three, the AI knows <em>who</em> you are, <em>what</em> you want, and <em>how</em> you want it delivered.
+          Compare the full prompt above to just saying "write me an email" -- the difference in output quality is enormous.
+        </p>
+
+        <div class="p-4 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20">
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            <strong class="text-(--color-accent)">Think of it this way:</strong> context is the background briefing,
+            instruction is the task itself, and format is the delivery specification. You would give all three to a new
+            employee on their first day -- give the same to your AI.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Before and After Examples -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Before and After: Weak vs. Strong Prompts</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          The gap between a vague prompt and a well-structured one is the gap between useless output and genuinely helpful
+          results. Here are four real-world examples showing exactly how to transform a weak prompt into a strong one.
+        </p>
+
+        <!-- Example 1 -->
+        <div class="mb-6">
+          <p class="text-sm font-semibold text-(--color-text-primary) mb-3">Writing a professional email</p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/20">
+              <p class="text-xs font-semibold text-(--color-danger) uppercase tracking-wider mb-2">Weak prompt</p>
+              <p class="text-sm text-(--color-text-secondary) italic">"Write an email to my boss."</p>
+              <p class="text-xs text-(--color-text-muted) mt-2">No context about the topic, tone, or purpose. The AI will produce something generic and probably unusable.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
+              <p class="text-xs font-semibold text-(--color-success) uppercase tracking-wider mb-2">Strong prompt</p>
+              <p class="text-sm text-(--color-text-secondary) italic">"Write a professional email to my manager requesting to work from home on Fridays. I have been in the role for 2 years with strong performance reviews. Keep the tone respectful but confident. Under 200 words."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="mb-6">
+          <p class="text-sm font-semibold text-(--color-text-primary) mb-3">Explaining a concept</p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/20">
+              <p class="text-xs font-semibold text-(--color-danger) uppercase tracking-wider mb-2">Weak prompt</p>
+              <p class="text-sm text-(--color-text-secondary) italic">"Explain blockchain."</p>
+              <p class="text-xs text-(--color-text-muted) mt-2">Too broad. You might get a 2,000-word essay or a one-line definition. No way to know.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
+              <p class="text-xs font-semibold text-(--color-success) uppercase tracking-wider mb-2">Strong prompt</p>
+              <p class="text-sm text-(--color-text-secondary) italic">"Explain blockchain technology to a 14-year-old who has never heard of it. Use a real-world analogy. Keep it to 3 short paragraphs, no jargon."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="mb-6">
+          <p class="text-sm font-semibold text-(--color-text-primary) mb-3">Getting code help</p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/20">
+              <p class="text-xs font-semibold text-(--color-danger) uppercase tracking-wider mb-2">Weak prompt</p>
+              <p class="text-sm text-(--color-text-secondary) italic">"My code doesn't work."</p>
+              <p class="text-xs text-(--color-text-muted) mt-2">The AI has no idea what language, what code, or what "doesn't work" means. It will ask you follow-up questions instead of helping.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
+              <p class="text-xs font-semibold text-(--color-success) uppercase tracking-wider mb-2">Strong prompt</p>
+              <p class="text-sm text-(--color-text-secondary) italic">"I have a Python function that should return the average of a list of numbers, but it returns 0 for every input. Here is the code: [paste code]. What is wrong and how do I fix it?"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example 4 -->
+        <div class="mb-4">
+          <p class="text-sm font-semibold text-(--color-text-primary) mb-3">Research and comparison</p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/20">
+              <p class="text-xs font-semibold text-(--color-danger) uppercase tracking-wider mb-2">Weak prompt</p>
+              <p class="text-sm text-(--color-text-secondary) italic">"Which laptop should I buy?"</p>
+              <p class="text-xs text-(--color-text-muted) mt-2">Budget? Use case? Screen size? Operating system preference? The AI has nothing to work with.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
+              <p class="text-xs font-semibold text-(--color-success) uppercase tracking-wider mb-2">Strong prompt</p>
+              <p class="text-sm text-(--color-text-secondary) italic">"Compare three laptops under $1,000 that are good for a university student studying graphic design. I need strong display quality and at least 16GB RAM. Present as a table with columns for model, price, display, RAM, and your recommendation."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Common Beginner Mistakes -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">The Most Common Beginner Mistakes</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          Nearly everyone makes the same mistakes when they start using AI. Recognising these patterns will immediately
+          improve your results.
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-base font-semibold text-(--color-text-primary) mb-2">1. Being too vague</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+              Prompts like "tell me about marketing" or "help me with my project" give the AI almost nothing to work with.
+              The model has to guess your intent, your audience, your level of expertise, and what format you want. The
+              result is generic output that helps no one.
+            </p>
+            <p class="text-sm text-(--color-text-muted)">
+              <strong>Fix:</strong> Add specifics. What kind of marketing? For what product? What do you already know? What do you need to decide?
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-base font-semibold text-(--color-text-primary) mb-2">2. Not specifying a format</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+              If you do not tell the AI how to structure its response, you will get a wall of text. You might want bullet
+              points but get paragraphs. You might want a table but get a narrative. The AI defaults to whatever seems
+              most natural -- which is usually long-form prose.
+            </p>
+            <p class="text-sm text-(--color-text-muted)">
+              <strong>Fix:</strong> End your prompt with format instructions: "as a numbered list," "in a table," "under 100 words," "as bullet points with bold headings."
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-base font-semibold text-(--color-text-primary) mb-2">3. Not giving context</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+              The AI does not know who you are, what you have already tried, or why you are asking. Without context, it
+              cannot tailor the response. Asking "how do I grow my business?" without mentioning your industry, size,
+              budget, or goals will produce advice so general it could apply to anyone -- and therefore helps no one.
+            </p>
+            <p class="text-sm text-(--color-text-muted)">
+              <strong>Fix:</strong> Start with a sentence or two of background. Who are you? What is the situation? What have you already tried?
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-base font-semibold text-(--color-text-primary) mb-2">4. Asking too many things at once</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+              "Explain quantum computing, compare it to classical computing, list the top companies working on it, and
+              predict where it will be in 10 years." That is four separate tasks crammed into one prompt. The AI will try
+              to do all of them, but each answer will be shallow because it is splitting its effort.
+            </p>
+            <p class="text-sm text-(--color-text-muted)">
+              <strong>Fix:</strong> One prompt, one task. Ask your follow-up questions in the next message. AI conversations are meant to be iterative.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Prompt Patterns That Work -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Prompt Patterns That Work</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          These are proven structures you can reuse across almost any task. Think of them as templates -- fill in your
+          specific details and you will consistently get better results.
+        </p>
+
+        <div class="space-y-4">
+          <!-- Pattern 1: Role-setting -->
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-base font-semibold text-(--color-text-primary) mb-2">Role-setting: "You are a..."</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
+              Assigning the AI a specific role or persona dramatically changes the quality and style of its output. When
+              you say "You are a senior nutritionist," the AI adjusts its vocabulary, depth of knowledge, and
+              communication style to match that expertise.
+            </p>
+            <div class="p-3 rounded-lg bg-(--color-accent)/10 border border-(--color-accent)/20">
+              <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Example</p>
+              <p class="text-sm text-(--color-text-secondary) italic">
+                "You are an experienced personal finance adviser. A 28-year-old earning $55,000/year with $12,000 in
+                savings wants to know whether to pay off student loans faster or start investing. Give balanced advice
+                with pros and cons for each option."
+              </p>
+            </div>
+          </div>
+
+          <!-- Pattern 2: Step-by-step -->
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-base font-semibold text-(--color-text-primary) mb-2">Step-by-step instructions</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
+              When you need the AI to follow a specific process, break your prompt into numbered steps. This forces the
+              model to think sequentially rather than jumping to a conclusion, which often produces more thorough and
+              accurate results.
+            </p>
+            <div class="p-3 rounded-lg bg-(--color-accent)/10 border border-(--color-accent)/20">
+              <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Example</p>
+              <p class="text-sm text-(--color-text-secondary) italic">
+                "I want to analyse whether I should rent or buy a flat in Manchester. Do this in three steps: 1) List the
+                key financial factors to consider. 2) Compare renting vs. buying using average Manchester prices. 3) Give
+                a recommendation based on someone earning $45,000/year with $20,000 saved."
+              </p>
+            </div>
+          </div>
+
+          <!-- Pattern 3: Few-shot -->
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-base font-semibold text-(--color-text-primary) mb-2">Examples in the prompt (few-shot learning)</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
+              Instead of explaining what you want, <em>show</em> the AI by including one or two examples of the desired
+              output. This is called "few-shot prompting" and it is one of the most effective techniques available. The
+              AI will pattern-match against your examples and produce output in the same style.
+            </p>
+            <div class="p-3 rounded-lg bg-(--color-accent)/10 border border-(--color-accent)/20">
+              <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Example</p>
+              <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+                "Convert these product features into customer-facing benefits.<br /><br />
+                Feature: '256GB SSD storage' --> Benefit: 'Loads your apps and files in seconds -- no more waiting around.'<br />
+                Feature: '18-hour battery life' --> Benefit: 'Work all day on a single charge, no charger needed.'<br /><br />
+                Now do these:<br />
+                Feature: '6.1-inch OLED display'<br />
+                Feature: 'IP68 water resistance'<br />
+                Feature: '48MP triple camera system'"
+              </p>
+            </div>
+          </div>
+
+          <!-- Pattern 4: Output format -->
+          <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="text-base font-semibold text-(--color-text-primary) mb-2">Specifying output format</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
+              Telling the AI exactly how to structure its response saves you from reformatting later. You can request
+              tables, bullet points, JSON, markdown, numbered lists, or any structure you need. Be explicit -- the
+              AI will follow your format instructions precisely.
+            </p>
+            <div class="p-3 rounded-lg bg-(--color-accent)/10 border border-(--color-accent)/20">
+              <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Example</p>
+              <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+                "List 5 healthy weeknight dinner ideas. For each one, provide: the meal name in bold, the estimated
+                cooking time in parentheses, a one-sentence description, and a difficulty rating of Easy, Medium, or Hard.
+                Format each entry as a numbered item."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed mt-4">
+          For a deeper dive into these techniques -- including chain-of-thought reasoning, system prompts, and
+          temperature settings -- see the
+          <a href={`${base}guides/advanced-prompting/`} class="text-(--color-accent) hover:underline">Advanced Prompting Techniques</a> guide.
+        </p>
+      </section>
+
+      <!-- Section 5: Your First 10 Prompts -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Your First 10 Prompts</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          Here are 10 ready-to-use prompts covering different tasks. Copy any of them, paste into your preferred AI
+          tool, and see the results. Each one demonstrates the context + instruction + format structure in action.
+        </p>
+
+        <div class="space-y-4">
+          <!-- Prompt 1: Summarise -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">1</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Summarise</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Summarise the following article in exactly 3 bullet points. Each bullet should be one sentence and capture
+              a key takeaway. Write for someone who has 30 seconds to read this. [Paste article text here]"
+            </p>
+          </div>
+
+          <!-- Prompt 2: Explain -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">2</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Explain</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Explain how compound interest works to someone with no financial background. Use a concrete example with
+              real numbers showing what happens to $1,000 over 10 years at 5% annual interest. Keep it under 200 words."
+            </p>
+          </div>
+
+          <!-- Prompt 3: Compare -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">3</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Compare</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Compare React and Vue.js for a beginner who wants to build their first web application. Create a table
+              with columns for: Learning Curve, Community Size, Job Market, and Best For. Add a one-sentence
+              recommendation at the end."
+            </p>
+          </div>
+
+          <!-- Prompt 4: Write -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">4</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Write</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Write a LinkedIn post announcing that I just completed a data analytics certification. I want to thank my
+              employer for supporting my development. Tone should be genuine and professional, not overly enthusiastic.
+              Under 150 words, no hashtags."
+            </p>
+          </div>
+
+          <!-- Prompt 5: Analyse -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">5</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Analyse</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Analyse the strengths and weaknesses of this business idea: a subscription box for home-brewed coffee
+              that delivers freshly roasted beans, a recipe card, and a small snack each month for $25. List 3 strengths
+              and 3 risks as bullet points."
+            </p>
+          </div>
+
+          <!-- Prompt 6: Brainstorm -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">6</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Brainstorm</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Brainstorm 10 blog post titles for a personal finance website aimed at people in their 20s. The tone
+              should be approachable and slightly irreverent -- not stuffy or corporate. Each title should be under 10
+              words."
+            </p>
+          </div>
+
+          <!-- Prompt 7: Translate -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">7</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Translate</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Translate the following English text into Spanish, then provide the translation a second time with each
+              sentence annotated to explain any tricky grammar or vocabulary choices for an intermediate Spanish learner.
+              Text: 'We would have arrived on time if the train hadn't been cancelled at the last minute.'"
+            </p>
+          </div>
+
+          <!-- Prompt 8: Debug code -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">8</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Debug code</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Here is a JavaScript function that should filter an array of products to only show items under $50, but
+              it returns an empty array every time. Find the bug, explain why it happens, and give me the corrected code.
+              [Paste your code here]"
+            </p>
+          </div>
+
+          <!-- Prompt 9: Create a plan -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">9</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Create a plan</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Create a 4-week study plan for someone preparing for the AWS Cloud Practitioner certification. They can
+              study 1 hour per day on weekdays. Break it into weekly goals with specific topics and recommended resources.
+              Format as a table with columns for Week, Topics, Daily Tasks, and Resources."
+            </p>
+          </div>
+
+          <!-- Prompt 10: Review / Critique -->
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-mono bg-(--color-bg-tertiary) text-(--color-text-muted) px-2 py-0.5 rounded">10</span>
+              <span class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider">Review / Critique</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) italic leading-relaxed">
+              "Review the following cover letter for a junior marketing role. Be honest and specific. Point out any
+              cliches, vague claims, or weak sections. Then suggest how to fix each issue. Do not rewrite the whole
+              letter -- just list the problems and fixes. [Paste cover letter here]"
+            </p>
+          </div>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed mt-4">
+          For hundreds more task-specific prompts organised by model and use case, visit the
+          <a href={`${base}prompts/`} class="text-(--color-accent) hover:underline">Prompt Library</a>.
+        </p>
+      </section>
+
+      <!-- Key Takeaways -->
+      <section class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Key Takeaways</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>Every good prompt has context, instruction, and format</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>Be specific -- vague prompts produce vague results</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>Tell the AI what format you want the answer in</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>Use role-setting to get expert-level responses</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>Include examples to show the AI what you want</span>
+          </div>
+          <div class="flex items-start gap-2 text-sm text-(--color-text-secondary)">
+            <span class="text-(--color-accent) mt-0.5 shrink-0">&#10003;</span>
+            <span>One task per prompt -- iterate in follow-up messages</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <section>
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Continue the Course</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <a href={`${base}academy/how-llms-work/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group">
+            <p class="text-xs text-(--color-text-muted) mb-1">Previous</p>
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Part 2: How Large Language Models Work</p>
+          </a>
+          <a href={`${base}academy/choosing-a-model/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group text-right">
+            <p class="text-xs text-(--color-text-muted) mb-1">Next</p>
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Part 4: How to Choose the Right AI Model</p>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}academy/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Lessons
+      </a>
+    </div>
+  </article>
+</BaseLayout>

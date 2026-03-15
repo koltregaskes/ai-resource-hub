@@ -7,6 +7,8 @@ import {
   getModelsByProviderGrouped,
   getModelBenchmarks,
   getPeopleByProvider,
+  getProviderPlans,
+  getPlanLimits,
 } from '../../db/queries';
 
 export function getStaticPaths() {
@@ -24,6 +26,8 @@ if (!provider) {
 const models = getModelsByProvider(id);
 const groupedModels = getModelsByProviderGrouped(id);
 const people = getPeopleByProvider(id);
+const plans = getProviderPlans(id);
+const planLimitsMap = new Map(plans.map(p => [p.id, getPlanLimits(p.id)]));
 
 const categoryLabels: Record<string, { label: string; href: string; priceUnit: string }> = {
   llm: { label: 'Language Models', href: `compare/llm/`, priceUnit: '$/1M tokens' },
@@ -234,6 +238,57 @@ const structuredData = {
         </div>
       );
     })}
+
+    <!-- Subscription Plans -->
+    {plans.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">
+          Subscription Plans
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {plans.map((plan) => {
+            const limits = planLimitsMap.get(plan.id) || [];
+            return (
+              <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="font-semibold text-(--color-text-primary)">{plan.plan_name}</h3>
+                  <span class="text-lg font-bold text-(--color-text-primary)">
+                    {plan.price_monthly != null ? (plan.price_monthly === 0 ? 'Free' : `$${plan.price_monthly}/mo`) : 'Custom'}
+                  </span>
+                </div>
+                {plan.notes && <p class="text-xs text-(--color-text-muted) mb-3">{plan.notes}</p>}
+                {limits.length > 0 && (
+                  <div class="space-y-1 mt-2">
+                    <p class="text-xs font-medium text-(--color-text-secondary) mb-1">Message limits:</p>
+                    {limits.map((l) => (
+                      <div class="flex items-center justify-between text-xs">
+                        <span class="text-(--color-text-secondary)">
+                          {l.model_name || l.model_tier || 'Default'}
+                        </span>
+                        <span class="font-mono text-(--color-text-primary)">
+                          {l.messages_low == null && l.messages_high == null
+                            ? 'Unlimited'
+                            : l.messages_low === l.messages_high
+                              ? `${l.messages_low?.toLocaleString()}`
+                              : `${l.messages_low?.toLocaleString()}-${l.messages_high?.toLocaleString()}`
+                          }
+                          <span class="text-(--color-text-muted)">/{l.message_period}</span>
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {plan.source_url && (
+                  <a href={plan.source_url} target="_blank" rel="noopener" class="text-xs text-blue-400 hover:underline mt-2 block">
+                    Official pricing page
+                  </a>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    )}
 
     <!-- Key people -->
     {people.length > 0 && (

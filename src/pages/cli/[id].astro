@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllCLIToolIds, getCLIToolById } from '../../db/queries';
+
+export function getStaticPaths() {
+  const ids = getAllCLIToolIds();
+  return ids.map((id) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+const tool = getCLIToolById(id);
+
+if (!tool) {
+  return Astro.redirect(`${import.meta.env.BASE_URL}404`);
+}
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const title = `${tool.name} — AI Coding CLI Tool`;
+const description = tool.description || `${tool.name} by ${tool.maker}. AI-powered coding CLI tool.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <nav class="text-sm text-(--color-text-muted) mb-4">
+      <a href={base} class="hover:text-(--color-text-primary)">Home</a>
+      <span class="mx-1">/</span>
+      <a href={`${base}cli/`} class="hover:text-(--color-text-primary)">CLI Tools</a>
+      <span class="mx-1">/</span>
+      <span class="text-(--color-text-secondary)">{tool.name}</span>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-2">
+        {tool.provider_colour && (
+          <div class="w-4 h-4 rounded-full shrink-0" style={`background: ${tool.provider_colour}`} />
+        )}
+        <h1 class="text-3xl font-bold text-(--color-text-primary)">{tool.name}</h1>
+      </div>
+      <p class="text-(--color-text-muted)">by {tool.maker}</p>
+      {tool.description && (
+        <p class="text-(--color-text-secondary) mt-3 text-lg">{tool.description}</p>
+      )}
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Default Model</p>
+        <p class="text-sm font-mono text-(--color-text-primary)">{tool.default_model || '—'}</p>
+      </div>
+      <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Context Window</p>
+        <p class="text-sm font-mono text-(--color-text-primary)">
+          {tool.context_window > 0 ? `${(tool.context_window / 1000).toFixed(0)}K tokens` : 'N/A'}
+        </p>
+      </div>
+      <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Pricing</p>
+        <p class="text-sm text-(--color-text-primary) capitalize">{tool.pricing_type}</p>
+        {tool.pricing_note && <p class="text-xs text-(--color-text-muted) mt-1">{tool.pricing_note}</p>}
+      </div>
+      <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+        <p class="text-xs text-(--color-text-muted) mb-1">Open Source</p>
+        {tool.open_source ? (
+          <p class="text-sm text-green-400">{tool.license || 'Yes'}</p>
+        ) : (
+          <p class="text-sm text-(--color-text-muted)">No</p>
+        )}
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div class="grid sm:grid-cols-2 gap-6 mb-8">
+      <div class="p-5 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="font-semibold text-(--color-text-primary) mb-3">Features</h2>
+        <div class="space-y-2 text-sm">
+          <div class="flex items-center justify-between">
+            <span class="text-(--color-text-secondary)">MCP Support</span>
+            <span class={tool.mcp_support ? 'text-green-400' : 'text-(--color-text-muted)'}>{tool.mcp_support ? 'Yes' : 'No'}</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-(--color-text-secondary)">Multi-file Editing</span>
+            <span class={tool.multi_file ? 'text-green-400' : 'text-(--color-text-muted)'}>{tool.multi_file ? 'Yes' : 'No'}</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-(--color-text-secondary)">Git Integration</span>
+            <span class={tool.git_integration ? 'text-green-400' : 'text-(--color-text-muted)'}>{tool.git_integration ? 'Yes' : 'No'}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="font-semibold text-(--color-text-primary) mb-3">Details</h2>
+        <div class="space-y-2 text-sm">
+          <div class="flex items-center justify-between">
+            <span class="text-(--color-text-secondary)">Platforms</span>
+            <span class="text-(--color-text-primary) text-xs">{tool.platforms}</span>
+          </div>
+          {tool.released && (
+            <div class="flex items-center justify-between">
+              <span class="text-(--color-text-secondary)">Released</span>
+              <span class="text-(--color-text-primary)">{tool.released}</span>
+            </div>
+          )}
+          {tool.supported_models && (
+            <div>
+              <span class="text-(--color-text-secondary)">Supported models</span>
+              <p class="text-xs text-(--color-text-muted) mt-1">{tool.supported_models}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <!-- Install Command -->
+    {tool.install_command && (
+      <div class="mb-8 p-5 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="font-semibold text-(--color-text-primary) mb-3">Quick Install</h2>
+        <div class="bg-(--color-bg-tertiary) rounded px-4 py-3">
+          <code class="text-sm font-mono text-green-400">{tool.install_command}</code>
+        </div>
+      </div>
+    )}
+
+    <!-- Notes -->
+    {tool.notes && (
+      <div class="mb-8 p-5 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="font-semibold text-(--color-text-primary) mb-2">Notes</h2>
+        <p class="text-sm text-(--color-text-secondary)">{tool.notes}</p>
+      </div>
+    )}
+
+    <!-- Links -->
+    <div class="flex gap-4 text-sm">
+      {tool.website && (
+        <a href={tool.website} target="_blank" rel="noopener"
+           class="text-blue-400 hover:underline">Official Website</a>
+      )}
+      {tool.github_url && (
+        <a href={tool.github_url} target="_blank" rel="noopener"
+           class="text-blue-400 hover:underline">GitHub Repository</a>
+      )}
+      {tool.provider_id && (
+        <a href={`${base}labs/${tool.provider_id}/`}
+           class="text-blue-400 hover:underline">{tool.provider_name} Models</a>
+      )}
+    </div>
+  </main>
+</BaseLayout>

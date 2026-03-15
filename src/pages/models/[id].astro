@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllModelIds, getModelById, getModelBenchmarks, getModelPriceHistory } from '../../db/queries';
+import MiniPriceChart from '../../components/MiniPriceChart';
+import { getAllModelIds, getModelById, getModelBenchmarks, getModelPriceHistory, getProviderEndpoints, getModelMessageLimits } from '../../db/queries';
 
 export function getStaticPaths() {
   const ids = getAllModelIds();
@@ -16,6 +17,8 @@ if (!model) {
 
 const benchmarks = getModelBenchmarks(id);
 const priceHistory = getModelPriceHistory(id);
+const providerEndpoints = getProviderEndpoints(id);
+const messageLimits = getModelMessageLimits(id);
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -183,6 +186,12 @@ const structuredData = {
             <dt class="text-sm text-(--color-text-muted)">Speed</dt>
             <dd class="text-sm text-(--color-text-primary)">{model.speed > 0 ? `${model.speed} tok/s` : 'N/A'}</dd>
           </div>
+          {model.ttft > 0 && (
+            <div class="flex justify-between">
+              <dt class="text-sm text-(--color-text-muted)">Time to First Token</dt>
+              <dd class="text-sm text-(--color-text-primary)">{model.ttft}ms</dd>
+            </div>
+          )}
           <div class="flex justify-between">
             <dt class="text-sm text-(--color-text-muted)">Open Source</dt>
             <dd class="text-sm text-(--color-text-primary)">{model.open_source === 1 ? 'Yes' : 'No'}</dd>
@@ -245,6 +254,49 @@ const structuredData = {
       )}
     </div>
 
+    <!-- Subscription Message Limits -->
+    {messageLimits.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Messages Per Plan</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Plan</th>
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Price</th>
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Messages</th>
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Period</th>
+                <th class="px-4 py-2 text-left text-(--color-text-secondary) font-medium">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {messageLimits.map((limit, i) => (
+                <tr class={i % 2 === 0 ? '' : 'bg-(--color-bg-secondary)'}>
+                  <td class="px-4 py-2 text-(--color-text-primary) font-medium">{limit.plan_name}</td>
+                  <td class="px-4 py-2 text-(--color-text-secondary)">
+                    {limit.price_monthly != null ? `$${limit.price_monthly}/mo` : 'Custom'}
+                  </td>
+                  <td class="px-4 py-2 text-(--color-text-primary) font-mono">
+                    {limit.messages_low == null && limit.messages_high == null
+                      ? 'Unlimited'
+                      : limit.messages_low === limit.messages_high
+                        ? limit.messages_low?.toLocaleString()
+                        : `${limit.messages_low?.toLocaleString()}-${limit.messages_high?.toLocaleString()}`
+                    }
+                  </td>
+                  <td class="px-4 py-2 text-(--color-text-secondary)">per {limit.message_period}</td>
+                  <td class="px-4 py-2 text-(--color-text-muted) text-xs">{limit.notes || ''}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-(--color-text-muted) mt-2">
+          Message counts vary by task complexity. Source: official provider pricing pages.
+        </p>
+      </div>
+    )}
+
     <!-- Benchmarks -->
     {benchmarks.length > 0 && (
       <div class="mb-8">
@@ -271,10 +323,61 @@ const structuredData = {
       </div>
     )}
 
+    <!-- Provider Endpoints -->
+    {providerEndpoints.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Available Providers</h2>
+        <p class="text-sm text-(--color-text-muted) mb-3">This model is available through multiple providers with different pricing and performance.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Provider</th>
+                <th class="text-right py-2 px-3 text-(--color-text-muted) font-medium">Input $/1M</th>
+                <th class="text-right py-2 px-3 text-(--color-text-muted) font-medium">Output $/1M</th>
+                <th class="text-right py-2 px-3 text-(--color-text-muted) font-medium">Speed</th>
+                <th class="text-right py-2 px-3 text-(--color-text-muted) font-medium">TTFT</th>
+              </tr>
+            </thead>
+            <tbody>
+              {providerEndpoints.map((ep) => (
+                <tr class="border-b border-(--color-border)/50">
+                  <td class="py-2 px-3">
+                    <a href={`${base}labs/${ep.provider_id}/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                      {ep.endpoint_name}
+                    </a>
+                  </td>
+                  <td class="py-2 px-3 text-right text-(--color-text-primary)">{formatPrice(ep.input_price)}</td>
+                  <td class="py-2 px-3 text-right text-(--color-text-primary)">{formatPrice(ep.output_price)}</td>
+                  <td class="py-2 px-3 text-right text-(--color-text-primary)">{ep.speed > 0 ? `${ep.speed} tok/s` : 'N/A'}</td>
+                  <td class="py-2 px-3 text-right text-(--color-text-primary)">{ep.ttft > 0 ? `${ep.ttft}ms` : 'N/A'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
     <!-- Price History -->
     {priceHistory.length > 1 && (
       <div class="mb-8">
         <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Price History</h2>
+
+        {priceHistory.length >= 2 && (
+          <div class="mb-4 p-3 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+            <p class="text-xs text-(--color-text-muted) mb-2">Blended price trend (input + 3×output / 4)</p>
+            <MiniPriceChart
+              client:visible
+              data={priceHistory.map(ph => ({
+                date: ph.recorded_at,
+                price: (ph.input_price + 3 * ph.output_price) / 4,
+              }))}
+              colour={model.providerColour}
+            />
+          </div>
+        )}
+
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
             <thead>

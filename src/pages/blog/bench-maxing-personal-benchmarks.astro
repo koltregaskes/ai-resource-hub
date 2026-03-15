@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'Bench-Maxing and Why You Should Test AI Models on Your Actual Work',
+  datePublished: '2026-02-25',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+  description: 'Formal benchmarks are increasingly gamed by AI labs. Here is the case for building a small personal test suite based on the work you actually do.',
+};
+---
+
+<BaseLayout
+  title="Bench-Maxing and Why You Should Test AI on Your Actual Work — Blog — The AI Resource Hub"
+  description="Formal benchmarks are increasingly gamed by AI labs. Here is the case for building a small personal test suite based on the work you actually do."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Bench-Maxing and Personal Benchmarks</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 font-medium">Analysis</span>
+        <span class="text-xs text-(--color-text-muted)">25 Feb 2026</span>
+        <span class="text-xs text-(--color-text-muted)">9 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        Bench-Maxing and Why You Should Test AI Models on Your Actual Work
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        Labs are increasingly accused of optimising models to score well on formal benchmarks rather than to be genuinely better. The fix is unglamorous: a small set of real tasks, run manually, tracked over time.
+      </p>
+    </div>
+
+    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Bench-Maxing Problem</h2>
+      <p>
+        Every frontier model launch now comes with a benchmark table. MMLU: 91.2%. GPQA Diamond: 75.4%. SWE-bench: 62%. The numbers go up every few months. But something is getting harder to explain: for a lot of practitioners, the experience of using these models on actual work is not improving at the same pace.
+      </p>
+      <p>
+        The term <strong class="text-(--color-text-primary)">"bench-maxing"</strong> has entered the AI discourse to describe the practice of training or fine-tuning models specifically to perform well on the benchmarks used to evaluate them, rather than improving general capability. It is the AI equivalent of teaching to the test. A model can be specifically optimised for MMLU question formats, or trained on data that overlaps with HumanEval problems, and post impressive numbers without becoming more useful to the person asking it to debug a script or summarise a contract.
+      </p>
+      <p>
+        This is not always deliberate bad faith. But the incentive structure is clear: high benchmark scores generate press coverage and user sign-ups. The labs know which benchmarks matter to which audiences. And evaluation contamination — where benchmark questions end up in training data — is notoriously difficult to detect or prevent.
+      </p>
+
+      <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) my-8">
+        <h3 class="text-sm font-semibold text-(--color-text-primary) mb-2">The contamination problem</h3>
+        <p class="text-sm">
+          When a benchmark is published, its questions become part of the public internet. Future models trained on web data will inevitably see them. Whether labs explicitly include benchmark datasets in training is a separate (and disputed) question — but even passive contamination is enough to inflate scores over time, making it impossible to compare a 2026 model's MMLU score against a 2024 model's on equal terms.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Why Community Signal Is More Honest</h2>
+      <p>
+        The most useful signal for which model is actually better at a given task often comes from practitioners in domain-specific communities — not from benchmark tables. On subreddits like <strong class="text-(--color-text-primary)">r/dataengineering</strong>, <strong class="text-(--color-text-primary)">r/excel</strong>, <strong class="text-(--color-text-primary)">r/financialmodelling</strong>, or <strong class="text-(--color-text-primary)">r/legaladvice</strong>, people share what actually worked and what failed — in the context of their real work, with real data, and with an outcome that mattered to them.
+      </p>
+      <p>
+        This signal has its own problems: it is anecdotal, it skews toward vocal users, and it reflects the demographics of those communities. But it has one property that formal benchmarks cannot replicate: the tasks were not designed to be evaluated. Nobody optimised for what r/dataengineering users would post about.
+      </p>
+      <p>
+        The same applies to <strong class="text-(--color-text-primary)">Chatbot Arena</strong> — the LMSYS crowdsourced Elo leaderboard where real users vote on real conversations. It is imperfect and can be gamed through coordination, but the sheer volume (millions of votes) and the fact that users are bringing their own tasks makes it much harder to bench-max against. It is the closest thing to a representative real-world signal that currently exists at scale.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Case for a Personal Benchmark Kit</h2>
+      <p>
+        If no public benchmark reliably measures performance on your specific work, the logical response is to build a small one yourself. Not a scientific study — a personal regression test suite. The goal is not to produce a number you can cite; it is to answer the question: <em>"Did this new model do better or worse on the tasks I actually care about?"</em>
+      </p>
+      <p>
+        This is more tractable than it sounds. You only need around 15–25 tasks. The critical rule is that prompts must be fixed — never change a prompt once it is written, because then you lose historical comparability. A spreadsheet is sufficient infrastructure.
+      </p>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">Task design: the actual hard part</h3>
+      <p>
+        Writing good benchmark tasks is harder than it sounds. Two rules apply:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">Easy tasks are useless.</strong> If every model scores full marks, you learn nothing. Tasks need to be difficult enough that at least one model fails part of the rubric.</li>
+        <li><strong class="text-(--color-text-primary)">Use your real failure cases.</strong> The best tasks come from moments when a model gave you a bad answer at work. Document those. They are a natural test battery because you already know what a good answer looks like.</li>
+      </ul>
+      <p>
+        Organise tasks into categories that reflect your actual usage. A plausible structure:
+      </p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden my-6">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Category</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Tasks</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Scoring approach</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Code / formula generation</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">5–8</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Gold standard — pre-write the correct answer, score correct / partial / wrong</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Debugging / error diagnosis</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">3–5</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Gold standard — did it identify the root cause? Did it fix it correctly?</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Analysis and interpretation</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">3–5</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Rubric scoring — pre-define 3–4 criteria before running any model</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-(--color-text-primary)">Your known edge cases</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">3–5</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Either approach — these are the tasks where models typically trip up for you</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">Three scoring approaches</h3>
+      <p>
+        <strong class="text-(--color-text-primary)">1. Gold standard answers</strong> — for tasks with a definite correct answer (code that runs, a formula that produces the right result), write the answer before you test any model. Score is: correct / partially correct / wrong. Fast and unambiguous.
+      </p>
+      <p>
+        <strong class="text-(--color-text-primary)">2. Rubric scoring</strong> — for tasks that require judgement (analysis quality, explanation clarity), pre-define 3–4 criteria before running any model. Writing rubrics before testing prevents unconscious bias toward whatever the first model said. Example:
+      </p>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) font-mono text-xs text-(--color-text-secondary) my-4">
+        <p class="text-(--color-text-primary) font-semibold mb-2">Task: "Explain why this Power Query step is slow and propose a fix"</p>
+        <p>[ ] Correctly identifies the bottleneck (1 pt)</p>
+        <p>[ ] Proposes a valid optimisation (1 pt)</p>
+        <p>[ ] Explains the trade-off or limitation of the fix (1 pt)</p>
+        <p>[ ] Answer is understandable to a non-expert (1 pt)</p>
+        <p class="mt-2 text-(--color-text-muted)">Max: 4 pts</p>
+      </div>
+      <p>
+        <strong class="text-(--color-text-primary)">3. LLM-as-judge</strong> — run Model A on a task, then paste the output into Model B with the rubric and ask it to grade strictly. Use the model you are <em>not</em> testing as the judge. Claude grades GPT-4o outputs; GPT-4o grades Claude outputs. This reduces personal bias and scales effort. It is imperfect but significantly more consistent than relying on your own intuition, especially across a dozen tasks.
+      </p>
+
+      <h3 class="text-xl font-semibold text-(--color-text-primary) mt-8 mb-3">The tracking sheet</h3>
+      <p>
+        A spreadsheet with fixed columns per model version, run each time something significant is released:
+      </p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden my-6 overflow-x-auto">
+        <table class="w-full text-xs">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Task ID</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Category</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Max</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">GPT-4o Jan</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Claude Jan</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">GPT-4o Feb</th>
+              <th class="text-left py-2 px-3 text-(--color-text-muted) font-medium">Claude Feb</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-2 px-3 text-(--color-text-primary)">F-01</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">Formula</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">4</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">3</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">4</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">3</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">4</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-2 px-3 text-(--color-text-primary)">D-01</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">Debug</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">3</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">2</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">3</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">3</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">3</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-3 text-(--color-text-muted)" colspan="3">Total</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">31/50</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">38/50</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">35/50</td>
+              <td class="py-2 px-3 text-(--color-text-secondary)">41/50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The absolute numbers are not scientifically rigorous. What matters is the delta over time — regression is immediately visible.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">A Worked Example: Power Query, M Code, and VBA</h2>
+      <p>
+        To make this concrete: one domain where the gap between benchmark scores and real-world usefulness is particularly apparent is spreadsheet automation — specifically <strong class="text-(--color-text-primary)">Power Query</strong>, <strong class="text-(--color-text-primary)">M code</strong>, and <strong class="text-(--color-text-primary)">VBA</strong>. These are narrow, practical skills used daily in financial analysis, operations, and data processing work. No published benchmark specifically tests them.
+      </p>
+      <p>
+        A small personal test suite for this domain might look like:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong class="text-(--color-text-primary)">M code generation (5 tasks)</strong> — "Write a Power Query step that unpivots these columns and handles nulls", "Merge these two queries on a fuzzy match". Gold standard scoring: does the code run? Does it produce the right output?</li>
+        <li><strong class="text-(--color-text-primary)">VBA debugging (3 tasks)</strong> — paste a broken macro, ask for the fix. Gold standard: does the corrected code execute without error?</li>
+        <li><strong class="text-(--color-text-primary)">Explanation quality (3 tasks)</strong> — "Explain what this M expression does and where it might fail". Rubric: correctness, completeness, clarity to a non-developer.</li>
+        <li><strong class="text-(--color-text-primary)">Known edge cases (3 tasks)</strong> — the specific scenarios that previously caught a model out. These are your most valuable tasks.</li>
+      </ul>
+      <p>
+        This is a narrow, small, very personal test. It will not tell you which model is best for legal drafting or medical summarisation. It will tell you, reliably, which model is currently best for <em>this</em> work. That is exactly the information a benchmark table cannot give you.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Community Signal as a Complement</h2>
+      <p>
+        Personal benchmarking captures your own experience. For a broader view of how models perform in a given domain, practitioner communities provide real signal that formal benchmarks cannot. People in domain-specific subreddits and forums share their experiences with AI tools in the context of real problems — not toy examples designed for evaluation.
+      </p>
+      <p>
+        The limitation is that this signal is qualitative and anecdotal. The value is that it is almost impossible to game. No lab has yet optimised a model specifically to score well in the spontaneous opinions of r/dataengineering members.
+      </p>
+      <p>
+        Together, personal testing and community observation are probably more predictive of real-world usefulness than the benchmark table in any model's press release.
+      </p>
+
+      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-2">Our position on benchmarks</h3>
+        <p class="text-sm text-(--color-text-secondary)">
+          We track formal benchmarks on this site because they are the best standardised data available and useful for directional comparisons — especially across model families and capability categories. But we weight community consensus (Chatbot Arena Elo, practitioner feedback) heavily in our quality scores precisely because it is harder to game. Where we know a benchmark has saturation or contamination problems, we flag it. Our methodology is documented in full on the <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">Methodology page</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Back -->
+    <div class="mt-8">
+      <a
+        href={`${base}blog/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Blog
+      </a>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</BaseLayout>

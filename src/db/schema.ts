@@ -30,6 +30,8 @@ function initSchema(db: Database.Database): void {
       name TEXT NOT NULL,
       colour TEXT NOT NULL DEFAULT '#888888',
       website TEXT,
+      status_url TEXT,
+      api_docs_url TEXT,
       description TEXT,
       founded TEXT,
       headquarters TEXT,
@@ -134,13 +136,163 @@ function initSchema(db: Database.Database): void {
       updated_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
+    -- YouTube creators covering AI topics
+    CREATE TABLE IF NOT EXISTS youtube_creators (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      channel_name TEXT NOT NULL,
+      youtube_handle TEXT,
+      subscribers INTEGER NOT NULL DEFAULT 0,
+      category TEXT NOT NULL DEFAULT 'general',
+      description TEXT,
+      twitter TEXT,
+      website TEXT,
+      person_id TEXT REFERENCES people(id),
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Tags for cross-cutting categorisation
+    CREATE TABLE IF NOT EXISTS tags (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      category TEXT NOT NULL DEFAULT 'topic',
+      description TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Many-to-many tag assignments (polymorphic)
+    CREATE TABLE IF NOT EXISTS taggables (
+      tag_id TEXT NOT NULL REFERENCES tags(id),
+      taggable_id TEXT NOT NULL,
+      taggable_type TEXT NOT NULL,
+      PRIMARY KEY (tag_id, taggable_id, taggable_type)
+    );
+
+    -- News articles (populated by external aggregator)
+    CREATE TABLE IF NOT EXISTS news (
+      id TEXT PRIMARY KEY,
+      title TEXT NOT NULL,
+      url TEXT NOT NULL,
+      source TEXT NOT NULL,
+      summary TEXT,
+      image_url TEXT,
+      published_at TEXT NOT NULL,
+      category TEXT NOT NULL DEFAULT 'general',
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Speed history for tracking latency changes over time
+    CREATE TABLE IF NOT EXISTS speed_history (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      model_id TEXT NOT NULL REFERENCES models(id),
+      speed INTEGER NOT NULL,
+      ttft INTEGER NOT NULL DEFAULT 0,
+      provider_endpoint TEXT,
+      recorded_at TEXT NOT NULL DEFAULT (datetime('now')),
+      source TEXT
+    );
+
+    -- Provider endpoints (same model available via different providers)
+    CREATE TABLE IF NOT EXISTS provider_endpoints (
+      id TEXT PRIMARY KEY,
+      model_id TEXT NOT NULL REFERENCES models(id),
+      provider_id TEXT NOT NULL REFERENCES providers(id),
+      endpoint_name TEXT NOT NULL,
+      speed INTEGER NOT NULL DEFAULT 0,
+      ttft INTEGER NOT NULL DEFAULT 0,
+      input_price REAL NOT NULL DEFAULT 0,
+      output_price REAL NOT NULL DEFAULT 0,
+      measured_at TEXT,
+      source TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Stealth / rumoured model sightings
+    CREATE TABLE IF NOT EXISTS rumoured_models (
+      id TEXT PRIMARY KEY,
+      codename TEXT NOT NULL,
+      provider_id TEXT REFERENCES providers(id),
+      status TEXT NOT NULL DEFAULT 'rumoured',  -- rumoured, confirmed, released, debunked
+      first_seen TEXT NOT NULL,
+      confirmed_as TEXT,                         -- model ID once confirmed (e.g., 'gpt-5.2')
+      confirmed_name TEXT,                       -- human-readable name once known
+      sources TEXT,                               -- JSON array of source URLs
+      notes TEXT,
+      category TEXT DEFAULT 'llm',
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Subscription plans and message limits
+    CREATE TABLE IF NOT EXISTS subscription_plans (
+      id TEXT PRIMARY KEY,
+      provider_id TEXT NOT NULL REFERENCES providers(id),
+      plan_name TEXT NOT NULL,
+      price_monthly REAL,
+      price_yearly_monthly REAL,
+      tier_level INTEGER NOT NULL DEFAULT 0,
+      source_url TEXT,
+      notes TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    CREATE TABLE IF NOT EXISTS plan_model_limits (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      plan_id TEXT NOT NULL REFERENCES subscription_plans(id),
+      model_id TEXT REFERENCES models(id),
+      model_tier TEXT,
+      messages_low INTEGER,
+      messages_high INTEGER,
+      message_period TEXT NOT NULL DEFAULT '5 hours',
+      notes TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- AI CLI coding tools
+    CREATE TABLE IF NOT EXISTS cli_tools (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      provider_id TEXT REFERENCES providers(id),
+      maker TEXT NOT NULL,
+      description TEXT,
+      default_model TEXT,
+      supported_models TEXT,
+      context_window INTEGER NOT NULL DEFAULT 0,
+      open_source INTEGER NOT NULL DEFAULT 0,
+      license TEXT,
+      github_url TEXT,
+      website TEXT,
+      install_command TEXT,
+      pricing_type TEXT NOT NULL DEFAULT 'free',
+      pricing_note TEXT,
+      mcp_support INTEGER NOT NULL DEFAULT 0,
+      multi_file INTEGER NOT NULL DEFAULT 0,
+      git_integration INTEGER NOT NULL DEFAULT 0,
+      platforms TEXT NOT NULL DEFAULT 'macOS, Linux',
+      released TEXT,
+      status TEXT NOT NULL DEFAULT 'active',
+      notes TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
     -- Indexes
+    CREATE INDEX IF NOT EXISTS idx_subscription_plans_provider ON subscription_plans(provider_id);
+    CREATE INDEX IF NOT EXISTS idx_plan_model_limits_plan ON plan_model_limits(plan_id);
+    CREATE INDEX IF NOT EXISTS idx_plan_model_limits_model ON plan_model_limits(model_id);
+    CREATE INDEX IF NOT EXISTS idx_cli_tools_provider ON cli_tools(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_provider ON models(provider_id);
     CREATE INDEX IF NOT EXISTS idx_models_category ON models(category);
     CREATE INDEX IF NOT EXISTS idx_benchmark_scores_model ON benchmark_scores(model_id);
     CREATE INDEX IF NOT EXISTS idx_benchmark_scores_benchmark ON benchmark_scores(benchmark_id);
     CREATE INDEX IF NOT EXISTS idx_price_history_model ON price_history(model_id);
     CREATE INDEX IF NOT EXISTS idx_people_provider ON people(provider_id);
+    CREATE INDEX IF NOT EXISTS idx_youtube_creators_category ON youtube_creators(category);
+    CREATE INDEX IF NOT EXISTS idx_taggables_tag ON taggables(tag_id);
+    CREATE INDEX IF NOT EXISTS idx_taggables_target ON taggables(taggable_id, taggable_type);
+    CREATE INDEX IF NOT EXISTS idx_news_published ON news(published_at);
+    CREATE INDEX IF NOT EXISTS idx_news_category ON news(category);
+    CREATE INDEX IF NOT EXISTS idx_speed_history_model ON speed_history(model_id);
+    CREATE INDEX IF NOT EXISTS idx_provider_endpoints_model ON provider_endpoints(model_id);
+    CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);
   `);
 }
 

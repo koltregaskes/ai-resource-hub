@@ -5,7 +5,7 @@ import CategoryCard from '../components/CategoryCard.astro';
 import TopModelsPreview from '../components/TopModelsPreview.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { getLLMModels } from '../data/llm-models';
-import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms, getModelsByCategory, getModelCounts, getRecentModels } from '../db/queries';
+import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms, getModelsByCategory, getModelCounts, getRecentModels, getYouTubeCreators, getTagsWithCounts, getNews } from '../db/queries';
 
 const models = getLLMModels();
 const providers = getProvidersWithCounts();
@@ -19,6 +19,9 @@ const speechModels = getModelsByCategory('speech');
 const voiceModels = getModelsByCategory('voice');
 const soundModels = getModelsByCategory('sound');
 const recentModels = getRecentModels(8);
+const youtubeCreators = getYouTubeCreators();
+const allTags = getTagsWithCounts();
+const latestNews = getNews(5);
 const catLabels = { llm: 'LLM', image: 'Image', video: 'Video', voice: 'Voice', speech: 'Speech', sound: 'Sound' } as Record<string, string>;
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -101,6 +104,153 @@ const dataCategories = [
     available: true,
     countLabel: 'companies listed',
   },
+  {
+    title: 'AI News',
+    description: 'Latest AI news — model releases, research breakthroughs, funding rounds, and industry updates.',
+    href: `${base}news/`,
+    modelCount: latestNews.length,
+    icon: '📰',
+    available: true,
+    countLabel: 'latest articles',
+  },
+  {
+    title: 'YouTube Channels',
+    description: `${youtubeCreators.length} curated AI YouTube channels — news, tutorials, research, and creative.`,
+    href: `${base}youtube/`,
+    modelCount: youtubeCreators.length,
+    icon: '🎥',
+    available: true,
+    countLabel: 'channels listed',
+  },
+  {
+    title: 'People in AI',
+    description: `${people.length} researchers, founders, and leaders shaping the AI industry.`,
+    href: `${base}people/`,
+    modelCount: people.length,
+    icon: '👤',
+    available: true,
+    countLabel: 'profiles',
+  },
+];
+
+const toolsAndFeatures = [
+  {
+    title: 'Head-to-Head Compare',
+    description: 'Select 2–4 models and compare them side by side across every metric.',
+    href: `${base}compare/head-to-head/`,
+    modelCount: models.length,
+    icon: '⚔️',
+    available: true,
+    countLabel: 'models to compare',
+  },
+  {
+    title: 'Model Leaderboard',
+    description: 'Ranked by quality, value, and price. See which LLM comes out on top.',
+    href: `${base}leaderboard/`,
+    modelCount: 20,
+    icon: '🏆',
+    available: true,
+    countLabel: 'top models ranked',
+  },
+  {
+    title: 'Coding Models',
+    description: 'Best AI models for software development — ranked by HumanEval, SWE-bench, and more.',
+    href: `${base}coding/`,
+    modelCount: models.filter(m => m.qualityScore > 0).length,
+    icon: '💻',
+    available: true,
+    countLabel: 'models evaluated',
+  },
+  {
+    title: 'Pricing Calculator',
+    description: 'Estimate your monthly API costs across every model with usage presets.',
+    href: `${base}calculator/`,
+    modelCount: models.length,
+    icon: '🧮',
+    available: true,
+    countLabel: 'models compared',
+  },
+  {
+    title: 'Pricing Trends',
+    description: 'How AI model pricing has dropped 90%+ in two years — charts, milestones, and analysis.',
+    href: `${base}pricing-trends/`,
+    modelCount: models.filter(m => m.inputPrice > 0).length,
+    icon: '📉',
+    available: true,
+    countLabel: 'paid models tracked',
+  },
+  {
+    title: 'Open Source Models',
+    description: 'Directory of open-source and open-weight AI models you can self-host and fine-tune.',
+    href: `${base}open-source/`,
+    modelCount: models.filter(m => m.openSource).length,
+    icon: '🔓',
+    available: true,
+    countLabel: 'open source models',
+  },
+  {
+    title: 'Fastest Models',
+    description: 'LLMs ranked by tokens per second for latency-sensitive applications.',
+    href: `${base}fastest/`,
+    modelCount: models.filter(m => m.speed > 0).length,
+    icon: '⚡',
+    available: true,
+    countLabel: 'models with speed data',
+  },
+  {
+    title: 'Cheapest Models',
+    description: 'Find the most affordable AI models — free and budget options ranked.',
+    href: `${base}cheapest/`,
+    modelCount: models.length,
+    icon: '💰',
+    available: true,
+    countLabel: 'models compared',
+  },
+  {
+    title: 'Best Value',
+    description: 'Quality per dollar — models that punch above their weight class.',
+    href: `${base}best-value/`,
+    modelCount: models.filter(m => m.inputPrice > 0).length,
+    icon: '🎯',
+    available: true,
+    countLabel: 'paid models ranked',
+  },
+  {
+    title: 'Reasoning Models',
+    description: 'Models ranked by math, logic, and reasoning benchmark performance.',
+    href: `${base}reasoning/`,
+    modelCount: models.length,
+    icon: '🧠',
+    available: true,
+    countLabel: 'models evaluated',
+  },
+  {
+    title: 'Multimodal Models',
+    description: 'Models that understand text, images, audio, and video together.',
+    href: `${base}multimodal/`,
+    modelCount: models.filter(m => m.modality && m.modality.length > 1).length,
+    icon: '👁️',
+    available: true,
+    countLabel: 'multimodal models',
+  },
+  {
+    title: 'Context Windows',
+    description: 'Compare context sizes from 4K to 4M+ tokens. Find models for long documents.',
+    href: `${base}context-window/`,
+    modelCount: models.filter(m => m.contextWindow > 0).length,
+    icon: '📏',
+    available: true,
+    countLabel: 'models compared',
+  },
+  {
+    title: 'New Releases',
+    description: 'Track the latest AI model launches across all categories.',
+    href: `${base}new/`,
+    modelCount: models.length,
+    icon: '🆕',
+    available: true,
+    countLabel: 'models tracked',
+  },
 ];
 
 const learnCategories = [
@@ -155,6 +305,18 @@ const learnCategories = [
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {dataCategories.map((cat) => (
+        <CategoryCard {...cat} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Tools & Features -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Tools & Analysis</h2>
+    <p class="text-sm text-(--color-text-secondary) mb-8">Interactive tools for comparing, calculating, and understanding AI models</p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {toolsAndFeatures.map((cat) => (
         <CategoryCard {...cat} />
       ))}
     </div>

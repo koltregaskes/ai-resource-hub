@@ -8,6 +8,7 @@ export interface LLMModel {
   contextWindow: number;    // tokens
   maxOutput: number;        // tokens
   speed: number;            // tokens per second (output)
+  ttft: number;             // time to first token (ms)
   qualityScore: number;     // 0-100 composite benchmark score
   valueScore: number;       // computed: quality / cost ratio
   released: string;         // ISO date string

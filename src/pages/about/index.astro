@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getProvidersWithCounts, getModelsByCategory, getBenchmarks, getPeople, getGlossaryTerms, getNews, getYouTubeCreators } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Count everything
+const providers = getProvidersWithCounts();
+const benchmarks = getBenchmarks();
+const people = getPeople();
+const glossary = getGlossaryTerms();
+const news = getNews(10000);
+const ytCreators = getYouTubeCreators();
+
+const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
+let totalModels = 0;
+for (const cat of categories) {
+  totalModels += getModelsByCategory(cat).length;
+}
+---
+
+<BaseLayout
+  title="About — The AI Resource Hub"
+  description="About The AI Resource Hub — an independent, comprehensive AI resource for comparing models, tracking pricing, and staying informed about AI."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">About</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        About The AI Resource Hub
+      </h1>
+      <p class="text-lg text-(--color-text-secondary) max-w-2xl">
+        The most comprehensive, independent resource for comparing AI models, tracking pricing, and staying informed about the rapidly evolving AI landscape.
+      </p>
+    </div>
+
+    <!-- Mission -->
+    <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20 mb-8">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Our Mission</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        To provide the most accurate, comprehensive, and unbiased resource for understanding and comparing AI models. We believe that transparent data helps everyone — developers, businesses, and researchers — make better decisions in an increasingly complex AI landscape.
+      </p>
+    </div>
+
+    <!-- What we cover -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">What We Cover</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-2">Model Comparisons</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Side-by-side comparisons of {totalModels} AI models across 6 categories: language models, image generation, video generation, voice synthesis, speech recognition, and music/sound. Each model is scored on quality, value, and capabilities.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-2">Pricing Data</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Real-time API pricing from {providers.length} providers, updated daily from the OpenRouter API and cross-referenced with official documentation. Track price changes over time and calculate costs with our pricing calculator.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-2">Benchmark Data</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            {benchmarks.length} industry benchmarks tracked across categories including general intelligence, coding, mathematics, reasoning, safety, and multilingual evaluation. See how models compare on the metrics that matter.
+          </p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-2">News & Analysis</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Daily AI news digest with {news.length}+ articles curated from major sources. Guides, blog posts, and a comprehensive AI glossary with {glossary.length} terms. Plus {ytCreators.length} curated YouTube channels and AI influencers on X/Twitter.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- By the numbers -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">By the Numbers</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+          <p class="text-2xl font-bold text-(--color-accent)">{totalModels}</p>
+          <p class="text-xs text-(--color-text-muted)">AI Models</p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+          <p class="text-2xl font-bold text-(--color-text-primary)">{providers.length}</p>
+          <p class="text-xs text-(--color-text-muted)">AI Providers</p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+          <p class="text-2xl font-bold text-(--color-text-primary)">{benchmarks.length}</p>
+          <p class="text-xs text-(--color-text-muted)">Benchmarks</p>
+        </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+          <p class="text-2xl font-bold text-(--color-text-primary)">{people.length}</p>
+          <p class="text-xs text-(--color-text-muted)">Key People</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it's built -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">How It's Built</h2>
+      <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <ul class="text-sm text-(--color-text-secondary) space-y-3">
+          <li><strong>Static site</strong> — Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Astro</a> for maximum performance. Every page is pre-rendered at build time.</li>
+          <li><strong>SQLite database</strong> — All model data, benchmarks, and content stored in a single SQLite database for fast, reliable queries at build time.</li>
+          <li><strong>Automated updates</strong> — GitHub Actions run daily at 06:00 UTC to scrape pricing data, import news digests, and rebuild the site.</li>
+          <li><strong>Open source</strong> — The entire codebase is <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">open source on GitHub</a>. Contributions welcome.</li>
+          <li><strong>No tracking</strong> — No cookies, no analytics trackers, no third-party scripts. Just fast, clean pages.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Independence -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Independence</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-3">
+        The AI Resource Hub is completely independent. We are not affiliated with, sponsored by, or funded by any AI provider, cloud platform, or technology company. We don't accept payment for rankings, reviews, or placement.
+      </p>
+      <p class="text-sm text-(--color-text-secondary)">
+        Our quality scores are based on publicly available benchmark data, official documentation, and transparent methodology. See our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">methodology page</a> for full details.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Get in Touch</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        Found an error? Want to suggest a model? Have feedback? Open an issue on our <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub repository</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

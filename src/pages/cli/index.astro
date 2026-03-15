@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCLITools } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const tools = getCLITools();
+
+const title = 'AI Coding CLI Tools Compared';
+const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemini CLI, Aider, Goose, Warp, Crush, and more. Features, pricing, models, and platform support.';
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+      <nav class="text-sm text-(--color-text-muted) mb-4">
+        <a href={base} class="hover:text-(--color-text-primary)">Home</a>
+        <span class="mx-1">/</span>
+        <span class="text-(--color-text-secondary)">CLI Tools</span>
+      </nav>
+      <h1 class="text-3xl font-bold text-(--color-text-primary) mb-2">{title}</h1>
+      <p class="text-(--color-text-secondary) max-w-3xl">
+        The terminal is back. After a decade of IDEs getting heavier, the command line has re-emerged as the
+        centre of gravity for AI-assisted coding. Here's every CLI tool worth knowing about.
+      </p>
+      <p class="text-sm text-(--color-text-muted) mt-2">
+        {tools.length} tools tracked. Updated March 2026.
+      </p>
+    </div>
+
+    <!-- Big 3 Feature Cards -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">The Big Three</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        {tools.filter(t => ['claude-code', 'openai-codex', 'gemini-cli'].includes(t.id)).map(tool => (
+          <div class="rounded-lg border border-(--color-border) bg-(--color-bg-card) p-5 flex flex-col">
+            <div class="flex items-center gap-3 mb-3">
+              {tool.provider_colour && (
+                <div class="w-3 h-3 rounded-full shrink-0" style={`background: ${tool.provider_colour}`} />
+              )}
+              <h3 class="text-lg font-bold text-(--color-text-primary)">{tool.name}</h3>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) mb-3 flex-1">{tool.description}</p>
+            <div class="space-y-2 text-xs">
+              <div class="flex justify-between">
+                <span class="text-(--color-text-muted)">Default model</span>
+                <span class="text-(--color-text-primary) font-mono">{tool.default_model}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-(--color-text-muted)">Context</span>
+                <span class="text-(--color-text-primary) font-mono">
+                  {tool.context_window > 0 ? `${(tool.context_window / 1000).toFixed(0)}K` : '—'}
+                </span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-(--color-text-muted)">Pricing</span>
+                <span class="text-(--color-text-primary)">{tool.pricing_type}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-(--color-text-muted)">Open source</span>
+                <span class={tool.open_source ? 'text-green-400' : 'text-(--color-text-muted)'}>{tool.open_source ? 'Yes' : 'No'}</span>
+              </div>
+              <div class="flex gap-1 flex-wrap mt-2">
+                {tool.mcp_support === 1 && <span class="px-1.5 py-0.5 rounded text-xs bg-blue-900/40 text-blue-300">MCP</span>}
+                {tool.git_integration === 1 && <span class="px-1.5 py-0.5 rounded text-xs bg-green-900/40 text-green-300">Git</span>}
+                {tool.multi_file === 1 && <span class="px-1.5 py-0.5 rounded text-xs bg-purple-900/40 text-purple-300">Multi-file</span>}
+              </div>
+            </div>
+            <div class="flex gap-2 mt-4 pt-3 border-t border-(--color-border)">
+              {tool.website && (
+                <a href={tool.website} target="_blank" rel="noopener"
+                   class="text-xs text-blue-400 hover:underline">Website</a>
+              )}
+              {tool.github_url && (
+                <a href={tool.github_url} target="_blank" rel="noopener"
+                   class="text-xs text-blue-400 hover:underline">GitHub</a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Full Comparison Table -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">All CLI Tools</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-(--color-border) text-left">
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium sticky left-0 bg-(--color-bg-primary)">Tool</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium">Maker</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium">Default Model</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium text-right">Context</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium text-center">Open Source</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium">Pricing</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium text-center">MCP</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium text-center">Git</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium">Platforms</th>
+              <th class="px-3 py-2 text-(--color-text-secondary) font-medium">Install</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tools.map((tool, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-secondary)/50 ${i % 2 === 0 ? '' : 'bg-(--color-bg-secondary)/30'}`}>
+                <td class="px-3 py-2.5 sticky left-0 bg-(--color-bg-primary)">
+                  <div class="flex items-center gap-2">
+                    {tool.provider_colour && (
+                      <div class="w-2 h-2 rounded-full shrink-0" style={`background: ${tool.provider_colour}`} />
+                    )}
+                    <a href={`${base}cli/${tool.id}/`} class="font-medium text-(--color-text-primary) hover:text-blue-400">
+                      {tool.name}
+                    </a>
+                  </div>
+                </td>
+                <td class="px-3 py-2.5 text-(--color-text-secondary)">{tool.maker}</td>
+                <td class="px-3 py-2.5 text-(--color-text-secondary) font-mono text-xs">{tool.default_model || '—'}</td>
+                <td class="px-3 py-2.5 text-(--color-text-primary) font-mono text-xs text-right">
+                  {tool.context_window > 0 ? `${(tool.context_window / 1000).toFixed(0)}K` : '—'}
+                </td>
+                <td class="px-3 py-2.5 text-center">
+                  {tool.open_source ? (
+                    <span class="text-green-400 text-xs font-medium">{tool.license || 'Yes'}</span>
+                  ) : (
+                    <span class="text-(--color-text-muted) text-xs">No</span>
+                  )}
+                </td>
+                <td class="px-3 py-2.5">
+                  <span class={`text-xs px-1.5 py-0.5 rounded ${
+                    tool.pricing_type === 'free' ? 'bg-green-900/40 text-green-300' :
+                    tool.pricing_type === 'freemium' ? 'bg-yellow-900/40 text-yellow-300' :
+                    'bg-blue-900/40 text-blue-300'
+                  }`}>{tool.pricing_type}</span>
+                </td>
+                <td class="px-3 py-2.5 text-center">{tool.mcp_support ? '✓' : '—'}</td>
+                <td class="px-3 py-2.5 text-center">{tool.git_integration ? '✓' : '—'}</td>
+                <td class="px-3 py-2.5 text-(--color-text-muted) text-xs max-w-[120px] truncate">{tool.platforms}</td>
+                <td class="px-3 py-2.5">
+                  {tool.install_command && (
+                    <code class="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-tertiary) px-1.5 py-0.5 rounded whitespace-nowrap">
+                      {tool.install_command}
+                    </code>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Feature Comparison Grid -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Quick Feature Matrix</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-2">Largest Context Window</h3>
+          {tools.filter(t => t.context_window > 0).sort((a, b) => b.context_window - a.context_window).slice(0, 3).map(t => (
+            <div class="flex justify-between text-sm mb-1">
+              <span class="text-(--color-text-secondary)">{t.name}</span>
+              <span class="font-mono text-(--color-text-primary)">{(t.context_window / 1000).toFixed(0)}K</span>
+            </div>
+          ))}
+        </div>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-2">MCP Support</h3>
+          {tools.filter(t => t.mcp_support).map(t => (
+            <div class="text-sm text-(--color-text-secondary) mb-1">{t.name}</div>
+          ))}
+        </div>
+        <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+          <h3 class="font-semibold text-(--color-text-primary) mb-2">Free & Open Source</h3>
+          {tools.filter(t => t.open_source && t.pricing_type === 'free').map(t => (
+            <div class="flex justify-between text-sm mb-1">
+              <span class="text-(--color-text-secondary)">{t.name}</span>
+              <span class="text-xs text-(--color-text-muted)">{t.license}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Choosing Guide -->
+    <div class="mb-8 p-6 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Which CLI Should You Use?</h2>
+      <div class="space-y-3 text-sm text-(--color-text-secondary)">
+        <p><strong class="text-(--color-text-primary)">For autonomous coding tasks:</strong> Claude Code leads on multi-step reasoning and large refactors.</p>
+        <p><strong class="text-(--color-text-primary)">For parallel execution:</strong> Codex CLI can run multiple agents on isolated worktrees simultaneously.</p>
+        <p><strong class="text-(--color-text-primary)">For huge codebases:</strong> Gemini CLI's 1M token context window is 5x larger than alternatives.</p>
+        <p><strong class="text-(--color-text-primary)">For model flexibility:</strong> Aider and Goose are model-agnostic — use whichever LLM you prefer.</p>
+        <p><strong class="text-(--color-text-primary)">For AWS workflows:</strong> Amazon Q Developer CLI has deep AWS service integration.</p>
+        <p><strong class="text-(--color-text-primary)">For web data:</strong> Firecrawl CLI turns any website into LLM-ready markdown for your agents.</p>
+        <p><strong class="text-(--color-text-primary)">For code review:</strong> CodeRabbit CLI focuses on review rather than generation.</p>
+        <p class="text-(--color-text-muted) mt-4 text-xs">Many teams now use multiple tools — the right answer may be "all of them" for different parts of your workflow.</p>
+      </div>
+    </div>
+
+  </main>
+</BaseLayout>

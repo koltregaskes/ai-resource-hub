@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Subscription Confirmed — The AI Resource Hub"
+  description="You're subscribed to The AI Resource Hub newsletter. Welcome aboard!"
+>
+  <section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+    <div class="mb-6">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-(--color-success)/20 mb-4">
+        <svg class="w-8 h-8 text-(--color-success)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        You're subscribed!
+      </h1>
+      <p class="text-(--color-text-secondary) text-lg mb-2">
+        Welcome to The AI Resource Hub newsletter.
+      </p>
+      <p class="text-(--color-text-muted) text-sm">
+        Check your inbox for a confirmation email from Buttondown. You'll start receiving updates soon.
+      </p>
+    </div>
+
+    <div class="mt-10 grid sm:grid-cols-3 gap-4">
+      <a href={`${base}leaderboard/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+        <p class="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Leaderboard</p>
+        <p class="text-xs text-(--color-text-muted) mt-1">See top-ranked AI models</p>
+      </a>
+      <a href={`${base}pricing-trends/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+        <p class="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Pricing Trends</p>
+        <p class="text-xs text-(--color-text-muted) mt-1">Track AI pricing over time</p>
+      </a>
+      <a href={`${base}new/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+        <p class="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">New Releases</p>
+        <p class="text-xs text-(--color-text-muted) mt-1">Latest model launches</p>
+      </a>
+    </div>
+
+    <div class="mt-8">
+      <a href={base} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        &larr; Back to homepage
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Tooltip from '../../components/Tooltip.astro';
+import NewsFilter from '../../components/NewsFilter';
+import { loadNewsDigests } from '../../data/news-digests';
+
+const news = loadNewsDigests();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const digestCount = new Set(news.map(n => n.digestDate)).size;
+const sourceCount = new Set(news.map(n => n.source)).size;
+---
+
+<BaseLayout
+  title="AI News — The AI Resource Hub"
+  description="Daily curated AI news from technical sources — model releases, research breakthroughs, open-source developments, and infrastructure updates."
+>
+  <section class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">News</span>
+    </nav>
+
+    <div class="mb-6">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI News
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {news.length} articles from {sourceCount}
+        <Tooltip term="sources" tip="News is aggregated daily from outlets including TechCrunch, Reuters, The Verge, Ars Technica, and AI-specific channels on YouTube." />
+        across {digestCount} daily digests. Focused on the technical side of AI — model releases, research, infrastructure, and open-source developments.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-1">
+        Updated daily · Use the sidebar to filter by date, source, or search
+      </p>
+    </div>
+
+    <NewsFilter client:load news={news} baseUrl={base} />
+  </section>
+</BaseLayout>

@@ -14,6 +14,36 @@ export const GET: APIRoute = ({ site }) => {
   // Blog posts (static list — matches blog/index.astro)
   const blogPosts = [
     {
+      title: 'What Is RAG? Retrieval-Augmented Generation Explained',
+      slug: 'what-is-rag',
+      date: '2026-02-27',
+      description: 'A plain-English guide to RAG — when to use it, when not to, and how it actually works.',
+    },
+    {
+      title: 'Context Windows Explained: Why Bigger Is Not Always Better',
+      slug: 'context-windows-explained',
+      date: '2026-02-26',
+      description: 'What context windows actually are and how to think about them when choosing a model.',
+    },
+    {
+      title: 'Bench-Maxing and Why You Should Test AI Models on Your Actual Work',
+      slug: 'bench-maxing-personal-benchmarks',
+      date: '2026-02-25',
+      description: 'The case for building a personal test suite based on the work you actually do.',
+    },
+    {
+      title: 'Temperature, Top-p, and the Inference Settings Nobody Explains',
+      slug: 'temperature-top-p-and-inference-settings',
+      date: '2026-02-24',
+      description: 'A practical guide to temperature, top-p, and other generation settings.',
+    },
+    {
+      title: 'AI Agents Explained: What They Are and How They Work',
+      slug: 'ai-agents-explained',
+      date: '2026-02-22',
+      description: 'AI agents that plan, use tools, and take actions — what this means in practice.',
+    },
+    {
       title: 'How AI Benchmarks Work (And Why You Should Care)',
       slug: 'how-ai-benchmarks-work',
       date: '2026-02-20',

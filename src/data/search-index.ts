@@ -147,6 +147,106 @@ export function getSearchIndex(base: string): SearchItem[] {
     });
   }
 
+  // YouTube creators
+  const ytCreators = db.prepare(`
+    SELECT id, name, channel_name, category, description FROM youtube_creators ORDER BY subscribers DESC
+  `).all() as Array<{ id: string; name: string; channel_name: string; category: string; description: string | null }>;
+
+  for (const c of ytCreators) {
+    items.push({
+      id: c.id,
+      title: c.channel_name,
+      type: 'youtube',
+      category: c.category,
+      description: c.description ?? `YouTube channel by ${c.name}`,
+      url: `${base}youtube/`,
+    });
+  }
+
+  // Tags
+  const tags = db.prepare(`
+    SELECT id, name, category, description FROM tags ORDER BY name
+  `).all() as Array<{ id: string; name: string; category: string; description: string | null }>;
+
+  for (const t of tags) {
+    items.push({
+      id: t.id,
+      title: t.name,
+      type: 'tag',
+      category: t.category,
+      description: t.description ?? `Tag: ${t.name}`,
+      url: `${base}tags/${t.id}/`,
+    });
+  }
+
+  // Static section pages
+  const sectionPages = [
+    { id: 'news', title: 'AI News', description: 'Latest AI news — model releases, research, funding, and industry updates' },
+    { id: 'youtube', title: 'AI YouTube Channels', description: 'Curated list of the best YouTube channels covering AI' },
+    { id: 'twitter', title: 'AI on X/Twitter', description: 'Curated list of the top AI accounts to follow on X/Twitter' },
+    { id: 'tags', title: 'Browse by Tag', description: 'Browse AI topics, technologies, and use cases' },
+    { id: 'status', title: 'Provider Status Dashboard', description: 'Check if AI services are up — all provider status pages in one place' },
+    { id: 'tools', title: 'AI Tools Directory', description: 'Comprehensive directory of the best AI tools — chatbots, coding assistants, image generators' },
+    { id: 'timeline', title: 'AI Timeline', description: 'Key moments in AI history — from the Transformer paper to modern LLMs' },
+    { id: 'leaderboard', title: 'AI Model Leaderboard', description: 'Ranked leaderboard of AI models by quality, value, and price' },
+    { id: 'calculator', title: 'API Pricing Calculator', description: 'Calculate and compare AI API costs across different models' },
+    { id: 'methodology', title: 'Methodology', description: 'How we score, rank, and compare AI models — full transparency' },
+    { id: 'open-source', title: 'Open Source AI Models', description: 'Directory of open-source and open-weight AI models ranked by quality' },
+    { id: 'coding', title: 'Best AI Models for Coding', description: 'Ranked leaderboard of the best AI models for coding and software development' },
+    { id: 'stats', title: 'AI Industry Statistics', description: 'Comprehensive statistics on the AI model landscape — pricing, model counts, and more' },
+    { id: 'references', title: 'References & Sources', description: 'Complete list of data sources, academic papers, benchmark methodologies, and citations' },
+    { id: 'about', title: 'About', description: 'About The AI Resource Hub — independent AI model comparison and pricing data' },
+    { id: 'changelog', title: 'Changelog', description: 'What\'s new — changelog of features, data updates, and improvements' },
+    { id: 'pricing-trends', title: 'AI Pricing Trends', description: 'Track AI model pricing trends — how costs have dropped and where pricing is heading' },
+    { id: 'fastest', title: 'Fastest AI Models', description: 'Ranked list of the fastest AI language models by tokens per second' },
+    { id: 'cheapest', title: 'Cheapest AI Models', description: 'Find the most affordable AI language models ranked by price per million tokens' },
+    { id: 'best-value', title: 'Best Value AI Models', description: 'AI models ranked by quality per dollar — find the best bang for your buck' },
+    { id: 'multimodal', title: 'Multimodal AI Models', description: 'AI models that can process text, images, audio, and video' },
+    { id: 'context-window', title: 'Context Window Comparison', description: 'Compare AI model context window sizes from 4K to 4M+ tokens' },
+    { id: 'reasoning', title: 'AI Reasoning Models', description: 'Compare reasoning models ranked by math, logic, and reasoning benchmarks' },
+    { id: 'new', title: 'New AI Models', description: 'Recently released AI models across all categories — track the latest launches' },
+    { id: 'healthcare', title: 'Healthcare AI Models', description: 'AI models ranked by medical benchmark performance — MedQA scores for clinical reasoning' },
+    { id: 'legal', title: 'Legal AI Models', description: 'AI models ranked by legal reasoning — LegalBench scores for issue-spotting and interpretation' },
+    { id: 'finance', title: 'Finance AI Models', description: 'AI models ranked by financial analysis — FinQA and FinanceBench scores' },
+    { id: 'creative-writing', title: 'Creative Writing AI Models', description: 'AI models ranked by creative writing quality — fiction, poetry, and narrative evaluation' },
+    { id: 'agents', title: 'AI Agent Models', description: 'AI models ranked by agent performance — GAIA, WebArena, and TAU-bench for browser and tool use' },
+    { id: 'speed', title: 'AI Speed Comparison', description: 'Compare AI model speed — TTFT, output tokens per second, and provider endpoint benchmarks' },
+    { id: 'academy', title: 'AI Academy', description: 'Free 5-part beginner course — learn AI from scratch, no technical background required' },
+    { id: 'prompts', title: 'Prompt Library', description: 'Model-specific prompting guides and task-based templates with official documentation links' },
+    { id: 'api-guides', title: 'API Getting Started', description: 'Code snippets and setup guides for OpenAI, Anthropic, Google, and Ollama APIs' },
+    { id: 'use-cases', title: 'Best Models by Use Case', description: 'The A-list — best AI models for coding, writing, reasoning, speed, privacy, and more' },
+    { id: 'token-counter', title: 'Token Counter', description: 'Estimate token counts and API costs — paste text and see pricing across all models' },
+    { id: 'rumours', title: 'Rumours & Leaks', description: 'Track stealth AI models, codenames, and leaks — unverified sightings from across the industry' },
+    { id: 'scheduling', title: 'Scheduling Guide', description: 'Set up automated daily data updates on Windows, macOS, or Linux' },
+  ];
+
+  // Custom URL pages
+  items.push({
+    id: 'head-to-head',
+    title: 'Head-to-Head Model Comparison',
+    type: 'page',
+    description: 'Compare 2–4 AI models side by side across pricing, benchmarks, and capabilities',
+    url: `${base}compare/head-to-head/`,
+  });
+
+  items.push({
+    id: 'compare-providers',
+    title: 'Compare AI Providers',
+    type: 'page',
+    description: 'Side-by-side comparison of all major AI providers by quality, pricing, and model lineup',
+    url: `${base}compare/providers/`,
+  });
+
+  for (const s of sectionPages) {
+    items.push({
+      id: s.id,
+      title: s.title,
+      type: 'page',
+      description: s.description,
+      url: `${base}${s.id}/`,
+    });
+  }
+
   _cachedIndex = items;
   return items;
 }

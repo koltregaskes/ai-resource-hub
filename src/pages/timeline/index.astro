@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+interface TimelineEvent {
+  date: string;
+  title: string;
+  description: string;
+  category: string;
+  significance: 'major' | 'notable' | 'standard';
+}
+
+const events: TimelineEvent[] = [
+  // 2026
+  { date: '2026-02', title: 'Claude Opus 4.6 Released', description: 'Anthropic releases Opus 4.6, setting new benchmarks in agentic coding and extended thinking.', category: 'model', significance: 'major' },
+  { date: '2026-02', title: 'SpaceX-xAI Merger', description: 'Elon Musk merges SpaceX and xAI, creating an integrated AI and space infrastructure company.', category: 'industry', significance: 'major' },
+  { date: '2026-01', title: 'GPT-5.3 Codex Launch', description: 'OpenAI launches GPT-5.3 Codex, a specialised coding model with autonomous debugging capabilities.', category: 'model', significance: 'notable' },
+
+  // 2025
+  { date: '2025-12', title: 'Gemini 2.5 Pro Released', description: 'Google releases Gemini 2.5 Pro with 1M+ context window and state-of-the-art benchmarks.', category: 'model', significance: 'major' },
+  { date: '2025-09', title: 'OpenAI o1 Preview', description: 'OpenAI releases o1, introducing chain-of-thought reasoning with extended thinking to consumer AI.', category: 'model', significance: 'major' },
+  { date: '2025-06', title: 'Claude 4 (Sonnet)', description: 'Anthropic launches Claude 4 Sonnet with major improvements in coding, analysis, and tool use.', category: 'model', significance: 'major' },
+  { date: '2025-04', title: 'Llama 4 Released', description: 'Meta releases Llama 4 family of open-weight models, narrowing the gap with closed-source leaders.', category: 'model', significance: 'notable' },
+  { date: '2025-03', title: 'Grok 3 Released', description: 'xAI launches Grok 3 with strong benchmark performance and DeepSearch capabilities.', category: 'model', significance: 'notable' },
+  { date: '2025-02', title: 'DeepSeek-R1 Released', description: 'Chinese lab DeepSeek releases R1, an open-weight reasoning model rivalling o1 at fraction of the cost.', category: 'model', significance: 'major' },
+
+  // 2024
+  { date: '2024-12', title: 'Sora Public Launch', description: 'OpenAI publicly launches Sora for video generation, included with ChatGPT Plus subscription.', category: 'product', significance: 'major' },
+  { date: '2024-09', title: 'OpenAI Raises $6.6B', description: 'OpenAI closes a $6.6 billion funding round at $157 billion valuation — largest AI funding ever.', category: 'funding', significance: 'major' },
+  { date: '2024-06', title: 'Claude 3.5 Sonnet', description: 'Anthropic releases Claude 3.5 Sonnet, widely praised as the best coding model available.', category: 'model', significance: 'major' },
+  { date: '2024-05', title: 'GPT-4o Released', description: 'OpenAI releases GPT-4o ("omni") — multimodal model with native image and audio capabilities.', category: 'model', significance: 'major' },
+  { date: '2024-03', title: 'Claude 3 Family', description: 'Anthropic launches Claude 3 (Haiku, Sonnet, Opus) — first to match GPT-4 across benchmarks.', category: 'model', significance: 'major' },
+  { date: '2024-02', title: 'Gemini 1.5 Pro', description: 'Google releases Gemini 1.5 Pro with 1 million token context window — 10x previous record.', category: 'model', significance: 'notable' },
+  { date: '2024-02', title: 'Sora Announced', description: 'OpenAI announces Sora, a text-to-video model capable of generating realistic 1-minute videos.', category: 'research', significance: 'major' },
+
+  // 2023
+  { date: '2023-12', title: 'Gemini 1.0 Released', description: 'Google launches Gemini, the successor to Bard, with Ultra, Pro, and Nano versions.', category: 'model', significance: 'notable' },
+  { date: '2023-11', title: 'OpenAI Leadership Crisis', description: 'Sam Altman fired and reinstated as OpenAI CEO within 5 days. Major governance upheaval.', category: 'industry', significance: 'major' },
+  { date: '2023-07', title: 'Llama 2 Released', description: 'Meta releases Llama 2 as open-source, accelerating the open-source AI ecosystem.', category: 'model', significance: 'major' },
+  { date: '2023-07', title: 'Claude 2 Released', description: 'Anthropic launches Claude 2 with 100K context window and improved safety.', category: 'model', significance: 'notable' },
+  { date: '2023-04', title: 'AI Safety Letter', description: 'Over 1,000 tech leaders sign open letter calling for 6-month pause on giant AI experiments.', category: 'safety', significance: 'major' },
+  { date: '2023-03', title: 'GPT-4 Released', description: 'OpenAI releases GPT-4 — significantly more capable, multimodal (text + images).', category: 'model', significance: 'major' },
+  { date: '2023-02', title: 'Bing Chat Launch', description: 'Microsoft launches Bing Chat powered by GPT-4, integrating AI into search.', category: 'product', significance: 'notable' },
+
+  // 2022
+  { date: '2022-11', title: 'ChatGPT Launch', description: 'OpenAI launches ChatGPT. Reaches 100 million users in 2 months — fastest-growing consumer app ever.', category: 'product', significance: 'major' },
+  { date: '2022-10', title: 'Stable Diffusion Public Release', description: 'Stability AI releases Stable Diffusion as open-source, democratising AI image generation.', category: 'model', significance: 'major' },
+  { date: '2022-07', title: 'Midjourney Beta', description: 'Midjourney launches public beta, making AI art generation accessible via Discord.', category: 'product', significance: 'notable' },
+  { date: '2022-04', title: 'DALL-E 2 Released', description: 'OpenAI releases DALL-E 2 with dramatically improved image generation quality.', category: 'model', significance: 'notable' },
+
+  // 2021 and earlier
+  { date: '2021-01', title: 'DALL-E Announced', description: 'OpenAI announces DALL-E, generating images from text descriptions for the first time.', category: 'research', significance: 'major' },
+  { date: '2020-06', title: 'GPT-3 Released', description: 'OpenAI releases GPT-3 with 175 billion parameters. First model to show emergent abilities.', category: 'model', significance: 'major' },
+  { date: '2020-01', title: 'AlphaFold Solves Protein Folding', description: 'DeepMind\'s AlphaFold solves the 50-year-old protein folding problem. Later wins Nobel Prize.', category: 'research', significance: 'major' },
+  { date: '2019-02', title: 'GPT-2 Released', description: 'OpenAI releases GPT-2, initially withholding the full model over concerns about misuse.', category: 'model', significance: 'notable' },
+  { date: '2017-06', title: '"Attention Is All You Need"', description: 'Google researchers publish the Transformer paper, laying the foundation for all modern LLMs.', category: 'research', significance: 'major' },
+  { date: '2016-03', title: 'AlphaGo Defeats Lee Sedol', description: 'DeepMind\'s AlphaGo defeats world Go champion Lee Sedol 4-1, a watershed moment for AI.', category: 'research', significance: 'major' },
+  { date: '2015-12', title: 'OpenAI Founded', description: 'Sam Altman, Elon Musk, and others found OpenAI as a non-profit AI research lab.', category: 'industry', significance: 'major' },
+  { date: '2014-01', title: 'Google Acquires DeepMind', description: 'Google acquires DeepMind for $500 million, its largest AI acquisition.', category: 'industry', significance: 'notable' },
+  { date: '2012-09', title: 'AlexNet / ImageNet Breakthrough', description: 'Alex Krizhevsky\'s deep neural network wins ImageNet by a massive margin, launching the deep learning revolution.', category: 'research', significance: 'major' },
+];
+
+const categoryColors: Record<string, string> = {
+  model: 'bg-blue-500/20 text-blue-400',
+  product: 'bg-green-500/20 text-green-400',
+  industry: 'bg-purple-500/20 text-purple-400',
+  research: 'bg-amber-500/20 text-amber-400',
+  safety: 'bg-red-500/20 text-red-400',
+  funding: 'bg-emerald-500/20 text-emerald-400',
+};
+---
+
+<BaseLayout
+  title="AI Timeline — Key Moments in AI History — The AI Resource Hub"
+  description="A timeline of the most important events in AI — from the Transformer paper to GPT-4, Claude, and beyond."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Timeline</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI Timeline
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        The most important moments in AI history — from deep learning breakthroughs to the models reshaping every industry. {events.length} key events from 2012 to today.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <div class="absolute left-4 top-0 bottom-0 w-px bg-(--color-border)"></div>
+
+      {events.map((event, i) => {
+        const prevYear = i > 0 ? events[i - 1].date.slice(0, 4) : '';
+        const thisYear = event.date.slice(0, 4);
+        const showYearHeader = thisYear !== prevYear;
+
+        return (
+          <>
+            {showYearHeader && (
+              <div class="relative pl-12 mb-4 mt-8 first:mt-0">
+                <div class="absolute left-2 w-5 h-5 rounded-full bg-(--color-accent) border-2 border-(--color-bg-primary) z-10 flex items-center justify-center">
+                  <div class="w-2 h-2 rounded-full bg-(--color-bg-primary)"></div>
+                </div>
+                <h2 class="text-2xl font-extrabold text-(--color-text-primary)">{thisYear}</h2>
+              </div>
+            )}
+            <div class={`relative pl-12 mb-4 ${event.significance === 'major' ? '' : 'opacity-80'}`}>
+              <div class={`absolute left-3 w-3 h-3 rounded-full z-10 ${event.significance === 'major' ? 'bg-(--color-accent)' : 'bg-(--color-border)'}`}></div>
+              <div class={`p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) ${event.significance === 'major' ? 'border-l-2 border-l-(--color-accent)' : ''}`}>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs text-(--color-text-muted)">{event.date}</span>
+                  <span class={`text-[10px] px-1.5 py-0.5 rounded ${categoryColors[event.category] || 'bg-(--color-bg-tertiary) text-(--color-text-muted)'}`}>
+                    {event.category}
+                  </span>
+                </div>
+                <h3 class={`font-semibold text-(--color-text-primary) ${event.significance === 'major' ? 'text-base' : 'text-sm'}`}>
+                  {event.title}
+                </h3>
+                <p class="text-sm text-(--color-text-secondary) mt-1">
+                  {event.description}
+                </p>
+              </div>
+            </div>
+          </>
+        );
+      })}
+    </div>
+  </section>
+</BaseLayout>

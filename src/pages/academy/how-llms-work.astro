@@ -1,0 +1,373 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="How Large Language Models Work — AI Academy Part 2 — The AI Resource Hub"
+  description="Understand how ChatGPT, Claude, and Gemini actually generate text. Tokens, training, the Transformer architecture, and why models hallucinate — explained simply."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}academy/`} class="hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Part 2</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Beginner</span>
+        <span class="text-xs text-(--color-text-muted)">8 min read</span>
+        <span class="text-xs text-(--color-text-muted)">Part 2 of 5</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        How Large Language Models Work
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        In Part 1, we learned what AI is at a high level. Now let's look under the hood of the technology
+        that powers ChatGPT, Claude, Gemini, and every other AI chatbot you've used. You don't need a
+        computer science degree -- just curiosity.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <!-- Section 1: What is a Large Language Model? -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">1. What Is a Large Language Model?</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          A <strong class="text-(--color-text-primary)">Large Language Model</strong> (LLM) is a type of AI that has been trained on
+          enormous amounts of text to understand and generate human language. When you type a message into ChatGPT, Claude, Gemini, or
+          any similar tool, you're talking to an LLM.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          The "large" in LLM refers to two things: the massive amount of text data the model was trained on (often most of the
+          publicly available internet), and the sheer number of internal parameters -- the numerical values the model has learned,
+          which can number in the hundreds of billions.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          At its core, an LLM does something deceptively simple: <strong class="text-(--color-text-primary)">it predicts the next word</strong>.
+          Given the text that comes before, the model calculates which word (or piece of a word) is most likely to come next.
+          Then it takes that output, appends it to the input, and predicts the next word again. And again. And again.
+          That's how it writes entire paragraphs, essays, and even code -- one word at a time.
+        </p>
+
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20 mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Key Concept</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            LLMs are next-word prediction machines. The sentence "The cat sat on the ___" has a highly predictable next word ("mat",
+            "floor", "chair"). LLMs do exactly this, but across billions of patterns learned from training data. The results are so
+            good they can feel like understanding -- but the underlying mechanism is statistical prediction, not reasoning the way
+            humans do.
+          </p>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          Well-known LLMs include OpenAI's <strong class="text-(--color-text-primary)">GPT-4o</strong>, Anthropic's
+          <strong class="text-(--color-text-primary)">Claude</strong>, Google's <strong class="text-(--color-text-primary)">Gemini</strong>,
+          and Meta's open-source <strong class="text-(--color-text-primary)">Llama</strong> models. They all work on this same
+          fundamental principle, though they differ in their training data, size, architecture details, and fine-tuning.
+        </p>
+      </section>
+
+      <!-- Section 2: Tokens and Tokenisation -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. Tokens and Tokenisation</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Before an LLM can process your message, it needs to break the text down into smaller pieces called
+          <strong class="text-(--color-text-primary)">tokens</strong>. This process is called
+          <strong class="text-(--color-text-primary)">tokenisation</strong>, and it's the very first step in everything an LLM does.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          A token is not the same as a word. Tokens are chunks of text that the model has learned to treat as units.
+          Short, common words like "I" or "the" are usually a single token. Longer or less common words get split into
+          multiple tokens. Punctuation, spaces, and even parts of words can each be their own token.
+        </p>
+
+        <!-- Tokenisation visual example -->
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <p class="text-xs font-semibold text-(--color-text-muted) uppercase tracking-wider mb-3">Tokenisation Example</p>
+          <p class="text-sm text-(--color-text-secondary) mb-3">The sentence <strong class="text-(--color-text-primary)">"I love programming"</strong> gets split into four tokens:</p>
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-(--color-accent)/10 border border-(--color-accent)/30 text-sm font-mono text-(--color-accent)">"I"</span>
+            <span class="text-(--color-text-muted) self-center">+</span>
+            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-(--color-accent)/10 border border-(--color-accent)/30 text-sm font-mono text-(--color-accent)">" love"</span>
+            <span class="text-(--color-text-muted) self-center">+</span>
+            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-(--color-accent)/10 border border-(--color-accent)/30 text-sm font-mono text-(--color-accent)">" program"</span>
+            <span class="text-(--color-text-muted) self-center">+</span>
+            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-(--color-accent)/10 border border-(--color-accent)/30 text-sm font-mono text-(--color-accent)">"ming"</span>
+          </div>
+          <p class="text-xs text-(--color-text-muted)">
+            Notice: "love" keeps a leading space as part of the token. "programming" is split into "program" and "ming" because the
+            model's tokeniser treats them as separate units. The exact split depends on the model's vocabulary.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20 mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Key Concept</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            A rough rule of thumb: <strong class="text-(--color-text-primary)">1 token is approximately 4 characters</strong> in English,
+            or about three-quarters of a word. A 1,000-word essay is roughly 1,300 to 1,500 tokens. This matters because
+            AI services charge per token -- both for your input (the prompt) and the model's output (the response). Understanding
+            tokens is essential for understanding AI pricing.
+          </p>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          Different models use different tokenisers, which means the same sentence might be split slightly differently
+          by GPT-4 versus Claude versus Gemini. But the core idea is universal: text goes in as raw characters and
+          comes out as a sequence of token IDs that the model can work with mathematically.
+        </p>
+      </section>
+
+      <!-- Section 3: Training -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">3. How Models Are Trained</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Training an LLM happens in two major phases. Understanding these phases helps explain both why LLMs are
+          so capable and why they have the specific limitations they do.
+        </p>
+
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Phase 1: Pre-training</h3>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          In the pre-training phase, the model reads an astronomical amount of text -- books, websites, articles, forums,
+          code repositories, scientific papers, and much more. We're talking about trillions of words. During this process,
+          the model is given a simple task over and over: predict the next word. It reads a sequence of tokens, predicts
+          what comes next, checks if it was right, and adjusts its internal parameters to do better next time.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          This process requires enormous computing power -- thousands of specialised processors (GPUs or TPUs) running
+          for weeks or months. The cost of pre-training a frontier model can run into tens or even hundreds of millions
+          of dollars. The result is a "base model" that is very good at predicting text but not yet good at following instructions
+          or having a conversation.
+        </p>
+
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Phase 2: Fine-tuning and RLHF</h3>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          A base model that can predict the next word is impressive, but it's not particularly useful as an assistant.
+          If you ask it a question, it might just continue generating text in the style of a web page rather than
+          answering you directly. This is where fine-tuning comes in.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          During fine-tuning, the model is trained on carefully curated examples of good conversations: a human asks a
+          question, and an ideal response is provided. The model learns to follow instructions, be helpful, and format
+          its answers clearly.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          An important technique in this phase is <strong class="text-(--color-text-primary)">RLHF</strong> (Reinforcement Learning
+          from Human Feedback). Human reviewers rank different model outputs from best to worst. The model then learns to
+          produce responses that humans prefer -- not just text that is statistically likely, but text that is helpful, honest,
+          and safe. This is a large part of what makes modern chatbots feel so conversational.
+        </p>
+
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Key Concept</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            Modern LLMs have billions of <strong class="text-(--color-text-primary)">parameters</strong> -- the numerical values
+            that encode everything the model has learned. GPT-4 is estimated to have over a trillion parameters. Claude, Gemini,
+            and Llama models all operate in the range of tens to hundreds of billions. More parameters generally means the model
+            can capture more nuance, but also requires more computing power to run.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: The Transformer Architecture -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. The Transformer Architecture</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Every modern LLM is built on an architecture called the <strong class="text-(--color-text-primary)">Transformer</strong>,
+          introduced in a landmark 2017 research paper from Google titled "Attention Is All You Need." This paper changed the
+          entire field of AI, and its core innovation -- the <strong class="text-(--color-text-primary)">attention mechanism</strong> --
+          is what makes today's language models possible.
+        </p>
+
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">What came before: processing words one at a time</h3>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Before Transformers, language models processed text sequentially -- one word at a time, left to right, like reading
+          a sentence aloud. This made them slow and forgetful. By the time the model reached the end of a long paragraph,
+          it had often "forgotten" details from the beginning. Long-range context was a fundamental problem.
+        </p>
+
+        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">The breakthrough: attention</h3>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          The Transformer's key innovation is that <strong class="text-(--color-text-primary)">the model can look at all the words at
+          once, not just left-to-right</strong>. When generating each new word, the model uses its attention mechanism to decide
+          which parts of the input are most relevant to what it's producing right now.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Think of it like reading an exam question. You don't read it one word at a time and forget the beginning by the end.
+          You scan the whole thing, focus on the key parts, and then formulate your answer. That's essentially what the
+          attention mechanism does -- it lets the model "attend to" (focus on) different parts of the input simultaneously,
+          weighting them by relevance.
+        </p>
+
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <p class="text-xs font-semibold text-(--color-text-muted) uppercase tracking-wider mb-3">A Simple Example</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+            Consider the sentence: <em class="text-(--color-text-primary)">"The dog didn't cross the street because it was too wide."</em>
+          </p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            What does "it" refer to -- the dog or the street? You know it's the street (streets are wide, not dogs). The attention
+            mechanism allows the model to make the same connection by directly linking "it" to "street" based on patterns learned
+            during training, even though the two words are far apart in the sentence.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Why This Was Revolutionary</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            The Transformer architecture solved two problems at once. First, it could handle long-range dependencies --
+            connecting information across thousands of words. Second, because it processes all words in parallel rather than
+            one at a time, it could be trained much faster on much more data. This is what enabled the jump from modest
+            language models to the massive, capable LLMs we have today. Every major model -- GPT, Claude, Gemini, Llama --
+            is a Transformer.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 5: Why Models Hallucinate -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. Why Models Hallucinate</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          If there is one thing you take away from this entire course, let it be this:
+          <strong class="text-(--color-text-primary)">LLMs do not look up facts. They predict likely text.</strong>
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          When you ask a model "Who wrote Hamlet?", it doesn't search a database. Instead, it has seen the pattern
+          "Hamlet was written by William Shakespeare" so many times during training that "William Shakespeare" is the
+          overwhelmingly likely next set of tokens. It gets the answer right -- but not because it "knows" the fact.
+          It gets it right because that pattern was extremely common in its training data.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          The problem arises when you ask something that doesn't have a dominant pattern in the training data. The model
+          will still generate confident, fluent text -- because that's what it was trained to do. But the content may
+          be completely fabricated. This is called <strong class="text-(--color-text-primary)">hallucination</strong>.
+        </p>
+
+        <div class="p-4 rounded-xl bg-red-500/5 border border-red-500/20 mb-4">
+          <p class="text-xs font-semibold text-red-400 uppercase tracking-wider mb-2">Critical Limitation</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+            A hallucinating model doesn't signal that it's unsure. It presents made-up information with exactly the same
+            confident, authoritative tone it uses for accurate information. It will cite research papers that don't exist,
+            invent statistics, fabricate quotes, and describe events that never happened -- all while sounding completely
+            certain.
+          </p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            This is not a bug that will be easily fixed. It's a fundamental consequence of how these models work: they
+            generate <em>plausible</em> text, and plausible is not the same as <em>true</em>.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">How to Protect Yourself</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><strong class="text-(--color-text-primary)">Verify claims independently</strong> -- especially statistics, dates, names, and citations.</li>
+            <li><strong class="text-(--color-text-primary)">Ask the model to show its reasoning</strong> -- if it can't explain how it arrived at an answer, be suspicious.</li>
+            <li><strong class="text-(--color-text-primary)">Be extra cautious in high-stakes domains</strong> -- medical, legal, and financial information should always be checked by a professional.</li>
+            <li><strong class="text-(--color-text-primary)">Tell the model it's OK to say "I don't know"</strong> -- this can reduce (but not eliminate) hallucination.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 6: Context Windows -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">6. Context Windows: The Model's Working Memory</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          An LLM doesn't have memory in the way you do. It doesn't remember your conversation from yesterday or learn
+          from past interactions. Instead, every time you send a message, the model receives your entire conversation
+          so far as input and generates a response based on that. The maximum amount of text it can receive at once is
+          called the <strong class="text-(--color-text-primary)">context window</strong>.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Think of the context window as the model's working memory -- everything it can "see" at one time. Anything
+          outside this window doesn't exist to the model. If your conversation grows longer than the context window,
+          the oldest messages get dropped and the model simply cannot reference them any more.
+        </p>
+
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-4">
+          <p class="text-xs font-semibold text-(--color-text-muted) uppercase tracking-wider mb-3">Context Window Sizes (Examples)</p>
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-sm">
+              <span class="text-(--color-text-secondary)">GPT-4o</span>
+              <span class="text-(--color-text-primary) font-mono">128K tokens</span>
+            </div>
+            <div class="w-full bg-(--color-bg-tertiary) rounded-full h-2">
+              <div class="bg-(--color-accent) h-2 rounded-full" style="width: 64%"></div>
+            </div>
+            <div class="flex justify-between items-center text-sm">
+              <span class="text-(--color-text-secondary)">Claude (Anthropic)</span>
+              <span class="text-(--color-text-primary) font-mono">200K tokens</span>
+            </div>
+            <div class="w-full bg-(--color-bg-tertiary) rounded-full h-2">
+              <div class="bg-(--color-accent) h-2 rounded-full" style="width: 100%"></div>
+            </div>
+            <div class="flex justify-between items-center text-sm">
+              <span class="text-(--color-text-secondary)">Gemini 1.5 Pro</span>
+              <span class="text-(--color-text-primary) font-mono">1M+ tokens</span>
+            </div>
+            <div class="w-full bg-(--color-bg-tertiary) rounded-full h-2">
+              <div class="bg-(--color-accent) h-2 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          <p class="text-xs text-(--color-text-muted) mt-3">
+            128K tokens is roughly equivalent to a 300-page book. 1M tokens can hold multiple books.
+            Context windows have grown dramatically -- early GPT-3 had only 4K tokens.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20 mb-4">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Key Concept</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            Context windows are measured in tokens, not words. Remember: 1 token is roughly 4 characters. A larger context
+            window means the model can process longer documents, maintain longer conversations, and consider more information
+            at once. But larger context windows also cost more (you pay per token) and can be slower. There's always a trade-off.
+          </p>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          Context window size is one of the most important factors when choosing a model. For a detailed side-by-side comparison
+          of context windows across all major models, see our
+          <a href={`${base}context-window/`} class="text-(--color-accent) hover:underline">Context Window Comparison</a> page.
+        </p>
+      </section>
+
+      <!-- Summary -->
+      <section class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Part 2 Summary</h2>
+        <ul class="text-sm text-(--color-text-secondary) space-y-2.5">
+          <li><strong class="text-(--color-text-primary)">LLMs predict the next token</strong> -- that's the fundamental mechanism behind GPT, Claude, Gemini, and all similar models.</li>
+          <li><strong class="text-(--color-text-primary)">Text is split into tokens</strong>, not words. Roughly 1 token = 4 characters. Tokens determine both what the model can process and what you pay.</li>
+          <li><strong class="text-(--color-text-primary)">Training has two phases</strong>: pre-training (reading the internet) gives broad knowledge; fine-tuning and RLHF make the model helpful and safe.</li>
+          <li><strong class="text-(--color-text-primary)">The Transformer architecture</strong> (2017) is the breakthrough behind all modern LLMs. Its attention mechanism lets models consider all words at once.</li>
+          <li><strong class="text-(--color-text-primary)">Models hallucinate</strong> because they predict likely text, not verified facts. Always verify important information independently.</li>
+          <li><strong class="text-(--color-text-primary)">Context windows</strong> define how much text the model can see at once -- its working memory. Bigger isn't always better due to cost and speed trade-offs.</li>
+        </ul>
+      </section>
+
+      <!-- Navigation -->
+      <nav class="flex flex-col sm:flex-row justify-between gap-4 pt-4">
+        <a
+          href={`${base}academy/what-is-ai/`}
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Part 1: What Is AI?
+        </a>
+        <a
+          href={`${base}academy/your-first-prompt/`}
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-accent) text-white font-medium hover:opacity-90 transition-opacity text-sm"
+        >
+          Part 3: Writing Your First Prompt
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </article>
+</BaseLayout>

@@ -12,7 +12,11 @@
     "scrape": "tsx scripts/scrape-all.ts",
     "scrape:pricing": "tsx scripts/scrapers/pricing.ts",
     "scrape:openrouter": "tsx scripts/scrapers/openrouter.ts",
-    "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts"
+    "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts",
+    "scrape:speed": "tsx scripts/scrapers/speed.ts",
+    "check:staleness": "tsx scripts/check-staleness.ts",
+    "import:news": "tsx scripts/import-news-digests.ts",
+    "generate:digest": "tsx scripts/generate-digest.ts"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
@@ -22,7 +26,9 @@
     "@types/react-dom": "^19.2.3",
     "astro": "^5.17.3",
     "better-sqlite3": "^12.6.2",
+    "chart.js": "^4.5.1",
     "react": "^19.2.4",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.4",
     "tailwindcss": "^4.2.0",
     "typescript": "^5.9.3"

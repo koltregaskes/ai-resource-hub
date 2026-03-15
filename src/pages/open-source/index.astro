@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory, getModelBenchmarks } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Get all active models across all categories
+const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
+const allModels: Array<{
+  id: string;
+  name: string;
+  provider: string;
+  colour: string;
+  qualityScore: number;
+  inputPrice: number;
+  outputPrice: number;
+  contextWindow: number;
+  released: string | null;
+  category: string;
+  modality: string;
+  benchmarkCount: number;
+  notes: string | undefined;
+}> = [];
+
+for (const cat of categories) {
+  const models = getModelsByCategory(cat);
+  for (const m of models) {
+    if (m.openSource) {
+      const scores = cat === 'llm' ? getModelBenchmarks(m.id) : [];
+      allModels.push({
+        id: m.id,
+        name: m.name,
+        provider: m.provider,
+        colour: m.providerColour,
+        qualityScore: m.qualityScore,
+        inputPrice: m.inputPrice,
+        outputPrice: m.outputPrice,
+        contextWindow: m.contextWindow,
+        released: m.released,
+        category: cat,
+        modality: m.modality,
+        benchmarkCount: scores.length,
+        notes: m.notes,
+      });
+    }
+  }
+}
+
+// Sort by quality score
+allModels.sort((a, b) => b.qualityScore - a.qualityScore);
+
+const llmModels = allModels.filter(m => m.category === 'llm');
+const otherModels = allModels.filter(m => m.category !== 'llm');
+
+const categoryLabels: Record<string, string> = {
+  llm: 'Language Model',
+  image: 'Image Generation',
+  video: 'Video Generation',
+  voice: 'Voice & TTS',
+  speech: 'Speech-to-Text',
+  sound: 'Music & Sound',
+};
+---
+
+<BaseLayout
+  title="Open Source AI Models — The AI Resource Hub"
+  description="Comprehensive directory of open-source AI models. Compare open-weight LLMs, image generators, and more — all ranked by quality."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Open Source Models</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Open Source AI Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {allModels.length} open-source and open-weight AI models ranked by quality. These models can be self-hosted, fine-tuned, and deployed without vendor lock-in.
+      </p>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-accent)">{allModels.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Open Source Models</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{llmModels.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Language Models</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{new Set(allModels.map(m => m.provider)).size}</p>
+        <p class="text-xs text-(--color-text-muted)">Providers</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">{allModels.filter(m => m.inputPrice === 0).length}</p>
+        <p class="text-xs text-(--color-text-muted)">Free to Use</p>
+      </div>
+    </div>
+
+    <!-- LLM Table -->
+    {llmModels.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Open Source Language Models</h2>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Context</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Benchmarks</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">API Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {llmModels.map((m, i) => (
+                <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
+                  <td class="py-3 px-2 text-center">
+                    <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                      {i + 1}
+                    </span>
+                  </td>
+                  <td class="py-3 px-4">
+                    <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                      <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
+                      <span class="font-medium">{m.name}</span>
+                    </a>
+                    <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right">
+                    <span class="font-mono font-medium text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right hidden sm:table-cell">
+                    <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? `${(m.contextWindow / 1000).toFixed(0)}K` : '—'}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right hidden md:table-cell">
+                    <span class="text-xs text-(--color-text-muted)">{m.benchmarkCount > 0 ? m.benchmarkCount : '—'}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                    {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)} / $${m.outputPrice.toFixed(2)}` : 'Self-host'}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    <!-- Other categories -->
+    {otherModels.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Other Open Source Models</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {otherModels.map(m => (
+            <a href={`${base}models/${m.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{m.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{m.provider} &middot; {categoryLabels[m.category] || m.category}</p>
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-sm text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                <span class="text-xs text-(--color-text-muted)">{m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}/M` : 'Self-host'}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Info box -->
+    <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">What does "Open Source" mean for AI?</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        Open-source AI models publish their model weights, allowing anyone to download, run, fine-tune, and deploy them. Some models (like Meta's Llama) use custom licences with usage restrictions, while others (like Mistral and some DeepSeek models) use fully permissive licences. "Open weight" is technically more accurate for models that share weights but not training data or code, though "open source" is commonly used.
+      </p>
+    </div>
+
+    <div class="mt-6 text-center">
+      <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        View all models (open & closed) &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

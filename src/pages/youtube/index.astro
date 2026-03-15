@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getYouTubeCreators, getYouTubeCreatorCategories } from '../../db/queries';
+
+const creators = getYouTubeCreators();
+const categories = getYouTubeCreatorCategories();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const categoryLabels: Record<string, string> = {
+  'news': 'AI News & Analysis',
+  'tutorials': 'Tutorials & Education',
+  'research': 'AI Research',
+  'coding': 'AI Coding',
+  'creative': 'AI Art & Creative',
+  'business': 'Business & Strategy',
+  'general': 'General AI',
+};
+
+const categoryColours: Record<string, string> = {
+  'news': 'bg-blue-500/20 text-blue-400',
+  'tutorials': 'bg-green-500/20 text-green-400',
+  'research': 'bg-purple-500/20 text-purple-400',
+  'coding': 'bg-emerald-500/20 text-emerald-400',
+  'creative': 'bg-pink-500/20 text-pink-400',
+  'business': 'bg-yellow-500/20 text-yellow-400',
+  'general': 'bg-gray-500/20 text-gray-400',
+};
+
+function formatSubs(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(0)}K`;
+  return String(n);
+}
+---
+
+<BaseLayout
+  title="AI YouTube Channels to Follow — The AI Resource Hub"
+  description="Curated list of the best YouTube channels covering AI news, tutorials, research, coding, and creative tools."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">YouTube Channels</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        AI YouTube Channels to Follow
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {creators.length} curated YouTube channels covering AI news, tutorials, research, coding, and creative tools.
+      </p>
+    </div>
+
+    <!-- Category filters -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      {categories.map((cat) => (
+        <span class={`text-xs px-3 py-1.5 rounded-full font-medium ${categoryColours[cat.category] ?? categoryColours.general}`}>
+          {categoryLabels[cat.category] ?? cat.category} ({cat.count})
+        </span>
+      ))}
+    </div>
+
+    <!-- Creator cards -->
+    {categories.map((cat) => {
+      const catCreators = creators.filter(c => c.category === cat.category);
+      return (
+        <div class="mb-10">
+          <h2 class="text-xl font-bold text-(--color-text-primary) mb-4 flex items-center gap-2">
+            <span class={`text-xs px-2.5 py-1 rounded-full font-medium ${categoryColours[cat.category] ?? categoryColours.general}`}>
+              {cat.count}
+            </span>
+            {categoryLabels[cat.category] ?? cat.category}
+          </h2>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {catCreators.map((creator) => (
+              <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors">
+                <div class="flex items-start gap-3">
+                  <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 font-semibold text-sm shrink-0">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-semibold text-(--color-text-primary) truncate">{creator.channel_name}</h3>
+                    <p class="text-xs text-(--color-text-muted)">
+                      {creator.name}
+                      {creator.youtube_handle && <span class="ml-1 text-(--color-text-muted)">@{creator.youtube_handle}</span>}
+                    </p>
+                  </div>
+                  <span class="text-xs font-mono text-(--color-accent) whitespace-nowrap">
+                    {formatSubs(creator.subscribers)} subs
+                  </span>
+                </div>
+
+                {creator.description && (
+                  <p class="text-sm text-(--color-text-secondary) mt-3 line-clamp-2">
+                    {creator.description}
+                  </p>
+                )}
+
+                <div class="flex items-center gap-3 mt-3">
+                  {creator.youtube_handle && (
+                    <a
+                      href={`https://youtube.com/@${creator.youtube_handle}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 text-xs text-red-400 hover:text-red-300 transition-colors"
+                    >
+                      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                      </svg>
+                      YouTube
+                    </a>
+                  )}
+                  {creator.twitter && (
+                    <a
+                      href={`https://x.com/${creator.twitter.replace('@', '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+                    >
+                      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                      </svg>
+                      {creator.twitter}
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    })}
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'AI YouTube Channels to Follow',
+    description: `${creators.length} curated YouTube channels covering AI news, tutorials, research, and more.`,
+    numberOfItems: creators.length,
+    itemListElement: creators.slice(0, 30).map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Person',
+        name: c.name,
+        url: c.youtube_handle ? `https://youtube.com/@${c.youtube_handle}` : undefined,
+      },
+    })),
+  })} />
+</BaseLayout>

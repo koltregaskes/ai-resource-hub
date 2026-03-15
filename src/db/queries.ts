@@ -10,6 +10,8 @@ export interface DBProvider {
   name: string;
   colour: string;
   website: string | null;
+  status_url: string | null;
+  api_docs_url: string | null;
   description: string | null;
   founded: string | null;
   headquarters: string | null;
@@ -231,6 +233,9 @@ export interface DBModelDetail {
   context_window: number;
   max_output: number;
   speed: number;
+  ttft: number;
+  speed_source: string | null;
+  speed_updated: string | null;
   quality_score: number;
   released: string | null;
   open_source: number;
@@ -374,6 +379,143 @@ export function getModelPriceHistory(modelId: string): DBPriceHistory[] {
     WHERE model_id = ?
     ORDER BY recorded_at ASC
   `).all(modelId) as DBPriceHistory[];
+}
+
+/**
+ * Get models that have price history records, grouped.
+ */
+export interface PriceHistoryWithModel {
+  model_id: string;
+  model_name: string;
+  provider: string;
+  provider_colour: string;
+  input_price: number;
+  output_price: number;
+  recorded_at: string;
+}
+
+export function getModelsWithPriceHistory(): PriceHistoryWithModel[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT ph.model_id, m.name AS model_name, p.name AS provider, p.colour AS provider_colour,
+           ph.input_price, ph.output_price, ph.recorded_at
+    FROM price_history ph
+    JOIN models m ON ph.model_id = m.id
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.status = 'active'
+    ORDER BY ph.model_id, ph.recorded_at ASC
+  `).all() as PriceHistoryWithModel[];
+}
+
+/**
+ * Get provider endpoints for a specific model (multi-provider comparison).
+ */
+export interface DBProviderEndpoint {
+  id: string;
+  model_id: string;
+  provider_id: string;
+  provider_name: string;
+  provider_colour: string;
+  endpoint_name: string;
+  speed: number;
+  ttft: number;
+  input_price: number;
+  output_price: number;
+  measured_at: string | null;
+  source: string | null;
+}
+
+export function getProviderEndpoints(modelId: string): DBProviderEndpoint[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT pe.id, pe.model_id, pe.provider_id, p.name AS provider_name, p.colour AS provider_colour,
+           pe.endpoint_name, pe.speed, pe.ttft, pe.input_price, pe.output_price, pe.measured_at, pe.source
+    FROM provider_endpoints pe
+    JOIN providers p ON pe.provider_id = p.id
+    WHERE pe.model_id = ?
+    ORDER BY pe.speed DESC
+  `).all(modelId) as DBProviderEndpoint[];
+}
+
+/**
+ * Get all models that have multi-provider endpoints.
+ */
+export function getModelsWithMultipleEndpoints(): Array<{ model_id: string; model_name: string; provider: string; provider_colour: string; endpoint_count: number }> {
+  const db = getDB();
+  return db.prepare(`
+    SELECT pe.model_id, m.name AS model_name, p.name AS provider, p.colour AS provider_colour,
+           COUNT(*) AS endpoint_count
+    FROM provider_endpoints pe
+    JOIN models m ON pe.model_id = m.id
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.status = 'active'
+    GROUP BY pe.model_id
+    HAVING COUNT(*) >= 2
+    ORDER BY endpoint_count DESC
+  `).all() as Array<{ model_id: string; model_name: string; provider: string; provider_colour: string; endpoint_count: number }>;
+}
+
+/**
+ * Get all LLM models with TTFT data, sorted by lowest TTFT first.
+ */
+export interface DBModelTTFT {
+  id: string;
+  name: string;
+  ttft: number;
+  speed: number;
+  provider: string;
+  provider_colour: string;
+  quality_score: number;
+  input_price: number;
+  output_price: number;
+  speed_source: string | null;
+}
+
+export function getModelsWithTTFT(): DBModelTTFT[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT m.id, m.name, m.ttft, m.speed, p.name AS provider, p.colour AS provider_colour,
+           m.quality_score, m.input_price, m.output_price, m.speed_source
+    FROM models m
+    JOIN providers p ON m.provider_id = p.id
+    WHERE m.ttft > 0 AND m.status = 'active' AND m.category = 'llm'
+    ORDER BY m.ttft ASC
+  `).all() as DBModelTTFT[];
+}
+
+/**
+ * Get all rumoured/stealth models.
+ */
+export interface DBRumouredModel {
+  id: string;
+  codename: string;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  status: string;
+  first_seen: string;
+  confirmed_as: string | null;
+  confirmed_name: string | null;
+  sources: string | null;
+  notes: string | null;
+  category: string;
+}
+
+export function getRumouredModels(): DBRumouredModel[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT rm.*, p.name AS provider_name, p.colour AS provider_colour
+    FROM rumoured_models rm
+    LEFT JOIN providers p ON rm.provider_id = p.id
+    ORDER BY
+      CASE rm.status
+        WHEN 'rumoured' THEN 1
+        WHEN 'confirmed' THEN 2
+        WHEN 'released' THEN 3
+        WHEN 'debunked' THEN 4
+      END,
+      rm.first_seen DESC
+  `).all() as DBRumouredModel[];
 }
 
 /**
@@ -651,4 +793,260 @@ export function getBenchmarkMatrix(): BenchmarkMatrix {
     benchmarks,
     models: Array.from(modelMap.values()),
   };
+}
+
+// ─── YouTube Creators ────────────────────────────────────────────
+
+export interface DBYouTubeCreator {
+  id: string;
+  name: string;
+  channel_name: string;
+  youtube_handle: string | null;
+  subscribers: number;
+  category: string;
+  description: string | null;
+  twitter: string | null;
+  website: string | null;
+  person_id: string | null;
+}
+
+export function getYouTubeCreators(): DBYouTubeCreator[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM youtube_creators ORDER BY subscribers DESC').all() as DBYouTubeCreator[];
+}
+
+export function getYouTubeCreatorsByCategory(category: string): DBYouTubeCreator[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM youtube_creators WHERE category = ? ORDER BY subscribers DESC').all(category) as DBYouTubeCreator[];
+}
+
+export function getYouTubeCreatorCategories(): Array<{ category: string; count: number }> {
+  const db = getDB();
+  return db.prepare('SELECT category, COUNT(*) as count FROM youtube_creators GROUP BY category ORDER BY count DESC').all() as Array<{ category: string; count: number }>;
+}
+
+// ─── Tags ────────────────────────────────────────────────────────
+
+export interface DBTag {
+  id: string;
+  name: string;
+  category: string;
+  description: string | null;
+}
+
+export function getTags(): DBTag[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM tags ORDER BY category, name').all() as DBTag[];
+}
+
+export function getTagById(tagId: string): DBTag | null {
+  const db = getDB();
+  return (db.prepare('SELECT * FROM tags WHERE id = ?').get(tagId) as DBTag | undefined) ?? null;
+}
+
+export function getAllTagIds(): string[] {
+  const db = getDB();
+  return (db.prepare('SELECT id FROM tags').all() as Array<{ id: string }>).map(r => r.id);
+}
+
+export function getTagsForItem(taggableId: string, taggableType: string): DBTag[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT t.* FROM tags t
+    JOIN taggables tg ON t.id = tg.tag_id
+    WHERE tg.taggable_id = ? AND tg.taggable_type = ?
+    ORDER BY t.name
+  `).all(taggableId, taggableType) as DBTag[];
+}
+
+export function getItemsByTag(tagId: string, taggableType: string): string[] {
+  const db = getDB();
+  return (db.prepare(`
+    SELECT taggable_id FROM taggables WHERE tag_id = ? AND taggable_type = ?
+  `).all(tagId, taggableType) as Array<{ taggable_id: string }>).map(r => r.taggable_id);
+}
+
+export function getTagsWithCounts(): Array<DBTag & { count: number }> {
+  const db = getDB();
+  return db.prepare(`
+    SELECT t.*, COUNT(tg.taggable_id) as count
+    FROM tags t
+    LEFT JOIN taggables tg ON t.id = tg.tag_id
+    GROUP BY t.id
+    ORDER BY count DESC, t.name
+  `).all() as Array<DBTag & { count: number }>;
+}
+
+// ─── News ────────────────────────────────────────────────────────
+
+export interface DBNews {
+  id: string;
+  title: string;
+  url: string;
+  source: string;
+  summary: string | null;
+  image_url: string | null;
+  published_at: string;
+  category: string;
+}
+
+export function getNews(limit: number = 50): DBNews[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM news ORDER BY published_at DESC LIMIT ?').all(limit) as DBNews[];
+}
+
+export function getNewsByCategory(category: string, limit: number = 50): DBNews[] {
+  const db = getDB();
+  return db.prepare('SELECT * FROM news WHERE category = ? ORDER BY published_at DESC LIMIT ?').all(category, limit) as DBNews[];
+}
+
+export function getNewsCategories(): Array<{ category: string; count: number }> {
+  const db = getDB();
+  return db.prepare('SELECT category, COUNT(*) as count FROM news GROUP BY category ORDER BY count DESC').all() as Array<{ category: string; count: number }>;
+}
+
+// ─── CLI Tools ────────────────────────────────────────────────────
+
+export interface DBCLITool {
+  id: string;
+  name: string;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  maker: string;
+  description: string | null;
+  default_model: string | null;
+  supported_models: string | null;
+  context_window: number;
+  open_source: number;
+  license: string | null;
+  github_url: string | null;
+  website: string | null;
+  install_command: string | null;
+  pricing_type: string;
+  pricing_note: string | null;
+  mcp_support: number;
+  multi_file: number;
+  git_integration: number;
+  platforms: string;
+  released: string | null;
+  status: string;
+  notes: string | null;
+}
+
+export function getCLITools(): DBCLITool[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT ct.*, p.name AS provider_name, p.colour AS provider_colour
+    FROM cli_tools ct
+    LEFT JOIN providers p ON ct.provider_id = p.id
+    WHERE ct.status = 'active'
+    ORDER BY
+      CASE WHEN ct.id IN ('claude-code', 'openai-codex', 'gemini-cli') THEN 0 ELSE 1 END,
+      ct.name
+  `).all() as DBCLITool[];
+}
+
+export function getCLIToolById(toolId: string): DBCLITool | null {
+  const db = getDB();
+  const row = db.prepare(`
+    SELECT ct.*, p.name AS provider_name, p.colour AS provider_colour
+    FROM cli_tools ct
+    LEFT JOIN providers p ON ct.provider_id = p.id
+    WHERE ct.id = ?
+  `).get(toolId) as DBCLITool | undefined;
+  return row ?? null;
+}
+
+export function getAllCLIToolIds(): string[] {
+  const db = getDB();
+  return (db.prepare('SELECT id FROM cli_tools WHERE status = ?').all('active') as Array<{ id: string }>).map(r => r.id);
+}
+
+// ─── Subscription Plans & Message Limits ──────────────────────────
+
+export interface DBSubscriptionPlan {
+  id: string;
+  provider_id: string;
+  plan_name: string;
+  price_monthly: number | null;
+  price_yearly_monthly: number | null;
+  tier_level: number;
+  source_url: string | null;
+  notes: string | null;
+}
+
+export interface DBPlanModelLimit {
+  plan_id: string;
+  plan_name: string;
+  price_monthly: number | null;
+  model_id: string | null;
+  model_tier: string | null;
+  model_name: string | null;
+  messages_low: number | null;
+  messages_high: number | null;
+  message_period: string;
+  notes: string | null;
+}
+
+/**
+ * Get all subscription plans for a provider, ordered by tier.
+ */
+export function getProviderPlans(providerId: string): DBSubscriptionPlan[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT * FROM subscription_plans
+    WHERE provider_id = ?
+    ORDER BY tier_level ASC
+  `).all(providerId) as DBSubscriptionPlan[];
+}
+
+/**
+ * Get message limits for a specific model across all plans.
+ */
+export function getModelMessageLimits(modelId: string): DBPlanModelLimit[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT pml.plan_id, sp.plan_name, sp.price_monthly,
+           pml.model_id, pml.model_tier, m.name AS model_name,
+           pml.messages_low, pml.messages_high,
+           pml.message_period, pml.notes
+    FROM plan_model_limits pml
+    JOIN subscription_plans sp ON pml.plan_id = sp.id
+    LEFT JOIN models m ON pml.model_id = m.id
+    WHERE pml.model_id = ?
+    ORDER BY sp.tier_level ASC
+  `).all(modelId) as DBPlanModelLimit[];
+}
+
+/**
+ * Get all message limits for a plan.
+ */
+export function getPlanLimits(planId: string): DBPlanModelLimit[] {
+  const db = getDB();
+  return db.prepare(`
+    SELECT pml.plan_id, sp.plan_name, sp.price_monthly,
+           pml.model_id, pml.model_tier, m.name AS model_name,
+           pml.messages_low, pml.messages_high,
+           pml.message_period, pml.notes
+    FROM plan_model_limits pml
+    JOIN subscription_plans sp ON pml.plan_id = sp.id
+    LEFT JOIN models m ON pml.model_id = m.id
+    WHERE pml.plan_id = ?
+    ORDER BY pml.messages_high DESC
+  `).all(planId) as DBPlanModelLimit[];
+}
+
+/**
+ * Get all subscription plans across all providers.
+ */
+export function getAllSubscriptionPlans(): Array<DBSubscriptionPlan & { provider_name: string; provider_colour: string; limit_count: number }> {
+  const db = getDB();
+  return db.prepare(`
+    SELECT sp.*, p.name AS provider_name, p.colour AS provider_colour,
+           (SELECT COUNT(*) FROM plan_model_limits WHERE plan_id = sp.id) AS limit_count
+    FROM subscription_plans sp
+    JOIN providers p ON sp.provider_id = p.id
+    ORDER BY p.name, sp.tier_level ASC
+  `).all() as Array<DBSubscriptionPlan & { provider_name: string; provider_colour: string; limit_count: number }>;
 }

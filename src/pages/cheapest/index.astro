@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const models = getModelsByCategory('llm');
+
+// Free models
+const freeModels = models
+  .filter(m => m.inputPrice === 0 && m.outputPrice === 0)
+  .sort((a, b) => b.qualityScore - a.qualityScore);
+
+// Paid models sorted by blended price (3:1 output:input)
+const paidModels = models
+  .filter(m => m.inputPrice > 0 || m.outputPrice > 0)
+  .map(m => ({
+    ...m,
+    blendedPrice: (m.inputPrice + 3 * m.outputPrice) / 4,
+  }))
+  .sort((a, b) => a.blendedPrice - b.blendedPrice);
+
+// Price tiers
+const ultraCheap = paidModels.filter(m => m.blendedPrice < 0.50);
+const affordable = paidModels.filter(m => m.blendedPrice >= 0.50 && m.blendedPrice < 2.00);
+const midRange = paidModels.filter(m => m.blendedPrice >= 2.00 && m.blendedPrice < 10.00);
+const premium = paidModels.filter(m => m.blendedPrice >= 10.00);
+
+// Best quality at each price tier
+const bestUltraCheap = ultraCheap.length > 0 ? ultraCheap.reduce((best, m) => m.qualityScore > best.qualityScore ? m : best) : null;
+const bestAffordable = affordable.length > 0 ? affordable.reduce((best, m) => m.qualityScore > best.qualityScore ? m : best) : null;
+const bestMidRange = midRange.length > 0 ? midRange.reduce((best, m) => m.qualityScore > best.qualityScore ? m : best) : null;
+
+function formatPrice(n: number): string {
+  if (n === 0) return 'Free';
+  return `$${n.toFixed(2)}`;
+}
+
+function formatTokens(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
+  return n.toString();
+}
+---
+
+<BaseLayout
+  title="Cheapest AI Models — The AI Resource Hub"
+  description="Find the most affordable AI language models. Compare free and low-cost LLMs ranked by price per million tokens."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}leaderboard/`} class="hover:text-(--color-text-secondary) transition-colors">Leaderboard</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Cheapest Models</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Cheapest AI Models
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        {freeModels.length} free + {paidModels.length} paid LLMs ranked by cost per million tokens. Find the most affordable model for your budget.
+      </p>
+      <p class="text-xs text-(--color-text-muted) mt-2">
+        Prices shown per 1M tokens. Blended price = (input + 3 &times; output) / 4, reflecting typical 3:1 output-heavy usage.
+      </p>
+    </div>
+
+    <!-- Price tier summary -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-green-400">{freeModels.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Free Models</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-accent)">{ultraCheap.length}</p>
+        <p class="text-xs text-(--color-text-muted)">Under $0.50/M</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{affordable.length}</p>
+        <p class="text-xs text-(--color-text-muted)">$0.50–$2/M</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-muted)">{premium.length}</p>
+        <p class="text-xs text-(--color-text-muted)">$10+/M (Premium)</p>
+      </div>
+    </div>
+
+    <!-- Best picks per tier -->
+    {(bestUltraCheap || bestAffordable || bestMidRange) && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Best Quality at Each Price Point</h2>
+        <div class="grid sm:grid-cols-3 gap-3">
+          {bestUltraCheap && (
+            <a href={`${base}models/${bestUltraCheap.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-green-400 font-medium mb-1">Best Under $0.50/M</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${bestUltraCheap.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{bestUltraCheap.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{bestUltraCheap.provider}</p>
+              <div class="flex justify-between">
+                <span class="font-mono text-sm text-green-400">{formatPrice(bestUltraCheap.blendedPrice)}/M</span>
+                <span class="font-mono text-sm text-(--color-accent)">{bestUltraCheap.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+          {bestAffordable && (
+            <a href={`${base}models/${bestAffordable.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-(--color-accent) font-medium mb-1">Best $0.50–$2/M</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${bestAffordable.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{bestAffordable.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{bestAffordable.provider}</p>
+              <div class="flex justify-between">
+                <span class="font-mono text-sm text-green-400">{formatPrice(bestAffordable.blendedPrice)}/M</span>
+                <span class="font-mono text-sm text-(--color-accent)">{bestAffordable.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+          {bestMidRange && (
+            <a href={`${base}models/${bestMidRange.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
+              <p class="text-xs text-(--color-text-secondary) font-medium mb-1">Best $2–$10/M</p>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${bestMidRange.providerColour}`}></span>
+                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{bestMidRange.name}</h3>
+              </div>
+              <p class="text-xs text-(--color-text-muted) mb-2">{bestMidRange.provider}</p>
+              <div class="flex justify-between">
+                <span class="font-mono text-sm text-green-400">{formatPrice(bestMidRange.blendedPrice)}/M</span>
+                <span class="font-mono text-sm text-(--color-accent)">{bestMidRange.qualityScore.toFixed(1)}/100</span>
+              </div>
+            </a>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Free models -->
+    {freeModels.length > 0 && (
+      <div class="mb-10">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Free Models</h2>
+        <p class="text-xs text-(--color-text-muted) mb-3">Models with no API pricing (may be free-tier, open-source self-hosted, or not yet publicly priced). Ranked by quality.</p>
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Speed</th>
+                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
+                <th class="text-center py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">OSS</th>
+              </tr>
+            </thead>
+            <tbody>
+              {freeModels.map((m, i) => (
+                <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-green-500/5' : ''}`}>
+                  <td class="py-3 px-2 text-center">
+                    <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                      {i + 1}
+                    </span>
+                  </td>
+                  <td class="py-3 px-4">
+                    <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                      <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                      <span class="font-medium">{m.name}</span>
+                    </a>
+                    <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right">
+                    <span class="font-mono text-sm text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right hidden sm:table-cell">
+                    <span class="font-mono text-xs text-(--color-text-secondary)">{m.speed > 0 ? `${m.speed} tok/s` : '—'}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right hidden md:table-cell">
+                    <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? formatTokens(m.contextWindow) : '—'}</span>
+                  </td>
+                  <td class="py-3 px-4 text-center hidden sm:table-cell">
+                    {m.openSource ? <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span> : <span class="text-(--color-text-muted)">—</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+
+    <!-- Paid models ranked by price -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">All Paid Models by Price</h2>
+      <p class="text-xs text-(--color-text-muted) mb-3">Ranked from cheapest to most expensive. Blended price per 1M tokens.</p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Blended $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Input $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Output $/M</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            {paidModels.map((m, i) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-green-500/5' : ''}`}>
+                <td class="py-3 px-2 text-center">
+                  <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
+                    {i + 1}
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
+                    <span class="font-medium">{m.name}</span>
+                    {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class={`font-mono font-bold ${m.blendedPrice < 0.50 ? 'text-green-400' : m.blendedPrice < 2.00 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'}`}>
+                    ${m.blendedPrice.toFixed(2)}
+                  </span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">${m.inputPrice.toFixed(2)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden sm:table-cell">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">${m.outputPrice.toFixed(2)}</span>
+                </td>
+                <td class="py-3 px-4 text-right">
+                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-4 text-right hidden md:table-cell">
+                  <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? formatTokens(m.contextWindow) : '—'}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <a href={`${base}leaderboard/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Full leaderboard &rarr;
+      </a>
+      <a href={`${base}best-value/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Best value models &rarr;
+      </a>
+      <a href={`${base}calculator/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+        Pricing calculator &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>

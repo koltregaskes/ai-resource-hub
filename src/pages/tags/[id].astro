@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  getAllTagIds,
+  getTagById,
+  getItemsByTag,
+  getModelById,
+  getPeople,
+  getYouTubeCreators,
+  getBenchmarks,
+} from '../../db/queries';
+
+export function getStaticPaths() {
+  const ids = getAllTagIds();
+  return ids.map((id) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+const tag = getTagById(id);
+
+if (!tag) {
+  return Astro.redirect(`${import.meta.env.BASE_URL}404`);
+}
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Get tagged items by type
+const modelIds = getItemsByTag(id, 'model');
+const peopleIds = getItemsByTag(id, 'person');
+const creatorIds = getItemsByTag(id, 'youtube_creator');
+const benchmarkIds = getItemsByTag(id, 'benchmark');
+
+// Resolve model names
+const allPeople = getPeople();
+const allCreators = getYouTubeCreators();
+const allBenchmarks = getBenchmarks();
+
+const taggedModels = modelIds.map(mid => {
+  const m = getModelById(mid);
+  return m ? { id: mid, name: m.name, provider: m.provider } : null;
+}).filter(Boolean) as Array<{ id: string; name: string; provider: string }>;
+
+const taggedPeople = allPeople.filter(p => peopleIds.includes(p.id));
+const taggedCreators = allCreators.filter(c => creatorIds.includes(c.id));
+const taggedBenchmarks = allBenchmarks.filter(b => benchmarkIds.includes(b.id));
+
+const totalItems = taggedModels.length + taggedPeople.length + taggedCreators.length + taggedBenchmarks.length;
+---
+
+<BaseLayout
+  title={`${tag.name} — Tagged Resources — The AI Resource Hub`}
+  description={tag.description ?? `Resources tagged with "${tag.name}" — models, people, benchmarks, and more.`}
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}tags/`} class="hover:text-(--color-text-secondary) transition-colors">Tags</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">{tag.name}</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        {tag.name}
+      </h1>
+      {tag.description && (
+        <p class="text-(--color-text-secondary) max-w-2xl">{tag.description}</p>
+      )}
+      <p class="text-sm text-(--color-text-muted) mt-2">
+        {totalItems} resource{totalItems !== 1 ? 's' : ''} tagged
+      </p>
+    </div>
+
+    {taggedModels.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Models ({taggedModels.length})</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {taggedModels.map((m) => (
+            <a
+              href={`${base}models/${m.id}/`}
+              class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent) transition-colors"
+            >
+              <p class="font-medium text-(--color-text-primary)">{m.name}</p>
+              <p class="text-xs text-(--color-text-muted)">{m.provider}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {taggedPeople.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">People ({taggedPeople.length})</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {taggedPeople.map((p) => (
+            <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+              <p class="font-medium text-(--color-text-primary)">{p.name}</p>
+              <p class="text-xs text-(--color-text-muted)">{p.role}{p.organisation ? ` at ${p.organisation}` : ''}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {taggedCreators.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">YouTube Channels ({taggedCreators.length})</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {taggedCreators.map((c) => (
+            <a
+              href={c.youtube_handle ? `https://youtube.com/@${c.youtube_handle}` : '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) hover:border-red-400/50 transition-colors"
+            >
+              <p class="font-medium text-(--color-text-primary)">{c.channel_name}</p>
+              <p class="text-xs text-(--color-text-muted)">{c.name}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {taggedBenchmarks.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Benchmarks ({taggedBenchmarks.length})</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {taggedBenchmarks.map((b) => (
+            <a
+              href={`${base}benchmarks/${b.id}/`}
+              class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent) transition-colors"
+            >
+              <p class="font-medium text-(--color-text-primary)">{b.name}</p>
+              <p class="text-xs text-(--color-text-muted)">{b.category} — {b.description?.slice(0, 80)}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <a
+      href={`${base}tags/`}
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+    >
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      All Tags
+    </a>
+  </section>
+</BaseLayout>

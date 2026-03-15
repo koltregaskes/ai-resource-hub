@@ -1,0 +1,448 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : rawBase + '/';
+---
+
+<BaseLayout
+  title="Beyond Chat: APIs, Agents & What's Next — AI Academy Part 5 — The AI Resource Hub"
+  description="Graduate from chat interfaces to building with AI. Understand APIs, tokens, pricing, agents, and where the technology is heading."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}academy/`} class="hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Part 5</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-400">Advanced</span>
+        <span class="text-xs text-(--color-text-muted)">9 min read</span>
+        <span class="text-xs text-(--color-text-muted)">Part 5 of 5</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        Beyond Chat: APIs, Agents & What's Next
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        Chat interfaces are just the surface. Underneath, there is a powerful ecosystem of APIs, agent frameworks,
+        and emerging tools that let you build with AI, not just talk to it. This final part of the Academy takes you
+        from consumer to creator — and looks at where all of this is heading.
+      </p>
+    </header>
+
+    <div class="space-y-10">
+
+      <!-- Section 1: Chat Interfaces vs APIs -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">1. Chat Interfaces vs APIs</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          When you use ChatGPT, Claude.ai, or Gemini through their websites, you are using a chat interface — a
+          pre-built front end designed for conversation. An API (Application Programming Interface) is the raw
+          connection underneath. It lets you send prompts and receive responses programmatically, from your own code.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) text-sm mb-2">Chat Interface</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+              <li>Type a message, get a reply</li>
+              <li>Designed for manual, interactive use</li>
+              <li>Fixed features (file upload, web search, etc.)</li>
+              <li>Subscription pricing (monthly fee)</li>
+              <li>No coding required</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) text-sm mb-2">API</h3>
+            <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+              <li>Send a request, receive structured data</li>
+              <li>Designed for automation and integration</li>
+              <li>Full control over parameters and behaviour</li>
+              <li>Pay-per-use pricing (per token)</li>
+              <li>Requires some programming knowledge</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+          <h3 class="font-semibold text-(--color-accent) text-sm mb-2">When Would You Want an API?</h3>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            You'd reach for the API when you need to: process hundreds of documents automatically, embed AI into
+            an app or website, build a custom chatbot for your business, run the same prompt across many inputs,
+            or integrate AI into an existing workflow. If you are doing the same thing manually more than a dozen
+            times, the API is probably worth learning.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Understanding Token Pricing -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. Understanding Token Pricing</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          API pricing is based on tokens — the chunks of text that models process internally. Understanding tokens
+          is essential to predicting costs and choosing the right model for your budget.
+        </p>
+
+        <div class="space-y-4 mb-6">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">What Is a Token?</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              A token is roughly three-quarters of a word in English. "ChatGPT is amazing" is about four tokens.
+              A typical page of text is around 400-500 tokens. Models are priced per million tokens processed,
+              with prices typically listed as "per 1M tokens" for both input (what you send) and output (what you receive).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Input vs Output Pricing</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Most providers charge differently for input tokens (your prompt, any context, system instructions)
+              and output tokens (the model's response). Output tokens are typically 2-5 times more expensive than
+              input tokens. This is why a long, detailed prompt with a short answer can be cheaper than a brief
+              prompt that generates a 2,000-word essay.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Blended Cost</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              The "blended cost" is the average cost per token across both input and output, weighted by a
+              typical use pattern. This is more useful for estimating real-world costs than looking at input
+              and output prices separately. A model with cheap input but expensive output could end up costing
+              more overall than one with moderate pricing on both sides.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          Use our <a href={`${base}calculator/`} class="text-(--color-accent) hover:underline">pricing calculator</a> to
+          estimate costs for your specific use case, or explore
+          <a href={`${base}pricing-trends/`} class="text-(--color-accent) hover:underline">pricing trends</a> to
+          see how costs have changed over time (spoiler: they keep falling).
+        </p>
+      </section>
+
+      <!-- Section 3: Temperature and Parameters -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">3. Temperature and Parameters</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          When using the API, you can control how the model behaves through a few key parameters. Understanding these
+          gives you much finer control than a chat interface offers.
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="font-semibold text-(--color-text-primary)">Temperature</h3>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted)">0.0 - 2.0</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
+              Temperature controls randomness. At 0, the model gives the most predictable, deterministic response.
+              At higher values, it becomes more creative and varied but also less reliable. Think of it as a dial
+              between "strictly factual" and "creatively adventurous."
+            </p>
+            <div class="grid sm:grid-cols-3 gap-2">
+              <div class="p-2 rounded-lg bg-(--color-bg-tertiary) text-center">
+                <p class="text-xs font-semibold text-(--color-text-primary)">Low (0 - 0.3)</p>
+                <p class="text-[11px] text-(--color-text-muted)">Factual tasks, code, data extraction</p>
+              </div>
+              <div class="p-2 rounded-lg bg-(--color-bg-tertiary) text-center">
+                <p class="text-xs font-semibold text-(--color-text-primary)">Medium (0.5 - 0.7)</p>
+                <p class="text-[11px] text-(--color-text-muted)">General conversation, balanced output</p>
+              </div>
+              <div class="p-2 rounded-lg bg-(--color-bg-tertiary) text-center">
+                <p class="text-xs font-semibold text-(--color-text-primary)">High (0.8 - 1.5)</p>
+                <p class="text-[11px] text-(--color-text-muted)">Creative writing, brainstorming</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="font-semibold text-(--color-text-primary)">Top-p (Nucleus Sampling)</h3>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted)">0.0 - 1.0</span>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Top-p is an alternative way to control randomness. Instead of scaling probabilities (like temperature),
+              it restricts the pool of words the model considers. A top-p of 0.1 means the model only considers
+              the top 10% most likely next tokens. Most of the time, you adjust either temperature or top-p, not both.
+              If you are new to this, stick with temperature and leave top-p at the default.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <div class="flex items-center gap-2 mb-2">
+              <h3 class="font-semibold text-(--color-text-primary)">Max Tokens</h3>
+            </div>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              This sets an upper limit on how long the model's response can be. If you set max tokens to 500,
+              the model will stop generating after 500 tokens regardless of whether it has finished its thought.
+              This is useful for controlling costs and ensuring responses don't run away. It does not force the
+              model to use all the tokens — it is a ceiling, not a target.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: AI Agents -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. AI Agents</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          One of the most significant developments in AI is the emergence of agents — AI systems that don't
+          just respond to a single prompt but can plan, use tools, and execute multi-step tasks autonomously.
+        </p>
+
+        <div class="space-y-4 mb-6">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">What Is an AI Agent?</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              A regular chatbot responds to one message at a time. An agent receives a goal and then works
+              towards it over multiple steps. It can decide which tools to use, break a problem into sub-tasks,
+              check its own work, and iterate until the goal is met. Think of the difference between asking someone
+              a question (chatbot) versus giving someone a project to complete (agent).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">How Agents Work</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
+              Most agent architectures follow a loop:
+            </p>
+            <div class="space-y-2">
+              <div class="flex items-center gap-3 p-2 rounded-lg bg-(--color-bg-tertiary)">
+                <span class="text-xs font-mono bg-(--color-bg-card) text-(--color-text-muted) px-2 py-0.5 rounded">1</span>
+                <p class="text-sm text-(--color-text-secondary)"><strong>Plan</strong> — The model analyses the goal and decides what to do first.</p>
+              </div>
+              <div class="flex items-center gap-3 p-2 rounded-lg bg-(--color-bg-tertiary)">
+                <span class="text-xs font-mono bg-(--color-bg-card) text-(--color-text-muted) px-2 py-0.5 rounded">2</span>
+                <p class="text-sm text-(--color-text-secondary)"><strong>Act</strong> — It calls a tool (search the web, run code, read a file, call an API).</p>
+              </div>
+              <div class="flex items-center gap-3 p-2 rounded-lg bg-(--color-bg-tertiary)">
+                <span class="text-xs font-mono bg-(--color-bg-card) text-(--color-text-muted) px-2 py-0.5 rounded">3</span>
+                <p class="text-sm text-(--color-text-secondary)"><strong>Observe</strong> — It reads the result of the tool call.</p>
+              </div>
+              <div class="flex items-center gap-3 p-2 rounded-lg bg-(--color-bg-tertiary)">
+                <span class="text-xs font-mono bg-(--color-bg-card) text-(--color-text-muted) px-2 py-0.5 rounded">4</span>
+                <p class="text-sm text-(--color-text-secondary)"><strong>Reflect</strong> — It decides if the goal is met or if it needs another step.</p>
+              </div>
+              <div class="flex items-center gap-3 p-2 rounded-lg bg-(--color-bg-tertiary)">
+                <span class="text-xs font-mono bg-(--color-bg-card) text-(--color-text-muted) px-2 py-0.5 rounded">5</span>
+                <p class="text-sm text-(--color-text-secondary)"><strong>Repeat</strong> — The loop continues until the task is done or a limit is reached.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">The Current State of Agents</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              AI agents are real and increasingly capable, but they are still in their early stages. They work well
+              for well-defined tasks with clear success criteria — coding, research, data processing. They struggle
+              more with ambiguous, open-ended goals where judgement is required. Expect rapid improvement here, but
+              also expect that fully autonomous agents will take time to become reliable for high-stakes work.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          See how different models perform on agent tasks in our
+          <a href={`${base}agents/`} class="text-(--color-accent) hover:underline">agents leaderboard</a>.
+        </p>
+      </section>
+
+      <!-- Section 5: The Emerging Stack -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. The Emerging AI Stack</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          Beyond basic prompt-and-response, a set of techniques has emerged that lets you build much more
+          powerful AI applications. Here are the key building blocks you should know about.
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">RAG (Retrieval-Augmented Generation)</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+              Instead of relying solely on what the model learned during training, RAG retrieves relevant information
+              from a knowledge base (your documents, a database, the web) and includes it in the prompt. This keeps
+              answers grounded in real, up-to-date data and dramatically reduces hallucination.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Use when: You need AI to answer questions about your specific data or documents.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Fine-Tuning</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+              Fine-tuning means taking a pre-trained model and training it further on your specific data. This
+              adjusts the model's behaviour, style, or knowledge to match your needs. It is more involved than
+              RAG — you need training data and some technical setup — but the result is a model that naturally
+              "knows" your domain without needing information stuffed into every prompt.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Use when: You need consistent style, specialised terminology, or domain-specific behaviour.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Embeddings</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+              Embeddings convert text into numerical vectors — lists of numbers that capture meaning. Texts with
+              similar meanings end up with similar numbers. This is the foundation of semantic search: instead of
+              matching keywords, you can find content that is conceptually related. Embeddings power RAG systems,
+              recommendation engines, and content classification.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Use when: You need to search by meaning, cluster content, or build recommendation systems.</p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Vector Databases</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-2">
+              A vector database stores and searches embeddings efficiently. When you have thousands or millions of
+              documents, you need a database that can quickly find the most similar vectors to a query. Tools like
+              Pinecone, Weaviate, and Chroma are purpose-built for this. A vector database is what makes RAG
+              fast and scalable.
+            </p>
+            <p class="text-xs text-(--color-text-muted)">Use when: You are building RAG at scale, or need fast semantic search across large datasets.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Where AI Is Heading -->
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">6. Where AI Is Heading</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          Predicting the future of AI is difficult — the field has repeatedly surprised even its own researchers.
+          But several trends are clearly underway.
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Scaling and Efficiency</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Models continue to get better, but the focus is shifting from "make it bigger" to "make it smarter."
+              Smaller models that match or exceed the performance of yesterday's giants are becoming common.
+              This means AI will keep getting cheaper, faster, and more accessible. The performance you pay a
+              premium for today will likely be available at a fraction of the cost within a year.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Reasoning Models</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Models that "think before they answer" — like OpenAI's o-series — represent a significant shift.
+              Instead of producing the first plausible response, they explore multiple approaches, check their
+              logic, and arrive at better answers for complex problems. Expect reasoning capabilities to become
+              standard across all model families, not just a premium feature.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Multimodal Everything</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Models are rapidly gaining the ability to work across text, images, audio, video, and code
+              simultaneously. The line between "text model" and "image model" is disappearing. In the near future,
+              you'll interact with a single model that can read your documents, analyse your photos, transcribe
+              your meetings, and generate visuals — all in one conversation.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Open-Source Momentum</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Open-weight models from Meta, DeepSeek, Mistral, and others are closing the gap with proprietary
+              models at a remarkable pace. This is good for everyone: it drives competition, reduces costs,
+              and ensures that advanced AI isn't controlled by a handful of companies. For privacy-sensitive
+              applications, local deployment of open models is becoming increasingly practical.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+            <h3 class="font-semibold text-(--color-accent) text-sm mb-2">An Honest Note About Uncertainty</h3>
+            <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+              Nobody knows exactly where this goes. Some predictions from two years ago have already proven
+              wildly wrong — in both directions. What we can say is that AI capabilities are improving faster
+              than most experts expected, costs are falling faster than anyone predicted, and the technology is
+              becoming more accessible every month. The best strategy is to stay curious, keep experimenting,
+              and avoid getting locked into any single tool or workflow.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Congratulations Section -->
+      <section class="p-6 rounded-xl bg-gradient-to-br from-(--color-accent)/10 to-transparent border border-(--color-accent)/20">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-3">Congratulations — You've Completed the AI Academy</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-6">
+          You've gone from "What is AI?" to understanding APIs, agents, and the emerging AI stack. That puts you
+          ahead of the vast majority of people who are still guessing at how this technology works. The next step
+          is to put this knowledge into practice. Here are the best places to go from here.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-3">
+          <a href={`${base}api-guides/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group">
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">API Getting Started Guides</p>
+            <p class="text-sm text-(--color-text-muted) mt-1">Code snippets and walkthroughs for OpenAI, Anthropic, Google, and more</p>
+          </a>
+          <a href={`${base}prompts/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group">
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Prompt Library</p>
+            <p class="text-sm text-(--color-text-muted) mt-1">Model-specific prompting guides with official best practices</p>
+          </a>
+          <a href={`${base}use-cases/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group">
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Use Cases</p>
+            <p class="text-sm text-(--color-text-muted) mt-1">Real-world applications of AI across industries and tasks</p>
+          </a>
+          <a href={`${base}compare/head-to-head/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group">
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Model Comparison</p>
+            <p class="text-sm text-(--color-text-muted) mt-1">Compare any two models head-to-head on benchmarks, pricing, and capabilities</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Navigation -->
+      <section>
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Academy Navigation</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <a href={`${base}academy/choosing-a-model/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors group">
+            <p class="text-xs text-(--color-text-muted) mb-1">Previous</p>
+            <p class="font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Part 4: How to Choose the Right AI Model</p>
+          </a>
+          <a href={`${base}academy/`} class="p-4 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/30 hover:bg-(--color-accent)/15 transition-colors group text-right">
+            <p class="text-xs text-(--color-text-muted) mb-1">Finished</p>
+            <p class="font-semibold text-(--color-accent) transition-colors">Complete the Academy</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Additional Resource Links -->
+      <section>
+        <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Explore More</h2>
+        <div class="grid sm:grid-cols-3 gap-3">
+          <a href={`${base}api-guides/`} class="p-3 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+            <p class="text-sm font-medium text-(--color-text-primary)">API Guides</p>
+            <p class="text-xs text-(--color-text-muted)">Start building with AI APIs</p>
+          </a>
+          <a href={`${base}calculator/`} class="p-3 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+            <p class="text-sm font-medium text-(--color-text-primary)">Pricing Calculator</p>
+            <p class="text-xs text-(--color-text-muted)">Estimate your API costs</p>
+          </a>
+          <a href={`${base}use-cases/`} class="p-3 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+            <p class="text-sm font-medium text-(--color-text-primary)">Use Cases</p>
+            <p class="text-xs text-(--color-text-muted)">See AI in action</p>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-8">
+      <a
+        href={`${base}academy/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        AI Academy
+      </a>
+    </div>
+  </article>
+</BaseLayout>
