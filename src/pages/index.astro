@@ -344,9 +344,10 @@ const learnCategories = [
           return (
             <a
               href={`${base}models/${model.id}/`}
-              class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/40 transition-all group"
+              class="p-5 rounded-2xl glass-panel glass-panel-hover group relative overflow-hidden"
             >
-              <div class="flex items-center gap-2 mb-2">
+              <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+              <div class="flex items-center gap-3 mb-3 relative z-10">
                 <span
                   class="w-2 h-2 rounded-full shrink-0"
                   style={`background-color: ${model.providerColour}`}
@@ -356,11 +357,11 @@ const learnCategories = [
                   {catLabels[model.category] ?? model.category}
                 </span>
               </div>
-              <h3 class="font-semibold text-sm text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors truncate">
+              <h3 class="font-bold font-display text-sm text-(--color-text-primary) group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 truncate relative z-10 transition-all duration-300">
                 {model.name}
               </h3>
-              <div class="flex items-center justify-between mt-2">
-                <span class="text-xs text-(--color-accent)">{model.qualityScore}/100</span>
+              <div class="flex items-center justify-between mt-3 relative z-10">
+                <span class="text-xs font-bold text-(--color-accent)">{model.qualityScore} <span class="text-(--color-text-muted) font-normal">/100</span></span>
                 {model.released && (
                   <span class="text-xs text-(--color-text-muted)">
                     {new Date(model.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}
@@ -378,27 +379,32 @@ const learnCategories = [
   <NewsletterSignup variant="card" />
 
   <!-- Stats bar -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-12">
     <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
-      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <p class="text-3xl font-bold text-(--color-accent)">{models.length + imageModels.length + videoModels.length + speechModels.length + voiceModels.length + soundModels.length}</p>
-        <p class="text-sm text-(--color-text-secondary) mt-1">AI Models Tracked</p>
+      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 relative z-10">{models.length + imageModels.length + videoModels.length + speechModels.length + voiceModels.length + soundModels.length}</p>
+        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">AI Models Tracked</p>
       </div>
-      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <p class="text-3xl font-bold text-(--color-accent)">{providers.length}</p>
-        <p class="text-sm text-(--color-text-secondary) mt-1">Providers</p>
+      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 relative z-10">{providers.length}</p>
+        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">Providers</p>
       </div>
-      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <p class="text-3xl font-bold text-(--color-accent)">{benchmarkMatrix.benchmarks.length}</p>
-        <p class="text-sm text-(--color-text-secondary) mt-1">Benchmarks</p>
+      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 relative z-10">{benchmarkMatrix.benchmarks.length}</p>
+        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">Benchmarks</p>
       </div>
-      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <p class="text-3xl font-bold text-(--color-accent)">{people.length}</p>
-        <p class="text-sm text-(--color-text-secondary) mt-1">People Profiled</p>
+      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 relative z-10">{people.length}</p>
+        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">People Profiled</p>
       </div>
-      <div class="text-center p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <p class="text-3xl font-bold text-(--color-accent)">Free</p>
-        <p class="text-sm text-(--color-text-secondary) mt-1">No Paywalls</p>
+      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-emerald-400 relative z-10">Free</p>
+        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">No Paywalls</p>
       </div>
     </div>
   </section>

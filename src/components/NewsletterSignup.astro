@@ -16,9 +16,10 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 {variant === 'card' ? (
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-(--color-accent)/10 to-(--color-accent)/5 border border-(--color-accent)/20 p-8 sm:p-12">
+    <div class="relative overflow-hidden rounded-3xl glass-panel group p-8 sm:p-12 border border-white/10 before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-purple-500/5 before:-z-10">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSkiLz48L3N2Zz4=')] opacity-50 pointer-events-none -z-10"></div>
       <div class="relative z-10 max-w-2xl">
-        <h2 class="text-2xl sm:text-3xl font-bold text-(--color-text-primary) mb-3">
+        <h2 class="text-3xl sm:text-4xl font-black font-display text-(--color-text-primary) mb-4 tracking-tight">
           Stay ahead of the AI curve
         </h2>
         <p class="text-(--color-text-secondary) mb-6">
@@ -50,20 +51,23 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           </div>
         )}
 
-        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3">
-          <input
-            type="email"
-            name="email"
-            placeholder="you@example.com"
-            required
-            class="flex-1 px-4 py-3 rounded-lg bg-(--color-bg-primary) border border-(--color-border) text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-(--color-accent) focus:outline-none text-sm"
-          />
+        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 relative z-20">
+          <div class="relative flex-1 group/input">
+            <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl blur opacity-25 group-focus-within/input:opacity-75 transition duration-500"></div>
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              class="relative w-full px-5 py-4 rounded-xl bg-(--color-bg-primary) border border-white/10 text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm shadow-inner transition-all"
+            />
+          </div>
           <input type="hidden" name="tag" value="ai-resource-hub" />
           <input type="hidden" name="metadata__categories" id="newsletter-categories-hidden" value="" />
           <button
             type="submit"
             id="newsletter-submit"
-            class="px-6 py-3 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-sm transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+            class="relative px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-sm transition-all whitespace-nowrap shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Subscribe
           </button>
@@ -80,7 +84,8 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
       </div>
 
       <!-- Background decoration -->
-      <div class="absolute top-0 right-0 w-64 h-64 bg-(--color-accent)/5 rounded-full -translate-y-1/3 translate-x-1/3 blur-3xl" aria-hidden="true"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-float" aria-hidden="true"></div>
+      <div class="absolute bottom-0 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-float" style="animation-delay: -3s" aria-hidden="true"></div>
     </div>
   </section>
 ) : variant === 'inline' ? (

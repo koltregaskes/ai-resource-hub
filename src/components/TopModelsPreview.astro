@@ -28,8 +28,8 @@ function formatContext(tokens: number): string {
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <div class="flex items-center justify-between mb-8">
     <div>
-      <h2 class="text-2xl font-bold text-(--color-text-primary)">Top Value LLMs</h2>
-      <p class="text-sm text-(--color-text-secondary) mt-1">Ranked by quality-to-cost ratio</p>
+      <h2 class="text-3xl font-black font-display text-(--color-text-primary) tracking-tight">Top Value LLMs</h2>
+      <p class="text-sm font-medium text-(--color-text-secondary) mt-1">Ranked by quality-to-cost ratio</p>
     </div>
     <a
       href={`${base}compare/llm/`}
@@ -42,26 +42,26 @@ function formatContext(tokens: number): string {
     </a>
   </div>
 
-  <div class="grid gap-3">
+  <div class="grid gap-4">
     {topModels.map((model, index) => (
-      <div class="flex items-center gap-4 p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors">
-        <div class="w-8 h-8 rounded-full bg-(--color-bg-tertiary) flex items-center justify-center text-sm font-bold text-(--color-text-secondary) shrink-0">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4 p-5 rounded-2xl glass-panel glass-panel-hover group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/10 border border-white/5 shadow-inner flex items-center justify-center text-sm font-bold text-(--color-text-primary) shrink-0 transition-transform group-hover:scale-110">
           {index + 1}
         </div>
 
-        <div class="flex-1 min-w-0">
-          <div class="flex items-center gap-2">
-            <a href={`${base}models/${model.id}/`} class="font-semibold text-(--color-text-primary) truncate hover:text-(--color-accent) transition-colors">{model.name}</a>
+        <div class="flex-1 min-w-0 flex items-center sm:block">
+          <div class="flex items-center gap-3">
+            <a href={`${base}models/${model.id}/`} class="text-lg font-bold font-display text-(--color-text-primary) truncate group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 transition-all">{model.name}</a>
             {model.openSource && (
-              <span class="text-xs px-1.5 py-0.5 rounded bg-(--color-success)/10 text-(--color-success)">
-                Open
+              <span class="badge badge-oss">
+                Open Weight
               </span>
             )}
           </div>
-          <p class="text-xs text-(--color-text-muted)">{model.provider}</p>
+          <p class="text-sm font-medium text-(--color-text-muted) ml-auto sm:ml-0">{model.provider}</p>
         </div>
 
-        <div class="hidden sm:flex items-center gap-6 text-right">
+        <div class="grid grid-cols-4 sm:flex items-center gap-4 sm:gap-8 text-center sm:text-right w-full sm:w-auto border-t sm:border-t-0 border-white/5 pt-4 sm:pt-0">
           <div>
             <p class="text-xs text-(--color-text-muted)">Input</p>
             <p class="text-sm font-mono text-(--color-text-secondary)">{formatPrice(model.inputPrice)}</p>

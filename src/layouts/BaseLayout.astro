@@ -36,7 +36,7 @@ const ogImageUrl = ogImage
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -73,11 +73,11 @@ const ogImageUrl = ogImage
     </script>
   </head>
   <body class="bg-(--color-bg-primary) text-(--color-text-primary) min-h-screen flex flex-col">
-    <header class="border-b border-(--color-border) bg-(--color-bg-secondary)/80 backdrop-blur-md sticky top-0 z-50">
+    <header class="border-b border-white/5 bg-(--color-bg-secondary)/60 backdrop-blur-xl sticky top-0 z-50">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href={base} class="flex items-center gap-2.5 group">
-          <img src={`${base}favicon.svg`} alt="" class="w-8 h-8 accent-glow" width="32" height="32" />
-          <span class="text-lg font-bold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+          <img src={`${base}favicon.svg`} alt="" class="w-8 h-8 accent-glow transition-transform duration-300 group-hover:scale-110" width="32" height="32" />
+          <span class="text-lg font-bold text-(--color-text-primary) group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 font-display tracking-tight transition-all duration-300">
             The AI Resource Hub
           </span>
         </a>
@@ -274,12 +274,15 @@ const ogImageUrl = ogImage
       </div>
     </header>
 
-    <main class="flex-1">
+    <main class="flex-1 relative">
       <slot />
     </main>
 
-    <footer class="border-t border-(--color-border) bg-(--color-bg-secondary) mt-auto">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <footer class="border-t border-white/5 bg-(--color-bg-secondary)/80 mt-auto relative overflow-hidden">
+      <!-- Footer subtle top glow -->
+      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Models</h3>

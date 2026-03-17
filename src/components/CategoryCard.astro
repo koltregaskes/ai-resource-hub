@@ -15,23 +15,23 @@ const { title, description, href, modelCount, icon, available, countLabel = 'tra
 <a
   href={available ? href : undefined}
   class:list={[
-    'block p-6 rounded-xl border transition-all duration-200',
+    'block p-6 rounded-2xl border transition-all duration-300 relative overflow-hidden group',
     available
-      ? 'bg-(--color-bg-card) border-(--color-border) hover:border-(--color-accent)/50 hover:bg-(--color-bg-hover) cursor-pointer group'
-      : 'bg-(--color-bg-card)/50 border-(--color-border)/50 opacity-60 cursor-default',
+      ? 'glass-panel glass-panel-hover cursor-pointer'
+      : 'bg-(--color-bg-card)/30 border-(--color-border)/30 opacity-50 cursor-default backdrop-blur-sm',
   ]}
   aria-disabled={!available}
 >
-  <div class="flex items-start gap-4">
+  <div class="flex items-start gap-4 relative z-10">
     <div class:list={[
-      'w-12 h-12 rounded-lg flex items-center justify-center text-2xl shrink-0',
-      available ? 'bg-(--color-accent)/10' : 'bg-(--color-bg-tertiary)',
+      'w-12 h-12 rounded-xl flex items-center justify-center text-2xl shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-sm',
+      available ? 'bg-gradient-to-br from-(--color-accent)/20 to-(--color-accent-hover)/5 border border-(--color-border-accent)' : 'bg-(--color-bg-tertiary)',
     ]}>
       {icon}
     </div>
     <div class="flex-1 min-w-0">
       <div class="flex items-center gap-2 mb-1">
-        <h3 class="text-lg font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+        <h3 class="text-lg font-bold font-display text-(--color-text-primary) group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 transition-all duration-300">
           {title}
         </h3>
         {!available && (
@@ -40,8 +40,8 @@ const { title, description, href, modelCount, icon, available, countLabel = 'tra
           </span>
         )}
       </div>
-      <p class="text-sm text-(--color-text-secondary) mb-3">{description}</p>
-      <div class="text-xs text-(--color-text-muted)">
+      <p class="text-sm text-(--color-text-secondary) mb-3 leading-relaxed">{description}</p>
+      <div class="text-xs font-medium text-(--color-text-muted) group-hover:text-(--color-text-secondary) transition-colors">
         {available ? `${modelCount} ${countLabel}` : 'In development'}
       </div>
     </div>

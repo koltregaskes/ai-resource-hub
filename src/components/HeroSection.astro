@@ -9,42 +9,47 @@ const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 ---
 
-<section class="relative overflow-hidden">
-  <!-- Gradient background -->
-  <div class="absolute inset-0 bg-gradient-to-b from-(--color-accent-glow) via-transparent to-transparent pointer-events-none" aria-hidden="true"></div>
+<section class="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
+  <!-- Animated Mesh Gradient Background -->
+  <div class="hero-glow-bg">
+    <div class="hero-glow-bg-orb"></div>
+  </div>
+  
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-(--color-bg-primary)/50 to-(--color-bg-primary) pointer-events-none z-0" aria-hidden="true"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
-    <div class="text-center max-w-3xl mx-auto">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-(--color-bg-tertiary) border border-(--color-border) text-xs text-(--color-text-secondary) mb-6">
-        <span class="w-2 h-2 rounded-full bg-(--color-success) animate-pulse"></span>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10 w-full">
+    <div class="text-center max-w-4xl mx-auto flex flex-col items-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-xs font-medium text-(--color-text-secondary) mb-8 animate-float shadow-lg shadow-indigo-500/10">
+        <span class="w-2 h-2 rounded-full bg-(--color-success) animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
         Tracking {modelCount} models &middot; Updated {lastUpdated}
       </div>
 
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 font-display leading-[1.1]">
         <span class="text-(--color-text-primary)">Your Complete</span>
         <br />
-        <span class="text-(--color-accent)">AI Resource Hub.</span>
+        <span class="text-gradient-vibrant drop-shadow-lg">AI Resource Hub.</span>
       </h1>
 
-      <p class="text-lg sm:text-xl text-(--color-text-secondary) mb-10 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-lg sm:text-xl md:text-2xl text-(--color-text-secondary) mb-12 max-w-2xl mx-auto leading-relaxed font-light">
         Compare models, learn prompting, track pricing, and stay up to date
         — everything you need to make the most of AI, whether you're a
         beginner or a power user.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
         <a
           href={`${base}compare/llm/`}
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold transition-colors accent-glow"
+          class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto rounded-xl bg-(--color-text-primary) text-(--color-bg-primary) font-bold transition-all hover:scale-105 shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(255,255,255,0.2)] overflow-hidden"
         >
-          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <svg class="w-5 h-5 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
           </svg>
-          Compare LLMs
+          <span class="relative z-10">Compare LLMs</span>
         </a>
         <a
           href="#categories"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-(--color-border) hover:border-(--color-border-hover) text-(--color-text-secondary) hover:text-(--color-text-primary) font-semibold transition-colors"
+          class="group inline-flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto rounded-xl glass-panel glass-panel-hover text-(--color-text-primary) font-semibold transition-all"
         >
           Explore All Resources
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
