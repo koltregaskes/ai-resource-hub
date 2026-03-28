@@ -11,7 +11,7 @@ interface Props {
 
 const {
   title,
-  description = 'Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.',
+  description = 'Independent AI model comparison for pricing, benchmarks, tools, and live news across the AI landscape.',
   ogImage,
 } = Astro.props;
 
@@ -22,6 +22,91 @@ const searchIndex = getSearchIndex(base);
 const ogImageUrl = ogImage
   ? new URL(ogImage, Astro.site).href
   : new URL(`${base}og-default.svg`, Astro.site).href;
+
+const primaryNav = [
+  { href: `${base}compare/llm/`, label: 'Compare' },
+  { href: `${base}benchmarks/`, label: 'Benchmarks' },
+  { href: `${base}news/`, label: 'News' },
+  { href: `${base}tools/`, label: 'Tools' },
+  { href: `${base}guides/`, label: 'Guides' },
+  { href: `${base}about/`, label: 'About' },
+];
+
+const mobileSections = [
+  {
+    title: 'Explore',
+    links: [
+      { href: `${base}leaderboard/`, label: 'Leaderboard' },
+      { href: `${base}fastest/`, label: 'Fastest Models' },
+      { href: `${base}cheapest/`, label: 'Cheapest Models' },
+      { href: `${base}best-value/`, label: 'Best Value' },
+      { href: `${base}pricing-trends/`, label: 'Pricing Trends' },
+      { href: `${base}labs/`, label: 'Labs & Providers' },
+      { href: `${base}people/`, label: 'People in AI' },
+    ],
+  },
+  {
+    title: 'Learn',
+    links: [
+      { href: `${base}academy/`, label: 'AI Academy' },
+      { href: `${base}glossary/`, label: 'AI Glossary' },
+      { href: `${base}quiz/`, label: 'Which AI Should I Use?' },
+      { href: `${base}token-counter/`, label: 'Token Counter' },
+      { href: `${base}prompts/`, label: 'Prompt Library' },
+      { href: `${base}references/`, label: 'References' },
+    ],
+  },
+  {
+    title: 'More',
+    links: [
+      { href: `${base}status/`, label: 'Provider Status' },
+      { href: `${base}rumours/`, label: 'Rumours & Leaks' },
+      { href: `${base}youtube/`, label: 'YouTube Channels' },
+      { href: `${base}timeline/`, label: 'AI Timeline' },
+      { href: `${base}methodology/`, label: 'Methodology' },
+      { href: `${base}rss.xml`, label: 'RSS Feed' },
+    ],
+  },
+];
+
+const footerSections = [
+  {
+    title: 'Core Paths',
+    links: [
+      { href: `${base}compare/llm/`, label: 'Model comparison' },
+      { href: `${base}benchmarks/`, label: 'Benchmark library' },
+      { href: `${base}leaderboard/`, label: 'Leaderboard' },
+      { href: `${base}news/`, label: 'AI news' },
+    ],
+  },
+  {
+    title: 'Built-In Tools',
+    links: [
+      { href: `${base}calculator/`, label: 'Pricing calculator' },
+      { href: `${base}token-counter/`, label: 'Token counter' },
+      { href: `${base}compare/head-to-head/`, label: 'Head-to-head compare' },
+      { href: `${base}tools/`, label: 'External tool guide' },
+    ],
+  },
+  {
+    title: 'Learn',
+    links: [
+      { href: `${base}guides/`, label: 'Guides' },
+      { href: `${base}academy/`, label: 'AI Academy' },
+      { href: `${base}glossary/`, label: 'Glossary' },
+      { href: `${base}methodology/`, label: 'Methodology' },
+    ],
+  },
+  {
+    title: 'Site',
+    links: [
+      { href: `${base}about/`, label: 'About' },
+      { href: `${base}references/`, label: 'References' },
+      { href: `${base}scheduling/`, label: 'Automation' },
+      { href: `${base}rss.xml`, label: 'RSS feed' },
+    ],
+  },
+];
 ---
 
 <!doctype html>
@@ -32,11 +117,10 @@ const ogImageUrl = ogImage
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -44,7 +128,6 @@ const ogImageUrl = ogImage
     <link rel="alternate" type="application/rss+xml" title="The AI Resource Hub RSS" href={`${base}rss.xml`} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -54,7 +137,6 @@ const ogImageUrl = ogImage
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="The AI Resource Hub" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -62,9 +144,8 @@ const ogImageUrl = ogImage
 
     <title>{title}</title>
 
-    <!-- Prevent FOUC: apply saved theme before first paint -->
     <script is:inline>
-      (function() {
+      (function () {
         const saved = localStorage.getItem('theme');
         if (saved === 'light') {
           document.documentElement.setAttribute('data-theme', 'light');
@@ -72,320 +153,149 @@ const ogImageUrl = ogImage
       })();
     </script>
   </head>
-  <body class="bg-(--color-bg-primary) text-(--color-text-primary) min-h-screen flex flex-col">
-    <header class="border-b border-white/5 bg-(--color-bg-secondary)/60 backdrop-blur-xl sticky top-0 z-50">
-      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href={base} class="flex items-center gap-2.5 group">
-          <img src={`${base}favicon.svg`} alt="" class="w-8 h-8 accent-glow transition-transform duration-300 group-hover:scale-110" width="32" height="32" />
-          <span class="text-lg font-bold text-(--color-text-primary) group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 font-display tracking-tight transition-all duration-300">
-            The AI Resource Hub
-          </span>
+  <body class="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary) flex flex-col">
+    <header class="sticky top-0 z-50 border-b border-white/6 bg-(--color-bg-primary)/86 backdrop-blur-xl">
+      <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href={base} class="flex items-center gap-3">
+          <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-xl" width="32" height="32" />
+          <div class="hidden sm:block">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-(--color-text-muted)">Independent AI Reference</p>
+            <p class="text-sm font-bold font-display text-(--color-text-primary)">The AI Resource Hub</p>
+          </div>
+          <span class="sm:hidden text-sm font-bold font-display text-(--color-text-primary)">AI Resource Hub</span>
         </a>
 
-        <div class="hidden md:flex items-center gap-6">
-          <div class="relative group">
-            <button class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors flex items-center gap-1">
-              Models
-              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div class="absolute top-full left-0 mt-1 w-48 rounded-lg bg-(--color-bg-secondary) border border-(--color-border) shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-              <div class="py-2">
-                <a href={`${base}compare/llm/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">LLMs</a>
-                <a href={`${base}compare/image/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Image Generation</a>
-                <a href={`${base}compare/video/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Video Generation</a>
-                <a href={`${base}compare/voice/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Voice & TTS</a>
-                <a href={`${base}compare/speech/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Speech-to-Text</a>
-                <a href={`${base}compare/sound/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Music & Sound</a>
-                <div class="border-t border-(--color-border) my-1"></div>
-                <a href={`${base}compare/head-to-head/`} class="block px-4 py-2 text-sm text-(--color-accent) hover:text-(--color-accent-hover) hover:bg-(--color-bg-tertiary) transition-colors font-medium">Head-to-Head Compare</a>
-              </div>
-            </div>
-          </div>
-          <div class="relative group">
-            <button class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors flex items-center gap-1">
-              Data
-              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div class="absolute top-full left-0 mt-1 w-52 rounded-lg bg-(--color-bg-secondary) border border-(--color-border) shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-              <div class="py-2">
-                <a href={`${base}leaderboard/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Leaderboard</a>
-                <a href={`${base}coding/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Coding Models</a>
-                <a href={`${base}fastest/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Fastest Models</a>
-                <a href={`${base}speed/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Speed Comparison</a>
-                <a href={`${base}cheapest/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Cheapest Models</a>
-                <a href={`${base}best-value/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Best Value</a>
-                <a href={`${base}open-source/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Open Source</a>
-                <a href={`${base}multimodal/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Multimodal</a>
-                <a href={`${base}context-window/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Context Windows</a>
-                <a href={`${base}reasoning/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Reasoning Models</a>
-                <a href={`${base}agents/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">AI Agents</a>
-                <a href={`${base}cli/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">CLI Tools</a>
-                <div class="border-t border-(--color-border) my-1"></div>
-                <p class="px-4 py-1 text-[10px] uppercase tracking-wider text-(--color-text-muted)">Domain</p>
-                <a href={`${base}healthcare/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Healthcare AI</a>
-                <a href={`${base}legal/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Legal AI</a>
-                <a href={`${base}finance/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Finance AI</a>
-                <a href={`${base}creative-writing/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Creative Writing</a>
-                <div class="border-t border-(--color-border) my-1"></div>
-                <a href={`${base}new/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">New Releases</a>
-                <a href={`${base}benchmarks/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Benchmarks</a>
-                <a href={`${base}calculator/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Pricing Calculator</a>
-                <a href={`${base}stats/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Statistics</a>
-                <a href={`${base}labs/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Labs & Providers</a>
-                <a href={`${base}status/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Provider Status</a>
-                <a href={`${base}rumours/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Rumours & Leaks</a>
-              </div>
-            </div>
-          </div>
-          <a href={`${base}tools/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
-            Tools
-          </a>
-          <a href={`${base}news/`} class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors">
-            News
-          </a>
-          <div class="relative group">
-            <button class="text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors flex items-center gap-1">
-              Resources
-              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div class="absolute top-full right-0 mt-1 w-52 rounded-lg bg-(--color-bg-secondary) border border-(--color-border) shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-              <div class="py-2">
-                <a href={`${base}guides/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Guides</a>
-                <a href={`${base}glossary/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">AI Glossary</a>
-                <a href={`${base}timeline/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">AI Timeline</a>
-                <a href={`${base}people/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">People in AI</a>
-                <a href={`${base}youtube/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">YouTube Channels</a>
-                <a href={`${base}twitter/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">AI on X/Twitter</a>
-                <a href={`${base}tags/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Tags</a>
-                <a href={`${base}quiz/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Which AI Should I Use?</a>
-                <a href={`${base}blog/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Blog</a>
-                <a href={`${base}methodology/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Methodology</a>
-                <a href={`${base}references/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">References & Sources</a>
-                <div class="border-t border-(--color-border) my-1"></div>
-                <p class="px-4 py-1 text-[10px] uppercase tracking-wider text-(--color-text-muted)">Learn</p>
-                <a href={`${base}academy/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">AI Academy</a>
-                <a href={`${base}prompts/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Prompt Library</a>
-                <a href={`${base}api-guides/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">API Getting Started</a>
-                <a href={`${base}use-cases/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Best Models by Use Case</a>
-                <a href={`${base}token-counter/`} class="block px-4 py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors">Token Counter</a>
-              </div>
-            </div>
-          </div>
+        <div class="hidden lg:flex items-center gap-1">
+          {primaryNav.map((item) => (
+            <a
+              href={item.href}
+              class="rounded-full px-3 py-2 text-sm font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
 
         <div class="flex items-center gap-2">
-          <!-- Global search -->
           <GlobalSearch client:load items={searchIndex} baseUrl={base} />
 
-          <!-- Theme toggle -->
           <button
             id="theme-toggle"
-            class="p-2 rounded-lg text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-tertiary) transition-colors"
+            class="rounded-full border border-(--color-border) p-2 text-(--color-text-secondary) transition-colors hover:border-(--color-border-hover) hover:text-(--color-text-primary)"
             aria-label="Toggle theme"
           >
-            <!-- Moon icon (visible in dark mode) -->
-            <svg id="theme-icon-moon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg id="theme-icon-moon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
-            <!-- Sun icon (visible in light mode) -->
-            <svg id="theme-icon-sun" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg id="theme-icon-sun" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
           </button>
 
-          <!-- Mobile menu button -->
           <button
             id="mobile-menu-btn"
-            class="md:hidden p-2 text-(--color-text-secondary) hover:text-(--color-text-primary)"
+            class="lg:hidden rounded-full border border-(--color-border) p-2 text-(--color-text-secondary) transition-colors hover:border-(--color-border-hover) hover:text-(--color-text-primary)"
             aria-label="Toggle navigation menu"
+            aria-expanded="false"
           >
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
             </svg>
           </button>
         </div>
       </nav>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="md:hidden hidden border-t border-(--color-border) bg-(--color-bg-secondary)">
-        <div class="px-4 py-3 space-y-2">
-          <a href={base} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">Home</a>
-          <p class="text-xs font-semibold text-(--color-text-muted) pt-2 uppercase tracking-wider">Models</p>
-          <a href={`${base}compare/llm/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">LLMs</a>
-          <a href={`${base}compare/image/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Image Generation</a>
-          <a href={`${base}compare/video/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Video Generation</a>
-          <a href={`${base}compare/voice/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Voice & TTS</a>
-          <a href={`${base}compare/speech/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Speech-to-Text</a>
-          <a href={`${base}compare/sound/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Music & Sound</a>
-          <a href={`${base}compare/head-to-head/`} class="block py-2 text-sm text-(--color-accent) hover:text-(--color-accent-hover) pl-3 font-medium">Head-to-Head Compare</a>
-          <p class="text-xs font-semibold text-(--color-text-muted) pt-2 uppercase tracking-wider">Data</p>
-          <a href={`${base}leaderboard/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Leaderboard</a>
-          <a href={`${base}coding/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Coding Models</a>
-          <a href={`${base}fastest/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Fastest Models</a>
-          <a href={`${base}cheapest/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Cheapest Models</a>
-          <a href={`${base}best-value/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Best Value</a>
-          <a href={`${base}open-source/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Open Source</a>
-          <a href={`${base}multimodal/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Multimodal</a>
-          <a href={`${base}context-window/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Context Windows</a>
-          <a href={`${base}reasoning/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Reasoning Models</a>
-          <a href={`${base}agents/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">AI Agents</a>
-          <a href={`${base}cli/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">CLI Tools</a>
-          <p class="text-[10px] font-semibold text-(--color-text-muted) pt-1 uppercase tracking-wider pl-3">Domain</p>
-          <a href={`${base}healthcare/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Healthcare AI</a>
-          <a href={`${base}legal/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Legal AI</a>
-          <a href={`${base}finance/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Finance AI</a>
-          <a href={`${base}creative-writing/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Creative Writing</a>
-          <a href={`${base}new/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">New Releases</a>
-          <a href={`${base}benchmarks/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Benchmarks</a>
-          <a href={`${base}calculator/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Pricing Calculator</a>
-          <a href={`${base}stats/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Statistics</a>
-          <a href={`${base}labs/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Labs & Providers</a>
-          <a href={`${base}status/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Provider Status</a>
-          <a href={`${base}rumours/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Rumours & Leaks</a>
-          <a href={`${base}tools/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">AI Tools Directory</a>
-          <a href={`${base}news/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary)">News</a>
-          <p class="text-xs font-semibold text-(--color-text-muted) pt-2 uppercase tracking-wider">Resources</p>
-          <a href={`${base}guides/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Guides</a>
-          <a href={`${base}glossary/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">AI Glossary</a>
-          <a href={`${base}timeline/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">AI Timeline</a>
-          <a href={`${base}people/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">People in AI</a>
-          <a href={`${base}youtube/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">YouTube Channels</a>
-          <a href={`${base}twitter/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">AI on X/Twitter</a>
-          <a href={`${base}tags/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Tags</a>
-          <a href={`${base}quiz/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Which AI Should I Use?</a>
-          <a href={`${base}blog/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Blog</a>
-          <a href={`${base}methodology/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Methodology</a>
-          <a href={`${base}references/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">References & Sources</a>
-          <p class="text-[10px] font-semibold text-(--color-text-muted) pt-1 uppercase tracking-wider pl-3">Learn</p>
-          <a href={`${base}academy/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">AI Academy</a>
-          <a href={`${base}prompts/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Prompt Library</a>
-          <a href={`${base}api-guides/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">API Getting Started</a>
-          <a href={`${base}use-cases/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Best Models by Use Case</a>
-          <a href={`${base}token-counter/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-6">Token Counter</a>
-          <a href={`${base}pricing-trends/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">Pricing Trends</a>
-          <a href={`${base}about/`} class="block py-2 text-sm text-(--color-text-secondary) hover:text-(--color-text-primary) pl-3">About</a>
+      <div id="mobile-menu" class="hidden border-t border-(--color-border) bg-(--color-bg-secondary) lg:hidden">
+        <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6">
+          <div class="grid gap-2">
+            {primaryNav.map((item) => (
+              <a
+                href={item.href}
+                class="rounded-2xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          <div class="mt-4 space-y-3">
+            {mobileSections.map((section) => (
+              <details class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary)">
+                <summary class="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-(--color-text-primary)">
+                  {section.title}
+                </summary>
+                <div class="grid gap-1 px-2 pb-2">
+                  {section.links.map((link) => (
+                    <a
+                      href={link.href}
+                      class="rounded-xl px-3 py-2 text-sm text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </div>
     </header>
 
-    <main class="flex-1 relative">
+    <main class="flex-1">
       <slot />
     </main>
 
-    <footer class="border-t border-white/5 bg-(--color-bg-secondary)/80 mt-auto relative overflow-hidden">
-      <!-- Footer subtle top glow -->
-      <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent"></div>
-      
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
-          <div>
-            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Models</h3>
-            <div class="space-y-2">
-              <a href={`${base}compare/llm/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">LLM Comparison</a>
-              <a href={`${base}compare/image/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Image Generation</a>
-              <a href={`${base}compare/video/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Video Generation</a>
-              <a href={`${base}compare/voice/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Voice & TTS</a>
-              <a href={`${base}compare/speech/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Speech-to-Text</a>
-              <a href={`${base}compare/sound/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Music & Sound</a>
-              <a href={`${base}compare/head-to-head/`} class="block text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Head-to-Head Compare</a>
-            </div>
+    <footer class="relative mt-auto border-t border-white/6 bg-(--color-bg-secondary)">
+      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr_1fr_1fr]">
+          <div class="max-w-sm">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.3em] text-(--color-text-muted)">Launch-ready reference</p>
+            <h2 class="mt-3 text-2xl font-black font-display text-(--color-text-primary)">A practical map of AI tools, models, and signals.</h2>
+            <p class="mt-4 text-sm leading-6 text-(--color-text-secondary)">
+              Pricing, benchmarks, provider context, learning resources, and daily news in one place.
+              Built to be useful first and flashy second.
+            </p>
+            <p class="mt-4 text-xs text-(--color-text-muted)">
+              Automated refreshes run daily on the always-on local machine. GitHub is used as a manual fallback, not the primary scheduler.
+            </p>
           </div>
-          <div>
-            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Data</h3>
-            <div class="space-y-2">
-              <a href={`${base}leaderboard/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Model Leaderboard</a>
-              <a href={`${base}coding/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Coding Models</a>
-              <a href={`${base}fastest/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Fastest Models</a>
-              <a href={`${base}cheapest/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Cheapest Models</a>
-              <a href={`${base}best-value/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Best Value</a>
-              <a href={`${base}open-source/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Open Source</a>
-              <a href={`${base}multimodal/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Multimodal</a>
-              <a href={`${base}context-window/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Context Windows</a>
-              <a href={`${base}agents/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI Agents</a>
-              <a href={`${base}cli/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">CLI Tools</a>
-              <a href={`${base}healthcare/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Healthcare AI</a>
-              <a href={`${base}legal/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Legal AI</a>
-              <a href={`${base}finance/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Finance AI</a>
-              <a href={`${base}creative-writing/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Creative Writing</a>
-              <a href={`${base}benchmarks/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Benchmarks</a>
-              <a href={`${base}calculator/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Pricing Calculator</a>
-              <a href={`${base}stats/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Statistics</a>
-              <a href={`${base}labs/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Labs & Providers</a>
-              <a href={`${base}people/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">People in AI</a>
-              <a href={`${base}tools/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI Tools Directory</a>
-              <a href={`${base}youtube/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">YouTube Channels</a>
-              <a href={`${base}twitter/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI on X/Twitter</a>
-              <a href={`${base}news/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI News</a>
-              <a href={`${base}status/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Provider Status</a>
-              <a href={`${base}tags/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Tags</a>
+
+          {footerSections.map((section) => (
+            <div>
+              <h3 class="text-sm font-semibold text-(--color-text-primary)">{section.title}</h3>
+              <div class="mt-4 space-y-2">
+                {section.links.map((link) => (
+                  <a
+                    href={link.href}
+                    class="block text-sm text-(--color-text-muted) transition-colors hover:text-(--color-text-primary)"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Learn</h3>
-            <div class="space-y-2">
-              <a href={`${base}guides/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Guides</a>
-              <a href={`${base}glossary/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI Glossary</a>
-              <a href={`${base}quiz/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Which AI Should I Use?</a>
-              <a href={`${base}timeline/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI Timeline</a>
-              <a href={`${base}guides/prompting-basics/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Prompting Basics</a>
-              <a href={`${base}academy/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
-              <a href={`${base}prompts/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Prompt Library</a>
-              <a href={`${base}api-guides/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">API Getting Started</a>
-              <a href={`${base}use-cases/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Best Models by Use Case</a>
-              <a href={`${base}token-counter/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Token Counter</a>
-              <a href={`${base}rumours/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Rumours & Leaks</a>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">Guides</h3>
-            <div class="space-y-2">
-              <a href={`${base}guides/choosing-an-ai-model/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Choosing an AI Model</a>
-              <a href={`${base}guides/advanced-prompting/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Advanced Prompting</a>
-              <a href={`${base}guides/understanding-ai-pricing/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Understanding Pricing</a>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-sm font-semibold text-(--color-text-primary) mb-3">More</h3>
-            <div class="space-y-2">
-              <a href={`${base}blog/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Blog</a>
-              <a href={`${base}about/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">About</a>
-              <a href={`${base}methodology/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Methodology</a>
-              <a href={`${base}references/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">References & Sources</a>
-              <a href={`${base}changelog/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Changelog</a>
-              <a href={`${base}pricing-trends/`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">Pricing Trends</a>
-              <a href={`${base}rss.xml`} class="block text-xs text-(--color-text-muted) hover:text-(--color-text-secondary) transition-colors">RSS Feed</a>
-              <p class="text-xs text-(--color-text-muted) mt-2">Independent. Not affiliated with any AI provider.</p>
-              <p class="text-xs text-(--color-text-muted)">Data updated every 12 hours via automated scrapers.</p>
-            </div>
-          </div>
+          ))}
         </div>
-        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-(--color-border)">
+
+        <div class="mt-10 flex flex-col gap-3 border-t border-(--color-border) pt-6 text-xs text-(--color-text-muted) sm:flex-row sm:items-center sm:justify-between">
           <div class="flex items-center gap-2">
-            <img src={`${base}favicon.svg`} alt="" class="w-5 h-5" width="20" height="20" />
-            <span class="text-xs text-(--color-text-muted)">The AI Resource Hub</span>
+            <img src={`${base}favicon.svg`} alt="" class="h-5 w-5" width="20" height="20" />
+            <span>The AI Resource Hub</span>
           </div>
-          <p class="text-xs text-(--color-text-muted)">
-            &copy; {new Date().getFullYear()} The AI Resource Hub. All data is provided for informational purposes only.
-          </p>
+          <p>Independent and unaffiliated. Data is provided for research and comparison purposes.</p>
         </div>
       </div>
     </footer>
 
     <script>
-      // Mobile menu toggle
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
       btn?.addEventListener('click', () => {
-        menu?.classList.toggle('hidden');
+        const isHidden = menu?.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
       });
 
-      // Theme toggle
       const themeToggle = document.getElementById('theme-toggle');
       const moonIcon = document.getElementById('theme-icon-moon');
       const sunIcon = document.getElementById('theme-icon-sun');
@@ -396,7 +306,6 @@ const ogImageUrl = ogImage
         sunIcon?.classList.toggle('hidden', !isLight);
       }
 
-      // Set initial icon state
       updateThemeIcons();
 
       themeToggle?.addEventListener('click', () => {

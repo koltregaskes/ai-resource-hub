@@ -13,7 +13,8 @@
  * 1. OpenRouter runs FIRST (primary pricing source + new model detection)
  * 2. Pricing validator runs SECOND (cross-checks against Together AI, Google, Groq)
  * 3. Benchmarks runs THIRD (ELO scores from LMSYS)
- * 4. Speed runs LAST (TTFT and throughput data)
+ * 4. Speed runs FOURTH (TTFT and throughput data)
+ * 5. News runs LAST (public RSS and official blogs)
  *
  * Exit codes:
  * - 0: all scrapers succeeded
@@ -33,6 +34,7 @@ async function main() {
     { name: 'Multi-Source Validator', script: 'scripts/scrapers/pricing.ts' },
     { name: 'Benchmarks (AA + LMSYS + HuggingFace)', script: 'scripts/scrapers/benchmarks.ts' },
     { name: 'Speed & TTFT', script: 'scripts/scrapers/speed.ts' },
+    { name: 'News (RSS + official blogs)', script: 'scripts/scrapers/news.ts' },
   ];
 
   let failures = 0;

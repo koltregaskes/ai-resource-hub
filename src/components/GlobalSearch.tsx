@@ -31,7 +31,7 @@ const typeColors: Record<string, string> = {
   guide: '#a855f7',
 };
 
-export default function GlobalSearch({ items, baseUrl = '/' }: Props) {
+export default function GlobalSearch({ items, baseUrl: _baseUrl = '/' }: Props) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
@@ -105,7 +105,7 @@ export default function GlobalSearch({ items, baseUrl = '/' }: Props) {
         </svg>
         <span className="hidden sm:inline">Search</span>
         <kbd className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-mono bg-[var(--color-bg-primary)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
-          <span className="text-xs">⌘</span>K
+          Ctrl+K
         </kbd>
       </button>
 

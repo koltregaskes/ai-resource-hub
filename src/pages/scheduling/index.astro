@@ -3,79 +3,79 @@
  * Scheduling Guide - how to run automated data updates locally.
  *
  * Covers:
- * - GitHub Actions
  * - Windows Task Scheduler
  * - macOS/Linux cron
+ * - GitHub Actions fallback
  * - Environment variables
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Scheduling Guide - How to Run Daily Updates"
-  description="Set up automated daily data updates for The AI Resource Hub on Windows, macOS, or Linux."
+  title="Scheduling Guide - How to Run Automated Updates"
+  description="Set up automated twice-daily data updates for The AI Resource Hub on Windows, macOS, or Linux."
 >
-  <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold text-(--color-text-primary) mb-2">Scheduling Automated Updates</h1>
-    <p class="text-(--color-text-secondary) mb-8">
-      How to keep pricing, benchmarks, and model data fresh with automated daily runs.
+  <div class="mx-auto max-w-4xl px-4 py-12">
+    <h1 class="mb-2 text-3xl font-bold text-(--color-text-primary)">Scheduling Automated Updates</h1>
+    <p class="mb-8 text-(--color-text-secondary)">
+      How to keep pricing, benchmarks, news, and model data fresh with automated twice-daily runs.
     </p>
 
-    <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-xl p-6 mb-8">
-      <h2 class="text-lg font-semibold text-(--color-text-primary) mb-3">Current Automation Status</h2>
+    <div class="mb-8 rounded-xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <h2 class="mb-3 text-lg font-semibold text-(--color-text-primary)">Current Automation Status</h2>
       <div class="space-y-2 text-sm">
         <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-green-500"></span>
-          <span class="text-(--color-text-secondary)"><strong>Windows scheduler</strong> - primary daily automation on the local machine</span>
+          <span class="h-2 w-2 rounded-full bg-green-500"></span>
+          <span class="text-(--color-text-secondary)"><strong>Windows scheduler</strong> - primary twice-daily automation on the local machine at 07:00 and 19:00 local time</span>
         </div>
         <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+          <span class="h-2 w-2 rounded-full bg-yellow-500"></span>
           <span class="text-(--color-text-secondary)"><strong>GitHub Actions</strong> - manual fallback for on-demand refreshes</span>
         </div>
       </div>
     </div>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">What Gets Updated</h2>
+      <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">What Gets Updated</h2>
       <div class="overflow-x-auto">
-        <table class="w-full text-sm border border-(--color-border) rounded-lg overflow-hidden">
+        <table class="w-full overflow-hidden rounded-lg border border-(--color-border) text-sm">
           <thead class="bg-(--color-bg-tertiary)">
             <tr>
-              <th class="text-left px-4 py-2 text-(--color-text-secondary)">Data</th>
-              <th class="text-left px-4 py-2 text-(--color-text-secondary)">Source</th>
-              <th class="text-left px-4 py-2 text-(--color-text-secondary)">Method</th>
-              <th class="text-left px-4 py-2 text-(--color-text-secondary)">API key?</th>
+              <th class="px-4 py-2 text-left text-(--color-text-secondary)">Data</th>
+              <th class="px-4 py-2 text-left text-(--color-text-secondary)">Source</th>
+              <th class="px-4 py-2 text-left text-(--color-text-secondary)">Method</th>
+              <th class="px-4 py-2 text-left text-(--color-text-secondary)">API key?</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-(--color-border)">
             <tr class="bg-(--color-bg-secondary)">
-              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Pricing and model discovery</td>
+              <td class="px-4 py-2 font-medium text-(--color-text-primary)">Pricing and model discovery</td>
               <td class="px-4 py-2 text-(--color-text-secondary)">OpenRouter API</td>
-              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2"><span class="font-mono text-xs text-green-400">LIVE</span></td>
               <td class="px-4 py-2 text-(--color-text-secondary)">No</td>
             </tr>
             <tr>
-              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Provider cross-checks</td>
+              <td class="px-4 py-2 font-medium text-(--color-text-primary)">Provider cross-checks</td>
               <td class="px-4 py-2 text-(--color-text-secondary)">Official provider pages and APIs</td>
-              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2"><span class="font-mono text-xs text-green-400">LIVE</span></td>
               <td class="px-4 py-2 text-(--color-text-secondary)">Optional</td>
             </tr>
             <tr class="bg-(--color-bg-secondary)">
-              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Benchmark coverage</td>
+              <td class="px-4 py-2 font-medium text-(--color-text-primary)">Benchmark coverage</td>
               <td class="px-4 py-2 text-(--color-text-secondary)">Artificial Analysis, arena-style sources</td>
-              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2"><span class="font-mono text-xs text-green-400">LIVE</span></td>
               <td class="px-4 py-2 text-(--color-text-secondary)">Recommended for fuller coverage</td>
             </tr>
             <tr>
-              <td class="px-4 py-2 text-(--color-text-primary) font-medium">Speed and TTFT</td>
+              <td class="px-4 py-2 font-medium text-(--color-text-primary)">Speed and TTFT</td>
               <td class="px-4 py-2 text-(--color-text-secondary)">Artificial Analysis</td>
-              <td class="px-4 py-2"><span class="text-green-400 font-mono text-xs">LIVE</span></td>
+              <td class="px-4 py-2"><span class="font-mono text-xs text-green-400">LIVE</span></td>
               <td class="px-4 py-2 text-(--color-text-secondary)">AA_API_KEY recommended</td>
             </tr>
             <tr class="bg-(--color-bg-secondary)">
-              <td class="px-4 py-2 text-(--color-text-primary) font-medium">News</td>
-              <td class="px-4 py-2 text-(--color-text-secondary)">Curated markdown digests</td>
-              <td class="px-4 py-2"><span class="text-yellow-400 font-mono text-xs">CURATED</span></td>
+              <td class="px-4 py-2 font-medium text-(--color-text-primary)">News</td>
+              <td class="px-4 py-2 text-(--color-text-secondary)">Public RSS feeds, official blogs, digest fallback</td>
+              <td class="px-4 py-2"><span class="font-mono text-xs text-green-400">LIVE</span></td>
               <td class="px-4 py-2 text-(--color-text-secondary)">No</td>
             </tr>
           </tbody>
@@ -84,28 +84,28 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">Quick Start - Run Manually</h2>
-      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-2">
+      <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">Quick Start - Run Manually</h2>
+      <div class="space-y-2 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
         <p class="text-(--color-text-muted)"># Run the full data pipeline</p>
         <p>npm run scrape</p>
-        <p class="text-(--color-text-muted) mt-4"># Check for stale or suspicious data</p>
+        <p class="mt-4 text-(--color-text-muted)"># Check for stale or suspicious data</p>
         <p>npm run check:staleness</p>
-        <p class="text-(--color-text-muted) mt-4"># Rebuild the site with fresh data</p>
+        <p class="mt-4 text-(--color-text-muted)"># Rebuild the site with fresh data</p>
         <p>npm run build</p>
       </div>
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">Windows Task Scheduler</h2>
-      <p class="text-(--color-text-secondary) mb-4">
-        Set up a daily task that runs the scraper pipeline automatically on your Windows machine.
+      <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">Windows Task Scheduler</h2>
+      <p class="mb-4 text-(--color-text-secondary)">
+        Set up a twice-daily task that runs the scraper pipeline automatically on your Windows machine.
       </p>
 
-      <h3 class="text-base font-semibold text-(--color-text-primary) mt-6 mb-3">Step 1: Create a batch script</h3>
-      <p class="text-(--color-text-secondary) mb-2">
-        Save this as <code class="text-xs bg-(--color-bg-tertiary) px-1 py-0.5 rounded">update-data.bat</code> in your project root:
+      <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 1: Create a batch script</h3>
+      <p class="mb-2 text-(--color-text-secondary)">
+        Save this as <code class="rounded bg-(--color-bg-tertiary) px-1 py-0.5 text-xs">update-data.bat</code> in your project root:
       </p>
-      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-1 mb-4">
+      <div class="mb-4 space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
         <p>@echo off</p>
         <p>cd /d "C:\Users\YourName\ai-resource-hub"</p>
         <p>&nbsp;</p>
@@ -116,26 +116,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p>echo [%date% %time%] Done. &gt;&gt; logs\scrape.log</p>
       </div>
 
-      <h3 class="text-base font-semibold text-(--color-text-primary) mt-6 mb-3">Step 2: Create the scheduled task</h3>
-      <p class="text-(--color-text-secondary) mb-2">
+      <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 2: Create the scheduled task</h3>
+      <p class="mb-2 text-(--color-text-secondary)">
         Open PowerShell as Administrator and run:
       </p>
-      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-1 mb-4">
-        <p class="text-(--color-text-muted)"># Create a daily task at 7am</p>
+      <div class="mb-4 space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
+        <p class="text-(--color-text-muted)"># Create two daily triggers at 7am and 7pm</p>
         <p>$action = New-ScheduledTaskAction `</p>
         <p>&nbsp;&nbsp;-Execute "C:\Users\YourName\ai-resource-hub\update-data.bat"</p>
         <p>&nbsp;</p>
-        <p>$trigger = New-ScheduledTaskTrigger -Daily -At 7:00AM</p>
+        <p>$trigger1 = New-ScheduledTaskTrigger -Daily -At 7:00AM</p>
+        <p>$trigger2 = New-ScheduledTaskTrigger -Daily -At 7:00PM</p>
         <p>&nbsp;</p>
         <p>Register-ScheduledTask `</p>
         <p>&nbsp;&nbsp;-TaskName "AI Resource Hub - Update Data" `</p>
         <p>&nbsp;&nbsp;-Action $action `</p>
-        <p>&nbsp;&nbsp;-Trigger $trigger `</p>
-        <p>&nbsp;&nbsp;-Description "Scrape latest AI model pricing and benchmarks"</p>
+        <p>&nbsp;&nbsp;-Trigger @($trigger1, $trigger2) `</p>
+        <p>&nbsp;&nbsp;-Description "Scrape latest AI model pricing, benchmarks, and news"</p>
       </div>
 
-      <h3 class="text-base font-semibold text-(--color-text-primary) mt-6 mb-3">Step 3: Verify it works</h3>
-      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-1">
+      <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 3: Verify it works</h3>
+      <div class="space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
         <p class="text-(--color-text-muted)"># Test the task manually</p>
         <p>Start-ScheduledTask -TaskName "AI Resource Hub - Update Data"</p>
         <p>&nbsp;</p>
@@ -145,29 +146,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">macOS / Linux (cron)</h2>
-      <p class="text-(--color-text-secondary) mb-4">
+      <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">macOS / Linux (cron)</h2>
+      <p class="mb-4 text-(--color-text-secondary)">
         Use cron for automated runs on macOS or Linux.
       </p>
-      <div class="bg-(--color-bg-tertiary) rounded-lg p-4 font-mono text-sm text-(--color-text-secondary) space-y-1">
+      <div class="space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
         <p class="text-(--color-text-muted)"># Open crontab editor</p>
         <p>crontab -e</p>
         <p>&nbsp;</p>
-        <p class="text-(--color-text-muted)"># Add these lines (runs daily at 7am)</p>
-        <p>0 7 * * * cd /home/user/ai-resource-hub && npm run scrape &gt;&gt; logs/scrape.log 2&gt;&amp;1</p>
-        <p>5 7 * * * cd /home/user/ai-resource-hub && npm run build &gt;&gt; logs/build.log 2&gt;&amp;1</p>
+        <p class="text-(--color-text-muted)"># Add these lines (runs at 7am and 7pm)</p>
+        <p>0 7,19 * * * cd /home/user/ai-resource-hub && npm run scrape &gt;&gt; logs/scrape.log 2&gt;&amp;1</p>
+        <p>5 7,19 * * * cd /home/user/ai-resource-hub && npm run build &gt;&gt; logs/build.log 2&gt;&amp;1</p>
       </div>
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">GitHub Actions</h2>
-      <p class="text-(--color-text-secondary) mb-4">
+      <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">GitHub Actions</h2>
+      <p class="mb-4 text-(--color-text-secondary)">
         GitHub still supports manual refreshes, but the main scheduled automation now lives on the always-on Windows machine.
       </p>
-      <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4 text-sm space-y-3">
+      <div class="space-y-3 rounded-lg border border-(--color-border) bg-(--color-bg-secondary) p-4 text-sm">
         <div>
           <span class="text-(--color-text-muted)">File:</span>
-          <code class="text-(--color-text-secondary) text-xs">.github/workflows/scrape.yml</code>
+          <code class="text-xs text-(--color-text-secondary)">.github/workflows/scrape.yml</code>
         </div>
         <div>
           <span class="text-(--color-text-muted)">Schedule:</span>
@@ -185,46 +186,46 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">API Keys</h2>
-      <p class="text-(--color-text-secondary) mb-4">
+      <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">API Keys</h2>
+      <p class="mb-4 text-(--color-text-secondary)">
         The pipeline can run with partial coverage without keys, but fuller validation needs repository secrets.
       </p>
       <div class="space-y-3">
-        <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
-          <code class="text-sm text-blue-400 font-mono">AA_API_KEY</code>
-          <p class="text-sm text-(--color-text-secondary) mt-1">Recommended for speed, TTFT, and some benchmark coverage.</p>
+        <div class="rounded-lg border border-(--color-border) bg-(--color-bg-secondary) p-4">
+          <code class="font-mono text-sm text-blue-400">AA_API_KEY</code>
+          <p class="mt-1 text-sm text-(--color-text-secondary)">Recommended for speed, TTFT, and some benchmark coverage.</p>
         </div>
-        <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
-          <code class="text-sm text-blue-400 font-mono">TOGETHER_API_KEY</code>
-          <p class="text-sm text-(--color-text-secondary) mt-1">Useful for cross-checking open-source model pricing.</p>
+        <div class="rounded-lg border border-(--color-border) bg-(--color-bg-secondary) p-4">
+          <code class="font-mono text-sm text-blue-400">TOGETHER_API_KEY</code>
+          <p class="mt-1 text-sm text-(--color-text-secondary)">Useful for cross-checking open-source model pricing.</p>
         </div>
-        <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
-          <code class="text-sm text-blue-400 font-mono">GOOGLE_API_KEY</code>
-          <p class="text-sm text-(--color-text-secondary) mt-1">Useful for validating Gemini-related metadata.</p>
+        <div class="rounded-lg border border-(--color-border) bg-(--color-bg-secondary) p-4">
+          <code class="font-mono text-sm text-blue-400">GOOGLE_API_KEY</code>
+          <p class="mt-1 text-sm text-(--color-text-secondary)">Useful for validating Gemini-related metadata.</p>
         </div>
-        <div class="bg-(--color-bg-secondary) border border-(--color-border) rounded-lg p-4">
-          <code class="text-sm text-blue-400 font-mono">GROQ_API_KEY</code>
-          <p class="text-sm text-(--color-text-secondary) mt-1">Useful for validating Groq-hosted model metadata.</p>
+        <div class="rounded-lg border border-(--color-border) bg-(--color-bg-secondary) p-4">
+          <code class="font-mono text-sm text-blue-400">GROQ_API_KEY</code>
+          <p class="mt-1 text-sm text-(--color-text-secondary)">Useful for validating Groq-hosted model metadata.</p>
         </div>
       </div>
-      <p class="text-xs text-(--color-text-muted) mt-4">
+      <p class="mt-4 text-xs text-(--color-text-muted)">
         Add these as repository secrets in GitHub under Settings, then Secrets and variables, then Actions.
       </p>
     </section>
 
     <section class="mb-10">
-      <h2 class="text-xl font-semibold text-(--color-text-primary) mb-4">TOS Safety</h2>
+      <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">TOS Safety</h2>
       <div class="space-y-4 text-sm">
         <div>
-          <p class="text-(--color-text-primary) font-medium">Prefer official sources</p>
+          <p class="font-medium text-(--color-text-primary)">Prefer official sources</p>
           <p class="text-(--color-text-secondary)">Use official APIs and official pricing pages before scraping any third-party website.</p>
         </div>
         <div>
-          <p class="text-(--color-text-primary) font-medium">Keep the request rate low</p>
-          <p class="text-(--color-text-secondary)">Daily collection is a safe starting point and avoids aggressive polling.</p>
+          <p class="font-medium text-(--color-text-primary)">Keep the request rate low</p>
+          <p class="text-(--color-text-secondary)">Twice-daily collection is still conservative and avoids aggressive polling.</p>
         </div>
         <div>
-          <p class="text-(--color-text-primary) font-medium">Do not automate blocked or login-only sources</p>
+          <p class="font-medium text-(--color-text-primary)">Do not automate blocked or login-only sources</p>
           <p class="text-(--color-text-secondary)">If a source is paywalled, private, or login-only, treat it as a manual research task instead.</p>
         </div>
       </div>

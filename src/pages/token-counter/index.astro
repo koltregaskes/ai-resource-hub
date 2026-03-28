@@ -18,7 +18,7 @@ const models = getModelsByCategory('llm')
 const modelsJSON = JSON.stringify(models.map(m => ({
   id: m.id,
   name: m.name,
-  provider: m.providerName,
+  provider: m.provider,
   colour: m.providerColour,
   inputPrice: m.inputPrice,
   outputPrice: m.outputPrice,

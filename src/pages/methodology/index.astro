@@ -49,10 +49,10 @@ const benchmarks = getBenchmarks();
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
           <div class="flex items-center justify-between mb-2">
             <h3 class="font-semibold text-(--color-text-primary)">Model Pricing</h3>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Daily</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Twice Daily</span>
           </div>
           <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
-            <li><a href="https://openrouter.ai/api/v1/models" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">OpenRouter API</a> — primary pricing source; 500+ models, 8 pricing dimensions (prompt, completion, image, request, cache read/write, web search, internal reasoning). Scraped daily via GitHub Actions.</li>
+            <li><a href="https://openrouter.ai/api/v1/models" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">OpenRouter API</a> — primary pricing source; 500+ models, 8 pricing dimensions (prompt, completion, image, request, cache read/write, web search, internal reasoning). Refreshed twice daily via the local automation runner.</li>
             <li><a href="https://openai.com/api/pricing" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">OpenAI API Pricing</a> — cross-reference for GPT and o-series models</li>
             <li><a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Anthropic Pricing</a> — cross-reference for Claude models</li>
             <li><a href="https://ai.google.dev/pricing" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Google AI Pricing</a> — cross-reference for Gemini models</li>
@@ -155,16 +155,16 @@ const benchmarks = getBenchmarks();
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
           <div class="flex items-center justify-between mb-2">
             <h3 class="font-semibold text-(--color-text-primary)">News &amp; Articles</h3>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Daily</span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Twice Daily</span>
           </div>
-          <p class="text-sm text-(--color-text-secondary) mb-2">News is aggregated daily via our News Scout system and imported from digest files. Sources include:</p>
+          <p class="text-sm text-(--color-text-secondary) mb-2">News is aggregated twice daily from public RSS feeds, official provider blogs, and archived digest imports when available. Sources include:</p>
           <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
             <li>TechCrunch AI, Reuters Technology, The Verge, Ars Technica, VentureBeat AI</li>
             <li>AI-specialist publications: The Decoder, Import AI (Jack Clark), Interconnects (Nathan Lambert)</li>
             <li>Provider engineering blogs: OpenAI, Anthropic, Google DeepMind, Meta AI Research</li>
             <li>arXiv paper announcements (cs.AI, cs.LG, cs.CL)</li>
           </ul>
-          <p class="text-xs text-(--color-text-muted) mt-2">Updated: Daily at 06:00 UTC via GitHub Actions</p>
+          <p class="text-xs text-(--color-text-muted) mt-2">Updated: Twice daily via the always-on local scheduler, with GitHub available for manual fallback runs</p>
         </div>
 
         {/* People */}
@@ -262,14 +262,14 @@ const benchmarks = getBenchmarks();
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Update Frequency</h2>
       <div class="grid sm:grid-cols-2 gap-3">
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-          <h3 class="font-semibold text-(--color-text-primary) text-sm">Every 12 Hours (Automated)</h3>
+          <h3 class="font-semibold text-(--color-text-primary) text-sm">Twice Daily (Automated)</h3>
           <ul class="text-xs text-(--color-text-secondary) mt-2 space-y-1 list-disc list-inside">
             <li>API pricing from OpenRouter + provider pages</li>
             <li>Speed & TTFT data from Artificial Analysis</li>
             <li>Benchmark score validation</li>
             <li>Cross-validation: provider vs OpenRouter pricing</li>
             <li>Data staleness report</li>
-            <li>News digest import</li>
+            <li>Live news refresh from public RSS feeds and official blogs</li>
             <li>Site rebuild and deployment</li>
           </ul>
         </div>
@@ -290,7 +290,7 @@ const benchmarks = getBenchmarks();
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Limitations</h2>
       <ul class="text-sm text-(--color-text-secondary) space-y-2 list-disc list-inside">
         <li><strong>Benchmarks have known issues</strong> — data contamination, narrow evaluation, and saturation effects mean no single benchmark tells the full story. We use multiple benchmarks and flag known issues.</li>
-        <li><strong>Pricing changes frequently</strong> — AI model pricing can change without notice. We update daily but prices may lag by up to 24 hours.</li>
+        <li><strong>Pricing changes frequently</strong> — AI model pricing can change without notice. We update twice daily but prices may still lag by up to 12 hours.</li>
         <li><strong>Speed data is limited</strong> — we track relative speed ratings rather than real-time latency measurements. For production speed data, we recommend <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a>.</li>
         <li><strong>Coverage is curated</strong> — we focus on models available via API and major consumer products. Some niche or regional models may not be listed.</li>
         <li><strong>Quality scores are editorial</strong> — while based on benchmark data, final quality scores involve editorial judgement. See our scoring breakdown above for transparency.</li>

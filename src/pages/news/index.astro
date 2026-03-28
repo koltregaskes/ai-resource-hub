@@ -2,38 +2,42 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Tooltip from '../../components/Tooltip.astro';
 import NewsFilter from '../../components/NewsFilter';
-import { loadNewsDigests } from '../../data/news-digests';
+import { loadNewsItems } from '../../data/news-digests';
 
-const news = loadNewsDigests();
+const news = loadNewsItems();
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const digestCount = new Set(news.map(n => n.digestDate)).size;
-const sourceCount = new Set(news.map(n => n.source)).size;
+const sourceCount = new Set(news.map((item) => item.source)).size;
+const latestAvailable = news[0]?.date ?? null;
+const archiveDays = new Set(news.map((item) => item.digestDate)).size;
 ---
 
 <BaseLayout
-  title="AI News — The AI Resource Hub"
-  description="Daily curated AI news from technical sources — model releases, research breakthroughs, open-source developments, and infrastructure updates."
+  title="AI News - The AI Resource Hub"
+  description="Daily curated AI news from technical sources covering model releases, research breakthroughs, open-source developments, and infrastructure updates."
 >
-  <section class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
-      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+  <section class="max-w-[1400px] mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
       <span class="mx-2">/</span>
       <span class="text-(--color-text-secondary)">News</span>
     </nav>
 
     <div class="mb-6">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+      <h1 class="mb-3 text-3xl font-extrabold text-(--color-text-primary) sm:text-4xl">
         AI News
       </h1>
-      <p class="text-(--color-text-secondary) max-w-2xl">
+      <p class="max-w-2xl text-(--color-text-secondary)">
         {news.length} articles from {sourceCount}
-        <Tooltip term="sources" tip="News is aggregated daily from outlets including TechCrunch, Reuters, The Verge, Ars Technica, and AI-specific channels on YouTube." />
-        across {digestCount} daily digests. Focused on the technical side of AI — model releases, research, infrastructure, and open-source developments.
+        <Tooltip term="sources" tip="News is collected daily from public RSS feeds, official AI company blogs, and a fallback archive of imported digests." />
+        focused on model launches, research, infrastructure, and open-source developments.
       </p>
-      <p class="text-xs text-(--color-text-muted) mt-1">
-        Updated daily · Use the sidebar to filter by date, source, or search
+      <p class="mt-1 text-xs text-(--color-text-muted)">
+        {latestAvailable ? `Latest available item: ${latestAvailable}` : 'News feed ready'} · Use the sidebar to filter by date, source, or search
+      </p>
+      <p class="mt-1 text-xs text-(--color-text-muted)">
+        Live news uses the database feed first, with {archiveDays} archive day{archiveDays === 1 ? '' : 's'} of digest fallback available if a source goes quiet. Newsletter signup is paused, but the news archive remains live.
       </p>
     </div>
 

@@ -5,7 +5,7 @@ import { getModelsByCategory } from '../../db/queries';
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const models = getModelsByCategory('llm').filter(m => m.input_price > 0 || m.output_price > 0);
+const models = getModelsByCategory('llm').filter(m => m.inputPrice > 0 || m.outputPrice > 0);
 
 
 // Build model data for the calculator

@@ -9,54 +9,64 @@ const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 ---
 
-<section class="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
-  <!-- Animated Mesh Gradient Background -->
+<section class="relative overflow-hidden border-b border-white/6">
   <div class="hero-glow-bg">
     <div class="hero-glow-bg-orb"></div>
   </div>
-  
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-(--color-bg-primary)/50 to-(--color-bg-primary) pointer-events-none z-0" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(190,242,100,0.09),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(56,189,248,0.1),transparent_30%)]"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10 w-full">
-    <div class="text-center max-w-4xl mx-auto flex flex-col items-center">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-xs font-medium text-(--color-text-secondary) mb-8 animate-float shadow-lg shadow-indigo-500/10">
-        <span class="w-2 h-2 rounded-full bg-(--color-success) animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
-        Tracking {modelCount} models &middot; Updated {lastUpdated}
-      </div>
-
-      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 font-display leading-[1.1]">
-        <span class="text-(--color-text-primary)">Your Complete</span>
-        <br />
-        <span class="text-gradient-vibrant drop-shadow-lg">AI Resource Hub.</span>
+  <div class="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl items-center gap-12 px-4 py-14 sm:px-6 md:min-h-[calc(84svh-4rem)] lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:px-8 lg:py-16">
+    <div class="relative z-10 max-w-3xl">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.34em] text-(--color-text-muted)">
+        Launch-ready AI reference
+      </p>
+      <h1 class="mt-5 text-5xl font-black leading-[0.98] tracking-tight text-(--color-text-primary) sm:text-6xl lg:text-7xl">
+        Benchmarks, pricing, tools, and news
+        <span class="mt-2 block text-gradient-vibrant">without the noise.</span>
       </h1>
-
-      <p class="text-lg sm:text-xl md:text-2xl text-(--color-text-secondary) mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-        Compare models, learn prompting, track pricing, and stay up to date
-        — everything you need to make the most of AI, whether you're a
-        beginner or a power user.
+      <p class="mt-6 max-w-2xl text-base leading-7 text-(--color-text-secondary) sm:text-lg">
+        The AI Resource Hub is a working field guide for people trying to understand what is worth using,
+        what is changing, and where the signal actually is.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
+      <div class="mt-8 flex flex-wrap gap-3">
         <a
           href={`${base}compare/llm/`}
-          class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto rounded-xl bg-(--color-text-primary) text-(--color-bg-primary) font-bold transition-all hover:scale-105 shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(255,255,255,0.2)] overflow-hidden"
+          class="inline-flex items-center justify-center rounded-full bg-(--color-text-primary) px-6 py-3 text-sm font-semibold text-(--color-bg-primary) transition-transform hover:-translate-y-0.5"
         >
-          <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <svg class="w-5 h-5 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-          </svg>
-          <span class="relative z-10">Compare LLMs</span>
+          Start with model comparison
         </a>
         <a
-          href="#categories"
-          class="group inline-flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto rounded-xl glass-panel glass-panel-hover text-(--color-text-primary) font-semibold transition-all"
+          href={`${base}news/`}
+          class="inline-flex items-center justify-center rounded-full border border-(--color-border) bg-(--color-bg-secondary)/70 px-6 py-3 text-sm font-semibold text-(--color-text-primary) transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)"
         >
-          Explore All Resources
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
+          Read the latest news
         </a>
       </div>
+
+      <div class="mt-8 flex flex-wrap gap-3 text-xs text-(--color-text-secondary)">
+        <span class="rounded-full border border-(--color-border) px-3 py-1.5">Updated {lastUpdated}</span>
+        <span class="rounded-full border border-(--color-border) px-3 py-1.5">{modelCount} LLMs tracked</span>
+        <span class="rounded-full border border-(--color-border) px-3 py-1.5">Daily local refresh</span>
+      </div>
     </div>
+
+    <aside class="relative z-10 rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary)/85 p-6 shadow-[0_30px_90px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Start Here</p>
+      <div class="mt-5 space-y-4">
+        <a href={`${base}leaderboard/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
+          <p class="text-sm font-semibold text-(--color-text-primary)">Leaderboard</p>
+          <p class="mt-1 text-sm text-(--color-text-secondary)">See the strongest models across quality, value, and speed.</p>
+        </a>
+        <a href={`${base}calculator/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
+          <p class="text-sm font-semibold text-(--color-text-primary)">Pricing Calculator</p>
+          <p class="mt-1 text-sm text-(--color-text-secondary)">Estimate API spend before you commit to a model or provider.</p>
+        </a>
+        <a href={`${base}references/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
+          <p class="text-sm font-semibold text-(--color-text-primary)">References & Sources</p>
+          <p class="mt-1 text-sm text-(--color-text-secondary)">Check where the data comes from and how often each source refreshes.</p>
+        </a>
+      </div>
+    </aside>
   </div>
 </section>

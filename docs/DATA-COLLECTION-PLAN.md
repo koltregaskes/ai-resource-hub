@@ -9,15 +9,16 @@ The repository already has two GitHub Actions workflows:
 - `deploy.yml` publishes the site to GitHub Pages whenever `main` changes.
 - `scrape.yml` can refresh tracked data manually from the Actions tab if needed.
 
-## Starting Schedule
+## Current Schedule
 
-To keep the setup simple, the main update pipeline should run once per day to begin with.
+The main update pipeline now runs twice per day on the always-on Windows mini PC.
 
-Recommended starting time:
+Current run times:
 
-- `07:00` local machine time every day on the Windows mini PC
+- `07:00` local machine time
+- `19:00` local machine time
 
-Once the pipeline is stable, it can be moved to twice daily without changing the overall approach.
+GitHub Actions remains available as a manual fallback if the local machine misses a run or you want an on-demand refresh.
 
 ## Data We Need
 
@@ -42,7 +43,8 @@ These are the main data groups the site is already designed to handle:
    - Endpoint-by-endpoint performance where available
 
 4. News and editorial updates
-   - Curated news digests
+   - Public RSS and Atom feed items
+   - Official provider newsroom and blog posts
    - Major model launches
    - Benchmark changes
    - Price cuts or new plans
@@ -54,7 +56,8 @@ Use the safest source available in this order:
 1. Official APIs
 2. Official pricing or model documentation pages
 3. Well-known public datasets or public benchmark pages
-4. Manual research for anything that is blocked, paywalled, or login-only
+4. Public RSS feeds or official newsroom/blog pages
+5. Manual research for anything that is blocked, paywalled, or login-only
 
 Current repo setup already points at sources such as:
 
@@ -62,35 +65,36 @@ Current repo setup already points at sources such as:
 - Official provider pages for pricing cross-checks
 - Artificial Analysis for speed and some benchmark coverage
 - Public arena or benchmark pages for leaderboard-style results
-- Manually prepared markdown digests for news
+- Public RSS feeds and official provider blogs for news
+- Markdown digests only as a fallback archive
 
 ## How To Gather Data Without TOS Problems
 
 Follow these rules:
 
 - Prefer official APIs over scraping HTML whenever an API exists.
-- Keep request volume low. Daily collection is safer than aggressive polling.
+- Keep request volume low. Twice-daily collection is still conservative and much safer than aggressive polling.
 - Respect robots.txt, site terms, and rate limits.
 - Do not automate sites that require login unless their terms clearly allow it.
 - Do not scrape X, private dashboards, or paywalled sources automatically.
 - Store source URLs and update timestamps so every public claim can be traced.
 - Treat manual review as the fallback when a source is legally or technically sensitive.
 
-## Recommended Cron Jobs
+## Recommended Jobs
 
 Start with this small set:
 
-1. Daily scrape and refresh
-   - Runs the pricing, benchmark, and speed refresh pipeline
+1. Twice-daily scrape and refresh
+   - Runs the pricing, benchmark, speed, and news refresh pipeline
    - Updates the SQLite data used for the site
 
-2. Daily staleness check
+2. Twice-daily staleness check
    - Confirms the latest scrape produced believable data
    - Flags empty scores, stale pricing, and missing source attribution
 
 3. Weekly digest generation
    - Optional for now
-   - Generates a newsletter or summary page from the latest data
+   - Generates a newsletter or summary page from the latest data if the newsletter returns later
 
 In the current setup, the Windows machine is the primary scheduler and GitHub Actions is the manual fallback.
 
@@ -109,8 +113,10 @@ If you want the repo to run cleanly on GitHub Pages, these are the steps:
 5. Open the `Actions` tab and run the scrape workflow manually only if the local scheduler fails or you want an on-demand refresh.
 6. Confirm that Pages deploys successfully after local or manual updates are pushed.
 
-## Important Note About News Digests
+## Important Note About News
 
-The current `/news/` page reads the markdown files in `news-digests/` directly during the site build.
+The public `/news/` page now prefers the live SQLite `news` table first.
 
-That means `news-digests/` should stay in the repository for now. If you later switch the news page to read from the SQLite database instead, those source files can become private operational inputs instead of public repo content.
+The `news-digests/` folder still matters because it acts as a fallback archive if live sources are unavailable during a build.
+
+That means `news-digests/` should stay in the repository for now. If you later decide the archive should become private operational input instead of public repo content, the page can be switched to database-only mode.

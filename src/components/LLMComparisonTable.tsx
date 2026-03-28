@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, type ReactElement } from 'react';
 import type { LLMModel, SortField, SortDirection, SortConfig, ColumnDef } from '../types/models';
 
 interface Props {
@@ -160,7 +160,7 @@ function ProviderBadge({ provider, colour }: { provider: string; colour: string 
 }
 
 function ModelBadges({ model, isBestValue }: { model: LLMModel; isBestValue: boolean }) {
-  const badges: JSX.Element[] = [];
+  const badges: ReactElement[] = [];
 
   if (isBestValue) {
     badges.push(

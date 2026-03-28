@@ -237,7 +237,7 @@ const WATCHED_PROVIDERS = new Set([
 ]);
 
 // ─── Fetch and transform ───────────────────────────────────────
-async function scrapeOpenRouter(): Promise<{
+async function scrapeOpenRouter(validProviderIds: Set<string>): Promise<{
   models: ScrapedModel[];
   newModels: OpenRouterModel[];
   totalOnOpenRouter: number;
@@ -296,6 +296,10 @@ async function scrapeOpenRouter(): Promise<{
 
     const modality = parseModality(orModel.architecture);
     const providerId = DB_ID_TO_PROVIDER[dbId];
+    if (!providerId || !validProviderIds.has(providerId)) {
+      console.warn(`    Skipping ${orModel.id}: missing provider record for "${providerId ?? 'unknown'}"`);
+      continue;
+    }
 
     models.push({
       id: dbId,
@@ -403,9 +407,12 @@ function writeNewModelsReport(newModels: OpenRouterModel[]): void {
 async function main() {
   console.log('Starting OpenRouter pricing scraper...');
   const db = getDB();
+  const validProviderIds = new Set(
+    (db.prepare('SELECT id FROM providers').all() as Array<{ id: string }>).map((row) => row.id)
+  );
 
   try {
-    const { models, newModels, totalOnOpenRouter } = await scrapeOpenRouter();
+    const { models, newModels, totalOnOpenRouter } = await scrapeOpenRouter(validProviderIds);
 
     if (models.length > 0) {
       const updated = upsertModels(db, models);

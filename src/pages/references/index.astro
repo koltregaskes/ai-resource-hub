@@ -8,7 +8,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const dataSources = [
   {
     category: 'Model Pricing & Availability',
-    frequency: 'Every 12 hours',
+    frequency: 'Twice Daily',
     sources: [
       { name: 'OpenRouter API', url: 'https://openrouter.ai/api/v1/models', description: 'Primary pricing source; 500+ models with 8 pricing dimensions. No authentication required.' },
       { name: 'OpenAI API Pricing', url: 'https://openai.com/api/pricing', description: 'Official GPT and o-series model pricing.' },
@@ -39,7 +39,7 @@ const dataSources = [
   },
   {
     category: 'Speed & Latency',
-    frequency: 'Every 12 hours',
+    frequency: 'Twice Daily',
     sources: [
       { name: 'Artificial Analysis', url: 'https://artificialanalysis.ai', description: 'Primary source for TTFT (time to first token) and output speed measurements.' },
       { name: 'Provider benchmarks', url: '', description: 'Official performance data published by OpenAI, Anthropic, Google, and others.' },
@@ -65,14 +65,15 @@ const dataSources = [
   },
   {
     category: 'Model Discovery & News',
-    frequency: 'Daily',
+    frequency: 'Twice Daily',
     sources: [
       { name: 'HuggingFace Model Hub', url: 'https://huggingface.co/models?sort=created', description: 'Model cards for open-weight models; parameter counts, licences, release dates.' },
       { name: 'arXiv', url: 'https://arxiv.org', description: 'Research papers in cs.AI, cs.LG, and cs.CL.' },
       { name: 'TechCrunch AI', url: 'https://techcrunch.com/category/artificial-intelligence/', description: 'Industry news and analysis.' },
-      { name: 'The Decoder', url: 'https://the-decoder.com', description: 'AI-specialist news publication.' },
-      { name: 'Import AI (Jack Clark)', url: 'https://importai.substack.com', description: 'Weekly AI newsletter covering research and industry.' },
-      { name: 'Provider blogs', url: '', description: 'Official engineering blogs from OpenAI, Anthropic, Google DeepMind, Meta AI Research, Mistral, and others.' },
+      { name: 'VentureBeat AI', url: 'https://venturebeat.com/category/ai/', description: 'AI industry reporting and product coverage.' },
+      { name: 'The Verge AI', url: 'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml', description: 'Consumer and platform coverage from a public AI-specific feed.' },
+      { name: 'Ars Technica', url: 'https://feeds.arstechnica.com/arstechnica/technology-lab', description: 'Technology reporting filtered for AI-relevant coverage.' },
+      { name: 'Provider blogs', url: '', description: 'Official blogs and newsroom pages from OpenAI, Anthropic, Google, and other major labs.' },
     ],
   },
 ];
@@ -173,7 +174,7 @@ const papers = [
     <div id="data-sources" class="mb-12">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Data Sources</h2>
       <p class="text-sm text-(--color-text-muted) mb-6">
-        We scrape and validate data every 12 hours via automated GitHub Actions. All scraping respects robots.txt, uses identified User-Agent strings, and accesses only public API endpoints or documentation pages.
+        We refresh data twice daily on the always-on local machine, with GitHub Actions reserved for manual fallback runs. Collection uses identified User-Agent strings and is limited to public APIs, RSS feeds, official blogs, newsroom pages, and documentation pages.
       </p>
 
       <div class="space-y-6">
@@ -246,6 +247,7 @@ const papers = [
             <li><strong>OpenRouter API</strong> — public endpoint, no authentication required. We use their <code>/api/v1/models</code> endpoint which is explicitly designed for programmatic access.</li>
             <li><strong>OpenAI API</strong> — we optionally use the models list endpoint to verify model availability. Requires an API key when configured.</li>
             <li><strong>HuggingFace Spaces</strong> — we access public Gradio API endpoints for Chatbot Arena and Open LLM Leaderboard data.</li>
+            <li><strong>News collection</strong> — we prioritise public RSS and Atom feeds plus official provider blogs rather than scraping article pages directly.</li>
           </ul>
         </div>
 
@@ -254,7 +256,7 @@ const papers = [
           <ul class="text-sm text-(--color-text-secondary) space-y-1.5 list-disc list-inside">
             <li>All scrapers use an identified User-Agent: <code>The-AI-Resource-Hub-Bot/1.0</code></li>
             <li>We respect <code>robots.txt</code> directives on all sites</li>
-            <li>Scraping frequency is limited to every 12 hours — well below any rate limits</li>
+            <li>Collection runs twice daily — still a conservative cadence that stays well below common rate limits</li>
             <li>We only access publicly available pages and API endpoints</li>
             <li>We do not circumvent paywalls, authentication, or access controls</li>
             <li>Pricing data is factual information used for comparison purposes</li>

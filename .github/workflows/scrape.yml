@@ -40,10 +40,6 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         timeout-minutes: 5
 
-      - name: Import news digests
-        run: npx tsx scripts/import-news-digests.ts
-        timeout-minutes: 2
-
       - name: Run data staleness check
         run: npx tsx scripts/check-staleness.ts
         timeout-minutes: 1

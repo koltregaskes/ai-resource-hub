@@ -27,10 +27,6 @@ interface Props {
   providerColour: string;
 }
 
-function getCSSVar(name: string): string {
-  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-}
-
 export default function PriceTrendChart({ data, modelName, providerColour }: Props) {
   const chartRef = useRef<ChartJS<'line'> | null>(null);
 
@@ -113,7 +109,10 @@ export default function PriceTrendChart({ data, modelName, providerColour }: Pro
         padding: 10,
         displayColors: true,
         callbacks: {
-          label: (ctx) => `${ctx.dataset.label}: $${ctx.parsed.y.toFixed(2)}`,
+          label: (ctx) => {
+            const y = ctx.parsed.y;
+            return y == null ? `${ctx.dataset.label}: $0.00` : `${ctx.dataset.label}: $${y.toFixed(2)}`;
+          },
         },
       },
     },

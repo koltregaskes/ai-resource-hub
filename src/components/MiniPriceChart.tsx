@@ -22,7 +22,7 @@ interface Props {
   colour: string;
 }
 
-export default function MiniPriceChart({ data, colour }: Props) {
+export default function MiniPriceChart({ data, colour: _colour }: Props) {
   if (data.length < 2) return null;
 
   const firstPrice = data[0].price;
@@ -65,7 +65,10 @@ export default function MiniPriceChart({ data, colour }: Props) {
         padding: 8,
         displayColors: false,
         callbacks: {
-          label: (ctx) => `$${ctx.parsed.y.toFixed(2)}/M tokens`,
+          label: (ctx) => {
+            const y = ctx.parsed.y;
+            return y == null ? '$0.00/M tokens' : `$${y.toFixed(2)}/M tokens`;
+          },
         },
       },
     },

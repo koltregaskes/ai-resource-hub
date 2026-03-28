@@ -1,28 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
-import CategoryCard from '../components/CategoryCard.astro';
-import TopModelsPreview from '../components/TopModelsPreview.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
-import { getLLMModels } from '../data/llm-models';
-import { getProvidersWithCounts, getPeople, getBenchmarkMatrix, getGlossaryTerms, getModelsByCategory, getModelCounts, getRecentModels, getYouTubeCreators, getTagsWithCounts, getNews } from '../db/queries';
+import TopModelsPreview from '../components/TopModelsPreview.astro';
+import {
+  getBenchmarkMatrix,
+  getLLMModelsFromDB,
+  getModelsByCategory,
+  getPeople,
+  getProvidersWithCounts,
+  getRecentModels,
+  getYouTubeCreators,
+} from '../db/queries';
+import { loadNewsItems } from '../data/news-digests';
 
-const models = getLLMModels();
-const providers = getProvidersWithCounts();
-const people = getPeople();
-const benchmarkMatrix = getBenchmarkMatrix();
-const glossaryTerms = getGlossaryTerms();
-const modelCounts = getModelCounts();
+const llmModels = getLLMModelsFromDB();
 const imageModels = getModelsByCategory('image');
 const videoModels = getModelsByCategory('video');
 const speechModels = getModelsByCategory('speech');
 const voiceModels = getModelsByCategory('voice');
 const soundModels = getModelsByCategory('sound');
-const recentModels = getRecentModels(8);
+const providers = getProvidersWithCounts();
+const benchmarkMatrix = getBenchmarkMatrix();
+const recentModels = getRecentModels(6);
+const people = getPeople();
 const youtubeCreators = getYouTubeCreators();
-const allTags = getTagsWithCounts();
-const latestNews = getNews(5);
-const catLabels = { llm: 'LLM', image: 'Image', video: 'Video', voice: 'Voice', speech: 'Speech', sound: 'Sound' } as Record<string, string>;
+const latestNews = loadNewsItems().slice(0, 4);
+
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const lastUpdated = new Date().toLocaleDateString('en-GB', {
@@ -31,390 +35,166 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
   year: 'numeric',
 });
 
-const dataCategories = [
+const launchCards = [
   {
-    title: 'Large Language Models',
-    description: 'Compare GPT, Claude, Gemini, Llama, and more. Sort by price, speed, quality, or value.',
+    title: 'Compare models properly',
+    description: 'Start with pricing, context, speed, quality, and value on one surface instead of jumping between provider docs.',
     href: `${base}compare/llm/`,
-    modelCount: models.length,
-    icon: '💬',
-    available: true,
-    countLabel: 'models tracked',
+    meta: `${llmModels.length} LLMs tracked`,
   },
   {
-    title: 'Image Generation',
-    description: 'DALL-E, Midjourney, FLUX, Stable Diffusion — compare pricing, resolution, and quality.',
-    href: `${base}compare/image/`,
-    modelCount: imageModels.length,
-    icon: '🎨',
-    available: true,
-    countLabel: 'models tracked',
-  },
-  {
-    title: 'Video Generation',
-    description: 'Sora, Veo, Runway, Kling — compare AI video models by cost, duration, and quality.',
-    href: `${base}compare/video/`,
-    modelCount: videoModels.length,
-    icon: '🎬',
-    available: true,
-    countLabel: 'models tracked',
-  },
-  {
-    title: 'Voice & TTS',
-    description: 'ElevenLabs, OpenAI TTS, Cartesia — compare text-to-speech models by cost and quality.',
-    href: `${base}compare/voice/`,
-    modelCount: voiceModels.length,
-    icon: '🗣️',
-    available: true,
-    countLabel: 'models tracked',
-  },
-  {
-    title: 'Speech-to-Text',
-    description: 'Whisper, AssemblyAI, Deepgram — compare speech recognition by accuracy and price.',
-    href: `${base}compare/speech/`,
-    modelCount: speechModels.length,
-    icon: '🎙️',
-    available: true,
-    countLabel: 'models tracked',
-  },
-  {
-    title: 'Music & Sound',
-    description: 'Suno, Udio, MusicGen — compare AI music generation models by cost and quality.',
-    href: `${base}compare/sound/`,
-    modelCount: soundModels.length,
-    icon: '🎵',
-    available: true,
-    countLabel: 'models tracked',
-  },
-  {
-    title: 'Benchmarks',
-    description: `${benchmarkMatrix.benchmarks.length} benchmarks across ${benchmarkMatrix.models.length} models — MMLU, GPQA, HumanEval, SWE-bench, and more.`,
-    href: `${base}benchmarks/`,
-    modelCount: benchmarkMatrix.benchmarks.length,
-    icon: '📊',
-    available: true,
-    countLabel: 'benchmarks tracked',
-  },
-  {
-    title: 'Labs & Providers',
-    description: `${providers.length} AI companies and research labs building the models we track.`,
-    href: `${base}labs/`,
-    modelCount: providers.length,
-    icon: '🏢',
-    available: true,
-    countLabel: 'companies listed',
-  },
-  {
-    title: 'AI News',
-    description: 'Latest AI news — model releases, research breakthroughs, funding rounds, and industry updates.',
+    title: 'Follow the market, not just the hype',
+    description: 'Use the news stream, benchmark library, and provider context together so the headlines are easier to interpret.',
     href: `${base}news/`,
-    modelCount: latestNews.length,
-    icon: '📰',
-    available: true,
-    countLabel: 'latest articles',
+    meta: latestNews[0] ? `Latest item dated ${latestNews[0].date}` : 'News feed ready',
   },
   {
-    title: 'YouTube Channels',
-    description: `${youtubeCreators.length} curated AI YouTube channels — news, tutorials, research, and creative.`,
-    href: `${base}youtube/`,
-    modelCount: youtubeCreators.length,
-    icon: '🎥',
-    available: true,
-    countLabel: 'channels listed',
-  },
-  {
-    title: 'People in AI',
-    description: `${people.length} researchers, founders, and leaders shaping the AI industry.`,
-    href: `${base}people/`,
-    modelCount: people.length,
-    icon: '👤',
-    available: true,
-    countLabel: 'profiles',
+    title: 'Use the built-in tools',
+    description: 'Estimate API spend, compare head to head, and check token costs without leaving the site.',
+    href: `${base}tools/`,
+    meta: 'Launch-ready working surfaces',
   },
 ];
 
-const toolsAndFeatures = [
-  {
-    title: 'Head-to-Head Compare',
-    description: 'Select 2–4 models and compare them side by side across every metric.',
-    href: `${base}compare/head-to-head/`,
-    modelCount: models.length,
-    icon: '⚔️',
-    available: true,
-    countLabel: 'models to compare',
-  },
-  {
-    title: 'Model Leaderboard',
-    description: 'Ranked by quality, value, and price. See which LLM comes out on top.',
-    href: `${base}leaderboard/`,
-    modelCount: 20,
-    icon: '🏆',
-    available: true,
-    countLabel: 'top models ranked',
-  },
-  {
-    title: 'Coding Models',
-    description: 'Best AI models for software development — ranked by HumanEval, SWE-bench, and more.',
-    href: `${base}coding/`,
-    modelCount: models.filter(m => m.qualityScore > 0).length,
-    icon: '💻',
-    available: true,
-    countLabel: 'models evaluated',
-  },
-  {
-    title: 'Pricing Calculator',
-    description: 'Estimate your monthly API costs across every model with usage presets.',
-    href: `${base}calculator/`,
-    modelCount: models.length,
-    icon: '🧮',
-    available: true,
-    countLabel: 'models compared',
-  },
-  {
-    title: 'Pricing Trends',
-    description: 'How AI model pricing has dropped 90%+ in two years — charts, milestones, and analysis.',
-    href: `${base}pricing-trends/`,
-    modelCount: models.filter(m => m.inputPrice > 0).length,
-    icon: '📉',
-    available: true,
-    countLabel: 'paid models tracked',
-  },
-  {
-    title: 'Open Source Models',
-    description: 'Directory of open-source and open-weight AI models you can self-host and fine-tune.',
-    href: `${base}open-source/`,
-    modelCount: models.filter(m => m.openSource).length,
-    icon: '🔓',
-    available: true,
-    countLabel: 'open source models',
-  },
-  {
-    title: 'Fastest Models',
-    description: 'LLMs ranked by tokens per second for latency-sensitive applications.',
-    href: `${base}fastest/`,
-    modelCount: models.filter(m => m.speed > 0).length,
-    icon: '⚡',
-    available: true,
-    countLabel: 'models with speed data',
-  },
-  {
-    title: 'Cheapest Models',
-    description: 'Find the most affordable AI models — free and budget options ranked.',
-    href: `${base}cheapest/`,
-    modelCount: models.length,
-    icon: '💰',
-    available: true,
-    countLabel: 'models compared',
-  },
-  {
-    title: 'Best Value',
-    description: 'Quality per dollar — models that punch above their weight class.',
-    href: `${base}best-value/`,
-    modelCount: models.filter(m => m.inputPrice > 0).length,
-    icon: '🎯',
-    available: true,
-    countLabel: 'paid models ranked',
-  },
-  {
-    title: 'Reasoning Models',
-    description: 'Models ranked by math, logic, and reasoning benchmark performance.',
-    href: `${base}reasoning/`,
-    modelCount: models.length,
-    icon: '🧠',
-    available: true,
-    countLabel: 'models evaluated',
-  },
-  {
-    title: 'Multimodal Models',
-    description: 'Models that understand text, images, audio, and video together.',
-    href: `${base}multimodal/`,
-    modelCount: models.filter(m => m.modality && m.modality.length > 1).length,
-    icon: '👁️',
-    available: true,
-    countLabel: 'multimodal models',
-  },
-  {
-    title: 'Context Windows',
-    description: 'Compare context sizes from 4K to 4M+ tokens. Find models for long documents.',
-    href: `${base}context-window/`,
-    modelCount: models.filter(m => m.contextWindow > 0).length,
-    icon: '📏',
-    available: true,
-    countLabel: 'models compared',
-  },
-  {
-    title: 'New Releases',
-    description: 'Track the latest AI model launches across all categories.',
-    href: `${base}new/`,
-    modelCount: models.length,
-    icon: '🆕',
-    available: true,
-    countLabel: 'models tracked',
-  },
+const coreSections = [
+  { title: 'LLM comparison', href: `${base}compare/llm/`, stat: `${llmModels.length} models`, note: 'Pricing, speed, context, quality, value' },
+  { title: 'Benchmarks', href: `${base}benchmarks/`, stat: `${benchmarkMatrix.benchmarks.length} tracked`, note: 'MMLU, GPQA, HumanEval, SWE-bench, and more' },
+  { title: 'Labs & providers', href: `${base}labs/`, stat: `${providers.length} organisations`, note: 'Who is building what, and where it fits' },
+  { title: 'AI news', href: `${base}news/`, stat: `${latestNews.length > 0 ? latestNews.length : 'Live'} items`, note: 'Public-feed collection with archive fallback' },
+  { title: 'Tool guide', href: `${base}tools/`, stat: 'Internal + external', note: 'Built-in calculators plus curated tools' },
+  { title: 'Guides & glossary', href: `${base}guides/`, stat: `${people.length} people and ${youtubeCreators.length} creators`, note: 'Plain-English learning paths and references' },
 ];
 
-const learnCategories = [
-  {
-    title: 'AI Guides',
-    description: 'Practical, jargon-free guides to help you get the most out of AI tools.',
-    href: `${base}guides/`,
-    modelCount: 6,
-    icon: '📖',
-    available: true,
-    countLabel: 'guides available',
-  },
-  {
-    title: 'AI Glossary',
-    description: `${glossaryTerms.length} AI terms explained in plain English. No PhD required.`,
-    href: `${base}glossary/`,
-    modelCount: glossaryTerms.length,
-    icon: '📚',
-    available: true,
-    countLabel: 'terms defined',
-  },
-  {
-    title: 'Which AI Should I Use?',
-    description: 'Answer 6 quick questions and get a personalised AI recommendation.',
-    href: `${base}quiz/`,
-    modelCount: 6,
-    icon: '🎯',
-    available: true,
-    countLabel: 'AI tools compared',
-  },
-  {
-    title: 'Prompting Basics',
-    description: 'Learn the fundamentals of writing effective AI prompts in 8 minutes.',
-    href: `${base}guides/prompting-basics/`,
-    modelCount: 6,
-    icon: '✍️',
-    available: true,
-    countLabel: 'core techniques',
-  },
-];
+const totalTracked =
+  llmModels.length +
+  imageModels.length +
+  videoModels.length +
+  speechModels.length +
+  voiceModels.length +
+  soundModels.length;
 ---
 
-<BaseLayout title="The AI Resource Hub — Independent AI Model Comparison">
-  <HeroSection modelCount={models.length} lastUpdated={lastUpdated} />
+<BaseLayout title="The AI Resource Hub - Independent AI Comparison and News">
+  <HeroSection modelCount={llmModels.length} lastUpdated={lastUpdated} />
 
-  <TopModelsPreview models={models} />
+  <TopModelsPreview models={llmModels} />
 
-  <!-- Data & Comparison -->
-  <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Compare & Explore</h2>
-    <p class="text-sm text-(--color-text-secondary) mb-8">Data-driven comparison of AI models, benchmarks, and providers</p>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {dataCategories.map((cat) => (
-        <CategoryCard {...cat} />
+  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="grid gap-4 lg:grid-cols-3">
+      {launchCards.map((card) => (
+        <a
+          href={card.href}
+          class="rounded-[1.75rem] border border-(--color-border) bg-(--color-bg-secondary) p-6 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)"
+        >
+          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Start here</p>
+          <h2 class="mt-4 text-2xl font-bold font-display text-(--color-text-primary)">{card.title}</h2>
+          <p class="mt-3 text-sm leading-6 text-(--color-text-secondary)">{card.description}</p>
+          <p class="mt-5 text-xs font-medium text-(--color-accent)">{card.meta}</p>
+        </a>
       ))}
     </div>
   </section>
 
-  <!-- Tools & Features -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Tools & Analysis</h2>
-    <p class="text-sm text-(--color-text-secondary) mb-8">Interactive tools for comparing, calculating, and understanding AI models</p>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {toolsAndFeatures.map((cat) => (
-        <CategoryCard {...cat} />
-      ))}
-    </div>
-  </section>
-
-  <!-- Learn & Discover -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Learn & Discover</h2>
-    <p class="text-sm text-(--color-text-secondary) mb-8">Beginner-friendly guides, glossary, and tools to help you navigate AI</p>
-
-    <div class="grid sm:grid-cols-2 gap-4">
-      {learnCategories.map((cat) => (
-        <CategoryCard {...cat} />
-      ))}
-    </div>
-  </section>
-
-  <!-- Recently Added Models -->
-  {recentModels.length > 0 && (
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-2">Recently Added</h2>
-      <p class="text-sm text-(--color-text-secondary) mb-6">The latest AI models added to our database</p>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {recentModels.map((model) => {
-          return (
-            <a
-              href={`${base}models/${model.id}/`}
-              class="p-5 rounded-2xl glass-panel glass-panel-hover group relative overflow-hidden"
-            >
-              <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
-              <div class="flex items-center gap-3 mb-3 relative z-10">
-                <span
-                  class="w-2 h-2 rounded-full shrink-0"
-                  style={`background-color: ${model.providerColour}`}
-                />
-                <span class="text-xs text-(--color-text-muted) truncate">{model.provider}</span>
-                <span class="text-xs px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-muted) ml-auto">
-                  {catLabels[model.category] ?? model.category}
-                </span>
-              </div>
-              <h3 class="font-bold font-display text-sm text-(--color-text-primary) group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-400 truncate relative z-10 transition-all duration-300">
-                {model.name}
-              </h3>
-              <div class="flex items-center justify-between mt-3 relative z-10">
-                <span class="text-xs font-bold text-(--color-accent)">{model.qualityScore} <span class="text-(--color-text-muted) font-normal">/100</span></span>
-                {model.released && (
-                  <span class="text-xs text-(--color-text-muted)">
-                    {new Date(model.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}
-                  </span>
-                )}
-              </div>
-            </a>
-          );
-        })}
+  <section id="categories" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Core coverage</p>
+        <h2 class="mt-2 text-3xl font-black font-display text-(--color-text-primary)">The parts of the site you will actually use first.</h2>
       </div>
-    </section>
-  )}
+      <a href={`${base}about/`} class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-hover)">
+        How the hub works
+      </a>
+    </div>
 
-  <!-- Newsletter -->
+    <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {coreSections.map((section) => (
+        <a
+          href={section.href}
+          class="rounded-[1.5rem] border border-(--color-border) bg-(--color-bg-card) p-5 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-hover)"
+        >
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-lg font-semibold text-(--color-text-primary)">{section.title}</h3>
+            <span class="text-xs font-medium text-(--color-accent)">{section.stat}</span>
+          </div>
+          <p class="mt-3 text-sm leading-6 text-(--color-text-secondary)">{section.note}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary) p-6 sm:p-8">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Latest signal</p>
+            <h2 class="mt-2 text-2xl font-bold font-display text-(--color-text-primary)">News worth checking</h2>
+          </div>
+          <a href={`${base}news/`} class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-hover)">Open news</a>
+        </div>
+
+        <div class="mt-6 space-y-4">
+          {latestNews.length > 0 ? latestNews.map((item) => (
+            <a href={item.url} target="_blank" rel="noopener noreferrer" class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/60 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
+              <div class="flex items-center gap-3 text-xs text-(--color-text-muted)">
+                <span>{item.source}</span>
+                <span>•</span>
+                <span>{item.date}</span>
+                <span class="rounded-full border border-(--color-border) px-2 py-0.5">{item.category}</span>
+              </div>
+              <h3 class="mt-3 text-base font-semibold text-(--color-text-primary)">{item.title}</h3>
+              {item.summary && <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">{item.summary}</p>}
+            </a>
+          )) : (
+            <div class="rounded-2xl border border-dashed border-(--color-border) p-5 text-sm text-(--color-text-secondary)">
+              The news surface is ready, but no items are loaded yet.
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary) p-6 sm:p-8">
+          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Recently added</p>
+          <h2 class="mt-2 text-2xl font-bold font-display text-(--color-text-primary)">Fresh entries in the database</h2>
+          <div class="mt-6 space-y-3">
+            {recentModels.map((model) => (
+              <a href={`${base}models/${model.id}/`} class="flex items-start justify-between gap-4 rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/60 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="h-2 w-2 rounded-full" style={`background-color: ${model.providerColour}`}></span>
+                    <p class="text-sm font-semibold text-(--color-text-primary)">{model.name}</p>
+                  </div>
+                  <p class="mt-1 text-xs text-(--color-text-muted)">{model.provider}</p>
+                </div>
+                <span class="text-xs font-medium text-(--color-accent)">{model.qualityScore}/100</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-[1.5rem] border border-(--color-border) bg-(--color-bg-secondary) p-5">
+            <p class="text-3xl font-black font-display text-(--color-text-primary)">{totalTracked}</p>
+            <p class="mt-2 text-sm text-(--color-text-secondary)">Models tracked across text, image, video, speech, voice, and sound.</p>
+          </div>
+          <div class="rounded-[1.5rem] border border-(--color-border) bg-(--color-bg-secondary) p-5">
+            <p class="text-3xl font-black font-display text-(--color-text-primary)">{benchmarkMatrix.models.length}</p>
+            <p class="mt-2 text-sm text-(--color-text-secondary)">Models connected to benchmark coverage and comparison tooling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <NewsletterSignup variant="card" />
 
-  <!-- Stats bar -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-12">
-    <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
-      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 relative z-10">{models.length + imageModels.length + videoModels.length + speechModels.length + voiceModels.length + soundModels.length}</p>
-        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">AI Models Tracked</p>
-      </div>
-      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 relative z-10">{providers.length}</p>
-        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">Providers</p>
-      </div>
-      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 relative z-10">{benchmarkMatrix.benchmarks.length}</p>
-        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">Benchmarks</p>
-      </div>
-      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 relative z-10">{people.length}</p>
-        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">People Profiled</p>
-      </div>
-      <div class="text-center p-6 rounded-2xl glass-panel relative overflow-hidden group">
-        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <p class="text-4xl font-black font-display text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-emerald-400 relative z-10">Free</p>
-        <p class="text-sm font-medium text-(--color-text-secondary) mt-2 relative z-10">No Paywalls</p>
-      </div>
-    </div>
-  </section>
-
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'The AI Resource Hub',
     url: new URL(base, Astro.site).toString(),
-    description: 'Independent AI model comparison — pricing, benchmarks, and value rankings for LLMs, image, video, and audio models.',
+    description: 'Independent AI model comparison for pricing, benchmarks, tools, and live news.',
     potentialAction: {
       '@type': 'SearchAction',
       target: `${new URL(base, Astro.site).toString()}?q={search_term_string}`,

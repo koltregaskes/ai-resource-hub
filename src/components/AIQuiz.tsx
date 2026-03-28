@@ -193,7 +193,7 @@ export default function AIQuiz() {
                 style={{
                   backgroundColor: 'var(--color-bg-card)',
                   borderColor: i === 0 ? product.colour : 'var(--color-border)',
-                  ringColor: i === 0 ? product.colour : undefined,
+                  boxShadow: i === 0 ? `0 0 0 2px ${product.colour}` : undefined,
                 }}
               >
                 <div className="flex items-start gap-4">

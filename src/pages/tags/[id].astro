@@ -38,7 +38,7 @@ const allBenchmarks = getBenchmarks();
 
 const taggedModels = modelIds.map(mid => {
   const m = getModelById(mid);
-  return m ? { id: mid, name: m.name, provider: m.provider } : null;
+  return m ? { id: mid, name: m.name, provider: m.provider_name } : null;
 }).filter(Boolean) as Array<{ id: string; name: string; provider: string }>;
 
 const taggedPeople = allPeople.filter(p => peopleIds.includes(p.id));

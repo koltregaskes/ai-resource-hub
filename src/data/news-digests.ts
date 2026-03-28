@@ -8,6 +8,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { getNews } from '../db/queries';
 
 export interface NewsItem {
   id: string;
@@ -20,6 +21,16 @@ export interface NewsItem {
   category: string;      // "Top Stories" | "News" | "YouTube"
   tags: string[];
   digestDate: string;    // The digest file date
+}
+
+interface DBNewsItem {
+  id: string;
+  title: string;
+  url: string;
+  source: string;
+  summary: string | null;
+  published_at: string;
+  category: string;
 }
 
 const TAG_PATTERNS: Record<string, RegExp> = {
@@ -245,4 +256,63 @@ export function loadNewsDigests(): NewsItem[] {
   allItems.sort((a, b) => b.date.localeCompare(a.date));
 
   return allItems;
+}
+
+function categoryLabelFromDB(category: string): string {
+  switch (category) {
+    case 'models':
+      return 'Top Stories';
+    case 'research':
+      return 'Research';
+    case 'tools':
+      return 'Tools';
+    case 'industry':
+      return 'News';
+    case 'funding':
+      return 'Funding';
+    case 'policy':
+      return 'Policy';
+    case 'open-source':
+      return 'Open Source';
+    default:
+      return 'News';
+  }
+}
+
+function loadNewsFromDB(): NewsItem[] {
+  const rows = getNews(250) as DBNewsItem[];
+
+  return rows.map((row) => {
+    const date = row.published_at.slice(0, 10);
+    const dateParts = date.split('-').map(Number);
+    const dateObj = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+
+    return {
+      id: row.id,
+      title: row.title,
+      url: row.url,
+      source: row.source,
+      summary: row.summary ?? '',
+      date,
+      dateLabel: dateObj.toLocaleDateString('en-GB', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }),
+      category: categoryLabelFromDB(row.category),
+      tags: generateTags(`${row.title} ${row.summary ?? ''}`),
+      digestDate: date,
+    };
+  });
+}
+
+/**
+ * Canonical news loader for public pages.
+ * Prefers the live SQLite news store, then falls back to archived digest files.
+ */
+export function loadNewsItems(): NewsItem[] {
+  const dbItems = loadNewsFromDB();
+  if (dbItems.length > 0) return dbItems;
+  return loadNewsDigests();
 }

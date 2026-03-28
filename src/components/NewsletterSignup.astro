@@ -1,211 +1,49 @@
 ---
-/**
- * Newsletter signup component using Buttondown.
- * Supports three variants: 'card' (hero CTA), 'inline' (horizontal form), 'compact' (minimal footer form).
- * Includes optional category checkboxes for subscribers to choose their interests.
- */
 interface Props {
   variant?: 'inline' | 'card' | 'compact';
-  showCategories?: boolean;
 }
 
-const { variant = 'card', showCategories = variant === 'card' } = Astro.props;
+const { variant = 'card' } = Astro.props;
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 ---
 
 {variant === 'card' ? (
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="relative overflow-hidden rounded-3xl glass-panel group p-8 sm:p-12 border border-white/10 before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/10 before:to-purple-500/5 before:-z-10">
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSkiLz48L3N2Zz4=')] opacity-50 pointer-events-none -z-10"></div>
-      <div class="relative z-10 max-w-2xl">
-        <h2 class="text-3xl sm:text-4xl font-black font-display text-(--color-text-primary) mb-4 tracking-tight">
-          Stay ahead of the AI curve
+    <div class="relative overflow-hidden rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary) p-8 sm:p-10">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(190,242,100,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(56,189,248,0.12),transparent_36%)]"></div>
+      <div class="relative z-10 max-w-3xl">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Newsletter On Hold</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-black font-display text-(--color-text-primary)">
+          Follow the live site instead of a waiting list.
         </h2>
-        <p class="text-(--color-text-secondary) mb-6">
-          Get weekly updates on new AI models, pricing changes, and benchmark results.
-          No spam, unsubscribe anytime.
+        <p class="mt-4 max-w-2xl text-(--color-text-secondary)">
+          The newsletter will come back later. For launch, the site itself is the product:
+          fresh model data, public news tracking, and an RSS feed you can use right now.
         </p>
-
-        {showCategories && (
-          <div class="mb-4" id="newsletter-categories">
-            <p class="text-xs text-(--color-text-muted) mb-2">I'm interested in:</p>
-            <div class="flex flex-wrap gap-2">
-              <label class="flex items-center gap-1.5 text-xs text-(--color-text-secondary) cursor-pointer">
-                <input type="checkbox" value="model-releases" class="newsletter-cat rounded border-gray-600 text-(--color-accent) focus:ring-(--color-accent)" checked />
-                Model Releases
-              </label>
-              <label class="flex items-center gap-1.5 text-xs text-(--color-text-secondary) cursor-pointer">
-                <input type="checkbox" value="pricing-updates" class="newsletter-cat rounded border-gray-600 text-(--color-accent) focus:ring-(--color-accent)" checked />
-                Pricing Updates
-              </label>
-              <label class="flex items-center gap-1.5 text-xs text-(--color-text-secondary) cursor-pointer">
-                <input type="checkbox" value="benchmark-results" class="newsletter-cat rounded border-gray-600 text-(--color-accent) focus:ring-(--color-accent)" />
-                Benchmark Results
-              </label>
-              <label class="flex items-center gap-1.5 text-xs text-(--color-text-secondary) cursor-pointer">
-                <input type="checkbox" value="guides-tips" class="newsletter-cat rounded border-gray-600 text-(--color-accent) focus:ring-(--color-accent)" />
-                Guides & Tips
-              </label>
-            </div>
-          </div>
-        )}
-
-        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 relative z-20">
-          <div class="relative flex-1 group/input">
-            <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl blur opacity-25 group-focus-within/input:opacity-75 transition duration-500"></div>
-            <input
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-              class="relative w-full px-5 py-4 rounded-xl bg-(--color-bg-primary) border border-white/10 text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm shadow-inner transition-all"
-            />
-          </div>
-          <input type="hidden" name="tag" value="ai-resource-hub" />
-          <input type="hidden" name="metadata__categories" id="newsletter-categories-hidden" value="" />
-          <button
-            type="submit"
-            id="newsletter-submit"
-            class="relative px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-sm transition-all whitespace-nowrap shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a
+            href={`${base}news/`}
+            class="inline-flex items-center justify-center rounded-full bg-(--color-text-primary) px-5 py-3 text-sm font-semibold text-(--color-bg-primary) transition-transform hover:-translate-y-0.5"
           >
-            Subscribe
-          </button>
-        </form>
-        <p id="newsletter-success" class="hidden mt-3 text-sm text-(--color-success)">
-          Thanks for subscribing! Check your email to confirm.
-        </p>
-        <p id="newsletter-error" class="hidden mt-3 text-sm text-red-400">
-          Something went wrong. Please try again.
-        </p>
-        <p class="mt-3 text-xs text-(--color-text-muted)">
-          Powered by <a href="https://buttondown.email" target="_blank" rel="noopener noreferrer" class="underline hover:text-(--color-text-secondary)">Buttondown</a>. Free forever.
-        </p>
+            Read the latest news
+          </a>
+          <a
+            href={`${base}rss.xml`}
+            class="inline-flex items-center justify-center rounded-full border border-(--color-border) px-5 py-3 text-sm font-semibold text-(--color-text-primary) transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)"
+          >
+            Subscribe via RSS
+          </a>
+        </div>
       </div>
-
-      <!-- Background decoration -->
-      <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-float" aria-hidden="true"></div>
-      <div class="absolute bottom-0 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-float" style="animation-delay: -3s" aria-hidden="true"></div>
     </div>
   </section>
 ) : variant === 'inline' ? (
-  <div class="flex flex-col sm:flex-row gap-2">
-    <input
-      type="email"
-      name="email"
-      placeholder="you@example.com"
-      required
-      form="newsletter-inline-form"
-      class="flex-1 px-3 py-2 rounded-lg bg-(--color-bg-tertiary) border border-(--color-border) text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:border-(--color-accent) focus:outline-none text-sm"
-    />
-    <button
-      type="submit"
-      form="newsletter-inline-form"
-      class="px-4 py-2 rounded-lg bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-xs transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
-    >
-      Subscribe
-    </button>
-    <form id="newsletter-inline-form" class="hidden">
-      <input type="hidden" name="tag" value="ai-resource-hub" />
-    </form>
+  <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4 text-sm text-(--color-text-secondary)">
+    Newsletter is on hold. Use the <a href={`${base}news/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">news page</a> or <a href={`${base}rss.xml`} class="text-(--color-accent) hover:text-(--color-accent-hover)">RSS feed</a> for updates.
   </div>
 ) : (
-  <form id="newsletter-compact-form" class="flex gap-2">
-    <input
-      type="email"
-      name="email"
-      placeholder="Email for updates"
-      required
-      class="flex-1 min-w-0 px-3 py-1.5 rounded bg-(--color-bg-tertiary) border border-(--color-border) text-(--color-text-secondary) placeholder:text-(--color-text-muted) focus:border-(--color-accent) focus:outline-none text-xs"
-    />
-    <input type="hidden" name="tag" value="ai-resource-hub" />
-    <button
-      type="submit"
-      class="px-3 py-1.5 rounded bg-(--color-accent) hover:bg-(--color-accent-hover) text-white font-semibold text-[10px] transition-colors whitespace-nowrap disabled:opacity-50"
-    >
-      Subscribe
-    </button>
-  </form>
+  <div class="text-xs text-(--color-text-muted)">
+    Newsletter on hold. Follow <a href={`${base}rss.xml`} class="text-(--color-accent) hover:text-(--color-accent-hover)">RSS</a>.
+  </div>
 )}
-
-<script>
-  function handleNewsletter(formId: string) {
-    const form = document.getElementById(formId) as HTMLFormElement | null;
-    if (!form) return;
-
-    // For inline/compact forms, get the associated input
-    const formEl = formId === 'newsletter-form' ? form : form;
-
-    formEl.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Gather email from form or associated inputs
-      let email: string | null = null;
-      const emailInput = formEl.querySelector('input[type="email"]') as HTMLInputElement | null;
-      if (emailInput) {
-        email = emailInput.value;
-      } else {
-        // For inline forms where the input has form= attribute
-        const externalInputs = document.querySelectorAll(`input[form="${formId}"]`) as NodeListOf<HTMLInputElement>;
-        for (const inp of externalInputs) {
-          if (inp.type === 'email') email = inp.value;
-        }
-      }
-
-      if (!email) return;
-
-      // Gather categories for card variant
-      const categoriesHidden = document.getElementById('newsletter-categories-hidden') as HTMLInputElement | null;
-      if (categoriesHidden) {
-        const cats = Array.from(document.querySelectorAll('.newsletter-cat:checked'))
-          .map(cb => (cb as HTMLInputElement).value);
-        categoriesHidden.value = cats.join(',');
-      }
-
-      const submitBtn = formEl.querySelector('button[type="submit"]') as HTMLButtonElement | null;
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Subscribing...';
-      }
-
-      try {
-        // Store locally for analytics fallback
-        const subs = JSON.parse(localStorage.getItem('newsletter_subs') || '[]');
-        if (!subs.includes(email)) {
-          subs.push(email);
-          localStorage.setItem('newsletter_subs', JSON.stringify(subs));
-        }
-
-        // Show success
-        const success = document.getElementById('newsletter-success');
-        const error = document.getElementById('newsletter-error');
-        if (success) success.classList.remove('hidden');
-        if (error) error.classList.add('hidden');
-
-        // Reset form
-        if (emailInput) emailInput.value = '';
-        const externalInputs = document.querySelectorAll(`input[form="${formId}"]`) as NodeListOf<HTMLInputElement>;
-        for (const inp of externalInputs) {
-          if (inp.type === 'email') inp.value = '';
-        }
-
-        // Hide success after 8 seconds
-        setTimeout(() => {
-          if (success) success.classList.add('hidden');
-        }, 8000);
-      } catch (err) {
-        const error = document.getElementById('newsletter-error');
-        if (error) error.classList.remove('hidden');
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Subscribe';
-        }
-      }
-    });
-  }
-
-  handleNewsletter('newsletter-form');
-  handleNewsletter('newsletter-inline-form');
-  handleNewsletter('newsletter-compact-form');
-</script>
