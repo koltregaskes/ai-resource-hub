@@ -8,11 +8,11 @@
   --color-bg-card: rgba(18, 18, 32, 0.6); /* Glassmorphic card base */
   --color-bg-hover: rgba(30, 30, 50, 0.8);
 
-  /* Vibrant Accent Gadients (Indigo to Cyan/Violet) */
-  --color-accent: #6366f1; /* Indigo-500 */
-  --color-accent-hover: #8b5cf6; /* Violet-500 */
-  --color-accent-muted: #4f46e5;
-  --color-accent-glow: rgba(99, 102, 241, 0.25);
+  /* Accent — teal/cyan, distinct from the generic AI-tool indigo */
+  --color-accent: #0d9488; /* Teal-600 */
+  --color-accent-hover: #0f766e; /* Teal-700 */
+  --color-accent-muted: #14b8a6; /* Teal-400 */
+  --color-accent-glow: rgba(13, 148, 136, 0.22);
   
   --color-text-primary: #f8fafc;
   --color-text-secondary: #cbd5e1;
@@ -51,10 +51,10 @@
   --color-bg-card: rgba(255, 255, 255, 0.8);
   --color-bg-hover: #e2e8f0;
 
-  --color-accent: #4f46e5;
-  --color-accent-hover: #4338ca;
-  --color-accent-muted: #6366f1;
-  --color-accent-glow: rgba(79, 70, 229, 0.15);
+  --color-accent: #0f766e;
+  --color-accent-hover: #0d5f59;
+  --color-accent-muted: #0d9488;
+  --color-accent-glow: rgba(13, 148, 136, 0.12);
 
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6, .font-display {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #6366f1, #06b6d4, #8b5cf6); /* Indigo -> Cyan -> Violet */
+  background-image: linear-gradient(to right, #14b8a6, #0d9488, #06b6d4); /* Teal -> Teal-dark -> Cyan */
   background-size: 200% auto;
   animation: shine 5s linear infinite;
 }

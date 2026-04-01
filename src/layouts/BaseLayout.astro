@@ -23,68 +23,144 @@ const ogImageUrl = ogImage
   ? new URL(ogImage, Astro.site).href
   : new URL(`${base}og-default.svg`, Astro.site).href;
 
+// Desktop nav with dropdown children
 const primaryNav = [
-  { href: `${base}compare/llm/`, label: 'Compare' },
-  { href: `${base}benchmarks/`, label: 'Benchmarks' },
-  { href: `${base}news/`, label: 'News' },
-  { href: `${base}tools/`, label: 'Tools' },
-  { href: `${base}guides/`, label: 'Guides' },
-  { href: `${base}about/`, label: 'About' },
+  {
+    label: 'Compare',
+    href: `${base}compare/llm/`,
+    children: [
+      { href: `${base}compare/llm/`, label: 'LLM Comparison', note: 'Pricing, speed, context, quality' },
+      { href: `${base}compare/head-to-head/`, label: 'Head-to-Head', note: 'Compare two models directly' },
+      { href: `${base}leaderboard/`, label: 'Leaderboard', note: 'Top models ranked by quality' },
+      { href: `${base}best-value/`, label: 'Best Value', note: 'Cost-performance ratio' },
+      { href: `${base}benchmarks/`, label: 'Benchmarks', note: 'MMLU, SWE-bench, HumanEval and more' },
+      { href: `${base}pricing-trends/`, label: 'Pricing Trends', note: 'How costs are moving over time' },
+    ],
+  },
+  {
+    label: 'Models',
+    href: `${base}compare/llm/`,
+    children: [
+      { href: `${base}fastest/`, label: 'Fastest Models', note: 'Ranked by tokens per second' },
+      { href: `${base}cheapest/`, label: 'Cheapest Models', note: 'Lowest cost per million tokens' },
+      { href: `${base}new/`, label: 'Recently Added', note: 'Latest entries in the database' },
+      { href: `${base}context-window/`, label: 'Context Window', note: 'Max context by model' },
+      { href: `${base}open-source/`, label: 'Open Source', note: 'Open-weight and open-source models' },
+      { href: `${base}reasoning/`, label: 'Reasoning Models', note: 'o1, DeepSeek-R1 and chain-of-thought' },
+      { href: `${base}multimodal/`, label: 'Multimodal', note: 'Image, audio, and video inputs' },
+    ],
+  },
+  {
+    label: 'Labs',
+    href: `${base}labs/`,
+    children: [
+      { href: `${base}labs/`, label: 'Labs & Providers', note: 'Who is building what' },
+      { href: `${base}people/`, label: 'People in AI', note: 'Key figures and researchers' },
+      { href: `${base}timeline/`, label: 'AI Timeline', note: 'History of releases and milestones' },
+      { href: `${base}rumours/`, label: 'Rumours & Leaks', note: 'Unconfirmed signals and upcoming models' },
+      { href: `${base}status/`, label: 'Provider Status', note: 'Live API health and incidents' },
+    ],
+  },
+  {
+    label: 'News',
+    href: `${base}news/`,
+    children: [
+      { href: `${base}news/`, label: 'AI News', note: 'Curated daily signal from 74 sources' },
+      { href: `${base}twitter/`, label: 'X / Twitter', note: '286 curated accounts across 17 lists' },
+      { href: `${base}youtube/`, label: 'YouTube', note: 'Key AI channels and creators' },
+      { href: `${base}stats/`, label: 'Stats & Numbers', note: 'Data points and market figures' },
+    ],
+  },
+  {
+    label: 'Tools',
+    href: `${base}tools/`,
+    children: [
+      { href: `${base}calculator/`, label: 'Pricing Calculator', note: 'Estimate API spend before you commit' },
+      { href: `${base}token-counter/`, label: 'Token Counter', note: 'Count tokens for any model' },
+      { href: `${base}tools/`, label: 'Tool Guide', note: 'Curated external AI tools' },
+      { href: `${base}quiz/`, label: 'Which AI?', note: 'Find the right model for your task' },
+    ],
+  },
+  {
+    label: 'Guides',
+    href: `${base}guides/`,
+    children: [
+      { href: `${base}guides/`, label: 'Guides Overview', note: 'Start here for learning paths' },
+      { href: `${base}academy/`, label: 'AI Academy', note: 'Structured learning for all levels' },
+      { href: `${base}glossary/`, label: 'Glossary', note: 'Plain-English AI terminology' },
+      { href: `${base}prompts/`, label: 'Prompt Library', note: 'Tested prompts across use cases' },
+      { href: `${base}use-cases/`, label: 'Use Cases', note: 'AI applied to real problems' },
+      { href: `${base}methodology/`, label: 'Methodology', note: 'How data is sourced and scored' },
+    ],
+  },
+  { label: 'About', href: `${base}about/` },
 ];
 
 const mobileSections = [
   {
-    title: 'Explore',
+    title: 'Compare',
     links: [
+      { href: `${base}compare/llm/`, label: 'LLM Comparison' },
+      { href: `${base}compare/head-to-head/`, label: 'Head-to-Head' },
       { href: `${base}leaderboard/`, label: 'Leaderboard' },
+      { href: `${base}best-value/`, label: 'Best Value' },
+      { href: `${base}benchmarks/`, label: 'Benchmarks' },
+      { href: `${base}pricing-trends/`, label: 'Pricing Trends' },
+    ],
+  },
+  {
+    title: 'Models',
+    links: [
       { href: `${base}fastest/`, label: 'Fastest Models' },
       { href: `${base}cheapest/`, label: 'Cheapest Models' },
-      { href: `${base}best-value/`, label: 'Best Value' },
-      { href: `${base}pricing-trends/`, label: 'Pricing Trends' },
+      { href: `${base}new/`, label: 'Recently Added' },
+      { href: `${base}context-window/`, label: 'Context Window' },
+      { href: `${base}open-source/`, label: 'Open Source' },
+      { href: `${base}reasoning/`, label: 'Reasoning Models' },
+    ],
+  },
+  {
+    title: 'Labs & News',
+    links: [
       { href: `${base}labs/`, label: 'Labs & Providers' },
       { href: `${base}people/`, label: 'People in AI' },
-    ],
-  },
-  {
-    title: 'Learn',
-    links: [
-      { href: `${base}academy/`, label: 'AI Academy' },
-      { href: `${base}glossary/`, label: 'AI Glossary' },
-      { href: `${base}quiz/`, label: 'Which AI Should I Use?' },
-      { href: `${base}token-counter/`, label: 'Token Counter' },
-      { href: `${base}prompts/`, label: 'Prompt Library' },
-      { href: `${base}references/`, label: 'References' },
-    ],
-  },
-  {
-    title: 'More',
-    links: [
-      { href: `${base}status/`, label: 'Provider Status' },
-      { href: `${base}rumours/`, label: 'Rumours & Leaks' },
-      { href: `${base}youtube/`, label: 'YouTube Channels' },
       { href: `${base}timeline/`, label: 'AI Timeline' },
-      { href: `${base}methodology/`, label: 'Methodology' },
-      { href: `${base}rss.xml`, label: 'RSS Feed' },
+      { href: `${base}news/`, label: 'AI News' },
+      { href: `${base}rumours/`, label: 'Rumours & Leaks' },
+      { href: `${base}status/`, label: 'Provider Status' },
+    ],
+  },
+  {
+    title: 'Tools & Guides',
+    links: [
+      { href: `${base}calculator/`, label: 'Pricing Calculator' },
+      { href: `${base}token-counter/`, label: 'Token Counter' },
+      { href: `${base}guides/`, label: 'Guides' },
+      { href: `${base}academy/`, label: 'AI Academy' },
+      { href: `${base}glossary/`, label: 'Glossary' },
+      { href: `${base}quiz/`, label: 'Which AI?' },
     ],
   },
 ];
 
 const footerSections = [
   {
-    title: 'Core Paths',
+    title: 'Compare',
     links: [
-      { href: `${base}compare/llm/`, label: 'Model comparison' },
+      { href: `${base}compare/llm/`, label: 'LLM comparison' },
       { href: `${base}benchmarks/`, label: 'Benchmark library' },
       { href: `${base}leaderboard/`, label: 'Leaderboard' },
-      { href: `${base}news/`, label: 'AI news' },
+      { href: `${base}best-value/`, label: 'Best value' },
+      { href: `${base}pricing-trends/`, label: 'Pricing trends' },
     ],
   },
   {
-    title: 'Built-In Tools',
+    title: 'Tools',
     links: [
       { href: `${base}calculator/`, label: 'Pricing calculator' },
       { href: `${base}token-counter/`, label: 'Token counter' },
-      { href: `${base}compare/head-to-head/`, label: 'Head-to-head compare' },
+      { href: `${base}compare/head-to-head/`, label: 'Head-to-head' },
+      { href: `${base}quiz/`, label: 'Which AI for me?' },
       { href: `${base}tools/`, label: 'External tool guide' },
     ],
   },
@@ -94,6 +170,7 @@ const footerSections = [
       { href: `${base}guides/`, label: 'Guides' },
       { href: `${base}academy/`, label: 'AI Academy' },
       { href: `${base}glossary/`, label: 'Glossary' },
+      { href: `${base}prompts/`, label: 'Prompt library' },
       { href: `${base}methodology/`, label: 'Methodology' },
     ],
   },
@@ -101,8 +178,9 @@ const footerSections = [
     title: 'Site',
     links: [
       { href: `${base}about/`, label: 'About' },
+      { href: `${base}news/`, label: 'AI news' },
+      { href: `${base}rumours/`, label: 'Rumours & leaks' },
       { href: `${base}references/`, label: 'References' },
-      { href: `${base}scheduling/`, label: 'Automation' },
       { href: `${base}rss.xml`, label: 'RSS feed' },
     ],
   },
@@ -120,7 +198,7 @@ const footerSections = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -154,81 +232,113 @@ const footerSections = [
     </script>
   </head>
   <body class="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary) flex flex-col">
-    <header class="sticky top-0 z-50 border-b border-white/6 bg-(--color-bg-primary)/86 backdrop-blur-xl">
-      <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href={base} class="flex items-center gap-3">
-          <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-xl" width="32" height="32" />
+
+    <!-- ── Header ─────────────────────────────────────────────────── -->
+    <header class="sticky top-0 z-50 border-b border-white/6 bg-(--color-bg-primary)/90 backdrop-blur-xl">
+      <nav class="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+
+        <!-- Logo -->
+        <a href={base} class="flex items-center gap-2.5 shrink-0">
+          <img src={`${base}favicon.svg`} alt="" class="h-7 w-7 rounded-lg" width="28" height="28" />
           <div class="hidden sm:block">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.25em] text-(--color-text-muted)">Independent AI Reference</p>
-            <p class="text-sm font-bold font-display text-(--color-text-primary)">The AI Resource Hub</p>
+            <p class="text-[9px] font-semibold uppercase tracking-[0.3em] text-(--color-text-muted) leading-none">Independent AI Reference</p>
+            <p class="text-sm font-bold font-display text-(--color-text-primary) leading-tight mt-0.5">The AI Resource Hub</p>
           </div>
           <span class="sm:hidden text-sm font-bold font-display text-(--color-text-primary)">AI Resource Hub</span>
         </a>
 
-        <div class="hidden lg:flex items-center gap-1">
+        <!-- Desktop nav with dropdowns -->
+        <div class="hidden lg:flex items-center gap-0.5">
           {primaryNav.map((item) => (
-            <a
-              href={item.href}
-              class="rounded-full px-3 py-2 text-sm font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
-            >
-              {item.label}
-            </a>
+            item.children ? (
+              <div class="nav-dropdown-group relative">
+                <a
+                  href={item.href}
+                  class="nav-dropdown-trigger flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
+                >
+                  {item.label}
+                  <svg class="h-3.5 w-3.5 opacity-50 transition-transform nav-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+                <div class="nav-dropdown absolute left-0 top-full pt-1 hidden">
+                  <div class="min-w-[280px] rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-2 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+                    {item.children.map((child) => (
+                      <a
+                        href={child.href}
+                        class="group flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-(--color-bg-tertiary)"
+                      >
+                        <div class="mt-0.5 h-1.5 w-1.5 rounded-full bg-(--color-accent) opacity-60 shrink-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div>
+                          <p class="text-sm font-medium text-(--color-text-primary)">{child.label}</p>
+                          {child.note && <p class="text-xs text-(--color-text-muted) mt-0.5">{child.note}</p>}
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <a
+                href={item.href}
+                class="rounded-lg px-3 py-2 text-sm font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
+              >
+                {item.label}
+              </a>
+            )
           ))}
         </div>
 
+        <!-- Right controls -->
         <div class="flex items-center gap-2">
           <GlobalSearch client:load items={searchIndex} baseUrl={base} />
 
           <button
             id="theme-toggle"
-            class="rounded-full border border-(--color-border) p-2 text-(--color-text-secondary) transition-colors hover:border-(--color-border-hover) hover:text-(--color-text-primary)"
+            class="rounded-lg border border-(--color-border) p-2 text-(--color-text-secondary) transition-colors hover:border-(--color-border-hover) hover:text-(--color-text-primary)"
             aria-label="Toggle theme"
           >
-            <svg id="theme-icon-moon" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg id="theme-icon-moon" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
-            <svg id="theme-icon-sun" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg id="theme-icon-sun" class="hidden h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
           </button>
 
           <button
             id="mobile-menu-btn"
-            class="lg:hidden rounded-full border border-(--color-border) p-2 text-(--color-text-secondary) transition-colors hover:border-(--color-border-hover) hover:text-(--color-text-primary)"
+            class="lg:hidden rounded-lg border border-(--color-border) p-2 text-(--color-text-secondary) transition-colors hover:border-(--color-border-hover) hover:text-(--color-text-primary)"
             aria-label="Toggle navigation menu"
             aria-expanded="false"
           >
-            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg id="mobile-menu-icon-bars" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg id="mobile-menu-icon-x" class="hidden h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
       </nav>
 
+      <!-- Mobile menu -->
       <div id="mobile-menu" class="hidden border-t border-(--color-border) bg-(--color-bg-secondary) lg:hidden">
         <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6">
-          <div class="grid gap-2">
-            {primaryNav.map((item) => (
-              <a
-                href={item.href}
-                class="rounded-2xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-
-          <div class="mt-4 space-y-3">
+          <div class="space-y-2">
             {mobileSections.map((section) => (
-              <details class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary)">
-                <summary class="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-(--color-text-primary)">
+              <details class="rounded-xl border border-(--color-border) bg-(--color-bg-primary)">
+                <summary class="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-(--color-text-primary) flex items-center justify-between">
                   {section.title}
+                  <svg class="h-3.5 w-3.5 text-(--color-text-muted)" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
                 </summary>
-                <div class="grid gap-1 px-2 pb-2">
+                <div class="grid grid-cols-2 gap-1 px-2 pb-2">
                   {section.links.map((link) => (
                     <a
                       href={link.href}
-                      class="rounded-xl px-3 py-2 text-sm text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
+                      class="rounded-lg px-3 py-2 text-sm text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)"
                     >
                       {link.label}
                     </a>
@@ -236,6 +346,10 @@ const footerSections = [
                 </div>
               </details>
             ))}
+          </div>
+          <div class="mt-3 grid grid-cols-2 gap-1">
+            <a href={`${base}about/`} class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)">About</a>
+            <a href={`${base}rss.xml`} class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors hover:bg-(--color-bg-tertiary) hover:text-(--color-text-primary)">RSS Feed</a>
           </div>
         </div>
       </div>
@@ -245,30 +359,33 @@ const footerSections = [
       <slot />
     </main>
 
+    <!-- ── Footer ─────────────────────────────────────────────────── -->
     <footer class="relative mt-auto border-t border-white/6 bg-(--color-bg-secondary)">
-      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-(--color-accent)/20 to-transparent"></div>
       <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr_1fr_1fr]">
+        <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div class="max-w-sm">
-            <p class="text-[11px] font-semibold uppercase tracking-[0.3em] text-(--color-text-muted)">Launch-ready reference</p>
-            <h2 class="mt-3 text-2xl font-black font-display text-(--color-text-primary)">A practical map of AI tools, models, and signals.</h2>
-            <p class="mt-4 text-sm leading-6 text-(--color-text-secondary)">
+            <div class="flex items-center gap-2.5 mb-4">
+              <img src={`${base}favicon.svg`} alt="" class="h-7 w-7 rounded-lg" width="28" height="28" />
+              <p class="text-sm font-bold font-display text-(--color-text-primary)">The AI Resource Hub</p>
+            </div>
+            <p class="text-sm leading-6 text-(--color-text-secondary)">
               Pricing, benchmarks, provider context, learning resources, and daily news in one place.
               Built to be useful first and flashy second.
             </p>
-            <p class="mt-4 text-xs text-(--color-text-muted)">
-              Automated refreshes run daily on the always-on local machine. GitHub is used as a manual fallback, not the primary scheduler.
+            <p class="mt-4 text-xs leading-5 text-(--color-text-muted)">
+              Independent and unaffiliated. Data is provided for research and comparison purposes only. Updated daily.
             </p>
           </div>
 
           {footerSections.map((section) => (
             <div>
-              <h3 class="text-sm font-semibold text-(--color-text-primary)">{section.title}</h3>
-              <div class="mt-4 space-y-2">
+              <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-(--color-text-muted) mb-4">{section.title}</h3>
+              <div class="space-y-2.5">
                 {section.links.map((link) => (
                   <a
                     href={link.href}
-                    class="block text-sm text-(--color-text-muted) transition-colors hover:text-(--color-text-primary)"
+                    class="block text-sm text-(--color-text-secondary) transition-colors hover:text-(--color-text-primary)"
                   >
                     {link.label}
                   </a>
@@ -278,24 +395,28 @@ const footerSections = [
           ))}
         </div>
 
-        <div class="mt-10 flex flex-col gap-3 border-t border-(--color-border) pt-6 text-xs text-(--color-text-muted) sm:flex-row sm:items-center sm:justify-between">
-          <div class="flex items-center gap-2">
-            <img src={`${base}favicon.svg`} alt="" class="h-5 w-5" width="20" height="20" />
-            <span>The AI Resource Hub</span>
-          </div>
-          <p>Independent and unaffiliated. Data is provided for research and comparison purposes.</p>
+        <div class="mt-10 flex flex-col gap-2 border-t border-(--color-border) pt-6 text-xs text-(--color-text-muted) sm:flex-row sm:items-center sm:justify-between">
+          <span>© {new Date().getFullYear()} The AI Resource Hub</span>
+          <p>Data is provided for research and comparison purposes.</p>
         </div>
       </div>
     </footer>
 
     <script>
+      // Mobile menu
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
+      const barsIcon = document.getElementById('mobile-menu-icon-bars');
+      const xIcon = document.getElementById('mobile-menu-icon-x');
+
       btn?.addEventListener('click', () => {
         const isHidden = menu?.classList.toggle('hidden');
         btn.setAttribute('aria-expanded', String(!isHidden));
+        barsIcon?.classList.toggle('hidden', !isHidden);
+        xIcon?.classList.toggle('hidden', isHidden ?? true);
       });
 
+      // Theme toggle
       const themeToggle = document.getElementById('theme-toggle');
       const moonIcon = document.getElementById('theme-icon-moon');
       const sunIcon = document.getElementById('theme-icon-sun');
@@ -305,7 +426,6 @@ const footerSections = [
         moonIcon?.classList.toggle('hidden', isLight);
         sunIcon?.classList.toggle('hidden', !isLight);
       }
-
       updateThemeIcons();
 
       themeToggle?.addEventListener('click', () => {
@@ -318,6 +438,31 @@ const footerSections = [
           localStorage.setItem('theme', 'light');
         }
         updateThemeIcons();
+      });
+
+      // Desktop dropdowns — show/hide on hover with small delay to prevent flicker
+      const groups = document.querySelectorAll('.nav-dropdown-group');
+      groups.forEach((group) => {
+        const dropdown = group.querySelector('.nav-dropdown') as HTMLElement | null;
+        const chevron = group.querySelector('.nav-chevron') as HTMLElement | null;
+        let hideTimer: ReturnType<typeof setTimeout> | null = null;
+
+        const show = () => {
+          if (hideTimer) clearTimeout(hideTimer);
+          dropdown?.classList.remove('hidden');
+          if (chevron) chevron.style.transform = 'rotate(180deg)';
+        };
+        const hide = () => {
+          hideTimer = setTimeout(() => {
+            dropdown?.classList.add('hidden');
+            if (chevron) chevron.style.transform = '';
+          }, 80);
+        };
+
+        group.addEventListener('mouseenter', show);
+        group.addEventListener('mouseleave', hide);
+        dropdown?.addEventListener('mouseenter', show);
+        dropdown?.addEventListener('mouseleave', hide);
       });
     </script>
   </body>
