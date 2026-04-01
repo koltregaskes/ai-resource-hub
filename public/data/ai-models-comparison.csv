@@ -1,0 +1,140 @@
+Model,Provider,Quality Score,Input Price ($/M tokens),Output Price ($/M tokens),Context Window,Max Output,Speed (tok/s),TTFT (ms),Open Source,Modality,API Available,Released,Chatbot Arena Elo,Mmlu,Gpqa Diamond,Math 500,Humaneval,Swe Bench Verified,Mt Bench,Livebench,Aime 2025,Arena Hard,Bigcodebench,Value Score,Pricing Source,Last Updated
+GPT-5.2 Pro,OpenAI,97,21,168,400000,32768,,,No,"text,vision",Yes,2025-12-10,,,,,,,,,,,,1,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+GPT-5 Pro,OpenAI,96,15,120,400000,32768,,,No,"text,vision",Yes,2025-10-06,,,,,,,,,,,,1.4,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Gemini 3.1 Pro,Google,96,2,12,1048576,65536,80,300,No,"text,vision,audio,video",Yes,2026-02-01,1375,,,,,,,,,,,13.7,ai.google.dev/pricing,
+Claude Opus 4.5,Anthropic,95,5,25,200000,64000,,,No,"text,vision",Yes,2025-11-24,,,,,,,,,,,,6.3,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Midjourney v7,Midjourney,95,0.01,0,6000,2048,,,No,image,,2025-05-25,,,,,,,,,,,,19000,midjourney.com/pricing,
+ElevenLabs Multilingual v2,ElevenLabs,94,24,0,5000,600,,,No,text-to-speech,Yes,2024-01-01,,,,,,,,,,,,7.8,elevenlabs.io/pricing,2026-03-15 06:44:04
+Gemini 3 Pro,Google,94,2,12,1048576,65536,,,No,"text,vision,audio,video",Yes,2025-11-18,,,,,,,,,,,,13.4,ai.google.dev/pricing,
+AssemblyAI Best,AssemblyAI,93,0.0065,0,36000,36000,,,No,speech-to-text,Yes,2024-01-01,,,,,,,,,,,,28615.4,assemblyai.com/pricing,
+Claude Sonnet 4.5,Anthropic,93,3,15,200000,64000,,,No,"text,vision",Yes,2025-09-29,,,,,,,,,,,,10.3,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Veo 3,Google,93,0.2,0,4000,8,,,No,video,Yes,2025-05-20,,,,,,,,,,,,930,deepmind.google/technologies/veo,
+GPT-4o Transcribe,OpenAI,92,0.006,0,7200,7200,,,No,speech-to-text,Yes,2025-03-14,,,,,,,,,,,,30666.7,openai.com/api/pricing,
+Imagen 4,Google,92,0.04,0,4000,2048,,,No,image,Yes,2025-05-20,,,,,,,,,,,,4600,ai.google.dev/pricing,
+Midjourney v6.1,Midjourney,92,0.01,0,6000,2048,,,No,image,,2024-12-01,,,,,,,,,,,,18400,midjourney.com/pricing,
+DeepSeek R1 0528,DeepSeek,91,0.45,2.15,128000,8192,,,Yes,text,Yes,2025-05-28,,,,,,,,,,,,70,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Deepgram Nova 3,Deepgram,91,0.0043,0,36000,36000,,,No,speech-to-text,Yes,2025-03-01,,,,,,,,,,,,42325.6,deepgram.com/pricing,
+ElevenLabs Turbo v2.5,ElevenLabs,90,18,0,5000,600,,,No,text-to-speech,Yes,2024-06-01,,,,,,,,,,,,10,elevenlabs.io/pricing,2026-03-15 06:44:04
+GPT Image 1,OpenAI,90,0.011,0,32000,1024,,,No,image,Yes,2025-04-23,,,,,,,,,,,,16363.6,openai.com/api/pricing,
+GPT-5.2,OpenAI,90,1.75,14,400000,32768,85,320,No,"text,vision",Yes,2025-12-10,1370,,89,,,78,9.5,88,,92,73,11.4,OpenAI (official),2026-03-31 19:09:12
+Gemini Audio (STT),Google,90,0.003,0,34200,34200,,,No,speech-to-text,Yes,2025-01-01,,,,,,,,,,,,60000,ai.google.dev/pricing,
+Qwen3 Max,Alibaba,90,0.78,3.9,256000,32768,,,Yes,text,Yes,2025-09-01,,,,,,,,,,,,38.5,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Suno v4,Suno,90,0.05,0,3000,240,,,No,music,Yes,2024-11-01,,,,,,,,,,,,3600,suno.com/pricing,
+Veo 2,Google,90,0.15,0,4000,8,,,No,video,Yes,2024-12-01,,,,,,,,,,,,1200,deepmind.google/technologies/veo,
+o4-mini,OpenAI,90,1.1,4.4,200000,100000,65,550,No,"text,vision",Yes,2025-04-16,,,81.4,96.3,96,,,,92.7,,,32.7,OpenAI (official),2026-03-31 19:09:12
+Claude Opus 4.6,Anthropic,89,15,75,200000,128000,50,280,No,"text,vision",Yes,2026-02-05,1365,,,,,78,9.4,86.5,,90,72,2,Anthropic (official),2026-03-31 19:09:12
+FLUX Kontext,Black Forest Labs,89,0.04,0,8000,1024,,,No,image,Yes,2025-06-18,,,,,,,,,,,,4450,blackforestlabs.ai/pricing,
+Cartesia Sonic 2,Cartesia,88,15,0,4000,600,,,No,text-to-speech,Yes,2025-01-29,,,,,,,,,,,,11.7,cartesia.ai/pricing,
+FLUX 1.1 Pro,Black Forest Labs,88,0.04,0,4000,1024,,,No,image,Yes,2024-10-01,,,,,,,,,,,,4400,blackforestlabs.ai/pricing,
+Gemini 3 Flash,Google,88,0.5,3,200000,32768,,,No,"text,vision,audio,video",Yes,2025-11-18,,,,,,,,,,,,50.3,ai.google.dev/pricing,
+Grok 4,xAI,88,3,15,256000,32768,50,350,No,text,Yes,2025-07-09,1345,,82,95,,,9.3,84,,89,,9.8,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Ideogram 3,Ideogram,88,0.02,0,8000,1536,,,No,image,Yes,2025-04-23,,,,,,,,,,,,8800,ideogram.ai/pricing,
+Kling 2,Kling AI,88,0.06,0,4000,10,,,No,video,Yes,2025-08-01,,,,,,,,,,,,2933.3,klingai.com/pricing,
+Qwen3 Coder 480B,Alibaba,88,2,2,256000,32768,,,Yes,text,Yes,2025-09-01,,,,,,,,,,,,44,together.ai/pricing,
+Sora,OpenAI,88,0.15,0,4000,20,,,No,video,Yes,2025-02-01,,,,,,,,,,,,1173.3,openai.com/sora,
+Whisper Large v3,OpenAI,88,0.006,0,7200,7200,,,Yes,speech-to-text,Yes,2023-11-06,,,,,,,,,,,,29333.3,openai.com/api/pricing,
+o3,OpenAI,88,2,8,200000,100000,15,1200,No,"text,vision",Yes,2025-04-16,1337,92,83.3,96.7,97,69.1,9.1,85,91.6,88.5,74,17.6,OpenAI (official),2026-03-31 19:09:12
+o3-mini,OpenAI,88,1.1,4.4,200000,100000,60,600,No,text,Yes,2025-01-31,,,,,,,,,,,,32,OpenAI (official),2026-03-31 19:09:12
+o3-pro,OpenAI,88,20,80,200000,100000,,,No,"text,vision",Yes,2025-06-10,,,87.5,98,,73,,,96.7,,,1.8,OpenAI (official),2026-03-31 19:09:12
+Claude Haiku 4.5,Anthropic,87,1,5,200000,64000,,,No,"text,vision",Yes,2025-10-15,,,,,,,,,,,,29,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Deepgram Nova 2,Deepgram,87,0.0036,0,36000,36000,,,No,speech-to-text,Yes,2024-01-01,,,,,,,,,,,,48333.3,deepgram.com/pricing,
+GPT-5,OpenAI,87,1.25,10,400000,32768,75,380,No,"text,vision",Yes,2025-08-07,1355,,86,,,75,,,,,,15.5,OpenAI (official),2026-03-31 19:09:12
+Gen-4,Runway,87,0.1,0,4000,10,,,No,video,Yes,2025-06-02,,,,,,,,,,,,1740,runwayml.com/pricing,
+Imagen 3,Google,87,0.04,0,4000,1024,,,No,image,Yes,2024-08-01,,,,,,,,,,,,4350,ai.google.dev/pricing,
+Qwen3 235B,Alibaba,87,0.455,1.82,256000,32768,40,420,Yes,text,Yes,2025-04-01,1320,,,92,,,,78,,,,76.5,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Udio v2,Udio,87,0.04,0,3000,180,,,No,music,Yes,2024-10-01,,,,,,,,,,,,4350,udio.com/pricing,
+Claude Sonnet 4.6,Anthropic,86,3,15,200000,64000,90,240,No,"text,vision",Yes,2026-02-17,1350,,,,,72,,83,,86,,9.6,Anthropic (official),2026-03-31 19:09:12
+DeepSeek V3.2,DeepSeek,86,0.27,1.1,128000,8192,49,400,Yes,text,Yes,2025-09-29,1310,89.5,,,91,,,,,,,125.5,DeepSeek (official),2026-03-31 19:09:13
+GPT-4o Mini TTS,OpenAI,86,12,0,4096,600,,,No,text-to-speech,Yes,2025-03-20,,,,,,,,,,,,14.3,openai.com/api/pricing,
+Grok 4.1 Fast,xAI,86,0.2,0.5,2097152,32768,,,No,text,Yes,2025-11-01,,,,,,,,,,,,245.7,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Mistral Large 3,Mistral,86,2,6,256000,32768,80,310,Yes,"text,vision",Yes,2025-06-01,1295,,,,,,,,,,,21.5,Mistral (official),2026-03-31 19:09:13
+Ray 2,Luma AI,86,0.08,0,4000,10,,,No,video,Yes,2025-03-01,,,,,,,,,,,,2150,lumalabs.ai/pricing,
+AssemblyAI Nano,AssemblyAI,85,0.002,0,36000,36000,,,No,speech-to-text,Yes,2024-01-01,,,,,,,,,,,,85000,assemblyai.com/pricing,
+DALL-E 3 HD,OpenAI,85,0.08,0,4000,1792,,,No,image,Yes,2023-10-01,,,,,,,,,,,,2125,openai.com/api/pricing,
+DeepSeek R1,DeepSeek,85,0.55,2.19,128000,8192,30,500,Yes,text,Yes,2025-01-20,1318,90.8,71.5,97.3,92.5,,8.9,80,79.8,82,65,62,DeepSeek (official),2026-03-31 19:09:13
+ElevenLabs Flash,ElevenLabs,85,12,0,5000,600,,,No,text-to-speech,Yes,2025-01-01,,,,,,,,,,,,14.2,elevenlabs.io/pricing,2026-03-15 06:44:04
+Grok 3,xAI,85,3,15,131072,32768,70,290,No,"text,vision",Yes,2025-06-10,1329,91,68.2,91.5,93.8,,,,83.9,,,9.4,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Grok 4 Fast,xAI,85,0.2,0.5,2097152,32768,,,No,text,Yes,2025-09-19,,,,,,,,,,,,242.9,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Recraft v3,Reka,85,0.04,0,4000,2048,,,No,image,Yes,2024-10-29,,,,,,,,,,,,4250,recraft.ai/pricing,
+Suno v3.5,Suno,85,0.04,0,3000,240,,,No,music,Yes,2024-07-01,,,,,,,,,,,,4250,suno.com/pricing,
+Claude Opus 4,Anthropic,84,15,75,200000,32000,30,350,No,"text,vision",Yes,2025-05-22,1330,89,72.1,88.7,95,72.5,,,,,,1.9,Anthropic (official),2026-03-31 19:09:12
+Command A Reasoning,Cohere,84,2.5,10,256000,32768,,,Yes,text,Yes,2025-08-01,,,,,,,,,,,,13.4,cohere.com/pricing,
+FLUX.1 Dev,Black Forest Labs,84,0,0,4000,1024,,,Yes,image,Yes,2024-08-01,,,,,,,,,,,,,blackforestlabs.ai/pricing,
+Kling 1.6,Kling AI,84,0.04,0,4000,10,,,No,video,Yes,2025-02-01,,,,,,,,,,,,4200,klingai.com/pricing,
+Llama 3.1 405B,Meta,84,3,3,131072,32768,,,Yes,text,Yes,2024-07-23,,,,,,,,,,,,28,together.ai/pricing,
+GPT-4.1 Mini,OpenAI,83,0.4,1.6,1047576,32768,160,190,No,"text,vision",Yes,2025-04-14,,,,,,,,,,,,83,OpenAI (official),2026-03-31 19:09:12
+Gemini 2.5 Pro,Google,83,1.25,10,1048576,65536,90,270,No,"text,vision,audio",Yes,2025-03-25,1340,90.5,68.4,90.2,93.2,63.8,9.2,82,86.7,85.5,68,14.8,Google (official),2026-03-31 19:09:12
+Gen-4 Turbo,Runway,83,0.06,0,4000,5,,,No,video,Yes,2025-08-01,,,,,,,,,,,,2766.7,runwayml.com/pricing,
+Ideogram 2,Ideogram,83,0.01,0,4000,1280,,,No,image,Yes,2024-08-19,,,,,,,,,,,,16600,ideogram.ai/pricing,
+OpenAI TTS-1 HD,OpenAI,83,30,0,4096,600,,,No,text-to-speech,Yes,2023-11-06,,,,,,,,,,,,5.5,openai.com/api/pricing,
+Resemble v3,Resemble AI,83,20,0,3000,600,,,No,text-to-speech,Yes,2024-06-01,,,,,,,,,,,,8.3,resemble.ai/pricing,
+Stable Image Ultra,Stability AI,83,0.08,0,4000,1536,,,No,image,Yes,2024-04-01,,,,,,,,,,,,2075,stability.ai/pricing,
+Amazon Nova 2 Lite,Amazon,82,0.3,2.5,1048576,16384,,,No,"text,vision,video",Yes,2025-12-02,,,,,,,,,,,,58.6,aws.amazon.com/nova/pricing,
+Claude 3.5 Haiku,Anthropic,82,0.8,4,200000,8192,120,200,No,"text,vision",Yes,2024-10-22,1260,,,,,,,,,,,34.2,Anthropic (official),2026-03-31 19:09:12
+Command A,Cohere,82,2.5,10,256000,32768,,,Yes,text,Yes,2025-03-13,1280,,,,,,,,,,,13.1,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+DALL-E 3,OpenAI,82,0.04,0,4000,1024,,,No,image,Yes,2023-10-01,,,,,,,,,,,,4100,openai.com/api/pricing,
+Deepgram Aura 2,Deepgram,82,15,0,2000,600,,,No,text-to-speech,Yes,2025-03-01,,,,,,,,,,,,10.9,deepgram.com/pricing,
+Gen-3 Alpha,Runway,82,0.05,0,4000,10,,,No,video,Yes,2024-06-17,,,,,,,,,,,,3280,runwayml.com/pricing,
+Grok 3 Mini,xAI,82,0.3,0.5,131072,32768,,,No,text,Yes,2025-06-10,,,,,,,,,,,,205,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Leonardo Phoenix,Leonardo AI,82,0.015,0,4000,1472,,,No,image,Yes,2024-08-01,,,,,,,,,,,,10933.3,leonardo.ai/pricing,
+Mistral Medium 3,Mistral,82,0.4,2,131072,16384,,,Yes,text,Yes,2025-06-01,,,,,,,,,,,,68.3,mistral.ai/pricing,2026-03-15 06:44:04
+Pixtral Large,Mistral,82,2,6,131072,32768,,,No,"text,vision",Yes,2024-11-18,,,,,,,,,,,,20.5,mistral.ai/pricing,
+PlayHT 2.0,PlayHT,82,18,0,3000,600,,,No,text-to-speech,Yes,2024-01-01,,,,,,,,,,,,9.1,play.ht/pricing,
+Sora Turbo,OpenAI,82,0.06,0,4000,10,,,No,video,Yes,2025-02-01,,,,,,,,,,,,2733.3,openai.com/sora,
+Codestral,Mistral,81,0.3,0.9,262144,32768,,,No,text,Yes,2025-01-14,,,,,,,,,,,,135,Mistral (official),2026-03-31 19:09:13
+Gemini 2.0 Flash,Google,81,0.1,0.4,1048576,8192,400,140,No,"text,vision,audio",Yes,2024-12-01,1270,,,,,,,,,,,324,Google (official),2026-03-31 19:09:12
+Pika 2.2,Pika,81,0.05,0,4000,10,,,No,video,Yes,2025-05-01,,,,,,,,,,,,3240,pika.art/pricing,
+Amazon Nova Premier,Amazon,80,2.5,12.5,300000,5120,,,No,"text,vision,video",Yes,2025-03-01,,,,,,,,,,,,10.7,aws.amazon.com/nova/pricing,
+Cartesia Sonic Mini,Cartesia,80,8,0,4000,600,,,No,text-to-speech,Yes,2025-06-01,,,,,,,,,,,,20,cartesia.ai/pricing,
+Dream Machine,Luma AI,80,0.04,0,4000,5,,,No,video,Yes,2024-06-12,,,,,,,,,,,,4000,lumalabs.ai/pricing,
+GPT-4o Mini,OpenAI,80,0.15,0.6,128000,16384,150,210,No,"text,vision",Yes,2024-07-18,1240,,,,,,,,,,,213.3,OpenAI (official),2026-03-31 19:09:12
+Llama 4 Scout,Meta,80,0.08,0.3,10485760,32768,120,220,Yes,"text,vision",Yes,2025-04-05,,,,,,,,,,,,421.1,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+MiniMax-01,MiniMax,80,0.2,1.1,4096000,32768,,,No,text,Yes,2025-01-15,,,,,,,,,,,,123.1,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Sonar Pro,Perplexity,80,3,15,200000,8192,,,No,text,Yes,2025-02-01,,,,,,,,,,,,8.9,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Stable Diffusion 3.5,Stability AI,80,0,0,4000,1024,,,Yes,image,Yes,2024-10-22,,,,,,,,,,,,,stability.ai/pricing,
+Udio v1.5,Udio,80,0.03,0,3000,120,,,No,music,Yes,2024-06-01,,,,,,,,,,,,5333.3,udio.com/pricing,
+Wan 2.1,Alibaba,80,0,0,4000,5,,,Yes,video,Yes,2025-02-25,,,,,,,,,,,,,github.com/Wan-Video,
+Claude Sonnet 4,Anthropic,79,3,15,200000,32000,80,260,No,"text,vision",Yes,2025-05-22,1310,88,67.5,85.4,93,53.6,8.8,,,,,8.8,Anthropic (official),2026-03-31 19:09:12
+Command R+,Cohere,79,2.5,10,128000,4096,,,Yes,text,Yes,2024-08-01,,,,,,,,,,,,12.6,cohere.com/pricing,
+Hailuo I2V-01 Live,Hailuo AI,79,0.03,0,4000,6,,,No,video,Yes,2024-10-01,,,,,,,,,,,,5266.7,hailuoai.com/pricing,
+Llama 3.3 70B,Meta,79,0.1,0.32,131072,32768,80,280,Yes,text,Yes,2024-12-06,1250,,,,,,,,,,,376.2,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Amazon Nova Pro,Amazon,78,0.8,3.2,300000,5120,,,No,"text,vision,video",Yes,2024-12-03,,,,,,,,,,,,39,aws.amazon.com/nova/pricing,
+FLUX.1 Schnell,Black Forest Labs,78,0,0,4000,1024,,,Yes,image,Yes,2024-08-01,,,,,,,,,,,,,blackforestlabs.ai/pricing,
+GPT-5 Nano,OpenAI,78,0.05,0.4,400000,32768,,,No,text,Yes,2025-08-07,,,,,,,,,,,,346.7,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Gemini 2.5 Flash,Google,78,0.15,0.6,1048576,65536,350,160,No,"text,vision,audio",Yes,2025-05-01,1300,86.5,59.2,82.3,88.5,,,,,,,208,Google (official),2026-03-31 19:09:12
+Gemini 2.5 Flash Lite,Google,78,0.1,0.4,1048576,8192,,,No,"text,vision,audio",Yes,2025-05-01,,,,,,,,,,,,312,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+OpenAI TTS-1,OpenAI,78,15,0,4096,600,,,No,text-to-speech,Yes,2023-11-06,,,,,,,,,,,,10.4,openai.com/api/pricing,
+Pika 2,Pika,78,0.04,0,4000,5,,,No,video,Yes,2024-12-09,,,,,,,,,,,,3900,pika.art/pricing,
+QwQ 32B,Alibaba,78,0.15,0.58,131072,32768,,,Yes,text,Yes,2025-03-06,,,63,90.6,88,,,,79.5,,,213.7,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Reka Core,Reka,78,3,15,128000,4096,,,No,"text,vision,audio,video",Yes,2024-04-15,,,,,,,,,,,,8.7,reka.ai/pricing,
+Stable Audio 2,Stability AI,78,0,0,2000,180,,,Yes,music,Yes,2024-04-03,,,,,,,,,,,,,stability.ai/stable-audio,
+GPT-4.1,OpenAI,77,2,8,1047576,32768,110,250,No,"text,vision",Yes,2025-04-14,1283,90.2,66.3,83,93.4,54.6,,,,,,15.4,OpenAI (official),2026-03-31 19:09:12
+CogVideoX 1.5,Zhipu AI,76,0,0,4000,10,,,Yes,video,Yes,2024-12-01,,,,,,,,,,,,,github.com/THUDM/CogVideo,
+DeepSeek V3,DeepSeek,76,0.27,1.1,64000,8192,,,Yes,text,Yes,2024-12-25,1275,88.5,59.1,78.3,89.5,,,,,,,110.9,DeepSeek (official),2026-03-31 19:09:13
+Gemini 2.0 Flash Lite,Google,76,0.075,0.3,1048576,8192,450,120,No,"text,vision,audio",Yes,2025-02-25,,,,,,,,,,,,405.3,Google (official),2026-03-31 19:09:13
+Jamba 1.5 Large,AI21 Labs,76,2,8,256000,4096,,,No,text,Yes,2024-08-22,,,,,,,,,,,,15.2,ai21.com/pricing,
+Mistral Small 3.1,Mistral,76,0.1,0.3,128000,16384,150,180,Yes,"text,vision",Yes,2025-03-18,1235,,,,,,,,,,,380,Mistral (official),2026-03-31 19:09:13
+GPT-4.1 Nano,OpenAI,75,0.1,0.4,1047576,32768,200,150,No,text,Yes,2025-04-14,,,,,,,,,,,,300,OpenAI (official),2026-03-31 19:09:12
+GPT-4o,OpenAI,75,2.5,10,128000,16384,100,290,No,"text,vision,audio",Yes,2024-05-13,1285,88.7,53.6,76.6,90.2,,8.6,,,,,12,OpenAI (official),2026-03-31 19:09:12
+Llama 4 Maverick,Meta,75,0.15,0.6,1048576,32768,95,250,Yes,"text,vision",Yes,2025-04-05,1290,85.5,56,,87.5,,8.5,,,,,200,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Stable Diffusion XL,Stability AI,75,0,0,2000,1024,,,Yes,image,Yes,2023-07-26,,,,,,,,,,,,,stability.ai/pricing,
+Amazon Nova Reel,Amazon,74,0.08,0,4000,6,,,No,video,Yes,2024-12-02,,,,,,,,,,,,1850,aws.amazon.com/nova/pricing,
+Reka Flash 3,Reka,74,0.1,0.2,128000,4096,,,No,"text,vision,audio,video",Yes,2025-06-01,,,,,,,,,,,,493.3,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Sonar,Perplexity,74,1,1,128000,8192,,,No,text,Yes,2025-02-01,,,,,,,,,,,,74,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Command R,Cohere,73,0.15,0.6,128000,4096,,,Yes,text,Yes,2024-03-11,,,,,,,,,,,,194.7,cohere.com/pricing,
+Amazon Nova Lite,Amazon,72,0.06,0.24,300000,5120,,,No,"text,vision,video",Yes,2024-12-03,,,,,,,,,,,,480,aws.amazon.com/nova/pricing,
+Mistral Nemo,Mistral,72,0.15,0.15,131072,16384,,,Yes,text,Yes,2024-07-18,,,,,,,,,,,,480,Mistral (official),2026-03-31 19:09:13
+MusicGen Large,Meta,72,0,0,2000,30,,,Yes,music,Yes,2023-06-01,,,,,,,,,,,,,github.com/facebookresearch/audiocraft,
+Qwen 2.5 72B,Alibaba,71,0.12,0.39,128000,16384,65,340,Yes,text,Yes,2024-09-19,1245,86.1,49,80,86.6,,,,,,,278.4,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Jamba 1.5 Mini,AI21 Labs,70,0.2,0.4,256000,4096,,,No,text,Yes,2024-08-22,,,,,,,,,,,,233.3,ai21.com/pricing,
+Amazon Nova Micro,Amazon,68,0.035,0.14,128000,5120,,,No,text,Yes,2024-12-03,,,,,,,,,,,,777.1,aws.amazon.com/nova/pricing,
+Command R7B,Cohere,65,0.0375,0.15,128000,4096,,,Yes,text,Yes,2024-06-01,,,,,,,,,,,,693.3,cohere.com/pricing,
+Claude 3.5 Sonnet,Anthropic,,3,15,200000,8192,,,No,"text,vision",Yes,,,,,,,,,,,,,,Anthropic (official),2026-03-31 19:09:12
+Claude 3.7 Sonnet,Anthropic,,3,15,200000,64000,,,No,"text,vision",Yes,,,,,,,,,,,,,,Anthropic (official),2026-03-31 19:09:12
+Llama 3.1 70B Instruct,Meta,,0.4,0.4,131072,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Llama 3.1 8B Instruct,Meta,,0.02,0.05,16384,16384,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Mistral Large 2407,Mistral,,2,6,131072,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Qwen2.5 Coder 32B Instruct,Alibaba,,0.66,1,32768,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Qwen3 30B A3B,Alibaba,,0.08,0.28,40960,40960,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+Qwen3 32B,Alibaba,,0.08,0.24,40960,40960,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-03-31 19:08:42
+o1,OpenAI,,15,60,200000,100000,,,No,"text,vision",Yes,,,,,,,,,,,,,,OpenAI (official),2026-03-31 19:09:12

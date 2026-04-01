@@ -35,6 +35,7 @@ async function main() {
     { name: 'Benchmarks (AA + LMSYS + HuggingFace)', script: 'scripts/scrapers/benchmarks.ts' },
     { name: 'Speed & TTFT', script: 'scripts/scrapers/speed.ts' },
     { name: 'Creative Benchmarks (AA Arenas)', script: 'scripts/scrapers/creative-benchmarks.ts' },
+    { name: 'Quality Score Calculator', script: 'scripts/scrapers/quality-scores.ts' },
     { name: 'News (RSS + official blogs)', script: 'scripts/scrapers/news.ts' },
   ];
 

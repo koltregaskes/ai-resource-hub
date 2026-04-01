@@ -17,7 +17,10 @@
     "scrape:news": "tsx scripts/scrapers/news.ts",
     "check:staleness": "tsx scripts/check-staleness.ts",
     "import:news": "tsx scripts/import-news-digests.ts",
-    "generate:digest": "tsx scripts/generate-digest.ts"
+    "generate:digest": "tsx scripts/generate-digest.ts",
+    "generate:spreadsheet": "tsx scripts/generate-spreadsheet.ts",
+    "scrape:quality": "tsx scripts/scrapers/quality-scores.ts",
+    "scrape:creative": "tsx scripts/scrapers/creative-benchmarks.ts"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

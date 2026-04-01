@@ -116,6 +116,7 @@ try {
   }
 
   Invoke-Logged 'npm.cmd' @('run', 'scrape')
+  Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
 
   try {
     Invoke-Logged 'npm.cmd' @('run', 'check:staleness')
