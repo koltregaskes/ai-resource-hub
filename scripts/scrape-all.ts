@@ -34,6 +34,7 @@ async function main() {
     { name: 'Multi-Source Validator', script: 'scripts/scrapers/pricing.ts' },
     { name: 'Benchmarks (AA + LMSYS + HuggingFace)', script: 'scripts/scrapers/benchmarks.ts' },
     { name: 'Speed & TTFT', script: 'scripts/scrapers/speed.ts' },
+    { name: 'Creative Benchmarks (AA Arenas)', script: 'scripts/scrapers/creative-benchmarks.ts' },
     { name: 'News (RSS + official blogs)', script: 'scripts/scrapers/news.ts' },
   ];
 
