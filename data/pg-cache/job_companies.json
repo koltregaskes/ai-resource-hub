@@ -1,0 +1,122 @@
+[
+  {
+    "id": "anthropic-jobs",
+    "name": "Anthropic",
+    "provider_id": "anthropic",
+    "careers_url": "https://www.anthropic.com/careers",
+    "board_type": "greenhouse",
+    "board_token": "anthropic",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board",
+    "updated_at": "2026-04-02T16:32:49.227Z"
+  },
+  {
+    "id": "figureai-jobs",
+    "name": "Figure",
+    "provider_id": null,
+    "careers_url": "https://www.figure.ai/careers",
+    "board_type": "greenhouse",
+    "board_token": "figureai",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/figureai/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board; robotics and embodied AI hiring signal",
+    "updated_at": "2026-04-02T16:32:49.242Z"
+  },
+  {
+    "id": "deepmind-jobs",
+    "name": "Google DeepMind",
+    "provider_id": "google",
+    "careers_url": "https://deepmind.google/about/careers/",
+    "board_type": "greenhouse",
+    "board_token": "deepmind",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/deepmind/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board",
+    "updated_at": "2026-04-02T16:32:49.234Z"
+  },
+  {
+    "id": "mistral-jobs",
+    "name": "Mistral AI",
+    "provider_id": "mistral",
+    "careers_url": "https://mistral.ai/careers",
+    "board_type": "lever",
+    "board_token": "mistral",
+    "board_url": "https://api.lever.co/v0/postings/mistral?mode=json",
+    "status": "active",
+    "notes": "Public Lever board",
+    "updated_at": "2026-04-02T16:32:49.230Z"
+  },
+  {
+    "id": "runway-jobs",
+    "name": "Runway",
+    "provider_id": "runway",
+    "careers_url": "https://runwayml.com/careers/",
+    "board_type": "greenhouse",
+    "board_token": "runwayml",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/runwayml/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board",
+    "updated_at": "2026-04-02T16:32:49.236Z"
+  },
+  {
+    "id": "scaleai-jobs",
+    "name": "Scale AI",
+    "provider_id": null,
+    "careers_url": "https://scale.com/careers",
+    "board_type": "greenhouse",
+    "board_token": "scaleai",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/scaleai/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board; useful as infrastructure hiring signal around AI deployment",
+    "updated_at": "2026-04-02T16:32:49.232Z"
+  },
+  {
+    "id": "stability-jobs",
+    "name": "Stability AI",
+    "provider_id": "stability",
+    "careers_url": "https://stability.ai/careers",
+    "board_type": "greenhouse",
+    "board_token": "stabilityai",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/stabilityai/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board",
+    "updated_at": "2026-04-02T16:32:49.238Z"
+  },
+  {
+    "id": "togetherai-jobs",
+    "name": "Together AI",
+    "provider_id": null,
+    "careers_url": "https://www.together.ai/careers",
+    "board_type": "greenhouse",
+    "board_token": "togetherai",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/togetherai/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board",
+    "updated_at": "2026-04-02T16:32:49.240Z"
+  },
+  {
+    "id": "wayve-jobs",
+    "name": "Wayve",
+    "provider_id": null,
+    "careers_url": "https://wayve.ai/careers/",
+    "board_type": "greenhouse",
+    "board_token": "wayve",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/wayve/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board; autonomous-driving AI hiring signal",
+    "updated_at": "2026-04-02T16:32:49.243Z"
+  },
+  {
+    "id": "youcom-jobs",
+    "name": "You.com",
+    "provider_id": null,
+    "careers_url": "https://you.com/careers",
+    "board_type": "greenhouse",
+    "board_token": "youcom",
+    "board_url": "https://boards-api.greenhouse.io/v1/boards/youcom/jobs",
+    "status": "active",
+    "notes": "Public Greenhouse board",
+    "updated_at": "2026-04-02T16:32:49.245Z"
+  }
+]

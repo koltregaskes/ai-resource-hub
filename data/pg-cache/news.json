@@ -1,5 +1,200 @@
 [
   {
+    "id": "5560ba59-612b-446a-a3fd-92c26c897be1",
+    "title": "Trending on HuggingFace: mistralai/Mistral-7B-Instruct-v0.2 (2,547,648 downloads)",
+    "url": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.412Z"
+  },
+  {
+    "id": "76c3ef34-ebd5-4635-a101-3d8f8b32fcfd",
+    "title": "Trending on HuggingFace: openai-community/gpt2 (12,114,967 downloads)",
+    "url": "https://huggingface.co/openai-community/gpt2",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.409Z"
+  },
+  {
+    "id": "bfa6b80b-c45c-4405-b3c2-35346201193c",
+    "title": "Trending on HuggingFace: google/gemma-7b (29,609 downloads)",
+    "url": "https://huggingface.co/google/gemma-7b",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.405Z"
+  },
+  {
+    "id": "65859b44-3df7-4bd1-923b-f509abdda80c",
+    "title": "Trending on HuggingFace: microsoft/phi-2 (1,626,525 downloads)",
+    "url": "https://huggingface.co/microsoft/phi-2",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.401Z"
+  },
+  {
+    "id": "7d4d77d8-e9e0-4e7d-8d47-ef4c301684f9",
+    "title": "Trending on HuggingFace: deepseek-ai/DeepSeek-V3 (609,693 downloads)",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.397Z"
+  },
+  {
+    "id": "73955f1c-ac78-4110-9752-d2b86fe3303f",
+    "title": "Trending on HuggingFace: mistralai/Mistral-7B-v0.1 (449,346 downloads)",
+    "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.392Z"
+  },
+  {
+    "id": "61a44e73-d56a-44d7-bec0-c423518e6196",
+    "title": "Trending on HuggingFace: meta-llama/Meta-Llama-3-8B-Instruct (1,380,142 downloads)",
+    "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.387Z"
+  },
+  {
+    "id": "5e7bb561-a683-4282-ab41-1bc5759beb99",
+    "title": "Trending on HuggingFace: openai/gpt-oss-20b (5,898,933 downloads)",
+    "url": "https://huggingface.co/openai/gpt-oss-20b",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.380Z"
+  },
+  {
+    "id": "6c922031-e194-468a-801e-0e05c04ac6e7",
+    "title": "Trending on HuggingFace: openai/gpt-oss-120b (4,101,251 downloads)",
+    "url": "https://huggingface.co/openai/gpt-oss-120b",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.376Z"
+  },
+  {
+    "id": "ef2afa95-852d-46d8-976c-d6309d784cb9",
+    "title": "Trending on HuggingFace: meta-llama/Llama-2-7b-chat-hf (454,099 downloads)",
+    "url": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.369Z"
+  },
+  {
+    "id": "72b0107d-7ad4-42d0-8bd3-542005517b87",
+    "title": "Trending on HuggingFace: meta-llama/Llama-3.1-8B-Instruct (8,358,344 downloads)",
+    "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.359Z"
+  },
+  {
+    "id": "c2597558-25b8-4b62-bc68-8e2a4b1dd2ca",
+    "title": "Trending on HuggingFace: meta-llama/Meta-Llama-3-8B (3,339,307 downloads)",
+    "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.352Z"
+  },
+  {
+    "id": "943aca06-8abe-4341-aefe-bb3e2391cf60",
+    "title": "Trending on HuggingFace: deepseek-ai/DeepSeek-R1 (2,465,541 downloads)",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.70",
+    "published_at": null,
+    "discovered_at": "2026-04-02T14:24:49.341Z"
+  },
+  {
     "id": "54d53ea8-44bc-4fa1-8811-0b03117b46a3",
     "title": "Leaked IRGC manual shows systematic use of civilian sites as missile cover",
     "url": "https://www.iranintl.com/en/202603319302",
@@ -2383,171 +2578,5 @@
     "importance_score": "0.46",
     "published_at": null,
     "discovered_at": "2026-04-01T09:35:11.151Z"
-  },
-  {
-    "id": "0107c1a8-be55-48b6-a3f2-b466d35feea3",
-    "title": "Stability AI’s Annual Integrity Transparency Report",
-    "url": "https://stability.ai/news-updates/stability-ais-annual-integrity-transparency-report",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.148Z"
-  },
-  {
-    "id": "4bdf6796-528c-47b9-8d6b-77fd1ca2c95d",
-    "title": "Stability AI Brings Image Services to Amazon Bedrock, Delivering End-to-End Creative Control with Enterprise-Grade Infrastructure",
-    "url": "https://stability.ai/news-updates/stability-ai-brings-image-services-to-amazon-bedrock-delivering-professional-creative-control-with-enterprise-grade-infrastructure",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "creative_tool"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.146Z"
-  },
-  {
-    "id": "48f5fde7-4928-4cc9-925e-83e0cd1e56be",
-    "title": "Stability AI and EA Partner to Empower Artists, Designers, and Developers to Reimagine Game Development",
-    "url": "https://stability.ai/news-updates/stability-ai-and-ea-partner-to-reimagine-game-development",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "benchmark",
-      "autonomous_systems"
-    ],
-    "importance_score": "0.46",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.143Z"
-  },
-  {
-    "id": "de655181-da30-45be-9910-ba3458bcedcd",
-    "title": "Universal Music Group and Stability AI Announce Strategic Alliance to Co-Develop Professional AI Music Creation Tools",
-    "url": "https://stability.ai/news-updates/universal-music-group-and-stability-ai-announce-strategic-alliance",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "benchmark",
-      "music_gen"
-    ],
-    "importance_score": "0.46",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.139Z"
-  },
-  {
-    "id": "8144bb62-a36f-4f43-9193-608e5ba5bee3",
-    "title": "Warner Music Group and Stability AI Join Forces To Build The Next Generation Of Responsible AI Tools For Music Creation",
-    "url": "https://stability.ai/news-updates/warner-music-group-and-stability-ai-join-forces-to-build-next-gen-tools",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.136Z"
-  },
-  {
-    "id": "8ea953d7-e844-4816-8996-037f871efc86",
-    "title": "Stability AI Joins the Tech Coalition",
-    "url": "https://stability.ai/news-updates/stability-ai-joins-the-tech-coalition",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "industry_move"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.132Z"
-  },
-  {
-    "id": "528ee06c-1a5b-4114-a215-b0828e6f08b4",
-    "title": "Health &amp; Bioscience",
-    "url": "https://research.google/research-areas/health-bioscience/",
-    "source": "Google Research Blog",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:09.745Z"
-  },
-  {
-    "id": "5d5ae251-37ac-497c-ab35-df18b33129a9",
-    "title": "General Science",
-    "url": "https://research.google/research-areas/general-science/",
-    "source": "Google Research Blog",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:09.742Z"
-  },
-  {
-    "id": "2c1dd55c-3cc4-458b-bbad-232ae314cbe7",
-    "title": "Education Innovation",
-    "url": "https://research.google/research-areas/education-innovation/",
-    "source": "Google Research Blog",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:09.714Z"
-  },
-  {
-    "id": "2e7f6353-ac40-46de-b2f4-e8a317f79d37",
-    "title": "Economics &amp; Electronic Commerce",
-    "url": "https://research.google/research-areas/economics-and-electronic-commerce/",
-    "source": "Google Research Blog",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:09.712Z"
-  },
-  {
-    "id": "75d903e9-fb0c-4c99-bda5-83b4896f4448",
-    "title": "Climate &amp; Sustainability",
-    "url": "https://research.google/research-areas/climate-and-sustainability/",
-    "source": "Google Research Blog",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:09.710Z"
-  },
-  {
-    "id": "e659338c-9911-4e08-8cb7-e963c02efc18",
-    "title": "Software Systems",
-    "url": "https://research.google/research-areas/software-systems/",
-    "source": "Google Research Blog",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:09.707Z"
-  },
-  {
-    "id": "5bde7627-33dc-467f-9d84-dd21d6a2b1bb",
-    "title": "Software Engineering",
-    "url": "https://research.google/research-areas/software-engineering/",
-    "source": "Google Research Blog",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:09.705Z"
   }
 ]

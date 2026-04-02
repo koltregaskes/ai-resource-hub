@@ -1,0 +1,98 @@
+[
+  {
+    "id": "neurips-2026",
+    "name": "NeurIPS 2026",
+    "url": "https://neurips.cc/Conferences/2026",
+    "date_start": "2026-12-06T00:00:00.000Z",
+    "date_end": "2026-12-12T00:00:00.000Z",
+    "location": "Sydney, Australia",
+    "category": "conference",
+    "recurring": false,
+    "description": null,
+    "updated_at": "2026-04-02T16:33:59.859Z"
+  },
+  {
+    "id": "icml-2026",
+    "name": "ICML 2026",
+    "url": "https://icml.cc/Conferences/2026",
+    "date_start": "2026-07-05T23:00:00.000Z",
+    "date_end": "2026-07-10T23:00:00.000Z",
+    "location": "Seoul, South Korea",
+    "category": "conference",
+    "recurring": false,
+    "description": null,
+    "updated_at": "2026-04-02T16:33:59.857Z"
+  },
+  {
+    "id": "wwdc-2026",
+    "name": "WWDC26",
+    "url": "https://developer.apple.com/wwdc26/",
+    "date_start": "2026-06-07T23:00:00.000Z",
+    "date_end": "2026-06-11T23:00:00.000Z",
+    "location": "Cupertino / online",
+    "category": "tech_conference",
+    "recurring": false,
+    "description": null,
+    "updated_at": "2026-04-02T16:33:59.861Z"
+  },
+  {
+    "id": "iclr-2026",
+    "name": "ICLR 2026",
+    "url": "https://iclr.cc/Conferences/FutureMeetings",
+    "date_start": "2026-04-22T23:00:00.000Z",
+    "date_end": "2026-04-26T23:00:00.000Z",
+    "location": "Rio de Janeiro, Brazil",
+    "category": "conference",
+    "recurring": false,
+    "description": null,
+    "updated_at": "2026-04-02T16:33:59.855Z"
+  },
+  {
+    "id": "aaai-2026",
+    "name": "AAAI-26",
+    "url": "https://aaai.org/conference/aaai/aaai-26/",
+    "date_start": "2026-01-20T00:00:00.000Z",
+    "date_end": "2026-01-27T00:00:00.000Z",
+    "location": "Singapore",
+    "category": "conference",
+    "recurring": false,
+    "description": null,
+    "updated_at": "2026-04-02T16:33:59.853Z"
+  },
+  {
+    "id": "google-io",
+    "name": "Google I/O",
+    "url": "https://developers.google.com/events",
+    "date_start": null,
+    "date_end": null,
+    "location": null,
+    "category": "tech_conference",
+    "recurring": false,
+    "description": null,
+    "updated_at": "2026-04-02T16:33:59.862Z"
+  },
+  {
+    "id": "nvidia-gtc",
+    "name": "NVIDIA GTC",
+    "url": "https://www.nvidia.com/gtc/",
+    "date_start": null,
+    "date_end": null,
+    "location": null,
+    "category": "industry",
+    "recurring": false,
+    "description": null,
+    "updated_at": "2026-04-02T16:33:59.864Z"
+  },
+  {
+    "id": "world-summit-ai",
+    "name": "World Summit AI",
+    "url": "https://worldsummit.ai/",
+    "date_start": null,
+    "date_end": null,
+    "location": null,
+    "category": "industry",
+    "recurring": false,
+    "description": null,
+    "updated_at": "2026-04-02T16:33:59.866Z"
+  }
+]

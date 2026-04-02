@@ -105,6 +105,30 @@ await dump('creative_benchmarks', `
   ORDER BY category, meta_rank ASC NULLS LAST
 `);
 
+// Jobs data
+await dump('job_companies', `
+  SELECT * FROM hub_job_companies WHERE status = 'active' ORDER BY name
+`);
+
+await dump('ai_jobs', `
+  SELECT j.*, c.name AS company_name, c.careers_url
+  FROM hub_ai_jobs j
+  JOIN hub_job_companies c ON j.company_id = c.id
+  WHERE j.active = true
+  ORDER BY j.posted_at DESC NULLS LAST
+`);
+
+await dump('ai_job_snapshots', `
+  SELECT s.*, c.name AS company_name
+  FROM hub_ai_job_snapshots s
+  JOIN hub_job_companies c ON s.company_id = c.id
+  ORDER BY s.snapshot_date DESC, c.name
+`);
+
+// Events and reports (if populated)
+await dump('events', `SELECT * FROM hub_events ORDER BY date_start DESC NULLS LAST`);
+await dump('reports', `SELECT * FROM hub_reports ORDER BY last_published DESC NULLS LAST`);
+
 // Write metadata
 const meta = {
   generated_at: new Date().toISOString(),

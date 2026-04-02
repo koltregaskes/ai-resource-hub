@@ -1,0 +1,90 @@
+[
+  {
+    "id": "stanford-ai-index",
+    "name": "AI Index",
+    "url": "https://hai.stanford.edu/ai-index",
+    "publisher": "Stanford HAI",
+    "frequency": "annual",
+    "category": "industry",
+    "description": null,
+    "last_published": null,
+    "updated_at": "2026-04-02T16:33:59.836Z"
+  },
+  {
+    "id": "mckinsey-state-of-ai",
+    "name": "The State of AI",
+    "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+    "publisher": "McKinsey",
+    "frequency": "annual",
+    "category": "industry",
+    "description": null,
+    "last_published": null,
+    "updated_at": "2026-04-02T16:33:59.839Z"
+  },
+  {
+    "id": "pwc-ai-jobs-barometer",
+    "name": "AI Jobs Barometer",
+    "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
+    "publisher": "PwC",
+    "frequency": "annual",
+    "category": "labour",
+    "description": null,
+    "last_published": null,
+    "updated_at": "2026-04-02T16:33:59.841Z"
+  },
+  {
+    "id": "state-of-ai-report",
+    "name": "State of AI Report",
+    "url": "https://www.stateof.ai/",
+    "publisher": "Air Street Capital",
+    "frequency": "annual",
+    "category": "industry",
+    "description": null,
+    "last_published": null,
+    "updated_at": "2026-04-02T16:33:59.843Z"
+  },
+  {
+    "id": "epoch-notable-models",
+    "name": "Notable AI Models",
+    "url": "https://epoch.ai/data/notable-ai-models",
+    "publisher": "Epoch AI",
+    "frequency": "continuous",
+    "category": "technical",
+    "description": null,
+    "last_published": null,
+    "updated_at": "2026-04-02T16:33:59.845Z"
+  },
+  {
+    "id": "oecd-ai-policy",
+    "name": "OECD AI Policy Observatory",
+    "url": "https://oecd.ai/",
+    "publisher": "OECD",
+    "frequency": "ongoing",
+    "category": "policy",
+    "description": null,
+    "last_published": null,
+    "updated_at": "2026-04-02T16:33:59.847Z"
+  },
+  {
+    "id": "helm",
+    "name": "HELM Benchmarking",
+    "url": "https://crfm.stanford.edu/helm/",
+    "publisher": "Stanford CRFM",
+    "frequency": "ongoing",
+    "category": "benchmarks",
+    "description": null,
+    "last_published": null,
+    "updated_at": "2026-04-02T16:33:59.849Z"
+  },
+  {
+    "id": "artificial-analysis",
+    "name": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/",
+    "publisher": "Artificial Analysis",
+    "frequency": "frequent",
+    "category": "benchmarks",
+    "description": null,
+    "last_published": null,
+    "updated_at": "2026-04-02T16:33:59.851Z"
+  }
+]
