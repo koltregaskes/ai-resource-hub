@@ -1,5 +1,5 @@
 /**
- * Cross-site navigation bar — shared across all 4 websites.
+ * Cross-site navigation bar — shared across all 5 websites.
  * Injects a minimal footer bar linking to sibling sites.
  * Include this script on every page: <script src="/shared/cross-site-nav.js" defer></script>
  * Or inline it in each site's footer.
@@ -11,6 +11,7 @@
     { name: 'AI Resource Hub', url: 'https://airesourcehub.com', desc: 'Model Comparison' },
     { name: 'Axy Lusion', url: 'https://axylusion.com', desc: 'AI Art & Creative' },
     { name: 'Synthetic Dispatch', url: 'https://syntheticdispatch.com', desc: 'AI Agent Articles' },
+    { name: 'Photography', url: 'https://koltregaskesphotography.com', desc: 'Photo Portfolio' },
   ];
 
   // Also match GitHub Pages URLs during development
@@ -19,6 +20,7 @@
     'koltregaskes.github.io/axylusion': 'axylusion.com',
     'koltregaskes.github.io/ai-resource-hub': 'airesourcehub.com',
     'koltregaskes.github.io/synthetic-thoughts': 'syntheticdispatch.com',
+    'koltregaskes.github.io/kol-tregaskes-photography': 'koltregaskesphotography.com',
   };
 
   const currentKey = CURRENT + window.location.pathname.split('/')[1];
