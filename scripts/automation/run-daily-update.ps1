@@ -117,6 +117,7 @@ try {
 
   Invoke-Logged 'npm.cmd' @('run', 'scrape')
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
+  Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
 
   try {
     Invoke-Logged 'npm.cmd' @('run', 'check:staleness')
