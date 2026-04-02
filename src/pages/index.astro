@@ -35,36 +35,6 @@ const lastUpdated = new Date().toLocaleDateString('en-GB', {
   year: 'numeric',
 });
 
-const launchCards = [
-  {
-    title: 'Compare models properly',
-    description: 'Start with pricing, context, speed, quality, and value on one surface instead of jumping between provider docs.',
-    href: `${base}compare/llm/`,
-    meta: `${llmModels.length} LLMs tracked`,
-  },
-  {
-    title: 'Follow the market, not just the hype',
-    description: 'Use the news stream, benchmark library, and provider context together so the headlines are easier to interpret.',
-    href: `${base}news/`,
-    meta: latestNews[0] ? `Latest item dated ${latestNews[0].date}` : 'News feed ready',
-  },
-  {
-    title: 'Use the built-in tools',
-    description: 'Estimate API spend, compare head to head, and check token costs without leaving the site.',
-    href: `${base}tools/`,
-    meta: 'Launch-ready working surfaces',
-  },
-];
-
-const coreSections = [
-  { title: 'LLM comparison', href: `${base}compare/llm/`, stat: `${llmModels.length} models`, note: 'Pricing, speed, context, quality, value' },
-  { title: 'Benchmarks', href: `${base}benchmarks/`, stat: `${benchmarkMatrix.benchmarks.length} tracked`, note: 'MMLU, GPQA, HumanEval, SWE-bench, and more' },
-  { title: 'Labs & providers', href: `${base}labs/`, stat: `${providers.length} organisations`, note: 'Who is building what, and where it fits' },
-  { title: 'AI news', href: `${base}news/`, stat: `${latestNews.length > 0 ? latestNews.length : 'Live'} items`, note: 'Public-feed collection with archive fallback' },
-  { title: 'Tool guide', href: `${base}tools/`, stat: 'Internal + external', note: 'Built-in calculators plus curated tools' },
-  { title: 'Guides & glossary', href: `${base}guides/`, stat: `${people.length} people and ${youtubeCreators.length} creators`, note: 'Plain-English learning paths and references' },
-];
-
 const totalTracked =
   llmModels.length +
   imageModels.length +
@@ -72,115 +42,207 @@ const totalTracked =
   speechModels.length +
   voiceModels.length +
   soundModels.length;
+
+const launchCards = [
+  {
+    title: 'Compare models properly',
+    description: 'Start with pricing, context, speed, quality, and value on one surface instead of bouncing between provider pages.',
+    href: `${base}compare/llm/`,
+    meta: `${llmModels.length} LLMs tracked`,
+  },
+  {
+    title: 'Read the market with context',
+    description: 'Use the news stream, benchmark library, and provider view together so each headline has somewhere to land.',
+    href: `${base}news/`,
+    meta: latestNews[0] ? `Latest note dated ${latestNews[0].date}` : 'News desk ready',
+  },
+  {
+    title: 'Use the built-in tools',
+    description: 'Estimate spend, compare models head to head, and work out token costs without leaving the site.',
+    href: `${base}tools/`,
+    meta: 'Calculator, counter, and shortlists',
+  },
+];
+
+const coreSections = [
+  {
+    title: 'LLM comparison',
+    href: `${base}compare/llm/`,
+    stat: `${llmModels.length} models`,
+    note: 'Pricing, speed, context, quality, and value in one place.',
+  },
+  {
+    title: 'Benchmarks',
+    href: `${base}benchmarks/`,
+    stat: `${benchmarkMatrix.benchmarks.length} tracked`,
+    note: 'MMLU, GPQA, HumanEval, SWE-bench, and the rest of the useful scoreboard.',
+  },
+  {
+    title: 'Labs and providers',
+    href: `${base}labs/`,
+    stat: `${providers.length} organisations`,
+    note: 'See who is building what and how their models fit together.',
+  },
+  {
+    title: 'AI news',
+    href: `${base}news/`,
+    stat: latestNews.length > 0 ? `${latestNews.length} fresh items` : 'Live feed',
+    note: 'Launches, benchmarks, regulation, platform changes, and market movement.',
+  },
+  {
+    title: 'Tools and calculators',
+    href: `${base}tools/`,
+    stat: 'Built in',
+    note: 'Pricing calculator, token counter, and quick routes into the practical stuff.',
+  },
+  {
+    title: 'Guides and glossary',
+    href: `${base}guides/`,
+    stat: `${people.length + youtubeCreators.length} references`,
+    note: 'Learning paths, key people, and plain-English explanations for the jargon.',
+  },
+];
+
+const fieldNotes = [
+  { value: totalTracked, label: 'Models tracked across text, image, video, speech, voice, and sound' },
+  { value: benchmarkMatrix.models.length, label: 'Models linked to benchmark coverage and comparison tooling' },
+  { value: providers.length, label: 'Labs and providers represented in the database' },
+  { value: `${people.length}/${youtubeCreators.length}`, label: 'People and creators available in the learning layer' },
+];
 ---
 
 <BaseLayout title="The AI Resource Hub - Independent AI Comparison and News">
   <HeroSection modelCount={llmModels.length} lastUpdated={lastUpdated} />
 
-  <TopModelsPreview models={llmModels} />
-
-  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-    <div class="grid gap-4 lg:grid-cols-3">
-      {launchCards.map((card) => (
-        <a
-          href={card.href}
-          class="rounded-[1.75rem] border border-(--color-border) bg-(--color-bg-secondary) p-6 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)"
-        >
-          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Start here</p>
-          <h2 class="mt-4 text-2xl font-bold font-display text-(--color-text-primary)">{card.title}</h2>
-          <p class="mt-3 text-sm leading-6 text-(--color-text-secondary)">{card.description}</p>
-          <p class="mt-5 text-xs font-medium text-(--color-accent)">{card.meta}</p>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section id="categories" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-    <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+  <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="editorial-band">
       <div>
-        <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Core coverage</p>
-        <h2 class="mt-2 text-3xl font-black font-display text-(--color-text-primary)">The parts of the site you will actually use first.</h2>
+        <p class="section-kicker">Why this homepage exists</p>
+        <h2 class="section-heading max-w-2xl">Three clear routes into the hub, depending on whether you need answers, context, or working tools.</h2>
       </div>
-      <a href={`${base}about/`} class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-hover)">
-        How the hub works
-      </a>
-    </div>
-
-    <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-      {coreSections.map((section) => (
-        <a
-          href={section.href}
-          class="rounded-[1.5rem] border border-(--color-border) bg-(--color-bg-card) p-5 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-hover)"
-        >
-          <div class="flex items-center justify-between gap-4">
-            <h3 class="text-lg font-semibold text-(--color-text-primary)">{section.title}</h3>
-            <span class="text-xs font-medium text-(--color-accent)">{section.stat}</span>
-          </div>
-          <p class="mt-3 text-sm leading-6 text-(--color-text-secondary)">{section.note}</p>
-        </a>
-      ))}
+      <div class="editorial-grid mt-8">
+        {launchCards.map((card, index) => (
+          <a href={card.href} class={`entry-card entry-card-${index + 1}`}>
+            <span class="entry-card-number">{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <h3 class="entry-card-title">{card.title}</h3>
+              <p class="entry-card-copy">{card.description}</p>
+              <p class="entry-card-meta">{card.meta}</p>
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
-  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-    <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-      <div class="rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary) p-6 sm:p-8">
-        <div class="flex items-center justify-between gap-4">
+  <section class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
+      <div class="paper-panel paper-panel-large">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Latest signal</p>
-            <h2 class="mt-2 text-2xl font-bold font-display text-(--color-text-primary)">News worth checking</h2>
+            <p class="section-kicker">Reference board</p>
+            <h2 class="section-heading">The part of the site that behaves like a working desk, not a brochure.</h2>
           </div>
-          <a href={`${base}news/`} class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-hover)">Open news</a>
+          <a href={`${base}about/`} class="editorial-link">How the hub works</a>
         </div>
 
-        <div class="mt-6 space-y-4">
-          {latestNews.length > 0 ? latestNews.map((item) => (
-            <a href={item.url} target="_blank" rel="noopener noreferrer" class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/60 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
-              <div class="flex items-center gap-3 text-xs text-(--color-text-muted)">
-                <span>{item.source}</span>
-                <span>•</span>
-                <span>{item.date}</span>
-                <span class="rounded-full border border-(--color-border) px-2 py-0.5">{item.category}</span>
+        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {coreSections.map((section, index) => (
+            <a href={section.href} class={`coverage-card coverage-card-${(index % 3) + 1}`}>
+              <p class="coverage-card-stat">{section.stat}</p>
+              <h3 class="coverage-card-title">{section.title}</h3>
+              <p class="coverage-card-copy">{section.note}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="stacked-aside">
+        <div class="paper-panel">
+          <p class="section-kicker">Field notes</p>
+          <h2 class="section-heading section-heading-compact">The coverage footprint at a glance.</h2>
+          <div class="mt-6 space-y-4">
+            {fieldNotes.map((note) => (
+              <div class="note-row">
+                <span class="note-value">{note.value}</span>
+                <p class="note-copy">{note.label}</p>
               </div>
-              <h3 class="mt-3 text-base font-semibold text-(--color-text-primary)">{item.title}</h3>
-              {item.summary && <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">{item.summary}</p>}
+            ))}
+          </div>
+        </div>
+
+        <div class="paper-panel note-manifesto">
+          <p class="section-kicker">Editorial stance</p>
+          <p class="manifesto-copy">
+            This is built for readers who want independent signal, not just launch-day excitement. The goal is to
+            make the AI landscape easier to compare, easier to read, and easier to revisit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TopModelsPreview models={llmModels} />
+
+  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
+      <div class="paper-panel paper-panel-large">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="section-kicker">Signal board</p>
+            <h2 class="section-heading">News worth reading, styled like a desk of clipped notes instead of a generic feed.</h2>
+          </div>
+          <a href={`${base}news/`} class="editorial-link">Open the full news desk</a>
+        </div>
+
+        <div class="mt-8 space-y-4">
+          {latestNews.length > 0 ? latestNews.map((item, index) => (
+            <a href={item.url} target="_blank" rel="noopener noreferrer" class={`headline-strip headline-strip-${(index % 3) + 1}`}>
+              <div class="headline-strip-meta">
+                <span>{item.source}</span>
+                <span>/</span>
+                <span>{item.date}</span>
+                <span>/</span>
+                <span>{item.category}</span>
+              </div>
+              <h3 class="headline-strip-title">{item.title}</h3>
+              {item.summary && <p class="headline-strip-copy">{item.summary}</p>}
             </a>
           )) : (
-            <div class="rounded-2xl border border-dashed border-(--color-border) p-5 text-sm text-(--color-text-secondary)">
-              The news surface is ready, but no items are loaded yet.
+            <div class="empty-surface">
+              The news surface is wired, but no current items are loaded yet.
             </div>
           )}
         </div>
       </div>
 
-      <div class="space-y-6">
-        <div class="rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary) p-6 sm:p-8">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Recently added</p>
-          <h2 class="mt-2 text-2xl font-bold font-display text-(--color-text-primary)">Fresh entries in the database</h2>
+      <div class="stacked-aside">
+        <div class="paper-panel">
+          <p class="section-kicker">Fresh entries</p>
+          <h2 class="section-heading section-heading-compact">Recently added to the database.</h2>
           <div class="mt-6 space-y-3">
             {recentModels.map((model) => (
-              <a href={`${base}models/${model.id}/`} class="flex items-start justify-between gap-4 rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/60 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
+              <a href={`${base}models/${model.id}/`} class="recent-model-row">
                 <div>
                   <div class="flex items-center gap-2">
-                    <span class="h-2 w-2 rounded-full" style={`background-color: ${model.providerColour}`}></span>
+                    <span class="model-dot" style={`background-color: ${model.providerColour}`}></span>
                     <p class="text-sm font-semibold text-(--color-text-primary)">{model.name}</p>
                   </div>
-                  <p class="mt-1 text-xs text-(--color-text-muted)">{model.provider}</p>
+                  <p class="mt-1 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">{model.provider}</p>
                 </div>
-                <span class="text-xs font-medium text-(--color-accent)">{model.qualityScore}/100</span>
+                <span class="recent-model-score">{model.qualityScore}/100</span>
               </a>
             ))}
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-4">
-          <div class="rounded-[1.5rem] border border-(--color-border) bg-(--color-bg-secondary) p-5">
-            <p class="text-3xl font-black font-display text-(--color-text-primary)">{totalTracked}</p>
-            <p class="mt-2 text-sm text-(--color-text-secondary)">Models tracked across text, image, video, speech, voice, and sound.</p>
-          </div>
-          <div class="rounded-[1.5rem] border border-(--color-border) bg-(--color-bg-secondary) p-5">
-            <p class="text-3xl font-black font-display text-(--color-text-primary)">{benchmarkMatrix.models.length}</p>
-            <p class="mt-2 text-sm text-(--color-text-secondary)">Models connected to benchmark coverage and comparison tooling.</p>
+        <div class="paper-panel">
+          <p class="section-kicker">Useful starting points</p>
+          <div class="mt-5 space-y-3">
+            <a href={`${base}leaderboard/`} class="aside-link">Leaderboard</a>
+            <a href={`${base}calculator/`} class="aside-link">Pricing calculator</a>
+            <a href={`${base}compare/head-to-head/`} class="aside-link">Head-to-head comparison</a>
+            <a href={`${base}methodology/`} class="aside-link">Methodology and sources</a>
           </div>
         </div>
       </div>
@@ -189,16 +251,20 @@ const totalTracked =
 
   <NewsletterSignup variant="card" />
 
-  <script is:inline type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'The AI Resource Hub',
-    url: new URL(base, Astro.site).toString(),
-    description: 'Independent AI model comparison for pricing, benchmarks, tools, and live news.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${new URL(base, Astro.site).toString()}?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
-  })} />
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'The AI Resource Hub',
+      url: new URL(base, Astro.site).toString(),
+      description: 'Independent AI model comparison for pricing, benchmarks, tools, and live news.',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${new URL(base, Astro.site).toString()}?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
+    })}
+  />
 </BaseLayout>

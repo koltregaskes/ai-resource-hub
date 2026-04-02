@@ -7,66 +7,91 @@ interface Props {
 const { modelCount, lastUpdated } = Astro.props;
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const deskRoutes = [
+  {
+    title: 'Comparison desk',
+    href: `${base}compare/llm/`,
+    note: 'Pricing, context, speed, and quality on one surface.',
+  },
+  {
+    title: 'News desk',
+    href: `${base}news/`,
+    note: 'A daily read of launches, benchmarks, regulation, and market shifts.',
+  },
+  {
+    title: 'Reference shelf',
+    href: `${base}references/`,
+    note: 'Sources, methodology, and traceability for the numbers on site.',
+  },
+];
+
+const pulseItems = [
+  `Updated ${lastUpdated}`,
+  `${modelCount} LLMs tracked`,
+  'Daily local refresh',
+];
 ---
 
-<section class="relative overflow-hidden border-b border-white/6">
-  <div class="hero-glow-bg">
-    <div class="hero-glow-bg-orb"></div>
-  </div>
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(13,148,136,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(20,184,166,0.07),transparent_35%)]"></div>
+<section class="relative overflow-hidden border-b border-(--color-border-strong)">
+  <div class="hero-ruling"></div>
+  <div class="editorial-burst editorial-burst-left"></div>
+  <div class="editorial-burst editorial-burst-right"></div>
 
-  <div class="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl items-center gap-12 px-4 py-14 sm:px-6 md:min-h-[calc(84svh-4rem)] lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:px-8 lg:py-16">
-    <div class="relative z-10 max-w-3xl">
-      <p class="text-[11px] font-semibold uppercase tracking-[0.34em] text-(--color-text-muted)">
-        Launch-ready AI reference
-      </p>
-      <h1 class="mt-5 text-5xl font-black leading-[0.98] tracking-tight text-(--color-text-primary) sm:text-6xl lg:text-7xl">
-        Benchmarks, pricing, tools, and news
-        <span class="mt-2 block text-gradient-vibrant">without the noise.</span>
-      </h1>
-      <p class="mt-6 max-w-2xl text-base leading-7 text-(--color-text-secondary) sm:text-lg">
-        The AI Resource Hub is a working field guide for people trying to understand what is worth using,
-        what is changing, and where the signal actually is.
-      </p>
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(320px,0.75fr)] lg:items-start">
+      <div class="relative z-10 max-w-4xl">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="eyebrow-chip">Reference desk</span>
+          <span class="hero-edition">Edition 01 / launch week</span>
+        </div>
 
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a
-          href={`${base}compare/llm/`}
-          class="inline-flex items-center justify-center rounded-full bg-(--color-text-primary) px-6 py-3 text-sm font-semibold text-(--color-bg-primary) transition-transform hover:-translate-y-0.5"
-        >
-          Start with model comparison
-        </a>
-        <a
-          href={`${base}news/`}
-          class="inline-flex items-center justify-center rounded-full border border-(--color-border) bg-(--color-bg-secondary)/70 px-6 py-3 text-sm font-semibold text-(--color-text-primary) transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)"
-        >
-          Read the latest news
-        </a>
+        <h1 class="mt-6 max-w-4xl text-5xl leading-[0.92] tracking-[-0.05em] text-(--color-text-primary) sm:text-6xl lg:text-[5.45rem]">
+          The independent field guide to what AI can actually do.
+        </h1>
+
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-(--color-text-secondary)">
+          Built like a newsroom, organised like a reference book, and focused on one job:
+          helping you compare models, read the market properly, and make better calls faster.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href={`${base}compare/llm/`} class="editorial-button editorial-button-primary">
+            Open model comparison
+          </a>
+          <a href={`${base}benchmarks/`} class="editorial-button editorial-button-secondary">
+            Check benchmark coverage
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-3 sm:grid-cols-3">
+          {pulseItems.map((item) => (
+            <div class="hero-pulse">
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div class="mt-8 flex flex-wrap gap-3 text-xs text-(--color-text-secondary)">
-        <span class="rounded-full border border-(--color-border) px-3 py-1.5">Updated {lastUpdated}</span>
-        <span class="rounded-full border border-(--color-border) px-3 py-1.5">{modelCount} LLMs tracked</span>
-        <span class="rounded-full border border-(--color-border) px-3 py-1.5">Daily local refresh</span>
-      </div>
+      <aside class="hero-note-card">
+        <p class="hero-note-label">How to use the hub</p>
+        <div class="mt-5 space-y-3">
+          {deskRoutes.map((route, index) => (
+            <a href={route.href} class="hero-route">
+              <span class="hero-route-index">{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <p class="text-base font-semibold text-(--color-text-primary)">{route.title}</p>
+                <p class="mt-1 text-sm leading-6 text-(--color-text-secondary)">{route.note}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div class="hero-note-footer">
+          <span class="hero-note-tag">Independent</span>
+          <span class="hero-note-tag">Readable</span>
+          <span class="hero-note-tag">Updated daily</span>
+        </div>
+      </aside>
     </div>
-
-    <aside class="relative z-10 rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary)/85 p-6 shadow-[0_30px_90px_rgba(0,0,0,0.25)] backdrop-blur-xl">
-      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Start Here</p>
-      <div class="mt-5 space-y-4">
-        <a href={`${base}leaderboard/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
-          <p class="text-sm font-semibold text-(--color-text-primary)">Leaderboard</p>
-          <p class="mt-1 text-sm text-(--color-text-secondary)">See the strongest models across quality, value, and speed.</p>
-        </a>
-        <a href={`${base}calculator/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
-          <p class="text-sm font-semibold text-(--color-text-primary)">Pricing Calculator</p>
-          <p class="mt-1 text-sm text-(--color-text-secondary)">Estimate API spend before you commit to a model or provider.</p>
-        </a>
-        <a href={`${base}references/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
-          <p class="text-sm font-semibold text-(--color-text-primary)">References & Sources</p>
-          <p class="mt-1 text-sm text-(--color-text-secondary)">Check where the data comes from and how often each source refreshes.</p>
-        </a>
-      </div>
-    </aside>
   </div>
 </section>
