@@ -1,5 +1,591 @@
 [
   {
+    "id": "e7f5a005-9251-4a90-a57d-6bea308cd280",
+    "title": "Cursor 3",
+    "url": "https://cursor.com/blog/cursor-3",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.68",
+    "published_at": "2026-04-02T18:13:41.000Z",
+    "discovered_at": "2026-04-02T18:30:46.841Z"
+  },
+  {
+    "id": "35f3cd54-1edd-4856-9599-0fbe563cf20b",
+    "title": "Why AI Job Loss Feels Existential",
+    "url": "https://daveshap.substack.com/p/why-ai-job-loss-feels-existential",
+    "source": "Dave Shapley (Substack)",
+    "summary": null,
+    "category": "ai_agents",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:25.666Z"
+  },
+  {
+    "id": "108f75bb-1b4f-4fcc-b181-20723fd142a9",
+    "title": "Why is Oracle Laying Off Thousands of Employees?",
+    "url": "https://aimagazine.com/news/oracle-lays-off-thousands-of-employees-amid-ai-investments",
+    "source": "AI Magazine",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:24.001Z"
+  },
+  {
+    "id": "8f7bdd01-17d0-4a55-8c52-247d499eebb7",
+    "title": "CFO David Kennedy Lifts the Lid on Dell&#x27;s AI-Powered Finance",
+    "url": "https://aimagazine.com/news/dell-cfo-on-ai-finance-strategy",
+    "source": "AI Magazine",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.998Z"
+  },
+  {
+    "id": "5d678de2-7f73-45cc-8815-c1418a39d0cd",
+    "title": "Embracing the Era of the Agentic Enterprise",
+    "url": "https://aimagazine.com/news/embracing-the-era-of-the-agentic-enterprise",
+    "source": "AI Magazine",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "ai_agents"
+    ],
+    "importance_score": "0.38",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.995Z"
+  },
+  {
+    "id": "7268d59d-9720-4a9b-a283-482e93d09d75",
+    "title": "AI self-sufficiency",
+    "url": "https://www.mitsloanme.com/article/microsoft-moves-toward-ai-self-sufficiency-amid-evolving-openai-ties/",
+    "source": "VentureBeat AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.359Z"
+  },
+  {
+    "id": "4ca262cc-6bcf-42cb-b9c3-f986265e10d6",
+    "title": "Microsoft Foundry",
+    "url": "https://azure.microsoft.com/en-us/products/ai-foundry",
+    "source": "VentureBeat AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.356Z"
+  },
+  {
+    "id": "30562232-b61c-4040-ac66-160f0a9abd58",
+    "title": "MAI-Transcribe-1",
+    "url": "https://microsoft.ai/news/state-of-the-art-speech-recognition-with-mai-transcribe-1/",
+    "source": "VentureBeat AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.354Z"
+  },
+  {
+    "id": "12cf5dd8-b6cc-4f86-8630-4be7b36cd49f",
+    "title": "Credit: VentureBeat made with Midjourney",
+    "url": "https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google",
+    "source": "VentureBeat AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "image_gen",
+      "funding"
+    ],
+    "importance_score": "0.56",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.351Z"
+  },
+  {
+    "id": "293c6ea6-4247-4e78-998f-444bb5ae32fd",
+    "title": "Google releases Gemma 4 under Apache 2.0 — and that license change may matter more than benchmarks",
+    "url": "https://venturebeat.com/technology/google-releases-gemma-4-under-apache-2-0-and-that-license-change-may-matter",
+    "source": "VentureBeat AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "model_release",
+      "benchmark",
+      "product_launch",
+      "open_source"
+    ],
+    "importance_score": "0.72",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.348Z"
+  },
+  {
+    "id": "8ff4999a-0d22-4fcf-830a-af0af7703ca9",
+    "title": "Google Home’s latest update makes Gemini better at understanding your commands",
+    "url": "https://www.theverge.com/tech/905805/google-home-gemini-temperature-controls-lighting",
+    "source": "The Verge AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.029Z"
+  },
+  {
+    "id": "d7c5237a-ce87-4669-9030-1a4b17230e11",
+    "title": "Microsoft’s new ‘superintelligence’ game plan is all about business",
+    "url": "https://www.theverge.com/report/905791/mustafa-suleyman-microsoft-ai-transcription-model",
+    "source": "The Verge AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "hardware"
+    ],
+    "importance_score": "0.48",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.026Z"
+  },
+  {
+    "id": "8643b358-7f00-4ac6-8bfb-f1d03d72bc6f",
+    "title": "It’s not easy to get depression-detecting AI through the FDA",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/905864/depression-detecting-ai-kintsugi-clinical-ai-startup-shut-down",
+    "source": "The Verge AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.023Z"
+  },
+  {
+    "id": "f8e140dc-5a5f-4555-8417-708ed2106090",
+    "title": "OpenAI just bought TBPN",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/906022/openai-buys-tbpn",
+    "source": "The Verge AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:23.020Z"
+  },
+  {
+    "id": "7c73400e-2bfa-4b81-839d-14f8129503fd",
+    "title": "You're Loading 66,000 Tokens of Plugins Before You Even Type. That's Why Your Limit Disappears.",
+    "url": "https://natesnewsletter.substack.com/p/your-claude-sessions-cost-10x-what",
+    "source": "Nate's Newsletter",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:20.453Z"
+  },
+  {
+    "id": "24de23f9-56f8-4cc2-b5ba-7ad2d2aac7c5",
+    "title": "IBM Releases Granite 4.0 3B Vision: A New Vision Language Model for Enterprise Grade Document Data Extraction",
+    "url": "https://www.marktechpost.com/2026/04/01/ibm-releases-granite-4-0-3b-vision-a-new-vision-language-model-for-enterprise-grade-document-data-extraction/",
+    "source": "MarkTechPost",
+    "summary": null,
+    "category": "ai_research",
+    "tags": [
+      "model_release",
+      "product_launch"
+    ],
+    "importance_score": "0.56",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:19.625Z"
+  },
+  {
+    "id": "7f7cdd17-6e3a-404f-9a6d-8be79d7d0e97",
+    "title": "[AINews] A quiet April Fools",
+    "url": "https://www.latent.space/p/ainews-a-quiet-april-fools",
+    "source": "Latent Space",
+    "summary": null,
+    "category": "ai_research",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:18.335Z"
+  },
+  {
+    "id": "40cf1964-f671-475d-babe-0cf17d612073",
+    "title": "Moonlake: Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun",
+    "url": "https://www.latent.space/p/moonlake",
+    "source": "Latent Space",
+    "summary": null,
+    "category": "ai_research",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:18.318Z"
+  },
+  {
+    "id": "41563b90-8b18-47cf-91dd-f59cb7221750",
+    "title": "Info IconREUTERS / Thomas Peter/Reuters",
+    "url": "https://ground.news/article/ai-machine-sorts-clothes-faster-than-humans-to-boost-textile-recycling-in-china",
+    "source": "Ground News AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:17.577Z"
+  },
+  {
+    "id": "e44accb1-bd38-4cd9-8826-3503e336b5bb",
+    "title": "Tariffs · United StatesHow tariffs have reshaped US trade a year later100% Center coverage: 22 sources",
+    "url": "https://ground.news/article/how-tariffs-have-reshaped-us-trade-a-year-later",
+    "source": "Ground News AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "reasoning"
+    ],
+    "importance_score": "0.48",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:17.573Z"
+  },
+  {
+    "id": "5f328b94-1c3f-4b9a-98de-c2e12fd5054c",
+    "title": "Nvidia rolls out its fix for PC gaming's \"compiling shaders\" wait times",
+    "url": "https://arstechnica.com/gaming/2026/04/nvidias-new-app-lets-you-precompile-gaming-shaders-during-machine-idle-time/",
+    "source": "Ars Technica AI",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [
+      "hardware"
+    ],
+    "importance_score": "0.48",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:16.232Z"
+  },
+  {
+    "id": "58303934-ecd5-4eba-99dd-f2417b73c6f1",
+    "title": "Artemis II, NASA's boldest mission in generations, launches crew to the Moon",
+    "url": "https://arstechnica.com/space/2026/04/four-astronauts-depart-for-the-moon-with-a-fiery-send-off-from-cape-canaveral/",
+    "source": "Ars Technica AI",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [
+      "product_launch"
+    ],
+    "importance_score": "0.48",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:16.230Z"
+  },
+  {
+    "id": "d2dcc078-db45-4e72-8c2a-9a760a09b34e",
+    "title": "Anthropic says its leak-focused DMCA effort unintentionally hit legit GitHub forks",
+    "url": "https://arstechnica.com/ai/2026/04/anthropic-says-its-leak-focused-dmca-effort-unintentionally-hit-legit-github-forks/",
+    "source": "Ars Technica AI",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:16.220Z"
+  },
+  {
+    "id": "102dabeb-5ff7-4c89-9015-1f7a0afd1d59",
+    "title": "Google announces Gemma 4 open AI models, switches to Apache 2.0 license",
+    "url": "https://arstechnica.com/ai/2026/04/google-announces-gemma-4-open-ai-models-switches-to-apache-2-0-license/",
+    "source": "Ars Technica AI",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [
+      "product_launch",
+      "announcement",
+      "open_source"
+    ],
+    "importance_score": "0.64",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:16.217Z"
+  },
+  {
+    "id": "5b6d05f9-a3bb-44e7-b8de-3dafbb513e8a",
+    "title": "Anthropic Says That Claude Contains Its Own Kind of Emotions",
+    "url": "https://www.wired.com/story/anthropic-claude-research-functional-emotions/",
+    "source": "Wired AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:15.316Z"
+  },
+  {
+    "id": "5b468baf-6259-45a5-98fc-332d2bc75830",
+    "title": "Cursor Launches a New AI Agent Experience to Take On Claude Code and Codex",
+    "url": "https://www.wired.com/story/cusor-launches-coding-agent-openai-anthropic/",
+    "source": "Wired AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "ai_agents",
+      "product_launch"
+    ],
+    "importance_score": "0.66",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:15.314Z"
+  },
+  {
+    "id": "549474c3-132f-4d1f-8cb9-256256a3d519",
+    "title": "‘Not up to standard’: Macron criticises Trump after comments about his marriage",
+    "url": "https://www.theguardian.com/world/2026/apr/02/macron-criticises-trump-after-comments-about-his-marriage",
+    "source": "The Guardian Tech",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:15.308Z"
+  },
+  {
+    "id": "e466f497-0e48-4c0f-bd08-ba2a9adc313e",
+    "title": "Goodbye mrbrightside416: Google allows users to alter quirky Gmail addresses",
+    "url": "https://www.theguardian.com/technology/2026/apr/02/google-allows-users-alter-quirky-gmail-addresses",
+    "source": "The Guardian Tech",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:15.297Z"
+  },
+  {
+    "id": "647f99e6-197a-49ab-ac91-139be8f902dd",
+    "title": "Google now lets you direct avatars through prompts in its Vids app",
+    "url": "https://techcrunch.com/2026/04/02/google-now-lets-you-direct-avatars-through-prompts-in-its-vids-app/",
+    "source": "TechCrunch AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:13.812Z"
+  },
+  {
+    "id": "0350b3b3-cece-4997-9d29-901e0ab47fd2",
+    "title": "Rebecca Szkutak",
+    "url": "https://techcrunch.com/author/rebecca-szkutak/",
+    "source": "TechCrunch AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:13.809Z"
+  },
+  {
+    "id": "5f82a241-01d7-4dae-a520-9d2b8d5fb5d6",
+    "title": "Microsoft takes on AI rivals with three new foundational models",
+    "url": "https://techcrunch.com/2026/04/02/microsoft-takes-on-ai-rivals-with-three-new-foundational-models/",
+    "source": "TechCrunch AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:13.807Z"
+  },
+  {
+    "id": "ab79f306-fb75-42c8-bb29-906004f4f8e1",
+    "title": "Apr 01     not much happened today          \nShow details",
+    "url": "https://news.smol.ai/issues/26-04-01-not-much",
+    "source": "Smol AI News",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:13.760Z"
+  },
+  {
+    "id": "05a3fc58-e7bb-437e-a91e-71c5b99d5f7a",
+    "title": "Common AI Model Formats     Feb 27, 2025 •  68",
+    "url": "https://huggingface.co/blog/ngxson/common-ai-model-formats",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:12.156Z"
+  },
+  {
+    "id": "822fcec4-bbd8-4ceb-aada-83ba1fb2868a",
+    "title": "Fine-Tuning Your First Large Language Model (LLM) with PyTorch and Hugging Face     Feb 11, 2025 •  111",
+    "url": "https://huggingface.co/blog/dvgodoy/fine-tuning-llm-hugging-face",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "dataset"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:12.154Z"
+  },
+  {
+    "id": "35d8f78b-09c5-4e17-8e7c-c7baf947020a",
+    "title": "Illustrated LLM OS: An Implementational Perspective     Dec 3, 2023 •  30",
+    "url": "https://huggingface.co/blog/shivance/illustrated-llm-os",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "opinion"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:12.152Z"
+  },
+  {
+    "id": "b80cd943-9e26-420f-be6d-cf27e92699f7",
+    "title": "Gemma 4: Byte for byte, the most capable open models",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+    "source": "Google AI Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "open_source"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:12.129Z"
+  },
+  {
+    "id": "277261c2-9956-4a4b-b950-5c1a6512358a",
+    "title": "Inside the leaked Claude Code files",
+    "url": "https://www.bensbites.com/p/inside-the-leaked-claude-code-files",
+    "source": "Ben's Bites",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:11.410Z"
+  },
+  {
+    "id": "545d55cf-a34e-4e5d-a064-66a5b2189612",
+    "title": "Fewer UK adults posting on social media, Ofcom findsSome experts believe it highlights a social media shift as platforms boost short video.See more",
+    "url": "https://www.bbc.com/news/articles/cgqk718l4neo",
+    "source": "BBC AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [],
+    "importance_score": "0.50",
+    "published_at": null,
+    "discovered_at": "2026-04-02T18:00:11.402Z"
+  },
+  {
+    "id": "fa041851-654a-4f31-b205-671926af497b",
+    "title": "OpenAI Acquires TBPN",
+    "url": "https://openai.com/index/openai-acquires-tbpn/",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.58",
+    "published_at": "2026-04-02T17:26:49.000Z",
+    "discovered_at": "2026-04-02T18:30:46.420Z"
+  },
+  {
+    "id": "31cf337b-bb99-4097-a443-72b9a610f2b9",
+    "title": "A forecast of the fair market value of SpaceX's businesses",
+    "url": "https://futuresearch.ai/spacex-ipo-valuation/",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.62",
+    "published_at": "2026-04-02T17:00:11.000Z",
+    "discovered_at": "2026-04-02T18:30:46.939Z"
+  },
+  {
+    "id": "2b2bae4d-1f01-489e-a377-e45eccb57daf",
+    "title": "Modern SQLite: Features You Didn't Know It Had",
+    "url": "https://slicker.me/sqlite/features.htm",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.62",
+    "published_at": "2026-04-02T16:34:39.000Z",
+    "discovered_at": "2026-04-02T18:30:46.997Z"
+  },
+  {
+    "id": "da037430-1f28-4f52-a55f-75ddba5cd1af",
+    "title": "Google releases Gemma 4 open models",
+    "url": "https://deepmind.google/models/gemma/gemma-4/",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.59",
+    "published_at": "2026-04-02T16:10:54.000Z",
+    "discovered_at": "2026-04-02T18:30:45.801Z"
+  },
+  {
+    "id": "4525f2d1-a8b3-4b65-8a70-4f5334513042",
+    "title": "Renewables reached nearly 50% of global electricity capacity last year",
+    "url": "https://www.theregister.com/2026/04/01/renewables_generated_nearly_half_global_power/",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.62",
+    "published_at": "2026-04-02T15:26:18.000Z",
+    "discovered_at": "2026-04-02T18:30:46.761Z"
+  },
+  {
+    "id": "4f2d6b4a-4681-46eb-afbb-d33366e724ac",
+    "title": "Artemis II will use laser beams to live-stream 4K moon footage at 260 Mbps",
+    "url": "https://www.tomshardware.com/networking/artemis-ii-will-use-laser-beams-to-live-stream-4k-moon-footage-one-giant-step-beyond-the-s-band-radio-comms-of-the-apollo-era",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.62",
+    "published_at": "2026-04-02T15:04:44.000Z",
+    "discovered_at": "2026-04-02T18:30:46.722Z"
+  },
+  {
+    "id": "ab7255c7-0e0e-4cf9-8db7-801b700d5749",
+    "title": "Delve allegedly forked an open-source tool and sold it as its own",
+    "url": "https://techcrunch.com/2026/04/01/the-reputation-of-troubled-yc-startup-delve-has-gotten-even-worse/",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.61",
+    "published_at": "2026-04-02T15:03:08.000Z",
+    "discovered_at": "2026-04-02T18:30:46.693Z"
+  },
+  {
+    "id": "52b21fb7-17ff-4780-b436-119f24214751",
+    "title": "Qwen3.6-Plus: Towards real world agents",
+    "url": "https://qwen.ai/blog?id=qwen3.6",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.68",
+    "published_at": "2026-04-02T14:28:52.000Z",
+    "discovered_at": "2026-04-02T18:30:46.095Z"
+  },
+  {
     "id": "5560ba59-612b-446a-a3fd-92c26c897be1",
     "title": "Trending on HuggingFace: mistralai/Mistral-7B-Instruct-v0.2 (2,547,648 downloads)",
     "url": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2",
@@ -7,10 +593,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.412Z"
   },
@@ -67,10 +652,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.397Z"
   },
@@ -82,10 +666,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.392Z"
   },
@@ -97,10 +680,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.387Z"
   },
@@ -112,10 +694,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.380Z"
   },
@@ -127,10 +708,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.376Z"
   },
@@ -142,10 +722,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.369Z"
   },
@@ -157,10 +736,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.359Z"
   },
@@ -172,10 +750,9 @@
     "summary": null,
     "category": "ai_models",
     "tags": [
-      "model_release",
-      "open_source"
+      "model_release"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.58",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.352Z"
   },
@@ -188,11 +765,35 @@
     "category": "ai_models",
     "tags": [
       "model_release",
-      "open_source"
+      "reasoning"
     ],
-    "importance_score": "0.70",
+    "importance_score": "0.66",
     "published_at": null,
     "discovered_at": "2026-04-02T14:24:49.341Z"
+  },
+  {
+    "id": "5c60d507-967f-41c5-a8b3-95aaf9149a14",
+    "title": "'Backrooms' and the Rise of the Institutional Gothic",
+    "url": "https://thereader.mitpress.mit.edu/backrooms-and-the-rise-of-the-institutional-gothic/",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.55",
+    "published_at": "2026-04-02T13:18:05.000Z",
+    "discovered_at": "2026-04-02T18:30:46.531Z"
+  },
+  {
+    "id": "f9cdbcaa-1dfe-4191-b50e-9dba50c7881e",
+    "title": "LinkedIn is illegally searching your computer",
+    "url": "https://browsergate.eu/",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.62",
+    "published_at": "2026-04-02T13:09:09.000Z",
+    "discovered_at": "2026-04-02T18:30:46.222Z"
   },
   {
     "id": "54d53ea8-44bc-4fa1-8811-0b03117b46a3",
@@ -225,8 +826,11 @@
     "source": "Hacker News",
     "summary": null,
     "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.68",
+    "tags": [
+      "hardware",
+      "open_source"
+    ],
+    "importance_score": "0.56",
     "published_at": "2026-04-02T11:04:51.000Z",
     "discovered_at": "2026-04-02T12:30:14.165Z"
   },
@@ -273,8 +877,11 @@
     "source": "Hacker News",
     "summary": null,
     "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.62",
+    "tags": [
+      "pricing_change",
+      "policy"
+    ],
+    "importance_score": "0.56",
     "published_at": "2026-04-02T09:00:26.000Z",
     "discovered_at": "2026-04-02T12:30:14.429Z"
   },
@@ -285,8 +892,12 @@
     "source": "Hacker News",
     "summary": null,
     "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.68",
+    "tags": [
+      "product_launch",
+      "announcement",
+      "industry_move"
+    ],
+    "importance_score": "0.64",
     "published_at": "2026-04-02T08:48:44.000Z",
     "discovered_at": "2026-04-02T12:30:13.977Z"
   },
@@ -736,8 +1347,10 @@
     "source": "Hacker News",
     "summary": null,
     "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.55",
+    "tags": [
+      "pricing_change"
+    ],
+    "importance_score": "0.48",
     "published_at": "2026-04-02T04:08:05.000Z",
     "discovered_at": "2026-04-02T06:30:29.997Z"
   },
@@ -1821,18 +2434,6 @@
     "discovered_at": "2026-04-01T17:36:44.235Z"
   },
   {
-    "id": "f47a9e1d-a093-45df-a9db-307ea71e384d",
-    "title": "Artemis II Launch Day Updates",
-    "url": "https://www.nasa.gov/blogs/missions/2026/04/01/live-artemis-ii-launch-day-updates/",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.57",
-    "published_at": "2026-04-01T17:11:31.000Z",
-    "discovered_at": "2026-04-02T06:30:29.961Z"
-  },
-  {
     "id": "0ad9b28b-e194-4e6e-9fe9-3f465b14885d",
     "title": "NASA Artemis II moon mission live launch broadcast",
     "url": "https://plus.nasa.gov/scheduled-video/nasas-artemis-ii-crew-launches-to-the-moon-official-broadcast/",
@@ -1843,6 +2444,18 @@
     "importance_score": "0.71",
     "published_at": "2026-04-01T17:11:31.000Z",
     "discovered_at": "2026-04-01T17:36:45.267Z"
+  },
+  {
+    "id": "f47a9e1d-a093-45df-a9db-307ea71e384d",
+    "title": "Artemis II Launch Day Updates",
+    "url": "https://www.nasa.gov/blogs/missions/2026/04/01/live-artemis-ii-launch-day-updates/",
+    "source": "Hacker News",
+    "summary": null,
+    "category": "tech_general",
+    "tags": [],
+    "importance_score": "0.57",
+    "published_at": "2026-04-01T17:11:31.000Z",
+    "discovered_at": "2026-04-02T06:30:29.961Z"
   },
   {
     "id": "2748a696-518b-4a48-9e53-5d927ae77750",
@@ -1945,638 +2558,5 @@
     "importance_score": "0.48",
     "published_at": "2026-04-01T15:37:22.000Z",
     "discovered_at": "2026-04-01T15:56:42.452Z"
-  },
-  {
-    "id": "23bc58a0-263d-4293-b801-d91de47e334a",
-    "title": "Marc Andreessen's Dangerously Unexamined Life",
-    "url": "https://www.thenation.com/article/society/marc-andreessen-silicon-valley-military-tech/",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.65",
-    "published_at": "2026-04-01T15:34:59.000Z",
-    "discovered_at": "2026-04-01T16:16:44.930Z"
-  },
-  {
-    "id": "64ee4f09-7e4b-48c2-b879-add9bcf37084",
-    "title": "OpenAI Demand Sinks on Secondary Market as Anthropic Runs Hot",
-    "url": "https://www.bloomberg.com/news/articles/2026-04-01/openai-demand-sinks-on-secondary-market-as-anthropic-runs-hot",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.71",
-    "published_at": "2026-04-01T14:26:16.000Z",
-    "discovered_at": "2026-04-01T14:56:43.975Z"
-  },
-  {
-    "id": "54e96f3b-dad7-4e32-b882-71a80f4cbe6e",
-    "title": "Iran war sparks renewables boom as Europeans rush to buy solar, heat pumps, EVs",
-    "url": "https://www.euronews.com/2026/03/31/iran-war-sparks-renewables-boom-as-europeans-rush-to-buy-solar-heat-pumps-and-evs",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.62",
-    "published_at": "2026-04-01T14:19:25.000Z",
-    "discovered_at": "2026-04-01T16:16:45.790Z"
-  },
-  {
-    "id": "6dde89d6-65be-44b8-8ff1-3864371c8854",
-    "title": "OnlyOffice kills Nextcloud partnership for forking its project without approval",
-    "url": "https://www.neowin.net/news/onlyoffice-suspends-nextcloud-partnership-over-unapproved-euro-office-fork/",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [
-      "industry_move"
-    ],
-    "importance_score": "0.48",
-    "published_at": "2026-04-01T14:11:58.000Z",
-    "discovered_at": "2026-04-01T15:56:42.421Z"
-  },
-  {
-    "id": "5529f8dd-2878-4937-a4a2-2bd9d4a31d39",
-    "title": "AI has suddenly become more useful to open-source developers",
-    "url": "https://www.zdnet.com/article/maybe-open-source-needs-ai/",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [
-      "benchmark",
-      "open_source"
-    ],
-    "importance_score": "0.56",
-    "published_at": "2026-04-01T14:07:50.000Z",
-    "discovered_at": "2026-04-01T15:56:42.524Z"
-  },
-  {
-    "id": "5bea0398-8270-4ff2-ab55-503beee2fe7e",
-    "title": "New patches allow building Linux IPv6-only",
-    "url": "https://www.phoronix.com/news/Linux-IPv6-IPv4-Legacy-Knobs",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.55",
-    "published_at": "2026-04-01T13:15:33.000Z",
-    "discovered_at": "2026-04-01T13:50:33.115Z"
-  },
-  {
-    "id": "8c02de7d-845c-4704-bb76-84ed08b18b45",
-    "title": "Is BGP safe yet?",
-    "url": "https://isbgpsafeyet.com/",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.65",
-    "published_at": "2026-04-01T13:10:29.000Z",
-    "discovered_at": "2026-04-01T13:24:30.460Z"
-  },
-  {
-    "id": "7561fe4b-a601-4160-af73-613bff30702d",
-    "title": "CEO of largest public hospital says he's ready to replace radiologists with AI",
-    "url": "https://radiologybusiness.com/topics/artificial-intelligence/ceo-americas-largest-public-hospital-system-says-hes-ready-replace-radiologists-ai",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.65",
-    "published_at": "2026-04-01T12:59:27.000Z",
-    "discovered_at": "2026-04-01T13:24:30.531Z"
-  },
-  {
-    "id": "29cc9a55-c40d-4ba7-8616-f893097e1c56",
-    "title": "Show HN: Sycamore – next gen Rust web UI library using fine-grained reactivity",
-    "url": "https://sycamore.dev",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.43",
-    "published_at": "2026-04-01T12:30:18.000Z",
-    "discovered_at": "2026-04-01T13:10:32.872Z"
-  },
-  {
-    "id": "a2c9ca2e-bf69-4ca3-9e19-fb81c68a901c",
-    "title": "Show HN: Baton – A desktop app for developing with AI agents",
-    "url": "https://getbaton.dev/",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [
-      "benchmark",
-      "ai_agents"
-    ],
-    "importance_score": "0.56",
-    "published_at": "2026-04-01T12:11:30.000Z",
-    "discovered_at": "2026-04-01T13:30:32.900Z"
-  },
-  {
-    "id": "e6eb97f8-0519-4167-8606-68bbdb546bde",
-    "title": "Wasmer (YC S19) Is Hiring – Rust and DevRel Positions",
-    "url": "https://www.workatastartup.com/companies/wasmer",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.39",
-    "published_at": "2026-04-01T12:00:17.000Z",
-    "discovered_at": "2026-04-01T12:10:32.715Z"
-  },
-  {
-    "id": "c88d85d6-7f79-451a-b900-87d6a63a23f8",
-    "title": "Random numbers, Persian code: A mysterious signal transfixes radio sleuths",
-    "url": "https://www.rferl.org/a/mystery-numbers-station-persian-signal-iran-war/33700659.html",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.62",
-    "published_at": "2026-04-01T11:39:04.000Z",
-    "discovered_at": "2026-04-01T16:36:51.951Z"
-  },
-  {
-    "id": "274c4720-75c6-404f-80d6-4bdbe29f7fae",
-    "title": "A Mysterious Numbers Station Is Broadcasting Through the Iran War",
-    "url": "https://www.wired.com/story/a-mysterious-numbers-station-is-broadcasting-through-the-iran-war/",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.39",
-    "published_at": "2026-04-01T11:39:04.000Z",
-    "discovered_at": "2026-04-01T12:50:33.566Z"
-  },
-  {
-    "id": "0a72c0d7-045e-4fb2-b7e3-fbca1734de69",
-    "title": "What the Claude Code Leak Means for Regulated Industries",
-    "url": "https://systima.ai/blog/claude-code-leak-compliance-implications",
-    "source": "Hacker News",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [],
-    "importance_score": "0.43",
-    "published_at": "2026-04-01T09:49:42.000Z",
-    "discovered_at": "2026-04-01T10:50:33.029Z"
-  },
-  {
-    "id": "fbf3d158-001c-4655-8d10-0eefe2f1be7a",
-    "title": "Jan 13, 2026​​Memory Shaped CitiesWhen Long Horizon AI Starts Designing Urban Life",
-    "url": "https://unaligned.io/p/memory-shaped-cities",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.479Z"
-  },
-  {
-    "id": "e31cc86d-b0a0-4030-b227-0f3d2e997b94",
-    "title": "Jan 20, 2026​​​​AI Shadow NegotiatorsInvisible Agents Shaping Human Deals",
-    "url": "https://unaligned.io/p/m",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [
-      "api_update",
-      "industry_move"
-    ],
-    "importance_score": "0.46",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.477Z"
-  },
-  {
-    "id": "1ff7452c-b771-4da5-9745-10169d12f61a",
-    "title": "Jan 27, 2026​​​​AI WitnessesAI as Independent Observers in Courts and Disputes",
-    "url": "https://unaligned.io/p/ai",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.475Z"
-  },
-  {
-    "id": "155989dd-c532-4698-8cc7-2042c76cad7b",
-    "title": "Feb 03, 2026​​​​MoltbookA Social Network for AI Assistants",
-    "url": "https://unaligned.io/p/ai-witnesses-1",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.472Z"
-  },
-  {
-    "id": "f5c9a74e-7d55-4e39-b868-731f75cd8207",
-    "title": "Feb 10, 2026​​​​What are World Models?",
-    "url": "https://unaligned.io/p/moltbook-1",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.470Z"
-  },
-  {
-    "id": "1b1fc2a7-2519-47b0-984e-9bfb0f6f93d4",
-    "title": "Feb 17, 2026​​​​The Limits of LLMs on the Road to AGI",
-    "url": "https://unaligned.io/p/what-are-world-models-1",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [
-      "autonomous_systems"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.468Z"
-  },
-  {
-    "id": "a821f9b2-46d0-4973-a603-c702e9b1892b",
-    "title": "Feb 24, 2026​​​​​​AI from a Consumer Perspective",
-    "url": "https://unaligned.io/p/ai-from-a-consumer-perspective",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [
-      "opinion"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.465Z"
-  },
-  {
-    "id": "919147b4-8332-4a19-b0c8-231db8f80f95",
-    "title": "Mar 03, 2026​​​​​​State of AI Surveillance in the United States",
-    "url": "https://unaligned.io/p/ai-from-a-consumer-perspective-369b",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.463Z"
-  },
-  {
-    "id": "9e738095-fd2b-4799-bc4d-7826604610b8",
-    "title": "Mar 10, 2026​​​​​​AI Under Pressure",
-    "url": "https://unaligned.io/p/ai-under-pressure",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.460Z"
-  },
-  {
-    "id": "b94992d8-28ed-4120-ab8c-0f56918a2e4a",
-    "title": "Mar 17, 2026​​​​​​The New AI Infrastructure Economy",
-    "url": "https://unaligned.io/p/the-new-ai-infrastructure-economy",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.458Z"
-  },
-  {
-    "id": "b8f820c3-a47b-4302-89a0-1b6fb80682f7",
-    "title": "Mar 24, 2026​​​​​​Physical AIAI Moves into Factories and Robots",
-    "url": "https://unaligned.io/p/physical-ai",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.456Z"
-  },
-  {
-    "id": "fa2e8b8d-f8c8-4acb-a9f4-3aec04717732",
-    "title": "19 hours ago​​​​​​AI Safety Has Entered the Cybersecurity Era",
-    "url": "https://unaligned.io/p/ai-safety-has-entered-the-cybersecurity-era",
-    "source": "Unaligned",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [
-      "ai_safety"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.454Z"
-  },
-  {
-    "id": "c89f8a44-c45f-433b-a550-b0a709f00ada",
-    "title": "Dan Mac's Weekly Podcast Roundup: October 13-20, 2025",
-    "url": "https://tokenstream.substack.com/p/dan-macs-weekly-podcast-roundup-october",
-    "source": "Token Stream",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.450Z"
-  },
-  {
-    "id": "76cdf841-6fe0-492e-b9f5-803e6115d778",
-    "title": "Dan Mac's Weekly Podcast Roundup: October 27 - November 3",
-    "url": "https://tokenstream.substack.com/p/dan-macs-weekly-podcast-roundup-october-9ee",
-    "source": "Token Stream",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.447Z"
-  },
-  {
-    "id": "3c48aaac-129d-4f28-8f53-0fe378a83a55",
-    "title": "Dan Mac Weekly Podcast Roundup: November 19 - 26",
-    "url": "https://tokenstream.substack.com/p/dan-mac-weekly-podcast-roundup-november",
-    "source": "Token Stream",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.445Z"
-  },
-  {
-    "id": "02f38444-12bb-439a-9d24-69adffc1229e",
-    "title": "Dan Mac Weekly AI Podcast Roundup: December 3rd - 10th",
-    "url": "https://tokenstream.substack.com/p/dan-mac-weekly-ai-podcast-roundup",
-    "source": "Token Stream",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.443Z"
-  },
-  {
-    "id": "b2f97ec9-2a3b-4693-b76e-c88b08050cae",
-    "title": "Dan Mac Weekly AI Podcast Roundup: December 12th - 19th",
-    "url": "https://tokenstream.substack.com/p/dan-mac-weekly-ai-podcast-roundup-254",
-    "source": "Token Stream",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.441Z"
-  },
-  {
-    "id": "0f59435d-bf8e-4467-a35d-5a33798fa8d5",
-    "title": "Dan Mac Weekly AI Podcast Roundup: December 26th - January 2nd",
-    "url": "https://tokenstream.substack.com/p/dan-mac-weekly-ai-podcast-roundup-3cb",
-    "source": "Token Stream",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.438Z"
-  },
-  {
-    "id": "3bcba2b2-4f24-4c5d-b7a6-45c34c7d298d",
-    "title": "The Machine that Builds the Machine",
-    "url": "https://tokenstream.substack.com/p/the-machine-that-builds-the-machine",
-    "source": "Token Stream",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.435Z"
-  },
-  {
-    "id": "0030f434-a9ac-42b7-b282-d1abc0b6804d",
-    "title": "Karpathy's 10 Actionable Insights for Working with AI Agents",
-    "url": "https://tokenstream.substack.com/p/karpathys-10-actionable-insights",
-    "source": "Token Stream",
-    "summary": null,
-    "category": "ai_tools",
-    "tags": [
-      "ai_agents"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:12.431Z"
-  },
-  {
-    "id": "74f06870-64ff-4111-a6f8-9aab605860e8",
-    "title": "Stable Diffusion 3.5 Large is Now Available on Microsoft Azure AI Foundry",
-    "url": "https://stability.ai/news-updates/stable-diffusion-35-large-is-now-available-on-microsoft-ai-foundry",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "architecture",
-      "image_gen",
-      "product_launch"
-    ],
-    "importance_score": "0.54",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.181Z"
-  },
-  {
-    "id": "b95b092f-93d0-43b1-8565-a361f3468837",
-    "title": "Stability AI and Arm Bring On-Device Generative Audio to Smartphones&nbsp;",
-    "url": "https://stability.ai/news-updates/stability-ai-and-arm-bring-on-device-generative-audio-to-smartphones",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "music_gen"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.179Z"
-  },
-  {
-    "id": "6391197a-699a-4e18-b902-03d9c71db1be",
-    "title": "Stability AI Announces Investment from WPP and New Partnership to Shape the Future of Media and Entertainment Production",
-    "url": "https://stability.ai/news-updates/stability-ai-announces-investment-from-wpp-and-new-partnership-to-shape-the-future-of-media-and-entertainment-production",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "product_launch",
-      "announcement",
-      "funding",
-      "industry_move"
-    ],
-    "importance_score": "0.62",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.176Z"
-  },
-  {
-    "id": "dfd66a0b-c7c9-40f1-986c-3f3c5ed493cc",
-    "title": "Introducing Our New SVP, Head of Product, Ryan Ellis",
-    "url": "https://stability.ai/news-updates/introducing-our-new-svp-head-of-product-ryan-ellis",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.174Z"
-  },
-  {
-    "id": "64150385-998a-48e7-b082-cf547e9652ec",
-    "title": "Introducing Stable Virtual Camera: Multi-View Video Generation with 3D Camera Control",
-    "url": "https://stability.ai/news-updates/introducing-stable-virtual-camera-multi-view-video-generation-with-3d-camera-control",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "video_gen"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.171Z"
-  },
-  {
-    "id": "644455a9-0ccc-48a7-aca6-c2fbd28bc75e",
-    "title": "Introducing Our New Chief Pipeline Architect, Robert Legato",
-    "url": "https://stability.ai/news-updates/introducing-our-new-chief-pipeline-architect-rob-legato",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "creative_workflow"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.169Z"
-  },
-  {
-    "id": "0e998954-31f2-4f84-8999-7a4559ed3417",
-    "title": "Stable Diffusion Now Optimized for AMD Radeon™ GPUs and Ryzen™ AI APUs",
-    "url": "https://stability.ai/news-updates/stable-diffusion-now-optimized-for-amd-radeon-gpus",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "architecture",
-      "hardware",
-      "image_gen"
-    ],
-    "importance_score": "0.54",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.167Z"
-  },
-  {
-    "id": "4722fe5a-3229-4aa4-a885-6d960f01d142",
-    "title": "Stability AI and Arm Collaborate to Release Stable Audio Open Small, Enabling Real-World Deployment for On-Device Audio Generation",
-    "url": "https://stability.ai/news-updates/stability-ai-and-arm-release-stable-audio-open-small-enabling-real-world-deployment-for-on-device-audio-control",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "music_gen"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.164Z"
-  },
-  {
-    "id": "f3c6c60e-9ced-4390-8143-e86dbcf64733",
-    "title": "Stable Video 4D 2.0: New Upgrades for High-Fidelity Novel-Views and 4D Generation from a Single Video",
-    "url": "https://stability.ai/news-updates/stable-video-4d-20-new-upgrades-for-high-fidelity-novel-views-and-4d-generation-from-a-single-video",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [],
-    "importance_score": "0.50",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.162Z"
-  },
-  {
-    "id": "cbb45f60-2c66-4914-99e0-e8151aab8b25",
-    "title": "Stable Diffusion 3.5 Models Optimized with TensorRT Deliver 2X Faster Performance and 40% Less Memory on NVIDIA RTX GPUs",
-    "url": "https://stability.ai/news-updates/stable-diffusion-35-models-optimized-with-tensorrt-deliver-2x-faster-performance-and-40-less-memory-on-nvidia-rtx-gpus",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "evaluation",
-      "architecture",
-      "hardware",
-      "image_gen"
-    ],
-    "importance_score": "0.62",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.160Z"
-  },
-  {
-    "id": "c8f5a848-00f1-43fd-a317-1d3ac3f7be1e",
-    "title": "Stability AI Achieves SOC 2 Type II and SOC 3 Compliance, Reaching New Industry Standard for Enterprise-Grade Security",
-    "url": "https://stability.ai/news-updates/stability-ai-achieves-soc-2-type-ii-and-soc-3-compliance",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "policy"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.158Z"
-  },
-  {
-    "id": "679e6e02-108a-4e16-88e5-cae95e33255b",
-    "title": "Introducing Stability AI Solutions: Generative AI Solutions to Accelerate Enterprise Creative Production",
-    "url": "https://stability.ai/news-updates/introducing-stability-ai-solutions",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "creative_tool"
-    ],
-    "importance_score": "0.38",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.156Z"
-  },
-  {
-    "id": "46392dab-3f3b-4f87-9597-b37bffb3fd4c",
-    "title": "Stability AI and NVIDIA Bring Faster Performance and Simplified Enterprise Deployment with the Stable Diffusion 3.5 NIM",
-    "url": "https://stability.ai/news-updates/stability-ai-and-nvidia-bring-faster-performance-and-simplified-enterprise-deployment-with-the-stable-diffusion-35-nim",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "evaluation",
-      "architecture",
-      "hardware",
-      "image_gen"
-    ],
-    "importance_score": "0.62",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.153Z"
-  },
-  {
-    "id": "064c09b0-7c96-46f4-bc53-6481c8828524",
-    "title": "Stability AI Introduces Stable Audio 2.5, the First Audio Model Built for Enterprise Sound Production at Scale",
-    "url": "https://stability.ai/news-updates/stability-ai-introduces-stable-audio-25-the-first-audio-model-built-for-enterprise-sound-production-at-scale",
-    "source": "Stability AI Blog",
-    "summary": null,
-    "category": "creative_tools",
-    "tags": [
-      "music_gen",
-      "product_launch"
-    ],
-    "importance_score": "0.46",
-    "published_at": null,
-    "discovered_at": "2026-04-01T09:35:11.151Z"
   }
 ]

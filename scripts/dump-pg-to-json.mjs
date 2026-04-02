@@ -129,6 +129,11 @@ await dump('ai_job_snapshots', `
 await dump('events', `SELECT * FROM hub_events ORDER BY date_start DESC NULLS LAST`);
 await dump('reports', `SELECT * FROM hub_reports ORDER BY last_published DESC NULLS LAST`);
 
+// YouTube creators
+await dump('youtube_creators', `
+  SELECT * FROM hub_youtube_creators ORDER BY vertical, category, name
+`);
+
 // Write metadata
 const meta = {
   generated_at: new Date().toISOString(),
