@@ -1,0 +1,33 @@
+# The AI Resource Hub
+
+> Independent AI model comparison for pricing, benchmarks, tools, and live news.
+
+This site is a reference resource for comparing AI models across pricing, quality, speed, and benchmarks. It covers LLMs, image models, video models, speech models, and creative AI tools.
+
+## Key pages
+
+- [Model Comparison](/ai-resource-hub/compare/llm/): Compare 139+ AI models by pricing, quality, speed, and context window
+- [Benchmarks](/ai-resource-hub/benchmarks/): MMLU, GPQA, MATH-500, HumanEval, SWE-bench, Arena ELO scores
+- [Leaderboard](/ai-resource-hub/leaderboard/): Models ranked by quality score
+- [News](/ai-resource-hub/news/): Daily AI news from 74 curated sources
+- [Pricing Trends](/ai-resource-hub/pricing-trends/): How model costs are changing over time
+- [Labs & Providers](/ai-resource-hub/labs/): 34 AI providers with context and history
+- [Tools](/ai-resource-hub/tools/): Calculator, token counter, and tool guides
+- [Guides](/ai-resource-hub/guides/): Plain-English learning paths and AI glossary
+
+## Data
+
+- Model comparison data (CSV): /ai-resource-hub/data/ai-models-comparison.csv
+- Model comparison data (JSON): /ai-resource-hub/data/ai-models-comparison.json
+- RSS feed: /ai-resource-hub/rss.xml
+
+## About
+
+Built and maintained by Kol Tregaskes. Updated daily via automated scrapers.
+Data sourced from OpenRouter, Artificial Analysis, LM Arena, and official provider pages.
+Independent and unaffiliated. UK-based.
+
+## Contact
+
+- Website: https://koltregaskes.com
+- X/Twitter: https://x.com/koltregaskes
