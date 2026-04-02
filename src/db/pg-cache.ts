@@ -308,9 +308,18 @@ export function getLLMModelsFromDB() {
 export function getGlossaryTerms() { return []; }
 export function getGlossaryTermById(_id: string) { return null; }
 export function getAllGlossaryIds() { return []; }
-export function getYouTubeCreators() { return []; }
-export function getYouTubeCreatorsByCategory(_cat: string) { return []; }
-export function getYouTubeCreatorCategories() { return []; }
+export function getYouTubeCreators() {
+  return loadCache<{ id: string; name: string; channel_name: string; youtube_handle: string; youtube_url: string; subscribers: number; category: string; vertical: string; description: string }>('youtube_creators');
+}
+export function getYouTubeCreatorsByCategory(cat: string) {
+  return getYouTubeCreators().filter(c => c.category === cat);
+}
+export function getYouTubeCreatorCategories() {
+  const creators = getYouTubeCreators();
+  const counts = new Map<string, number>();
+  for (const c of creators) counts.set(c.category, (counts.get(c.category) || 0) + 1);
+  return Array.from(counts.entries()).map(([category, count]) => ({ category, count })).sort((a, b) => b.count - a.count);
+}
 export function getTags() { return []; }
 export function getTagById(_id: string) { return null; }
 export function getAllTagIds() { return []; }
