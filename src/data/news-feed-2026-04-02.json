@@ -1,0 +1,247 @@
+{
+  "generated": "2026-04-02T18:05:09.194Z",
+  "site": "AI Resource Hub",
+  "article_count": 19,
+  "articles": [
+    {
+      "title": "Google releases Gemma 4 under Apache 2.0 — and that license change may matter more than benchmarks",
+      "url": "https://venturebeat.com/technology/google-releases-gemma-4-under-apache-2-0-and-that-license-change-may-matter",
+      "source": "VentureBeat AI",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "product_launch",
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-04-02T18:00:23.348Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "How to Build Production Ready AgentScope Workflows with ReAct Agents, Custom Tools, Multi-Agent Debate, Structured Output and Concurrent Pipelines",
+      "url": "https://www.marktechpost.com/2026/04/01/how-to-build-production-ready-agentscope-workflows-with-react-agents-custom-tools-multi-agent-debate-structured-output-and-concurrent-pipelines/",
+      "source": "MarkTechPost",
+      "tags": [
+        "hardware",
+        "creative_workflow",
+        "ai_agents",
+        "multi_agent"
+      ],
+      "importance": 0.72,
+      "date": "2026-04-02T06:00:27.049Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Trending on HuggingFace: deepseek-ai/DeepSeek-R1 (2,465,541 downloads)",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "reasoning"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-02T14:24:49.341Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Google announces Gemma 4 open AI models, switches to Apache 2.0 license",
+      "url": "https://arstechnica.com/ai/2026/04/google-announces-gemma-4-open-ai-models-switches-to-apache-2-0-license/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "product_launch",
+        "announcement",
+        "open_source"
+      ],
+      "importance": 0.64,
+      "date": "2026-04-02T18:00:16.217Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Fine-Tuning Your First Large Language Model (LLM) with PyTorch and Hugging Face     Feb 11, 2025 •  111",
+      "url": "https://huggingface.co/blog/dvgodoy/fine-tuning-llm-hugging-face",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "dataset"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T18:00:12.154Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Gemma 4: Byte for byte, the most capable open models",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+      "source": "Google AI Blog",
+      "tags": [
+        "open_source"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T18:00:12.129Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: mistralai/Mistral-7B-Instruct-v0.2 (2,547,648 downloads)",
+      "url": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.412Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: deepseek-ai/DeepSeek-V3 (609,693 downloads)",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.397Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: mistralai/Mistral-7B-v0.1 (449,346 downloads)",
+      "url": "https://huggingface.co/mistralai/Mistral-7B-v0.1",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.392Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: meta-llama/Meta-Llama-3-8B-Instruct (1,380,142 downloads)",
+      "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.387Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: openai/gpt-oss-20b (5,898,933 downloads)",
+      "url": "https://huggingface.co/openai/gpt-oss-20b",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.380Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: openai/gpt-oss-120b (4,101,251 downloads)",
+      "url": "https://huggingface.co/openai/gpt-oss-120b",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.376Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: meta-llama/Llama-2-7b-chat-hf (454,099 downloads)",
+      "url": "https://huggingface.co/meta-llama/Llama-2-7b-chat-hf",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.369Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: meta-llama/Llama-3.1-8B-Instruct (8,358,344 downloads)",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.359Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Trending on HuggingFace: meta-llama/Meta-Llama-3-8B (3,339,307 downloads)",
+      "url": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T14:24:49.352Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "LiveMiddle East crisis live: markets and oil prices suffer after Trump defends Iran war in prime-time address",
+      "url": "https://www.theguardian.com/world/live/2026/apr/02/middle-east-crisis-live-trump-prime-time-address-white-house-iran-war-israel-strait-hormuz",
+      "source": "The Guardian Tech",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-02T06:00:21.395Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "IBM Releases Granite 4.0 3B Vision: A New Vision Language Model for Enterprise Grade Document Data Extraction",
+      "url": "https://www.marktechpost.com/2026/04/01/ibm-releases-granite-4-0-3b-vision-a-new-vision-language-model-for-enterprise-grade-document-data-extraction/",
+      "source": "MarkTechPost",
+      "tags": [
+        "model_release",
+        "product_launch"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-02T18:00:19.625Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "New laws to make it easier to cancel subscriptions and get refunds",
+      "url": "https://www.bbc.co.uk/news/articles/cvg0v36ek2go",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change",
+        "policy"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-02T09:00:26.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Lemonade by AMD: a fast and open source local LLM server using GPU and NPU",
+      "url": "https://lemonade-server.ai",
+      "source": "Hacker News",
+      "tags": [
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-02T11:04:51.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

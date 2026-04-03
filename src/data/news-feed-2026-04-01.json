@@ -1,0 +1,286 @@
+{
+  "generated": "2026-04-01T18:05:06.916Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Navigating the RLHF Landscape: From Policy Gradients to PPO, GAE, and DPO for LLM Alignment     Feb 11, 2025 •  113",
+      "url": "https://huggingface.co/blog/NormalUhr/rlhf-pipeline",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "dataset",
+        "training",
+        "ai_safety",
+        "policy"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-01T09:34:55.941Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Improve coding agents’ performance with Gemini API Docs MCP and Agent Skills.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-docsmcp-agent-skills/",
+      "source": "Google AI Blog",
+      "tags": [
+        "evaluation",
+        "api_update",
+        "tool_use",
+        "mcp"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-01T09:34:55.903Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "AnnouncementsFeb 5, 2026Introducing Claude Opus 4.6We’re upgrading our smartest model. Across agentic coding, computer use, tool use, search, and finance, Opus 4.6 is an industry-leading model, often by wide margin.",
+      "url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "source": "Anthropic News",
+      "tags": [
+        "api_update",
+        "hardware",
+        "ai_agents",
+        "tool_use"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-01T09:34:54.348Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "NVIDIA Releases New AI Models and Developer Tools to Advance Autonomous Vehicle Ecosystem",
+      "url": "https://blogs.nvidia.com/blog/autonomous-vehicle-ecosystem-ai-models-developer-tools/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "hardware",
+        "autonomous_systems",
+        "product_launch"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-04-01T09:35:05.180Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Agent-Infra Releases AIO Sandbox: An All-in-One Runtime for AI Agents with Browser, Shell, Shared Filesystem, and MCP",
+      "url": "https://www.marktechpost.com/2026/03/29/agent-infra-releases-aio-sandbox-an-all-in-one-runtime-for-ai-agents-with-browser-shell-shared-filesystem-and-mcp/",
+      "source": "MarkTechPost",
+      "tags": [
+        "model_release",
+        "ai_agents",
+        "tool_use",
+        "mcp",
+        "product_launch"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-04-01T09:35:03.720Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Beyond Semantic Similarity: Introducing NVIDIA NeMo Retriever’s Generalizable Agentic Retrieval Pipeline     19 days ago •  39",
+      "url": "https://huggingface.co/blog/nvidia/nemo-retriever-agentic-retrieval",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "hardware",
+        "creative_workflow",
+        "ai_agents"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-01T18:00:11.539Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Unbreakable? Researchers Warn Quantum Computers Have Serious Security Flaws",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260120000330.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper",
+        "hardware",
+        "policy"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-01T09:34:57.362Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Feb 25, 2026AnnouncementsAnthropic acquires Vercept to advance Claude&#x27;s computer use capabilities",
+      "url": "https://www.anthropic.com/news/acquires-vercept",
+      "source": "Anthropic News",
+      "tags": [
+        "hardware",
+        "tool_use",
+        "acquisition"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-01T09:34:54.370Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Salesforce AI Research Releases VoiceAgentRAG: A Dual-Agent Memory Router that Cuts Voice RAG Retrieval Latency by 316x",
+      "url": "https://www.marktechpost.com/2026/03/30/salesforce-ai-research-releases-voiceagentrag-a-dual-agent-memory-router-that-cuts-voice-rag-retrieval-latency-by-316x/",
+      "source": "MarkTechPost",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "inference",
+        "product_launch"
+      ],
+      "importance": 0.72,
+      "date": "2026-04-01T09:35:03.718Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Hugging Face Releases TRL v1.0: A Unified Post-Training Stack for SFT, Reward Modeling, DPO, and GRPO Workflows",
+      "url": "https://www.marktechpost.com/2026/04/01/hugging-face-releases-trl-v1-0-a-unified-post-training-stack-for-sft-reward-modeling-dpo-and-grpo-workflows/",
+      "source": "MarkTechPost",
+      "tags": [
+        "model_release",
+        "training",
+        "creative_workflow",
+        "product_launch"
+      ],
+      "importance": 0.72,
+      "date": "2026-04-01T09:35:03.710Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Cognichip wants AI to design the chips that power AI, and just raised $60M to try",
+      "url": "https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware",
+        "funding"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T18:00:13.581Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "From DeepSeek V3 to V3.2: Architecture, Sparse Attention, and RL Updates",
+      "url": "https://magazine.sebastianraschka.com/p/technical-deepseek",
+      "source": "Sebastian Raschka",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:57.393Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Categories of Inference-Time Scaling for Improved LLM Reasoning",
+      "url": "https://magazine.sebastianraschka.com/p/categories-of-inference-time-scaling",
+      "source": "Sebastian Raschka",
+      "tags": [
+        "inference",
+        "reasoning"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:57.386Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "ChatGPT as a Therapist? New Study Reveals Serious Ethical Risks",
+      "url": "https://www.sciencedaily.com/releases/2026/03/260302030642.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:57.330Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Expanding the Alpamayo Open Platform for Developing Reasoning AVs Across Models, Data, and Simulation      16 days ago •  23",
+      "url": "https://huggingface.co/blog/drmapavone/nvidia-alpamayo-1-5",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "benchmark",
+        "reasoning"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:55.931Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Introducing WM Bench: A Benchmark for Cognitive Intelligence in World Models     3 days ago •  13",
+      "url": "https://huggingface.co/blog/FINAL-Bench/world-model",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "benchmark",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:55.916Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "KV Caching Explained: Optimizing Transformer Inference Efficiency     Jan 30, 2025 •  273",
+      "url": "https://huggingface.co/blog/not-lain/kv-caching",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "architecture",
+        "inference"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:55.914Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "How I contributed a new model to the Transformers library using Codex     1 day ago •  34",
+      "url": "https://huggingface.co/blog/nielsr/contributing-to-transformers-with-codex",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:55.910Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Nvidia loves OpenClaw",
+      "url": "https://www.bensbites.com/p/nvidia-loves-openclaw",
+      "source": "Ben's Bites",
+      "tags": [
+        "hardware",
+        "policy"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:55.069Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Mar 31, 2026AnnouncementsAustralian government and Anthropic sign MOU for AI safety and research",
+      "url": "https://www.anthropic.com/news/australia-MOU",
+      "source": "Anthropic News",
+      "tags": [
+        "research_paper",
+        "ai_safety"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-01T09:34:54.353Z",
+      "summary": null,
+      "category": "ai_models"
+    }
+  ]
+}
