@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const models = getModelsByCategory('stt');
+---
+
+<BaseLayout title="Speech-to-Text Models — The AI Resource Hub" description="Compare speech-to-text and transcription models by accuracy, speed, language support, and pricing.">
+
+  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Model comparison</p>
+      <h1 class="mt-2 text-3xl font-black font-display text-(--color-text-primary)">Speech-to-Text Models</h1>
+      <p class="mt-3 max-w-2xl text-sm leading-7 text-(--color-text-secondary)">
+        Audio transcription and speech recognition models ranked by quality, speed, and cost.
+        From OpenAI Whisper to Deepgram and AssemblyAI.
+      </p>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2">
+      {models.map((m, i) => (
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5 hover:border-(--color-border-hover) transition-colors">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-(--color-accent)">#{i + 1}</span>
+              <h3 class="text-base font-semibold text-(--color-text-primary)">{m.name}</h3>
+            </div>
+            <span class="text-sm font-mono font-semibold text-(--color-accent)">{m.qualityScore}/100</span>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full" style={`background-color: ${m.providerColour}`}></span>
+            <span class="text-xs text-(--color-text-secondary)">{m.provider}</span>
+          </div>
+          <div class="flex flex-wrap gap-3 text-xs text-(--color-text-muted)">
+            <span>Input: ${m.inputPrice}/M tokens</span>
+            {m.openSource && <span class="text-emerald-400">Open Source</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {models.length === 0 && (
+      <div class="rounded-2xl border border-dashed border-(--color-border) p-8 text-center text-sm text-(--color-text-secondary)">
+        Speech-to-text model data is being populated. Check back soon.
+      </div>
+    )}
+  </section>
+
+</BaseLayout>

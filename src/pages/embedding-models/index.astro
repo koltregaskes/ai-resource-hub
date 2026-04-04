@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const models = getModelsByCategory('embedding');
+---
+
+<BaseLayout title="Embedding Models — The AI Resource Hub" description="Compare text embedding models by quality, dimensions, speed, and pricing for RAG, search, and similarity applications.">
+
+  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Model comparison</p>
+      <h1 class="mt-2 text-3xl font-black font-display text-(--color-text-primary)">Embedding Models</h1>
+      <p class="mt-3 max-w-2xl text-sm leading-7 text-(--color-text-secondary)">
+        Text embedding models for RAG, semantic search, clustering, and similarity applications.
+        Ranked by quality score, with dimensions and pricing.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-(--color-border) text-left">
+            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) w-10">#</th>
+            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted)">Model</th>
+            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted)">Provider</th>
+            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) text-right">Quality</th>
+            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) text-right">Dimensions</th>
+            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) text-right">$/M tokens</th>
+            <th class="py-3 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted)">Open Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          {models.map((m, i) => (
+            <tr class="border-b border-(--color-border) hover:bg-(--color-bg-tertiary) transition-colors">
+              <td class="py-3 pr-4 text-(--color-text-muted) font-mono text-xs">{i + 1}</td>
+              <td class="py-3 pr-4 font-medium text-(--color-text-primary)">{m.name}</td>
+              <td class="py-3 pr-4">
+                <span class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full" style={`background-color: ${m.providerColour}`}></span>
+                  <span class="text-(--color-text-secondary)">{m.provider}</span>
+                </span>
+              </td>
+              <td class="py-3 pr-4 text-right font-mono font-semibold text-(--color-accent)">{m.qualityScore}</td>
+              <td class="py-3 pr-4 text-right font-mono text-(--color-text-secondary)">{m.maxOutput > 0 ? m.maxOutput.toLocaleString() : '—'}</td>
+              <td class="py-3 pr-4 text-right font-mono text-(--color-text-secondary)">{m.inputPrice > 0 ? `$${m.inputPrice}` : 'Free'}</td>
+              <td class="py-3 text-xs text-(--color-text-muted)">{m.openSource ? '✓ Open' : 'Proprietary'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {models.length === 0 && (
+      <div class="rounded-2xl border border-dashed border-(--color-border) p-8 text-center text-sm text-(--color-text-secondary)">
+        Embedding model data is being populated. Check back soon.
+      </div>
+    )}
+  </section>
+
+</BaseLayout>
