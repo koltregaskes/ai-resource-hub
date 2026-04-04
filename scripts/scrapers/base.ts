@@ -91,7 +91,7 @@ export function upsertModels(db: Database.Database, models: ScrapedModel[]): num
 export function logScrapeRun(
   db: Database.Database,
   scraper: string,
-  status: 'success' | 'error',
+  status: 'success' | 'error' | 'live' | 'fallback' | 'computed',
   modelsUpdated: number,
   errorMessage?: string
 ): void {

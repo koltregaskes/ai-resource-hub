@@ -5,6 +5,7 @@ import NewsletterSignup from '../components/NewsletterSignup.astro';
 import TopModelsPreview from '../components/TopModelsPreview.astro';
 import {
   getBenchmarkMatrix,
+  getAIJobsOverview,
   getLLMModelsFromDB,
   getModelsByCategory,
   getPeople,
@@ -22,6 +23,7 @@ const voiceModels = getModelsByCategory('voice');
 const soundModels = getModelsByCategory('sound');
 const providers = getProvidersWithCounts();
 const benchmarkMatrix = getBenchmarkMatrix();
+const jobsOverview = getAIJobsOverview();
 const recentModels = getRecentModels(6);
 const people = getPeople();
 const youtubeCreators = getYouTubeCreators();
@@ -62,6 +64,14 @@ const launchCards = [
     href: `${base}tools/`,
     meta: 'Calculator, counter, and shortlists',
   },
+  {
+    title: 'Check real hiring signal',
+    description: 'Read the AI jobs market through live company boards, role mix, and remote share instead of generic macro hot takes.',
+    href: `${base}jobs/`,
+    meta: jobsOverview.total_open_roles > 0
+      ? `${jobsOverview.total_open_roles} live roles / ${jobsOverview.posted_last_14d} posted in 14 days`
+      : 'Jobs tracker ready',
+  },
 ];
 
 const coreSections = [
@@ -96,6 +106,12 @@ const coreSections = [
     note: 'Pricing calculator, token counter, and quick routes into the practical stuff.',
   },
   {
+    title: 'AI jobs market',
+    href: `${base}jobs/`,
+    stat: jobsOverview.total_open_roles > 0 ? `${jobsOverview.total_open_roles} live roles` : 'Live boards',
+    note: 'Daily snapshots of hiring across tracked AI-company public job boards.',
+  },
+  {
     title: 'Guides and glossary',
     href: `${base}guides/`,
     stat: `${people.length + youtubeCreators.length} references`,
@@ -107,6 +123,7 @@ const fieldNotes = [
   { value: totalTracked, label: 'Models tracked across text, image, video, speech, voice, and sound' },
   { value: benchmarkMatrix.models.length, label: 'Models linked to benchmark coverage and comparison tooling' },
   { value: providers.length, label: 'Labs and providers represented in the database' },
+  { value: `${jobsOverview.total_open_roles}/${jobsOverview.posted_last_14d}`, label: 'Live roles tracked and roles posted in the last 14 days' },
   { value: `${people.length}/${youtubeCreators.length}`, label: 'People and creators available in the learning layer' },
 ];
 ---
@@ -242,6 +259,9 @@ const fieldNotes = [
             <a href={`${base}leaderboard/`} class="aside-link">Leaderboard</a>
             <a href={`${base}calculator/`} class="aside-link">Pricing calculator</a>
             <a href={`${base}compare/head-to-head/`} class="aside-link">Head-to-head comparison</a>
+            <a href={`${base}jobs/`} class="aside-link">AI jobs market</a>
+            <a href={`${base}reports/`} class="aside-link">AI reports</a>
+            <a href={`${base}events/`} class="aside-link">AI events</a>
             <a href={`${base}methodology/`} class="aside-link">Methodology and sources</a>
           </div>
         </div>

@@ -85,13 +85,16 @@ interface CachedBenchmark {
 interface CachedBenchmarkScore {
   model_id: string;
   benchmark_id: string;
-  score: number;
+  score: number | string;
   source: string | null;
   source_url: string | null;
+  measured_at?: string | null;
+  updated_at?: string | null;
   model_name: string;
   provider_name: string;
   provider_colour: string;
   model_category: string;
+  provider_id?: string;
 }
 
 interface CachedPerson {
@@ -125,16 +128,32 @@ interface CachedPriceHistory {
   model_name: string;
   provider_name: string;
   provider_colour: string;
-  input_price: number;
-  output_price: number;
+  input_price: number | string;
+  output_price: number | string;
   recorded_at: string;
   source: string | null;
+}
+
+function toNumber(value: number | string | null | undefined): number {
+  if (typeof value === 'number') return value;
+  if (typeof value === 'string') {
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }
+  return 0;
 }
 
 // ─── Public API (drop-in replacements for queries.ts functions) ─
 
 export function getModels(): CachedModel[] {
-  return loadCache<CachedModel>('models');
+  return loadCache<CachedModel>('models').map((model) => ({
+    ...model,
+    input_price: toNumber(model.input_price),
+    output_price: toNumber(model.output_price),
+    speed: toNumber(model.speed),
+    ttft: toNumber(model.ttft),
+    quality_score: toNumber(model.quality_score),
+  }));
 }
 
 export function getModelsByCategory(category: string): CachedModel[] {
@@ -189,7 +208,14 @@ export function getAllBenchmarkIds(): string[] {
 }
 
 export function getBenchmarkScores(): CachedBenchmarkScore[] {
-  return loadCache<CachedBenchmarkScore>('benchmark_scores');
+  const models = new Map(getModels().map((model) => [model.id, model]));
+  return loadCache<CachedBenchmarkScore>('benchmark_scores').map((score) => ({
+    ...score,
+    score: toNumber(score.score),
+    provider_id: score.provider_id ?? models.get(score.model_id)?.provider_id,
+    measured_at: score.measured_at ?? null,
+    updated_at: score.updated_at ?? null,
+  }));
 }
 
 export function getModelBenchmarks(modelId: string): CachedBenchmarkScore[] {
@@ -260,7 +286,11 @@ export function getNewsCategories(): Array<{ category: string; count: number }> 
 }
 
 export function getPriceHistory(): CachedPriceHistory[] {
-  return loadCache<CachedPriceHistory>('price_history');
+  return loadCache<CachedPriceHistory>('price_history').map((entry) => ({
+    ...entry,
+    input_price: toNumber(entry.input_price),
+    output_price: toNumber(entry.output_price),
+  }));
 }
 
 export function getModelPriceHistory(modelId: string): CachedPriceHistory[] {

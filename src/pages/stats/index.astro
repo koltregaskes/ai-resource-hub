@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getProvidersWithCounts, getModelsByCategory, getBenchmarks, getModelBenchmarks, getPeople, getGlossaryTerms, getNews, getYouTubeCreators, getTags } from '../../db/queries';
+import { getProvidersWithCounts, getModelsByCategory, getBenchmarks, getModelBenchmarks, getPeople, getGlossaryTerms, getNews, getYouTubeCreators, getTags, getAIJobsOverview } from '../../db/queries';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -12,6 +12,7 @@ const glossaryTerms = getGlossaryTerms();
 const newsArticles = getNews(10000);
 const ytCreators = getYouTubeCreators();
 const tags = getTags();
+const jobsOverview = getAIJobsOverview();
 
 // Count models by category
 const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
@@ -94,7 +95,7 @@ function formatTokens(n: number): string {
     </div>
 
     <!-- Key metrics -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 mb-10">
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
         <p class="text-2xl font-bold text-(--color-accent)">{totalModels}</p>
         <p class="text-xs text-(--color-text-muted)">Active Models</p>
@@ -118,6 +119,10 @@ function formatTokens(n: number): string {
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
         <p class="text-2xl font-bold text-(--color-text-primary)">{newsArticles.length}</p>
         <p class="text-xs text-(--color-text-muted)">News Articles</p>
+      </div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+        <p class="text-2xl font-bold text-(--color-text-primary)">{jobsOverview.total_open_roles}</p>
+        <p class="text-xs text-(--color-text-muted)">Tracked AI Jobs</p>
       </div>
     </div>
 
@@ -212,6 +217,35 @@ function formatTokens(n: number): string {
             <span class="text-sm text-(--color-text-muted)">Benchmark Coverage</span>
             <span class="font-mono text-sm text-(--color-text-primary)">{totalScores} scores across {benchmarks.length} benchmarks</span>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Jobs Market Snapshot</h2>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Tracked companies</p>
+            <p class="mt-2 text-2xl font-bold text-(--color-text-primary)">{jobsOverview.tracked_companies}</p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Remote share</p>
+            <p class="mt-2 text-2xl font-bold text-(--color-text-primary)">{jobsOverview.remote_share.toFixed(0)}%</p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Research roles</p>
+            <p class="mt-2 text-2xl font-bold text-(--color-text-primary)">{jobsOverview.research_roles}</p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Engineering roles</p>
+            <p class="mt-2 text-2xl font-bold text-(--color-text-primary)">{jobsOverview.engineering_roles}</p>
+          </div>
+        </div>
+        <div class="mt-5">
+          <a href={`${base}jobs/`} class="text-sm font-semibold text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+            Open the AI jobs market view →
+          </a>
         </div>
       </div>
     </div>

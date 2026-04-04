@@ -29,7 +29,8 @@ interface DBNewsItem {
   url: string;
   source: string;
   summary: string | null;
-  published_at: string;
+  published_at: string | null;
+  discovered_at?: string | null;
   category: string;
 }
 
@@ -283,7 +284,8 @@ function loadNewsFromDB(): NewsItem[] {
   const rows = getNews(250) as DBNewsItem[];
 
   return rows.map((row) => {
-    const date = row.published_at.slice(0, 10);
+    const dateSource = row.published_at ?? row.discovered_at ?? new Date().toISOString();
+    const date = dateSource.slice(0, 10);
     const dateParts = date.split('-').map(Number);
     const dateObj = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
 

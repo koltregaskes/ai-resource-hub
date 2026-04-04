@@ -1,0 +1,305 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  getAIJobFunctionCounts,
+  getAIJobLocationCounts,
+  getAIJobs,
+  getAIJobsOverview,
+  getAIJobSnapshotSeries,
+  getJobCompanies,
+  getLatestAIJobSnapshots,
+} from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const overview = getAIJobsOverview();
+const latestRoles = getAIJobs(120);
+const companySnapshots = getLatestAIJobSnapshots();
+const trackedCompanies = getJobCompanies();
+const functionCounts = getAIJobFunctionCounts();
+const locationCounts = getAIJobLocationCounts(10);
+const snapshotSeries = getAIJobSnapshotSeries(30);
+
+const latestDateLabel = overview.latest_snapshot_date
+  ? new Date(`${overview.latest_snapshot_date}T00:00:00`).toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    })
+  : 'No snapshot yet';
+
+const maxOpenCount = Math.max(...snapshotSeries.map((item) => item.open_role_count), 1);
+const maxCompanyCount = Math.max(...companySnapshots.map((item) => item.open_role_count), 1);
+
+const functionLabels: Record<string, string> = {
+  research: 'Research and safety',
+  engineering: 'Engineering and infrastructure',
+  product: 'Product and design',
+  gtm: 'Go to market',
+  operations: 'Operations and support',
+  other: 'Other',
+};
+---
+
+<BaseLayout
+  title="AI Jobs Market - The AI Resource Hub"
+  description="A grounded view of the AI jobs market built from public company boards, daily snapshots, and role mix rather than generic hype."
+>
+  <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Jobs Market</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="section-kicker">Reality check</p>
+      <h1 class="section-heading">A calmer read on the AI jobs market, built from live company boards instead of grand claims.</h1>
+      <p class="mt-4 text-base leading-7 text-(--color-text-secondary)">
+        This page tracks a small set of public AI-company hiring boards and stores daily snapshots. It is designed to
+        answer practical questions: who is hiring, what kinds of roles are open, how much of the hiring is technical,
+        and how much is actually remote.
+      </p>
+      <p class="mt-3 text-sm uppercase tracking-[0.18em] text-(--color-text-muted)">
+        Latest snapshot: {latestDateLabel}
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 gap-3 lg:grid-cols-6">
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{overview.total_open_roles}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Open roles tracked</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{overview.tracked_companies}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Companies tracked</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{overview.posted_last_14d}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Posted in 14 days</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{overview.remote_share.toFixed(0)}%</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Remote share</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{overview.engineering_roles + overview.research_roles}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Technical roles</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{overview.dated_roles}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Roles with known dates</p>
+      </div>
+    </div>
+
+    <p class="mt-4 max-w-3xl text-sm leading-6 text-(--color-text-secondary)">
+      This is intentionally a narrow tracker. We follow named AI-company boards and keep daily snapshots, so the page reads more like a market pulse than an inflated jobs directory.
+    </p>
+  </section>
+
+  <section class="mx-auto grid max-w-7xl gap-6 px-4 pb-8 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <p class="section-kicker">Daily movement</p>
+          <h2 class="section-heading section-heading-compact">Open roles over time</h2>
+        </div>
+        <p class="text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Last {snapshotSeries.length} snapshots</p>
+      </div>
+
+      {snapshotSeries.length > 0 ? (
+        <div class="mt-8 grid h-64 grid-cols-[repeat(auto-fit,minmax(10px,1fr))] items-end gap-2">
+          {snapshotSeries.map((point) => (
+            <div class="group flex h-full flex-col justify-end">
+              <div
+                class="rounded-t-full bg-(--color-accent) transition-opacity group-hover:opacity-80"
+                style={`height: ${Math.max((point.open_role_count / maxOpenCount) * 100, 6)}%`}
+                title={`${point.snapshot_date}: ${point.open_role_count} open roles`}
+              ></div>
+              <span class="mt-2 origin-top-left rotate-[-45deg] text-[10px] text-(--color-text-muted)">
+                {point.snapshot_date.slice(5)}
+              </span>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="mt-8 rounded-2xl border border-dashed border-(--color-border) p-6 text-sm text-(--color-text-muted)">
+          No snapshot data yet. Run the jobs scraper to start building a daily hiring trend.
+        </div>
+      )}
+    </div>
+
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <p class="section-kicker">What the roles are</p>
+      <h2 class="section-heading section-heading-compact">Role mix right now</h2>
+
+      <div class="mt-6 space-y-4">
+        {functionCounts.map((item) => {
+          const pct = overview.total_open_roles > 0 ? (item.count / overview.total_open_roles) * 100 : 0;
+          return (
+            <div>
+              <div class="mb-1 flex items-center justify-between text-sm">
+                <span class="text-(--color-text-secondary)">{functionLabels[item.function_category] ?? item.function_category}</span>
+                <span class="font-mono text-(--color-text-primary)">{item.count}</span>
+              </div>
+              <div class="h-3 overflow-hidden rounded-full bg-(--color-bg-tertiary)">
+                <div class="h-full rounded-full bg-(--color-accent)" style={`width: ${pct}%`}></div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div class="mt-8 border-t border-(--color-border) pt-6">
+        <p class="section-kicker">Where the roles are</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {locationCounts.map((item) => (
+            <span class="rounded-full border border-(--color-border-strong) px-3 py-1 text-xs uppercase tracking-[0.14em] text-(--color-text-secondary)">
+              {item.location_group} / {item.count}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-7xl gap-6 px-4 pb-8 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <p class="section-kicker">By company</p>
+      <h2 class="section-heading section-heading-compact">Current hiring footprint</h2>
+
+      <div class="mt-6 space-y-4">
+        {companySnapshots.map((company) => (
+          <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-base font-semibold text-(--color-text-primary)">{company.company_name}</p>
+                <p class="mt-1 text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">
+                  {company.research_role_count} research / {company.engineering_role_count} engineering / {company.remote_role_count} remote
+                </p>
+              </div>
+              <span class="text-2xl font-semibold text-(--color-text-primary)">{company.open_role_count}</span>
+            </div>
+            <div class="mt-4 h-2 overflow-hidden rounded-full bg-(--color-bg-tertiary)">
+              <div class="h-full rounded-full bg-(--color-accent)" style={`width: ${Math.max((company.open_role_count / maxCompanyCount) * 100, 8)}%`}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <p class="section-kicker">Coverage</p>
+          <h2 class="section-heading section-heading-compact">Tracked public boards</h2>
+        </div>
+        <p class="text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">
+          {trackedCompanies.length} sources
+        </p>
+      </div>
+
+      <div class="mt-6 space-y-3">
+        {trackedCompanies.map((company) => (
+          <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <p class="text-base font-semibold text-(--color-text-primary)">{company.name}</p>
+                <p class="mt-1 text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">
+                  {company.board_type} board
+                  {company.provider_name ? ` / ${company.provider_name}` : ''}
+                </p>
+                {company.notes && (
+                  <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">{company.notes}</p>
+                )}
+              </div>
+              <a
+                href={company.careers_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-semibold text-(--color-accent) hover:text-(--color-accent-hover)"
+              >
+                Careers page
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <p class="section-kicker">Live openings</p>
+          <h2 class="section-heading section-heading-compact">Recent roles from tracked boards</h2>
+        </div>
+        <p class="text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">
+          {latestRoles.length} roles loaded
+        </p>
+      </div>
+
+      <div class="mt-6 space-y-3">
+        {latestRoles.slice(0, 24).map((job) => (
+          <a
+            href={job.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4 transition-colors hover:border-(--color-border-strong)"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-base font-semibold text-(--color-text-primary)">{job.title}</p>
+                <p class="mt-1 text-sm text-(--color-text-secondary)">
+                  {job.company_name}
+                  {job.team ? ` / ${job.team}` : ''}
+                </p>
+                <p class="mt-2 text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">
+                  {job.function_category} / {job.workplace_type} / {job.location ?? 'Location not stated'}
+                </p>
+              </div>
+              <div class="text-right text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">
+                <p>{job.commitment ?? 'Open role'}</p>
+                <p class="mt-1">{job.posted_at ? job.posted_at.slice(0, 10) : 'Date unknown'}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <p class="section-kicker">Method</p>
+      <h2 class="section-heading section-heading-compact">Why this is useful</h2>
+      <div class="mt-5 grid gap-4 md:grid-cols-3">
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
+          <p class="text-sm font-semibold text-(--color-text-primary)">Real boards, not generic AI-job SEO pages</p>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+            The feed only tracks public company ATS boards, so the numbers map to actual named employers rather than scraped keyword spam.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
+          <p class="text-sm font-semibold text-(--color-text-primary)">Daily snapshots for trend lines</p>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+            Each run stores a dated snapshot, which means we can plot hiring movement over time instead of staring at a single noisy moment.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
+          <p class="text-sm font-semibold text-(--color-text-primary)">Role mix beats hype</p>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+            The useful question is not "is AI hiring booming?" but which functions are expanding: research, engineering, product, go-to-market, or operations.
+          </p>
+        </div>
+      </div>
+      <p class="mt-5 max-w-3xl text-sm leading-6 text-(--color-text-secondary)">
+        The next layer planned here is slower-moving labour evidence from official sources such as Stanford AI Index and the PwC AI Jobs Barometer, so the live board tracker can be compared against broader market trends instead of standing alone.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

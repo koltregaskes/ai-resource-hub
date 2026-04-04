@@ -234,7 +234,7 @@ async function main() {
   const pgCount = await writeToPostgres(allScores);
   console.log(`  Postgres: ${pgCount} scores written`);
 
-  logScrapeRun(db, 'creative-benchmarks', isLive ? 'live' : 'fallback', allScores.length, 0);
+  logScrapeRun(db, 'creative-benchmarks', isLive ? 'live' : 'fallback', allScores.length);
   console.log(`\n  Source: ${isLive ? 'LIVE from Artificial Analysis' : 'CACHED fallback data'}`);
   console.log('  Done.');
 }

@@ -181,9 +181,12 @@ export function getSearchIndex(base: string): SearchItem[] {
 
   // Static section pages
   const sectionPages = [
+    { id: 'reports', title: 'AI Reports', description: 'Recurring AI reports, indexes, and research dashboards worth tracking' },
+    { id: 'events', title: 'AI Events', description: 'Recurring AI conferences and industry events worth watching' },
     { id: 'news', title: 'AI News', description: 'Latest AI news — model releases, research, funding, and industry updates' },
     { id: 'youtube', title: 'AI YouTube Channels', description: 'Curated list of the best YouTube channels covering AI' },
     { id: 'twitter', title: 'AI on X/Twitter', description: 'Curated list of the top AI accounts to follow on X/Twitter' },
+    { id: 'jobs', title: 'AI Jobs Market', description: 'Track live AI-company openings, remote share, and role mix across public ATS boards' },
     { id: 'tags', title: 'Browse by Tag', description: 'Browse AI topics, technologies, and use cases' },
     { id: 'status', title: 'Provider Status Dashboard', description: 'Check if AI services are up — all provider status pages in one place' },
     { id: 'tools', title: 'AI Tools Directory', description: 'Comprehensive directory of the best AI tools — chatbots, coding assistants, image generators' },

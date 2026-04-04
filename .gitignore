@@ -49,3 +49,6 @@ dist/newsletter/
 .claude/
 .codex/
 .cursor/
+
+# Local build repair tools
+tools/esbuild/

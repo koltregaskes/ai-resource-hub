@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { recurringReports } from '../../data/research-intel';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="AI Reports - The AI Resource Hub"
+  description="Recurring AI reports, indexes, and research dashboards worth tracking for grounded market, labour, policy, and model context."
+>
+  <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Reports</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="section-kicker">Reference shelf</p>
+      <h1 class="section-heading">Recurring AI reports and indexes worth checking before repeating the internet's loudest takes.</h1>
+      <p class="mt-4 text-base leading-7 text-(--color-text-secondary)">
+        This page is for slower, sturdier sources. Instead of another rolling news stream, it collects the recurring reports,
+        annual indexes, and benchmark dashboards that help anchor AI coverage in something more durable.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="grid gap-4 md:grid-cols-3">
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{recurringReports.length}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Tracked report sources</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">Annual + ongoing</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Cadence mix</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">Market + labour + policy</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Coverage focus</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+    <div class="grid gap-5 lg:grid-cols-2">
+      {recurringReports.map((report) => (
+        <article class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <p class="section-kicker">{report.organisation}</p>
+              <h2 class="section-heading section-heading-compact">{report.title}</h2>
+            </div>
+            <span class="rounded-full border border-(--color-border-strong) px-3 py-1 text-xs uppercase tracking-[0.16em] text-(--color-text-secondary)">
+              {report.cadence}
+            </span>
+          </div>
+
+          <div class="mt-5 space-y-4">
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">Focus</p>
+              <p class="mt-1 text-sm leading-6 text-(--color-text-secondary)">{report.focus}</p>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">Why it matters</p>
+              <p class="mt-1 text-sm leading-6 text-(--color-text-secondary)">{report.whyItMatters}</p>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">Best for</p>
+              <p class="mt-1 text-sm leading-6 text-(--color-text-secondary)">{report.bestFor}</p>
+            </div>
+          </div>
+
+          <a
+            href={report.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 inline-flex text-sm font-semibold text-(--color-accent) transition-colors hover:text-(--color-accent-hover)"
+          >
+            Open source report
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

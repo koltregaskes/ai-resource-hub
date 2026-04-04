@@ -137,7 +137,7 @@ function main() {
   console.log(`  Skipped: ${skipped} (no benchmark data)`);
   console.log(`  Still zero: ${remaining.c} models`);
 
-  logScrapeRun(db, 'quality-scores', 'computed', updated, 0);
+  logScrapeRun(db, 'quality-scores', 'computed', updated);
   db.close();
   console.log('  Done.');
 }

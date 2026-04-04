@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { recurringEvents } from '../../data/research-intel';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const allTags = Array.from(new Set(recurringEvents.flatMap((event) => event.tags))).sort();
+const confirmedEvents = recurringEvents
+  .filter((event) => event.status === 'confirmed' && event.startDate)
+  .sort((a, b) => (a.startDate ?? '').localeCompare(b.startDate ?? ''));
+const upcomingByMonth = confirmedEvents.reduce((map, event) => {
+  const key = event.startDate!.slice(0, 7);
+  if (!map.has(key)) map.set(key, []);
+  map.get(key)!.push(event);
+  return map;
+}, new Map<string, typeof confirmedEvents>());
+const datedEvents = Array.from(upcomingByMonth.entries());
+const undatedEvents = recurringEvents.filter((event) => event.status !== 'confirmed');
+
+function formatMonth(monthKey: string): string {
+  return new Date(`${monthKey}-01T00:00:00`).toLocaleDateString('en-GB', {
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
+function formatDateRange(startDate?: string, endDate?: string): string {
+  if (!startDate) return 'Date TBC';
+  const start = new Date(`${startDate}T00:00:00`);
+  if (!endDate || startDate === endDate) {
+    return start.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+  const end = new Date(`${endDate}T00:00:00`);
+  return `${start.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} - ${end.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+}
+---
+
+<BaseLayout
+  title="AI Events - The AI Resource Hub"
+  description="Recurring AI conferences, AI Dev Days, and major tech events with a calendar-style view, categories, and official source links."
+>
+  <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Events</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="section-kicker">Signal calendar</p>
+      <h1 class="section-heading">AI conferences, AI Dev Days, and major tech events worth tracking.</h1>
+      <p class="mt-4 text-base leading-7 text-(--color-text-secondary)">
+        This is the start of a proper events layer rather than a simple list. Confirmed dates are shown in a calendar-style
+        monthly view, while recurring but unannounced events stay visible in a separate watchlist until official details are published.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="grid gap-4 md:grid-cols-4">
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{recurringEvents.length}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Tracked events</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{confirmedEvents.length}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Confirmed dates</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{undatedEvents.length}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">TBC or series</p>
+      </div>
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
+        <p class="text-3xl font-semibold text-(--color-text-primary)">Daily</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Target verification cadence</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="section-kicker">Filters</p>
+          <h2 class="section-heading section-heading-compact">Multi-select categories for the full directory</h2>
+        </div>
+        <button
+          type="button"
+          id="clear-event-filters"
+          class="inline-flex rounded-full border border-(--color-border-strong) px-4 py-2 text-xs uppercase tracking-[0.16em] text-(--color-text-secondary) transition-colors hover:border-(--color-accent) hover:text-(--color-text-primary)"
+        >
+          Clear filters
+        </button>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-3">
+        {allTags.map((tag) => (
+          <label class="inline-flex cursor-pointer items-center gap-2 rounded-full border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-xs uppercase tracking-[0.14em] text-(--color-text-secondary)">
+            <input type="checkbox" class="event-filter-checkbox h-4 w-4 accent-[var(--color-accent)]" value={tag} />
+            <span>{tag.replace(/-/g, ' ')}</span>
+          </label>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <p class="section-kicker">Calendar view</p>
+      <h2 class="section-heading section-heading-compact">Confirmed dates by month</h2>
+
+      <div class="mt-6 grid gap-6 lg:grid-cols-2">
+        {datedEvents.map(([monthKey, events]) => (
+          <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-5">
+            <div class="flex items-end justify-between gap-4 border-b border-(--color-border) pb-4">
+              <h3 class="text-xl font-semibold text-(--color-text-primary)">{formatMonth(monthKey)}</h3>
+              <span class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">{events.length} event{events.length === 1 ? '' : 's'}</span>
+            </div>
+
+            <div class="mt-4 space-y-4">
+              {events.map((event) => (
+                <article
+                  class="event-directory-card rounded-2xl border border-(--color-border) p-4"
+                  data-tags={event.tags.join('|')}
+                  data-status={event.status}
+                >
+                  <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">{event.organiser}</p>
+                      <h4 class="mt-1 text-lg font-semibold text-(--color-text-primary)">{event.name}</h4>
+                    </div>
+                    <span class="rounded-full border border-(--color-border-strong) px-3 py-1 text-[11px] uppercase tracking-[0.16em] text-(--color-text-secondary)">
+                      {event.category}
+                    </span>
+                  </div>
+
+                  <div class="mt-4 grid gap-3 md:grid-cols-2">
+                    <div>
+                      <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">Dates</p>
+                      <p class="mt-1 text-sm leading-6 text-(--color-text-secondary)">{formatDateRange(event.startDate, event.endDate)}</p>
+                    </div>
+                    <div>
+                      <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">Location</p>
+                      <p class="mt-1 text-sm leading-6 text-(--color-text-secondary)">
+                        {[event.city, event.country].filter(Boolean).join(', ') || 'Location TBC'}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="mt-4 text-sm leading-6 text-(--color-text-secondary)">{event.whyWatch}</p>
+
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    {event.tags.map((tag) => (
+                      <span class="rounded-full bg-(--color-bg-secondary) px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-(--color-text-muted)">
+                        {tag.replace(/-/g, ' ')}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={event.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-5 inline-flex text-sm font-semibold text-(--color-accent) transition-colors hover:text-(--color-accent-hover)"
+                  >
+                    Official source
+                  </a>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <p class="section-kicker">Watchlist</p>
+      <h2 class="section-heading section-heading-compact">Recurring events waiting on official dates</h2>
+
+      <div class="mt-6 grid gap-4 lg:grid-cols-2">
+        {undatedEvents.map((event) => (
+          <article
+            class="event-directory-card rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-5"
+            data-tags={event.tags.join('|')}
+            data-status={event.status}
+          >
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">{event.organiser}</p>
+                <h3 class="mt-1 text-lg font-semibold text-(--color-text-primary)">{event.name}</h3>
+              </div>
+              <span class="rounded-full border border-(--color-border-strong) px-3 py-1 text-[11px] uppercase tracking-[0.16em] text-(--color-text-secondary)">
+                {event.status}
+              </span>
+            </div>
+
+            <div class="mt-4 grid gap-3 md:grid-cols-2">
+              <div>
+                <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">Category</p>
+                <p class="mt-1 text-sm leading-6 text-(--color-text-secondary)">{event.category}</p>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">Current timing</p>
+                <p class="mt-1 text-sm leading-6 text-(--color-text-secondary)">{event.timing}</p>
+              </div>
+            </div>
+
+            <p class="mt-4 text-sm leading-6 text-(--color-text-secondary)">{event.whyWatch}</p>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+              {event.tags.map((tag) => (
+                <span class="rounded-full bg-(--color-bg-secondary) px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-(--color-text-muted)">
+                  {tag.replace(/-/g, ' ')}
+                </span>
+              ))}
+            </div>
+
+            <a
+              href={event.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-5 inline-flex text-sm font-semibold text-(--color-accent) transition-colors hover:text-(--color-accent-hover)"
+            >
+              Official source
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+      <p class="section-kicker">Implementation notes</p>
+      <h2 class="section-heading section-heading-compact">What this should become</h2>
+      <div class="mt-5 grid gap-4 md:grid-cols-3">
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
+          <p class="text-sm font-semibold text-(--color-text-primary)">Postgres as the source of truth</p>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+            The final version should store events in Postgres with daily verification, source URLs, and last-checked timestamps.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
+          <p class="text-sm font-semibold text-(--color-text-primary)">Calendar first, list second</p>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+            Confirmed events should appear in a real month calendar, while TBC and recurring series stay in a separate watchlist.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
+          <p class="text-sm font-semibold text-(--color-text-primary)">Public sync later</p>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+            A public Google Calendar can be a subscriber surface later, but it should not replace the site database as the master record.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    (() => {
+      const checkboxes = Array.from(document.querySelectorAll('.event-filter-checkbox'));
+      const cards = Array.from(document.querySelectorAll('.event-directory-card'));
+      const clearButton = document.getElementById('clear-event-filters');
+
+      function applyFilters() {
+        const active = checkboxes
+          .filter((checkbox) => checkbox instanceof HTMLInputElement && checkbox.checked)
+          .map((checkbox) => checkbox instanceof HTMLInputElement ? checkbox.value : '')
+          .filter(Boolean);
+
+        for (const card of cards) {
+          const tags = (card.getAttribute('data-tags') || '').split('|').filter(Boolean);
+          const visible = active.length === 0 || active.every((tag) => tags.includes(tag));
+          card.classList.toggle('hidden', !visible);
+        }
+      }
+
+      for (const checkbox of checkboxes) {
+        checkbox.addEventListener('change', applyFilters);
+      }
+
+      clearButton?.addEventListener('click', () => {
+        for (const checkbox of checkboxes) {
+          if (checkbox instanceof HTMLInputElement) checkbox.checked = false;
+        }
+        applyFilters();
+      });
+    })();
+  </script>
+</BaseLayout>

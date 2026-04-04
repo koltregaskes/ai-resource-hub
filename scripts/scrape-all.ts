@@ -14,7 +14,8 @@
  * 2. Pricing validator runs SECOND (cross-checks against Together AI, Google, Groq)
  * 3. Benchmarks runs THIRD (ELO scores from LMSYS)
  * 4. Speed runs FOURTH (TTFT and throughput data)
- * 5. News runs LAST (public RSS and official blogs)
+ * 5. News runs FIFTH (public RSS and official blogs)
+ * 6. Jobs runs LAST (public ATS boards + daily snapshots)
  *
  * Exit codes:
  * - 0: all scrapers succeeded
@@ -37,6 +38,7 @@ async function main() {
     { name: 'Creative Benchmarks (AA Arenas)', script: 'scripts/scrapers/creative-benchmarks.ts' },
     { name: 'Quality Score Calculator', script: 'scripts/scrapers/quality-scores.ts' },
     { name: 'News (RSS + official blogs)', script: 'scripts/scrapers/news.ts' },
+    { name: 'Jobs Market (public ATS boards)', script: 'scripts/scrapers/jobs.ts' },
   ];
 
   let failures = 0;

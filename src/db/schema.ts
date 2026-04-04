@@ -184,6 +184,57 @@ function initSchema(db: Database.Database): void {
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
+    -- Company boards used for AI jobs-market tracking
+    CREATE TABLE IF NOT EXISTS job_companies (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      provider_id TEXT REFERENCES providers(id),
+      careers_url TEXT NOT NULL,
+      board_type TEXT NOT NULL,
+      board_token TEXT NOT NULL,
+      board_url TEXT,
+      status TEXT NOT NULL DEFAULT 'active',
+      notes TEXT,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Current AI-related job openings pulled from public ATS boards
+    CREATE TABLE IF NOT EXISTS ai_jobs (
+      id TEXT PRIMARY KEY,
+      company_id TEXT NOT NULL REFERENCES job_companies(id),
+      provider_id TEXT REFERENCES providers(id),
+      title TEXT NOT NULL,
+      team TEXT,
+      location TEXT,
+      location_group TEXT,
+      workplace_type TEXT NOT NULL DEFAULT 'unknown',
+      commitment TEXT,
+      function_category TEXT NOT NULL DEFAULT 'other',
+      url TEXT NOT NULL,
+      posted_at TEXT,
+      listed_at TEXT,
+      source TEXT NOT NULL,
+      active INTEGER NOT NULL DEFAULT 1,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- Daily rollups so the jobs page can chart movement over time
+    CREATE TABLE IF NOT EXISTS ai_job_snapshots (
+      snapshot_date TEXT NOT NULL,
+      company_id TEXT NOT NULL REFERENCES job_companies(id),
+      provider_id TEXT REFERENCES providers(id),
+      open_role_count INTEGER NOT NULL DEFAULT 0,
+      remote_role_count INTEGER NOT NULL DEFAULT 0,
+      research_role_count INTEGER NOT NULL DEFAULT 0,
+      engineering_role_count INTEGER NOT NULL DEFAULT 0,
+      product_role_count INTEGER NOT NULL DEFAULT 0,
+      gtm_role_count INTEGER NOT NULL DEFAULT 0,
+      operations_role_count INTEGER NOT NULL DEFAULT 0,
+      other_role_count INTEGER NOT NULL DEFAULT 0,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+      PRIMARY KEY (snapshot_date, company_id)
+    );
+
     -- Speed history for tracking latency changes over time
     CREATE TABLE IF NOT EXISTS speed_history (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -293,6 +344,14 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_taggables_target ON taggables(taggable_id, taggable_type);
     CREATE INDEX IF NOT EXISTS idx_news_published ON news(published_at);
     CREATE INDEX IF NOT EXISTS idx_news_category ON news(category);
+    CREATE INDEX IF NOT EXISTS idx_job_companies_provider ON job_companies(provider_id);
+    CREATE INDEX IF NOT EXISTS idx_ai_jobs_company ON ai_jobs(company_id);
+    CREATE INDEX IF NOT EXISTS idx_ai_jobs_provider ON ai_jobs(provider_id);
+    CREATE INDEX IF NOT EXISTS idx_ai_jobs_active ON ai_jobs(active);
+    CREATE INDEX IF NOT EXISTS idx_ai_jobs_function ON ai_jobs(function_category);
+    CREATE INDEX IF NOT EXISTS idx_ai_jobs_workplace ON ai_jobs(workplace_type);
+    CREATE INDEX IF NOT EXISTS idx_ai_job_snapshots_date ON ai_job_snapshots(snapshot_date);
+    CREATE INDEX IF NOT EXISTS idx_ai_job_snapshots_company ON ai_job_snapshots(company_id);
     CREATE INDEX IF NOT EXISTS idx_speed_history_model ON speed_history(model_id);
     CREATE INDEX IF NOT EXISTS idx_provider_endpoints_model ON provider_endpoints(model_id);
     CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);

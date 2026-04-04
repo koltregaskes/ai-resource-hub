@@ -1,8 +1,24 @@
 {
-  "generated": "2026-04-03T14:06:04.885Z",
+  "generated": "2026-04-03T18:05:06.807Z",
   "site": "AI Resource Hub",
   "article_count": 20,
   "articles": [
+    {
+      "title": "I've spotted two new Sony A7R VI rumors. One, I believe, but the other? I'm skeptical\n\n\n\nAlan Palazon \n\npublished 2 April 26\n\n\nRUMORS\nThe latest in a string of Sony A7R VI rumors is that the camera will be announced in May and that it'll feature a fully-stacked sensor. While I believe the first, the second is questionable&hellip;",
+      "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/ive-spotted-two-new-sony-a7r-vi-rumors-one-i-believe-but-the-other-im-skeptical",
+      "source": "Digital Camera World",
+      "tags": [
+        "research_paper",
+        "announcement",
+        "photography",
+        "camera",
+        "crypto_regulation"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-04-03T06:00:43.677Z",
+      "summary": null,
+      "category": "creative_tools"
+    },
     {
       "title": "Compact camera prices are climbing. But Fujifilm has dropped the list price of the retro X Half to what I think it should have been at launch\n\n\nBy\n\nHillary K. Grigonis \n\npublished 2 April 26\n\n\nFUJIFILM\nThe Fujifilm X Half appears to have a new lower list price at several retailers in the US and UK, including the official Fujifilm stores",
       "url": "https://www.digitalcameraworld.com/cameras/compact-cameras/compact-camera-prices-are-climbing-but-fujifilm-has-dropped-the-list-price-of-the-retro-x-half-to-what-i-think-it-should-have-been-at-launch",
@@ -34,21 +50,6 @@
       "category": "creative_tools"
     },
     {
-      "title": "I've spotted two new Sony A7R VI rumors. One, I believe, but the other? I'm skeptical\n\n\n\nAlan Palazon \n\npublished 2 April 26\n\n\nRUMORS\nThe latest in a string of Sony A7R VI rumors is that the camera will be announced in May and that it'll feature a fully-stacked sensor. While I believe the first, the second is questionable&hellip;",
-      "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/ive-spotted-two-new-sony-a7r-vi-rumors-one-i-believe-but-the-other-im-skeptical",
-      "source": "Digital Camera World",
-      "tags": [
-        "research_paper",
-        "announcement",
-        "photography",
-        "camera"
-      ],
-      "importance": 0.8200000000000001,
-      "date": "2026-04-03T06:00:43.677Z",
-      "summary": null,
-      "category": "creative_tools"
-    },
-    {
       "title": "Arcee AI Releases Trinity Large Thinking: An Apache 2.0 Open Reasoning Model for Long-Horizon Agents and Tool Use",
       "url": "https://www.marktechpost.com/2026/04/02/arcee-ai-releases-trinity-large-thinking-an-apache-2-0-open-reasoning-model-for-long-horizon-agents-and-tool-use/",
       "source": "MarkTechPost",
@@ -64,6 +65,20 @@
       "date": "2026-04-03T06:00:57.447Z",
       "summary": null,
       "category": "ai_research"
+    },
+    {
+      "title": "Yes, there are GoPros strapped to Orion. From smartphones to DSLRs, could Artemis II become one of the most photographed space flights in history?\n\n\n\nHillary K. Grigonis \n\npublished 3 April 26\n\n\nNASA\nAt least 28 cameras are aboard the Orion for the Artemis II mission, including GoPros, DSLRs and a mirrorless camera",
+      "url": "https://www.digitalcameraworld.com/photography/astrophotography/yes-there-are-gopros-strapped-to-orion-from-smartphones-to-dslrs-could-artemis-ii-become-one-of-the-most-photographed-space-flights-in-history",
+      "source": "Digital Camera World",
+      "tags": [
+        "research_paper",
+        "photography",
+        "camera"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-03T18:00:12.578Z",
+      "summary": null,
+      "category": "creative_tools"
     },
     {
       "title": "Apple MacBook Neo review: can Apple's cheapest laptop be a good buy for photographers?\n\n\nBy\n\nIan Evenden \n\npublished 3 April 26\n\n\nReview\nApple&rsquo;s laptop that runs on an iPhone chip proves to be surprisingly capable",
@@ -164,19 +179,45 @@
       "category": "creative_tools"
     },
     {
-      "title": "Google releases Gemma 4 under Apache 2.0 — and that license change may matter more than benchmarks",
-      "url": "https://venturebeat.com/technology/google-releases-gemma-4-under-apache-2-0-and-that-license-change-may-matter",
-      "source": "VentureBeat AI",
+      "title": "Defeating the ‘Token Tax’: How Google Gemma 4, NVIDIA, and OpenClaw are Revolutionizing Local Agentic AI: From RTX Desktops to DGX Spark",
+      "url": "https://www.marktechpost.com/2026/04/02/defeating-the-token-tax-how-google-gemma-4-nvidia-and-openclaw-are-revolutionizing-local-agentic-ai-from-rtx-desktops-to-dgx-spark/",
+      "source": "MarkTechPost",
       "tags": [
-        "model_release",
-        "benchmark",
-        "product_launch",
-        "open_source"
+        "hardware",
+        "ai_agents",
+        "policy",
+        "crypto_defi"
       ],
       "importance": 0.72,
-      "date": "2026-04-02T18:00:23.348Z",
+      "date": "2026-04-03T06:00:57.457Z",
       "summary": null,
-      "category": "ai_tools"
+      "category": "ai_research"
+    },
+    {
+      "title": "Get Your Photo Fit at the Harper Finch x PetaPixel Limited Edition Merch Drop",
+      "url": "https://petapixel.com/2026/04/01/get-your-photo-fit-at-the-harper-finch-x-petapixel-limited-edition-merch-drop/",
+      "source": "PetaPixel",
+      "tags": [
+        "api_update",
+        "photography"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-03T18:00:16.343Z",
+      "summary": null,
+      "category": "creative_tools"
+    },
+    {
+      "title": "Yashica FX-D S300 review: this retro-styled compact camera aims to give you the choice of an analog or digital shooting experience\n\n\nBy\n\nMatthew Richards \n\npublished 3 April 26\n\n\nReview\nAt a glance, the Yashica FX-D S300 looks like a &lsquo;proper&rsquo; film camera from the 1970s, but looks can be deceiving",
+      "url": "https://www.digitalcameraworld.com/cameras/compact-cameras/yashica-fx-d-s300-review-this-retro-styled-compact-camera-aims-to-give-you-the-choice-of-an-analog-or-digital-shooting-experience",
+      "source": "Digital Camera World",
+      "tags": [
+        "research_paper",
+        "photography"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-03T18:00:12.589Z",
+      "summary": null,
+      "category": "creative_tools"
     },
     {
       "title": "This US$99 compact camera promises to be a big hit in Japan &ndash; and it takes on Kodak's best-selling favorite\n\n\n\nKim Bunermann \n\npublished 3 April 26\n\n\nNEWS\nThe Kodak Pixpro FZ55 has been a best-seller for years, but Agfa Photo's newest budget compact camera might just give it competition",
@@ -242,46 +283,6 @@
       "date": "2026-04-03T06:00:43.702Z",
       "summary": null,
       "category": "creative_tools"
-    },
-    {
-      "title": "Insta360 X6 leak hints at imminent launch &ndash; could the updated camera fix the X5&rsquo;s biggest weakness?\n\n\nBy\n\nAdam Juniper \n\npublished 2 April 26\n\n\nNews\nLeak suggests the Insta360 X6 could arrive within weeks. With rivals closing the gap, can Insta360&rsquo;s next flagship reclaim the crown?",
-      "url": "https://www.digitalcameraworld.com/cameras/360-cameras/insta360-x6-leak-hints-at-imminent-launch-could-the-updated-camera-fix-the-x5s-biggest-weakness",
-      "source": "Digital Camera World",
-      "tags": [
-        "research_paper",
-        "photography"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-03T06:00:43.700Z",
-      "summary": null,
-      "category": "creative_tools"
-    },
-    {
-      "title": "Trending on HuggingFace: deepseek-ai/DeepSeek-R1 (2,465,541 downloads)",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
-      "source": "Hugging Face Blog",
-      "tags": [
-        "model_release",
-        "reasoning"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-02T14:24:49.341Z",
-      "summary": null,
-      "category": "ai_models"
-    },
-    {
-      "title": "Step by Step Guide to Build an End-to-End Model Optimization Pipeline with NVIDIA Model Optimizer Using FastNAS Pruning and Fine-Tuning",
-      "url": "https://www.marktechpost.com/2026/04/03/step-by-step-guide-to-build-an-end-to-end-model-optimization-pipeline-with-nvidia-model-optimizer-using-fastnas-pruning-and-fine-tuning/",
-      "source": "MarkTechPost",
-      "tags": [
-        "dataset",
-        "hardware",
-        "creative_workflow"
-      ],
-      "importance": 0.64,
-      "date": "2026-04-03T14:05:05.329Z",
-      "summary": null,
-      "category": "ai_research"
     }
   ]
 }

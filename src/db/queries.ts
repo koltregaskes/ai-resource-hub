@@ -8,52 +8,36 @@
  * Original SQLite version preserved at: queries-sqlite.ts
  */
 
-// Re-export everything from the Postgres cache module
-export {
-  // Models
+import {
   getLLMModelsFromDB,
-  getModelsByCategory,
-  getModelById,
+  getModelsByCategory as getModelsByCategoryFromCache,
+  getModelById as getModelByIdFromCache,
   getAllModelIds,
-  getRecentModels,
-  getModelsByProvider,
-  getModelsByProviderGrouped,
+  getRecentModels as getRecentModelsFromCache,
+  getModelsByProvider as getModelsByProviderFromCache,
+  getModelsByProviderGrouped as getModelsByProviderGroupedFromCache,
   getModelCounts,
   getModelsWithTTFT,
-
-  // Providers
-  getProviders,
-  getProviderById,
+  getProviders as getProvidersFromCache,
+  getProviderById as getProviderByIdFromCache,
   getAllProviderIds,
   getProvidersWithCounts,
-
-  // Benchmarks
   getBenchmarks,
   getBenchmarkById,
   getAllBenchmarkIds,
   getBenchmarkScores,
-  getModelBenchmarks,
-  getScoresForBenchmark,
+  getModelBenchmarks as getModelBenchmarksFromCache,
+  getScoresForBenchmark as getScoresForBenchmarkFromCache,
   getBenchmarkMatrix,
-
-  // People
   getPeople,
   getPeopleByProvider,
-
-  // News (now from shared pipeline, not Hub RSS)
   getNews,
   getNewsByCategory,
   getNewsCategories,
-
-  // Price history
   getPriceHistory,
   getModelPriceHistory,
   getModelsWithPriceHistory,
-
-  // Scrape log
   getLastScrapeTime,
-
-  // Stubs for tables not yet migrated or empty
   getGlossaryTerms,
   getGlossaryTermById,
   getAllGlossaryIds,
@@ -77,6 +61,51 @@ export {
   getProviderEndpoints,
   getModelsWithMultipleEndpoints,
 } from './pg-cache';
+
+export {
+  getLLMModelsFromDB,
+  getAllModelIds,
+  getModelCounts,
+  getModelsWithTTFT,
+  getAllProviderIds,
+  getProvidersWithCounts,
+  getBenchmarks,
+  getBenchmarkById,
+  getAllBenchmarkIds,
+  getBenchmarkScores,
+  getBenchmarkMatrix,
+  getPeople,
+  getPeopleByProvider,
+  getNews,
+  getNewsByCategory,
+  getNewsCategories,
+  getPriceHistory,
+  getModelPriceHistory,
+  getModelsWithPriceHistory,
+  getLastScrapeTime,
+  getGlossaryTerms,
+  getGlossaryTermById,
+  getAllGlossaryIds,
+  getYouTubeCreators,
+  getYouTubeCreatorsByCategory,
+  getYouTubeCreatorCategories,
+  getTags,
+  getTagById,
+  getAllTagIds,
+  getTagsForItem,
+  getItemsByTag,
+  getTagsWithCounts,
+  getRumouredModels,
+  getCLITools,
+  getCLIToolById,
+  getAllCLIToolIds,
+  getProviderPlans,
+  getModelMessageLimits,
+  getPlanLimits,
+  getAllSubscriptionPlans,
+  getProviderEndpoints,
+  getModelsWithMultipleEndpoints,
+};
 
 // ─── Type exports (preserved for Astro page compatibility) ─────
 
@@ -251,6 +280,42 @@ export interface CategoryModel {
   notes: string | undefined;
 }
 
+type CompatModel = DBModelDetail & CategoryModel & {
+  provider_name: string;
+  provider_colour: string;
+  provider_website: string | null;
+  input_price: number;
+  output_price: number;
+  context_window: number;
+  max_output: number;
+  quality_score: number;
+  open_source: boolean;
+  api_available: boolean;
+};
+
+function normalizeCompatModel(model: any): CompatModel {
+  return {
+    ...model,
+    provider: model.provider ?? model.provider_name,
+    providerColour: model.providerColour ?? model.provider_colour,
+    inputPrice: model.inputPrice ?? Number(model.input_price ?? 0),
+    outputPrice: model.outputPrice ?? Number(model.output_price ?? 0),
+    contextWindow: model.contextWindow ?? Number(model.context_window ?? 0),
+    maxOutput: model.maxOutput ?? Number(model.max_output ?? 0),
+    qualityScore: model.qualityScore ?? Number(model.quality_score ?? 0),
+    openSource: model.openSource ?? Boolean(model.open_source),
+    apiAvailable: model.apiAvailable ?? Boolean(model.api_available),
+    notes: model.notes ?? undefined,
+    input_price: Number(model.input_price ?? model.inputPrice ?? 0),
+    output_price: Number(model.output_price ?? model.outputPrice ?? 0),
+    context_window: Number(model.context_window ?? model.contextWindow ?? 0),
+    max_output: Number(model.max_output ?? model.maxOutput ?? 0),
+    quality_score: Number(model.quality_score ?? model.qualityScore ?? 0),
+    open_source: Boolean(model.open_source ?? model.openSource),
+    api_available: Boolean(model.api_available ?? model.apiAvailable),
+  };
+}
+
 export interface DBYouTubeCreator {
   id: string;
   name: string;
@@ -370,6 +435,90 @@ export interface DBCLITool {
 
 // ─── Jobs (new from Codex) ──────────────────────────────────────
 
+export function getModelsByCategory(category: string): CompatModel[] {
+  return getModelsByCategoryFromCache(category).map((model) => normalizeCompatModel(model));
+}
+
+export function getModelById(id: string): CompatModel | null {
+  const model = getModelByIdFromCache(id);
+  return model ? normalizeCompatModel(model) : null;
+}
+
+export function getRecentModels(limit: number = 12): RecentModel[] {
+  return getRecentModelsFromCache(limit).map((model: any) => ({
+    id: model.id,
+    name: model.name,
+    provider: model.provider ?? model.provider_name,
+    providerColour: model.providerColour ?? model.provider_colour,
+    category: model.category,
+    released: model.released ?? null,
+    qualityScore: Number(model.qualityScore ?? model.quality_score ?? 0),
+  }));
+}
+
+export function getModelsByProvider(providerId: string): CompatModel[] {
+  return getModelsByProviderFromCache(providerId).map((model) => normalizeCompatModel(model));
+}
+
+export function getModelsByProviderGrouped(providerId: string): Record<string, CompatModel[]> {
+  const grouped = getModelsByProviderGroupedFromCache(providerId);
+  return Object.fromEntries(
+    Object.entries(grouped).map(([category, models]) => [category, models.map((model) => normalizeCompatModel(model))]),
+  );
+}
+
+export function getProviders(): DBProvider[] {
+  return getProvidersFromCache().map((provider: any) => ({
+    ...provider,
+    status_url: provider.status_url ?? null,
+    api_docs_url: provider.api_docs_url ?? null,
+  }));
+}
+
+export function getProviderById(id: string): DBProvider | null {
+  const provider = getProviderByIdFromCache(id);
+  if (!provider) return null;
+  return {
+    ...provider,
+    status_url: (provider as any).status_url ?? null,
+    api_docs_url: (provider as any).api_docs_url ?? null,
+  };
+}
+
+export function getModelBenchmarks(modelId: string): BenchmarkModelScore[] {
+  return getModelBenchmarksFromCache(modelId).map((score: any) => ({
+    model_id: score.model_id,
+    benchmark_id: score.benchmark_id,
+    benchmark_name: getBenchmarkById(score.benchmark_id)?.name ?? score.benchmark_id,
+    model_name: score.model_name,
+    provider: score.provider ?? score.provider_name,
+    provider_id: score.provider_id ?? getModelById(score.model_id)?.provider_id ?? '',
+    providerColour: score.providerColour ?? score.provider_colour,
+    score: Number(score.score ?? 0),
+    source: score.source ?? null,
+    source_url: score.source_url ?? null,
+    measured_at: score.measured_at ?? null,
+    category: score.category ?? score.model_category ?? '',
+  }));
+}
+
+export function getScoresForBenchmark(benchmarkId: string): BenchmarkModelScore[] {
+  return getScoresForBenchmarkFromCache(benchmarkId).map((score: any) => ({
+    model_id: score.model_id,
+    benchmark_id: score.benchmark_id,
+    benchmark_name: getBenchmarkById(score.benchmark_id)?.name ?? score.benchmark_id,
+    model_name: score.model_name,
+    provider: score.provider ?? score.provider_name,
+    provider_id: score.provider_id ?? getModelById(score.model_id)?.provider_id ?? '',
+    providerColour: score.providerColour ?? score.provider_colour,
+    score: Number(score.score ?? 0),
+    source: score.source ?? null,
+    source_url: score.source_url ?? null,
+    measured_at: score.measured_at ?? null,
+    category: score.category ?? score.model_category ?? '',
+  }));
+}
+
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 
@@ -383,46 +532,311 @@ function loadJobsCache<T>(name: string): T[] {
 
 export interface AIJobsOverview {
   total_open_roles: number;
+  tracked_companies: number;
+  remote_roles: number;
+  remote_share: number;
   posted_last_14d: number;
   posted_last_30d: number;
   dated_roles: number;
-  companies: number;
+  research_roles: number;
+  engineering_roles: number;
+  product_roles: number;
+  gtm_roles: number;
+  operations_roles: number;
+  other_roles: number;
+  latest_snapshot_date: string | null;
+}
+
+export interface DBJobCompany {
+  id: string;
+  name: string;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  careers_url: string;
+  board_type: string;
+  board_token: string | null;
+  board_url: string | null;
+  status: string;
+  notes: string | null;
+  updated_at: string | null;
+}
+
+export interface DBAIJob {
+  id: string;
+  company_id: string;
+  company_name: string | null;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  title: string;
+  team: string | null;
+  location: string | null;
+  location_group: string | null;
+  workplace_type: string;
+  commitment: string | null;
+  function_category: string;
+  url: string;
+  posted_at: string | null;
+  listed_at: string | null;
+  source: string;
+  active: boolean;
+  updated_at: string | null;
+}
+
+export interface DBAIJobSnapshot {
+  snapshot_date: string;
+  company_id: string;
+  company_name: string;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  open_role_count: number;
+  remote_role_count: number;
+  research_role_count: number;
+  engineering_role_count: number;
+  product_role_count: number;
+  gtm_role_count: number;
+  operations_role_count: number;
+  other_role_count: number;
+  updated_at: string | null;
+}
+
+type CachedProviderLight = {
+  id: string;
+  name: string;
+  colour: string;
+};
+
+type CachedJobCompany = Omit<DBJobCompany, 'provider_name' | 'provider_colour'>;
+type CachedJob = Omit<DBAIJob, 'provider_name' | 'provider_colour'>;
+type CachedJobSnapshot = Omit<DBAIJobSnapshot, 'provider_name' | 'provider_colour'>;
+
+const JOB_FUNCTION_ORDER: Record<string, number> = {
+  research: 0,
+  engineering: 1,
+  product: 2,
+  gtm: 3,
+  operations: 4,
+  other: 5,
+};
+
+function toIsoDate(value: string | null | undefined): string | null {
+  if (!value) return null;
+  return value.slice(0, 10);
+}
+
+function compareDateDesc(a: string | null | undefined, b: string | null | undefined): number {
+  const aTime = a ? new Date(a).getTime() : 0;
+  const bTime = b ? new Date(b).getTime() : 0;
+  return bTime - aTime;
+}
+
+function getProvidersMap(): Map<string, CachedProviderLight> {
+  const providers = loadJobsCache<CachedProviderLight>('providers');
+  return new Map(providers.map((provider) => [provider.id, provider]));
+}
+
+function getCompaniesMap(): Map<string, CachedJobCompany> {
+  const companies = loadJobsCache<CachedJobCompany>('job_companies');
+  return new Map(companies.map((company) => [company.id, company]));
+}
+
+export function getJobCompanies(): DBJobCompany[] {
+  const providers = getProvidersMap();
+  return loadJobsCache<CachedJobCompany>('job_companies')
+    .filter((company) => company.status === 'active')
+    .map((company) => {
+      const provider = company.provider_id ? providers.get(company.provider_id) : undefined;
+      return {
+        ...company,
+        provider_name: provider?.name ?? null,
+        provider_colour: provider?.colour ?? null,
+      };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export function getAIJobs(limit: number = 200): DBAIJob[] {
+  const providers = getProvidersMap();
+  const companies = getCompaniesMap();
+
+  return loadJobsCache<CachedJob>('ai_jobs')
+    .filter((job) => job.active)
+    .map((job) => {
+      const provider = job.provider_id ? providers.get(job.provider_id) : undefined;
+      const company = companies.get(job.company_id);
+      return {
+        ...job,
+        company_name: job.company_name ?? company?.name ?? null,
+        provider_name: provider?.name ?? null,
+        provider_colour: provider?.colour ?? null,
+      };
+    })
+    .sort((a, b) => {
+      const functionDelta = (JOB_FUNCTION_ORDER[a.function_category] ?? 99) - (JOB_FUNCTION_ORDER[b.function_category] ?? 99);
+      if (functionDelta !== 0) return functionDelta;
+
+      const dateDelta = compareDateDesc(a.posted_at ?? a.listed_at ?? a.updated_at, b.posted_at ?? b.listed_at ?? b.updated_at);
+      if (dateDelta !== 0) return dateDelta;
+
+      return a.title.localeCompare(b.title);
+    })
+    .slice(0, limit);
+}
+
+export function getAIJobFunctionCounts(): Array<{ function_category: string; count: number }> {
+  const counts = new Map<string, number>();
+  for (const job of loadJobsCache<CachedJob>('ai_jobs')) {
+    if (!job.active) continue;
+    const key = job.function_category || 'other';
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+
+  return Array.from(counts.entries())
+    .map(([function_category, count]) => ({ function_category, count }))
+    .sort((a, b) => b.count - a.count || a.function_category.localeCompare(b.function_category));
+}
+
+export function getAIJobLocationCounts(limit: number = 12): Array<{ location_group: string; count: number }> {
+  const counts = new Map<string, number>();
+  for (const job of loadJobsCache<CachedJob>('ai_jobs')) {
+    if (!job.active) continue;
+    const key = job.location_group || 'Other';
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+
+  return Array.from(counts.entries())
+    .map(([location_group, count]) => ({ location_group, count }))
+    .sort((a, b) => b.count - a.count || a.location_group.localeCompare(b.location_group))
+    .slice(0, limit);
+}
+
+export function getLatestAIJobSnapshots(): DBAIJobSnapshot[] {
+  const providers = getProvidersMap();
+  const companies = getCompaniesMap();
+  const snapshots = loadJobsCache<CachedJobSnapshot>('ai_job_snapshots');
+  const latestDate = snapshots.reduce<string | null>((latest, snapshot) => {
+    const date = toIsoDate(snapshot.snapshot_date);
+    if (!date) return latest;
+    return !latest || date > latest ? date : latest;
+  }, null);
+
+  if (!latestDate) return [];
+
+  return snapshots
+    .filter((snapshot) => toIsoDate(snapshot.snapshot_date) === latestDate)
+    .map((snapshot) => {
+      const provider = snapshot.provider_id ? providers.get(snapshot.provider_id) : undefined;
+      const company = companies.get(snapshot.company_id);
+      return {
+        ...snapshot,
+        snapshot_date: latestDate,
+        company_name: snapshot.company_name ?? company?.name ?? snapshot.company_id,
+        provider_name: provider?.name ?? null,
+        provider_colour: provider?.colour ?? null,
+      };
+    })
+    .sort((a, b) => b.open_role_count - a.open_role_count || a.company_name.localeCompare(b.company_name));
+}
+
+export function getAIJobSnapshotSeries(limitDays: number = 30): Array<{
+  snapshot_date: string;
+  open_role_count: number;
+  remote_role_count: number;
+  research_role_count: number;
+  engineering_role_count: number;
+  product_role_count: number;
+  gtm_role_count: number;
+  operations_role_count: number;
+  other_role_count: number;
+}> {
+  const totals = new Map<string, Omit<DBAIJobSnapshot, 'company_id' | 'company_name' | 'provider_id' | 'provider_name' | 'provider_colour' | 'updated_at'>>();
+
+  for (const snapshot of loadJobsCache<CachedJobSnapshot>('ai_job_snapshots')) {
+    const date = toIsoDate(snapshot.snapshot_date);
+    if (!date) continue;
+
+    const current = totals.get(date) ?? {
+      snapshot_date: date,
+      open_role_count: 0,
+      remote_role_count: 0,
+      research_role_count: 0,
+      engineering_role_count: 0,
+      product_role_count: 0,
+      gtm_role_count: 0,
+      operations_role_count: 0,
+      other_role_count: 0,
+    };
+
+    current.open_role_count += snapshot.open_role_count ?? 0;
+    current.remote_role_count += snapshot.remote_role_count ?? 0;
+    current.research_role_count += snapshot.research_role_count ?? 0;
+    current.engineering_role_count += snapshot.engineering_role_count ?? 0;
+    current.product_role_count += snapshot.product_role_count ?? 0;
+    current.gtm_role_count += snapshot.gtm_role_count ?? 0;
+    current.operations_role_count += snapshot.operations_role_count ?? 0;
+    current.other_role_count += snapshot.other_role_count ?? 0;
+
+    totals.set(date, current);
+  }
+
+  return Array.from(totals.values())
+    .sort((a, b) => a.snapshot_date.localeCompare(b.snapshot_date))
+    .slice(-limitDays);
 }
 
 export function getAIJobsOverview(): AIJobsOverview {
-  const jobs = loadJobsCache<{ posted_at: string | null; active: boolean }>('ai_jobs');
-  const companies = loadJobsCache<{ id: string }>('job_companies');
+  const jobs = loadJobsCache<CachedJob>('ai_jobs').filter((job) => job.active);
+  const latestSnapshots = getLatestAIJobSnapshots();
   const now = Date.now();
   const d14 = 14 * 24 * 60 * 60 * 1000;
   const d30 = 30 * 24 * 60 * 60 * 1000;
 
-  let posted14 = 0, posted30 = 0, dated = 0;
-  for (const j of jobs) {
-    if (j.posted_at) {
-      dated++;
-      const age = now - new Date(j.posted_at).getTime();
-      if (age < d14) posted14++;
-      if (age < d30) posted30++;
-    }
+  let datedRoles = 0;
+  let postedLast14d = 0;
+  let postedLast30d = 0;
+
+  for (const job of jobs) {
+    if (!job.posted_at) continue;
+    datedRoles++;
+    const age = now - new Date(job.posted_at).getTime();
+    if (age < d14) postedLast14d++;
+    if (age < d30) postedLast30d++;
   }
 
+  const totalOpenRoles = latestSnapshots.reduce((sum, snapshot) => sum + snapshot.open_role_count, 0);
+  const remoteRoles = latestSnapshots.reduce((sum, snapshot) => sum + snapshot.remote_role_count, 0);
+  const researchRoles = latestSnapshots.reduce((sum, snapshot) => sum + snapshot.research_role_count, 0);
+  const engineeringRoles = latestSnapshots.reduce((sum, snapshot) => sum + snapshot.engineering_role_count, 0);
+  const productRoles = latestSnapshots.reduce((sum, snapshot) => sum + snapshot.product_role_count, 0);
+  const gtmRoles = latestSnapshots.reduce((sum, snapshot) => sum + snapshot.gtm_role_count, 0);
+  const operationsRoles = latestSnapshots.reduce((sum, snapshot) => sum + snapshot.operations_role_count, 0);
+  const otherRoles = latestSnapshots.reduce((sum, snapshot) => sum + snapshot.other_role_count, 0);
+
   return {
-    total_open_roles: jobs.length,
-    posted_last_14d: posted14,
-    posted_last_30d: posted30,
-    dated_roles: dated,
-    companies: companies.length,
+    total_open_roles: totalOpenRoles,
+    tracked_companies: latestSnapshots.length,
+    remote_roles: remoteRoles,
+    remote_share: totalOpenRoles > 0 ? (remoteRoles / totalOpenRoles) * 100 : 0,
+    posted_last_14d: postedLast14d,
+    posted_last_30d: postedLast30d,
+    dated_roles: datedRoles,
+    research_roles: researchRoles,
+    engineering_roles: engineeringRoles,
+    product_roles: productRoles,
+    gtm_roles: gtmRoles,
+    operations_roles: operationsRoles,
+    other_roles: otherRoles,
+    latest_snapshot_date: latestSnapshots[0]?.snapshot_date ?? null,
   };
 }
 
-export function getAIJobs() {
-  return loadJobsCache('ai_jobs');
-}
-
-export function getJobCompanies() {
-  return loadJobsCache('job_companies');
-}
-
-export function getJobSnapshots() {
-  return loadJobsCache('ai_job_snapshots');
+export function getJobSnapshots(): DBAIJobSnapshot[] {
+  return loadJobsCache<CachedJobSnapshot>('ai_job_snapshots').map((snapshot) => ({
+    ...snapshot,
+    snapshot_date: toIsoDate(snapshot.snapshot_date) ?? snapshot.snapshot_date,
+    provider_name: null,
+    provider_colour: null,
+  }));
 }
