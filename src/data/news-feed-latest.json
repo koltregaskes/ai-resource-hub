@@ -1,70 +1,23 @@
 {
-  "generated": "2026-04-03T18:05:06.807Z",
+  "generated": "2026-04-04T06:05:04.395Z",
   "site": "AI Resource Hub",
-  "article_count": 20,
+  "article_count": 19,
   "articles": [
     {
-      "title": "I've spotted two new Sony A7R VI rumors. One, I believe, but the other? I'm skeptical\n\n\n\nAlan Palazon \n\npublished 2 April 26\n\n\nRUMORS\nThe latest in a string of Sony A7R VI rumors is that the camera will be announced in May and that it'll feature a fully-stacked sensor. While I believe the first, the second is questionable&hellip;",
-      "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/ive-spotted-two-new-sony-a7r-vi-rumors-one-i-believe-but-the-other-im-skeptical",
+      "title": "A third-party lens brand is teasing a new bright 11mm that sees 180 degrees. Could this new lens be an astrophotography contender?\n\n\n\nHillary K. Grigonis \n\npublished 3 April 26\n\n\nLENS\nBrightin Star is teasing a new MF 11mm f/2.8 II lens coming to refresh its existing full-frame 180-degree fisheye",
+      "url": "https://www.digitalcameraworld.com/cameras/lenses/a-third-party-lens-brand-is-teasing-a-new-bright-11mm-that-sees-180-degrees-could-this-new-lens-be-an-astrophotography-contender",
       "source": "Digital Camera World",
       "tags": [
         "research_paper",
-        "announcement",
         "photography",
-        "camera",
-        "crypto_regulation"
+        "camera_release",
+        "lens",
+        "photography_technique"
       ],
       "importance": 0.8999999999999999,
-      "date": "2026-04-03T06:00:43.677Z",
+      "date": "2026-04-04T06:00:11.324Z",
       "summary": null,
       "category": "creative_tools"
-    },
-    {
-      "title": "Compact camera prices are climbing. But Fujifilm has dropped the list price of the retro X Half to what I think it should have been at launch\n\n\nBy\n\nHillary K. Grigonis \n\npublished 2 April 26\n\n\nFUJIFILM\nThe Fujifilm X Half appears to have a new lower list price at several retailers in the US and UK, including the official Fujifilm stores",
-      "url": "https://www.digitalcameraworld.com/cameras/compact-cameras/compact-camera-prices-are-climbing-but-fujifilm-has-dropped-the-list-price-of-the-retro-x-half-to-what-i-think-it-should-have-been-at-launch",
-      "source": "Digital Camera World",
-      "tags": [
-        "research_paper",
-        "pricing_change",
-        "photography",
-        "camera"
-      ],
-      "importance": 0.8200000000000001,
-      "date": "2026-04-03T06:00:43.698Z",
-      "summary": null,
-      "category": "creative_tools"
-    },
-    {
-      "title": "The camera slowdown has started. Camera shipments drop in the latest numbers from Japan, but compact cameras and mirrorless aren&rsquo;t to blame\n\n\nBy\n\nHillary K. Grigonis \n\npublished 2 April 26\n\n\nCIPA\nThe predicted decline in camera shipments in 2026 may already be starting as February numbers slow, but aging DSLRs are the biggest culprit",
-      "url": "https://www.digitalcameraworld.com/cameras/digital-cameras/the-camera-slowdown-has-started-camera-shipments-drop-in-the-latest-numbers-from-japan-but-compact-cameras-and-mirrorless-arent-to-blame",
-      "source": "Digital Camera World",
-      "tags": [
-        "research_paper",
-        "autonomous_systems",
-        "photography",
-        "camera"
-      ],
-      "importance": 0.8200000000000001,
-      "date": "2026-04-03T06:00:43.695Z",
-      "summary": null,
-      "category": "creative_tools"
-    },
-    {
-      "title": "Arcee AI Releases Trinity Large Thinking: An Apache 2.0 Open Reasoning Model for Long-Horizon Agents and Tool Use",
-      "url": "https://www.marktechpost.com/2026/04/02/arcee-ai-releases-trinity-large-thinking-an-apache-2-0-open-reasoning-model-for-long-horizon-agents-and-tool-use/",
-      "source": "MarkTechPost",
-      "tags": [
-        "model_release",
-        "api_update",
-        "tool_use",
-        "reasoning",
-        "product_launch",
-        "open_source"
-      ],
-      "importance": 0.7999999999999999,
-      "date": "2026-04-03T06:00:57.447Z",
-      "summary": null,
-      "category": "ai_research"
     },
     {
       "title": "Yes, there are GoPros strapped to Orion. From smartphones to DSLRs, could Artemis II become one of the most photographed space flights in history?\n\n\n\nHillary K. Grigonis \n\npublished 3 April 26\n\n\nNASA\nAt least 28 cameras are aboard the Orion for the Artemis II mission, including GoPros, DSLRs and a mirrorless camera",
@@ -109,89 +62,17 @@
       "category": "creative_tools"
     },
     {
-      "title": "This popular mirrorless camera is now discontinued after 6 years of budget-friendly high-resolution performance\nOne of the most accessible full-frame cameras has left the market, and it was a true workhorse for hybrid creators &ndash; here are your alternatives",
-      "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/this-popular-mirrorless-camera-is-now-discontinued-after-6-years-of-budget-friendly-high-resolution-performance",
-      "source": "Digital Camera World",
-      "tags": [
-        "evaluation",
-        "photography",
-        "camera"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-03T06:00:43.688Z",
-      "summary": null,
-      "category": "creative_tools"
-    },
-    {
-      "title": "The latest Nikon firmware updates tweak how two mirrorless cameras handle aperture settings before going to sleep\n\n\n\nAlan Palazon \n\npublished 2 April 26\n\n\nNews \nFirmware version 2.01 for the Nikon Zf and 5.32 for the Nikon Z9 ensure the cameras lock in the current aperture setting upon powering down for sleep mode",
-      "url": "https://www.digitalcameraworld.com/tech/firmware/the-latest-nikon-firmware-updates-tweak-how-two-mirrorless-cameras-handle-aperture-settings-before-going-to-sleep",
+      "title": "The first photos of Earth from Artemis II are going viral, but look closer, or you&rsquo;ll miss the best part. As an astrophotographer, I'm geeking out over this photo\n\n\n\nHillary K. Grigonis \n\npublished 3 April 26\n\n\nARTEMIS\nOne of the Artemis II astronauts has managed to take a photo of both the northern and southern lights in one frame",
+      "url": "https://www.digitalcameraworld.com/photography/astrophotography/the-first-photos-of-earth-from-artemis-ii-are-going-viral-but-look-closer-or-youll-miss-the-best-part-as-an-astrophotographer-im-geeking-out-over-this-photo",
       "source": "Digital Camera World",
       "tags": [
         "research_paper",
-        "photography",
-        "camera"
+        "photography"
       ],
-      "importance": 0.74,
-      "date": "2026-04-03T06:00:43.686Z",
+      "importance": 0.6599999999999999,
+      "date": "2026-04-04T06:00:11.318Z",
       "summary": null,
       "category": "creative_tools"
-    },
-    {
-      "title": "Nikon is selling off the robotic camera company it bought up in 2016 after it &ldquo;reconsidered its business portfolio&rdquo;\n\n\n\nHillary K. Grigonis \n\npublished 2 April 26\n\n\nNIKON\nNikon has agreed to sell its shares in Mark Roberts Motion Control Limited (MMRC), a robotic camera motion tech company",
-      "url": "https://www.digitalcameraworld.com/cameras/nikon-is-selling-off-the-robotic-camera-company-it-bought-up-in-2016-after-it-reconsidered-its-business-portfolio",
-      "source": "Digital Camera World",
-      "tags": [
-        "research_paper",
-        "photography",
-        "camera"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-03T06:00:43.684Z",
-      "summary": null,
-      "category": "creative_tools"
-    },
-    {
-      "title": "An optics expert is now the head of Nikon as the imaging giant shifts executives\n\n\n\nHillary K. Grigonis \n\npublished 2 April 26\n\n\nNIKON\nNikon leaders have stepped into new roles this week, as Nikon welcomes a 30+ year veteran and optics expert as the new CEO",
-      "url": "https://www.digitalcameraworld.com/cameras/an-optics-expert-is-now-the-head-of-nikon-as-the-imaging-giant-shifts-executives",
-      "source": "Digital Camera World",
-      "tags": [
-        "research_paper",
-        "autonomous_systems",
-        "camera"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-03T06:00:43.681Z",
-      "summary": null,
-      "category": "creative_tools"
-    },
-    {
-      "title": "The Lensbaby Twist 28 creates twisty bokeh in multiple camera mounts &ndash; and the special effects pancake lens only weighs as much as a baseball\n\n\n\nHillary K. Grigonis \n\npublished 2 April 26\n\n\nLENS\nThe Lensbaby Twist 28 is a multi-mount pancake lens made to let the backgrounds swirl around the subject",
-      "url": "https://www.digitalcameraworld.com/cameras/lenses/the-lensbaby-twist-28-creates-twisty-bokeh-in-multiple-camera-mounts-and-the-special-effects-pancake-lens-only-weighs-as-much-as-a-baseball",
-      "source": "Digital Camera World",
-      "tags": [
-        "research_paper",
-        "photography",
-        "lens"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-03T06:00:43.679Z",
-      "summary": null,
-      "category": "creative_tools"
-    },
-    {
-      "title": "Defeating the ‘Token Tax’: How Google Gemma 4, NVIDIA, and OpenClaw are Revolutionizing Local Agentic AI: From RTX Desktops to DGX Spark",
-      "url": "https://www.marktechpost.com/2026/04/02/defeating-the-token-tax-how-google-gemma-4-nvidia-and-openclaw-are-revolutionizing-local-agentic-ai-from-rtx-desktops-to-dgx-spark/",
-      "source": "MarkTechPost",
-      "tags": [
-        "hardware",
-        "ai_agents",
-        "policy",
-        "crypto_defi"
-      ],
-      "importance": 0.72,
-      "date": "2026-04-03T06:00:57.457Z",
-      "summary": null,
-      "category": "ai_research"
     },
     {
       "title": "Get Your Photo Fit at the Harper Finch x PetaPixel Limited Edition Merch Drop",
@@ -259,30 +140,119 @@
       "category": "creative_tools"
     },
     {
-      "title": "The Exposure Triangle Explained: ISO, Aperture, and Shutter Speed for Complete Beginners",
-      "url": "https://fstoppers.com/gear/exposure-triangle-explained-iso-aperture-and-shutter-speed-complete-beginners-900806",
-      "source": "Fstoppers",
+      "title": "Step by Step Guide to Build an End-to-End Model Optimization Pipeline with NVIDIA Model Optimizer Using FastNAS Pruning and Fine-Tuning",
+      "url": "https://www.marktechpost.com/2026/04/03/step-by-step-guide-to-build-an-end-to-end-model-optimization-pipeline-with-nvidia-model-optimizer-using-fastnas-pruning-and-fine-tuning/",
+      "source": "MarkTechPost",
       "tags": [
-        "inference",
-        "photography"
+        "dataset",
+        "hardware",
+        "creative_workflow"
       ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-03T06:00:46.268Z",
+      "importance": 0.64,
+      "date": "2026-04-03T14:05:05.329Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "TII Releases Falcon Perception: A 0.6B-Parameter Early-Fusion Transformer for Open-Vocabulary Grounding and Segmentation from Natural Language Prompts",
+      "url": "https://www.marktechpost.com/2026/04/03/tii-releases-falcon-perception-a-0-6b-parameter-early-fusion-transformer-for-open-vocabulary-grounding-and-segmentation-from-natural-language-prompts/",
+      "source": "MarkTechPost",
+      "tags": [
+        "model_release",
+        "architecture",
+        "product_launch"
+      ],
+      "importance": 0.64,
+      "date": "2026-04-03T14:05:05.318Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "ArmBench-LLM 1.0: Benchmarking LLMs on Armenian Language Tasks     1 day ago •  3",
+      "url": "https://huggingface.co/blog/Metric-AI/armbench-llm",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "benchmark"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T06:00:12.035Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "How I Trained Action Chunking Transformer (ACT) on SO-101: My Journey, Gotchas, and Lessons     Sep 30, 2025 •  64",
+      "url": "https://huggingface.co/blog/sherryxychen/train-act-on-so-101",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "architecture"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T06:00:12.030Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Godox Litemons LR30Bi review: soup up your smartphone selfies \n\n\nBy\n\nGeorge Cairns \n\npublished 3 April 26\n\n\nReview\nA pocket-sized ring LED for more polished-looking portraits on the go",
+      "url": "https://www.digitalcameraworld.com/cameras/camera-lights/godox-litemons-lr30bi-review",
+      "source": "Digital Camera World",
+      "tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T06:00:11.334Z",
       "summary": null,
       "category": "creative_tools"
     },
     {
-      "title": "Cokin Nuances Infrared 720 (89B) filter review: top-notch IR filters for those with a slot-in filter system\n\n\nBy\n\nDan Mold \n\npublished 2 April 26\n\n\nReview\nCan Cokin's premium Nuances infrared filter put in a premium performance?",
-      "url": "https://www.digitalcameraworld.com/cameras/lens-filters/cokin-nuances-infrared-720-89b-filter-review",
-      "source": "Digital Camera World",
+      "title": "UK’s leading AI research institute told to make ‘significant’ changes",
+      "url": "https://www.theguardian.com/technology/2026/apr/03/uk-alan-turing-institute-ai-research-underperforming-ukri",
+      "source": "The Guardian Tech",
       "tags": [
-        "evaluation",
         "research_paper"
       ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-03T06:00:43.702Z",
+      "importance": 0.5800000000000001,
+      "date": "2026-04-03T14:04:58.761Z",
       "summary": null,
-      "category": "creative_tools"
+      "category": "tech_general"
+    },
+    {
+      "title": "ai-security-research",
+      "url": "https://simonwillison.net/tags/ai-security-research/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "research_paper",
+        "crypto_regulation"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T06:00:24.781Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Netflix must refund customers for years of price hikes, Italian court rules",
+      "url": "https://arstechnica.com/gadgets/2026/04/netflix-ordered-to-refund-subscribers-up-to-e500-for-unlawful-price-hikes/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "pricing_change",
+        "crypto_regulation"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T06:00:15.608Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "&#8220;Cognitive surrender&#8221; leads AI users to abandon logical thinking, research finds",
+      "url": "https://arstechnica.com/ai/2026/04/research-finds-ai-users-scarily-willing-to-surrender-their-cognition-to-llms/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "research_paper",
+        "reasoning"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T06:00:15.593Z",
+      "summary": null,
+      "category": "tech_general"
     }
   ]
 }
