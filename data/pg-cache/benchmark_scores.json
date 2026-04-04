@@ -9,7 +9,7 @@
     "updated_at": "2026-04-02T08:11:51.591Z",
     "model_name": "Gemini 3.1 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -74,7 +74,7 @@
     "updated_at": "2026-04-02T08:11:51.651Z",
     "model_name": "Grok 4",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -87,7 +87,7 @@
     "updated_at": "2026-04-02T08:11:51.607Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -126,7 +126,7 @@
     "updated_at": "2026-04-02T08:11:51.674Z",
     "model_name": "Grok 3",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -152,7 +152,7 @@
     "updated_at": "2026-04-02T08:11:51.633Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -178,7 +178,7 @@
     "updated_at": "2026-04-02T08:11:51.639Z",
     "model_name": "DeepSeek V3.2",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -191,7 +191,7 @@
     "updated_at": "2026-04-02T08:11:51.619Z",
     "model_name": "Gemini 2.5 Flash",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -204,7 +204,7 @@
     "updated_at": "2026-04-02T08:11:51.708Z",
     "model_name": "Mistral Large 3",
     "provider_name": "Mistral",
-    "provider_colour": "#ff7000",
+    "provider_colour": "#f97316",
     "model_category": "llm"
   },
   {
@@ -256,7 +256,7 @@
     "updated_at": "2026-04-02T08:11:51.711Z",
     "model_name": "Command A",
     "provider_name": "Cohere",
-    "provider_colour": "#39c0ed",
+    "provider_colour": "#6366f1",
     "model_category": "llm"
   },
   {
@@ -269,7 +269,7 @@
     "updated_at": "2026-04-02T08:11:51.835Z",
     "model_name": "DeepSeek V3",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -282,7 +282,7 @@
     "updated_at": "2026-04-02T08:11:51.829Z",
     "model_name": "Gemini 2.0 Flash",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -347,7 +347,7 @@
     "updated_at": "2026-04-02T08:11:51.838Z",
     "model_name": "Mistral Small 3.1",
     "provider_name": "Mistral",
-    "provider_colour": "#ff7000",
+    "provider_colour": "#f97316",
     "model_category": "llm"
   },
   {
@@ -373,7 +373,7 @@
     "updated_at": "2026-04-02T08:11:51.625Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -464,7 +464,7 @@
     "updated_at": "2026-04-02T08:11:51.656Z",
     "model_name": "Grok 4",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -477,7 +477,7 @@
     "updated_at": "2026-04-02T08:11:51.672Z",
     "model_name": "Grok 3",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -503,7 +503,7 @@
     "updated_at": "2026-04-02T08:11:51.597Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -542,7 +542,7 @@
     "updated_at": "2026-04-02T08:11:51.630Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -607,7 +607,7 @@
     "updated_at": "2026-04-02T08:11:51.665Z",
     "model_name": "Grok 3",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -620,7 +620,7 @@
     "updated_at": "2026-04-02T08:11:51.637Z",
     "model_name": "DeepSeek V3.2",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -633,7 +633,7 @@
     "updated_at": "2026-04-02T08:11:51.659Z",
     "model_name": "Grok 3",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -646,7 +646,7 @@
     "updated_at": "2026-04-02T08:11:51.621Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -672,7 +672,7 @@
     "updated_at": "2026-04-02T08:11:51.593Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -698,7 +698,7 @@
     "updated_at": "2026-04-02T08:11:51.599Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -737,7 +737,7 @@
     "updated_at": "2026-04-02T08:11:51.635Z",
     "model_name": "DeepSeek V3.2",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -750,7 +750,7 @@
     "updated_at": "2026-04-02T08:11:51.648Z",
     "model_name": "DeepSeek V3",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -776,7 +776,7 @@
     "updated_at": "2026-04-02T08:11:51.753Z",
     "model_name": "Grok 4",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -841,7 +841,7 @@
     "updated_at": "2026-04-02T08:11:51.641Z",
     "model_name": "DeepSeek V3",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -854,7 +854,7 @@
     "updated_at": "2026-04-02T08:11:51.616Z",
     "model_name": "Gemini 2.5 Flash",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -932,7 +932,7 @@
     "updated_at": "2026-04-02T08:11:51.605Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -971,7 +971,7 @@
     "updated_at": "2026-04-02T08:11:51.609Z",
     "model_name": "Gemini 2.5 Flash",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1036,7 +1036,7 @@
     "updated_at": "2026-04-02T08:11:51.723Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1075,7 +1075,7 @@
     "updated_at": "2026-04-02T08:11:51.784Z",
     "model_name": "Grok 4",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -1088,7 +1088,7 @@
     "updated_at": "2026-04-02T08:11:51.668Z",
     "model_name": "Grok 3",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -1140,7 +1140,7 @@
     "updated_at": "2026-04-02T08:11:51.613Z",
     "model_name": "Gemini 2.5 Flash",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1153,7 +1153,7 @@
     "updated_at": "2026-04-02T08:11:51.756Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -1166,7 +1166,7 @@
     "updated_at": "2026-04-02T08:11:51.782Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1179,7 +1179,7 @@
     "updated_at": "2026-04-02T08:11:51.654Z",
     "model_name": "Grok 4",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -1218,7 +1218,7 @@
     "updated_at": "2026-04-02T08:11:51.787Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -1231,7 +1231,7 @@
     "updated_at": "2026-04-02T08:11:51.627Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -1257,7 +1257,7 @@
     "updated_at": "2026-04-02T08:11:51.646Z",
     "model_name": "DeepSeek V3",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -1426,7 +1426,7 @@
     "updated_at": "2026-04-02T08:11:51.623Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -1452,7 +1452,7 @@
     "updated_at": "2026-04-02T08:11:51.595Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1465,7 +1465,7 @@
     "updated_at": "2026-04-02T08:11:51.662Z",
     "model_name": "Grok 3",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -1478,7 +1478,7 @@
     "updated_at": "2026-04-02T08:11:51.805Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1517,7 +1517,7 @@
     "updated_at": "2026-04-02T08:11:51.807Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -1530,7 +1530,7 @@
     "updated_at": "2026-04-02T08:11:51.602Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1556,7 +1556,7 @@
     "updated_at": "2026-04-02T08:11:51.611Z",
     "model_name": "Gemini 2.5 Flash",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1569,7 +1569,7 @@
     "updated_at": "2026-04-02T08:11:51.644Z",
     "model_name": "DeepSeek V3",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -1660,7 +1660,7 @@
     "updated_at": "2026-04-02T08:11:51.817Z",
     "model_name": "Gemini 3.1 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1699,7 +1699,7 @@
     "updated_at": "2026-04-02T08:11:51.820Z",
     "model_name": "Grok 4",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -1712,7 +1712,7 @@
     "updated_at": "2026-04-02T08:11:51.822Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {
@@ -1751,7 +1751,7 @@
     "updated_at": "2026-04-02T08:11:51.766Z",
     "model_name": "Grok 4",
     "provider_name": "xAI",
-    "provider_colour": "#1da1f2",
+    "provider_colour": "#0ea5e9",
     "model_category": "llm"
   },
   {
@@ -1764,7 +1764,7 @@
     "updated_at": "2026-04-02T08:11:51.764Z",
     "model_name": "Gemini 2.5 Pro",
     "provider_name": "Google",
-    "provider_colour": "#4285f4",
+    "provider_colour": "#3b82f6",
     "model_category": "llm"
   },
   {
@@ -1790,7 +1790,7 @@
     "updated_at": "2026-04-02T08:11:51.770Z",
     "model_name": "DeepSeek R1",
     "provider_name": "DeepSeek",
-    "provider_colour": "#5b6ef7",
+    "provider_colour": "#4f46e5",
     "model_category": "llm"
   },
   {

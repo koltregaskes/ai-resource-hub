@@ -9,7 +9,8 @@
     "headquarters": "Tel Aviv, Israel",
     "ceo": "Yoav Shoham",
     "funding": "$336M",
-    "updated_at": "2026-04-02T08:11:50.778Z"
+    "updated_at": "2026-04-02T08:11:50.778Z",
+    "icon_url": null
   },
   {
     "id": "alibaba",
@@ -21,7 +22,8 @@
     "headquarters": "Hangzhou, China",
     "ceo": "Daniel Zhang",
     "funding": "Alibaba subsidiary",
-    "updated_at": "2026-04-02T08:11:50.775Z"
+    "updated_at": "2026-04-02T08:11:50.775Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%23ff6a00%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EA%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "amazon",
@@ -33,7 +35,8 @@
     "headquarters": "Seattle, WA",
     "ceo": "Andy Jassy",
     "funding": "Amazon subsidiary",
-    "updated_at": "2026-04-02T08:11:50.770Z"
+    "updated_at": "2026-04-02T08:11:50.770Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%23ff9900%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EA%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "anthropic",
@@ -45,7 +48,8 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Dario Amodei",
     "funding": "$7.6B+",
-    "updated_at": "2026-04-02T08:11:50.753Z"
+    "updated_at": "2026-04-02T08:11:50.753Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%23d97706%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EA%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "assemblyai",
@@ -57,7 +61,21 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Dylan Fox",
     "funding": "$115M",
-    "updated_at": "2026-04-02T08:11:50.839Z"
+    "updated_at": "2026-04-02T08:11:50.839Z",
+    "icon_url": null
+  },
+  {
+    "id": "baai",
+    "name": "BAAI",
+    "colour": "#ef4444",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:56:20.225Z",
+    "icon_url": null
   },
   {
     "id": "blackforest",
@@ -69,7 +87,8 @@
     "headquarters": "Freiburg, Germany",
     "ceo": "Robin Rombach",
     "funding": "$31M",
-    "updated_at": "2026-04-02T08:11:50.795Z"
+    "updated_at": "2026-04-02T08:11:50.795Z",
+    "icon_url": null
   },
   {
     "id": "cartesia",
@@ -81,19 +100,21 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Karan Goel",
     "funding": "$27M",
-    "updated_at": "2026-04-02T08:11:50.845Z"
+    "updated_at": "2026-04-02T08:11:50.845Z",
+    "icon_url": null
   },
   {
     "id": "cohere",
     "name": "Cohere",
-    "colour": "#39c0ed",
+    "colour": "#6366f1",
     "website": "https://cohere.com",
     "description": "Enterprise-focused AI company building Command models with RAG capabilities.",
     "founded": "2019-01-01",
     "headquarters": "Toronto, Canada",
     "ceo": "Aidan Gomez",
     "funding": "$445M+",
-    "updated_at": "2026-04-02T08:11:50.773Z"
+    "updated_at": "2026-04-02T08:11:50.773Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%236366f1%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EC%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "deepgram",
@@ -105,19 +126,21 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Scott Stephenson",
     "funding": "$86M+",
-    "updated_at": "2026-04-02T08:11:50.842Z"
+    "updated_at": "2026-04-02T08:11:50.842Z",
+    "icon_url": null
   },
   {
     "id": "deepseek",
     "name": "DeepSeek",
-    "colour": "#5b6ef7",
+    "colour": "#4f46e5",
     "website": "https://deepseek.com",
     "description": "Chinese AI lab known for efficient open-weight models with strong reasoning.",
     "founded": "2023-07-01",
     "headquarters": "Hangzhou, China",
     "ceo": "Liang Wenfeng",
     "funding": "High-Flyer Capital",
-    "updated_at": "2026-04-02T08:11:50.768Z"
+    "updated_at": "2026-04-02T08:11:50.768Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%234f46e5%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3ED%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "elevenlabs",
@@ -129,19 +152,21 @@
     "headquarters": "New York, NY",
     "ceo": "Mati Staniszewski",
     "funding": "$101M+",
-    "updated_at": "2026-04-02T08:11:50.837Z"
+    "updated_at": "2026-04-02T08:11:50.837Z",
+    "icon_url": null
   },
   {
     "id": "google",
     "name": "Google",
-    "colour": "#4285f4",
+    "colour": "#3b82f6",
     "website": "https://deepmind.google",
     "description": "Google DeepMind, creator of Gemini models. Merged from Google Brain and DeepMind.",
     "founded": "2010-01-01",
     "headquarters": "London / Mountain View",
     "ceo": "Demis Hassabis",
     "funding": "Alphabet subsidiary",
-    "updated_at": "2026-04-02T08:11:50.757Z"
+    "updated_at": "2026-04-02T08:11:50.757Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%233b82f6%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EG%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "veo",
@@ -153,7 +178,8 @@
     "headquarters": "London, UK",
     "ceo": "Demis Hassabis",
     "funding": "Alphabet subsidiary",
-    "updated_at": "2026-04-02T08:11:50.835Z"
+    "updated_at": "2026-04-02T08:11:50.835Z",
+    "icon_url": null
   },
   {
     "id": "hailuo",
@@ -165,7 +191,8 @@
     "headquarters": "Shanghai, China",
     "ceo": "Yan Junjie",
     "funding": "MiniMax subsidiary",
-    "updated_at": "2026-04-02T08:11:50.832Z"
+    "updated_at": "2026-04-02T08:11:50.832Z",
+    "icon_url": null
   },
   {
     "id": "ideogram",
@@ -177,7 +204,8 @@
     "headquarters": "Toronto, Canada",
     "ceo": "Mohammad Norouzi",
     "funding": "$80M+",
-    "updated_at": "2026-04-02T08:11:50.797Z"
+    "updated_at": "2026-04-02T08:11:50.797Z",
+    "icon_url": null
   },
   {
     "id": "kling",
@@ -189,7 +217,8 @@
     "headquarters": "Beijing, China",
     "ceo": "Su Hua",
     "funding": "Kuaishou subsidiary",
-    "updated_at": "2026-04-02T08:11:50.810Z"
+    "updated_at": "2026-04-02T08:11:50.810Z",
+    "icon_url": null
   },
   {
     "id": "leonardo",
@@ -201,7 +230,8 @@
     "headquarters": "Sydney, Australia",
     "ceo": "JJ Fiasson",
     "funding": "$31M",
-    "updated_at": "2026-04-02T08:11:50.799Z"
+    "updated_at": "2026-04-02T08:11:50.799Z",
+    "icon_url": null
   },
   {
     "id": "luma",
@@ -213,7 +243,8 @@
     "headquarters": "Palo Alto, CA",
     "ceo": "Amit Jain",
     "funding": "$43M+",
-    "updated_at": "2026-04-02T08:11:50.807Z"
+    "updated_at": "2026-04-02T08:11:50.807Z",
+    "icon_url": null
   },
   {
     "id": "meta",
@@ -225,7 +256,8 @@
     "headquarters": "Menlo Park, CA",
     "ceo": "Mark Zuckerberg",
     "funding": "Meta subsidiary",
-    "updated_at": "2026-04-02T08:11:50.760Z"
+    "updated_at": "2026-04-02T08:11:50.760Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%230668e1%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EM%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "midjourney",
@@ -237,7 +269,8 @@
     "headquarters": "San Francisco, CA",
     "ceo": "David Holz",
     "funding": "Self-funded",
-    "updated_at": "2026-04-02T08:11:50.793Z"
+    "updated_at": "2026-04-02T08:11:50.793Z",
+    "icon_url": null
   },
   {
     "id": "minimax",
@@ -249,19 +282,21 @@
     "headquarters": "Shanghai, China",
     "ceo": "Yan Junjie",
     "funding": "$600M+",
-    "updated_at": "2026-04-02T08:11:50.784Z"
+    "updated_at": "2026-04-02T08:11:50.784Z",
+    "icon_url": null
   },
   {
     "id": "mistral",
     "name": "Mistral",
-    "colour": "#ff7000",
+    "colour": "#f97316",
     "website": "https://mistral.ai",
     "description": "French AI lab building efficient open and commercial models.",
     "founded": "2023-04-01",
     "headquarters": "Paris, France",
     "ceo": "Arthur Mensch",
     "funding": "€600M+",
-    "updated_at": "2026-04-02T08:11:50.763Z"
+    "updated_at": "2026-04-02T08:11:50.763Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%23f97316%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EM%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "openai",
@@ -273,19 +308,21 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Sam Altman",
     "funding": "$13B+",
-    "updated_at": "2026-04-02T08:11:50.747Z"
+    "updated_at": "2026-04-02T08:11:50.747Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%2310a37f%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EO%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "perplexity",
     "name": "Perplexity",
-    "colour": "#20b2aa",
+    "colour": "#1fb8cd",
     "website": "https://www.perplexity.ai",
     "description": "AI-powered search engine with its own Sonar models.",
     "founded": "2022-08-01",
     "headquarters": "San Francisco, CA",
     "ceo": "Aravind Srinivas",
     "funding": "$500M+",
-    "updated_at": "2026-04-02T08:11:50.786Z"
+    "updated_at": "2026-04-02T08:11:50.786Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%231fb8cd%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EP%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "pika",
@@ -297,7 +334,8 @@
     "headquarters": "Palo Alto, CA",
     "ceo": "Demi Guo",
     "funding": "$135M+",
-    "updated_at": "2026-04-02T08:11:50.805Z"
+    "updated_at": "2026-04-02T08:11:50.805Z",
+    "icon_url": null
   },
   {
     "id": "play-ht",
@@ -309,7 +347,8 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Hammad Syed",
     "funding": "$20M+",
-    "updated_at": "2026-04-02T08:11:50.857Z"
+    "updated_at": "2026-04-02T08:11:50.857Z",
+    "icon_url": null
   },
   {
     "id": "reka",
@@ -321,7 +360,8 @@
     "headquarters": "London, UK",
     "ceo": "Dani Yogatama",
     "funding": "$58M",
-    "updated_at": "2026-04-02T08:11:50.789Z"
+    "updated_at": "2026-04-02T08:11:50.789Z",
+    "icon_url": null
   },
   {
     "id": "resemble",
@@ -333,7 +373,8 @@
     "headquarters": "Toronto, Canada",
     "ceo": "Zohaib Ahmed",
     "funding": "$28M",
-    "updated_at": "2026-04-02T08:11:50.854Z"
+    "updated_at": "2026-04-02T08:11:50.854Z",
+    "icon_url": null
   },
   {
     "id": "runway",
@@ -345,19 +386,34 @@
     "headquarters": "New York, NY",
     "ceo": "Cristóbal Valenzuela",
     "funding": "$237M+",
-    "updated_at": "2026-04-02T08:11:50.801Z"
+    "updated_at": "2026-04-02T08:11:50.801Z",
+    "icon_url": null
+  },
+  {
+    "id": "sentence-transformers",
+    "name": "Sentence Transformers",
+    "colour": "#6b7280",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:56:20.227Z",
+    "icon_url": null
   },
   {
     "id": "stability",
     "name": "Stability AI",
-    "colour": "#a855f7",
+    "colour": "#8b5cf6",
     "website": "https://stability.ai",
     "description": "Creator of Stable Diffusion open-source image generation models.",
     "founded": "2019-01-01",
     "headquarters": "London, UK",
     "ceo": "Prem Akkaraju",
     "funding": "$200M+",
-    "updated_at": "2026-04-02T08:11:50.791Z"
+    "updated_at": "2026-04-02T08:11:50.791Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%238b5cf6%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3ES%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "suno",
@@ -369,7 +425,8 @@
     "headquarters": "Cambridge, MA",
     "ceo": "Mikey Shulman",
     "funding": "$125M+",
-    "updated_at": "2026-04-02T08:11:50.848Z"
+    "updated_at": "2026-04-02T08:11:50.848Z",
+    "icon_url": null
   },
   {
     "id": "udio",
@@ -381,30 +438,46 @@
     "headquarters": "New York, NY",
     "ceo": "David Ding",
     "funding": "$10M+",
-    "updated_at": "2026-04-02T08:11:50.850Z"
+    "updated_at": "2026-04-02T08:11:50.850Z",
+    "icon_url": null
+  },
+  {
+    "id": "voyage",
+    "name": "Voyage AI",
+    "colour": "#8b5cf6",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:56:20.223Z",
+    "icon_url": null
   },
   {
     "id": "xai",
     "name": "xAI",
-    "colour": "#1da1f2",
+    "colour": "#0ea5e9",
     "website": "https://x.ai",
     "description": "Elon Musk's AI company building Grok models.",
     "founded": "2023-07-12",
     "headquarters": "Austin, TX",
     "ceo": "Elon Musk",
     "funding": "$6B+",
-    "updated_at": "2026-04-02T08:11:50.765Z"
+    "updated_at": "2026-04-02T08:11:50.765Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%230ea5e9%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EX%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "zhipu",
     "name": "Zhipu AI",
-    "colour": "#00b4d8",
+    "colour": "#2563eb",
     "website": "https://www.zhipuai.cn",
     "description": "Chinese AI company building GLM series models.",
     "founded": "2019-01-01",
     "headquarters": "Beijing, China",
     "ceo": "Tang Jie",
     "funding": "$400M+",
-    "updated_at": "2026-04-02T08:11:50.781Z"
+    "updated_at": "2026-04-02T08:11:50.781Z",
+    "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%232563eb%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EZ%3C%2Ftext%3E%3C%2Fsvg%3E"
   }
 ]

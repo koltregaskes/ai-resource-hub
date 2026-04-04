@@ -3,7 +3,7 @@
     "id": "bigcodebench",
     "name": "BigCodeBench",
     "category": "coding",
-    "description": "Challenging code generation tasks with complex function calls and libraries",
+    "description": "Comprehensive code generation benchmark with function-level and class-level tasks.",
     "url": "https://bigcode-bench.github.io",
     "scale_min": "0.00",
     "scale_max": "100.00",
@@ -22,6 +22,18 @@
     "higher_is_better": true,
     "weight": "1.00",
     "updated_at": "2026-04-02T08:11:51.437Z"
+  },
+  {
+    "id": "livebench",
+    "name": "LiveBench",
+    "category": "coding",
+    "description": "Continuously updated coding problems from LeetCode, AtCoder, CodeForces. Tests real-world programming ability.",
+    "url": "https://livebench.ai",
+    "scale_min": "0.00",
+    "scale_max": "100.00",
+    "higher_is_better": true,
+    "weight": "1.30",
+    "updated_at": "2026-04-02T08:11:51.456Z"
   },
   {
     "id": "livecodebench",
@@ -87,7 +99,7 @@
     "id": "ifeval",
     "name": "IFEval",
     "category": "instruction",
-    "description": "Instruction Following Evaluation",
+    "description": "Instruction-following evaluation. Tests whether models follow complex multi-constraint instructions accurately.",
     "url": "https://arxiv.org/abs/2311.07911",
     "scale_min": "0.00",
     "scale_max": "100.00",
@@ -120,10 +132,22 @@
     "updated_at": "2026-04-02T08:11:51.427Z"
   },
   {
+    "id": "gsm8k",
+    "name": "GSM8K",
+    "category": "math",
+    "description": "Grade School Math 8K. 8,500 grade school math word problems requiring multi-step reasoning.",
+    "url": null,
+    "scale_min": null,
+    "scale_max": "100.00",
+    "higher_is_better": true,
+    "weight": "1.00",
+    "updated_at": "2026-04-04T19:55:53.019Z"
+  },
+  {
     "id": "mmmu",
     "name": "MMMU",
     "category": "multimodal",
-    "description": "Massive Multi-discipline Multimodal Understanding",
+    "description": "Massive Multi-discipline Multimodal Understanding. Tests vision+language across 30 subjects.",
     "url": "https://arxiv.org/abs/2311.16502",
     "scale_min": "0.00",
     "scale_max": "100.00",
@@ -142,6 +166,18 @@
     "higher_is_better": true,
     "weight": "1.40",
     "updated_at": "2026-04-02T08:11:51.435Z"
+  },
+  {
+    "id": "arc-agi",
+    "name": "ARC-AGI",
+    "category": "reasoning",
+    "description": "Abstraction and Reasoning Corpus. Tests genuine novel reasoning ability. Key AGI benchmark.",
+    "url": null,
+    "scale_min": null,
+    "scale_max": "100.00",
+    "higher_is_better": true,
+    "weight": "1.00",
+    "updated_at": "2026-04-04T19:55:53.026Z"
   },
   {
     "id": "arc-challenge",
@@ -178,18 +214,6 @@
     "higher_is_better": true,
     "weight": "1.50",
     "updated_at": "2026-04-02T08:11:51.461Z"
-  },
-  {
-    "id": "livebench",
-    "name": "LiveBench",
-    "category": "reasoning",
-    "description": "Contamination-free benchmark using recent questions from math, coding, and reasoning",
-    "url": "https://livebench.ai",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.30",
-    "updated_at": "2026-04-02T08:11:51.456Z"
   },
   {
     "id": "math-500",
