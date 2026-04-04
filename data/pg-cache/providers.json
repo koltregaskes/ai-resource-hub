@@ -1,5 +1,18 @@
 [
   {
+    "id": "01ai",
+    "name": "01.AI",
+    "colour": "#ef4444",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.241Z",
+    "icon_url": null
+  },
+  {
     "id": "ai21",
     "name": "AI21 Labs",
     "colour": "#6c5ce7",
@@ -117,6 +130,19 @@
     "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%236366f1%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EC%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
+    "id": "databricks",
+    "name": "Databricks",
+    "colour": "#ef4444",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.266Z",
+    "icon_url": null
+  },
+  {
     "id": "deepgram",
     "name": "Deepgram",
     "colour": "#13ef93",
@@ -205,6 +231,19 @@
     "ceo": "Mohammad Norouzi",
     "funding": "$80M+",
     "updated_at": "2026-04-02T08:11:50.797Z",
+    "icon_url": null
+  },
+  {
+    "id": "inflection",
+    "name": "Inflection AI",
+    "colour": "#8b5cf6",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.249Z",
     "icon_url": null
   },
   {
@@ -299,6 +338,32 @@
     "icon_url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2210%22%20fill%3D%22%23f97316%22%2F%3E%3Ctext%20x%3D%2212%22%20y%3D%2216%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2210%22%20font-weight%3D%22bold%22%20fill%3D%22white%22%3EM%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
+    "id": "nexusflow",
+    "name": "NexusFlow",
+    "colour": "#3b82f6",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.288Z",
+    "icon_url": null
+  },
+  {
+    "id": "nous",
+    "name": "Nous Research",
+    "colour": "#10b981",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.281Z",
+    "icon_url": null
+  },
+  {
     "id": "openai",
     "name": "OpenAI",
     "colour": "#10a37f",
@@ -348,6 +413,19 @@
     "ceo": "Hammad Syed",
     "funding": "$20M+",
     "updated_at": "2026-04-02T08:11:50.857Z",
+    "icon_url": null
+  },
+  {
+    "id": "qwen",
+    "name": "Qwen (Alibaba)",
+    "colour": "#ff6a00",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.292Z",
     "icon_url": null
   },
   {
@@ -403,6 +481,19 @@
     "icon_url": null
   },
   {
+    "id": "snowflake",
+    "name": "Snowflake",
+    "colour": "#29b5e8",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.278Z",
+    "icon_url": null
+  },
+  {
     "id": "stability",
     "name": "Stability AI",
     "colour": "#8b5cf6",
@@ -442,6 +533,19 @@
     "icon_url": null
   },
   {
+    "id": "upstage",
+    "name": "Upstage",
+    "colour": "#6366f1",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.285Z",
+    "icon_url": null
+  },
+  {
     "id": "voyage",
     "name": "Voyage AI",
     "colour": "#8b5cf6",
@@ -452,6 +556,19 @@
     "ceo": null,
     "funding": null,
     "updated_at": "2026-04-04T19:56:20.223Z",
+    "icon_url": null
+  },
+  {
+    "id": "writer",
+    "name": "Writer",
+    "colour": "#0ea5e9",
+    "website": null,
+    "description": null,
+    "founded": null,
+    "headquarters": null,
+    "ceo": null,
+    "funding": null,
+    "updated_at": "2026-04-04T19:57:53.273Z",
     "icon_url": null
   },
   {
