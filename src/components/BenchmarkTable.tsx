@@ -7,7 +7,7 @@ interface Benchmark {
   description: string | null;
   scale_min: number;
   scale_max: number;
-  higher_is_better: number;
+  higher_is_better: number | boolean;
   weight: number;
 }
 

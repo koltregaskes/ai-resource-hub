@@ -361,6 +361,8 @@ export interface BenchmarkDetail {
 
 export interface BenchmarkModelScore {
   model_id: string;
+  benchmark_id: string;
+  benchmark_name: string;
   model_name: string;
   provider: string;
   provider_id: string;

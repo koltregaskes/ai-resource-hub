@@ -447,9 +447,9 @@ const footerSections = [
 
       const groups = document.querySelectorAll('.nav-dropdown-group');
       groups.forEach((group) => {
-        const dropdown = group.querySelector('.nav-dropdown');
-        const chevron = group.querySelector('.nav-chevron');
-        let hideTimer;
+        const dropdown = group.querySelector<HTMLElement>('.nav-dropdown');
+        const chevron = group.querySelector<HTMLElement>('.nav-chevron');
+        let hideTimer: ReturnType<typeof setTimeout> | null = null;
 
         const show = () => {
           if (hideTimer) clearTimeout(hideTimer);

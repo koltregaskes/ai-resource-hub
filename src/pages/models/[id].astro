@@ -119,10 +119,10 @@ const structuredData = {
               {mod}
             </span>
           ))}
-          {model.open_source === 1 && (
+          {model.open_source && (
             <span class="badge badge-oss">Open Source</span>
           )}
-          {model.api_available === 1 && (
+          {model.api_available && (
             <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-accent-glow) text-(--color-accent)">
               API Available
             </span>
@@ -194,11 +194,11 @@ const structuredData = {
           )}
           <div class="flex justify-between">
             <dt class="text-sm text-(--color-text-muted)">Open Source</dt>
-            <dd class="text-sm text-(--color-text-primary)">{model.open_source === 1 ? 'Yes' : 'No'}</dd>
+            <dd class="text-sm text-(--color-text-primary)">{model.open_source ? 'Yes' : 'No'}</dd>
           </div>
           <div class="flex justify-between">
             <dt class="text-sm text-(--color-text-muted)">API Available</dt>
-            <dd class="text-sm text-(--color-text-primary)">{model.api_available === 1 ? 'Yes' : 'No'}</dd>
+            <dd class="text-sm text-(--color-text-primary)">{model.api_available ? 'Yes' : 'No'}</dd>
           </div>
           {model.pricing_source && (
             <div class="flex justify-between">

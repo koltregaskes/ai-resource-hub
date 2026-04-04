@@ -85,7 +85,7 @@ interface CachedBenchmark {
 interface CachedBenchmarkScore {
   model_id: string;
   benchmark_id: string;
-  score: number | string;
+  score: number;
   source: string | null;
   source_url: string | null;
   measured_at?: string | null;
@@ -128,10 +128,76 @@ interface CachedPriceHistory {
   model_name: string;
   provider_name: string;
   provider_colour: string;
-  input_price: number | string;
-  output_price: number | string;
+  input_price: number;
+  output_price: number;
   recorded_at: string;
   source: string | null;
+}
+
+type LooseRecord = Record<string, any>;
+
+interface CachedYouTubeCreator {
+  id: string;
+  name: string;
+  channel_name: string;
+  youtube_handle: string;
+  youtube_url: string;
+  subscribers: number;
+  category: string;
+  vertical: string;
+  description: string;
+  twitter?: string | null;
+  website?: string | null;
+  person_id?: string | null;
+}
+
+interface CachedGlossaryTerm {
+  id: string;
+  term: string;
+  definition: string;
+  plain_english: string | null;
+  category: string;
+  related_terms: string | null;
+  see_also: string | null;
+}
+
+interface CachedTag {
+  id: string;
+  name: string;
+  category: string;
+  description: string | null;
+}
+
+interface CachedTagWithCount extends CachedTag {
+  count: number;
+}
+
+interface CachedProviderEndpoint {
+  id: string;
+  model_id: string;
+  provider_id: string;
+  provider_name: string;
+  provider_colour: string;
+  endpoint_name: string;
+  speed: number;
+  ttft: number;
+  input_price: number;
+  output_price: number;
+  measured_at: string | null;
+  source: string | null;
+}
+
+interface CachedPlanLimit {
+  plan_id: string;
+  plan_name: string;
+  price_monthly: number | null;
+  model_id: string | null;
+  model_tier: string | null;
+  model_name: string | null;
+  messages_low: number | null;
+  messages_high: number | null;
+  message_period: string;
+  notes: string | null;
 }
 
 function toNumber(value: number | string | null | undefined): number {
@@ -335,11 +401,11 @@ export function getLLMModelsFromDB() {
 }
 
 // Stub functions for tables not yet in Postgres
-export function getGlossaryTerms() { return []; }
-export function getGlossaryTermById(_id: string) { return null; }
-export function getAllGlossaryIds() { return []; }
+export function getGlossaryTerms(): CachedGlossaryTerm[] { return []; }
+export function getGlossaryTermById(_id: string): CachedGlossaryTerm | null { return null; }
+export function getAllGlossaryIds(): string[] { return []; }
 export function getYouTubeCreators() {
-  return loadCache<{ id: string; name: string; channel_name: string; youtube_handle: string; youtube_url: string; subscribers: number; category: string; vertical: string; description: string }>('youtube_creators');
+  return loadCache<CachedYouTubeCreator>('youtube_creators');
 }
 export function getYouTubeCreatorsByCategory(cat: string) {
   return getYouTubeCreators().filter(c => c.category === cat);
@@ -350,22 +416,22 @@ export function getYouTubeCreatorCategories() {
   for (const c of creators) counts.set(c.category, (counts.get(c.category) || 0) + 1);
   return Array.from(counts.entries()).map(([category, count]) => ({ category, count })).sort((a, b) => b.count - a.count);
 }
-export function getTags() { return []; }
-export function getTagById(_id: string) { return null; }
-export function getAllTagIds() { return []; }
-export function getTagsForItem(_id: string, _type: string) { return []; }
-export function getItemsByTag(_tagId: string, _type: string) { return []; }
-export function getTagsWithCounts() { return []; }
-export function getRumouredModels() { return []; }
-export function getCLITools() { return []; }
-export function getCLIToolById(_id: string) { return null; }
-export function getAllCLIToolIds() { return []; }
-export function getProviderPlans(_id: string) { return []; }
-export function getModelMessageLimits(_id: string) { return []; }
-export function getPlanLimits(_id: string) { return []; }
-export function getAllSubscriptionPlans() { return []; }
-export function getProviderEndpoints(_id: string) { return []; }
-export function getModelsWithMultipleEndpoints() { return []; }
+export function getTags(): CachedTag[] { return []; }
+export function getTagById(_id: string): CachedTag | null { return null; }
+export function getAllTagIds(): string[] { return []; }
+export function getTagsForItem(_id: string, _type: string): CachedTag[] { return []; }
+export function getItemsByTag(_tagId: string, _type: string): string[] { return []; }
+export function getTagsWithCounts(): CachedTagWithCount[] { return []; }
+export function getRumouredModels(): LooseRecord[] { return []; }
+export function getCLITools(): LooseRecord[] { return []; }
+export function getCLIToolById(_id: string): LooseRecord | null { return null; }
+export function getAllCLIToolIds(): string[] { return []; }
+export function getProviderPlans(_id: string): LooseRecord[] { return []; }
+export function getModelMessageLimits(_id: string): CachedPlanLimit[] { return []; }
+export function getPlanLimits(_id: string): LooseRecord[] { return []; }
+export function getAllSubscriptionPlans(): LooseRecord[] { return []; }
+export function getProviderEndpoints(_id: string): CachedProviderEndpoint[] { return []; }
+export function getModelsWithMultipleEndpoints(): LooseRecord[] { return []; }
 export function getModelsWithTTFT() {
   return getModels()
     .filter(m => Number(m.ttft) > 0 && m.status === 'active' && m.category === 'llm')
