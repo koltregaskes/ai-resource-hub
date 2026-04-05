@@ -32,8 +32,8 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
 ---
 
 <BaseLayout
-  title="AI Meta Leaderboard - The AI Resource Hub"
-  description="Benchmark-weighted leaderboard of AI models. Compare meta score, benchmark coverage, context, and price in one place."
+  title="AI Composite Leaderboard - The AI Resource Hub"
+  description="Benchmark-weighted leaderboard of AI models. Compare composite score, benchmark coverage, context, and price in one place."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -44,9 +44,9 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
 
     <div class="mb-8">
       <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Weighted ranking</p>
-      <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">AI Meta Leaderboard</h1>
+      <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">AI Composite Leaderboard</h1>
       <p class="text-(--color-text-secondary) max-w-3xl mt-3 leading-7">
-        This page ranks LLMs using the same coverage-aware benchmark blend shown on the homepage. Meta score combines
+        This page ranks LLMs using the same coverage-aware benchmark blend shown on the homepage. Composite score combines
         normalized benchmark results, benchmark coverage, and the existing quality layer, so newer models with thin
         published data do not leapfrog better-documented leaders on hype alone.
       </p>
@@ -54,7 +54,7 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
 
     <div class="flex flex-wrap gap-2 mb-6 border-b border-(--color-border) pb-2">
       <button class="leaderboard-tab active px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="meta">
-        Meta score
+        Composite score
       </button>
       <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="value">
         Best value
@@ -71,7 +71,7 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
             <tr class="border-b border-(--color-border)">
               <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
               <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Meta</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Composite</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Bench</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Coverage</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th>
@@ -121,7 +121,7 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
               <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
               <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Value</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Meta</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Composite</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th>
             </tr>
           </thead>
@@ -165,7 +165,7 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
               <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Input</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Output</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Meta</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Composite</th>
             </tr>
           </thead>
           <tbody>
@@ -200,7 +200,7 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
     </div>
 
     <p class="mt-6 text-sm text-(--color-text-secondary) max-w-3xl">
-      Meta score is coverage-aware by design. Models with thin public benchmark coverage can still appear here, but they are
+      Composite score is coverage-aware by design. Models with thin public benchmark coverage can still appear here, but they are
       penalized until enough benchmark evidence exists to trust the ranking.
     </p>
   </section>

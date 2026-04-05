@@ -144,7 +144,7 @@ const heroStats = [
 ];
 ---
 
-<BaseLayout title="The AI Resource Hub - Meta Leaderboard, AGI Progress, and Daily AI Updates">
+<BaseLayout title="The AI Resource Hub - Composite Leaderboard, AGI Progress, and Daily AI Updates">
   <section class="hub-home-shell">
     <div class="hub-home-grid mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <div class="hub-home-head">
@@ -187,7 +187,7 @@ const heroStats = [
             <div>
               <p class="hub-home-brief-title">
                 <span class="fresh-dot" data-fresh-dot hidden></span>
-                Meta leaderboard
+                Composite leaderboard
               </p>
               <p class="hub-home-brief-copy">Weighted ranking across quality, benchmark coverage, and signal strength.</p>
             </div>
@@ -237,7 +237,7 @@ const heroStats = [
       <div class="hub-home-tab-row" role="tablist" aria-label="Homepage primary views">
         <button class="hub-home-tab is-active" type="button" data-home-tab="leaderboard" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
           <span class="fresh-dot" data-fresh-dot hidden></span>
-          Meta leaderboard
+          Composite leaderboard
         </button>
         <button class="hub-home-tab" type="button" data-home-tab="agi" data-fresh-at={agiOverview.updatedAt ?? ''}>
           <span class="fresh-dot" data-fresh-dot hidden></span>
@@ -251,7 +251,7 @@ const heroStats = [
             <div class="hub-home-card-head">
               <div>
                 <p class="hub-home-mini-label">Homepage ranking</p>
-                <h2 class="hub-home-card-title">The benchmark-weighted AI leaderboard.</h2>
+                <h2 class="hub-home-card-title">The benchmark-weighted composite AI leaderboard.</h2>
               </div>
               <a href={`${base}leaderboard/`} class="editorial-link">Open the full ranking</a>
             </div>
@@ -270,7 +270,7 @@ const heroStats = [
                   <tr>
                     <th class="hub-home-col-rank">#</th>
                     <th>Model</th>
-                    <th class="hub-home-col-number">Meta</th>
+                    <th class="hub-home-col-number">Composite</th>
                     <th class="hub-home-col-number hub-home-col-desktop">Bench</th>
                     <th class="hub-home-col-number hub-home-col-desktop">Coverage</th>
                     <th class="hub-home-col-number">Price</th>
@@ -306,7 +306,7 @@ const heroStats = [
                       </td>
                       <td class="hub-home-score-cell">
                         <span class="hub-home-score">{model.metaScore.toFixed(1)}</span>
-                        <span class="hub-home-score-note">meta</span>
+                        <span class="hub-home-score-note">composite</span>
                       </td>
                       <td class="hub-home-score-cell hub-home-col-desktop">
                         <span class="hub-home-score-secondary">{model.benchmarkScore.toFixed(1)}</span>
@@ -336,7 +336,7 @@ const heroStats = [
                     {leaderboardLeader.name}
                   </h3>
                   <p class="hub-home-rail-copy">
-                    {leaderboardLeader.provider} leads the homepage ranking with a meta score of {leaderboardLeader.metaScore.toFixed(1)}.
+                    {leaderboardLeader.provider} leads the homepage ranking with a composite score of {leaderboardLeader.metaScore.toFixed(1)}.
                   </p>
                   <dl class="hub-home-metric-list">
                     <div>
@@ -354,7 +354,7 @@ const heroStats = [
                   </dl>
                 </>
               ) : (
-                <div class="empty-surface">The meta leaderboard needs benchmark data before a leader can be shown.</div>
+                <div class="empty-surface">The composite leaderboard needs benchmark data before a leader can be shown.</div>
               )}
             </div>
 
@@ -589,7 +589,7 @@ const heroStats = [
     </div>
 
     <p class="hub-home-footnote">
-      The homepage meta score is a coverage-aware blend of benchmark-normalized results and the existing quality layer.
+      The homepage composite score is a coverage-aware blend of benchmark-normalized results and the existing quality layer.
       The AGI panel is a derived frontier signal built from ARC-AGI, GPQA Diamond, Humanity&rsquo;s Last Exam, MMLU-Pro,
       SWE-bench Verified, and Chatbot Arena. Read the <a href={`${base}methodology/`}>methodology</a> before treating any ranking as gospel.
     </p>

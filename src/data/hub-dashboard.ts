@@ -546,7 +546,7 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
   return [
     {
       id: 'meta',
-      label: 'Meta leaderboard',
+      label: 'Composite leaderboard',
       note: `${getBenchmarks().length} benchmark tracks weighted into the ranking layer.`,
       updatedAt: benchmarkRefresh,
       href: `${basePath}leaderboard/`,
