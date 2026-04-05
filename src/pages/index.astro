@@ -1,275 +1,599 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import NewsletterSignup from '../components/NewsletterSignup.astro';
-import TopModelsPreview from '../components/TopModelsPreview.astro';
+import { getBenchmarks } from '../db/queries';
 import {
-  getBenchmarkMatrix,
-  getAIJobsOverview,
-  getLLMModelsFromDB,
-  getModelsByCategory,
-  getPeople,
-  getProvidersWithCounts,
-  getRecentModels,
-  getYouTubeCreators,
-} from '../db/queries';
-import { loadNewsItems } from '../data/news-digests';
-
-const llmModels = getLLMModelsFromDB();
-const imageModels = getModelsByCategory('image');
-const videoModels = getModelsByCategory('video');
-const speechModels = getModelsByCategory('speech');
-const voiceModels = getModelsByCategory('voice');
-const soundModels = getModelsByCategory('sound');
-const providers = getProvidersWithCounts();
-const benchmarkMatrix = getBenchmarkMatrix();
-const jobsOverview = getAIJobsOverview();
-const recentModels = getRecentModels(6);
-const people = getPeople();
-const youtubeCreators = getYouTubeCreators();
-const latestNews = loadNewsItems().slice(0, 4);
+  getAgiOverview,
+  getDataPulse,
+  getLatestActivities,
+  getLatestDigest,
+  getMetaLeaderboard,
+  normaliseDateTime,
+  type AgiFrontierPoint,
+} from '../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
-const lastUpdated = new Date().toLocaleDateString('en-GB', {
-  day: 'numeric',
-  month: 'short',
-  year: 'numeric',
-});
 
-const totalTracked =
-  llmModels.length +
-  imageModels.length +
-  videoModels.length +
-  speechModels.length +
-  voiceModels.length +
-  soundModels.length;
+const metaLeaderboardAll = getMetaLeaderboard(250);
+const metaLeaderboard = metaLeaderboardAll.slice(0, 10);
+const agiOverview = getAgiOverview();
+const latestDigest = getLatestDigest();
+const digestEntries = latestDigest?.entries.slice(0, 4) ?? [];
+const dataPulse = getDataPulse(base);
+const activities = getLatestActivities(8, base);
+const trackedBenchmarkCount = getBenchmarks().length;
 
-const launchCards = [
-  {
-    title: 'Compare models properly',
-    description: 'Start with pricing, context, speed, quality, and value on one surface instead of bouncing between provider pages.',
-    href: `${base}compare/llm/`,
-    meta: `${llmModels.length} LLMs tracked`,
-  },
-  {
-    title: 'Read the market with context',
-    description: 'Use the news stream, benchmark library, and provider view together so each headline has somewhere to land.',
-    href: `${base}news/`,
-    meta: latestNews[0] ? `Latest note dated ${latestNews[0].date}` : 'News desk ready',
-  },
-  {
-    title: 'Use the built-in tools',
-    description: 'Estimate spend, compare models head to head, and work out token costs without leaving the site.',
-    href: `${base}tools/`,
-    meta: 'Calculator, counter, and shortlists',
-  },
-  {
-    title: 'Check real hiring signal',
-    description: 'Read the AI jobs market through live company boards, role mix, and remote share instead of generic macro hot takes.',
-    href: `${base}jobs/`,
-    meta: jobsOverview.total_open_roles > 0
-      ? `${jobsOverview.total_open_roles} live roles / ${jobsOverview.posted_last_14d} posted in 14 days`
-      : 'Jobs tracker ready',
-  },
-];
+const leaderboardLeader = metaLeaderboard[0] ?? null;
+const bestOpenModel = metaLeaderboardAll.find((model) => model.openSource) ?? null;
+const bestValueModel = [...metaLeaderboardAll]
+  .filter((model) => model.inputPrice > 0 && model.outputPrice > 0)
+  .sort((a, b) => b.valueScore - a.valueScore)[0] ?? null;
 
-const coreSections = [
-  {
-    title: 'LLM comparison',
-    href: `${base}compare/llm/`,
-    stat: `${llmModels.length} models`,
-    note: 'Pricing, speed, context, quality, and value in one place.',
-  },
-  {
-    title: 'Benchmarks',
-    href: `${base}benchmarks/`,
-    stat: `${benchmarkMatrix.benchmarks.length} tracked`,
-    note: 'MMLU, GPQA, HumanEval, SWE-bench, and the rest of the useful scoreboard.',
-  },
-  {
-    title: 'Labs and providers',
-    href: `${base}labs/`,
-    stat: `${providers.length} organisations`,
-    note: 'See who is building what and how their models fit together.',
-  },
-  {
-    title: 'AI news',
-    href: `${base}news/`,
-    stat: latestNews.length > 0 ? `${latestNews.length} fresh items` : 'Live feed',
-    note: 'Launches, benchmarks, regulation, platform changes, and market movement.',
-  },
-  {
-    title: 'Tools and calculators',
-    href: `${base}tools/`,
-    stat: 'Built in',
-    note: 'Pricing calculator, token counter, and quick routes into the practical stuff.',
-  },
-  {
-    title: 'AI jobs market',
-    href: `${base}jobs/`,
-    stat: jobsOverview.total_open_roles > 0 ? `${jobsOverview.total_open_roles} live roles` : 'Live boards',
-    note: 'Daily snapshots of hiring across tracked AI-company public job boards.',
-  },
-  {
-    title: 'Guides and glossary',
-    href: `${base}guides/`,
-    stat: `${people.length + youtubeCreators.length} references`,
-    note: 'Learning paths, key people, and plain-English explanations for the jargon.',
-  },
-];
+function latestTimestamp(values: Array<string | null | undefined>): string | null {
+  const timestamps = values
+    .map((value) => normaliseDateTime(value))
+    .filter((value): value is string => Boolean(value))
+    .sort((a, b) => Date.parse(b) - Date.parse(a));
 
-const fieldNotes = [
-  { value: totalTracked, label: 'Models tracked across text, image, video, speech, voice, and sound' },
-  { value: benchmarkMatrix.models.length, label: 'Models linked to benchmark coverage and comparison tooling' },
-  { value: providers.length, label: 'Labs and providers represented in the database' },
-  { value: `${jobsOverview.total_open_roles}/${jobsOverview.posted_last_14d}`, label: 'Live roles tracked and roles posted in the last 14 days' },
-  { value: `${people.length}/${youtubeCreators.length}`, label: 'People and creators available in the learning layer' },
+  return timestamps[0] ?? null;
+}
+
+function formatDateLabel(value: string | null | undefined, options?: Intl.DateTimeFormatOptions): string {
+  const normalised = normaliseDateTime(value);
+  if (!normalised) return 'Awaiting refresh';
+
+  return new Date(normalised).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    ...options,
+  });
+}
+
+function formatContextWindow(tokens: number): string {
+  if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(1)}M`;
+  if (tokens >= 1_000) return `${Math.round(tokens / 1_000)}K`;
+  return `${tokens}`;
+}
+
+function formatCoverage(ratio: number): string {
+  return `${Math.round(ratio * 100)}%`;
+}
+
+function formatPricePair(inputPrice: number, outputPrice: number, openSource: boolean): string {
+  if (inputPrice === 0 && outputPrice === 0) return openSource ? 'Open / free' : 'Included';
+  return `$${inputPrice.toFixed(2)} / $${outputPrice.toFixed(2)}`;
+}
+
+function isExternalLink(href: string | null | undefined): boolean {
+  return Boolean(href && /^https?:\/\//.test(href));
+}
+
+function buildAgiChart(points: AgiFrontierPoint[]) {
+  if (points.length === 0) {
+    return {
+      path: '',
+      areaPath: '',
+      circles: [] as Array<{ x: number; y: number; score: number; label: string; modelName: string }>,
+      guides: [] as number[],
+    };
+  }
+
+  const width = 720;
+  const height = 280;
+  const paddingX = 26;
+  const paddingY = 20;
+  const usableWidth = width - paddingX * 2;
+  const usableHeight = height - paddingY * 2;
+  const scores = points.map((point) => point.score);
+  const minScore = Math.min(...scores);
+  const maxScore = Math.max(...scores);
+  const scoreFloor = Math.max(0, Math.floor((minScore - 6) / 5) * 5);
+  const scoreCeiling = Math.min(100, Math.ceil((maxScore + 4) / 5) * 5);
+  const scoreRange = Math.max(1, scoreCeiling - scoreFloor);
+  const stepX = points.length > 1 ? usableWidth / (points.length - 1) : usableWidth / 2;
+
+  const circles = points.map((point, index) => {
+    const x = points.length > 1 ? paddingX + stepX * index : width / 2;
+    const ratio = (point.score - scoreFloor) / scoreRange;
+    const y = paddingY + usableHeight - ratio * usableHeight;
+    return {
+      x: Number(x.toFixed(2)),
+      y: Number(y.toFixed(2)),
+      score: point.score,
+      label: point.label,
+      modelName: point.modelName,
+    };
+  });
+
+  const path = circles.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`).join(' ');
+  const areaPath = `${path} L ${circles.at(-1)?.x ?? paddingX} ${height - paddingY} L ${circles[0]?.x ?? paddingX} ${height - paddingY} Z`;
+  const guides = Array.from({ length: 4 }, (_, index) => {
+    const ratio = index / 3;
+    return Number((paddingY + usableHeight * ratio).toFixed(2));
+  });
+
+  return { path, areaPath, circles, guides };
+}
+
+const agiChart = buildAgiChart(agiOverview.frontierPoints);
+const latestHomepageUpdate = latestTimestamp([
+  ...dataPulse.map((item) => item.updatedAt),
+  ...activities.map((item) => item.date),
+  latestDigest ? normaliseDateTime(latestDigest.digestDate) : null,
+  agiOverview.updatedAt,
+]);
+
+const heroStats = [
+  {
+    label: 'Ranked LLMs',
+    value: metaLeaderboardAll.length.toLocaleString('en-GB'),
+  },
+  {
+    label: 'Weighted benchmarks',
+    value: trackedBenchmarkCount.toLocaleString('en-GB'),
+  },
+  {
+    label: 'Digest stories',
+    value: (latestDigest?.storyCount ?? digestEntries.length).toLocaleString('en-GB'),
+  },
+  {
+    label: 'Latest full refresh',
+    value: formatDateLabel(latestHomepageUpdate, { day: 'numeric', month: 'short' }),
+  },
 ];
 ---
 
-<BaseLayout title="The AI Resource Hub - Independent AI Comparison and News">
-  <HeroSection modelCount={llmModels.length} lastUpdated={lastUpdated} />
+<BaseLayout title="The AI Resource Hub - Meta Leaderboard, AGI Progress, and Daily AI Updates">
+  <section class="hub-home-shell">
+    <div class="hub-home-grid mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="hub-home-head">
+        <p class="hub-home-kicker">Live AI intelligence</p>
+        <h1 class="hub-home-title">Weighted leaderboard first. AGI signal second. Today&rsquo;s changes underneath.</h1>
+        <p class="hub-home-intro">
+          The homepage now starts with the actual product: a benchmark-weighted model ranking, a compact view of frontier
+          progress, and the latest changes across the hub. No filler, no box farm.
+        </p>
 
-  <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-    <div class="editorial-band">
-      <div>
-        <p class="section-kicker">Why this homepage exists</p>
-        <h2 class="section-heading max-w-2xl">Three clear routes into the hub, depending on whether you need answers, context, or working tools.</h2>
-      </div>
-      <div class="editorial-grid mt-8">
-        {launchCards.map((card, index) => (
-          <a href={card.href} class={`entry-card entry-card-${index + 1}`}>
-            <span class="entry-card-number">{String(index + 1).padStart(2, '0')}</span>
-            <div>
-              <h3 class="entry-card-title">{card.title}</h3>
-              <p class="entry-card-copy">{card.description}</p>
-              <p class="entry-card-meta">{card.meta}</p>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)]">
-      <div class="paper-panel paper-panel-large">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p class="section-kicker">Reference board</p>
-            <h2 class="section-heading">The part of the site that behaves like a working desk, not a brochure.</h2>
-          </div>
-          <a href={`${base}about/`} class="editorial-link">How the hub works</a>
+        <div class="hub-home-actions">
+          <a href={`${base}leaderboard/`} class="editorial-button editorial-button-primary">Open full leaderboard</a>
+          <a href={`${base}methodology/`} class="editorial-button editorial-button-secondary">How the scores work</a>
         </div>
 
-        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {coreSections.map((section, index) => (
-            <a href={section.href} class={`coverage-card coverage-card-${(index % 3) + 1}`}>
-              <p class="coverage-card-stat">{section.stat}</p>
-              <h3 class="coverage-card-title">{section.title}</h3>
-              <p class="coverage-card-copy">{section.note}</p>
-            </a>
+        <div class="hub-home-stat-strip">
+          {heroStats.map((stat) => (
+            <div class="hub-home-stat">
+              <p class="hub-home-stat-value">{stat.value}</p>
+              <p class="hub-home-stat-label">{stat.label}</p>
+            </div>
           ))}
         </div>
       </div>
 
-      <div class="stacked-aside">
-        <div class="paper-panel">
-          <p class="section-kicker">Field notes</p>
-          <h2 class="section-heading section-heading-compact">The coverage footprint at a glance.</h2>
-          <div class="mt-6 space-y-4">
-            {fieldNotes.map((note) => (
-              <div class="note-row">
-                <span class="note-value">{note.value}</span>
-                <p class="note-copy">{note.label}</p>
-              </div>
-            ))}
+      <aside class="hub-home-brief">
+        <div class="hub-home-brief-head">
+          <div>
+            <p class="hub-home-mini-label">Fastest routes</p>
+            <h2 class="hub-home-side-title">Use the hub like a desk, not a directory.</h2>
           </div>
-        </div>
-
-        <div class="paper-panel note-manifesto">
-          <p class="section-kicker">Editorial stance</p>
-          <p class="manifesto-copy">
-            This is built for readers who want independent signal, not just launch-day excitement. The goal is to
-            make the AI landscape easier to compare, easier to read, and easier to revisit.
+          <p class="hub-home-fresh-legend">
+            <span class="fresh-dot fresh-dot-static"></span>
+            Updated since your last visit
           </p>
         </div>
-      </div>
+
+        <div class="hub-home-brief-links">
+          <a href={`${base}leaderboard/`} class="hub-home-brief-link" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
+            <div>
+              <p class="hub-home-brief-title">
+                <span class="fresh-dot" data-fresh-dot hidden></span>
+                Meta leaderboard
+              </p>
+              <p class="hub-home-brief-copy">Weighted ranking across quality, benchmark coverage, and signal strength.</p>
+            </div>
+            <span class="hub-home-brief-meta">{leaderboardLeader ? `${leaderboardLeader.name} leads` : 'Live now'}</span>
+          </a>
+          <a href={`${base}agi/`} class="hub-home-brief-link" data-fresh-at={agiOverview.updatedAt ?? ''}>
+            <div>
+              <p class="hub-home-brief-title">
+                <span class="fresh-dot" data-fresh-dot hidden></span>
+                AGI progress
+              </p>
+              <p class="hub-home-brief-copy">Derived frontier signal from ARC-AGI, GPQA, HLE, SWE-bench, and related tracks.</p>
+            </div>
+            <span class="hub-home-brief-meta">
+              {agiOverview.currentLeader ? `${agiOverview.currentLeader.modelName} at ${agiOverview.currentLeader.score}` : 'Frontier view'}
+            </span>
+          </a>
+          <a href={`${base}news/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
+            <div>
+              <p class="hub-home-brief-title">
+                <span class="fresh-dot" data-fresh-dot hidden></span>
+                Daily digest
+              </p>
+              <p class="hub-home-brief-copy">Breaking news and curated signal pulled into one brief.</p>
+            </div>
+            <span class="hub-home-brief-meta">
+              {latestDigest ? `${latestDigest.storyCount ?? digestEntries.length} stories` : 'Awaiting digest'}
+            </span>
+          </a>
+          <a href={`${base}changelog/`} class="hub-home-brief-link" data-fresh-at={activities[0]?.date ?? ''}>
+            <div>
+              <p class="hub-home-brief-title">
+                <span class="fresh-dot" data-fresh-dot hidden></span>
+                Latest activities
+              </p>
+              <p class="hub-home-brief-copy">A running activity log for model additions, pipeline refreshes, and site updates.</p>
+            </div>
+            <span class="hub-home-brief-meta">{activities.length} recent entries</span>
+          </a>
+        </div>
+      </aside>
     </div>
   </section>
-
-  <TopModelsPreview models={llmModels} />
 
   <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
-      <div class="paper-panel paper-panel-large">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p class="section-kicker">Signal board</p>
-            <h2 class="section-heading">News worth reading, styled like a desk of clipped notes instead of a generic feed.</h2>
-          </div>
-          <a href={`${base}news/`} class="editorial-link">Open the full news desk</a>
-        </div>
+    <div class="hub-home-surface">
+      <div class="hub-home-tab-row" role="tablist" aria-label="Homepage primary views">
+        <button class="hub-home-tab is-active" type="button" data-home-tab="leaderboard" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
+          <span class="fresh-dot" data-fresh-dot hidden></span>
+          Meta leaderboard
+        </button>
+        <button class="hub-home-tab" type="button" data-home-tab="agi" data-fresh-at={agiOverview.updatedAt ?? ''}>
+          <span class="fresh-dot" data-fresh-dot hidden></span>
+          AGI progress
+        </button>
+      </div>
 
-        <div class="mt-8 space-y-4">
-          {latestNews.length > 0 ? latestNews.map((item, index) => (
-            <a href={item.url} target="_blank" rel="noopener noreferrer" class={`headline-strip headline-strip-${(index % 3) + 1}`}>
-              <div class="headline-strip-meta">
-                <span>{item.source}</span>
-                <span>/</span>
-                <span>{item.date}</span>
-                <span>/</span>
-                <span>{item.category}</span>
+      <div class="hub-home-panel" data-home-panel="leaderboard">
+        <div class="hub-home-panel-grid">
+          <div class="hub-home-card hub-home-card-main">
+            <div class="hub-home-card-head">
+              <div>
+                <p class="hub-home-mini-label">Homepage ranking</p>
+                <h2 class="hub-home-card-title">The benchmark-weighted AI leaderboard.</h2>
               </div>
-              <h3 class="headline-strip-title">{item.title}</h3>
-              {item.summary && <p class="headline-strip-copy">{item.summary}</p>}
-            </a>
-          )) : (
-            <div class="empty-surface">
-              The news surface is wired, but no current items are loaded yet.
+              <a href={`${base}leaderboard/`} class="editorial-link">Open the full ranking</a>
             </div>
-          )}
+
+            <div class="hub-home-chip-row">
+              <a href={`${base}leaderboard/`} class="hub-home-chip">Overall</a>
+              <a href={`${base}coding/`} class="hub-home-chip">Coding</a>
+              <a href={`${base}best-value/`} class="hub-home-chip">Best value</a>
+              <a href={`${base}open-source/`} class="hub-home-chip">Open source</a>
+              <a href={`${base}reasoning/`} class="hub-home-chip">Reasoning</a>
+            </div>
+
+            <div class="hub-home-table-shell">
+              <table class="hub-home-table">
+                <thead>
+                  <tr>
+                    <th class="hub-home-col-rank">#</th>
+                    <th>Model</th>
+                    <th class="hub-home-col-number">Meta</th>
+                    <th class="hub-home-col-number hub-home-col-desktop">Bench</th>
+                    <th class="hub-home-col-number hub-home-col-desktop">Coverage</th>
+                    <th class="hub-home-col-number">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {metaLeaderboard.map((model, index) => (
+                    <tr data-fresh-at={normaliseDateTime(model.released) ?? ''}>
+                      <td class="hub-home-rank-cell">
+                        <span class={`hub-home-rank ${index === 0 ? 'is-first' : index === 1 ? 'is-second' : index === 2 ? 'is-third' : ''}`}>
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                      </td>
+                      <td>
+                        <a href={`${base}models/${model.id}/`} class="hub-home-model-link">
+                          <span class="hub-home-provider-dot" style={`background-color: ${model.providerColour}`}></span>
+                          <span class="fresh-dot" data-fresh-dot hidden></span>
+                          <span>{model.name}</span>
+                        </a>
+                        <p class="hub-home-model-meta">
+                          {model.provider}
+                          <span>/</span>
+                          {model.bestFor}
+                          <span>/</span>
+                          {formatContextWindow(model.contextWindow)} context
+                        </p>
+                        <div class="hub-home-badge-row">
+                          {model.openSource ? <span class="hub-home-badge">Open</span> : null}
+                          {model.apiAvailable ? <span class="hub-home-badge">API</span> : null}
+                          {model.modality.includes('vision') ? <span class="hub-home-badge">Vision</span> : null}
+                          {model.modality.includes('audio') ? <span class="hub-home-badge">Audio</span> : null}
+                        </div>
+                      </td>
+                      <td class="hub-home-score-cell">
+                        <span class="hub-home-score">{model.metaScore.toFixed(1)}</span>
+                        <span class="hub-home-score-note">meta</span>
+                      </td>
+                      <td class="hub-home-score-cell hub-home-col-desktop">
+                        <span class="hub-home-score-secondary">{model.benchmarkScore.toFixed(1)}</span>
+                        <span class="hub-home-score-note">{model.benchmarkCount} tracks</span>
+                      </td>
+                      <td class="hub-home-score-cell hub-home-col-desktop">
+                        <span class="hub-home-score-secondary">{formatCoverage(model.coverageRatio)}</span>
+                        <span class="hub-home-score-note">weighted</span>
+                      </td>
+                      <td class="hub-home-price-cell">
+                        <span>{formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="hub-home-rail">
+            <div class="hub-home-card" data-fresh-at={leaderboardLeader?.released ?? ''}>
+              <p class="hub-home-mini-label">Current leader</p>
+              {leaderboardLeader ? (
+                <>
+                  <h3 class="hub-home-rail-title">
+                    <span class="fresh-dot" data-fresh-dot hidden></span>
+                    {leaderboardLeader.name}
+                  </h3>
+                  <p class="hub-home-rail-copy">
+                    {leaderboardLeader.provider} leads the homepage ranking with a meta score of {leaderboardLeader.metaScore.toFixed(1)}.
+                  </p>
+                  <dl class="hub-home-metric-list">
+                    <div>
+                      <dt>Benchmark score</dt>
+                      <dd>{leaderboardLeader.benchmarkScore.toFixed(1)}</dd>
+                    </div>
+                    <div>
+                      <dt>Coverage</dt>
+                      <dd>{formatCoverage(leaderboardLeader.coverageRatio)}</dd>
+                    </div>
+                    <div>
+                      <dt>Best for</dt>
+                      <dd>{leaderboardLeader.bestFor}</dd>
+                    </div>
+                  </dl>
+                </>
+              ) : (
+                <div class="empty-surface">The meta leaderboard needs benchmark data before a leader can be shown.</div>
+              )}
+            </div>
+
+            <div class="hub-home-card" data-fresh-at={bestOpenModel?.released ?? ''}>
+              <p class="hub-home-mini-label">Best open model</p>
+              {bestOpenModel ? (
+                <>
+                  <h3 class="hub-home-rail-title">
+                    <span class="fresh-dot" data-fresh-dot hidden></span>
+                    {bestOpenModel.name}
+                  </h3>
+                  <p class="hub-home-rail-copy">
+                    The strongest open-weight entry on the weighted ranking right now, with benchmark coverage baked into the score.
+                  </p>
+                  <a href={`${base}open-source/`} class="editorial-link">Open source shortlist</a>
+                </>
+              ) : (
+                <div class="empty-surface">Open-weight models will appear here once the ranking layer is populated.</div>
+              )}
+            </div>
+
+            <div class="hub-home-card" data-fresh-at={bestValueModel?.released ?? ''}>
+              <p class="hub-home-mini-label">Best value</p>
+              {bestValueModel ? (
+                <>
+                  <h3 class="hub-home-rail-title">
+                    <span class="fresh-dot" data-fresh-dot hidden></span>
+                    {bestValueModel.name}
+                  </h3>
+                  <p class="hub-home-rail-copy">
+                    Strongest quality-per-cost ratio in the current leaderboard, useful when performance still has to fit a budget.
+                  </p>
+                  <a href={`${base}best-value/`} class="editorial-link">Full value ranking</a>
+                </>
+              ) : (
+                <div class="empty-surface">Value leaders need current pricing coverage before they can be shown.</div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="stacked-aside">
-        <div class="paper-panel">
-          <p class="section-kicker">Fresh entries</p>
-          <h2 class="section-heading section-heading-compact">Recently added to the database.</h2>
-          <div class="mt-6 space-y-3">
-            {recentModels.map((model) => (
-              <a href={`${base}models/${model.id}/`} class="recent-model-row">
-                <div>
-                  <div class="flex items-center gap-2">
-                    <span class="model-dot" style={`background-color: ${model.providerColour}`}></span>
-                    <p class="text-sm font-semibold text-(--color-text-primary)">{model.name}</p>
-                  </div>
-                  <p class="mt-1 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">{model.provider}</p>
-                </div>
-                <span class="recent-model-score">{model.qualityScore}/100</span>
-              </a>
-            ))}
-          </div>
-        </div>
+      <div class="hub-home-panel is-hidden" data-home-panel="agi">
+        <div class="hub-home-panel-grid">
+          <div class="hub-home-card hub-home-card-main">
+            <div class="hub-home-card-head">
+              <div>
+                <p class="hub-home-mini-label">Frontier signal</p>
+                <h2 class="hub-home-card-title">The AGI progress view is a compact frontier chart, not just a link.</h2>
+              </div>
+              <a href={`${base}agi/`} class="editorial-link">Open the full AGI page</a>
+            </div>
 
-        <div class="paper-panel">
-          <p class="section-kicker">Useful starting points</p>
-          <div class="mt-5 space-y-3">
-            <a href={`${base}leaderboard/`} class="aside-link">Leaderboard</a>
-            <a href={`${base}calculator/`} class="aside-link">Pricing calculator</a>
-            <a href={`${base}compare/head-to-head/`} class="aside-link">Head-to-head comparison</a>
-            <a href={`${base}jobs/`} class="aside-link">AI jobs market</a>
-            <a href={`${base}reports/`} class="aside-link">AI reports</a>
-            <a href={`${base}events/`} class="aside-link">AI events</a>
-            <a href={`${base}methodology/`} class="aside-link">Methodology and sources</a>
+            {agiChart.circles.length > 0 ? (
+              <div class="hub-home-agi-chart-shell" data-fresh-at={agiOverview.updatedAt ?? ''}>
+                <svg viewBox="0 0 720 280" class="hub-home-agi-chart" aria-label="AGI frontier progress chart">
+                  {agiChart.guides.map((guide) => (
+                    <line x1="26" x2="694" y1={guide} y2={guide} class="hub-home-agi-guide" />
+                  ))}
+                  <path d={agiChart.areaPath} class="hub-home-agi-area" />
+                  <path d={agiChart.path} class="hub-home-agi-line" />
+                  {agiChart.circles.map((point) => (
+                    <>
+                      <circle cx={point.x} cy={point.y} r="5.5" class="hub-home-agi-dot"></circle>
+                      <text x={point.x} y={point.y - 12} text-anchor="middle" class="hub-home-agi-score-label">{point.score.toFixed(1)}</text>
+                    </>
+                  ))}
+                </svg>
+
+                <div class="hub-home-agi-ticks">
+                  {agiChart.circles.map((point) => (
+                    <div class="hub-home-agi-tick">
+                      <p class="hub-home-agi-tick-label">{point.label}</p>
+                      <p class="hub-home-agi-tick-model">{point.modelName}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div class="empty-surface">The AGI view needs at least two benchmark-backed frontier points before the chart can draw.</div>
+            )}
+          </div>
+
+          <div class="hub-home-rail">
+            <div class="hub-home-card" data-fresh-at={agiOverview.currentLeader?.released ?? ''}>
+              <p class="hub-home-mini-label">Frontier leader</p>
+              {agiOverview.currentLeader ? (
+                <>
+                  <h3 class="hub-home-rail-title">
+                    <span class="fresh-dot" data-fresh-dot hidden></span>
+                    {agiOverview.currentLeader.modelName}
+                  </h3>
+                  <p class="hub-home-rail-copy">
+                    Leads the current AGI signal view at {agiOverview.currentLeader.score.toFixed(1)} across the tracked frontier set.
+                  </p>
+                </>
+              ) : (
+                <div class="empty-surface">No eligible frontier leader is available yet.</div>
+              )}
+            </div>
+
+            <div class="hub-home-card" data-fresh-at={agiOverview.updatedAt ?? ''}>
+              <p class="hub-home-mini-label">12 month gain</p>
+              <h3 class="hub-home-rail-big">{agiOverview.twelveMonthGain >= 0 ? '+' : ''}{agiOverview.twelveMonthGain.toFixed(1)}</h3>
+              <p class="hub-home-rail-copy">
+                Change in the frontier signal between the current leader and the last comparable point roughly one year earlier.
+              </p>
+            </div>
+
+            <div class="hub-home-card" data-fresh-at={agiOverview.updatedAt ?? ''}>
+              <p class="hub-home-mini-label">Strongest benchmark</p>
+              {agiOverview.strongestBenchmark ? (
+                <>
+                  <h3 class="hub-home-rail-title">{agiOverview.strongestBenchmark.name}</h3>
+                  <p class="hub-home-rail-copy">
+                    The current frontier leader&rsquo;s strongest normalized result is {agiOverview.strongestBenchmark.score.toFixed(1)} on this track.
+                  </p>
+                </>
+              ) : (
+                <div class="empty-surface">Benchmark detail will appear here once the AGI overview has enough source rows.</div>
+              )}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <NewsletterSignup variant="card" />
+  <section class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+    <div class="hub-home-support-grid">
+      <section class="hub-home-card">
+        <div class="hub-home-card-head">
+          <div>
+            <p class="hub-home-mini-label">Breaking news / daily digest</p>
+            <h2 class="hub-home-card-title">The current brief.</h2>
+          </div>
+          <a href={`${base}news/`} class="editorial-link">Open the news desk</a>
+        </div>
+
+        {latestDigest ? (
+          <p class="hub-home-card-note" data-fresh-at={normaliseDateTime(latestDigest.digestDate) ?? ''}>
+            <span class="fresh-dot" data-fresh-dot hidden></span>
+            {formatDateLabel(latestDigest.digestDate)} digest with {latestDigest.storyCount ?? digestEntries.length} stories
+            {latestDigest.sourceCount ? ` from ${latestDigest.sourceCount} sources` : ''}.
+          </p>
+        ) : (
+          <p class="hub-home-card-note">No digest file is available yet, so this panel will fill on the next publish.</p>
+        )}
+
+        <div class="hub-home-stack">
+          {digestEntries.length > 0 ? digestEntries.map((entry) => (
+            <a
+              href={entry.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hub-home-feed-row"
+              data-fresh-at={normaliseDateTime(entry.publishedDate) ?? ''}
+            >
+              <div>
+                <p class="hub-home-feed-meta">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  {entry.source}
+                  <span>/</span>
+                  {entry.score !== null ? `${entry.score.toFixed(2)} score` : 'Digest pick'}
+                </p>
+                <h3 class="hub-home-feed-title">{entry.title}</h3>
+                {entry.summary ? <p class="hub-home-feed-copy">{entry.summary}</p> : null}
+              </div>
+            </a>
+          )) : (
+            <div class="empty-surface">This panel will surface the latest digest once a current file is present.</div>
+          )}
+        </div>
+      </section>
+
+      <section class="hub-home-card">
+        <div class="hub-home-card-head">
+          <div>
+            <p class="hub-home-mini-label">Updated data</p>
+            <h2 class="hub-home-card-title">Pipeline freshness.</h2>
+          </div>
+          <a href={`${base}methodology/`} class="editorial-link">Method and sources</a>
+        </div>
+
+        <div class="hub-home-stack">
+          {dataPulse.map((item) => (
+            <a href={item.href} class="hub-home-pulse-row" data-fresh-at={item.updatedAt ?? ''}>
+              <div>
+                <p class="hub-home-pulse-label">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  {item.label}
+                </p>
+                <p class="hub-home-pulse-copy">{item.note}</p>
+              </div>
+              <span class="hub-home-pulse-date">{formatDateLabel(item.updatedAt, { day: 'numeric', month: 'short' })}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="hub-home-card">
+        <div class="hub-home-card-head">
+          <div>
+            <p class="hub-home-mini-label">Latest activities</p>
+            <h2 class="hub-home-card-title">The site changelog, in live form.</h2>
+          </div>
+          <a href={`${base}changelog/`} class="editorial-link">Open full activity log</a>
+        </div>
+
+        <div class="hub-home-stack">
+          {activities.map((entry) => (
+            <a
+              href={entry.href ?? `${base}changelog/`}
+              class="hub-home-activity-row"
+              data-fresh-at={entry.date}
+              target={isExternalLink(entry.href) ? '_blank' : undefined}
+              rel={isExternalLink(entry.href) ? 'noopener noreferrer' : undefined}
+            >
+              <div class="hub-home-activity-topline">
+                <span class={`hub-home-category is-${entry.category}`}>{entry.category}</span>
+                <span class="hub-home-activity-date">{formatDateLabel(entry.date, { day: 'numeric', month: 'short' })}</span>
+              </div>
+              <h3 class="hub-home-feed-title">
+                <span class="fresh-dot" data-fresh-dot hidden></span>
+                {entry.title}
+              </h3>
+              <p class="hub-home-feed-copy">{entry.detail}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <p class="hub-home-footnote">
+      The homepage meta score is a coverage-aware blend of benchmark-normalized results and the existing quality layer.
+      The AGI panel is a derived frontier signal built from ARC-AGI, GPQA Diamond, Humanity&rsquo;s Last Exam, MMLU-Pro,
+      SWE-bench Verified, and Chatbot Arena. Read the <a href={`${base}methodology/`}>methodology</a> before treating any ranking as gospel.
+    </p>
+  </section>
 
   <script
     is:inline
@@ -279,7 +603,7 @@ const fieldNotes = [
       '@type': 'WebSite',
       name: 'The AI Resource Hub',
       url: new URL(base, Astro.site).toString(),
-      description: 'Independent AI model comparison for pricing, benchmarks, tools, and live news.',
+      description: 'Benchmark-weighted AI model leaderboard, AGI progress tracking, and daily AI updates.',
       potentialAction: {
         '@type': 'SearchAction',
         target: `${new URL(base, Astro.site).toString()}?q={search_term_string}`,
@@ -287,4 +611,61 @@ const fieldNotes = [
       },
     })}
   />
+
+  <script is:inline>
+    (() => {
+      const visitKey = 'airh:last-visit';
+      const tabKey = 'airh:home-tab';
+      const now = new Date().toISOString();
+
+      const activateTab = (name) => {
+        const tabs = document.querySelectorAll('[data-home-tab]');
+        const panels = document.querySelectorAll('[data-home-panel]');
+
+        tabs.forEach((tab) => {
+          const active = tab.getAttribute('data-home-tab') === name;
+          tab.classList.toggle('is-active', active);
+        });
+
+        panels.forEach((panel) => {
+          const active = panel.getAttribute('data-home-panel') === name;
+          panel.classList.toggle('is-hidden', !active);
+        });
+      };
+
+      try {
+        const storedTab = localStorage.getItem(tabKey);
+        activateTab(storedTab || 'leaderboard');
+
+        document.querySelectorAll('[data-home-tab]').forEach((button) => {
+          button.addEventListener('click', () => {
+            const tabName = button.getAttribute('data-home-tab') || 'leaderboard';
+            activateTab(tabName);
+            localStorage.setItem(tabKey, tabName);
+          });
+        });
+
+        const lastVisit = localStorage.getItem(visitKey);
+        if (lastVisit) {
+          document.querySelectorAll('[data-fresh-at]').forEach((node) => {
+            const updatedAt = node.getAttribute('data-fresh-at');
+            const dot = node.querySelector('[data-fresh-dot]');
+
+            if (!updatedAt || !dot) return;
+
+            const updatedTime = Date.parse(updatedAt);
+            const lastVisitTime = Date.parse(lastVisit);
+            if (Number.isFinite(updatedTime) && Number.isFinite(lastVisitTime) && updatedTime > lastVisitTime) {
+              node.setAttribute('data-fresh', 'true');
+              dot.hidden = false;
+            }
+          });
+        }
+
+        localStorage.setItem(visitKey, now);
+      } catch {
+        activateTab('leaderboard');
+      }
+    })();
+  </script>
 </BaseLayout>

@@ -1,114 +1,169 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLatestActivities, type ActivityCategory } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const entries = [
-  {
-    date: '2026-02-24',
-    version: '1.1',
-    title: 'Specialised Leaderboards, Quiz & Provider Comparisons',
-    items: [
-      'Added Fastest AI Models page — speed rankings with tokens-per-second data',
-      'Added Cheapest AI Models page — ranked by cost with free tier highlighted',
-      'Added Best Value AI Models page — quality-per-dollar value score rankings',
-      'Added Multimodal Models page — models supporting vision, audio, and video inputs',
-      'Added Context Window Comparison page — from 4K to 4M+ tokens',
-      'Added Reasoning Models page — ranked by math, logic, and reasoning benchmarks',
-      'Added New Releases page — timeline of model releases grouped by month',
-      'Added "Which AI Should I Use?" quiz — 8-question interactive tool with personalised recommendations',
-      'Added Compare AI Providers page — side-by-side provider comparison across 6 dimensions',
-      'Expanded homepage with 8 additional tool cards for all specialised leaderboards',
-      'Updated navigation with links to all new specialised pages',
-      'Extended search index to include all new pages',
-    ],
-  },
-  {
-    date: '2026-02-22',
-    version: '1.0',
-    title: 'Initial Launch',
-    items: [
-      'Launched with 129+ AI models across 6 categories (LLM, Image, Video, Voice, Speech, Sound)',
-      '34 AI providers with company details, funding, and leadership data',
-      '30 benchmarks with 171 scores across coding, math, reasoning, safety, and more',
-      'LLM Comparison Table with real-time sorting and filtering',
-      'Individual model pages with pricing, benchmarks, and price history',
-      'Provider ("Lab") pages with grouped model listings',
-      'Head-to-Head model comparison tool with visual bars',
-      'Model Leaderboard with Quality, Value, and Cheapest rankings',
-      'Coding Models leaderboard — best AI models for software development',
-      'Open Source Models directory',
-      'API Pricing Calculator with usage presets',
-      'AI Industry Statistics dashboard',
-      'AI Tools Directory with 55+ tools across 9 categories',
-      'AI Timeline with 37 key events from 2012 to 2026',
-      'AI News page with 814+ curated articles from daily digests',
-      'AI Glossary with detailed term definitions',
-      'AI People directory with 31 key figures',
-      '27 curated YouTube channels covering AI',
-      '68 curated X/Twitter AI accounts',
-      'Provider Status Dashboard with real-time status page links',
-      '6 in-depth guides (prompting, choosing models, pricing, writing, research)',
-      '4 blog posts (benchmarks explained, pricing trends, open source vs closed, what is an LLM)',
-      '"Which AI Should I Use?" interactive quiz',
-      '28 tags for browsing by topic',
-      'Full-text search across all content',
-      'Dark/light theme toggle',
-      'SEO optimised with structured data, sitemaps, and meta tags',
-      'RSS feed for blog posts',
-      'Responsive design for mobile, tablet, and desktop',
-      'Transparent methodology page with scoring details',
-      'Automated daily pricing updates via GitHub Actions',
-    ],
-  },
-];
+const activities = getLatestActivities(80, base);
+
+const categoryLabels: Record<'all' | ActivityCategory, string> = {
+  all: 'All activity',
+  site: 'Site updates',
+  models: 'Models',
+  data: 'Data refreshes',
+  digest: 'Digest',
+  jobs: 'Jobs',
+};
+
+const categoryOrder: Array<'all' | ActivityCategory> = ['all', 'site', 'models', 'data', 'digest', 'jobs'];
+
+const counts = categoryOrder.map((category) => ({
+  category,
+  label: categoryLabels[category],
+  count: category === 'all' ? activities.length : activities.filter((entry) => entry.category === category).length,
+}));
+
+function formatDateLabel(value: string): string {
+  return new Date(value).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+
+function isExternalLink(href: string | null | undefined): boolean {
+  return Boolean(href && /^https?:\/\//.test(href));
+}
 ---
 
 <BaseLayout
-  title="Changelog — The AI Resource Hub"
-  description="What's new on The AI Resource Hub. Changelog of features, data updates, and improvements."
+  title="Activity Log - The AI Resource Hub"
+  description="Live activity log for The AI Resource Hub: model additions, data refreshes, digest publishes, jobs snapshots, and site updates."
 >
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+  <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
       <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
       <span class="mx-2">/</span>
-      <span class="text-(--color-text-secondary)">Changelog</span>
+      <span class="text-(--color-text-secondary)">Activity Log</span>
     </nav>
 
-    <div class="mb-8">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
-        Changelog
-      </h1>
-      <p class="text-(--color-text-secondary) max-w-2xl">
-        All notable changes, new features, and data updates for The AI Resource Hub.
-      </p>
-    </div>
+    <div class="activity-shell">
+      <div class="activity-hero">
+        <div>
+          <p class="activity-kicker">Latest activities</p>
+          <h1 class="activity-title">The live changelog for the site, the data, and the ranking surfaces.</h1>
+          <p class="activity-intro">
+            This is where model additions, digest publishes, jobs snapshots, and site-level changes land. Use the filters to
+            narrow the feed instead of guessing what moved.
+          </p>
+        </div>
 
-    <div class="space-y-8">
-      {entries.map(entry => (
-        <article class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
-          <div class="p-5 border-b border-(--color-border) bg-(--color-bg-tertiary)/50">
-            <div class="flex items-center gap-3">
-              <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-accent)/20 text-(--color-accent) font-mono font-medium">
-                v{entry.version}
-              </span>
-              <time class="text-sm text-(--color-text-muted)">{new Date(entry.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <div class="activity-summary-grid">
+          {counts.map((item) => (
+            <div class="activity-summary-card">
+              <p class="activity-summary-value">{item.count}</p>
+              <p class="activity-summary-label">{item.label}</p>
             </div>
-            <h2 class="text-xl font-bold text-(--color-text-primary) mt-2">{entry.title}</h2>
-          </div>
-          <div class="p-5">
-            <ul class="space-y-2">
-              {entry.items.map(item => (
-                <li class="flex gap-2 text-sm text-(--color-text-secondary)">
-                  <span class="text-(--color-accent) shrink-0 mt-1">+</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </article>
-      ))}
+          ))}
+        </div>
+      </div>
+
+      <div class="activity-toolbar">
+        <div class="activity-filter-group" role="group" aria-label="Filter by category">
+          {categoryOrder.map((category, index) => (
+            <button
+              class={`activity-filter-chip ${index === 0 ? 'is-active' : ''}`}
+              type="button"
+              data-activity-filter={category}
+            >
+              {categoryLabels[category]}
+            </button>
+          ))}
+        </div>
+
+        <div class="activity-filter-group" role="group" aria-label="Filter by time">
+          <button class="activity-filter-chip is-active" type="button" data-activity-window="all">All time</button>
+          <button class="activity-filter-chip" type="button" data-activity-window="7">Last 7 days</button>
+          <button class="activity-filter-chip" type="button" data-activity-window="30">Last 30 days</button>
+          <button class="activity-filter-chip" type="button" data-activity-window="90">Last 90 days</button>
+        </div>
+      </div>
+
+      <div class="activity-list">
+        {activities.map((entry) => (
+          <a
+            href={entry.href ?? `${base}changelog/`}
+            class="activity-row"
+            data-activity-item
+            data-category={entry.category}
+            data-timestamp={entry.date}
+            target={isExternalLink(entry.href) ? '_blank' : undefined}
+            rel={isExternalLink(entry.href) ? 'noopener noreferrer' : undefined}
+          >
+            <div class="activity-row-topline">
+              <span class={`hub-home-category is-${entry.category}`}>{entry.category}</span>
+              <time class="activity-row-date">{formatDateLabel(entry.date)}</time>
+            </div>
+            <h2 class="activity-row-title">{entry.title}</h2>
+            <p class="activity-row-copy">{entry.detail}</p>
+          </a>
+        ))}
+      </div>
+
+      <div class="activity-empty is-hidden" data-activity-empty>
+        No activity matches the current filters.
+      </div>
     </div>
   </section>
+
+  <script is:inline>
+    (() => {
+      const itemNodes = Array.from(document.querySelectorAll('[data-activity-item]'));
+      const emptyState = document.querySelector('[data-activity-empty]');
+      const categoryButtons = Array.from(document.querySelectorAll('[data-activity-filter]'));
+      const windowButtons = Array.from(document.querySelectorAll('[data-activity-window]'));
+
+      let activeCategory = 'all';
+      let activeWindow = 'all';
+
+      const applyFilters = () => {
+        const now = Date.now();
+        let visibleCount = 0;
+
+        itemNodes.forEach((node) => {
+          const category = node.getAttribute('data-category') || 'all';
+          const timestamp = Date.parse(node.getAttribute('data-timestamp') || '');
+
+          const categoryMatch = activeCategory === 'all' || category === activeCategory;
+          const windowMatch = activeWindow === 'all'
+            || (Number.isFinite(timestamp) && (now - timestamp) <= Number(activeWindow) * 24 * 60 * 60 * 1000);
+
+          const visible = categoryMatch && windowMatch;
+          node.classList.toggle('is-hidden', !visible);
+          if (visible) visibleCount += 1;
+        });
+
+        emptyState?.classList.toggle('is-hidden', visibleCount !== 0);
+      };
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeCategory = button.getAttribute('data-activity-filter') || 'all';
+          categoryButtons.forEach((node) => node.classList.toggle('is-active', node === button));
+          applyFilters();
+        });
+      });
+
+      windowButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeWindow = button.getAttribute('data-activity-window') || 'all';
+          windowButtons.forEach((node) => node.classList.toggle('is-active', node === button));
+          applyFilters();
+        });
+      });
+
+      applyFilters();
+    })();
+  </script>
 </BaseLayout>
