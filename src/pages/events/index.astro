@@ -38,7 +38,7 @@ function formatDateRange(startDate?: string, endDate?: string): string {
 
 <BaseLayout
   title="AI Events - The AI Resource Hub"
-  description="Recurring AI conferences, AI Dev Days, and major tech events with a calendar-style view, categories, and official source links."
+  description="Recurring AI conferences, AI Dev Days, and major tech events with a month-by-month schedule, categories, and official source links."
 >
   <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
     <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
@@ -51,8 +51,8 @@ function formatDateRange(startDate?: string, endDate?: string): string {
       <p class="section-kicker">Signal calendar</p>
       <h1 class="section-heading">AI conferences, AI Dev Days, and major tech events worth tracking.</h1>
       <p class="mt-4 text-base leading-7 text-(--color-text-secondary)">
-        This is the start of a proper events layer rather than a simple list. Confirmed dates are shown in a calendar-style
-        monthly view, while recurring but unannounced events stay visible in a separate watchlist until official details are published.
+        This is the start of a proper events layer rather than a simple list. Confirmed dates are shown in a month-by-month
+        schedule, while recurring but unannounced events stay visible in a separate watchlist until official details are published.
       </p>
     </div>
   </section>
@@ -107,10 +107,13 @@ function formatDateRange(startDate?: string, endDate?: string): string {
 
   <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
     <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
-      <p class="section-kicker">Calendar view</p>
+      <p class="section-kicker">Confirmed schedule</p>
       <h2 class="section-heading section-heading-compact">Confirmed dates by month</h2>
+      <p class="mt-3 max-w-2xl text-sm leading-6 text-(--color-text-secondary)">
+        This is a month-grouped schedule for now, not a literal calendar grid. The aim is to keep the order easy to scan until the full calendar view lands.
+      </p>
 
-      <div class="mt-6 grid gap-6 lg:grid-cols-2">
+      <div class="mt-6 space-y-6">
         {datedEvents.map(([monthKey, events]) => (
           <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-5">
             <div class="flex items-end justify-between gap-4 border-b border-(--color-border) pb-4">

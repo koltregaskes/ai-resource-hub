@@ -9,6 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { getNews } from '../db/queries';
+import { curateNewsItems } from './content-curation';
 
 export interface NewsItem {
   id: string;
@@ -314,7 +315,7 @@ function loadNewsFromDB(): NewsItem[] {
  * Prefers the live SQLite news store, then falls back to archived digest files.
  */
 export function loadNewsItems(): NewsItem[] {
-  const dbItems = loadNewsFromDB();
+  const dbItems = curateNewsItems(loadNewsFromDB());
   if (dbItems.length > 0) return dbItems;
-  return loadNewsDigests();
+  return curateNewsItems(loadNewsDigests());
 }

@@ -105,17 +105,20 @@ const functionLabels: Record<string, string> = {
       <div class="flex items-end justify-between gap-4">
         <div>
           <p class="section-kicker">Daily movement</p>
-          <h2 class="section-heading section-heading-compact">Open roles over time</h2>
+          <h2 class="section-heading section-heading-compact">Daily open-role snapshots</h2>
         </div>
         <p class="text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Last {snapshotSeries.length} snapshots</p>
       </div>
+      <p class="mt-3 max-w-2xl text-sm leading-6 text-(--color-text-secondary)">
+        Each bar is one dated scrape of the tracked company boards. It shows the total number of live openings visible on that day, not a cumulative running total.
+      </p>
 
       {snapshotSeries.length > 0 ? (
         <div class="mt-8 grid h-64 grid-cols-[repeat(auto-fit,minmax(10px,1fr))] items-end gap-2">
           {snapshotSeries.map((point) => (
             <div class="group flex h-full flex-col justify-end">
               <div
-                class="rounded-t-full bg-(--color-accent) transition-opacity group-hover:opacity-80"
+                class="rounded-t-lg bg-(--color-accent) transition-opacity group-hover:opacity-80"
                 style={`height: ${Math.max((point.open_role_count / maxOpenCount) * 100, 6)}%`}
                 title={`${point.snapshot_date}: ${point.open_role_count} open roles`}
               ></div>
@@ -140,7 +143,7 @@ const functionLabels: Record<string, string> = {
         {functionCounts.map((item) => {
           const pct = overview.total_open_roles > 0 ? (item.count / overview.total_open_roles) * 100 : 0;
           return (
-            <div>
+            <div id={`role-${item.function_category}`}>
               <div class="mb-1 flex items-center justify-between text-sm">
                 <span class="text-(--color-text-secondary)">{functionLabels[item.function_category] ?? item.function_category}</span>
                 <span class="font-mono text-(--color-text-primary)">{item.count}</span>
@@ -231,7 +234,7 @@ const functionLabels: Record<string, string> = {
     </div>
   </section>
 
-  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+  <section class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8" id="recent-roles">
     <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
       <div class="flex items-end justify-between gap-4">
         <div>

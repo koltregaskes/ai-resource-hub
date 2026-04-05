@@ -37,7 +37,7 @@ const archiveDays = new Set(news.map((item) => item.digestDate)).size;
         {latestAvailable ? `Latest available item: ${latestAvailable}` : 'News feed ready'} · Use the sidebar to filter by date, source, or search
       </p>
       <p class="mt-1 text-xs text-(--color-text-muted)">
-        Live news uses the database feed first, with {archiveDays} archive day{archiveDays === 1 ? '' : 's'} of digest fallback available if a source goes quiet. Newsletter signup is paused, but the news archive remains live.
+        Live news now uses the cleaned database feed first, with {archiveDays} archive day{archiveDays === 1 ? '' : 's'} of digest fallback available if a source goes quiet. Newsletter signup is paused, but the news archive remains live.
       </p>
     </div>
 

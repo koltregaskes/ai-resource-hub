@@ -1,20 +1,24 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllGlossaryIds, getGlossaryTermById, getGlossaryTerms } from '../../db/queries';
+import { getGlossaryTerms } from '../../db/queries';
+import {
+  getRenderableGlossaryIds,
+  getRenderableGlossaryTermById,
+  getRenderableGlossaryTerms,
+} from '../../data/content-curation';
 
 export function getStaticPaths() {
-  const ids = getAllGlossaryIds();
+  const ids = getRenderableGlossaryIds(getGlossaryTerms());
   return ids.map((id) => ({ params: { id } }));
 }
 
 const { id } = Astro.params;
-const term = getGlossaryTermById(id);
+const allTerms = getRenderableGlossaryTerms(getGlossaryTerms());
+const term = getRenderableGlossaryTermById(id, allTerms);
 
 if (!term) {
   return Astro.redirect(`${import.meta.env.BASE_URL}404`);
 }
-
-const allTerms = getGlossaryTerms();
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;

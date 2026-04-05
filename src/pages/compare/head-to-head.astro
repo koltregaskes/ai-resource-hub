@@ -69,6 +69,29 @@ const benchmarkNamesJSON = JSON.stringify(
 
     <!-- Model selectors -->
     <div class="mb-6" id="model-selectors">
+      <div class="grid gap-3 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_220px] mb-4">
+        <div>
+          <label for="provider-filter" class="text-xs text-(--color-text-muted) mb-1 block">Filter by lab</label>
+          <select id="provider-filter" class="w-full px-3 py-2.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm focus:outline-none focus:border-(--color-accent)">
+            <option value="">All labs</option>
+          </select>
+        </div>
+        <div>
+          <label for="model-search" class="text-xs text-(--color-text-muted) mb-1 block">Search model name</label>
+          <input id="model-search" type="search" placeholder="Search models..." class="w-full px-3 py-2.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-accent)" />
+        </div>
+        <div>
+          <label for="model-sort" class="text-xs text-(--color-text-muted) mb-1 block">Order list by</label>
+          <select id="model-sort" class="w-full px-3 py-2.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm focus:outline-none focus:border-(--color-accent)">
+            <option value="quality">Best quality</option>
+            <option value="name">Alphabetical</option>
+            <option value="provider">Lab then model</option>
+            <option value="price">Lowest input price</option>
+            <option value="recent">Newest first</option>
+          </select>
+        </div>
+      </div>
+
       <div class="flex flex-wrap gap-3 items-end">
         <div class="flex-1 min-w-[200px]">
           <label class="text-xs text-(--color-text-muted) mb-1 block">Model A</label>
@@ -201,17 +224,87 @@ const benchmarkNamesJSON = JSON.stringify(
 
     const selects = document.querySelectorAll('.model-select');
     const addBtn = document.getElementById('add-model-btn');
+    const providerFilter = document.getElementById('provider-filter');
+    const modelSearchInput = document.getElementById('model-search');
+    const modelSort = document.getElementById('model-sort');
     let visibleSlots = 2;
 
-    // Populate selects
+    function getUniqueProviders() {
+      return [...new Set(models.map(m => m.provider))].sort((a, b) => a.localeCompare(b));
+    }
+
+    function populateProviderFilter() {
+      if (!(providerFilter instanceof HTMLSelectElement)) return;
+      const current = providerFilter.value;
+      providerFilter.innerHTML = '<option value="">All labs</option>' +
+        getUniqueProviders().map(provider => `<option value="${provider}" ${provider === current ? 'selected' : ''}>${provider}</option>`).join('');
+    }
+
+    function getFilteredModelPool() {
+      const providerValue = providerFilter instanceof HTMLSelectElement ? providerFilter.value : '';
+      const searchValue = modelSearchInput instanceof HTMLInputElement ? modelSearchInput.value.toLowerCase().trim() : '';
+      const sortValue = modelSort instanceof HTMLSelectElement ? modelSort.value : 'quality';
+
+      let filtered = [...models];
+
+      if (providerValue) {
+        filtered = filtered.filter(model => model.provider === providerValue);
+      }
+
+      if (searchValue) {
+        filtered = filtered.filter((model) =>
+          `${model.name} ${model.provider}`.toLowerCase().includes(searchValue)
+        );
+      }
+
+      filtered.sort((a, b) => {
+        switch (sortValue) {
+          case 'name':
+            return a.name.localeCompare(b.name) || a.provider.localeCompare(b.provider);
+          case 'provider':
+            return a.provider.localeCompare(b.provider) || a.name.localeCompare(b.name);
+          case 'price':
+            return a.inputPrice - b.inputPrice || a.outputPrice - b.outputPrice || b.qualityScore - a.qualityScore;
+          case 'recent':
+            return (b.released || '').localeCompare(a.released || '') || b.qualityScore - a.qualityScore;
+          case 'quality':
+          default:
+            return b.qualityScore - a.qualityScore || a.name.localeCompare(b.name);
+        }
+      });
+
+      return filtered;
+    }
+
     function populateSelects() {
       selects.forEach(sel => {
         const current = sel.value;
-        const opts = '<option value="">Select a model...</option>' +
-          models.map(m => `<option value="${m.id}" ${m.id === current ? 'selected' : ''}>${m.name} (${m.provider})</option>`).join('');
-        sel.innerHTML = opts;
+        const filtered = getFilteredModelPool();
+        const currentModel = current ? models.find(model => model.id === current) : null;
+        const grouped = filtered.reduce((acc, model) => {
+          if (!acc[model.provider]) acc[model.provider] = [];
+          acc[model.provider].push(model);
+          return acc;
+        }, {});
+
+        let options = '<option value="">Select a model...</option>';
+
+        if (currentModel && !filtered.some((model) => model.id === currentModel.id)) {
+          options += `<optgroup label="Selected outside current filter"><option value="${currentModel.id}" selected>${currentModel.name} (${currentModel.provider})</option></optgroup>`;
+        }
+
+        Object.keys(grouped).sort((a, b) => a.localeCompare(b)).forEach((provider) => {
+          options += `<optgroup label="${provider}">`;
+          options += grouped[provider]
+            .map(model => `<option value="${model.id}" ${model.id === current ? 'selected' : ''}>${model.name}</option>`)
+            .join('');
+          options += '</optgroup>';
+        });
+
+        sel.innerHTML = options;
       });
     }
+    populateProviderFilter();
     populateSelects();
 
     // Show/hide additional slots
@@ -275,6 +368,10 @@ const benchmarkNamesJSON = JSON.stringify(
         updateComparison();
       });
     });
+
+    providerFilter?.addEventListener('change', populateSelects);
+    modelSearchInput?.addEventListener('input', populateSelects);
+    modelSort?.addEventListener('change', populateSelects);
 
     // Listen for changes
     selects.forEach(sel => sel.addEventListener('change', updateComparison));

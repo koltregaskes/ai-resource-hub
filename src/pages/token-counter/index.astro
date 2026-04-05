@@ -101,6 +101,29 @@ const modelsJSON = JSON.stringify(models.map(m => ({
       <p class="text-xs text-(--color-text-muted) mb-3">
         What this text would cost as input tokens across different models. Output tokens (the model's response) are typically 2-5x more expensive.
       </p>
+      <div class="grid gap-3 md:grid-cols-[minmax(0,1fr)_220px_220px] mb-3">
+        <input
+          id="token-model-search"
+          type="search"
+          placeholder="Search model or provider..."
+          class="w-full rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm px-3 py-2"
+        />
+        <select
+          id="token-provider-filter"
+          class="w-full rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm px-3 py-2"
+        >
+          <option value="">All labs</option>
+        </select>
+        <select
+          id="token-sort"
+          class="w-full rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm px-3 py-2"
+        >
+          <option value="cost">Lowest cost first</option>
+          <option value="name">Alphabetical</option>
+          <option value="provider">Lab then model</option>
+          <option value="input">Lowest input price</option>
+        </select>
+      </div>
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-x-auto">
         <table class="w-full text-sm">
           <thead>
@@ -146,6 +169,15 @@ const modelsJSON = JSON.stringify(models.map(m => ({
 
   <script define:vars={{ modelsJSON }}>
     const models = JSON.parse(modelsJSON);
+    const providerFilter = document.getElementById('token-provider-filter');
+    const modelSearch = document.getElementById('token-model-search');
+    const sortSelect = document.getElementById('token-sort');
+
+    if (providerFilter instanceof HTMLSelectElement) {
+      const providers = [...new Set(models.map(model => model.provider))].sort((a, b) => a.localeCompare(b));
+      providerFilter.innerHTML = '<option value="">All labs</option>' +
+        providers.map(provider => `<option value="${provider}">${provider}</option>`).join('');
+    }
 
     const contextWindows = [
       { name: 'GPT-4o / Claude Haiku', tokens: 128000 },
@@ -175,6 +207,9 @@ const modelsJSON = JSON.stringify(models.map(m => ({
 
     function update() {
       const text = document.getElementById('text-input').value;
+      const providerValue = (providerFilter instanceof HTMLSelectElement ? providerFilter.value : '');
+      const searchValue = (modelSearch instanceof HTMLInputElement ? modelSearch.value.toLowerCase().trim() : '');
+      const sortValue = (sortSelect instanceof HTMLSelectElement ? sortSelect.value : 'cost');
       const chars = text.length;
       const words = text.trim() ? text.trim().split(/\s+/).length : 0;
       const tokens = estimateTokens(text);
@@ -187,7 +222,31 @@ const modelsJSON = JSON.stringify(models.map(m => ({
 
       // Cost table
       const tbody = document.getElementById('cost-table-body');
-      tbody.innerHTML = models.map(m => {
+      const filteredModels = models
+        .filter((model) => {
+          const matchesProvider = !providerValue || model.provider === providerValue;
+          const haystack = `${model.name} ${model.provider}`.toLowerCase();
+          const matchesSearch = !searchValue || haystack.includes(searchValue);
+          return matchesProvider && matchesSearch;
+        })
+        .sort((a, b) => {
+          const costA = (tokens / 1000000) * a.inputPrice;
+          const costB = (tokens / 1000000) * b.inputPrice;
+
+          switch (sortValue) {
+            case 'name':
+              return a.name.localeCompare(b.name);
+            case 'provider':
+              return a.provider.localeCompare(b.provider) || a.name.localeCompare(b.name);
+            case 'input':
+              return a.inputPrice - b.inputPrice || costA - costB;
+            case 'cost':
+            default:
+              return costA - costB;
+          }
+        });
+
+      tbody.innerHTML = filteredModels.map(m => {
         const cost = (tokens / 1000000) * m.inputPrice;
         const cost1k = cost * 1000;
         return `<tr class="border-b border-[var(--color-border)]/50 hover:bg-[var(--color-bg-hover)] transition-colors">
@@ -221,6 +280,9 @@ const modelsJSON = JSON.stringify(models.map(m => ({
     }
 
     document.getElementById('text-input').addEventListener('input', update);
+    providerFilter?.addEventListener('change', update);
+    modelSearch?.addEventListener('input', update);
+    sortSelect?.addEventListener('change', update);
     update();
   </script>
 </BaseLayout>

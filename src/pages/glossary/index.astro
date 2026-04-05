@@ -1,17 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getGlossaryTerms } from '../../db/queries';
+import { getRenderableGlossaryTerms } from '../../data/content-curation';
 
-const terms = getGlossaryTerms();
+const terms = getRenderableGlossaryTerms(getGlossaryTerms());
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
-
-// Group by category
-const categories = new Map<string, typeof terms>();
-for (const term of terms) {
-  if (!categories.has(term.category)) categories.set(term.category, []);
-  categories.get(term.category)!.push(term);
-}
 
 const categoryLabels: Record<string, string> = {
   core: 'Core Concepts',

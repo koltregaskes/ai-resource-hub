@@ -4,11 +4,12 @@ import {
   getBenchmarks,
   getGlossaryTerms,
   getModelsByCategory,
-  getNews,
   getPeople,
   getProvidersWithCounts,
   getYouTubeCreators,
 } from '../../db/queries';
+import { filterAIYouTubeCreators, getRenderableGlossaryTerms } from '../../data/content-curation';
+import { loadNewsItems } from '../../data/news-digests';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -16,9 +17,9 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const providers = getProvidersWithCounts();
 const benchmarks = getBenchmarks();
 const people = getPeople();
-const glossary = getGlossaryTerms();
-const news = getNews(10000);
-const ytCreators = getYouTubeCreators();
+const glossary = getRenderableGlossaryTerms(getGlossaryTerms());
+const news = loadNewsItems();
+const ytCreators = filterAIYouTubeCreators(getYouTubeCreators());
 
 const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
 let totalModels = 0;

@@ -35,18 +35,18 @@ const tools: AITool[] = [
 
   // Image Generation
   { name: 'Midjourney', url: 'https://midjourney.com', category: 'image', description: 'Industry-leading AI art generation. V6.1 model. Discord and web interfaces.', pricing: '$10/mo Basic', tags: ['images', 'art'] },
-  { name: 'DALL-E 3', url: 'https://openai.com/dall-e-3', category: 'image', description: 'OpenAI\'s image generation. Integrated into ChatGPT. Strong prompt following.', pricing: 'Included with ChatGPT', tags: ['images', 'art'] },
-  { name: 'Stable Diffusion', url: 'https://stability.ai', category: 'image', description: 'Open-source image generation. SD3.5, SDXL. Run locally or via API. Highly customisable.', pricing: 'Free (local) / API pricing', tags: ['images', 'open-source'] },
+  { name: 'DALL-E', url: 'https://openai.com/dall-e-3', category: 'image', description: 'OpenAI image generation available through ChatGPT and API surfaces. Strong prompt following and editing workflows.', pricing: 'Included with ChatGPT', tags: ['images', 'art'] },
+  { name: 'Stable Diffusion', url: 'https://stability.ai', category: 'image', description: 'Stable Diffusion family image generation. Run locally or via API. Highly customisable and widely supported.', pricing: 'Free (local) / API pricing', tags: ['images', 'open-source'] },
   { name: 'Ideogram', url: 'https://ideogram.ai', category: 'image', description: 'Best-in-class text rendering in images. V3 model. Magic prompt feature.', pricing: 'Free / $8/mo Basic', tags: ['images', 'text-rendering'] },
   { name: 'Flux', url: 'https://blackforestlabs.ai', category: 'image', description: 'By Black Forest Labs (ex-Stability). Flux.1 Pro, Dev, Schnell models. State-of-the-art quality.', pricing: 'API / Open-source', tags: ['images', 'open-source'] },
   { name: 'Leonardo AI', url: 'https://leonardo.ai', category: 'image', description: 'AI image generation platform. Fine-tuning, real-time canvas, 3D textures.', pricing: 'Free / $12/mo', tags: ['images', 'design'] },
 
   // Video Generation
-  { name: 'Sora', url: 'https://sora.com', category: 'video', description: 'OpenAI\'s video generation model. Realistic and imaginative scenes from text. Up to 1 minute.', pricing: 'Included with ChatGPT Plus', tags: ['video', 'generation'] },
-  { name: 'Runway Gen-3', url: 'https://runwayml.com', category: 'video', description: 'AI video generation and editing. Gen-3 Alpha Turbo. Motion brush, camera controls.', pricing: '$12/mo Standard', tags: ['video', 'editing'] },
+  { name: 'Sora', url: 'https://sora.com', category: 'video', description: 'OpenAI video generation product for text-to-video and creative scene generation.', pricing: 'Included with ChatGPT Plus', tags: ['video', 'generation'] },
+  { name: 'Runway', url: 'https://runwayml.com', category: 'video', description: 'Runway\'s AI video generation and editing suite with motion controls, editing tools, and production workflows.', pricing: '$12/mo Standard', tags: ['video', 'editing'] },
   { name: 'Pika', url: 'https://pika.art', category: 'video', description: 'AI video effects and generation. Pika 2.1. Lip sync, scene expansion, special effects.', pricing: 'Free / $8/mo', tags: ['video', 'effects'] },
   { name: 'Kling AI', url: 'https://klingai.com', category: 'video', description: 'Professional AI video generation. Up to 2 minutes. Motion brush and camera control.', pricing: 'Free / Paid tiers', tags: ['video', 'generation'] },
-  { name: 'Veo 2', url: 'https://deepmind.google/technologies/veo/', category: 'video', description: 'Google DeepMind\'s video model. 4K resolution, cinematic quality. Available via Vertex AI.', pricing: 'API pricing', tags: ['video', 'generation'] },
+  { name: 'Veo', url: 'https://deepmind.google/technologies/veo/', category: 'video', description: 'Google DeepMind\'s video generation family for cinematic text-to-video and related creative workflows.', pricing: 'API pricing', tags: ['video', 'generation'] },
   { name: 'Luma Dream Machine', url: 'https://lumalabs.ai', category: 'video', description: 'Fast, high-quality video generation. Text and image to video. 3D scene understanding.', pricing: 'Free / $24/mo', tags: ['video', '3D'] },
 
   // Voice & Audio
@@ -153,12 +153,23 @@ const grouped = categoryOrder.map(cat => ({
           <p class="text-sm font-semibold text-(--color-text-primary)">Filter the external tool list</p>
           <p class="text-xs text-(--color-text-muted) mt-1">Search by name, category, or tag. Category chips jump you straight to the section.</p>
         </div>
-        <input
-          id="tool-search"
-          type="search"
-          placeholder="Search tools, tags, or categories..."
-          class="w-full lg:w-96 rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-border-hover)"
-        />
+        <div class="grid gap-3 w-full lg:w-auto lg:grid-cols-[minmax(0,320px)_220px]">
+          <input
+            id="tool-search"
+            type="search"
+            placeholder="Search tools, tags, or categories..."
+            class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-border-hover)"
+          />
+          <select
+            id="tool-category-filter"
+            class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-border-hover)"
+          >
+            <option value="">All tool types</option>
+            {grouped.map(g => (
+              <option value={g.category}>{g.config.label}</option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div class="flex flex-wrap gap-2 mt-5">
@@ -184,6 +195,7 @@ const grouped = categoryOrder.map(cat => ({
               rel="noopener noreferrer"
               class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-border-hover) transition-colors group"
               data-tool-card
+              data-tool-category={tool.category}
               data-tool-filter={`${tool.name} ${tool.category} ${tool.description} ${tool.tags.join(' ')}`.toLowerCase()}
             >
               <div class="flex items-start justify-between gap-2 mb-2">
@@ -229,15 +241,19 @@ const grouped = categoryOrder.map(cat => ({
 
   <script>
     const searchInput = document.getElementById('tool-search') as HTMLInputElement | null;
+    const categoryFilter = document.getElementById('tool-category-filter') as HTMLSelectElement | null;
     const cards = Array.from(document.querySelectorAll('[data-tool-card]'));
     const groups = Array.from(document.querySelectorAll('[data-tool-group]'));
 
     function updateToolFilter() {
       const query = (searchInput?.value ?? '').toLowerCase().trim();
+      const category = categoryFilter?.value ?? '';
 
       cards.forEach((card) => {
         const haystack = card.getAttribute('data-tool-filter') || '';
-        const matches = !query || haystack.includes(query);
+        const matchesQuery = !query || haystack.includes(query);
+        const matchesCategory = !category || card.getAttribute('data-tool-category') === category;
+        const matches = matchesQuery && matchesCategory;
         card.classList.toggle('hidden', !matches);
       });
 
@@ -248,5 +264,6 @@ const grouped = categoryOrder.map(cat => ({
     }
 
     searchInput?.addEventListener('input', updateToolFilter);
+    categoryFilter?.addEventListener('change', updateToolFilter);
   </script>
 </BaseLayout>

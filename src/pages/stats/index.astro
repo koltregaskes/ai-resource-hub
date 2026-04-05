@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getProvidersWithCounts, getModelsByCategory, getBenchmarks, getModelBenchmarks, getPeople, getGlossaryTerms, getNews, getYouTubeCreators, getTags, getAIJobsOverview } from '../../db/queries';
+import { getProvidersWithCounts, getModelsByCategory, getBenchmarks, getModelBenchmarks, getPeople, getGlossaryTerms, getYouTubeCreators, getAIJobsOverview } from '../../db/queries';
+import {
+  filterAIYouTubeCreators,
+  getGuideCount,
+  getRenderableGlossaryTerms,
+  getStoryTagCount,
+} from '../../data/content-curation';
+import { loadNewsItems } from '../../data/news-digests';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -8,10 +15,11 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const providers = getProvidersWithCounts();
 const benchmarks = getBenchmarks();
 const people = getPeople();
-const glossaryTerms = getGlossaryTerms();
-const newsArticles = getNews(10000);
-const ytCreators = getYouTubeCreators();
-const tags = getTags();
+const glossaryTerms = getRenderableGlossaryTerms(getGlossaryTerms());
+const newsArticles = loadNewsItems();
+const ytCreators = filterAIYouTubeCreators(getYouTubeCreators());
+const storyTagCount = getStoryTagCount(newsArticles);
+const guideCount = getGuideCount();
 const jobsOverview = getAIJobsOverview();
 
 // Count models by category
@@ -96,45 +104,46 @@ function formatTokens(n: number): string {
 
     <!-- Key metrics -->
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 mb-10">
-      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+      <a href={`${base}leaderboard/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center hover:border-(--color-accent)/50 transition-colors">
         <p class="text-2xl font-bold text-(--color-accent)">{totalModels}</p>
         <p class="text-xs text-(--color-text-muted)">Active Models</p>
-      </div>
-      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+      </a>
+      <a href={`${base}labs/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center hover:border-(--color-accent)/50 transition-colors">
         <p class="text-2xl font-bold text-(--color-text-primary)">{providers.length}</p>
         <p class="text-xs text-(--color-text-muted)">AI Providers</p>
-      </div>
-      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+      </a>
+      <a href={`${base}benchmarks/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center hover:border-(--color-accent)/50 transition-colors">
         <p class="text-2xl font-bold text-(--color-text-primary)">{benchmarks.length}</p>
         <p class="text-xs text-(--color-text-muted)">Benchmarks</p>
-      </div>
-      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+      </a>
+      <a href={`${base}benchmarks/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center hover:border-(--color-accent)/50 transition-colors">
         <p class="text-2xl font-bold text-(--color-text-primary)">{totalScores}</p>
         <p class="text-xs text-(--color-text-muted)">Benchmark Scores</p>
-      </div>
-      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+      </a>
+      <a href={`${base}people/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center hover:border-(--color-accent)/50 transition-colors">
         <p class="text-2xl font-bold text-(--color-text-primary)">{people.length}</p>
         <p class="text-xs text-(--color-text-muted)">People Tracked</p>
-      </div>
-      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+      </a>
+      <a href={`${base}news/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center hover:border-(--color-accent)/50 transition-colors">
         <p class="text-2xl font-bold text-(--color-text-primary)">{newsArticles.length}</p>
         <p class="text-xs text-(--color-text-muted)">News Articles</p>
-      </div>
-      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
+      </a>
+      <a href={`${base}jobs/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center hover:border-(--color-accent)/50 transition-colors">
         <p class="text-2xl font-bold text-(--color-text-primary)">{jobsOverview.total_open_roles}</p>
         <p class="text-xs text-(--color-text-muted)">Tracked AI Jobs</p>
-      </div>
+      </a>
     </div>
 
     <!-- Models by Category -->
-    <div class="mb-10">
+    <div class="mb-10" id="models-by-category">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Models by Category</h2>
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
         <div class="space-y-3">
           {Object.entries(categoryCounts).sort(([,a], [,b]) => b - a).map(([cat, count]) => {
             const pct = totalModels > 0 ? (count / totalModels * 100) : 0;
+            const categoryPath = cat === 'llm' ? 'llm' : cat;
             return (
-              <div>
+              <a href={`${base}compare/${categoryPath}/`} class="block rounded-lg p-2 -mx-2 hover:bg-(--color-bg-hover) transition-colors">
                 <div class="flex items-center justify-between text-sm mb-1">
                   <span class="text-(--color-text-secondary)">{categoryLabels[cat] || cat}</span>
                   <span class="font-mono text-(--color-text-primary)">{count} <span class="text-(--color-text-muted)">({pct.toFixed(0)}%)</span></span>
@@ -142,7 +151,7 @@ function formatTokens(n: number): string {
                 <div class="w-full h-3 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
                   <div class="h-full rounded-full bg-(--color-accent)" style={`width: ${pct}%`}></div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
@@ -281,22 +290,22 @@ function formatTokens(n: number): string {
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Content Library</h2>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <a href={`${base}glossary/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
           <p class="text-2xl font-bold text-(--color-text-primary)">{glossaryTerms.length}</p>
           <p class="text-xs text-(--color-text-muted)">Glossary Terms</p>
-        </div>
-        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        </a>
+        <a href={`${base}youtube/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
           <p class="text-2xl font-bold text-(--color-text-primary)">{ytCreators.length}</p>
           <p class="text-xs text-(--color-text-muted)">YouTube Channels</p>
-        </div>
-        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-          <p class="text-2xl font-bold text-(--color-text-primary)">{tags.length}</p>
-          <p class="text-xs text-(--color-text-muted)">Tags</p>
-        </div>
-        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-          <p class="text-2xl font-bold text-(--color-text-primary)">6</p>
+        </a>
+        <a href={`${base}news/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+          <p class="text-2xl font-bold text-(--color-text-primary)">{storyTagCount}</p>
+          <p class="text-xs text-(--color-text-muted)">News Topics</p>
+        </a>
+        <a href={`${base}guides/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+          <p class="text-2xl font-bold text-(--color-text-primary)">{guideCount}</p>
           <p class="text-xs text-(--color-text-muted)">Guides</p>
-        </div>
+        </a>
       </div>
     </div>
 
