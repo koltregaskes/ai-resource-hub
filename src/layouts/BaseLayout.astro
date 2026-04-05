@@ -208,6 +208,8 @@ const footerSections = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#12100f" />
     <link rel="canonical" href={canonicalURL} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -239,8 +241,16 @@ const footerSections = [
 
     <script is:inline>
       (function () {
-        const saved = localStorage.getItem('theme');
-        if (saved === 'dark') {
+        try {
+          const saved = localStorage.getItem('theme');
+          const theme = saved === 'light' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+
+          const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute('content', theme === 'dark' ? '#12100f' : '#f6f0e3');
+          }
+        } catch (_) {
           document.documentElement.setAttribute('data-theme', 'dark');
         }
       })();
@@ -257,7 +267,7 @@ const footerSections = [
 
       <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href={base} class="flex shrink-0 items-center gap-3">
-          <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-full border border-(--color-border-strong) bg-(--color-bg-secondary) p-1" width="32" height="32" />
+          <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-[0.95rem] border border-(--color-border-strong) bg-(--color-bg-tertiary) p-0.5 shadow-[0_10px_24px_rgba(0,0,0,0.16)]" width="32" height="32" />
           <div class="hidden sm:block">
             <p class="text-[9px] font-semibold uppercase tracking-[0.32em] text-(--color-text-muted) leading-none">Field guide</p>
             <p class="mt-1 text-base font-display font-semibold text-(--color-text-primary) leading-tight">The AI Resource Hub</p>
@@ -380,7 +390,7 @@ const footerSections = [
         <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div class="max-w-sm">
             <div class="mb-4 flex items-center gap-2.5">
-              <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-full border border-(--color-border-strong) bg-(--color-bg-primary) p-1" width="32" height="32" />
+              <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-[0.95rem] border border-(--color-border-strong) bg-(--color-bg-tertiary) p-0.5 shadow-[0_10px_24px_rgba(0,0,0,0.16)]" width="32" height="32" />
               <p class="text-base font-display font-semibold text-(--color-text-primary)">The AI Resource Hub</p>
             </div>
             <p class="text-sm leading-6 text-(--color-text-secondary)">
@@ -432,23 +442,22 @@ const footerSections = [
       const themeToggle = document.getElementById('theme-toggle');
       const moonIcon = document.getElementById('theme-icon-moon');
       const sunIcon = document.getElementById('theme-icon-sun');
+      const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
       function updateThemeIcons() {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const theme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        const isDark = theme === 'dark';
         moonIcon?.classList.toggle('hidden', isDark);
         sunIcon?.classList.toggle('hidden', !isDark);
+        themeColorMeta?.setAttribute('content', isDark ? '#12100f' : '#f6f0e3');
       }
       updateThemeIcons();
 
       themeToggle?.addEventListener('click', () => {
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        if (isDark) {
-          document.documentElement.removeAttribute('data-theme');
-          localStorage.setItem('theme', 'light');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-        }
+        const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', nextTheme);
+        localStorage.setItem('theme', nextTheme);
         updateThemeIcons();
       });
 

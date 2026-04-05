@@ -61,6 +61,11 @@
   --color-success: #56b374;
   --color-warning: #d7943f;
   --color-danger: #df6b57;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
 }
 
 html {
@@ -71,6 +76,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   transition: background-color 0.25s ease, color 0.25s ease;
+  color-scheme: dark;
 }
 
 body {
