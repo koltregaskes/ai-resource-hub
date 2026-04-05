@@ -1,0 +1,42 @@
+name: Refresh provider status
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh provider status snapshot
+        run: npm run scrape:status
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet -- data/provider-status.json || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit updated provider status
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "The AI Resource Hub Bot"
+          git config user.email "bot@theairesourcehub.com"
+          git add data/provider-status.json
+          git commit -m "chore: refresh provider status $(date +%Y-%m-%dT%H:%MZ) [automated]"
+          git push

@@ -1,35 +1,135 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getProviders } from '../../db/queries';
+import { getProviderStatusSnapshot, type ProviderStatusEntry, type ProviderOverallStatus } from '../../data/provider-status';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
+const snapshot = getProviderStatusSnapshot();
 const allProviders = getProviders();
 
 const statusFallbacks: Record<string, string> = {
-  'openai': 'https://status.openai.com',
-  'anthropic': 'https://status.anthropic.com',
-  'google': 'https://status.cloud.google.com',
-  'meta': 'https://status.fb.com',
-  'mistral': 'https://status.mistral.ai',
-  'cohere': 'https://status.cohere.com',
-  'aws': 'https://health.aws.amazon.com',
+  openai: 'https://status.openai.com',
+  anthropic: 'https://status.claude.com',
+  google: 'https://status.cloud.google.com',
+  meta: 'https://status.fb.com',
+  mistral: 'https://status.mistral.ai',
+  cohere: 'https://status.cohere.io',
+  aws: 'https://health.aws.amazon.com',
+  deepseek: 'https://status.deepseek.com',
+  xai: 'https://status.x.ai',
 };
 
-// Resolve the effective status URL for each provider: database value first, then fallback
-const providersWithEffectiveStatus = allProviders.map((p) => {
-  const effectiveStatusUrl = p.status_url || statusFallbacks[p.id] || null;
-  return { ...p, effectiveStatusUrl };
-});
+const providersWithEffectiveStatus = allProviders
+  .map((provider) => ({
+    ...provider,
+    effectiveStatusUrl: provider.status_url || statusFallbacks[provider.id] || null,
+  }))
+  .filter((provider) => provider.effectiveStatusUrl)
+  .sort((a, b) => a.name.localeCompare(b.name));
 
-const providersWithStatus = providersWithEffectiveStatus.filter((p) => p.effectiveStatusUrl);
-const providersWithoutStatus = providersWithEffectiveStatus.filter((p) => !p.effectiveStatusUrl);
+const monitoredProviders = snapshot.providers
+  .filter((provider) => provider.monitored)
+  .sort((a, b) => statusOrder(a.overallStatus) - statusOrder(b.overallStatus) || a.name.localeCompare(b.name));
+
+const linkOnlyProviders = snapshot.providers.filter((provider) => provider.fetchState === 'link_only');
+const totalActiveIncidents = monitoredProviders.reduce((sum, provider) => sum + provider.activeIncidents.length, 0);
+const impactedProviders = monitoredProviders.filter((provider) => provider.overallStatus !== 'operational').length;
+
+function statusOrder(status: ProviderOverallStatus): number {
+  switch (status) {
+    case 'major_outage':
+      return 0;
+    case 'partial_outage':
+      return 1;
+    case 'degraded':
+    case 'issues':
+      return 2;
+    case 'maintenance':
+      return 3;
+    case 'operational':
+      return 4;
+    default:
+      return 5;
+  }
+}
+
+function statusClasses(status: ProviderOverallStatus): string {
+  switch (status) {
+    case 'major_outage':
+      return 'border-red-500/40 bg-red-500/12 text-red-200';
+    case 'partial_outage':
+      return 'border-orange-500/40 bg-orange-500/12 text-orange-100';
+    case 'degraded':
+    case 'issues':
+      return 'border-amber-500/40 bg-amber-500/12 text-amber-100';
+    case 'maintenance':
+      return 'border-sky-500/40 bg-sky-500/12 text-sky-100';
+    case 'operational':
+      return 'border-emerald-500/40 bg-emerald-500/12 text-emerald-100';
+    default:
+      return 'border-white/15 bg-white/5 text-(--color-text-secondary)';
+  }
+}
+
+function dotClasses(status: ProviderOverallStatus): string {
+  switch (status) {
+    case 'major_outage':
+      return 'bg-red-400 shadow-[0_0_18px_rgba(248,113,113,0.55)]';
+    case 'partial_outage':
+      return 'bg-orange-400 shadow-[0_0_18px_rgba(251,146,60,0.55)]';
+    case 'degraded':
+    case 'issues':
+      return 'bg-amber-300 shadow-[0_0_18px_rgba(252,211,77,0.5)]';
+    case 'maintenance':
+      return 'bg-sky-300 shadow-[0_0_18px_rgba(125,211,252,0.5)]';
+    case 'operational':
+      return 'bg-emerald-300 shadow-[0_0_18px_rgba(110,231,183,0.45)]';
+    default:
+      return 'bg-white/40';
+  }
+}
+
+function formatUtc(value: string | null): string {
+  if (!value) return 'Not yet generated';
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return 'Unknown';
+
+  return `${date.toLocaleString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: 'UTC',
+    hour12: false,
+  })} UTC`;
+}
+
+function formatIncidentTime(value: string | null): string {
+  if (!value) return 'Time unavailable';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return 'Time unavailable';
+  return date.toLocaleString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: 'UTC',
+    hour12: false,
+  });
+}
+
+function getProviderHref(provider: ProviderStatusEntry): string | null {
+  return provider.providerId ? `${base}labs/${provider.providerId}/` : null;
+}
 ---
 
 <BaseLayout
-  title="AI Provider Status Dashboard — The AI Resource Hub"
-  description="Check the operational status of all major AI providers — OpenAI, Anthropic, Google, Mistral, and more. All status pages in one place."
+  title="AI Provider Status Dashboard - The AI Resource Hub"
+  description="Live AI provider status overview with official feeds, recent incidents, and direct links to the main lab status pages."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -38,282 +138,317 @@ const providersWithoutStatus = providersWithEffectiveStatus.filter((p) => !p.eff
       <span class="text-(--color-text-secondary)">Provider Status</span>
     </nav>
 
-    <!-- Page header -->
-    <div class="mb-8">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
-        AI Provider Status Dashboard
-      </h1>
-      <p class="text-(--color-text-secondary) max-w-3xl">
-        All major AI provider status pages aggregated in one place. Quickly check if your AI service is experiencing issues, or bookmark this page for the next time an outage hits.
-      </p>
-    </div>
+    <div class="relative overflow-hidden rounded-[30px] border border-white/10 bg-[#0c1118] shadow-[0_30px_80px_rgba(0,0,0,0.35)] mb-8">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(251,146,60,0.22),transparent_42%),radial-gradient(circle_at_top_right,rgba(56,189,248,0.14),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_55%)]"></div>
+      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-300/50 to-transparent"></div>
+      <div class="relative p-6 sm:p-8 lg:p-10">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-3xl">
+            <p class="text-[11px] uppercase tracking-[0.3em] text-orange-200/70 mb-3">AI Operations Board</p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.02] mb-4">
+              One place to check whether the major AI labs are up, degraded, or having a bad day.
+            </h1>
+            <p class="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
+              This page combines official status APIs, official incident feeds, and official status pages into one board. Where a provider blocks automation, we keep the official link and do not guess.
+            </p>
+          </div>
+          <div class="lg:text-right">
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-300">
+              <span class="h-2 w-2 rounded-full bg-orange-300"></span>
+              Snapshot refreshed {formatUtc(snapshot.generatedAt)}
+            </div>
+            <p class="mt-3 text-xs text-slate-400 max-w-xs lg:ml-auto">
+              Target cadence: hourly on the lightweight status refresh workflow, without waiting for the full daily scrape.
+            </p>
+          </div>
+        </div>
 
-    <!-- Disclaimer note -->
-    <div class="mb-8 p-4 rounded-xl border border-(--color-border) bg-(--color-bg-card)">
-      <div class="flex items-start gap-3">
-        <svg class="w-5 h-5 text-(--color-accent) shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <div>
-          <p class="text-sm font-medium text-(--color-text-primary) mb-1">This is a link aggregator, not a live monitor</p>
-          <p class="text-xs text-(--color-text-muted)">
-            We collect links to each provider's official status page so you can check them all from one place. We do not perform live status checks or uptime monitoring. Click any link below to visit the provider's own status page for real-time information.
-          </p>
+        <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4 mt-8">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur-sm">
+            <p class="text-[11px] uppercase tracking-[0.26em] text-slate-400 mb-2">Monitored Labs</p>
+            <div class="text-3xl font-black text-white">{monitoredProviders.length}</div>
+            <p class="text-xs text-slate-400 mt-2">Live summaries from official sources only.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur-sm">
+            <p class="text-[11px] uppercase tracking-[0.26em] text-slate-400 mb-2">Active Incidents</p>
+            <div class="text-3xl font-black text-white">{totalActiveIncidents}</div>
+            <p class="text-xs text-slate-400 mt-2">Open incidents visible in the current snapshot.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur-sm">
+            <p class="text-[11px] uppercase tracking-[0.26em] text-slate-400 mb-2">Impacted Labs</p>
+            <div class="text-3xl font-black text-white">{impactedProviders}</div>
+            <p class="text-xs text-slate-400 mt-2">Providers not currently reporting a fully operational state.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur-sm">
+            <p class="text-[11px] uppercase tracking-[0.26em] text-slate-400 mb-2">Direct Link Only</p>
+            <div class="text-3xl font-black text-white">{linkOnlyProviders.length}</div>
+            <p class="text-xs text-slate-400 mt-2">Providers whose public pages do not expose stable machine-readable data.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Providers with status pages -->
-    <div class="mb-10">
-      <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">
-        Providers with Status Pages
-      </h2>
-      <p class="text-sm text-(--color-text-muted) mb-5">
-        {providersWithStatus.length} providers with known status pages. Links open in a new tab.
-      </p>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {providersWithStatus.map((provider) => (
-          <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 flex flex-col">
-            <!-- Provider header -->
-            <div class="flex items-center gap-3 mb-3">
-              <div
-                class="w-3 h-3 rounded-full shrink-0"
-                style={`background-color: ${provider.colour}`}
-              ></div>
-              <h3 class="font-semibold text-(--color-text-primary) truncate">
-                {provider.name}
-              </h3>
-            </div>
-
-            <!-- Description -->
-            {provider.description && (
-              <p class="text-xs text-(--color-text-secondary) mb-4 line-clamp-2 flex-1">
-                {provider.description}
-              </p>
-            )}
-            {!provider.description && <div class="flex-1"></div>}
-
-            <!-- Links -->
-            <div class="flex flex-col gap-2 mt-auto">
-              <a
-                href={provider.effectiveStatusUrl!}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2 text-sm font-medium text-(--color-accent) hover:text-(--color-accent-hover) transition-colors group"
-              >
-                <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <span>Status Page</span>
-                <svg class="w-3.5 h-3.5 text-(--color-text-muted) group-hover:text-(--color-accent-hover) transition-colors ml-auto shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-
-              <div class="flex items-center gap-3 text-xs">
-                {provider.api_docs_url && (
-                  <a
-                    href={provider.api_docs_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-(--color-text-muted) hover:text-(--color-accent) transition-colors flex items-center gap-1"
-                  >
-                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                    API Docs
-                  </a>
-                )}
-                {provider.website && (
-                  <a
-                    href={provider.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-(--color-text-muted) hover:text-(--color-accent) transition-colors flex items-center gap-1"
-                  >
-                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                    Website
-                  </a>
-                )}
-              </div>
-
-              <p class="text-[11px] text-(--color-text-muted) truncate mt-1" title={provider.effectiveStatusUrl!}>
-                {provider.effectiveStatusUrl}
-              </p>
-            </div>
+    <div class="grid gap-4 lg:grid-cols-[minmax(0,2.2fr)_minmax(18rem,0.95fr)] mb-10">
+      <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-card) p-6">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.28em] text-(--color-text-muted) mb-2">Live Monitors</p>
+            <h2 class="text-2xl font-black text-(--color-text-primary)">Official signals, aggregated carefully</h2>
           </div>
-        ))}
+          <span class="rounded-full border border-white/10 bg-(--color-bg-tertiary) px-3 py-1 text-xs text-(--color-text-secondary)">
+            {monitoredProviders.length} monitored providers
+          </span>
+        </div>
+        <p class="text-sm text-(--color-text-secondary) max-w-3xl">
+          We prefer official JSON APIs and official feeds. If a provider only exposes a public status page, we use the page headline at a low cadence. If the provider blocks automation entirely, we keep a direct link instead of pretending we have live telemetry.
+        </p>
+      </div>
+
+      <div class="rounded-3xl border border-orange-500/20 bg-orange-500/[0.06] p-6">
+        <p class="text-[11px] uppercase tracking-[0.28em] text-orange-200/80 mb-2">Collection Policy</p>
+        <h2 class="text-lg font-black text-white mb-3">Status data should stay boring and trustworthy.</h2>
+        <ul class="space-y-2 text-sm text-orange-50/85">
+          <li>Official API when available.</li>
+          <li>Official RSS or Atom feed when available.</li>
+          <li>Official status page headline only when that is the stable public source.</li>
+          <li>Direct links only when automation is blocked.</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Providers without status pages -->
-    {providersWithoutStatus.length > 0 && (
-      <div class="mb-10">
-        <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">
-          Other Providers
-        </h2>
-        <p class="text-sm text-(--color-text-muted) mb-5">
-          {providersWithoutStatus.length} providers without a known dedicated status page. Check their main website or social channels for updates.
-        </p>
+    {monitoredProviders.length > 0 ? (
+      <div class="grid gap-5 lg:grid-cols-2 xl:grid-cols-3 mb-12">
+        {monitoredProviders.map((provider) => {
+          const providerHref = getProviderHref(provider);
+          const incidents = provider.activeIncidents.length > 0 ? provider.activeIncidents : provider.recentIncidents;
+          const incidentLabel = provider.activeIncidents.length > 0 ? 'Active incidents' : 'Latest incident notes';
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {providersWithoutStatus.map((provider) => (
-            <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 flex flex-col">
-              <!-- Provider header -->
-              <div class="flex items-center gap-3 mb-3">
-                <div
-                  class="w-3 h-3 rounded-full shrink-0"
-                  style={`background-color: ${provider.colour}`}
-                ></div>
-                <h3 class="font-semibold text-(--color-text-primary) truncate">
-                  {provider.name}
-                </h3>
-                <span class="text-[10px] px-2 py-0.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted) shrink-0 ml-auto">
-                  No status page
+          return (
+            <article class="rounded-[26px] border border-(--color-border) bg-(--color-bg-card) p-5 shadow-[0_16px_48px_rgba(0,0,0,0.18)]">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div class="min-w-0">
+                  <div class="flex items-center gap-3 mb-2">
+                    <span class={`h-3 w-3 rounded-full shrink-0 ${dotClasses(provider.overallStatus)}`}></span>
+                    <h3 class="text-lg font-black text-(--color-text-primary)">{provider.name}</h3>
+                  </div>
+                  <p class="text-sm text-(--color-text-secondary)">{provider.summary ?? provider.overallLabel}</p>
+                </div>
+                <span class={`shrink-0 rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${statusClasses(provider.overallStatus)}`}>
+                  {provider.overallLabel}
                 </span>
               </div>
 
-              <!-- Description -->
-              {provider.description && (
-                <p class="text-xs text-(--color-text-secondary) mb-4 line-clamp-2 flex-1">
-                  {provider.description}
-                </p>
-              )}
-              {!provider.description && <div class="flex-1"></div>}
+              <div class="grid gap-3 sm:grid-cols-2 mb-4 text-xs text-(--color-text-muted)">
+                <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-3">
+                  <div class="uppercase tracking-[0.18em] mb-1">Source</div>
+                  <div class="text-(--color-text-secondary)">{provider.sourceLabel}</div>
+                </div>
+                <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-3">
+                  <div class="uppercase tracking-[0.18em] mb-1">Last checked</div>
+                  <div class="text-(--color-text-secondary)">{formatUtc(provider.lastCheckedAt)}</div>
+                </div>
+              </div>
 
-              <!-- Links -->
-              <div class="flex items-center gap-3 text-xs mt-auto">
-                {provider.api_docs_url && (
-                  <a
-                    href={provider.api_docs_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-(--color-text-muted) hover:text-(--color-accent) transition-colors flex items-center gap-1"
-                  >
-                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                    API Docs
+              {provider.components.length > 0 && (
+                <div class="mb-4">
+                  <p class="text-[11px] uppercase tracking-[0.2em] text-(--color-text-muted) mb-2">Component watch</p>
+                  <div class="flex flex-wrap gap-2">
+                    {provider.components.slice(0, 6).map((component) => (
+                      <span class={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1 text-[11px] ${componentStatusClasses(component.status)}`}>
+                        <span class="truncate max-w-[10rem]">{component.name}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {incidents.length > 0 && (
+                <div class="mb-4 rounded-2xl border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+                  <p class="text-[11px] uppercase tracking-[0.2em] text-(--color-text-muted) mb-3">{incidentLabel}</p>
+                  <div class="space-y-3">
+                    {incidents.slice(0, 3).map((incident) => (
+                      <div class="border-b border-(--color-border)/70 pb-3 last:border-b-0 last:pb-0">
+                        <div class="flex items-start justify-between gap-3">
+                          <div class="min-w-0">
+                            <p class="text-sm font-semibold text-(--color-text-primary)">{incident.title}</p>
+                            {incident.summary && (
+                              <p class="text-xs text-(--color-text-secondary) mt-1">{incident.summary}</p>
+                            )}
+                          </div>
+                          <span class="shrink-0 text-[11px] text-(--color-text-muted)">{formatIncidentTime(incident.updatedAt || incident.startedAt)}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {provider.notes && (
+                <p class="text-xs text-(--color-text-muted) mb-4">{provider.notes}</p>
+              )}
+
+              <div class="flex flex-wrap items-center gap-3 text-xs">
+                <a
+                  href={provider.statusPageUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+                >
+                  <span>Open official status page</span>
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+                {providerHref && (
+                  <a href={providerHref} class="text-(--color-text-muted) hover:text-(--color-accent) transition-colors">
+                    Lab profile
                   </a>
                 )}
-                {provider.website && (
+                {provider.websiteUrl && (
                   <a
-                    href={provider.website}
+                    href={provider.websiteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-(--color-text-muted) hover:text-(--color-accent) transition-colors flex items-center gap-1"
+                    class="text-(--color-text-muted) hover:text-(--color-accent) transition-colors"
                   >
-                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
                     Website
                   </a>
                 )}
               </div>
-            </div>
+            </article>
+          );
+        })}
+      </div>
+    ) : (
+      <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-card) p-6 mb-12">
+        <h2 class="text-xl font-black text-(--color-text-primary) mb-2">Status snapshot not generated yet</h2>
+        <p class="text-sm text-(--color-text-secondary)">
+          The live provider-status cache is missing, so this page can only show direct links right now. Run the status refresh script or workflow to generate the snapshot.
+        </p>
+      </div>
+    )}
+
+    {linkOnlyProviders.length > 0 && (
+      <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-card) p-6 mb-10">
+        <div class="flex items-center justify-between gap-4 mb-4">
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.28em] text-(--color-text-muted) mb-2">Direct Links</p>
+            <h2 class="text-xl font-black text-(--color-text-primary)">Providers we link, but do not poll</h2>
+          </div>
+          <span class="rounded-full border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-1 text-xs text-(--color-text-secondary)">
+            {linkOnlyProviders.length} provider{linkOnlyProviders.length === 1 ? '' : 's'}
+          </span>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {linkOnlyProviders.map((provider) => (
+            <article class="rounded-2xl border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="h-3 w-3 rounded-full" style={`background-color: ${provider.colour}`}></span>
+                <h3 class="font-semibold text-(--color-text-primary)">{provider.name}</h3>
+              </div>
+              <p class="text-sm text-(--color-text-secondary) mb-3">{provider.summary}</p>
+              {provider.notes && <p class="text-xs text-(--color-text-muted) mb-3">{provider.notes}</p>}
+              <a
+                href={provider.statusPageUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+              >
+                Open official status page
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </article>
           ))}
         </div>
       </div>
     )}
 
-    <!-- Quick reference table -->
-    <div class="mb-10">
-      <h2 class="text-xl font-bold text-(--color-text-primary) mb-2">
-        Quick Reference
-      </h2>
-      <p class="text-sm text-(--color-text-muted) mb-5">
-        All providers at a glance with direct links to status pages, API docs, and websites.
-      </p>
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden mb-10">
+      <div class="px-6 py-5 border-b border-(--color-border)">
+        <p class="text-[11px] uppercase tracking-[0.28em] text-(--color-text-muted) mb-2">Official Directory</p>
+        <h2 class="text-2xl font-black text-(--color-text-primary)">Tracked providers with known status pages</h2>
+        <p class="text-sm text-(--color-text-secondary) mt-2 max-w-3xl">
+          This directory covers the broader site catalog. Not every provider has a public machine-readable status source, but if we know the official page, it is linked here.
+        </p>
+      </div>
 
-      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="border-b border-(--color-border)">
-                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Provider</th>
-                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Status Page</th>
-                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">API Docs</th>
-                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Website</th>
-              </tr>
-            </thead>
-            <tbody>
-              {providersWithEffectiveStatus.map((p) => (
-                <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Provider</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Status page</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Site data</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            {providersWithEffectiveStatus.map((provider) => {
+              const liveEntry = snapshot.providers.find((entry) => entry.providerId === provider.id);
+              return (
+                <tr class="border-b border-(--color-border)/60 hover:bg-(--color-bg-hover) transition-colors">
                   <td class="py-3 px-4">
-                    <a href={`${base}labs/${p.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                      <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${p.colour}`}></span>
-                      {p.name}
+                    <a href={`${base}labs/${provider.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                      <span class="w-2.5 h-2.5 rounded-full shrink-0" style={`background-color: ${provider.colour}`}></span>
+                      {provider.name}
                     </a>
                   </td>
                   <td class="py-3 px-4">
-                    {p.effectiveStatusUrl ? (
-                      <a
-                        href={p.effectiveStatusUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors inline-flex items-center gap-1"
-                      >
-                        View status
-                        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
+                    <a
+                      href={provider.effectiveStatusUrl!}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors inline-flex items-center gap-1"
+                    >
+                      View status
+                      <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </td>
+                  <td class="py-3 px-4">
+                    {liveEntry ? (
+                      <span class={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1 text-[11px] ${statusClasses(liveEntry.overallStatus)}`}>
+                        <span class={`h-2 w-2 rounded-full ${dotClasses(liveEntry.overallStatus)}`}></span>
+                        {liveEntry.fetchState === 'live' ? 'Live monitor' : 'Link only'}
+                      </span>
                     ) : (
-                      <span class="text-xs text-(--color-text-muted)">&mdash;</span>
+                      <span class="text-xs text-(--color-text-muted)">Directory only</span>
                     )}
                   </td>
                   <td class="py-3 px-4">
-                    {p.api_docs_url ? (
+                    {provider.website ? (
                       <a
-                        href={p.api_docs_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-xs text-(--color-accent) hover:text-(--color-accent-hover) transition-colors inline-flex items-center gap-1"
-                      >
-                        Documentation
-                        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                      </a>
-                    ) : (
-                      <span class="text-xs text-(--color-text-muted)">&mdash;</span>
-                    )}
-                  </td>
-                  <td class="py-3 px-4">
-                    {p.website ? (
-                      <a
-                        href={p.website}
+                        href={provider.website}
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-xs text-(--color-text-muted) hover:text-(--color-accent) transition-colors"
                       >
-                        {p.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                        {provider.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
                       </a>
                     ) : (
-                      <span class="text-xs text-(--color-text-muted)">&mdash;</span>
+                      <span class="text-xs text-(--color-text-muted)">-</span>
                     )}
                   </td>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <!-- Tips section -->
-    <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
-      <h2 class="text-sm font-semibold text-(--color-accent) mb-3">Tips During Outages</h2>
+    <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-card) p-6">
+      <h2 class="text-lg font-black text-(--color-text-primary) mb-3">During provider outages</h2>
       <ul class="text-sm text-(--color-text-secondary) space-y-2 list-disc list-inside">
-        <li>Check the official status page first -- most providers update within minutes of a detected issue</li>
-        <li>Follow providers on X/Twitter for real-time outage announcements and resolution updates</li>
-        <li>Consider using <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">alternative models</a> as a fallback when your primary provider is down</li>
-        <li>API aggregators like OpenRouter can automatically route requests to another provider if one goes offline</li>
-        <li>For mission-critical applications, implement retry logic with exponential backoff and provider failover</li>
+        <li>Check the official status page first. Providers usually post there before social channels settle down.</li>
+        <li>Use the composite leaderboard and model comparison pages to line up fallback providers in advance.</li>
+        <li>If a primary lab is down, route critical workflows to an alternative endpoint rather than waiting on one provider.</li>
+        <li>For production systems, pair retries with provider failover and clear incident messaging for users.</li>
       </ul>
     </div>
   </section>
 </BaseLayout>
+

@@ -38,6 +38,7 @@ async function main() {
     { name: 'Creative Benchmarks (AA Arenas)', script: 'scripts/scrapers/creative-benchmarks.ts' },
     { name: 'Quality Score Calculator', script: 'scripts/scrapers/quality-scores.ts' },
     { name: 'News (RSS + official blogs)', script: 'scripts/scrapers/news.ts' },
+    { name: 'Provider Status (official APIs + feeds)', script: 'scripts/scrapers/status-pages.mjs' },
     { name: 'Jobs Market (public ATS boards)', script: 'scripts/scrapers/jobs.ts' },
   ];
 
@@ -81,3 +82,5 @@ async function main() {
 }
 
 main().catch(console.error);
+
+

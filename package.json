@@ -15,6 +15,7 @@
     "scrape:benchmarks": "tsx scripts/scrapers/benchmarks.ts",
     "scrape:speed": "tsx scripts/scrapers/speed.ts",
     "scrape:news": "tsx scripts/scrapers/news.ts",
+    "scrape:status": "node scripts/scrapers/status-pages.mjs",
     "scrape:jobs": "tsx scripts/scrapers/jobs.ts",
     "check:staleness": "tsx scripts/check-staleness.ts",
     "import:news": "tsx scripts/import-news-digests.ts",
@@ -49,3 +50,6 @@
     "tsx": "^4.21.0"
   }
 }
+
+
+
