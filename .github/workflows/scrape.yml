@@ -1,6 +1,9 @@
 name: Update data (scrape + rebuild)
 
 on:
+  schedule:
+    - cron: '15 6 * * *'
+    - cron: '15 18 * * *'
   workflow_dispatch:
     inputs:
       force_rebuild:

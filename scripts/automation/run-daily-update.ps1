@@ -84,6 +84,40 @@ function Get-WorkingTreeChanges {
   )
 }
 
+function Get-ChangePath {
+  param(
+    [string]$StatusLine
+  )
+
+  if ([string]::IsNullOrWhiteSpace($StatusLine)) {
+    return ''
+  }
+
+  if ($StatusLine.Length -le 3) {
+    return $StatusLine.Trim()
+  }
+
+  return $StatusLine.Substring(3).Trim()
+}
+
+function Test-IgnorableGeneratedChange {
+  param(
+    [string]$StatusLine
+  )
+
+  $path = Get-ChangePath $StatusLine
+  if ([string]::IsNullOrWhiteSpace($path)) {
+    return $false
+  }
+
+  $normalised = $path.Replace('\', '/')
+  return (
+    $normalised -eq 'src/data/news-feed-latest.json' -or
+    $normalised -match '^src/data/news-feed-\d{4}-\d{2}-\d{2}\.json$' -or
+    $normalised -match '^src/data/digest-\d{4}-\d{2}-\d{2}\.md$'
+  )
+}
+
 Push-Location $repoRoot
 
 try {
@@ -91,9 +125,16 @@ try {
   Ensure-SafeDirectory
 
   $existingChanges = Get-WorkingTreeChanges
-  if ($existingChanges.Count -gt 0) {
+  $blockingChanges = @($existingChanges | Where-Object { -not (Test-IgnorableGeneratedChange $_) })
+  $ignorableChanges = @($existingChanges | Where-Object { Test-IgnorableGeneratedChange $_ })
+
+  if ($ignorableChanges.Count -gt 0) {
+    Write-Log "Ignoring $($ignorableChanges.Count) generated news snapshot change(s) when checking tree cleanliness."
+  }
+
+  if ($blockingChanges.Count -gt 0) {
     Write-Log 'Working tree is not clean. Skipping automated run to avoid touching manual changes.' 'WARN'
-    $existingChanges | ForEach-Object {
+    $blockingChanges | ForEach-Object {
       Write-Log "Pending change: $_" 'WARN'
     }
     exit 0
