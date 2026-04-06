@@ -119,22 +119,18 @@ try {
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
   Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
 
-  try {
-    Invoke-Logged 'npm.cmd' @('run', 'check:staleness')
-  } catch {
-    Write-Log $_.Exception.Message 'WARN'
-    Write-Log 'Continuing despite staleness warnings.' 'WARN'
-  }
+  Invoke-Logged 'npm.cmd' @('run', 'check:staleness')
 
   Invoke-Logged 'npm.cmd' @('run', 'build')
 
-  $dbChanges = @(Invoke-Captured 'git' @('status', '--porcelain', '--', 'data/the-ai-resource-hub.db'))
-  if ($dbChanges.Count -eq 0) {
-    Write-Log 'No database changes detected. Nothing to commit.'
+  $publishPaths = @('data/the-ai-resource-hub.db', 'data/pg-cache')
+  $publishChanges = @(Invoke-Captured 'git' (@('status', '--porcelain', '--') + $publishPaths))
+  if ($publishChanges.Count -eq 0) {
+    Write-Log 'No publishable data changes detected. Nothing to commit.'
     exit 0
   }
 
-  Invoke-Logged 'git' @('add', 'data/the-ai-resource-hub.db')
+  Invoke-Logged 'git' (@('add') + $publishPaths)
 
   $commitMessage = "chore: local daily data refresh $(Get-Date -Format 'yyyy-MM-dd') [automated]"
   & git commit -m $commitMessage 2>&1 | ForEach-Object {

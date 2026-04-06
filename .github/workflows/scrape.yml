@@ -40,21 +40,26 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         timeout-minutes: 5
 
+      - name: Dump public cache from Postgres
+        if: ${{ secrets.DATABASE_URL != '' }}
+        run: npm run dump:pg
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
       - name: Run data staleness check
         run: npx tsx scripts/check-staleness.ts
         timeout-minutes: 1
-        continue-on-error: true
 
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet data/the-ai-resource-hub.db || echo "changed=true" >> "$GITHUB_OUTPUT"
+          git diff --quiet -- data/the-ai-resource-hub.db data/pg-cache || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated data
         if: steps.changes.outputs.changed == 'true' || inputs.force_rebuild == 'true'
         run: |
           git config user.name "The AI Resource Hub Bot"
           git config user.email "bot@theairesourcehub.com"
-          git add data/the-ai-resource-hub.db
+          git add data/the-ai-resource-hub.db data/pg-cache
           git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
           git push

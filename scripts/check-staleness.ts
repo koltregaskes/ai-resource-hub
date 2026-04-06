@@ -1,6 +1,6 @@
 #!/usr/bin/env npx tsx
 /**
- * Data staleness checker — flags outdated, missing, or suspect data.
+ * Data staleness checker - flags outdated, missing, or suspect data.
  *
  * Run: npx tsx scripts/check-staleness.ts
  *
@@ -9,20 +9,61 @@
  * - Speed data older than 30 days
  * - Benchmark scores with no source attribution
  * - Models with zero quality score
- * - Price discrepancies between OpenRouter and provider-direct data
+ * - Price anomalies
+ * - Missing current frontier models in the public cache
  *
- * Outputs a summary report. Non-zero exit code if critical issues found.
+ * Outputs a summary report. Non-zero exit code if critical issues are found.
  */
 import Database from 'better-sqlite3';
+import fs from 'node:fs';
 import path from 'node:path';
+import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry.ts';
 
 const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
+const PUBLIC_CACHE_MODELS_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'models.json');
 
 interface StaleModel {
   id: string;
   name: string;
   issue: string;
   detail: string;
+}
+
+interface PublicCacheModel {
+  id: string;
+  name?: string | null;
+  provider_name?: string | null;
+  status?: string | null;
+}
+
+function normalise(value: string | null | undefined): string {
+  return (value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function loadPublicCacheModels(): PublicCacheModel[] {
+  if (!fs.existsSync(PUBLIC_CACHE_MODELS_PATH)) return [];
+
+  try {
+    const raw = fs.readFileSync(PUBLIC_CACHE_MODELS_PATH, 'utf8');
+    return JSON.parse(raw) as PublicCacheModel[];
+  } catch (error) {
+    console.warn(`Failed to read public cache models at ${PUBLIC_CACHE_MODELS_PATH}:`, error);
+    return [];
+  }
+}
+
+function matchesRequirement(model: PublicCacheModel, requirement: FrontierModelRequirement): boolean {
+  const provider = normalise(model.provider_name);
+  const id = normalise(model.id);
+  const name = normalise(model.name);
+
+  const providerMatches = requirement.providerHints.some((hint) => provider.includes(normalise(hint)));
+  if (!providerMatches) return false;
+
+  return requirement.aliases.some((alias) => {
+    const expected = normalise(alias);
+    return id.includes(expected) || name.includes(expected);
+  });
 }
 
 function main() {
@@ -33,12 +74,12 @@ function main() {
   let warnings = 0;
   let criticals = 0;
 
-  console.log('═══════════════════════════════════════════════');
+  console.log('================================================');
   console.log('  Data Staleness & Accuracy Report');
   console.log(`  ${new Date().toISOString()}`);
-  console.log('═══════════════════════════════════════════════\n');
+  console.log('================================================\n');
 
-  // ─── 1. Stale Pricing (>48 hours) ─────────────────────────
+  // 1. Stale Pricing (>48 hours)
   const stalePricing = db.prepare(`
     SELECT id, name, pricing_updated
     FROM models
@@ -49,20 +90,20 @@ function main() {
   `).all() as Array<{ id: string; name: string; pricing_updated: string | null }>;
 
   if (stalePricing.length > 0) {
-    console.log(`⚠ STALE PRICING: ${stalePricing.length} models with pricing >48h old`);
-    for (const m of stalePricing.slice(0, 10)) {
-      const age = m.pricing_updated || 'never';
-      console.log(`    ${m.name}: last updated ${age}`);
-      issues.push({ id: m.id, name: m.name, issue: 'stale-pricing', detail: `Last updated: ${age}` });
+    console.log(`WARN STALE PRICING: ${stalePricing.length} models with pricing >48h old`);
+    for (const model of stalePricing.slice(0, 10)) {
+      const age = model.pricing_updated || 'never';
+      console.log(`    ${model.name}: last updated ${age}`);
+      issues.push({ id: model.id, name: model.name, issue: 'stale-pricing', detail: `Last updated: ${age}` });
     }
     if (stalePricing.length > 10) console.log(`    ... and ${stalePricing.length - 10} more`);
     warnings += stalePricing.length;
   } else {
-    console.log('✓ All model pricing is within 48 hours');
+    console.log('OK All model pricing is within 48 hours');
   }
   console.log();
 
-  // ─── 2. Stale Speed Data (>30 days) ───────────────────────
+  // 2. Stale Speed Data (>30 days)
   const staleSpeed = db.prepare(`
     SELECT id, name, speed_updated
     FROM models
@@ -74,19 +115,24 @@ function main() {
   `).all() as Array<{ id: string; name: string; speed_updated: string | null }>;
 
   if (staleSpeed.length > 0) {
-    console.log(`⚠ STALE SPEED: ${staleSpeed.length} models with speed data >30d old`);
-    for (const m of staleSpeed.slice(0, 5)) {
-      console.log(`    ${m.name}: last updated ${m.speed_updated || 'never'}`);
-      issues.push({ id: m.id, name: m.name, issue: 'stale-speed', detail: `Last updated: ${m.speed_updated || 'never'}` });
+    console.log(`WARN STALE SPEED: ${staleSpeed.length} models with speed data >30d old`);
+    for (const model of staleSpeed.slice(0, 5)) {
+      console.log(`    ${model.name}: last updated ${model.speed_updated || 'never'}`);
+      issues.push({
+        id: model.id,
+        name: model.name,
+        issue: 'stale-speed',
+        detail: `Last updated: ${model.speed_updated || 'never'}`,
+      });
     }
     if (staleSpeed.length > 5) console.log(`    ... and ${staleSpeed.length - 5} more`);
     warnings += staleSpeed.length;
   } else {
-    console.log('✓ All speed data is within 30 days');
+    console.log('OK All speed data is within 30 days');
   }
   console.log();
 
-  // ─── 3. Zero Quality Score ─────────────────────────────────
+  // 3. Zero Quality Score
   const zeroQuality = db.prepare(`
     SELECT id, name
     FROM models
@@ -96,18 +142,18 @@ function main() {
   `).all() as Array<{ id: string; name: string }>;
 
   if (zeroQuality.length > 0) {
-    console.log(`⚠ ZERO QUALITY: ${zeroQuality.length} active LLMs with quality_score = 0`);
-    for (const m of zeroQuality) {
-      console.log(`    ${m.name}`);
-      issues.push({ id: m.id, name: m.name, issue: 'zero-quality', detail: 'Quality score is 0' });
+    console.log(`WARN ZERO QUALITY: ${zeroQuality.length} active LLMs with quality_score = 0`);
+    for (const model of zeroQuality) {
+      console.log(`    ${model.name}`);
+      issues.push({ id: model.id, name: model.name, issue: 'zero-quality', detail: 'Quality score is 0' });
     }
     criticals += zeroQuality.length;
   } else {
-    console.log('✓ All active LLMs have quality scores');
+    console.log('OK All active LLMs have quality scores');
   }
   console.log();
 
-  // ─── 4. Benchmark Scores Without Sources ───────────────────
+  // 4. Benchmark Scores Without Sources
   const noSource = db.prepare(`
     SELECT bs.model_id, m.name, b.name AS benchmark_name
     FROM benchmark_scores bs
@@ -118,20 +164,24 @@ function main() {
   `).all() as Array<{ model_id: string; name: string; benchmark_name: string }>;
 
   if (noSource.length > 0) {
-    console.log(`⚠ NO SOURCE: ${noSource.length} benchmark scores without source attribution`);
-    for (const s of noSource.slice(0, 5)) {
-      console.log(`    ${s.name} / ${s.benchmark_name}`);
-      issues.push({ id: s.model_id, name: s.name, issue: 'no-benchmark-source', detail: `${s.benchmark_name} has no source` });
+    console.log(`WARN NO SOURCE: ${noSource.length} benchmark scores without source attribution`);
+    for (const score of noSource.slice(0, 5)) {
+      console.log(`    ${score.name} / ${score.benchmark_name}`);
+      issues.push({
+        id: score.model_id,
+        name: score.name,
+        issue: 'no-benchmark-source',
+        detail: `${score.benchmark_name} has no source`,
+      });
     }
     if (noSource.length > 5) console.log(`    ... and ${noSource.length - 5} more`);
     warnings += noSource.length;
   } else {
-    console.log('✓ All benchmark scores have source attribution');
+    console.log('OK All benchmark scores have source attribution');
   }
   console.log();
 
-  // ─── 5. Price Discrepancy Check ────────────────────────────
-  // Compare models that have both OpenRouter and provider-direct pricing in history
+  // 5. Price anomaly check
   const discrepancies = db.prepare(`
     SELECT
       m.id, m.name,
@@ -147,18 +197,23 @@ function main() {
   `).all() as Array<{ id: string; name: string; current_input: number; current_output: number; pricing_source: string }>;
 
   if (discrepancies.length > 0) {
-    console.log(`⚠ FREE PRICING SUSPECT: ${discrepancies.length} quality-scored models with $0 pricing`);
-    for (const d of discrepancies) {
-      console.log(`    ${d.name} (quality: scored, price: $0/$0)`);
-      issues.push({ id: d.id, name: d.name, issue: 'suspect-free-pricing', detail: 'Has quality score but $0 pricing' });
+    console.log(`WARN FREE PRICING SUSPECT: ${discrepancies.length} quality-scored models with $0 pricing`);
+    for (const model of discrepancies) {
+      console.log(`    ${model.name} (quality: scored, price: $0/$0)`);
+      issues.push({
+        id: model.id,
+        name: model.name,
+        issue: 'suspect-free-pricing',
+        detail: 'Has quality score but $0 pricing',
+      });
     }
     warnings += discrepancies.length;
   } else {
-    console.log('✓ No suspect free-pricing anomalies');
+    console.log('OK No suspect free-pricing anomalies');
   }
   console.log();
 
-  // ─── 6. Models Without Any Benchmarks ──────────────────────
+  // 6. Models Without Any Benchmarks
   const noBenchmarks = db.prepare(`
     SELECT m.id, m.name
     FROM models m
@@ -170,18 +225,23 @@ function main() {
   `).all() as Array<{ id: string; name: string }>;
 
   if (noBenchmarks.length > 0) {
-    console.log(`⚠ NO BENCHMARKS: ${noBenchmarks.length} high-quality LLMs without benchmark scores`);
-    for (const m of noBenchmarks) {
-      console.log(`    ${m.name} (quality: ${m.id})`);
-      issues.push({ id: m.id, name: m.name, issue: 'no-benchmarks', detail: 'Quality >= 80 but no benchmark scores' });
+    console.log(`WARN NO BENCHMARKS: ${noBenchmarks.length} high-quality LLMs without benchmark scores`);
+    for (const model of noBenchmarks) {
+      console.log(`    ${model.name} (quality: ${model.id})`);
+      issues.push({
+        id: model.id,
+        name: model.name,
+        issue: 'no-benchmarks',
+        detail: 'Quality >= 80 but no benchmark scores',
+      });
     }
     warnings += noBenchmarks.length;
   } else {
-    console.log('✓ All high-quality LLMs have benchmark scores');
+    console.log('OK All high-quality LLMs have benchmark scores');
   }
   console.log();
 
-  // ─── 7. Recent Scrape Log Health ───────────────────────────
+  // 7. Recent Scrape Log Health
   const recentErrors = db.prepare(`
     SELECT scraper, error_message, finished_at
     FROM scrape_log
@@ -191,27 +251,58 @@ function main() {
   `).all() as Array<{ scraper: string; error_message: string; finished_at: string }>;
 
   if (recentErrors.length > 0) {
-    console.log(`⚠ SCRAPER ERRORS: ${recentErrors.length} errors in last 24 hours`);
-    for (const e of recentErrors) {
-      console.log(`    ${e.scraper}: ${e.error_message} (${e.finished_at})`);
+    console.log(`WARN SCRAPER ERRORS: ${recentErrors.length} errors in last 24 hours`);
+    for (const error of recentErrors) {
+      console.log(`    ${error.scraper}: ${error.error_message} (${error.finished_at})`);
     }
     warnings += recentErrors.length;
   } else {
-    console.log('✓ No scraper errors in last 24 hours');
+    console.log('OK No scraper errors in last 24 hours');
   }
   console.log();
 
-  // ─── Summary ───────────────────────────────────────────────
-  console.log('═══════════════════════════════════════════════');
+  // 8. Public Cache Completeness
+  const publicCacheModels = loadPublicCacheModels()
+    .filter((model) => (model.status ?? 'active') !== 'retired');
+
+  if (publicCacheModels.length === 0) {
+    console.log('WARN PUBLIC CACHE: no public cache models found at data/pg-cache/models.json');
+    warnings++;
+  } else {
+    const missingFrontier = REQUIRED_FRONTIER_MODELS.filter((requirement) => (
+      !publicCacheModels.some((model) => matchesRequirement(model, requirement))
+    ));
+
+    if (missingFrontier.length > 0) {
+      console.log(`CRITICAL FRONTIER GAPS: ${missingFrontier.length} current frontier models missing from the public cache`);
+      for (const requirement of missingFrontier) {
+        console.log(`    ${requirement.name} (required as of ${requirement.requiredAsOf})`);
+        console.log(`      Source: ${requirement.sourceUrl}`);
+        issues.push({
+          id: `public-cache:${requirement.name}`,
+          name: requirement.name,
+          issue: 'missing-frontier-model',
+          detail: `Missing from public cache models.json (required as of ${requirement.requiredAsOf})`,
+        });
+      }
+      criticals += missingFrontier.length;
+    } else {
+      console.log('OK Public cache includes all required frontier models');
+    }
+  }
+  console.log();
+
+  // Summary
+  console.log('================================================');
   console.log(`  Summary: ${criticals} critical, ${warnings} warnings`);
   console.log(`  Total issues: ${issues.length}`);
-  console.log('═══════════════════════════════════════════════');
+  console.log('================================================');
 
   db.close();
 
-  // Exit with non-zero if critical issues found (but don't fail the workflow)
   if (criticals > 0) {
-    console.log('\n⛔ Critical issues found — manual review recommended');
+    console.log('\nBLOCK: Critical issues found - manual review required');
+    process.exitCode = 1;
   }
 }
 
