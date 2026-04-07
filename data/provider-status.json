@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-07T12:05:54.414Z",
+  "generatedAt": "2026-04-07T14:03:04.692Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T12:05:53.114Z",
+      "lastCheckedAt": "2026-04-07T14:03:00.863Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T12:05:53.777Z",
+      "lastCheckedAt": "2026-04-07T14:03:01.499Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T12:05:53.291Z",
+      "lastCheckedAt": "2026-04-07T14:03:00.974Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T12:05:54.169Z",
+      "lastCheckedAt": "2026-04-07T14:03:01.612Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T12:05:53.169Z",
+      "lastCheckedAt": "2026-04-07T14:03:00.840Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T12:05:53.511Z",
+      "lastCheckedAt": "2026-04-07T14:03:04.685Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T12:05:53.157Z",
+      "lastCheckedAt": "2026-04-07T14:03:00.741Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T12:05:54.407Z",
+      "lastCheckedAt": "2026-04-07T14:03:01.987Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -430,7 +430,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-06T19:03:24.000Z",
+          "id": "together-feed-0-2026-04-07T13:14:00.000Z",
+          "title": "FLUX.1 Krea [dev] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-07T13:14:00.000Z",
+          "updatedAt": "2026-04-07T13:14:00.000Z",
+          "resolvedAt": "2026-04-07T13:14:00.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-07T13:00:52.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-07T13:00:52.000Z",
+          "updatedAt": "2026-04-07T13:00:52.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-06T19:03:24.000Z",
           "title": "FLUX.1 [schnell] recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -441,7 +463,7 @@
           "summary": "FLUX.1 [schnell] recovered"
         },
         {
-          "id": "together-feed-1-2026-04-06T18:23:19.000Z",
+          "id": "together-feed-3-2026-04-06T18:23:19.000Z",
           "title": "FLUX.1 [schnell] went down",
           "status": "investigating",
           "impact": "major",
@@ -450,28 +472,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "FLUX.1 [schnell] went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-03T16:27:14.000Z",
-          "title": "Qwen3.5 9B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-03T16:27:14.000Z",
-          "updatedAt": "2026-04-03T16:27:14.000Z",
-          "resolvedAt": "2026-04-03T16:27:14.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-03T16:13:52.000Z",
-          "title": "Qwen3.5 9B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-03T16:13:52.000Z",
-          "updatedAt": "2026-04-03T16:13:52.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B went down"
         }
       ]
     },
