@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-04-07T11:16:07.107Z",
+  "generatedAt": "2026-04-07T12:05:54.414Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T11:16:05.318Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Conversations",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Voice mode",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Agent",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Connectors/Apps",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Compliance API",
-          "status": "partial_outage"
-        },
-        {
-          "name": "ChatGPT Atlas",
-          "status": "partial_outage"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KNKQQ4R06K00RDTNXZVX7SFC",
-          "title": "Some users may experience issues accessing the ChatGPT website on VPN",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-04-07T10:27:25.000Z",
-          "updatedAt": "2026-04-07T11:00:45.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KNKQQ4R06K00RDTNXZVX7SFC",
-          "title": "Some users may experience issues accessing the ChatGPT website on VPN",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-04-07T10:27:25.000Z",
-          "updatedAt": "2026-04-07T11:00:45.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KNH45H33H4J553XBG6TJ3PQF",
-          "title": "GET /v1/responses endpoint is currently down and unable to serve requests",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-04-06T10:07:16.000Z",
-          "updatedAt": "2026-04-06T10:39:36.000Z",
-          "resolvedAt": "2026-04-06T10:39:36.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KNGPM84F5G72B8Y7ASYNB11H",
-          "title": "Some users may experience empty response from ChatGPT in web",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-06T06:10:38.000Z",
-          "updatedAt": "2026-04-06T08:35:49.000Z",
-          "resolvedAt": "2026-04-06T08:35:49.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KN78XN18M5VB6DSRTCWMJRYN",
-          "title": "ChatGPT Dictation Elevated Error Rate",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-04-02T14:17:56.000Z",
-          "updatedAt": "2026-04-02T17:49:44.000Z",
-          "resolvedAt": "2026-04-02T17:49:44.000Z",
-          "summary": null
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -109,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T11:16:05.377Z",
+      "lastCheckedAt": "2026-04-07T12:05:53.114Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T11:16:06.159Z",
+      "lastCheckedAt": "2026-04-07T12:05:53.777Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T11:16:07.100Z",
+      "lastCheckedAt": "2026-04-07T12:05:53.291Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T11:16:06.636Z",
+      "lastCheckedAt": "2026-04-07T12:05:54.169Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T11:16:05.448Z",
+      "lastCheckedAt": "2026-04-07T12:05:53.169Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T11:16:05.948Z",
+      "lastCheckedAt": "2026-04-07T12:05:53.511Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -420,6 +323,92 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-07T12:05:53.157Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KNKQQ4R06K00RDTNXZVX7SFC",
+          "title": "Some users may experience issues accessing the ChatGPT website on VPN",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-07T10:27:25.000Z",
+          "updatedAt": "2026-04-07T11:49:38.000Z",
+          "resolvedAt": "2026-04-07T11:49:38.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KNH45H33H4J553XBG6TJ3PQF",
+          "title": "GET /v1/responses endpoint is currently down and unable to serve requests",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-06T10:07:16.000Z",
+          "updatedAt": "2026-04-06T10:39:36.000Z",
+          "resolvedAt": "2026-04-06T10:39:36.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KNGPM84F5G72B8Y7ASYNB11H",
+          "title": "Some users may experience empty response from ChatGPT in web",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-06T06:10:38.000Z",
+          "updatedAt": "2026-04-06T08:35:49.000Z",
+          "resolvedAt": "2026-04-06T08:35:49.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KN78XN18M5VB6DSRTCWMJRYN",
+          "title": "ChatGPT Dictation Elevated Error Rate",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-02T14:17:56.000Z",
+          "updatedAt": "2026-04-02T17:49:44.000Z",
+          "resolvedAt": "2026-04-02T17:49:44.000Z",
+          "summary": null
+        }
+      ]
     },
     {
       "id": "together",
@@ -432,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-07T11:16:06.572Z",
+      "lastCheckedAt": "2026-04-07T12:05:54.407Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
