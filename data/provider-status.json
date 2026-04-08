@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-08T05:59:20.857Z",
+  "generatedAt": "2026-04-08T07:54:43.190Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,39 +12,62 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T05:59:19.678Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-04-08T07:54:41.999Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "platform.claude.com (formerly console.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "lhws0phdvzz3",
+          "title": "Sonnet 4.6 elevated rate of errors",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-08T06:23:25.066Z",
+          "updatedAt": "2026-04-08T07:06:50.258Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/9p1s3snnkxrj",
+          "summary": "We are continuing to investigate this issue."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "lhws0phdvzz3",
+          "title": "Sonnet 4.6 elevated rate of errors",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-08T06:23:25.066Z",
+          "updatedAt": "2026-04-08T07:06:50.258Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/9p1s3snnkxrj",
+          "summary": "We are continuing to investigate this issue."
+        },
         {
           "id": "124yr07585k9",
           "title": "Elevated errors on Claude.ai",
@@ -77,17 +100,6 @@
           "resolvedAt": "2026-04-06T17:16:41.222Z",
           "url": "https://stspg.io/727c89jg5cdb",
           "summary": "From 15:00–16:30 UTC on April 6, we saw elevated errors on login for Claude.ai and Claude Code. This issue also affected some Claude.ai conversations and other product functionali..."
-        },
-        {
-          "id": "7n7xgqws441v",
-          "title": "Sonnet 4.6 and Opus 4.6 elevated error rate",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-04T17:30:00.000Z",
-          "updatedAt": "2026-04-04T18:24:55.278Z",
-          "resolvedAt": "2026-04-04T17:30:00.000Z",
-          "url": "https://stspg.io/bppjxlqtspvj",
-          "summary": "Between 10:09 and 10:31 PDT, Sonnet 4.6 and Opus 4.6 experienced elevated error rates across most product surfaces."
         }
       ]
     },
@@ -102,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T05:59:20.300Z",
+      "lastCheckedAt": "2026-04-08T07:54:42.657Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T05:59:19.761Z",
+      "lastCheckedAt": "2026-04-08T07:54:42.126Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T05:59:20.850Z",
+      "lastCheckedAt": "2026-04-08T07:54:43.055Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T05:59:19.712Z",
+      "lastCheckedAt": "2026-04-08T07:54:41.975Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T05:59:20.079Z",
+      "lastCheckedAt": "2026-04-08T07:54:42.194Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +347,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T05:59:19.564Z",
+      "lastCheckedAt": "2026-04-08T07:54:41.985Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +433,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T05:59:20.680Z",
+      "lastCheckedAt": "2026-04-08T07:54:43.183Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -430,7 +442,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-07T23:27:04.000Z",
+          "id": "together-feed-0-2026-04-08T06:13:58.000Z",
+          "title": "FLUX.1 Krea [dev] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-08T06:13:58.000Z",
+          "updatedAt": "2026-04-08T06:13:58.000Z",
+          "resolvedAt": "2026-04-08T06:13:58.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-08T06:01:00.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-08T06:01:00.000Z",
+          "updatedAt": "2026-04-08T06:01:00.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-07T23:27:04.000Z",
           "title": "Qwen3 235B A22B Instruct 2507 Throughput recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -441,7 +475,7 @@
           "summary": "Qwen3 235B A22B Instruct 2507 Throughput recovered"
         },
         {
-          "id": "together-feed-1-2026-04-07T23:01:37.000Z",
+          "id": "together-feed-3-2026-04-07T23:01:37.000Z",
           "title": "ZAI GLM 5 FP4 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -450,28 +484,6 @@
           "resolvedAt": "2026-04-07T23:01:37.000Z",
           "url": "https://status.together.ai/",
           "summary": "ZAI GLM 5 FP4 recovered"
-        },
-        {
-          "id": "together-feed-2-2026-04-07T22:51:03.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-07T22:51:03.000Z",
-          "updatedAt": "2026-04-07T22:51:03.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-07T22:11:26.000Z",
-          "title": "ZAI GLM 5 FP4 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-07T22:11:26.000Z",
-          "updatedAt": "2026-04-07T22:11:26.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 went down"
         }
       ]
     },
