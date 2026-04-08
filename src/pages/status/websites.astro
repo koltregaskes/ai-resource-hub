@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  websiteEstateChecklistItems,
+  websiteEstateSites,
+  type WebsiteEstateChecklistOwner,
+  type WebsiteEstateChecklistStatus,
+} from '../../data/website-estate-checklist';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const checklistOwners: WebsiteEstateChecklistOwner[] = ['Codex', 'User', 'Shared'];
+
+const statusMeta: Record<WebsiteEstateChecklistStatus, { symbol: string; label: string; classes: string }> = {
+  done: {
+    symbol: 'OK',
+    label: 'Done',
+    classes: 'border-emerald-500/35 bg-emerald-500/12 text-emerald-200',
+  },
+  review: {
+    symbol: '!',
+    label: 'Needs review',
+    classes: 'border-amber-500/35 bg-amber-500/12 text-amber-100',
+  },
+  missing: {
+    symbol: 'X',
+    label: 'Missing',
+    classes: 'border-red-500/35 bg-red-500/12 text-red-200',
+  },
+};
+
+const ownerMeta: Record<WebsiteEstateChecklistOwner, { classes: string; detail: string }> = {
+  Codex: {
+    classes: 'border-sky-500/35 bg-sky-500/12 text-sky-100',
+    detail: 'Repo and implementation work we should keep current in code.',
+  },
+  User: {
+    classes: 'border-violet-500/35 bg-violet-500/12 text-violet-100',
+    detail: 'Registrar, GitHub account, or other manual platform settings on your side.',
+  },
+  Shared: {
+    classes: 'border-orange-500/35 bg-orange-500/12 text-orange-100',
+    detail: 'Checks that need both build work and a human review pass.',
+  },
+};
+
+const totalCells = websiteEstateChecklistItems.length * websiteEstateSites.length;
+const statusCounts = websiteEstateChecklistItems.reduce(
+  (counts, item) => {
+    websiteEstateSites.forEach((site) => {
+      counts[item.statuses[site.slug]] += 1;
+    });
+    return counts;
+  },
+  { done: 0, review: 0, missing: 0 } as Record<WebsiteEstateChecklistStatus, number>,
+);
+
+const siteSummaries = websiteEstateSites.map((site) => {
+  const counts = websiteEstateChecklistItems.reduce(
+    (summary, item) => {
+      summary[item.statuses[site.slug]] += 1;
+      return summary;
+    },
+    { done: 0, review: 0, missing: 0 } as Record<WebsiteEstateChecklistStatus, number>,
+  );
+
+  return {
+    ...site,
+    counts,
+    score: `${counts.done}/${websiteEstateChecklistItems.length}`,
+  };
+});
+---
+
+<BaseLayout
+  title="Website Estate Checklist - The AI Resource Hub"
+  description="A generic cross-site checklist for accessibility, mobile readiness, tags, repo hygiene, and platform settings across the active website estate."
+>
+  <section class="max-w-[1500px] mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}status/`} class="transition-colors hover:text-(--color-text-secondary)">Provider Status</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Website Estate</span>
+    </nav>
+
+    <div class="relative overflow-hidden rounded-[32px] border border-(--color-border-strong) bg-(--color-bg-secondary) mb-8 shadow-[0_24px_64px_rgba(0,0,0,0.14)]">
+      <div class="hero-ruling opacity-35"></div>
+      <div class="editorial-burst editorial-burst-left"></div>
+      <div class="editorial-burst editorial-burst-right"></div>
+      <div class="relative grid gap-8 px-6 py-8 sm:px-8 lg:grid-cols-[minmax(0,1.45fr)_minmax(18rem,0.92fr)] lg:items-end lg:px-10 lg:py-10">
+        <div class="max-w-3xl">
+          <p class="mb-3 text-[11px] uppercase tracking-[0.3em] text-(--color-accent-muted)">Website Estate Control Board</p>
+          <h1 class="max-w-3xl text-3xl font-black leading-[1.02] text-(--color-text-primary) sm:text-4xl lg:text-5xl">
+            One generic checklist for the things every site should keep getting right.
+          </h1>
+          <p class="mt-4 max-w-2xl text-sm leading-relaxed text-(--color-text-secondary) sm:text-base">
+            This board is intentionally generic. It is for recurring launch hygiene across the estate: accessibility, mobile review, tags, repo docs, deployment plumbing, and manual platform settings. Bespoke bugs still belong in the relevant site session.
+          </p>
+        </div>
+
+        <div class="glass-panel rounded-[28px] p-5">
+          <p class="text-[11px] uppercase tracking-[0.26em] text-(--color-text-muted)">How to read it</p>
+          <div class="mt-4 space-y-3 text-sm text-(--color-text-secondary)">
+            <p><span class="font-semibold text-(--color-text-primary)">OK</span> means the item is present or recently verified.</p>
+            <p><span class="font-semibold text-(--color-text-primary)">!</span> means it needs a review pass or a manual platform check.</p>
+            <p><span class="font-semibold text-(--color-text-primary)">X</span> means the gap is visible enough that we should treat it as missing.</p>
+          </div>
+          <a href={`${base}news/pipeline/`} class="mt-5 inline-flex items-center gap-2 text-sm text-(--color-accent) transition-colors hover:text-(--color-accent-hover)">
+            Open the news pipeline board
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4 mb-10">
+      <div class="glass-panel rounded-[24px] p-5">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-(--color-text-muted)">Estate Sites</p>
+        <div class="mt-3 text-3xl font-black text-(--color-text-primary)">{websiteEstateSites.length}</div>
+        <p class="mt-2 text-xs text-(--color-text-muted)">Active website repos currently tracked in the estate manifest.</p>
+      </div>
+      <div class="glass-panel rounded-[24px] p-5">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-(--color-text-muted)">Checklist Rows</p>
+        <div class="mt-3 text-3xl font-black text-(--color-text-primary)">{websiteEstateChecklistItems.length}</div>
+        <p class="mt-2 text-xs text-(--color-text-muted)">Generic items we should re-check across every site.</p>
+      </div>
+      <div class="glass-panel rounded-[24px] p-5">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-(--color-text-muted)">Needs Review</p>
+        <div class="mt-3 text-3xl font-black text-(--color-text-primary)">{statusCounts.review}</div>
+        <p class="mt-2 text-xs text-(--color-text-muted)">Cells that still want either a human pass or a manual setting check.</p>
+      </div>
+      <div class="glass-panel rounded-[24px] p-5">
+        <p class="text-[11px] uppercase tracking-[0.24em] text-(--color-text-muted)">Visible Gaps</p>
+        <div class="mt-3 text-3xl font-black text-(--color-text-primary)">{statusCounts.missing}</div>
+        <p class="mt-2 text-xs text-(--color-text-muted)">{statusCounts.done} of {totalCells} cells are currently marked done.</p>
+      </div>
+    </div>
+
+    <div class="grid gap-4 xl:grid-cols-[minmax(0,2.1fr)_minmax(18rem,0.95fr)] mb-10">
+      <div class="rounded-[28px] border border-(--color-border) bg-(--color-bg-card) p-6">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between mb-4">
+          <div>
+            <p class="text-[11px] uppercase tracking-[0.28em] text-(--color-text-muted)">Site Snapshot</p>
+            <h2 class="mt-2 text-2xl font-black text-(--color-text-primary)">Quick score by website</h2>
+          </div>
+          <span class="badge">Generic checklist only</span>
+        </div>
+        <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {siteSummaries.map((site) => (
+            <article class="rounded-[22px] border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <h3 class="text-base font-semibold text-(--color-text-primary)">{site.name}</h3>
+                  <p class="mt-1 text-xs text-(--color-text-muted)">{site.score} checks currently marked done</p>
+                </div>
+                <span class="badge">{site.shortName}</span>
+              </div>
+              <div class="mt-4 grid grid-cols-3 gap-2 text-center text-xs">
+                <div class="rounded-2xl border border-emerald-500/25 bg-emerald-500/10 px-2 py-3 text-emerald-100">
+                  <div class="text-lg font-black">{site.counts.done}</div>
+                  <div>Done</div>
+                </div>
+                <div class="rounded-2xl border border-amber-500/25 bg-amber-500/10 px-2 py-3 text-amber-100">
+                  <div class="text-lg font-black">{site.counts.review}</div>
+                  <div>Review</div>
+                </div>
+                <div class="rounded-2xl border border-red-500/25 bg-red-500/10 px-2 py-3 text-red-100">
+                  <div class="text-lg font-black">{site.counts.missing}</div>
+                  <div>Missing</div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-[28px] border border-(--color-border-accent) bg-(--color-accent-glow) p-6">
+        <p class="text-[11px] uppercase tracking-[0.28em] text-(--color-accent)">Owner guide</p>
+        <h2 class="mt-2 text-xl font-black text-(--color-text-primary)">Who owns what</h2>
+        <div class="mt-4 space-y-3">
+          {checklistOwners.map((owner) => (
+            <div class="rounded-[20px] border border-(--color-border) bg-(--color-bg-primary)/65 p-4">
+              <div class="flex items-center gap-3">
+                <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${ownerMeta[owner].classes}`}>
+                  {owner}
+                </span>
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-(--color-text-secondary)">{ownerMeta[owner].detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="table-scroll-container rounded-[28px] border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+      <table class="min-w-[1100px] w-full border-collapse text-left text-sm">
+        <thead>
+          <tr class="border-b border-(--color-border)">
+            <th class="sticky left-0 z-20 w-[31rem] bg-(--color-bg-card) px-5 py-4 font-semibold text-(--color-text-primary)">Checklist item</th>
+            {websiteEstateSites.map((site) => (
+              <th class="min-w-[8rem] px-4 py-4 font-semibold text-(--color-text-primary) text-center">
+                <div>{site.shortName}</div>
+                <div class="mt-1 text-[11px] font-medium uppercase tracking-[0.16em] text-(--color-text-muted)">{site.name}</div>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {websiteEstateChecklistItems.map((item) => (
+            <tr class="border-b border-(--color-border)/70 align-top transition-colors hover:bg-(--color-bg-tertiary)/65">
+              <td class="sticky left-0 z-10 bg-(--color-bg-card) px-5 py-5">
+                <p class="text-[11px] uppercase tracking-[0.24em] text-(--color-text-muted)">{item.category}</p>
+                <div class="mt-2 flex flex-wrap items-center gap-2">
+                  <h3 class="text-base font-semibold text-(--color-text-primary)">{item.label}</h3>
+                  <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${ownerMeta[item.owner].classes}`}>
+                    {item.owner}
+                  </span>
+                  <span class="rounded-full border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-(--color-text-secondary)">
+                    {item.cadence}
+                  </span>
+                </div>
+                <p class="mt-3 max-w-3xl text-sm leading-relaxed text-(--color-text-secondary)">{item.detail}</p>
+              </td>
+
+              {websiteEstateSites.map((site) => {
+                const status = item.statuses[site.slug];
+                const meta = statusMeta[status];
+
+                return (
+                  <td class="px-4 py-5 text-center">
+                    <div class="flex justify-center">
+                      <span
+                        class={`inline-flex min-w-[4.25rem] items-center justify-center rounded-full border px-3 py-2 text-sm font-semibold ${meta.classes}`}
+                        title={meta.label}
+                        aria-label={`${site.name}: ${meta.label}`}
+                      >
+                        <span class="mr-1.5 text-base leading-none">{meta.symbol}</span>
+                        <span>{meta.label}</span>
+                      </span>
+                    </div>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 rounded-[28px] border border-(--color-border) bg-(--color-bg-card) p-6">
+      <h2 class="text-lg font-black text-(--color-text-primary)">Scope note</h2>
+      <p class="mt-3 max-w-4xl text-sm leading-relaxed text-(--color-text-secondary)">
+        This board is a generic estate checklist, not a per-site bug log. The statuses are based on current repo evidence and the latest manager-side verification rounds. A warning does not always mean something is broken; often it means the next human review or platform setting check still needs to happen.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -159,7 +159,7 @@ const papers = [
         References & Sources
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        Every data point on this site has a source. This page lists all external data sources, academic papers, and benchmark methodologies we reference. See our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">methodology page</a> for how we score and rank models.
+        Every data point on this site has a source. This page lists all external data sources, academic papers, and benchmark methodologies we reference. See our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">methodology page</a> for how we score and rank models, and our <a href={`${base}collection-policy/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">collection policy</a> for what we will and will not ingest.
       </p>
     </div>
 
@@ -168,13 +168,14 @@ const papers = [
       <a href="#data-sources" class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Data Sources</a>
       <a href="#papers" class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Academic Papers</a>
       <a href="#compliance" class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Compliance & TOS</a>
+      <a href={`${base}collection-policy/`} class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">Collection Policy</a>
     </div>
 
     <!-- Data Sources -->
     <div id="data-sources" class="mb-12">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Data Sources</h2>
       <p class="text-sm text-(--color-text-muted) mb-6">
-        We refresh data twice daily on the always-on local machine, with GitHub Actions reserved for manual fallback runs. Collection uses identified User-Agent strings and is limited to public APIs, RSS feeds, official blogs, newsroom pages, and documentation pages.
+        We refresh data through a local twice-daily pipeline, scheduled GitHub refreshes, and hourly provider-status checks. Collection uses identified User-Agent strings and is limited to public APIs, public feeds, official blogs and newsroom pages, documentation pages, and other clearly public endpoints that fit the site brief.
       </p>
 
       <div class="space-y-6">
@@ -247,7 +248,7 @@ const papers = [
             <li><strong>OpenRouter API</strong> — public endpoint, no authentication required. We use their <code>/api/v1/models</code> endpoint which is explicitly designed for programmatic access.</li>
             <li><strong>OpenAI API</strong> — we optionally use the models list endpoint to verify model availability. Requires an API key when configured.</li>
             <li><strong>HuggingFace Spaces</strong> — we access public Gradio API endpoints for Chatbot Arena and Open LLM Leaderboard data.</li>
-            <li><strong>News collection</strong> — we prioritise public RSS and Atom feeds plus official provider blogs rather than scraping article pages directly.</li>
+            <li><strong>News collection</strong> — we prioritise public APIs, RSS and Atom feeds, official provider blogs, newsroom pages, and other clearly public source surfaces rather than scraping full article bodies.</li>
           </ul>
         </div>
 
@@ -256,7 +257,7 @@ const papers = [
           <ul class="text-sm text-(--color-text-secondary) space-y-1.5 list-disc list-inside">
             <li>All scrapers use an identified User-Agent: <code>The-AI-Resource-Hub-Bot/1.0</code></li>
             <li>We respect <code>robots.txt</code> directives on all sites</li>
-            <li>Collection runs twice daily — still a conservative cadence that stays well below common rate limits</li>
+            <li>Collection runs on a conservative scheduled cadence and stays well below common rate limits</li>
             <li>We only access publicly available pages and API endpoints</li>
             <li>We do not circumvent paywalls, authentication, or access controls</li>
             <li>Pricing data is factual information used for comparison purposes</li>
@@ -286,7 +287,7 @@ const papers = [
     <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20">
       <h2 class="text-sm font-semibold text-(--color-accent) mb-2">How We Use This Data</h2>
       <p class="text-sm text-(--color-text-secondary)">
-        For details on our scoring formula, quality metrics, and update frequency, see our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover) font-medium">Methodology page</a>.
+        For details on our scoring formula, quality metrics, and update frequency, see our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover) font-medium">Methodology page</a>. For the practical rules behind source collection, routing, and exclusions, see the <a href={`${base}collection-policy/`} class="text-(--color-accent) hover:text-(--color-accent-hover) font-medium">Collection Policy</a>.
       </p>
     </div>
   </section>

@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const allowedCollection = [
+  'Official APIs, official docs, changelogs, and model/pricing pages',
+  'Official blogs, newsroom pages, release notes, and status pages',
+  'Public RSS or Atom feeds where a source provides them',
+  'Public benchmark endpoints, leaderboards, and research repositories',
+  'Public model hubs and dataset indexes where programmatic access is clearly intended',
+];
+
+const restrictedCollection = [
+  'X / Twitter accounts and lists: manual curation or official API only, no unauthorised scraping',
+  'Paywalled or login-gated sources: manual review only unless explicit licensed access exists',
+  'Community forums or user-generated spaces with unclear reuse rights: manual review first',
+  'Any source whose terms, robots rules, or access pattern are unclear enough to create doubt',
+];
+
+const disallowedCollection = [
+  'Bypassing paywalls, authentication, anti-bot checks, or other access controls',
+  'Copying or republishing full third-party articles instead of linking and summarising',
+  'Aggressive crawling that ignores rate limits or source instructions',
+  'Silent reuse of data from sources that explicitly prohibit that collection path',
+];
+
+const reviewWorkflow = [
+  'Automated first pass: collect candidate updates from allowed public sources on a scheduled cadence.',
+  'Canonical source check: prefer the official provider, benchmark owner, or primary documentation when available.',
+  'Cross-check pass: compare against secondary reputable sources when the official source is missing, delayed, or ambiguous.',
+  'Manual review queue: hold or correct items when routing, naming, pricing, benchmark scope, or terms compliance is uncertain.',
+  'Correction loop: update the site and source notes quickly when a verified error is found.',
+];
+---
+
+<BaseLayout
+  title="Collection Policy - The AI Resource Hub"
+  description="What The AI Resource Hub collects, what it avoids, and how we review source compliance, freshness, and accuracy."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Collection Policy</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
+        Collection Policy
+      </h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        This is the practical policy behind how the site gathers public information, where we draw the line, and how we review data before it should be trusted on the public site.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl bg-(--color-accent)/10 border border-(--color-accent)/20 mb-8">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Default rule</h2>
+      <p class="text-sm text-(--color-text-secondary)">
+        We prefer official sources first. If a provider, benchmark owner, or platform publishes an official API, docs page, pricing page, changelog, blog, or status page, that should beat third-party summaries wherever possible.
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-3">Allowed collection</h2>
+        <ul class="space-y-2 list-disc list-inside text-sm text-(--color-text-secondary)">
+          {allowedCollection.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-3">Restricted or manual-review collection</h2>
+        <p class="text-sm text-(--color-text-secondary) mb-3">
+          These sources are not banned outright, but they should not quietly flow through the normal automation without a clearer compliance and accuracy path.
+        </p>
+        <ul class="space-y-2 list-disc list-inside text-sm text-(--color-text-secondary)">
+          {restrictedCollection.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-3">Disallowed collection</h2>
+        <ul class="space-y-2 list-disc list-inside text-sm text-(--color-text-secondary)">
+          {disallowedCollection.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-3">Accuracy workflow</h2>
+        <p class="text-sm text-(--color-text-secondary) mb-3">
+          Freshness matters, but freshness without verification is not good enough. The target operating model is:
+        </p>
+        <ol class="space-y-2 list-decimal list-inside text-sm text-(--color-text-secondary)">
+          {reviewWorkflow.map((item) => <li>{item}</li>)}
+        </ol>
+      </div>
+
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-3">Routing and relevance</h2>
+        <p class="text-sm text-(--color-text-secondary)">
+          Shared ingestion is not enough by itself. Each website in the estate should only receive the stories that match its brief. AI Resource Hub should get technical AI coverage, not crypto, photography, or other off-brief material. When that kind of item appears, it should be treated as a routing bug and fixed at the pipeline level.
+        </p>
+        <p class="text-sm text-(--color-text-secondary) mt-3">
+          The current routing snapshot is visible on the <a href={`${base}news/pipeline/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">News Pipeline board</a>.
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-3">Corrections and takedowns</h2>
+        <p class="text-sm text-(--color-text-secondary)">
+          If a source owner, lab, researcher, or reader spots a compliance problem or a factual error, we should correct it quickly. For data-source and citation context, see <a href={`${base}references/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">References & Sources</a>. For scoring and ranking logic, see the <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">Methodology</a> page.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

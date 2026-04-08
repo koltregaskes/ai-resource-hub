@@ -114,7 +114,8 @@ function Test-IgnorableGeneratedChange {
   return (
     $normalised -eq 'src/data/news-feed-latest.json' -or
     $normalised -match '^src/data/news-feed-\d{4}-\d{2}-\d{2}\.json$' -or
-    $normalised -match '^src/data/digest-\d{4}-\d{2}-\d{2}\.md$'
+    $normalised -match '^src/data/digest-\d{4}-\d{2}-\d{2}\.md$' -or
+    $normalised -eq 'src/data/news-pipeline.generated.ts'
   )
 }
 
@@ -160,11 +161,20 @@ try {
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
   Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
 
+  if (Test-Path (Join-Path $repoRoot 'scripts\sync-news-pipeline-data.mjs')) {
+    try {
+      Invoke-Logged 'node' @('scripts/sync-news-pipeline-data.mjs')
+    } catch {
+      Write-Log $_.Exception.Message 'WARN'
+      Write-Log 'Continuing without a refreshed news pipeline snapshot.' 'WARN'
+    }
+  }
+
   Invoke-Logged 'npm.cmd' @('run', 'check:staleness')
 
   Invoke-Logged 'npm.cmd' @('run', 'build')
 
-  $publishPaths = @('data/the-ai-resource-hub.db', 'data/pg-cache')
+  $publishPaths = @('data/the-ai-resource-hub.db', 'data/pg-cache', 'src/data/news-pipeline.generated.ts')
   $publishChanges = @(Invoke-Captured 'git' (@('status', '--porcelain', '--') + $publishPaths))
   if ($publishChanges.Count -eq 0) {
     Write-Log 'No publishable data changes detected. Nothing to commit.'

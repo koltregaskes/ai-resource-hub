@@ -157,14 +157,14 @@ const benchmarks = getBenchmarks();
             <h3 class="font-semibold text-(--color-text-primary)">News &amp; Articles</h3>
             <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">Twice Daily</span>
           </div>
-          <p class="text-sm text-(--color-text-secondary) mb-2">News is aggregated twice daily from public RSS feeds, official provider blogs, and archived digest imports when available. Sources include:</p>
+          <p class="text-sm text-(--color-text-secondary) mb-2">News is aggregated from public APIs and feeds, official provider blogs and newsroom pages, and archived digest imports when available. Sources include:</p>
           <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
             <li>TechCrunch AI, Reuters Technology, The Verge, Ars Technica, VentureBeat AI</li>
             <li>AI-specialist publications: The Decoder, Import AI (Jack Clark), Interconnects (Nathan Lambert)</li>
             <li>Provider engineering blogs: OpenAI, Anthropic, Google DeepMind, Meta AI Research</li>
             <li>arXiv paper announcements (cs.AI, cs.LG, cs.CL)</li>
           </ul>
-          <p class="text-xs text-(--color-text-muted) mt-2">Updated: Twice daily via the always-on local scheduler, with GitHub available for manual fallback runs</p>
+          <p class="text-xs text-(--color-text-muted) mt-2">Updated through the local twice-daily refresh pipeline, scheduled GitHub refreshes, and hourly provider-status checks.</p>
         </div>
 
         {/* People */}
@@ -304,7 +304,7 @@ const benchmarks = getBenchmarks();
         If you spot incorrect data, outdated pricing, or missing models, please open an issue on our <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub repository</a>. We take accuracy seriously and will update within 24 hours of verified corrections.
       </p>
       <p class="text-sm text-(--color-text-secondary) mt-2">
-        For a complete list of all data sources, academic citations, and compliance details, see our <a href={`${base}references/`} class="text-(--color-accent) hover:text-(--color-accent-hover) font-medium">References & Sources</a> page.
+        For a complete list of all data sources, academic citations, and compliance details, see our <a href={`${base}references/`} class="text-(--color-accent) hover:text-(--color-accent-hover) font-medium">References & Sources</a> page and our <a href={`${base}collection-policy/`} class="text-(--color-accent) hover:text-(--color-accent-hover) font-medium">Collection Policy</a>.
       </p>
     </div>
   </section>
