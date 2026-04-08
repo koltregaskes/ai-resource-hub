@@ -3,13 +3,13 @@
     "id": "bigcodebench",
     "name": "BigCodeBench",
     "category": "coding",
-    "description": "Comprehensive code generation benchmark with function-level and class-level tasks.",
+    "description": "Challenging code generation tasks with complex function calls and libraries",
     "url": "https://bigcode-bench.github.io",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.10",
-    "updated_at": "2026-04-02T08:11:51.458Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.1,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "humaneval",
@@ -17,23 +17,11 @@
     "category": "coding",
     "description": "Python function completion (pass@1)",
     "url": "https://arxiv.org/abs/2107.03374",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.00",
-    "updated_at": "2026-04-02T08:11:51.437Z"
-  },
-  {
-    "id": "livebench",
-    "name": "LiveBench",
-    "category": "coding",
-    "description": "Continuously updated coding problems from LeetCode, AtCoder, CodeForces. Tests real-world programming ability.",
-    "url": "https://livebench.ai",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.30",
-    "updated_at": "2026-04-02T08:11:51.456Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "livecodebench",
@@ -41,11 +29,11 @@
     "category": "coding",
     "description": "Competitive programming from live contests",
     "url": "https://livecodebench.github.io",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.20",
-    "updated_at": "2026-04-02T08:11:51.442Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.2,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "swe-bench-verified",
@@ -53,11 +41,11 @@
     "category": "coding",
     "description": "Real-world GitHub issue resolution",
     "url": "https://swebench.com",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.50",
-    "updated_at": "2026-04-02T08:11:51.440Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.5,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "arena-hard",
@@ -65,11 +53,11 @@
     "category": "conversational",
     "description": "Automated benchmark using GPT-4 as judge on challenging Arena questions",
     "url": "https://github.com/lm-sys/arena-hard-auto",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.20",
-    "updated_at": "2026-04-02T08:11:51.451Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.2,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "chatbot-arena-elo",
@@ -77,11 +65,11 @@
     "category": "conversational",
     "description": "LMSYS Chatbot Arena crowdsourced ELO rating",
     "url": "https://chat.lmsys.org",
-    "scale_min": "800.00",
-    "scale_max": "1400.00",
-    "higher_is_better": true,
-    "weight": "1.50",
-    "updated_at": "2026-04-02T08:11:51.447Z"
+    "scale_min": 800,
+    "scale_max": 1400,
+    "higher_is_better": 1,
+    "weight": 1.5,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "mt-bench",
@@ -89,23 +77,23 @@
     "category": "conversational",
     "description": "Multi-turn conversation benchmark judged by GPT-4",
     "url": "https://arxiv.org/abs/2306.05685",
-    "scale_min": "0.00",
-    "scale_max": "10.00",
-    "higher_is_better": true,
-    "weight": "0.80",
-    "updated_at": "2026-04-02T08:11:51.453Z"
+    "scale_min": 0,
+    "scale_max": 10,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "ifeval",
     "name": "IFEval",
     "category": "instruction",
-    "description": "Instruction-following evaluation. Tests whether models follow complex multi-constraint instructions accurately.",
+    "description": "Instruction Following Evaluation",
     "url": "https://arxiv.org/abs/2311.07911",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "0.80",
-    "updated_at": "2026-04-02T08:11:51.444Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "mmlu",
@@ -113,11 +101,11 @@
     "category": "knowledge",
     "description": "Massive Multitask Language Understanding — 57 academic subjects",
     "url": "https://arxiv.org/abs/2009.03300",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "0.80",
-    "updated_at": "2026-04-02T08:11:51.423Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "mmlu-pro",
@@ -125,35 +113,23 @@
     "category": "knowledge",
     "description": "Harder version of MMLU with 10 answer choices",
     "url": "https://arxiv.org/abs/2406.01574",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.20",
-    "updated_at": "2026-04-02T08:11:51.427Z"
-  },
-  {
-    "id": "gsm8k",
-    "name": "GSM8K",
-    "category": "math",
-    "description": "Grade School Math 8K. 8,500 grade school math word problems requiring multi-step reasoning.",
-    "url": null,
-    "scale_min": null,
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.00",
-    "updated_at": "2026-04-04T19:55:53.019Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.2,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "mmmu",
     "name": "MMMU",
     "category": "multimodal",
-    "description": "Massive Multi-discipline Multimodal Understanding. Tests vision+language across 30 subjects.",
+    "description": "Massive Multi-discipline Multimodal Understanding",
     "url": "https://arxiv.org/abs/2311.16502",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.00",
-    "updated_at": "2026-04-02T08:11:51.449Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "aime-2025",
@@ -161,23 +137,11 @@
     "category": "reasoning",
     "description": "American Invitational Mathematics Examination 2025",
     "url": null,
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.40",
-    "updated_at": "2026-04-02T08:11:51.435Z"
-  },
-  {
-    "id": "arc-agi",
-    "name": "ARC-AGI",
-    "category": "reasoning",
-    "description": "Abstraction and Reasoning Corpus. Tests genuine novel reasoning ability. Key AGI benchmark.",
-    "url": null,
-    "scale_min": null,
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.00",
-    "updated_at": "2026-04-04T19:55:53.026Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.4,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "arc-challenge",
@@ -185,11 +149,11 @@
     "category": "reasoning",
     "description": "AI2 Reasoning Challenge — grade school science",
     "url": "https://arxiv.org/abs/1803.05457",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "0.60",
-    "updated_at": "2026-04-02T08:11:51.431Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.6,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "gpqa-diamond",
@@ -197,11 +161,11 @@
     "category": "reasoning",
     "description": "Graduate-level science questions, expert-validated",
     "url": "https://arxiv.org/abs/2311.12022",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.50",
-    "updated_at": "2026-04-02T08:11:51.429Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.5,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "humanitys-last-exam",
@@ -209,11 +173,23 @@
     "category": "reasoning",
     "description": "Ultra-hard questions from experts across 100+ academic subjects",
     "url": "https://lastexam.ai",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.50",
-    "updated_at": "2026-04-02T08:11:51.461Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.5,
+    "updated_at": "2026-02-22 11:54:42"
+  },
+  {
+    "id": "livebench",
+    "name": "LiveBench",
+    "category": "reasoning",
+    "description": "Contamination-free benchmark using recent questions from math, coding, and reasoning",
+    "url": "https://livebench.ai",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.3,
+    "updated_at": "2026-02-22 11:54:42"
   },
   {
     "id": "math-500",
@@ -221,10 +197,10 @@
     "category": "reasoning",
     "description": "Competition-level mathematics problems",
     "url": "https://arxiv.org/abs/2103.03874",
-    "scale_min": "0.00",
-    "scale_max": "100.00",
-    "higher_is_better": true,
-    "weight": "1.30",
-    "updated_at": "2026-04-02T08:11:51.433Z"
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.3,
+    "updated_at": "2026-02-22 11:54:42"
   }
 ]

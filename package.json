@@ -19,6 +19,7 @@
     "scrape:news": "tsx scripts/scrapers/news.ts",
     "scrape:status": "node scripts/scrapers/status-pages.mjs",
     "scrape:jobs": "tsx scripts/scrapers/jobs.ts",
+    "scrape:official-pricing": "tsx scripts/scrapers/official-pricing.ts",
     "check:staleness": "tsx scripts/check-staleness.ts",
     "import:news": "tsx scripts/import-news-digests.ts",
     "generate:digest": "tsx scripts/generate-digest.ts",

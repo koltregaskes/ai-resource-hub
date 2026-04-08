@@ -1,0 +1,134 @@
+[
+  {
+    "id": "agentic-tasks",
+    "name": "Autonomous Task Execution",
+    "category": "agency",
+    "description": null,
+    "status": "emerging",
+    "evidence": null,
+    "first_demonstrated": "2025-02-24T00:00:00.000Z",
+    "current_best": "Claude Code / Devin",
+    "updated_at": "2026-04-04T16:18:14.578Z"
+  },
+  {
+    "id": "tool-use",
+    "name": "Tool Use / Function Calling",
+    "category": "agency",
+    "description": null,
+    "status": "achieved",
+    "evidence": null,
+    "first_demonstrated": "2023-06-12T23:00:00.000Z",
+    "current_best": "Claude / GPT-4",
+    "updated_at": "2026-04-04T16:18:14.583Z"
+  },
+  {
+    "id": "reasoning",
+    "name": "Multi-step Reasoning",
+    "category": "cognition",
+    "description": null,
+    "status": "achieved",
+    "evidence": null,
+    "first_demonstrated": "2024-09-11T23:00:00.000Z",
+    "current_best": "o3 / DeepSeek-R1",
+    "updated_at": "2026-04-04T16:18:14.574Z"
+  },
+  {
+    "id": "natural-language",
+    "name": "Natural Language Understanding",
+    "category": "cognition",
+    "description": null,
+    "status": "achieved",
+    "evidence": null,
+    "first_demonstrated": "2022-11-30T00:00:00.000Z",
+    "current_best": "GPT-4o / Claude Opus 4.6",
+    "updated_at": "2026-04-04T16:18:14.571Z"
+  },
+  {
+    "id": "world-models",
+    "name": "World Models / Physical Understanding",
+    "category": "cognition",
+    "description": null,
+    "status": "not_achieved",
+    "evidence": null,
+    "first_demonstrated": null,
+    "current_best": null,
+    "updated_at": "2026-04-04T16:18:14.588Z"
+  },
+  {
+    "id": "creative-originality",
+    "name": "Genuinely Original Creative Work",
+    "category": "creativity",
+    "description": null,
+    "status": "disputed",
+    "evidence": null,
+    "first_demonstrated": null,
+    "current_best": null,
+    "updated_at": "2026-04-04T16:18:14.592Z"
+  },
+  {
+    "id": "autonomous-research",
+    "name": "Autonomous Scientific Research",
+    "category": "innovation",
+    "description": null,
+    "status": "emerging",
+    "evidence": null,
+    "first_demonstrated": null,
+    "current_best": "FutureHouse / various",
+    "updated_at": "2026-04-04T16:18:14.590Z"
+  },
+  {
+    "id": "long-context",
+    "name": "Long Context (1M+ tokens)",
+    "category": "memory",
+    "description": null,
+    "status": "achieved",
+    "evidence": null,
+    "first_demonstrated": "2024-02-15T00:00:00.000Z",
+    "current_best": "Gemini 2.5 Pro",
+    "updated_at": "2026-04-04T16:18:14.581Z"
+  },
+  {
+    "id": "persistent-memory",
+    "name": "Persistent Cross-Session Memory",
+    "category": "memory",
+    "description": null,
+    "status": "partial",
+    "evidence": null,
+    "first_demonstrated": null,
+    "current_best": "ChatGPT memory / Claude memory",
+    "updated_at": "2026-04-04T16:18:14.586Z"
+  },
+  {
+    "id": "self-reflection",
+    "name": "Self-Correction / Reflection",
+    "category": "metacognition",
+    "description": null,
+    "status": "emerging",
+    "evidence": null,
+    "first_demonstrated": "2024-09-11T23:00:00.000Z",
+    "current_best": "o1 / Claude extended thinking",
+    "updated_at": "2026-04-04T16:18:14.585Z"
+  },
+  {
+    "id": "multimodal",
+    "name": "Vision + Audio + Text",
+    "category": "perception",
+    "description": null,
+    "status": "achieved",
+    "evidence": null,
+    "first_demonstrated": "2023-03-14T00:00:00.000Z",
+    "current_best": "GPT-4o / Gemini",
+    "updated_at": "2026-04-04T16:18:14.579Z"
+  },
+  {
+    "id": "code-generation",
+    "name": "Code Generation",
+    "category": "technical",
+    "description": null,
+    "status": "achieved",
+    "evidence": null,
+    "first_demonstrated": "2021-06-28T23:00:00.000Z",
+    "current_best": "Claude Code / Codex",
+    "updated_at": "2026-04-04T16:18:14.576Z"
+  }
+]

@@ -1,0 +1,208 @@
+[
+  {
+    "id": "kol-position",
+    "source_name": "Kol Tregaskes (Site Author)",
+    "source_type": "editorial",
+    "source_url": null,
+    "framework_name": "Practical AGI Achieved",
+    "levels": [
+      {
+        "desc": "ChatGPT launch — broad general capability across knowledge domains",
+        "name": "Conversational AGI",
+        "level": 1
+      },
+      {
+        "desc": "o1/o3, DeepSeek-R1 — chain of thought, multi-step problem solving",
+        "name": "Reasoning AGI",
+        "level": 2
+      },
+      {
+        "desc": "Claude Code, Codex — autonomous task completion with tool use",
+        "name": "Agentic AGI",
+        "level": 3
+      },
+      {
+        "desc": "Multi-agent systems coordinating work across domains",
+        "name": "Collaborative AGI",
+        "level": 4
+      },
+      {
+        "desc": "Self-directed systems that can identify and pursue goals independently",
+        "name": "Autonomous AGI",
+        "level": 5
+      }
+    ],
+    "summary": "Position: AGI was functionally achieved with ChatGPT in November 2022. Since then we have been climbing capability levels. The question is no longer \"if AGI\" but \"what level of AGI and how fast.\"",
+    "key_quote": null,
+    "published_date": null,
+    "updated_at": "2026-04-04T16:18:14.541Z"
+  },
+  {
+    "id": "marcus-sceptic",
+    "source_name": "Gary Marcus",
+    "source_type": "individual",
+    "source_url": "https://garymarcus.substack.com",
+    "framework_name": "Sceptical Position",
+    "levels": [],
+    "summary": "Argues AGI requires fundamental breakthroughs in reasoning, reliability, and genuine understanding. Current models are sophisticated pattern matchers that fail on novel situations. Consistent critic of AGI hype.",
+    "key_quote": null,
+    "published_date": null,
+    "updated_at": "2026-04-04T16:18:14.537Z"
+  },
+  {
+    "id": "suleiman-turing",
+    "source_name": "Mustafa Suleiman",
+    "source_type": "individual",
+    "source_url": null,
+    "framework_name": "Modern Turing Test",
+    "levels": [
+      {
+        "desc": "AI that can turn $100,000 into $1,000,000 autonomously by researching and executing a retail business",
+        "name": "Modern Turing Test",
+        "level": 1
+      }
+    ],
+    "summary": "Proposed a practical economic test rather than conversational imitation. Focuses on real-world capability and autonomous decision-making.",
+    "key_quote": null,
+    "published_date": null,
+    "updated_at": "2026-04-04T16:18:14.532Z"
+  },
+  {
+    "id": "shane-legg",
+    "source_name": "Shane Legg (DeepMind co-founder)",
+    "source_type": "individual",
+    "source_url": null,
+    "framework_name": "Original AGI Definition",
+    "levels": [],
+    "summary": "Defined AGI as \"a machine that can do any intellectual task that a human being can.\" Co-coined the term \"Artificial General Intelligence.\" Has predicted 50% chance of AGI by 2028.",
+    "key_quote": null,
+    "published_date": null,
+    "updated_at": "2026-04-04T16:18:14.539Z"
+  },
+  {
+    "id": "lecun-position",
+    "source_name": "Yann LeCun",
+    "source_type": "individual",
+    "source_url": null,
+    "framework_name": "World Models Required",
+    "levels": [],
+    "summary": "Argues current LLMs cannot achieve AGI because they lack world models, persistent memory, and genuine planning. Token prediction is insufficient. Cofounded AMI Labs in 2026 with $1B+ to pursue his approach.",
+    "key_quote": null,
+    "published_date": null,
+    "updated_at": "2026-04-04T16:18:14.534Z"
+  },
+  {
+    "id": "anthropic-asl",
+    "source_name": "Anthropic",
+    "source_type": "lab",
+    "source_url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+    "framework_name": "AI Safety Levels (ASL)",
+    "levels": [
+      {
+        "desc": "No meaningful catastrophic risk",
+        "name": "ASL-1",
+        "level": 1
+      },
+      {
+        "desc": "Present-day risks, requires current safeguards",
+        "name": "ASL-2",
+        "level": 2
+      },
+      {
+        "desc": "Substantially increased risk, enhanced containment needed",
+        "name": "ASL-3",
+        "level": 3
+      },
+      {
+        "desc": "Potentially catastrophic autonomous capabilities",
+        "name": "ASL-4+",
+        "level": 4
+      }
+    ],
+    "summary": "Safety-focused framework tied to deployment policy. Current models operate at ASL-2. ASL-3 would require bio/cyber risk mitigation before deployment.",
+    "key_quote": null,
+    "published_date": null,
+    "updated_at": "2026-04-04T16:18:14.530Z"
+  },
+  {
+    "id": "deepmind-levels",
+    "source_name": "Google DeepMind",
+    "source_type": "lab",
+    "source_url": "https://arxiv.org/abs/2311.02462",
+    "framework_name": "Levels of AGI",
+    "levels": [
+      {
+        "desc": "Narrow non-AI tools",
+        "name": "No AI",
+        "level": 0
+      },
+      {
+        "desc": "Equal to or somewhat better than unskilled human",
+        "name": "Emerging",
+        "level": 1
+      },
+      {
+        "desc": "At least 50th percentile of skilled adults",
+        "name": "Competent",
+        "level": 2
+      },
+      {
+        "desc": "At least 90th percentile of skilled adults",
+        "name": "Expert",
+        "level": 3
+      },
+      {
+        "desc": "At least 99th percentile of skilled adults",
+        "name": "Virtuoso",
+        "level": 4
+      },
+      {
+        "desc": "Outperforms 100% of humans",
+        "name": "Superhuman",
+        "level": 5
+      }
+    ],
+    "summary": "Six performance levels crossed with breadth (narrow vs general). Published Nov 2023. Defines AGI as general-purpose AI at Level 3+ (Expert).",
+    "key_quote": null,
+    "published_date": null,
+    "updated_at": "2026-04-04T16:18:14.524Z"
+  },
+  {
+    "id": "openai-levels",
+    "source_name": "OpenAI",
+    "source_type": "lab",
+    "source_url": null,
+    "framework_name": "Five Levels of AI",
+    "levels": [
+      {
+        "desc": "Conversational AI with natural language",
+        "name": "Chatbots",
+        "level": 1
+      },
+      {
+        "desc": "Human-level problem solving",
+        "name": "Reasoners",
+        "level": 2
+      },
+      {
+        "desc": "Systems that can take actions in the world",
+        "name": "Agents",
+        "level": 3
+      },
+      {
+        "desc": "AI that aids in scientific invention",
+        "name": "Innovators",
+        "level": 4
+      },
+      {
+        "desc": "AI that can do the work of an entire organisation",
+        "name": "Organisations",
+        "level": 5
+      }
+    ],
+    "summary": "Internal framework leaked July 2024. OpenAI claimed Level 2 reached with o1. Level 3 (agents) is the current frontier as of early 2026.",
+    "key_quote": null,
+    "published_date": null,
+    "updated_at": "2026-04-04T16:18:14.527Z"
+  }
+]

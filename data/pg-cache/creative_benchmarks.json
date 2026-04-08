@@ -19,7 +19,7 @@
     "model_url": "https://hyper3d.ai",
     "pricing_note": "Credits-based",
     "scraped_at": "2026-04-01T10:52:11.177Z",
-    "updated_at": "2026-04-04T05:00:05.145Z"
+    "updated_at": "2026-04-08T05:00:06.304Z"
   },
   {
     "id": "b9d2c279-0f96-45c5-9b6e-24e493cddd5d",
@@ -40,7 +40,7 @@
     "model_url": "https://www.meshy.ai",
     "pricing_note": "Free tier / $20/mo",
     "scraped_at": "2026-04-01T10:52:11.179Z",
-    "updated_at": "2026-04-04T05:00:05.147Z"
+    "updated_at": "2026-04-08T05:00:06.306Z"
   },
   {
     "id": "5c644222-9668-40e4-b2f5-8a503bf48528",
@@ -61,7 +61,7 @@
     "model_url": "https://www.tripo3d.ai",
     "pricing_note": "Free tier / Pro",
     "scraped_at": "2026-04-01T10:52:11.182Z",
-    "updated_at": "2026-04-04T05:00:05.150Z"
+    "updated_at": "2026-04-08T05:00:06.308Z"
   },
   {
     "id": "bd6f9469-2f45-4376-8a54-edfe3ba4af25",
@@ -82,29 +82,7 @@
     "model_url": "https://deepmind.google",
     "pricing_note": "Free via Gemini",
     "scraped_at": "2026-04-01T10:52:11.136Z",
-    "updated_at": "2026-04-04T05:00:05.087Z"
-  },
-  {
-    "id": "e3b884be-b3b6-4bf0-a283-9712975e98fb",
-    "model_name": "GPT Image 1.5",
-    "model_maker": "OpenAI",
-    "category": "image_editing",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "93.00",
-    "score_type": "score_100",
-    "meta_score": "88.00",
-    "meta_rank": 2,
-    "strengths": [
-      "Natural language editing",
-      "Inpainting",
-      "Style transfer"
-    ],
-    "considerations": "Requires ChatGPT subscription.",
-    "model_url": "https://openai.com",
-    "pricing_note": "ChatGPT Plus $20/mo",
-    "scraped_at": "2026-04-01T10:52:11.133Z",
-    "updated_at": "2026-04-04T05:00:05.089Z"
+    "updated_at": "2026-04-08T05:00:06.250Z"
   },
   {
     "id": "276928c1-412b-4573-a66b-59b31a9545b9",
@@ -126,7 +104,29 @@
     "model_url": "https://openai.com",
     "pricing_note": "ChatGPT Plus $20/mo",
     "scraped_at": "2026-04-01T10:52:11.130Z",
-    "updated_at": "2026-04-04T05:00:05.089Z"
+    "updated_at": "2026-04-08T05:00:06.252Z"
+  },
+  {
+    "id": "e3b884be-b3b6-4bf0-a283-9712975e98fb",
+    "model_name": "GPT Image 1.5",
+    "model_maker": "OpenAI",
+    "category": "image_editing",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "93.00",
+    "score_type": "score_100",
+    "meta_score": "88.00",
+    "meta_rank": 2,
+    "strengths": [
+      "Natural language editing",
+      "Inpainting",
+      "Style transfer"
+    ],
+    "considerations": "Requires ChatGPT subscription.",
+    "model_url": "https://openai.com",
+    "pricing_note": "ChatGPT Plus $20/mo",
+    "scraped_at": "2026-04-01T10:52:11.133Z",
+    "updated_at": "2026-04-08T05:00:06.252Z"
   },
   {
     "id": "a5d75d74-db09-4a2d-aa15-d13340a824dc",
@@ -147,7 +147,7 @@
     "model_url": "https://www.midjourney.com",
     "pricing_note": "From $10/mo",
     "scraped_at": "2026-04-01T10:52:11.138Z",
-    "updated_at": "2026-04-04T05:00:05.091Z"
+    "updated_at": "2026-04-08T05:00:06.255Z"
   },
   {
     "id": "7a830621-ac07-4c7b-bc05-37561d3b5960",
@@ -168,7 +168,7 @@
     "model_url": "https://www.adobe.com/products/firefly.html",
     "pricing_note": "Creative Cloud",
     "scraped_at": "2026-04-01T10:52:11.140Z",
-    "updated_at": "2026-04-04T05:00:05.094Z"
+    "updated_at": "2026-04-08T05:00:06.256Z"
   },
   {
     "id": "bd44d5da-c4fd-4909-b1c9-bd79e0bcbd1e",
@@ -189,7 +189,7 @@
     "model_url": "https://www.midjourney.com",
     "pricing_note": "From $10/mo",
     "scraped_at": "2026-04-01T10:52:11.120Z",
-    "updated_at": "2026-04-04T05:00:05.123Z"
+    "updated_at": "2026-04-08T05:00:06.283Z"
   },
   {
     "id": "ef69a54e-2b01-4b11-9c0e-697acbebdcd1",
@@ -210,7 +210,7 @@
     "model_url": "https://blackforestlabs.ai",
     "pricing_note": "Open source / API",
     "scraped_at": "2026-04-01T10:52:11.123Z",
-    "updated_at": "2026-04-04T05:00:05.125Z"
+    "updated_at": "2026-04-08T05:00:06.285Z"
   },
   {
     "id": "259a8611-1ef6-4ebe-9573-05f9b325a515",
@@ -231,29 +231,7 @@
     "model_url": "https://deepmind.google",
     "pricing_note": "Free via Gemini",
     "scraped_at": "2026-04-01T10:52:11.125Z",
-    "updated_at": "2026-04-04T05:00:05.127Z"
-  },
-  {
-    "id": "3334e8b6-fe5d-49d0-a4af-68684f9dd0fe",
-    "model_name": "GPT Image 1.5",
-    "model_maker": "OpenAI",
-    "category": "image_generation",
-    "source_name": "Artificial Analysis",
-    "source_url": null,
-    "raw_score": "1268.00",
-    "score_type": "elo",
-    "meta_score": "83.00",
-    "meta_rank": 4,
-    "strengths": [
-      "Overall quality leader",
-      "Text rendering",
-      "Complex compositions"
-    ],
-    "considerations": "Requires ChatGPT Pro for best quality. Rate limited.",
-    "model_url": "https://openai.com",
-    "pricing_note": "ChatGPT Plus $20/mo",
-    "scraped_at": "2026-04-01T10:52:11.108Z",
-    "updated_at": "2026-04-04T05:00:05.129Z"
+    "updated_at": "2026-04-08T05:00:06.287Z"
   },
   {
     "id": "ee9a81c5-8af3-4660-ab1e-67620dc87ec0",
@@ -275,7 +253,7 @@
     "model_url": "https://openai.com",
     "pricing_note": "ChatGPT Plus $20/mo",
     "scraped_at": "2026-04-01T10:52:11.118Z",
-    "updated_at": "2026-04-04T05:00:05.129Z"
+    "updated_at": "2026-04-08T05:00:06.289Z"
   },
   {
     "id": "cd281ca7-195c-4351-a23e-72dbd6de7b33",
@@ -297,7 +275,29 @@
     "model_url": "https://openai.com",
     "pricing_note": "ChatGPT Plus $20/mo",
     "scraped_at": "2026-04-01T10:52:11.115Z",
-    "updated_at": "2026-04-04T05:00:05.129Z"
+    "updated_at": "2026-04-08T05:00:06.289Z"
+  },
+  {
+    "id": "3334e8b6-fe5d-49d0-a4af-68684f9dd0fe",
+    "model_name": "GPT Image 1.5",
+    "model_maker": "OpenAI",
+    "category": "image_generation",
+    "source_name": "Artificial Analysis",
+    "source_url": null,
+    "raw_score": "1268.00",
+    "score_type": "elo",
+    "meta_score": "83.00",
+    "meta_rank": 4,
+    "strengths": [
+      "Overall quality leader",
+      "Text rendering",
+      "Complex compositions"
+    ],
+    "considerations": "Requires ChatGPT Pro for best quality. Rate limited.",
+    "model_url": "https://openai.com",
+    "pricing_note": "ChatGPT Plus $20/mo",
+    "scraped_at": "2026-04-01T10:52:11.108Z",
+    "updated_at": "2026-04-08T05:00:06.289Z"
   },
   {
     "id": "3d75743a-5ac5-46e1-a997-88208cf20220",
@@ -318,7 +318,7 @@
     "model_url": "https://www.reveimage.com",
     "pricing_note": "Pay per generation",
     "scraped_at": "2026-04-01T10:52:11.127Z",
-    "updated_at": "2026-04-04T05:00:05.131Z"
+    "updated_at": "2026-04-08T05:00:06.291Z"
   },
   {
     "id": "e9cb61c6-4c98-4f7b-9cbc-e761e263f577",
@@ -340,7 +340,7 @@
     "model_url": "https://suno.com",
     "pricing_note": "Free tier / $10/mo Pro",
     "scraped_at": "2026-04-01T10:52:11.157Z",
-    "updated_at": "2026-04-04T05:00:05.097Z"
+    "updated_at": "2026-04-08T05:00:06.259Z"
   },
   {
     "id": "33830334-e8fd-4643-b14b-69eb73b4e047",
@@ -361,7 +361,7 @@
     "model_url": "https://www.udio.com",
     "pricing_note": "Free tier / $10/mo",
     "scraped_at": "2026-04-01T10:52:11.159Z",
-    "updated_at": "2026-04-04T05:00:05.099Z"
+    "updated_at": "2026-04-08T05:00:06.261Z"
   },
   {
     "id": "99fba54b-78d3-4aed-b651-aed4c59b8b0d",
@@ -382,7 +382,7 @@
     "model_url": "https://www.aiva.ai",
     "pricing_note": "Free / $15/mo Pro",
     "scraped_at": "2026-04-01T10:52:11.162Z",
-    "updated_at": "2026-04-04T05:00:05.102Z"
+    "updated_at": "2026-04-08T05:00:06.263Z"
   },
   {
     "id": "f55a19e1-4c31-42af-b575-a2dd63bddd57",
@@ -404,7 +404,7 @@
     "model_url": "https://magnific.ai",
     "pricing_note": "$39/mo",
     "scraped_at": "2026-04-01T10:52:11.185Z",
-    "updated_at": "2026-04-04T05:00:05.105Z"
+    "updated_at": "2026-04-08T05:00:06.265Z"
   },
   {
     "id": "5029b1f5-d358-44b3-9ee8-aed035c50fdd",
@@ -425,7 +425,7 @@
     "model_url": "https://www.topazlabs.com",
     "pricing_note": "$199 lifetime",
     "scraped_at": "2026-04-01T10:52:11.188Z",
-    "updated_at": "2026-04-04T05:00:05.107Z"
+    "updated_at": "2026-04-08T05:00:06.267Z"
   },
   {
     "id": "73a07f0a-1dad-446d-8e4a-74e118aa6289",
@@ -446,7 +446,7 @@
     "model_url": "https://www.topazlabs.com/bloom",
     "pricing_note": "Subscription",
     "scraped_at": "2026-04-01T10:52:11.191Z",
-    "updated_at": "2026-04-04T05:00:05.110Z"
+    "updated_at": "2026-04-08T05:00:06.270Z"
   },
   {
     "id": "93d62833-4e46-4b30-84f8-c0eb307068e5",
@@ -467,7 +467,7 @@
     "model_url": "https://upscayl.org",
     "pricing_note": "Free",
     "scraped_at": "2026-04-01T10:52:11.193Z",
-    "updated_at": "2026-04-04T05:00:05.112Z"
+    "updated_at": "2026-04-08T05:00:06.272Z"
   },
   {
     "id": "0b8ce649-cd1a-4e55-8294-0ac6f5a98559",
@@ -488,7 +488,7 @@
     "model_url": "https://runwayml.com",
     "pricing_note": "Free tier / $15/mo",
     "scraped_at": "2026-04-01T10:52:11.149Z",
-    "updated_at": "2026-04-04T05:00:05.134Z"
+    "updated_at": "2026-04-08T05:00:06.293Z"
   },
   {
     "id": "0a3e0634-731e-48a8-8405-1b5dedc2bb5d",
@@ -509,29 +509,7 @@
     "model_url": "https://seedance.ai",
     "pricing_note": "Credits",
     "scraped_at": "2026-04-01T10:52:11.151Z",
-    "updated_at": "2026-04-04T05:00:05.136Z"
-  },
-  {
-    "id": "c021df85-c411-43a3-8ed7-6ea1d170869c",
-    "model_name": "Kling 3.0",
-    "model_maker": "Kuaishou",
-    "category": "video_generation",
-    "source_name": "Artificial Analysis",
-    "source_url": null,
-    "raw_score": "1245.00",
-    "score_type": "elo",
-    "meta_score": "86.00",
-    "meta_rank": 3,
-    "strengths": [
-      "Up to 2 min duration",
-      "4K 60fps",
-      "Best value (~$0.50/10s)"
-    ],
-    "considerations": "Chinese platform.",
-    "model_url": "https://klingai.com",
-    "pricing_note": "Free tier / credits",
-    "scraped_at": "2026-04-01T10:52:11.143Z",
-    "updated_at": "2026-04-04T05:00:05.138Z"
+    "updated_at": "2026-04-08T05:00:06.296Z"
   },
   {
     "id": "1c24f29b-ecae-4185-886e-1b916beb5f78",
@@ -553,7 +531,29 @@
     "model_url": "https://klingai.com",
     "pricing_note": "Free tier / credits",
     "scraped_at": "2026-04-01T10:52:11.146Z",
-    "updated_at": "2026-04-04T05:00:05.138Z"
+    "updated_at": "2026-04-08T05:00:06.298Z"
+  },
+  {
+    "id": "c021df85-c411-43a3-8ed7-6ea1d170869c",
+    "model_name": "Kling 3.0",
+    "model_maker": "Kuaishou",
+    "category": "video_generation",
+    "source_name": "Artificial Analysis",
+    "source_url": null,
+    "raw_score": "1245.00",
+    "score_type": "elo",
+    "meta_score": "86.00",
+    "meta_rank": 3,
+    "strengths": [
+      "Up to 2 min duration",
+      "4K 60fps",
+      "Best value (~$0.50/10s)"
+    ],
+    "considerations": "Chinese platform.",
+    "model_url": "https://klingai.com",
+    "pricing_note": "Free tier / credits",
+    "scraped_at": "2026-04-01T10:52:11.143Z",
+    "updated_at": "2026-04-08T05:00:06.298Z"
   },
   {
     "id": "9cf365ad-863d-4452-86e5-63b80de060cd",
@@ -574,7 +574,7 @@
     "model_url": "https://deepmind.google/technologies/veo/",
     "pricing_note": "Via Google AI Studio",
     "scraped_at": "2026-04-01T10:52:11.153Z",
-    "updated_at": "2026-04-04T05:00:05.140Z"
+    "updated_at": "2026-04-08T05:00:06.300Z"
   },
   {
     "id": "6d1000e3-f2b5-45e0-9a02-71f4a48528c6",
@@ -595,29 +595,7 @@
     "model_url": "https://openai.com/sora",
     "pricing_note": "ChatGPT Plus",
     "scraped_at": "2026-04-01T10:52:11.155Z",
-    "updated_at": "2026-04-04T05:00:05.142Z"
-  },
-  {
-    "id": "ce8bc73e-4583-4e6c-8aea-1779a82f897b",
-    "model_name": "ElevenLabs v3",
-    "model_maker": "ElevenLabs",
-    "category": "voice_tts",
-    "source_name": "Artificial Analysis",
-    "source_url": null,
-    "raw_score": "1105.00",
-    "score_type": "elo",
-    "meta_score": "88.00",
-    "meta_rank": 1,
-    "strengths": [
-      "Best realism & emotion",
-      "380+ voices",
-      "70+ languages"
-    ],
-    "considerations": "Premium pricing.",
-    "model_url": "https://elevenlabs.io",
-    "pricing_note": "Free tier / $5/mo Starter",
-    "scraped_at": "2026-04-01T10:52:11.164Z",
-    "updated_at": "2026-04-04T05:00:05.114Z"
+    "updated_at": "2026-04-08T05:00:06.302Z"
   },
   {
     "id": "873e5b82-312f-49ef-86df-1ed5e66b39e9",
@@ -639,7 +617,29 @@
     "model_url": "https://elevenlabs.io",
     "pricing_note": "Free tier / $5/mo Starter",
     "scraped_at": "2026-04-01T10:52:11.166Z",
-    "updated_at": "2026-04-04T05:00:05.114Z"
+    "updated_at": "2026-04-08T05:00:06.275Z"
+  },
+  {
+    "id": "ce8bc73e-4583-4e6c-8aea-1779a82f897b",
+    "model_name": "ElevenLabs v3",
+    "model_maker": "ElevenLabs",
+    "category": "voice_tts",
+    "source_name": "Artificial Analysis",
+    "source_url": null,
+    "raw_score": "1105.00",
+    "score_type": "elo",
+    "meta_score": "88.00",
+    "meta_rank": 1,
+    "strengths": [
+      "Best realism & emotion",
+      "380+ voices",
+      "70+ languages"
+    ],
+    "considerations": "Premium pricing.",
+    "model_url": "https://elevenlabs.io",
+    "pricing_note": "Free tier / $5/mo Starter",
+    "scraped_at": "2026-04-01T10:52:11.164Z",
+    "updated_at": "2026-04-08T05:00:06.275Z"
   },
   {
     "id": "69af5b8f-ddf4-4a74-b413-5d49c02deb1d",
@@ -660,7 +660,7 @@
     "model_url": "https://inworld.ai",
     "pricing_note": "API pricing",
     "scraped_at": "2026-04-01T10:52:11.168Z",
-    "updated_at": "2026-04-04T05:00:05.117Z"
+    "updated_at": "2026-04-08T05:00:06.276Z"
   },
   {
     "id": "48dcb08b-b799-4568-a019-e6518f3ee4ce",
@@ -681,7 +681,7 @@
     "model_url": "https://www.minimax.io",
     "pricing_note": "API pricing",
     "scraped_at": "2026-04-01T10:52:11.171Z",
-    "updated_at": "2026-04-04T05:00:05.119Z"
+    "updated_at": "2026-04-08T05:00:06.278Z"
   },
   {
     "id": "a5ce16e3-55a5-473f-8d2d-5613c47eb1cb",
@@ -702,6 +702,6 @@
     "model_url": "https://openai.com",
     "pricing_note": "API pricing",
     "scraped_at": "2026-04-01T10:52:11.174Z",
-    "updated_at": "2026-04-04T05:00:05.121Z"
+    "updated_at": "2026-04-08T05:00:06.280Z"
   }
 ]

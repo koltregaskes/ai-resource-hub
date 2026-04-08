@@ -10,12 +10,12 @@
  * - Manual runs (npm run scrape)
  *
  * Pipeline order matters:
- * 1. OpenRouter runs FIRST (primary pricing source + new model detection)
- * 2. Pricing validator runs SECOND (cross-checks against Together AI, Google, Groq)
- * 3. Benchmarks runs THIRD (ELO scores from LMSYS)
- * 4. Speed runs FOURTH (TTFT and throughput data)
- * 5. News runs FIFTH (public RSS and official blogs)
- * 6. Jobs runs LAST (public ATS boards + daily snapshots)
+ * 1. Canonical catalog sync runs FIRST (seed official providers + tracked frontier models)
+ * 2. OpenRouter runs SECOND (primary pricing source + new model detection)
+ * 3. Pricing validators run THIRD (cross-checks against official sources and live APIs)
+ * 4. Benchmarks and speed run FOURTH (quality + latency signals)
+ * 5. Registry normalisation runs FIFTH (demotes incomplete models and hides stale speed data)
+ * 6. News, status, and jobs run LAST (public editorial + market signals)
  *
  * Exit codes:
  * - 0: all scrapers succeeded
@@ -31,7 +31,6 @@ async function main() {
 
   const scrapers = [
     { name: 'Canonical Model Catalog Sync', script: 'scripts/sync-model-catalog.ts' },
-    { name: 'Registry Status Normaliser', script: 'scripts/normalize-model-registry.ts' },
     { name: 'OpenRouter Pricing (PRIMARY)', script: 'scripts/scrapers/openrouter.ts' },
     { name: 'Official Provider Pricing', script: 'scripts/scrapers/official-pricing.ts' },
     { name: 'Multi-Source Validator', script: 'scripts/scrapers/pricing.ts' },
@@ -39,6 +38,7 @@ async function main() {
     { name: 'Speed & TTFT', script: 'scripts/scrapers/speed.ts' },
     { name: 'Creative Benchmarks (AA Arenas)', script: 'scripts/scrapers/creative-benchmarks.ts' },
     { name: 'Quality Score Calculator', script: 'scripts/scrapers/quality-scores.ts' },
+    { name: 'Registry Status Normaliser', script: 'scripts/normalize-model-registry.ts' },
     { name: 'News (RSS + official blogs)', script: 'scripts/scrapers/news.ts' },
     { name: 'Provider Status (official APIs + feeds)', script: 'scripts/scrapers/status-pages.mjs' },
     { name: 'Jobs Market (public ATS boards)', script: 'scripts/scrapers/jobs.ts' },

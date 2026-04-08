@@ -60,6 +60,11 @@ interface OpenRouterResponse {
   data: OpenRouterModel[];
 }
 
+interface KnownModelRow {
+  id: string;
+  provider_id: string;
+}
+
 // ─── Model ID mapping ──────────────────────────────────────────
 // Maps OpenRouter model IDs to our database model IDs.
 // This is the COMPLETE mapping for all ~99 LLM models we track.
@@ -106,7 +111,9 @@ const LEGACY_MODEL_MAP: Record<string, string> = {
   'google/gemini-1.5-pro': 'gemini-1.5-pro',
   'google/gemini-1.5-flash': 'gemini-1.5-flash',
   'google/gemini-2.0-flash': 'gemini-2.0-flash',
+  'google/gemini-2.0-flash-001': 'gemini-2.0-flash',
   'google/gemini-2.0-flash-lite': 'gemini-2.0-flash-lite',
+  'google/gemini-2.0-flash-lite-001': 'gemini-2.0-flash-lite',
   'google/gemini-2.5-pro': 'gemini-2.5-pro',
   'google/gemini-2.5-flash': 'gemini-2.5-flash',
   'google/gemini-2.5-flash-lite': 'gemini-2.5-flash-lite',
@@ -134,10 +141,13 @@ const LEGACY_MODEL_MAP: Record<string, string> = {
   'mistralai/mistral-large-2407': 'mistral-large-2',
   'mistralai/mistral-medium': 'mistral-medium-3',
   'mistralai/mistral-small': 'mistral-small-3.1',
+  'mistralai/mistral-small-3.1-24b-instruct': 'mistral-small-3.1',
   'mistralai/codestral': 'codestral',
+  'mistralai/codestral-2508': 'codestral',
   'mistralai/codestral-2501': 'codestral-25.01',
   'mistralai/mistral-nemo': 'mistral-nemo',
   'mistralai/pixtral-large': 'pixtral-large',
+  'mistralai/pixtral-large-2411': 'pixtral-large',
 
   // ── xAI / Grok ──────────────────────────────────────────────
   'x-ai/grok-2': 'grok-2',
@@ -151,8 +161,11 @@ const LEGACY_MODEL_MAP: Record<string, string> = {
   'cohere/command-a': 'command-a',
   'cohere/command-a-reasoning': 'command-a-reasoning',
   'cohere/command-r-plus': 'command-r-plus',
+  'cohere/command-r-plus-08-2024': 'command-r-plus',
   'cohere/command-r': 'command-r',
+  'cohere/command-r-08-2024': 'command-r',
   'cohere/command-r7b': 'command-r7b',
+  'cohere/command-r7b-12-2024': 'command-r7b',
 
   // ── Alibaba / Qwen ──────────────────────────────────────────
   'qwen/qwen-2.5-72b-instruct': 'qwen-2.5-72b',
@@ -162,6 +175,7 @@ const LEGACY_MODEL_MAP: Record<string, string> = {
   'qwen/qwen3-32b': 'qwen3-32b',
   'qwen/qwen3-30b-a3b': 'qwen3-30b',
   'qwen/qwen3-coder-480b': 'qwen3-coder-480b',
+  'qwen/qwen3-coder': 'qwen3-coder-480b',
   'qwen/qwen3-max': 'qwen3-max',
 
   // ── Perplexity ───────────────────────────────────────────────
@@ -174,10 +188,15 @@ const LEGACY_MODEL_MAP: Record<string, string> = {
 
   // ── Amazon ───────────────────────────────────────────────────
   'amazon/nova-premier': 'nova-premier',
+  'amazon/nova-premier-v1': 'nova-premier',
   'amazon/nova-pro': 'nova-pro',
+  'amazon/nova-pro-v1': 'nova-pro',
   'amazon/nova-lite': 'nova-lite',
+  'amazon/nova-lite-v1': 'nova-lite',
   'amazon/nova-micro': 'nova-micro',
+  'amazon/nova-micro-v1': 'nova-micro',
   'amazon/nova-2-lite': 'nova-2-lite',
+  'amazon/nova-2-lite-v1': 'nova-2-lite',
 
   // ── Microsoft ────────────────────────────────────────────────
   'microsoft/phi-4': 'phi-4',
@@ -212,15 +231,14 @@ const MODEL_MAP: Record<string, string> = {
 };
 
 // Reverse lookup: our DB ID → provider ID for the model
-const DB_ID_TO_PROVIDER: Record<string, string> = {};
-for (const [orId, dbId] of Object.entries(MODEL_MAP)) {
-  const prefix = orId.split('/')[0];
-  DB_ID_TO_PROVIDER[dbId] = PROVIDER_PREFIX_MAP[prefix] ?? prefix;
-}
-
 // ─── Providers we care about for new model detection ──────────
 // Only flag new models from these major providers (ignore niche/community models)
 const WATCHED_PROVIDERS = getWatchedProviderPrefixes();
+const DISCOVERY_EXCLUDE_PATTERN = /\b(guard|moderation|embed|embedding|rerank|tts|transcribe|speech-to-text|text-to-speech|whisper)\b/i;
+
+function cleanModelName(name: string): string {
+  return name.replace(/^[^:]+:\s*/, '').trim();
+}
 
 function resolveDbId(orModel: OpenRouterModel, validModelIds: Set<string>): string | null {
   const mapped = MODEL_MAP[orModel.id];
@@ -236,9 +254,37 @@ function resolveDbId(orModel: OpenRouterModel, validModelIds: Set<string>): stri
   return catalogMatch?.id ?? null;
 }
 
+function resolveProviderId(orModel: OpenRouterModel, dbId: string, knownModels: Map<string, KnownModelRow>): string | null {
+  const existing = knownModels.get(dbId);
+  if (existing?.provider_id) return existing.provider_id;
+
+  const catalogMatch = findCatalogModelByAlias(dbId)
+    ?? findCatalogModelByAlias(orModel.id)
+    ?? findCatalogModelByAlias(orModel.name);
+  if (catalogMatch?.providerId) return catalogMatch.providerId;
+
+  const prefix = orModel.id.split('/')[0];
+  return PROVIDER_PREFIX_MAP[prefix] ?? null;
+}
+
+function shouldAutoTrackModel(orModel: OpenRouterModel, providerId: string | null, validProviderIds: Set<string>): boolean {
+  if (!providerId || !validProviderIds.has(providerId)) return false;
+  if (DISCOVERY_EXCLUDE_PATTERN.test(orModel.id) || DISCOVERY_EXCLUDE_PATTERN.test(orModel.name)) return false;
+
+  const prompt = parseFloat(orModel.pricing.prompt);
+  const completion = parseFloat(orModel.pricing.completion);
+  if (Number.isNaN(prompt) || Number.isNaN(completion)) return false;
+  return prompt > 0 || completion > 0;
+}
+
 // ─── Fetch and transform ───────────────────────────────────────
-async function scrapeOpenRouter(validProviderIds: Set<string>, validModelIds: Set<string>): Promise<{
+async function scrapeOpenRouter(
+  validProviderIds: Set<string>,
+  validModelIds: Set<string>,
+  knownModels: Map<string, KnownModelRow>,
+): Promise<{
   models: ScrapedModel[];
+  discoveredModels: ScrapedModel[];
   newModels: OpenRouterModel[];
   totalOnOpenRouter: number;
 }> {
@@ -259,15 +305,18 @@ async function scrapeOpenRouter(validProviderIds: Set<string>, validModelIds: Se
   console.log(`    Received ${data.data.length} models from OpenRouter`);
 
   const models: ScrapedModel[] = [];
+  const discoveredModels: ScrapedModel[] = [];
   const newModels: OpenRouterModel[] = [];
+  const discoveredIds = new Set<string>();
   let matched = 0;
 
   for (const orModel of data.data) {
     const dbId = resolveDbId(orModel, validModelIds);
+    const prefix = orModel.id.split('/')[0];
+    const providerId = dbId ? resolveProviderId(orModel, dbId, knownModels) : (PROVIDER_PREFIX_MAP[prefix] ?? null);
 
     if (!dbId) {
       // New model detection: is this from a provider we watch?
-      const prefix = orModel.id.split('/')[0];
       if (WATCHED_PROVIDERS.has(prefix)) {
         // Skip free/community variants (typically have ":free" suffix)
         if (!orModel.id.includes(':free') && !orModel.id.includes(':extended')) {
@@ -276,6 +325,27 @@ async function scrapeOpenRouter(validProviderIds: Set<string>, validModelIds: Se
           // Only flag paid models (free tier variants aren't new models)
           if (!isNaN(prompt) && !isNaN(completion) && (prompt > 0 || completion > 0)) {
             newModels.push(orModel);
+            const derivedId = deriveModelIdFromOpenRouterId(orModel.id);
+            if (!discoveredIds.has(derivedId) && shouldAutoTrackModel(orModel, providerId, validProviderIds)) {
+              discoveredModels.push({
+                id: derivedId,
+                name: cleanModelName(orModel.name),
+                providerId: providerId!,
+                inputPrice: Math.round(prompt * 1_000_000 * 1000) / 1000,
+                outputPrice: Math.round(completion * 1_000_000 * 1000) / 1000,
+                contextWindow: orModel.context_length || undefined,
+                maxOutput: orModel.top_provider?.max_completion_tokens || undefined,
+                released: orModel.created ? new Date(orModel.created * 1000).toISOString().slice(0, 10) : undefined,
+                modality: parseModality(orModel.architecture),
+                apiAvailable: true,
+                status: 'tracking',
+                notes: `Auto-tracked from OpenRouter discovery (${orModel.id}); awaiting official verification.`,
+                pricingSource: 'openrouter.ai/api/v1/models',
+              });
+              discoveredIds.add(derivedId);
+              validModelIds.add(derivedId);
+              knownModels.set(derivedId, { id: derivedId, provider_id: providerId! });
+            }
           }
         }
       }
@@ -295,7 +365,6 @@ async function scrapeOpenRouter(validProviderIds: Set<string>, validModelIds: Se
     if (inputPrice === 0 && outputPrice === 0) continue;
 
     const modality = parseModality(orModel.architecture);
-    const providerId = DB_ID_TO_PROVIDER[dbId];
     if (!providerId || !validProviderIds.has(providerId)) {
       console.warn(`    Skipping ${orModel.id}: missing provider record for "${providerId ?? 'unknown'}"`);
       continue;
@@ -303,7 +372,7 @@ async function scrapeOpenRouter(validProviderIds: Set<string>, validModelIds: Se
 
     models.push({
       id: dbId,
-      name: orModel.name.replace(/^[^:]+:\s*/, ''),
+      name: cleanModelName(orModel.name),
       providerId,
       inputPrice: Math.round(inputPrice * 1000) / 1000,
       outputPrice: Math.round(outputPrice * 1000) / 1000,
@@ -320,7 +389,11 @@ async function scrapeOpenRouter(validProviderIds: Set<string>, validModelIds: Se
     console.log(`    ⚠ Found ${newModels.length} NEW untracked models from watched providers`);
   }
 
-  return { models, newModels, totalOnOpenRouter: data.data.length };
+  if (discoveredModels.length > 0) {
+    console.log(`    Auto-tracked ${discoveredModels.length} new models for review`);
+  }
+
+  return { models, discoveredModels, newModels, totalOnOpenRouter: data.data.length };
 }
 
 function parseModality(architecture?: OpenRouterModel['architecture']): string {
@@ -412,15 +485,20 @@ async function main() {
   const validProviderIds = new Set(
     (db.prepare('SELECT id FROM providers').all() as Array<{ id: string }>).map((row) => row.id)
   );
-  const validModelIds = new Set(
-    (db.prepare('SELECT id FROM models').all() as Array<{ id: string }>).map((row) => row.id)
-  );
+  const existingModels = db.prepare('SELECT id, provider_id FROM models').all() as KnownModelRow[];
+  const validModelIds = new Set(existingModels.map((row) => row.id));
+  const knownModels = new Map(existingModels.map((row) => [row.id, row] as const));
 
   try {
-    const { models, newModels, totalOnOpenRouter } = await scrapeOpenRouter(validProviderIds, validModelIds);
+    const { models, discoveredModels, newModels, totalOnOpenRouter } = await scrapeOpenRouter(
+      validProviderIds,
+      validModelIds,
+      knownModels,
+    );
+    const allModels = [...models, ...discoveredModels];
 
-    if (models.length > 0) {
-      const updated = upsertModels(db, models);
+    if (allModels.length > 0) {
+      const updated = upsertModels(db, allModels);
       logScrapeRun(db, 'pricing:openrouter', 'success', updated);
       console.log(`  ✓ OpenRouter: ${updated} models updated (${totalOnOpenRouter} total on platform)`);
     } else {

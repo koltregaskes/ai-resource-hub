@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { spawn } from 'node:child_process';
 
@@ -29,9 +29,22 @@ function resolveAstroCli() {
   return candidates.find((candidate) => existsSync(candidate)) ?? null;
 }
 
+function pinEsbuildBinary(esbuildMainPath, binaryPath) {
+  if (!existsSync(esbuildMainPath) || !existsSync(binaryPath)) return;
+
+  const source = readFileSync(esbuildMainPath, 'utf8');
+  const marker = 'var ESBUILD_BINARY_PATH = process.env.ESBUILD_BINARY_PATH || ESBUILD_BINARY_PATH;';
+  const replacement = `var ESBUILD_BINARY_PATH = process.env.ESBUILD_BINARY_PATH || ${JSON.stringify(binaryPath)} || ESBUILD_BINARY_PATH;`;
+
+  if (!source.includes(marker) || source.includes(replacement)) return;
+  writeFileSync(esbuildMainPath, source.replace(marker, replacement), 'utf8');
+}
+
 const astroCli = resolveAstroCli();
 const localEsbuild = resolve('tools', 'esbuild', 'esbuild.exe');
-const packagedEsbuild = resolve('node_modules', '@esbuild', 'win32-x64', 'esbuild.exe');
+const topLevelEsbuildMain = resolve('node_modules', 'esbuild', 'lib', 'main.js');
+const viteEsbuildMain = resolve('node_modules', 'vite', 'node_modules', 'esbuild', 'lib', 'main.js');
+const vitePackagedEsbuild = resolve('node_modules', 'vite', 'node_modules', '@esbuild', 'win32-x64', 'esbuild.exe');
 const args = process.argv.slice(2);
 
 const env = { ...process.env };
@@ -40,9 +53,8 @@ if (!astroCli) {
   process.exit(1);
 }
 
-if (!env.ESBUILD_BINARY_PATH && !existsSync(packagedEsbuild) && existsSync(localEsbuild)) {
-  env.ESBUILD_BINARY_PATH = localEsbuild;
-}
+pinEsbuildBinary(topLevelEsbuildMain, localEsbuild);
+pinEsbuildBinary(viteEsbuildMain, vitePackagedEsbuild);
 
 const child = spawn(process.execPath, [astroCli, ...args], {
   cwd: process.cwd(),

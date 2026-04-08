@@ -24,6 +24,8 @@ export interface ScrapedModel {
   modality?: string;
   apiAvailable?: boolean;
   notes?: string;
+  category?: string;
+  status?: string;
   pricingSource: string;
 }
 
@@ -33,11 +35,39 @@ export interface ScrapedModel {
  */
 export function upsertModels(db: Database.Database, models: ScrapedModel[]): number {
   const upsert = db.prepare(`
-    INSERT INTO models (id, name, provider_id, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, pricing_source, pricing_updated)
-    VALUES (@id, @name, @providerId, @inputPrice, @outputPrice, @contextWindow, @maxOutput, @speed, @qualityScore, @released, @openSource, @modality, @apiAvailable, @notes, @pricingSource, datetime('now'))
+    INSERT INTO models (
+      id, name, provider_id, input_price, output_price, context_window, max_output, speed, quality_score,
+      released, open_source, modality, api_available, notes, category, status, pricing_source, pricing_updated
+    )
+    VALUES (
+      @id, @name, @providerId, @inputPrice, @outputPrice, @contextWindow, @maxOutput, @speed, @qualityScore,
+      @released, @openSource, @modality, @apiAvailable, @notes, @category, @status, @pricingSource, datetime('now')
+    )
     ON CONFLICT(id) DO UPDATE SET
+      name = excluded.name,
+      provider_id = excluded.provider_id,
       input_price = excluded.input_price,
       output_price = excluded.output_price,
+      context_window = CASE
+        WHEN excluded.context_window > 0 THEN excluded.context_window
+        ELSE models.context_window
+      END,
+      max_output = CASE
+        WHEN excluded.max_output > 0 THEN excluded.max_output
+        ELSE models.max_output
+      END,
+      modality = CASE
+        WHEN excluded.modality IS NOT NULL AND excluded.modality != '' THEN excluded.modality
+        ELSE models.modality
+      END,
+      api_available = excluded.api_available,
+      notes = COALESCE(excluded.notes, models.notes),
+      category = COALESCE(excluded.category, models.category),
+      status = CASE
+        WHEN models.status = 'retired' THEN models.status
+        WHEN models.status = 'tracking' AND excluded.status = 'active' THEN models.status
+        ELSE COALESCE(excluded.status, models.status)
+      END,
       pricing_source = excluded.pricing_source,
       pricing_updated = datetime('now'),
       updated_at = datetime('now')
@@ -67,6 +97,8 @@ export function upsertModels(db: Database.Database, models: ScrapedModel[]): num
         modality: model.modality ?? 'text',
         apiAvailable: model.apiAvailable !== false ? 1 : 0,
         notes: model.notes ?? null,
+        category: model.category ?? 'llm',
+        status: model.status ?? 'active',
         pricingSource: model.pricingSource,
       });
 

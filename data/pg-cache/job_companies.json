@@ -9,7 +9,9 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-02T16:32:49.227Z"
+    "updated_at": "2026-04-08 15:35:28",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
   },
   {
     "id": "figureai-jobs",
@@ -21,7 +23,9 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/figureai/jobs",
     "status": "active",
     "notes": "Public Greenhouse board; robotics and embodied AI hiring signal",
-    "updated_at": "2026-04-02T16:32:49.242Z"
+    "updated_at": "2026-04-08 15:35:34",
+    "provider_name": null,
+    "provider_colour": null
   },
   {
     "id": "deepmind-jobs",
@@ -33,7 +37,9 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/deepmind/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-02T16:32:49.234Z"
+    "updated_at": "2026-04-08 15:35:33",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
   },
   {
     "id": "mistral-jobs",
@@ -45,19 +51,9 @@
     "board_url": "https://api.lever.co/v0/postings/mistral?mode=json",
     "status": "active",
     "notes": "Public Lever board",
-    "updated_at": "2026-04-02T16:32:49.230Z"
-  },
-  {
-    "id": "runway-jobs",
-    "name": "Runway",
-    "provider_id": "runway",
-    "careers_url": "https://runwayml.com/careers/",
-    "board_type": "greenhouse",
-    "board_token": "runwayml",
-    "board_url": "https://boards-api.greenhouse.io/v1/boards/runwayml/jobs",
-    "status": "active",
-    "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-02T16:32:49.236Z"
+    "updated_at": "2026-04-08 15:35:33",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
   },
   {
     "id": "scaleai-jobs",
@@ -69,7 +65,9 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/scaleai/jobs",
     "status": "active",
     "notes": "Public Greenhouse board; useful as infrastructure hiring signal around AI deployment",
-    "updated_at": "2026-04-02T16:32:49.232Z"
+    "updated_at": "2026-04-08 15:35:34",
+    "provider_name": null,
+    "provider_colour": null
   },
   {
     "id": "stability-jobs",
@@ -81,7 +79,9 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/stabilityai/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-02T16:32:49.238Z"
+    "updated_at": "2026-04-08 15:35:34",
+    "provider_name": "Stability AI",
+    "provider_colour": "#a855f7"
   },
   {
     "id": "togetherai-jobs",
@@ -93,7 +93,9 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/togetherai/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-02T16:32:49.240Z"
+    "updated_at": "2026-04-08 15:35:34",
+    "provider_name": null,
+    "provider_colour": null
   },
   {
     "id": "wayve-jobs",
@@ -105,7 +107,9 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/wayve/jobs",
     "status": "active",
     "notes": "Public Greenhouse board; autonomous-driving AI hiring signal",
-    "updated_at": "2026-04-02T16:32:49.243Z"
+    "updated_at": "2026-04-08 15:35:35",
+    "provider_name": null,
+    "provider_colour": null
   },
   {
     "id": "youcom-jobs",
@@ -117,6 +121,8 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/youcom/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-02T16:32:49.245Z"
+    "updated_at": "2026-04-08 15:35:35",
+    "provider_name": null,
+    "provider_colour": null
   }
 ]

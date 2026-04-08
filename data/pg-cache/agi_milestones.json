@@ -1,0 +1,145 @@
+[
+  {
+    "id": "multi-agent-systems",
+    "title": "Multi-Agent Systems Mature",
+    "date": "2026-01-15T00:00:00.000Z",
+    "description": "Claude Code, Codex, and Gemini working together on shared codebases. Agent coordination becomes practical, not theoretical.",
+    "capability": "agent_collaboration",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 8,
+    "updated_at": "2026-04-04T16:18:14.569Z"
+  },
+  {
+    "id": "gpt5-release",
+    "title": "GPT-5 Release",
+    "date": "2025-07-31T23:00:00.000Z",
+    "description": "Significant capability jump across all domains. Pushes frontier of what single-model systems can achieve.",
+    "capability": "general_capability",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 9,
+    "updated_at": "2026-04-04T16:18:14.567Z"
+  },
+  {
+    "id": "claude-opus4",
+    "title": "Claude Opus 4",
+    "date": "2025-05-13T23:00:00.000Z",
+    "description": "Extended thinking, agentic capabilities, sustained complex task execution. Powers multi-session autonomous work.",
+    "capability": "agentic_reasoning",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 8,
+    "updated_at": "2026-04-04T16:18:14.564Z"
+  },
+  {
+    "id": "claude-code-launch",
+    "title": "Claude Code Launch",
+    "date": "2025-02-24T00:00:00.000Z",
+    "description": "Anthropic launches agentic coding tool. Autonomous file editing, terminal access, git operations. The agentic era begins.",
+    "capability": "agentic_coding",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 8,
+    "updated_at": "2026-04-04T16:18:14.562Z"
+  },
+  {
+    "id": "deepseek-r1",
+    "title": "DeepSeek-R1",
+    "date": "2025-01-20T00:00:00.000Z",
+    "description": "Open-weight reasoning model from China matching o1 performance at a fraction of the cost. Democratises advanced reasoning.",
+    "capability": "open_source_reasoning",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 9,
+    "updated_at": "2026-04-04T16:18:14.560Z"
+  },
+  {
+    "id": "o1-release",
+    "title": "o1 Release",
+    "date": "2024-09-11T23:00:00.000Z",
+    "description": "OpenAI releases o1 with explicit chain-of-thought reasoning. Claims Level 2 (Reasoners) reached. PhD-level science performance.",
+    "capability": "reasoning",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 9,
+    "updated_at": "2026-04-04T16:18:14.558Z"
+  },
+  {
+    "id": "gpt4o-release",
+    "title": "GPT-4o (Omni)",
+    "date": "2024-05-12T23:00:00.000Z",
+    "description": "Omni model with native audio/video understanding. Sub-second voice responses. Free tier access.",
+    "capability": "multimodal_realtime",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 8,
+    "updated_at": "2026-04-04T16:18:14.556Z"
+  },
+  {
+    "id": "claude3-opus",
+    "title": "Claude 3 Opus",
+    "date": "2024-03-04T00:00:00.000Z",
+    "description": "Anthropic releases Claude 3 family. Opus leads multiple benchmarks. First model widely considered to match GPT-4.",
+    "capability": "reasoning",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 8,
+    "updated_at": "2026-04-04T16:18:14.554Z"
+  },
+  {
+    "id": "sora-demo",
+    "title": "Sora Demonstration",
+    "date": "2024-02-15T00:00:00.000Z",
+    "description": "OpenAI demonstrates photorealistic text-to-video generation. Later shut down in 2026 due to cost and moderation challenges.",
+    "capability": "video_generation",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 7,
+    "updated_at": "2026-04-04T16:18:14.552Z"
+  },
+  {
+    "id": "gemini-release",
+    "title": "Gemini Release",
+    "date": "2023-12-06T00:00:00.000Z",
+    "description": "Google releases Gemini, natively multimodal from the ground up.",
+    "capability": "multimodal",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 8,
+    "updated_at": "2026-04-04T16:18:14.549Z"
+  },
+  {
+    "id": "claude2-release",
+    "title": "Claude 2",
+    "date": "2023-07-10T23:00:00.000Z",
+    "description": "Anthropic releases Claude 2 with 100K context window — 10x what was standard at the time.",
+    "capability": "long_context",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 7,
+    "updated_at": "2026-04-04T16:18:14.548Z"
+  },
+  {
+    "id": "gpt4-release",
+    "title": "GPT-4 Release",
+    "date": "2023-03-14T00:00:00.000Z",
+    "description": "Multimodal model passing bar exam, SAT, and various professional benchmarks. Significant quality jump over GPT-3.5.",
+    "capability": "multimodal_reasoning",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 9,
+    "updated_at": "2026-04-04T16:18:14.546Z"
+  },
+  {
+    "id": "chatgpt-launch",
+    "title": "ChatGPT Launch",
+    "date": "2022-11-30T00:00:00.000Z",
+    "description": "OpenAI releases ChatGPT. Broad conversational AI available to the public for the first time. Reaches 100M users in 2 months.",
+    "capability": "conversational_ai",
+    "level_mapping": {},
+    "source_url": null,
+    "significance": 10,
+    "updated_at": "2026-04-04T16:18:14.544Z"
+  }
+]

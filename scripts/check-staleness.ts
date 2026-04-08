@@ -115,18 +115,34 @@ function main() {
   `).all() as Array<{ id: string; name: string; speed_updated: string | null }>;
 
   if (staleSpeed.length > 0) {
-    console.log(`WARN STALE SPEED: ${staleSpeed.length} models with speed data >30d old`);
-    for (const model of staleSpeed.slice(0, 5)) {
-      console.log(`    ${model.name}: last updated ${model.speed_updated || 'never'}`);
+    if (!process.env.AA_API_KEY) {
+      console.log(`WARN SPEED COVERAGE: ${staleSpeed.length} active models still rely on legacy speed values`);
+      console.log('    Live Artificial Analysis refresh is unavailable because AA_API_KEY is not configured.');
+      for (const model of staleSpeed.slice(0, 5)) {
+        console.log(`    ${model.name}: legacy speed value with no live refresh timestamp`);
+      }
+      if (staleSpeed.length > 5) console.log(`    ... and ${staleSpeed.length - 5} more`);
       issues.push({
-        id: model.id,
-        name: model.name,
-        issue: 'stale-speed',
-        detail: `Last updated: ${model.speed_updated || 'never'}`,
+        id: 'speed-coverage',
+        name: 'Speed coverage',
+        issue: 'missing-live-speed-source',
+        detail: `AA_API_KEY not configured; ${staleSpeed.length} active models still use legacy speed values`,
       });
+      warnings += 1;
+    } else {
+      console.log(`WARN STALE SPEED: ${staleSpeed.length} models with speed data >30d old`);
+      for (const model of staleSpeed.slice(0, 5)) {
+        console.log(`    ${model.name}: last updated ${model.speed_updated || 'never'}`);
+        issues.push({
+          id: model.id,
+          name: model.name,
+          issue: 'stale-speed',
+          detail: `Last updated: ${model.speed_updated || 'never'}`,
+        });
+      }
+      if (staleSpeed.length > 5) console.log(`    ... and ${staleSpeed.length - 5} more`);
+      warnings += staleSpeed.length;
     }
-    if (staleSpeed.length > 5) console.log(`    ... and ${staleSpeed.length - 5} more`);
-    warnings += staleSpeed.length;
   } else {
     console.log('OK All speed data is within 30 days');
   }
@@ -243,11 +259,24 @@ function main() {
 
   // 7. Recent Scrape Log Health
   const recentErrors = db.prepare(`
+    WITH ranked_runs AS (
+      SELECT
+        scraper,
+        status,
+        error_message,
+        finished_at,
+        ROW_NUMBER() OVER (
+          PARTITION BY scraper
+          ORDER BY datetime(finished_at) DESC, id DESC
+        ) AS run_rank
+      FROM scrape_log
+      WHERE finished_at > datetime('now', '-24 hours')
+    )
     SELECT scraper, error_message, finished_at
-    FROM scrape_log
-    WHERE status = 'error'
-      AND finished_at > datetime('now', '-24 hours')
-    ORDER BY finished_at DESC
+    FROM ranked_runs
+    WHERE run_rank = 1
+      AND status = 'error'
+    ORDER BY datetime(finished_at) DESC
   `).all() as Array<{ scraper: string; error_message: string; finished_at: string }>;
 
   if (recentErrors.length > 0) {

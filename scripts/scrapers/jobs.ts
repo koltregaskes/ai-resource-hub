@@ -313,7 +313,7 @@ async function main() {
 
   const upsertCompany = db.prepare(`
     INSERT INTO job_companies (id, name, provider_id, careers_url, board_type, board_token, board_url, status, notes, updated_at)
-    VALUES (@id, @name, @providerId, @careersUrl, @boardType, @boardToken, @boardUrl, 'active', @notes, datetime('now'))
+    VALUES (@id, @name, @providerId, @careersUrl, @boardType, @boardToken, @boardUrl, @status, @notes, datetime('now'))
     ON CONFLICT(id) DO UPDATE SET
       name = excluded.name,
       provider_id = excluded.provider_id,
@@ -322,7 +322,7 @@ async function main() {
       board_token = excluded.board_token,
       board_url = excluded.board_url,
       notes = excluded.notes,
-      status = 'active',
+      status = excluded.status,
       updated_at = datetime('now')
   `);
 
@@ -367,6 +367,40 @@ async function main() {
   let importedJobs = 0;
   const failures: string[] = [];
 
+  function markCompanyUnavailable(company: CompanyConfig) {
+    const writeUnavailable = db.transaction(() => {
+      upsertCompany.run({
+        id: company.id,
+        name: company.name,
+        providerId: company.providerId,
+        careersUrl: company.careersUrl,
+        boardType: company.boardType,
+        boardToken: company.boardToken,
+        boardUrl: company.boardUrl,
+        status: 'unavailable',
+        notes: company.notes ?? null,
+      });
+
+      deactivateCompanyJobs.run(company.id);
+      deleteSnapshot.run(snapshotDate, company.id);
+      insertSnapshot.run(
+        snapshotDate,
+        company.id,
+        company.providerId,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+      );
+    });
+
+    writeUnavailable();
+  }
+
   for (const company of COMPANIES) {
     try {
       console.log(`Fetching jobs for ${company.name}...`);
@@ -387,6 +421,7 @@ async function main() {
           boardType: company.boardType,
           boardToken: company.boardToken,
           boardUrl: company.boardUrl,
+          status: 'active',
           notes: company.notes ?? null,
         });
 
@@ -416,6 +451,11 @@ async function main() {
       console.log(`  Imported ${uniqueJobs.length} active roles from ${company.name}`);
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
+      if (message.includes('HTTP 404')) {
+        markCompanyUnavailable(company);
+        console.warn(`  Marked ${company.name} as unavailable: ${message}`);
+        continue;
+      }
       failures.push(`${company.name}: ${message}`);
       console.warn(`  Failed to import ${company.name}: ${message}`);
     }
