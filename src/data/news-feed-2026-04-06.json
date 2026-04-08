@@ -1,0 +1,286 @@
+{
+  "generated": "2026-04-06T18:08:32.455Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "[P] Easily provide Wandb logs as context to agents for analysis and planning.",
+      "url": "https://reddit.com/r/MachineLearning/comments/1se1rmd/p_easily_provide_wandb_logs_as_context_to_agents/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "research_paper",
+        "api_update",
+        "tool_use",
+        "mcp"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-06T15:16:50.000Z",
+      "summary": "It is frustrating to use the Wandb CLI and MCP tools with my agents. For one, the MCP tool basically floods the context window and frequently errors out :/\n\nSo I built a cli tool that:\n\n* imports my wandb projects;\n* uses algorithms from [AlphaEvolve](https://arxiv.org/abs/2506.13131) to index and structure my runs;\n* is easy to use for agents;\n* provides greater context of past experiments;\n* does not flood the context window; and\n* easily tune exploration-exploitation while planning\n\nWould lov",
+      "category": "ai_research"
+    },
+    {
+      "title": "Gemma4:26b's reasoning capabilities are crazy.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sdz71b/gemma426bs_reasoning_capabilities_are_crazy/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "api_update",
+        "hardware",
+        "reasoning"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-06T13:41:08.000Z",
+      "summary": "Been experimenting with it, first on my buddy's compute he let me borrow, and then with the Gemini SDK so that I don't need to keep stealing his macbook from 600 miles away. Originally my home agent was run through Gemini-3-Flash because no other model I've tried has been able to match it's reasoning ability.\n\nThe script(s) I have it running through are a re-implementation of a multi-speaker smart home speaker setup, with several rasperry pi zeroes functioning as speaker satellites for a central",
+      "category": "ai_models"
+    },
+    {
+      "title": "[PokeClaw] First working app that uses Gemma 4 to autonomously control an Android phone. Fully on-device,  no cloud.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sdv3lo/pokeclaw_first_working_app_that_uses_gemma_4_to/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "api_update",
+        "training",
+        "autonomous_systems",
+        "policy"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-06T10:31:42.000Z",
+      "summary": "Most \"private\" AI assistants are private because the company says so. PokeClaw is private because there's literally no server component. The AI model runs on your phone's CPU. There's no cloud endpoint. You can block the app from the internet entirely and it works the same.\n\nIt runs Gemma 4 on-device using LiteRT and controls your phone through Android Accessibility. You type a command, the AI reads the screen, decides what to tap, and executes. Works with any app.\n\nI built this because I wanted",
+      "category": "ai_models"
+    },
+    {
+      "title": "Comparing Qwen3.5 vs Gemma4 for Local Agentic Coding",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sd0be8/comparing_qwen35_vs_gemma4_for_local_agentic/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "inference",
+        "ai_agents"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-05T10:34:32.000Z",
+      "summary": "[Gemma4](https://deepmind.google/models/gemma/gemma-4/) was relased by Google on April 2nd earlier this week and I wanted to see how it performs against Qwen3.5 for local agentic coding. This post is my notes on benchmarking the two model families. I ran two types of tests:\n\n* **Standard llama-bench benchmarks** for raw prefill and generation speed\n* **Single-shot agentic coding tasks** using [Open Code](https://opencode.ai) to see how these models actually perform on real multi-step coding work",
+      "category": "ai_models"
+    },
+    {
+      "title": "RightNow AI Releases AutoKernel: An Open-Source Framework that Applies an Autonomous Agent Loop to GPU Kernel Optimization for Arbitrary PyTorch Models",
+      "url": "https://www.marktechpost.com/2026/04/06/rightnow-ai-releases-autokernel-an-open-source-framework-that-applies-an-autonomous-agent-loop-to-gpu-kernel-optimization-for-arbitrary-pytorch-models/",
+      "source": "MarkTechPost",
+      "tags": [
+        "model_release",
+        "hardware",
+        "ai_agents",
+        "autonomous_systems",
+        "product_launch",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-04-06T18:01:49.121Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "We aren’t even close to AGI",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1se1cbk/we_arent_even_close_to_agi/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "dataset",
+        "hardware",
+        "autonomous_systems"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-06T15:01:21.000Z",
+      "summary": "Supposedly we’ve reached AGI according to Jensen Huang and Marc Andreessen.\n\nWhat a load of shit. I tried to get Claude code with Opus 4.6 max plan to play Elden Ring. Couldn’t even get past the first room. It made it past the character creator, but couldn’t leave the original chapel.\n\nIf it can’t play a game that millions have beat, if it can’t even get past the first room, how are we even close to Artificial GENERAL Intelligence?\n\nI understand that this isn’t in its training data but that’s th",
+      "category": "ai_models"
+    },
+    {
+      "title": "RTX 5090 gemma4-26b TG performance report",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sdl08q/rtx_5090_gemma426b_tg_performance_report/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "evaluation",
+        "hardware",
+        "reasoning"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-06T01:21:51.000Z",
+      "summary": "Nothing exhaustive... but I thought I'd report what I've seen from early testing. \n\nI'm running a modified version of vLLM that has NVFP4 support for gemma4-26b. Weights come in around 15.76 GiB and the remainder is KV cache. I'm running full context as well.\n\nFor a \"story telling\" prompt and raw output with no thinking, I'm seeing about 150 t/s on TG.  \nTTFT in streaming mode is about 80ms.\n\nQuality is good!",
+      "category": "ai_models"
+    },
+    {
+      "title": "[D] Is it a bad look to not respond to this rebuttal acknowledgement?",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sdlkbt/d_is_it_a_bad_look_to_not_respond_to_this/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "evaluation",
+        "reasoning",
+        "announcement"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-06T01:47:02.000Z",
+      "summary": "My ICML scores are 5,4,2. We flagged the reject review to the AC immediately because it was comprised almost entirely of objectively false statements (like claiming we didn’t test against baselines that we did in fact test against). Regardless, we made sure to write a thorough and respectful rebuttal. \n\nThen in reviewer’s rebuttal acknowledgement they ignored their own original review as well as the rebuttal and brought up new critiques. We’re thinking the best strategy is to say nothing at this",
+      "category": "ai_research"
+    },
+    {
+      "title": "TurboQuant on Apple Silicon: real benchmarks on Mac Mini M4 16GB and M3 Max 48GB",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sdkav6/turboquant_on_apple_silicon_real_benchmarks_on/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "architecture",
+        "inference"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-06T00:50:01.000Z",
+      "summary": "I’ve been testing TurboQuant this week on two machines and wanted to share the actual numbers.\n\n**Why this matters:** TurboQuant compresses the KV cache, not the model weights. On long contexts, KV cache can take several GB of memory, so reducing it can make a big difference even when throughput stays similar.\n\n**In the setup I tested,** K stays at q8\\_0 and V goes to turbo3 (\\~3-bit). That asymmetric tradeoff makes sense because errors in the keys affect attention routing more directly, while v",
+      "category": "ai_models"
+    },
+    {
+      "title": "[D] The memory chip market lost tens of billions over a paper this community would have understood in 10 minutes",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sdb7ne/d_the_memory_chip_market_lost_tens_of_billions/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "research_paper",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-05T18:32:27.000Z",
+      "summary": "TurboQuant was teased recently and tens of billions gone from memory chip market in 48 hours but anyone in this community who read the paper would have seen the problem with the panic immediately.\n\nTurboQuant compresses the KV cache down to 3 bits per value from the standard 16 using polar coordinate quantization. But the KV cache is inference memory. Training memory, activations, gradients, optimizer states, is a completely different thing and completely untouched. And majority of HBM demand co",
+      "category": "ai_research"
+    },
+    {
+      "title": "TurboQuant seems to work very well on Gemma 4 — and separately, per-layer outlier-aware K quantization is beating current public fork results on Qwen PPL",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sd05sa/turboquant_seems_to_work_very_well_on_gemma_4_and/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-05T10:25:07.000Z",
+      "summary": "I’ve been experimenting with TurboQuant KV cache quantization in llama.cpp (CPU + Metal) on Gemma 4 26B A4B-it Q4\\_K\\_M on an Apple M4 Pro 48GB, and the results look surprisingly strong.\n\n**Gemma 4 findings**\n\nOn Gemma 4, QJL seems to work well, and FWHT as a structured rotation substitute also looks like a good fit for the large attention heads (dk=256/512).\n\nMy benchmark results:\n\n* tq3j/q4\\_0: 37/37 on quality tests, 8/8 on NIAH\n* tq2j/q4\\_0: 36/37, with the only miss being an empty response\n",
+      "category": "ai_models"
+    },
+    {
+      "title": "Gemma 4 just casually destroyed every model on our leaderboard except Opus 4.6 and GPT-5.2. 31B params, $0.20/run",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sdcotc/gemma_4_just_casually_destroyed_every_model_on/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "open_source"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-05T19:30:02.000Z",
+      "summary": "Tested Gemma 4 (31B) on our benchmark. Genuinely did not expect this.\n\n100% survival, 5 out of 5 runs profitable, +1,144% median ROI. At $0.20 per run.\n\nIt outperforms GPT-5.2 ($4.43/run), Gemini 3 Pro ($2.95/run), Sonnet 4.6 ($7.90/run), and absolutely destroys every Chinese open-source model we've tested — Qwen 3.5 397B, Qwen 3.5 9B, DeepSeek V3.2, GLM-5. None of them even survive consistently.\n\nThe only model that beats Gemma 4 is Opus 4.6 at $36 per run. That's 180× more expensive.\n\n31 billi",
+      "category": "ai_models"
+    },
+    {
+      "title": "Best model for 4090 as AI Coding Agent",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sdzu1v/best_model_for_4090_as_ai_coding_agent/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "hardware",
+        "ai_agents"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-06T14:05:58.000Z",
+      "summary": "Good day. I am looking for best local  model for coding agent. I might've missed something or some model which is not that widely used so I cam here for the help.\n\nCurrently I have following models I found useful in agentic coding via Google's turbo quant applied on **llama.cpp:**\n\n* GLM 4.7 Flash Q4\\_K\\_M -&gt; 30B\n* 30B Nemotron 3 Q4\\_K\\_M -&gt; 30B\n* Qwen3 Coder Next Q4\\_K\\_M -&gt; 80B\n\nI really was trying to get Qwen3 Coder Next to get a decent t/s for input and output as I thought it would ",
+      "category": "ai_models"
+    },
+    {
+      "title": "I open-sourced a tool that compiles raw documents into an AI-navigable wiki with persistent memory; runs 100% locally",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sdzalu/i_opensourced_a_tool_that_compiles_raw_documents/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-06T13:45:10.000Z",
+      "summary": "After seeing Karpathy's tweet about using LLMs to build personal wikis from research documents, I realized I'd already been using something similar like this internally for our R&amp;D.\n\nSo I cleaned it up and open-sourced it.\n\n**What it does:** You drop a folder of raw documents (PDFs, papers, notes, code, 60+ formats) and the LLM compiles them into a structured markdown wiki with backlinked articles, concept pages, and a master index. It then compresses everything into a `.aura` archive optimi",
+      "category": "ai_models"
+    },
+    {
+      "title": "[D] Why do we keep pretending that AI agent continuity is a prompt engineering problem?",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sdwqn5/d_why_do_we_keep_pretending_that_ai_agent/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "api_update",
+        "ai_agents"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-06T11:55:38.000Z",
+      "summary": "Every few months someone posts about \"long-term memory for LLMs\" and the thread fills with retrieval strategies, vector databases, and context window tricks. Good engineering. Wrong level of abstraction.\n\nThe continuity problem for deployed AI agents is not a retrieval problem. It is an infrastructure problem.\n\nHere is the distinction:\n\n**Retrieval-level continuity:** The agent can surface relevant context from past interactions. This is solved well enough with embedding search, hierarchical sum",
+      "category": "ai_research"
+    },
+    {
+      "title": "qwen3.5 vs gemma4 vs cloud llms in python turtle",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sduotb/qwen35_vs_gemma4_vs_cloud_llms_in_python_turtle/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-06T10:08:45.000Z",
+      "summary": "I have found python turtle to be a pretty good test for a model. All of these models have received the same prompt: \"write a python turtle program that draws a cat\"\n\nyou can actually see similarity in gemma's and gemini pro's outputs, they share the color pallete and minimalist approach in terms of details.\n\nI have a 16 gb vram gpu so couldn't test bigger versions of qwen and gemma without quantisation.   \n\n\n[gemma\\_4\\_31B\\_it\\_UD\\_IQ3\\_XXS.gguf](https://preview.redd.it/lqilrv53njtg1.png?width=9",
+      "category": "ai_models"
+    },
+    {
+      "title": "Scoble: Several Robotaxis Are Driving Around Austin With No Humans in the Car",
+      "url": "https://x.com/Scobleizer/status/2040729193743532457",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "api_update",
+        "autonomous_systems"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-05T19:55:33.648Z",
+      "summary": "Scoble noted that several robotaxis are driving around Austin with no humans in the car, reflecting the rapid expansion of autonomous vehicle deployments beyond San Francisco to other major cities.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "500 AI Agents Debating News Stories on Your Laptop — Open Source and Available Now",
+      "url": "https://x.com/RoundtableSpace/status/2040870839210418437",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "ai_agents",
+        "open_source"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-05T19:57:17.766Z",
+      "summary": "Braygent's take on the open-source 500-agent debate engine, highlighting its implications for understanding how narratives form and evolve in public discourse.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Speed Limits Are Real — You Can Go Four Times Faster But Try for Ten Times and You Go Slower",
+      "url": "https://x.com/vasuman/status/2040870287928140055",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference",
+        "creative_workflow"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-05T19:57:17.766Z",
+      "summary": "Braygent's take on @vasuman's AI speed limits observation, arguing that understanding the 2x-4x ceiling is essential for designing effective AI-assisted workflows.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Built my 10x NVidia V100 AI Server - 320gb vram - vLLM Testing Linux Headless - Just a Lawyer,Need Tips",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sdovu9/built_my_10x_nvidia_v100_ai_server_320gb_vram/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "hardware",
+        "policy"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-06T04:26:20.000Z",
+      "summary": "Just by way of background: I am from the Midwest but I’m lawyer in South Carolina (and I am actually preparing for a trial next week and should be asleep). Have had my own Law firm for 11 years now. \n\nAbout 4 months ago Claude code did some things that were pretty powerful and scared the shit out of me. Since then I’ve probably wasted more time than I gained, but I have been successful in automating a lot of low level paralegal type tasks, and have learned a lot. It has been fun along the way, o",
+      "category": "ai_models"
+    }
+  ]
+}

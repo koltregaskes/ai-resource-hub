@@ -1,0 +1,296 @@
+{
+  "generated": "2026-04-07T18:05:04.643Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "I benchmarked 37 LLMs on MacBook Air M5 32GB — full results + open-source tool to benchmark your own Mac",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1se81a5/i_benchmarked_37_llms_on_macbook_air_m5_32gb_full/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "evaluation",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-04-06T19:00:28.000Z",
+      "summary": "So I got curious about how fast different models actually run on my M5 Air (32GB, 10 CPU/10 GPU). Instead of just testing one or two, I went through 37 models across 10 different families and recorded everything using llama-bench with Q4\\_K\\_M quantization.\n\nThe goal: build a **community benchmark database** covering every Apple Silicon chip (M1 through M5, base/Pro/Max/Ultra) so anyone can look up performance for their exact hardware.\n\n# The Results (M5 32GB, Q4_K_M, llama-bench)\n\n# Top 15 by G",
+      "category": "ai_models"
+    },
+    {
+      "title": "4 days on gemma 4 26b quantized, honest notes",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1se5jr9/4_days_on_gemma_4_26b_quantized_honest_notes/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "hardware",
+        "creative_workflow",
+        "ai_agents",
+        "reasoning",
+        "open_source"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-04-06T17:32:25.000Z",
+      "summary": "running it on a mac mini m4 24gb via ollama\n\nlegitimately good for: structured tasks, code generation, json formatting, following specific instructions. the apache 2.0 license means you can actually ship commercial products on it\n\nwhere it falls apart: multi-step reasoning and self correction. tried it with hermes agent for agentic workflows and it loses the thread after 3-4 steps. ends up in loops or contradicts its own earlier output\n\nsweet spot for me is routing simple repeatable tasks to gem",
+      "category": "ai_models"
+    },
+    {
+      "title": "TurboQuant - Extreme KV Cache Quantization · ggml-org/llama.cpp · Discussion #20969",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sevwek/turboquant_extreme_kv_cache_quantization/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "research_paper",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-07T13:24:08.000Z",
+      "summary": "&gt;14+ independent validators now across Metal, CUDA, HIP, Vulkan, and MLX. Apple Silicon, NVIDIA (4090, 5090, H100, A100, V100, 1080 Ti), AMD (RX 9070 XT, RX 6600). from M1 to Blackwell.  \nthis is what open source research looks like. the data converges.\n\n\\- u/Pidtom\n\nThat's an all-in-one thread to check all discussions &amp; benchmarks on TurboQuant.",
+      "category": "ai_models"
+    },
+    {
+      "title": "[R] Hybrid attention for small code models: 50x faster inference, but data scaling still dominates",
+      "url": "https://reddit.com/r/MachineLearning/comments/1senzrn/r_hybrid_attention_for_small_code_models_50x/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "model_release",
+        "architecture",
+        "dataset",
+        "inference"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-07T06:21:36.000Z",
+      "summary": "**TLDR: Forked pytorch and triton internals . Changed attention so its linear first layer , middle quadratic  layer, last linear layer**  \n**Inference got much faster with a low perplexity hit in tests .**\n\nI trained a 25.6M parameter Rust-focused language model from scratch using a byte-level GPT-style decoder.\n\nThe main result is that increasing dataset size mattered more than any architectural change.\n\nExpanding the corpus from about 31MB of core Rust sources to roughly 173MB by adding a few ",
+      "category": "ai_research"
+    },
+    {
+      "title": "[D] How's MLX and jax/ pytorch on MacBooks these days?",
+      "url": "https://reddit.com/r/MachineLearning/comments/1seexk0/d_hows_mlx_and_jax_pytorch_on_macbooks_these_days/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "dataset",
+        "hardware"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-06T23:16:18.000Z",
+      "summary": "&amp;#x200B;\n\nSo I'm looking at  buying a new   14 inch MacBook pro with m5 pro and 64 gb of memory vs m4 max with same specs.\n\nMy priorities are pro  software development including running multiple VMs and agents and containers, and playing around with local LLMs, maybe fine-tuning and also training regular old machine learning models.\n\nit seems like I'd go for the m4 max because of the extra GPU cores, way higher bandwidth, only marginal difference in CPU performance etc but I'm wondering abou",
+      "category": "ai_research"
+    },
+    {
+      "title": "Got Gemma 4 running locally on CUDA, both float and GGUF quantized, with benchmarks",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sebwz2/got_gemma_4_running_locally_on_cuda_both_float/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-06T21:18:02.000Z",
+      "summary": "Spent the last week getting Gemma 4 working on CUDA with both full-precision (BF16) and GGUF quantized inference. Here's a video of it running. Sharing some findings because this model has some quirks that aren't obvious.\n\n**Performance (Gemma4 E2B, RTX 3090):**\n\n    | Config                  | BF16 Float | Q4_K_M GGUF |\n    |-------------------------|------------|-------------|\n    | short gen (p=1, g=32)   | 110 tok/s  | 170 tok/s   |\n    | long gen (p=512, g=128) |  72 tok/s  |  93 tok/s   |\n",
+      "category": "ai_models"
+    },
+    {
+      "title": "[D] MemPalace claims 100% on LoCoMo and a \"perfect score on LongMemEval.\" Its own BENCHMARKS.md documents why neither is meaningful.",
+      "url": "https://reddit.com/r/MachineLearning/comments/1seunbr/d_mempalace_claims_100_on_locomo_and_a_perfect/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "open_source"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-07T12:32:42.000Z",
+      "summary": "A new open-source memory project called MemPalace launched yesterday claiming \"100% on LoCoMo\" and \"the first perfect score ever recorded on LongMemEval. 500/500 questions, every category at 100%.\" The launch tweet went viral reaching over 1.5 million views while the repository picked up over 7,000 GitHub stars in less than 24 hours.\n\nThe interesting thing is not that the headline numbers are inflated. The interesting thing is that the project's own BENCHMARKS.md file documents this in detail, w",
+      "category": "ai_research"
+    },
+    {
+      "title": "Meta AI Releases EUPE",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1seundj/meta_ai_releases_eupe/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "product_launch"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-07T12:32:46.000Z",
+      "summary": "# A Compact Vision Encoder Family Under 100M Parameters That Rivals Specialist Models Across Image Understanding, Dense Prediction, and VLM Tasks\n\nLink: [https://github.com/facebookresearch/EUPE](https://github.com/facebookresearch/EUPE)",
+      "category": "ai_models"
+    },
+    {
+      "title": "Built an open source memory layer for local AI agents, runs fully offline, no cloud needed",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1serbdw/built_an_open_source_memory_layer_for_local_ai/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "api_update",
+        "ai_agents",
+        "open_source"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-07T09:42:51.000Z",
+      "summary": "I built an open source memory layer for AI agents called Octopoda. Runs entirely locally, no cloud, no API keys, no external services. Everything stays on your machine.\n\nThe problem is pretty simple. Agents forget everything between sessions. Every time you restart your agent it starts from scratch like you never talked to it. I kept building hacky workarounds for this so eventually I just built a proper solution.\n\nIt gives your agents persistent memory that survives restarts and crashes, semant",
+      "category": "ai_models"
+    },
+    {
+      "title": "[D] Is ACL more about the benchmarks now?",
+      "url": "https://reddit.com/r/MachineLearning/comments/1seqckq/d_is_acl_more_about_the_benchmarks_now/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "benchmark",
+        "research_paper",
+        "announcement"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-07T08:43:51.000Z",
+      "summary": "I am not a NLP guy, but afaik ACL is one of the premium venues of NLP. \n\nAnd given that the results were announced recently, my LinkedIn and Twitter are full of such posts. However, every title I read in those posts has something to do with benchmarks. And even it seems, the young researchers also have like 10+ papers (main + findings) at a single venue. \n\n  \nSo was just wondering if ACL is majorly about benchmarks now, or are there are good theory/empirical stuffs yet published at this venue",
+      "category": "ai_research"
+    },
+    {
+      "title": "Anthropic Cut Claude Subscription Support for OpenClaw — Kilo Gateway Is the Alternative",
+      "url": "https://x.com/thenewstack/status/2041305023091548583",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "pricing_change",
+        "policy",
+        "open_source"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-07T02:17:09.479Z",
+      "summary": "Braygent's take on Anthropic cutting Claude subscription support for OpenClaw, arguing the community will keep finding alternatives and Anthropic can't win this battle against open source.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Tested TurboQuant KV compression with Gemma 4 31B — 5.80x compression, perfect long-context recall, JSON output preserved",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sellby/tested_turboquant_kv_compression_with_gemma_4_31b/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "research_paper",
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-07T04:11:42.000Z",
+      "summary": "Quick experiment: I implemented Google Research's TurboQuant paper (arXiv 2504.19874) as a Python package and tested it with Google's brand new Gemma 4 31B model. The results exceeded the paper's claims.\n\n**Setup:**\n\n* Hardware: RTX PRO 6000 Blackwell (96GB VRAM)\n* Model: google/gemma-4-31B-it (BF16, 64 layers)\n* Compression: TurboQuant turbo3 (3-bit PolarQuant + QJL residual)\n* Backend: HuggingFace Transformers with custom past\\_key\\_values interception\n\n**Compression results:**\n\n|Metric|Value|",
+      "category": "ai_models"
+    },
+    {
+      "title": "Built a Hybrid NAS tool for RNN architectures (HyNAS-R) – Looking for feedback for my final year evaluation [R]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sebmo8/built_a_hybrid_nas_tool_for_rnn_architectures/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "funding"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-06T21:07:09.000Z",
+      "summary": "Hi everyone,\n\nI'm currently in the evaluation phase of my Final Year Project and am looking for feedback on the system I've built. It's called HyNAS-R, a Neural Architecture Search tool designed to automatically find the best RNN architectures for NLP tasks by combining a zero-cost proxy with metaheuristic optimization.\n\nI have recorded a video explaining the core algorithm and the technology stack behind the system, specifically how it uses an Improved Grey Wolf Optimizer and a Hidden Covarianc",
+      "category": "ai_research"
+    },
+    {
+      "title": "I wanted Claude Max but I'm a broke CS student. So I built an open-source TUI orchestrator that forces free/local models to act as a swarm using AST-Hypergraphs and Git worktrees. I would appreciate suggestions, advice, and feedback that can help me improve the tool before I release it!",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1seg9i0/i_wanted_claude_max_but_im_a_broke_cs_student_so/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "api_update",
+        "pricing_change",
+        "training",
+        "hardware",
+        "autonomous_systems",
+        "reasoning",
+        "open_source"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-07T00:12:05.000Z",
+      "summary": "Hey everyone,\n\nI'm a Computer Science undergrad, and lately, I've been obsessed with the idea of autonomous coding agents. The problem? I simply cannot afford the costs of running massive context windows for multi-step reasoning. \n\nI wanted to build a CLI tool that could utilize local models, API endpoints or/and the coolest part, it can utilize tools like **Codex**, **Antigravity**, **Cursor**, VS Code's **Copilot** (All of these tools have free tiers and student plans), and **Claude Code** to ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Any significant limitation from RTX 30xx series? nvidia compute capability",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1se5qbr/any_significant_limitation_from_rtx_30xx_series/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-06T17:38:38.000Z",
+      "summary": "According to [nvidia](https://developer.nvidia.com/cuda/gpus) the RTX 30xx series have 8.6 compute capability support.\n\nI just wanted to know if there are any hardware limitations that impact model inference and training.\n\nMy concern is if the hardware doesn't support whatever fancy version of flash attention or the like and then I can't use it or it is 10x slower.\n\nI don't think it makes a difference, beyond speed, but the GPU would be a mobile RTX 30xx series. It sucks but it's what I can affo",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Anthropic ups compute deal with Google and Broadcom amid skyrocketing demand",
+      "url": "https://techcrunch.com/2026/04/07/anthropic-compute-deal-google-broadcom-tpus/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware",
+        "industry_move"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-07T18:00:12.494Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI encourages firms to trial four-day weeks to adapt to AI eraThe ChatGPT-maker said its early policy ideas aim to prompt discussions about action needed as AI systems become more capable.",
+      "url": "https://www.bbc.com/news/articles/c8x71ejrp92o",
+      "source": "BBC AI",
+      "tags": [
+        "model_release",
+        "policy"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-07T18:00:09.887Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemma 4 on LocalAI: Vulkan vs ROCm",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sf182p/gemma_4_on_localai_vulkan_vs_rocm/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "architecture"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-07T16:38:25.000Z",
+      "summary": "# Gemma 4 on LocalAI: Vulkan vs ROCm\n\nHey everyone! 👋\n\nJust finished running a bunch of benchmarks on the new Gemma 4 models using LocalAI and figured I'd share the results. I was curious how **Vulkan** and **ROCm** backends stack up against each other, and how the **26B MoE** (only ~4B active params) compares to the full **31B dense** model in practice.\n\n---\n\nThree model variants, each on both Vulkan and ROCm:\n\n| Model | Type | Quant | Source |\n|---|---|---|---|\n| gemma-4-26B-A4B-it-APEX | MoE",
+      "category": "ai_models"
+    },
+    {
+      "title": "Auto-creation of agent SKILLs from observing your screen via Gemma 4 for any agent to execute and self-improve",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sey6vv/autocreation_of_agent_skills_from_observing_your/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "creative_workflow",
+        "open_source"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-07T14:50:28.000Z",
+      "summary": "AgentHandover is an open-source Mac menu bar app that watches your screen through Gemma 4 (running locally via Ollama) and turns your repeated workflows into structured Skill files that any agent can follow.\n\nI built it because every time I wanted an agent to handle something for me I had to explain the whole process from scratch, even for stuff I do daily. So AgentHandover just watches instead. You can either hit record for a specific task (Focus Record) or let it run in the background where it",
+      "category": "ai_models"
+    },
+    {
+      "title": "Pdf to Json?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sett7m/pdf_to_json/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-07T11:55:30.000Z",
+      "summary": "Hello all, I am working on a project where I need to extract information from a scanned pdf containing tables, images and text, and return a JSON format. What’s the most efficient/SOTA way I could be doing it? I tested deepseekocr and it was kinda mid, I also came across tesseract which I wanted to test. The constraints are GPU and API cost (has to be free I’m a student T.T)",
+      "category": "ai_models"
+    }
+  ]
+}

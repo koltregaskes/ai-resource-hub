@@ -1,0 +1,223 @@
+{
+  "generated": "2026-04-04T18:05:27.184Z",
+  "site": "AI Resource Hub",
+  "article_count": 16,
+  "articles": [
+    {
+      "title": "Google Researchers Reveal Every Way Hackers Can Trap, Hijack AI Agents",
+      "url": "https://decrypt.co/363201/google-researchers-reveal-every-way-hackers-can-trap-hijack-ai-agents",
+      "source": "Decrypt",
+      "tags": [
+        "research_paper",
+        "ai_agents",
+        "multi_agent",
+        "autonomous_systems"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-02T21:01:09.000Z",
+      "summary": "A Google DeepMind paper maps six attack categories against autonomous AI agents—from invisible HTML commands to multi-agent flash crashes.",
+      "category": "crypto"
+    },
+    {
+      "title": "ArmBench-LLM 1.0: Benchmarking LLMs on Armenian Language Tasks     1 day ago •  3",
+      "url": "https://huggingface.co/blog/Metric-AI/armbench-llm",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "benchmark"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T06:00:12.035Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "How I Trained Action Chunking Transformer (ACT) on SO-101: My Journey, Gotchas, and Lessons     Sep 30, 2025 •  64",
+      "url": "https://huggingface.co/blog/sherryxychen/train-act-on-so-101",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "architecture"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T06:00:12.030Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Netflix AI Team Just Open-Sourced VOID: an AI Model That Erases Objects From Videos — Physics and All",
+      "url": "https://www.marktechpost.com/2026/04/04/netflix-ai-team-just-open-sourced-void-an-ai-model-that-erases-objects-from-videos-physics-and-all/",
+      "source": "MarkTechPost",
+      "tags": [
+        "open_source",
+        "crypto_regulation"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T18:00:34.036Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Elon Musk insists banks working on SpaceX IPO must buy Grok subscriptions",
+      "url": "https://arstechnica.com/tech-policy/2026/04/elon-musk-insists-banks-working-on-spacex-ipo-must-buy-grok-subscriptions/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "benchmark",
+        "pricing_change"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T18:00:29.401Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "ai-security-research",
+      "url": "https://simonwillison.net/tags/ai-security-research/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "research_paper",
+        "crypto_regulation"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T06:00:24.781Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Netflix must refund customers for years of price hikes, Italian court rules",
+      "url": "https://arstechnica.com/gadgets/2026/04/netflix-ordered-to-refund-subscribers-up-to-e500-for-unlawful-price-hikes/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "pricing_change",
+        "crypto_regulation"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T06:00:15.608Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "&#8220;Cognitive surrender&#8221; leads AI users to abandon logical thinking, research finds",
+      "url": "https://arstechnica.com/ai/2026/04/research-finds-ai-users-scarily-willing-to-surrender-their-cognition-to-llms/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "research_paper",
+        "reasoning"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T06:00:15.593Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "&#8216;Alive and well:&#8217; Solana memecoin honoring 193-year-old tortoise Jonathan rallies following April Fools&#8217; prank",
+      "url": "https://www.theblock.co/post/396264/alive-well-solana-memecoin-193-year-old-tortoise-jonathan-rallies-april-fools-prank?utm_source=rss&amp;utm_medium=rss",
+      "source": "The Block",
+      "tags": [
+        "model_release",
+        "crypto",
+        "crypto_defi"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-02T17:21:45.000Z",
+      "summary": "The JONATHAN token, launched eight months ago, hit a high of approximately $0.00038 on April Fools' Day, in a single 1,400% candle.",
+      "category": "crypto"
+    },
+    {
+      "title": "CoinDesk 20 performance update: Bitcoin (BTC) trades flat while altcoins rise",
+      "url": "https://www.coindesk.com/coindesk-indices/2026/04/03/coindesk-20-performance-update-bitcoin-btc-trades-flat-while-altcoins-rise",
+      "source": "CoinDesk",
+      "tags": [
+        "evaluation",
+        "crypto",
+        "crypto_defi"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T13:18:50.000Z",
+      "summary": "NEAR Protocol (NEAR) gained 5.8% and Avalanche (AVAX) climbed 3.6%.",
+      "category": "crypto"
+    },
+    {
+      "title": "Schwab plans spot bitcoin, ether trading launch in first half of 2026",
+      "url": "https://www.coindesk.com/business/2026/04/03/schwab-plans-spot-bitcoin-ether-trading-launch-in-first-half-of-2026",
+      "source": "CoinDesk",
+      "tags": [
+        "pricing_change",
+        "crypto",
+        "crypto_trading"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T19:18:00.000Z",
+      "summary": "The financial services giant with almost $12 trillion in client assets is moving closer to direct crypto trading, offering subscription for early access to the Schwab Crypto account.",
+      "category": "crypto"
+    },
+    {
+      "title": "Here's what 'cracking' bitcoin in 9 minutes by quantum computers actually means",
+      "url": "https://www.coindesk.com/tech/2026/03/31/what-does-cracking-bitcoin-in-9-minutes-by-quantum-computers-actually-mean",
+      "source": "CoinDesk",
+      "tags": [
+        "research_paper",
+        "hardware",
+        "crypto"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-04T02:30:00.000Z",
+      "summary": "Google's quantum paper made headlines with that number. Here's what it means, what's actually at risk, and why 6.9 million bitcoin are more exposed than the rest.",
+      "category": "crypto"
+    },
+    {
+      "title": "Algorand Soars Double-Digits On Google ‘Post-Quantum Protocols’ Citation",
+      "url": "https://decrypt.co/363236/algorand-soars-double-digits-on-google-post-quantum-protocols-citation",
+      "source": "Decrypt",
+      "tags": [
+        "research_paper",
+        "crypto",
+        "crypto_defi"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T11:35:36.000Z",
+      "summary": "Algorand jumped following its mention in a Google research paper, as post-quantum cryptography emerges as a new crypto narrative.",
+      "category": "crypto"
+    },
+    {
+      "title": "Trump’s New Attorney General Held Bitcoin—But Has a Mixed Crypto Track Record",
+      "url": "https://decrypt.co/363267/trumps-new-attorney-general-held-bitcoin-mixed-crypto-track-record",
+      "source": "Decrypt",
+      "tags": [
+        "benchmark",
+        "crypto",
+        "crypto_regulation"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T17:09:42.000Z",
+      "summary": "Acting Attorney General Todd Blanche directed his staff last year to lay off crypto developers—but also oversaw their continued prosecution.",
+      "category": "crypto"
+    },
+    {
+      "title": "Ethereum L2s need responsive pricing to scale, says Offchain Labs",
+      "url": "https://cointelegraph.com/news/ethereum-l2s-responsive-pricing-scale-billions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "CoinTelegraph",
+      "tags": [
+        "model_release",
+        "pricing_change",
+        "crypto"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T13:51:29.000Z",
+      "summary": "Edward Felten said Ethereum L2s need responsive pricing to scale, as Arbitrum’s new model tests an alternative to EIP-1559-style fee swings.",
+      "category": "crypto"
+    },
+    {
+      "title": "Is Bitcoin mispricing a prolonged Iran war? Ex-hedge fund manager weighs in",
+      "url": "https://cointelegraph.com/news/bitcoin-underestimating-prolonged-iran-war-macro-investor-weighs-in?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "source": "CoinTelegraph",
+      "tags": [
+        "pricing_change",
+        "hardware",
+        "crypto"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T19:04:17.000Z",
+      "summary": "In a recent Cointelegraph interview, macro investor James Lavish explains why markets are pricing in a quick end to the Iran war — and what could happen if that assumption is wrong.",
+      "category": "crypto"
+    }
+  ]
+}

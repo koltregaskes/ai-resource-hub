@@ -1,0 +1,275 @@
+{
+  "generated": "2026-04-05T06:05:59.553Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "@CloudflareDev — Gemma 4 Just Landed on Cloudflare Workers AI — 256K Context, Tool Calling, Vision",
+      "url": "https://x.com/CloudflareDev/status/2040459229039940068",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "api_update",
+        "architecture",
+        "tool_use",
+        "reasoning",
+        "product_launch",
+        "announcement"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-04-04T16:20:03.318Z",
+      "summary": "@CloudflareDev announces Gemma 4 is now on Workers AI — MoE model with 26B total and 4B active parameters, 256K context window, tool calling, reasoning, and vision capabilities.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SemiAnalysis Lawsuit — Former Employee Says Dylan Patel Fired Him for Refusing to Insert Confidential Data",
+      "url": "https://x.com/The_AI_Investor/status/2040322820409118946",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper",
+        "funding",
+        "policy"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-04T09:50:17.219Z",
+      "summary": "Former SemiAnalysis employee sues Dylan Patel for wrongful termination after refusing to insert confidential Fluidstack investment data into paid research reports.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@techsnif — AI Hiring Surge: Major Labs Expanding Teams Across Engineering, Research, and Policy",
+      "url": "https://x.com/techsnif/status/2040210870995743008",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper",
+        "funding",
+        "policy"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-04T09:51:10.718Z",
+      "summary": "AI labs are hiring aggressively across engineering, research, and policy roles as the industry accelerates. Q1 2026 saw record AI hiring alongside record VC funding.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Banned OpenClaw — And the Creator Says They Copied Features First",
+      "url": "https://x.com/steipete/status/2040209434019082522",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "pricing_change",
+        "policy"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-04T09:50:17.219Z",
+      "summary": "Anthropic banned OpenClaw from Claude subscriptions. The creator says they copied features first. Hermes is the winner.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Agent Outperforms Claude Code and OpenClaw on 89 Real-World Tasks — Not Just Higher Scores",
+      "url": "https://x.com/WolfBenchAI/status/2039797885982953800",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "policy"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-04T09:50:17.219Z",
+      "summary": "Hermes Agent outperforms Claude Code and OpenClaw on 89 real-world tasks — a higher floor, not just higher scores. The winner of the OpenClaw ban.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Q1 2026 VC Funding Hits $297B — AI Startups Capture 81%, Four Companies Raised 64% of the Total",
+      "url": "https://x.com/Techmeme/status/2039300765869817919",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "api_update",
+        "funding"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-04T09:50:17.219Z",
+      "summary": "Q1 2026 VC funding hit a record $297B with AI capturing 81% — but just four companies raised 64% of all capital, showing extreme concentration.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@haydenfield — Mustafa Suleyman: Renegotiating Microsoft-OpenAI Deal 'Unlocked Ability to Pursue Superintelligence'",
+      "url": "https://x.com/haydenfield/status/2039705728416362864",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware",
+        "industry_move"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-04T16:20:03.318Z",
+      "summary": "@haydenfield reports Mustafa Suleyman says renegotiating Microsoft's contract with OpenAI 'unlocked Microsoft's ability to pursue superintelligence' — and he's stepping back from product to focus on frontier models.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Researchers Reveal Every Way Hackers Can Trap, Hijack AI Agents",
+      "url": "https://decrypt.co/363201/google-researchers-reveal-every-way-hackers-can-trap-hijack-ai-agents",
+      "source": "Decrypt",
+      "tags": [
+        "research_paper",
+        "ai_agents",
+        "multi_agent",
+        "autonomous_systems"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-02T21:01:09.000Z",
+      "summary": "A Google DeepMind paper maps six attack categories against autonomous AI agents—from invisible HTML commands to multi-agent flash crashes.",
+      "category": "crypto"
+    },
+    {
+      "title": "Kimi K2.5 (1 Trillion Parameters) Now Runs at 7.5 tok/s on Mac M5 Max 128GB via SSD Streaming",
+      "url": "https://x.com/anemll/status/2039790920229695952",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T09:50:17.219Z",
+      "summary": "anemll-flash-llama.cpp enables Kimi K2.5 (1T params) at 7.5 tok/s on M5 Max 128GB via SSD streaming — a breakthrough for local inference.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Liquid AI LFM2 Is Not a Transformer — And It's 3x Faster Than Qwen at the Same Scale",
+      "url": "https://x.com/ollama/status/2026305296709173535",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T09:50:17.219Z",
+      "summary": "Liquid AI's LFM2 is not a Transformer — it's 3x faster than comparable Transformer models at the same parameter scale.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GEN-1 From Generalist AI — 99% Success Rate, 3x Faster — The ChatGPT Moment of Robotics",
+      "url": "https://x.com/GeneralistAI/status/2039709306145190262",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T09:50:17.219Z",
+      "summary": "GEN-1 from Generalist AI achieves 99% success rates on physical tasks — multiple researchers call it the ChatGPT moment of robotics.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Bonsai 8B Runs at 40+ tok/s on iPhone 17 Pro — The First Dense 8B Model at This Speed on a Phone",
+      "url": "https://x.com/adrgrondin/status/2039066539022778613",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T09:50:17.219Z",
+      "summary": "Bonsai 8B from PrismML runs at 40+ tok/s on iPhone 17 Pro — the first dense 8B model to achieve this speed on a phone.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@Scobleizer — Local Models Report Gets 37 RTs — 'What Is the Best Local Model to Run on ANY Computer or Device?'",
+      "url": "https://x.com/Scobleizer/status/2040361715511292309",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-04T16:20:03.318Z",
+      "summary": "@Scobleizer's local models report gets 37 RTs and 1,418 views when shared with @AlexFinn — 'Here's a decent report about all the local models that people should be trying out on various machines.'",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Netflix AI Team Just Open-Sourced VOID: an AI Model That Erases Objects From Videos — Physics and All",
+      "url": "https://www.marktechpost.com/2026/04/04/netflix-ai-team-just-open-sourced-void-an-ai-model-that-erases-objects-from-videos-physics-and-all/",
+      "source": "MarkTechPost",
+      "tags": [
+        "open_source",
+        "crypto_regulation"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T18:00:34.036Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Elon Musk insists banks working on SpaceX IPO must buy Grok subscriptions",
+      "url": "https://arstechnica.com/tech-policy/2026/04/elon-musk-insists-banks-working-on-spacex-ipo-must-buy-grok-subscriptions/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "benchmark",
+        "pricing_change"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-04-04T18:00:29.401Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "&#8216;Alive and well:&#8217; Solana memecoin honoring 193-year-old tortoise Jonathan rallies following April Fools&#8217; prank",
+      "url": "https://www.theblock.co/post/396264/alive-well-solana-memecoin-193-year-old-tortoise-jonathan-rallies-april-fools-prank?utm_source=rss&amp;utm_medium=rss",
+      "source": "The Block",
+      "tags": [
+        "model_release",
+        "crypto",
+        "crypto_defi"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-02T17:21:45.000Z",
+      "summary": "The JONATHAN token, launched eight months ago, hit a high of approximately $0.00038 on April Fools' Day, in a single 1,400% candle.",
+      "category": "crypto"
+    },
+    {
+      "title": "CoinDesk 20 performance update: Bitcoin (BTC) trades flat while altcoins rise",
+      "url": "https://www.coindesk.com/coindesk-indices/2026/04/03/coindesk-20-performance-update-bitcoin-btc-trades-flat-while-altcoins-rise",
+      "source": "CoinDesk",
+      "tags": [
+        "evaluation",
+        "crypto",
+        "crypto_defi"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T13:18:50.000Z",
+      "summary": "NEAR Protocol (NEAR) gained 5.8% and Avalanche (AVAX) climbed 3.6%.",
+      "category": "crypto"
+    },
+    {
+      "title": "Schwab plans spot bitcoin, ether trading launch in first half of 2026",
+      "url": "https://www.coindesk.com/business/2026/04/03/schwab-plans-spot-bitcoin-ether-trading-launch-in-first-half-of-2026",
+      "source": "CoinDesk",
+      "tags": [
+        "pricing_change",
+        "crypto",
+        "crypto_trading"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T19:18:00.000Z",
+      "summary": "The financial services giant with almost $12 trillion in client assets is moving closer to direct crypto trading, offering subscription for early access to the Schwab Crypto account.",
+      "category": "crypto"
+    },
+    {
+      "title": "Here's what 'cracking' bitcoin in 9 minutes by quantum computers actually means",
+      "url": "https://www.coindesk.com/tech/2026/03/31/what-does-cracking-bitcoin-in-9-minutes-by-quantum-computers-actually-mean",
+      "source": "CoinDesk",
+      "tags": [
+        "research_paper",
+        "hardware",
+        "crypto"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-04T02:30:00.000Z",
+      "summary": "Google's quantum paper made headlines with that number. Here's what it means, what's actually at risk, and why 6.9 million bitcoin are more exposed than the rest.",
+      "category": "crypto"
+    },
+    {
+      "title": "Algorand Soars Double-Digits On Google ‘Post-Quantum Protocols’ Citation",
+      "url": "https://decrypt.co/363236/algorand-soars-double-digits-on-google-post-quantum-protocols-citation",
+      "source": "Decrypt",
+      "tags": [
+        "research_paper",
+        "crypto",
+        "crypto_defi"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-03T11:35:36.000Z",
+      "summary": "Algorand jumped following its mention in a Google research paper, as post-quantum cryptography emerges as a new crypto narrative.",
+      "category": "crypto"
+    }
+  ]
+}
