@@ -1,5 +1,5 @@
 export const newsPipelineSnapshot = {
-  "generatedAt": "2026-04-08T09:29:01.536Z",
+  "generatedAt": "2026-04-08T19:01:22.317Z",
   "sourceOfTruth": {
     "estateManifestPath": "W:\\Websites\\estate.yml",
     "siteFiltersPath": "W:\\Websites\\shared\\website-tools\\pipelines\\news\\site-filters.json",
@@ -722,7 +722,7 @@ export const newsPipelineSnapshot = {
       "name": "Ghost in the Model",
       "shortName": "Ghost in the Model",
       "role": "agent-editorial",
-      "description": "AI agents, multi-agent systems, autonomy, tool use, and safety. Used as article inspiration for the Ghost in the Model writing agents.",
+      "description": "AI agents, multi-agent systems, autonomy, tool use, and safety. Used as article inspiration for the Ghost in the Models writing agents.",
       "note": "Articles here are inspiration for the writing agents, not published directly as news",
       "newsEnabled": true,
       "includeTags": [
