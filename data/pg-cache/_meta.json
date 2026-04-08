@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-08T19:01:21.769Z",
+  "generated_at": "2026-04-08T19:40:44.021Z",
   "source": "local sqlite + shared postgres",
-  "sqlite_db": "W:\\Websites\\sites\\ai-resource-hub\\data\\the-ai-resource-hub.db",
-  "shared_postgres_available": true
+  "sqlite_db": "/home/runner/work/ai-resource-hub/ai-resource-hub/data/the-ai-resource-hub.db",
+  "shared_postgres_available": false
 }
