@@ -91,6 +91,28 @@ function dotClasses(status: ProviderOverallStatus): string {
   }
 }
 
+function componentStatusClasses(status: string): string {
+  const normalized = status.toLowerCase();
+
+  if (normalized.includes('major') || normalized.includes('outage')) {
+    return 'border-red-500/40 bg-red-500/12 text-red-200';
+  }
+  if (normalized.includes('partial')) {
+    return 'border-orange-500/40 bg-orange-500/12 text-orange-100';
+  }
+  if (normalized.includes('degrad') || normalized.includes('issue')) {
+    return 'border-amber-500/40 bg-amber-500/12 text-amber-100';
+  }
+  if (normalized.includes('maint')) {
+    return 'border-sky-500/40 bg-sky-500/12 text-sky-100';
+  }
+  if (normalized.includes('operational') || normalized.includes('ok') || normalized.includes('up')) {
+    return 'border-emerald-500/40 bg-emerald-500/12 text-emerald-100';
+  }
+
+  return 'border-white/15 bg-white/5 text-(--color-text-secondary)';
+}
+
 function formatUtc(value: string | null): string {
   if (!value) return 'Not yet generated';
 

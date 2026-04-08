@@ -2,16 +2,11 @@
  * Base scraper infrastructure.
  * Provides common utilities for all provider-specific scrapers.
  */
-import Database from 'better-sqlite3';
-import path from 'node:path';
-
-const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
+import type Database from 'better-sqlite3';
+import { getDB as getSchemaDB } from '../../src/db/schema';
 
 export function getDB(): Database.Database {
-  const db = new Database(DB_PATH);
-  db.pragma('journal_mode = WAL');
-  db.pragma('foreign_keys = ON');
-  return db;
+  return getSchemaDB();
 }
 
 export interface ScrapedModel {

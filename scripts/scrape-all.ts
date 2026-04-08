@@ -30,6 +30,8 @@ async function main() {
   console.log('═══════════════════════════════════════════════════\n');
 
   const scrapers = [
+    { name: 'Canonical Model Catalog Sync', script: 'scripts/sync-model-catalog.ts' },
+    { name: 'Registry Status Normaliser', script: 'scripts/normalize-model-registry.ts' },
     { name: 'OpenRouter Pricing (PRIMARY)', script: 'scripts/scrapers/openrouter.ts' },
     { name: 'Official Provider Pricing', script: 'scripts/scrapers/official-pricing.ts' },
     { name: 'Multi-Source Validator', script: 'scripts/scrapers/pricing.ts' },

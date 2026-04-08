@@ -43,14 +43,17 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         timeout-minutes: 5
 
-      - name: Dump public cache from Postgres
-        if: ${{ secrets.DATABASE_URL != '' }}
+      - name: Build public cache
         run: npm run dump:pg
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: Run data staleness check
         run: npx tsx scripts/check-staleness.ts
+        timeout-minutes: 1
+
+      - name: Verify publish readiness
+        run: npm run verify:publish
         timeout-minutes: 1
 
       - name: Check for changes

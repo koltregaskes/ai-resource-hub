@@ -37,6 +37,10 @@ function joinValues(values: readonly string[]): string {
   return values.join('|').toLowerCase();
 }
 
+function routeModeLabel(routeMode: string): string {
+  return routeMode === 'shared-default' ? 'Shared default scope' : 'Explicit site scope';
+}
+
 const filterOptions = {
   sites: activeNewsSites.map((site) => ({ value: site.slug, label: site.name })),
   categories: newsPipelineSnapshot.sourceCategories,
@@ -387,7 +391,7 @@ const filterOptions = {
                   <div class="min-w-[10rem]">
                     <div class="font-medium text-(--color-text-primary)">{source.section}</div>
                     <p class="mt-1 text-xs text-(--color-text-muted)">
-                      {source.routeMode === 'shared-default' ? 'Shared default scope' : 'Explicit site scope'}
+                      {routeModeLabel(source.routeMode)}
                     </p>
                   </div>
                 </td>

@@ -117,8 +117,8 @@ interface CachedNews {
   source: string;
   summary: string | null;
   category: string;
-  tags: string[];
-  importance_score: number;
+  tags: string[] | string | null;
+  importance_score: number | string | null;
   published_at: string | null;
   discovered_at: string | null;
 }
@@ -140,8 +140,8 @@ interface CachedYouTubeCreator {
   id: string;
   name: string;
   channel_name: string;
-  youtube_handle: string;
-  youtube_url: string;
+  youtube_handle: string | null;
+  youtube_url: string | null;
   subscribers: number;
   category: string;
   vertical: string;
@@ -197,6 +197,61 @@ interface CachedPlanLimit {
   messages_low: number | null;
   messages_high: number | null;
   message_period: string;
+  notes: string | null;
+}
+
+interface CachedRumouredModel {
+  id: string;
+  codename: string;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  status: string;
+  first_seen: string;
+  confirmed_as: string | null;
+  confirmed_name: string | null;
+  sources: string | null;
+  notes: string | null;
+  category: string;
+}
+
+interface CachedSubscriptionPlan {
+  id: string;
+  provider_id: string;
+  provider_name: string;
+  provider_colour: string;
+  plan_name: string;
+  price_monthly: number | null;
+  price_yearly_monthly: number | null;
+  tier_level: number;
+  source_url: string | null;
+  notes: string | null;
+}
+
+interface CachedCliTool {
+  id: string;
+  name: string;
+  provider_id: string | null;
+  provider_name: string | null;
+  provider_colour: string | null;
+  maker: string;
+  description: string | null;
+  default_model: string | null;
+  supported_models: string | null;
+  context_window: number;
+  open_source: boolean;
+  license: string | null;
+  github_url: string | null;
+  website: string | null;
+  install_command: string | null;
+  pricing_type: string;
+  pricing_note: string | null;
+  mcp_support: boolean;
+  multi_file: boolean;
+  git_integration: boolean;
+  platforms: string;
+  released: string | null;
+  status: string;
   notes: string | null;
 }
 
@@ -331,7 +386,22 @@ export function getPeopleByProvider(providerId: string): CachedPerson[] {
 }
 
 export function getNews(limit = 50): CachedNews[] {
-  return loadCache<CachedNews>('news').slice(0, limit);
+  return loadCache<CachedNews>('news')
+    .map((item) => {
+      const rawTags = item.tags;
+      const tags = Array.isArray(rawTags)
+        ? rawTags
+        : typeof rawTags === 'string'
+          ? rawTags.split(',').map((tag: string) => tag.trim()).filter(Boolean)
+          : [];
+
+      return {
+        ...item,
+        tags,
+        importance_score: toNumber(item.importance_score),
+      };
+    })
+    .slice(0, limit);
 }
 
 export function getNewsByCategory(category: string, limit = 50): CachedNews[] {
@@ -400,10 +470,15 @@ export function getLLMModelsFromDB() {
   });
 }
 
-// Stub functions for tables not yet in Postgres
-export function getGlossaryTerms(): CachedGlossaryTerm[] { return []; }
-export function getGlossaryTermById(_id: string): CachedGlossaryTerm | null { return null; }
-export function getAllGlossaryIds(): string[] { return []; }
+export function getGlossaryTerms(): CachedGlossaryTerm[] {
+  return loadCache<CachedGlossaryTerm>('glossary').sort((a, b) => a.term.localeCompare(b.term));
+}
+export function getGlossaryTermById(id: string): CachedGlossaryTerm | null {
+  return getGlossaryTerms().find((term) => term.id === id) ?? null;
+}
+export function getAllGlossaryIds(): string[] {
+  return getGlossaryTerms().map((term) => term.id);
+}
 export function getYouTubeCreators() {
   return loadCache<CachedYouTubeCreator>('youtube_creators');
 }
@@ -416,22 +491,137 @@ export function getYouTubeCreatorCategories() {
   for (const c of creators) counts.set(c.category, (counts.get(c.category) || 0) + 1);
   return Array.from(counts.entries()).map(([category, count]) => ({ category, count })).sort((a, b) => b.count - a.count);
 }
-export function getTags(): CachedTag[] { return []; }
-export function getTagById(_id: string): CachedTag | null { return null; }
-export function getAllTagIds(): string[] { return []; }
-export function getTagsForItem(_id: string, _type: string): CachedTag[] { return []; }
-export function getItemsByTag(_tagId: string, _type: string): string[] { return []; }
-export function getTagsWithCounts(): CachedTagWithCount[] { return []; }
-export function getRumouredModels(): LooseRecord[] { return []; }
-export function getCLITools(): LooseRecord[] { return []; }
-export function getCLIToolById(_id: string): LooseRecord | null { return null; }
-export function getAllCLIToolIds(): string[] { return []; }
-export function getProviderPlans(_id: string): LooseRecord[] { return []; }
-export function getModelMessageLimits(_id: string): CachedPlanLimit[] { return []; }
-export function getPlanLimits(_id: string): LooseRecord[] { return []; }
-export function getAllSubscriptionPlans(): LooseRecord[] { return []; }
-export function getProviderEndpoints(_id: string): CachedProviderEndpoint[] { return []; }
-export function getModelsWithMultipleEndpoints(): LooseRecord[] { return []; }
+export function getTags(): CachedTag[] {
+  return loadCache<CachedTag>('tags').sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name));
+}
+export function getTagById(id: string): CachedTag | null {
+  return getTags().find((tag) => tag.id === id) ?? null;
+}
+export function getAllTagIds(): string[] {
+  return getTags().map((tag) => tag.id);
+}
+export function getTagsForItem(id: string, type: string): CachedTag[] {
+  const tagIds = loadCache<{ tag_id: string; taggable_id: string; taggable_type: string }>('taggables')
+    .filter((row) => row.taggable_id === id && row.taggable_type === type)
+    .map((row) => row.tag_id);
+  return getTags().filter((tag) => tagIds.includes(tag.id));
+}
+export function getItemsByTag(tagId: string, type: string): string[] {
+  return loadCache<{ tag_id: string; taggable_id: string; taggable_type: string }>('taggables')
+    .filter((row) => row.tag_id === tagId && row.taggable_type === type)
+    .map((row) => row.taggable_id);
+}
+export function getTagsWithCounts(): CachedTagWithCount[] {
+  const counts = new Map<string, number>();
+  for (const row of loadCache<{ tag_id: string }>('taggables')) {
+    counts.set(row.tag_id, (counts.get(row.tag_id) ?? 0) + 1);
+  }
+  return getTags()
+    .map((tag) => ({ ...tag, count: counts.get(tag.id) ?? 0 }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+export function getRumouredModels(): CachedRumouredModel[] {
+  return loadCache<CachedRumouredModel>('rumoured_models');
+}
+export function getCLITools(): CachedCliTool[] {
+  return loadCache<CachedCliTool>('cli_tools')
+    .filter((tool) => tool.status === 'active')
+    .map((tool) => ({
+      ...tool,
+      context_window: toNumber(tool.context_window),
+      open_source: !!tool.open_source,
+      mcp_support: !!tool.mcp_support,
+      multi_file: !!tool.multi_file,
+      git_integration: !!tool.git_integration,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+export function getCLIToolById(id: string): CachedCliTool | null {
+  return getCLITools().find((tool) => tool.id === id) ?? null;
+}
+export function getAllCLIToolIds(): string[] {
+  return getCLITools().map((tool) => tool.id);
+}
+export function getProviderPlans(id: string): CachedSubscriptionPlan[] {
+  return loadCache<CachedSubscriptionPlan>('subscription_plans')
+    .filter((plan) => plan.provider_id === id)
+    .map((plan) => ({
+      ...plan,
+      price_monthly: plan.price_monthly == null ? null : toNumber(plan.price_monthly),
+      price_yearly_monthly: plan.price_yearly_monthly == null ? null : toNumber(plan.price_yearly_monthly),
+      tier_level: toNumber(plan.tier_level),
+    }))
+    .sort((a, b) => a.tier_level - b.tier_level || a.plan_name.localeCompare(b.plan_name));
+}
+export function getModelMessageLimits(id: string): CachedPlanLimit[] {
+  return loadCache<CachedPlanLimit>('plan_model_limits')
+    .filter((limit) => limit.model_id === id)
+    .map((limit) => ({
+      ...limit,
+      price_monthly: limit.price_monthly == null ? null : toNumber(limit.price_monthly),
+      messages_low: limit.messages_low == null ? null : toNumber(limit.messages_low),
+      messages_high: limit.messages_high == null ? null : toNumber(limit.messages_high),
+    }));
+}
+export function getPlanLimits(id: string): CachedPlanLimit[] {
+  return loadCache<CachedPlanLimit>('plan_model_limits')
+    .filter((limit) => limit.plan_id === id)
+    .map((limit) => ({
+      ...limit,
+      price_monthly: limit.price_monthly == null ? null : toNumber(limit.price_monthly),
+      messages_low: limit.messages_low == null ? null : toNumber(limit.messages_low),
+      messages_high: limit.messages_high == null ? null : toNumber(limit.messages_high),
+    }));
+}
+export function getAllSubscriptionPlans(): Array<CachedSubscriptionPlan & { limit_count: number }> {
+  const limitCounts = new Map<string, number>();
+  for (const limit of loadCache<CachedPlanLimit>('plan_model_limits')) {
+    limitCounts.set(limit.plan_id, (limitCounts.get(limit.plan_id) ?? 0) + 1);
+  }
+  return loadCache<CachedSubscriptionPlan>('subscription_plans')
+    .map((plan) => ({
+      ...plan,
+      price_monthly: plan.price_monthly == null ? null : toNumber(plan.price_monthly),
+      price_yearly_monthly: plan.price_yearly_monthly == null ? null : toNumber(plan.price_yearly_monthly),
+      tier_level: toNumber(plan.tier_level),
+      limit_count: limitCounts.get(plan.id) ?? 0,
+    }))
+    .sort((a, b) => a.provider_name.localeCompare(b.provider_name) || a.tier_level - b.tier_level || a.plan_name.localeCompare(b.plan_name));
+}
+export function getProviderEndpoints(id: string): CachedProviderEndpoint[] {
+  return loadCache<CachedProviderEndpoint>('provider_endpoints')
+    .filter((endpoint) => endpoint.model_id === id)
+    .map((endpoint) => ({
+      ...endpoint,
+      speed: toNumber(endpoint.speed),
+      ttft: toNumber(endpoint.ttft),
+      input_price: toNumber(endpoint.input_price),
+      output_price: toNumber(endpoint.output_price),
+    }))
+    .sort((a, b) => b.speed - a.speed || a.provider_name.localeCompare(b.provider_name));
+}
+export function getModelsWithMultipleEndpoints(): Array<{ model_id: string; model_name: string; provider: string; provider_colour: string; endpoint_count: number }> {
+  const modelMap = new Map(getModels().map((model) => [model.id, model]));
+  const grouped = new Map<string, CachedProviderEndpoint[]>();
+  for (const endpoint of loadCache<CachedProviderEndpoint>('provider_endpoints')) {
+    const list = grouped.get(endpoint.model_id) ?? [];
+    list.push(endpoint);
+    grouped.set(endpoint.model_id, list);
+  }
+  return Array.from(grouped.entries())
+    .filter(([, endpoints]) => endpoints.length >= 2)
+    .map(([model_id, endpoints]) => {
+      const model = modelMap.get(model_id);
+      return {
+        model_id,
+        model_name: model?.name ?? endpoints[0]?.model_id ?? model_id,
+        provider: model?.provider_name ?? endpoints[0]?.provider_name ?? '',
+        provider_colour: model?.provider_colour ?? endpoints[0]?.provider_colour ?? '#888888',
+        endpoint_count: endpoints.length,
+      };
+    })
+    .sort((a, b) => b.endpoint_count - a.endpoint_count || a.model_name.localeCompare(b.model_name));
+}
 export function getModelsWithTTFT() {
   return getModels()
     .filter(m => Number(m.ttft) > 0 && m.status === 'active' && m.category === 'llm')

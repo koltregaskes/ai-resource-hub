@@ -1,8 +1,21 @@
 /**
  * Builds the search index for the global search component.
- * This runs at build time — the resulting array is serialised into every page.
+ *
+ * This now reads from the public cache/query layer instead of talking to
+ * SQLite directly, so builds and previews use the same source of truth.
  */
-import { getDB } from '../db/schema';
+import {
+  getAllBenchmarkIds,
+  getAllModelIds,
+  getAllTagIds,
+  getBenchmarkById,
+  getGlossaryTerms,
+  getModelById,
+  getPeople,
+  getProviders,
+  getTagById,
+  getYouTubeCreators,
+} from '../db/queries';
 
 export interface SearchItem {
   id: string;
@@ -19,81 +32,54 @@ let _cachedIndex: SearchItem[] | null = null;
 export function getSearchIndex(base: string): SearchItem[] {
   if (_cachedIndex) return _cachedIndex;
 
-  const db = getDB();
   const items: SearchItem[] = [];
 
-  // Models (all categories)
-  const models = db.prepare(`
-    SELECT m.id, m.name, m.category, m.notes, p.name AS provider
-    FROM models m
-    JOIN providers p ON m.provider_id = p.id
-    WHERE m.status = 'active'
-    ORDER BY m.quality_score DESC
-  `).all() as Array<{ id: string; name: string; category: string; notes: string | null; provider: string }>;
-
-  for (const m of models) {
+  for (const modelId of getAllModelIds()) {
+    const model = getModelById(modelId);
+    if (!model) continue;
     items.push({
-      id: m.id,
-      title: m.name,
+      id: model.id,
+      title: model.name,
       type: 'model',
-      category: m.category,
-      description: m.notes ?? `${m.category.toUpperCase()} model by ${m.provider}`,
-      url: `${base}models/${m.id}/`,
-      provider: m.provider,
+      category: model.category,
+      description: model.notes ?? `${model.category.toUpperCase()} model by ${model.provider_name}`,
+      url: `${base}models/${model.id}/`,
+      provider: model.provider_name,
     });
   }
 
-  // Providers
-  const providers = db.prepare(`
-    SELECT id, name, description FROM providers ORDER BY name
-  `).all() as Array<{ id: string; name: string; description: string | null }>;
-
-  for (const p of providers) {
+  for (const provider of getProviders()) {
     items.push({
-      id: p.id,
-      title: p.name,
+      id: provider.id,
+      title: provider.name,
       type: 'provider',
-      description: p.description ?? `AI provider`,
-      url: `${base}labs/${p.id}/`,
+      description: provider.description ?? 'AI provider',
+      url: `${base}labs/${provider.id}/`,
     });
   }
 
-  // People
-  const people = db.prepare(`
-    SELECT p.id, p.name, p.role, p.notable_for, pr.name AS organisation
-    FROM people p
-    LEFT JOIN providers pr ON p.provider_id = pr.id
-    ORDER BY p.name
-  `).all() as Array<{ id: string; name: string; role: string | null; notable_for: string | null; organisation: string | null }>;
-
-  for (const p of people) {
+  for (const person of getPeople()) {
     items.push({
-      id: p.id,
-      title: p.name,
+      id: person.id,
+      title: person.name,
       type: 'person',
-      description: [p.role, p.organisation].filter(Boolean).join(' at '),
+      description: [person.role, person.organisation_name].filter(Boolean).join(' at '),
       url: `${base}people/`,
-      provider: p.organisation ?? undefined,
+      provider: person.organisation_name ?? undefined,
     });
   }
 
-  // Glossary terms
-  const glossary = db.prepare(`
-    SELECT id, term, definition, category FROM glossary ORDER BY term
-  `).all() as Array<{ id: string; term: string; definition: string; category: string }>;
-
-  for (const g of glossary) {
+  for (const term of getGlossaryTerms()) {
     items.push({
-      id: g.id,
-      title: g.term,
+      id: term.id,
+      title: term.term,
       type: 'glossary',
-      category: g.category,
-      description: g.definition.length > 120 ? g.definition.slice(0, 120) + '...' : g.definition,
-      url: `${base}glossary/${g.id}/`,
+      category: term.category,
+      description: term.definition.length > 120 ? `${term.definition.slice(0, 120)}...` : term.definition,
+      url: `${base}glossary/${term.id}/`,
     });
   }
 
-  // Static guide pages
   const guides = [
     { id: 'prompting-basics', title: 'Prompting Basics', description: 'Learn the fundamentals of writing effective AI prompts' },
     { id: 'advanced-prompting', title: 'Advanced Prompting Techniques', description: 'Chain-of-thought, few-shot learning, and expert techniques' },
@@ -103,33 +89,29 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'ai-for-research', title: 'AI for Research', description: 'Using AI to accelerate and improve your research' },
   ];
 
-  for (const g of guides) {
+  for (const guide of guides) {
     items.push({
-      id: g.id,
-      title: g.title,
+      id: guide.id,
+      title: guide.title,
       type: 'guide',
-      description: g.description,
-      url: `${base}guides/${g.id}/`,
+      description: guide.description,
+      url: `${base}guides/${guide.id}/`,
     });
   }
 
-  // Benchmarks
-  const benchmarks = db.prepare(`
-    SELECT id, name, category, description FROM benchmarks ORDER BY name
-  `).all() as Array<{ id: string; name: string; category: string; description: string | null }>;
-
-  for (const b of benchmarks) {
+  for (const benchmarkId of getAllBenchmarkIds()) {
+    const benchmark = getBenchmarkById(benchmarkId);
+    if (!benchmark) continue;
     items.push({
-      id: b.id,
-      title: b.name,
+      id: benchmark.id,
+      title: benchmark.name,
       type: 'benchmark',
-      category: b.category,
-      description: b.description ?? `AI benchmark in the ${b.category} category`,
-      url: `${base}benchmarks/${b.id}/`,
+      category: benchmark.category,
+      description: benchmark.description ?? `AI benchmark in the ${benchmark.category} category`,
+      url: `${base}benchmarks/${benchmark.id}/`,
     });
   }
 
-  // Blog posts
   const blogPosts = [
     { id: 'how-ai-benchmarks-work', title: 'How AI Benchmarks Work', description: 'A plain-English guide to MMLU, GPQA, HumanEval, and more' },
     { id: 'ai-pricing-race-to-zero', title: 'The AI Pricing Race to Zero', description: 'AI model pricing has dropped over 90% in two years' },
@@ -147,39 +129,30 @@ export function getSearchIndex(base: string): SearchItem[] {
     });
   }
 
-  // YouTube creators
-  const ytCreators = db.prepare(`
-    SELECT id, name, channel_name, category, description FROM youtube_creators ORDER BY subscribers DESC
-  `).all() as Array<{ id: string; name: string; channel_name: string; category: string; description: string | null }>;
-
-  for (const c of ytCreators) {
+  for (const creator of getYouTubeCreators()) {
     items.push({
-      id: c.id,
-      title: c.channel_name,
+      id: creator.id,
+      title: creator.channel_name,
       type: 'youtube',
-      category: c.category,
-      description: c.description ?? `YouTube channel by ${c.name}`,
+      category: creator.category,
+      description: creator.description ?? `YouTube channel by ${creator.name}`,
       url: `${base}youtube/`,
     });
   }
 
-  // Tags
-  const tags = db.prepare(`
-    SELECT id, name, category, description FROM tags ORDER BY name
-  `).all() as Array<{ id: string; name: string; category: string; description: string | null }>;
-
-  for (const t of tags) {
+  for (const tagId of getAllTagIds()) {
+    const tag = getTagById(tagId);
+    if (!tag) continue;
     items.push({
-      id: t.id,
-      title: t.name,
+      id: tag.id,
+      title: tag.name,
       type: 'tag',
-      category: t.category,
-      description: t.description ?? `Tag: ${t.name}`,
-      url: `${base}tags/${t.id}/`,
+      category: tag.category,
+      description: tag.description ?? `Tag: ${tag.name}`,
+      url: `${base}tags/${tag.id}/`,
     });
   }
 
-  // Static section pages
   const sectionPages = [
     { id: 'reports', title: 'AI Reports', description: 'Recurring AI reports, indexes, and research dashboards worth tracking' },
     { id: 'events', title: 'AI Events', description: 'Recurring AI conferences and industry events worth watching' },
@@ -223,7 +196,6 @@ export function getSearchIndex(base: string): SearchItem[] {
     { id: 'scheduling', title: 'Scheduling Guide', description: 'Set up automated daily data updates on Windows, macOS, or Linux' },
   ];
 
-  // Custom URL pages
   items.push({
     id: 'head-to-head',
     title: 'Head-to-Head Model Comparison',
@@ -240,13 +212,13 @@ export function getSearchIndex(base: string): SearchItem[] {
     url: `${base}compare/providers/`,
   });
 
-  for (const s of sectionPages) {
+  for (const page of sectionPages) {
     items.push({
-      id: s.id,
-      title: s.title,
+      id: page.id,
+      title: page.title,
       type: 'page',
-      description: s.description,
-      url: `${base}${s.id}/`,
+      description: page.description,
+      url: `${base}${page.id}/`,
     });
   }
 

@@ -357,7 +357,24 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_provider_endpoints_provider ON provider_endpoints(provider_id);
   `);
 
+  ensureProviderColumns(db);
   ensureModelColumns(db);
+}
+
+function ensureProviderColumns(db: Database.Database): void {
+  const columns = db.prepare('PRAGMA table_info(providers)').all() as Array<{ name: string }>;
+  const existing = new Set(columns.map((column) => column.name));
+
+  const missingColumns = [
+    { name: 'status_url', sql: 'ALTER TABLE providers ADD COLUMN status_url TEXT' },
+    { name: 'api_docs_url', sql: 'ALTER TABLE providers ADD COLUMN api_docs_url TEXT' },
+  ];
+
+  for (const column of missingColumns) {
+    if (!existing.has(column.name)) {
+      db.exec(column.sql);
+    }
+  }
 }
 
 function ensureModelColumns(db: Database.Database): void {

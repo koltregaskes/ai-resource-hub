@@ -171,6 +171,7 @@ try {
   }
 
   Invoke-Logged 'npm.cmd' @('run', 'check:staleness')
+  Invoke-Logged 'npm.cmd' @('run', 'verify:publish')
 
   Invoke-Logged 'npm.cmd' @('run', 'build')
 

@@ -1,41 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { readFileSync, existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
-
-// Read AGI data from pg-cache
 const cacheDir = path.join(process.cwd(), 'data', 'pg-cache');
-function loadCache(name) {
-  const p = path.join(cacheDir, `${name}.json`);
-  return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : [];
-}
 
-// Load from DB if available, otherwise use inline data
-let definitions = [];
-let milestones = [];
-let capabilities = [];
-
-try {
-  // Try loading from Postgres cache
-  const { query } = await import('../../db/pg-pool');
-  const defRes = await query('SELECT * FROM agi_definitions ORDER BY source_type, source_name');
-  definitions = defRes.rows;
-  const milRes = await query('SELECT * FROM agi_milestones ORDER BY date DESC');
-  milestones = milRes.rows;
-  const capRes = await query('SELECT * FROM agi_capabilities ORDER BY category, name');
-  capabilities = capRes.rows;
-} catch {
-  // Fallback: empty arrays, page still renders
-}
-
-const labDefs = definitions.filter(d => d.source_type === 'lab');
-const individualDefs = definitions.filter(d => d.source_type === 'individual');
-const editorialDefs = definitions.filter(d => d.source_type === 'editorial');
-
-const statusColors = {
+const statusColors: Record<string, string> = {
   achieved: 'text-emerald-400',
   emerging: 'text-amber-400',
   partial: 'text-sky-400',
@@ -43,17 +15,64 @@ const statusColors = {
   disputed: 'text-purple-400',
 };
 
-const statusLabels = {
+const statusLabels: Record<string, string> = {
   achieved: 'Achieved',
   emerging: 'Emerging',
   partial: 'Partial',
   not_achieved: 'Not Yet',
   disputed: 'Disputed',
 };
+
+interface AgiLevel {
+  level: number;
+  name: string;
+  desc: string;
+}
+
+interface AgiDefinition {
+  id: string;
+  source_name: string;
+  source_type: 'lab' | 'individual' | 'editorial' | string;
+  framework_name: string | null;
+  summary: string;
+  source_url: string | null;
+  levels: AgiLevel[] | null;
+}
+
+interface AgiMilestone {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  significance: number | null;
+}
+
+interface AgiCapability {
+  id: string;
+  name: string;
+  category: string;
+  status: string;
+  current_best: string | null;
+}
+
+function loadCache<T>(name: string): T[] {
+  const filePath = path.join(cacheDir, `${name}.json`);
+  return existsSync(filePath) ? (JSON.parse(readFileSync(filePath, 'utf8')) as T[]) : [];
+}
+
+const definitions = loadCache<AgiDefinition>('agi_definitions');
+const milestones = loadCache<AgiMilestone>('agi_milestones');
+const capabilities = loadCache<AgiCapability>('agi_capabilities');
+
+const labDefs = definitions.filter((definition) => definition.source_type === 'lab');
+const individualDefs = definitions.filter((definition) => definition.source_type === 'individual');
+const editorialDefs = definitions.filter((definition) => definition.source_type === 'editorial');
 ---
 
-<BaseLayout title="AGI Progress Tracker — The AI Resource Hub" description="Tracking progress toward AGI across definitions, capabilities, and milestones from major labs, researchers, and our own editorial position.">
-
+<BaseLayout
+  title="AGI Progress Tracker - The AI Resource Hub"
+  description="Tracking progress toward AGI across definitions, capabilities, and milestones from major labs, researchers, and our own editorial position."
+>
   <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
     <div class="mb-8">
       <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Progress tracker</p>
@@ -64,85 +83,89 @@ const statusLabels = {
       </p>
     </div>
 
-    <!-- Capability overview -->
     <div class="mb-12">
-      <h2 class="text-2xl font-bold font-display text-(--color-text-primary) mb-6">Capability Status</h2>
+      <h2 class="mb-6 text-2xl font-bold font-display text-(--color-text-primary)">Capability Status</h2>
       <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {capabilities.map(cap => (
+        {capabilities.map((capability) => (
           <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4">
-            <div class="flex items-center justify-between gap-2 mb-2">
-              <h3 class="text-sm font-semibold text-(--color-text-primary)">{cap.name}</h3>
-              <span class={`text-xs font-medium ${statusColors[cap.status] || 'text-(--color-text-muted)'}`}>
-                {statusLabels[cap.status] || cap.status}
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <h3 class="text-sm font-semibold text-(--color-text-primary)">{capability.name}</h3>
+              <span class={`text-xs font-medium ${statusColors[capability.status] || 'text-(--color-text-muted)'}`}>
+                {statusLabels[capability.status] || capability.status}
               </span>
             </div>
-            <p class="text-xs text-(--color-text-muted)">{cap.category}</p>
-            {cap.current_best && <p class="mt-1 text-xs text-(--color-text-secondary)">Best: {cap.current_best}</p>}
+            <p class="text-xs text-(--color-text-muted)">{capability.category}</p>
+            {capability.current_best && <p class="mt-1 text-xs text-(--color-text-secondary)">Best: {capability.current_best}</p>}
           </div>
         ))}
       </div>
     </div>
 
-    <!-- Lab definitions -->
     <div class="mb-12">
-      <h2 class="text-2xl font-bold font-display text-(--color-text-primary) mb-6">How the Labs Define AGI</h2>
+      <h2 class="mb-6 text-2xl font-bold font-display text-(--color-text-primary)">How the Labs Define AGI</h2>
       <div class="space-y-6">
-        {labDefs.map(def => (
+        {labDefs.map((definition) => (
           <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <h3 class="text-lg font-semibold text-(--color-text-primary)">{def.source_name}</h3>
-              {def.framework_name && <span class="text-xs font-medium text-(--color-accent) bg-(--color-accent-glow) px-2 py-0.5 rounded-full">{def.framework_name}</span>}
+            <div class="mb-3 flex items-center gap-3">
+              <h3 class="text-lg font-semibold text-(--color-text-primary)">{definition.source_name}</h3>
+              {definition.framework_name && (
+                <span class="rounded-full bg-(--color-accent-glow) px-2 py-0.5 text-xs font-medium text-(--color-accent)">
+                  {definition.framework_name}
+                </span>
+              )}
             </div>
-            <p class="text-sm text-(--color-text-secondary) mb-4">{def.summary}</p>
-            {def.levels && typeof def.levels === 'object' && Array.isArray(def.levels) && def.levels.length > 0 && (
+            <p class="mb-4 text-sm text-(--color-text-secondary)">{definition.summary}</p>
+            {definition.levels && Array.isArray(definition.levels) && definition.levels.length > 0 && (
               <div class="space-y-2">
-                {def.levels.map(level => (
-                  <div class="flex items-start gap-3 rounded-xl bg-(--color-bg-primary)/60 p-3 border border-(--color-border)">
-                    <span class="text-xs font-bold text-(--color-accent) min-w-[2rem]">L{level.level}</span>
+                {definition.levels.map((level) => (
+                  <div class="flex items-start gap-3 rounded-xl border border-(--color-border) bg-(--color-bg-primary)/60 p-3">
+                    <span class="min-w-[2rem] text-xs font-bold text-(--color-accent)">L{level.level}</span>
                     <div>
                       <span class="text-sm font-medium text-(--color-text-primary)">{level.name}</span>
-                      <p class="text-xs text-(--color-text-muted) mt-0.5">{level.desc}</p>
+                      <p class="mt-0.5 text-xs text-(--color-text-muted)">{level.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             )}
-            {def.source_url && <a href={def.source_url} target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-xs text-(--color-accent) hover:underline">Source →</a>}
+            {definition.source_url && (
+              <a href={definition.source_url} target="_blank" rel="noopener noreferrer" class="inline-block mt-3 text-xs text-(--color-accent) hover:underline">
+                Source ->
+              </a>
+            )}
           </div>
         ))}
       </div>
     </div>
 
-    <!-- Individual researchers -->
     <div class="mb-12">
-      <h2 class="text-2xl font-bold font-display text-(--color-text-primary) mb-6">Researcher Positions</h2>
+      <h2 class="mb-6 text-2xl font-bold font-display text-(--color-text-primary)">Researcher Positions</h2>
       <div class="grid gap-4 md:grid-cols-2">
-        {individualDefs.map(def => (
+        {individualDefs.map((definition) => (
           <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
-            <h3 class="text-base font-semibold text-(--color-text-primary)">{def.source_name}</h3>
-            {def.framework_name && <p class="text-xs text-(--color-accent) mt-1">{def.framework_name}</p>}
-            <p class="text-sm text-(--color-text-secondary) mt-2">{def.summary}</p>
+            <h3 class="text-base font-semibold text-(--color-text-primary)">{definition.source_name}</h3>
+            {definition.framework_name && <p class="mt-1 text-xs text-(--color-accent)">{definition.framework_name}</p>}
+            <p class="mt-2 text-sm text-(--color-text-secondary)">{definition.summary}</p>
           </div>
         ))}
       </div>
     </div>
 
-    <!-- Editorial position -->
     {editorialDefs.length > 0 && (
       <div class="mb-12">
-        <h2 class="text-2xl font-bold font-display text-(--color-text-primary) mb-6">Our Position</h2>
-        {editorialDefs.map(def => (
+        <h2 class="mb-6 text-2xl font-bold font-display text-(--color-text-primary)">Our Position</h2>
+        {editorialDefs.map((definition) => (
           <div class="rounded-2xl border-2 border-(--color-accent) bg-(--color-bg-secondary) p-6">
-            <h3 class="text-lg font-semibold text-(--color-text-primary)">{def.framework_name}</h3>
-            <p class="text-sm text-(--color-text-secondary) mt-2 mb-4">{def.summary}</p>
-            {def.levels && Array.isArray(def.levels) && def.levels.length > 0 && (
+            <h3 class="text-lg font-semibold text-(--color-text-primary)">{definition.framework_name}</h3>
+            <p class="mb-4 mt-2 text-sm text-(--color-text-secondary)">{definition.summary}</p>
+            {definition.levels && Array.isArray(definition.levels) && definition.levels.length > 0 && (
               <div class="space-y-2">
-                {def.levels.map(level => (
-                  <div class="flex items-start gap-3 rounded-xl bg-(--color-bg-primary)/60 p-3 border border-(--color-accent)/20">
-                    <span class="text-sm font-bold text-(--color-accent) min-w-[2rem]">L{level.level}</span>
+                {definition.levels.map((level) => (
+                  <div class="flex items-start gap-3 rounded-xl border border-(--color-accent)/20 bg-(--color-bg-primary)/60 p-3">
+                    <span class="min-w-[2rem] text-sm font-bold text-(--color-accent)">L{level.level}</span>
                     <div>
                       <span class="text-sm font-medium text-(--color-text-primary)">{level.name}</span>
-                      <p class="text-xs text-(--color-text-muted) mt-0.5">{level.desc}</p>
+                      <p class="mt-0.5 text-xs text-(--color-text-muted)">{level.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -153,28 +176,28 @@ const statusLabels = {
       </div>
     )}
 
-    <!-- Timeline -->
     <div class="mb-12">
-      <h2 class="text-2xl font-bold font-display text-(--color-text-primary) mb-6">Milestones</h2>
+      <h2 class="mb-6 text-2xl font-bold font-display text-(--color-text-primary)">Milestones</h2>
       <div class="space-y-3">
-        {milestones.map(m => (
+        {milestones.map((milestone) => (
           <div class="flex gap-4 rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4">
             <div class="shrink-0 text-right" style="min-width: 5rem;">
-              <p class="text-sm font-medium text-(--color-text-primary)">{new Date(m.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</p>
-              <div class="flex gap-0.5 justify-end mt-1">
-                {Array.from({length: Math.min(m.significance || 5, 10)}).map(() => (
-                  <div class="w-1.5 h-1.5 rounded-full bg-(--color-accent)"></div>
+              <p class="text-sm font-medium text-(--color-text-primary)">
+                {new Date(milestone.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}
+              </p>
+              <div class="mt-1 flex justify-end gap-0.5">
+                {Array.from({ length: Math.min(milestone.significance || 5, 10) }).map(() => (
+                  <div class="h-1.5 w-1.5 rounded-full bg-(--color-accent)"></div>
                 ))}
               </div>
             </div>
             <div>
-              <h3 class="text-sm font-semibold text-(--color-text-primary)">{m.title}</h3>
-              <p class="text-xs text-(--color-text-secondary) mt-1">{m.description}</p>
+              <h3 class="text-sm font-semibold text-(--color-text-primary)">{milestone.title}</h3>
+              <p class="mt-1 text-xs text-(--color-text-secondary)">{milestone.description}</p>
             </div>
           </div>
         ))}
       </div>
     </div>
   </section>
-
 </BaseLayout>

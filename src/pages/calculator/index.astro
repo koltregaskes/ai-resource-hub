@@ -178,7 +178,8 @@ const modelData = models.map(m => ({
   </section>
 
   <script>
-    const providerOptions = Array.from(new Set(Array.from(document.querySelectorAll('.calc-row')).map((row) => row.dataset.provider || '')))
+    const calcRows = Array.from(document.querySelectorAll<HTMLElement>('.calc-row'));
+    const providerOptions = Array.from(new Set(calcRows.map((row) => row.dataset.provider || '')))
       .filter(Boolean)
       .sort();
 
@@ -218,19 +219,18 @@ const modelData = models.map(m => ({
       }
 
       // Update each row
-      const rows = document.querySelectorAll('.calc-row');
-      const costs: { row: Element; cost: number }[] = [];
+      const rows = document.querySelectorAll<HTMLElement>('.calc-row');
+      const costs: { row: HTMLElement; cost: number }[] = [];
       rows.forEach(row => {
-        const rowEl = row as HTMLElement;
-        const provider = rowEl.dataset.provider || '';
-        const model = rowEl.dataset.model || '';
+        const provider = row.dataset.provider || '';
+        const model = row.dataset.model || '';
         const matchesProvider = !providerValue || provider === providerValue;
         const matchesSearch = !searchValue || provider.includes(searchValue) || model.includes(searchValue);
 
-        rowEl.classList.toggle('hidden', !(matchesProvider && matchesSearch));
+        row.classList.toggle('hidden', !(matchesProvider && matchesSearch));
 
-        const inputPrice = parseFloat((row as HTMLElement).dataset.inputPrice || '0');
-        const outputPrice = parseFloat((row as HTMLElement).dataset.outputPrice || '0');
+        const inputPrice = parseFloat(row.dataset.inputPrice || '0');
+        const outputPrice = parseFloat(row.dataset.outputPrice || '0');
         const cost = (monthlyInputTokens / 1_000_000) * inputPrice + (monthlyOutputTokens / 1_000_000) * outputPrice;
 
         const costEl = row.querySelector('.calc-cost');
@@ -249,8 +249,8 @@ const modelData = models.map(m => ({
       });
 
       costs.sort((a, b) => {
-        const rowA = a.row as HTMLElement;
-        const rowB = b.row as HTMLElement;
+        const rowA = a.row;
+        const rowB = b.row;
         const inputA = parseFloat(rowA.dataset.inputPrice || '0');
         const inputB = parseFloat(rowB.dataset.inputPrice || '0');
         const outputA = parseFloat(rowA.dataset.outputPrice || '0');

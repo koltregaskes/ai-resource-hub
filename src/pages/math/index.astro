@@ -9,23 +9,25 @@ const allModels = getModelsByCategory('llm');
 const scores = getBenchmarkScores();
 
 const mathBenchmarks = ['math-500', 'gsm8k', 'aime-2025'];
-const mathScoreMap = new Map();
+const mathScoreMap = new Map<string, Record<string, number>>();
 
 for (const s of scores) {
   if (mathBenchmarks.includes(s.benchmark_id)) {
     if (!mathScoreMap.has(s.model_id)) mathScoreMap.set(s.model_id, {});
-    mathScoreMap.get(s.model_id)[s.benchmark_id] = s.score;
+    const modelBenchmarks = mathScoreMap.get(s.model_id);
+    if (!modelBenchmarks) continue;
+    modelBenchmarks[s.benchmark_id] = s.score;
   }
 }
 
 const mathModels = allModels
-  .map(m => {
-    const benchmarks = mathScoreMap.get(m.id) || {};
+  .map((model) => {
+    const benchmarks = mathScoreMap.get(model.id) ?? {};
     const benchCount = Object.keys(benchmarks).length;
     const avgScore = benchCount > 0
-      ? Object.values(benchmarks).reduce((a, b) => a + b, 0) / benchCount
-      : m.qualityScore * 0.5;
-    return { ...m, mathScore: Math.round(avgScore), benchmarks, benchCount };
+      ? Object.values(benchmarks).reduce((sum, score) => sum + score, 0) / benchCount
+      : model.qualityScore * 0.5;
+    return { ...model, mathScore: Math.round(avgScore), benchmarks, benchCount };
   })
   .sort((a, b) => b.mathScore - a.mathScore)
   .slice(0, 40);

@@ -18,6 +18,13 @@
 import { getDB, upsertModels, logScrapeRun, type ScrapedModel } from './base';
 import fs from 'node:fs';
 import path from 'node:path';
+import {
+  PROVIDER_PREFIX_MAP,
+  deriveModelIdFromOpenRouterId,
+  findCatalogModelByAlias,
+  getOpenRouterModelMap,
+  getWatchedProviderPrefixes,
+} from '../model-catalog';
 
 // ─── OpenRouter API types ──────────────────────────────────────
 interface OpenRouterModel {
@@ -61,7 +68,7 @@ interface OpenRouterResponse {
 //
 // When OpenRouter lists a model we DON'T have here, it gets reported
 // as a new/untracked model in the detection report.
-const MODEL_MAP: Record<string, string> = {
+const LEGACY_MODEL_MAP: Record<string, string> = {
   // ── OpenAI ───────────────────────────────────────────────────
   'openai/gpt-4o': 'gpt-4o',
   'openai/gpt-4o-mini': 'gpt-4o-mini',
@@ -199,26 +206,9 @@ const MODEL_MAP: Record<string, string> = {
 };
 
 // ─── Provider prefix → DB provider ID ─────────────────────────
-const PROVIDER_PREFIX_MAP: Record<string, string> = {
-  'openai': 'openai',
-  'anthropic': 'anthropic',
-  'google': 'google',
-  'meta-llama': 'meta',
-  'deepseek': 'deepseek',
-  'mistralai': 'mistral',
-  'x-ai': 'xai',
-  'cohere': 'cohere',
-  'qwen': 'alibaba',
-  'perplexity': 'perplexity',
-  'ai21': 'ai21',
-  'amazon': 'amazon',
-  'microsoft': 'microsoft',
-  'nvidia': 'nvidia',
-  'minimax': 'minimax',
-  'inflection': 'inflection',
-  'rekaai': 'reka',
-  '01-ai': '01ai',
-  'zhipuai': 'zhipu',
+const MODEL_MAP: Record<string, string> = {
+  ...LEGACY_MODEL_MAP,
+  ...getOpenRouterModelMap(),
 };
 
 // Reverse lookup: our DB ID → provider ID for the model
@@ -230,14 +220,24 @@ for (const [orId, dbId] of Object.entries(MODEL_MAP)) {
 
 // ─── Providers we care about for new model detection ──────────
 // Only flag new models from these major providers (ignore niche/community models)
-const WATCHED_PROVIDERS = new Set([
-  'openai', 'anthropic', 'google', 'meta-llama', 'deepseek',
-  'mistralai', 'x-ai', 'cohere', 'qwen', 'amazon', 'microsoft',
-  'nvidia', 'minimax', 'ai21', 'inflection', 'rekaai', '01-ai',
-]);
+const WATCHED_PROVIDERS = getWatchedProviderPrefixes();
+
+function resolveDbId(orModel: OpenRouterModel, validModelIds: Set<string>): string | null {
+  const mapped = MODEL_MAP[orModel.id];
+  if (mapped) return mapped;
+
+  const derived = deriveModelIdFromOpenRouterId(orModel.id);
+  if (validModelIds.has(derived)) return derived;
+
+  const catalogMatch = findCatalogModelByAlias(orModel.id)
+    ?? findCatalogModelByAlias(orModel.name)
+    ?? findCatalogModelByAlias(derived);
+
+  return catalogMatch?.id ?? null;
+}
 
 // ─── Fetch and transform ───────────────────────────────────────
-async function scrapeOpenRouter(validProviderIds: Set<string>): Promise<{
+async function scrapeOpenRouter(validProviderIds: Set<string>, validModelIds: Set<string>): Promise<{
   models: ScrapedModel[];
   newModels: OpenRouterModel[];
   totalOnOpenRouter: number;
@@ -263,7 +263,7 @@ async function scrapeOpenRouter(validProviderIds: Set<string>): Promise<{
   let matched = 0;
 
   for (const orModel of data.data) {
-    const dbId = MODEL_MAP[orModel.id];
+    const dbId = resolveDbId(orModel, validModelIds);
 
     if (!dbId) {
       // New model detection: is this from a provider we watch?
@@ -354,6 +354,7 @@ function writeNewModelsReport(newModels: OpenRouterModel[]): void {
   // Group by provider
   const byProvider: Record<string, Array<{
     openrouterId: string;
+    suggestedId: string;
     name: string;
     inputPrice: number;
     outputPrice: number;
@@ -371,6 +372,7 @@ function writeNewModelsReport(newModels: OpenRouterModel[]): void {
 
     byProvider[provider].push({
       openrouterId: m.id,
+      suggestedId: deriveModelIdFromOpenRouterId(m.id),
       name: m.name,
       inputPrice: Math.round(inputPrice * 1000) / 1000,
       outputPrice: Math.round(outputPrice * 1000) / 1000,
@@ -383,7 +385,7 @@ function writeNewModelsReport(newModels: OpenRouterModel[]): void {
     generated: new Date().toISOString(),
     totalNewModels: newModels.length,
     byProvider,
-    instructions: 'Add models to MODEL_MAP in openrouter.ts and seed-db.ts to start tracking them.',
+    instructions: 'Review the canonical model catalog and promote verified discoveries into scripts/model-catalog.ts.',
   };
 
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -410,9 +412,12 @@ async function main() {
   const validProviderIds = new Set(
     (db.prepare('SELECT id FROM providers').all() as Array<{ id: string }>).map((row) => row.id)
   );
+  const validModelIds = new Set(
+    (db.prepare('SELECT id FROM models').all() as Array<{ id: string }>).map((row) => row.id)
+  );
 
   try {
-    const { models, newModels, totalOnOpenRouter } = await scrapeOpenRouter(validProviderIds);
+    const { models, newModels, totalOnOpenRouter } = await scrapeOpenRouter(validProviderIds, validModelIds);
 
     if (models.length > 0) {
       const updated = upsertModels(db, models);
