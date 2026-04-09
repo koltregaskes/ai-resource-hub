@@ -7,7 +7,7 @@ priority: "high"
 model: "Kimi K2 0711"
 provider: "Moonshot AI"
 release_date: "2026-03-28"
-generated_at: "2026-04-09T15:53:53.515Z"
+generated_at: "2026-04-09T17:21:21.599Z"
 ---
 
 # Kimi K2 0711: release brief
@@ -16,7 +16,7 @@ Moonshot AI's Kimi K2 0711 is on the release desk with 0 related storyies and 0 
 
 ## Release summary
 
-Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

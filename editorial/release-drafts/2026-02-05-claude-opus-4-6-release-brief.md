@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Claude Opus 4.6"
 provider: "Anthropic"
 release_date: "2026-02-05"
-generated_at: "2026-04-09T15:53:53.516Z"
+generated_at: "2026-04-09T17:21:21.600Z"
 ---
 
 # Claude Opus 4.6: release brief
@@ -16,7 +16,7 @@ Anthropic's Claude Opus 4.6 is on the release desk with 4 related storyies and 5
 
 ## Release summary
 
-Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

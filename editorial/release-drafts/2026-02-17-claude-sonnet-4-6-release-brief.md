@@ -7,7 +7,7 @@ priority: "watch"
 model: "Claude Sonnet 4.6"
 provider: "Anthropic"
 release_date: "2026-02-17"
-generated_at: "2026-04-09T15:53:53.516Z"
+generated_at: "2026-04-09T17:21:21.600Z"
 ---
 
 # Claude Sonnet 4.6: release brief
@@ -16,7 +16,7 @@ Anthropic's Claude Sonnet 4.6 is on the release desk with 5 related storyies and
 
 ## Release summary
 
-Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

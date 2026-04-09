@@ -7,7 +7,7 @@ priority: "watch"
 model: "MiniMax M2.7"
 provider: "MiniMax"
 release_date: "2026-03-18"
-generated_at: "2026-04-09T15:53:53.515Z"
+generated_at: "2026-04-09T17:21:21.599Z"
 ---
 
 # MiniMax M2.7: release brief
@@ -16,7 +16,7 @@ MiniMax's MiniMax M2.7 is on the release desk with 0 related storyies and 0 benc
 
 ## Release summary
 
-MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Current MiniMax flagship family line. Tracking only until benchmark and quality coverage is available. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Current MiniMax flagship family line. Tracking only until benchmark and quality coverage is available. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

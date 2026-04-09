@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.4 Mini"
 provider: "OpenAI"
 release_date: "2026-03-17"
-generated_at: "2026-04-09T15:53:53.515Z"
+generated_at: "2026-04-09T17:21:21.599Z"
 ---
 
 # GPT-5.4 Mini: release brief
@@ -16,7 +16,7 @@ OpenAI's GPT-5.4 Mini is on the release desk with 6 related storyies and 0 bench
 
 ## Release summary
 
-GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.75 in / $4.50 out per million tokens. Smaller GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.75 in / $4.50 out per million tokens. Smaller GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Gemini 3 Flash Preview"
 provider: "Google"
 release_date: "2025-12-17"
-generated_at: "2026-04-09T15:53:53.516Z"
+generated_at: "2026-04-09T17:21:21.600Z"
 ---
 
 # Gemini 3 Flash Preview: release brief
@@ -16,7 +16,7 @@ Google's Gemini 3 Flash Preview is on the release desk with 6 related storyies a
 
 ## Release summary
 
-Gemini 3 Flash Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Free tier available; Computer Use Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Gemini 3 Flash Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Free tier available; Computer Use Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

@@ -7,7 +7,7 @@ priority: "watch"
 model: "GLM 5 Turbo"
 provider: "Zhipu AI"
 release_date: "2026-03-15"
-generated_at: "2026-04-09T15:53:53.515Z"
+generated_at: "2026-04-09T17:21:21.599Z"
 ---
 
 # GLM 5 Turbo: release brief
@@ -16,7 +16,7 @@ Zhipu AI's GLM 5 Turbo is on the release desk with 0 related storyies and 0 benc
 
 ## Release summary
 
-GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. Tracking only until benchmark and quality coverage is available. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. Tracking only until benchmark and quality coverage is available. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

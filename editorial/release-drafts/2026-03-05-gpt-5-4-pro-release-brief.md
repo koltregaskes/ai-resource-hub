@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.4 Pro"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-04-09T15:53:53.515Z"
+generated_at: "2026-04-09T17:21:21.599Z"
 ---
 
 # GPT-5.4 Pro: release brief
@@ -16,7 +16,7 @@ OpenAI's GPT-5.4 Pro is on the release desk with 6 related storyies and 0 benchm
 
 ## Release summary
 
-GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Premium GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Premium GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
