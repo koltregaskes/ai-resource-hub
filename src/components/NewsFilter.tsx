@@ -54,6 +54,75 @@ const TAG_COLOURS: Record<string, string> = {
 };
 
 type DateRange = '24h' | '7d' | 'all';
+type GroupBy = 'date' | 'tag';
+
+const DISALLOWED_NEWS_TAGS = new Set([
+  'image_gen',
+  'video_gen',
+  'music_gen',
+  'voice_synthesis',
+  'creative_tool',
+  'art_ai',
+  'photography',
+  'camera',
+  'camera_release',
+  'lens',
+  'photo_editing',
+  'lightroom',
+  'photoshop',
+  'capture_one',
+  'photography_ai',
+  'photography_technique',
+  'photography_business',
+  'crypto',
+  'crypto_trading',
+  'crypto_defi',
+  'crypto_regulation',
+]);
+
+const TOPIC_ORDER = [
+  'model_release',
+  'benchmark',
+  'evaluation',
+  'research_paper',
+  'api_update',
+  'pricing_change',
+  'architecture',
+  'dataset',
+  'training',
+  'inference',
+  'hardware',
+  'open_source',
+];
+
+const TOPIC_LABELS: Record<string, string> = {
+  model_release: 'Model Releases',
+  benchmark: 'Benchmarks',
+  evaluation: 'Evaluations',
+  research_paper: 'Research Papers',
+  api_update: 'API Updates',
+  pricing_change: 'Pricing',
+  architecture: 'Architecture',
+  dataset: 'Datasets',
+  training: 'Training',
+  inference: 'Inference',
+  hardware: 'Hardware',
+  open_source: 'Open Source',
+};
+
+function shouldDisplayItem(item: NewsItem): boolean {
+  const tags = item.tags ?? [];
+  if (tags.some((tag) => DISALLOWED_NEWS_TAGS.has(tag))) {
+    return false;
+  }
+
+  const text = `${item.title} ${item.summary} ${item.source} ${tags.join(' ')}`.toLowerCase();
+  if (/\b(bitcoin|ethereum|crypto|photography|lightroom|photoshop|camera)\b/.test(text)) {
+    return false;
+  }
+
+  return tags.some((tag) => TOPIC_ORDER.includes(tag));
+}
 
 export default function NewsFilter({ news }: Props) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -64,6 +133,10 @@ export default function NewsFilter({ news }: Props) {
   const [highlightsOnly, setHighlightsOnly] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [archiveMonth, setArchiveMonth] = useState('');
+  const [activeTag, setActiveTag] = useState('');
+  const [groupBy, setGroupBy] = useState<GroupBy>('date');
+
+  const cleanNews = useMemo(() => news.filter((item) => shouldDisplayItem(item)), [news]);
 
   useEffect(() => {
     try {
@@ -76,15 +149,20 @@ export default function NewsFilter({ news }: Props) {
 
   const archiveMonths = useMemo(() => {
     const months = new Set<string>();
-    news.forEach((item) => {
+    cleanNews.forEach((item) => {
       const [year, month] = item.date.split('-');
       months.add(`${year}-${month}`);
     });
     return Array.from(months).sort().reverse();
-  }, [news]);
+  }, [cleanNews]);
+
+  const availableTags = useMemo(
+    () => TOPIC_ORDER.filter((tag) => cleanNews.some((item) => item.tags.includes(tag))),
+    [cleanNews],
+  );
 
   const filtered = useMemo(() => {
-    let items = news;
+    let items = cleanNews;
 
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
@@ -94,6 +172,10 @@ export default function NewsFilter({ news }: Props) {
         || item.source.toLowerCase().includes(query)
         || item.tags.some((tag) => tag.toLowerCase().includes(query)),
       );
+    }
+
+    if (activeTag) {
+      items = items.filter((item) => item.tags.includes(activeTag));
     }
 
     if (archiveMonth) {
@@ -118,23 +200,32 @@ export default function NewsFilter({ news }: Props) {
     }
 
     return items;
-  }, [archiveMonth, customFrom, customTo, dateRange, favourites, highlightsOnly, news, searchQuery]);
+  }, [activeTag, archiveMonth, cleanNews, customFrom, customTo, dateRange, favourites, highlightsOnly, searchQuery]);
 
   const grouped = useMemo(() => {
     const groups: Record<string, NewsItem[]> = {};
 
     filtered.forEach((item) => {
-      if (!groups[item.date]) groups[item.date] = [];
-      groups[item.date].push(item);
+      const key = groupBy === 'tag'
+        ? TOPIC_ORDER.find((tag) => item.tags.includes(tag)) ?? 'other'
+        : item.date;
+
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(item);
     });
 
     const sorted: Record<string, NewsItem[]> = {};
-    Object.keys(groups).sort().reverse().forEach((key) => {
+    Object.keys(groups).sort((left, right) => {
+      if (groupBy === 'tag') {
+        return TOPIC_ORDER.indexOf(left) - TOPIC_ORDER.indexOf(right);
+      }
+      return right.localeCompare(left);
+    }).forEach((key) => {
       sorted[key] = groups[key];
     });
 
     return sorted;
-  }, [filtered]);
+  }, [filtered, groupBy]);
 
   const favouritedItems = useMemo(
     () => filtered.filter((item) => favourites.has(item.id)),
@@ -158,6 +249,8 @@ export default function NewsFilter({ news }: Props) {
     setCustomTo('');
     setArchiveMonth('');
     setHighlightsOnly(false);
+    setActiveTag('');
+    setGroupBy('date');
   }, []);
 
   const setQuickDate = useCallback((range: DateRange) => {
@@ -183,8 +276,9 @@ export default function NewsFilter({ news }: Props) {
     }
 
     if (highlightsOnly) parts.push('Highlights only');
+    if (activeTag) parts.push(TOPIC_LABELS[activeTag] ?? activeTag);
     return parts.join(' · ');
-  }, [archiveMonth, customFrom, customTo, dateRange, highlightsOnly, searchQuery]);
+  }, [activeTag, archiveMonth, customFrom, customTo, dateRange, highlightsOnly, searchQuery]);
 
   return (
     <div className="relative flex gap-6">
@@ -232,6 +326,35 @@ export default function NewsFilter({ news }: Props) {
                 color: 'var(--color-text-primary)',
               }}
             />
+          </div>
+
+          <div>
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Topics</h3>
+            <div className="flex flex-wrap gap-1.5">
+              <button
+                onClick={() => setActiveTag('')}
+                className="rounded-full px-2.5 py-1 text-[11px] font-medium"
+                style={{
+                  backgroundColor: activeTag === '' ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
+                  color: activeTag === '' ? '#fff' : 'var(--color-text-secondary)',
+                }}
+              >
+                All topics
+              </button>
+              {availableTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setActiveTag((current) => (current === tag ? '' : tag))}
+                  className="rounded-full px-2.5 py-1 text-[11px] font-medium"
+                  style={{
+                    backgroundColor: activeTag === tag ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
+                    color: activeTag === tag ? '#fff' : 'var(--color-text-secondary)',
+                  }}
+                >
+                  {TOPIC_LABELS[tag] ?? tag}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div>
@@ -302,6 +425,25 @@ export default function NewsFilter({ news }: Props) {
           </div>
 
           <div>
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Group By</h3>
+            <div className="flex gap-1">
+              {(['date', 'tag'] as const).map((value) => (
+                <button
+                  key={value}
+                  onClick={() => setGroupBy(value)}
+                  className="flex-1 rounded-md py-1.5 text-xs font-medium transition-colors"
+                  style={{
+                    backgroundColor: groupBy === value ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
+                    color: groupBy === value ? '#fff' : 'var(--color-text-secondary)',
+                  }}
+                >
+                  {value === 'date' ? 'Date' : 'Topic'}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Options</h3>
             <label className="flex cursor-pointer items-center gap-2 py-1 text-xs" style={{ color: 'var(--color-text-secondary)' }}>
               <input
@@ -329,7 +471,7 @@ export default function NewsFilter({ news }: Props) {
       <div className="min-w-0 flex-1">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
           <p className="text-xs" style={{ color: 'var(--color-text-muted)' }}>
-            Showing {filtered.length} of {news.length} articles
+            Showing {filtered.length} of {cleanNews.length} articles
             {filterSummary ? ` · ${filterSummary}` : ''}
           </p>
         </div>
@@ -358,7 +500,7 @@ export default function NewsFilter({ news }: Props) {
                   className="mb-3 border-b pb-1 text-sm font-semibold"
                   style={{ color: 'var(--color-text-primary)', borderBottomColor: 'var(--color-border)' }}
                 >
-                  {getRelativeDateLabel(key)}
+                  {groupBy === 'tag' ? (TOPIC_LABELS[key] ?? key) : getRelativeDateLabel(key)}
                   <span className="ml-2 font-normal" style={{ color: 'var(--color-text-muted)' }}>
                     ({items.length})
                   </span>
