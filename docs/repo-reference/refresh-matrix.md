@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 09 Apr 2026, 18:50 UTC
+Generated: 09 Apr 2026, 19:01 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,18 +8,18 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| Models and releases | Hourly automated refresh | Mixed | 09 Apr 2026, 17:21 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 09 Apr 2026, 17:21 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 09 Apr 2026, 17:21 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 09 Apr 2026, 17:21 UTC |
-| Provider status | Hourly automated refresh | Automated | 09 Apr 2026, 17:21 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 09 Apr 2026, 19:01 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 09 Apr 2026, 19:00 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 09 Apr 2026, 19:00 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 09 Apr 2026, 19:00 UTC |
+| Provider status | Hourly automated refresh | Automated | 09 Apr 2026, 19:00 UTC |
 | Guides and learning | Manual editorial review | Manual | 05 Apr 2026, 22:58 UTC |
 
 ## Models and releases
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 09 Apr 2026, 17:21 UTC
+- Last refreshed: 09 Apr 2026, 19:01 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -39,7 +39,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 09 Apr 2026, 17:21 UTC
+- Last refreshed: 09 Apr 2026, 19:00 UTC
 - Category route: `/benchmarks/`
 
 
@@ -51,14 +51,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Apr 2026, 17:21 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 09 Apr 2026, 17:21 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 09 Apr 2026, 19:00 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 09 Apr 2026, 19:00 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 09 Apr 2026, 17:21 UTC
+- Last refreshed: 09 Apr 2026, 19:00 UTC
 - Category route: `/compare/llm/`
 
 
@@ -70,15 +70,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Apr 2026, 17:21 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 09 Apr 2026, 17:21 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 09 Apr 2026, 17:21 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 09 Apr 2026, 19:00 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 09 Apr 2026, 19:00 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 09 Apr 2026, 19:00 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 09 Apr 2026, 17:21 UTC
+- Last refreshed: 09 Apr 2026, 19:00 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -90,15 +90,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Apr 2026, 17:20 UTC: Sierra&#8217;s Bret Taylor says the era of clicking buttons is over - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/09/sierras-bret-taylor-says-the-era-of-clicking-buttons-is-over/))
-- 09 Apr 2026, 14:27 UTC: Amazon CEO takes aim at Nvidia, Intel, Starlink, more in annual shareholder letter - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/09/amazon-ceo-takes-aim-at-nvidia-intel-starlink-more-in-annual-shareholder-letter/))
-- 09 Apr 2026, 14:00 UTC: The AI industry’s race for profits is now existential - The Verge (industry) ([source](https://www.theverge.com/podcast/909042/ai-monetization-cliff-anthropic-openai-profitable-ai-existential-moment))
+- 09 Apr 2026, 18:00 UTC: How are SambaNova and Intel Scaling Inference for Agentic AI - AI Magazine (ai_tools) ([source](https://aimagazine.com/news/how-are-sambanova-and-intel-scaling-inference-for-agentic-ai))
+- 09 Apr 2026, 18:00 UTC: Amazon CEO takes aim at Nvidia, Intel, Starlink, more in annual shareholder letter - TechCrunch AI (ai_tools) ([source](https://techcrunch.com/2026/04/09/amazon-ceo-takes-aim-at-nvidia-intel-starlink-more-in-annual-shareholder-letter/))
+- 09 Apr 2026, 17:15 UTC: Cold start latency on GPU cloud platforms in 2026 — p99 specifically, not p50. Anyone have real data? [D] - Reddit r/MachineLearning (ai_research) ([source](https://reddit.com/r/MachineLearning/comments/1sgvw83/cold_start_latency_on_gpu_cloud_platforms_in_2026/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 09 Apr 2026, 17:21 UTC
+- Last refreshed: 09 Apr 2026, 19:00 UTC
 - Category route: `/status/`
 
 
@@ -109,9 +109,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Apr 2026, 17:21 UTC: Anthropic - Partially Degraded Service ([source](https://status.claude.com))
-- 09 Apr 2026, 17:21 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
-- 09 Apr 2026, 17:21 UTC: DeepSeek - All Systems Operational ([source](https://status.deepseek.com))
+- 09 Apr 2026, 19:00 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 09 Apr 2026, 19:00 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 09 Apr 2026, 19:00 UTC: DeepSeek - All Systems Operational ([source](https://status.deepseek.com))
 
 ## Guides and learning
 
