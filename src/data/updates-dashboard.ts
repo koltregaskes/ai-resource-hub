@@ -136,7 +136,7 @@ function readProviderStatus(): ProviderStatusSnapshot | null {
 function releaseHighlights(basePath: string): UpdateHighlight[] {
   return modelReleaseDesk.releases.slice(0, 3).map((release) => ({
     title: release.modelName,
-    detail: `${release.providerName} release desk entry is ${release.draftStatus.replace(/_/g, ' ')} with ${release.storyCount} related ${release.storyCount === 1 ? 'story' : 'stories'} and ${release.benchmarkCount} benchmark signals attached.`,
+    detail: `${release.providerName} release desk entry is ${release.draftStatus.replace(/_/g, ' ')} with ${release.storyCount} related ${Number(release.storyCount) === 1 ? 'story' : 'stories'} and ${release.benchmarkCount} benchmark signals attached.`,
     href: formatRoute(basePath, '/new/'),
     date: normaliseDateTime(release.releaseDate),
   }));

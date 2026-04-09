@@ -1,6 +1,8 @@
 name: Refresh provider status
 
 on:
+  schedule:
+    - cron: '42 * * * *'
   workflow_dispatch:
 
 env:
