@@ -401,6 +401,18 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     },
   },
   {
+    id: 'claude-mythos-preview',
+    name: 'Claude Mythos Preview',
+    providerId: 'anthropic',
+    released: '2026-04-07',
+    modality: 'text',
+    apiAvailable: false,
+    notes: 'Limited-access Anthropic frontier preview launched with Project Glasswing for defensive cybersecurity work.',
+    status: 'preview',
+    officialUrl: 'https://www.anthropic.com/glasswing',
+    aliases: ['claude mythos', 'mythos preview', 'mythos'],
+  },
+  {
     id: 'gemini-3.1-pro',
     name: 'Gemini 3.1 Pro',
     providerId: 'google',

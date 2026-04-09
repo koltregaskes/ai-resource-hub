@@ -3,23 +3,14 @@ import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
 import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry';
+import { getAiResourceHubNewsRoutingDiagnostics } from '../src/data/news-routing';
 
 const repoRoot = process.cwd();
 const dbPath = path.join(repoRoot, 'data', 'the-ai-resource-hub.db');
 const cacheDir = path.join(repoRoot, 'data', 'pg-cache');
 const publicDataDir = path.join(repoRoot, 'public', 'data');
 const providerStatusPath = path.join(repoRoot, 'data', 'provider-status.json');
-const siteFiltersPath = path.join(
-  repoRoot,
-  '..',
-  '..',
-  'shared',
-  'website-tools',
-  'pipelines',
-  'news',
-  'site-filters.json',
-);
-
+const releaseDeskPath = path.join(publicDataDir, 'model-release-desk.json');
 interface CacheModel {
   id: string;
   name?: string | null;
@@ -35,6 +26,8 @@ interface CacheNews {
   summary?: string | null;
   tags?: unknown;
   importance_score?: number | string | null;
+  published_at?: string | null;
+  discovered_at?: string | null;
 }
 
 interface SpreadsheetExport {
@@ -48,6 +41,16 @@ interface SpreadsheetExport {
 interface ProviderStatusSnapshot {
   generatedAt?: string;
   providers?: Array<{ name?: string; lastCheckedAt?: string | null }>;
+}
+
+interface ReleaseDeskSnapshot {
+  generatedAt?: string;
+  stats?: {
+    totalReleases?: number;
+    highPriority?: number;
+    readyForEditor?: number;
+  };
+  releases?: Array<{ id?: string; draftStatus?: string | null }>;
 }
 
 function loadJson<T>(name: string): T[] {
@@ -65,26 +68,6 @@ function normalise(value: string | null | undefined): string {
   return (value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '');
 }
 
-function toTags(value: unknown): string[] {
-  if (Array.isArray(value)) return value.map((item) => String(item).trim()).filter(Boolean);
-  if (typeof value === 'string') {
-    const trimmed = value.trim();
-    if (!trimmed) return [];
-    if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
-      return trimmed.slice(1, -1).split(',').map((item) => item.replace(/^"+|"+$/g, '').trim()).filter(Boolean);
-    }
-    if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
-      try {
-        return JSON.parse(trimmed).map((item: unknown) => String(item).trim()).filter(Boolean);
-      } catch {
-        return [];
-      }
-    }
-    return trimmed.split(',').map((item) => item.trim()).filter(Boolean);
-  }
-  return [];
-}
-
 function matchesRequirement(model: CacheModel, requirement: FrontierModelRequirement): boolean {
   const provider = normalise(model.provider_name);
   const id = normalise(model.id);
@@ -99,43 +82,6 @@ function matchesRequirement(model: CacheModel, requirement: FrontierModelRequire
   });
 }
 
-function getSiteFilter() {
-  if (!fs.existsSync(siteFiltersPath)) return null;
-  const raw = JSON.parse(fs.readFileSync(siteFiltersPath, 'utf8'));
-  return raw?.sites?.['ai-resource-hub'] ?? null;
-}
-
-function verifyNewsRouting(newsRows: CacheNews[]): string[] {
-  const issues: string[] = [];
-  const filter = getSiteFilter();
-  if (!filter) return issues;
-
-  const includeTags = new Set((filter.include_tags ?? []) as string[]);
-  const excludeTags = new Set((filter.exclude_tags ?? []) as string[]);
-  const minImportance = Number(filter.min_importance_score ?? 0);
-
-  for (const item of newsRows) {
-    const tags = toTags(item.tags);
-    const importance = Number(item.importance_score ?? 0);
-    const hasIncludeTag = tags.some((tag) => includeTags.has(tag));
-    const hasExcludeTag = tags.some((tag) => excludeTags.has(tag));
-
-    if (importance < minImportance) {
-      issues.push(`News item below importance threshold: ${item.source} :: ${item.title}`);
-      continue;
-    }
-    if (!hasIncludeTag) {
-      issues.push(`News item missing AI Resource Hub include tags: ${item.source} :: ${item.title}`);
-      continue;
-    }
-    if (hasExcludeTag) {
-      issues.push(`News item contains excluded tags: ${item.source} :: ${item.title}`);
-    }
-  }
-
-  return issues;
-}
-
 function main() {
   const db = new Database(dbPath, { readonly: true });
   const failures: string[] = [];
@@ -147,6 +93,7 @@ function main() {
   const spreadsheet = loadJsonFile<SpreadsheetExport>(path.join(publicDataDir, 'ai-models-comparison.json'));
   const latestSpreadsheet = loadJsonFile<SpreadsheetExport>(path.join(publicDataDir, 'models-latest.json'));
   const providerStatus = loadJsonFile<ProviderStatusSnapshot>(providerStatusPath);
+  const releaseDesk = loadJsonFile<ReleaseDeskSnapshot>(releaseDeskPath);
 
   const dbCounts = {
     providers: Number((db.prepare('SELECT COUNT(*) AS count FROM providers').get() as { count: number }).count),
@@ -200,6 +147,27 @@ function main() {
     }
   }
 
+  if (!releaseDesk) {
+    failures.push('Missing release desk snapshot: public/data/model-release-desk.json');
+  } else {
+    const generatedAt = releaseDesk.generatedAt ? Date.parse(releaseDesk.generatedAt) : NaN;
+    if (!Number.isFinite(generatedAt)) {
+      failures.push('Release desk snapshot is missing a valid generatedAt timestamp.');
+    } else if (Date.now() - generatedAt > 1000 * 60 * 60 * 48) {
+      failures.push(`Release desk snapshot is stale: generatedAt=${releaseDesk.generatedAt}`);
+    }
+
+    const releaseCount = releaseDesk.releases?.length ?? 0;
+    if (releaseCount === 0) {
+      failures.push('Release desk snapshot contains zero releases.');
+    }
+
+    const readyForEditor = releaseDesk.stats?.readyForEditor ?? 0;
+    if (releaseCount > 0 && readyForEditor === 0) {
+      failures.push('Release desk snapshot contains no editor-ready release briefs.');
+    }
+  }
+
   const missingFrontier = REQUIRED_FRONTIER_MODELS.filter((requirement) => (
     !cacheModels.some((model) => matchesRequirement(model, requirement))
   ));
@@ -208,8 +176,31 @@ function main() {
     failures.push(`Missing required frontier model in public cache: ${requirement.name} (${requirement.sourceUrl})`);
   }
 
-  const newsIssues = verifyNewsRouting(cacheNews);
-  failures.push(...newsIssues.slice(0, 20));
+  const newsDiagnostics = getAiResourceHubNewsRoutingDiagnostics(cacheNews.map((item) => ({
+    id: item.id,
+    title: item.title,
+    url: item.url,
+    source: item.source,
+    summary: item.summary ?? '',
+    date: (item.published_at ?? item.discovered_at ?? new Date().toISOString()).slice(0, 10),
+    dateLabel: '',
+    category: 'News',
+    tags: [],
+    digestDate: (item.published_at ?? item.discovered_at ?? new Date().toISOString()).slice(0, 10),
+    importance_score: item.importance_score,
+  })));
+
+  if (cacheNews.length > 0 && newsDiagnostics.routedItems.length === 0) {
+    failures.push('News routing produced zero publishable AI Resource Hub items from the current cache.');
+  }
+
+  if (newsDiagnostics.routedItems.length > 0 && newsDiagnostics.highSignalCount === 0) {
+    failures.push('News routing produced no high-signal stories (model releases, benchmarks, research, pricing, hardware).');
+  }
+
+  if (newsDiagnostics.routedItems.length > 0 && newsDiagnostics.officialSourceCount === 0) {
+    failures.push('News routing produced no items from mapped official or routed sources.');
+  }
 
   db.close();
 
@@ -218,7 +209,11 @@ function main() {
   console.log(`  Models: ${cacheModels.length}/${dbCounts.models}`);
   console.log(`  Benchmark scores: ${cacheBenchmarks.length}/${dbCounts.benchmarkScores}`);
   console.log(`  News items: ${cacheNews.length}`);
+  console.log(`  Routed AI news items: ${newsDiagnostics.routedItems.length}`);
+  console.log(`  High-signal AI news items: ${newsDiagnostics.highSignalCount}`);
+  console.log(`  Official/routed source items: ${newsDiagnostics.officialSourceCount}`);
   console.log(`  Public export rows: ${spreadsheet?.model_count ?? 0}`);
+  console.log(`  Release desk items: ${releaseDesk?.releases?.length ?? 0}`);
   console.log(`  Provider status snapshot: ${providerStatus?.generatedAt ?? 'missing'}`);
 
   if (failures.length > 0) {

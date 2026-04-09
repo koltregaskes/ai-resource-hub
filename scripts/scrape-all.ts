@@ -16,6 +16,7 @@
  * 4. Benchmarks and speed run FOURTH (quality + latency signals)
  * 5. Registry normalisation runs FIFTH (demotes incomplete models and hides stale speed data)
  * 6. News, status, and jobs run LAST (public editorial + market signals)
+ * 7. Release desk generation runs AFTER data refresh (editorial handoff + release coverage)
  *
  * Exit codes:
  * - 0: all scrapers succeeded
@@ -42,6 +43,7 @@ async function main() {
     { name: 'News (RSS + official blogs)', script: 'scripts/scrapers/news.ts' },
     { name: 'Provider Status (official APIs + feeds)', script: 'scripts/scrapers/status-pages.mjs' },
     { name: 'Jobs Market (public ATS boards)', script: 'scripts/scrapers/jobs.ts' },
+    { name: 'Release Desk & Editorial Drafts', script: 'scripts/generate-release-desk.ts' },
   ];
 
   let failures = 0;

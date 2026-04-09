@@ -115,11 +115,14 @@ function Test-IgnorableGeneratedChange {
     $normalised -eq 'data/provider-status.json' -or
     $normalised -eq 'public/data/ai-models-comparison.csv' -or
     $normalised -eq 'public/data/ai-models-comparison.json' -or
+    $normalised -eq 'public/data/model-release-desk.json' -or
     $normalised -eq 'public/data/models-latest.json' -or
+    $normalised -eq 'src/data/model-release-desk.generated.ts' -or
     $normalised -eq 'src/data/news-feed-latest.json' -or
     $normalised -match '^src/data/news-feed-\d{4}-\d{2}-\d{2}\.json$' -or
     $normalised -match '^src/data/digest-\d{4}-\d{2}-\d{2}\.md$' -or
-    $normalised -eq 'src/data/news-pipeline.generated.ts'
+    $normalised -eq 'src/data/news-pipeline.generated.ts' -or
+    $normalised -match '^editorial/release-drafts/.+\.md$'
   )
 }
 
@@ -163,6 +166,7 @@ try {
 
   Invoke-Logged 'npm.cmd' @('run', 'scrape')
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
+  Invoke-Logged 'npm.cmd' @('run', 'generate:release-desk')
   Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
 
   if (Test-Path (Join-Path $repoRoot 'scripts\sync-news-pipeline-data.mjs')) {
@@ -179,7 +183,7 @@ try {
 
   Invoke-Logged 'npm.cmd' @('run', 'build')
 
-  $publishPaths = @('data/the-ai-resource-hub.db', 'data/pg-cache', 'data/provider-status.json', 'public/data', 'src/data/news-pipeline.generated.ts')
+  $publishPaths = @('data/the-ai-resource-hub.db', 'data/pg-cache', 'data/provider-status.json', 'public/data', 'src/data/news-pipeline.generated.ts', 'src/data/model-release-desk.generated.ts', 'editorial/release-drafts')
   $publishChanges = @(Invoke-Captured 'git' (@('status', '--porcelain', '--') + $publishPaths))
   if ($publishChanges.Count -eq 0) {
     Write-Log 'No publishable data changes detected. Nothing to commit.'

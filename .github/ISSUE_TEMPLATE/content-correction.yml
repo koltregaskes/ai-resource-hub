@@ -1,0 +1,41 @@
+name: Content correction
+description: Report a typo, wording issue, broken link, or small content fix.
+title: "[Content correction]: "
+labels:
+  - content-correction
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for copy, wording, typo, and link corrections only.
+        This is not the right place for design, workflow, scraper, database, or automation requests.
+  - type: input
+    id: affected-page
+    attributes:
+      label: Affected page or section
+      description: Which page or article needs the correction?
+      placeholder: /blog/example-post
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is wrong?
+      description: Describe the typo, wording problem, or broken link.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested fix
+      description: Optional, but helpful if you already know the exact change.
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or reference
+      description: For factual corrections, include a source link. For simple copy fixes, explain briefly.
+    validations:
+      required: false

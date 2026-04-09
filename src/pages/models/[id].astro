@@ -34,6 +34,17 @@ const categoryLabels: Record<string, { label: string; href: string }> = {
 };
 const categoryInfo = categoryLabels[model.category] ?? categoryLabels.llm;
 const isLLM = model.category === 'llm';
+const isTrackedModel = model.status && model.status !== 'active';
+const benchmarkCoveragePending = benchmarks.length === 0;
+const statusLabel = model.status === 'preview'
+  ? 'Preview'
+  : model.status === 'tracking'
+    ? 'Tracked'
+    : model.status === 'deprecated'
+      ? 'Deprecated'
+      : model.status === 'retired'
+        ? 'Retired'
+        : null;
 
 // Computed values
 const inputPrice = model.input_price;
@@ -83,7 +94,9 @@ const structuredData = {
 
 <BaseLayout
   title={`${model.name} — The AI Resource Hub`}
-  description={`${model.name} by ${model.provider_name}. Pricing: ${formatPrice(inputPrice)}/${formatPrice(outputPrice)} per 1M tokens. Context: ${formatTokens(model.context_window)} tokens. Quality score: ${model.quality_score}/100.`}
+  description={isTrackedModel
+    ? `${model.name} by ${model.provider_name}. Tracked release page with pricing, context window, availability, and source notes while benchmark coverage is still being collected.`
+    : `${model.name} by ${model.provider_name}. Pricing: ${formatPrice(inputPrice)}/${formatPrice(outputPrice)} per 1M tokens. Context: ${formatTokens(model.context_window)} tokens. Quality score: ${model.quality_score}/100.`}
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <!-- Breadcrumb -->
@@ -114,6 +127,17 @@ const structuredData = {
           >{model.provider_name}</a>
         </p>
         <div class="flex flex-wrap gap-2 mt-3">
+          {statusLabel && (
+            <span class={`text-xs px-2.5 py-1 rounded-full ${
+              model.status === 'preview'
+                ? 'bg-amber-500/15 text-amber-200'
+                : model.status === 'tracking'
+                  ? 'bg-sky-500/15 text-sky-200'
+                  : 'bg-(--color-bg-tertiary) text-(--color-text-secondary)'
+            }`}>
+              {statusLabel}
+            </span>
+          )}
           {modalities.map((mod: string) => (
             <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) capitalize">
               {mod}
@@ -130,6 +154,18 @@ const structuredData = {
         </div>
       </div>
     </div>
+
+    {(isTrackedModel || benchmarkCoveragePending) && (
+      <div class="mb-8 rounded-xl border border-(--color-accent)/20 bg-(--color-accent)/10 p-4">
+        <p class="text-sm font-semibold text-(--color-text-primary)">
+          {statusLabel ? `${statusLabel} release` : 'Coverage still building'}
+        </p>
+        <p class="mt-2 text-sm leading-relaxed text-(--color-text-secondary)">
+          This page is live so the release is discoverable quickly, but it is not treated as a fully evaluated ranked model yet.
+          Pricing, context, availability, and source notes may already be present while benchmark and quality coverage are still being collected.
+        </p>
+      </div>
+    )}
 
     <!-- Stats grid -->
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
@@ -155,13 +191,13 @@ const structuredData = {
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Quality Score</p>
-        <p class="text-xl font-bold text-(--color-accent)">{model.quality_score}</p>
-        <p class="text-xs text-(--color-text-muted)">out of 100</p>
+        <p class="text-xl font-bold text-(--color-accent)">{isTrackedModel && model.quality_score === 0 ? '—' : model.quality_score}</p>
+        <p class="text-xs text-(--color-text-muted)">{isTrackedModel && model.quality_score === 0 ? 'awaiting evaluation' : 'out of 100'}</p>
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Value Score</p>
-        <p class="text-xl font-bold text-(--color-success)">{valueScore}</p>
-        <p class="text-xs text-(--color-text-muted)">quality per $</p>
+        <p class="text-xl font-bold text-(--color-success)">{isTrackedModel && model.quality_score === 0 ? '—' : valueScore}</p>
+        <p class="text-xs text-(--color-text-muted)">{isTrackedModel && model.quality_score === 0 ? 'awaiting evaluation' : 'quality per $'}</p>
       </div>
     </div>
 

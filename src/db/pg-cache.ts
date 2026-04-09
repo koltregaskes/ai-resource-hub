@@ -288,12 +288,20 @@ export function getModelsByCategory(category: string): CachedModel[] {
   return getModels().filter(m => m.category === category && m.status === 'active');
 }
 
+export function getPublicModelsByCategory(category: string): CachedModel[] {
+  return getModels().filter((model) => model.category === category && isPublicModelStatus(model.status));
+}
+
 export function getModelById(id: string): CachedModel | null {
   return getModels().find(m => m.id === id) ?? null;
 }
 
+function isPublicModelStatus(status: string | null | undefined): boolean {
+  return ['active', 'tracking', 'preview'].includes((status ?? '').toLowerCase());
+}
+
 export function getAllModelIds(): string[] {
-  return getModels().filter(m => m.status === 'active').map(m => m.id);
+  return getModels().filter(m => isPublicModelStatus(m.status)).map(m => m.id);
 }
 
 export function getRecentModels(limit = 12): CachedModel[] {

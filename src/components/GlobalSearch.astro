@@ -1,0 +1,220 @@
+---
+interface SearchItem {
+  id: string;
+  title: string;
+  type: string;
+  category?: string;
+  description?: string;
+  url: string;
+  provider?: string;
+}
+
+interface Props {
+  items: SearchItem[];
+  baseUrl?: string;
+}
+
+const { items, baseUrl: _baseUrl = '/' } = Astro.props;
+
+const itemsJSON = JSON.stringify(items);
+const typeLabels: Record<string, string> = {
+  model: 'Model',
+  provider: 'Provider',
+  person: 'Person',
+  glossary: 'Glossary',
+  guide: 'Guide',
+};
+
+const typeColors: Record<string, string> = {
+  model: 'var(--color-accent)',
+  provider: 'var(--color-success)',
+  person: 'var(--color-warning)',
+  glossary: 'var(--color-danger)',
+  guide: 'var(--color-accent-muted)',
+};
+---
+
+<div class="global-search" data-global-search>
+  <button
+    type="button"
+    class="flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-tertiary)] px-3 py-1.5 text-sm text-[var(--color-text-muted)] transition-colors hover:border-[var(--color-border-hover)] hover:text-[var(--color-text-secondary)]"
+    aria-label="Search"
+    data-search-trigger
+  >
+    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+    </svg>
+    <span class="hidden sm:inline">Search</span>
+    <kbd class="hidden items-center gap-0.5 rounded border border-[var(--color-border)] bg-[var(--color-bg-primary)] px-1.5 py-0.5 font-mono text-[10px] text-[var(--color-text-muted)] sm:inline-flex">
+      Ctrl+K
+    </kbd>
+  </button>
+
+  <div class="fixed inset-0 z-[100] hidden items-start justify-center px-4 pt-[15vh]" data-search-overlay>
+    <button type="button" class="fixed inset-0 bg-black/50 backdrop-blur-sm" aria-label="Close search" data-search-backdrop></button>
+    <div
+      class="relative w-full max-w-xl overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] shadow-2xl"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Global search"
+      data-search-dialog
+    >
+      <div class="flex items-center gap-3 border-b border-[var(--color-border)] px-4 py-3">
+        <svg class="h-5 w-5 shrink-0 text-[var(--color-text-muted)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input
+          type="search"
+          placeholder="Search models, providers, glossary, guides..."
+          class="flex-1 bg-transparent text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none"
+          data-search-input
+        />
+        <kbd class="rounded border border-[var(--color-border)] bg-[var(--color-bg-tertiary)] px-1.5 py-0.5 font-mono text-[10px] text-[var(--color-text-muted)]">
+          ESC
+        </kbd>
+      </div>
+
+      <div class="max-h-[50vh] overflow-y-auto" data-search-results></div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ itemsJSON, typeLabels, typeColors }}>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!(root instanceof HTMLElement)) return;
+
+    const items = JSON.parse(itemsJSON);
+    const trigger = root.querySelector('[data-search-trigger]');
+    const overlay = root.querySelector('[data-search-overlay]');
+    const backdrop = root.querySelector('[data-search-backdrop]');
+    const dialog = root.querySelector('[data-search-dialog]');
+    const input = root.querySelector('[data-search-input]');
+    const results = root.querySelector('[data-search-results]');
+    let open = false;
+
+    if (!(overlay instanceof HTMLElement) || !(dialog instanceof HTMLElement) || !(results instanceof HTMLElement) || !(input instanceof HTMLInputElement)) {
+      return;
+    }
+
+    const closeSearch = () => {
+      open = false;
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+      input.value = '';
+      renderResults([]);
+    };
+
+    const openSearch = () => {
+      open = true;
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+      window.setTimeout(() => input.focus(), 40);
+      renderResults([]);
+    };
+
+    const searchItems = (query) => {
+      const q = query.trim().toLowerCase();
+      if (!q) return [];
+      return items
+        .filter((item) =>
+          item.title.toLowerCase().includes(q)
+          || item.description?.toLowerCase().includes(q)
+          || item.provider?.toLowerCase().includes(q)
+          || item.category?.toLowerCase().includes(q)
+        )
+        .slice(0, 12);
+    };
+
+    const renderResults = (matches) => {
+      if (!input.value.trim()) {
+        results.innerHTML = `<div class="px-4 py-6 text-center text-sm text-[var(--color-text-muted)]">Start typing to search across ${items.length} items</div>`;
+        return;
+      }
+
+      if (matches.length === 0) {
+        results.innerHTML = `<div class="px-4 py-8 text-center text-sm text-[var(--color-text-muted)]">No results found for "${input.value.trim()}"</div>`;
+        return;
+      }
+
+      results.innerHTML = `<ul class="py-2">${matches.map((item) => {
+        const label = typeLabels[item.type] ?? item.type;
+        const color = typeColors[item.type] ?? 'var(--color-text-muted)';
+        const description = item.description
+          ? `<p class="truncate text-xs text-[var(--color-text-muted)]">${escapeHtml(item.description)}</p>`
+          : '';
+        const provider = item.provider
+          ? `<span class="shrink-0 text-xs text-[var(--color-text-muted)]">${escapeHtml(item.provider)}</span>`
+          : '';
+
+        return `
+          <li>
+            <button
+              type="button"
+              class="flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors hover:bg-[var(--color-bg-hover)]"
+              data-search-result="${escapeAttribute(item.url)}"
+            >
+              <span
+                class="shrink-0 rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
+                style="color: ${color}; background-color: color-mix(in srgb, ${color} 15%, transparent);"
+              >
+                ${escapeHtml(label)}
+              </span>
+              <div class="min-w-0 flex-1">
+                <p class="truncate text-sm font-medium text-[var(--color-text-primary)]">${escapeHtml(item.title)}</p>
+                ${description}
+              </div>
+              ${provider}
+              <svg class="h-4 w-4 shrink-0 text-[var(--color-text-muted)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </li>
+        `;
+      }).join('')}</ul>`;
+
+      results.querySelectorAll('[data-search-result]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const href = button.getAttribute('data-search-result');
+          if (!href) return;
+          closeSearch();
+          window.location.href = href;
+        });
+      });
+    };
+
+    const escapeHtml = (value) => value
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+
+    const escapeAttribute = (value) => escapeHtml(value);
+
+    trigger?.addEventListener('click', openSearch);
+    backdrop?.addEventListener('click', closeSearch);
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) closeSearch();
+    });
+    dialog.addEventListener('click', (event) => event.stopPropagation());
+    input.addEventListener('input', () => renderResults(searchItems(input.value)));
+
+    document.addEventListener('keydown', (event) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault();
+        if (open) {
+          closeSearch();
+        } else {
+          openSearch();
+        }
+      }
+
+      if (event.key === 'Escape' && open) {
+        closeSearch();
+      }
+    });
+
+    renderResults([]);
+  })();
+</script>

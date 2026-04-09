@@ -210,8 +210,26 @@ function toNumber(value: unknown): number {
 
 export function normaliseDateTime(value: string | null | undefined): string | null {
   if (!value) return null;
-  if (value.includes('T')) return value;
-  return `${value}T12:00:00Z`;
+  const trimmed = value.trim();
+  if (!trimmed) return null;
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
+    return `${trimmed}T12:00:00Z`;
+  }
+
+  if (/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(trimmed)) {
+    return `${trimmed.replace(' ', 'T')}Z`;
+  }
+
+  if (/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/.test(trimmed)) {
+    return `${trimmed.replace(' ', 'T')}:00Z`;
+  }
+
+  if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?$/.test(trimmed)) {
+    return `${trimmed}${trimmed.endsWith('Z') ? '' : 'Z'}`;
+  }
+
+  return trimmed;
 }
 
 function latestDateTime(...values: Array<string | null | undefined>): string | null {

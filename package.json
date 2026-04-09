@@ -25,6 +25,7 @@
     "generate:digest": "tsx scripts/generate-digest.ts",
     "sync:news-pipeline": "node scripts/sync-news-pipeline-data.mjs",
     "generate:spreadsheet": "tsx scripts/generate-spreadsheet.ts",
+    "generate:release-desk": "tsx scripts/generate-release-desk.ts",
     "scrape:quality": "tsx scripts/scrapers/quality-scores.ts",
     "scrape:creative": "tsx scripts/scrapers/creative-benchmarks.ts",
     "dump:pg": "node scripts/dump-pg-to-json.mjs",

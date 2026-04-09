@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getModelsByCategory, getModelBenchmarks, getBenchmarks } from '../../db/queries';
+import { getPublicModelsByCategory, getModelBenchmarks, getBenchmarks } from '../../db/queries';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const models = getModelsByCategory('llm');
+const models = getPublicModelsByCategory('llm');
 const allBenchmarks = getBenchmarks();
 
 // Pre-fetch all benchmark scores for all models
@@ -33,6 +33,7 @@ const modelsJSON = JSON.stringify(models.map(m => ({
   speed: m.speed,
   qualityScore: m.qualityScore,
   released: m.released,
+  status: m.status,
   openSource: m.openSource,
   modality: m.modality,
   apiAvailable: m.apiAvailable,
@@ -64,6 +65,9 @@ const benchmarkNamesJSON = JSON.stringify(
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
         Select 2–4 models to compare side by side across pricing, performance, benchmarks, and capabilities.
+      </p>
+      <p class="mt-2 max-w-2xl text-xs leading-relaxed text-(--color-text-muted)">
+        Tracked and preview releases are included so you can inspect the latest launches before full evaluation coverage lands.
       </p>
     </div>
 
@@ -142,6 +146,9 @@ const benchmarkNamesJSON = JSON.stringify(
           Open Source
         </button>
       </div>
+      <p class="mt-3 text-xs text-(--color-text-muted)">
+        Latest tracked releases stay visible here even when benchmark coverage is still building. Quality-led verdicts only use models with enough public evaluation data.
+      </p>
     </div>
 
     <!-- Comparison results -->
@@ -229,6 +236,30 @@ const benchmarkNamesJSON = JSON.stringify(
     const modelSort = document.getElementById('model-sort');
     let visibleSlots = 2;
 
+    function isEvaluatedModel(model) {
+      return model.qualityScore > 0 || Object.keys(benchmarkScores[model.id] ?? {}).length > 0;
+    }
+
+    function getStatusLabel(model) {
+      switch ((model.status || '').toLowerCase()) {
+        case 'preview':
+          return 'preview';
+        case 'tracking':
+          return 'tracked';
+        case 'deprecated':
+          return 'deprecated';
+        case 'retired':
+          return 'retired';
+        default:
+          return '';
+      }
+    }
+
+    function optionLabel(model) {
+      const status = getStatusLabel(model);
+      return status ? `${model.name} [${status}]` : model.name;
+    }
+
     function getUniqueProviders() {
       return [...new Set(models.map(m => m.provider))].sort((a, b) => a.localeCompare(b));
     }
@@ -269,7 +300,7 @@ const benchmarkNamesJSON = JSON.stringify(
             return (b.released || '').localeCompare(a.released || '') || b.qualityScore - a.qualityScore;
           case 'quality':
           default:
-            return b.qualityScore - a.qualityScore || a.name.localeCompare(b.name);
+            return b.qualityScore - a.qualityScore || (b.released || '').localeCompare(a.released || '') || a.name.localeCompare(b.name);
         }
       });
 
@@ -290,13 +321,13 @@ const benchmarkNamesJSON = JSON.stringify(
         let options = '<option value="">Select a model...</option>';
 
         if (currentModel && !filtered.some((model) => model.id === currentModel.id)) {
-          options += `<optgroup label="Selected outside current filter"><option value="${currentModel.id}" selected>${currentModel.name} (${currentModel.provider})</option></optgroup>`;
+          options += `<optgroup label="Selected outside current filter"><option value="${currentModel.id}" selected>${optionLabel(currentModel)} (${currentModel.provider})</option></optgroup>`;
         }
 
         Object.keys(grouped).sort((a, b) => a.localeCompare(b)).forEach((provider) => {
           options += `<optgroup label="${provider}">`;
           options += grouped[provider]
-            .map(model => `<option value="${model.id}" ${model.id === current ? 'selected' : ''}>${model.name}</option>`)
+            .map(model => `<option value="${model.id}" ${model.id === current ? 'selected' : ''}>${optionLabel(model)}</option>`)
             .join('');
           options += '</optgroup>';
         });
@@ -319,11 +350,11 @@ const benchmarkNamesJSON = JSON.stringify(
     // Quick presets
     const presets = {
       frontier: () => {
-        const names = ['claude-opus-4', 'gpt-4.1', 'gemini-2.5-pro', 'grok-3'];
+        const names = ['gpt-5.4', 'claude-opus-4.6', 'grok-4.20', 'qwen3.6-plus'];
         return findModelsByPartial(names);
       },
       value: () => {
-        const sorted = [...models].filter(m => m.inputPrice > 0).sort((a, b) => {
+        const sorted = [...models].filter(m => m.inputPrice > 0 && isEvaluatedModel(m)).sort((a, b) => {
           const va = a.qualityScore / ((a.inputPrice + 3 * a.outputPrice) / 4);
           const vb = b.qualityScore / ((b.inputPrice + 3 * b.outputPrice) / 4);
           return vb - va;
@@ -335,11 +366,11 @@ const benchmarkNamesJSON = JSON.stringify(
         return sorted.slice(0, 4).map(m => m.id);
       },
       coding: () => {
-        const names = ['claude-sonnet-4', 'gpt-4.1', 'gemini-2.5-pro', 'deepseek-v3'];
+        const names = ['gpt-5.4', 'claude-sonnet-4.6', 'qwen3.6-plus', 'deepseek-v3.2'];
         return findModelsByPartial(names);
       },
       opensource: () => {
-        const oss = models.filter(m => m.openSource).sort((a, b) => b.qualityScore - a.qualityScore);
+        const oss = models.filter(m => m.openSource).sort((a, b) => b.qualityScore - a.qualityScore || (b.released || '').localeCompare(a.released || ''));
         return oss.slice(0, 4).map(m => m.id);
       },
     };
@@ -428,7 +459,9 @@ const benchmarkNamesJSON = JSON.stringify(
       container.style.gridTemplateColumns = `repeat(${selected.length}, 1fr)`;
       container.innerHTML = selected.map(m => {
         const blended = (m.inputPrice + 3 * m.outputPrice) / 4;
-        const value = blended > 0 ? ((m.qualityScore / blended) * 10).toFixed(1) : '0';
+        const evaluated = isEvaluatedModel(m);
+        const status = getStatusLabel(m);
+        const value = blended > 0 && evaluated ? ((m.qualityScore / blended) * 10).toFixed(1) : '—';
         return `
           <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <div class="flex items-center gap-2 mb-3">
@@ -436,14 +469,15 @@ const benchmarkNamesJSON = JSON.stringify(
               <h3 class="font-bold text-(--color-text-primary) text-sm truncate">${m.name}</h3>
             </div>
             <p class="text-xs text-(--color-text-muted) mb-3">${m.provider}</p>
+            ${status ? `<p class="mb-3"><span class="rounded-full border border-(--color-border) bg-(--color-bg-tertiary) px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-(--color-text-secondary)">${status}</span></p>` : ''}
             <div class="grid grid-cols-2 gap-2 text-center">
               <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
-                <p class="text-lg font-bold text-(--color-accent)">${m.qualityScore}</p>
-                <p class="text-[10px] text-(--color-text-muted)">Quality</p>
+                <p class="text-lg font-bold text-(--color-accent)">${evaluated ? m.qualityScore : '—'}</p>
+                <p class="text-[10px] text-(--color-text-muted)">${evaluated ? 'Quality' : 'Pending eval'}</p>
               </div>
               <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
                 <p class="text-lg font-bold text-green-400">${value}</p>
-                <p class="text-[10px] text-(--color-text-muted)">Value</p>
+                <p class="text-[10px] text-(--color-text-muted)">${evaluated ? 'Value' : 'Pending eval'}</p>
               </div>
             </div>
             <a href="${base}models/${m.id}/" class="block mt-3 text-xs text-(--color-accent) hover:text-(--color-accent-hover) text-center transition-colors">
@@ -501,10 +535,11 @@ const benchmarkNamesJSON = JSON.stringify(
         ['Context Window', selected.map((m, i) => `<span class="${ctxBest[i]}">${formatTokens(m.contextWindow)}</span>`)],
         ['Max Output', selected.map((m, i) => `<span class="${outBest[i]}">${formatTokens(m.maxOutput)}</span>`)],
         ['Speed', selected.map((m, i) => `<span class="${speedBest[i]}">${m.speed > 0 ? m.speed + ' tok/s' : 'N/A'}</span>`)],
-        ['Quality Score', selected.map((m, i) => `<span class="${qualBest[i]}">${m.qualityScore}/100</span>`)],
+        ['Quality Score', selected.map((m, i) => isEvaluatedModel(m) ? `<span class="${qualBest[i]}">${m.qualityScore}/100</span>` : '<span class="text-(--color-text-muted)">Awaiting evaluation</span>')],
         ['Open Source', selected.map(m => m.openSource ? '<span class="text-green-400">Yes</span>' : '<span class="text-(--color-text-muted)">No</span>')],
         ['API Available', selected.map(m => m.apiAvailable ? '<span class="text-green-400">Yes</span>' : '<span class="text-(--color-text-muted)">No</span>')],
         ['Modality', selected.map(m => `<span class="text-xs">${m.modality}</span>`)],
+        ['Status', selected.map(m => `<span class="text-xs capitalize">${getStatusLabel(m) || 'active'}</span>`)],
         ['Released', selected.map(m => m.released ? `<span class="text-xs">${new Date(m.released).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</span>` : '<span class="text-(--color-text-muted)">—</span>')],
       ];
 
@@ -594,8 +629,9 @@ const benchmarkNamesJSON = JSON.stringify(
           <div class="space-y-2">
             ${selected.map(m => {
               const val = m[metric.key];
-              const pct = metric.max > 0 ? (val / metric.max * 100) : 0;
-              const display = metric.key === 'qualityScore' ? val + '/100' : formatTokens(val);
+              const missingQuality = metric.key === 'qualityScore' && !isEvaluatedModel(m);
+              const pct = missingQuality ? 0 : (metric.max > 0 ? (val / metric.max * 100) : 0);
+              const display = missingQuality ? 'Pending' : (metric.key === 'qualityScore' ? val + '/100' : formatTokens(val));
               return `
                 <div class="flex items-center gap-3">
                   <span class="text-xs text-(--color-text-secondary) w-28 truncate">${m.name}</span>
@@ -612,30 +648,41 @@ const benchmarkNamesJSON = JSON.stringify(
     }
 
     function renderVerdict(selected) {
-      const sorted = [...selected].sort((a, b) => b.qualityScore - a.qualityScore);
+      const evaluated = selected.filter((model) => isEvaluatedModel(model));
+      const pending = selected.filter((model) => !isEvaluatedModel(model));
+      const sorted = [...evaluated].sort((a, b) => b.qualityScore - a.qualityScore);
       const cheapest = [...selected].filter(m => m.inputPrice > 0).sort((a, b) => {
         const ba = (a.inputPrice + 3 * a.outputPrice) / 4;
         const bb = (b.inputPrice + 3 * b.outputPrice) / 4;
         return ba - bb;
       });
-      const bestValue = [...selected].filter(m => m.inputPrice > 0).sort((a, b) => {
+      const bestValue = [...evaluated].filter(m => m.inputPrice > 0).sort((a, b) => {
         const va = a.qualityScore / ((a.inputPrice + 3 * a.outputPrice) / 4);
         const vb = b.qualityScore / ((b.inputPrice + 3 * b.outputPrice) / 4);
         return vb - va;
       });
 
-      let text = `<strong>${sorted[0].name}</strong> leads in quality score (${sorted[0].qualityScore}/100).`;
-      if (cheapest.length > 0 && cheapest[0].id !== sorted[0].id) {
-        text += ` <strong>${cheapest[0].name}</strong> is the most affordable option.`;
+      let text = '';
+      if (sorted.length === 0) {
+        text = 'These releases are visible early, but they are still waiting for enough benchmark and quality coverage to support a confident verdict.';
+      } else {
+        text = `<strong>${sorted[0].name}</strong> leads among the evaluated models (${sorted[0].qualityScore}/100).`;
       }
-      if (bestValue.length > 0 && bestValue[0].id !== sorted[0].id && bestValue[0].id !== cheapest[0]?.id) {
-        text += ` <strong>${bestValue[0].name}</strong> offers the best quality-per-dollar value.`;
+      if (cheapest.length > 0 && (!sorted[0] || cheapest[0].id !== sorted[0].id)) {
+        text += ` <strong>${cheapest[0].name}</strong> is the most affordable option in this group.`;
+      }
+      if (bestValue.length > 0 && bestValue[0].id !== sorted[0]?.id && bestValue[0].id !== cheapest[0]?.id) {
+        text += ` <strong>${bestValue[0].name}</strong> offers the best quality-per-dollar value among the evaluated models.`;
       }
       if (sorted.length > 1) {
         const diff = sorted[0].qualityScore - sorted[sorted.length - 1].qualityScore;
         if (diff < 5) {
           text += ` These models are very close in quality — pricing and specific benchmark performance may be the deciding factor.`;
         }
+      }
+
+      if (pending.length > 0) {
+        text += ` ${pending.map((model) => `<strong>${model.name}</strong>`).join(', ')} ${pending.length === 1 ? 'is' : 'are'} still tracked without enough public coverage for a fair quality call.`;
       }
 
       document.getElementById('verdict-text').innerHTML = text;

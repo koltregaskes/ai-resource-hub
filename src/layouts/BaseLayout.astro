@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import GlobalSearch from '../components/GlobalSearch';
+import GlobalSearch from '../components/GlobalSearch.astro';
 import { getSearchIndex } from '../data/search-index';
 
 interface Props {
@@ -42,7 +42,7 @@ const primaryNav = [
     children: [
       { href: `${base}fastest/`, label: 'Fastest Models', note: 'Ranked by tokens per second' },
       { href: `${base}cheapest/`, label: 'Cheapest Models', note: 'Lowest cost per million tokens' },
-      { href: `${base}new/`, label: 'Recently Added', note: 'Latest entries in the database' },
+      { href: `${base}new/`, label: 'Release Desk', note: 'Latest model launches and editor-ready briefs' },
       { href: `${base}context-window/`, label: 'Context Window', note: 'Max context by model' },
       { href: `${base}open-source/`, label: 'Open Source', note: 'Open-weight and open-source models' },
       { href: `${base}reasoning/`, label: 'Reasoning Models', note: 'o1, DeepSeek-R1, and chain-of-thought' },
@@ -124,7 +124,7 @@ const mobileSections = [
     links: [
       { href: `${base}fastest/`, label: 'Fastest Models' },
       { href: `${base}cheapest/`, label: 'Cheapest Models' },
-      { href: `${base}new/`, label: 'Recently Added' },
+      { href: `${base}new/`, label: 'Release Desk' },
       { href: `${base}context-window/`, label: 'Context Window' },
       { href: `${base}open-source/`, label: 'Open Source' },
       { href: `${base}reasoning/`, label: 'Reasoning Models' },
@@ -265,19 +265,12 @@ const footerSections = [
   </head>
   <body class="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary) flex flex-col">
     <header class="sticky top-0 z-50 border-b border-(--color-border-strong) bg-(--color-bg-primary)/92 backdrop-blur-md">
-      <div class="border-b border-(--color-border) bg-(--color-bg-secondary)/72">
-        <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-(--color-text-muted) sm:px-6 lg:px-8">
-          <span>Independent AI reference desk</span>
-          <span class="hidden sm:inline">Pricing / Benchmarks / News / Sources</span>
-        </div>
-      </div>
-
       <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a href={base} class="flex shrink-0 items-center gap-3">
           <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-[0.95rem] border border-(--color-border-strong) bg-(--color-bg-tertiary) p-0.5 shadow-[0_10px_24px_rgba(0,0,0,0.16)]" width="32" height="32" />
           <div class="hidden sm:block">
-            <p class="text-[9px] font-semibold uppercase tracking-[0.32em] text-(--color-text-muted) leading-none">Field guide</p>
-            <p class="mt-1 text-base font-display font-semibold text-(--color-text-primary) leading-tight">The AI Resource Hub</p>
+            <p class="text-base font-display font-semibold text-(--color-text-primary) leading-tight">The AI Resource Hub</p>
+            <p class="mt-1 text-[11px] text-(--color-text-muted)">Models, benchmarks, pricing, and daily AI updates</p>
           </div>
           <span class="sm:hidden text-sm font-display font-semibold text-(--color-text-primary)">AI Resource Hub</span>
         </a>
@@ -324,7 +317,7 @@ const footerSections = [
         </div>
 
         <div class="flex items-center gap-2">
-          <GlobalSearch client:load items={searchIndex} baseUrl={base} />
+          <GlobalSearch items={searchIndex} baseUrl={base} />
 
           <button
             id="theme-toggle"

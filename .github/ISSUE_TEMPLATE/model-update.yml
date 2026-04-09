@@ -1,0 +1,36 @@
+name: Model update
+description: Report a model, provider, benchmark, or capability update that needs maintainer review.
+title: "[Model update]: "
+labels:
+  - model-update
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for model, provider, release, benchmark, and capability updates only.
+        Design, UI, workflow, scraper, database, and automation requests are out of scope.
+  - type: input
+    id: affected-page
+    attributes:
+      label: Affected page or section
+      description: Which page, panel, or claim is affected?
+      placeholder: /models/openai/gpt-5
+    validations:
+      required: true
+  - type: textarea
+    id: correction-summary
+    attributes:
+      label: What needs updating?
+      description: Describe the model or provider change as precisely as possible.
+      placeholder: The page still lists the previous context window.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source links or evidence
+      description: Include official release notes, documentation, or other reliable sources.
+      placeholder: https://...
+    validations:
+      required: true

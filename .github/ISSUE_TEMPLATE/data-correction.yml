@@ -1,0 +1,42 @@
+name: Stats or figure correction
+description: Report a factual correction involving statistics, metrics, benchmarks, dates, or figures.
+title: "[Data correction]: "
+labels:
+  - data-correction
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for factual corrections only.
+        Source evidence is required for numbers, dates, rankings, metrics, or benchmark claims.
+  - type: input
+    id: affected-page
+    attributes:
+      label: Affected page or section
+      description: Which page, table, chart, or paragraph is affected?
+      placeholder: /benchmarks
+    validations:
+      required: true
+  - type: textarea
+    id: incorrect-claim
+    attributes:
+      label: Current claim
+      description: Quote or summarise the value that appears to be wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: corrected-claim
+    attributes:
+      label: Proposed correction
+      description: What should it say instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source links or evidence
+      description: Provide source links for the correction.
+      placeholder: https://...
+    validations:
+      required: true

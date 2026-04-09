@@ -11,6 +11,7 @@
 import {
   getLLMModelsFromDB,
   getModelsByCategory as getModelsByCategoryFromCache,
+  getPublicModelsByCategory as getPublicModelsByCategoryFromCache,
   getModelById as getModelByIdFromCache,
   getAllModelIds,
   getRecentModels as getRecentModelsFromCache,
@@ -173,6 +174,7 @@ export interface DBModelDetail {
   provider_name: string;
   provider_colour: string;
   provider_website: string | null;
+  status: string;
   input_price: number;
   output_price: number;
   context_window: number;
@@ -439,6 +441,10 @@ export interface DBCLITool {
 
 export function getModelsByCategory(category: string): CompatModel[] {
   return getModelsByCategoryFromCache(category).map((model) => normalizeCompatModel(model));
+}
+
+export function getPublicModelsByCategory(category: string): CompatModel[] {
+  return getPublicModelsByCategoryFromCache(category).map((model) => normalizeCompatModel(model));
 }
 
 export function getModelById(id: string): CompatModel | null {

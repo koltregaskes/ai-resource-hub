@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getBenchmarks } from '../db/queries';
+import { modelReleaseDesk } from '../data/model-release-desk.generated';
 import {
   getAgiOverview,
   getDataPulse,
@@ -28,6 +29,10 @@ const bestOpenModel = metaLeaderboardAll.find((model) => model.openSource) ?? nu
 const bestValueModel = [...metaLeaderboardAll]
   .filter((model) => model.inputPrice > 0 && model.outputPrice > 0)
   .sort((a, b) => b.valueScore - a.valueScore)[0] ?? null;
+const latestTrackedRelease = modelReleaseDesk.releases.find((release) => release.draftStatus === 'ready_for_editor')
+  ?? modelReleaseDesk.releases.find((release) => release.priority === 'high')
+  ?? modelReleaseDesk.releases[0]
+  ?? null;
 
 function latestTimestamp(values: Array<string | null | undefined>): string | null {
   const timestamps = values
@@ -191,7 +196,7 @@ const heroStats = [
               </p>
               <p class="hub-home-brief-copy">Weighted ranking across quality, benchmark coverage, and signal strength.</p>
             </div>
-            <span class="hub-home-brief-meta">{leaderboardLeader ? `${leaderboardLeader.name} leads` : 'Live now'}</span>
+            <span class="hub-home-brief-meta">{leaderboardLeader ? `Top evaluated: ${leaderboardLeader.name}` : 'Live now'}</span>
           </a>
           <a href={`${base}agi/`} class="hub-home-brief-link" data-fresh-at={agiOverview.updatedAt ?? ''}>
             <div>
@@ -202,7 +207,7 @@ const heroStats = [
               <p class="hub-home-brief-copy">Derived frontier signal from ARC-AGI, GPQA, HLE, SWE-bench, and related tracks.</p>
             </div>
             <span class="hub-home-brief-meta">
-              {agiOverview.currentLeader ? `${agiOverview.currentLeader.modelName} at ${agiOverview.currentLeader.score}` : 'Frontier view'}
+              {agiOverview.currentLeader ? `Frontier peak: ${agiOverview.currentLeader.modelName}` : 'Frontier view'}
             </span>
           </a>
           <a href={`${base}news/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
@@ -216,6 +221,16 @@ const heroStats = [
             <span class="hub-home-brief-meta">
               {latestDigest ? `${latestDigest.storyCount ?? digestEntries.length} stories` : 'Awaiting digest'}
             </span>
+          </a>
+          <a href={`${base}new/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
+            <div>
+              <p class="hub-home-brief-title">
+                <span class="fresh-dot" data-fresh-dot hidden></span>
+                Release desk
+              </p>
+              <p class="hub-home-brief-copy">Latest model launches, source-first briefs, and editor-ready release coverage.</p>
+            </div>
+            <span class="hub-home-brief-meta">{latestTrackedRelease ? `Latest tracked: ${latestTrackedRelease.modelName}` : 'Launch radar'}</span>
           </a>
           <a href={`${base}changelog/`} class="hub-home-brief-link" data-fresh-at={activities[0]?.date ?? ''}>
             <div>
@@ -263,6 +278,13 @@ const heroStats = [
               <a href={`${base}open-source/`} class="hub-home-chip">Open source</a>
               <a href={`${base}reasoning/`} class="hub-home-chip">Reasoning</a>
             </div>
+
+            {latestTrackedRelease ? (
+              <p class="hub-home-card-note" data-fresh-at={normaliseDateTime(latestTrackedRelease.releaseDate) ?? ''}>
+                <span class="fresh-dot" data-fresh-dot hidden></span>
+                Latest tracked release: <a href={`${base}new/`} class="editorial-link">{latestTrackedRelease.modelName}</a> on {latestTrackedRelease.releaseDateLabel}. It stays out of the scored set until public benchmark and quality coverage are strong enough to rank it honestly.
+              </p>
+            ) : null}
 
             <div class="hub-home-table-shell">
               <table class="hub-home-table">
@@ -328,7 +350,7 @@ const heroStats = [
 
           <div class="hub-home-rail">
             <div class="hub-home-card" data-fresh-at={leaderboardLeader?.released ?? ''}>
-              <p class="hub-home-mini-label">Current leader</p>
+              <p class="hub-home-mini-label">Top evaluated model</p>
               {leaderboardLeader ? (
                 <>
                   <h3 class="hub-home-rail-title">
@@ -336,7 +358,7 @@ const heroStats = [
                     {leaderboardLeader.name}
                   </h3>
                   <p class="hub-home-rail-copy">
-                    {leaderboardLeader.provider} leads the homepage ranking with a composite score of {leaderboardLeader.metaScore.toFixed(1)}.
+                    {leaderboardLeader.provider} currently tops the evaluated benchmark set with a composite score of {leaderboardLeader.metaScore.toFixed(1)}.
                   </p>
                   <dl class="hub-home-metric-list">
                     <div>
@@ -352,6 +374,11 @@ const heroStats = [
                       <dd>{leaderboardLeader.bestFor}</dd>
                     </div>
                   </dl>
+                  {latestTrackedRelease ? (
+                    <p class="hub-home-card-note">
+                      Newer tracked launch: <a href={`${base}new/`} class="editorial-link">{latestTrackedRelease.modelName}</a>. Release coverage is live before it becomes rankable.
+                    </p>
+                  ) : null}
                 </>
               ) : (
                 <div class="empty-surface">The composite leaderboard needs benchmark data before a leader can be shown.</div>
@@ -448,7 +475,7 @@ const heroStats = [
                     {agiOverview.currentLeader.modelName}
                   </h3>
                   <p class="hub-home-rail-copy">
-                    Leads the current AGI signal view at {agiOverview.currentLeader.score.toFixed(1)} across the tracked frontier set.
+                    This is the highest published AGI-style frontier score in the current benchmark set at {agiOverview.currentLeader.score.toFixed(1)}.
                   </p>
                 </>
               ) : (

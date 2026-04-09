@@ -47,6 +47,7 @@ docs/DATA-COLLECTION-PLAN.md
 data/reports/
 logs/
 dist/newsletter/
+output/
 
 # Common local AI tooling folders
 .claude/

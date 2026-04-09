@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { modelReleaseDesk } from '../../data/model-release-desk.generated';
 import { getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
@@ -17,6 +18,10 @@ const topCheapest = [...rankedModels]
   .slice(0, 24);
 const providerOptions = Array.from(new Set(rankedModels.map((model) => model.provider))).sort((a, b) => a.localeCompare(b));
 const useCaseOptions = Array.from(new Set(rankedModels.map((model) => model.bestFor))).sort((a, b) => a.localeCompare(b));
+const latestTrackedRelease = modelReleaseDesk.releases.find((release) => release.draftStatus === 'ready_for_editor')
+  ?? modelReleaseDesk.releases.find((release) => release.priority === 'high')
+  ?? modelReleaseDesk.releases[0]
+  ?? null;
 
 function formatCoverage(ratio: number): string {
   return `${Math.round(ratio * 100)}%`;
@@ -61,6 +66,15 @@ function formatReleaseDate(value: string | null): string {
         normalized benchmark results, benchmark coverage, and the existing quality layer, so newer models with thin
         published data do not leapfrog better-documented leaders on hype alone.
       </p>
+
+      {latestTrackedRelease ? (
+        <div class="mt-5 rounded-2xl border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
+          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Important</p>
+          <p class="mt-2 max-w-4xl text-sm leading-6 text-(--color-text-secondary)">
+            This ranking is for evaluated models only. The newest tracked launch right now is <a href={`${base}new/`} class="text-(--color-accent) transition-colors hover:text-(--color-accent-hover)">{latestTrackedRelease.modelName}</a>, released {latestTrackedRelease.releaseDateLabel}. It stays in the release desk until public benchmark and quality coverage are strong enough to rank it honestly.
+          </p>
+        </div>
+      ) : null}
     </div>
 
     <div class="flex flex-wrap gap-2 mb-6 border-b border-(--color-border) pb-2">
