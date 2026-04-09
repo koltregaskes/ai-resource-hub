@@ -5,6 +5,7 @@ import { getBenchmarks, getNews } from '../src/db/queries';
 import { getModels, getProviders } from '../src/db/pg-cache';
 import { getLatestActivities, getMetaLeaderboard, normaliseDateTime } from '../src/data/hub-dashboard';
 import { modelReleaseDesk } from '../src/data/model-release-desk.generated';
+import { newsPipelineSnapshot } from '../src/data/news-pipeline.generated';
 import { getUpdatesDashboard } from '../src/data/updates-dashboard';
 
 const ROOT = process.cwd();
@@ -63,6 +64,18 @@ function formatCoverage(ratio: number): string {
   return `${Math.round(ratio * 100)}%`;
 }
 
+function humaniseToken(value: string | null | undefined): string {
+  return String(value ?? '')
+    .split(/[-_]/g)
+    .filter(Boolean)
+    .map((part) => {
+      if (part.toLowerCase() === 'ai') return 'AI';
+      if (part.toLowerCase() === 'api') return 'API';
+      return `${part.charAt(0).toUpperCase()}${part.slice(1)}`;
+    })
+    .join(' ');
+}
+
 function repoLink(label: string, relativePath: string): string {
   return `[${label}](${relativePath})`;
 }
@@ -104,6 +117,7 @@ function buildIndexDoc(generatedAt: string): string {
       ['Benchmarks', String(getBenchmarks().length)],
       ['News items in cache', String(getNews(500).length)],
       ['Release-desk entries', String(modelReleaseDesk.stats.totalReleases)],
+      ['Configured news sources', String(newsPipelineSnapshot.summary.configuredSourceCount)],
       ['Latest visible refresh', formatDateTime(latestRefresh)],
       ['Current composite leader', leaderboard ? `${leaderboard.name} (${leaderboard.metaScore.toFixed(1)})` : 'Not yet available'],
       ['Latest tracked release', latestRelease ? `${latestRelease.modelName} (${latestRelease.releaseDateLabel})` : 'Not yet available'],
@@ -117,6 +131,7 @@ function buildIndexDoc(generatedAt: string): string {
       [repoLink('composite-leaderboard.md', './composite-leaderboard.md'), 'Top of the benchmark-weighted ranking as rendered for the website.'],
       [repoLink('latest-releases.md', './latest-releases.md'), 'Newest tracked releases and editor-state visibility from the release desk.'],
       [repoLink('provider-coverage.md', './provider-coverage.md'), 'Per-provider model coverage across active, tracking, and preview states.'],
+      [repoLink('source-registry.md', './source-registry.md'), 'Tracked source registry with routing, collection lane, and verification notes.'],
       [repoLink('activity-log.md', './activity-log.md'), 'Recent visible changes across data, models, digest, jobs, and site operations.'],
     ],
   );
@@ -126,6 +141,7 @@ function buildIndexDoc(generatedAt: string): string {
     [
       [repoLink('models-latest.json', '../../public/data/models-latest.json'), 'Latest model snapshot for repo readers and downstream tooling.'],
       [repoLink('model-release-desk.json', '../../public/data/model-release-desk.json'), 'Structured release desk used by the site and editorial flow.'],
+      [repoLink('source-registry.json', '../../public/data/source-registry.json'), 'Public mirror of the current source registry and routing policy metadata.'],
       [repoLink('ai-models-comparison.csv', '../../public/data/ai-models-comparison.csv'), 'Spreadsheet-friendly comparison export.'],
       [repoLink('ai-models-comparison.json', '../../public/data/ai-models-comparison.json'), 'Machine-readable comparison export for analysis.'],
     ],
@@ -372,6 +388,77 @@ ${table}
 `;
 }
 
+function buildSourceRegistryDoc(generatedAt: string): string {
+  const sources = [...newsPipelineSnapshot.sources].sort((left, right) =>
+    left.name.localeCompare(right.name));
+  const aiHubSources = sources.filter((source) => source.routeSiteSlugs.includes('ai-resource-hub'));
+  const manualSources = sources.filter((source) => String(source.collectionMode) === 'manual_review');
+
+  const summaryTable = markdownTable(
+    ['Metric', 'Value'],
+    [
+      ['Generated', formatDateTime(generatedAt)],
+      ['Configured sources', String(newsPipelineSnapshot.summary.configuredSourceCount)],
+      ['AI Resource Hub routed sources', String(aiHubSources.length)],
+      ['Automated sources', String(newsPipelineSnapshot.summary.automatedSourceCount)],
+      ['Manual-review-only sources', String(newsPipelineSnapshot.summary.manualReviewSourceCount)],
+      ['Official-first verification lanes', String(newsPipelineSnapshot.summary.officialFirstSourceCount)],
+      ['Cross-check verification lanes', String(newsPipelineSnapshot.summary.crossCheckSourceCount)],
+    ],
+  );
+
+  const table = markdownTable(
+    ['Source', 'Host', 'Type', 'Collection', 'Verification', 'Routes to', 'Categories', 'Status'],
+    sources.map((source) => [
+      externalLink(source.name, source.url),
+      source.host,
+      source.sourceTypeLabel,
+      source.collectionLabel,
+      source.verificationLabel,
+      source.routeSiteNames.join(', '),
+      source.categoryLabels.map((category) => category.label).join(', '),
+      humaniseToken(source.status),
+    ]),
+  );
+
+  const manualSection = manualSources.length > 0
+    ? markdownTable(
+      ['Source', 'Why manual'],
+      manualSources.map((source) => [
+        externalLink(source.name, source.url),
+        source.policyNote,
+      ]),
+    )
+    : 'No manual-review-only sources are currently configured in the shared registry.';
+
+  return `
+# Source Registry Snapshot
+
+Generated: ${formatDateTime(generatedAt)}
+
+This is the repo-readable mirror of the shared source registry. It shows where source definitions currently live, how they route into the website estate, and which collection / verification lane each source should use.
+
+Canonical config:
+
+- \`${newsPipelineSnapshot.sourceOfTruth.sourcesPath}\`
+- \`${newsPipelineSnapshot.sourceOfTruth.siteFiltersPath}\`
+
+## Summary
+
+${summaryTable}
+
+## Tracked Sources
+
+${table}
+
+## Manual Review Lanes
+
+${manualSection}
+
+Raw export: ${repoLink('source-registry.json', '../../public/data/source-registry.json')}
+`;
+}
+
 function main(): void {
   const generatedAt = new Date().toISOString();
 
@@ -380,6 +467,7 @@ function main(): void {
   writeDoc('composite-leaderboard.md', buildLeaderboardDoc(generatedAt));
   writeDoc('latest-releases.md', buildReleasesDoc(generatedAt));
   writeDoc('provider-coverage.md', buildProviderCoverageDoc(generatedAt));
+  writeDoc('source-registry.md', buildSourceRegistryDoc(generatedAt));
   writeDoc('activity-log.md', buildActivityLogDoc(generatedAt));
 
   console.log(`Generated repo reference docs in ${OUT_DIR}`);

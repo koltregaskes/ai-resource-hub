@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 09 Apr 2026, 17:21 UTC |
+| Generated | 09 Apr 2026, 17:36 UTC |
 | Providers tracked | 39 |
 | Public models | 299 |
 | Active models | 101 |
@@ -17,6 +17,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Benchmarks | 17 |
 | News items in cache | 146 |
 | Release-desk entries | 48 |
+| Configured news sources | 12 |
 | Latest visible refresh | 09 Apr 2026, 17:21 UTC |
 | Current composite leader | o3 (86.9) |
 | Latest tracked release | Claude Opus 4.6 (Fast) (7 Apr 2026) |
@@ -29,6 +30,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | [composite-leaderboard.md](./composite-leaderboard.md) | Top of the benchmark-weighted ranking as rendered for the website. |
 | [latest-releases.md](./latest-releases.md) | Newest tracked releases and editor-state visibility from the release desk. |
 | [provider-coverage.md](./provider-coverage.md) | Per-provider model coverage across active, tracking, and preview states. |
+| [source-registry.md](./source-registry.md) | Tracked source registry with routing, collection lane, and verification notes. |
 | [activity-log.md](./activity-log.md) | Recent visible changes across data, models, digest, jobs, and site operations. |
 
 ## Raw Data Exports
@@ -37,5 +39,6 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | --- | --- |
 | [models-latest.json](../../public/data/models-latest.json) | Latest model snapshot for repo readers and downstream tooling. |
 | [model-release-desk.json](../../public/data/model-release-desk.json) | Structured release desk used by the site and editorial flow. |
+| [source-registry.json](../../public/data/source-registry.json) | Public mirror of the current source registry and routing policy metadata. |
 | [ai-models-comparison.csv](../../public/data/ai-models-comparison.csv) | Spreadsheet-friendly comparison export. |
 | [ai-models-comparison.json](../../public/data/ai-models-comparison.json) | Machine-readable comparison export for analysis. |

@@ -22,6 +22,8 @@ const sourcesPath = path.join(
 );
 const estateManifestPath = path.join(estateRoot, 'estate.yml');
 const outputPath = path.join(repoRoot, 'src', 'data', 'news-pipeline.generated.ts');
+const publicDataDir = path.join(repoRoot, 'public', 'data');
+const publicSourceRegistryPath = path.join(publicDataDir, 'source-registry.json');
 
 const SITE_OVERRIDES = {
   'kols-korner': {
@@ -86,6 +88,99 @@ function sortByLabel(items) {
   return [...items].sort((left, right) => left.label.localeCompare(right.label));
 }
 
+function getHostName(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+function describeSourceGovernance(source, categories) {
+  const host = getHostName(source.url);
+  const isXHost = /(^|\.)x\.com$/i.test(host) || /(^|\.)twitter\.com$/i.test(host);
+  const isOfficial = categories.some((value) =>
+    ['official-lab', 'provider-blog', 'platform-blog', 'research-lab'].includes(value)
+  );
+  const isResearch = categories.some((value) =>
+    ['academic', 'research-feed', 'open-source'].includes(value)
+  );
+  const isMedia = categories.some((value) =>
+    ['analysis', 'technical-analysis', 'industry-media', 'consumer-tech', 'enterprise-ai'].includes(value)
+  );
+  const isDigest = categories.some((value) =>
+    ['curated-digest', 'newsletter'].includes(value)
+  );
+
+  if (isXHost) {
+    return {
+      sourceType: 'social',
+      sourceTypeLabel: 'Social / announcement watch',
+      collectionMode: 'manual_review',
+      collectionLabel: 'Manual review only',
+      verificationMode: 'manual_only',
+      verificationLabel: 'Official API or manual',
+      policyRisk: 'restricted',
+      policyRiskLabel: 'Restricted',
+      policyNote: 'Do not automate unauthorised collection from X / Twitter. Use manual review or official API access only.',
+    };
+  }
+
+  if (isOfficial) {
+    return {
+      sourceType: 'official',
+      sourceTypeLabel: 'Official lab / provider',
+      collectionMode: 'automated',
+      collectionLabel: 'Automated public source',
+      verificationMode: 'official_first',
+      verificationLabel: 'Official-first',
+      policyRisk: 'low',
+      policyRiskLabel: 'Low risk',
+      policyNote: 'Official provider or lab publication. This is suitable for automated intake and primary verification.',
+    };
+  }
+
+  if (isResearch) {
+    return {
+      sourceType: 'research',
+      sourceTypeLabel: 'Research / open source',
+      collectionMode: 'automated',
+      collectionLabel: 'Automated public source',
+      verificationMode: 'cross_check',
+      verificationLabel: 'Cross-check before promotion',
+      policyRisk: 'low',
+      policyRiskLabel: 'Low risk',
+      policyNote: 'Good for discovery and signal gathering, but product claims should still be cross-checked with official docs where possible.',
+    };
+  }
+
+  if (isMedia || isDigest) {
+    return {
+      sourceType: isDigest ? 'digest' : 'media',
+      sourceTypeLabel: isDigest ? 'Digest / newsletter' : 'Media / analysis',
+      collectionMode: 'automated',
+      collectionLabel: 'Automated public source',
+      verificationMode: 'cross_check',
+      verificationLabel: 'Cross-check before promotion',
+      policyRisk: 'review',
+      policyRiskLabel: 'Review',
+      policyNote: 'Useful for fast awareness, but naming, dates, prices, and capability claims should be verified against primary sources before public promotion.',
+    };
+  }
+
+  return {
+    sourceType: 'general',
+    sourceTypeLabel: 'General public source',
+    collectionMode: 'automated',
+    collectionLabel: 'Automated public source',
+    verificationMode: 'cross_check',
+    verificationLabel: 'Cross-check before promotion',
+    policyRisk: 'review',
+    policyRiskLabel: 'Review',
+    policyNote: 'Publicly accessible source. Cross-check material claims against canonical provider or benchmark-owner sources before promotion.',
+  };
+}
+
 async function main() {
   const [siteFiltersRaw, sourcesRaw, estateRaw] = await Promise.all([
     fs.readFile(siteFiltersPath, 'utf8'),
@@ -98,8 +193,6 @@ async function main() {
   const estateSites = parseActiveSites(estateRaw);
   const configuredSites = siteFilters?.sites ?? {};
   const configuredSources = Array.isArray(sourcesConfig?.sources) ? sourcesConfig.sources : [];
-  const sharedPipelineSites = Object.keys(configuredSites);
-
   const siteNameBySlug = Object.fromEntries(
     estateSites.map((slug) => {
       const override = SITE_OVERRIDES[slug];
@@ -157,12 +250,14 @@ async function main() {
       : configuredSiteScope;
     const categories = toUniqueList(source.categories ?? []);
     const tags = toUniqueList(source.tags ?? []);
+    const governance = describeSourceGovernance(source, categories);
 
     return {
       id: source.id,
       name: source.name,
       adapter: source.adapter,
       url: source.url,
+      host: getHostName(source.url),
       listingUrl: source.listingUrl ?? null,
       section: source.section ?? 'Industry',
       status: source.status ?? 'active',
@@ -182,6 +277,7 @@ async function main() {
       routeSiteNames: routeSiteSlugs.map((slug) => siteNameBySlug[slug] ?? humaniseToken(slug)),
       routeMode: configuredSiteScope.includes('all') ? 'shared-default' : 'explicit',
       articleLinkPattern: source.articleLinkPattern ?? null,
+      ...governance,
     };
   });
 
@@ -211,6 +307,10 @@ async function main() {
       estateSiteCount: sites.length,
       activeNewsSiteCount: activeNewsSiteSlugs.length,
       configuredSourceCount: sources.length,
+      automatedSourceCount: sources.filter((source) => source.collectionMode === 'automated').length,
+      manualReviewSourceCount: sources.filter((source) => source.collectionMode === 'manual_review').length,
+      officialFirstSourceCount: sources.filter((source) => source.verificationMode === 'official_first').length,
+      crossCheckSourceCount: sources.filter((source) => source.verificationMode === 'cross_check').length,
       routingTagCount: routingTags.length,
       lookbackHours: siteFilters?.lookback_hours ?? 24,
       sectionCount: Array.isArray(sourcesConfig?.defaults?.sectionOrder)
@@ -250,13 +350,20 @@ async function main() {
         'Keep the canonical routing config in W:\\Websites\\shared\\website-tools\\pipelines\\news. Surface it in the hub, but do not fork it silently in multiple workspaces.',
       aiResourceHubPolicy:
         'AI Resource Hub should only show technical AI coverage. Crypto, photography, and off-brief creative items should be blocked at routing time, not hidden later.',
+      sourceHandling:
+        'Use the shared pipeline for source discovery and routing. Mirror it into the website and repo for transparency, but keep the source definitions in one canonical place.',
     },
   };
 
   const fileContents = `export const newsPipelineSnapshot = ${JSON.stringify(snapshot, null, 2)} as const;\n\nexport type NewsPipelineSnapshot = typeof newsPipelineSnapshot;\nexport type NewsPipelineSite = NewsPipelineSnapshot['sites'][number];\nexport type NewsPipelineSource = NewsPipelineSnapshot['sources'][number];\n`;
 
-  await fs.writeFile(outputPath, fileContents, 'utf8');
+  await fs.mkdir(publicDataDir, { recursive: true });
+  await Promise.all([
+    fs.writeFile(outputPath, fileContents, 'utf8'),
+    fs.writeFile(publicSourceRegistryPath, JSON.stringify(snapshot, null, 2) + '\n', 'utf8'),
+  ]);
   console.log(`Wrote ${path.relative(repoRoot, outputPath)}`);
+  console.log(`Wrote ${path.relative(repoRoot, publicSourceRegistryPath)}`);
 }
 
 main().catch((error) => {

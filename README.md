@@ -40,4 +40,5 @@ Key generated tables:
 - [Composite leaderboard snapshot](docs/repo-reference/composite-leaderboard.md)
 - [Latest releases snapshot](docs/repo-reference/latest-releases.md)
 - [Provider coverage snapshot](docs/repo-reference/provider-coverage.md)
+- [Source registry snapshot](docs/repo-reference/source-registry.md)
 - [Recent activity snapshot](docs/repo-reference/activity-log.md)

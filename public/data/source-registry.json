@@ -1,4 +1,4 @@
-export const newsPipelineSnapshot = {
+{
   "generatedAt": "2026-04-09T17:22:27.168Z",
   "sourceOfTruth": {
     "estateManifestPath": "W:\\Websites\\estate.yml",
@@ -1872,8 +1872,4 @@ export const newsPipelineSnapshot = {
     "aiResourceHubPolicy": "AI Resource Hub should only show technical AI coverage. Crypto, photography, and off-brief creative items should be blocked at routing time, not hidden later.",
     "sourceHandling": "Use the shared pipeline for source discovery and routing. Mirror it into the website and repo for transparency, but keep the source definitions in one canonical place."
   }
-} as const;
-
-export type NewsPipelineSnapshot = typeof newsPipelineSnapshot;
-export type NewsPipelineSite = NewsPipelineSnapshot['sites'][number];
-export type NewsPipelineSource = NewsPipelineSnapshot['sources'][number];
+}

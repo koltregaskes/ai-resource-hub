@@ -117,6 +117,7 @@ function Test-IgnorableGeneratedChange {
     $normalised -eq 'public/data/ai-models-comparison.json' -or
     $normalised -eq 'public/data/model-release-desk.json' -or
     $normalised -eq 'public/data/models-latest.json' -or
+    $normalised -eq 'public/data/source-registry.json' -or
     $normalised -eq 'src/data/model-release-desk.generated.ts' -or
     $normalised -eq 'src/data/news-feed-latest.json' -or
     $normalised -match '^src/data/news-feed-\d{4}-\d{2}-\d{2}\.json$' -or

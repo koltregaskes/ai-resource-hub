@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 09 Apr 2026, 17:21 UTC
+Generated: 09 Apr 2026, 17:36 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -13,7 +13,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 | Pricing and value | Hourly automated refresh | Automated | 09 Apr 2026, 17:21 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 09 Apr 2026, 17:21 UTC |
 | Provider status | Hourly automated refresh | Automated | 09 Apr 2026, 17:21 UTC |
-| Guides and learning | Manual editorial review | Manual | 09 Apr 2026, 17:20 UTC |
+| Guides and learning | Manual editorial review | Manual | 05 Apr 2026, 22:58 UTC |
 
 ## Models and releases
 
@@ -117,7 +117,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 09 Apr 2026, 17:20 UTC
+- Last refreshed: 05 Apr 2026, 22:58 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -129,6 +129,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Apr 2026, 17:20 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 09 Apr 2026, 17:20 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 09 Apr 2026, 17:20 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 05 Apr 2026, 22:58 UTC: Glossary - Guide or learning page updated in the repository. (`/glossary/`)
+- 23 Mar 2026, 21:45 UTC: Understanding Ai Pricing - Guide or learning page updated in the repository. (`/guides/understanding-ai-pricing/`)
+- 15 Mar 2026, 20:44 UTC: Prompting Basics - Guide or learning page updated in the repository. (`/guides/prompting-basics/`)
