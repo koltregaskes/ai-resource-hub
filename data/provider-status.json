@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-08T23:54:21.969Z",
+  "generatedAt": "2026-04-09T03:30:03.014Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T23:54:18.180Z",
+      "lastCheckedAt": "2026-04-09T03:30:01.971Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -46,6 +46,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "hsgj6gh6rlck",
+          "title": "Errors when connecting to Claude.ai",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-04-08T23:57:07.068Z",
+          "updatedAt": "2026-04-08T23:57:07.131Z",
+          "resolvedAt": "2026-04-08T23:57:07.118Z",
+          "url": "https://stspg.io/7kl6qq3lldmg",
+          "summary": "Some users experienced an error when trying to access Claude.ai on desktop and the web from 23:22–23:50 UTC. This issue has now been resolved."
+        },
+        {
           "id": "z0bqmftj68dr",
           "title": "Outage affecting Workspace Creation",
           "status": "resolved",
@@ -77,17 +88,6 @@
           "resolvedAt": "2026-04-08T09:33:39.659Z",
           "url": "https://stspg.io/9p1s3snnkxrj",
           "summary": "The incident is now resolved. Sonnet 4.6 exhibited errors above baseline between 23:00 PT / 7:00 UTC and 1:50 PT / 9:50 UTC."
-        },
-        {
-          "id": "124yr07585k9",
-          "title": "Elevated errors on Claude.ai",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-04-07T14:32:10.000Z",
-          "updatedAt": "2026-04-07T15:59:16.076Z",
-          "resolvedAt": "2026-04-07T15:59:16.060Z",
-          "url": "https://stspg.io/jkzylwdkf66g",
-          "summary": "From 14:32–15:12 UTC, we saw elevated errors impacting various Claude services, including Claude.ai and Claude Code authentication. These errors have been resolved."
         }
       ]
     },
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T23:54:19.000Z",
+      "lastCheckedAt": "2026-04-09T03:30:02.722Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T23:54:21.961Z",
+      "lastCheckedAt": "2026-04-09T03:30:02.786Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T23:54:19.709Z",
+      "lastCheckedAt": "2026-04-09T03:30:02.997Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T23:54:18.311Z",
+      "lastCheckedAt": "2026-04-09T03:30:02.067Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T23:54:18.648Z",
+      "lastCheckedAt": "2026-04-09T03:30:02.314Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T23:54:18.080Z",
+      "lastCheckedAt": "2026-04-09T03:30:01.864Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-08T23:54:19.844Z",
+      "lastCheckedAt": "2026-04-09T03:30:03.006Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -430,7 +430,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-08T19:56:46.000Z",
+          "id": "together-feed-0-2026-04-09T00:46:56.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-09T00:46:56.000Z",
+          "updatedAt": "2026-04-09T00:46:56.000Z",
+          "resolvedAt": "2026-04-09T00:46:56.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-09T00:33:57.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-09T00:33:57.000Z",
+          "updatedAt": "2026-04-09T00:33:57.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-08T19:56:46.000Z",
           "title": "Whisper Large V3 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -441,7 +463,7 @@
           "summary": "Whisper Large V3 recovered"
         },
         {
-          "id": "together-feed-1-2026-04-08T19:44:39.000Z",
+          "id": "together-feed-3-2026-04-08T19:44:39.000Z",
           "title": "Whisper Large V3 went down",
           "status": "investigating",
           "impact": "major",
@@ -450,28 +472,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Whisper Large V3 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-08T14:59:03.000Z",
-          "title": "FLUX.1 Krea [dev] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-08T14:59:03.000Z",
-          "updatedAt": "2026-04-08T14:59:03.000Z",
-          "resolvedAt": "2026-04-08T14:59:03.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-08T14:45:49.000Z",
-          "title": "FLUX.1 Krea [dev] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-08T14:45:49.000Z",
-          "updatedAt": "2026-04-08T14:45:49.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] went down"
         }
       ]
     },
