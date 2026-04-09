@@ -34,26 +34,38 @@
   "dependencies": {
     "@astrojs/prism": "^4.0.1",
     "@astrojs/react": "^4.4.2",
-    "@astrojs/sitemap": "^3.7.0",
-    "@tailwindcss/vite": "^4.2.0",
+    "@astrojs/sitemap": "^3.7.2",
+    "@tailwindcss/vite": "^4.2.2",
     "@types/pg": "^8.20.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.17.3",
-    "better-sqlite3": "^12.6.2",
+    "astro": "^5.18.1",
+    "better-sqlite3": "^12.8.0",
     "chart.js": "^4.5.1",
     "pg": "^8.20.0",
-    "prismjs": "^1.29.0",
-    "react": "^19.2.4",
+    "prismjs": "^1.30.0",
+    "react": "^19.2.5",
     "react-chartjs-2": "^5.3.1",
-    "react-dom": "^19.2.4",
-    "tailwindcss": "^4.2.0",
+    "react-dom": "^19.2.5",
+    "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.7",
+    "@astrojs/check": "^0.9.8",
     "@types/better-sqlite3": "^7.6.13",
     "tsx": "^4.21.0"
+  },
+  "overrides": {
+    "vite": "^6.4.2",
+    "rollup": "^4.59.0",
+    "devalue": "^5.6.4",
+    "h3": "^1.15.9",
+    "defu": "^6.1.5",
+    "yaml": "^2.8.3",
+    "picomatch": "^4.0.4",
+    "anymatch": {
+      "picomatch": "^2.3.2"
+    }
   }
 }
 
