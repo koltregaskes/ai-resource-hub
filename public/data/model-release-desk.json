@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T12:02:57.033Z",
+  "generatedAt": "2026-04-09T15:53:53.417Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -34,7 +34,7 @@
       "inputPrice": 30,
       "outputPrice": 150,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Claude Opus 4.6 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $30.00 in / $150.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.6-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -79,7 +79,7 @@
       "inputPrice": 1.395,
       "outputPrice": 4.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GLM 5.1 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.40 in / $4.40 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5.1 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -111,7 +111,7 @@
       "ageDays": 2,
       "status": "preview",
       "priority": "high",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://www.anthropic.com/glasswing",
       "providerStatusUrl": "https://status.claude.com",
       "providerDocsUrl": "https://docs.anthropic.com",
@@ -126,11 +126,11 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access Anthropic frontier preview launched with Project Glasswing for defensive cybersecurity work. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -140,11 +140,27 @@
         "Explain whether this is open-weight, limited preview, or a non-general-availability research release."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative",
+          "url": "https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/",
+          "source": "TechCrunch",
+          "date": "2026-04-07",
+          "summary": "The new model will be used by a small number of high-profile companies to engage in defensive cybersecurity work.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-04-07-claude-mythos-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "gemma-4",
@@ -158,7 +174,7 @@
       "ageDays": 7,
       "status": "tracking",
       "priority": "high",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
       "providerStatusUrl": "https://status.cloud.google.com",
       "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
@@ -171,13 +187,13 @@
       "inputPrice": 0.14,
       "outputPrice": 0.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $0.40 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. Tracking only until benchmark and quality coverage is available. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemma 4 31B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $0.40 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. Tracking only until benchmark and quality coverage is available. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Google's Gemma 4 31B is on the release desk with 5 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -187,11 +203,82 @@
         "Add local-running context: LM Studio, Ollama, GGUF, MLX, or device notes where relevant."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Gemini gets notebooks to help you organize projects",
+          "url": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
+          "source": "The Verge",
+          "date": "2026-04-09",
+          "summary": "Google's Gemini is getting a feature called \"notebooks\" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google quietly launched an AI dictation app that works offline",
+          "url": "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/",
+          "source": "TechCrunch",
+          "date": "2026-04-08",
+          "summary": "Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google Maps can now write captions for your photos using AI",
+          "url": "https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/",
+          "source": "TechCrunch",
+          "date": "2026-04-07",
+          "summary": "Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini is making it faster for distressed users to reach mental health resources",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update",
+          "source": "The Verge",
+          "date": "2026-04-07",
+          "summary": "Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot \"coached\" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "New ways to balance cost and reliability in the Gemini API",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/",
+          "source": "Google",
+          "date": "2026-04-02",
+          "summary": "Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.",
+          "routingTags": [
+            "model_release",
+            "api_update",
+            "inference"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-31b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "qwen3.6-plus",
@@ -218,8 +305,8 @@
       "inputPrice": 0.325,
       "outputPrice": 1.95,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. Tracking only until benchmark and quality coverage is available. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. Tracking only until benchmark and quality coverage is available. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 Plus is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -263,7 +350,7 @@
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GLM 5V Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5v-turbo); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5V Turbo is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -308,8 +395,8 @@
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI flagship model. Tracking only until benchmark and quality coverage is available. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI flagship model. Tracking only until benchmark and quality coverage is available. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok 4.20 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -353,8 +440,8 @@
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. Tracking only until benchmark and quality coverage is available. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. Tracking only until benchmark and quality coverage is available. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -398,8 +485,8 @@
       "inputPrice": 0.57,
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Moonshot AI's Kimi K2 0711 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -443,7 +530,7 @@
       "inputPrice": 0.1,
       "outputPrice": 0.1,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Reka Edge is a currently tracked release from Reka. It is positioned as an API-available model rather than a local-only release. Tracked context window: 16.4K tokens. Current tracked pricing: $0.10 in / $0.10 out per million tokens. Auto-tracked from OpenRouter discovery (rekaai/reka-edge); awaiting official verification.",
       "dek": "Reka's Reka Edge is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -475,7 +562,7 @@
       "ageDays": 22,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
@@ -488,12 +575,12 @@
       "inputPrice": 0.3,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Current MiniMax flagship family line. Tracking only until benchmark and quality coverage is available. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "MiniMax's MiniMax M2.7 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Current MiniMax flagship family line. Tracking only until benchmark and quality coverage is available. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "MiniMax's MiniMax M2.7 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -502,24 +589,11 @@
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Chinese AI models (Qwen, Kimi, MiniMax) are going closed-source. Does that kill their appeal for you?",
-          "url": "https://reddit.com/r/ChatGPT/comments/1sgfp00/chinese_ai_models_qwen_kimi_minimax_are_going/",
-          "source": "Reddit r/ChatGPT",
-          "date": "2026-04-09",
-          "summary": "Honest question for people who actually use these models:\n\nThe main reason I and many others trusted Chinese AI models was open source — you could run them locally, inspect the weights, avoid sending data to Chinese servers. That felt like a reasonable workaround for anyone with privacy or geopolitical concerns.\n\nNow that they're closing up, the calculus changes:\n\n\\- No local deployment\n\n\\- API calls go to servers in China\n\n\\- No way to verify what the model is actually doing\n\nIs this a dealbrea",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "open_source"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-03-18-minimax-m2-7-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gpt-5.4-mini",
@@ -546,9 +620,9 @@
       "inputPrice": 0.75,
       "outputPrice": 4.5,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-04-09 10:41:25",
-      "summary": "GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.75 in / $4.50 out per million tokens. Smaller GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Mini is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:14",
+      "summary": "GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.75 in / $4.50 out per million tokens. Smaller GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "OpenAI's GPT-5.4 Mini is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -562,25 +636,33 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
+          "title": "Introducing GPT-5.4 mini and nano",
+          "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning, and high-volume API and sub-agent workloads.",
           "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
+            "model_release",
+            "api_update"
+          ]
+        },
+        {
+          "title": "Gradient Labs gives every bank customer an AI account manager",
+          "url": "https://openai.com/index/gradient-labs",
+          "source": "OpenAI",
+          "date": "2026-04-01",
+          "summary": "Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.",
+          "routingTags": [
+            "model_release",
+            "inference"
           ]
         },
         {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -590,12 +672,44 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-17-gpt-5-4-mini-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gpt-5.4-nano",
@@ -622,9 +736,9 @@
       "inputPrice": 0.2,
       "outputPrice": 1.25,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-04-09 10:41:25",
-      "summary": "GPT-5.4 Nano is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.20 in / $1.25 out per million tokens. Fastest and cheapest GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Nano is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:14",
+      "summary": "GPT-5.4 Nano is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.20 in / $1.25 out per million tokens. Fastest and cheapest GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "OpenAI's GPT-5.4 Nano is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -638,25 +752,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -666,12 +766,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-17-gpt-5-4-nano-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "mistral-small-2603",
@@ -698,7 +851,7 @@
       "inputPrice": 0.15,
       "outputPrice": 0.6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Mistral Small 4 is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-small-2603); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Mistral's Mistral Small 4 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -743,8 +896,8 @@
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. Tracking only until benchmark and quality coverage is available. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. Tracking only until benchmark and quality coverage is available. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5 Turbo is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -788,7 +941,7 @@
       "inputPrice": 0.1,
       "outputPrice": 0.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.10 in / $0.50 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-super-120b-a12b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "NVIDIA's Nemotron 3 Super is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -833,7 +986,7 @@
       "inputPrice": 0.05,
       "outputPrice": 0.15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Qwen3.5-9B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 256K tokens. Current tracked pricing: $0.05 in / $0.15 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-9b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-9B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -878,9 +1031,9 @@
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-04-09 10:41:25",
-      "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. Tracking only until benchmark and quality coverage is available. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 is on the release desk with 3 related storyies and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:14",
+      "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. Tracking only until benchmark and quality coverage is available. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -894,37 +1047,33 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "[AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1sg2gyz/autobe_qwen_3527b_just_built_complete_backends/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-04-08",
-          "summary": "We benchmarked Qwen 3.5-27B against 10 other models on backend generation — including Claude Opus 4.6 and GPT-5.4. The outputs were nearly identical. 25x cheaper.\n\n## TL;DR\n\n1. Qwen 3.5-27B achieved 100% compilation on all 4 backend projects\n   - [Todo](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-27b/todo), [Reddit](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-27b/reddit), [Shopping](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-2",
+          "title": "Introducing GPT-5.4 mini and nano",
+          "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning, and high-volume API and sub-agent workloads.",
           "routingTags": [
             "model_release",
-            "pricing_change",
-            "open_source"
+            "api_update"
           ]
         },
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
+          "title": "Gradient Labs gives every bank customer an AI account manager",
+          "url": "https://openai.com/index/gradient-labs",
+          "source": "OpenAI",
+          "date": "2026-04-01",
+          "summary": "Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.",
           "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
+            "model_release",
+            "inference"
           ]
         },
         {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -934,12 +1083,44 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gpt-5.4-pro",
@@ -966,9 +1147,9 @@
       "inputPrice": 30,
       "outputPrice": 180,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-04-09 10:41:25",
-      "summary": "GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Premium GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Pro is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:14",
+      "summary": "GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Premium GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "OpenAI's GPT-5.4 Pro is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -982,25 +1163,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -1010,12 +1177,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gpt-5.3-chat",
@@ -1042,9 +1262,9 @@
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GPT-5.3 Chat is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.3-chat); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.3 Chat is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.3 Chat is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1058,25 +1278,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -1086,12 +1292,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-03-gpt-5-3-chat-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gemini-3.1-flash-lite",
@@ -1105,7 +1364,7 @@
       "ageDays": 37,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://ai.google.dev/gemini-api/docs/models",
       "providerStatusUrl": "https://status.cloud.google.com",
       "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
@@ -1118,12 +1377,12 @@
       "inputPrice": 0.25,
       "outputPrice": 1.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.25 in / $1.50 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.1-flash-lite-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.1 Flash Lite Preview is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Flash Lite Preview is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1132,11 +1391,99 @@
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Gemini gets notebooks to help you organize projects",
+          "url": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
+          "source": "The Verge",
+          "date": "2026-04-09",
+          "summary": "Google's Gemini is getting a feature called \"notebooks\" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google quietly launched an AI dictation app that works offline",
+          "url": "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/",
+          "source": "TechCrunch",
+          "date": "2026-04-08",
+          "summary": "Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google Maps can now write captions for your photos using AI",
+          "url": "https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/",
+          "source": "TechCrunch",
+          "date": "2026-04-07",
+          "summary": "Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini is making it faster for distressed users to reach mental health resources",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update",
+          "source": "The Verge",
+          "date": "2026-04-07",
+          "summary": "Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot \"coached\" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "The Galaxy S26’s photo app can sloppify your memories",
+          "url": "https://www.theverge.com/tech/904176/samsung-galaxy-s26-ai-photo-assist-slop",
+          "source": "The Verge",
+          "date": "2026-03-31",
+          "summary": "The Google Pixel 9 walked so that the Samsung Galaxy S26 could run. Google introduced AI editing tools to Photos slowly. It started with changes to the background - make the sky more blue, or remove crowds of tourists. Things got weird once the company added natural language requests and let you ask for basically [&#8…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "You can now transfer your chats and personal information from other chatbots directly into Gemini",
+          "url": "https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/",
+          "source": "TechCrunch",
+          "date": "2026-03-26",
+          "summary": "Google is launching \"switching tools\" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-03-03-gemini-3-1-flash-lite-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gemini-3.1-flash-image",
@@ -1150,7 +1497,7 @@
       "ageDays": 42,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://ai.google.dev/gemini-api/docs/models",
       "providerStatusUrl": "https://status.cloud.google.com",
       "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
@@ -1163,12 +1510,12 @@
       "inputPrice": 0.5,
       "outputPrice": 3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 65.5K tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.1-flash-image-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1177,11 +1524,99 @@
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Gemini gets notebooks to help you organize projects",
+          "url": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
+          "source": "The Verge",
+          "date": "2026-04-09",
+          "summary": "Google's Gemini is getting a feature called \"notebooks\" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google quietly launched an AI dictation app that works offline",
+          "url": "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/",
+          "source": "TechCrunch",
+          "date": "2026-04-08",
+          "summary": "Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google Maps can now write captions for your photos using AI",
+          "url": "https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/",
+          "source": "TechCrunch",
+          "date": "2026-04-07",
+          "summary": "Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini is making it faster for distressed users to reach mental health resources",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update",
+          "source": "The Verge",
+          "date": "2026-04-07",
+          "summary": "Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot \"coached\" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "The Galaxy S26’s photo app can sloppify your memories",
+          "url": "https://www.theverge.com/tech/904176/samsung-galaxy-s26-ai-photo-assist-slop",
+          "source": "The Verge",
+          "date": "2026-03-31",
+          "summary": "The Google Pixel 9 walked so that the Samsung Galaxy S26 could run. Google introduced AI editing tools to Photos slowly. It started with changes to the background - make the sky more blue, or remove crowds of tourists. Things got weird once the company added natural language requests and let you ask for basically [&#8…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "You can now transfer your chats and personal information from other chatbots directly into Gemini",
+          "url": "https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/",
+          "source": "TechCrunch",
+          "date": "2026-03-26",
+          "summary": "Google is launching \"switching tools\" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-02-26-nano-banana-2-gemini-3-1-flash-image-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "qwen3.5-35b-a3b",
@@ -1208,7 +1643,7 @@
       "inputPrice": 0.163,
       "outputPrice": 1.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Qwen3.5-35B-A3B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.16 in / $1.30 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-35b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-35B-A3B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1240,7 +1675,7 @@
       "ageDays": 43,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
@@ -1253,12 +1688,12 @@
       "inputPrice": 0.195,
       "outputPrice": 1.56,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Qwen3.5-27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.20 in / $1.56 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-27b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5-27B is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5-27B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1267,24 +1702,11 @@
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "[AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1sg2gyz/autobe_qwen_3527b_just_built_complete_backends/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-04-08",
-          "summary": "We benchmarked Qwen 3.5-27B against 10 other models on backend generation — including Claude Opus 4.6 and GPT-5.4. The outputs were nearly identical. 25x cheaper.\n\n## TL;DR\n\n1. Qwen 3.5-27B achieved 100% compilation on all 4 backend projects\n   - [Todo](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-27b/todo), [Reddit](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-27b/reddit), [Shopping](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-2",
-          "routingTags": [
-            "model_release",
-            "pricing_change",
-            "open_source"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-02-25-qwen3-5-27b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "qwen3.5-122b-a10b",
@@ -1311,7 +1733,7 @@
       "inputPrice": 0.26,
       "outputPrice": 2.08,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Qwen3.5-122B-A10B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.26 in / $2.08 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-122b-a10b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-122B-A10B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1356,7 +1778,7 @@
       "inputPrice": 0.065,
       "outputPrice": 0.26,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Qwen3.5-Flash is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.07 in / $0.26 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-flash-02-23); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-Flash is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1401,9 +1823,9 @@
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GPT-5.3-Codex is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.3-codex); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.3-Codex is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.3-Codex is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1417,25 +1839,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -1445,12 +1853,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-02-24-gpt-5-3-codex-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gemini-3.1-pro",
@@ -1477,12 +1938,12 @@
       "inputPrice": 2,
       "outputPrice": 12,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 0 related storyies and 2 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 6 related storyies and 2 benchmark signals to review.",
       "whyItMatters": [
         "There are already 2 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1508,11 +1969,99 @@
           "source": "Google"
         }
       ],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Gemini gets notebooks to help you organize projects",
+          "url": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
+          "source": "The Verge",
+          "date": "2026-04-09",
+          "summary": "Google's Gemini is getting a feature called \"notebooks\" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google quietly launched an AI dictation app that works offline",
+          "url": "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/",
+          "source": "TechCrunch",
+          "date": "2026-04-08",
+          "summary": "Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google Maps can now write captions for your photos using AI",
+          "url": "https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/",
+          "source": "TechCrunch",
+          "date": "2026-04-07",
+          "summary": "Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini is making it faster for distressed users to reach mental health resources",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update",
+          "source": "The Verge",
+          "date": "2026-04-07",
+          "summary": "Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot \"coached\" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "The Galaxy S26’s photo app can sloppify your memories",
+          "url": "https://www.theverge.com/tech/904176/samsung-galaxy-s26-ai-photo-assist-slop",
+          "source": "The Verge",
+          "date": "2026-03-31",
+          "summary": "The Google Pixel 9 walked so that the Samsung Galaxy S26 could run. Google introduced AI editing tools to Photos slowly. It started with changes to the background - make the sky more blue, or remove crowds of tourists. Things got weird once the company added natural language requests and let you ask for basically [&#8…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "You can now transfer your chats and personal information from other chatbots directly into Gemini",
+          "url": "https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/",
+          "source": "TechCrunch",
+          "date": "2026-03-26",
+          "summary": "Google is launching \"switching tools\" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-preview-release-brief.md",
       "benchmarkCount": 2,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "claude-sonnet-4.6",
@@ -1539,12 +2088,12 @@
       "inputPrice": 3,
       "outputPrice": 15,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-04-09 10:41:25",
-      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 0 related storyies and 4 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:14",
+      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 5 related storyies and 4 benchmark signals to review.",
       "whyItMatters": [
         "There are already 4 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1586,11 +2135,83 @@
           "source": "Anthropic"
         }
       ],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Introducing Claude Sonnet 4.6",
+          "url": "https://www.anthropic.com/81k-interviews",
+          "source": "Anthropic",
+          "date": "2026-03-18",
+          "summary": "Sonnet 4.6 delivers frontier performance across coding, agents, and professional work at scale.",
+          "routingTags": [
+            "model_release",
+            "api_update",
+            "ai_agents",
+            "ai_safety",
+            "evaluation"
+          ]
+        },
+        {
+          "title": "Bluesky’s new app is an AI for customizing your feed",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/903190/bluesky-attie-ai-custom-feeds",
+          "source": "The Verge",
+          "date": "2026-03-29",
+          "summary": "The latest app from the team behind Bluesky is Attie, an AI assistant that lets you build your own algorithm. At the Atmosphere conference, Bluesky's former CEO, Jay Graber, and CTO Paul Frazee, unveiled Attie, which is powered by Anthropic's Claude and built on top of Bluesky's underlying AT Protocol (atproto). Attie…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s Claude popularity with paying consumers is skyrocketing",
+          "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/",
+          "source": "TechCrunch",
+          "date": "2026-03-28",
+          "summary": "Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million). Anthropic hasn't disclosed this data, but a spokesperson did tell TechCrunch that Claude paid subscriptions have more than doubled this year.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google is making it easier to import another AI’s memory into Gemini",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/902085/google-gemini-import-memory-chat-history",
+          "source": "The Verge",
+          "date": "2026-03-26",
+          "summary": "After Anthropic updated its tool for copying another AI's memory into Claude earlier this month, Google Gemini is rolling out new \"Import Memory\" and \"Import Chat History\" features on desktop that can help users quickly copy over everything their current AI already knows about them. To use the \"Import Memory\" tool, us…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Apple will reportedly allow other AI chatbots to plug into Siri",
+          "url": "https://www.theverge.com/tech/902048/apple-siri-ai-chatbot-update-ios-27",
+          "source": "The Verge",
+          "date": "2026-03-26",
+          "summary": "Apple's iOS 27 update will allow users to choose the AI chatbot they want to link with Siri. That's according to a report from Bloomberg's Mark Gurman, who says third-party chatbots downloaded from the App Store, like Google's Gemini or Anthropic's Claude, will be able to fetch replies for Siri - similar to how the [&…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-02-17-claude-sonnet-4-6-release-brief.md",
       "benchmarkCount": 4,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "qwen3.5-plus-02-15",
@@ -1617,7 +2238,7 @@
       "inputPrice": 0.26,
       "outputPrice": 1.56,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Qwen3.5 Plus 2026-02-15 is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.26 in / $1.56 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-plus-02-15); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5 Plus 2026-02-15 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1662,7 +2283,7 @@
       "inputPrice": 0.39,
       "outputPrice": 2.34,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Qwen3.5 397B A17B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.39 in / $2.34 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-397b-a17b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5 397B A17B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1707,8 +2328,8 @@
       "inputPrice": 0.72,
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "GLM 5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 80K tokens. Current tracked pricing: $0.72 in / $2.30 out per million tokens. Zhipu flagship GLM 5 line. Tracking only until benchmark and quality coverage is available. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "GLM 5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 80K tokens. Current tracked pricing: $0.72 in / $2.30 out per million tokens. Zhipu flagship GLM 5 line. Tracking only until benchmark and quality coverage is available. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1739,7 +2360,7 @@
       "ageDays": 56,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
@@ -1752,12 +2373,12 @@
       "inputPrice": 0.118,
       "outputPrice": 0.99,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "MiniMax M2.5 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 196.6K tokens. Current tracked pricing: $0.12 in / $0.99 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2.5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "MiniMax's MiniMax M2.5 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "MiniMax's MiniMax M2.5 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1766,24 +2387,11 @@
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Chinese AI models (Qwen, Kimi, MiniMax) are going closed-source. Does that kill their appeal for you?",
-          "url": "https://reddit.com/r/ChatGPT/comments/1sgfp00/chinese_ai_models_qwen_kimi_minimax_are_going/",
-          "source": "Reddit r/ChatGPT",
-          "date": "2026-04-09",
-          "summary": "Honest question for people who actually use these models:\n\nThe main reason I and many others trusted Chinese AI models was open source — you could run them locally, inspect the weights, avoid sending data to Chinese servers. That felt like a reasonable workaround for anyone with privacy or geopolitical concerns.\n\nNow that they're closing up, the calculus changes:\n\n\\- No local deployment\n\n\\- API calls go to servers in China\n\n\\- No way to verify what the model is actually doing\n\nIs this a dealbrea",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "open_source"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-02-12-minimax-m2-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "claude-opus-4.6",
@@ -1810,9 +2418,9 @@
       "inputPrice": 15,
       "outputPrice": 75,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-04-09 10:41:25",
-      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 1 related story and 5 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:14",
+      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 4 related storyies and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1867,22 +2475,67 @@
       ],
       "relatedStories": [
         {
-          "title": "[AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1sg2gyz/autobe_qwen_3527b_just_built_complete_backends/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-04-08",
-          "summary": "We benchmarked Qwen 3.5-27B against 10 other models on backend generation — including Claude Opus 4.6 and GPT-5.4. The outputs were nearly identical. 25x cheaper.\n\n## TL;DR\n\n1. Qwen 3.5-27B achieved 100% compilation on all 4 backend projects\n   - [Todo](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-27b/todo), [Reddit](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-27b/reddit), [Shopping](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-2",
+          "title": "Bluesky’s new app is an AI for customizing your feed",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/903190/bluesky-attie-ai-custom-feeds",
+          "source": "The Verge",
+          "date": "2026-03-29",
+          "summary": "The latest app from the team behind Bluesky is Attie, an AI assistant that lets you build your own algorithm. At the Atmosphere conference, Bluesky's former CEO, Jay Graber, and CTO Paul Frazee, unveiled Attie, which is powered by Anthropic's Claude and built on top of Bluesky's underlying AT Protocol (atproto). Attie…",
           "routingTags": [
-            "model_release",
-            "pricing_change",
-            "open_source"
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s Claude popularity with paying consumers is skyrocketing",
+          "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/",
+          "source": "TechCrunch",
+          "date": "2026-03-28",
+          "summary": "Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million). Anthropic hasn't disclosed this data, but a spokesperson did tell TechCrunch that Claude paid subscriptions have more than doubled this year.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google is making it easier to import another AI’s memory into Gemini",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/902085/google-gemini-import-memory-chat-history",
+          "source": "The Verge",
+          "date": "2026-03-26",
+          "summary": "After Anthropic updated its tool for copying another AI's memory into Claude earlier this month, Google Gemini is rolling out new \"Import Memory\" and \"Import Chat History\" features on desktop that can help users quickly copy over everything their current AI already knows about them. To use the \"Import Memory\" tool, us…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Apple will reportedly allow other AI chatbots to plug into Siri",
+          "url": "https://www.theverge.com/tech/902048/apple-siri-ai-chatbot-update-ios-27",
+          "source": "The Verge",
+          "date": "2026-03-26",
+          "summary": "Apple's iOS 27 update will allow users to choose the AI chatbot they want to link with Siri. That's according to a report from Bloomberg's Mark Gurman, who says third-party chatbots downloaded from the App Store, like Google's Gemini or Anthropic's Claude, will be able to fetch replies for Siri - similar to how the [&…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
           ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-02-05-claude-opus-4-6-release-brief.md",
       "benchmarkCount": 5,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "qwen3-coder-next",
@@ -1909,7 +2562,7 @@
       "inputPrice": 0.12,
       "outputPrice": 0.75,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Qwen3 Coder Next is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.12 in / $0.75 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3-coder-next); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3 Coder Next is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1941,7 +2594,7 @@
       "ageDays": 76,
       "status": "tracking",
       "priority": "backfill",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
@@ -1954,12 +2607,12 @@
       "inputPrice": 0.3,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "MiniMax M2-her is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 65.5K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2-her); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "MiniMax's MiniMax M2-her is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "MiniMax's MiniMax M2-her is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1968,24 +2621,11 @@
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Chinese AI models (Qwen, Kimi, MiniMax) are going closed-source. Does that kill their appeal for you?",
-          "url": "https://reddit.com/r/ChatGPT/comments/1sgfp00/chinese_ai_models_qwen_kimi_minimax_are_going/",
-          "source": "Reddit r/ChatGPT",
-          "date": "2026-04-09",
-          "summary": "Honest question for people who actually use these models:\n\nThe main reason I and many others trusted Chinese AI models was open source — you could run them locally, inspect the weights, avoid sending data to Chinese servers. That felt like a reasonable workaround for anyone with privacy or geopolitical concerns.\n\nNow that they're closing up, the calculus changes:\n\n\\- No local deployment\n\n\\- API calls go to servers in China\n\n\\- No way to verify what the model is actually doing\n\nIs this a dealbrea",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "open_source"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-01-23-minimax-m2-her-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gpt-audio",
@@ -2012,9 +2652,9 @@
       "inputPrice": 2.5,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GPT Audio is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $2.50 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-audio); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT Audio is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT Audio is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2028,25 +2668,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -2056,12 +2682,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-01-19-gpt-audio-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gpt-audio-mini",
@@ -2088,9 +2767,9 @@
       "inputPrice": 0.6,
       "outputPrice": 2.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $0.60 in / $2.40 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-audio-mini); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT Audio Mini is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT Audio Mini is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2104,25 +2783,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -2132,12 +2797,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-01-19-gpt-audio-mini-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "glm-4.7-flash",
@@ -2164,7 +2882,7 @@
       "inputPrice": 0.06,
       "outputPrice": 0.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GLM 4.7 Flash is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.06 in / $0.40 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-4.7-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 4.7 Flash is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2209,9 +2927,9 @@
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GPT-5.2-Codex is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.2-codex); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2-Codex is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2-Codex is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2225,25 +2943,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -2253,12 +2957,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-01-14-gpt-5-2-codex-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "minimax-m2.1",
@@ -2272,7 +3029,7 @@
       "ageDays": 107,
       "status": "tracking",
       "priority": "backfill",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
@@ -2285,12 +3042,12 @@
       "inputPrice": 0.29,
       "outputPrice": 0.95,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "MiniMax M2.1 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 196.6K tokens. Current tracked pricing: $0.29 in / $0.95 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "MiniMax's MiniMax M2.1 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "MiniMax's MiniMax M2.1 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -2299,24 +3056,11 @@
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Chinese AI models (Qwen, Kimi, MiniMax) are going closed-source. Does that kill their appeal for you?",
-          "url": "https://reddit.com/r/ChatGPT/comments/1sgfp00/chinese_ai_models_qwen_kimi_minimax_are_going/",
-          "source": "Reddit r/ChatGPT",
-          "date": "2026-04-09",
-          "summary": "Honest question for people who actually use these models:\n\nThe main reason I and many others trusted Chinese AI models was open source — you could run them locally, inspect the weights, avoid sending data to Chinese servers. That felt like a reasonable workaround for anyone with privacy or geopolitical concerns.\n\nNow that they're closing up, the calculus changes:\n\n\\- No local deployment\n\n\\- API calls go to servers in China\n\n\\- No way to verify what the model is actually doing\n\nIs this a dealbrea",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "open_source"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2025-12-23-minimax-m2-1-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "glm-4.7",
@@ -2343,7 +3087,7 @@
       "inputPrice": 0.39,
       "outputPrice": 1.75,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GLM 4.7 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.39 in / $1.75 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-4.7); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 4.7 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2375,7 +3119,7 @@
       "ageDays": 113,
       "status": "tracking",
       "priority": "backfill",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://ai.google.dev/gemini-api/docs/changelog",
       "providerStatusUrl": "https://status.cloud.google.com",
       "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
@@ -2388,12 +3132,12 @@
       "inputPrice": 0.5,
       "outputPrice": 3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
-      "summary": "Gemini 3 Flash Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Free tier available; Computer Use Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3 Flash Preview is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-04-09 15:53:13",
+      "summary": "Gemini 3 Flash Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Free tier available; Computer Use Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Google's Gemini 3 Flash Preview is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -2402,11 +3146,99 @@
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Gemini gets notebooks to help you organize projects",
+          "url": "https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm",
+          "source": "The Verge",
+          "date": "2026-04-09",
+          "summary": "Google's Gemini is getting a feature called \"notebooks\" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google quietly launched an AI dictation app that works offline",
+          "url": "https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/",
+          "source": "TechCrunch",
+          "date": "2026-04-08",
+          "summary": "Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google Maps can now write captions for your photos using AI",
+          "url": "https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/",
+          "source": "TechCrunch",
+          "date": "2026-04-07",
+          "summary": "Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini is making it faster for distressed users to reach mental health resources",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update",
+          "source": "The Verge",
+          "date": "2026-04-07",
+          "summary": "Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot \"coached\" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "The Galaxy S26’s photo app can sloppify your memories",
+          "url": "https://www.theverge.com/tech/904176/samsung-galaxy-s26-ai-photo-assist-slop",
+          "source": "The Verge",
+          "date": "2026-03-31",
+          "summary": "The Google Pixel 9 walked so that the Samsung Galaxy S26 could run. Google introduced AI editing tools to Photos slowly. It started with changes to the background - make the sky more blue, or remove crowds of tourists. Things got weird once the company added natural language requests and let you ask for basically [&#8…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "You can now transfer your chats and personal information from other chatbots directly into Gemini",
+          "url": "https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/",
+          "source": "TechCrunch",
+          "date": "2026-03-26",
+          "summary": "Google is launching \"switching tools\" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2025-12-17-gemini-3-flash-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "mistral-small-creative",
@@ -2433,7 +3265,7 @@
       "inputPrice": 0.1,
       "outputPrice": 0.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Mistral Small Creative is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 32.8K tokens. Current tracked pricing: $0.10 in / $0.30 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-small-creative); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Mistral's Mistral Small Creative is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2478,7 +3310,7 @@
       "inputPrice": 0.05,
       "outputPrice": 0.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "Nemotron 3 Nano 30B A3B is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.05 in / $0.20 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-nano-30b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "NVIDIA's Nemotron 3 Nano 30B A3B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2523,9 +3355,9 @@
       "inputPrice": 21,
       "outputPrice": 168,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GPT-5.2 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $21.00 in / $168.00 out per million tokens. Premium reasoning tier Tracking only until benchmark coverage is available. Tracking only until benchmark coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2 Pro is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2 Pro is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2539,25 +3371,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -2567,12 +3385,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2025-12-10-gpt-5-2-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gpt-5.2",
@@ -2599,9 +3470,9 @@
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GPT-5.2 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Newest flagship; 90% off cached input There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2 is on the release desk with 2 related storyies and 5 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2 is on the release desk with 6 related storyies and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2656,25 +3527,11 @@
       ],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -2684,12 +3541,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2025-12-10-gpt-5-2-release-brief.md",
       "benchmarkCount": 5,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gpt-5.2-chat",
@@ -2716,9 +3626,9 @@
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-09 10:41:23",
+      "pricingUpdated": "2026-04-09 15:53:13",
       "summary": "GPT-5.2 Chat is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.2-chat); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2 Chat is on the release desk with 2 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2 Chat is on the release desk with 6 related storyies and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2732,25 +3642,11 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5",
-          "url": "https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since",
-          "source": "VentureBeat AI",
-          "date": "2026-04-09",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "industry_move",
-            "ai_agents",
-            "model_release"
-          ]
-        },
-        {
           "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
           "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch AI",
+          "source": "TechCrunch",
           "date": "2026-04-08",
-          "summary": "",
+          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -2760,12 +3656,65 @@
             "model_release",
             "ai_safety"
           ]
+        },
+        {
+          "title": "Introducing the Child Safety Blueprint",
+          "url": "https://openai.com/index/introducing-child-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-04-08",
+          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Announcing the OpenAI Safety Fellowship",
+          "url": "https://openai.com/index/introducing-openai-safety-fellowship",
+          "source": "OpenAI",
+          "date": "2026-04-06",
+          "summary": "A pilot program to support independent safety and alignment research and develop the next generation of talent",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "OpenAI",
+          "date": "2026-03-25",
+          "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "OpenAI",
+          "date": "2026-03-24",
+          "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "OpenAI",
+          "date": "2026-03-17",
+          "summary": "OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.",
+          "routingTags": [
+            "model_release",
+            "ai_safety"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2025-12-10-gpt-5-2-chat-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     }
   ]
 }

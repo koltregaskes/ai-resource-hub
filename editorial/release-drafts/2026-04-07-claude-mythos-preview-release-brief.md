@@ -2,17 +2,17 @@
 title: "Claude Mythos Preview: release brief"
 slug: "2026-04-07-claude-mythos-preview-release-brief"
 draft_type: "model-release"
-status: "needs_research"
+status: "ready_for_editor"
 priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-04-09T12:02:58.354Z"
+generated_at: "2026-04-09T15:53:53.514Z"
 ---
 
 # Claude Mythos Preview: release brief
 
-Anthropic's Claude Mythos Preview is on the release desk with 0 related storyies and 0 benchmark signals to review.
+Anthropic's Claude Mythos Preview is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -22,7 +22,7 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 - Preview status means the launch narrative matters before long-run benchmark coverage is complete.
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
+- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
 
 ## Benchmarks and evals to mention
 
@@ -30,7 +30,7 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 ## Outside coverage and early reactions
 
-- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
+- TechCrunch (2026-04-07): [Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative](https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/)
 
 ## Editor checklist
 
@@ -44,3 +44,4 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 - [Official launch or docs](https://www.anthropic.com/glasswing)
 - [Provider API/docs](https://docs.anthropic.com)
+- [TechCrunch: Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative](https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/)

@@ -7,7 +7,7 @@ priority: "watch"
 model: "Qwen3.5 397B A17B"
 provider: "Alibaba"
 release_date: "2026-02-16"
-generated_at: "2026-04-09T12:02:58.501Z"
+generated_at: "2026-04-09T15:53:53.516Z"
 ---
 
 # Qwen3.5 397B A17B: release brief

@@ -7,7 +7,7 @@ priority: "high"
 model: "Qwen3.6 Plus"
 provider: "Alibaba"
 release_date: "2026-04-02"
-generated_at: "2026-04-09T12:02:58.363Z"
+generated_at: "2026-04-09T15:53:53.514Z"
 ---
 
 # Qwen3.6 Plus: release brief
@@ -16,7 +16,7 @@ Alibaba's Qwen3.6 Plus is on the release desk with 0 related storyies and 0 benc
 
 ## Release summary
 
-Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. Tracking only until benchmark and quality coverage is available. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. Tracking only until benchmark and quality coverage is available. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

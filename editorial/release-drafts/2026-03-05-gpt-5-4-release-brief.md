@@ -7,16 +7,16 @@ priority: "watch"
 model: "GPT-5.4"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-04-09T12:02:58.422Z"
+generated_at: "2026-04-09T15:53:53.515Z"
 ---
 
 # GPT-5.4: release brief
 
-OpenAI's GPT-5.4 is on the release desk with 3 related storyies and 0 benchmark signals to review.
+OpenAI's GPT-5.4 is on the release desk with 6 related storyies and 0 benchmark signals to review.
 
 ## Release summary
 
-GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. Tracking only until benchmark and quality coverage is available. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. Tracking only until benchmark and quality coverage is available. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -29,9 +29,12 @@ GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 ## Outside coverage and early reactions
 
-- Reddit r/LocalLLaMA (2026-04-08): [[AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper](https://reddit.com/r/LocalLLaMA/comments/1sg2gyz/autobe_qwen_3527b_just_built_complete_backends/)
-- VentureBeat AI (2026-04-09): [Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5](https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since)
-- TechCrunch AI (2026-04-08): [OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
+- OpenAI (2026-03-17): [Introducing GPT-5.4 mini and nano](https://openai.com/index/introducing-gpt-5-4-mini-and-nano)
+- OpenAI (2026-04-01): [Gradient Labs gives every bank customer an AI account manager](https://openai.com/index/gradient-labs)
+- TechCrunch (2026-04-08): [OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
+- OpenAI (2026-04-08): [Introducing the Child Safety Blueprint](https://openai.com/index/introducing-child-safety-blueprint)
+- OpenAI (2026-04-06): [Announcing the OpenAI Safety Fellowship](https://openai.com/index/introducing-openai-safety-fellowship)
+- OpenAI (2026-03-25): [Introducing the OpenAI Safety Bug Bounty program](https://openai.com/index/safety-bug-bounty)
 
 ## Editor checklist
 
@@ -44,6 +47,9 @@ GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 - [Official launch or docs](https://developers.openai.com/api/docs/guides/latest-model)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [Reddit r/LocalLLaMA: [AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper](https://reddit.com/r/LocalLLaMA/comments/1sg2gyz/autobe_qwen_3527b_just_built_complete_backends/)
-- [VentureBeat AI: Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5](https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since)
-- [TechCrunch AI: OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
+- [OpenAI: Introducing GPT-5.4 mini and nano](https://openai.com/index/introducing-gpt-5-4-mini-and-nano)
+- [OpenAI: Gradient Labs gives every bank customer an AI account manager](https://openai.com/index/gradient-labs)
+- [TechCrunch: OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
+- [OpenAI: Introducing the Child Safety Blueprint](https://openai.com/index/introducing-child-safety-blueprint)
+- [OpenAI: Announcing the OpenAI Safety Fellowship](https://openai.com/index/introducing-openai-safety-fellowship)
+- [OpenAI: Introducing the OpenAI Safety Bug Bounty program](https://openai.com/index/safety-bug-bounty)

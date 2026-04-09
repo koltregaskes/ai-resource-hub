@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT Audio Mini"
 provider: "OpenAI"
 release_date: "2026-01-19"
-generated_at: "2026-04-09T12:02:58.537Z"
+generated_at: "2026-04-09T15:53:53.516Z"
 ---
 
 # GPT Audio Mini: release brief
 
-OpenAI's GPT Audio Mini is on the release desk with 2 related storyies and 0 benchmark signals to review.
+OpenAI's GPT Audio Mini is on the release desk with 6 related storyies and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,8 +29,12 @@ GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as a
 
 ## Outside coverage and early reactions
 
-- VentureBeat AI (2026-04-09): [Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5](https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since)
-- TechCrunch AI (2026-04-08): [OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
+- TechCrunch (2026-04-08): [OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
+- OpenAI (2026-04-08): [Introducing the Child Safety Blueprint](https://openai.com/index/introducing-child-safety-blueprint)
+- OpenAI (2026-04-06): [Announcing the OpenAI Safety Fellowship](https://openai.com/index/introducing-openai-safety-fellowship)
+- OpenAI (2026-03-25): [Introducing the OpenAI Safety Bug Bounty program](https://openai.com/index/safety-bug-bounty)
+- OpenAI (2026-03-24): [Helping developers build safer AI experiences for teens](https://openai.com/index/teen-safety-policies-gpt-oss-safeguard)
+- OpenAI (2026-03-17): [OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first](https://openai.com/index/japan-teen-safety-blueprint)
 
 ## Editor checklist
 
@@ -43,5 +47,9 @@ GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as a
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [VentureBeat AI: Llama exits Meta with box under Muse Spark sign. Credit: VentureBeat made with OpenAI GPT-Image-1.5](https://venturebeat.com/technology/goodbye-llama-meta-launches-new-proprietary-ai-model-muse-spark-first-since)
-- [TechCrunch AI: OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
+- [TechCrunch: OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
+- [OpenAI: Introducing the Child Safety Blueprint](https://openai.com/index/introducing-child-safety-blueprint)
+- [OpenAI: Announcing the OpenAI Safety Fellowship](https://openai.com/index/introducing-openai-safety-fellowship)
+- [OpenAI: Introducing the OpenAI Safety Bug Bounty program](https://openai.com/index/safety-bug-bounty)
+- [OpenAI: Helping developers build safer AI experiences for teens](https://openai.com/index/teen-safety-policies-gpt-oss-safeguard)
+- [OpenAI: OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first](https://openai.com/index/japan-teen-safety-blueprint)

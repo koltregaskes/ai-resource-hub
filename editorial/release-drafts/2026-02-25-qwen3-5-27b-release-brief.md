@@ -2,17 +2,17 @@
 title: "Qwen3.5-27B: release brief"
 slug: "2026-02-25-qwen3-5-27b-release-brief"
 draft_type: "model-release"
-status: "ready_for_editor"
+status: "needs_research"
 priority: "watch"
 model: "Qwen3.5-27B"
 provider: "Alibaba"
 release_date: "2026-02-25"
-generated_at: "2026-04-09T12:02:58.456Z"
+generated_at: "2026-04-09T15:53:53.515Z"
 ---
 
 # Qwen3.5-27B: release brief
 
-Alibaba's Qwen3.5-27B is on the release desk with 1 related story and 0 benchmark signals to review.
+Alibaba's Qwen3.5-27B is on the release desk with 0 related storyies and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -21,7 +21,7 @@ Qwen3.5-27B is a currently tracked release from Alibaba. It is positioned as an 
 ## Why this matters
 
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
+- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
 
 ## Benchmarks and evals to mention
 
@@ -29,7 +29,7 @@ Qwen3.5-27B is a currently tracked release from Alibaba. It is positioned as an 
 
 ## Outside coverage and early reactions
 
-- Reddit r/LocalLLaMA (2026-04-08): [[AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper](https://reddit.com/r/LocalLLaMA/comments/1sg2gyz/autobe_qwen_3527b_just_built_complete_backends/)
+- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
 
 ## Editor checklist
 
@@ -42,4 +42,3 @@ Qwen3.5-27B is a currently tracked release from Alibaba. It is positioned as an 
 
 - [Official launch or docs](https://help.aliyun.com/zh/model-studio/model-pricing)
 - [Provider API/docs](https://help.aliyun.com/zh/model-studio/model-pricing)
-- [Reddit r/LocalLLaMA: [AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper](https://reddit.com/r/LocalLLaMA/comments/1sg2gyz/autobe_qwen_3527b_just_built_complete_backends/)
