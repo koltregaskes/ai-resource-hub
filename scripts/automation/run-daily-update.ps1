@@ -115,6 +115,8 @@ function Test-IgnorableGeneratedChange {
     $normalised -eq 'data/provider-status.json' -or
     $normalised -eq 'public/data/ai-models-comparison.csv' -or
     $normalised -eq 'public/data/ai-models-comparison.json' -or
+    $normalised -eq 'public/data/ai-milestones.json' -or
+    $normalised -eq 'public/data/model-availability.json' -or
     $normalised -eq 'public/data/model-release-desk.json' -or
     $normalised -eq 'public/data/models-latest.json' -or
     $normalised -eq 'public/data/source-registry.json' -or
@@ -166,9 +168,11 @@ try {
   }
 
   Invoke-Logged 'npm.cmd' @('run', 'scrape')
+  Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
+  Invoke-Logged 'npm.cmd' @('run', 'generate:milestones')
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
   Invoke-Logged 'npm.cmd' @('run', 'generate:release-desk')
-  Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
+  Invoke-Logged 'npm.cmd' @('run', 'generate:availability')
   Invoke-Logged 'npm.cmd' @('run', 'generate:repo-reference')
 
   if (Test-Path (Join-Path $repoRoot 'scripts\sync-news-pipeline-data.mjs')) {

@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 09 Apr 2026, 21:02 UTC
+Generated: 09 Apr 2026, 21:31 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,12 +8,33 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
+| Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
 | Models and releases | Hourly automated refresh | Mixed | 09 Apr 2026, 21:02 UTC |
 | Benchmarks and evals | Hourly automated refresh | Automated | 09 Apr 2026, 21:02 UTC |
 | Pricing and value | Hourly automated refresh | Automated | 09 Apr 2026, 21:02 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 09 Apr 2026, 21:02 UTC |
 | Provider status | Hourly automated refresh | Automated | 09 Apr 2026, 21:02 UTC |
-| Guides and learning | Manual editorial review | Manual | 09 Apr 2026, 21:01 UTC |
+| Guides and learning | Manual editorial review | Manual | 09 Apr 2026, 21:29 UTC |
+
+## Regional availability
+
+- Cadence: Manual review with official-source refresh
+- Automation: Mixed
+- Last refreshed: 09 Apr 2026, 20:49 UTC
+- Category route: `/availability/`
+- Note: This lane is intentionally official-first and cautious. Unknown availability should stay unknown until the provider documents it.
+
+### Source Types
+
+- Official support-country and region-availability pages
+- Product FAQs and help-center coverage for country restrictions
+- Official docs and product availability notices
+
+### Last Visible Updates
+
+- 09 Apr 2026, 20:49 UTC: Sora app and Sora 2 - Model-specific rule for 2 tracked models on Web + App. (`/availability/`)
+- 09 Apr 2026, 20:47 UTC: Claude supported locations - Provider baseline rule for 14 tracked models on Web + App. (`/availability/`)
+- 09 Apr 2026, 20:41 UTC: Google AI Studio and Gemini API - Provider baseline rule for 19 tracked models on API + Web. (`/availability/`)
 
 ## Models and releases
 
@@ -117,7 +138,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 09 Apr 2026, 21:01 UTC
+- Last refreshed: 09 Apr 2026, 21:29 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -129,6 +150,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Apr 2026, 21:01 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 09 Apr 2026, 21:01 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
-- 09 Apr 2026, 21:01 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)
+- 09 Apr 2026, 21:29 UTC: Understanding Ai Pricing - Guide or learning page updated in the repository. (`/guides/understanding-ai-pricing/`)
+- 09 Apr 2026, 21:29 UTC: Prompting Basics - Guide or learning page updated in the repository. (`/guides/prompting-basics/`)
+- 09 Apr 2026, 21:29 UTC: Guides - Guide or learning page updated in the repository. (`/guides/`)

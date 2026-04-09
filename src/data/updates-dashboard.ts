@@ -4,6 +4,7 @@ import path from 'node:path';
 import { getLastScrapeTime, getNews, getRecentModels } from '../db/queries';
 import { modelReleaseDesk } from './model-release-desk.generated';
 import { getLatestDigest, normaliseDateTime } from './hub-dashboard';
+import { getAvailabilityOverview, getAvailabilityRows } from './model-availability';
 
 export interface UpdateHighlight {
   title: string;
@@ -159,6 +160,15 @@ function scrapeHighlights(
 }
 
 export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
+  const availabilityOverview = getAvailabilityOverview();
+  const availabilityHighlights = getAvailabilityRows()
+    .slice(0, 3)
+    .map((entry) => ({
+      title: entry.label,
+      detail: `${entry.scope === 'model' ? 'Model-specific' : 'Provider baseline'} rule for ${entry.matchingModelCount} tracked ${entry.matchingModelCount === 1 ? 'model' : 'models'} on ${entry.surfaceLabel}.`,
+      href: formatRoute(basePath, '/availability/'),
+      date: normaliseDateTime(entry.lastVerified),
+    }));
   const digest = getLatestDigest();
   const providerStatus = readProviderStatus();
   const recentNews = getNews(3).map((item) => ({
@@ -229,6 +239,23 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
   ]);
 
   return [
+    {
+      id: 'availability',
+      label: 'Regional availability',
+      cadence: 'Manual review with official-source refresh',
+      automation: 'Mixed',
+      status: 'manual',
+      href: formatRoute(basePath, '/availability/'),
+      summary: 'Track where models, apps, and API surfaces are officially available so launch coverage does not assume every market has access.',
+      sources: [
+        'Official support-country and region-availability pages',
+        'Product FAQs and help-center coverage for country restrictions',
+        'Official docs and product availability notices',
+      ],
+      note: 'This lane is intentionally official-first and cautious. Unknown availability should stay unknown until the provider documents it.',
+      lastRefreshed: availabilityOverview.latestVerification,
+      highlights: availabilityHighlights,
+    },
     {
       id: 'models',
       label: 'Models and releases',

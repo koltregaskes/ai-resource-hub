@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatAvailabilityDate, getAvailabilityOverview, getAvailabilityRows } from '../../data/model-availability';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const overview = getAvailabilityOverview();
+const rows = getAvailabilityRows();
+const modelRules = rows.filter((row) => row.scope === 'model');
+const providerRules = rows.filter((row) => row.scope === 'provider');
+---
+
+<BaseLayout
+  title="Regional Availability - The AI Resource Hub"
+  description="Official-country and region availability for tracked AI models, apps, and APIs, including model-specific restrictions where providers publish them."
+>
+  <section class="max-w-[1440px] mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Regional Availability</span>
+    </nav>
+
+    <div class="activity-shell">
+      <div class="activity-hero">
+        <div class="max-w-4xl">
+          <p class="activity-kicker">Regional Availability</p>
+          <h1 class="activity-title">Where tracked models and tools are officially available, and where they are not.</h1>
+          <p class="activity-intro">
+            This is the availability control room for the hub. We only add regional restrictions when a provider documents them
+            clearly enough to cite. Unknown markets stay unknown until the provider says otherwise.
+          </p>
+        </div>
+
+        <div class="activity-summary-grid">
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{overview.totalRules}</p>
+            <p class="activity-summary-label">Tracked rules</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{overview.modelSpecificRules}</p>
+            <p class="activity-summary-label">Model-specific restrictions</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{overview.providerBaselines}</p>
+            <p class="activity-summary-label">Provider baselines</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{overview.surfacedModels}</p>
+            <p class="activity-summary-label">Tracked models covered</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-4 xl:grid-cols-[minmax(0,1.55fr)_minmax(18rem,0.85fr)] mt-6">
+        <div class="rounded-[1.6rem] border border-(--color-border) bg-(--color-bg-card) p-5">
+          <p class="hub-home-mini-label">How to read this</p>
+          <p class="hub-home-feed-copy mt-3">
+            Provider baselines are broad region rules that apply to a family of products or APIs. Model-specific rules are the
+            higher-signal cases where a single product or model has narrower access than its provider's general footprint.
+          </p>
+          <div class="hub-home-chip-row mt-4">
+            <a href={`${base}updates/`} class="hub-home-chip">Updates & freshness</a>
+            <a href={`${base}collection-policy/`} class="hub-home-chip">Collection policy</a>
+            <a href={`${base}news/pipeline/`} class="hub-home-chip">News pipeline</a>
+            <a href={`${base}data/model-availability.json`} class="hub-home-chip">Raw JSON export</a>
+          </div>
+        </div>
+
+        <div class="rounded-[1.6rem] border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
+          <p class="hub-home-mini-label text-(--color-accent)">Last verification</p>
+          <h2 class="hub-home-side-title mt-2">Official docs first, assumptions second.</h2>
+          <p class="hub-home-feed-copy mt-3">
+            Country support is easy to misstate. We use official availability pages and product FAQs where possible, and we keep
+            inferred notes clearly marked.
+          </p>
+          <p class="hub-home-brief-meta mt-4">
+            <span>Latest verified</span>
+            <span>{formatAvailabilityDate(overview.latestVerification)}</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 space-y-8">
+        <section>
+          <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="hub-home-mini-label">Model-specific restrictions</p>
+              <h2 class="hub-home-card-title mt-2">The narrower rules that users are most likely to trip over.</h2>
+            </div>
+            <span class="badge badge-new">{modelRules.length} tracked</span>
+          </div>
+
+          <div class="grid gap-4 xl:grid-cols-2">
+            {modelRules.map((entry) => (
+              <article class="rounded-[1.8rem] border border-(--color-border) bg-(--color-bg-card) p-5 shadow-[0_18px_36px_rgba(47,27,12,0.08)]">
+                <div class="flex flex-wrap items-center gap-2">
+                  <p class="hub-home-mini-label">{entry.label}</p>
+                  <span class="badge badge-new">{entry.surfaceLabel}</span>
+                </div>
+                <h3 class="hub-home-feed-title mt-3">{entry.summary}</h3>
+                <p class="hub-home-feed-copy mt-2">{entry.coverageSummary}</p>
+
+                <div class="grid gap-4 mt-5 md:grid-cols-2">
+                  {entry.knownAvailableRegions && entry.knownAvailableRegions.length > 0 && (
+                    <div class="rounded-[1.2rem] border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+                      <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Known available</p>
+                      <div class="mt-3 flex flex-wrap gap-2">
+                        {entry.knownAvailableRegions.map((region) => (
+                          <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-200">
+                            {region}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {entry.knownUnavailableRegions && entry.knownUnavailableRegions.length > 0 && (
+                    <div class="rounded-[1.2rem] border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+                      <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Known unavailable</p>
+                      <div class="mt-3 flex flex-wrap gap-2">
+                        {entry.knownUnavailableRegions.map((region) => (
+                          <span class="rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-xs font-medium text-rose-200">
+                            {region}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div class="mt-5 rounded-[1.2rem] border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Applies to</p>
+                  <p class="mt-2 text-sm text-(--color-text-secondary)">{entry.matchingModelNames.join(', ')}</p>
+                  {entry.note && <p class="mt-3 text-xs leading-relaxed text-(--color-text-muted)">{entry.note}</p>}
+                </div>
+
+                <div class="mt-5 flex flex-wrap items-center justify-between gap-3 text-sm">
+                  <span class="text-(--color-text-muted)">Last verified {formatAvailabilityDate(entry.lastVerified)}</span>
+                  <a href={entry.sourceUrl} class="text-(--color-accent) hover:text-(--color-accent-hover)" target="_blank" rel="noopener noreferrer">
+                    {entry.sourceLabel}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="hub-home-mini-label">Provider baselines</p>
+              <h2 class="hub-home-card-title mt-2">Broad regional rules we can apply safely across provider families.</h2>
+            </div>
+            <span class="badge badge-best-value">{providerRules.length} tracked</span>
+          </div>
+
+          <div class="grid gap-4 xl:grid-cols-2">
+            {providerRules.map((entry) => (
+              <article class="rounded-[1.8rem] border border-(--color-border) bg-(--color-bg-card) p-5 shadow-[0_18px_36px_rgba(47,27,12,0.08)]">
+                <div class="flex flex-wrap items-center gap-2">
+                  <p class="hub-home-mini-label">{entry.providerName}</p>
+                  <span class="badge badge-best-value">{entry.surfaceLabel}</span>
+                </div>
+                <h3 class="hub-home-feed-title mt-3">{entry.label}</h3>
+                <p class="hub-home-feed-copy mt-2">{entry.summary}</p>
+
+                <div class="rounded-[1.2rem] border border-(--color-border) bg-(--color-bg-tertiary) p-4 mt-5">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Coverage summary</p>
+                  <p class="mt-2 text-sm leading-relaxed text-(--color-text-secondary)">{entry.coverageSummary}</p>
+                  {entry.knownAvailableRegions && entry.knownAvailableRegions.length > 0 && (
+                    <div class="mt-3 flex flex-wrap gap-2">
+                      {entry.knownAvailableRegions.map((region) => (
+                        <span class="rounded-full border border-(--color-border) bg-(--color-bg-primary) px-3 py-1 text-xs font-medium text-(--color-text-secondary)">
+                          {region}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  {entry.note && <p class="mt-3 text-xs leading-relaxed text-(--color-text-muted)">{entry.note}</p>}
+                </div>
+
+                <div class="grid gap-4 mt-5 md:grid-cols-2">
+                  <div class="rounded-[1.2rem] border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+                    <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Tracked models covered</p>
+                    <p class="mt-2 text-2xl font-black text-(--color-text-primary)">{entry.matchingModelCount}</p>
+                  </div>
+                  <div class="rounded-[1.2rem] border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+                    <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Last verified</p>
+                    <p class="mt-2 text-sm font-semibold text-(--color-text-primary)">{formatAvailabilityDate(entry.lastVerified)}</p>
+                  </div>
+                </div>
+
+                <div class="mt-5 flex flex-wrap items-center justify-between gap-3 text-sm">
+                  <span class="text-(--color-text-muted)">Examples: {entry.matchingModelNames.slice(0, 3).join(', ')}{entry.matchingModelCount > 3 ? ` + ${entry.matchingModelCount - 3} more` : ''}</span>
+                  <a href={entry.sourceUrl} class="text-(--color-accent) hover:text-(--color-accent-hover)" target="_blank" rel="noopener noreferrer">
+                    {entry.sourceLabel}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

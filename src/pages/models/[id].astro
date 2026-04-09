@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MiniPriceChart from '../../components/MiniPriceChart';
 import { getAllModelIds, getModelById, getModelBenchmarks, getModelPriceHistory, getProviderEndpoints, getModelMessageLimits } from '../../db/queries';
+import { getAvailabilityForModel, formatAvailabilityDate } from '../../data/model-availability';
 
 export function getStaticPaths() {
   const ids = getAllModelIds();
@@ -19,6 +20,7 @@ const benchmarks = getModelBenchmarks(id);
 const priceHistory = getModelPriceHistory(id);
 const providerEndpoints = getProviderEndpoints(id);
 const messageLimits = getModelMessageLimits(id);
+const availabilityEntries = getAvailabilityForModel(model);
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -93,7 +95,7 @@ const structuredData = {
 ---
 
 <BaseLayout
-  title={`${model.name} — The AI Resource Hub`}
+  title={`${model.name} - The AI Resource Hub`}
   description={isTrackedModel
     ? `${model.name} by ${model.provider_name}. Tracked release page with pricing, context window, availability, and source notes while benchmark coverage is still being collected.`
     : `${model.name} by ${model.provider_name}. Pricing: ${formatPrice(inputPrice)}/${formatPrice(outputPrice)} per 1M tokens. Context: ${formatTokens(model.context_window)} tokens. Quality score: ${model.quality_score}/100.`}
@@ -191,12 +193,12 @@ const structuredData = {
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Quality Score</p>
-        <p class="text-xl font-bold text-(--color-accent)">{isTrackedModel && model.quality_score === 0 ? '—' : model.quality_score}</p>
+        <p class="text-xl font-bold text-(--color-accent)">{isTrackedModel && model.quality_score === 0 ? '--' : model.quality_score}</p>
         <p class="text-xs text-(--color-text-muted)">{isTrackedModel && model.quality_score === 0 ? 'awaiting evaluation' : 'out of 100'}</p>
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Value Score</p>
-        <p class="text-xl font-bold text-(--color-success)">{isTrackedModel && model.quality_score === 0 ? '—' : valueScore}</p>
+        <p class="text-xl font-bold text-(--color-success)">{isTrackedModel && model.quality_score === 0 ? '--' : valueScore}</p>
         <p class="text-xs text-(--color-text-muted)">{isTrackedModel && model.quality_score === 0 ? 'awaiting evaluation' : 'quality per $'}</p>
       </div>
     </div>
@@ -289,6 +291,81 @@ const structuredData = {
         </div>
       )}
     </div>
+
+    {availabilityEntries.length > 0 && (
+      <div class="mb-8">
+        <div class="mb-4 flex flex-wrap items-center gap-3">
+          <h2 class="text-xl font-bold text-(--color-text-primary)">Regional Availability</h2>
+          <a href={`${base}availability/`} class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-hover)">
+            Open availability board
+          </a>
+        </div>
+
+        <div class="grid gap-4 lg:grid-cols-2">
+          {availabilityEntries.map((entry) => (
+            <article class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary)">
+                  {entry.surfaceLabel}
+                </span>
+                <span class={`text-xs px-2.5 py-1 rounded-full ${
+                  entry.scope === 'model'
+                    ? 'bg-amber-500/15 text-amber-100'
+                    : 'bg-emerald-500/12 text-emerald-200'
+                }`}>
+                  {entry.scope === 'model' ? 'Model-specific' : 'Provider baseline'}
+                </span>
+              </div>
+
+              <h3 class="mt-3 text-lg font-semibold text-(--color-text-primary)">{entry.label}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-(--color-text-secondary)">{entry.summary}</p>
+              <p class="mt-3 text-sm leading-relaxed text-(--color-text-secondary)">{entry.coverageSummary}</p>
+
+              {(entry.knownAvailableRegions || entry.knownUnavailableRegions) && (
+                <div class="grid gap-3 mt-4 sm:grid-cols-2">
+                  {entry.knownAvailableRegions && entry.knownAvailableRegions.length > 0 && (
+                    <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) p-3">
+                      <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Known available</p>
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        {entry.knownAvailableRegions.map((region) => (
+                          <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-medium text-emerald-200">
+                            {region}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {entry.knownUnavailableRegions && entry.knownUnavailableRegions.length > 0 && (
+                    <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) p-3">
+                      <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Known unavailable</p>
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        {entry.knownUnavailableRegions.map((region) => (
+                          <span class="rounded-full border border-rose-500/20 bg-rose-500/10 px-2.5 py-1 text-[11px] font-medium text-rose-200">
+                            {region}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {entry.note && (
+                <p class="mt-4 text-xs leading-relaxed text-(--color-text-muted)">{entry.note}</p>
+              )}
+
+              <div class="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm">
+                <span class="text-(--color-text-muted)">Last verified {formatAvailabilityDate(entry.lastVerified)}</span>
+                <a href={entry.sourceUrl} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors" target="_blank" rel="noopener noreferrer">
+                  {entry.sourceLabel}
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    )}
 
     <!-- Subscription Message Limits -->
     {messageLimits.length > 0 && (

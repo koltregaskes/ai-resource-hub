@@ -56,6 +56,9 @@ jobs:
       - name: Generate release desk and editorial drafts
         run: npm run generate:release-desk
 
+      - name: Generate regional availability export
+        run: npm run generate:availability
+
       - name: Generate repo reference snapshots
         run: npm run generate:repo-reference
 
