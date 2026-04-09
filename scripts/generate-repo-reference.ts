@@ -3,6 +3,7 @@ import path from 'node:path';
 
 import { getBenchmarks, getNews } from '../src/db/queries';
 import { getModels, getProviders } from '../src/db/pg-cache';
+import { formatAiMilestoneDate, getThisDayInAiOverview } from '../src/data/ai-anniversaries';
 import { getLatestActivities, getMetaLeaderboard, normaliseDateTime } from '../src/data/hub-dashboard';
 import { modelReleaseDesk } from '../src/data/model-release-desk.generated';
 import { newsPipelineSnapshot } from '../src/data/news-pipeline.generated';
@@ -131,6 +132,7 @@ function buildIndexDoc(generatedAt: string): string {
       [repoLink('composite-leaderboard.md', './composite-leaderboard.md'), 'Top of the benchmark-weighted ranking as rendered for the website.'],
       [repoLink('latest-releases.md', './latest-releases.md'), 'Newest tracked releases and editor-state visibility from the release desk.'],
       [repoLink('provider-coverage.md', './provider-coverage.md'), 'Per-provider model coverage across active, tracking, and preview states.'],
+      [repoLink('this-day-in-ai.md', './this-day-in-ai.md'), 'Curated launch anniversaries, lab birthdays, and upcoming milestone dates.'],
       [repoLink('source-registry.md', './source-registry.md'), 'Tracked source registry with routing, collection lane, and verification notes.'],
       [repoLink('activity-log.md', './activity-log.md'), 'Recent visible changes across data, models, digest, jobs, and site operations.'],
     ],
@@ -459,6 +461,90 @@ Raw export: ${repoLink('source-registry.json', '../../public/data/source-registr
 `;
 }
 
+function buildThisDayInAiDoc(generatedAt: string): string {
+  const overview = getThisDayInAiOverview();
+
+  const summaryTable = markdownTable(
+    ['Metric', 'Value'],
+    [
+      ['Generated', formatDateTime(generatedAt)],
+      ['Reference date', overview.generatedForLabel],
+      ['Curated milestones', String(overview.trackedMilestones)],
+      ['Exact-date anniversaries', String(overview.exactDateMilestones)],
+      ['Anniversaries today', String(overview.todayMilestones.length)],
+      ['Next exact milestone', overview.nextMilestone ? `${overview.nextMilestone.title} (${overview.nextMilestone.nextOccurrenceLabel})` : 'n/a'],
+    ],
+  );
+
+  const todayTable = overview.todayMilestones.length > 0
+    ? markdownTable(
+      ['Title', 'Category', 'Years', 'Source'],
+      overview.todayMilestones.map((milestone) => [
+        milestone.title,
+        milestone.category,
+        String(milestone.anniversaryYears),
+        externalLink(milestone.sourceLabel, milestone.sourceUrl),
+      ]),
+    )
+    : 'No exact anniversary lands on the current Europe/London date snapshot.';
+
+  const upcomingTable = markdownTable(
+    ['In', 'Date', 'Title', 'Source'],
+    overview.upcomingMilestones.map((milestone) => [
+      `${milestone.daysUntil}d`,
+      milestone.nextOccurrenceLabel,
+      milestone.title,
+      externalLink(milestone.sourceLabel, milestone.sourceUrl),
+    ]),
+  );
+
+  const launchTable = markdownTable(
+    ['Date', 'Milestone', 'Source'],
+    overview.launchMilestones.map((milestone) => [
+      formatAiMilestoneDate(milestone),
+      milestone.title,
+      externalLink(milestone.sourceLabel, milestone.sourceUrl),
+    ]),
+  );
+
+  const labTable = markdownTable(
+    ['Date', 'Lab milestone', 'Source'],
+    overview.labMilestones.map((milestone) => [
+      formatAiMilestoneDate(milestone),
+      milestone.title,
+      externalLink(milestone.sourceLabel, milestone.sourceUrl),
+    ]),
+  );
+
+  return `
+# This Day in AI Snapshot
+
+Generated: ${formatDateTime(generatedAt)}
+
+Repo-readable mirror of the public anniversaries page. This is the curated date reference for major model launches and lab birthdays.
+
+## Summary
+
+${summaryTable}
+
+## On This Day
+
+${todayTable}
+
+## Coming Up Next
+
+${upcomingTable}
+
+## Big Model Launch Dates
+
+${launchTable}
+
+## Lab Founding Dates and Institutional Milestones
+
+${labTable}
+`;
+}
+
 function main(): void {
   const generatedAt = new Date().toISOString();
 
@@ -467,6 +553,7 @@ function main(): void {
   writeDoc('composite-leaderboard.md', buildLeaderboardDoc(generatedAt));
   writeDoc('latest-releases.md', buildReleasesDoc(generatedAt));
   writeDoc('provider-coverage.md', buildProviderCoverageDoc(generatedAt));
+  writeDoc('this-day-in-ai.md', buildThisDayInAiDoc(generatedAt));
   writeDoc('source-registry.md', buildSourceRegistryDoc(generatedAt));
   writeDoc('activity-log.md', buildActivityLogDoc(generatedAt));
 

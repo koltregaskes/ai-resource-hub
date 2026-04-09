@@ -7,16 +7,16 @@ priority: "high"
 model: "Grok 4.20 Multi-Agent"
 provider: "xAI"
 release_date: "2026-03-31"
-generated_at: "2026-04-09T17:21:21.599Z"
+generated_at: "2026-04-09T18:53:53.148Z"
 ---
 
 # Grok 4.20 Multi-Agent: release brief
 
-xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related storyies and 0 benchmark signals to review.
+xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
-Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. Tracking only until benchmark and quality coverage is available. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -30,6 +30,14 @@ Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned 
 ## Outside coverage and early reactions
 
 - No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
+
+## Suggested thread / post structure
+
+1. Lead with the hook: what xAI actually launched with Grok 4.20 Multi-Agent, and why it matters now.
+2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
+3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
+4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
+5. Keep the chronology explicit: this release landed on 31 Mar 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 

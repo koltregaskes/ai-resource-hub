@@ -1,6 +1,6 @@
 # Recent Activity Snapshot
 
-Generated: 09 Apr 2026, 17:36 UTC
+Generated: 09 Apr 2026, 18:50 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
@@ -11,9 +11,11 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 09 Apr 2026, 17:21 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
 | 09 Apr 2026, 17:21 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 09 Apr 2026, 17:21 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Apr 2026, 12:00 UTC | digest | Cold start latency on GPU cloud platforms in 2026 — p99 specifically, not p50. Anyone have real data? [D] | Reddit r/MachineLearning featured in the latest daily brief. | [open](https://reddit.com/r/MachineLearning/comments/1sgvw83/cold_start_latency_on_gpu_cloud_platforms_in_2026/) |
 | 09 Apr 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,082 open roles across 10 tracked companies. | `/jobs/` |
-| 09 Apr 2026, 12:00 UTC | digest | Published the 2026-04-09 daily digest | 20 stories captured from 677 sources. | `/news/` |
-| 08 Apr 2026, 12:00 UTC | digest | Meta Releases Muse Spark - A Natively Multimodal Reasoning model | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sfyacf/meta_releases_muse_spark_a_natively_multimodal/) |
+| 09 Apr 2026, 12:00 UTC | digest | Published the 2026-04-09 daily digest | 20 stories captured from tracked sources. | `/news/` |
+| 09 Apr 2026, 12:00 UTC | digest | Turbo-OCR for high-volume image and PDF processing | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sg8lfr/turboocr_for_highvolume_image_and_pdf_processing/) |
+| 09 Apr 2026, 12:00 UTC | digest | Used ray tracing cores on my RTX 5070 Ti for LLM routing — 218x speedup, runs entirely on 1 consumer GPU | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sgs3vp/used_ray_tracing_cores_on_my_rtx_5070_ti_for_llm/) |
 | 02 Apr 2026, 16:33 UTC | data | NeurIPS 2026 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | ICML 2026 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -24,5 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 29 Sept 2025, 12:00 UTC | models | DeepSeek V3 0324 added to the comparison layer | DeepSeek now appears in the live model index and ranking surfaces. | `/models/deepseek-v3.2/` |
-| 07 Aug 2025, 12:00 UTC | models | GPT-5 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5/` |
-| 07 Aug 2025, 12:00 UTC | models | GPT-5 Nano added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5-nano/` |

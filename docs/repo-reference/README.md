@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 09 Apr 2026, 17:36 UTC |
+| Generated | 09 Apr 2026, 18:50 UTC |
 | Providers tracked | 39 |
 | Public models | 299 |
 | Active models | 101 |
@@ -30,6 +30,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | [composite-leaderboard.md](./composite-leaderboard.md) | Top of the benchmark-weighted ranking as rendered for the website. |
 | [latest-releases.md](./latest-releases.md) | Newest tracked releases and editor-state visibility from the release desk. |
 | [provider-coverage.md](./provider-coverage.md) | Per-provider model coverage across active, tracking, and preview states. |
+| [this-day-in-ai.md](./this-day-in-ai.md) | Curated launch anniversaries, lab birthdays, and upcoming milestone dates. |
 | [source-registry.md](./source-registry.md) | Tracked source registry with routing, collection lane, and verification notes. |
 | [activity-log.md](./activity-log.md) | Recent visible changes across data, models, digest, jobs, and site operations. |
 

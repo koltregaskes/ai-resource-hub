@@ -7,16 +7,16 @@ priority: "high"
 model: "Kimi K2 0711"
 provider: "Moonshot AI"
 release_date: "2026-03-28"
-generated_at: "2026-04-09T17:21:21.599Z"
+generated_at: "2026-04-09T18:53:53.152Z"
 ---
 
 # Kimi K2 0711: release brief
 
-Moonshot AI's Kimi K2 0711 is on the release desk with 0 related storyies and 0 benchmark signals to review.
+Moonshot AI's Kimi K2 0711 is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
-Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -30,6 +30,14 @@ Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned a
 ## Outside coverage and early reactions
 
 - No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
+
+## Suggested thread / post structure
+
+1. Lead with the hook: what Moonshot AI actually launched with Kimi K2 0711, and why it matters now.
+2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
+3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
+4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
+5. Keep the chronology explicit: this release landed on 28 Mar 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 

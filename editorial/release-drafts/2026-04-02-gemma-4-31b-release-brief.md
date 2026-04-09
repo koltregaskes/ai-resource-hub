@@ -7,16 +7,16 @@ priority: "high"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-04-09T17:21:21.599Z"
+generated_at: "2026-04-09T18:53:53.135Z"
 ---
 
 # Gemma 4 31B: release brief
 
-Google's Gemma 4 31B is on the release desk with 5 related storyies and 0 benchmark signals to review.
+Google's Gemma 4 31B is on the release desk with 5 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
-Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $0.40 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. Tracking only until benchmark and quality coverage is available. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $0.40 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -30,11 +30,20 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-09): [Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm)
-- TechCrunch (2026-04-08): [Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/)
-- TechCrunch (2026-04-07): [Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/)
-- The Verge (2026-04-07): [Gemini is making it faster for distressed users to reach mental health resources](https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update)
-- Google (2026-04-02): [New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/)
+- The Verge (2026-04-09): [Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm) - Google's Gemini is getting a feature called "notebooks" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…
+- TechCrunch (2026-04-08): [Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/) - Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.
+- TechCrunch (2026-04-07): [Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/) - Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.
+- The Verge (2026-04-07): [Gemini is making it faster for distressed users to reach mental health resources](https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update) - Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot "coached" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…
+- Google (2026-04-02): [New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/) - Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.
+
+## Suggested thread / post structure
+
+1. Lead with the hook: what Google actually launched with Gemma 4 31B, and why it matters now.
+2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
+3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
+4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
+5. Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.
+6. Keep the chronology explicit: this release landed on 2 Apr 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 

@@ -7,12 +7,12 @@ priority: "watch"
 model: "Nano Banana 2 (Gemini 3.1 Flash Image Preview)"
 provider: "Google"
 release_date: "2026-02-26"
-generated_at: "2026-04-09T17:21:21.599Z"
+generated_at: "2026-04-09T18:53:53.196Z"
 ---
 
 # Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief
 
-Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 6 related storyies and 0 benchmark signals to review.
+Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 6 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,12 +29,20 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-09): [Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm)
-- TechCrunch (2026-04-08): [Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/)
-- TechCrunch (2026-04-07): [Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/)
-- The Verge (2026-04-07): [Gemini is making it faster for distressed users to reach mental health resources](https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update)
-- The Verge (2026-03-31): [The Galaxy S26’s photo app can sloppify your memories](https://www.theverge.com/tech/904176/samsung-galaxy-s26-ai-photo-assist-slop)
-- TechCrunch (2026-03-26): [You can now transfer your chats and personal information from other chatbots directly into Gemini](https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/)
+- The Verge (2026-04-09): [Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm) - Google's Gemini is getting a feature called "notebooks" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…
+- TechCrunch (2026-04-08): [Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/) - Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.
+- TechCrunch (2026-04-07): [Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/) - Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.
+- The Verge (2026-04-07): [Gemini is making it faster for distressed users to reach mental health resources](https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update) - Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot "coached" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…
+- The Verge (2026-03-31): [The Galaxy S26’s photo app can sloppify your memories](https://www.theverge.com/tech/904176/samsung-galaxy-s26-ai-photo-assist-slop) - The Google Pixel 9 walked so that the Samsung Galaxy S26 could run. Google introduced AI editing tools to Photos slowly. It started with changes to the background - make the sky more blue, or remove crowds of tourists. Things got weird once the company added natural language requests and let you ask for basically [&#8…
+- TechCrunch (2026-03-26): [You can now transfer your chats and personal information from other chatbots directly into Gemini](https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/) - Google is launching "switching tools" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini.
+
+## Suggested thread / post structure
+
+1. Lead with the hook: what Google actually launched with Nano Banana 2 (Gemini 3.1 Flash Image Preview), and why it matters now.
+2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
+3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
+4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
+5. Keep the chronology explicit: this release landed on 26 Feb 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 

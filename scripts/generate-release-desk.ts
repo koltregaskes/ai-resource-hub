@@ -146,7 +146,32 @@ function buildSummary(model: ReleaseModelRow, officialUrl: string | null): strin
     parts.push('There is an official launch or documentation URL attached, so this is ready for source-first editorial work.');
   }
 
-  return parts.join(' ');
+  const seen = new Set<string>();
+  const sentences: string[] = [];
+
+  for (const part of parts) {
+    for (const sentence of part.split(/(?<=[.!?])\s+/)) {
+      const trimmed = sentence.trim();
+      if (!trimmed) continue;
+
+      const key = trimmed.toLowerCase().replace(/\s+/g, ' ');
+      if (seen.has(key)) continue;
+
+      seen.add(key);
+      sentences.push(trimmed);
+    }
+  }
+
+  return sentences.join(' ');
+}
+
+function cleanSummaryText(value: string | null | undefined): string {
+  return String(value ?? '')
+    .replace(/â€¦/g, '...')
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function buildWhyItMatters(model: ReleaseModelRow, benchmarkCount: number, relatedStoryCount: number): string[] {
@@ -192,6 +217,42 @@ function buildChecklist(model: ReleaseModelRow): string[] {
   }
 
   return checklist;
+}
+
+function buildThreadPlan(entry: {
+  modelName: string;
+  providerName: string;
+  openSource: boolean;
+  benchmarkCount: number;
+  relatedStoryCount: number;
+  releaseDate: string | null;
+}): string[] {
+  const steps = [
+    `Lead with the hook: what ${entry.providerName} actually launched with ${entry.modelName}, and why it matters now.`,
+    'Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.',
+  ];
+
+  if (entry.benchmarkCount > 0) {
+    steps.push('Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.');
+  } else {
+    steps.push('Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.');
+  }
+
+  if (entry.relatedStoryCount > 0) {
+    steps.push('Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.');
+  } else {
+    steps.push('Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.');
+  }
+
+  if (entry.openSource) {
+    steps.push('Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.');
+  }
+
+  if (entry.releaseDate) {
+    steps.push(`Keep the chronology explicit: this release landed on ${formatDate(entry.releaseDate)} and should be framed against the models it is replacing or competing with.`);
+  }
+
+  return steps;
 }
 
 function scoreRelatedStory(
@@ -246,8 +307,9 @@ function buildDraftMarkdown(entry: {
   summary: string;
   whyItMatters: string[];
   checklist: string[];
+  threadPlan: string[];
   benchmarkHighlights: Array<{ benchmark_name: string; score: number; scale_max: number; source: string | null }>;
-  relatedStories: Array<{ title: string; url: string; source: string; date: string; routingTags: string[] }>;
+  relatedStories: Array<{ title: string; url: string; source: string; date: string; summary: string; routingTags: string[] }>;
   officialUrl: string | null;
   providerDocsUrl: string | null;
 }): string {
@@ -292,8 +354,12 @@ ${entry.benchmarkHighlights.length > 0
 ## Outside coverage and early reactions
 
 ${entry.relatedStories.length > 0
-    ? entry.relatedStories.map((story) => `- ${story.source} (${story.date}): [${story.title}](${story.url})`).join('\n')
+    ? entry.relatedStories.map((story) => `- ${story.source} (${story.date}): [${story.title}](${story.url})${story.summary ? ` - ${story.summary}` : ''}`).join('\n')
     : '- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.'}
+
+## Suggested thread / post structure
+
+${entry.threadPlan.map((item, index) => `${index + 1}. ${item}`).join('\n')}
 
 ## Editor checklist
 
@@ -439,7 +505,7 @@ function main() {
         url: story.url,
         source: story.source,
         date: story.date,
-        summary: story.summary,
+        summary: cleanSummaryText(story.summary),
         routingTags: story.routingTags,
       }));
 
@@ -455,10 +521,18 @@ function main() {
         ? 'needs_research'
         : 'watch_only';
     const fileSlug = `${model.released ?? now.toISOString().slice(0, 10)}-${slugify(model.name)}-release-brief`;
-    const dek = `${model.provider_name}'s ${model.name} is on the release desk with ${relatedStories.length} related story${relatedStories.length === 1 ? '' : 'ies'} and ${benchmarkHighlights.length} benchmark signal${benchmarkHighlights.length === 1 ? '' : 's'} to review.`;
+    const dek = `${model.provider_name}'s ${model.name} is on the release desk with ${relatedStories.length} related ${relatedStories.length === 1 ? 'story' : 'stories'} and ${benchmarkHighlights.length} benchmark signal${benchmarkHighlights.length === 1 ? '' : 's'} to review.`;
     const summary = buildSummary(model, officialUrl);
     const whyItMatters = buildWhyItMatters(model, benchmarkHighlights.length, relatedStories.length);
     const checklist = buildChecklist(model);
+    const threadPlan = buildThreadPlan({
+      modelName: model.name,
+      providerName: model.provider_name,
+      openSource: Boolean(model.open_source),
+      benchmarkCount: benchmarkHighlights.length,
+      relatedStoryCount: relatedStories.length,
+      releaseDate: model.released,
+    });
     const draftPath = path.relative(process.cwd(), path.join(DRAFT_DIR, `${fileSlug}.md`)).replace(/\\/g, '/');
 
     return {
@@ -491,6 +565,7 @@ function main() {
       dek,
       whyItMatters,
       checklist,
+      threadPlan,
       benchmarkHighlights,
       relatedStories,
       draftPath,
@@ -547,6 +622,7 @@ function main() {
       summary: release.summary,
       whyItMatters: release.whyItMatters,
       checklist: release.checklist,
+      threadPlan: release.threadPlan,
       benchmarkHighlights: release.benchmarkHighlights,
       relatedStories: release.relatedStories,
       officialUrl: release.officialUrl,

@@ -2114,6 +2114,12 @@ a {
   }
 }
 
+@media (min-width: 1280px) {
+  .hub-home-support-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 900px) {
   .hub-home-col-desktop {
     display: none;

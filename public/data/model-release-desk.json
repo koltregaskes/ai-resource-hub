@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T17:21:21.502Z",
+  "generatedAt": "2026-04-09T18:53:52.289Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -36,7 +36,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Claude Opus 4.6 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $30.00 in / $150.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.6-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -46,6 +46,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Opus 4.6 (Fast), and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 7 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -81,7 +88,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GLM 5.1 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.40 in / $4.40 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Zhipu AI's GLM 5.1 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Zhipu AI's GLM 5.1 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -91,6 +98,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Zhipu AI actually launched with GLM 5.1, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 7 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -138,6 +152,13 @@
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups.",
         "Explain whether this is open-weight, limited preview, or a non-general-availability research release."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Mythos Preview, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 7 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -188,8 +209,8 @@
       "outputPrice": 0.4,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $0.40 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. Tracking only until benchmark and quality coverage is available. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. Open-weight Gemma 4 family anchor for local/open-source coverage. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemma 4 31B is on the release desk with 5 related storyies and 0 benchmark signals to review.",
+      "summary": "Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $0.40 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Google's Gemma 4 31B is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -201,6 +222,14 @@
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups.",
         "Add local-running context: LM Studio, Ollama, GGUF, MLX, or device notes where relevant."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemma 4 31B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.",
+        "Keep the chronology explicit: this release landed on 2 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -306,8 +335,8 @@
       "outputPrice": 1.95,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. Tracking only until benchmark and quality coverage is available. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. Latest Qwen Plus line in Model Studio pricing. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.6 Plus is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "summary": "Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Alibaba's Qwen3.6 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -317,6 +346,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.6 Plus, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 2 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -352,7 +388,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GLM 5V Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5v-turbo); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Zhipu AI's GLM 5V Turbo is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Zhipu AI's GLM 5V Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -362,6 +398,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Zhipu AI actually launched with GLM 5V Turbo, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 1 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -396,8 +439,8 @@
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI flagship model. Tracking only until benchmark and quality coverage is available. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. xAI flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "xAI's Grok 4.20 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "summary": "Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI flagship model. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "xAI's Grok 4.20 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -407,6 +450,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what xAI actually launched with Grok 4.20, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 31 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -441,8 +491,8 @@
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. Tracking only until benchmark and quality coverage is available. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. xAI multi-agent Grok variant. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "summary": "Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -452,6 +502,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what xAI actually launched with Grok 4.20 Multi-Agent, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 31 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -486,8 +543,8 @@
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. Current Kimi family line in Moonshot platform docs. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Moonshot AI's Kimi K2 0711 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "summary": "Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Moonshot AI's Kimi K2 0711 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -497,6 +554,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Moonshot AI actually launched with Kimi K2 0711, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 28 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -532,7 +596,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Reka Edge is a currently tracked release from Reka. It is positioned as an API-available model rather than a local-only release. Tracked context window: 16.4K tokens. Current tracked pricing: $0.10 in / $0.10 out per million tokens. Auto-tracked from OpenRouter discovery (rekaai/reka-edge); awaiting official verification.",
-      "dek": "Reka's Reka Edge is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Reka's Reka Edge is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -542,6 +606,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Reka actually launched with Reka Edge, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 20 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -576,8 +647,8 @@
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Current MiniMax flagship family line. Tracking only until benchmark and quality coverage is available. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. Current MiniMax flagship family line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "MiniMax's MiniMax M2.7 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "summary": "MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Current MiniMax flagship family line. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "MiniMax's MiniMax M2.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -587,6 +658,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what MiniMax actually launched with MiniMax M2.7, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 18 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -621,8 +699,8 @@
       "outputPrice": 4.5,
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": "2026-04-09 17:21:03",
-      "summary": "GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.75 in / $4.50 out per million tokens. Smaller GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. Smaller GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Mini is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "summary": "GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.75 in / $4.50 out per million tokens. Smaller GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "OpenAI's GPT-5.4 Mini is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -632,6 +710,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.4 Mini, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 17 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -678,7 +763,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -737,8 +822,8 @@
       "outputPrice": 1.25,
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": "2026-04-09 17:21:03",
-      "summary": "GPT-5.4 Nano is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.20 in / $1.25 out per million tokens. Fastest and cheapest GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. Fastest and cheapest GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Nano is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "summary": "GPT-5.4 Nano is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.20 in / $1.25 out per million tokens. Fastest and cheapest GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "OpenAI's GPT-5.4 Nano is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -748,6 +833,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.4 Nano, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 17 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -772,7 +864,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -853,7 +945,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Mistral Small 4 is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-small-2603); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Mistral's Mistral Small 4 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Mistral's Mistral Small 4 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -863,6 +955,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Mistral actually launched with Mistral Small 4, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 16 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -897,8 +996,8 @@
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. Tracking only until benchmark and quality coverage is available. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. Lower-cost GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Zhipu AI's GLM 5 Turbo is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "summary": "GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Zhipu AI's GLM 5 Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -908,6 +1007,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Zhipu AI actually launched with GLM 5 Turbo, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 15 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -943,7 +1049,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.10 in / $0.50 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-super-120b-a12b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "NVIDIA's Nemotron 3 Super is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "NVIDIA's Nemotron 3 Super is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -953,6 +1059,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what NVIDIA actually launched with Nemotron 3 Super, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 11 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -988,7 +1101,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Qwen3.5-9B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 256K tokens. Current tracked pricing: $0.05 in / $0.15 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-9b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5-9B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5-9B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -998,6 +1111,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.5-9B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 10 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -1032,8 +1152,8 @@
       "outputPrice": 15,
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": "2026-04-09 17:21:03",
-      "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. Tracking only until benchmark and quality coverage is available. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. Current flagship GPT family model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1043,6 +1163,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.4, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 5 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -1089,7 +1216,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -1148,8 +1275,8 @@
       "outputPrice": 180,
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": "2026-04-09 17:21:03",
-      "summary": "GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Premium GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. Premium GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Pro is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "summary": "GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Premium GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "OpenAI's GPT-5.4 Pro is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1159,6 +1286,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.4 Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 5 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -1183,7 +1317,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -1264,7 +1398,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GPT-5.3 Chat is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.3-chat); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.3 Chat is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.3 Chat is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1274,6 +1408,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.3 Chat, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 3 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -1298,7 +1439,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -1379,7 +1520,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.25 in / $1.50 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.1-flash-lite-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.1 Flash Lite Preview is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Flash Lite Preview is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1389,6 +1530,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 3.1 Flash Lite Preview, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 3 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -1512,7 +1660,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 65.5K tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.1-flash-image-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1522,6 +1670,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Nano Banana 2 (Gemini 3.1 Flash Image Preview), and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 26 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -1645,7 +1800,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Qwen3.5-35B-A3B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.16 in / $1.30 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-35b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5-35B-A3B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5-35B-A3B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -1655,6 +1810,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.5-35B-A3B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 25 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -1690,7 +1852,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Qwen3.5-27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.20 in / $1.56 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-27b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5-27B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5-27B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -1700,6 +1862,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.5-27B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 25 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -1735,7 +1904,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Qwen3.5-122B-A10B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.26 in / $2.08 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-122b-a10b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5-122B-A10B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5-122B-A10B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -1745,6 +1914,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.5-122B-A10B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 25 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -1780,7 +1956,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Qwen3.5-Flash is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.07 in / $0.26 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-flash-02-23); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5-Flash is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5-Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -1790,6 +1966,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.5-Flash, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 25 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -1825,7 +2008,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GPT-5.3-Codex is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.3-codex); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.3-Codex is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.3-Codex is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1835,6 +2018,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.3-Codex, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 24 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -1859,7 +2049,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -1939,8 +2129,8 @@
       "outputPrice": 12,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 6 related storyies and 2 benchmark signals to review.",
+      "summary": "Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 6 related stories and 2 benchmark signals to review.",
       "whyItMatters": [
         "There are already 2 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1950,6 +2140,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 3.1 Pro Preview, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 19 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
         {
@@ -2089,8 +2286,8 @@
       "outputPrice": 15,
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": "2026-04-09 17:21:03",
-      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 5 related storyies and 4 benchmark signals to review.",
+      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 5 related stories and 4 benchmark signals to review.",
       "whyItMatters": [
         "There are already 4 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2100,6 +2297,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Sonnet 4.6, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 17 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
         {
@@ -2240,7 +2444,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Qwen3.5 Plus 2026-02-15 is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.26 in / $1.56 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-plus-02-15); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5 Plus 2026-02-15 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5 Plus 2026-02-15 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2250,6 +2454,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.5 Plus 2026-02-15, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 16 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -2285,7 +2496,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Qwen3.5 397B A17B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.39 in / $2.34 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-397b-a17b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5 397B A17B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5 397B A17B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2295,6 +2506,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.5 397B A17B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 16 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -2329,8 +2547,8 @@
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "GLM 5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 80K tokens. Current tracked pricing: $0.72 in / $2.30 out per million tokens. Zhipu flagship GLM 5 line. Tracking only until benchmark and quality coverage is available. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. Zhipu flagship GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Zhipu AI's GLM 5 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "summary": "GLM 5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 80K tokens. Current tracked pricing: $0.72 in / $2.30 out per million tokens. Zhipu flagship GLM 5 line. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Zhipu AI's GLM 5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2340,6 +2558,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Zhipu AI actually launched with GLM 5, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 12 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -2375,7 +2600,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "MiniMax M2.5 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 196.6K tokens. Current tracked pricing: $0.12 in / $0.99 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2.5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "MiniMax's MiniMax M2.5 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "MiniMax's MiniMax M2.5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2385,6 +2610,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what MiniMax actually launched with MiniMax M2.5, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 12 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -2419,8 +2651,8 @@
       "outputPrice": 75,
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": "2026-04-09 17:21:03",
-      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 4 related storyies and 5 benchmark signals to review.",
+      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 4 related stories and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2430,6 +2662,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Opus 4.6, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 5 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
         {
@@ -2564,7 +2803,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Qwen3 Coder Next is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.12 in / $0.75 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3-coder-next); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3 Coder Next is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3 Coder Next is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2574,6 +2813,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3 Coder Next, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 4 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -2609,7 +2855,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "MiniMax M2-her is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 65.5K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2-her); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "MiniMax's MiniMax M2-her is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "MiniMax's MiniMax M2-her is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2619,6 +2865,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what MiniMax actually launched with MiniMax M2-her, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 23 Jan 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -2654,7 +2907,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GPT Audio is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $2.50 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-audio); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT Audio is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT Audio is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2664,6 +2917,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT Audio, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 19 Jan 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -2688,7 +2948,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -2769,7 +3029,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $0.60 in / $2.40 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-audio-mini); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT Audio Mini is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT Audio Mini is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2779,6 +3039,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT Audio Mini, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 19 Jan 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -2803,7 +3070,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -2884,7 +3151,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GLM 4.7 Flash is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.06 in / $0.40 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-4.7-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Zhipu AI's GLM 4.7 Flash is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Zhipu AI's GLM 4.7 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2894,6 +3161,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Zhipu AI actually launched with GLM 4.7 Flash, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 19 Jan 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -2929,7 +3203,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GPT-5.2-Codex is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.2-codex); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2-Codex is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2-Codex is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2939,6 +3213,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.2-Codex, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 14 Jan 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -2963,7 +3244,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -3044,7 +3325,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "MiniMax M2.1 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 196.6K tokens. Current tracked pricing: $0.29 in / $0.95 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "MiniMax's MiniMax M2.1 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "MiniMax's MiniMax M2.1 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -3054,6 +3335,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what MiniMax actually launched with MiniMax M2.1, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 23 Dec 2025 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -3089,7 +3377,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GLM 4.7 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.39 in / $1.75 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-4.7); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Zhipu AI's GLM 4.7 is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Zhipu AI's GLM 4.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -3099,6 +3387,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Zhipu AI actually launched with GLM 4.7, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 22 Dec 2025 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -3133,8 +3428,8 @@
       "outputPrice": 3,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
-      "summary": "Gemini 3 Flash Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Free tier available; Computer Use Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. Fast Gemini 3 series model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3 Flash Preview is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "summary": "Gemini 3 Flash Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Free tier available; Computer Use Fast Gemini 3 series model. Fast Gemini 3 series model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Google's Gemini 3 Flash Preview is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3144,6 +3439,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 3 Flash Preview, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 17 Dec 2025 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -3267,7 +3569,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Mistral Small Creative is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 32.8K tokens. Current tracked pricing: $0.10 in / $0.30 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-small-creative); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Mistral's Mistral Small Creative is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "Mistral's Mistral Small Creative is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -3277,6 +3579,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Mistral actually launched with Mistral Small Creative, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 16 Dec 2025 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -3312,7 +3621,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "Nemotron 3 Nano 30B A3B is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.05 in / $0.20 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-nano-30b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "NVIDIA's Nemotron 3 Nano 30B A3B is on the release desk with 0 related storyies and 0 benchmark signals to review.",
+      "dek": "NVIDIA's Nemotron 3 Nano 30B A3B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -3322,6 +3631,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what NVIDIA actually launched with Nemotron 3 Nano 30B A3B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 14 Dec 2025 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
@@ -3357,7 +3673,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GPT-5.2 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $21.00 in / $168.00 out per million tokens. Premium reasoning tier Tracking only until benchmark coverage is available. Tracking only until benchmark coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2 Pro is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2 Pro is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3367,6 +3683,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.2 Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 10 Dec 2025 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -3391,7 +3714,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -3472,7 +3795,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GPT-5.2 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Newest flagship; 90% off cached input There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2 is on the release desk with 6 related storyies and 5 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2 is on the release desk with 6 related stories and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3482,6 +3805,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.2, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 10 Dec 2025 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
         {
@@ -3547,7 +3877,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
@@ -3628,7 +3958,7 @@
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-04-09 17:21:02",
       "summary": "GPT-5.2 Chat is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.2-chat); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2 Chat is on the release desk with 6 related storyies and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2 Chat is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3638,6 +3968,13 @@
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.2 Chat, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 10 Dec 2025 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
@@ -3662,7 +3999,7 @@
           "url": "https://openai.com/index/introducing-child-safety-blueprint",
           "source": "OpenAI",
           "date": "2026-04-08",
-          "summary": "Discover OpenAI’s Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
+          "summary": "Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.",
           "routingTags": [
             "model_release",
             "ai_safety"
