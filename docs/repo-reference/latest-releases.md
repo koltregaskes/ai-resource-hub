@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 09 Apr 2026, 19:01 UTC
+Generated: 09 Apr 2026, 19:35 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -10,8 +10,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7 Apr 2026 | Claude Opus 4.6 (Fast) | Anthropic | tracking | high | needs research | 0 | 0 | [official](https://docs.anthropic.com) |
 | 7 Apr 2026 | GLM 5.1 | Zhipu AI | tracking | high | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
-| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/glasswing) |
-| 2 Apr 2026 | Gemma 4 31B | Google | tracking | high | ready for editor | 0 | 5 | [official](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) |
+| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
+| 2 Apr 2026 | Gemma 4 31B | Google | tracking | high | ready for editor | 0 | 6 | [official](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) |
 | 2 Apr 2026 | Qwen3.6 Plus | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 1 Apr 2026 | GLM 5V Turbo | Zhipu AI | tracking | high | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | 31 Mar 2026 | Grok 4.20 | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
