@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getBenchmarks } from '../db/queries';
+import { getBenchmarks, getNews } from '../db/queries';
 import { modelReleaseDesk } from '../data/model-release-desk.generated';
 import {
   getAgiOverview,
@@ -19,10 +19,20 @@ const metaLeaderboardAll = getMetaLeaderboard(250);
 const metaLeaderboard = metaLeaderboardAll.slice(0, 10);
 const agiOverview = getAgiOverview();
 const latestDigest = getLatestDigest();
-const digestEntries = latestDigest?.entries.slice(0, 4) ?? [];
+const digestEntries = latestDigest?.entries.slice(0, 5) ?? [];
 const dataPulse = getDataPulse(base);
 const activities = getLatestActivities(8, base);
 const trackedBenchmarkCount = getBenchmarks().length;
+type HeadlineNewsItem = ReturnType<typeof getNews>[number] & {
+  discovered_at?: string | null;
+};
+const headlineNews = (getNews() as HeadlineNewsItem[])
+  .map((item) => ({
+    ...item,
+    headlineDate: normaliseDateTime(item.published_at ?? item.discovered_at ?? null),
+  }))
+  .sort((a, b) => Date.parse(b.headlineDate ?? '') - Date.parse(a.headlineDate ?? ''))
+  .slice(0, 5);
 
 const leaderboardLeader = metaLeaderboard[0] ?? null;
 const bestOpenModel = metaLeaderboardAll.find((model) => model.openSource) ?? null;
@@ -151,104 +161,127 @@ const heroStats = [
 
 <BaseLayout title="The AI Resource Hub - Composite Leaderboard, AGI Progress, and Daily AI Updates">
   <section class="hub-home-shell">
-    <div class="hub-home-grid mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <div class="hub-home-head">
-        <p class="hub-home-kicker">Live AI intelligence</p>
-        <h1 class="hub-home-title">Find the right AI model fast, see frontier progress, then catch up on what changed today.</h1>
-        <p class="hub-home-intro">
-          Start with the weighted leaderboard, sanity-check the AGI trend line, then scan the digest and change log.
-          The goal is simple: help you choose quickly without losing the evidence underneath.
-        </p>
+    <div class="hub-home-frame mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+      <div class="hub-home-grid">
+        <div class="hub-home-head">
+          <p class="hub-home-kicker">Live AI intelligence</p>
+          <h1 class="hub-home-title">Choose the right AI model faster.</h1>
+          <p class="hub-home-intro">
+            Start with the benchmark-weighted leaderboard, check the frontier line, then scan what changed today.
+          </p>
 
-        <div class="hub-home-actions">
-          <a href={`${base}leaderboard/`} class="editorial-button editorial-button-primary">Open full leaderboard</a>
-          <a href={`${base}methodology/`} class="editorial-button editorial-button-secondary">How the scores work</a>
+          <div class="hub-home-actions">
+            <a href={`${base}leaderboard/`} class="editorial-button editorial-button-primary">Open full leaderboard</a>
+            <a href={`${base}methodology/`} class="editorial-button editorial-button-secondary">How the scores work</a>
+          </div>
+
+          <div class="hub-home-stat-strip">
+            {heroStats.map((stat) => (
+              <div class="hub-home-stat">
+                <p class="hub-home-stat-value">{stat.value}</p>
+                <p class="hub-home-stat-label">{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div class="hub-home-stat-strip">
-          {heroStats.map((stat) => (
-            <div class="hub-home-stat">
-              <p class="hub-home-stat-value">{stat.value}</p>
-              <p class="hub-home-stat-label">{stat.label}</p>
+        <aside class="hub-home-brief">
+          <div class="hub-home-brief-head">
+            <div>
+              <p class="hub-home-mini-label">Fastest routes</p>
+              <h2 class="hub-home-side-title">Jump straight to the useful parts.</h2>
             </div>
-          ))}
-        </div>
+            <p class="hub-home-fresh-legend">
+              <span class="fresh-dot fresh-dot-static"></span>
+              Updated since your last visit
+            </p>
+          </div>
+
+          <div class="hub-home-brief-links">
+            <a href={`${base}leaderboard/`} class="hub-home-brief-link" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
+              <div>
+                <p class="hub-home-brief-title">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  Composite leaderboard
+                </p>
+              </div>
+              <span class="hub-home-brief-meta">{leaderboardLeader ? `Top evaluated: ${leaderboardLeader.name}` : 'Live now'}</span>
+            </a>
+            <a href={`${base}agi/`} class="hub-home-brief-link" data-fresh-at={agiOverview.updatedAt ?? ''}>
+              <div>
+                <p class="hub-home-brief-title">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  AGI progress
+                </p>
+              </div>
+              <span class="hub-home-brief-meta">
+                {agiOverview.currentLeader ? `Frontier peak: ${agiOverview.currentLeader.modelName}` : 'Frontier view'}
+              </span>
+            </a>
+            <a href={`${base}news/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
+              <div>
+                <p class="hub-home-brief-title">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  Daily digest
+                </p>
+              </div>
+              <span class="hub-home-brief-meta">
+                {latestDigest ? `${latestDigest.storyCount ?? digestEntries.length} stories` : 'Awaiting digest'}
+              </span>
+            </a>
+            <a href={`${base}new/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
+              <div>
+                <p class="hub-home-brief-title">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  Release desk
+                </p>
+              </div>
+              <span class="hub-home-brief-meta">{latestTrackedRelease ? `Latest tracked: ${latestTrackedRelease.modelName}` : 'Launch radar'}</span>
+            </a>
+            <a href={`${base}changelog/`} class="hub-home-brief-link hub-home-brief-link-wide" data-fresh-at={activities[0]?.date ?? ''}>
+              <div>
+                <p class="hub-home-brief-title">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  Latest activities
+                </p>
+              </div>
+              <span class="hub-home-brief-meta">{activities.length} recent entries</span>
+            </a>
+          </div>
+        </aside>
       </div>
 
-      <aside class="hub-home-brief">
-        <div class="hub-home-brief-head">
-          <div>
-            <p class="hub-home-mini-label">Fastest routes</p>
-            <h2 class="hub-home-side-title">Use the hub like a desk, not a directory.</h2>
+      {headlineNews.length > 0 ? (
+        <section class="hub-home-news-strip" data-news-rotator>
+          <div class="hub-home-news-strip-head">
+            <p class="hub-home-mini-label">Latest news</p>
+            <a href={`${base}news/`} class="editorial-link">Open the news desk</a>
           </div>
-          <p class="hub-home-fresh-legend">
-            <span class="fresh-dot fresh-dot-static"></span>
-            Updated since your last visit
-          </p>
-        </div>
 
-        <div class="hub-home-brief-links">
-          <a href={`${base}leaderboard/`} class="hub-home-brief-link" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-            <div>
-              <p class="hub-home-brief-title">
-                <span class="fresh-dot" data-fresh-dot hidden></span>
-                Composite leaderboard
-              </p>
-              <p class="hub-home-brief-copy">Weighted ranking across quality, benchmark coverage, and signal strength.</p>
-            </div>
-            <span class="hub-home-brief-meta">{leaderboardLeader ? `Top evaluated: ${leaderboardLeader.name}` : 'Live now'}</span>
-          </a>
-          <a href={`${base}agi/`} class="hub-home-brief-link" data-fresh-at={agiOverview.updatedAt ?? ''}>
-            <div>
-              <p class="hub-home-brief-title">
-                <span class="fresh-dot" data-fresh-dot hidden></span>
-                AGI progress
-              </p>
-              <p class="hub-home-brief-copy">Derived frontier signal from ARC-AGI, GPQA, HLE, SWE-bench, and related tracks.</p>
-            </div>
-            <span class="hub-home-brief-meta">
-              {agiOverview.currentLeader ? `Frontier peak: ${agiOverview.currentLeader.modelName}` : 'Frontier view'}
-            </span>
-          </a>
-          <a href={`${base}news/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
-            <div>
-              <p class="hub-home-brief-title">
-                <span class="fresh-dot" data-fresh-dot hidden></span>
-                Daily digest
-              </p>
-              <p class="hub-home-brief-copy">Breaking news and curated signal pulled into one brief.</p>
-            </div>
-            <span class="hub-home-brief-meta">
-              {latestDigest ? `${latestDigest.storyCount ?? digestEntries.length} stories` : 'Awaiting digest'}
-            </span>
-          </a>
-          <a href={`${base}new/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
-            <div>
-              <p class="hub-home-brief-title">
-                <span class="fresh-dot" data-fresh-dot hidden></span>
-                Release desk
-              </p>
-              <p class="hub-home-brief-copy">Latest model launches, source-first briefs, and editor-ready release coverage.</p>
-            </div>
-            <span class="hub-home-brief-meta">{latestTrackedRelease ? `Latest tracked: ${latestTrackedRelease.modelName}` : 'Launch radar'}</span>
-          </a>
-          <a href={`${base}changelog/`} class="hub-home-brief-link" data-fresh-at={activities[0]?.date ?? ''}>
-            <div>
-              <p class="hub-home-brief-title">
-                <span class="fresh-dot" data-fresh-dot hidden></span>
-                Latest activities
-              </p>
-              <p class="hub-home-brief-copy">A running activity log for model additions, pipeline refreshes, and site updates.</p>
-            </div>
-            <span class="hub-home-brief-meta">{activities.length} recent entries</span>
-          </a>
-        </div>
-      </aside>
-    </div>
-  </section>
+          <div class="hub-home-news-rail">
+            {headlineNews.map((entry, index) => (
+              <a
+                href={entry.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`hub-home-news-card ${index === 0 ? 'is-active' : ''}`}
+                data-news-card
+                data-fresh-at={entry.headlineDate ?? ''}
+              >
+                <p class="hub-home-news-meta">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  {entry.source}
+                  <span>/</span>
+                  {formatDateLabel(entry.headlineDate, { day: 'numeric', month: 'short' })}
+                </p>
+                <h3 class="hub-home-news-title">{entry.title}</h3>
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
-  <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-    <div class="hub-home-surface">
+      <div class="hub-home-surface hub-home-surface-top">
       <div class="hub-home-tab-row" role="tablist" aria-label="Homepage primary views">
         <button class="hub-home-tab is-active" type="button" data-home-tab="leaderboard" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
           <span class="fresh-dot" data-fresh-dot hidden></span>
@@ -508,9 +541,10 @@ const heroStats = [
         </div>
       </div>
     </div>
+    </div>
   </section>
 
-  <section class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+  <section class="mx-auto max-w-7xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16 lg:pt-10">
     <div class="hub-home-support-grid">
       <section class="hub-home-card">
         <div class="hub-home-card-head">
@@ -687,6 +721,55 @@ const heroStats = [
               dot.hidden = false;
             }
           });
+        }
+
+        const rotator = document.querySelector('[data-news-rotator]');
+        if (rotator) {
+          const cards = Array.from(rotator.querySelectorAll('[data-news-card]'));
+          let activeIndex = Math.max(0, cards.findIndex((card) => card.classList.contains('is-active')));
+
+          const setActiveCard = (index, smooth = false) => {
+            cards.forEach((card, cardIndex) => {
+              card.classList.toggle('is-active', cardIndex === index);
+            });
+
+            const activeCard = cards[index];
+            if (activeCard && smooth) {
+              activeCard.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'nearest',
+              });
+            }
+          };
+
+          setActiveCard(activeIndex);
+
+          if (cards.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            let ticker = null;
+
+            const stopTicker = () => {
+              if (ticker) {
+                window.clearInterval(ticker);
+                ticker = null;
+              }
+            };
+
+            const startTicker = () => {
+              stopTicker();
+              ticker = window.setInterval(() => {
+                activeIndex = (activeIndex + 1) % cards.length;
+                setActiveCard(activeIndex, true);
+              }, 12000);
+            };
+
+            rotator.addEventListener('mouseenter', stopTicker);
+            rotator.addEventListener('mouseleave', startTicker);
+            rotator.addEventListener('focusin', stopTicker);
+            rotator.addEventListener('focusout', startTicker);
+
+            startTicker();
+          }
         }
 
         localStorage.setItem(visitKey, now);
