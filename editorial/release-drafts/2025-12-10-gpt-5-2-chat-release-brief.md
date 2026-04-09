@@ -7,7 +7,7 @@ priority: "backfill"
 model: "GPT-5.2 Chat"
 provider: "OpenAI"
 release_date: "2025-12-10"
-generated_at: "2026-04-09T21:57:16.464Z"
+generated_at: "2026-04-09T23:00:05.384Z"
 ---
 
 # GPT-5.2 Chat: release brief
@@ -29,12 +29,12 @@ GPT-5.2 Chat is a currently tracked release from OpenAI. It is positioned as an 
 
 ## Outside coverage and early reactions
 
+- The Verge (2026-04-09): [ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new) - OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers "5x more" usage of its Codex coding tool than the $20 per month Plus subscription and "is best for longer, high-effort Codex sessions," OpenAI says. The company is introducing the new tier as it [&#823…
+- The Verge (2026-04-09): [Florida launches investigation into OpenAI](https://www.theverge.com/policy/909557/openai-florida-investigation) - Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are "falling into the hands of America's enemies, such as the…
 - TechCrunch (2026-04-08): [OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/) - OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.
 - OpenAI (2026-04-08): [Introducing the Child Safety Blueprint](https://openai.com/index/introducing-child-safety-blueprint) - Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.
 - OpenAI (2026-04-06): [Announcing the OpenAI Safety Fellowship](https://openai.com/index/introducing-openai-safety-fellowship) - A pilot program to support independent safety and alignment research and develop the next generation of talent
 - OpenAI (2026-03-25): [Introducing the OpenAI Safety Bug Bounty program](https://openai.com/index/safety-bug-bounty) - OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.
-- OpenAI (2026-03-24): [Helping developers build safer AI experiences for teens](https://openai.com/index/teen-safety-policies-gpt-oss-safeguard) - OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.
-- OpenAI (2026-03-17): [OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first](https://openai.com/index/japan-teen-safety-blueprint) - OpenAI Japan announces the Japan Teen Safety Blueprint, introducing stronger age protections, parental controls, and well-being safeguards for teens using generative AI.
 
 ## Suggested thread / post structure
 
@@ -55,9 +55,9 @@ GPT-5.2 Chat is a currently tracked release from OpenAI. It is positioned as an 
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
+- [The Verge: ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new)
+- [The Verge: Florida launches investigation into OpenAI](https://www.theverge.com/policy/909557/openai-florida-investigation)
 - [TechCrunch: OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
 - [OpenAI: Introducing the Child Safety Blueprint](https://openai.com/index/introducing-child-safety-blueprint)
 - [OpenAI: Announcing the OpenAI Safety Fellowship](https://openai.com/index/introducing-openai-safety-fellowship)
 - [OpenAI: Introducing the OpenAI Safety Bug Bounty program](https://openai.com/index/safety-bug-bounty)
-- [OpenAI: Helping developers build safer AI experiences for teens](https://openai.com/index/teen-safety-policies-gpt-oss-safeguard)
-- [OpenAI: OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first](https://openai.com/index/japan-teen-safety-blueprint)
