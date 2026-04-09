@@ -81,6 +81,7 @@ function humanFileLabel(filePath: string): string {
 function guideRouteFromPath(filePath: string): string | null {
   const relative = path.relative(path.join(ROOT, 'src', 'pages'), filePath).replace(/\\/g, '/');
   if (!relative || relative.startsWith('..')) return null;
+  if (relative.includes('[') || relative.includes(']')) return null;
 
   const route = relative
     .replace(/index\.astro$/, '')
@@ -110,14 +111,17 @@ function collectGuideFiles(directory: string, bucket: string[] = []): string[] {
 function getRecentGuideUpdates(basePath: string, limit = 3): GuideUpdate[] {
   return GUIDE_DIRS
     .flatMap((directory) => collectGuideFiles(directory))
-    .map((filePath) => {
+    .map((filePath): GuideUpdate | null => {
       const href = guideRouteFromPath(filePath);
+      if (!href) return null;
+
       return {
         label: humanFileLabel(filePath),
-        href: href ? formatRoute(basePath, href) : formatRoute(basePath, '/guides/'),
+        href: formatRoute(basePath, href),
         updatedAt: statSync(filePath).mtime.toISOString(),
       };
     })
+    .filter((guide): guide is GuideUpdate => Boolean(guide))
     .sort((a, b) => Date.parse(b.updatedAt ?? '') - Date.parse(a.updatedAt ?? ''))
     .slice(0, limit);
 }

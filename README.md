@@ -28,4 +28,16 @@ The site is built from a mixture of structured data, editorial content, and sche
 
 ## Operations
 
-Repository and data collection notes live in [docs/DATA-COLLECTION-PLAN.md](docs/DATA-COLLECTION-PLAN.md).
+Operational reference material lives in the generated [repo reference pack](docs/repo-reference/README.md) and the supporting notes under [docs](docs/).
+
+## Repository Snapshots
+
+For people who prefer reading the repo directly, the refresh pipeline now publishes a synced reference pack in [docs/repo-reference/README.md](docs/repo-reference/README.md).
+
+Key generated tables:
+
+- [Refresh matrix](docs/repo-reference/refresh-matrix.md)
+- [Composite leaderboard snapshot](docs/repo-reference/composite-leaderboard.md)
+- [Latest releases snapshot](docs/repo-reference/latest-releases.md)
+- [Provider coverage snapshot](docs/repo-reference/provider-coverage.md)
+- [Recent activity snapshot](docs/repo-reference/activity-log.md)

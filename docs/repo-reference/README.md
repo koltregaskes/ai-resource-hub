@@ -1,0 +1,41 @@
+# Repository Reference Snapshot
+
+Auto-generated from the same cache and release-desk data that powers the public site.
+
+These files exist for people who prefer reading GitHub directly. They are rebuilt by the automated refresh workflow so the repo view and website view stay aligned.
+
+## Snapshot
+
+| Metric | Value |
+| --- | --- |
+| Generated | 09 Apr 2026, 16:28 UTC |
+| Providers tracked | 39 |
+| Public models | 299 |
+| Active models | 101 |
+| Tracking models | 197 |
+| Preview models | 1 |
+| Benchmarks | 17 |
+| News items in cache | 145 |
+| Release-desk entries | 48 |
+| Latest visible refresh | 09 Apr 2026, 15:53 UTC |
+| Current composite leader | o3 (86.9) |
+| Latest tracked release | Claude Opus 4.6 (Fast) (7 Apr 2026) |
+
+## Reference Files
+
+| File | Purpose |
+| --- | --- |
+| [refresh-matrix.md](./refresh-matrix.md) | Cadence, source types, automation level, and recent visible updates by category. |
+| [composite-leaderboard.md](./composite-leaderboard.md) | Top of the benchmark-weighted ranking as rendered for the website. |
+| [latest-releases.md](./latest-releases.md) | Newest tracked releases and editor-state visibility from the release desk. |
+| [provider-coverage.md](./provider-coverage.md) | Per-provider model coverage across active, tracking, and preview states. |
+| [activity-log.md](./activity-log.md) | Recent visible changes across data, models, digest, jobs, and site operations. |
+
+## Raw Data Exports
+
+| Raw export | Purpose |
+| --- | --- |
+| [models-latest.json](../../public/data/models-latest.json) | Latest model snapshot for repo readers and downstream tooling. |
+| [model-release-desk.json](../../public/data/model-release-desk.json) | Structured release desk used by the site and editorial flow. |
+| [ai-models-comparison.csv](../../public/data/ai-models-comparison.csv) | Spreadsheet-friendly comparison export. |
+| [ai-models-comparison.json](../../public/data/ai-models-comparison.json) | Machine-readable comparison export for analysis. |
