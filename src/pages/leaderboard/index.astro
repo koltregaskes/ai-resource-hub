@@ -15,6 +15,8 @@ const topCheapest = [...rankedModels]
   .filter((model) => model.inputPrice > 0)
   .sort((a, b) => a.inputPrice - b.inputPrice || a.outputPrice - b.outputPrice)
   .slice(0, 24);
+const providerOptions = Array.from(new Set(rankedModels.map((model) => model.provider))).sort((a, b) => a.localeCompare(b));
+const useCaseOptions = Array.from(new Set(rankedModels.map((model) => model.bestFor))).sort((a, b) => a.localeCompare(b));
 
 function formatCoverage(ratio: number): string {
   return `${Math.round(ratio * 100)}%`;
@@ -28,6 +30,15 @@ function formatContextWindow(tokens: number): string {
 function formatPricePair(inputPrice: number, outputPrice: number, openSource: boolean): string {
   if (inputPrice === 0 && outputPrice === 0) return openSource ? 'Open / free' : 'Included';
   return `$${inputPrice.toFixed(2)} / $${outputPrice.toFixed(2)}`;
+}
+
+function formatReleaseDate(value: string | null): string {
+  if (!value) return 'Unknown';
+  return new Date(value).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
 }
 ---
 
@@ -203,12 +214,141 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
       Composite score is coverage-aware by design. Models with thin public benchmark coverage can still appear here, but they are
       penalized until enough benchmark evidence exists to trust the ranking.
     </p>
+
+    <div class="mt-10 rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 sm:p-6">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Explore the field</p>
+          <h2 class="mt-2 text-2xl font-bold text-(--color-text-primary)">Search and filter the full ranked dataset</h2>
+          <p class="mt-2 max-w-3xl text-sm leading-6 text-(--color-text-secondary)">
+            The top tables are quick reads. This table is for actual decision-making when you want a specific lab, use case, release window, or pricing posture.
+          </p>
+        </div>
+        <button
+          type="button"
+          id="leaderboard-reset"
+          class="inline-flex rounded-full border border-(--color-border-strong) px-4 py-2 text-xs uppercase tracking-[0.16em] text-(--color-text-secondary) transition-colors hover:border-(--color-accent) hover:text-(--color-text-primary)"
+        >
+          Reset filters
+        </button>
+      </div>
+
+      <div class="mt-5 grid gap-3 lg:grid-cols-5">
+        <input
+          id="leaderboard-search"
+          type="search"
+          placeholder="Search model or provider..."
+          class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-accent)"
+        />
+        <select id="leaderboard-provider" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+          <option value="">All labs</option>
+          {providerOptions.map((provider) => (
+            <option value={provider}>{provider}</option>
+          ))}
+        </select>
+        <select id="leaderboard-use-case" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+          <option value="">All use cases</option>
+          {useCaseOptions.map((useCase) => (
+            <option value={useCase}>{useCase}</option>
+          ))}
+        </select>
+        <select id="leaderboard-signal" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+          <option value="">All signals</option>
+          <option value="open">Open source only</option>
+          <option value="api">API available</option>
+          <option value="high-coverage">High coverage (60%+)</option>
+          <option value="recent">Released in the last 180 days</option>
+        </select>
+        <select id="leaderboard-sort" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+          <option value="meta">Composite rank</option>
+          <option value="value">Best value</option>
+          <option value="cheap">Cheapest input</option>
+          <option value="coverage">Highest coverage</option>
+          <option value="recent">Newest release</option>
+        </select>
+      </div>
+
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Composite</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Coverage</th>
+              <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Best for</th>
+              <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium hidden md:table-cell">Released</th>
+              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Price</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-explorer-body">
+            {rankedModels.map((model) => (
+              <tr
+                class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors"
+                data-leaderboard-row
+                data-filter={`${model.name} ${model.provider} ${model.bestFor} ${model.modality.join(' ')}`.toLowerCase()}
+                data-provider={model.provider}
+                data-use-case={model.bestFor}
+                data-open={model.openSource ? 'true' : 'false'}
+                data-api={model.apiAvailable ? 'true' : 'false'}
+                data-coverage={model.coverageRatio}
+                data-meta={model.metaScore}
+                data-value={model.valueScore}
+                data-input={model.inputPrice}
+                data-release={model.released ?? ''}
+              >
+                <td class="py-3 px-3">
+                  <a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span>
+                    <span class="font-medium">{model.name}</span>
+                  </a>
+                  <p class="text-[10px] text-(--color-text-muted) mt-1">
+                    {model.provider} / {formatContextWindow(model.contextWindow)} context
+                  </p>
+                </td>
+                <td class="py-3 px-3 text-right">
+                  <span class="font-mono font-medium text-(--color-accent)">{model.metaScore.toFixed(1)}</span>
+                </td>
+                <td class="py-3 px-3 text-right">
+                  <span class="text-xs text-(--color-text-secondary)">{formatCoverage(model.coverageRatio)}</span>
+                </td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">
+                  <div>{model.bestFor}</div>
+                  <div class="flex flex-wrap gap-1 mt-1">
+                    {model.openSource ? <span class="badge badge-oss">Open</span> : null}
+                    {model.apiAvailable ? <span class="badge">API</span> : null}
+                  </div>
+                </td>
+                <td class="py-3 px-3 text-(--color-text-muted) hidden md:table-cell">
+                  {formatReleaseDate(model.released)}
+                </td>
+                <td class="py-3 px-3 text-right font-mono text-xs text-(--color-text-secondary)">
+                  {formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div id="leaderboard-empty" class="hidden mt-4 rounded-xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-5 text-center text-sm text-(--color-text-secondary)">
+        No models match the current filters. Reset them and widen the search.
+      </div>
+    </div>
   </section>
 
   <script is:inline>
     (() => {
       const tabs = document.querySelectorAll('.leaderboard-tab');
       const panels = document.querySelectorAll('.leaderboard-panel');
+      const searchInput = document.getElementById('leaderboard-search');
+      const providerInput = document.getElementById('leaderboard-provider');
+      const useCaseInput = document.getElementById('leaderboard-use-case');
+      const signalInput = document.getElementById('leaderboard-signal');
+      const sortInput = document.getElementById('leaderboard-sort');
+      const resetButton = document.getElementById('leaderboard-reset');
+      const explorerBody = document.getElementById('leaderboard-explorer-body');
+      const explorerRows = Array.from(document.querySelectorAll('[data-leaderboard-row]'));
+      const emptyState = document.getElementById('leaderboard-empty');
 
       tabs.forEach((tab) => {
         tab.addEventListener('click', () => {
@@ -223,6 +363,70 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
       });
 
       tabs[0]?.classList.add('bg-(--color-accent)/20', 'text-(--color-accent)');
+
+      const applyExplorerFilters = () => {
+        const query = (searchInput instanceof HTMLInputElement ? searchInput.value : '').toLowerCase().trim();
+        const provider = providerInput instanceof HTMLSelectElement ? providerInput.value : '';
+        const useCase = useCaseInput instanceof HTMLSelectElement ? useCaseInput.value : '';
+        const signal = signalInput instanceof HTMLSelectElement ? signalInput.value : '';
+        const sort = sortInput instanceof HTMLSelectElement ? sortInput.value : 'meta';
+        const recentCutoff = new Date();
+        recentCutoff.setDate(recentCutoff.getDate() - 180);
+
+        for (const row of explorerRows) {
+          const haystack = row.getAttribute('data-filter') || '';
+          const matchesQuery = !query || haystack.includes(query);
+          const matchesProvider = !provider || row.getAttribute('data-provider') === provider;
+          const matchesUseCase = !useCase || row.getAttribute('data-use-case') === useCase;
+
+          let matchesSignal = true;
+          if (signal === 'open') matchesSignal = row.getAttribute('data-open') === 'true';
+          if (signal === 'api') matchesSignal = row.getAttribute('data-api') === 'true';
+          if (signal === 'high-coverage') matchesSignal = Number(row.getAttribute('data-coverage') || 0) >= 0.6;
+          if (signal === 'recent') {
+            const released = row.getAttribute('data-release') || '';
+            matchesSignal = Boolean(released) && Date.parse(released) >= recentCutoff.getTime();
+          }
+
+          row.classList.toggle('hidden', !(matchesQuery && matchesProvider && matchesUseCase && matchesSignal));
+        }
+
+        const visibleRows = explorerRows.filter((row) => !row.classList.contains('hidden'));
+        const sortedRows = [...visibleRows].sort((a, b) => {
+          if (sort === 'value') {
+            return Number(b.getAttribute('data-value') || 0) - Number(a.getAttribute('data-value') || 0);
+          }
+          if (sort === 'cheap') {
+            return Number(a.getAttribute('data-input') || 0) - Number(b.getAttribute('data-input') || 0);
+          }
+          if (sort === 'coverage') {
+            return Number(b.getAttribute('data-coverage') || 0) - Number(a.getAttribute('data-coverage') || 0);
+          }
+          if (sort === 'recent') {
+            return Date.parse(b.getAttribute('data-release') || '') - Date.parse(a.getAttribute('data-release') || '');
+          }
+          return Number(b.getAttribute('data-meta') || 0) - Number(a.getAttribute('data-meta') || 0);
+        });
+
+        sortedRows.forEach((row) => explorerBody?.appendChild(row));
+        emptyState?.classList.toggle('hidden', visibleRows.length > 0);
+      };
+
+      searchInput?.addEventListener('input', applyExplorerFilters);
+      providerInput?.addEventListener('change', applyExplorerFilters);
+      useCaseInput?.addEventListener('change', applyExplorerFilters);
+      signalInput?.addEventListener('change', applyExplorerFilters);
+      sortInput?.addEventListener('change', applyExplorerFilters);
+      resetButton?.addEventListener('click', () => {
+        if (searchInput instanceof HTMLInputElement) searchInput.value = '';
+        if (providerInput instanceof HTMLSelectElement) providerInput.value = '';
+        if (useCaseInput instanceof HTMLSelectElement) useCaseInput.value = '';
+        if (signalInput instanceof HTMLSelectElement) signalInput.value = '';
+        if (sortInput instanceof HTMLSelectElement) sortInput.value = 'meta';
+        applyExplorerFilters();
+      });
+
+      applyExplorerFilters();
     })();
   </script>
 </BaseLayout>

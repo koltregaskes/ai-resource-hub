@@ -14,100 +14,99 @@ interface AITool {
 }
 
 const tools: AITool[] = [
-  // Chatbots & Assistants
-  { name: 'ChatGPT', url: 'https://chat.openai.com', category: 'chatbot', description: 'OpenAI\'s conversational AI. GPT-4o, o1, o3 models. Web browsing, code execution, image generation.', pricing: 'Free / $20/mo Plus', tags: ['chat', 'coding', 'images'] },
-  { name: 'Claude', url: 'https://claude.ai', category: 'chatbot', description: 'Anthropic\'s AI assistant. Opus 4.6, Sonnet 4.6 models. Extended thinking, tool use, computer use.', pricing: 'Free / $20/mo Pro', tags: ['chat', 'coding', 'analysis'] },
-  { name: 'Gemini', url: 'https://gemini.google.com', category: 'chatbot', description: 'Google\'s AI assistant. Gemini 2.5 Pro, Flash. Deep research, image understanding, Google integration.', pricing: 'Free / $20/mo Advanced', tags: ['chat', 'research', 'multimodal'] },
-  { name: 'Grok', url: 'https://grok.x.ai', category: 'chatbot', description: 'xAI\'s AI assistant. Grok 3 model. Real-time X/Twitter data, image generation, DeepSearch.', pricing: 'Free / X Premium', tags: ['chat', 'real-time', 'images'] },
-  { name: 'Perplexity', url: 'https://perplexity.ai', category: 'chatbot', description: 'AI-powered search engine. Cites sources. Multiple model backends. Research and discovery.', pricing: 'Free / $20/mo Pro', tags: ['search', 'research', 'citations'] },
-  { name: 'Poe', url: 'https://poe.com', category: 'chatbot', description: 'Multi-model chat platform by Quora. Access GPT-4, Claude, Gemini, and more from one interface.', pricing: 'Free / $20/mo', tags: ['chat', 'multi-model'] },
-  { name: 'HuggingChat', url: 'https://huggingface.co/chat', category: 'chatbot', description: 'Open-source chat by Hugging Face. Llama, Mistral, and more. Free and private.', pricing: 'Free', tags: ['chat', 'open-source'] },
+  { name: 'ChatGPT', url: 'https://chat.openai.com', category: 'chatbot', description: 'OpenAI chat product for writing, coding, browsing, and multimodal work.', pricing: 'Free / paid plans', tags: ['chat', 'coding', 'images'] },
+  { name: 'Claude', url: 'https://claude.ai', category: 'chatbot', description: 'Anthropic assistant focused on reasoning, writing, analysis, and coding workflows.', pricing: 'Free / paid plans', tags: ['chat', 'coding', 'analysis'] },
+  { name: 'Gemini', url: 'https://gemini.google.com', category: 'chatbot', description: 'Google assistant for chat, research, multimodal work, and workspace-adjacent tasks.', pricing: 'Free / paid plans', tags: ['chat', 'research', 'multimodal'] },
+  { name: 'Grok', url: 'https://grok.x.ai', category: 'chatbot', description: 'xAI assistant with chat, search, and related consumer AI workflows.', pricing: 'Free / paid plans', tags: ['chat', 'real-time', 'images'] },
+  { name: 'Perplexity', url: 'https://perplexity.ai', category: 'chatbot', description: 'AI search and research interface with citations and multiple model backends.', pricing: 'Free / paid plans', tags: ['search', 'research', 'citations'] },
+  { name: 'Poe', url: 'https://poe.com', category: 'chatbot', description: 'Multi-model chat product that gives one interface for several labs and model families.', pricing: 'Free / paid plans', tags: ['chat', 'multi-model'] },
+  { name: 'HuggingChat', url: 'https://huggingface.co/chat', category: 'chatbot', description: 'Open ecosystem chat product from Hugging Face with public and open-model focus.', pricing: 'Free', tags: ['chat', 'open-source'] },
 
-  // Coding Assistants
-  { name: 'GitHub Copilot', url: 'https://github.com/features/copilot', category: 'coding', description: 'AI pair programmer. Autocomplete, chat, code review. Powered by GPT-4o and Claude.', pricing: 'Free / $10/mo', tags: ['coding', 'IDE'] },
-  { name: 'Cursor', url: 'https://cursor.com', category: 'coding', description: 'AI-first code editor. Built on VS Code. Multi-file editing, codebase understanding.', pricing: 'Free / $20/mo Pro', tags: ['coding', 'IDE', 'editor'] },
-  { name: 'Claude Code', url: 'https://docs.anthropic.com/en/docs/claude-code', category: 'coding', description: 'Anthropic\'s agentic coding tool. Terminal-based. Autonomous multi-file editing and debugging.', pricing: 'API pricing', tags: ['coding', 'terminal', 'agents'] },
-  { name: 'Windsurf', url: 'https://windsurf.com', category: 'coding', description: 'AI-powered IDE by Codeium. Flows feature for multi-step coding tasks. Free tier available.', pricing: 'Free / $15/mo Pro', tags: ['coding', 'IDE'] },
-  { name: 'Replit', url: 'https://replit.com', category: 'coding', description: 'Cloud IDE with AI agent. Build, deploy, and iterate on apps with natural language.', pricing: 'Free / $25/mo', tags: ['coding', 'deployment', 'cloud'] },
-  { name: 'v0', url: 'https://v0.dev', category: 'coding', description: 'Vercel\'s AI UI builder. Generate React/Next.js components from text descriptions.', pricing: 'Free / $20/mo', tags: ['coding', 'UI', 'React'] },
-  { name: 'Bolt.new', url: 'https://bolt.new', category: 'coding', description: 'AI full-stack app builder. Generate and deploy web apps from prompts in the browser.', pricing: 'Free / $20/mo', tags: ['coding', 'full-stack', 'deployment'] },
-  { name: 'Lovable', url: 'https://lovable.dev', category: 'coding', description: 'AI-powered app builder. Create production-ready apps with natural language. Formerly GPT Engineer.', pricing: 'Free / $20/mo', tags: ['coding', 'no-code', 'apps'] },
+  { name: 'GitHub Copilot', url: 'https://github.com/features/copilot', category: 'coding', description: 'AI pair programmer inside editors, pull requests, and related coding workflows.', pricing: 'Free / paid plans', tags: ['coding', 'IDE'] },
+  { name: 'Cursor', url: 'https://cursor.com', category: 'coding', description: 'AI-first code editor focused on repo awareness, generation, and multi-file work.', pricing: 'Free / paid plans', tags: ['coding', 'IDE', 'editor'] },
+  { name: 'Claude Code', url: 'https://docs.anthropic.com/en/docs/claude-code', category: 'coding', description: 'Terminal-native coding agent for repo changes, debugging, and long-running tasks.', pricing: 'API pricing', tags: ['coding', 'terminal', 'agents'] },
+  { name: 'Windsurf', url: 'https://windsurf.com', category: 'coding', description: 'AI-powered editor and coding environment for prompt-driven app and feature work.', pricing: 'Free / paid plans', tags: ['coding', 'IDE'] },
+  { name: 'Replit', url: 'https://replit.com', category: 'coding', description: 'Cloud IDE with AI assistance for building, iterating, and deploying apps.', pricing: 'Free / paid plans', tags: ['coding', 'deployment', 'cloud'] },
+  { name: 'v0', url: 'https://v0.dev', category: 'coding', description: 'Prompt-to-UI product for React and frontend generation.', pricing: 'Free / paid plans', tags: ['coding', 'UI', 'React'] },
+  { name: 'Bolt.new', url: 'https://bolt.new', category: 'coding', description: 'Browser-based product for generating and iterating on full-stack apps from prompts.', pricing: 'Free / paid plans', tags: ['coding', 'full-stack', 'deployment'] },
+  { name: 'Lovable', url: 'https://lovable.dev', category: 'coding', description: 'Prompt-driven app builder for quickly shipping product prototypes and real apps.', pricing: 'Free / paid plans', tags: ['coding', 'apps', 'no-code'] },
 
-  // Image Generation
-  { name: 'Midjourney', url: 'https://midjourney.com', category: 'image', description: 'Industry-leading AI art generation. V6.1 model. Discord and web interfaces.', pricing: '$10/mo Basic', tags: ['images', 'art'] },
-  { name: 'DALL-E', url: 'https://openai.com/dall-e-3', category: 'image', description: 'OpenAI image generation available through ChatGPT and API surfaces. Strong prompt following and editing workflows.', pricing: 'Included with ChatGPT', tags: ['images', 'art'] },
-  { name: 'Stable Diffusion', url: 'https://stability.ai', category: 'image', description: 'Stable Diffusion family image generation. Run locally or via API. Highly customisable and widely supported.', pricing: 'Free (local) / API pricing', tags: ['images', 'open-source'] },
-  { name: 'Ideogram', url: 'https://ideogram.ai', category: 'image', description: 'Best-in-class text rendering in images. V3 model. Magic prompt feature.', pricing: 'Free / $8/mo Basic', tags: ['images', 'text-rendering'] },
-  { name: 'Flux', url: 'https://blackforestlabs.ai', category: 'image', description: 'By Black Forest Labs (ex-Stability). Flux.1 Pro, Dev, Schnell models. State-of-the-art quality.', pricing: 'API / Open-source', tags: ['images', 'open-source'] },
-  { name: 'Leonardo AI', url: 'https://leonardo.ai', category: 'image', description: 'AI image generation platform. Fine-tuning, real-time canvas, 3D textures.', pricing: 'Free / $12/mo', tags: ['images', 'design'] },
+  { name: 'LM Studio', url: 'https://lmstudio.ai', category: 'local', description: 'Desktop app for downloading, chatting with, and serving local models on your own machine.', pricing: 'Free', tags: ['local', 'gguf', 'desktop'] },
+  { name: 'Ollama', url: 'https://ollama.com', category: 'local', description: 'Simple terminal-first way to pull and run local models with an API layer on top.', pricing: 'Free', tags: ['local', 'terminal', 'open-source'] },
+  { name: 'llama.cpp', url: 'https://github.com/ggml-org/llama.cpp', category: 'local', description: 'Core open-source runtime behind much of the modern GGUF local-model ecosystem.', pricing: 'Free', tags: ['local', 'gguf', 'runtime'] },
+  { name: 'Open WebUI', url: 'https://openwebui.com', category: 'local', description: 'Self-hostable web front end for local and private AI chat setups.', pricing: 'Free', tags: ['local', 'ui', 'self-hosted'] },
+  { name: 'MLX', url: 'https://github.com/ml-explore/mlx', category: 'local', description: 'Apple Silicon-focused machine learning framework relevant for local model running and tuning on Macs.', pricing: 'Free', tags: ['local', 'apple', 'open-source'] },
+  { name: 'Jan', url: 'https://jan.ai', category: 'local', description: 'Desktop product for local and remote model chat with an easy consumer-style interface.', pricing: 'Free', tags: ['local', 'desktop', 'chat'] },
+  { name: 'KoboldCpp', url: 'https://github.com/LostRuins/koboldcpp', category: 'local', description: 'Single-binary local model runner popular for offline chat and lightweight GGUF serving.', pricing: 'Free', tags: ['local', 'offline', 'gguf'] },
 
-  // Video Generation
-  { name: 'Sora', url: 'https://sora.com', category: 'video', description: 'OpenAI video generation product for text-to-video and creative scene generation.', pricing: 'Included with ChatGPT Plus', tags: ['video', 'generation'] },
-  { name: 'Runway', url: 'https://runwayml.com', category: 'video', description: 'Runway\'s AI video generation and editing suite with motion controls, editing tools, and production workflows.', pricing: '$12/mo Standard', tags: ['video', 'editing'] },
-  { name: 'Pika', url: 'https://pika.art', category: 'video', description: 'AI video effects and generation. Pika 2.1. Lip sync, scene expansion, special effects.', pricing: 'Free / $8/mo', tags: ['video', 'effects'] },
-  { name: 'Kling AI', url: 'https://klingai.com', category: 'video', description: 'Professional AI video generation. Up to 2 minutes. Motion brush and camera control.', pricing: 'Free / Paid tiers', tags: ['video', 'generation'] },
-  { name: 'Veo', url: 'https://deepmind.google/technologies/veo/', category: 'video', description: 'Google DeepMind\'s video generation family for cinematic text-to-video and related creative workflows.', pricing: 'API pricing', tags: ['video', 'generation'] },
-  { name: 'Luma Dream Machine', url: 'https://lumalabs.ai', category: 'video', description: 'Fast, high-quality video generation. Text and image to video. 3D scene understanding.', pricing: 'Free / $24/mo', tags: ['video', '3D'] },
+  { name: 'Midjourney', url: 'https://midjourney.com', category: 'image', description: 'High-profile AI image product known for strong visual quality and artistic output.', pricing: 'Paid plans', tags: ['images', 'art'] },
+  { name: 'DALL-E', url: 'https://openai.com/dall-e-3', category: 'image', description: 'OpenAI image-generation product family across ChatGPT and API surfaces.', pricing: 'Included / API pricing', tags: ['images', 'editing'] },
+  { name: 'Stable Diffusion', url: 'https://stability.ai', category: 'image', description: 'Stable Diffusion image family, important both as a hosted option and a local/open model ecosystem.', pricing: 'Free (local) / API pricing', tags: ['images', 'open-source'] },
+  { name: 'Ideogram', url: 'https://ideogram.ai', category: 'image', description: 'Image-generation product known for text rendering and design-style outputs.', pricing: 'Free / paid plans', tags: ['images', 'text-rendering'] },
+  { name: 'Flux', url: 'https://blackforestlabs.ai', category: 'image', description: 'Black Forest Labs image model family used in both hosted and open workflows.', pricing: 'API / open model access', tags: ['images', 'open-source'] },
+  { name: 'Leonardo AI', url: 'https://leonardo.ai', category: 'image', description: 'Image and asset creation product for design, iteration, and creative workflows.', pricing: 'Free / paid plans', tags: ['images', 'design'] },
 
-  // Voice & Audio
-  { name: 'ElevenLabs', url: 'https://elevenlabs.io', category: 'voice', description: 'Industry-leading voice synthesis. Voice cloning, dubbing, audiobooks. 32 languages.', pricing: 'Free / $5/mo Starter', tags: ['voice', 'TTS', 'cloning'] },
-  { name: 'Suno', url: 'https://suno.com', category: 'voice', description: 'AI music generation. Create full songs from text prompts. Vocals, instruments, production.', pricing: 'Free / $10/mo Pro', tags: ['music', 'generation'] },
-  { name: 'Udio', url: 'https://udio.com', category: 'voice', description: 'AI music creation. Text to song with vocals. Multiple genres and styles.', pricing: 'Free / $10/mo', tags: ['music', 'generation'] },
-  { name: 'Descript', url: 'https://descript.com', category: 'voice', description: 'AI-powered audio/video editing. Edit audio like a doc. Overdub voice synthesis.', pricing: 'Free / $24/mo Pro', tags: ['audio', 'editing', 'podcasts'] },
+  { name: 'Sora', url: 'https://sora.com', category: 'video', description: 'OpenAI video-generation product for cinematic text-to-video and creative scene generation.', pricing: 'Included / paid plans', tags: ['video', 'generation'] },
+  { name: 'Runway', url: 'https://runwayml.com', category: 'video', description: 'AI video suite for generation, editing, motion controls, and production workflows.', pricing: 'Paid plans', tags: ['video', 'editing'] },
+  { name: 'Pika', url: 'https://pika.art', category: 'video', description: 'Consumer-friendly AI video product for generation and stylised effects.', pricing: 'Free / paid plans', tags: ['video', 'effects'] },
+  { name: 'Kling AI', url: 'https://klingai.com', category: 'video', description: 'AI video product focused on generation and motion control.', pricing: 'Free / paid plans', tags: ['video', 'generation'] },
+  { name: 'Veo', url: 'https://deepmind.google/technologies/veo/', category: 'video', description: 'Google DeepMind video model family for cinematic generation workflows.', pricing: 'API pricing', tags: ['video', 'generation'] },
+  { name: 'Luma Dream Machine', url: 'https://lumalabs.ai', category: 'video', description: 'Fast video-generation product with image-to-video and 3D-adjacent creative workflows.', pricing: 'Free / paid plans', tags: ['video', '3D'] },
 
-  // Writing & Content
-  { name: 'Jasper', url: 'https://jasper.ai', category: 'writing', description: 'AI marketing content platform. Brand voice, campaigns, templates. Enterprise-focused.', pricing: '$39/mo Creator', tags: ['writing', 'marketing'] },
-  { name: 'Copy.ai', url: 'https://copy.ai', category: 'writing', description: 'AI copywriting and workflows. Sales, marketing, and operations automation.', pricing: 'Free / $49/mo Pro', tags: ['writing', 'marketing'] },
-  { name: 'Grammarly', url: 'https://grammarly.com', category: 'writing', description: 'AI writing assistant. Grammar, clarity, tone. Integrates everywhere. GrammarlyGO AI feature.', pricing: 'Free / $12/mo Premium', tags: ['writing', 'grammar'] },
-  { name: 'NotebookLM', url: 'https://notebooklm.google.com', category: 'writing', description: 'Google\'s AI research assistant. Upload sources, get summaries. Audio Overview podcasts.', pricing: 'Free', tags: ['research', 'notes', 'podcasts'] },
-  { name: 'Notion AI', url: 'https://notion.so/product/ai', category: 'writing', description: 'AI built into Notion. Summarise, write, translate, brainstorm. Workspace-aware.', pricing: '$10/mo add-on', tags: ['writing', 'productivity'] },
+  { name: 'ElevenLabs', url: 'https://elevenlabs.io', category: 'voice', description: 'Voice product for synthesis, cloning, dubbing, and speech generation.', pricing: 'Free / paid plans', tags: ['voice', 'tts', 'cloning'] },
+  { name: 'Suno', url: 'https://suno.com', category: 'voice', description: 'Music-generation product for creating full songs from prompts.', pricing: 'Free / paid plans', tags: ['music', 'generation'] },
+  { name: 'Udio', url: 'https://udio.com', category: 'voice', description: 'Music-creation product for text-to-song workflows across styles and genres.', pricing: 'Free / paid plans', tags: ['music', 'generation'] },
+  { name: 'Descript', url: 'https://descript.com', category: 'voice', description: 'AI-powered editing environment for audio and video production.', pricing: 'Free / paid plans', tags: ['audio', 'editing', 'podcasts'] },
 
-  // Research & Analysis
-  { name: 'Elicit', url: 'https://elicit.com', category: 'research', description: 'AI research assistant. Analyse academic papers. Extract data, synthesise findings.', pricing: 'Free / $10/mo Plus', tags: ['research', 'academic'] },
-  { name: 'Consensus', url: 'https://consensus.app', category: 'research', description: 'AI-powered academic search. Evidence-based answers from 200M+ papers.', pricing: 'Free / $10/mo Premium', tags: ['research', 'academic'] },
-  { name: 'Semantic Scholar', url: 'https://semanticscholar.org', category: 'research', description: 'AI-powered academic search by Allen AI. TLDR summaries, citation graphs, influence scores.', pricing: 'Free', tags: ['research', 'academic'] },
+  { name: 'Jasper', url: 'https://jasper.ai', category: 'writing', description: 'Marketing-oriented writing and content automation platform.', pricing: 'Paid plans', tags: ['writing', 'marketing'] },
+  { name: 'Copy.ai', url: 'https://copy.ai', category: 'writing', description: 'AI copywriting and workflow product for sales, marketing, and operations use cases.', pricing: 'Free / paid plans', tags: ['writing', 'marketing'] },
+  { name: 'Grammarly', url: 'https://grammarly.com', category: 'writing', description: 'Writing assistant for grammar, tone, and clarity with AI-enhanced drafting support.', pricing: 'Free / paid plans', tags: ['writing', 'grammar'] },
+  { name: 'NotebookLM', url: 'https://notebooklm.google.com', category: 'writing', description: 'Source-grounded research and note product with summary and audio-overview workflows.', pricing: 'Free', tags: ['research', 'notes', 'podcasts'] },
+  { name: 'Notion AI', url: 'https://notion.so/product/ai', category: 'writing', description: 'Workspace-native AI features inside Notion for writing, summarising, and organising.', pricing: 'Paid add-on', tags: ['writing', 'productivity'] },
 
-  // Developer Tools & APIs
-  { name: 'OpenRouter', url: 'https://openrouter.ai', category: 'devtools', description: 'Unified API for 500+ AI models. Automatic fallbacks, cost tracking, rate limiting.', pricing: 'Pay-per-use', tags: ['API', 'multi-model'] },
-  { name: 'LangChain', url: 'https://langchain.com', category: 'devtools', description: 'Framework for building LLM applications. Chains, agents, RAG. Python and JavaScript.', pricing: 'Free / LangSmith paid', tags: ['framework', 'agents'] },
-  { name: 'LlamaIndex', url: 'https://llamaindex.ai', category: 'devtools', description: 'Data framework for LLMs. Connect custom data sources. RAG pipelines.', pricing: 'Free / Cloud paid', tags: ['framework', 'RAG'] },
-  { name: 'Hugging Face', url: 'https://huggingface.co', category: 'devtools', description: 'ML model hub. 500K+ models, datasets, spaces. Transformers library. The GitHub of AI.', pricing: 'Free / $9/mo Pro', tags: ['models', 'datasets', 'open-source'] },
-  { name: 'Replicate', url: 'https://replicate.com', category: 'devtools', description: 'Run open-source AI models via API. Serverless GPU. Easy deployment.', pricing: 'Pay-per-use', tags: ['API', 'deployment'] },
-  { name: 'Together AI', url: 'https://together.ai', category: 'devtools', description: 'Fast inference for open-source models. Fine-tuning, serverless endpoints.', pricing: 'Pay-per-use', tags: ['API', 'open-source', 'fine-tuning'] },
-  { name: 'Fireworks AI', url: 'https://fireworks.ai', category: 'devtools', description: 'Ultra-fast inference platform. Compound AI systems. Function calling.', pricing: 'Pay-per-use', tags: ['API', 'inference'] },
-  { name: 'Groq', url: 'https://groq.com', category: 'devtools', description: 'Fastest LLM inference. Custom LPU chips. Llama, Mixtral at blazing speed.', pricing: 'Free / Pay-per-use', tags: ['API', 'speed', 'hardware'] },
+  { name: 'Elicit', url: 'https://elicit.com', category: 'research', description: 'AI research assistant for academic literature, extraction, and synthesis.', pricing: 'Free / paid plans', tags: ['research', 'academic'] },
+  { name: 'Consensus', url: 'https://consensus.app', category: 'research', description: 'Research search product focused on evidence-backed answers from the literature.', pricing: 'Free / paid plans', tags: ['research', 'academic'] },
+  { name: 'Semantic Scholar', url: 'https://semanticscholar.org', category: 'research', description: 'Academic search platform with ML-assisted discovery and paper summaries.', pricing: 'Free', tags: ['research', 'academic'] },
 
-  // Productivity & Business
-  { name: 'Microsoft Copilot', url: 'https://copilot.microsoft.com', category: 'productivity', description: 'AI assistant across Microsoft 365. Word, Excel, PowerPoint, Teams integration.', pricing: '$30/user/mo', tags: ['productivity', 'office'] },
-  { name: 'Google Workspace AI', url: 'https://workspace.google.com/solutions/ai/', category: 'productivity', description: 'AI in Google Docs, Sheets, Slides, Gmail. Gemini-powered. Smart compose, summarise.', pricing: 'Included / $20/mo AI Premium', tags: ['productivity', 'office'] },
-  { name: 'Zapier AI', url: 'https://zapier.com/ai', category: 'productivity', description: 'AI-powered automation. Natural language workflows. Connect 6,000+ apps.', pricing: 'Free / $20/mo Starter', tags: ['automation', 'workflows'] },
-  { name: 'Otter.ai', url: 'https://otter.ai', category: 'productivity', description: 'AI meeting transcription. Real-time notes, action items, summaries. Zoom/Teams integration.', pricing: 'Free / $17/mo Pro', tags: ['transcription', 'meetings'] },
+  { name: 'OpenRouter', url: 'https://openrouter.ai', category: 'devtools', description: 'Unified API for many model providers with routing, fallbacks, and cost tracking.', pricing: 'Pay per use', tags: ['api', 'multi-model'] },
+  { name: 'LangChain', url: 'https://langchain.com', category: 'devtools', description: 'Framework for building LLM applications, chains, agents, and RAG workflows.', pricing: 'Free / paid cloud', tags: ['framework', 'agents'] },
+  { name: 'LlamaIndex', url: 'https://llamaindex.ai', category: 'devtools', description: 'Data and retrieval framework for connecting LLMs to your own content.', pricing: 'Free / paid cloud', tags: ['framework', 'rag'] },
+  { name: 'Hugging Face', url: 'https://huggingface.co', category: 'devtools', description: 'Open model hub for models, datasets, Spaces, and wider ML tooling.', pricing: 'Free / paid plans', tags: ['models', 'datasets', 'open-source'] },
+  { name: 'Replicate', url: 'https://replicate.com', category: 'devtools', description: 'Hosted platform for running open models via API and serverless compute.', pricing: 'Pay per use', tags: ['api', 'deployment'] },
+  { name: 'Together AI', url: 'https://together.ai', category: 'devtools', description: 'Inference platform focused on open models, fine-tuning, and serverless endpoints.', pricing: 'Pay per use', tags: ['api', 'open-source', 'fine-tuning'] },
+  { name: 'Fireworks AI', url: 'https://fireworks.ai', category: 'devtools', description: 'High-performance inference platform for model APIs and compound systems.', pricing: 'Pay per use', tags: ['api', 'inference'] },
+  { name: 'Groq', url: 'https://groq.com', category: 'devtools', description: 'Inference platform known for low-latency hosted model access.', pricing: 'Free / pay per use', tags: ['api', 'speed', 'hardware'] },
+
+  { name: 'Microsoft Copilot', url: 'https://copilot.microsoft.com', category: 'productivity', description: 'AI assistant layer across Microsoft productivity products and enterprise workflows.', pricing: 'Paid plans', tags: ['productivity', 'office'] },
+  { name: 'Google Workspace AI', url: 'https://workspace.google.com/solutions/ai/', category: 'productivity', description: 'Gemini-powered features across Docs, Sheets, Slides, Gmail, and related tools.', pricing: 'Included / paid plans', tags: ['productivity', 'office'] },
+  { name: 'Zapier AI', url: 'https://zapier.com/ai', category: 'productivity', description: 'Automation product with AI-assisted workflow generation and orchestration.', pricing: 'Free / paid plans', tags: ['automation', 'workflows'] },
+  { name: 'Otter.ai', url: 'https://otter.ai', category: 'productivity', description: 'Meeting transcription and note product for calls, summaries, and action items.', pricing: 'Free / paid plans', tags: ['transcription', 'meetings'] },
 ];
 
-// Category labels and order
-const categoryConfig: Record<string, { label: string; icon: string }> = {
-  chatbot: { label: 'Chatbots & AI Assistants', icon: '💬' },
-  coding: { label: 'Coding Assistants & IDEs', icon: '👨‍💻' },
-  image: { label: 'Image Generation', icon: '🎨' },
-  video: { label: 'Video Generation', icon: '🎬' },
-  voice: { label: 'Voice, Music & Audio', icon: '🎵' },
-  writing: { label: 'Writing & Content', icon: '✍️' },
-  research: { label: 'Research & Analysis', icon: '🔬' },
-  devtools: { label: 'Developer Tools & APIs', icon: '🔧' },
-  productivity: { label: 'Productivity & Business', icon: '📊' },
+const categoryConfig: Record<string, { label: string }> = {
+  chatbot: { label: 'Chatbots & AI Assistants' },
+  coding: { label: 'Coding Assistants & IDEs' },
+  local: { label: 'Local AI & Open Source' },
+  image: { label: 'Image Generation' },
+  video: { label: 'Video Generation' },
+  voice: { label: 'Voice, Music & Audio' },
+  writing: { label: 'Writing & Content' },
+  research: { label: 'Research & Analysis' },
+  devtools: { label: 'Developer Tools & APIs' },
+  productivity: { label: 'Productivity & Business' },
 };
 
-const categoryOrder = ['chatbot', 'coding', 'image', 'video', 'voice', 'writing', 'research', 'devtools', 'productivity'];
-const grouped = categoryOrder.map(cat => ({
-  category: cat,
-  config: categoryConfig[cat],
-  tools: tools.filter(t => t.category === cat),
+const categoryOrder = ['chatbot', 'coding', 'local', 'image', 'video', 'voice', 'writing', 'research', 'devtools', 'productivity'];
+const grouped = categoryOrder.map((category) => ({
+  category,
+  config: categoryConfig[category],
+  tools: tools.filter((tool) => tool.category === category),
 }));
 ---
 
 <BaseLayout
-  title="AI Tools Directory — The AI Resource Hub"
-  description="Comprehensive directory of the best AI tools — chatbots, coding assistants, image generators, video tools, and more. With pricing and descriptions."
+  title="AI Tools Directory - The AI Resource Hub"
+  description="Curated directory of important AI tools across chat, coding, local models, media generation, research, and developer workflows."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -165,30 +164,29 @@ const grouped = categoryOrder.map(cat => ({
             class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-border-hover)"
           >
             <option value="">All tool types</option>
-            {grouped.map(g => (
-              <option value={g.category}>{g.config.label}</option>
+            {grouped.map((group) => (
+              <option value={group.category}>{group.config.label}</option>
             ))}
           </select>
         </div>
       </div>
 
       <div class="flex flex-wrap gap-2 mt-5">
-      {grouped.map(g => (
-        <a href={`#${g.category}`} class="text-xs px-3 py-1.5 rounded-full font-medium bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors">
-          {g.config.label} ({g.tools.length})
-        </a>
-      ))}
+        {grouped.map((group) => (
+          <a href={`#${group.category}`} class="text-xs px-3 py-1.5 rounded-full font-medium bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors">
+            {group.config.label} ({group.tools.length})
+          </a>
+        ))}
       </div>
     </div>
 
-    <!-- Tool groups -->
-    {grouped.map(group => (
+    {grouped.map((group) => (
       <div class="mb-10" id={group.category} data-tool-group>
         <h2 class="text-lg font-bold text-(--color-text-primary) mb-4">
           {group.config.label}
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {group.tools.map(tool => (
+          {group.tools.map((tool) => (
             <a
               href={tool.url}
               target="_blank"
@@ -214,7 +212,7 @@ const grouped = categoryOrder.map(cat => ({
                   {tool.pricing}
                 </span>
                 <div class="flex gap-1">
-                  {tool.tags.slice(0, 2).map(tag => (
+                  {tool.tags.slice(0, 2).map((tag) => (
                     <span class="text-[10px] px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-muted)">
                       {tag}
                     </span>
@@ -230,11 +228,12 @@ const grouped = categoryOrder.map(cat => ({
     <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
       <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Choosing the Right Tool</h2>
       <ul class="text-sm text-(--color-text-secondary) space-y-1 list-disc list-inside">
-        <li>Most AI chatbots offer free tiers — try several before committing to a paid plan</li>
-        <li>For coding, Cursor and Claude Code are currently leading in code quality and multi-file editing</li>
-        <li>For image generation, Midjourney leads on quality, Flux on open-source, Ideogram on text rendering</li>
-        <li>OpenRouter lets you access 500+ models through a single API, great for comparison</li>
-        <li>Check our <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">LLM comparison</a> for detailed pricing and benchmark data</li>
+        <li>Most AI chatbots offer free tiers, so it is worth trying several before paying for one default.</li>
+        <li>For coding, Cursor and Claude Code are strong starting points if you want fast repo-aware assistance.</li>
+        <li>For local models, start with LM Studio or Ollama before moving to lower-level runtimes like llama.cpp or MLX.</li>
+        <li>For image generation, the right choice depends on whether you care more about art direction, editing, or open local control.</li>
+        <li>OpenRouter is useful when you want one API entry point for many model providers.</li>
+        <li>Check our <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">LLM comparison</a> for detailed pricing and benchmark data.</li>
       </ul>
     </div>
   </section>

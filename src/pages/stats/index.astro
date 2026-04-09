@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getProvidersWithCounts, getModelsByCategory, getBenchmarks, getModelBenchmarks, getPeople, getGlossaryTerms, getYouTubeCreators, getAIJobsOverview } from '../../db/queries';
+import { getProvidersWithCounts, getModelsByCategory, getBenchmarks, getModelBenchmarks, getPeople, getGlossaryTerms, getYouTubeCreators, getAIJobsOverview, getLastScrapeTime } from '../../db/queries';
 import {
   filterAIYouTubeCreators,
   getGuideCount,
@@ -21,6 +21,9 @@ const ytCreators = filterAIYouTubeCreators(getYouTubeCreators());
 const storyTagCount = getStoryTagCount(newsArticles);
 const guideCount = getGuideCount();
 const jobsOverview = getAIJobsOverview();
+const latestRefresh = getLastScrapeTime('jobs')
+  ?? getLastScrapeTime('news:rss')
+  ?? getLastScrapeTime('pricing:openrouter');
 
 // Count models by category
 const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
@@ -80,6 +83,17 @@ function formatTokens(n: number): string {
   if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
   return n.toString();
 }
+
+function formatRefreshLabel(value: string | null): string {
+  if (!value) return 'Awaiting refresh';
+  return new Date(value).toLocaleString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+}
 ---
 
 <BaseLayout
@@ -99,6 +113,9 @@ function formatTokens(n: number): string {
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
         A snapshot of the AI model landscape based on our database of {totalModels} models, {providers.length} providers, and {benchmarks.length} benchmarks.
+      </p>
+      <p class="text-sm text-(--color-text-muted) mt-3">
+        Latest full refresh: {formatRefreshLabel(latestRefresh)}
       </p>
     </div>
 
@@ -298,7 +315,7 @@ function formatTokens(n: number): string {
           <p class="text-2xl font-bold text-(--color-text-primary)">{ytCreators.length}</p>
           <p class="text-xs text-(--color-text-muted)">YouTube Channels</p>
         </a>
-        <a href={`${base}news/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <a href={`${base}tags/`} class="block p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
           <p class="text-2xl font-bold text-(--color-text-primary)">{storyTagCount}</p>
           <p class="text-xs text-(--color-text-muted)">News Topics</p>
         </a>

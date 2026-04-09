@@ -112,6 +112,10 @@ function Test-IgnorableGeneratedChange {
 
   $normalised = $path.Replace('\', '/')
   return (
+    $normalised -eq 'data/provider-status.json' -or
+    $normalised -eq 'public/data/ai-models-comparison.csv' -or
+    $normalised -eq 'public/data/ai-models-comparison.json' -or
+    $normalised -eq 'public/data/models-latest.json' -or
     $normalised -eq 'src/data/news-feed-latest.json' -or
     $normalised -match '^src/data/news-feed-\d{4}-\d{2}-\d{2}\.json$' -or
     $normalised -match '^src/data/digest-\d{4}-\d{2}-\d{2}\.md$' -or
@@ -130,7 +134,7 @@ try {
   $ignorableChanges = @($existingChanges | Where-Object { Test-IgnorableGeneratedChange $_ })
 
   if ($ignorableChanges.Count -gt 0) {
-    Write-Log "Ignoring $($ignorableChanges.Count) generated news snapshot change(s) when checking tree cleanliness."
+    Write-Log "Ignoring $($ignorableChanges.Count) generated publish artifact change(s) when checking tree cleanliness."
   }
 
   if ($blockingChanges.Count -gt 0) {
@@ -175,7 +179,7 @@ try {
 
   Invoke-Logged 'npm.cmd' @('run', 'build')
 
-  $publishPaths = @('data/the-ai-resource-hub.db', 'data/pg-cache', 'src/data/news-pipeline.generated.ts')
+  $publishPaths = @('data/the-ai-resource-hub.db', 'data/pg-cache', 'data/provider-status.json', 'public/data', 'src/data/news-pipeline.generated.ts')
   $publishChanges = @(Invoke-Captured 'git' (@('status', '--porcelain', '--') + $publishPaths))
   if ($publishChanges.Count -eq 0) {
     Write-Log 'No publishable data changes detected. Nothing to commit.'

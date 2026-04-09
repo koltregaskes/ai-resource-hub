@@ -112,8 +112,8 @@ for (const category of categories) {
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
         <ul class="space-y-3 text-sm text-(--color-text-secondary)">
           <li><strong>Static site</strong> - Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Astro</a> for maximum performance. Every page is pre-rendered at build time.</li>
-          <li><strong>SQLite database</strong> - All model data, benchmarks, and content are stored in a single SQLite database for fast, reliable queries at build time.</li>
-          <li><strong>Automated updates</strong> - the primary twice-daily refresh now runs on the always-on local machine, with GitHub Actions kept as a manual fallback when needed.</li>
+          <li><strong>Data pipeline</strong> - Collection runs through the local automation stack, normalises into the shared registry, and publishes a static JSON cache for fast build-time queries.</li>
+          <li><strong>Automated updates</strong> - Twice-daily refreshes rebuild pricing, benchmarks, news, exports, and publish-readiness checks before a new site build is allowed through.</li>
           <li><strong>Open source</strong> - The entire codebase is <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">open source on GitHub</a>. Contributions welcome.</li>
           <li><strong>No tracking</strong> - No cookies, no analytics trackers, and no third-party scripts. Just fast, clean pages.</li>
         </ul>

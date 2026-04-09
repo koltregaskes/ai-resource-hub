@@ -6,14 +6,14 @@ const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 const tools = getCLITools();
+const usingCuratedFallback = tools.length > 0 && tools.every((tool) => tool.notes?.includes('Curated fallback entry'));
 
 const title = 'AI Coding CLI Tools Compared';
-const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemini CLI, Aider, Goose, Warp, Crush, and more. Features, pricing, models, and platform support.';
+const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemini CLI, Aider, Goose, Warp, and more. Features, pricing, models, and platform support.';
 ---
 
 <BaseLayout title={title} description={description}>
   <main class="max-w-7xl mx-auto px-4 py-8">
-    <!-- Header -->
     <div class="mb-8">
       <nav class="text-sm text-(--color-text-muted) mb-4">
         <a href={base} class="hover:text-(--color-text-primary)">Home</a>
@@ -23,18 +23,17 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
       <h1 class="text-3xl font-bold text-(--color-text-primary) mb-2">{title}</h1>
       <p class="text-(--color-text-secondary) max-w-3xl">
         The terminal is back. After a decade of IDEs getting heavier, the command line has re-emerged as the
-        centre of gravity for AI-assisted coding. Here's every CLI tool worth knowing about.
+        centre of gravity for AI-assisted coding. Here are the CLI tools worth knowing about.
       </p>
       <p class="text-sm text-(--color-text-muted) mt-2">
-        {tools.length} tools tracked. Updated March 2026.
+        {tools.length} tools tracked. {usingCuratedFallback ? 'Showing a curated baseline while the live CLI registry fills out.' : 'Pulled from the live CLI registry.'}
       </p>
     </div>
 
-    <!-- Big 3 Feature Cards -->
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">The Big Three</h2>
       <div class="grid md:grid-cols-3 gap-4">
-        {tools.filter(t => ['claude-code', 'openai-codex', 'gemini-cli'].includes(t.id)).map(tool => (
+        {tools.filter((tool) => ['claude-code', 'openai-codex', 'gemini-cli'].includes(tool.id)).map((tool) => (
           <div class="rounded-lg border border-(--color-border) bg-(--color-bg-card) p-5 flex flex-col">
             <div class="flex items-center gap-3 mb-3">
               {tool.provider_colour && (
@@ -51,7 +50,7 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
               <div class="flex justify-between">
                 <span class="text-(--color-text-muted)">Context</span>
                 <span class="text-(--color-text-primary) font-mono">
-                  {tool.context_window > 0 ? `${(tool.context_window / 1000).toFixed(0)}K` : '—'}
+                  {tool.context_window > 0 ? `${(tool.context_window / 1000).toFixed(0)}K` : 'Varies'}
                 </span>
               </div>
               <div class="flex justify-between">
@@ -60,7 +59,9 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
               </div>
               <div class="flex justify-between">
                 <span class="text-(--color-text-muted)">Open source</span>
-                <span class={tool.open_source ? 'text-green-400' : 'text-(--color-text-muted)'}>{tool.open_source ? 'Yes' : 'No'}</span>
+                <span class={tool.open_source ? 'text-green-400' : 'text-(--color-text-muted)'}>
+                  {tool.open_source ? 'Yes' : 'No'}
+                </span>
               </div>
               <div class="flex gap-1 flex-wrap mt-2">
                 {tool.mcp_support && <span class="px-1.5 py-0.5 rounded text-xs bg-blue-900/40 text-blue-300">MCP</span>}
@@ -70,12 +71,10 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
             </div>
             <div class="flex gap-2 mt-4 pt-3 border-t border-(--color-border)">
               {tool.website && (
-                <a href={tool.website} target="_blank" rel="noopener"
-                   class="text-xs text-blue-400 hover:underline">Website</a>
+                <a href={tool.website} target="_blank" rel="noopener" class="text-xs text-blue-400 hover:underline">Website</a>
               )}
               {tool.github_url && (
-                <a href={tool.github_url} target="_blank" rel="noopener"
-                   class="text-xs text-blue-400 hover:underline">GitHub</a>
+                <a href={tool.github_url} target="_blank" rel="noopener" class="text-xs text-blue-400 hover:underline">GitHub</a>
               )}
             </div>
           </div>
@@ -83,7 +82,6 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
       </div>
     </div>
 
-    <!-- Full Comparison Table -->
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">All CLI Tools</h2>
       <div class="overflow-x-auto">
@@ -103,8 +101,8 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
             </tr>
           </thead>
           <tbody>
-            {tools.map((tool, i) => (
-              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-secondary)/50 ${i % 2 === 0 ? '' : 'bg-(--color-bg-secondary)/30'}`}>
+            {tools.map((tool, index) => (
+              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-secondary)/50 ${index % 2 === 0 ? '' : 'bg-(--color-bg-secondary)/30'}`}>
                 <td class="px-3 py-2.5 sticky left-0 bg-(--color-bg-primary)">
                   <div class="flex items-center gap-2">
                     {tool.provider_colour && (
@@ -116,9 +114,9 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
                   </div>
                 </td>
                 <td class="px-3 py-2.5 text-(--color-text-secondary)">{tool.maker}</td>
-                <td class="px-3 py-2.5 text-(--color-text-secondary) font-mono text-xs">{tool.default_model || '—'}</td>
+                <td class="px-3 py-2.5 text-(--color-text-secondary) font-mono text-xs">{tool.default_model || '-'}</td>
                 <td class="px-3 py-2.5 text-(--color-text-primary) font-mono text-xs text-right">
-                  {tool.context_window > 0 ? `${(tool.context_window / 1000).toFixed(0)}K` : '—'}
+                  {tool.context_window > 0 ? `${(tool.context_window / 1000).toFixed(0)}K` : 'Varies'}
                 </td>
                 <td class="px-3 py-2.5 text-center">
                   {tool.open_source ? (
@@ -129,19 +127,21 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
                 </td>
                 <td class="px-3 py-2.5">
                   <span class={`text-xs px-1.5 py-0.5 rounded ${
-                    tool.pricing_type === 'free' ? 'bg-green-900/40 text-green-300' :
-                    tool.pricing_type === 'freemium' ? 'bg-yellow-900/40 text-yellow-300' :
-                    'bg-blue-900/40 text-blue-300'
+                    tool.pricing_type === 'free' ? 'bg-green-900/40 text-green-300'
+                    : tool.pricing_type === 'freemium' ? 'bg-yellow-900/40 text-yellow-300'
+                    : 'bg-blue-900/40 text-blue-300'
                   }`}>{tool.pricing_type}</span>
                 </td>
-                <td class="px-3 py-2.5 text-center">{tool.mcp_support ? '✓' : '—'}</td>
-                <td class="px-3 py-2.5 text-center">{tool.git_integration ? '✓' : '—'}</td>
+                <td class="px-3 py-2.5 text-center">{tool.mcp_support ? 'Yes' : '-'}</td>
+                <td class="px-3 py-2.5 text-center">{tool.git_integration ? 'Yes' : '-'}</td>
                 <td class="px-3 py-2.5 text-(--color-text-muted) text-xs max-w-[120px] truncate">{tool.platforms}</td>
                 <td class="px-3 py-2.5">
-                  {tool.install_command && (
+                  {tool.install_command ? (
                     <code class="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-tertiary) px-1.5 py-0.5 rounded whitespace-nowrap">
                       {tool.install_command}
                     </code>
+                  ) : (
+                    <span class="text-xs text-(--color-text-muted)">See docs</span>
                   )}
                 </td>
               </tr>
@@ -151,51 +151,47 @@ const description = 'Compare every AI coding CLI tool: Claude Code, Codex, Gemin
       </div>
     </div>
 
-    <!-- Feature Comparison Grid -->
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Quick Feature Matrix</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
           <h3 class="font-semibold text-(--color-text-primary) mb-2">Largest Context Window</h3>
-          {tools.filter(t => t.context_window > 0).sort((a, b) => b.context_window - a.context_window).slice(0, 3).map(t => (
+          {tools.filter((tool) => tool.context_window > 0).sort((a, b) => b.context_window - a.context_window).slice(0, 3).map((tool) => (
             <div class="flex justify-between text-sm mb-1">
-              <span class="text-(--color-text-secondary)">{t.name}</span>
-              <span class="font-mono text-(--color-text-primary)">{(t.context_window / 1000).toFixed(0)}K</span>
+              <span class="text-(--color-text-secondary)">{tool.name}</span>
+              <span class="font-mono text-(--color-text-primary)">{(tool.context_window / 1000).toFixed(0)}K</span>
             </div>
           ))}
         </div>
         <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
           <h3 class="font-semibold text-(--color-text-primary) mb-2">MCP Support</h3>
-          {tools.filter(t => t.mcp_support).map(t => (
-            <div class="text-sm text-(--color-text-secondary) mb-1">{t.name}</div>
+          {tools.filter((tool) => tool.mcp_support).map((tool) => (
+            <div class="text-sm text-(--color-text-secondary) mb-1">{tool.name}</div>
           ))}
         </div>
         <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
           <h3 class="font-semibold text-(--color-text-primary) mb-2">Free & Open Source</h3>
-          {tools.filter(t => t.open_source && t.pricing_type === 'free').map(t => (
+          {tools.filter((tool) => tool.open_source && tool.pricing_type === 'free').map((tool) => (
             <div class="flex justify-between text-sm mb-1">
-              <span class="text-(--color-text-secondary)">{t.name}</span>
-              <span class="text-xs text-(--color-text-muted)">{t.license}</span>
+              <span class="text-(--color-text-secondary)">{tool.name}</span>
+              <span class="text-xs text-(--color-text-muted)">{tool.license}</span>
             </div>
           ))}
         </div>
       </div>
     </div>
 
-    <!-- Choosing Guide -->
     <div class="mb-8 p-6 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Which CLI Should You Use?</h2>
       <div class="space-y-3 text-sm text-(--color-text-secondary)">
         <p><strong class="text-(--color-text-primary)">For autonomous coding tasks:</strong> Claude Code leads on multi-step reasoning and large refactors.</p>
-        <p><strong class="text-(--color-text-primary)">For parallel execution:</strong> Codex CLI can run multiple agents on isolated worktrees simultaneously.</p>
-        <p><strong class="text-(--color-text-primary)">For huge codebases:</strong> Gemini CLI's 1M token context window is 5x larger than alternatives.</p>
-        <p><strong class="text-(--color-text-primary)">For model flexibility:</strong> Aider and Goose are model-agnostic — use whichever LLM you prefer.</p>
-        <p><strong class="text-(--color-text-primary)">For AWS workflows:</strong> Amazon Q Developer CLI has deep AWS service integration.</p>
-        <p><strong class="text-(--color-text-primary)">For web data:</strong> Firecrawl CLI turns any website into LLM-ready markdown for your agents.</p>
-        <p><strong class="text-(--color-text-primary)">For code review:</strong> CodeRabbit CLI focuses on review rather than generation.</p>
-        <p class="text-(--color-text-muted) mt-4 text-xs">Many teams now use multiple tools — the right answer may be "all of them" for different parts of your workflow.</p>
+        <p><strong class="text-(--color-text-primary)">For parallel execution:</strong> Codex CLI is strong when you want isolated agents and repo-level workflows.</p>
+        <p><strong class="text-(--color-text-primary)">For huge codebases:</strong> Gemini CLI is attractive when long-context prompts matter.</p>
+        <p><strong class="text-(--color-text-primary)">For model flexibility:</strong> Aider and Goose are model-agnostic, so you can bring your own API or local model stack.</p>
+        <p><strong class="text-(--color-text-primary)">For AWS workflows:</strong> Amazon Q Developer CLI is useful when the work is tightly tied to AWS services.</p>
+        <p><strong class="text-(--color-text-primary)">For terminal UX:</strong> Warp is useful when you want AI assistance embedded in the terminal itself rather than a pure coding agent.</p>
+        <p class="text-(--color-text-muted) mt-4 text-xs">Many teams now use multiple tools. The right answer is often a stack, not a single winner.</p>
       </div>
     </div>
-
   </main>
 </BaseLayout>

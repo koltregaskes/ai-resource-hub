@@ -110,12 +110,22 @@ function formatDateRange(startDate?: string, endDate?: string): string {
       <p class="section-kicker">Confirmed schedule</p>
       <h2 class="section-heading section-heading-compact">Confirmed dates by month</h2>
       <p class="mt-3 max-w-2xl text-sm leading-6 text-(--color-text-secondary)">
-        This is a month-grouped schedule for now, not a literal calendar grid. The aim is to keep the order easy to scan until the full calendar view lands.
+        Confirmed dates are grouped by month for fast scanning. This is the working event schedule for now, with the watchlist below handling recurring series that are still waiting on official dates.
       </p>
+
+      {datedEvents.length > 0 && (
+        <div class="mt-5 flex flex-wrap gap-2">
+          {datedEvents.map(([monthKey]) => (
+            <a href={`#event-month-${monthKey}`} class="rounded-full border border-(--color-border) bg-(--color-bg-primary) px-3 py-1.5 text-xs uppercase tracking-[0.14em] text-(--color-text-secondary) transition-colors hover:border-(--color-accent) hover:text-(--color-text-primary)">
+              {formatMonth(monthKey)}
+            </a>
+          ))}
+        </div>
+      )}
 
       <div class="mt-6 space-y-6">
         {datedEvents.map(([monthKey, events]) => (
-          <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-5">
+          <div id={`event-month-${monthKey}`} class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-5" data-event-month>
             <div class="flex items-end justify-between gap-4 border-b border-(--color-border) pb-4">
               <h3 class="text-xl font-semibold text-(--color-text-primary)">{formatMonth(monthKey)}</h3>
               <span class="text-xs uppercase tracking-[0.16em] text-(--color-text-muted)">{events.length} event{events.length === 1 ? '' : 's'}</span>
@@ -232,6 +242,10 @@ function formatDateRange(startDate?: string, endDate?: string): string {
           </article>
         ))}
       </div>
+
+      <div id="events-empty-state" class="hidden rounded-2xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-6 text-center text-sm text-(--color-text-secondary)">
+        No events match the current filter set. Clear the category filters to see the full schedule again.
+      </div>
     </div>
   </section>
 
@@ -267,6 +281,8 @@ function formatDateRange(startDate?: string, endDate?: string): string {
       const checkboxes = Array.from(document.querySelectorAll('.event-filter-checkbox'));
       const cards = Array.from(document.querySelectorAll('.event-directory-card'));
       const clearButton = document.getElementById('clear-event-filters');
+      const monthBlocks = Array.from(document.querySelectorAll('[data-event-month]'));
+      const emptyState = document.getElementById('events-empty-state');
 
       function applyFilters() {
         const active = checkboxes
@@ -279,6 +295,14 @@ function formatDateRange(startDate?: string, endDate?: string): string {
           const visible = active.length === 0 || active.every((tag) => tags.includes(tag));
           card.classList.toggle('hidden', !visible);
         }
+
+        monthBlocks.forEach((block) => {
+          const visibleCards = block.querySelectorAll('.event-directory-card:not(.hidden)');
+          block.classList.toggle('hidden', visibleCards.length === 0);
+        });
+
+        const visibleCount = cards.filter((card) => !card.classList.contains('hidden')).length;
+        emptyState?.classList.toggle('hidden', visibleCount > 0);
       }
 
       for (const checkbox of checkboxes) {
@@ -291,6 +315,8 @@ function formatDateRange(startDate?: string, endDate?: string): string {
         }
         applyFilters();
       });
+
+      applyFilters();
     })();
   </script>
 </BaseLayout>

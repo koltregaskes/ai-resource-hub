@@ -9,6 +9,7 @@
  */
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
+import { getRenderableCliTools } from '../data/cli-tools';
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'pg-cache');
 
@@ -54,8 +55,11 @@ interface CachedModel {
   notes: string | null;
   pricing_source: string | null;
   pricing_updated: string | null;
+  updated_at?: string | null;
   speed_source: string | null;
   speed_updated: string | null;
+  provider_status_url?: string | null;
+  provider_api_docs_url?: string | null;
 }
 
 interface CachedProvider {
@@ -63,11 +67,14 @@ interface CachedProvider {
   name: string;
   colour: string;
   website: string | null;
+  status_url?: string | null;
+  api_docs_url?: string | null;
   description: string | null;
   founded: string | null;
   headquarters: string | null;
   ceo: string | null;
   funding: string | null;
+  updated_at?: string | null;
 }
 
 interface CachedBenchmark {
@@ -524,8 +531,10 @@ export function getRumouredModels(): CachedRumouredModel[] {
   return loadCache<CachedRumouredModel>('rumoured_models');
 }
 export function getCLITools(): CachedCliTool[] {
-  return loadCache<CachedCliTool>('cli_tools')
-    .filter((tool) => tool.status === 'active')
+  const liveTools = loadCache<CachedCliTool>('cli_tools')
+    .filter((tool) => tool.status === 'active');
+
+  return getRenderableCliTools(liveTools)
     .map((tool) => ({
       ...tool,
       context_window: toNumber(tool.context_window),

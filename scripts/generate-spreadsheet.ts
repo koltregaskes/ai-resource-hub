@@ -27,11 +27,22 @@ function main() {
       m.speed, m.quality_score,
       m.released, m.open_source,
       m.modality, m.api_available,
+      m.category, m.status,
       m.pricing_source, m.pricing_updated,
       m.notes
     FROM models m
     LEFT JOIN providers p ON p.id = m.provider_id
-    ORDER BY m.quality_score DESC, m.name ASC
+    ORDER BY
+      CASE m.status
+        WHEN 'active' THEN 0
+        WHEN 'tracking' THEN 1
+        WHEN 'preview' THEN 2
+        WHEN 'deprecated' THEN 3
+        WHEN 'retired' THEN 4
+        ELSE 5
+      END,
+      m.quality_score DESC,
+      m.name ASC
   `).all() as any[];
 
   // Get benchmark scores for each model
@@ -69,7 +80,7 @@ function main() {
 
   // CSV headers
   const headers = [
-    'Model', 'Provider', 'Quality Score', 'Input Price ($/M tokens)', 'Output Price ($/M tokens)',
+    'Model', 'Provider', 'Category', 'Status', 'Quality Score', 'Input Price ($/M tokens)', 'Output Price ($/M tokens)',
     'Context Window', 'Max Output', 'Speed (tok/s)', 'TTFT (ms)',
     'Open Source', 'Modality', 'API Available', 'Released',
     ...benchmarkIds.map(b => b.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())),
@@ -93,6 +104,8 @@ function main() {
     const row = [
       m.name || '',
       m.provider_name || m.provider_id || '',
+      m.category || '',
+      m.status || '',
       String(m.quality_score || ''),
       String(m.input_price ?? ''),
       String(m.output_price ?? ''),
@@ -114,8 +127,11 @@ function main() {
 
     // Also build JSON version for web table
     jsonRows.push({
+      id: m.id,
       model: m.name,
       provider: m.provider_name || m.provider_id,
+      category: m.category || null,
+      status: m.status || null,
       quality_score: m.quality_score || null,
       input_price: m.input_price != null ? parseFloat(m.input_price) : null,
       output_price: m.output_price != null ? parseFloat(m.output_price) : null,
@@ -158,6 +174,8 @@ function main() {
   const jsonData = {
     generated: new Date().toISOString(),
     model_count: models.length,
+    active_model_count: models.filter((model) => model.status === 'active').length,
+    tracking_model_count: models.filter((model) => model.status === 'tracking').length,
     benchmark_types: benchmarkIds,
     models: jsonRows,
   };

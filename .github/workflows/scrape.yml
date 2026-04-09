@@ -48,6 +48,9 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+      - name: Generate public comparison exports
+        run: npm run generate:spreadsheet
+
       - name: Run data staleness check
         run: npx tsx scripts/check-staleness.ts
         timeout-minutes: 1
@@ -59,13 +62,13 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet -- data/the-ai-resource-hub.db data/pg-cache || echo "changed=true" >> "$GITHUB_OUTPUT"
+          git diff --quiet -- data/the-ai-resource-hub.db data/pg-cache data/provider-status.json public/data || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated data
         if: steps.changes.outputs.changed == 'true' || inputs.force_rebuild == 'true'
         run: |
           git config user.name "The AI Resource Hub Bot"
           git config user.email "bot@theairesourcehub.com"
-          git add data/the-ai-resource-hub.db data/pg-cache
+          git add data/the-ai-resource-hub.db data/pg-cache data/provider-status.json public/data
           git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
           git push

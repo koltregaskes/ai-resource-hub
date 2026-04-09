@@ -7,6 +7,8 @@ import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './front
 const repoRoot = process.cwd();
 const dbPath = path.join(repoRoot, 'data', 'the-ai-resource-hub.db');
 const cacheDir = path.join(repoRoot, 'data', 'pg-cache');
+const publicDataDir = path.join(repoRoot, 'public', 'data');
+const providerStatusPath = path.join(repoRoot, 'data', 'provider-status.json');
 const siteFiltersPath = path.join(
   repoRoot,
   '..',
@@ -35,10 +37,28 @@ interface CacheNews {
   importance_score?: number | string | null;
 }
 
+interface SpreadsheetExport {
+  generated?: string;
+  model_count?: number;
+  active_model_count?: number;
+  tracking_model_count?: number;
+  models?: Array<{ id?: string; status?: string | null }>;
+}
+
+interface ProviderStatusSnapshot {
+  generatedAt?: string;
+  providers?: Array<{ name?: string; lastCheckedAt?: string | null }>;
+}
+
 function loadJson<T>(name: string): T[] {
   const filePath = path.join(cacheDir, `${name}.json`);
   if (!fs.existsSync(filePath)) return [];
   return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T[];
+}
+
+function loadJsonFile<T>(filePath: string): T | null {
+  if (!fs.existsSync(filePath)) return null;
+  return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
 }
 
 function normalise(value: string | null | undefined): string {
@@ -124,6 +144,9 @@ function main() {
   const cacheProviders = loadJson<Record<string, unknown>>('providers');
   const cacheBenchmarks = loadJson<Record<string, unknown>>('benchmark_scores');
   const cacheNews = loadJson<CacheNews>('news');
+  const spreadsheet = loadJsonFile<SpreadsheetExport>(path.join(publicDataDir, 'ai-models-comparison.json'));
+  const latestSpreadsheet = loadJsonFile<SpreadsheetExport>(path.join(publicDataDir, 'models-latest.json'));
+  const providerStatus = loadJsonFile<ProviderStatusSnapshot>(providerStatusPath);
 
   const dbCounts = {
     providers: Number((db.prepare('SELECT COUNT(*) AS count FROM providers').get() as { count: number }).count),
@@ -141,6 +164,40 @@ function main() {
 
   if (cacheBenchmarks.length < dbCounts.benchmarkScores) {
     failures.push(`Benchmark score cache lagging local DB: cache=${cacheBenchmarks.length}, db=${dbCounts.benchmarkScores}`);
+  }
+
+  if (!spreadsheet) {
+    failures.push('Missing public model spreadsheet export: public/data/ai-models-comparison.json');
+  } else {
+    const spreadsheetCount = Number(spreadsheet.model_count ?? 0);
+    const spreadsheetRows = spreadsheet.models?.length ?? 0;
+
+    if (spreadsheetCount !== dbCounts.models || spreadsheetRows !== dbCounts.models) {
+      failures.push(`Public model spreadsheet is out of sync: export=${spreadsheetCount}/${spreadsheetRows}, db=${dbCounts.models}`);
+    }
+
+    if ((spreadsheet.models ?? []).some((model) => !model.status)) {
+      failures.push('Public model spreadsheet is missing status values on one or more rows.');
+    }
+  }
+
+  if (!latestSpreadsheet) {
+    failures.push('Missing latest model export: public/data/models-latest.json');
+  }
+
+  if (!fs.existsSync(path.join(publicDataDir, 'ai-models-comparison.csv'))) {
+    failures.push('Missing public model spreadsheet export: public/data/ai-models-comparison.csv');
+  }
+
+  if (!providerStatus) {
+    failures.push('Missing provider status snapshot: data/provider-status.json');
+  } else {
+    const generatedAt = providerStatus.generatedAt ? Date.parse(providerStatus.generatedAt) : NaN;
+    if (!Number.isFinite(generatedAt)) {
+      failures.push('Provider status snapshot is missing a valid generatedAt timestamp.');
+    } else if (Date.now() - generatedAt > 1000 * 60 * 60 * 48) {
+      failures.push(`Provider status snapshot is stale: generatedAt=${providerStatus.generatedAt}`);
+    }
   }
 
   const missingFrontier = REQUIRED_FRONTIER_MODELS.filter((requirement) => (
@@ -161,6 +218,8 @@ function main() {
   console.log(`  Models: ${cacheModels.length}/${dbCounts.models}`);
   console.log(`  Benchmark scores: ${cacheBenchmarks.length}/${dbCounts.benchmarkScores}`);
   console.log(`  News items: ${cacheNews.length}`);
+  console.log(`  Public export rows: ${spreadsheet?.model_count ?? 0}`);
+  console.log(`  Provider status snapshot: ${providerStatus?.generatedAt ?? 'missing'}`);
 
   if (failures.length > 0) {
     console.log('\nBLOCK: publish readiness verification failed');
@@ -171,7 +230,7 @@ function main() {
     return;
   }
 
-  console.log('\nOK publish cache matches local data and passes routing checks');
+  console.log('\nOK publish cache, public exports, and status snapshot match local data and pass routing checks');
 }
 
 main();

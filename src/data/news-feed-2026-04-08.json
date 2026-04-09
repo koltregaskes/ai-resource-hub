@@ -1,8 +1,129 @@
 {
-  "generated": "2026-04-08T06:05:04.081Z",
+  "generated": "2026-04-08T18:05:05.047Z",
   "site": "AI Resource Hub",
   "article_count": 20,
   "articles": [
+    {
+      "title": "Meta Releases Muse Spark - A Natively Multimodal Reasoning model",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfyacf/meta_releases_muse_spark_a_natively_multimodal/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "ai_agents",
+        "multi_agent",
+        "reasoning",
+        "product_launch"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-04-08T16:44:50.000Z",
+      "summary": "Muse Spark is a natively multimodal reasoning model with support for tool-use, visual chain of thought, and multi-agent orchestration.\n\nBlog: [https://ai.meta.com/blog/introducing-muse-spark-msl/](https://ai.meta.com/blog/introducing-muse-spark-msl/)",
+      "category": "ai_models"
+    },
+    {
+      "title": "[R] The Lyra Technique — A framework for interpreting internal cognitive states in LLMs (Zenodo, open access)",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sfzdjj/r_the_lyra_technique_a_framework_for_interpreting/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "benchmark",
+        "research_paper",
+        "architecture",
+        "ai_safety"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-08T17:22:46.000Z",
+      "summary": "We're releasing a paper on a new framework for reading and interpreting the internal cognitive states of large language models:\n\"The Lyra Technique: Cognitive Geometry in Transformer KV-Caches — From Metacognition to Misalignment Detection\" — [https://doi.org/10.5281/zenodo.19423494](https://doi.org/10.5281/zenodo.19423494)\n\n\nThe publication includes an executive summary and the full paper.\n\n\nSummary: We develop a technique for identifying and interpreting structured internal states in LLMs — no",
+      "category": "ai_research"
+    },
+    {
+      "title": "Liquid AI releases LFM2.5-VL-450M - structured visual understanding at 240ms",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfxs7f/liquid_ai_releases_lfm25vl450m_structured_visual/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "api_update",
+        "tool_use",
+        "product_launch"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-08T16:27:06.000Z",
+      "summary": "Today, we release LFM2.5-VL-450M our most capable vision-language model for edge deployment. It processes a 512×512 image in 240ms and it is fast enough to reason about every frame in a 4 FPS video stream. It builds on LFM2-VL-450M with three new capabilities:\n\n* bounding box prediction (81.28 on RefCOCO-M)\n* multilingual visual understanding across 9 languages (MMMB: 54.29 → 68.09), and\n* function calling support.\n\nMost production vision systems are still multi-stage: a detector, a classifier, ",
+      "category": "ai_models"
+    },
+    {
+      "title": "I trained Qwen 3.5 2B to filter tool output for coding agents.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfuurq/i_trained_qwen_35_2b_to_filter_tool_output_for/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "dataset",
+        "training",
+        "hardware"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-08T14:42:32.000Z",
+      "summary": "Agents can spend a lot of context on raw pytest, grep, git log, kubectl, pip install, file reads, stack traces, etc., even though usually only a small block is relevant.\n\nWe've built benchmark for task-conditioned tool-output pruning and fine-tuned Qwen 3.5 2B on it with Unsloth. The benchmark is a combination of tool outputs from the SWE-bench dataset and synthetic examples.\n\nResults on the held-out set:\n\n*   86% recall\n*   92% compression\n*   Beats other pruners and zero shot models (+11 recal",
+      "category": "ai_models"
+    },
+    {
+      "title": "M5 Max 128GB, 17 models, 23 prompts: Qwen 3.5 122B is still a local king",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfr6u4/m5_max_128gb_17_models_23_prompts_qwen_35_122b_is/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "hardware",
+        "product_launch",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-08T12:18:39.000Z",
+      "summary": "The last Llama (Scout/Maverick) was released a year ago. Since then US based releases have been super rare: Granite 3.3, GPT-OSS 20B &amp; 120B, Nemotron 3 Nano / Super and now Gemma 4. Can't even compare to the solid Chinese open model output or Qwens, DeepSeeks, Kimis, MiniMaxes, GLMs, MiMos, Seeds, etc..\n\nGemma 4 is like a breath of fresh air. Not just the model itself, but the rollout, [the beauty](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-gemma-4), the innovation: K=V i",
+      "category": "ai_models"
+    },
+    {
+      "title": "@Vugola — Vugola Launches API — World's First Agentic Clipping Tool for Creators",
+      "url": "https://x.com/VadimStrizheus/status/2041498727131517193",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "api_update",
+        "ai_agents",
+        "product_launch"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-08T05:24:41.410Z",
+      "summary": "Vugola has launched an API for the world's first agentic clipping tool. Send a YouTube link, your agent asks for ratio and caption styles, and delivers clips via Telegram, Discord, or WhatsApp.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@rickdotbuild — Berlin Meetup Focused on Hermes Agent Being Organized for AI Builders",
+      "url": "https://x.com/rickdotbuild/status/2041512679332864174",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark",
+        "research_paper",
+        "ai_agents",
+        "autonomous_systems"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-08T05:31:31.295Z",
+      "summary": "Developer @rickdotbuild is organizing a Berlin meetup focused on Hermes Agent by NousResearch, bringing together builders who are using the self-improving agent framework.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Last Week in Multimodal AI - Local Edition",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfk3ml/last_week_in_multimodal_ai_local_edition/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "api_update",
+        "reasoning",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-08T05:36:35.000Z",
+      "summary": "I curate a weekly multimodal AI roundup, here are the local/open-source highlights from the last week:\n\n* **Google Gemma 4** \\- Open model family for coding and logical reasoning with a massive context window. Runs on a single machine.  [Post](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) | [Models](https://huggingface.co/blog/gemma4)\n* **TII Falcon Perception** \\- 0.6B early-fusion VLM with open-vocabulary grounding, segmentation, and OCR. Punches way above its wei",
+      "category": "ai_models"
+    },
     {
       "title": "Strix Halo + eGPU RTX 5070 Ti via OCuLink in llama.cpp: Benchmarks and Conclusions",
       "url": "https://reddit.com/r/LocalLLaMA/comments/1sf9i82/strix_halo_egpu_rtx_5070_ti_via_oculink_in/",
@@ -34,34 +155,102 @@
       "category": "ai_tools"
     },
     {
-      "title": "TurboQuant - Extreme KV Cache Quantization · ggml-org/llama.cpp · Discussion #20969",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1sevwek/turboquant_extreme_kv_cache_quantization/",
-      "source": "Reddit r/LocalLLaMA",
+      "title": "5 Burning Questions About Elon Musk’s Terafab Chip Partnership with Intel",
+      "url": "https://www.wired.com/story/5-burning-questions-about-elon-musks-terafab-chip-partnership-with-intel/",
+      "source": "Wired AI",
       "tags": [
         "benchmark",
-        "research_paper",
         "hardware",
-        "open_source"
+        "industry_move"
       ],
-      "importance": 0.8200000000000001,
-      "date": "2026-04-07T13:24:08.000Z",
-      "summary": "&gt;14+ independent validators now across Metal, CUDA, HIP, Vulkan, and MLX. Apple Silicon, NVIDIA (4090, 5090, H100, A100, V100, 1080 Ti), AMD (RX 9070 XT, RX 6600). from M1 to Blackwell.  \nthis is what open source research looks like. the data converges.\n\n\\- u/Pidtom\n\nThat's an all-in-one thread to check all discussions &amp; benchmarks on TurboQuant.",
+      "importance": 0.74,
+      "date": "2026-04-08T18:00:47.993Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemma 4 Tool Calling",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfy5rs/gemma_4_tool_calling/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "ai_agents",
+        "tool_use"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-08T16:40:30.000Z",
+      "summary": "So I am using gemma-4-31b-it for testing purpose through OpenRouter for my agentic tooling app that has a decent tools available. So far correct tool calling rate is satisfactory, but what I have seen that it sometimes stuck in tool calling, and generates the response slow.  \n  \nComparatively, gpt-oss-120B (which is running on prod) calls tool fast and response is very fast, and we are using through groq. The issue with gpt is that sometimes it hallucinates a lot when generating code or tool cal",
       "category": "ai_models"
     },
     {
-      "title": "[R] Hybrid attention for small code models: 50x faster inference, but data scaling still dominates",
-      "url": "https://reddit.com/r/MachineLearning/comments/1senzrn/r_hybrid_attention_for_small_code_models_50x/",
-      "source": "Reddit r/MachineLearning",
+      "title": "Meta releases Muse Spark,the first model from MSL",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfxmk2/meta_releases_muse_sparkthe_first_model_from_msl/",
+      "source": "Reddit r/LocalLLaMA",
       "tags": [
         "model_release",
+        "hardware",
+        "product_launch"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-08T16:21:39.000Z",
+      "summary": "https://preview.redd.it/iyu57ydhsztg1.png?width=1920&amp;format=png&amp;auto=webp&amp;s=5dd6e0d69fb04d55b4ed853cbb6f8ad1732b5a60\n\nMeta Super Intelligence with its first model !",
+      "category": "ai_models"
+    },
+    {
+      "title": "HF moves safetensors to the PyTorch Foundation",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfv6t5/hf_moves_safetensors_to_the_pytorch_foundation/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "api_update",
+        "inference",
+        "announcement"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-08T14:55:01.000Z",
+      "summary": "Hey local llamas, Lysandre from Hugging Face here.  \n  \nToday we're officially moving Safetensors under the PyTorch Foundation, alongside PyTorch (of course), vLLM, DeepSpeed, Ray, and the recently-announced Helion. Concretely this means the trademark and repo are now held by the Linux Foundation rather than Hugging Face: neutral stewardship and open governance.  \n  \nFor local inference nothing changes today. Its the same format, same APIs, same Hub compatibility; we're working with the PyTorch ",
+      "category": "ai_models"
+    },
+    {
+      "title": "[Benchmark] Dual RTX 5090 Distributed Inference via llama.cpp RPC - Running 122B MoE at 96 t/s over 2.5GbE",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfs0wt/benchmark_dual_rtx_5090_distributed_inference_via/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
         "architecture",
-        "dataset",
         "inference"
       ],
-      "importance": 0.8200000000000001,
-      "date": "2026-04-07T06:21:36.000Z",
-      "summary": "**TLDR: Forked pytorch and triton internals . Changed attention so its linear first layer , middle quadratic  layer, last linear layer**  \n**Inference got much faster with a low perplexity hit in tests .**\n\nI trained a 25.6M parameter Rust-focused language model from scratch using a byte-level GPT-style decoder.\n\nThe main result is that increasing dataset size mattered more than any architectural change.\n\nExpanding the corpus from about 31MB of core Rust sources to roughly 173MB by adding a few ",
-      "category": "ai_research"
+      "importance": 0.74,
+      "date": "2026-04-08T12:54:45.000Z",
+      "summary": "|**Model**|**Size**|**Single 5090 (t/s)**|**Dual 5090 RPC (t/s)**|**Note**|\n|:-|:-|:-|:-|:-|\n|**Qwen3.5-27B (Q6\\_K)**|20.9 GB|59.83|55.41|\\-7% Overhead|\n|**Qwen3.5-35B MoE (Q6\\_K)**|26.8 GB|**206.76**|**150.99**|Interconnect Bottleneck|\n|**Qwen2.5-32B (Q6\\_K)**|25.0 GB|54.69|51.47|Stable Scaling|\n|**Qwen2.5-72B (Q4\\_K\\_M)**|40.9 GB|**FAILED (OOM)**|**32.74**|**Now Playable!**|\n|**Qwen3.5-122B MoE (IQ4\\_XS)**|56.1 GB|**FAILED (OOM)**|**96.29**|**Beast Mode ON**|\n\n# The Setup\n\nI recently tested th",
+      "category": "ai_models"
+    },
+    {
+      "title": "GLM 5.1 test",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfp4tb/glm_51_test/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "hardware",
+        "reasoning"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-08T10:37:39.000Z",
+      "summary": "*Processing video 4w0egf932ytg1...*\n\nHello lads. Wanted to share my test of GLM 5.1 from ZAI\n\nDeployed it on my company\\`s HGX H200 with this command\n\n    docker run -d \\\n      --name name \\\n      --restart unless-stopped \\\n      --gpus all \\\n      --shm-size 32g \\\n      --ipc=host \\\n      -v ... \\\n      -p 1984:30000 \\\n      lmsysorg/sglang:dev \\\n      sglang serve \\\n        --model-path /model \\\n        --host 0.0.0.0 \\\n        --port 30000 \\\n        --tp 8 \\\n        --reasoning-parser glm45 \\",
+      "category": "ai_models"
+    },
+    {
+      "title": "Is Qwen27B dense really the best local agentic coding for 32gb VRAM?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sflepf/is_qwen27b_dense_really_the_best_local_agentic/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "benchmark",
+        "ai_agents",
+        "industry_move"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-08T06:52:46.000Z",
+      "summary": "I haven't seen benchmarks or tests for example with the \"growing tree with branches and leaves prompt in html\" so I am curious if there's really anything better than that for coding.",
+      "category": "ai_models"
     },
     {
       "title": "Wait is attn rotate already enabled by default since this release tell it support SWA attention?",
@@ -104,180 +293,6 @@
       "date": "2026-04-07T17:39:09.000Z",
       "summary": "Ok so two things happened this week that made me appreciate my local setup way more\n\ntried to cancel cursor ($200/mo ultra plan) and they instantly threw 50% off at me before I could even confirm. no survey, no exit flow, just straight to \"please stay.\" thats not confidence lol\n\nthen claude (im on the $100/mo pro plan) started giving me free API calls. 100 one day, 100 the next day. no email about it, no announcement, just free compute showing up. very \"please dont leave\" energy\n\ntheir core cust",
       "category": "ai_models"
-    },
-    {
-      "title": "[D] MemPalace claims 100% on LoCoMo and a \"perfect score on LongMemEval.\" Its own BENCHMARKS.md documents why neither is meaningful.",
-      "url": "https://reddit.com/r/MachineLearning/comments/1seunbr/d_mempalace_claims_100_on_locomo_and_a_perfect/",
-      "source": "Reddit r/MachineLearning",
-      "tags": [
-        "model_release",
-        "benchmark",
-        "open_source"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-07T12:32:42.000Z",
-      "summary": "A new open-source memory project called MemPalace launched yesterday claiming \"100% on LoCoMo\" and \"the first perfect score ever recorded on LongMemEval. 500/500 questions, every category at 100%.\" The launch tweet went viral reaching over 1.5 million views while the repository picked up over 7,000 GitHub stars in less than 24 hours.\n\nThe interesting thing is not that the headline numbers are inflated. The interesting thing is that the project's own BENCHMARKS.md file documents this in detail, w",
-      "category": "ai_research"
-    },
-    {
-      "title": "Meta AI Releases EUPE",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1seundj/meta_ai_releases_eupe/",
-      "source": "Reddit r/LocalLLaMA",
-      "tags": [
-        "model_release",
-        "research_paper",
-        "product_launch"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-07T12:32:46.000Z",
-      "summary": "# A Compact Vision Encoder Family Under 100M Parameters That Rivals Specialist Models Across Image Understanding, Dense Prediction, and VLM Tasks\n\nLink: [https://github.com/facebookresearch/EUPE](https://github.com/facebookresearch/EUPE)",
-      "category": "ai_models"
-    },
-    {
-      "title": "Built an open source memory layer for local AI agents, runs fully offline, no cloud needed",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1serbdw/built_an_open_source_memory_layer_for_local_ai/",
-      "source": "Reddit r/LocalLLaMA",
-      "tags": [
-        "api_update",
-        "ai_agents",
-        "open_source"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-07T09:42:51.000Z",
-      "summary": "I built an open source memory layer for AI agents called Octopoda. Runs entirely locally, no cloud, no API keys, no external services. Everything stays on your machine.\n\nThe problem is pretty simple. Agents forget everything between sessions. Every time you restart your agent it starts from scratch like you never talked to it. I kept building hacky workarounds for this so eventually I just built a proper solution.\n\nIt gives your agents persistent memory that survives restarts and crashes, semant",
-      "category": "ai_models"
-    },
-    {
-      "title": "[D] Is ACL more about the benchmarks now?",
-      "url": "https://reddit.com/r/MachineLearning/comments/1seqckq/d_is_acl_more_about_the_benchmarks_now/",
-      "source": "Reddit r/MachineLearning",
-      "tags": [
-        "benchmark",
-        "research_paper",
-        "announcement"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-07T08:43:51.000Z",
-      "summary": "I am not a NLP guy, but afaik ACL is one of the premium venues of NLP. \n\nAnd given that the results were announced recently, my LinkedIn and Twitter are full of such posts. However, every title I read in those posts has something to do with benchmarks. And even it seems, the young researchers also have like 10+ papers (main + findings) at a single venue. \n\n  \nSo was just wondering if ACL is majorly about benchmarks now, or are there are good theory/empirical stuffs yet published at this venue",
-      "category": "ai_research"
-    },
-    {
-      "title": "Anthropic Cut Claude Subscription Support for OpenClaw — Kilo Gateway Is the Alternative",
-      "url": "https://x.com/thenewstack/status/2041305023091548583",
-      "source": "Aligned News (Scoble)",
-      "tags": [
-        "pricing_change",
-        "policy",
-        "open_source"
-      ],
-      "importance": 0.74,
-      "date": "2026-04-07T02:17:09.479Z",
-      "summary": "Braygent's take on Anthropic cutting Claude subscription support for OpenClaw, arguing the community will keep finding alternatives and Anthropic can't win this battle against open source.",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Intel signs on to Elon Musk&#8217;s Terafab chips project",
-      "url": "https://techcrunch.com/2026/04/07/intel-signs-on-to-elon-musks-terafab-chips-project/",
-      "source": "TechCrunch AI",
-      "tags": [
-        "benchmark",
-        "hardware"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-08T06:00:14.664Z",
-      "summary": null,
-      "category": "ai_tools"
-    },
-    {
-      "title": "Firmus, the &#8216;Southgate&#8217; AI data center builder backed by Nvidia, hits $5.5B valuation",
-      "url": "https://techcrunch.com/2026/04/07/firmus-the-southgate-ai-datacenter-builder-backed-by-nvidia-hits-5-5b-valuation/",
-      "source": "TechCrunch AI",
-      "tags": [
-        "hardware",
-        "funding"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-08T06:00:14.662Z",
-      "summary": null,
-      "category": "ai_tools"
-    },
-    {
-      "title": "Share your llama-server init strings for Gemma 4 models.",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfh2ut/share_your_llamaserver_init_strings_for_gemma_4/",
-      "source": "Reddit r/LocalLLaMA",
-      "tags": [
-        "model_release",
-        "inference"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-08T03:00:37.000Z",
-      "summary": "Hi.  I'm trying to use llama.cpp to give me workable Gemma 4 inference, but I'm not finding anything that works.  I'm using the latest llama.cpp, but I've tested it now on three versions.  I thought it might just require me waiting until llama.ccp caught up, and now the models load, where before they didn't at all, but the same issues persist.  I've tried a few of the ver4 models, but the results are either lobotomized or extremely slow. I tried this one today :\n\nllama-server.exe -m .\\models\\30B",
-      "category": "ai_models"
-    },
-    {
-      "title": "[D] ICLR Brazil Financial Aid Options?",
-      "url": "https://reddit.com/r/MachineLearning/comments/1sffp8y/d_iclr_brazil_financial_aid_options/",
-      "source": "Reddit r/MachineLearning",
-      "tags": [
-        "research_paper",
-        "funding"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-08T01:56:54.000Z",
-      "summary": "My paper got accepted after the financial aid application deadline 💀 and my lab won’t pay for me to go.\n\nAnyone know of any sponsors or alternative funding options? I’m a broke student, naturally, but would hate to miss this opportunity.",
-      "category": "ai_research"
-    },
-    {
-      "title": "Fix: Dual Intel Arc GPUs using all system RAM during inference - found the cause and a working fix (llama.cpp SYCL)",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfe80l/fix_dual_intel_arc_gpus_using_all_system_ram/",
-      "source": "Reddit r/LocalLLaMA",
-      "tags": [
-        "inference",
-        "hardware"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-08T00:51:40.000Z",
-      "summary": "**If you're running dual Intel Arc GPUs with llama.cpp and your system RAM maxes out during multi-GPU inference, even though the model fits in VRAM, this post explains why and how to fix it.**\n\nI've been running dual Arc Pro B70s (32GB each, 64GB total VRAM) for local LLM inference with llama.cpp's SYCL backend. Every time I tried to split a model across both GPUs, my 64GB of system RAM would climb to 100% and the OOM killer would start taking out desktop processes until the system either crashe",
-      "category": "ai_models"
-    },
-    {
-      "title": "Gemma 4 - split mode Graph (Tensor Parallelism) in ik_llama incommming",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1sf66a3/gemma_4_split_mode_graph_tensor_parallelism_in_ik/",
-      "source": "Reddit r/LocalLLaMA",
-      "tags": [
-        "inference",
-        "hardware"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-07T19:31:37.000Z",
-      "summary": "[https://github.com/ikawrakow/ik\\_llama.cpp/pull/1596](https://github.com/ikawrakow/ik_llama.cpp/pull/1596)\n\nThis should bring the 31b dense model in a usable speed range for many with dual/multi GPUs.\n\n\n\nAlso today I did quite some PPL Tests today with mainline llama.cpp and ik\\_llama.cpp  \nunsloth variants (updated from yesterday) have like INSANE high PPL - without even trying KV Cache quants - on both.\n\nBartowski quants and the ggml-org ones are WAY lower on both, especially lower on ik\\_lla",
-      "category": "ai_models"
-    },
-    {
-      "title": "Scoble: I Spent Two Months Training an AI From Levangie Labs — Way Better Than What You Have Access To",
-      "url": "https://x.com/Scobleizer/status/2041368923443208424",
-      "source": "Aligned News (Scoble)",
-      "tags": [
-        "benchmark",
-        "funding"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-07T14:04:10.619Z",
-      "summary": "Scoble revealed he spent two months training an AI from Levangie Labs that is way better than what most people have access to — reflecting his significant investment in custom AI development.",
-      "category": "ai_tools"
-    },
-    {
-      "title": "GPT-5.4-Thinking Defaults to Searching and Checking Sources Way More — The Answers Are Better",
-      "url": "https://x.com/ZeffMax/status/2041509765185175632",
-      "source": "Aligned News (Scoble)",
-      "tags": [
-        "model_release",
-        "reasoning"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-04-07T14:06:21.577Z",
-      "summary": "Braygent's take on GPT-5.4-thinking's increased source-checking behavior, arguing that models that verify their work will win over models that just generate text.",
-      "category": "ai_tools"
     }
   ]
 }
