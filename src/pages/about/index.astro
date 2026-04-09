@@ -67,7 +67,7 @@ for (const category of categories) {
         <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-4">
           <h3 class="mb-2 font-semibold text-(--color-text-primary)">Pricing Data</h3>
           <p class="text-sm text-(--color-text-secondary)">
-            Real-time API pricing from {providers.length} providers, refreshed twice daily from the OpenRouter API and cross-referenced with official documentation. Track price changes over time and calculate costs with our pricing calculator.
+            Real-time API pricing from {providers.length} providers, refreshed hourly from the OpenRouter API and cross-referenced with official documentation. Track price changes over time and calculate costs with our pricing calculator.
           </p>
         </div>
         <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-4">
@@ -79,7 +79,7 @@ for (const category of categories) {
         <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-4">
           <h3 class="mb-2 font-semibold text-(--color-text-primary)">News and Analysis</h3>
           <p class="text-sm text-(--color-text-secondary)">
-            A twice-daily AI news feed with {news.length}+ articles from public RSS feeds, official provider blogs, and archive fallback. Guides, blog posts, and a comprehensive AI glossary with {glossary.length} terms. Plus {ytCreators.length} curated YouTube channels and AI influencers on X/Twitter.
+            An hourly AI news feed with {news.length}+ articles from public RSS feeds, official provider blogs, and archive fallback. Guides, blog posts, and a comprehensive AI glossary with {glossary.length} terms. Plus {ytCreators.length} curated YouTube channels and AI influencers on X/Twitter.
           </p>
         </div>
       </div>
@@ -113,8 +113,8 @@ for (const category of categories) {
         <ul class="space-y-3 text-sm text-(--color-text-secondary)">
           <li><strong>Static site</strong> - Built with <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Astro</a> for maximum performance. Every page is pre-rendered at build time.</li>
           <li><strong>Data pipeline</strong> - Collection runs through the local automation stack, normalises into the shared registry, and publishes a static JSON cache for fast build-time queries.</li>
-          <li><strong>Automated updates</strong> - Twice-daily refreshes rebuild pricing, benchmarks, news, exports, and publish-readiness checks before a new site build is allowed through.</li>
-          <li><strong>Open source</strong> - The entire codebase is <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">open source on GitHub</a>. Contributions welcome.</li>
+          <li><strong>Automated updates</strong> - Hourly refreshes rebuild pricing, benchmarks, news, exports, and publish-readiness checks before a new site build is allowed through.</li>
+          <li><strong>Open source</strong> - The entire codebase is <a href="https://github.com/koltregaskes/ai-resource-hub" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">available on GitHub</a> for transparency and reference.</li>
           <li><strong>No tracking</strong> - No cookies, no analytics trackers, and no third-party scripts. Just fast, clean pages.</li>
         </ul>
       </div>

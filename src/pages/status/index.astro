@@ -180,7 +180,7 @@ function getProviderHref(provider: ProviderStatusEntry): string | null {
               Snapshot refreshed {formatUtc(snapshot.generatedAt)}
             </div>
             <p class="mt-3 text-xs text-slate-400 max-w-xs lg:ml-auto">
-              Target cadence: hourly on the lightweight status refresh workflow, without waiting for the full daily scrape.
+              Target cadence: hourly on the full refresh workflow, with manual provider-status reruns available if needed.
             </p>
           </div>
         </div>

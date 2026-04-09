@@ -8,7 +8,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const dataSources = [
   {
     category: 'Model Pricing & Availability',
-    frequency: 'Twice Daily',
+    frequency: 'Hourly',
     sources: [
       { name: 'OpenRouter API', url: 'https://openrouter.ai/api/v1/models', description: 'Primary pricing source; 500+ models with 8 pricing dimensions. No authentication required.' },
       { name: 'OpenAI API Pricing', url: 'https://openai.com/api/pricing', description: 'Official GPT and o-series model pricing.' },
@@ -39,7 +39,7 @@ const dataSources = [
   },
   {
     category: 'Speed & Latency',
-    frequency: 'Twice Daily',
+    frequency: 'Hourly',
     sources: [
       { name: 'Artificial Analysis', url: 'https://artificialanalysis.ai', description: 'Primary source for TTFT (time to first token) and output speed measurements.' },
       { name: 'Provider benchmarks', url: '', description: 'Official performance data published by OpenAI, Anthropic, Google, and others.' },
@@ -65,7 +65,7 @@ const dataSources = [
   },
   {
     category: 'Model Discovery & News',
-    frequency: 'Twice Daily',
+    frequency: 'Hourly',
     sources: [
       { name: 'HuggingFace Model Hub', url: 'https://huggingface.co/models?sort=created', description: 'Model cards for open-weight models; parameter counts, licences, release dates.' },
       { name: 'arXiv', url: 'https://arxiv.org', description: 'Research papers in cs.AI, cs.LG, and cs.CL.' },
@@ -175,7 +175,7 @@ const papers = [
     <div id="data-sources" class="mb-12">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Data Sources</h2>
       <p class="text-sm text-(--color-text-muted) mb-6">
-        We refresh data through a local twice-daily pipeline, scheduled GitHub refreshes, and hourly provider-status checks. Collection uses identified User-Agent strings and is limited to public APIs, public feeds, official blogs and newsroom pages, documentation pages, and other clearly public endpoints that fit the site brief.
+        We refresh data through a scheduled hourly pipeline, with manual provider-status reruns available when needed. Collection uses identified User-Agent strings and is limited to public APIs, public feeds, official blogs and newsroom pages, documentation pages, and other clearly public endpoints that fit the site brief.
       </p>
 
       <div class="space-y-6">
@@ -277,7 +277,7 @@ const papers = [
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
           <h3 class="font-semibold text-(--color-text-primary) text-sm mb-2">Corrections & Takedowns</h3>
           <p class="text-sm text-(--color-text-secondary)">
-            If you represent a data source listed here and have concerns about how we use your data, please contact us via <a href="https://github.com/koltregaskes/ai-resource-hub/issues" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub Issues</a>. We take accuracy and compliance seriously and will respond within 48 hours.
+            If you represent a data source listed here and have concerns about how we use your data, please review the repository and contact the site owner via the <a href="https://github.com/koltregaskes" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">GitHub profile</a>. We take accuracy and compliance seriously and will review credible requests promptly.
           </p>
         </div>
       </div>

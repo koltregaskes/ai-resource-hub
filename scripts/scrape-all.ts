@@ -5,8 +5,8 @@
  * Run: npx tsx scripts/scrape-all.ts
  *
  * Used by:
- * - GitHub Actions cron (daily)
- * - Windows Task Scheduler (daily)
+ * - GitHub Actions scheduled refreshes
+ * - Windows Task Scheduler refreshes
  * - Manual runs (npm run scrape)
  *
  * Pipeline order matters:

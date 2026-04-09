@@ -13,12 +13,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Scheduling Guide - How to Run Automated Updates"
-  description="Set up automated twice-daily data updates for The AI Resource Hub on Windows, macOS, or Linux."
+  description="Set up automated hourly data updates for The AI Resource Hub on Windows, macOS, or Linux."
 >
   <div class="mx-auto max-w-4xl px-4 py-12">
     <h1 class="mb-2 text-3xl font-bold text-(--color-text-primary)">Scheduling Automated Updates</h1>
     <p class="mb-8 text-(--color-text-secondary)">
-      How to keep pricing, benchmarks, news, and model data fresh with automated twice-daily runs.
+      How to keep pricing, benchmarks, news, and model data fresh with automated hourly runs.
     </p>
 
     <div class="mb-8 rounded-xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
@@ -26,11 +26,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="space-y-2 text-sm">
         <div class="flex items-center gap-2">
           <span class="h-2 w-2 rounded-full bg-green-500"></span>
-          <span class="text-(--color-text-secondary)"><strong>Windows scheduler</strong> - primary twice-daily automation on the local machine at 07:00 and 19:00 local time</span>
+          <span class="text-(--color-text-secondary)"><strong>GitHub Actions</strong> - primary hourly full refresh at 12 minutes past each hour</span>
         </div>
         <div class="flex items-center gap-2">
           <span class="h-2 w-2 rounded-full bg-yellow-500"></span>
-          <span class="text-(--color-text-secondary)"><strong>GitHub Actions</strong> - manual fallback for on-demand refreshes</span>
+          <span class="text-(--color-text-secondary)"><strong>Windows scheduler</strong> - optional local mirror or manual recovery path on an always-on machine</span>
         </div>
       </div>
     </div>
@@ -98,7 +98,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section class="mb-10">
       <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">Windows Task Scheduler</h2>
       <p class="mb-4 text-(--color-text-secondary)">
-        Set up a twice-daily task that runs the scraper pipeline automatically on your Windows machine.
+        If you want a local mirror of the hosted automation, set up an hourly task that runs the scraper pipeline automatically on your Windows machine.
       </p>
 
       <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 1: Create a batch script</h3>
@@ -118,21 +118,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 2: Create the scheduled task</h3>
       <p class="mb-2 text-(--color-text-secondary)">
-        Open PowerShell as Administrator and run:
+        Open Command Prompt as Administrator and run:
       </p>
       <div class="mb-4 space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
-        <p class="text-(--color-text-muted)"># Create two daily triggers at 7am and 7pm</p>
-        <p>$action = New-ScheduledTaskAction `</p>
-        <p>&nbsp;&nbsp;-Execute "C:\Users\YourName\ai-resource-hub\update-data.bat"</p>
-        <p>&nbsp;</p>
-        <p>$trigger1 = New-ScheduledTaskTrigger -Daily -At 7:00AM</p>
-        <p>$trigger2 = New-ScheduledTaskTrigger -Daily -At 7:00PM</p>
-        <p>&nbsp;</p>
-        <p>Register-ScheduledTask `</p>
-        <p>&nbsp;&nbsp;-TaskName "AI Resource Hub - Update Data" `</p>
-        <p>&nbsp;&nbsp;-Action $action `</p>
-        <p>&nbsp;&nbsp;-Trigger @($trigger1, $trigger2) `</p>
-        <p>&nbsp;&nbsp;-Description "Scrape latest AI model pricing, benchmarks, and news"</p>
+        <p class="text-(--color-text-muted)"># Create an hourly task</p>
+        <p>schtasks /Create /SC HOURLY /MO 1 ^</p>
+        <p>&nbsp;&nbsp;/TN "AI Resource Hub - Update Data" ^</p>
+        <p>&nbsp;&nbsp;/TR "C:\Users\YourName\ai-resource-hub\update-data.bat"</p>
       </div>
 
       <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 3: Verify it works</h3>
@@ -148,22 +140,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section class="mb-10">
       <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">macOS / Linux (cron)</h2>
       <p class="mb-4 text-(--color-text-secondary)">
-        Use cron for automated runs on macOS or Linux.
+        Use cron for automated hourly runs on macOS or Linux.
       </p>
       <div class="space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
         <p class="text-(--color-text-muted)"># Open crontab editor</p>
         <p>crontab -e</p>
         <p>&nbsp;</p>
-        <p class="text-(--color-text-muted)"># Add these lines (runs at 7am and 7pm)</p>
-        <p>0 7,19 * * * cd /home/user/ai-resource-hub && npm run scrape &gt;&gt; logs/scrape.log 2&gt;&amp;1</p>
-        <p>5 7,19 * * * cd /home/user/ai-resource-hub && npm run build &gt;&gt; logs/build.log 2&gt;&amp;1</p>
+        <p class="text-(--color-text-muted)"># Add these lines (runs every hour)</p>
+        <p>12 * * * * cd /home/user/ai-resource-hub && npm run scrape &gt;&gt; logs/scrape.log 2&gt;&amp;1</p>
+        <p>20 * * * * cd /home/user/ai-resource-hub && npm run build &gt;&gt; logs/build.log 2&gt;&amp;1</p>
       </div>
     </section>
 
     <section class="mb-10">
       <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">GitHub Actions</h2>
       <p class="mb-4 text-(--color-text-secondary)">
-        GitHub still supports manual refreshes, but the main scheduled automation now lives on the always-on Windows machine.
+        GitHub Actions is the primary scheduled refresh path for the public site, with a full hourly data run and manual reruns available on demand.
       </p>
       <div class="space-y-3 rounded-lg border border-(--color-border) bg-(--color-bg-secondary) p-4 text-sm">
         <div>
@@ -172,7 +164,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div>
           <span class="text-(--color-text-muted)">Schedule:</span>
-          <span class="text-(--color-text-secondary)">Manual only</span>
+          <span class="text-(--color-text-secondary)">Hourly at 12 minutes past the hour</span>
         </div>
         <div>
           <span class="text-(--color-text-muted)">Manual trigger:</span>
@@ -222,7 +214,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div>
           <p class="font-medium text-(--color-text-primary)">Keep the request rate low</p>
-          <p class="text-(--color-text-secondary)">Twice-daily collection is still conservative and avoids aggressive polling.</p>
+          <p class="text-(--color-text-secondary)">Hourly collection still uses a conservative source list and avoids aggressive polling.</p>
         </div>
         <div>
           <p class="font-medium text-(--color-text-primary)">Do not automate blocked or login-only sources</p>
