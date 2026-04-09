@@ -7,7 +7,7 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-04-09T19:35:52.623Z"
+generated_at: "2026-04-09T21:02:17.197Z"
 ---
 
 # Claude Mythos Preview: release brief
@@ -30,7 +30,7 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 ## Outside coverage and early reactions
 
-- TechCrunch (2026-04-09): [Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?](https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/) - Are real cybersecurity concerns a cover for a bigger problem at the frontier lab?
+- TechCrunch (2026-04-09): [Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?](https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/) - Anthropic said this week that it limited the release of its newest model, dubbed Mythos, because it is too capable of finding security exploits in software relied upon by users around the world. Are real cybersecurity concerns a cover for a bigger problem at the frontier lab?
 - TechCrunch (2026-04-07): [Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative](https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/) - The new model will be used by a small number of high-profile companies to engage in defensive cybersecurity work.
 
 ## Suggested thread / post structure
