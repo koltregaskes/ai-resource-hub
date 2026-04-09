@@ -30,7 +30,7 @@ const archiveDays = new Set(news.map((item) => item.digestDate)).size;
       </h1>
       <p class="max-w-2xl text-(--color-text-secondary)">
         {news.length} articles from {sourceCount}
-        <Tooltip term="sources" tip="News is collected daily from public RSS feeds, official AI company blogs, and a fallback archive of imported digests." />
+        <Tooltip term="sources" tip="News is refreshed throughout the day from public RSS feeds, official AI company blogs, and a fallback archive of imported digests." />
         focused on model launches, research, infrastructure, and open-source developments.
       </p>
       <p class="mt-1 text-xs text-(--color-text-muted)">

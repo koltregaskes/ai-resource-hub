@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getUpdatesDashboard } from '../../data/updates-dashboard';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const categories = getUpdatesDashboard(base);
+
+const summary = {
+  total: categories.length,
+  automated: categories.filter((category) => category.automation === 'Automated').length,
+  mixed: categories.filter((category) => category.automation === 'Mixed').length,
+  manual: categories.filter((category) => category.automation === 'Manual').length,
+  latestRefresh: [...categories]
+    .map((category) => category.lastRefreshed)
+    .filter((value): value is string => Boolean(value))
+    .sort((a, b) => Date.parse(b) - Date.parse(a))[0] ?? null,
+};
+
+const automationMeta = {
+  Automated: 'badge-best-value',
+  Mixed: 'badge-new',
+  Manual: 'badge-deprecated',
+} as const;
+
+const statusMeta = {
+  healthy: {
+    label: 'Healthy',
+    classes: 'border-emerald-500/30 bg-emerald-500/12 text-emerald-200',
+  },
+  watch: {
+    label: 'Watch gap',
+    classes: 'border-amber-500/30 bg-amber-500/12 text-amber-100',
+  },
+  manual: {
+    label: 'Manual review',
+    classes: 'border-slate-500/30 bg-slate-500/12 text-slate-200',
+  },
+} as const;
+
+function formatDateTime(value: string | null): string {
+  if (!value) return 'Not yet tracked';
+  return new Date(value).toLocaleString('en-GB', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  });
+}
+
+function formatRelative(value: string | null): string {
+  if (!value) return 'Manual / on demand';
+
+  const deltaMs = Date.now() - Date.parse(value);
+  const minutes = Math.max(1, Math.round(deltaMs / (1000 * 60)));
+  if (minutes < 60) return `${minutes} min ago`;
+
+  const hours = Math.round(minutes / 60);
+  if (hours < 48) return `${hours} hr ago`;
+
+  const days = Math.round(hours / 24);
+  return `${days} day${days === 1 ? '' : 's'} ago`;
+}
+
+function isExternal(href: string | null): boolean {
+  return Boolean(href && /^https?:\/\//.test(href));
+}
+---
+
+<BaseLayout
+  title="Updates and Freshness - The AI Resource Hub"
+  description="See what the site tracks, how often each category is checked, where the data comes from, and what changed most recently."
+>
+  <section class="max-w-[1440px] mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Updates and Freshness</span>
+    </nav>
+
+    <div class="activity-shell">
+      <div class="activity-hero">
+        <div class="max-w-4xl">
+          <p class="activity-kicker">Updates and Freshness</p>
+          <h1 class="activity-title">What we track, how often we check it, and where the next gaps still are.</h1>
+          <p class="activity-intro">
+            This is the public operations board for the hub. It shows the current data categories, their refresh cadence,
+            the types of sources we rely on, and the last few changes visible in each lane. Freshness matters, but official
+            verification still comes first.
+          </p>
+        </div>
+
+        <div class="activity-summary-grid">
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{summary.total}</p>
+            <p class="activity-summary-label">Tracked categories</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{summary.automated}</p>
+            <p class="activity-summary-label">Fully automated lanes</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{summary.mixed}</p>
+            <p class="activity-summary-label">Mixed automation lanes</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{summary.manual}</p>
+            <p class="activity-summary-label">Manual editorial lanes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-4 xl:grid-cols-[minmax(0,1.6fr)_minmax(18rem,0.8fr)] mt-6">
+        <div class="rounded-[1.6rem] border border-(--color-border) bg-(--color-bg-card) p-5">
+          <p class="hub-home-mini-label">Current operating model</p>
+          <p class="hub-home-feed-copy mt-3">
+            The hub now refreshes core data throughout the day, but not every category should be treated the same.
+            Prices, status pages, and structured benchmark feeds are strong candidates for hourly automation. Social signals
+            and editorial reactions should trigger review work, not silently overwrite the canonical data layer.
+          </p>
+          <div class="hub-home-chip-row mt-4">
+            <a href={`${base}changelog/`} class="hub-home-chip">Activity log</a>
+            <a href={`${base}news/pipeline/`} class="hub-home-chip">News pipeline</a>
+            <a href={`${base}collection-policy/`} class="hub-home-chip">Collection policy</a>
+            <a href={`${base}references/`} class="hub-home-chip">References</a>
+          </div>
+        </div>
+
+        <div class="rounded-[1.6rem] border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
+          <p class="hub-home-mini-label text-(--color-accent)">Manual social watch</p>
+          <h2 class="hub-home-side-title mt-2">Social can tell us when to look, not what is true.</h2>
+          <p class="hub-home-feed-copy mt-3">
+            X / Twitter is useful for launch timing and first impressions, but it should stay manual-review only or official API only.
+            The automated layer should still rely on official docs, pricing pages, changelogs, and status endpoints.
+          </p>
+          <p class="hub-home-brief-meta mt-4">
+            <span>Latest refresh</span>
+            <span>{formatDateTime(summary.latestRefresh)}</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="grid gap-4 mt-8 xl:grid-cols-2">
+        {categories.map((category) => (
+          <article class="rounded-[1.8rem] border border-(--color-border) bg-(--color-bg-card) p-5 shadow-[0_18px_36px_rgba(47,27,12,0.08)]">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div class="max-w-2xl">
+                <div class="flex flex-wrap items-center gap-2">
+                  <p class="hub-home-mini-label">{category.label}</p>
+                  <span class={`badge ${automationMeta[category.automation]}`}>{category.automation}</span>
+                  <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${statusMeta[category.status].classes}`}>
+                    {statusMeta[category.status].label}
+                  </span>
+                </div>
+                <h2 class="hub-home-card-title mt-3">{category.summary}</h2>
+              </div>
+
+              <div class="min-w-[13rem] rounded-[1.2rem] border border-(--color-border) bg-(--color-bg-tertiary) px-4 py-3">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Cadence</p>
+                <p class="mt-2 text-sm font-semibold text-(--color-text-primary)">{category.cadence}</p>
+                <p class="mt-3 text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Last refreshed</p>
+                <p class="mt-2 text-sm font-semibold text-(--color-text-primary)">{formatDateTime(category.lastRefreshed)}</p>
+                <p class="mt-1 text-xs text-(--color-text-muted)">{formatRelative(category.lastRefreshed)}</p>
+              </div>
+            </div>
+
+            <div class="grid gap-4 mt-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)]">
+              <div class="rounded-[1.25rem] border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+                <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Source types</p>
+                <ul class="mt-3 space-y-2 text-sm leading-relaxed text-(--color-text-secondary)">
+                  {category.sources.map((source) => (
+                    <li class="flex gap-2">
+                      <span class="mt-1 h-1.5 w-1.5 rounded-full bg-(--color-accent) shrink-0"></span>
+                      <span>{source}</span>
+                    </li>
+                  ))}
+                </ul>
+                {category.note && (
+                  <p class="mt-4 text-xs leading-relaxed text-(--color-text-muted)">{category.note}</p>
+                )}
+              </div>
+
+              <div class="rounded-[1.25rem] border border-(--color-border) bg-(--color-bg-tertiary) p-4">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-[11px] uppercase tracking-[0.18em] text-(--color-text-muted)">Last 3 visible updates</p>
+                  <a href={category.href} class="text-xs font-medium text-(--color-accent) hover:text-(--color-accent-hover)">
+                    Open category
+                  </a>
+                </div>
+
+                <div class="space-y-3 mt-3">
+                  {category.highlights.length > 0 ? category.highlights.map((highlight) => (
+                    <a
+                      href={highlight.href ?? category.href}
+                      class="hub-home-activity-row block"
+                      target={isExternal(highlight.href) ? '_blank' : undefined}
+                      rel={isExternal(highlight.href) ? 'noopener noreferrer' : undefined}
+                    >
+                      <div class="hub-home-activity-topline">
+                        <span class="hub-home-category is-data">{highlight.date ? formatRelative(highlight.date) : 'Watch'}</span>
+                        {highlight.date && <time class="hub-home-activity-date">{formatDateTime(highlight.date)}</time>}
+                      </div>
+                      <h3 class="hub-home-feed-title">{highlight.title}</h3>
+                      <p class="hub-home-feed-copy">{highlight.detail}</p>
+                    </a>
+                  )) : (
+                    <div class="rounded-[1.2rem] border border-dashed border-(--color-border-hover) px-4 py-5 text-sm text-(--color-text-secondary)">
+                      No recent updates are tracked for this category yet.
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -72,7 +72,8 @@ const primaryNav = [
     label: 'News',
     href: `${base}news/`,
     children: [
-      { href: `${base}news/`, label: 'AI News', note: 'Curated daily signal from tracked sources' },
+      { href: `${base}news/`, label: 'AI News', note: 'Rolling signal from tracked sources' },
+      { href: `${base}updates/`, label: 'Updates & Freshness', note: 'Categories, cadence, sources, and latest changes' },
       { href: `${base}news/pipeline/`, label: 'News Pipeline', note: 'Website routing, source categories, and filter rules' },
       { href: `${base}jobs/`, label: 'AI Jobs Market', note: 'Live hiring signal from public company boards' },
       { href: `${base}reports/`, label: 'AI Reports', note: 'Recurring indexes, labour reports, and market studies' },
@@ -137,6 +138,7 @@ const mobileSections = [
       { href: `${base}people/`, label: 'People in AI' },
       { href: `${base}timeline/`, label: 'AI Timeline' },
       { href: `${base}news/`, label: 'AI News' },
+      { href: `${base}updates/`, label: 'Updates & Freshness' },
       { href: `${base}news/pipeline/`, label: 'News Pipeline' },
       { href: `${base}status/websites/`, label: 'Website Estate' },
       { href: `${base}jobs/`, label: 'AI Jobs Market' },
@@ -200,6 +202,7 @@ const footerSections = [
       { href: `${base}jobs/`, label: 'AI jobs market' },
       { href: `${base}reports/`, label: 'AI reports' },
       { href: `${base}events/`, label: 'AI events' },
+      { href: `${base}updates/`, label: 'Updates & freshness' },
       { href: `${base}rumours/`, label: 'Rumours and leaks' },
       { href: `${base}references/`, label: 'References' },
       { href: `${base}collection-policy/`, label: 'Collection policy' },
@@ -270,7 +273,7 @@ const footerSections = [
           <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-[0.95rem] border border-(--color-border-strong) bg-(--color-bg-tertiary) p-0.5 shadow-[0_10px_24px_rgba(0,0,0,0.16)]" width="32" height="32" />
           <div class="hidden sm:block">
             <p class="text-base font-display font-semibold text-(--color-text-primary) leading-tight">The AI Resource Hub</p>
-            <p class="mt-1 text-[11px] text-(--color-text-muted)">Models, benchmarks, pricing, and daily AI updates</p>
+            <p class="mt-1 text-[11px] text-(--color-text-muted)">Models, benchmarks, pricing, and live AI updates</p>
           </div>
           <span class="sm:hidden text-sm font-display font-semibold text-(--color-text-primary)">AI Resource Hub</span>
         </a>
@@ -398,7 +401,7 @@ const footerSections = [
               Built more like a reference desk than a landing page.
             </p>
             <p class="mt-4 text-xs leading-5 text-(--color-text-muted)">
-              Independent and unaffiliated. Data is provided for research and comparison purposes only. Updated daily.
+              Independent and unaffiliated. Data is provided for research and comparison purposes only. Updated throughout the day.
             </p>
           </div>
 

@@ -675,7 +675,12 @@ export function getModelCounts() {
   return counts;
 }
 export function getLastScrapeTime(_scraper: string) {
-  const logs = loadCache<{ scraper: string; status: string; finished_at: string }>('scrape_log');
-  const match = logs.find(l => l.scraper === _scraper && l.status === 'success');
-  return match?.finished_at ?? null;
+  const logs = loadCache<{ scraper: string; status: string; finished_at: string | null; started_at?: string | null }>('scrape_log');
+  const timestamps = logs
+    .filter((log) => log.scraper === _scraper && (log.status === 'success' || log.status === 'computed'))
+    .map((log) => log.finished_at ?? log.started_at ?? null)
+    .filter((value): value is string => Boolean(value))
+    .sort((a, b) => Date.parse(b) - Date.parse(a));
+
+  return timestamps[0] ?? null;
 }
