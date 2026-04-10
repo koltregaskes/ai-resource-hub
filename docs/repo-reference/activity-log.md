@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 10 Apr 2026, 07:01 UTC
+Generated: 10 Apr 2026, 07:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 10 Apr 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,085 open roles across 10 tracked companies. | `/jobs/` |
-| 10 Apr 2026, 12:00 UTC | digest | Published the 2026-04-10 daily digest | 20 stories captured from tracked sources. | `/news/` |
-| 10 Apr 2026, 07:00 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 10 Apr 2026, 07:00 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 10 Apr 2026, 07:00 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 10 Apr 2026, 07:00 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 10 Apr 2026, 07:00 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Apr 2026, 12:00 UTC | digest | Cold start latency on GPU cloud platforms in 2026 — p99 specifically, not p50. Anyone have real data? [D] | Reddit r/MachineLearning featured in the latest daily brief. | [open](https://reddit.com/r/MachineLearning/comments/1sgvw83/cold_start_latency_on_gpu_cloud_platforms_in_2026/) |
-| 09 Apr 2026, 12:00 UTC | digest | Used ray tracing cores on my RTX 5070 Ti for LLM routing — 218x speedup, runs entirely on 1 consumer GPU | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sgs3vp/used_ray_tracing_cores_on_my_rtx_5070_ti_for_llm/) |
-| 09 Apr 2026, 12:00 UTC | digest | We're bringing the advisor strategy to the Claude Platform. | Reddit r/ClaudeAI featured in the latest daily brief. | [open](https://reddit.com/r/ClaudeAI/comments/1sgy11x/were_bringing_the_advisor_strategy_to_the_claude/) |
+| 10 Apr 2026, 07:58 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 10 Apr 2026, 07:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Apr 2026, 07:58 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 10 Apr 2026, 07:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 10 Apr 2026, 07:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Apr 2026, 12:00 UTC | digest | Mamba 1 &amp; 2 to Mamba 3 Architectural Upgrade | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sge45s/mamba_1_2_to_mamba_3_architectural_upgrade/) |
+| 09 Apr 2026, 12:00 UTC | digest | Published the 2026-04-09 daily digest | 20 stories captured from 677 sources. | `/news/` |
+| 08 Apr 2026, 12:00 UTC | digest | Finally Abliterated Sarvam 30B and 105B! | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sg5770/finally_abliterated_sarvam_30b_and_105b/) |
+| 08 Apr 2026, 12:00 UTC | digest | Meta Releases Muse Spark - A Natively Multimodal Reasoning model | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sfyacf/meta_releases_muse_spark_a_natively_multimodal/) |
 | 02 Apr 2026, 16:33 UTC | data | NeurIPS 2026 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | ICML 2026 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
