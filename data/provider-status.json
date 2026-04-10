@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T16:06:09.611Z",
+  "generatedAt": "2026-04-10T16:35:30.300Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,39 +12,62 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T16:06:08.174Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-04-10T16:35:29.582Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "platform.claude.com (formerly console.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "411xbc51v608",
+          "title": "Elevated errors on requests to Claude models",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-10T16:30:38.844Z",
+          "updatedAt": "2026-04-10T16:30:39.033Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/hfbfvplmg5s1",
+          "summary": "We are investigating reports of elevated errors on requests to Claude across all products. We will provide an update as soon as possible."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "411xbc51v608",
+          "title": "Elevated errors on requests to Claude models",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-10T16:30:38.844Z",
+          "updatedAt": "2026-04-10T16:30:39.033Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/hfbfvplmg5s1",
+          "summary": "We are investigating reports of elevated errors on requests to Claude across all products. We will provide an update as soon as possible."
+        },
         {
           "id": "2z4mf00ffcwd",
           "title": "Degraded Performance on Vaults",
@@ -77,17 +100,6 @@
           "resolvedAt": "2026-04-09T08:53:20.029Z",
           "url": "https://stspg.io/f2kvgw1r8ky0",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "hsgj6gh6rlck",
-          "title": "Errors when connecting to Claude.ai",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-08T23:57:07.068Z",
-          "updatedAt": "2026-04-08T23:57:07.131Z",
-          "resolvedAt": "2026-04-08T23:57:07.118Z",
-          "url": "https://stspg.io/7kl6qq3lldmg",
-          "summary": "Some users experienced an error when trying to access Claude.ai on desktop and the web from 23:22–23:50 UTC. This issue has now been resolved."
         }
       ]
     },
@@ -102,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T16:06:09.049Z",
+      "lastCheckedAt": "2026-04-10T16:35:30.117Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T16:06:08.330Z",
+      "lastCheckedAt": "2026-04-10T16:35:29.677Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T16:06:09.401Z",
+      "lastCheckedAt": "2026-04-10T16:35:30.204Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T16:06:08.188Z",
+      "lastCheckedAt": "2026-04-10T16:35:29.559Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T16:06:08.433Z",
+      "lastCheckedAt": "2026-04-10T16:35:29.837Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +347,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T16:06:08.246Z",
+      "lastCheckedAt": "2026-04-10T16:35:29.418Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +433,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T16:06:09.604Z",
+      "lastCheckedAt": "2026-04-10T16:35:30.293Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -430,7 +442,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-10T14:14:06.000Z",
+          "id": "together-feed-0-2026-04-10T16:28:40.000Z",
+          "title": "Deepseek R1 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-10T16:28:40.000Z",
+          "updatedAt": "2026-04-10T16:28:40.000Z",
+          "resolvedAt": "2026-04-10T16:28:40.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Deepseek R1 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-10T15:58:55.000Z",
+          "title": "Deepseek R1 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-10T15:58:55.000Z",
+          "updatedAt": "2026-04-10T15:58:55.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Deepseek R1 went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-10T14:14:06.000Z",
           "title": "FLUX.1 Krea [dev] recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -441,34 +475,12 @@
           "summary": "FLUX.1 Krea [dev] recovered"
         },
         {
-          "id": "together-feed-1-2026-04-10T14:00:45.000Z",
+          "id": "together-feed-3-2026-04-10T14:00:45.000Z",
           "title": "FLUX.1 Krea [dev] went down",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-04-10T14:00:45.000Z",
           "updatedAt": "2026-04-10T14:00:45.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-10T12:44:21.000Z",
-          "title": "FLUX.1 Krea [dev] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-10T12:44:21.000Z",
-          "updatedAt": "2026-04-10T12:44:21.000Z",
-          "resolvedAt": "2026-04-10T12:44:21.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-10T12:31:00.000Z",
-          "title": "FLUX.1 Krea [dev] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-10T12:31:00.000Z",
-          "updatedAt": "2026-04-10T12:31:00.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "FLUX.1 Krea [dev] went down"
