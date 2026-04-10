@@ -385,6 +385,17 @@
     "provider_colour": "#d97706"
   },
   {
+    "id": 10755,
+    "model_id": "claude-3-haiku",
+    "input_price": 0.25,
+    "output_price": 1.25,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude 3 Haiku",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
     "id": 1753,
     "model_id": "claude-3.5-sonnet",
     "input_price": 6,
@@ -1391,6 +1402,28 @@
     "input_price": 3,
     "output_price": 15,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude 3.7 Sonnet (thinking)",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10697,
+    "model_id": "claude-3.7-sonnet",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude 3.7 Sonnet (thinking)",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10698,
+    "model_id": "claude-3.7-sonnet",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Claude 3.7 Sonnet (thinking)",
     "provider_name": "Anthropic",
@@ -2453,6 +2486,17 @@
     "provider_colour": "#d97706"
   },
   {
+    "id": 10728,
+    "model_id": "claude-haiku-3.5",
+    "input_price": 0.8,
+    "output_price": 4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude 3.5 Haiku",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
     "id": 19,
     "model_id": "claude-haiku-4.5",
     "input_price": 1,
@@ -3118,6 +3162,17 @@
     "input_price": 1,
     "output_price": 5,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Haiku 4.5",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10593,
+    "model_id": "claude-haiku-4.5",
+    "input_price": 1,
+    "output_price": 5,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Claude Haiku 4.5",
     "provider_name": "Anthropic",
@@ -4180,6 +4235,17 @@
     "provider_colour": "#d97706"
   },
   {
+    "id": 10659,
+    "model_id": "claude-opus-4",
+    "input_price": 15,
+    "output_price": 75,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Opus 4",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
     "id": 2593,
     "model_id": "claude-opus-4.1",
     "input_price": 15,
@@ -4515,6 +4581,17 @@
     "input_price": 15,
     "output_price": 75,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Opus 4.1",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10635,
+    "model_id": "claude-opus-4.1",
+    "input_price": 15,
+    "output_price": 75,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Claude Opus 4.1",
     "provider_name": "Anthropic",
@@ -5186,6 +5263,17 @@
     "input_price": 5,
     "output_price": 25,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Opus 4.5",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10577,
+    "model_id": "claude-opus-4.5",
+    "input_price": 5,
+    "output_price": 25,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Claude Opus 4.5",
     "provider_name": "Anthropic",
@@ -6710,6 +6798,39 @@
     "provider_colour": "#d97706"
   },
   {
+    "id": 10515,
+    "model_id": "claude-opus-4.6",
+    "input_price": 15,
+    "output_price": 75,
+    "recorded_at": "2026-04-10 22:54:55",
+    "source": "Anthropic (official)",
+    "model_name": "Claude Opus 4.6",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10551,
+    "model_id": "claude-opus-4.6",
+    "input_price": 5,
+    "output_price": 25,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Opus 4.6",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10771,
+    "model_id": "claude-opus-4.6",
+    "input_price": 15,
+    "output_price": 75,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "Anthropic (official)",
+    "model_name": "Claude Opus 4.6",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
     "id": 2510,
     "model_id": "claude-opus-4.6-fast",
     "input_price": 30,
@@ -7045,6 +7166,17 @@
     "input_price": 30,
     "output_price": 150,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Opus 4.6 (Fast)",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10517,
+    "model_id": "claude-opus-4.6-fast",
+    "input_price": 30,
+    "output_price": 150,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Claude Opus 4.6 (Fast)",
     "provider_name": "Anthropic",
@@ -8107,6 +8239,17 @@
     "provider_colour": "#d97706"
   },
   {
+    "id": 10660,
+    "model_id": "claude-sonnet-4",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Sonnet 4",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
     "id": 18,
     "model_id": "claude-sonnet-4.5",
     "input_price": 3,
@@ -8772,6 +8915,17 @@
     "input_price": 3,
     "output_price": 15,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Sonnet 4.5",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10605,
+    "model_id": "claude-sonnet-4.5",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Claude Sonnet 4.5",
     "provider_name": "Anthropic",
@@ -10296,6 +10450,39 @@
     "provider_colour": "#d97706"
   },
   {
+    "id": 10516,
+    "model_id": "claude-sonnet-4.6",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:55",
+    "source": "Anthropic (official)",
+    "model_name": "Claude Sonnet 4.6",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10545,
+    "model_id": "claude-sonnet-4.6",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Claude Sonnet 4.6",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
+    "id": 10772,
+    "model_id": "claude-sonnet-4.6",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "Anthropic (official)",
+    "model_name": "Claude Sonnet 4.6",
+    "provider_name": "Anthropic",
+    "provider_colour": "#d97706"
+  },
+  {
     "id": 41,
     "model_id": "codestral",
     "input_price": 0.3,
@@ -11033,6 +11220,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10636,
+    "model_id": "codestral",
+    "input_price": 0.3,
+    "output_price": 0.9,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Codestral 2508",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 104,
     "model_id": "cogvideox-1.5",
     "input_price": 0,
@@ -11715,6 +11913,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10687,
+    "model_id": "command-a",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Command A",
+    "provider_name": "Cohere",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 55,
     "model_id": "command-a-reasoning",
     "input_price": 2.5,
@@ -12078,6 +12287,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10737,
+    "model_id": "command-r",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Command R (08-2024)",
+    "provider_name": "Cohere",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 56,
     "model_id": "command-r-plus",
     "input_price": 2.5,
@@ -12430,6 +12650,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10738,
+    "model_id": "command-r-plus",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Command R+ (08-2024)",
+    "provider_name": "Cohere",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 58,
     "model_id": "command-r7b",
     "input_price": 0.0375,
@@ -12776,6 +13007,17 @@
     "input_price": 0.038,
     "output_price": 0.15,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Command R7B (12-2024)",
+    "provider_name": "Cohere",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 10718,
+    "model_id": "command-r7b",
+    "input_price": 0.038,
+    "output_price": 0.15,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Command R7B (12-2024)",
     "provider_name": "Cohere",
@@ -13172,6 +13414,17 @@
     "input_price": 0.15,
     "output_price": 0.75,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V3.1",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 10624,
+    "model_id": "deepseek-chat-v3.1",
+    "input_price": 0.15,
+    "output_price": 0.75,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V3.1",
     "provider_name": "DeepSeek",
@@ -14234,6 +14487,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10713,
+    "model_id": "deepseek-r1",
+    "input_price": 0.7,
+    "output_price": 2.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "R1",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 36,
     "model_id": "deepseek-r1-0528",
     "input_price": 1.35,
@@ -15136,6 +15400,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10658,
+    "model_id": "deepseek-r1-0528",
+    "input_price": 0.45,
+    "output_price": 2.15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "R1 0528",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 2630,
     "model_id": "deepseek-r1-distill-llama-70b",
     "input_price": 0.7,
@@ -15477,6 +15752,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10712,
+    "model_id": "deepseek-r1-distill-llama-70b",
+    "input_price": 0.7,
+    "output_price": 0.8,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "R1 Distill Llama 70B",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 2629,
     "model_id": "deepseek-r1-distill-qwen-32b",
     "input_price": 0.29,
@@ -15812,6 +16098,17 @@
     "input_price": 0.29,
     "output_price": 0.29,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "R1 Distill Qwen 32B",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 10710,
+    "model_id": "deepseek-r1-distill-qwen-32b",
+    "input_price": 0.29,
+    "output_price": 0.29,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "R1 Distill Qwen 32B",
     "provider_name": "DeepSeek",
@@ -16643,6 +16940,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10716,
+    "model_id": "deepseek-v3",
+    "input_price": 0.32,
+    "output_price": 0.89,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V3",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 2575,
     "model_id": "deepseek-v3.1-terminus",
     "input_price": 0.21,
@@ -16978,6 +17286,17 @@
     "input_price": 0.21,
     "output_price": 0.79,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V3.1 Terminus",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 10613,
+    "model_id": "deepseek-v3.1-terminus",
+    "input_price": 0.21,
+    "output_price": 0.79,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V3.1 Terminus",
     "provider_name": "DeepSeek",
@@ -18392,6 +18711,28 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10576,
+    "model_id": "deepseek-v3.2",
+    "input_price": 0.26,
+    "output_price": 0.38,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V3 0324",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 10682,
+    "model_id": "deepseek-v3.2",
+    "input_price": 0.2,
+    "output_price": 0.77,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V3 0324",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 2569,
     "model_id": "deepseek-v3.2-exp",
     "input_price": 0.27,
@@ -18727,6 +19068,17 @@
     "input_price": 0.27,
     "output_price": 0.41,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V3.2 Exp",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 10606,
+    "model_id": "deepseek-v3.2-exp",
+    "input_price": 0.27,
+    "output_price": 0.41,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V3.2 Exp",
     "provider_name": "DeepSeek",
@@ -19074,6 +19426,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 10575,
+    "model_id": "deepseek-v3.2-speciale",
+    "input_price": 0.4,
+    "output_price": 1.2,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V3.2 Speciale",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 2539,
     "model_id": "devstral-2512",
     "input_price": 0.4,
@@ -19409,6 +19772,17 @@
     "input_price": 0.4,
     "output_price": 2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Devstral 2 2512",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10567,
+    "model_id": "devstral-2512",
+    "input_price": 0.4,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Devstral 2 2512",
     "provider_name": "Mistral",
@@ -19756,6 +20130,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10647,
+    "model_id": "devstral-medium",
+    "input_price": 0.4,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Devstral Medium",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2602,
     "model_id": "devstral-small",
     "input_price": 0.1,
@@ -20091,6 +20476,17 @@
     "input_price": 0.1,
     "output_price": 0.3,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Devstral Small 1.1",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10648,
+    "model_id": "devstral-small",
+    "input_price": 0.1,
+    "output_price": 0.3,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Devstral Small 1.1",
     "provider_name": "Mistral",
@@ -21615,6 +22011,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10701,
+    "model_id": "gemini-2.0-flash",
+    "input_price": 0.1,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 2.0 Flash",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 180,
     "model_id": "gemini-2.0-flash-lite",
     "input_price": 0.075,
@@ -22335,6 +22742,17 @@
     "input_price": 0.075,
     "output_price": 0.3,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 2.0 Flash Lite",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10696,
+    "model_id": "gemini-2.0-flash-lite",
+    "input_price": 0.075,
+    "output_price": 0.3,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemini 2.0 Flash Lite",
     "provider_name": "Google",
@@ -23397,6 +23815,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10652,
+    "model_id": "gemini-2.5-flash",
+    "input_price": 0.3,
+    "output_price": 2.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 2.5 Flash",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 2565,
     "model_id": "gemini-2.5-flash-image",
     "input_price": 0.3,
@@ -23732,6 +24161,17 @@
     "input_price": 0.3,
     "output_price": 2.5,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nano Banana (Gemini 2.5 Flash Image)",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10600,
+    "model_id": "gemini-2.5-flash-image",
+    "input_price": 0.3,
+    "output_price": 2.5,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Nano Banana (Gemini 2.5 Flash Image)",
     "provider_name": "Google",
@@ -24409,6 +24849,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10644,
+    "model_id": "gemini-2.5-flash-lite",
+    "input_price": 0.1,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 2.5 Flash Lite",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 2570,
     "model_id": "gemini-2.5-flash-lite-preview-09-2025",
     "input_price": 0.1,
@@ -24744,6 +25195,17 @@
     "input_price": 0.1,
     "output_price": 0.4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 2.5 Flash Lite Preview 09-2025",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10607,
+    "model_id": "gemini-2.5-flash-lite-preview-09-2025",
+    "input_price": 0.1,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemini 2.5 Flash Lite Preview 09-2025",
     "provider_name": "Google",
@@ -26158,6 +26620,28 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10653,
+    "model_id": "gemini-2.5-pro",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 2.5 Pro Preview 06-05",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10657,
+    "model_id": "gemini-2.5-pro",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 2.5 Pro Preview 06-05",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 2606,
     "model_id": "gemini-2.5-pro-preview-05-06",
     "input_price": 1.25,
@@ -26493,6 +26977,17 @@
     "input_price": 1.25,
     "output_price": 10,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 2.5 Pro Preview 05-06",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10663,
+    "model_id": "gemini-2.5-pro-preview-05-06",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemini 2.5 Pro Preview 05-06",
     "provider_name": "Google",
@@ -26862,6 +27357,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10561,
+    "model_id": "gemini-3-flash",
+    "input_price": 0.5,
+    "output_price": 3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 3 Flash Preview",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 24,
     "model_id": "gemini-3-pro",
     "input_price": 2,
@@ -27214,6 +27720,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10578,
+    "model_id": "gemini-3-pro-image",
+    "input_price": 2,
+    "output_price": 12,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nano Banana Pro (Gemini 3 Pro Image Preview)",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 2519,
     "model_id": "gemini-3.1-flash-image",
     "input_price": 0.5,
@@ -27555,6 +28072,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10537,
+    "model_id": "gemini-3.1-flash-image",
+    "input_price": 0.5,
+    "output_price": 3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 2518,
     "model_id": "gemini-3.1-flash-lite",
     "input_price": 0.25,
@@ -27890,6 +28418,17 @@
     "input_price": 0.25,
     "output_price": 1.5,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 3.1 Flash Lite Preview",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10536,
+    "model_id": "gemini-3.1-flash-lite",
+    "input_price": 0.25,
+    "output_price": 1.5,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemini 3.1 Flash Lite Preview",
     "provider_name": "Google",
@@ -28611,6 +29150,28 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10542,
+    "model_id": "gemini-3.1-pro",
+    "input_price": 2,
+    "output_price": 12,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 3.1 Pro Preview",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10544,
+    "model_id": "gemini-3.1-pro",
+    "input_price": 2,
+    "output_price": 12,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 3.1 Pro Preview",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 108,
     "model_id": "gemini-stt",
     "input_price": 0.003,
@@ -28963,6 +29524,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10745,
+    "model_id": "gemma-2-27b-it",
+    "input_price": 0.65,
+    "output_price": 0.65,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 2 27B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 2637,
     "model_id": "gemma-2-9b-it",
     "input_price": 0.03,
@@ -29298,6 +29870,17 @@
     "input_price": 0.03,
     "output_price": 0.09,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 2 9B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10746,
+    "model_id": "gemma-2-9b-it",
+    "input_price": 0.03,
+    "output_price": 0.09,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemma 2 9B",
     "provider_name": "Google",
@@ -29645,6 +30228,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10686,
+    "model_id": "gemma-3-12b-it",
+    "input_price": 0.04,
+    "output_price": 0.13,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3 12B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 2618,
     "model_id": "gemma-3-27b-it",
     "input_price": 0.08,
@@ -29980,6 +30574,17 @@
     "input_price": 0.08,
     "output_price": 0.16,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3 27B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10691,
+    "model_id": "gemma-3-27b-it",
+    "input_price": 0.08,
+    "output_price": 0.16,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemma 3 27B",
     "provider_name": "Google",
@@ -30327,6 +30932,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10685,
+    "model_id": "gemma-3-4b-it",
+    "input_price": 0.04,
+    "output_price": 0.08,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3 4B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 2605,
     "model_id": "gemma-3n-e4b-it",
     "input_price": 0.02,
@@ -30662,6 +31278,17 @@
     "input_price": 0.02,
     "output_price": 0.04,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3n 4B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10661,
+    "model_id": "gemma-3n-e4b-it",
+    "input_price": 0.02,
+    "output_price": 0.04,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemma 3n 4B",
     "provider_name": "Google",
@@ -31350,6 +31977,28 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 10519,
+    "model_id": "gemma-4",
+    "input_price": 0.12,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 4 31B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 10520,
+    "model_id": "gemma-4",
+    "input_price": 0.14,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 4 31B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 93,
     "model_id": "gen-3-alpha",
     "input_price": 0.05,
@@ -31724,6 +32373,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 10642,
+    "model_id": "glm-4-32b",
+    "input_price": 0.1,
+    "output_price": 0.1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4 32B",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 2596,
     "model_id": "glm-4.5",
     "input_price": 0.6,
@@ -32059,6 +32719,17 @@
     "input_price": 0.6,
     "output_price": 2.2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4.5",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
+    "id": 10639,
+    "model_id": "glm-4.5",
+    "input_price": 0.6,
+    "output_price": 2.2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 4.5",
     "provider_name": "Zhipu AI",
@@ -32406,6 +33077,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 10640,
+    "model_id": "glm-4.5-air",
+    "input_price": 0.13,
+    "output_price": 0.85,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4.5 Air",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 2587,
     "model_id": "glm-4.5v",
     "input_price": 0.6,
@@ -32741,6 +33423,17 @@
     "input_price": 0.6,
     "output_price": 1.8,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4.5V",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
+    "id": 10627,
+    "model_id": "glm-4.5v",
+    "input_price": 0.6,
+    "output_price": 1.8,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 4.5V",
     "provider_name": "Zhipu AI",
@@ -33088,6 +33781,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 10604,
+    "model_id": "glm-4.6",
+    "input_price": 0.39,
+    "output_price": 1.9,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4.6",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 2540,
     "model_id": "glm-4.6v",
     "input_price": 0.3,
@@ -33423,6 +34127,17 @@
     "input_price": 0.3,
     "output_price": 0.9,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4.6V",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
+    "id": 10568,
+    "model_id": "glm-4.6v",
+    "input_price": 0.3,
+    "output_price": 0.9,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 4.6V",
     "provider_name": "Zhipu AI",
@@ -33770,6 +34485,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 10560,
+    "model_id": "glm-4.7",
+    "input_price": 0.39,
+    "output_price": 1.75,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4.7",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 2532,
     "model_id": "glm-4.7-flash",
     "input_price": 0.06,
@@ -34105,6 +34831,17 @@
     "input_price": 0.06,
     "output_price": 0.4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4.7 Flash",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
+    "id": 10557,
+    "model_id": "glm-4.7-flash",
+    "input_price": 0.06,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 4.7 Flash",
     "provider_name": "Zhipu AI",
@@ -34452,6 +35189,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 10549,
+    "model_id": "glm-5",
+    "input_price": 0.72,
+    "output_price": 2.3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 5",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 2413,
     "model_id": "glm-5-turbo",
     "input_price": 1.2,
@@ -34787,6 +35535,17 @@
     "input_price": 1.2,
     "output_price": 4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 5 Turbo",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
+    "id": 10530,
+    "model_id": "glm-5-turbo",
+    "input_price": 1.2,
+    "output_price": 4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 5 Turbo",
     "provider_name": "Zhipu AI",
@@ -35134,6 +35893,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 10518,
+    "model_id": "glm-5.1",
+    "input_price": 0.95,
+    "output_price": 3.15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 5.1",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 2512,
     "model_id": "glm-5v-turbo",
     "input_price": 1.2,
@@ -35469,6 +36239,17 @@
     "input_price": 1.2,
     "output_price": 4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 5V Turbo",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
+    "id": 10522,
+    "model_id": "glm-5v-turbo",
+    "input_price": 1.2,
+    "output_price": 4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 5V Turbo",
     "provider_name": "Zhipu AI",
@@ -35816,6 +36597,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10765,
+    "model_id": "gpt-3.5-turbo",
+    "input_price": 0.5,
+    "output_price": 1.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-3.5 Turbo",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2644,
     "model_id": "gpt-3.5-turbo-0613",
     "input_price": 1,
@@ -36151,6 +36943,17 @@
     "input_price": 1,
     "output_price": 2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-3.5 Turbo (older v0613)",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10757,
+    "model_id": "gpt-3.5-turbo-0613",
+    "input_price": 1,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-3.5 Turbo (older v0613)",
     "provider_name": "OpenAI",
@@ -36498,6 +37301,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10763,
+    "model_id": "gpt-3.5-turbo-16k",
+    "input_price": 3,
+    "output_price": 4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-3.5 Turbo 16k",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2648,
     "model_id": "gpt-3.5-turbo-instruct",
     "input_price": 1.5,
@@ -36833,6 +37647,17 @@
     "input_price": 1.5,
     "output_price": 2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-3.5 Turbo Instruct",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10762,
+    "model_id": "gpt-3.5-turbo-instruct",
+    "input_price": 1.5,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-3.5 Turbo Instruct",
     "provider_name": "OpenAI",
@@ -37180,6 +38005,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10766,
+    "model_id": "gpt-4",
+    "input_price": 30,
+    "output_price": 60,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2650,
     "model_id": "gpt-4-0314",
     "input_price": 30,
@@ -37521,6 +38357,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10764,
+    "model_id": "gpt-4-0314",
+    "input_price": 30,
+    "output_price": 60,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4 (older v0314)",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2646,
     "model_id": "gpt-4-1106",
     "input_price": 10,
@@ -37856,6 +38703,17 @@
     "input_price": 10,
     "output_price": 30,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4 Turbo (older v1106)",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10760,
+    "model_id": "gpt-4-1106",
+    "input_price": 10,
+    "output_price": 30,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-4 Turbo (older v1106)",
     "provider_name": "OpenAI",
@@ -38538,6 +39396,28 @@
     "input_price": 10,
     "output_price": 30,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4 Turbo Preview",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10754,
+    "model_id": "gpt-4-turbo",
+    "input_price": 10,
+    "output_price": 30,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4 Turbo Preview",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10758,
+    "model_id": "gpt-4-turbo",
+    "input_price": 10,
+    "output_price": 30,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-4 Turbo Preview",
     "provider_name": "OpenAI",
@@ -39600,6 +40480,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10673,
+    "model_id": "gpt-4.1",
+    "input_price": 2,
+    "output_price": 8,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4.1",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 7,
     "model_id": "gpt-4.1-mini",
     "input_price": 0.4,
@@ -40656,6 +41547,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10674,
+    "model_id": "gpt-4.1-mini",
+    "input_price": 0.4,
+    "output_price": 1.6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4.1 Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 8,
     "model_id": "gpt-4.1-nano",
     "input_price": 0.1,
@@ -41706,6 +42608,17 @@
     "input_price": 0.1,
     "output_price": 0.4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4.1 Nano",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10675,
+    "model_id": "gpt-4.1-nano",
+    "input_price": 0.1,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-4.1 Nano",
     "provider_name": "OpenAI",
@@ -44176,6 +45089,61 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10723,
+    "model_id": "gpt-4o",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o (2024-05-13)",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10739,
+    "model_id": "gpt-4o",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o (2024-05-13)",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10747,
+    "model_id": "gpt-4o",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o (2024-05-13)",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10748,
+    "model_id": "gpt-4o",
+    "input_price": 6,
+    "output_price": 18,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o (2024-05-13)",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10749,
+    "model_id": "gpt-4o",
+    "input_price": 5,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o (2024-05-13)",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2585,
     "model_id": "gpt-4o-audio",
     "input_price": 2.5,
@@ -44511,6 +45479,17 @@
     "input_price": 2.5,
     "output_price": 10,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o Audio",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10625,
+    "model_id": "gpt-4o-audio",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-4o Audio",
     "provider_name": "OpenAI",
@@ -45925,6 +46904,28 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10743,
+    "model_id": "gpt-4o-mini",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o-mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10744,
+    "model_id": "gpt-4o-mini",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o-mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2616,
     "model_id": "gpt-4o-mini-search",
     "input_price": 0.15,
@@ -46260,6 +47261,17 @@
     "input_price": 0.15,
     "output_price": 0.6,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o-mini Search Preview",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10688,
+    "model_id": "gpt-4o-mini-search",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-4o-mini Search Preview",
     "provider_name": "OpenAI",
@@ -46612,6 +47624,17 @@
     "input_price": 2.5,
     "output_price": 10,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-4o Search Preview",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10689,
+    "model_id": "gpt-4o-search",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-4o Search Preview",
     "provider_name": "OpenAI",
@@ -47223,6 +48246,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10630,
+    "model_id": "gpt-5",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2589,
     "model_id": "gpt-5-chat",
     "input_price": 1.25,
@@ -47558,6 +48592,17 @@
     "input_price": 1.25,
     "output_price": 10,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5 Chat",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10629,
+    "model_id": "gpt-5-chat",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5 Chat",
     "provider_name": "OpenAI",
@@ -47905,6 +48950,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10612,
+    "model_id": "gpt-5-codex",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5 Codex",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2561,
     "model_id": "gpt-5-image",
     "input_price": 10,
@@ -48240,6 +49296,17 @@
     "input_price": 10,
     "output_price": 10,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5 Image",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10596,
+    "model_id": "gpt-5-image",
+    "input_price": 10,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5 Image",
     "provider_name": "OpenAI",
@@ -48587,6 +49654,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10592,
+    "model_id": "gpt-5-image-mini",
+    "input_price": 2.5,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5 Image Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2590,
     "model_id": "gpt-5-mini",
     "input_price": 0.25,
@@ -48922,6 +50000,17 @@
     "input_price": 0.25,
     "output_price": 2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5 Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10631,
+    "model_id": "gpt-5-mini",
+    "input_price": 0.25,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5 Mini",
     "provider_name": "OpenAI",
@@ -49368,6 +50457,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10632,
+    "model_id": "gpt-5-nano",
+    "input_price": 0.05,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5 Nano",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 4,
     "model_id": "gpt-5-pro",
     "input_price": 15,
@@ -49808,6 +50908,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10603,
+    "model_id": "gpt-5-pro",
+    "input_price": 15,
+    "output_price": 120,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5 Pro",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2548,
     "model_id": "gpt-5.1",
     "input_price": 1.25,
@@ -50143,6 +51254,17 @@
     "input_price": 1.25,
     "output_price": 10,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.1",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10580,
+    "model_id": "gpt-5.1",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5.1",
     "provider_name": "OpenAI",
@@ -50490,6 +51612,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10581,
+    "model_id": "gpt-5.1-chat",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.1 Chat",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2550,
     "model_id": "gpt-5.1-codex",
     "input_price": 1.25,
@@ -50825,6 +51958,17 @@
     "input_price": 1.25,
     "output_price": 10,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.1-Codex",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10582,
+    "model_id": "gpt-5.1-codex",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5.1-Codex",
     "provider_name": "OpenAI",
@@ -51172,6 +52316,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10569,
+    "model_id": "gpt-5.1-codex-max",
+    "input_price": 1.25,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.1-Codex-Max",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2551,
     "model_id": "gpt-5.1-codex-mini",
     "input_price": 0.25,
@@ -51507,6 +52662,17 @@
     "input_price": 0.25,
     "output_price": 2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.1-Codex-Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10583,
+    "model_id": "gpt-5.1-codex-mini",
+    "input_price": 0.25,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5.1-Codex-Mini",
     "provider_name": "OpenAI",
@@ -52107,6 +53273,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10566,
+    "model_id": "gpt-5.2",
+    "input_price": 1.75,
+    "output_price": 14,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.2",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2538,
     "model_id": "gpt-5.2-chat",
     "input_price": 1.75,
@@ -52448,6 +53625,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10564,
+    "model_id": "gpt-5.2-chat",
+    "input_price": 1.75,
+    "output_price": 14,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.2 Chat",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2533,
     "model_id": "gpt-5.2-codex",
     "input_price": 1.75,
@@ -52783,6 +53971,17 @@
     "input_price": 1.75,
     "output_price": 14,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.2-Codex",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10558,
+    "model_id": "gpt-5.2-codex",
+    "input_price": 1.75,
+    "output_price": 14,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5.2-Codex",
     "provider_name": "OpenAI",
@@ -53229,6 +54428,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10565,
+    "model_id": "gpt-5.2-pro",
+    "input_price": 21,
+    "output_price": 168,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.2 Pro",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2517,
     "model_id": "gpt-5.3-chat",
     "input_price": 1.75,
@@ -53570,6 +54780,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10535,
+    "model_id": "gpt-5.3-chat",
+    "input_price": 1.75,
+    "output_price": 14,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.3 Chat",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2524,
     "model_id": "gpt-5.3-codex",
     "input_price": 1.75,
@@ -53905,6 +55126,17 @@
     "input_price": 1.75,
     "output_price": 14,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.3-Codex",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10543,
+    "model_id": "gpt-5.3-codex",
+    "input_price": 1.75,
+    "output_price": 14,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5.3-Codex",
     "provider_name": "OpenAI",
@@ -54956,6 +56188,39 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10511,
+    "model_id": "gpt-5.4",
+    "input_price": 2.5,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:55",
+    "source": "OpenAI (official)",
+    "model_name": "GPT-5.4",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10534,
+    "model_id": "gpt-5.4",
+    "input_price": 2.5,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.4",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10767,
+    "model_id": "gpt-5.4",
+    "input_price": 2.5,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "OpenAI (official)",
+    "model_name": "GPT-5.4",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2311,
     "model_id": "gpt-5.4-mini",
     "input_price": 0.75,
@@ -55995,6 +57260,39 @@
     "input_price": 0.75,
     "output_price": 4.5,
     "recorded_at": "2026-04-10 21:53:07",
+    "source": "OpenAI (official)",
+    "model_name": "GPT-5.4 Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10513,
+    "model_id": "gpt-5.4-mini",
+    "input_price": 0.75,
+    "output_price": 4.5,
+    "recorded_at": "2026-04-10 22:54:55",
+    "source": "OpenAI (official)",
+    "model_name": "GPT-5.4 Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10528,
+    "model_id": "gpt-5.4-mini",
+    "input_price": 0.75,
+    "output_price": 4.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.4 Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10769,
+    "model_id": "gpt-5.4-mini",
+    "input_price": 0.75,
+    "output_price": 4.5,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "OpenAI (official)",
     "model_name": "GPT-5.4 Mini",
     "provider_name": "OpenAI",
@@ -57046,6 +58344,39 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10514,
+    "model_id": "gpt-5.4-nano",
+    "input_price": 0.2,
+    "output_price": 1.25,
+    "recorded_at": "2026-04-10 22:54:55",
+    "source": "OpenAI (official)",
+    "model_name": "GPT-5.4 Nano",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10527,
+    "model_id": "gpt-5.4-nano",
+    "input_price": 0.2,
+    "output_price": 1.25,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.4 Nano",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10770,
+    "model_id": "gpt-5.4-nano",
+    "input_price": 0.2,
+    "output_price": 1.25,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "OpenAI (official)",
+    "model_name": "GPT-5.4 Nano",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2310,
     "model_id": "gpt-5.4-pro",
     "input_price": 30,
@@ -58091,6 +59422,39 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10512,
+    "model_id": "gpt-5.4-pro",
+    "input_price": 30,
+    "output_price": 180,
+    "recorded_at": "2026-04-10 22:54:55",
+    "source": "OpenAI (official)",
+    "model_name": "GPT-5.4 Pro",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10533,
+    "model_id": "gpt-5.4-pro",
+    "input_price": 30,
+    "output_price": 180,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT-5.4 Pro",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10768,
+    "model_id": "gpt-5.4-pro",
+    "input_price": 30,
+    "output_price": 180,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "OpenAI (official)",
+    "model_name": "GPT-5.4 Pro",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2530,
     "model_id": "gpt-audio",
     "input_price": 2.5,
@@ -58432,6 +59796,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10555,
+    "model_id": "gpt-audio",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT Audio",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2531,
     "model_id": "gpt-audio-mini",
     "input_price": 0.6,
@@ -58767,6 +60142,17 @@
     "input_price": 0.6,
     "output_price": 2.4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GPT Audio Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10556,
+    "model_id": "gpt-audio-mini",
+    "input_price": 0.6,
+    "output_price": 2.4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT Audio Mini",
     "provider_name": "OpenAI",
@@ -59125,6 +60511,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10633,
+    "model_id": "gpt-oss-120b",
+    "input_price": 0.039,
+    "output_price": 0.19,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "gpt-oss-120b",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2592,
     "model_id": "gpt-oss-20b",
     "input_price": 0.03,
@@ -59466,6 +60863,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10634,
+    "model_id": "gpt-oss-20b",
+    "input_price": 0.03,
+    "output_price": 0.14,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "gpt-oss-20b",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2554,
     "model_id": "gpt-oss-safeguard-20b",
     "input_price": 0.075,
@@ -59801,6 +61209,17 @@
     "input_price": 0.075,
     "output_price": 0.3,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "gpt-oss-safeguard-20b",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10588,
+    "model_id": "gpt-oss-safeguard-20b",
+    "input_price": 0.075,
+    "output_price": 0.3,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "gpt-oss-safeguard-20b",
     "provider_name": "OpenAI",
@@ -61061,6 +62480,28 @@
     "provider_colour": "#1da1f2"
   },
   {
+    "id": 10656,
+    "model_id": "grok-3",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 3 Beta",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
+    "id": 10677,
+    "model_id": "grok-3",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 3 Beta",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
     "id": 48,
     "model_id": "grok-3-mini",
     "input_price": 0.3,
@@ -62084,6 +63525,28 @@
     "provider_colour": "#1da1f2"
   },
   {
+    "id": 10655,
+    "model_id": "grok-3-mini",
+    "input_price": 0.3,
+    "output_price": 0.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 3 Mini Beta",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
+    "id": 10676,
+    "model_id": "grok-3-mini",
+    "input_price": 0.3,
+    "output_price": 0.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 3 Mini Beta",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
     "id": 44,
     "model_id": "grok-4",
     "input_price": 3,
@@ -62749,6 +64212,17 @@
     "input_price": 3,
     "output_price": 15,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 4",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
+    "id": 10649,
+    "model_id": "grok-4",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Grok 4",
     "provider_name": "xAI",
@@ -63426,6 +64900,17 @@
     "provider_colour": "#1da1f2"
   },
   {
+    "id": 10614,
+    "model_id": "grok-4-fast",
+    "input_price": 0.2,
+    "output_price": 0.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 4 Fast",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
     "id": 46,
     "model_id": "grok-4.1-fast",
     "input_price": 0.2,
@@ -64097,6 +65582,17 @@
     "provider_colour": "#1da1f2"
   },
   {
+    "id": 10579,
+    "model_id": "grok-4.1-fast",
+    "input_price": 0.2,
+    "output_price": 0.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 4.1 Fast",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
     "id": 2316,
     "model_id": "grok-4.20",
     "input_price": 2,
@@ -64443,6 +65939,17 @@
     "input_price": 2,
     "output_price": 6,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 4.20",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
+    "id": 10524,
+    "model_id": "grok-4.20",
+    "input_price": 2,
+    "output_price": 6,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Grok 4.20",
     "provider_name": "xAI",
@@ -64801,6 +66308,17 @@
     "provider_colour": "#1da1f2"
   },
   {
+    "id": 10523,
+    "model_id": "grok-4.20-multi-agent",
+    "input_price": 2,
+    "output_price": 6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok 4.20 Multi-Agent",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
     "id": 2583,
     "model_id": "grok-code-fast-1",
     "input_price": 0.2,
@@ -65136,6 +66654,17 @@
     "input_price": 0.2,
     "output_price": 1.5,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Grok Code Fast 1",
+    "provider_name": "xAI",
+    "provider_colour": "#1da1f2"
+  },
+  {
+    "id": 10623,
+    "model_id": "grok-code-fast-1",
+    "input_price": 0.2,
+    "output_price": 1.5,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Grok Code Fast 1",
     "provider_name": "xAI",
@@ -65516,6 +67045,17 @@
     "provider_colour": "#f97316"
   },
   {
+    "id": 10731,
+    "model_id": "inflection-3-pi",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Inflection 3 Pi",
+    "provider_name": "Inflection",
+    "provider_colour": "#f97316"
+  },
+  {
     "id": 3161,
     "model_id": "inflection-3-productivity",
     "input_price": 2.5,
@@ -65829,6 +67369,17 @@
     "input_price": 2.5,
     "output_price": 10,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Inflection 3 Productivity",
+    "provider_name": "Inflection",
+    "provider_colour": "#f97316"
+  },
+  {
+    "id": 10732,
+    "model_id": "inflection-3-productivity",
+    "input_price": 2.5,
+    "output_price": 10,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Inflection 3 Productivity",
     "provider_name": "Inflection",
@@ -66198,6 +67749,17 @@
     "provider_colour": "#7c3aed"
   },
   {
+    "id": 10628,
+    "model_id": "jamba-large-1.7",
+    "input_price": 2,
+    "output_price": 8,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Jamba Large 1.7",
+    "provider_name": "AI21 Labs",
+    "provider_colour": "#7c3aed"
+  },
+  {
     "id": 2581,
     "model_id": "kimi-k2-0905",
     "input_price": 0.4,
@@ -66533,6 +68095,17 @@
     "input_price": 0.4,
     "output_price": 2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Kimi K2 0905",
+    "provider_name": "Moonshot AI",
+    "provider_colour": "#f59e0b"
+  },
+  {
+    "id": 10621,
+    "model_id": "kimi-k2-0905",
+    "input_price": 0.4,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Kimi K2 0905",
     "provider_name": "Moonshot AI",
@@ -67562,6 +69135,39 @@
     "provider_colour": "#f59e0b"
   },
   {
+    "id": 10553,
+    "model_id": "kimi-k2.5",
+    "input_price": 0.383,
+    "output_price": 1.72,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Kimi K2 0711",
+    "provider_name": "Moonshot AI",
+    "provider_colour": "#f59e0b"
+  },
+  {
+    "id": 10584,
+    "model_id": "kimi-k2.5",
+    "input_price": 0.6,
+    "output_price": 2.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Kimi K2 0711",
+    "provider_name": "Moonshot AI",
+    "provider_colour": "#f59e0b"
+  },
+  {
+    "id": 10646,
+    "model_id": "kimi-k2.5",
+    "input_price": 0.57,
+    "output_price": 2.3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Kimi K2 0711",
+    "provider_name": "Moonshot AI",
+    "provider_colour": "#f59e0b"
+  },
+  {
     "id": 100,
     "model_id": "kling-1.6",
     "input_price": 0.04,
@@ -67936,6 +69542,17 @@
     "provider_colour": "#0a66ff"
   },
   {
+    "id": 10751,
+    "model_id": "llama-3-70b-instruct",
+    "input_price": 0.51,
+    "output_price": 0.74,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3 70B Instruct",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
     "id": 2638,
     "model_id": "llama-3-8b-instruct",
     "input_price": 0.03,
@@ -68271,6 +69888,17 @@
     "input_price": 0.03,
     "output_price": 0.04,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3 8B Instruct",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
+    "id": 10750,
+    "model_id": "llama-3-8b-instruct",
+    "input_price": 0.03,
+    "output_price": 0.04,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Llama 3 8B Instruct",
     "provider_name": "Meta",
@@ -68717,6 +70345,17 @@
     "provider_colour": "#0a66ff"
   },
   {
+    "id": 10741,
+    "model_id": "llama-3.1-70b",
+    "input_price": 0.4,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.1 70B Instruct",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
     "id": 1755,
     "model_id": "llama-3.1-8b",
     "input_price": 0.02,
@@ -69146,6 +70785,17 @@
     "provider_colour": "#0a66ff"
   },
   {
+    "id": 10740,
+    "model_id": "llama-3.1-8b",
+    "input_price": 0.02,
+    "output_price": 0.05,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.1 8B Instruct",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
     "id": 2611,
     "model_id": "llama-3.1-nemotron-ultra-253b-v1",
     "input_price": 0.6,
@@ -69481,6 +71131,17 @@
     "input_price": 0.6,
     "output_price": 1.8,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.1 Nemotron Ultra 253B v1",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
+    "id": 10678,
+    "model_id": "llama-3.1-nemotron-ultra-253b-v1",
+    "input_price": 0.6,
+    "output_price": 1.8,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Llama 3.1 Nemotron Ultra 253B v1",
     "provider_name": "NVIDIA",
@@ -69828,6 +71489,17 @@
     "provider_colour": "#0a66ff"
   },
   {
+    "id": 10735,
+    "model_id": "llama-3.2-11b-vision-instruct",
+    "input_price": 0.049,
+    "output_price": 0.049,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.2 11B Vision Instruct",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
     "id": 2634,
     "model_id": "llama-3.2-1b-instruct",
     "input_price": 0.027,
@@ -70169,6 +71841,17 @@
     "provider_colour": "#0a66ff"
   },
   {
+    "id": 10734,
+    "model_id": "llama-3.2-1b-instruct",
+    "input_price": 0.027,
+    "output_price": 0.2,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.2 1B Instruct",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
     "id": 2633,
     "model_id": "llama-3.2-3b-instruct",
     "input_price": 0.051,
@@ -70504,6 +72187,17 @@
     "input_price": 0.051,
     "output_price": 0.34,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.2 3B Instruct",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
+    "id": 10733,
+    "model_id": "llama-3.2-3b-instruct",
+    "input_price": 0.051,
+    "output_price": 0.34,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Llama 3.2 3B Instruct",
     "provider_name": "Meta",
@@ -71181,6 +72875,17 @@
     "provider_colour": "#0a66ff"
   },
   {
+    "id": 10719,
+    "model_id": "llama-3.3-70b",
+    "input_price": 0.1,
+    "output_price": 0.32,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.3 70B Instruct",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
     "id": 2564,
     "model_id": "llama-3.3-nemotron-super-49b-v1.5",
     "input_price": 0.1,
@@ -71516,6 +73221,17 @@
     "input_price": 0.1,
     "output_price": 0.4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.3 Nemotron Super 49B V1.5",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
+    "id": 10599,
+    "model_id": "llama-3.3-nemotron-super-49b-v1.5",
+    "input_price": 0.1,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Llama 3.3 Nemotron Super 49B V1.5",
     "provider_name": "NVIDIA",
@@ -72193,6 +73909,17 @@
     "provider_colour": "#0a66ff"
   },
   {
+    "id": 10679,
+    "model_id": "llama-4-maverick",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 4 Maverick",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
     "id": 31,
     "model_id": "llama-4-scout",
     "input_price": 0.18,
@@ -72864,6 +74591,17 @@
     "provider_colour": "#0a66ff"
   },
   {
+    "id": 10680,
+    "model_id": "llama-4-scout",
+    "input_price": 0.08,
+    "output_price": 0.3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 4 Scout",
+    "provider_name": "Meta",
+    "provider_colour": "#0a66ff"
+  },
+  {
     "id": 83,
     "model_id": "midjourney-v6.1",
     "input_price": 0.01,
@@ -73326,6 +75064,17 @@
     "provider_colour": "#e040fb"
   },
   {
+    "id": 10714,
+    "model_id": "minimax-01",
+    "input_price": 0.2,
+    "output_price": 1.1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax-01",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
     "id": 2604,
     "model_id": "minimax-m1",
     "input_price": 0.4,
@@ -73661,6 +75410,17 @@
     "input_price": 0.4,
     "output_price": 2.2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M1",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
+    "id": 10651,
+    "model_id": "minimax-m1",
+    "input_price": 0.4,
+    "output_price": 2.2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "MiniMax M1",
     "provider_name": "MiniMax",
@@ -74008,6 +75768,17 @@
     "provider_colour": "#e040fb"
   },
   {
+    "id": 10590,
+    "model_id": "minimax-m2",
+    "input_price": 0.255,
+    "output_price": 1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M2",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
     "id": 2529,
     "model_id": "minimax-m2-her",
     "input_price": 0.3,
@@ -74343,6 +76114,17 @@
     "input_price": 0.3,
     "output_price": 1.2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M2-her",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
+    "id": 10554,
+    "model_id": "minimax-m2-her",
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "MiniMax M2-her",
     "provider_name": "MiniMax",
@@ -74690,6 +76472,17 @@
     "provider_colour": "#e040fb"
   },
   {
+    "id": 10559,
+    "model_id": "minimax-m2.1",
+    "input_price": 0.29,
+    "output_price": 0.95,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M2.1",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
     "id": 2527,
     "model_id": "minimax-m2.5",
     "input_price": 0.118,
@@ -75025,6 +76818,17 @@
     "input_price": 0.118,
     "output_price": 0.99,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M2.5",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
+    "id": 10548,
+    "model_id": "minimax-m2.5",
+    "input_price": 0.118,
+    "output_price": 0.99,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "MiniMax M2.5",
     "provider_name": "MiniMax",
@@ -75383,6 +77187,17 @@
     "provider_colour": "#e040fb"
   },
   {
+    "id": 10526,
+    "model_id": "minimax-m2.7",
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M2.7",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
     "id": 2542,
     "model_id": "ministral-14b-2512",
     "input_price": 0.2,
@@ -75718,6 +77533,17 @@
     "input_price": 0.2,
     "output_price": 0.2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Ministral 3 14B 2512",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10571,
+    "model_id": "ministral-14b-2512",
+    "input_price": 0.2,
+    "output_price": 0.2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Ministral 3 14B 2512",
     "provider_name": "Mistral",
@@ -76065,6 +77891,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10573,
+    "model_id": "ministral-3b-2512",
+    "input_price": 0.1,
+    "output_price": 0.1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Ministral 3 3B 2512",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2543,
     "model_id": "ministral-8b-2512",
     "input_price": 0.15,
@@ -76406,6 +78243,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10572,
+    "model_id": "ministral-8b-2512",
+    "input_price": 0.15,
+    "output_price": 0.15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Ministral 3 8B 2512",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2647,
     "model_id": "mistral-7b-instruct-v0.1",
     "input_price": 0.11,
@@ -76741,6 +78589,17 @@
     "input_price": 0.11,
     "output_price": 0.19,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral 7B Instruct v0.1",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10761,
+    "model_id": "mistral-7b-instruct-v0.1",
+    "input_price": 0.11,
+    "output_price": 0.19,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Mistral 7B Instruct v0.1",
     "provider_name": "Mistral",
@@ -77176,6 +79035,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10725,
+    "model_id": "mistral-large-2",
+    "input_price": 2,
+    "output_price": 6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Large 2407",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2631,
     "model_id": "mistral-large-2411",
     "input_price": 2,
@@ -77517,6 +79387,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10724,
+    "model_id": "mistral-large-2411",
+    "input_price": 2,
+    "output_price": 6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Large 2411",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2545,
     "model_id": "mistral-large-2512",
     "input_price": 0.5,
@@ -77852,6 +79733,17 @@
     "input_price": 0.5,
     "output_price": 1.5,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Large 3 2512",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10574,
+    "model_id": "mistral-large-2512",
+    "input_price": 0.5,
+    "output_price": 1.5,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Mistral Large 3 2512",
     "provider_name": "Mistral",
@@ -78914,6 +80806,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10756,
+    "model_id": "mistral-large-3",
+    "input_price": 2,
+    "output_price": 6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Large",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 39,
     "model_id": "mistral-medium-3",
     "input_price": 0.4,
@@ -79508,6 +81411,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10662,
+    "model_id": "mistral-medium-3",
+    "input_price": 0.4,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Medium 3",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2586,
     "model_id": "mistral-medium-3.1",
     "input_price": 0.4,
@@ -79843,6 +81757,17 @@
     "input_price": 0.4,
     "output_price": 2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Medium 3.1",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10626,
+    "model_id": "mistral-medium-3.1",
+    "input_price": 0.4,
+    "output_price": 2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Mistral Medium 3.1",
     "provider_name": "Mistral",
@@ -80674,6 +82599,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10742,
+    "model_id": "mistral-nemo",
+    "input_price": 0.02,
+    "output_price": 0.04,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Nemo",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2621,
     "model_id": "mistral-saba",
     "input_price": 0.2,
@@ -81009,6 +82945,17 @@
     "input_price": 0.2,
     "output_price": 0.6,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Saba",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10699,
+    "model_id": "mistral-saba",
+    "input_price": 0.2,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Saba",
     "provider_name": "Mistral",
@@ -81356,6 +83303,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10709,
+    "model_id": "mistral-small-24b-instruct-2501",
+    "input_price": 0.05,
+    "output_price": 0.08,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Small 3",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2514,
     "model_id": "mistral-small-2603",
     "input_price": 0.15,
@@ -81691,6 +83649,17 @@
     "input_price": 0.15,
     "output_price": 0.6,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Small 4",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10529,
+    "model_id": "mistral-small-2603",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Mistral Small 4",
     "provider_name": "Mistral",
@@ -82434,6 +84403,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10684,
+    "model_id": "mistral-small-3.1",
+    "input_price": 0.03,
+    "output_price": 0.11,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Small 3.1 24B",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2603,
     "model_id": "mistral-small-3.2-24b-instruct",
     "input_price": 0.075,
@@ -82769,6 +84749,17 @@
     "input_price": 0.075,
     "output_price": 0.2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Small 3.2 24B",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10650,
+    "model_id": "mistral-small-3.2-24b-instruct",
+    "input_price": 0.075,
+    "output_price": 0.2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Mistral Small 3.2 24B",
     "provider_name": "Mistral",
@@ -83116,6 +85107,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10562,
+    "model_id": "mistral-small-creative",
+    "input_price": 0.1,
+    "output_price": 0.3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mistral Small Creative",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2640,
     "model_id": "mixtral-8x22b-instruct",
     "input_price": 2,
@@ -83457,6 +85459,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10752,
+    "model_id": "mixtral-8x22b-instruct",
+    "input_price": 2,
+    "output_price": 6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mixtral 8x22B Instruct",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 2645,
     "model_id": "mixtral-8x7b-instruct",
     "input_price": 0.54,
@@ -83792,6 +85805,17 @@
     "input_price": 0.54,
     "output_price": 0.54,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Mixtral 8x7B Instruct",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10759,
+    "model_id": "mixtral-8x7b-instruct",
+    "input_price": 0.54,
+    "output_price": 0.54,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Mixtral 8x7B Instruct",
     "provider_name": "Mistral",
@@ -84150,6 +86174,17 @@
     "provider_colour": "#76b900"
   },
   {
+    "id": 10563,
+    "model_id": "nemotron-3-nano-30b-a3b",
+    "input_price": 0.05,
+    "output_price": 0.2,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nemotron 3 Nano 30B A3B",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
     "id": 2515,
     "model_id": "nemotron-3-super-120b-a12b",
     "input_price": 0.1,
@@ -84485,6 +86520,17 @@
     "input_price": 0.1,
     "output_price": 0.5,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nemotron 3 Super",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
+    "id": 10531,
+    "model_id": "nemotron-3-super-120b-a12b",
+    "input_price": 0.1,
+    "output_price": 0.5,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Nemotron 3 Super",
     "provider_name": "NVIDIA",
@@ -84832,6 +86878,17 @@
     "provider_colour": "#76b900"
   },
   {
+    "id": 10730,
+    "model_id": "nemotron-70b",
+    "input_price": 1.2,
+    "output_price": 1.2,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Llama 3.1 Nemotron 70B Instruct",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
     "id": 2555,
     "model_id": "nemotron-nano-12b-v2-vl",
     "input_price": 0.2,
@@ -85173,6 +87230,17 @@
     "provider_colour": "#76b900"
   },
   {
+    "id": 10589,
+    "model_id": "nemotron-nano-12b-v2-vl",
+    "input_price": 0.2,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nemotron Nano 12B 2 VL",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
     "id": 2580,
     "model_id": "nemotron-nano-9b-v2",
     "input_price": 0.04,
@@ -85508,6 +87576,17 @@
     "input_price": 0.04,
     "output_price": 0.16,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nemotron Nano 9B V2",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
+    "id": 10620,
+    "model_id": "nemotron-nano-9b-v2",
+    "input_price": 0.04,
+    "output_price": 0.16,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Nemotron Nano 9B V2",
     "provider_name": "NVIDIA",
@@ -85866,6 +87945,17 @@
     "provider_colour": "#ff9900"
   },
   {
+    "id": 10570,
+    "model_id": "nova-2-lite",
+    "input_price": 0.3,
+    "output_price": 2.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nova 2 Lite",
+    "provider_name": "Amazon",
+    "provider_colour": "#ff9900"
+  },
+  {
     "id": 52,
     "model_id": "nova-lite",
     "input_price": 0.06,
@@ -86212,6 +88302,17 @@
     "input_price": 0.06,
     "output_price": 0.24,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nova Lite 1.0",
+    "provider_name": "Amazon",
+    "provider_colour": "#ff9900"
+  },
+  {
+    "id": 10720,
+    "model_id": "nova-lite",
+    "input_price": 0.06,
+    "output_price": 0.24,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Nova Lite 1.0",
     "provider_name": "Amazon",
@@ -86570,6 +88671,17 @@
     "provider_colour": "#ff9900"
   },
   {
+    "id": 10721,
+    "model_id": "nova-micro",
+    "input_price": 0.035,
+    "output_price": 0.14,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nova Micro 1.0",
+    "provider_name": "Amazon",
+    "provider_colour": "#ff9900"
+  },
+  {
     "id": 50,
     "model_id": "nova-premier",
     "input_price": 2.5,
@@ -86922,6 +89034,17 @@
     "provider_colour": "#ff9900"
   },
   {
+    "id": 10585,
+    "model_id": "nova-premier",
+    "input_price": 2.5,
+    "output_price": 12.5,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nova Premier 1.0",
+    "provider_name": "Amazon",
+    "provider_colour": "#ff9900"
+  },
+  {
     "id": 51,
     "model_id": "nova-pro",
     "input_price": 0.8,
@@ -87268,6 +89391,17 @@
     "input_price": 0.8,
     "output_price": 3.2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nova Pro 1.0",
+    "provider_name": "Amazon",
+    "provider_colour": "#ff9900"
+  },
+  {
+    "id": 10722,
+    "model_id": "nova-pro",
+    "input_price": 0.8,
+    "output_price": 3.2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Nova Pro 1.0",
     "provider_name": "Amazon",
@@ -87791,6 +89925,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10717,
+    "model_id": "o1",
+    "input_price": 15,
+    "output_price": 60,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o1",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2613,
     "model_id": "o1-pro",
     "input_price": 150,
@@ -88126,6 +90271,17 @@
     "input_price": 150,
     "output_price": 600,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o1-pro",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10683,
+    "model_id": "o1-pro",
+    "input_price": 150,
+    "output_price": 600,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "o1-pro",
     "provider_name": "OpenAI",
@@ -89188,6 +91344,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10670,
+    "model_id": "o3",
+    "input_price": 2,
+    "output_price": 8,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o3",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2562,
     "model_id": "o3-deep-research",
     "input_price": 10,
@@ -89523,6 +91690,17 @@
     "input_price": 10,
     "output_price": 40,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o3 Deep Research",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10597,
+    "model_id": "o3-deep-research",
+    "input_price": 10,
+    "output_price": 40,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "o3 Deep Research",
     "provider_name": "OpenAI",
@@ -90585,6 +92763,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10708,
+    "model_id": "o3-mini",
+    "input_price": 1.1,
+    "output_price": 4.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o3 Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2622,
     "model_id": "o3-mini-high",
     "input_price": 1.1,
@@ -90920,6 +93109,17 @@
     "input_price": 1.1,
     "output_price": 4.4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o3 Mini High",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10700,
+    "model_id": "o3-mini-high",
+    "input_price": 1.1,
+    "output_price": 4.4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "o3 Mini High",
     "provider_name": "OpenAI",
@@ -91982,6 +94182,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10654,
+    "model_id": "o3-pro",
+    "input_price": 20,
+    "output_price": 80,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o3 Pro",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 14,
     "model_id": "o4-mini",
     "input_price": 1.1,
@@ -93038,6 +95249,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10671,
+    "model_id": "o4-mini",
+    "input_price": 1.1,
+    "output_price": 4.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o4 Mini",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2563,
     "model_id": "o4-mini-deep-research",
     "input_price": 2,
@@ -93379,6 +95601,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 10598,
+    "model_id": "o4-mini-deep-research",
+    "input_price": 2,
+    "output_price": 8,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o4 Mini Deep Research",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 2609,
     "model_id": "o4-mini-high",
     "input_price": 1.1,
@@ -93714,6 +95947,17 @@
     "input_price": 1.1,
     "output_price": 4.4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "o4 Mini High",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 10669,
+    "model_id": "o4-mini-high",
+    "input_price": 1.1,
+    "output_price": 4.4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "o4 Mini High",
     "provider_name": "OpenAI",
@@ -94077,6 +96321,17 @@
     "input_price": 0.065,
     "output_price": 0.14,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Phi 4",
+    "provider_name": "Microsoft",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 10715,
+    "model_id": "phi-4",
+    "input_price": 0.065,
+    "output_price": 0.14,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Phi 4",
     "provider_name": "Microsoft",
@@ -94451,6 +96706,17 @@
     "input_price": 2,
     "output_price": 6,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Pixtral Large 2411",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 10726,
+    "model_id": "pixtral-large",
+    "input_price": 2,
+    "output_price": 6,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Pixtral Large 2411",
     "provider_name": "Mistral",
@@ -95139,6 +97405,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10736,
+    "model_id": "qwen-2.5-72b",
+    "input_price": 0.12,
+    "output_price": 0.39,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen2.5 72B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2632,
     "model_id": "qwen-2.5-7b-instruct",
     "input_price": 0.04,
@@ -95474,6 +97751,17 @@
     "input_price": 0.04,
     "output_price": 0.1,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen2.5 7B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10729,
+    "model_id": "qwen-2.5-7b-instruct",
+    "input_price": 0.04,
+    "output_price": 0.1,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen2.5 7B Instruct",
     "provider_name": "Alibaba",
@@ -95909,6 +98197,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10727,
+    "model_id": "qwen-2.5-coder-32b",
+    "input_price": 0.66,
+    "output_price": 1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen2.5 Coder 32B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2627,
     "model_id": "qwen-max",
     "input_price": 1.04,
@@ -96244,6 +98543,17 @@
     "input_price": 1.04,
     "output_price": 4.16,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen-Max",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10707,
+    "model_id": "qwen-max",
+    "input_price": 1.04,
+    "output_price": 4.16,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen-Max",
     "provider_name": "Alibaba",
@@ -97273,6 +99583,39 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10618,
+    "model_id": "qwen-plus",
+    "input_price": 0.26,
+    "output_price": 0.78,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen-Plus",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10619,
+    "model_id": "qwen-plus",
+    "input_price": 0.26,
+    "output_price": 0.78,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen-Plus",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10706,
+    "model_id": "qwen-plus",
+    "input_price": 0.26,
+    "output_price": 0.78,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen-Plus",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 62,
     "model_id": "qwen-qwq-32b",
     "input_price": 1.2,
@@ -97944,6 +100287,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10695,
+    "model_id": "qwen-qwq-32b",
+    "input_price": 0.15,
+    "output_price": 0.58,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "QwQ 32B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2625,
     "model_id": "qwen-turbo",
     "input_price": 0.033,
@@ -98279,6 +100633,17 @@
     "input_price": 0.033,
     "output_price": 0.13,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen-Turbo",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10704,
+    "model_id": "qwen-turbo",
+    "input_price": 0.033,
+    "output_price": 0.13,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen-Turbo",
     "provider_name": "Alibaba",
@@ -98626,6 +100991,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10703,
+    "model_id": "qwen-vl-max",
+    "input_price": 0.52,
+    "output_price": 2.08,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen VL Max",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2623,
     "model_id": "qwen-vl-plus",
     "input_price": 0.137,
@@ -98961,6 +101337,17 @@
     "input_price": 0.137,
     "output_price": 0.41,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen VL Plus",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10702,
+    "model_id": "qwen-vl-plus",
+    "input_price": 0.137,
+    "output_price": 0.41,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen VL Plus",
     "provider_name": "Alibaba",
@@ -99308,6 +101695,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10672,
+    "model_id": "qwen2.5-coder-7b-instruct",
+    "input_price": 0.03,
+    "output_price": 0.09,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen2.5 Coder 7B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2612,
     "model_id": "qwen2.5-vl-32b-instruct",
     "input_price": 0.2,
@@ -99643,6 +102041,17 @@
     "input_price": 0.2,
     "output_price": 0.6,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen2.5 VL 32B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10681,
+    "model_id": "qwen2.5-vl-32b-instruct",
+    "input_price": 0.2,
+    "output_price": 0.6,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen2.5 VL 32B Instruct",
     "provider_name": "Alibaba",
@@ -99990,6 +102399,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10705,
+    "model_id": "qwen2.5-vl-72b-instruct",
+    "input_price": 0.8,
+    "output_price": 0.8,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen2.5 VL 72B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2608,
     "model_id": "qwen3-14b",
     "input_price": 0.06,
@@ -100325,6 +102745,17 @@
     "input_price": 0.06,
     "output_price": 0.24,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 14B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10666,
+    "model_id": "qwen3-14b",
+    "input_price": 0.06,
+    "output_price": 0.24,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 14B",
     "provider_name": "Alibaba",
@@ -100771,6 +103202,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10668,
+    "model_id": "qwen3-235b",
+    "input_price": 0.455,
+    "output_price": 1.82,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 235B A22B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2600,
     "model_id": "qwen3-235b-a22b-2507",
     "input_price": 0.071,
@@ -101112,6 +103554,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10645,
+    "model_id": "qwen3-235b-a22b-2507",
+    "input_price": 0.071,
+    "output_price": 0.1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 235B A22B Instruct 2507",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2598,
     "model_id": "qwen3-235b-a22b-thinking-2507",
     "input_price": 0.15,
@@ -101447,6 +103900,17 @@
     "input_price": 0.15,
     "output_price": 1.495,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 235B A22B Thinking 2507",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10641,
+    "model_id": "qwen3-235b-a22b-thinking-2507",
+    "input_price": 0.15,
+    "output_price": 1.495,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 235B A22B Thinking 2507",
     "provider_name": "Alibaba",
@@ -101882,6 +104346,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10664,
+    "model_id": "qwen3-30b",
+    "input_price": 0.08,
+    "output_price": 0.28,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 30B A3B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2595,
     "model_id": "qwen3-30b-a3b-instruct-2507",
     "input_price": 0.09,
@@ -102223,6 +104698,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10638,
+    "model_id": "qwen3-30b-a3b-instruct-2507",
+    "input_price": 0.09,
+    "output_price": 0.3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 30B A3B Instruct 2507",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2582,
     "model_id": "qwen3-30b-a3b-thinking-2507",
     "input_price": 0.08,
@@ -102558,6 +105044,17 @@
     "input_price": 0.08,
     "output_price": 0.4,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 30B A3B Thinking 2507",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10622,
+    "model_id": "qwen3-30b-a3b-thinking-2507",
+    "input_price": 0.08,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 30B A3B Thinking 2507",
     "provider_name": "Alibaba",
@@ -102993,6 +105490,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10667,
+    "model_id": "qwen3-32b",
+    "input_price": 0.08,
+    "output_price": 0.24,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 32B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2607,
     "model_id": "qwen3-8b",
     "input_price": 0.05,
@@ -103334,6 +105842,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10665,
+    "model_id": "qwen3-8b",
+    "input_price": 0.05,
+    "output_price": 0.4,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 8B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2594,
     "model_id": "qwen3-coder-30b-a3b-instruct",
     "input_price": 0.07,
@@ -103669,6 +106188,17 @@
     "input_price": 0.07,
     "output_price": 0.27,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Coder 30B A3B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10637,
+    "model_id": "qwen3-coder-30b-a3b-instruct",
+    "input_price": 0.07,
+    "output_price": 0.27,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 Coder 30B A3B Instruct",
     "provider_name": "Alibaba",
@@ -104027,6 +106557,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10643,
+    "model_id": "qwen3-coder-480b",
+    "input_price": 0.22,
+    "output_price": 1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Coder 480B A35B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2576,
     "model_id": "qwen3-coder-flash",
     "input_price": 0.195,
@@ -104362,6 +106903,17 @@
     "input_price": 0.195,
     "output_price": 0.975,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Coder Flash",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10615,
+    "model_id": "qwen3-coder-flash",
+    "input_price": 0.195,
+    "output_price": 0.975,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 Coder Flash",
     "provider_name": "Alibaba",
@@ -104709,6 +107261,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10552,
+    "model_id": "qwen3-coder-next",
+    "input_price": 0.12,
+    "output_price": 0.75,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Coder Next",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2573,
     "model_id": "qwen3-coder-plus",
     "input_price": 0.65,
@@ -105044,6 +107607,17 @@
     "input_price": 0.65,
     "output_price": 3.25,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Coder Plus",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10611,
+    "model_id": "qwen3-coder-plus",
+    "input_price": 0.65,
+    "output_price": 3.25,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 Coder Plus",
     "provider_name": "Alibaba",
@@ -105842,6 +108416,28 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10550,
+    "model_id": "qwen3-max",
+    "input_price": 0.78,
+    "output_price": 3.9,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Max",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10610,
+    "model_id": "qwen3-max",
+    "input_price": 0.78,
+    "output_price": 3.9,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Max",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2577,
     "model_id": "qwen3-next-80b-a3b",
     "input_price": 0.098,
@@ -106177,6 +108773,17 @@
     "input_price": 0.098,
     "output_price": 0.78,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Next 80B A3B Thinking",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10616,
+    "model_id": "qwen3-next-80b-a3b",
+    "input_price": 0.098,
+    "output_price": 0.78,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 Next 80B A3B Thinking",
     "provider_name": "Alibaba",
@@ -106524,6 +109131,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10617,
+    "model_id": "qwen3-next-80b-a3b-instruct",
+    "input_price": 0.09,
+    "output_price": 1.1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Next 80B A3B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2571,
     "model_id": "qwen3-vl-235b-a22b",
     "input_price": 0.26,
@@ -106859,6 +109477,17 @@
     "input_price": 0.26,
     "output_price": 2.6,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 VL 235B A22B Thinking",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10608,
+    "model_id": "qwen3-vl-235b-a22b",
+    "input_price": 0.26,
+    "output_price": 2.6,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 VL 235B A22B Thinking",
     "provider_name": "Alibaba",
@@ -107206,6 +109835,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10609,
+    "model_id": "qwen3-vl-235b-a22b-instruct",
+    "input_price": 0.2,
+    "output_price": 0.88,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 VL 235B A22B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2566,
     "model_id": "qwen3-vl-30b-a3b",
     "input_price": 0.13,
@@ -107541,6 +110181,17 @@
     "input_price": 0.13,
     "output_price": 1.56,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 VL 30B A3B Thinking",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10601,
+    "model_id": "qwen3-vl-30b-a3b",
+    "input_price": 0.13,
+    "output_price": 1.56,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 VL 30B A3B Thinking",
     "provider_name": "Alibaba",
@@ -107888,6 +110539,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10602,
+    "model_id": "qwen3-vl-30b-a3b-instruct",
+    "input_price": 0.13,
+    "output_price": 0.52,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 VL 30B A3B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2557,
     "model_id": "qwen3-vl-32b-instruct",
     "input_price": 0.104,
@@ -108223,6 +110885,17 @@
     "input_price": 0.104,
     "output_price": 0.416,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 VL 32B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10591,
+    "model_id": "qwen3-vl-32b-instruct",
+    "input_price": 0.104,
+    "output_price": 0.416,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 VL 32B Instruct",
     "provider_name": "Alibaba",
@@ -108570,6 +111243,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10594,
+    "model_id": "qwen3-vl-8b",
+    "input_price": 0.117,
+    "output_price": 1.365,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 VL 8B Thinking",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2560,
     "model_id": "qwen3-vl-8b-instruct",
     "input_price": 0.08,
@@ -108905,6 +111589,17 @@
     "input_price": 0.08,
     "output_price": 0.5,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 VL 8B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10595,
+    "model_id": "qwen3-vl-8b-instruct",
+    "input_price": 0.08,
+    "output_price": 0.5,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 VL 8B Instruct",
     "provider_name": "Alibaba",
@@ -109252,6 +111947,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10540,
+    "model_id": "qwen3.5-122b-a10b",
+    "input_price": 0.26,
+    "output_price": 2.08,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5-122B-A10B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2521,
     "model_id": "qwen3.5-27b",
     "input_price": 0.195,
@@ -109587,6 +112293,17 @@
     "input_price": 0.195,
     "output_price": 1.56,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5-27B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10539,
+    "model_id": "qwen3.5-27b",
+    "input_price": 0.195,
+    "output_price": 1.56,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-27B",
     "provider_name": "Alibaba",
@@ -109934,6 +112651,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10538,
+    "model_id": "qwen3.5-35b-a3b",
+    "input_price": 0.163,
+    "output_price": 1.3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5-35B-A3B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2526,
     "model_id": "qwen3.5-397b-a17b",
     "input_price": 0.39,
@@ -110269,6 +112997,17 @@
     "input_price": 0.39,
     "output_price": 2.34,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5 397B A17B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10547,
+    "model_id": "qwen3.5-397b-a17b",
+    "input_price": 0.39,
+    "output_price": 2.34,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5 397B A17B",
     "provider_name": "Alibaba",
@@ -110616,6 +113355,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10532,
+    "model_id": "qwen3.5-9b",
+    "input_price": 0.05,
+    "output_price": 0.15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5-9B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2523,
     "model_id": "qwen3.5-flash-02-23",
     "input_price": 0.065,
@@ -110951,6 +113701,17 @@
     "input_price": 0.065,
     "output_price": 0.26,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5-Flash",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10541,
+    "model_id": "qwen3.5-flash-02-23",
+    "input_price": 0.065,
+    "output_price": 0.26,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-Flash",
     "provider_name": "Alibaba",
@@ -111298,6 +114059,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 10546,
+    "model_id": "qwen3.5-plus-02-15",
+    "input_price": 0.26,
+    "output_price": 1.56,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5 Plus 2026-02-15",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 2407,
     "model_id": "qwen3.6-plus",
     "input_price": 0.325,
@@ -111633,6 +114405,17 @@
     "input_price": 0.325,
     "output_price": 1.95,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.6 Plus",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 10521,
+    "model_id": "qwen3.6-plus",
+    "input_price": 0.325,
+    "output_price": 1.95,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.6 Plus",
     "provider_name": "Alibaba",
@@ -112007,6 +114790,17 @@
     "input_price": 0.1,
     "output_price": 0.1,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Reka Edge",
+    "provider_name": "Reka",
+    "provider_colour": "#ec4899"
+  },
+  {
+    "id": 10525,
+    "model_id": "reka-edge",
+    "input_price": 0.1,
+    "output_price": 0.1,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Reka Edge",
     "provider_name": "Reka",
@@ -112392,6 +115186,17 @@
     "input_price": 0.1,
     "output_price": 0.2,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Reka Flash 3",
+    "provider_name": "Reka",
+    "provider_colour": "#ec4899"
+  },
+  {
+    "id": 10690,
+    "model_id": "reka-flash-3",
+    "input_price": 0.1,
+    "output_price": 0.2,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Reka Flash 3",
     "provider_name": "Reka",
@@ -113080,6 +115885,17 @@
     "provider_colour": "#0f766e"
   },
   {
+    "id": 10711,
+    "model_id": "sonar",
+    "input_price": 1,
+    "output_price": 1,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Sonar",
+    "provider_name": "Perplexity",
+    "provider_colour": "#0f766e"
+  },
+  {
     "id": 2620,
     "model_id": "sonar-deep-research",
     "input_price": 2,
@@ -113415,6 +116231,17 @@
     "input_price": 2,
     "output_price": 8,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Sonar Deep Research",
+    "provider_name": "Perplexity",
+    "provider_colour": "#0f766e"
+  },
+  {
+    "id": 10694,
+    "model_id": "sonar-deep-research",
+    "input_price": 2,
+    "output_price": 8,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Sonar Deep Research",
     "provider_name": "Perplexity",
@@ -114092,6 +116919,17 @@
     "provider_colour": "#0f766e"
   },
   {
+    "id": 10693,
+    "model_id": "sonar-pro",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Sonar Pro",
+    "provider_name": "Perplexity",
+    "provider_colour": "#0f766e"
+  },
+  {
     "id": 2552,
     "model_id": "sonar-pro-search",
     "input_price": 3,
@@ -114433,6 +117271,17 @@
     "provider_colour": "#0f766e"
   },
   {
+    "id": 10586,
+    "model_id": "sonar-pro-search",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Sonar Pro Search",
+    "provider_name": "Perplexity",
+    "provider_colour": "#0f766e"
+  },
+  {
     "id": 2619,
     "model_id": "sonar-reasoning-pro",
     "input_price": 2,
@@ -114768,6 +117617,17 @@
     "input_price": 2,
     "output_price": 8,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Sonar Reasoning Pro",
+    "provider_name": "Perplexity",
+    "provider_colour": "#0f766e"
+  },
+  {
+    "id": 10692,
+    "model_id": "sonar-reasoning-pro",
+    "input_price": 2,
+    "output_price": 8,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Sonar Reasoning Pro",
     "provider_name": "Perplexity",
@@ -115247,6 +118107,17 @@
     "provider_colour": "#111827"
   },
   {
+    "id": 10587,
+    "model_id": "voxtral-small-24b-2507",
+    "input_price": 0.1,
+    "output_price": 0.3,
+    "recorded_at": "2026-04-10 22:54:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Voxtral Small 24B 2507",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
     "id": 103,
     "model_id": "wan-2.1",
     "input_price": 0,
@@ -115604,6 +118475,17 @@
     "input_price": 0.62,
     "output_price": 0.62,
     "recorded_at": "2026-04-10 21:53:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "WizardLM-2 8x22B",
+    "provider_name": "Microsoft",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 10753,
+    "model_id": "wizardlm-2-8x22b",
+    "input_price": 0.62,
+    "output_price": 0.62,
+    "recorded_at": "2026-04-10 22:54:56",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "WizardLM-2 8x22B",
     "provider_name": "Microsoft",
