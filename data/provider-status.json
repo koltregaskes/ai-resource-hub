@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T03:39:34.778Z",
+  "generatedAt": "2026-04-10T04:33:23.682Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,18 +12,18 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T03:39:33.305Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-04-10T04:33:22.543Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "claude.ai",
-          "status": "operational"
+          "name": "platform.claude.com (formerly console.anthropic.com)",
+          "status": "degraded_performance"
         },
         {
-          "name": "platform.claude.com (formerly console.anthropic.com)",
+          "name": "claude.ai",
           "status": "operational"
         },
         {
@@ -43,8 +43,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "2z4mf00ffcwd",
+          "title": "Degraded Performance on Vaults",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-10T04:28:06.379Z",
+          "updatedAt": "2026-04-10T04:28:06.451Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/fzv1qyjb3j1b",
+          "summary": "We are currently investigating this issue."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "2z4mf00ffcwd",
+          "title": "Degraded Performance on Vaults",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-10T04:28:06.379Z",
+          "updatedAt": "2026-04-10T04:28:06.451Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/fzv1qyjb3j1b",
+          "summary": "We are currently investigating this issue."
+        },
         {
           "id": "cb0h2zyzl0kd",
           "title": "Elevated Connector Error Rates",
@@ -77,17 +100,6 @@
           "resolvedAt": "2026-04-08T23:57:07.118Z",
           "url": "https://stspg.io/7kl6qq3lldmg",
           "summary": "Some users experienced an error when trying to access Claude.ai on desktop and the web from 23:22–23:50 UTC. This issue has now been resolved."
-        },
-        {
-          "id": "z0bqmftj68dr",
-          "title": "Outage affecting Workspace Creation",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-08T19:22:09.645Z",
-          "updatedAt": "2026-04-08T19:40:06.658Z",
-          "resolvedAt": "2026-04-08T19:40:06.642Z",
-          "url": "https://stspg.io/vxzqkwltrx9k",
-          "summary": "The issue affecting API workspace creation has been resolved. Impact occurred from approximately 4:15 PM to 7:30 PM UTC."
         }
       ]
     },
@@ -102,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T03:39:34.116Z",
+      "lastCheckedAt": "2026-04-10T04:33:23.233Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T03:39:33.489Z",
+      "lastCheckedAt": "2026-04-10T04:33:22.559Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T03:39:34.552Z",
+      "lastCheckedAt": "2026-04-10T04:33:23.674Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T03:39:33.428Z",
+      "lastCheckedAt": "2026-04-10T04:33:22.409Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T03:39:33.860Z",
+      "lastCheckedAt": "2026-04-10T04:33:22.838Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,10 +347,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T03:39:33.209Z",
+      "lastCheckedAt": "2026-04-10T04:33:22.500Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -366,8 +378,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01KNTTM5EQY332QC4P7ZQA4X0K",
+          "title": "Issues with share link creation on web UI",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-04-10T04:32:54.000Z",
+          "updatedAt": "2026-04-10T04:32:54.000Z",
+          "resolvedAt": null,
+          "summary": null
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01KNTTM5EQY332QC4P7ZQA4X0K",
+          "title": "Issues with share link creation on web UI",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-04-10T04:32:54.000Z",
+          "updatedAt": "2026-04-10T04:32:54.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
         {
           "id": "01KNQ1XDJ1T0NS4P15YNEG5FPV",
           "title": "Elevated Errors with Login",
@@ -397,16 +430,6 @@
           "updatedAt": "2026-04-06T10:39:36.000Z",
           "resolvedAt": "2026-04-06T10:39:36.000Z",
           "summary": null
-        },
-        {
-          "id": "01KNGPM84F5G72B8Y7ASYNB11H",
-          "title": "Some users may experience empty response from ChatGPT in web",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-06T06:10:38.000Z",
-          "updatedAt": "2026-04-06T08:35:49.000Z",
-          "resolvedAt": "2026-04-06T08:35:49.000Z",
-          "summary": null
         }
       ]
     },
@@ -421,7 +444,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T03:39:34.771Z",
+      "lastCheckedAt": "2026-04-10T04:33:23.570Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -430,7 +453,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-09T23:00:01.000Z",
+          "id": "together-feed-0-2026-04-10T04:29:17.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-10T04:29:17.000Z",
+          "updatedAt": "2026-04-10T04:29:17.000Z",
+          "resolvedAt": "2026-04-10T04:29:17.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-10T03:55:09.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-10T03:55:09.000Z",
+          "updatedAt": "2026-04-10T03:55:09.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-09T23:00:01.000Z",
           "title": "Qwen3 235B A22B Instruct 2507 Throughput recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -441,7 +486,7 @@
           "summary": "Qwen3 235B A22B Instruct 2507 Throughput recovered"
         },
         {
-          "id": "together-feed-1-2026-04-09T22:47:55.000Z",
+          "id": "together-feed-3-2026-04-09T22:47:55.000Z",
           "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
           "status": "investigating",
           "impact": "major",
@@ -450,28 +495,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-09T15:49:02.000Z",
-          "title": "ZAI GLM 5.1 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-09T15:49:02.000Z",
-          "updatedAt": "2026-04-09T15:49:02.000Z",
-          "resolvedAt": "2026-04-09T15:49:02.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5.1 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-09T15:37:07.000Z",
-          "title": "ZAI GLM 5.1 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-09T15:37:07.000Z",
-          "updatedAt": "2026-04-09T15:37:07.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5.1 went down"
         }
       ]
     },
