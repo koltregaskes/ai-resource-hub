@@ -7,7 +7,7 @@ priority: "watch"
 model: "GLM 5"
 provider: "Zhipu AI"
 release_date: "2026-02-12"
-generated_at: "2026-04-10T07:58:35.432Z"
+generated_at: "2026-04-10T09:37:51.654Z"
 ---
 
 # GLM 5: release brief
