@@ -7,7 +7,7 @@ priority: "high"
 model: "Reka Edge"
 provider: "Reka"
 release_date: "2026-03-20"
-generated_at: "2026-04-10T18:04:07.967Z"
+generated_at: "2026-04-10T19:11:26.447Z"
 ---
 
 # Reka Edge: release brief
