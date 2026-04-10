@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 10 Apr 2026, 22:55 UTC
+Generated: 10 Apr 2026, 23:51 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,8 +8,8 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 10 Apr 2026, 22:55 UTC |
-| Reference date | Friday, 10 April 2026 |
+| Generated | 10 Apr 2026, 23:51 UTC |
+| Reference date | Saturday, 11 April 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
 | Tracking milestones | 2 |
@@ -25,14 +25,14 @@ No exact anniversary lands on the current Europe/London date snapshot.
 
 | In | Date | Title | Source |
 | --- | --- | --- | --- |
-| 8d | 18 Apr 2026 | Llama 3 released | [Meta](https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/) |
-| 10d | 20 Apr 2026 | Google DeepMind formed | [Google DeepMind](https://deepmind.google/en/blog/announcing-google-deepmind/) |
-| 33d | 13 May 2026 | GPT-4o introduced | [OpenAI](https://openai.com/index/hello-gpt-4o/) |
-| 62d | 11 Jun 2026 | GPT-3 launched via the OpenAI API | [OpenAI](https://openai.com/blog/openai-api/) |
-| 63d | 12 Jun 2026 | Attention Is All You Need released | [arXiv](https://arxiv.org/abs/1706.03762) |
-| 71d | 20 Jun 2026 | Claude 3.5 Sonnet launched | [Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) |
-| 92d | 11 Jul 2026 | Claude 2 launched | [Anthropic](https://www.anthropic.com/news/claude-2) |
-| 99d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
+| 7d | 18 Apr 2026 | Llama 3 released | [Meta](https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/) |
+| 9d | 20 Apr 2026 | Google DeepMind formed | [Google DeepMind](https://deepmind.google/en/blog/announcing-google-deepmind/) |
+| 32d | 13 May 2026 | GPT-4o introduced | [OpenAI](https://openai.com/index/hello-gpt-4o/) |
+| 61d | 11 Jun 2026 | GPT-3 launched via the OpenAI API | [OpenAI](https://openai.com/blog/openai-api/) |
+| 62d | 12 Jun 2026 | Attention Is All You Need released | [arXiv](https://arxiv.org/abs/1706.03762) |
+| 70d | 20 Jun 2026 | Claude 3.5 Sonnet launched | [Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) |
+| 91d | 11 Jul 2026 | Claude 2 launched | [Anthropic](https://www.anthropic.com/news/claude-2) |
+| 98d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
 
 ## Recent Flagship Launches
 

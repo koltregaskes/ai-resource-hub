@@ -7,7 +7,7 @@ priority: "watch"
 model: "Nemotron 3 Super"
 provider: "NVIDIA"
 release_date: "2026-03-11"
-generated_at: "2026-04-10T22:55:18.907Z"
+generated_at: "2026-04-10T23:51:34.465Z"
 ---
 
 # Nemotron 3 Super: release brief
