@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T04:33:23.682Z",
+  "generatedAt": "2026-04-10T06:06:31.925Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,18 +12,18 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T04:33:22.543Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-04-10T06:06:30.508Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "platform.claude.com (formerly console.anthropic.com)",
-          "status": "degraded_performance"
+          "name": "claude.ai",
+          "status": "operational"
         },
         {
-          "name": "claude.ai",
+          "name": "platform.claude.com (formerly console.anthropic.com)",
           "status": "operational"
         },
         {
@@ -43,30 +43,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "2z4mf00ffcwd",
-          "title": "Degraded Performance on Vaults",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-04-10T04:28:06.379Z",
-          "updatedAt": "2026-04-10T04:28:06.451Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/fzv1qyjb3j1b",
-          "summary": "We are currently investigating this issue."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "2z4mf00ffcwd",
           "title": "Degraded Performance on Vaults",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-04-10T04:28:06.379Z",
-          "updatedAt": "2026-04-10T04:28:06.451Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-10T04:38:02.142Z",
+          "resolvedAt": "2026-04-10T04:38:02.124Z",
           "url": "https://stspg.io/fzv1qyjb3j1b",
-          "summary": "We are currently investigating this issue."
+          "summary": "This incident has been resolved."
         },
         {
           "id": "cb0h2zyzl0kd",
@@ -114,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T04:33:23.233Z",
+      "lastCheckedAt": "2026-04-10T06:06:31.188Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T04:33:22.559Z",
+      "lastCheckedAt": "2026-04-10T06:06:30.840Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T04:33:23.674Z",
+      "lastCheckedAt": "2026-04-10T06:06:31.673Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T04:33:22.409Z",
+      "lastCheckedAt": "2026-04-10T06:06:30.640Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T04:33:22.838Z",
+      "lastCheckedAt": "2026-04-10T06:06:30.887Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -347,10 +335,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T04:33:22.500Z",
+      "lastCheckedAt": "2026-04-10T06:06:30.422Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -378,27 +366,26 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01KNTTM5EQY332QC4P7ZQA4X0K",
-          "title": "Issues with share link creation on web UI",
-          "status": "investigating",
-          "impact": "none",
-          "startedAt": "2026-04-10T04:32:54.000Z",
-          "updatedAt": "2026-04-10T04:32:54.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01KNTWSXK5MAKGBNNSY093X29H",
+          "title": "Issue with API platform login and account creation",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-10T05:10:59.000Z",
+          "updatedAt": "2026-04-10T05:20:19.000Z",
+          "resolvedAt": "2026-04-10T05:20:19.000Z",
+          "summary": null
+        },
+        {
           "id": "01KNTTM5EQY332QC4P7ZQA4X0K",
           "title": "Issues with share link creation on web UI",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-04-10T04:32:54.000Z",
-          "updatedAt": "2026-04-10T04:32:54.000Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-10T04:46:12.000Z",
+          "resolvedAt": "2026-04-10T04:46:12.000Z",
           "summary": null
         },
         {
@@ -420,16 +407,6 @@
           "updatedAt": "2026-04-07T11:49:38.000Z",
           "resolvedAt": "2026-04-07T11:49:38.000Z",
           "summary": null
-        },
-        {
-          "id": "01KNH45H33H4J553XBG6TJ3PQF",
-          "title": "GET /v1/responses endpoint is currently down and unable to serve requests",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-04-06T10:07:16.000Z",
-          "updatedAt": "2026-04-06T10:39:36.000Z",
-          "resolvedAt": "2026-04-06T10:39:36.000Z",
-          "summary": null
         }
       ]
     },
@@ -444,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T04:33:23.570Z",
+      "lastCheckedAt": "2026-04-10T06:06:31.918Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -453,48 +430,48 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-10T04:29:17.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
+          "id": "together-feed-0-2026-04-10T05:30:33.000Z",
+          "title": "Qwen3 VL 8B Instruct recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-04-10T04:29:17.000Z",
-          "updatedAt": "2026-04-10T04:29:17.000Z",
-          "resolvedAt": "2026-04-10T04:29:17.000Z",
+          "startedAt": "2026-04-10T05:30:33.000Z",
+          "updatedAt": "2026-04-10T05:30:33.000Z",
+          "resolvedAt": "2026-04-10T05:30:33.000Z",
           "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
+          "summary": "Qwen3 VL 8B Instruct recovered"
         },
         {
-          "id": "together-feed-1-2026-04-10T03:55:09.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-10T03:55:09.000Z",
-          "updatedAt": "2026-04-10T03:55:09.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-09T23:00:01.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput recovered",
+          "id": "together-feed-1-2026-04-10T05:28:59.000Z",
+          "title": "FLUX.1 Krea [dev] recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-04-09T23:00:01.000Z",
-          "updatedAt": "2026-04-09T23:00:01.000Z",
-          "resolvedAt": "2026-04-09T23:00:01.000Z",
+          "startedAt": "2026-04-10T05:28:59.000Z",
+          "updatedAt": "2026-04-10T05:28:59.000Z",
+          "resolvedAt": "2026-04-10T05:28:59.000Z",
           "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput recovered"
+          "summary": "FLUX.1 Krea [dev] recovered"
         },
         {
-          "id": "together-feed-3-2026-04-09T22:47:55.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
+          "id": "together-feed-2-2026-04-10T05:15:52.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-04-09T22:47:55.000Z",
-          "updatedAt": "2026-04-09T22:47:55.000Z",
+          "startedAt": "2026-04-10T05:15:52.000Z",
+          "updatedAt": "2026-04-10T05:15:52.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-10T05:15:46.000Z",
+          "title": "Qwen3 VL 8B Instruct went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-10T05:15:46.000Z",
+          "updatedAt": "2026-04-10T05:15:46.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 VL 8B Instruct went down"
         }
       ]
     },
