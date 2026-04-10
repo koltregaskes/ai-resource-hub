@@ -7,12 +7,12 @@ priority: "watch"
 model: "Claude Sonnet 4.6"
 provider: "Anthropic"
 release_date: "2026-02-17"
-generated_at: "2026-04-10T19:54:52.229Z"
+generated_at: "2026-04-10T20:55:00.495Z"
 ---
 
 # Claude Sonnet 4.6: release brief
 
-Anthropic's Claude Sonnet 4.6 is on the release desk with 5 related stories and 4 benchmark signals to review.
+Anthropic's Claude Sonnet 4.6 is on the release desk with 6 related stories and 4 benchmark signals to review.
 
 ## Release summary
 
@@ -33,6 +33,7 @@ Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positione
 ## Outside coverage and early reactions
 
 - Anthropic (2026-03-18): [Introducing Claude Sonnet 4.6](https://www.anthropic.com/81k-interviews) - Sonnet 4.6 delivers frontier performance across coding, agents, and professional work at scale.
+- TechCrunch (2026-04-10): [Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) - This ban took place after Claude's pricing changed for OpenClaw users last week.
 - The Verge (2026-03-29): [Bluesky’s new app is an AI for customizing your feed](https://www.theverge.com/ai-artificial-intelligence/903190/bluesky-attie-ai-custom-feeds) - The latest app from the team behind Bluesky is Attie, an AI assistant that lets you build your own algorithm. At the Atmosphere conference, Bluesky's former CEO, Jay Graber, and CTO Paul Frazee, unveiled Attie, which is powered by Anthropic's Claude and built on top of Bluesky's underlying AT Protocol (atproto). Attie…
 - TechCrunch (2026-03-28): [Anthropic&#8217;s Claude popularity with paying consumers is skyrocketing](https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/) - Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million). Anthropic hasn't disclosed this data, but a spokesperson did tell TechCrunch that Claude paid subscriptions have more than doubled this year.
 - The Verge (2026-03-26): [Google is making it easier to import another AI’s memory into Gemini](https://www.theverge.com/ai-artificial-intelligence/902085/google-gemini-import-memory-chat-history) - After Anthropic updated its tool for copying another AI's memory into Claude earlier this month, Google Gemini is rolling out new "Import Memory" and "Import Chat History" features on desktop that can help users quickly copy over everything their current AI already knows about them. To use the "Import Memory" tool, us…
@@ -58,6 +59,7 @@ Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positione
 - [Official launch or docs](https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf)
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Sonnet 4.6](https://www.anthropic.com/81k-interviews)
+- [TechCrunch: Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/)
 - [The Verge: Bluesky’s new app is an AI for customizing your feed](https://www.theverge.com/ai-artificial-intelligence/903190/bluesky-attie-ai-custom-feeds)
 - [TechCrunch: Anthropic&#8217;s Claude popularity with paying consumers is skyrocketing](https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/)
 - [The Verge: Google is making it easier to import another AI’s memory into Gemini](https://www.theverge.com/ai-artificial-intelligence/902085/google-gemini-import-memory-chat-history)

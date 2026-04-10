@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-04-10T19:54:52.227Z"
+generated_at: "2026-04-10T20:55:00.494Z"
 ---
 
 # Claude Mythos Preview: release brief
 
-Anthropic's Claude Mythos Preview is on the release desk with 2 related stories and 0 benchmark signals to review.
+Anthropic's Claude Mythos Preview is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -32,6 +32,7 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 - TechCrunch (2026-04-09): [Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?](https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/) - Anthropic said this week that it limited the release of its newest model, dubbed Mythos, because it is too capable of finding security exploits in software relied upon by users around the world. Are real cybersecurity concerns a cover for a bigger problem at the frontier lab?
 - TechCrunch (2026-04-07): [Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative](https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/) - The new model will be used by a small number of high-profile companies to engage in defensive cybersecurity work.
+- TechCrunch (2026-04-10): [Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) - This ban took place after Claude's pricing changed for OpenClaw users last week.
 
 ## Suggested thread / post structure
 
@@ -55,3 +56,4 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 - [Provider API/docs](https://docs.anthropic.com)
 - [TechCrunch: Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?](https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/)
 - [TechCrunch: Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative](https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/)
+- [TechCrunch: Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/)

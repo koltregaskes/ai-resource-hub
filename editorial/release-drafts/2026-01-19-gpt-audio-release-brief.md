@@ -7,7 +7,7 @@ priority: "backfill"
 model: "GPT Audio"
 provider: "OpenAI"
 release_date: "2026-01-19"
-generated_at: "2026-04-10T19:54:52.229Z"
+generated_at: "2026-04-10T20:55:00.495Z"
 ---
 
 # GPT Audio: release brief
