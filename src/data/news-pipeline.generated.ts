@@ -1,5 +1,5 @@
 export const newsPipelineSnapshot = {
-  "generatedAt": "2026-04-09T19:01:07.169Z",
+  "generatedAt": "2026-04-10T07:01:44.425Z",
   "sourceOfTruth": {
     "estateManifestPath": "W:\\Websites\\estate.yml",
     "siteFiltersPath": "W:\\Websites\\shared\\website-tools\\pipelines\\news\\site-filters.json",
@@ -485,7 +485,40 @@ export const newsPipelineSnapshot = {
         "creative_workflow",
         "art_ai"
       ],
-      "excludeTags": [],
+      "excludeTags": [
+        "photography",
+        "camera",
+        "camera_release",
+        "lens",
+        "photo_editing",
+        "lightroom",
+        "photoshop",
+        "capture_one",
+        "photography_ai",
+        "photography_technique",
+        "photography_business",
+        "crypto",
+        "crypto_trading",
+        "crypto_defi",
+        "crypto_regulation",
+        "ai_agents",
+        "multi_agent",
+        "tool_use",
+        "autonomous_systems",
+        "ai_safety",
+        "mcp",
+        "reasoning",
+        "agentic_framework",
+        "agent_sdk",
+        "research_paper",
+        "benchmark",
+        "evaluation",
+        "architecture",
+        "dataset",
+        "training",
+        "inference",
+        "hardware"
+      ],
       "includeLabels": [
         {
           "id": "image_gen",
@@ -520,7 +553,136 @@ export const newsPipelineSnapshot = {
           "label": "Art AI"
         }
       ],
-      "excludeLabels": [],
+      "excludeLabels": [
+        {
+          "id": "photography",
+          "label": "Photography"
+        },
+        {
+          "id": "camera",
+          "label": "Camera"
+        },
+        {
+          "id": "camera_release",
+          "label": "Camera Release"
+        },
+        {
+          "id": "lens",
+          "label": "Lens"
+        },
+        {
+          "id": "photo_editing",
+          "label": "Photo Editing"
+        },
+        {
+          "id": "lightroom",
+          "label": "Lightroom"
+        },
+        {
+          "id": "photoshop",
+          "label": "Photoshop"
+        },
+        {
+          "id": "capture_one",
+          "label": "Capture One"
+        },
+        {
+          "id": "photography_ai",
+          "label": "Photography AI"
+        },
+        {
+          "id": "photography_technique",
+          "label": "Photography Technique"
+        },
+        {
+          "id": "photography_business",
+          "label": "Photography Business"
+        },
+        {
+          "id": "crypto",
+          "label": "Crypto"
+        },
+        {
+          "id": "crypto_trading",
+          "label": "Crypto Trading"
+        },
+        {
+          "id": "crypto_defi",
+          "label": "Crypto Defi"
+        },
+        {
+          "id": "crypto_regulation",
+          "label": "Crypto Regulation"
+        },
+        {
+          "id": "ai_agents",
+          "label": "AI Agents"
+        },
+        {
+          "id": "multi_agent",
+          "label": "Multi Agent"
+        },
+        {
+          "id": "tool_use",
+          "label": "Tool Use"
+        },
+        {
+          "id": "autonomous_systems",
+          "label": "Autonomous Systems"
+        },
+        {
+          "id": "ai_safety",
+          "label": "AI Safety"
+        },
+        {
+          "id": "mcp",
+          "label": "MCP"
+        },
+        {
+          "id": "reasoning",
+          "label": "Reasoning"
+        },
+        {
+          "id": "agentic_framework",
+          "label": "Agentic Framework"
+        },
+        {
+          "id": "agent_sdk",
+          "label": "Agent SDK"
+        },
+        {
+          "id": "research_paper",
+          "label": "Research Paper"
+        },
+        {
+          "id": "benchmark",
+          "label": "Benchmark"
+        },
+        {
+          "id": "evaluation",
+          "label": "Evaluation"
+        },
+        {
+          "id": "architecture",
+          "label": "Architecture"
+        },
+        {
+          "id": "dataset",
+          "label": "Dataset"
+        },
+        {
+          "id": "training",
+          "label": "Training"
+        },
+        {
+          "id": "inference",
+          "label": "Inference"
+        },
+        {
+          "id": "hardware",
+          "label": "Hardware"
+        }
+      ],
       "minImportanceScore": 0.4,
       "outputFormat": "markdown_digest",
       "outputPath": "W:\\Websites\\sites\\axylusion\\news-digests",

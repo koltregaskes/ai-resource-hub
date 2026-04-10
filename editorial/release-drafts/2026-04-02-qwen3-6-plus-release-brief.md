@@ -2,17 +2,17 @@
 title: "Qwen3.6 Plus: release brief"
 slug: "2026-04-02-qwen3-6-plus-release-brief"
 draft_type: "model-release"
-status: "needs_research"
+status: "ready_for_editor"
 priority: "high"
 model: "Qwen3.6 Plus"
 provider: "Alibaba"
 release_date: "2026-04-02"
-generated_at: "2026-04-10T06:07:04.139Z"
+generated_at: "2026-04-10T07:01:40.807Z"
 ---
 
 # Qwen3.6 Plus: release brief
 
-Alibaba's Qwen3.6 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.
+Alibaba's Qwen3.6 Plus is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -21,7 +21,7 @@ Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an
 ## Why this matters
 
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
+- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
 
 ## Benchmarks and evals to mention
 
@@ -29,14 +29,14 @@ Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an
 
 ## Outside coverage and early reactions
 
-- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
+- Reddit r/LocalLLaMA (2026-04-09): [Marco-Mini (17.3B, 0.86B active) and Marco-Nano (8B, 0.6B active) by Alibaba](https://reddit.com/r/LocalLLaMA/comments/1sgzt0p/marcomini_173b_086b_active_and_marconano_8b_06b/) - Looks like these were released six days ago. Did a search and didn't see a post about them. https://huggingface.co/AIDC-AI/Marco-Mini-Instruct https://huggingface.co/AIDC-AI/Marco-Nano-Instruct Pretty wild parameter/active ratio, should be lightning fast. &gt;Marco-Mini-Instruct is the instruction-tuned variant of Marco-Mini-Base, a highly sparse Mixture-of-Experts (MoE) multilingual language model from the Marco-MoE family, developed by Alibaba International Digital Commerce. It activates
 
 ## Suggested thread / post structure
 
 1. Lead with the hook: what Alibaba actually launched with Qwen3.6 Plus, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
-4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
+4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
 5. Keep the chronology explicit: this release landed on 2 Apr 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
@@ -50,3 +50,4 @@ Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an
 
 - [Official launch or docs](https://help.aliyun.com/zh/model-studio/model-pricing)
 - [Provider API/docs](https://help.aliyun.com/zh/model-studio/model-pricing)
+- [Reddit r/LocalLLaMA: Marco-Mini (17.3B, 0.86B active) and Marco-Nano (8B, 0.6B active) by Alibaba](https://reddit.com/r/LocalLLaMA/comments/1sgzt0p/marcomini_173b_086b_active_and_marconano_8b_06b/)

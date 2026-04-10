@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-04-10T06:07:04.139Z"
+generated_at: "2026-04-10T07:01:40.800Z"
 ---
 
 # Claude Mythos Preview: release brief
 
-Anthropic's Claude Mythos Preview is on the release desk with 2 related stories and 0 benchmark signals to review.
+Anthropic's Claude Mythos Preview is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,8 +30,7 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 ## Outside coverage and early reactions
 
-- TechCrunch (2026-04-09): [Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?](https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/) - Anthropic said this week that it limited the release of its newest model, dubbed Mythos, because it is too capable of finding security exploits in software relied upon by users around the world. Are real cybersecurity concerns a cover for a bigger problem at the frontier lab?
-- TechCrunch (2026-04-07): [Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative](https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/) - The new model will be used by a small number of high-profile companies to engage in defensive cybersecurity work.
+- Reddit r/ClaudeAI (2026-04-09): [BREAKING: Anthropic’s new “Mythos” model reportedly found the One Piece before the Straw Hats](https://reddit.com/r/ClaudeAI/comments/1sgs0b4/breaking_anthropics_new_mythos_model_reportedly/) - Sources close to Anthropic have confirmed that their latest reasoning model, codenamed "Mythos," has located the legendary treasure One Piece during what was described as a "routine benchmark test." Eiichiro Oda was reportedly "furious" after learning that a large language model solved the mystery he has been carefully crafting for 27 years in approximately 11 seconds of inference time. "I had 342 more chapters planned," Oda said through a translator, before locking himself in his studio. In r
 
 ## Suggested thread / post structure
 
@@ -53,5 +52,4 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 - [Official launch or docs](https://www.anthropic.com/glasswing)
 - [Provider API/docs](https://docs.anthropic.com)
-- [TechCrunch: Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?](https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/)
-- [TechCrunch: Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative](https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/)
+- [Reddit r/ClaudeAI: BREAKING: Anthropic’s new “Mythos” model reportedly found the One Piece before the Straw Hats](https://reddit.com/r/ClaudeAI/comments/1sgs0b4/breaking_anthropics_new_mythos_model_reportedly/)
