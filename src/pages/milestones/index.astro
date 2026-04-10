@@ -1,0 +1,274 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatAiMilestoneDate, getAiMilestonesOverview } from '../../data/ai-milestones';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const overview = getAiMilestonesOverview();
+
+const significanceMeta = {
+  major: 'border-amber-500/30 bg-amber-500/12 text-amber-100',
+  notable: 'border-sky-500/30 bg-sky-500/12 text-sky-100',
+  reference: 'border-slate-500/30 bg-slate-500/12 text-slate-200',
+} as const;
+
+const statusMeta = {
+  verified: 'border-emerald-500/30 bg-emerald-500/12 text-emerald-200',
+  tracking: 'border-amber-500/30 bg-amber-500/12 text-amber-100',
+  needs_review: 'border-red-500/30 bg-red-500/12 text-red-200',
+} as const;
+
+function anniversaryLabel(years: number): string {
+  if (years <= 0) return 'New';
+  return `${years}${years === 1 ? ' year' : ' years'}`;
+}
+---
+
+<BaseLayout
+  title="AI Milestones - Model Launch Dates, Lab Founding Dates, and AI History - The AI Resource Hub"
+  description="Track major AI model launches, lab founding dates, research breakthroughs, and upcoming anniversaries in one curated, source-first timeline."
+>
+  <section class="max-w-[1440px] mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}timeline/`} class="transition-colors hover:text-(--color-text-secondary)">AI Timeline</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Milestones</span>
+    </nav>
+
+    <div class="activity-shell">
+      <div class="activity-hero">
+        <div class="max-w-4xl">
+          <p class="activity-kicker">AI Milestones</p>
+          <h1 class="activity-title">The dates that explain how modern AI got here.</h1>
+          <p class="activity-intro">
+            This is the curated milestone layer for The AI Resource Hub: flagship model launches, lab founding dates,
+            major research breakthroughs, and the anniversaries that are actually worth remembering. Exact-day anniversaries
+            only appear when the source evidence supports day precision.
+          </p>
+          <div class="hub-home-chip-row mt-4">
+            <a href={`${base}timeline/`} class="hub-home-chip">Full timeline</a>
+            <a href={`${base}new/`} class="hub-home-chip">Release desk</a>
+            <a href={`${base}labs/`} class="hub-home-chip">Labs and providers</a>
+            <a href={`${base}references/`} class="hub-home-chip">References</a>
+          </div>
+        </div>
+
+        <div class="activity-summary-grid">
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{overview.totalMilestones}</p>
+            <p class="activity-summary-label">Curated milestones</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{overview.exactDateMilestones}</p>
+            <p class="activity-summary-label">Exact-day anniversaries</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{overview.trackingMilestonesCount}</p>
+            <p class="activity-summary-label">Tracking entries</p>
+          </div>
+          <div class="activity-summary-card">
+            <p class="activity-summary-value">{overview.nextMilestone ? `${overview.nextMilestone.daysUntil}d` : 'n/a'}</p>
+            <p class="activity-summary-label">Until the next exact anniversary</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-4 mt-8 xl:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.9fr)]">
+        <section class="rounded-[1.8rem] border border-(--color-border) bg-(--color-bg-card) p-5 shadow-[0_18px_36px_rgba(47,27,12,0.08)]">
+          <div class="hub-home-card-head">
+            <div>
+              <p class="hub-home-mini-label">Today in AI</p>
+              <h2 class="hub-home-card-title">What happened on {overview.generatedForLabel}?</h2>
+            </div>
+          </div>
+
+          {overview.todayMilestones.length > 0 ? (
+            <div class="hub-home-stack mt-4">
+              {overview.todayMilestones.map((milestone) => (
+                <article class="hub-home-card">
+                  <div class="hub-home-activity-topline">
+                    <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${significanceMeta[milestone.significance]}`}>
+                      {milestone.kindLabel}
+                    </span>
+                    <span class="hub-home-activity-date">{anniversaryLabel(milestone.anniversaryYears)}</span>
+                  </div>
+                  <h3 class="hub-home-feed-title mt-3">{milestone.title}</h3>
+                  <p class="hub-home-feed-copy">{milestone.summary}</p>
+                  <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                    <a href={`${base}${milestone.href.replace(/^\//, '')}`} class="editorial-link">Open related page</a>
+                    <a href={milestone.canonicalSource.url} target="_blank" rel="noopener noreferrer" class="editorial-link">
+                      {milestone.canonicalSource.label}
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div class="rounded-[1.5rem] border border-dashed border-(--color-border-hover) px-5 py-6 mt-4">
+              <p class="hub-home-feed-title">No exact anniversary lands today.</p>
+              <p class="hub-home-feed-copy mt-3">
+                {overview.nextMilestone
+                  ? `The next exact anniversary is ${overview.nextMilestone.title} in ${overview.nextMilestone.daysUntil} day${overview.nextMilestone.daysUntil === 1 ? '' : 's'}.`
+                  : 'The next exact anniversary will appear here once another day-level milestone is added.'}
+              </p>
+            </div>
+          )}
+        </section>
+
+        <aside class="rounded-[1.8rem] border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
+          <p class="hub-home-mini-label text-(--color-accent)">Coming up</p>
+          <h2 class="hub-home-side-title mt-2">The next exact anniversaries on the calendar.</h2>
+          <div class="hub-home-stack mt-4">
+            {overview.upcomingMilestones.slice(0, 5).map((milestone) => (
+              <article class="hub-home-activity-row block">
+                <div class="hub-home-activity-topline">
+                  <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${significanceMeta[milestone.significance]}`}>
+                    {milestone.daysUntil}d
+                  </span>
+                  <span class="hub-home-activity-date">{milestone.nextOccurrenceLabel}</span>
+                </div>
+                <h3 class="hub-home-feed-title mt-3">{milestone.title}</h3>
+                <p class="hub-home-feed-copy">{milestone.summary}</p>
+              </article>
+            ))}
+          </div>
+        </aside>
+      </div>
+
+      <div class="grid gap-4 mt-8 xl:grid-cols-2">
+        <section class="rounded-[1.8rem] border border-(--color-border) bg-(--color-bg-card) p-5 shadow-[0_18px_36px_rgba(47,27,12,0.08)]">
+          <div class="hub-home-card-head">
+            <div>
+              <p class="hub-home-mini-label">Launch chronology</p>
+              <h2 class="hub-home-card-title">Recent flagship model releases.</h2>
+            </div>
+          </div>
+
+          <div class="hub-home-stack mt-4">
+            {overview.latestLaunches.map((milestone) => (
+              <article class="hub-home-feed-row">
+                <div class="hub-home-activity-topline">
+                  <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${significanceMeta[milestone.significance]}`}>
+                    {milestone.categoryLabel}
+                  </span>
+                  <time class="hub-home-activity-date">{formatAiMilestoneDate(milestone)}</time>
+                </div>
+                <h3 class="hub-home-feed-title mt-3">{milestone.title}</h3>
+                <p class="hub-home-feed-copy">{milestone.summary}</p>
+                <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                  <a href={milestone.canonicalSource.url} target="_blank" rel="noopener noreferrer" class="editorial-link">
+                    {milestone.canonicalSource.label}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="rounded-[1.8rem] border border-(--color-border) bg-(--color-bg-card) p-5 shadow-[0_18px_36px_rgba(47,27,12,0.08)]">
+          <div class="hub-home-card-head">
+            <div>
+              <p class="hub-home-mini-label">Institutional dates</p>
+              <h2 class="hub-home-card-title">Lab founding dates and company milestones.</h2>
+            </div>
+          </div>
+
+          <div class="hub-home-stack mt-4">
+            {overview.labMilestones.map((milestone) => (
+              <article class="hub-home-feed-row">
+                <div class="hub-home-activity-topline">
+                  <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${statusMeta[milestone.status]}`}>
+                    {milestone.statusLabel}
+                  </span>
+                  <time class="hub-home-activity-date">{formatAiMilestoneDate(milestone)}</time>
+                </div>
+                <h3 class="hub-home-feed-title mt-3">{milestone.title}</h3>
+                <p class="hub-home-feed-copy">{milestone.summary}</p>
+                {milestone.trackingDate ? (
+                  <p class="hub-home-feed-copy mt-3">
+                    Estimated internal anchor: {milestone.trackingDateLabel}. This is kept separate from the public canonical date.
+                  </p>
+                ) : null}
+                <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                  <a href={milestone.canonicalSource.url} target="_blank" rel="noopener noreferrer" class="editorial-link">
+                    {milestone.canonicalSource.label}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <div class="grid gap-4 mt-8 xl:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.95fr)]">
+        <section class="rounded-[1.8rem] border border-(--color-border) bg-(--color-bg-card) p-5 shadow-[0_18px_36px_rgba(47,27,12,0.08)]">
+          <div class="hub-home-card-head">
+            <div>
+              <p class="hub-home-mini-label">History lane</p>
+              <h2 class="hub-home-card-title">Research and industry milestones with lasting significance.</h2>
+            </div>
+            <a href={`${base}timeline/`} class="editorial-link">Open full timeline</a>
+          </div>
+
+          <div class="hub-home-stack mt-4">
+            {overview.historicalHighlights.map((milestone) => (
+              <article class="hub-home-feed-row">
+                <div class="hub-home-activity-topline">
+                  <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${significanceMeta[milestone.significance]}`}>
+                    {milestone.categoryLabel}
+                  </span>
+                  <time class="hub-home-activity-date">{formatAiMilestoneDate(milestone)}</time>
+                </div>
+                <h3 class="hub-home-feed-title mt-3">{milestone.title}</h3>
+                <p class="hub-home-feed-copy">{milestone.summary}</p>
+                <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                  <a href={milestone.canonicalSource.url} target="_blank" rel="noopener noreferrer" class="editorial-link">
+                    {milestone.canonicalSource.label}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <aside class="rounded-[1.8rem] border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
+          <p class="hub-home-mini-label text-(--color-accent)">Tracking queue</p>
+          <h2 class="hub-home-side-title mt-2">Entries waiting on stronger chronology evidence.</h2>
+          <div class="hub-home-stack mt-4">
+            {overview.trackingMilestones.map((milestone) => (
+              <article class="hub-home-activity-row block">
+                <div class="hub-home-activity-topline">
+                  <span class={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] ${statusMeta[milestone.status]}`}>
+                    {milestone.statusLabel}
+                  </span>
+                  <span class="hub-home-activity-date">{milestone.dateLabel}</span>
+                </div>
+                <h3 class="hub-home-feed-title mt-3">{milestone.title}</h3>
+                <p class="hub-home-feed-copy">{milestone.summary}</p>
+                {milestone.trackingDate?.note ? (
+                  <p class="hub-home-feed-copy mt-3">{milestone.trackingDate.note}</p>
+                ) : null}
+                <div class="mt-4 flex flex-wrap gap-3 text-sm">
+                  <a href={milestone.canonicalSource.url} target="_blank" rel="noopener noreferrer" class="editorial-link">
+                    {milestone.canonicalSource.label}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </aside>
+      </div>
+
+      <div class="rounded-[1.6rem] border border-(--color-border-accent) bg-(--color-accent-glow) p-5 mt-8">
+        <p class="hub-home-mini-label text-(--color-accent)">How to read this</p>
+        <p class="hub-home-feed-copy mt-3">
+          This page is intentionally source-first. Exact anniversaries only use day-level dates backed by trustworthy sources.
+          Where a founding date is only defensible to the year or month, we keep it broad. If a useful estimated anchor exists,
+          it stays in the tracking note instead of being presented as a fake public date.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

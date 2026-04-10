@@ -126,6 +126,11 @@ const insertSource = db.prepare(`
     notes = excluded.notes
 `);
 
+const deleteSourcesForMilestone = db.prepare(`
+  DELETE FROM ai_milestone_sources
+  WHERE milestone_id = ?
+`);
+
 const insertRegistry = db.prepare(`
   INSERT INTO ai_milestone_source_registry (
     id, label, base_url, source_type, priority, official_first, active, coverage, scrape_notes, updated_at
@@ -191,6 +196,8 @@ const sync = db.transaction(() => {
       canonicalSourceUrl: canonicalSource?.url ?? null,
       canonicalSourceType: canonicalSource?.sourceType ?? null,
     });
+
+    deleteSourcesForMilestone.run(milestone.id);
 
     for (const source of milestone.sources) {
       insertSource.run({

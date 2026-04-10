@@ -50,6 +50,15 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+      - name: Validate AI milestone seed
+        run: npm run validate:milestones
+
+      - name: Sync AI milestones staging tables
+        run: npm run sync:milestones
+
+      - name: Generate AI milestone export
+        run: npm run generate:milestones
+
       - name: Generate public comparison exports
         run: npm run generate:spreadsheet
 

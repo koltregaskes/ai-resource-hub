@@ -169,6 +169,8 @@ try {
 
   Invoke-Logged 'npm.cmd' @('run', 'scrape')
   Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
+  Invoke-Logged 'npm.cmd' @('run', 'validate:milestones')
+  Invoke-Logged 'npm.cmd' @('run', 'sync:milestones')
   Invoke-Logged 'npm.cmd' @('run', 'generate:milestones')
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
   Invoke-Logged 'npm.cmd' @('run', 'generate:release-desk')

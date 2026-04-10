@@ -102,6 +102,17 @@ export const aiMilestoneSourceRegistry: AiMilestoneSourceRegistryEntry[] = [
     scrapeNotes: 'Strong for model launches, weak for company founding history.',
   },
   {
+    id: 'moonshot-platform',
+    label: 'Moonshot AI / Kimi platform and blog',
+    baseUrl: 'https://platform.moonshot.ai/',
+    sourceType: 'official_docs',
+    priority: 2,
+    officialFirst: true,
+    active: true,
+    coverage: 'Kimi and Moonshot AI platform launches, API notes, and official blog posts',
+    scrapeNotes: 'Useful for product and model launches, but public founding chronology is still weak.',
+  },
+  {
     id: 'zhipu-about',
     label: 'Zhipu AI company pages',
     baseUrl: 'https://www.zhipuai.cn/',

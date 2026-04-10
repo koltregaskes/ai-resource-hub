@@ -2,6 +2,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
 
 import { getLastScrapeTime, getNews, getRecentModels } from '../db/queries';
+import { getAiMilestonesOverview } from './ai-milestones';
 import { modelReleaseDesk } from './model-release-desk.generated';
 import { getLatestDigest, normaliseDateTime } from './hub-dashboard';
 import { getAvailabilityOverview, getAvailabilityRows } from './model-availability';
@@ -52,6 +53,10 @@ const GUIDE_DIRS = [
   path.join(ROOT, 'src', 'pages', 'academy'),
   path.join(ROOT, 'src', 'pages', 'glossary'),
 ];
+const MILESTONE_FILES = [
+  path.join(ROOT, 'src', 'data', 'ai-milestones-seed.ts'),
+  path.join(ROOT, 'public', 'data', 'ai-milestones.json'),
+];
 
 function latestDateTime(...values: Array<string | null | undefined>): string | null {
   const timestamps = values
@@ -60,6 +65,14 @@ function latestDateTime(...values: Array<string | null | undefined>): string | n
     .sort((a, b) => Date.parse(b) - Date.parse(a));
 
   return timestamps[0] ?? null;
+}
+
+function latestFileModifiedAt(paths: string[]): string | null {
+  const timestamps = paths
+    .filter((filePath) => existsSync(filePath))
+    .map((filePath) => statSync(filePath).mtime.toISOString());
+
+  return latestDateTime(...timestamps);
 }
 
 function formatRoute(basePath: string, route: string): string {
@@ -170,6 +183,7 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
       date: normaliseDateTime(entry.lastVerified),
     }));
   const digest = getLatestDigest();
+  const milestoneOverview = getAiMilestonesOverview();
   const providerStatus = readProviderStatus();
   const recentNews = getNews(3).map((item) => ({
     title: item.title,
@@ -195,6 +209,32 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     href: provider.statusPageUrl,
     date: normaliseDateTime(provider.lastCheckedAt ?? providerStatus.generatedAt),
   })) ?? [];
+  const milestoneHighlights = [
+    milestoneOverview.todayMilestones[0]
+      ? {
+          title: milestoneOverview.todayMilestones[0].title,
+          detail: `${milestoneOverview.todayMilestones[0].anniversaryYears} year anniversary landing on today's date.`,
+          href: formatRoute(basePath, '/milestones/'),
+          date: milestoneOverview.todayMilestones[0].nextOccurrenceIso,
+        }
+      : null,
+    milestoneOverview.nextMilestone
+      ? {
+          title: milestoneOverview.nextMilestone.title,
+          detail: `Next exact anniversary in ${milestoneOverview.nextMilestone.daysUntil} day${milestoneOverview.nextMilestone.daysUntil === 1 ? '' : 's'}.`,
+          href: formatRoute(basePath, '/milestones/'),
+          date: milestoneOverview.nextMilestone.nextOccurrenceIso,
+        }
+      : null,
+    milestoneOverview.trackingMilestones[0]
+      ? {
+          title: milestoneOverview.trackingMilestones[0].title,
+          detail: 'Still marked tracking until stronger chronology evidence is sourced.',
+          href: formatRoute(basePath, '/milestones/'),
+          date: latestFileModifiedAt(MILESTONE_FILES),
+        }
+      : null,
+  ].filter((item): item is { title: string; detail: string; href: string; date: string | null } => Boolean(item));
 
   const pricingUpdates = scrapeHighlights([
     {
@@ -239,6 +279,23 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
   ]);
 
   return [
+    {
+      id: 'milestones',
+      label: 'AI milestones',
+      cadence: 'Curated updates as research lands',
+      automation: 'Mixed',
+      status: milestoneOverview.trackingMilestonesCount > 0 ? 'watch' : 'healthy',
+      href: formatRoute(basePath, '/milestones/'),
+      summary: 'Keep major launch dates, lab founding dates, and historical AI milestones usable without faking precision where the sourcing is weak.',
+      sources: [
+        'Official launch posts, model cards, and company pages',
+        'Official registry and filing sources where available',
+        'Selective secondary reporting only when official chronology is weak',
+      ],
+      note: 'Estimated anchors stay in tracking notes, not in the canonical public date fields.',
+      lastRefreshed: latestFileModifiedAt(MILESTONE_FILES),
+      highlights: milestoneHighlights,
+    },
     {
       id: 'availability',
       label: 'Regional availability',

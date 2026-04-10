@@ -373,14 +373,20 @@ export const aiMilestoneSeed: AiMilestoneSeed[] = [
     significance: 'major',
     providerId: 'anthropic',
     tags: ['anthropic', 'lab', 'founding'],
-    status: 'tracking',
+    status: 'verified',
     confidence: 'medium',
     homepageEligible: true,
     calendarEligible: true,
     exactAnniversaryEligible: false,
     sources: [
-      { label: 'CNBC', url: 'https://www.cnbc.com/2023/07/11/anthropic-an-openai-rival-opens-claude-2-ai-chatbot-to-the-public.html', sourceType: 'secondary_report', role: 'canonical', notes: 'Widely cited 2021 founding reference; exact day still needs official confirmation.' },
-      { label: 'Anthropic', url: 'https://www.anthropic.com/company', sourceType: 'official_company', role: 'supporting' },
+      {
+        label: 'Anthropic',
+        url: 'https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai',
+        sourceType: 'official_news',
+        role: 'canonical',
+        notes: 'Official April 2022 post confirms Anthropic was founded at the beginning of 2021, but does not provide an exact day.',
+      },
+      { label: 'Anthropic company page', url: 'https://www.anthropic.com/company', sourceType: 'official_company', role: 'supporting' },
     ],
   },
   {

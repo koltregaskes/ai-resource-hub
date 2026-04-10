@@ -1,0 +1,3673 @@
+{
+  "generatedAt": "2026-04-10T00:25:09.970Z",
+  "overview": {
+    "generatedForLabel": "Friday, 10 April 2026",
+    "totalMilestones": 37,
+    "verifiedMilestones": 35,
+    "trackingMilestones": 2,
+    "needsReviewMilestones": 0,
+    "exactDateMilestones": 27,
+    "homepageEligibleMilestones": 34,
+    "nextMilestone": {
+      "id": "llama-3-launch",
+      "title": "Llama 3 released",
+      "nextOccurrenceLabel": "18 Apr 2026",
+      "daysUntil": 8
+    }
+  },
+  "todayMilestones": [],
+  "upcomingMilestones": [
+    {
+      "id": "llama-3-launch",
+      "slug": "llama-3-launch",
+      "title": "Llama 3 released",
+      "summary": "Llama 3 strengthened Meta’s position in open-weight models and raised the bar for broadly available open releases.",
+      "year": 2024,
+      "month": 4,
+      "day": 18,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "meta",
+      "modelId": "llama-3",
+      "tags": [
+        "llama",
+        "meta",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Meta",
+          "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+          "sourceType": "official_news",
+          "role": "canonical",
+          "notes": "English Meta launch post dated April 18, 2024."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Meta",
+        "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+        "sourceType": "official_news",
+        "role": "canonical",
+        "notes": "English Meta launch post dated April 18, 2024."
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "18 Apr 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1713441600000,
+      "daysUntil": 8,
+      "anniversaryYears": 2,
+      "nextOccurrenceIso": "2026-04-18T12:00:00.000Z",
+      "nextOccurrenceLabel": "18 Apr 2026"
+    },
+    {
+      "id": "google-deepmind-formed",
+      "slug": "google-deepmind-formed",
+      "title": "Google DeepMind formed",
+      "summary": "Google merged DeepMind and Google Brain into one lab, concentrating one of the largest frontier AI teams under a single brand.",
+      "year": 2023,
+      "month": 4,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "industry_event",
+      "kind": "milestone",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "tags": [
+        "google",
+        "deepmind",
+        "merger"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Industry event",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Apr 2023",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1681992000000,
+      "daysUntil": 10,
+      "anniversaryYears": 3,
+      "nextOccurrenceIso": "2026-04-20T12:00:00.000Z",
+      "nextOccurrenceLabel": "20 Apr 2026"
+    },
+    {
+      "id": "gpt-4o-launch",
+      "slug": "gpt-4o-launch",
+      "title": "GPT-4o introduced",
+      "summary": "GPT-4o fused text, image and audio into a single flagship model and reset the baseline for mainstream multimodal products.",
+      "year": 2024,
+      "month": 5,
+      "day": 13,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "gpt-4o",
+      "tags": [
+        "gpt-4o",
+        "multimodal",
+        "openai"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/hello-gpt-4o/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/hello-gpt-4o/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "13 May 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1715601600000,
+      "daysUntil": 33,
+      "anniversaryYears": 2,
+      "nextOccurrenceIso": "2026-05-13T12:00:00.000Z",
+      "nextOccurrenceLabel": "13 May 2026"
+    },
+    {
+      "id": "gpt-3-api-launch",
+      "slug": "gpt-3-api-launch",
+      "title": "GPT-3 launched via the OpenAI API",
+      "summary": "GPT-3 opened the first large commercial wave of general-purpose LLM product building.",
+      "year": 2020,
+      "month": 6,
+      "day": 11,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "gpt-3",
+      "tags": [
+        "gpt",
+        "openai",
+        "api"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/blog/openai-api/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/blog/openai-api/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "11 Jun 2020",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1591876800000,
+      "daysUntil": 62,
+      "anniversaryYears": 6,
+      "nextOccurrenceIso": "2026-06-11T12:00:00.000Z",
+      "nextOccurrenceLabel": "11 Jun 2026"
+    },
+    {
+      "id": "transformer-paper",
+      "slug": "transformer-paper",
+      "title": "Attention Is All You Need released",
+      "summary": "The Transformer paper established the architecture that now underpins the modern LLM era.",
+      "year": 2017,
+      "month": 6,
+      "day": 12,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "launch",
+      "significance": "major",
+      "tags": [
+        "transformers",
+        "papers",
+        "foundation-models"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "12 Jun 2017",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1497268800000,
+      "daysUntil": 63,
+      "anniversaryYears": 9,
+      "nextOccurrenceIso": "2026-06-12T12:00:00.000Z",
+      "nextOccurrenceLabel": "12 Jun 2026"
+    },
+    {
+      "id": "claude-3-5-sonnet-launch",
+      "slug": "claude-3-5-sonnet-launch",
+      "title": "Claude 3.5 Sonnet launched",
+      "summary": "Claude 3.5 Sonnet quickly became one of the strongest coding and writing models in the market.",
+      "year": 2024,
+      "month": 6,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude-3-5-sonnet",
+      "tags": [
+        "claude",
+        "anthropic",
+        "coding"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Jun 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1718884800000,
+      "daysUntil": 71,
+      "anniversaryYears": 2,
+      "nextOccurrenceIso": "2026-06-20T12:00:00.000Z",
+      "nextOccurrenceLabel": "20 Jun 2026"
+    },
+    {
+      "id": "claude-2-launch",
+      "slug": "claude-2-launch",
+      "title": "Claude 2 launched",
+      "summary": "Claude 2 made Anthropic’s assistant more broadly available and pushed the long-context commercial race forward.",
+      "year": 2023,
+      "month": 7,
+      "day": 11,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude-2",
+      "tags": [
+        "claude",
+        "anthropic",
+        "long-context"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-2",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-2",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "11 Jul 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1689076800000,
+      "daysUntil": 92,
+      "anniversaryYears": 3,
+      "nextOccurrenceIso": "2026-07-11T12:00:00.000Z",
+      "nextOccurrenceLabel": "11 Jul 2026"
+    },
+    {
+      "id": "llama-2-launch",
+      "slug": "llama-2-launch",
+      "title": "Llama 2 released",
+      "summary": "Llama 2 became the most important open-weight launch of 2023 and broadened serious industry use of open models.",
+      "year": 2023,
+      "month": 7,
+      "day": 18,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "meta",
+      "modelId": "llama-2",
+      "tags": [
+        "llama",
+        "meta",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Meta",
+          "url": "https://about.fb.com/news/2023/07/llama-2/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Meta",
+        "url": "https://about.fb.com/news/2023/07/llama-2/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "18 Jul 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1689681600000,
+      "daysUntil": 99,
+      "anniversaryYears": 3,
+      "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
+      "nextOccurrenceLabel": "18 Jul 2026"
+    }
+  ],
+  "latestLaunches": [
+    {
+      "id": "grok-3-launch",
+      "slug": "grok-3-launch",
+      "title": "Grok 3 announced",
+      "summary": "Grok 3 marked xAI’s move into the reasoning-agent frontier with a much stronger model family.",
+      "year": 2025,
+      "month": 2,
+      "day": 19,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "xai",
+      "modelId": "grok-3",
+      "tags": [
+        "grok",
+        "xai",
+        "reasoning-agents"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/news/grok-3/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "xAI",
+        "url": "https://x.ai/news/grok-3/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "19 Feb 2025",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1739966400000
+    },
+    {
+      "id": "deepseek-r1-launch",
+      "slug": "deepseek-r1-launch",
+      "title": "DeepSeek-R1 released",
+      "summary": "DeepSeek-R1 pushed low-cost reasoning into the mainstream model conversation and accelerated global interest in Chinese frontier labs.",
+      "year": 2025,
+      "month": 1,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "deepseek",
+      "modelId": "deepseek-r1",
+      "tags": [
+        "deepseek",
+        "reasoning",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/news/news250120",
+          "sourceType": "official_docs",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "DeepSeek API docs",
+        "url": "https://api-docs.deepseek.com/news/news250120",
+        "sourceType": "official_docs",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Jan 2025",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1737374400000
+    },
+    {
+      "id": "deepseek-v3-launch",
+      "slug": "deepseek-v3-launch",
+      "title": "DeepSeek-V3 released",
+      "summary": "DeepSeek-V3 turned the lab into a serious global open-model competitor late in 2024.",
+      "year": 2024,
+      "month": 12,
+      "day": 26,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "deepseek",
+      "modelId": "deepseek-v3",
+      "tags": [
+        "deepseek",
+        "open-weights",
+        "reasoning"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/news/news1226",
+          "sourceType": "official_docs",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "DeepSeek API docs",
+        "url": "https://api-docs.deepseek.com/news/news1226",
+        "sourceType": "official_docs",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "26 Dec 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1735214400000
+    },
+    {
+      "id": "o1-preview-launch",
+      "slug": "o1-preview-launch",
+      "title": "OpenAI o1-preview launched",
+      "summary": "OpenAI’s o1-preview pushed reasoning-first models into the mainstream product conversation.",
+      "year": 2024,
+      "month": 9,
+      "day": 12,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "o1-preview",
+      "tags": [
+        "reasoning",
+        "openai",
+        "o1"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/introducing-openai-o1-preview/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/introducing-openai-o1-preview/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "12 Sept 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1726142400000
+    },
+    {
+      "id": "claude-3-5-sonnet-launch",
+      "slug": "claude-3-5-sonnet-launch",
+      "title": "Claude 3.5 Sonnet launched",
+      "summary": "Claude 3.5 Sonnet quickly became one of the strongest coding and writing models in the market.",
+      "year": 2024,
+      "month": 6,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude-3-5-sonnet",
+      "tags": [
+        "claude",
+        "anthropic",
+        "coding"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Jun 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1718884800000
+    },
+    {
+      "id": "gpt-4o-launch",
+      "slug": "gpt-4o-launch",
+      "title": "GPT-4o introduced",
+      "summary": "GPT-4o fused text, image and audio into a single flagship model and reset the baseline for mainstream multimodal products.",
+      "year": 2024,
+      "month": 5,
+      "day": 13,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "gpt-4o",
+      "tags": [
+        "gpt-4o",
+        "multimodal",
+        "openai"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/hello-gpt-4o/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/hello-gpt-4o/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "13 May 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1715601600000
+    },
+    {
+      "id": "llama-3-launch",
+      "slug": "llama-3-launch",
+      "title": "Llama 3 released",
+      "summary": "Llama 3 strengthened Meta’s position in open-weight models and raised the bar for broadly available open releases.",
+      "year": 2024,
+      "month": 4,
+      "day": 18,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "meta",
+      "modelId": "llama-3",
+      "tags": [
+        "llama",
+        "meta",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Meta",
+          "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+          "sourceType": "official_news",
+          "role": "canonical",
+          "notes": "English Meta launch post dated April 18, 2024."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Meta",
+        "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+        "sourceType": "official_news",
+        "role": "canonical",
+        "notes": "English Meta launch post dated April 18, 2024."
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "18 Apr 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1713441600000
+    },
+    {
+      "id": "claude-3-launch",
+      "slug": "claude-3-launch",
+      "title": "Claude 3 model family introduced",
+      "summary": "Claude 3 established Anthropic’s strongest model family to date and intensified the frontier race in 2024.",
+      "year": 2024,
+      "month": 3,
+      "datePrecision": "month",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude-3",
+      "tags": [
+        "claude",
+        "anthropic",
+        "frontier-models"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-3-family",
+          "sourceType": "official_news",
+          "role": "canonical",
+          "notes": "Month is strong; exact day still needs direct confirmation in this repo pass."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-family",
+        "sourceType": "official_news",
+        "role": "canonical",
+        "notes": "Month is strong; exact day still needs direct confirmation in this repo pass."
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "March 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1709294400000
+    },
+    {
+      "id": "gemma-launch",
+      "slug": "gemma-launch",
+      "title": "Gemma introduced",
+      "summary": "Gemma became Google’s main open-model family and widened the competitive open-weight field.",
+      "year": 2024,
+      "month": 2,
+      "day": 21,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "modelId": "gemma-1",
+      "tags": [
+        "gemma",
+        "google",
+        "open-models"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-open-models/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-open-models/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "21 Feb 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1708516800000
+    },
+    {
+      "id": "gemini-1-5-launch",
+      "slug": "gemini-1-5-launch",
+      "title": "Gemini 1.5 introduced",
+      "summary": "Gemini 1.5 brought long-context performance back to the centre of the frontier model conversation.",
+      "year": 2024,
+      "month": 2,
+      "day": 15,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "modelId": "gemini-1-5",
+      "tags": [
+        "gemini",
+        "long-context",
+        "google"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google",
+          "url": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google",
+        "url": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "15 Feb 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1707998400000
+    }
+  ],
+  "labMilestones": [
+    {
+      "id": "xai-founded",
+      "slug": "xai-founded",
+      "title": "xAI founded",
+      "summary": "xAI launched in 2023 and quickly became the lab behind the Grok model line.",
+      "year": 2023,
+      "month": 7,
+      "datePrecision": "month",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "xai",
+      "tags": [
+        "xai",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/company",
+          "sourceType": "official_company",
+          "role": "canonical",
+          "notes": "Company page points to July 2023 as the company starting point."
+        }
+      ],
+      "canonicalSource": {
+        "label": "xAI",
+        "url": "https://x.ai/company",
+        "sourceType": "official_company",
+        "role": "canonical",
+        "notes": "Company page points to July 2023 as the company starting point."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "July 2023",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1688212800000
+    },
+    {
+      "id": "moonshot-founded",
+      "slug": "moonshot-founded",
+      "title": "Moonshot AI founded",
+      "summary": "Moonshot AI joined the post-ChatGPT Chinese lab wave and later built the Kimi family.",
+      "year": 2023,
+      "month": 3,
+      "datePrecision": "month",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "moonshot",
+      "tags": [
+        "moonshot",
+        "kimi",
+        "lab",
+        "founding"
+      ],
+      "status": "tracking",
+      "confidence": "medium",
+      "homepageEligible": false,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "trackingDate": {
+        "date": "2023-03-01",
+        "kind": "estimated",
+        "note": "Secondary reporting consistently points to March 2023, but the exact public founding day remains unclear."
+      },
+      "sources": [
+        {
+          "label": "Aurora Mobile investor relations",
+          "url": "https://ir.jiguang.cn/node/9621/pdf",
+          "sourceType": "secondary_report",
+          "role": "canonical",
+          "notes": "Partnership release describing Moonshot AI as founded in March 2023."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Aurora Mobile investor relations",
+        "url": "https://ir.jiguang.cn/node/9621/pdf",
+        "sourceType": "secondary_report",
+        "role": "canonical",
+        "notes": "Partnership release describing Moonshot AI as founded in March 2023."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Tracking",
+      "dateLabel": "March 2023",
+      "trackingDateLabel": "1 Mar 2023",
+      "href": "/labs/",
+      "sortKey": 1677672000000
+    },
+    {
+      "id": "deepseek-founded",
+      "slug": "deepseek-founded",
+      "title": "DeepSeek founded",
+      "summary": "DeepSeek emerged in 2023 and later broke into the global frontier conversation with low-cost reasoning models.",
+      "year": 2023,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "deepseek",
+      "tags": [
+        "deepseek",
+        "lab",
+        "founding"
+      ],
+      "status": "tracking",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "trackingDate": {
+        "date": "2023-05-01",
+        "kind": "estimated",
+        "note": "Secondary reporting points to spring 2023; keep public precision at year until an official filing or company page confirms more."
+      },
+      "sources": [
+        {
+          "label": "Forbes",
+          "url": "https://www.forbes.com/sites/giacomotognini/2025/01/30/how-much-ai-firm-deepseek-and-its-billionaire-founder-are-worth/",
+          "sourceType": "secondary_report",
+          "role": "canonical",
+          "notes": "Useful secondary reference citing the early 2023 High-Flyer launch of DeepSeek."
+        },
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/",
+          "sourceType": "official_docs",
+          "role": "supporting"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Forbes",
+        "url": "https://www.forbes.com/sites/giacomotognini/2025/01/30/how-much-ai-firm-deepseek-and-its-billionaire-founder-are-worth/",
+        "sourceType": "secondary_report",
+        "role": "canonical",
+        "notes": "Useful secondary reference citing the early 2023 High-Flyer launch of DeepSeek."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Tracking",
+      "dateLabel": "2023",
+      "trackingDateLabel": "1 May 2023",
+      "href": "/labs/",
+      "sortKey": 1672574400000
+    },
+    {
+      "id": "mistral-founded",
+      "slug": "mistral-founded",
+      "title": "Mistral AI founded",
+      "summary": "Mistral AI launched in 2023 and quickly became Europe’s most prominent open-weight AI lab.",
+      "year": 2023,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "mistral",
+      "tags": [
+        "mistral",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Mistral AI",
+          "url": "https://mistral.ai/news/about-mistral-ai",
+          "sourceType": "official_company",
+          "role": "canonical",
+          "notes": "Official company launch article; exact company founding day not explicitly stated."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Mistral AI",
+        "url": "https://mistral.ai/news/about-mistral-ai",
+        "sourceType": "official_company",
+        "role": "canonical",
+        "notes": "Official company launch article; exact company founding day not explicitly stated."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "2023",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1672574400000
+    },
+    {
+      "id": "minimax-founded",
+      "slug": "minimax-founded",
+      "title": "MiniMax founded",
+      "summary": "MiniMax was founded in early 2022 and became part of the new wave of Chinese multimodal model companies.",
+      "year": 2022,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "minimax",
+      "tags": [
+        "minimax",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": false,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "trackingDate": {
+        "date": "2022-01-01",
+        "kind": "estimated",
+        "note": "Official MiniMax material says founded in early 2022 but does not confirm a day or month."
+      },
+      "sources": [
+        {
+          "label": "MiniMax",
+          "url": "https://www.minimax.io/about",
+          "sourceType": "official_company",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "MiniMax",
+        "url": "https://www.minimax.io/about",
+        "sourceType": "official_company",
+        "role": "canonical"
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Verified",
+      "dateLabel": "2022",
+      "trackingDateLabel": "1 Jan 2022",
+      "href": "/labs/",
+      "sortKey": 1641038400000
+    },
+    {
+      "id": "anthropic-founded",
+      "slug": "anthropic-founded",
+      "title": "Anthropic founded",
+      "summary": "Anthropic emerged as a safety-focused frontier lab and became the second major commercial model family of the ChatGPT era.",
+      "year": 2021,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "anthropic",
+      "tags": [
+        "anthropic",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+          "sourceType": "official_news",
+          "role": "canonical",
+          "notes": "Official April 2022 post confirms Anthropic was founded at the beginning of 2021, but does not provide an exact day."
+        },
+        {
+          "label": "Anthropic company page",
+          "url": "https://www.anthropic.com/company",
+          "sourceType": "official_company",
+          "role": "supporting"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+        "sourceType": "official_news",
+        "role": "canonical",
+        "notes": "Official April 2022 post confirms Anthropic was founded at the beginning of 2021, but does not provide an exact day."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "2021",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1609502400000
+    },
+    {
+      "id": "cohere-founded",
+      "slug": "cohere-founded",
+      "title": "Cohere founded",
+      "summary": "Cohere launched with an enterprise-first strategy and became a durable commercial model provider.",
+      "year": 2019,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "cohere",
+      "tags": [
+        "lab",
+        "cohere",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Cohere",
+          "url": "https://cohere.com/about",
+          "sourceType": "official_company",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Cohere",
+        "url": "https://cohere.com/about",
+        "sourceType": "official_company",
+        "role": "canonical"
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Verified",
+      "dateLabel": "2019",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1546344000000
+    },
+    {
+      "id": "zhipu-founded",
+      "slug": "zhipu-founded",
+      "title": "Zhipu AI founded",
+      "summary": "Zhipu AI became one of the most visible Chinese frontier-model companies through the GLM line.",
+      "year": 2019,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "zhipu",
+      "tags": [
+        "zhipu",
+        "glm",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": false,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Zhipu AI",
+          "url": "https://www.zhipuai.cn/en/about",
+          "sourceType": "official_company",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Zhipu AI",
+        "url": "https://www.zhipuai.cn/en/about",
+        "sourceType": "official_company",
+        "role": "canonical"
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Verified",
+      "dateLabel": "2019",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1546344000000
+    },
+    {
+      "id": "openai-founded",
+      "slug": "openai-founded",
+      "title": "OpenAI founded",
+      "summary": "OpenAI launched as a non-profit AI research company and later became a central lab in the ChatGPT era.",
+      "year": 2015,
+      "month": 12,
+      "day": 11,
+      "datePrecision": "day",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "openai",
+      "tags": [
+        "lab",
+        "openai",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/introducing-openai/",
+          "sourceType": "official_company",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/introducing-openai/",
+        "sourceType": "official_company",
+        "role": "canonical"
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "11 Dec 2015",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1449835200000
+    },
+    {
+      "id": "deepmind-founded",
+      "slug": "deepmind-founded",
+      "title": "DeepMind founded",
+      "summary": "DeepMind was founded in London and became one of the defining labs of the frontier-model era.",
+      "year": 2010,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "deepmind",
+      "tags": [
+        "lab",
+        "deepmind",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+          "sourceType": "official_company",
+          "role": "canonical",
+          "notes": "Official lab history source confirming 2010 founding year."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+        "sourceType": "official_company",
+        "role": "canonical",
+        "notes": "Official lab history source confirming 2010 founding year."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "2010",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1262347200000
+    }
+  ],
+  "historicalHighlights": [
+    {
+      "id": "grok-announced",
+      "slug": "grok-announced",
+      "title": "Grok announced",
+      "summary": "xAI introduced Grok and established its real-time, X-connected assistant product line.",
+      "year": 2023,
+      "month": 11,
+      "day": 3,
+      "datePrecision": "day",
+      "category": "product_launch",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "xai",
+      "modelId": "grok",
+      "tags": [
+        "grok",
+        "xai",
+        "assistant"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/news/grok",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "xAI",
+        "url": "https://x.ai/news/grok",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Product launch",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "3 Nov 2023",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1699012800000
+    },
+    {
+      "id": "google-deepmind-formed",
+      "slug": "google-deepmind-formed",
+      "title": "Google DeepMind formed",
+      "summary": "Google merged DeepMind and Google Brain into one lab, concentrating one of the largest frontier AI teams under a single brand.",
+      "year": 2023,
+      "month": 4,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "industry_event",
+      "kind": "milestone",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "tags": [
+        "google",
+        "deepmind",
+        "merger"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Industry event",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Apr 2023",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1681992000000
+    },
+    {
+      "id": "claude-launch",
+      "slug": "claude-launch",
+      "title": "Claude introduced",
+      "summary": "Anthropic introduced Claude and started the commercial expansion of the Claude family.",
+      "year": 2023,
+      "month": 3,
+      "day": 14,
+      "datePrecision": "day",
+      "category": "product_launch",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude",
+      "tags": [
+        "claude",
+        "anthropic",
+        "assistant"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/introducing-claude",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-claude",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Product launch",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "14 Mar 2023",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1678795200000
+    },
+    {
+      "id": "chatgpt-launch",
+      "slug": "chatgpt-launch",
+      "title": "ChatGPT launched",
+      "summary": "ChatGPT turned language models into a mass-market product and reset the pace of AI product adoption.",
+      "year": 2022,
+      "month": 11,
+      "day": 30,
+      "datePrecision": "day",
+      "category": "product_launch",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "chatgpt",
+      "tags": [
+        "chatgpt",
+        "consumer-ai",
+        "openai"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/blog/chatgpt/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/blog/chatgpt/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Product launch",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "30 Nov 2022",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1669809600000
+    },
+    {
+      "id": "alphafold-breakthrough",
+      "slug": "alphafold-breakthrough",
+      "title": "AlphaFold breakthrough at CASP14",
+      "summary": "AlphaFold’s CASP14 performance reshaped expectations for AI-assisted protein structure prediction.",
+      "year": 2020,
+      "month": 11,
+      "day": 30,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "milestone",
+      "significance": "major",
+      "providerId": "deepmind",
+      "tags": [
+        "biology",
+        "protein-folding",
+        "deepmind"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "30 Nov 2020",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1606737600000
+    },
+    {
+      "id": "gpt-2-announced",
+      "slug": "gpt-2-announced",
+      "title": "GPT-2 announced",
+      "summary": "GPT-2 pushed text generation quality forward and sparked the first big public debate over staged release in frontier models.",
+      "year": 2019,
+      "month": 2,
+      "day": 14,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "gpt-2",
+      "tags": [
+        "gpt",
+        "openai",
+        "language-models"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/blog/better-language-models/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/blog/better-language-models/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "14 Feb 2019",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1550145600000
+    },
+    {
+      "id": "transformer-paper",
+      "slug": "transformer-paper",
+      "title": "Attention Is All You Need released",
+      "summary": "The Transformer paper established the architecture that now underpins the modern LLM era.",
+      "year": 2017,
+      "month": 6,
+      "day": 12,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "launch",
+      "significance": "major",
+      "tags": [
+        "transformers",
+        "papers",
+        "foundation-models"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "12 Jun 2017",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1497268800000
+    },
+    {
+      "id": "alphago-seoul-final",
+      "slug": "alphago-seoul-final",
+      "title": "AlphaGo beats Lee Sedol",
+      "summary": "DeepMind’s AlphaGo beat Lee Sedol in Seoul and turned modern AI progress into a mainstream global story.",
+      "year": 2016,
+      "month": 3,
+      "day": 15,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "milestone",
+      "significance": "major",
+      "providerId": "deepmind",
+      "tags": [
+        "go",
+        "deepmind",
+        "reinforcement-learning"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/discover/blog/alphago-seoul-final-score-4-1/",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/discover/blog/alphago-seoul-final-score-4-1/",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "15 Mar 2016",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1458043200000
+    },
+    {
+      "id": "alexnet-breakthrough",
+      "slug": "alexnet-breakthrough",
+      "title": "AlexNet wins ILSVRC 2012",
+      "summary": "AlexNet made deep learning impossible to ignore by winning the 2012 ImageNet competition with a dramatic error-rate jump.",
+      "year": 2012,
+      "month": 10,
+      "day": 13,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "milestone",
+      "significance": "major",
+      "tags": [
+        "computer-vision",
+        "imagenet",
+        "deep-learning"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "ImageNet ILSVRC 2012",
+          "url": "https://image-net.org/challenges/LSVRC/2012/index",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "ImageNet ILSVRC 2012",
+        "url": "https://image-net.org/challenges/LSVRC/2012/index",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "13 Oct 2012",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1350129600000
+    }
+  ],
+  "trackingMilestones": [
+    {
+      "id": "moonshot-founded",
+      "slug": "moonshot-founded",
+      "title": "Moonshot AI founded",
+      "summary": "Moonshot AI joined the post-ChatGPT Chinese lab wave and later built the Kimi family.",
+      "year": 2023,
+      "month": 3,
+      "datePrecision": "month",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "moonshot",
+      "tags": [
+        "moonshot",
+        "kimi",
+        "lab",
+        "founding"
+      ],
+      "status": "tracking",
+      "confidence": "medium",
+      "homepageEligible": false,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "trackingDate": {
+        "date": "2023-03-01",
+        "kind": "estimated",
+        "note": "Secondary reporting consistently points to March 2023, but the exact public founding day remains unclear."
+      },
+      "sources": [
+        {
+          "label": "Aurora Mobile investor relations",
+          "url": "https://ir.jiguang.cn/node/9621/pdf",
+          "sourceType": "secondary_report",
+          "role": "canonical",
+          "notes": "Partnership release describing Moonshot AI as founded in March 2023."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Aurora Mobile investor relations",
+        "url": "https://ir.jiguang.cn/node/9621/pdf",
+        "sourceType": "secondary_report",
+        "role": "canonical",
+        "notes": "Partnership release describing Moonshot AI as founded in March 2023."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Tracking",
+      "dateLabel": "March 2023",
+      "trackingDateLabel": "1 Mar 2023",
+      "href": "/labs/",
+      "sortKey": 1677672000000
+    },
+    {
+      "id": "deepseek-founded",
+      "slug": "deepseek-founded",
+      "title": "DeepSeek founded",
+      "summary": "DeepSeek emerged in 2023 and later broke into the global frontier conversation with low-cost reasoning models.",
+      "year": 2023,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "deepseek",
+      "tags": [
+        "deepseek",
+        "lab",
+        "founding"
+      ],
+      "status": "tracking",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "trackingDate": {
+        "date": "2023-05-01",
+        "kind": "estimated",
+        "note": "Secondary reporting points to spring 2023; keep public precision at year until an official filing or company page confirms more."
+      },
+      "sources": [
+        {
+          "label": "Forbes",
+          "url": "https://www.forbes.com/sites/giacomotognini/2025/01/30/how-much-ai-firm-deepseek-and-its-billionaire-founder-are-worth/",
+          "sourceType": "secondary_report",
+          "role": "canonical",
+          "notes": "Useful secondary reference citing the early 2023 High-Flyer launch of DeepSeek."
+        },
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/",
+          "sourceType": "official_docs",
+          "role": "supporting"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Forbes",
+        "url": "https://www.forbes.com/sites/giacomotognini/2025/01/30/how-much-ai-firm-deepseek-and-its-billionaire-founder-are-worth/",
+        "sourceType": "secondary_report",
+        "role": "canonical",
+        "notes": "Useful secondary reference citing the early 2023 High-Flyer launch of DeepSeek."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Tracking",
+      "dateLabel": "2023",
+      "trackingDateLabel": "1 May 2023",
+      "href": "/labs/",
+      "sortKey": 1672574400000
+    }
+  ],
+  "sourceRegistryCount": 37,
+  "entries": [
+    {
+      "id": "grok-3-launch",
+      "slug": "grok-3-launch",
+      "title": "Grok 3 announced",
+      "summary": "Grok 3 marked xAI’s move into the reasoning-agent frontier with a much stronger model family.",
+      "year": 2025,
+      "month": 2,
+      "day": 19,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "xai",
+      "modelId": "grok-3",
+      "tags": [
+        "grok",
+        "xai",
+        "reasoning-agents"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/news/grok-3/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "xAI",
+        "url": "https://x.ai/news/grok-3/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "19 Feb 2025",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1739966400000
+    },
+    {
+      "id": "deepseek-r1-launch",
+      "slug": "deepseek-r1-launch",
+      "title": "DeepSeek-R1 released",
+      "summary": "DeepSeek-R1 pushed low-cost reasoning into the mainstream model conversation and accelerated global interest in Chinese frontier labs.",
+      "year": 2025,
+      "month": 1,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "deepseek",
+      "modelId": "deepseek-r1",
+      "tags": [
+        "deepseek",
+        "reasoning",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/news/news250120",
+          "sourceType": "official_docs",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "DeepSeek API docs",
+        "url": "https://api-docs.deepseek.com/news/news250120",
+        "sourceType": "official_docs",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Jan 2025",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1737374400000
+    },
+    {
+      "id": "deepseek-v3-launch",
+      "slug": "deepseek-v3-launch",
+      "title": "DeepSeek-V3 released",
+      "summary": "DeepSeek-V3 turned the lab into a serious global open-model competitor late in 2024.",
+      "year": 2024,
+      "month": 12,
+      "day": 26,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "deepseek",
+      "modelId": "deepseek-v3",
+      "tags": [
+        "deepseek",
+        "open-weights",
+        "reasoning"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/news/news1226",
+          "sourceType": "official_docs",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "DeepSeek API docs",
+        "url": "https://api-docs.deepseek.com/news/news1226",
+        "sourceType": "official_docs",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "26 Dec 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1735214400000
+    },
+    {
+      "id": "o1-preview-launch",
+      "slug": "o1-preview-launch",
+      "title": "OpenAI o1-preview launched",
+      "summary": "OpenAI’s o1-preview pushed reasoning-first models into the mainstream product conversation.",
+      "year": 2024,
+      "month": 9,
+      "day": 12,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "o1-preview",
+      "tags": [
+        "reasoning",
+        "openai",
+        "o1"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/introducing-openai-o1-preview/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/introducing-openai-o1-preview/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "12 Sept 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1726142400000
+    },
+    {
+      "id": "claude-3-5-sonnet-launch",
+      "slug": "claude-3-5-sonnet-launch",
+      "title": "Claude 3.5 Sonnet launched",
+      "summary": "Claude 3.5 Sonnet quickly became one of the strongest coding and writing models in the market.",
+      "year": 2024,
+      "month": 6,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude-3-5-sonnet",
+      "tags": [
+        "claude",
+        "anthropic",
+        "coding"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Jun 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1718884800000
+    },
+    {
+      "id": "gpt-4o-launch",
+      "slug": "gpt-4o-launch",
+      "title": "GPT-4o introduced",
+      "summary": "GPT-4o fused text, image and audio into a single flagship model and reset the baseline for mainstream multimodal products.",
+      "year": 2024,
+      "month": 5,
+      "day": 13,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "gpt-4o",
+      "tags": [
+        "gpt-4o",
+        "multimodal",
+        "openai"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/hello-gpt-4o/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/hello-gpt-4o/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "13 May 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1715601600000
+    },
+    {
+      "id": "llama-3-launch",
+      "slug": "llama-3-launch",
+      "title": "Llama 3 released",
+      "summary": "Llama 3 strengthened Meta’s position in open-weight models and raised the bar for broadly available open releases.",
+      "year": 2024,
+      "month": 4,
+      "day": 18,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "meta",
+      "modelId": "llama-3",
+      "tags": [
+        "llama",
+        "meta",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Meta",
+          "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+          "sourceType": "official_news",
+          "role": "canonical",
+          "notes": "English Meta launch post dated April 18, 2024."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Meta",
+        "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+        "sourceType": "official_news",
+        "role": "canonical",
+        "notes": "English Meta launch post dated April 18, 2024."
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "18 Apr 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1713441600000
+    },
+    {
+      "id": "claude-3-launch",
+      "slug": "claude-3-launch",
+      "title": "Claude 3 model family introduced",
+      "summary": "Claude 3 established Anthropic’s strongest model family to date and intensified the frontier race in 2024.",
+      "year": 2024,
+      "month": 3,
+      "datePrecision": "month",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude-3",
+      "tags": [
+        "claude",
+        "anthropic",
+        "frontier-models"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-3-family",
+          "sourceType": "official_news",
+          "role": "canonical",
+          "notes": "Month is strong; exact day still needs direct confirmation in this repo pass."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-3-family",
+        "sourceType": "official_news",
+        "role": "canonical",
+        "notes": "Month is strong; exact day still needs direct confirmation in this repo pass."
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "March 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1709294400000
+    },
+    {
+      "id": "gemma-launch",
+      "slug": "gemma-launch",
+      "title": "Gemma introduced",
+      "summary": "Gemma became Google’s main open-model family and widened the competitive open-weight field.",
+      "year": 2024,
+      "month": 2,
+      "day": 21,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "modelId": "gemma-1",
+      "tags": [
+        "gemma",
+        "google",
+        "open-models"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-open-models/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-open-models/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "21 Feb 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1708516800000
+    },
+    {
+      "id": "gemini-1-5-launch",
+      "slug": "gemini-1-5-launch",
+      "title": "Gemini 1.5 introduced",
+      "summary": "Gemini 1.5 brought long-context performance back to the centre of the frontier model conversation.",
+      "year": 2024,
+      "month": 2,
+      "day": 15,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "modelId": "gemini-1-5",
+      "tags": [
+        "gemini",
+        "long-context",
+        "google"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google",
+          "url": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google",
+        "url": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "15 Feb 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1707998400000
+    },
+    {
+      "id": "mixtral-8x7b-launch",
+      "slug": "mixtral-8x7b-launch",
+      "title": "Mixtral 8x7B released",
+      "summary": "Mixtral 8x7B showed that sparse open-weight models could compete far above their active parameter count.",
+      "year": 2023,
+      "month": 12,
+      "day": 11,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "mistral",
+      "modelId": "mixtral-8x7b",
+      "tags": [
+        "mistral",
+        "mixtral",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Mistral AI",
+          "url": "https://mistral.ai/news/mixtral-of-experts/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Mistral AI",
+        "url": "https://mistral.ai/news/mixtral-of-experts/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "11 Dec 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1702296000000
+    },
+    {
+      "id": "gemini-1-launch",
+      "slug": "gemini-1-launch",
+      "title": "Gemini 1 introduced",
+      "summary": "Google introduced Gemini as its flagship multimodal model family and reset its frontier model branding around a single line.",
+      "year": 2023,
+      "month": 12,
+      "day": 6,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "modelId": "gemini-1",
+      "tags": [
+        "gemini",
+        "google",
+        "multimodal"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "6 Dec 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1701864000000
+    },
+    {
+      "id": "grok-announced",
+      "slug": "grok-announced",
+      "title": "Grok announced",
+      "summary": "xAI introduced Grok and established its real-time, X-connected assistant product line.",
+      "year": 2023,
+      "month": 11,
+      "day": 3,
+      "datePrecision": "day",
+      "category": "product_launch",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "xai",
+      "modelId": "grok",
+      "tags": [
+        "grok",
+        "xai",
+        "assistant"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/news/grok",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "xAI",
+        "url": "https://x.ai/news/grok",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Product launch",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "3 Nov 2023",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1699012800000
+    },
+    {
+      "id": "mistral-7b-launch",
+      "slug": "mistral-7b-launch",
+      "title": "Mistral 7B released",
+      "summary": "Mistral 7B immediately changed perceptions of how capable a smaller open-weight model could be.",
+      "year": 2023,
+      "month": 9,
+      "day": 27,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "mistral",
+      "modelId": "mistral-7b",
+      "tags": [
+        "mistral",
+        "open-weights",
+        "efficiency"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Mistral AI",
+          "url": "https://mistral.ai/news/about-mistral-ai",
+          "sourceType": "official_news",
+          "role": "canonical",
+          "notes": "The company launch article explicitly states Mistral 7B was released that day."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Mistral AI",
+        "url": "https://mistral.ai/news/about-mistral-ai",
+        "sourceType": "official_news",
+        "role": "canonical",
+        "notes": "The company launch article explicitly states Mistral 7B was released that day."
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "27 Sept 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1695816000000
+    },
+    {
+      "id": "llama-2-launch",
+      "slug": "llama-2-launch",
+      "title": "Llama 2 released",
+      "summary": "Llama 2 became the most important open-weight launch of 2023 and broadened serious industry use of open models.",
+      "year": 2023,
+      "month": 7,
+      "day": 18,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "meta",
+      "modelId": "llama-2",
+      "tags": [
+        "llama",
+        "meta",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Meta",
+          "url": "https://about.fb.com/news/2023/07/llama-2/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Meta",
+        "url": "https://about.fb.com/news/2023/07/llama-2/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "18 Jul 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1689681600000
+    },
+    {
+      "id": "claude-2-launch",
+      "slug": "claude-2-launch",
+      "title": "Claude 2 launched",
+      "summary": "Claude 2 made Anthropic’s assistant more broadly available and pushed the long-context commercial race forward.",
+      "year": 2023,
+      "month": 7,
+      "day": 11,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude-2",
+      "tags": [
+        "claude",
+        "anthropic",
+        "long-context"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-2",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/claude-2",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "11 Jul 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1689076800000
+    },
+    {
+      "id": "xai-founded",
+      "slug": "xai-founded",
+      "title": "xAI founded",
+      "summary": "xAI launched in 2023 and quickly became the lab behind the Grok model line.",
+      "year": 2023,
+      "month": 7,
+      "datePrecision": "month",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "xai",
+      "tags": [
+        "xai",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "xAI",
+          "url": "https://x.ai/company",
+          "sourceType": "official_company",
+          "role": "canonical",
+          "notes": "Company page points to July 2023 as the company starting point."
+        }
+      ],
+      "canonicalSource": {
+        "label": "xAI",
+        "url": "https://x.ai/company",
+        "sourceType": "official_company",
+        "role": "canonical",
+        "notes": "Company page points to July 2023 as the company starting point."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "July 2023",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1688212800000
+    },
+    {
+      "id": "google-deepmind-formed",
+      "slug": "google-deepmind-formed",
+      "title": "Google DeepMind formed",
+      "summary": "Google merged DeepMind and Google Brain into one lab, concentrating one of the largest frontier AI teams under a single brand.",
+      "year": 2023,
+      "month": 4,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "industry_event",
+      "kind": "milestone",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "tags": [
+        "google",
+        "deepmind",
+        "merger"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Industry event",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Apr 2023",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1681992000000
+    },
+    {
+      "id": "claude-launch",
+      "slug": "claude-launch",
+      "title": "Claude introduced",
+      "summary": "Anthropic introduced Claude and started the commercial expansion of the Claude family.",
+      "year": 2023,
+      "month": 3,
+      "day": 14,
+      "datePrecision": "day",
+      "category": "product_launch",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "anthropic",
+      "modelId": "claude",
+      "tags": [
+        "claude",
+        "anthropic",
+        "assistant"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/introducing-claude",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/introducing-claude",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Product launch",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "14 Mar 2023",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1678795200000
+    },
+    {
+      "id": "gpt-4-launch",
+      "slug": "gpt-4-launch",
+      "title": "GPT-4 introduced",
+      "summary": "GPT-4 reset expectations around multimodal frontier capability and commercial LLM quality.",
+      "year": 2023,
+      "month": 3,
+      "day": 14,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "gpt-4",
+      "tags": [
+        "gpt-4",
+        "multimodal",
+        "openai"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/gpt-4-research/",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/gpt-4-research/",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "14 Mar 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1678795200000
+    },
+    {
+      "id": "moonshot-founded",
+      "slug": "moonshot-founded",
+      "title": "Moonshot AI founded",
+      "summary": "Moonshot AI joined the post-ChatGPT Chinese lab wave and later built the Kimi family.",
+      "year": 2023,
+      "month": 3,
+      "datePrecision": "month",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "moonshot",
+      "tags": [
+        "moonshot",
+        "kimi",
+        "lab",
+        "founding"
+      ],
+      "status": "tracking",
+      "confidence": "medium",
+      "homepageEligible": false,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "trackingDate": {
+        "date": "2023-03-01",
+        "kind": "estimated",
+        "note": "Secondary reporting consistently points to March 2023, but the exact public founding day remains unclear."
+      },
+      "sources": [
+        {
+          "label": "Aurora Mobile investor relations",
+          "url": "https://ir.jiguang.cn/node/9621/pdf",
+          "sourceType": "secondary_report",
+          "role": "canonical",
+          "notes": "Partnership release describing Moonshot AI as founded in March 2023."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Aurora Mobile investor relations",
+        "url": "https://ir.jiguang.cn/node/9621/pdf",
+        "sourceType": "secondary_report",
+        "role": "canonical",
+        "notes": "Partnership release describing Moonshot AI as founded in March 2023."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Tracking",
+      "dateLabel": "March 2023",
+      "trackingDateLabel": "1 Mar 2023",
+      "href": "/labs/",
+      "sortKey": 1677672000000
+    },
+    {
+      "id": "deepseek-founded",
+      "slug": "deepseek-founded",
+      "title": "DeepSeek founded",
+      "summary": "DeepSeek emerged in 2023 and later broke into the global frontier conversation with low-cost reasoning models.",
+      "year": 2023,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "deepseek",
+      "tags": [
+        "deepseek",
+        "lab",
+        "founding"
+      ],
+      "status": "tracking",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "trackingDate": {
+        "date": "2023-05-01",
+        "kind": "estimated",
+        "note": "Secondary reporting points to spring 2023; keep public precision at year until an official filing or company page confirms more."
+      },
+      "sources": [
+        {
+          "label": "Forbes",
+          "url": "https://www.forbes.com/sites/giacomotognini/2025/01/30/how-much-ai-firm-deepseek-and-its-billionaire-founder-are-worth/",
+          "sourceType": "secondary_report",
+          "role": "canonical",
+          "notes": "Useful secondary reference citing the early 2023 High-Flyer launch of DeepSeek."
+        },
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/",
+          "sourceType": "official_docs",
+          "role": "supporting"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Forbes",
+        "url": "https://www.forbes.com/sites/giacomotognini/2025/01/30/how-much-ai-firm-deepseek-and-its-billionaire-founder-are-worth/",
+        "sourceType": "secondary_report",
+        "role": "canonical",
+        "notes": "Useful secondary reference citing the early 2023 High-Flyer launch of DeepSeek."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Tracking",
+      "dateLabel": "2023",
+      "trackingDateLabel": "1 May 2023",
+      "href": "/labs/",
+      "sortKey": 1672574400000
+    },
+    {
+      "id": "mistral-founded",
+      "slug": "mistral-founded",
+      "title": "Mistral AI founded",
+      "summary": "Mistral AI launched in 2023 and quickly became Europe’s most prominent open-weight AI lab.",
+      "year": 2023,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "mistral",
+      "tags": [
+        "mistral",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Mistral AI",
+          "url": "https://mistral.ai/news/about-mistral-ai",
+          "sourceType": "official_company",
+          "role": "canonical",
+          "notes": "Official company launch article; exact company founding day not explicitly stated."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Mistral AI",
+        "url": "https://mistral.ai/news/about-mistral-ai",
+        "sourceType": "official_company",
+        "role": "canonical",
+        "notes": "Official company launch article; exact company founding day not explicitly stated."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "2023",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1672574400000
+    },
+    {
+      "id": "chatgpt-launch",
+      "slug": "chatgpt-launch",
+      "title": "ChatGPT launched",
+      "summary": "ChatGPT turned language models into a mass-market product and reset the pace of AI product adoption.",
+      "year": 2022,
+      "month": 11,
+      "day": 30,
+      "datePrecision": "day",
+      "category": "product_launch",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "chatgpt",
+      "tags": [
+        "chatgpt",
+        "consumer-ai",
+        "openai"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/blog/chatgpt/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/blog/chatgpt/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Product launch",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "30 Nov 2022",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1669809600000
+    },
+    {
+      "id": "stable-diffusion-public-release",
+      "slug": "stable-diffusion-public-release",
+      "title": "Stable Diffusion public release",
+      "summary": "Stable Diffusion accelerated open image-generation adoption and made consumer AI image creation a mainstream topic.",
+      "year": 2022,
+      "month": 8,
+      "day": 22,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "modelId": "stable-diffusion",
+      "tags": [
+        "image-generation",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Stability AI",
+          "url": "https://stability.ai/news/stable-diffusion-public-release",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Stability AI",
+        "url": "https://stability.ai/news/stable-diffusion-public-release",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "22 Aug 2022",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1661169600000
+    },
+    {
+      "id": "minimax-founded",
+      "slug": "minimax-founded",
+      "title": "MiniMax founded",
+      "summary": "MiniMax was founded in early 2022 and became part of the new wave of Chinese multimodal model companies.",
+      "year": 2022,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "minimax",
+      "tags": [
+        "minimax",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": false,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "trackingDate": {
+        "date": "2022-01-01",
+        "kind": "estimated",
+        "note": "Official MiniMax material says founded in early 2022 but does not confirm a day or month."
+      },
+      "sources": [
+        {
+          "label": "MiniMax",
+          "url": "https://www.minimax.io/about",
+          "sourceType": "official_company",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "MiniMax",
+        "url": "https://www.minimax.io/about",
+        "sourceType": "official_company",
+        "role": "canonical"
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Verified",
+      "dateLabel": "2022",
+      "trackingDateLabel": "1 Jan 2022",
+      "href": "/labs/",
+      "sortKey": 1641038400000
+    },
+    {
+      "id": "anthropic-founded",
+      "slug": "anthropic-founded",
+      "title": "Anthropic founded",
+      "summary": "Anthropic emerged as a safety-focused frontier lab and became the second major commercial model family of the ChatGPT era.",
+      "year": 2021,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "anthropic",
+      "tags": [
+        "anthropic",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+          "sourceType": "official_news",
+          "role": "canonical",
+          "notes": "Official April 2022 post confirms Anthropic was founded at the beginning of 2021, but does not provide an exact day."
+        },
+        {
+          "label": "Anthropic company page",
+          "url": "https://www.anthropic.com/company",
+          "sourceType": "official_company",
+          "role": "supporting"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai",
+        "sourceType": "official_news",
+        "role": "canonical",
+        "notes": "Official April 2022 post confirms Anthropic was founded at the beginning of 2021, but does not provide an exact day."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "2021",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1609502400000
+    },
+    {
+      "id": "alphafold-breakthrough",
+      "slug": "alphafold-breakthrough",
+      "title": "AlphaFold breakthrough at CASP14",
+      "summary": "AlphaFold’s CASP14 performance reshaped expectations for AI-assisted protein structure prediction.",
+      "year": 2020,
+      "month": 11,
+      "day": 30,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "milestone",
+      "significance": "major",
+      "providerId": "deepmind",
+      "tags": [
+        "biology",
+        "protein-folding",
+        "deepmind"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "30 Nov 2020",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1606737600000
+    },
+    {
+      "id": "gpt-3-api-launch",
+      "slug": "gpt-3-api-launch",
+      "title": "GPT-3 launched via the OpenAI API",
+      "summary": "GPT-3 opened the first large commercial wave of general-purpose LLM product building.",
+      "year": 2020,
+      "month": 6,
+      "day": 11,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "gpt-3",
+      "tags": [
+        "gpt",
+        "openai",
+        "api"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/blog/openai-api/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/blog/openai-api/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "11 Jun 2020",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1591876800000
+    },
+    {
+      "id": "gpt-2-announced",
+      "slug": "gpt-2-announced",
+      "title": "GPT-2 announced",
+      "summary": "GPT-2 pushed text generation quality forward and sparked the first big public debate over staged release in frontier models.",
+      "year": 2019,
+      "month": 2,
+      "day": 14,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "gpt-2",
+      "tags": [
+        "gpt",
+        "openai",
+        "language-models"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/blog/better-language-models/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/blog/better-language-models/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "14 Feb 2019",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1550145600000
+    },
+    {
+      "id": "cohere-founded",
+      "slug": "cohere-founded",
+      "title": "Cohere founded",
+      "summary": "Cohere launched with an enterprise-first strategy and became a durable commercial model provider.",
+      "year": 2019,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "cohere",
+      "tags": [
+        "lab",
+        "cohere",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Cohere",
+          "url": "https://cohere.com/about",
+          "sourceType": "official_company",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Cohere",
+        "url": "https://cohere.com/about",
+        "sourceType": "official_company",
+        "role": "canonical"
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Verified",
+      "dateLabel": "2019",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1546344000000
+    },
+    {
+      "id": "zhipu-founded",
+      "slug": "zhipu-founded",
+      "title": "Zhipu AI founded",
+      "summary": "Zhipu AI became one of the most visible Chinese frontier-model companies through the GLM line.",
+      "year": 2019,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "notable",
+      "providerId": "zhipu",
+      "tags": [
+        "zhipu",
+        "glm",
+        "lab",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": false,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Zhipu AI",
+          "url": "https://www.zhipuai.cn/en/about",
+          "sourceType": "official_company",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Zhipu AI",
+        "url": "https://www.zhipuai.cn/en/about",
+        "sourceType": "official_company",
+        "role": "canonical"
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Notable",
+      "statusLabel": "Verified",
+      "dateLabel": "2019",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1546344000000
+    },
+    {
+      "id": "transformer-paper",
+      "slug": "transformer-paper",
+      "title": "Attention Is All You Need released",
+      "summary": "The Transformer paper established the architecture that now underpins the modern LLM era.",
+      "year": 2017,
+      "month": 6,
+      "day": 12,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "launch",
+      "significance": "major",
+      "tags": [
+        "transformers",
+        "papers",
+        "foundation-models"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "12 Jun 2017",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1497268800000
+    },
+    {
+      "id": "alphago-seoul-final",
+      "slug": "alphago-seoul-final",
+      "title": "AlphaGo beats Lee Sedol",
+      "summary": "DeepMind’s AlphaGo beat Lee Sedol in Seoul and turned modern AI progress into a mainstream global story.",
+      "year": 2016,
+      "month": 3,
+      "day": 15,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "milestone",
+      "significance": "major",
+      "providerId": "deepmind",
+      "tags": [
+        "go",
+        "deepmind",
+        "reinforcement-learning"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/discover/blog/alphago-seoul-final-score-4-1/",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/discover/blog/alphago-seoul-final-score-4-1/",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "15 Mar 2016",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1458043200000
+    },
+    {
+      "id": "openai-founded",
+      "slug": "openai-founded",
+      "title": "OpenAI founded",
+      "summary": "OpenAI launched as a non-profit AI research company and later became a central lab in the ChatGPT era.",
+      "year": 2015,
+      "month": 12,
+      "day": 11,
+      "datePrecision": "day",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "openai",
+      "tags": [
+        "lab",
+        "openai",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/introducing-openai/",
+          "sourceType": "official_company",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/introducing-openai/",
+        "sourceType": "official_company",
+        "role": "canonical"
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "11 Dec 2015",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1449835200000
+    },
+    {
+      "id": "alexnet-breakthrough",
+      "slug": "alexnet-breakthrough",
+      "title": "AlexNet wins ILSVRC 2012",
+      "summary": "AlexNet made deep learning impossible to ignore by winning the 2012 ImageNet competition with a dramatic error-rate jump.",
+      "year": 2012,
+      "month": 10,
+      "day": 13,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "milestone",
+      "significance": "major",
+      "tags": [
+        "computer-vision",
+        "imagenet",
+        "deep-learning"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "ImageNet ILSVRC 2012",
+          "url": "https://image-net.org/challenges/LSVRC/2012/index",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "ImageNet ILSVRC 2012",
+        "url": "https://image-net.org/challenges/LSVRC/2012/index",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "13 Oct 2012",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1350129600000
+    },
+    {
+      "id": "deepmind-founded",
+      "slug": "deepmind-founded",
+      "title": "DeepMind founded",
+      "summary": "DeepMind was founded in London and became one of the defining labs of the frontier-model era.",
+      "year": 2010,
+      "datePrecision": "year",
+      "category": "lab_founded",
+      "kind": "founded",
+      "significance": "major",
+      "providerId": "deepmind",
+      "tags": [
+        "lab",
+        "deepmind",
+        "founding"
+      ],
+      "status": "verified",
+      "confidence": "medium",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": false,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+          "sourceType": "official_company",
+          "role": "canonical",
+          "notes": "Official lab history source confirming 2010 founding year."
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/en/blog/announcing-google-deepmind/",
+        "sourceType": "official_company",
+        "role": "canonical",
+        "notes": "Official lab history source confirming 2010 founding year."
+      },
+      "categoryLabel": "Lab founded",
+      "kindLabel": "Founded",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "2010",
+      "trackingDateLabel": null,
+      "href": "/labs/",
+      "sortKey": 1262347200000
+    }
+  ]
+}

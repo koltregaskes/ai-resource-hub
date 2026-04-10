@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 09 Apr 2026, 23:52 UTC
+Generated: 10 Apr 2026, 00:25 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,13 +8,33 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
+| AI milestones | Curated updates as research lands | Mixed | 10 Apr 2026, 00:25 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
 | Models and releases | Hourly automated refresh | Mixed | 09 Apr 2026, 23:52 UTC |
 | Benchmarks and evals | Hourly automated refresh | Automated | 09 Apr 2026, 23:52 UTC |
 | Pricing and value | Hourly automated refresh | Automated | 09 Apr 2026, 23:52 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 09 Apr 2026, 23:52 UTC |
 | Provider status | Hourly automated refresh | Automated | 09 Apr 2026, 23:52 UTC |
-| Guides and learning | Manual editorial review | Manual | 09 Apr 2026, 23:52 UTC |
+| Guides and learning | Manual editorial review | Manual | 05 Apr 2026, 22:58 UTC |
+
+## AI milestones
+
+- Cadence: Curated updates as research lands
+- Automation: Mixed
+- Last refreshed: 10 Apr 2026, 00:25 UTC
+- Category route: `/milestones/`
+- Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
+
+### Source Types
+
+- Official launch posts, model cards, and company pages
+- Official registry and filing sources where available
+- Selective secondary reporting only when official chronology is weak
+
+### Last Visible Updates
+
+- 18 Apr 2026, 12:00 UTC: Llama 3 released - Next exact anniversary in 8 days. (`/milestones/`)
+- 10 Apr 2026, 00:25 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -138,7 +158,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 09 Apr 2026, 23:52 UTC
+- Last refreshed: 05 Apr 2026, 22:58 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -150,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Apr 2026, 23:52 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 09 Apr 2026, 23:52 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
-- 09 Apr 2026, 23:52 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)
+- 05 Apr 2026, 22:58 UTC: Glossary - Guide or learning page updated in the repository. (`/glossary/`)
+- 23 Mar 2026, 21:45 UTC: Understanding Ai Pricing - Guide or learning page updated in the repository. (`/guides/understanding-ai-pricing/`)
+- 15 Mar 2026, 20:44 UTC: Prompting Basics - Guide or learning page updated in the repository. (`/guides/prompting-basics/`)

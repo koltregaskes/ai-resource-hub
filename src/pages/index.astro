@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getBenchmarks, getNews } from '../db/queries';
-import { getThisDayInAiOverview } from '../data/ai-anniversaries';
+import { getAiMilestonesOverview } from '../data/ai-milestones';
 import { modelReleaseDesk } from '../data/model-release-desk.generated';
 import {
   getAgiOverview,
@@ -23,7 +23,7 @@ const latestDigest = getLatestDigest();
 const digestEntries = latestDigest?.entries.slice(0, 5) ?? [];
 const dataPulse = getDataPulse(base);
 const activities = getLatestActivities(8, base);
-const thisDayInAi = getThisDayInAiOverview();
+const milestonesOverview = getAiMilestonesOverview();
 const trackedBenchmarkCount = getBenchmarks().length;
 type HeadlineNewsItem = ReturnType<typeof getNews>[number] & {
   discovered_at?: string | null;
@@ -240,18 +240,18 @@ const heroStats = [
               </div>
               <span class="hub-home-brief-meta">{latestTrackedRelease ? `Latest tracked: ${latestTrackedRelease.modelName}` : 'Launch radar'}</span>
             </a>
-            <a href={`${base}this-day-in-ai/`} class="hub-home-brief-link">
+            <a href={`${base}milestones/`} class="hub-home-brief-link">
               <div>
                 <p class="hub-home-brief-title">
                   <span class="fresh-dot" data-fresh-dot hidden></span>
-                  This Day in AI
+                  AI milestones
                 </p>
               </div>
               <span class="hub-home-brief-meta">
-                {thisDayInAi.todayMilestones.length > 0
-                  ? `${thisDayInAi.todayMilestones.length} anniversaries today`
-                  : thisDayInAi.nextMilestone
-                    ? `Next up: ${thisDayInAi.nextMilestone.title}`
+                {milestonesOverview.todayMilestones.length > 0
+                  ? `${milestonesOverview.todayMilestones.length} anniversaries today`
+                  : milestonesOverview.nextMilestone
+                    ? `Next up: ${milestonesOverview.nextMilestone.title}`
                     : 'Launch and lab dates'}
               </span>
             </a>
@@ -636,25 +636,25 @@ const heroStats = [
       <section class="hub-home-card">
         <div class="hub-home-card-head">
           <div>
-            <p class="hub-home-mini-label">This Day in AI</p>
-            <h2 class="hub-home-card-title">The launch birthdays and lab dates.</h2>
+            <p class="hub-home-mini-label">Today in AI</p>
+            <h2 class="hub-home-card-title">The launch birthdays and lab dates that matter.</h2>
           </div>
-          <a href={`${base}this-day-in-ai/`} class="editorial-link">Open the full date desk</a>
+          <a href={`${base}milestones/`} class="editorial-link">Open AI Milestones</a>
         </div>
 
         <p class="hub-home-card-note">
-          {thisDayInAi.todayMilestones.length > 0
-            ? `${thisDayInAi.todayMilestones.length} exact anniversary${thisDayInAi.todayMilestones.length === 1 ? '' : 'ies'} lands today.`
-            : thisDayInAi.nextMilestone
-              ? `No exact anniversary lands today. The next one is ${thisDayInAi.nextMilestone.title} in ${thisDayInAi.nextMilestone.daysUntil} day${thisDayInAi.nextMilestone.daysUntil === 1 ? '' : 's'}.`
+          {milestonesOverview.todayMilestones.length > 0
+            ? `${milestonesOverview.todayMilestones.length} exact anniversary${milestonesOverview.todayMilestones.length === 1 ? '' : 'ies'} lands today.`
+            : milestonesOverview.nextMilestone
+              ? `No exact anniversary lands today. The next one is ${milestonesOverview.nextMilestone.title} in ${milestonesOverview.nextMilestone.daysUntil} day${milestonesOverview.nextMilestone.daysUntil === 1 ? '' : 's'}.`
               : 'This lane fills out as the curated milestone list grows.'}
         </p>
 
         <div class="hub-home-stack">
-          {(thisDayInAi.todayMilestones.length > 0 ? thisDayInAi.todayMilestones : thisDayInAi.upcomingMilestones.slice(0, 3)).map((milestone) => (
-            <a href={`${base}this-day-in-ai/`} class="hub-home-activity-row">
+          {(milestonesOverview.todayMilestones.length > 0 ? milestonesOverview.todayMilestones : milestonesOverview.upcomingMilestones.slice(0, 3)).map((milestone) => (
+            <a href={`${base}milestones/`} class="hub-home-activity-row">
               <div class="hub-home-activity-topline">
-                <span class={`hub-home-category ${milestone.category === 'lab' ? 'is-site' : 'is-models'}`}>
+                <span class={`hub-home-category ${milestone.category === 'lab_founded' ? 'is-site' : 'is-models'}`}>
                   {milestone.daysUntil === 0 ? 'today' : `${milestone.daysUntil}d`}
                 </span>
                 <span class="hub-home-activity-date">

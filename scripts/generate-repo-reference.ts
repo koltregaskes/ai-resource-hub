@@ -3,7 +3,7 @@ import path from 'node:path';
 
 import { getBenchmarks, getNews } from '../src/db/queries';
 import { getModels, getProviders } from '../src/db/pg-cache';
-import { formatAiMilestoneDate, getThisDayInAiOverview } from '../src/data/ai-anniversaries';
+import { formatAiMilestoneDate, getAiMilestonesOverview } from '../src/data/ai-milestones';
 import { getLatestActivities, getMetaLeaderboard, normaliseDateTime } from '../src/data/hub-dashboard';
 import { formatAvailabilityDate, getAvailabilityOverview, getAvailabilityRows } from '../src/data/model-availability';
 import { modelReleaseDesk } from '../src/data/model-release-desk.generated';
@@ -135,7 +135,7 @@ function buildIndexDoc(generatedAt: string): string {
       [repoLink('latest-releases.md', './latest-releases.md'), 'Newest tracked releases and editor-state visibility from the release desk.'],
       [repoLink('provider-coverage.md', './provider-coverage.md'), 'Per-provider model coverage across active, tracking, and preview states.'],
       [repoLink('model-availability.md', './model-availability.md'), 'Regional availability baselines and model-specific country restrictions.'],
-      [repoLink('this-day-in-ai.md', './this-day-in-ai.md'), 'Curated launch anniversaries, lab birthdays, and upcoming milestone dates.'],
+      [repoLink('ai-milestones.md', './ai-milestones.md'), 'Curated launch anniversaries, lab birthdays, historical breakthroughs, and tracking notes.'],
       [repoLink('source-registry.md', './source-registry.md'), 'Tracked source registry with routing, collection lane, and verification notes.'],
       [repoLink('activity-log.md', './activity-log.md'), 'Recent visible changes across data, models, digest, jobs, and site operations.'],
     ],
@@ -148,6 +148,7 @@ function buildIndexDoc(generatedAt: string): string {
       [repoLink('model-release-desk.json', '../../public/data/model-release-desk.json'), 'Structured release desk used by the site and editorial flow.'],
       [repoLink('model-availability.json', '../../public/data/model-availability.json'), 'Machine-readable regional availability snapshot for website and repo readers.'],
       [repoLink('source-registry.json', '../../public/data/source-registry.json'), 'Public mirror of the current source registry and routing policy metadata.'],
+      [repoLink('ai-milestones.json', '../../public/data/ai-milestones.json'), 'Machine-readable milestone snapshot for the site and repo readers.'],
       [repoLink('ai-models-comparison.csv', '../../public/data/ai-models-comparison.csv'), 'Spreadsheet-friendly comparison export.'],
       [repoLink('ai-models-comparison.json', '../../public/data/ai-models-comparison.json'), 'Machine-readable comparison export for analysis.'],
     ],
@@ -465,15 +466,17 @@ Raw export: ${repoLink('source-registry.json', '../../public/data/source-registr
 `;
 }
 
-function buildThisDayInAiDoc(generatedAt: string): string {
-  const overview = getThisDayInAiOverview();
+function buildAiMilestonesDoc(generatedAt: string): string {
+  const overview = getAiMilestonesOverview();
 
   const summaryTable = markdownTable(
     ['Metric', 'Value'],
     [
       ['Generated', formatDateTime(generatedAt)],
       ['Reference date', overview.generatedForLabel],
-      ['Curated milestones', String(overview.trackedMilestones)],
+      ['Curated milestones', String(overview.totalMilestones)],
+      ['Verified milestones', String(overview.verifiedMilestones)],
+      ['Tracking milestones', String(overview.trackingMilestonesCount)],
       ['Exact-date anniversaries', String(overview.exactDateMilestones)],
       ['Anniversaries today', String(overview.todayMilestones.length)],
       ['Next exact milestone', overview.nextMilestone ? `${overview.nextMilestone.title} (${overview.nextMilestone.nextOccurrenceLabel})` : 'n/a'],
@@ -485,9 +488,9 @@ function buildThisDayInAiDoc(generatedAt: string): string {
       ['Title', 'Category', 'Years', 'Source'],
       overview.todayMilestones.map((milestone) => [
         milestone.title,
-        milestone.category,
+        milestone.categoryLabel,
         String(milestone.anniversaryYears),
-        externalLink(milestone.sourceLabel, milestone.sourceUrl),
+        externalLink(milestone.canonicalSource.label, milestone.canonicalSource.url),
       ]),
     )
     : 'No exact anniversary lands on the current Europe/London date snapshot.';
@@ -498,40 +501,64 @@ function buildThisDayInAiDoc(generatedAt: string): string {
       `${milestone.daysUntil}d`,
       milestone.nextOccurrenceLabel,
       milestone.title,
-      externalLink(milestone.sourceLabel, milestone.sourceUrl),
+      externalLink(milestone.canonicalSource.label, milestone.canonicalSource.url),
     ]),
   );
 
   const launchTable = markdownTable(
     ['Date', 'Milestone', 'Source'],
-    overview.launchMilestones.map((milestone) => [
+    overview.latestLaunches.map((milestone) => [
       formatAiMilestoneDate(milestone),
       milestone.title,
-      externalLink(milestone.sourceLabel, milestone.sourceUrl),
+      externalLink(milestone.canonicalSource.label, milestone.canonicalSource.url),
     ]),
   );
 
   const labTable = markdownTable(
-    ['Date', 'Lab milestone', 'Source'],
+    ['Date', 'Lab milestone', 'Status', 'Source'],
     overview.labMilestones.map((milestone) => [
       formatAiMilestoneDate(milestone),
       milestone.title,
-      externalLink(milestone.sourceLabel, milestone.sourceUrl),
+      milestone.statusLabel,
+      externalLink(milestone.canonicalSource.label, milestone.canonicalSource.url),
     ]),
   );
 
+  const historyTable = markdownTable(
+    ['Date', 'Milestone', 'Category', 'Source'],
+    overview.historicalHighlights.map((milestone) => [
+      formatAiMilestoneDate(milestone),
+      milestone.title,
+      milestone.categoryLabel,
+      externalLink(milestone.canonicalSource.label, milestone.canonicalSource.url),
+    ]),
+  );
+
+  const trackingTable = overview.trackingMilestones.length > 0
+    ? markdownTable(
+      ['Date', 'Milestone', 'Estimated anchor', 'Note', 'Source'],
+      overview.trackingMilestones.map((milestone) => [
+        milestone.dateLabel,
+        milestone.title,
+        milestone.trackingDateLabel ?? 'n/a',
+        milestone.trackingDate?.note ?? 'Awaiting stronger source evidence.',
+        externalLink(milestone.canonicalSource.label, milestone.canonicalSource.url),
+      ]),
+    )
+    : 'No tracking items are currently left in the milestone seed.';
+
   return `
-# This Day in AI Snapshot
+# AI Milestones Snapshot
 
 Generated: ${formatDateTime(generatedAt)}
 
-Repo-readable mirror of the public anniversaries page. This is the curated date reference for major model launches and lab birthdays.
+Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
 ## Summary
 
 ${summaryTable}
 
-## On This Day
+## Today in AI
 
 ${todayTable}
 
@@ -539,13 +566,23 @@ ${todayTable}
 
 ${upcomingTable}
 
-## Big Model Launch Dates
+## Recent Flagship Launches
 
 ${launchTable}
 
 ## Lab Founding Dates and Institutional Milestones
 
 ${labTable}
+
+## Historical Highlights
+
+${historyTable}
+
+## Tracking Queue
+
+${trackingTable}
+
+Raw export: ${repoLink('ai-milestones.json', '../../public/data/ai-milestones.json')}
 `;
 }
 
@@ -628,7 +665,7 @@ function main(): void {
   writeDoc('latest-releases.md', buildReleasesDoc(generatedAt));
   writeDoc('provider-coverage.md', buildProviderCoverageDoc(generatedAt));
   writeDoc('model-availability.md', buildModelAvailabilityDoc(generatedAt));
-  writeDoc('this-day-in-ai.md', buildThisDayInAiDoc(generatedAt));
+  writeDoc('ai-milestones.md', buildAiMilestonesDoc(generatedAt));
   writeDoc('source-registry.md', buildSourceRegistryDoc(generatedAt));
   writeDoc('activity-log.md', buildActivityLogDoc(generatedAt));
 
