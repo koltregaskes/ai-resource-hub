@@ -7,7 +7,7 @@ priority: "watch"
 model: "Gemini 3.1 Flash Lite Preview"
 provider: "Google"
 release_date: "2026-03-03"
-generated_at: "2026-04-10T09:37:51.653Z"
+generated_at: "2026-04-10T11:12:04.316Z"
 ---
 
 # Gemini 3.1 Flash Lite Preview: release brief
@@ -29,7 +29,7 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-09): [Google&#8217;s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations) - Google's latest upgrade for Gemini will allow the chatbot to generate interactive 3D models and simulations in response to your questions. With the new feature, you may see options to rotate the AI-generated model, manually adjust sliders on it, or input different values to change the simulation in real-time. When try…
+- The Verge (2026-04-09): [Google’s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations) - Google's latest upgrade for Gemini will allow the chatbot to generate interactive 3D models and simulations in response to your questions. With the new feature, you may see options to rotate the AI-generated model, manually adjust sliders on it, or input different values to change the simulation in real time. When try…
 - The Verge (2026-04-09): [Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm) - Google's Gemini is getting a feature called "notebooks" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…
 - TechCrunch (2026-04-08): [Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/) - Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.
 - TechCrunch (2026-04-07): [Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/) - Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.
@@ -55,7 +55,7 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/models)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
-- [The Verge: Google&#8217;s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations)
+- [The Verge: Google’s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations)
 - [The Verge: Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm)
 - [TechCrunch: Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/)
 - [TechCrunch: Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/)
