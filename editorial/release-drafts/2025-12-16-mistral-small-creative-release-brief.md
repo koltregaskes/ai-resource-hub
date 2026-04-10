@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Mistral Small Creative"
 provider: "Mistral"
 release_date: "2025-12-16"
-generated_at: "2026-04-10T11:12:04.317Z"
+generated_at: "2026-04-10T12:01:20.529Z"
 ---
 
 # Mistral Small Creative: release brief
