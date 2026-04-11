@@ -3,11 +3,11 @@ title: "Reka Edge: release brief"
 slug: "2026-03-20-reka-edge-release-brief"
 draft_type: "model-release"
 status: "watch_only"
-priority: "high"
+priority: "watch"
 model: "Reka Edge"
 provider: "Reka"
 release_date: "2026-03-20"
-generated_at: "2026-04-10T23:51:34.465Z"
+generated_at: "2026-04-11T03:18:45.065Z"
 ---
 
 # Reka Edge: release brief

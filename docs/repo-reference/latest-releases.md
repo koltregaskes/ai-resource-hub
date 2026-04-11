@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 10 Apr 2026, 23:51 UTC
+Generated: 11 Apr 2026, 03:18 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -17,7 +17,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 31 Mar 2026 | Grok 4.20 | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
 | 31 Mar 2026 | Grok 4.20 Multi-Agent | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
 | 28 Mar 2026 | Kimi K2 0711 | Moonshot AI | tracking | high | needs research | 0 | 0 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
-| 20 Mar 2026 | Reka Edge | Reka | tracking | high | watch only | 0 | 0 | n/a |
+| 20 Mar 2026 | Reka Edge | Reka | tracking | watch | watch only | 0 | 0 | n/a |
 | 18 Mar 2026 | MiniMax M2.7 | MiniMax | tracking | watch | needs research | 0 | 0 | [official](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | 17 Mar 2026 | GPT-5.4 Mini | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/guides/latest-model) |
 | 17 Mar 2026 | GPT-5.4 Nano | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/guides/latest-model) |

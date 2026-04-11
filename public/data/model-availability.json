@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-10T23:51:34.892Z",
+  "generatedAt": "2026-04-11T03:18:45.463Z",
   "overview": {
-    "generatedAt": "2026-04-10T23:51:34.903Z",
+    "generatedAt": "2026-04-11T03:18:45.473Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
@@ -309,7 +309,7 @@
         "OpenAI TTS-1",
         "GPT-4.1",
         "GPT-4.1 Nano",
-        "GPT-4o (2024-05-13)",
+        "GPT-4o (extended)",
         "GPT Audio",
         "GPT Audio Mini",
         "GPT-3.5 Turbo",
