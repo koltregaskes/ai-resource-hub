@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T23:51:17.206Z",
+  "generatedAt": "2026-04-11T00:05:24.923Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T23:51:16.030Z",
+      "lastCheckedAt": "2026-04-11T00:05:23.984Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -46,6 +46,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "qcfvv041lb1k",
+          "title": "Email login down",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-11T00:00:20.098Z",
+          "updatedAt": "2026-04-11T00:00:59.545Z",
+          "resolvedAt": "2026-04-11T00:00:20.140Z",
+          "url": "https://stspg.io/tp29skc2n4p9",
+          "summary": "Email login was broken between approximately 3:46 PM and 4:52 PM PDT on April 10, 2026."
+        },
+        {
           "id": "411xbc51v608",
           "title": "Elevated errors on requests to Claude models",
           "status": "resolved",
@@ -77,17 +88,6 @@
           "resolvedAt": "2026-04-10T04:38:02.124Z",
           "url": "https://stspg.io/fzv1qyjb3j1b",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "cb0h2zyzl0kd",
-          "title": "Elevated Connector Error Rates",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-09T16:54:18.801Z",
-          "updatedAt": "2026-04-09T17:34:00.068Z",
-          "resolvedAt": "2026-04-09T17:34:00.052Z",
-          "url": "https://stspg.io/3qh7qtgrvprd",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T23:51:16.564Z",
+      "lastCheckedAt": "2026-04-11T00:05:24.484Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T23:51:16.080Z",
+      "lastCheckedAt": "2026-04-11T00:05:24.042Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T23:51:16.890Z",
+      "lastCheckedAt": "2026-04-11T00:05:24.916Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T23:51:15.974Z",
+      "lastCheckedAt": "2026-04-11T00:05:23.928Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -305,6 +305,26 @@
       ]
     },
     {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-11T00:05:24.160Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -315,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T23:51:15.918Z",
+      "lastCheckedAt": "2026-04-11T00:05:23.823Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -401,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T23:51:17.199Z",
+      "lastCheckedAt": "2026-04-11T00:05:24.841Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -454,26 +474,6 @@
           "summary": "Moonshot Kimi K2.5 went down"
         }
       ]
-    },
-    {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-10T23:51:16.202Z",
-      "overallStatus": "unknown",
-      "overallLabel": "Status page available",
-      "summary": "Official provider status page reports: Status page available.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "xai",
