@@ -7,12 +7,12 @@ priority: "high"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-04-11T15:47:24.781Z"
+generated_at: "2026-04-11T15:52:33.519Z"
 ---
 
 # Gemma 4 31B: release brief
 
-Google's Gemma 4 31B is on the release desk with 6 related stories and 0 benchmark signals to review.
+Google's Gemma 4 31B is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,12 +30,7 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-09): [Google’s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations) - Google's latest upgrade for Gemini will allow the chatbot to generate interactive 3D models and simulations in response to your questions. With the new feature, you may see options to rotate the AI-generated model, manually adjust sliders on it, or input different values to change the simulation in real time. When try…
-- The Verge (2026-04-09): [Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm) - Google's Gemini is getting a feature called "notebooks" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…
-- TechCrunch (2026-04-08): [Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/) - Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.
-- TechCrunch (2026-04-07): [Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/) - Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.
-- The Verge (2026-04-07): [Gemini is making it faster for distressed users to reach mental health resources](https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update) - Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot "coached" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…
-- Google (2026-04-02): [New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/) - Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.
+- Reddit r/LocalLLaMA (2026-04-10): [96GB Vram. What to run in 2026?](https://reddit.com/r/LocalLLaMA/comments/1shd5nm/96gb_vram_what_to_run_in_2026/) - I was all set on doing the 4x 3090 route but with the current releases of qwen 3.5 and gemma 4. I am having second doubts. 96gb of vram seems to be in a weird spot where it not enough to run larger models and more than needed for the mid models. What are you running as your main model?
 
 ## Suggested thread / post structure
 
@@ -58,9 +53,4 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 - [Official launch or docs](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
-- [The Verge: Google’s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations)
-- [The Verge: Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm)
-- [TechCrunch: Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/)
-- [TechCrunch: Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/)
-- [The Verge: Gemini is making it faster for distressed users to reach mental health resources](https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update)
-- [Google: New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/)
+- [Reddit r/LocalLLaMA: 96GB Vram. What to run in 2026?](https://reddit.com/r/LocalLLaMA/comments/1shd5nm/96gb_vram_what_to_run_in_2026/)
