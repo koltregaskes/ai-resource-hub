@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.3 Chat"
 provider: "OpenAI"
 release_date: "2026-03-03"
-generated_at: "2026-04-12T06:02:11.206Z"
+generated_at: "2026-04-12T07:43:41.246Z"
 ---
 
 # GPT-5.3 Chat: release brief
