@@ -7,7 +7,7 @@ priority: "high"
 model: "Claude Opus 4.6 (Fast)"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-04-12T19:51:28.380Z"
+generated_at: "2026-04-12T20:51:50.982Z"
 ---
 
 # Claude Opus 4.6 (Fast): release brief
