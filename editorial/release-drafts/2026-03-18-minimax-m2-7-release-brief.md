@@ -7,7 +7,7 @@ priority: "watch"
 model: "MiniMax M2.7"
 provider: "MiniMax"
 release_date: "2026-03-18"
-generated_at: "2026-04-12T22:54:36.354Z"
+generated_at: "2026-04-12T23:50:58.330Z"
 ---
 
 # MiniMax M2.7: release brief
