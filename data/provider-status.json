@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T12:03:34.231Z",
+  "generatedAt": "2026-04-12T13:33:49.043Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-12T12:03:32.795Z",
+      "lastCheckedAt": "2026-04-12T13:33:47.966Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-12T12:03:33.546Z",
+      "lastCheckedAt": "2026-04-12T13:33:48.516Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-12T12:03:32.988Z",
+      "lastCheckedAt": "2026-04-12T13:33:48.082Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-12T12:03:33.871Z",
+      "lastCheckedAt": "2026-04-12T13:33:49.036Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-12T12:03:32.907Z",
+      "lastCheckedAt": "2026-04-12T13:33:47.968Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-12T12:03:32.787Z",
+      "lastCheckedAt": "2026-04-12T13:33:47.863Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -401,7 +401,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-12T12:03:34.224Z",
+      "lastCheckedAt": "2026-04-12T13:33:48.853Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -410,7 +410,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-12T11:15:41.000Z",
+          "id": "together-feed-0-2026-04-12T12:56:54.000Z",
+          "title": "Voxtral Mini 3B 2507 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-12T12:56:54.000Z",
+          "updatedAt": "2026-04-12T12:56:54.000Z",
+          "resolvedAt": "2026-04-12T12:56:54.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Voxtral Mini 3B 2507 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-12T12:36:47.000Z",
+          "title": "Voxtral Mini 3B 2507 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-12T12:36:47.000Z",
+          "updatedAt": "2026-04-12T12:36:47.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Voxtral Mini 3B 2507 went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-12T11:15:41.000Z",
           "title": "FLUX.1 [schnell] recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -421,7 +443,7 @@
           "summary": "FLUX.1 [schnell] recovered"
         },
         {
-          "id": "together-feed-1-2026-04-12T11:03:19.000Z",
+          "id": "together-feed-3-2026-04-12T11:03:19.000Z",
           "title": "FLUX.1 [schnell] went down",
           "status": "investigating",
           "impact": "major",
@@ -430,28 +452,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "FLUX.1 [schnell] went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-12T04:00:40.000Z",
-          "title": "Qwen3 VL 8B Instruct recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-12T04:00:40.000Z",
-          "updatedAt": "2026-04-12T04:00:40.000Z",
-          "resolvedAt": "2026-04-12T04:00:40.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 VL 8B Instruct recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-12T03:48:28.000Z",
-          "title": "Qwen3 VL 8B Instruct went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-12T03:48:28.000Z",
-          "updatedAt": "2026-04-12T03:48:28.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 VL 8B Instruct went down"
         }
       ]
     },
@@ -466,7 +466,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-12T12:03:33.335Z",
+      "lastCheckedAt": "2026-04-12T13:33:48.133Z",
       "overallStatus": "unknown",
       "overallLabel": "Status page available",
       "summary": "Official provider status page reports: Status page available.",
