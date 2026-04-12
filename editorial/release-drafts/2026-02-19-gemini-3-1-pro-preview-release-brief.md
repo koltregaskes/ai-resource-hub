@@ -7,7 +7,7 @@ priority: "watch"
 model: "Gemini 3.1 Pro Preview"
 provider: "Google"
 release_date: "2026-02-19"
-generated_at: "2026-04-12T14:56:58.417Z"
+generated_at: "2026-04-12T15:51:08.022Z"
 ---
 
 # Gemini 3.1 Pro Preview: release brief
