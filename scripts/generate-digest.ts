@@ -17,8 +17,9 @@
 import Database from 'better-sqlite3';
 import path from 'node:path';
 import { writeFileSync, mkdirSync } from 'node:fs';
+import { getAiResourceHubSqlitePath } from './sqlite-path';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
+const DB_PATH = getAiResourceHubSqlitePath();
 const OUTPUT_DIR = path.join(process.cwd(), 'dist', 'newsletter');
 
 function main() {

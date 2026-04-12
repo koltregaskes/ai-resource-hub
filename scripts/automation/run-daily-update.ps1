@@ -191,7 +191,7 @@ try {
 
   Invoke-Logged 'npm.cmd' @('run', 'build')
 
-  $publishPaths = @('data/the-ai-resource-hub.db', 'data/pg-cache', 'data/provider-status.json', 'public/data', 'src/data/news-pipeline.generated.ts', 'src/data/model-release-desk.generated.ts', 'editorial/release-drafts', 'docs/repo-reference')
+  $publishPaths = @('data/pg-cache', 'data/provider-status.json', 'public/data', 'src/data/news-pipeline.generated.ts', 'src/data/model-release-desk.generated.ts', 'editorial/release-drafts', 'docs/repo-reference')
   $publishChanges = @(Invoke-Captured 'git' (@('status', '--porcelain', '--') + $publishPaths))
   if ($publishChanges.Count -eq 0) {
     Write-Log 'No publishable data changes detected. Nothing to commit.'

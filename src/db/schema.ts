@@ -5,9 +5,9 @@
  * Scrapers write to the DB, Astro reads from it during static generation.
  */
 import Database from 'better-sqlite3';
-import path from 'node:path';
+import { getAiResourceHubSqlitePath } from '../../scripts/sqlite-path';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
+const DB_PATH = getAiResourceHubSqlitePath();
 
 let _db: Database.Database | null = null;
 

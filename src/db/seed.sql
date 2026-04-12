@@ -9,7 +9,7 @@
 --   4. ~150 additional benchmark scores
 --
 -- These are appended to the existing seed data in scripts/seed-db.ts
--- Run with: sqlite3 data/the-ai-resource-hub.db < src/db/seed.sql
+-- Run with: sqlite3 .local/data/the-ai-resource-hub.db < src/db/seed.sql
 -- ============================================================================
 
 -- ─── New Providers ──────────────────────────────────────────────────────────
