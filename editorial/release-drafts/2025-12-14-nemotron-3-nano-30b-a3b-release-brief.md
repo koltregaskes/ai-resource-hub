@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Nemotron 3 Nano 30B A3B"
 provider: "NVIDIA"
 release_date: "2025-12-14"
-generated_at: "2026-04-13T06:26:24.908Z"
+generated_at: "2026-04-13T09:09:00.709Z"
 ---
 
 # Nemotron 3 Nano 30B A3B: release brief
