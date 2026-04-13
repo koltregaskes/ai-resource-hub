@@ -7,7 +7,7 @@ priority: "watch"
 model: "Claude Sonnet 4.6"
 provider: "Anthropic"
 release_date: "2026-02-17"
-generated_at: "2026-04-13T10:56:08.504Z"
+generated_at: "2026-04-13T12:10:29.783Z"
 ---
 
 # Claude Sonnet 4.6: release brief
