@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.4 Mini"
 provider: "OpenAI"
 release_date: "2026-03-17"
-generated_at: "2026-04-13T17:20:19.582Z"
+generated_at: "2026-04-13T19:37:12.638Z"
 ---
 
 # GPT-5.4 Mini: release brief
@@ -29,12 +29,12 @@ GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an 
 
 ## Outside coverage and early reactions
 
-- OpenAI (2026-03-17): [Introducing GPT-5.4 mini and nano](https://openai.com/index/introducing-gpt-5-4-mini-and-nano) - GPT-5.4 mini and nano are smaller, faster versions of GPT-5.4 optimized for coding, tool use, multimodal reasoning, and high-volume API and sub-agent workloads.
 - The Verge (2026-04-09): [ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new) - OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers "5x more" usage of its Codex coding tool than the $20 per month Plus subscription and "is best for longer, high-effort Codex sessions," OpenAI says. The company is introducing the new tier as it [&#823…
 - OpenAI (2026-04-01): [Gradient Labs gives every bank customer an AI account manager](https://openai.com/index/gradient-labs) - Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.
 - The Verge (2026-04-09): [Florida launches investigation into OpenAI](https://www.theverge.com/policy/909557/openai-florida-investigation) - Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are "falling into the hands of America's enemies, such as the…
 - TechCrunch (2026-04-08): [OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/) - OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.
 - OpenAI (2026-04-08): [Introducing the Child Safety Blueprint](https://openai.com/index/introducing-child-safety-blueprint) - Discover OpenAI's Child Safety Blueprint—a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect and empower young people online.
+- OpenAI (2026-04-06): [Announcing the OpenAI Safety Fellowship](https://openai.com/index/introducing-openai-safety-fellowship) - A pilot program to support independent safety and alignment research and develop the next generation of talent
 
 ## Suggested thread / post structure
 
@@ -55,9 +55,9 @@ GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an 
 
 - [Official launch or docs](https://developers.openai.com/api/docs/guides/latest-model)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [OpenAI: Introducing GPT-5.4 mini and nano](https://openai.com/index/introducing-gpt-5-4-mini-and-nano)
 - [The Verge: ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new)
 - [OpenAI: Gradient Labs gives every bank customer an AI account manager](https://openai.com/index/gradient-labs)
 - [The Verge: Florida launches investigation into OpenAI](https://www.theverge.com/policy/909557/openai-florida-investigation)
 - [TechCrunch: OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
 - [OpenAI: Introducing the Child Safety Blueprint](https://openai.com/index/introducing-child-safety-blueprint)
+- [OpenAI: Announcing the OpenAI Safety Fellowship](https://openai.com/index/introducing-openai-safety-fellowship)
