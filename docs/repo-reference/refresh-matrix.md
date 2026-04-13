@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 13 Apr 2026, 09:09 UTC
+Generated: 13 Apr 2026, 10:56 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 13 Apr 2026, 09:08 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 13 Apr 2026, 10:56 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 13 Apr 2026, 09:09 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 13 Apr 2026, 09:08 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 13 Apr 2026, 09:08 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 13 Apr 2026, 09:08 UTC |
-| Provider status | Hourly automated refresh | Automated | 13 Apr 2026, 09:08 UTC |
-| Guides and learning | Manual editorial review | Manual | 13 Apr 2026, 09:08 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 13 Apr 2026, 10:56 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 13 Apr 2026, 10:55 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 13 Apr 2026, 10:55 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 13 Apr 2026, 10:55 UTC |
+| Provider status | Hourly automated refresh | Automated | 13 Apr 2026, 10:55 UTC |
+| Guides and learning | Manual editorial review | Manual | 13 Apr 2026, 10:55 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 13 Apr 2026, 09:08 UTC
+- Last refreshed: 13 Apr 2026, 10:56 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 18 Apr 2026, 12:00 UTC: Llama 3 released - Next exact anniversary in 5 days. (`/milestones/`)
-- 13 Apr 2026, 09:08 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 13 Apr 2026, 10:56 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 13 Apr 2026, 09:09 UTC
+- Last refreshed: 13 Apr 2026, 10:56 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -80,7 +80,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 13 Apr 2026, 09:08 UTC
+- Last refreshed: 13 Apr 2026, 10:55 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 13 Apr 2026, 09:08 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 13 Apr 2026, 09:08 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 13 Apr 2026, 10:55 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 13 Apr 2026, 10:55 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 13 Apr 2026, 09:08 UTC
+- Last refreshed: 13 Apr 2026, 10:55 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,15 +111,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 13 Apr 2026, 09:08 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 13 Apr 2026, 09:08 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 13 Apr 2026, 09:08 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 13 Apr 2026, 10:55 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 13 Apr 2026, 10:55 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 13 Apr 2026, 10:55 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 13 Apr 2026, 09:08 UTC
+- Last refreshed: 13 Apr 2026, 10:55 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -131,15 +131,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
+- 13 Apr 2026, 09:25 UTC: Sam Altman reportedly targeted in second attack - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/910890/openai-sam-altman-second-home-attack-shooting))
 - 13 Apr 2026, 07:01 UTC: The largest orbital compute cluster is open for business - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/13/the-largest-orbital-compute-cluster-is-open-for-business/))
 - 12 Apr 2026, 21:14 UTC: Trump officials may be encouraging banks to test Anthropic’s Mythos model - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/12/trump-officials-may-be-encouraging-banks-to-test-anthropics-mythos-model/))
-- 12 Apr 2026, 19:58 UTC: Apple reportedly testing four designs for upcoming smart glasses - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/12/apple-reportedly-testing-four-designs-for-upcoming-smart-glasses/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 13 Apr 2026, 09:08 UTC
+- Last refreshed: 13 Apr 2026, 10:55 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 13 Apr 2026, 09:08 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
-- 13 Apr 2026, 09:08 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
-- 13 Apr 2026, 09:08 UTC: DeepSeek - All Systems Operational ([source](https://status.deepseek.com))
+- 13 Apr 2026, 10:55 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 13 Apr 2026, 10:55 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 13 Apr 2026, 10:55 UTC: DeepSeek - All Systems Operational ([source](https://status.deepseek.com))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 13 Apr 2026, 09:08 UTC
+- Last refreshed: 13 Apr 2026, 10:55 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 13 Apr 2026, 09:08 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 13 Apr 2026, 09:08 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 13 Apr 2026, 09:08 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 13 Apr 2026, 10:55 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 13 Apr 2026, 10:55 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 13 Apr 2026, 10:55 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
