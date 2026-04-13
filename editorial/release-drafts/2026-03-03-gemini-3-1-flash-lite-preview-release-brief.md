@@ -7,7 +7,7 @@ priority: "watch"
 model: "Gemini 3.1 Flash Lite Preview"
 provider: "Google"
 release_date: "2026-03-03"
-generated_at: "2026-04-12T23:50:58.330Z"
+generated_at: "2026-04-13T03:51:32.694Z"
 ---
 
 # Gemini 3.1 Flash Lite Preview: release brief
