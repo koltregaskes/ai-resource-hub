@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:43:55.827Z",
+  "generatedAt": "2026-04-13T16:46:26.994Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,15 +12,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-13T15:43:54.146Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-04-13T16:46:25.775Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "major_outage"
+          "status": "operational"
         },
         {
           "name": "platform.claude.com (formerly console.anthropic.com)",
@@ -43,30 +43,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "6jd2m42f8mld",
-          "title": "Claude.ai down",
-          "status": "investigating",
-          "impact": "critical",
-          "startedAt": "2026-04-13T15:40:43.567Z",
-          "updatedAt": "2026-04-13T15:40:43.663Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/b0rjmf00qb07",
-          "summary": "We are currently investigating this issue."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "6jd2m42f8mld",
           "title": "Claude.ai down",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "critical",
           "startedAt": "2026-04-13T15:40:43.567Z",
-          "updatedAt": "2026-04-13T15:40:43.663Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-13T16:35:58.082Z",
+          "resolvedAt": "2026-04-13T16:35:58.062Z",
           "url": "https://stspg.io/b0rjmf00qb07",
-          "summary": "We are currently investigating this issue."
+          "summary": "We have resolved the issue resulting in elevated errors on login for Claude.ai and Claude Code betwen 15:31 to 16:19 UTC."
         },
         {
           "id": "qcfvv041lb1k",
@@ -114,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-13T15:43:54.943Z",
+      "lastCheckedAt": "2026-04-13T16:46:26.374Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-13T15:43:54.212Z",
+      "lastCheckedAt": "2026-04-13T16:46:25.907Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-13T15:43:55.697Z",
+      "lastCheckedAt": "2026-04-13T16:46:26.718Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-13T15:43:54.062Z",
+      "lastCheckedAt": "2026-04-13T16:46:25.786Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +315,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-13T15:43:54.152Z",
+      "lastCheckedAt": "2026-04-13T16:46:25.684Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 25 tracked components.",
@@ -424,7 +412,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-13T15:43:55.819Z",
+      "lastCheckedAt": "2026-04-13T16:46:26.987Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -489,7 +477,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-13T15:43:54.318Z",
+      "lastCheckedAt": "2026-04-13T16:46:26.071Z",
       "overallStatus": "unknown",
       "overallLabel": "Status page available",
       "summary": "Official provider status page reports: Status page available.",
