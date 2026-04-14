@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T11:43:14.347Z",
+  "generatedAt": "2026-04-14T14:09:49.973Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T11:43:13.196Z",
+      "lastCheckedAt": "2026-04-14T14:09:48.741Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -47,26 +47,26 @@
         {
           "id": "w3389p5qg7kp",
           "title": "Degraded service on usage and analytics admin API endpoints",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-04-14T09:24:51.920Z",
-          "updatedAt": "2026-04-14T09:24:52.008Z",
+          "updatedAt": "2026-04-14T13:20:20.494Z",
           "resolvedAt": null,
           "url": "https://stspg.io/w2qlkm4lprv5",
-          "summary": "We are investigating reports of degraded performance affecting the usage and analytics admin API endpoints. We will provide an update as soon as possible."
+          "summary": "A fix has been implemented and we are monitoring the results."
         }
       ],
       "recentIncidents": [
         {
           "id": "w3389p5qg7kp",
           "title": "Degraded service on usage and analytics admin API endpoints",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-04-14T09:24:51.920Z",
-          "updatedAt": "2026-04-14T09:24:52.008Z",
+          "updatedAt": "2026-04-14T13:20:20.494Z",
           "resolvedAt": null,
           "url": "https://stspg.io/w2qlkm4lprv5",
-          "summary": "We are investigating reports of degraded performance affecting the usage and analytics admin API endpoints. We will provide an update as soon as possible."
+          "summary": "A fix has been implemented and we are monitoring the results."
         },
         {
           "id": "6jd2m42f8mld",
@@ -104,6 +104,94 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-14T14:09:49.966Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-1-2026-04-14T13:15:45.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-14T13:15:45.000Z",
+          "updatedAt": "2026-04-14T13:15:45.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-14T13:14:09.000Z",
+          "title": "FLUX.1 [schnell] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-14T13:14:09.000Z",
+          "updatedAt": "2026-04-14T13:14:09.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 [schnell] went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-04-14T13:29:14.000Z",
+          "title": "FLUX.1 Krea [dev] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-14T13:29:14.000Z",
+          "updatedAt": "2026-04-14T13:29:14.000Z",
+          "resolvedAt": "2026-04-14T13:29:14.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-14T13:15:45.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-14T13:15:45.000Z",
+          "updatedAt": "2026-04-14T13:15:45.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-14T13:14:09.000Z",
+          "title": "FLUX.1 [schnell] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-14T13:14:09.000Z",
+          "updatedAt": "2026-04-14T13:14:09.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 [schnell] went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-14T12:29:13.000Z",
+          "title": "FLUX.1 Krea [dev] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-14T12:29:13.000Z",
+          "updatedAt": "2026-04-14T12:29:13.000Z",
+          "resolvedAt": "2026-04-14T12:29:13.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] recovered"
+        }
+      ]
+    },
+    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -114,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T11:43:13.890Z",
+      "lastCheckedAt": "2026-04-14T14:09:49.616Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +222,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T11:43:13.234Z",
+      "lastCheckedAt": "2026-04-14T14:09:48.976Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +296,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T11:43:14.095Z",
+      "lastCheckedAt": "2026-04-14T14:09:49.941Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +361,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T11:43:13.200Z",
+      "lastCheckedAt": "2026-04-14T14:09:48.863Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +415,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T11:43:13.194Z",
+      "lastCheckedAt": "2026-04-14T14:09:48.728Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -403,71 +491,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T11:43:14.340Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-04-14T04:44:01.000Z",
-          "title": "FLUX.1 Krea [dev] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-14T04:44:01.000Z",
-          "updatedAt": "2026-04-14T04:44:01.000Z",
-          "resolvedAt": "2026-04-14T04:44:01.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] recovered"
-        },
-        {
-          "id": "together-feed-1-2026-04-14T03:30:14.000Z",
-          "title": "FLUX.1 Krea [dev] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-14T03:30:14.000Z",
-          "updatedAt": "2026-04-14T03:30:14.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-14T03:29:19.000Z",
-          "title": "Qwen3 235B A22B Thinking 2507 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-14T03:29:19.000Z",
-          "updatedAt": "2026-04-14T03:29:19.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Thinking 2507 went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-14T01:36:12.000Z",
-          "title": "Qwen3 235B A22B Thinking 2507 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-14T01:36:12.000Z",
-          "updatedAt": "2026-04-14T01:36:12.000Z",
-          "resolvedAt": "2026-04-14T01:36:12.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Thinking 2507 recovered"
-        }
-      ]
-    },
-    {
       "id": "mistral",
       "providerId": "mistral",
       "name": "Mistral",
@@ -478,7 +501,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T11:43:13.606Z",
+      "lastCheckedAt": "2026-04-14T14:09:49.409Z",
       "overallStatus": "unknown",
       "overallLabel": "Status page available",
       "summary": "Official provider status page reports: Status page available.",
