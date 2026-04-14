@@ -203,6 +203,9 @@ const benchmarks = getBenchmarks();
       <p class="text-sm text-(--color-text-secondary) mb-4">
         We now separate <strong>what is current</strong> from <strong>what is heavily benchmarked</strong>. Those are related questions, but they are not the same question.
       </p>
+      <p class="text-sm text-(--color-text-secondary) mb-4">
+        Our synthetic leaderboards now use a hard evidence threshold: <strong>4+ relevant benchmark rows</strong> are required before a model can enter a numbered ranking. Models with 1 to 3 relevant rows stay visible as tracking items, and pages with thinner benchmark coverage stay in tracking mode rather than publishing a fake winner.
+      </p>
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden mb-4">
         <table class="w-full text-sm">
           <thead>
@@ -268,6 +271,12 @@ const benchmarks = getBenchmarks();
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="mt-4 rounded-xl border border-(--color-border-accent) bg-(--color-accent-glow) p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Synthetic surfaces</p>
+        <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+          We classify leaderboard-style pages into four groups: <strong>factual</strong> pages such as cheapest and fastest, <strong>synthetic evaluated</strong> pages such as the composite, coding, reasoning, best value, and open source, <strong>frontier / tracking</strong> watchlists, and <strong>unsupported</strong> pages that are still waiting for enough canonical benchmark coverage. Unsupported pages now show the watched benchmark set and tracked models instead of publishing ranked claims.
+        </p>
       </div>
     </div>
 

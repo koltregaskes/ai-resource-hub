@@ -10,6 +10,11 @@ import {
   getPublicModelsByCategory,
   getRecentModels,
 } from '../db/queries';
+import {
+  getSyntheticLeaderboardView,
+  type SyntheticEvidenceTier,
+  type SyntheticLeaderboardEntry,
+} from './synthetic-leaderboards';
 
 type PublicLLMModel = ReturnType<typeof getPublicModelsByCategory>[number];
 type BenchmarkDefinition = ReturnType<typeof getBenchmarks>[number];
@@ -86,6 +91,16 @@ export interface MetaLeaderboardEntry {
   openSource: boolean;
   apiAvailable: boolean;
   modality: string[];
+  evidenceTier: SyntheticEvidenceTier;
+  isRankEligible: boolean;
+  reasonIfNotEligible: string | null;
+  scoreLabel: string;
+}
+
+export interface MetaLeaderboardView {
+  ranked: MetaLeaderboardEntry[];
+  partial: MetaLeaderboardEntry[];
+  tracking: MetaLeaderboardEntry[];
 }
 
 export interface FrontierNowEntry {
@@ -512,105 +527,65 @@ function getFrontierEvidence(
     };
   }
 
-  if (benchmarkCount >= 2 || qualityScore > 0) {
+  if (benchmarkCount >= 1) {
     return {
-      evidenceLabel: benchmarkCount >= 2 ? `${benchmarkCount} public evals` : 'quality layer only',
+      evidenceLabel: `${benchmarkCount} public evals`,
       evidenceState: 'partial',
     };
   }
 
   return {
-    evidenceLabel: 'tracking official release',
+    evidenceLabel: qualityScore > 0 ? 'quality layer only' : 'tracking official release',
     evidenceState: 'tracking',
   };
 }
 
+function toMetaLeaderboardEntry(entry: SyntheticLeaderboardEntry, benchmarkTotal: number): MetaLeaderboardEntry {
+  const benchmarkCategories = Array.from(new Set(entry.relevantBenchmarks
+    .filter((benchmark) => benchmark.score !== null)
+    .map((benchmark) => benchmark.category)));
+
+  return {
+    id: entry.id,
+    name: entry.name,
+    provider: entry.provider,
+    providerColour: entry.providerColour,
+    status: entry.status,
+    metaScore: entry.score ?? 0,
+    benchmarkScore: entry.benchmarkScore,
+    qualityScore: entry.qualityScore,
+    freshnessScore: entry.freshness,
+    benchmarkCount: entry.relevantBenchmarkCount,
+    coverageRatio: benchmarkTotal > 0 ? Number((entry.relevantBenchmarkCount / benchmarkTotal).toFixed(3)) : 0,
+    bestFor: benchmarkCategories.length > 0 ? benchmarkCategories.map(getCategoryLabel).join(' / ') : 'Frontier tracking',
+    inputPrice: entry.inputPrice,
+    outputPrice: entry.outputPrice,
+    contextWindow: entry.contextWindow,
+    valueScore: entry.valueScore,
+    released: entry.released,
+    openSource: entry.openSource,
+    apiAvailable: entry.apiAvailable,
+    modality: entry.modality,
+    evidenceTier: entry.evidenceTier,
+    isRankEligible: entry.isRankEligible,
+    reasonIfNotEligible: entry.reasonIfNotEligible,
+    scoreLabel: entry.scoreLabel,
+  };
+}
+
+export function getMetaLeaderboardView(limit = 50): MetaLeaderboardView {
+  const syntheticView = getSyntheticLeaderboardView('evaluated-composite', limit);
+  const benchmarkTotal = syntheticView.definition.benchmarkIds.length;
+
+  return {
+    ranked: syntheticView.rankedEntries.map((entry) => toMetaLeaderboardEntry(entry, benchmarkTotal)).slice(0, limit),
+    partial: syntheticView.partialEntries.map((entry) => toMetaLeaderboardEntry(entry, benchmarkTotal)).slice(0, limit),
+    tracking: syntheticView.trackingEntries.map((entry) => toMetaLeaderboardEntry(entry, benchmarkTotal)).slice(0, limit),
+  };
+}
+
 export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
-  const models = getPublicModelsByCategory('llm');
-  const benchmarks = getBenchmarks().filter((benchmark) => toNumber(benchmark.weight) > 0);
-  const benchmarkScores = getBenchmarkScores().filter((row) => row.model_category === 'llm');
-  const benchmarkMap = new Map(benchmarks.map((benchmark) => [benchmark.id, benchmark]));
-  const totalWeight = benchmarks.reduce((sum, benchmark) => sum + toNumber(benchmark.weight), 0);
-  const scoresByModel = new Map<string, BenchmarkScoreRow[]>();
-  const latestByProvider = buildProviderLatestReleaseMap(models);
-
-  for (const score of benchmarkScores) {
-    if (!scoresByModel.has(score.model_id)) scoresByModel.set(score.model_id, []);
-    scoresByModel.get(score.model_id)?.push(score);
-  }
-
-  return models
-    .map((model): MetaLeaderboardEntry | null => {
-      const scores = (scoresByModel.get(model.id) ?? []).filter((row) => benchmarkMap.has(row.benchmark_id));
-      const categoryScores = new Map<string, { total: number; weight: number }>();
-      let weightedScoreTotal = 0;
-      let coveredWeight = 0;
-
-      for (const score of scores) {
-        const benchmark = benchmarkMap.get(score.benchmark_id);
-        if (!benchmark) continue;
-
-        const weight = toNumber(benchmark.weight);
-        const normalized = normaliseBenchmarkScore(score, benchmark);
-        weightedScoreTotal += normalized * weight;
-        coveredWeight += weight;
-
-        const current = categoryScores.get(benchmark.category) ?? { total: 0, weight: 0 };
-        current.total += normalized * weight;
-        current.weight += weight;
-        categoryScores.set(benchmark.category, current);
-      }
-
-      const benchmarkScore = coveredWeight > 0 ? weightedScoreTotal / coveredWeight : 0;
-      const coverageRatio = totalWeight > 0 ? coveredWeight / totalWeight : 0;
-      const coverageFactor = Math.min(1, coverageRatio / 0.55);
-      const qualityScore = toNumber(model.quality_score);
-      const freshnessScore = getFreshnessScore(model.released);
-
-      if (scores.length === 0 && qualityScore === 0) return null;
-
-      const baseScore = benchmarkScore * 0.5 + qualityScore * 0.25 + freshnessScore * 0.25;
-      const metaScore = baseScore
-        * (0.7 + 0.3 * coverageFactor)
-        * getEvidenceFactor(scores.length)
-        * getStatusMultiplier(model.status)
-        * getProviderAgePenalty(model, latestByProvider)
-        * getVariantPenalty(model.name);
-
-      return {
-        id: model.id,
-        name: model.name,
-        provider: model.provider_name,
-        providerColour: model.provider_colour,
-        status: model.status,
-        metaScore: Number(metaScore.toFixed(1)),
-        benchmarkScore: Number(benchmarkScore.toFixed(1)),
-        qualityScore,
-        freshnessScore,
-        benchmarkCount: scores.length,
-        coverageRatio: Number(coverageRatio.toFixed(3)),
-        bestFor: scores.length > 0 ? getBestForLabel(categoryScores) : 'Frontier tracking',
-        inputPrice: toNumber(model.input_price),
-        outputPrice: toNumber(model.output_price),
-        contextWindow: toNumber(model.context_window),
-        valueScore: (() => {
-          const blended = (toNumber(model.input_price) + 3 * toNumber(model.output_price)) / 4;
-          return blended > 0 && qualityScore > 0 ? Math.round((qualityScore / blended) * 10) : 0;
-        })(),
-        released: model.released || null,
-        openSource: Boolean(model.open_source),
-        apiAvailable: Boolean(model.api_available),
-        modality: toModalityList(model.modality),
-      };
-    })
-    .filter((model): model is MetaLeaderboardEntry => Boolean(model))
-    .sort((a, b) =>
-      b.metaScore - a.metaScore ||
-      b.freshnessScore - a.freshnessScore ||
-      b.benchmarkScore - a.benchmarkScore ||
-      b.qualityScore - a.qualityScore ||
-      a.name.localeCompare(b.name))
-    .slice(0, limit);
+  return getMetaLeaderboardView(limit).ranked.slice(0, limit);
 }
 
 export function getFrontierNow(limit = 10): FrontierNowEntry[] {

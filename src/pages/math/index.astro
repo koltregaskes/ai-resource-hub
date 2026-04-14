@@ -1,95 +1,35 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getModelsByCategory, getBenchmarkScores } from '../../db/queries';
+import UnsupportedSyntheticSurface from '../../components/leaderboards/UnsupportedSyntheticSurface.astro';
+import { getSyntheticLeaderboardView } from '../../data/synthetic-leaderboards';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const allModels = getModelsByCategory('llm');
-const scores = getBenchmarkScores();
-
-const mathBenchmarks = ['math-500', 'gsm8k', 'aime-2025'];
-const mathScoreMap = new Map<string, Record<string, number>>();
-
-for (const s of scores) {
-  if (mathBenchmarks.includes(s.benchmark_id)) {
-    if (!mathScoreMap.has(s.model_id)) mathScoreMap.set(s.model_id, {});
-    const modelBenchmarks = mathScoreMap.get(s.model_id);
-    if (!modelBenchmarks) continue;
-    modelBenchmarks[s.benchmark_id] = s.score;
-  }
-}
-
-const mathModels = allModels
-  .map((model) => {
-    const benchmarks = mathScoreMap.get(model.id) ?? {};
-    const benchCount = Object.keys(benchmarks).length;
-    const avgScore = benchCount > 0
-      ? Object.values(benchmarks).reduce((sum, score) => sum + score, 0) / benchCount
-      : model.qualityScore * 0.5;
-    return { ...model, mathScore: Math.round(avgScore), benchmarks, benchCount };
-  })
-  .sort((a, b) => b.mathScore - a.mathScore)
-  .slice(0, 40);
+const view = getSyntheticLeaderboardView('math', 12);
 ---
 
-<BaseLayout title="Best AI for Math — The AI Resource Hub" description="AI models ranked by mathematical reasoning across MATH-500, GSM8K, and AIME 2025.">
-
-  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-    <div class="mb-8">
-      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Leaderboard</p>
-      <h1 class="mt-2 text-3xl font-black font-display text-(--color-text-primary)">Best AI for Math</h1>
-      <p class="mt-3 max-w-2xl text-sm leading-7 text-(--color-text-secondary)">
-        Models ranked by mathematical reasoning performance across MATH-500, GSM8K, and AIME 2025.
-        Composite score averages available math benchmarks.
-      </p>
-    </div>
-
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead>
-          <tr class="border-b border-(--color-border) text-left">
-            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) w-10">#</th>
-            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted)">Model</th>
-            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted)">Provider</th>
-            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) text-right">Score</th>
-            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) text-right">MATH-500</th>
-            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) text-right">AIME 2025</th>
-            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) text-right">GSM8K</th>
-            <th class="py-3 pr-4 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted) text-right">Input $/M</th>
-            <th class="py-3 text-xs font-semibold uppercase tracking-wider text-(--color-text-muted)">Open Source</th>
-          </tr>
-        </thead>
-        <tbody>
-          {mathModels.map((m, i) => (
-            <tr class="border-b border-(--color-border) hover:bg-(--color-bg-tertiary) transition-colors">
-              <td class="py-3 pr-4 text-(--color-text-muted) font-mono text-xs">{i + 1}</td>
-              <td class="py-3 pr-4">
-                <a href={`${base}models/${m.id}/`} class="font-medium text-(--color-text-primary) hover:text-(--color-accent)">
-                  {m.name}
-                </a>
-              </td>
-              <td class="py-3 pr-4">
-                <span class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full" style={`background-color: ${m.providerColour}`}></span>
-                  <span class="text-(--color-text-secondary)">{m.provider}</span>
-                </span>
-              </td>
-              <td class="py-3 pr-4 text-right font-mono font-semibold text-(--color-accent)">{m.mathScore}</td>
-              <td class="py-3 pr-4 text-right font-mono text-(--color-text-secondary)">{m.benchmarks['math-500'] ?? '—'}</td>
-              <td class="py-3 pr-4 text-right font-mono text-(--color-text-secondary)">{m.benchmarks['aime-2025'] ?? '—'}</td>
-              <td class="py-3 pr-4 text-right font-mono text-(--color-text-secondary)">{m.benchmarks['gsm8k'] ?? '—'}</td>
-              <td class="py-3 pr-4 text-right font-mono text-(--color-text-secondary)">${m.inputPrice}</td>
-              <td class="py-3 text-xs text-(--color-text-muted)">{m.openSource ? '✓ Open' : 'Proprietary'}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-
-    <div class="mt-8 text-xs text-(--color-text-muted)">
-      <p>Composite score averages available math benchmarks (MATH-500, GSM8K, AIME 2025). Models without benchmark data use a quality-weighted estimate.</p>
-    </div>
-  </section>
-
+<BaseLayout
+  title="AI Math Models - The AI Resource Hub"
+  description="Math model coverage is visible here, but the page stays in tracking mode until the benchmark set is broad enough to rank honestly."
+>
+  <UnsupportedSyntheticSurface
+    base={base}
+    title="AI Math Models"
+    description="Math capability matters, but this page no longer fakes a ranked winner from two or three published rows. We track the benchmark set, the current model watchlist, and the evidence gaps openly until the canonical math coverage is deep enough to score fairly."
+    view={view}
+    benchmarkBlurbs={{
+      'math-500': 'A modern mathematical reasoning benchmark used by frontier labs in model cards and evaluations.',
+      'aime-2025': 'Competition-style math signal covering harder Olympiad-style reasoning tasks.',
+      gsm8k: 'Widely used grade-school math benchmark; still tracked here even though the current canonical registry does not yet publish rows.',
+      'aime-2024': 'Historical AIME-style benchmark slot for broader year-over-year math tracking.',
+      'omni-math': 'Tracked placeholder for future broader math-eval coverage once canonical rows are available.',
+    }}
+    relatedLinks={[
+      { href: `${base}leaderboard/`, label: 'Leaderboard desk' },
+      { href: `${base}reasoning/`, label: 'Reasoning leaderboard' },
+      { href: `${base}benchmarks/`, label: 'Benchmark index' },
+      { href: `${base}compare/head-to-head/`, label: 'Head-to-head compare' },
+    ]}
+  />
 </BaseLayout>

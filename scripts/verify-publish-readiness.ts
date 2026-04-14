@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry';
 import { getAiResourceHubNewsRoutingDiagnostics } from '../src/data/news-routing';
+import { getSyntheticLeaderboardValidationReport } from '../src/data/synthetic-leaderboards';
 
 const repoRoot = process.cwd();
 const dbPath = path.join(repoRoot, 'data', 'the-ai-resource-hub.db');
@@ -202,6 +203,12 @@ function main() {
     failures.push('News routing produced no items from mapped official or routed sources.');
   }
 
+  const syntheticValidation = getSyntheticLeaderboardValidationReport();
+
+  for (const issue of syntheticValidation.issues) {
+    failures.push(`Synthetic leaderboard validation failed for ${issue.routeId}: ${issue.message}`);
+  }
+
   db.close();
 
   console.log('Publish readiness verification');
@@ -215,6 +222,8 @@ function main() {
   console.log(`  Public export rows: ${spreadsheet?.model_count ?? 0}`);
   console.log(`  Release desk items: ${releaseDesk?.releases?.length ?? 0}`);
   console.log(`  Provider status snapshot: ${providerStatus?.generatedAt ?? 'missing'}`);
+  console.log(`  Synthetic leaderboard routes: ${syntheticValidation.routes.length}`);
+  console.log(`  Synthetic leaderboard validation issues: ${syntheticValidation.issues.length}`);
 
   if (failures.length > 0) {
     console.log('\nBLOCK: publish readiness verification failed');

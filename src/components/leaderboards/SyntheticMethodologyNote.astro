@@ -1,0 +1,16 @@
+---
+interface Props {
+  title?: string;
+  body?: string;
+}
+
+const {
+  title = 'Synthetic ranking',
+  body = 'Requires 4+ relevant benchmark rows to rank. Models with thinner evidence are shown separately.',
+} = Astro.props;
+---
+
+<div class="rounded-xl border border-(--color-border-accent) bg-(--color-accent-glow) p-4 sm:p-5">
+  <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">{title}</p>
+  <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">{body}</p>
+</div>

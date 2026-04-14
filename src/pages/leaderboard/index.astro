@@ -1,41 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { modelReleaseDesk } from '../../data/model-release-desk.generated';
-import { getFrontierNow, getMetaLeaderboard } from '../../data/hub-dashboard';
+import SyntheticMethodologyNote from '../../components/leaderboards/SyntheticMethodologyNote.astro';
+import { getModelsByCategory } from '../../db/queries';
+import { getFrontierNow } from '../../data/hub-dashboard';
+import { getSyntheticLeaderboardView } from '../../data/synthetic-leaderboards';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 const frontierNow = getFrontierNow(18);
-const rankedModels = getMetaLeaderboard(250);
-const topMeta = rankedModels.slice(0, 24);
-const topValue = [...rankedModels]
-  .filter((model) => model.inputPrice > 0 && model.outputPrice > 0)
-  .sort((a, b) => b.valueScore - a.valueScore)
-  .slice(0, 24);
-const topCheapest = [...rankedModels]
+const evaluatedView = getSyntheticLeaderboardView('evaluated-composite', 250);
+const rankedModels = evaluatedView.rankedEntries;
+const trackingModels = [...evaluatedView.partialEntries, ...evaluatedView.trackingEntries].slice(0, 18);
+const valueView = getSyntheticLeaderboardView('best-value', 24);
+const topValue = valueView.rankedEntries.slice(0, 8);
+const cheapest = getModelsByCategory('llm')
   .filter((model) => model.inputPrice > 0)
   .sort((a, b) => a.inputPrice - b.inputPrice || a.outputPrice - b.outputPrice)
-  .slice(0, 24);
-const providerOptions = Array.from(new Set(rankedModels.map((model) => model.provider))).sort((a, b) => a.localeCompare(b));
-const useCaseOptions = Array.from(new Set(rankedModels.map((model) => model.bestFor))).sort((a, b) => a.localeCompare(b));
-const latestTrackedRelease = modelReleaseDesk.releases.find((release) => release.draftStatus === 'ready_for_editor')
-  ?? modelReleaseDesk.releases.find((release) => release.priority === 'high')
-  ?? modelReleaseDesk.releases[0]
-  ?? null;
-
-function formatCoverage(ratio: number): string {
-  return `${Math.round(ratio * 100)}%`;
-}
+  .slice(0, 8);
 
 function formatContextWindow(tokens: number): string {
   if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(1)}M`;
   return `${Math.round(tokens / 1_000)}K`;
-}
-
-function formatPricePair(inputPrice: number, outputPrice: number, openSource: boolean): string {
-  if (inputPrice === 0 && outputPrice === 0) return openSource ? 'Open / free' : 'Included';
-  return `$${inputPrice.toFixed(2)} / $${outputPrice.toFixed(2)}`;
 }
 
 function formatReleaseDate(value: string | null): string {
@@ -46,12 +32,14 @@ function formatReleaseDate(value: string | null): string {
     year: 'numeric',
   });
 }
+
+function formatPricePair(inputPrice: number, outputPrice: number, openSource: boolean): string {
+  if (inputPrice === 0 && outputPrice === 0) return openSource ? 'Open / free' : 'Included';
+  return `$${inputPrice.toFixed(2)} / $${outputPrice.toFixed(2)}`;
+}
 ---
 
-<BaseLayout
-  title="AI Leaderboard Desk - The AI Resource Hub"
-  description="Current frontier watchlist plus the benchmark-backed evaluated composite for AI models."
->
+<BaseLayout title="AI Leaderboard Desk - The AI Resource Hub" description="Frontier watchlist, evaluated synthetic rankings, and explicit tracking states for AI models.">
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
       <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
@@ -62,443 +50,79 @@ function formatReleaseDate(value: string | null): string {
     <div class="mb-8">
       <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Ranking desk</p>
       <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">AI Leaderboard Desk</h1>
-      <p class="text-(--color-text-secondary) max-w-3xl mt-3 leading-7">
-        This page now separates two different questions. <strong>Frontier now</strong> answers what is current across the major labs.
-        <strong>Evaluated composite</strong> answers which models are currently strongest inside the benchmark-backed scored set.
-      </p>
-
-      {latestTrackedRelease ? (
-        <div class="mt-5 rounded-2xl border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Important</p>
-          <p class="mt-2 max-w-4xl text-sm leading-6 text-(--color-text-secondary)">
-            The old “composite leaderboard” confusion came from treating one scored table as the answer to everything. The frontier lane keeps newer launches visible immediately, while the evaluated composite only ranks models once there is enough public evidence to score them with some confidence.
-          </p>
-        </div>
-      ) : null}
+      <p class="text-(--color-text-secondary) max-w-3xl mt-3 leading-7">This page now separates three different states clearly: the current frontier watchlist, the benchmark-backed evaluated composite, and the models that are still being tracked because the evidence is too thin to rank honestly.</p>
     </div>
 
-    <div class="flex flex-wrap gap-2 mb-6 border-b border-(--color-border) pb-2">
-      <button class="leaderboard-tab active px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="frontier">
-        Frontier now
-      </button>
-      <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="meta">
-        Evaluated composite
-      </button>
-      <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="value">
-        Best value
-      </button>
-      <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="cheapest">
-        Cheapest
-      </button>
+    <div class="grid gap-3 sm:grid-cols-3 mb-8">
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)"><p class="text-2xl font-bold text-(--color-accent)">{frontierNow.length}</p><p class="text-xs text-(--color-text-muted)">Frontier watchlist</p></div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)"><p class="text-2xl font-bold text-(--color-text-primary)">{rankedModels.length}</p><p class="text-xs text-(--color-text-muted)">Evaluated models</p></div>
+      <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)"><p class="text-2xl font-bold text-(--color-text-primary)">{trackingModels.length}</p><p class="text-xs text-(--color-text-muted)">Tracking / insufficient evidence</p></div>
     </div>
 
-    <div class="leaderboard-panel" id="panel-frontier">
-      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-(--color-border)">
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">State</th>
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Evidence</th>
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Released</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {frontierNow.map((model) => (
-              <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
-                <td class="py-3 px-4">
-                  <a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span>
-                    <span class="font-medium">{model.name}</span>
-                  </a>
-                  <span class="text-[10px] text-(--color-text-muted)">
-                    {model.provider} / {formatContextWindow(model.contextWindow)} context
-                  </span>
-                </td>
-                <td class="py-3 px-4">
-                  <div class="flex flex-wrap gap-1">
-                    <span class={`hub-home-badge hub-home-badge-${model.evidenceState}`}>{model.evidenceState}</span>
-                    <span class="hub-home-badge">{model.status}</span>
-                    {model.openSource ? <span class="hub-home-badge">Open</span> : null}
-                  </div>
-                </td>
-                <td class="py-3 px-4 text-(--color-text-secondary) hidden sm:table-cell">
-                  <div>{model.evidenceLabel}</div>
-                  <div class="text-[10px] text-(--color-text-muted) mt-1">
-                    {model.qualityScore > 0 ? `${model.qualityScore.toFixed(0)} quality score` : 'Awaiting quality score'}
-                  </div>
-                </td>
-                <td class="py-3 px-4 text-(--color-text-muted) hidden md:table-cell">
-                  {formatReleaseDate(model.released)}
-                </td>
-                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
-                  {formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <p class="mt-6 text-sm text-(--color-text-secondary) max-w-3xl">
-        The frontier lane is intentionally not a synthetic score. It keeps the current flagship and launch watchlist visible
-        even when benchmark coverage is still catching up.
-      </p>
-    </div>
-
-    <div class="leaderboard-panel hidden" id="panel-meta">
-      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-(--color-border)">
-              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Composite</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Bench</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Coverage</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {topMeta.map((model, index) => (
-              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${index < 3 ? 'bg-(--color-accent)/5' : ''}`}>
-                <td class="py-3 px-2 text-center">
-                  <span class={`text-sm font-bold ${index === 0 ? 'text-amber-400' : index === 1 ? 'text-gray-400' : index === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
-                    {index + 1}
-                  </span>
-                </td>
-                <td class="py-3 px-4">
-                  <a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span>
-                    <span class="font-medium">{model.name}</span>
-                  </a>
-                  <span class="text-[10px] text-(--color-text-muted)">
-                    {model.provider} / {model.bestFor} / {formatContextWindow(model.contextWindow)} context
-                  </span>
-                </td>
-                <td class="py-3 px-4 text-right">
-                  <span class="font-mono font-medium text-(--color-accent)">{model.metaScore.toFixed(1)}</span>
-                </td>
-                <td class="py-3 px-4 text-right hidden sm:table-cell">
-                  <span class="text-xs text-(--color-text-muted)">{model.benchmarkScore.toFixed(1)} / {model.benchmarkCount}</span>
-                </td>
-                <td class="py-3 px-4 text-right hidden md:table-cell">
-                  <span class="text-xs text-(--color-text-muted)">{formatCoverage(model.coverageRatio)}</span>
-                </td>
-                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
-                  {formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="leaderboard-panel hidden" id="panel-value">
-      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-(--color-border)">
-              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Value</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Composite</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {topValue.map((model, index) => (
-              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${index < 3 ? 'bg-(--color-accent)/5' : ''}`}>
-                <td class="py-3 px-2 text-center">
-                  <span class={`text-sm font-bold ${index === 0 ? 'text-amber-400' : index === 1 ? 'text-gray-400' : index === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
-                    {index + 1}
-                  </span>
-                </td>
-                <td class="py-3 px-4">
-                  <a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span>
-                    <span class="font-medium">{model.name}</span>
-                  </a>
-                  <span class="text-[10px] text-(--color-text-muted)">{model.provider}</span>
-                </td>
-                <td class="py-3 px-4 text-right">
-                  <span class="font-mono font-medium text-green-400">{model.valueScore.toFixed(1)}</span>
-                </td>
-                <td class="py-3 px-4 text-right hidden sm:table-cell">
-                  <span class="font-mono text-xs text-(--color-text-secondary)">{model.metaScore.toFixed(1)}</span>
-                </td>
-                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
-                  ${model.inputPrice.toFixed(2)} / ${model.outputPrice.toFixed(2)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="leaderboard-panel hidden" id="panel-cheapest">
-      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-(--color-border)">
-              <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Input</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Output</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Composite</th>
-            </tr>
-          </thead>
-          <tbody>
-            {topCheapest.map((model, index) => (
-              <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${index < 3 ? 'bg-(--color-accent)/5' : ''}`}>
-                <td class="py-3 px-2 text-center">
-                  <span class={`text-sm font-bold ${index === 0 ? 'text-amber-400' : index === 1 ? 'text-gray-400' : index === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
-                    {index + 1}
-                  </span>
-                </td>
-                <td class="py-3 px-4">
-                  <a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span>
-                    <span class="font-medium">{model.name}</span>
-                  </a>
-                  <span class="text-[10px] text-(--color-text-muted)">{model.provider}</span>
-                </td>
-                <td class="py-3 px-4 text-right font-mono text-sm font-medium text-green-400">
-                  ${model.inputPrice.toFixed(3)}
-                </td>
-                <td class="py-3 px-4 text-right font-mono text-sm text-(--color-text-secondary)">
-                  ${model.outputPrice.toFixed(3)}
-                </td>
-                <td class="py-3 px-4 text-right hidden sm:table-cell">
-                  <span class="font-mono text-xs text-(--color-text-muted)">{model.metaScore.toFixed(1)}</span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <p class="mt-6 text-sm text-(--color-text-secondary) max-w-3xl">
-      Evaluated composite now uses a weighted blend of normalized benchmark results, the existing quality layer, and a freshness signal.
-      It also penalizes thin evidence, stale provider generations, and beta or compact variants so older benchmark saturation does not dominate the story.
-    </p>
-
-    <div class="mt-10 rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 sm:p-6">
-      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+    <section class="mb-12">
+      <div class="flex items-end justify-between gap-4 mb-4">
         <div>
-          <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Explore the field</p>
-          <h2 class="mt-2 text-2xl font-bold text-(--color-text-primary)">Search and filter the full ranked dataset</h2>
-          <p class="mt-2 max-w-3xl text-sm leading-6 text-(--color-text-secondary)">
-            The top tables are quick reads. This table is for actual decision-making when you want a specific lab, use case, release window, or pricing posture.
-          </p>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Frontier now</p>
+          <h2 class="text-2xl font-bold text-(--color-text-primary)">Current flagship and launch watchlist</h2>
         </div>
-        <button
-          type="button"
-          id="leaderboard-reset"
-          class="inline-flex rounded-full border border-(--color-border-strong) px-4 py-2 text-xs uppercase tracking-[0.16em] text-(--color-text-secondary) transition-colors hover:border-(--color-accent) hover:text-(--color-text-primary)"
-        >
-          Reset filters
-        </button>
+        <p class="text-sm text-(--color-text-secondary) max-w-xl">Not a synthetic score. This lane keeps the current major models visible even before benchmark coverage catches up.</p>
       </div>
 
-      <div class="mt-5 grid gap-3 lg:grid-cols-5">
-        <input
-          id="leaderboard-search"
-          type="search"
-          placeholder="Search model or provider..."
-          class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-accent)"
-        />
-        <select id="leaderboard-provider" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
-          <option value="">All labs</option>
-          {providerOptions.map((provider) => (
-            <option value={provider}>{provider}</option>
-          ))}
-        </select>
-        <select id="leaderboard-use-case" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
-          <option value="">All use cases</option>
-          {useCaseOptions.map((useCase) => (
-            <option value={useCase}>{useCase}</option>
-          ))}
-        </select>
-        <select id="leaderboard-signal" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
-          <option value="">All signals</option>
-          <option value="open">Open source only</option>
-          <option value="api">API available</option>
-          <option value="high-coverage">High coverage (60%+)</option>
-          <option value="recent">Released in the last 180 days</option>
-        </select>
-        <select id="leaderboard-sort" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
-          <option value="meta">Composite rank</option>
-          <option value="value">Best value</option>
-          <option value="cheap">Cheapest input</option>
-          <option value="coverage">Highest coverage</option>
-          <option value="recent">Newest release</option>
-        </select>
-      </div>
-
-      <div class="mt-6 overflow-x-auto">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
         <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-(--color-border)">
-              <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Model</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Composite</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Coverage</th>
-              <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Best for</th>
-              <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium hidden md:table-cell">Released</th>
-              <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Price</th>
-            </tr>
-          </thead>
-          <tbody id="leaderboard-explorer-body">
-            {rankedModels.map((model) => (
-              <tr
-                class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors"
-                data-leaderboard-row
-                data-filter={`${model.name} ${model.provider} ${model.bestFor} ${model.modality.join(' ')}`.toLowerCase()}
-                data-provider={model.provider}
-                data-use-case={model.bestFor}
-                data-open={model.openSource ? 'true' : 'false'}
-                data-api={model.apiAvailable ? 'true' : 'false'}
-                data-coverage={model.coverageRatio}
-                data-meta={model.metaScore}
-                data-value={model.valueScore}
-                data-input={model.inputPrice}
-                data-release={model.released ?? ''}
-              >
-                <td class="py-3 px-3">
-                  <a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span>
-                    <span class="font-medium">{model.name}</span>
-                  </a>
-                  <p class="text-[10px] text-(--color-text-muted) mt-1">
-                    {model.provider} / {formatContextWindow(model.contextWindow)} context
-                  </p>
-                </td>
-                <td class="py-3 px-3 text-right">
-                  <span class="font-mono font-medium text-(--color-accent)">{model.metaScore.toFixed(1)}</span>
-                </td>
-                <td class="py-3 px-3 text-right">
-                  <span class="text-xs text-(--color-text-secondary)">{formatCoverage(model.coverageRatio)}</span>
-                </td>
-                <td class="py-3 px-3 text-(--color-text-secondary)">
-                  <div>{model.bestFor}</div>
-                  <div class="flex flex-wrap gap-1 mt-1">
-                    {model.openSource ? <span class="badge badge-oss">Open</span> : null}
-                    {model.apiAvailable ? <span class="badge">API</span> : null}
-                  </div>
-                </td>
-                <td class="py-3 px-3 text-(--color-text-muted) hidden md:table-cell">
-                  {formatReleaseDate(model.released)}
-                </td>
-                <td class="py-3 px-3 text-right font-mono text-xs text-(--color-text-secondary)">
-                  {formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
+          <thead><tr class="border-b border-(--color-border)"><th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th><th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">State</th><th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Released</th><th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th></tr></thead>
+          <tbody>{frontierNow.map((model) => <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors"><td class="py-3 px-4"><a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors"><span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span><span class="font-medium">{model.name}</span></a><p class="text-[10px] text-(--color-text-muted)">{model.provider} / {formatContextWindow(model.contextWindow)} context</p></td><td class="py-3 px-4 text-(--color-text-secondary)"><p class="text-xs uppercase tracking-[0.16em] text-(--color-accent)">{model.evidenceState}</p><p class="mt-1 text-xs text-(--color-text-muted)">{model.evidenceLabel}</p></td><td class="py-3 px-4 text-(--color-text-muted) hidden md:table-cell">{formatReleaseDate(model.released)}</td><td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">{formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}</td></tr>)}</tbody>
         </table>
       </div>
+    </section>
 
-      <div id="leaderboard-empty" class="hidden mt-4 rounded-xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-5 text-center text-sm text-(--color-text-secondary)">
-        No models match the current filters. Reset them and widen the search.
+    <section class="mb-12">
+      <div class="flex items-end justify-between gap-4 mb-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Evaluated composite</p>
+          <h2 class="text-2xl font-bold text-(--color-text-primary)">Best-evidenced current synthetic ranking</h2>
+        </div>
+        <p class="text-sm text-(--color-text-secondary) max-w-xl">This is the scored view. Models need at least four relevant benchmark rows to rank, and freshness still matters.</p>
       </div>
-    </div>
+
+      <SyntheticMethodologyNote body="Synthetic ranking. Requires 4+ relevant benchmark rows to rank. Models with thinner evidence are shown separately instead of being folded into the numbered table." />
+
+      <div class="mt-4 rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead><tr class="border-b border-(--color-border)"><th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th><th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th><th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Composite</th><th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Bench</th><th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Evidence</th><th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th></tr></thead>
+          <tbody>{rankedModels.slice(0, 24).map((model, index) => <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${index < 3 ? 'bg-(--color-accent)/5' : ''}`}><td class="py-3 px-2 text-center text-sm font-bold text-(--color-text-muted)">{index + 1}</td><td class="py-3 px-4"><a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors"><span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span><span class="font-medium">{model.name}</span></a><p class="text-[10px] text-(--color-text-muted)">{model.provider} / {model.relevantBenchmarkCount} relevant rows / {formatContextWindow(model.contextWindow)} context</p></td><td class="py-3 px-4 text-right font-mono font-medium text-(--color-accent)">{model.score?.toFixed(1)}</td><td class="py-3 px-4 text-right hidden sm:table-cell font-mono text-xs text-(--color-text-secondary)">{model.benchmarkScore.toFixed(1)}</td><td class="py-3 px-4 text-right hidden md:table-cell text-xs text-(--color-text-muted)">{model.relevantBenchmarkCount} rows</td><td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">{formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}</td></tr>)}</tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <div class="flex items-end justify-between gap-4 mb-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Tracking / insufficient evidence</p>
+          <h2 class="text-2xl font-bold text-(--color-text-primary)">Visible, but not yet rankable</h2>
+        </div>
+        <p class="text-sm text-(--color-text-secondary) max-w-xl">These models are tracked in public because they matter, but they do not enter the numbered table until the evidence threshold is met.</p>
+      </div>
+
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead><tr class="border-b border-(--color-border)"><th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th><th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Evidence</th><th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Freshness</th></tr></thead>
+          <tbody>{trackingModels.map((model) => <tr class="border-b border-(--color-border)/50"><td class="py-3 px-4"><a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors"><span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span><span class="font-medium">{model.name}</span></a><p class="text-[10px] text-(--color-text-muted)">{model.provider}</p></td><td class="py-3 px-4 text-(--color-text-secondary)"><p class="text-xs uppercase tracking-[0.16em] text-(--color-accent)">{model.evidenceTier}</p><p class="mt-1 text-xs text-(--color-text-muted)">{model.reasonIfNotEligible}</p></td><td class="py-3 px-4 text-right hidden md:table-cell font-mono text-xs text-(--color-text-secondary)">{model.freshness.toFixed(0)}</td></tr>)}</tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-2">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Best value snapshot</p>
+        <div class="mt-4 space-y-3">{topValue.map((model, index) => <a href={`${base}models/${model.id}/`} class="flex items-center justify-between gap-3 text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors"><span>{index + 1}. {model.name}</span><span class="font-mono text-xs text-(--color-text-secondary)">{model.score?.toFixed(1)}</span></a>)}</div>
+        <a href={`${base}best-value/`} class="inline-flex mt-4 text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Open value ranking &rarr;</a>
+      </div>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Cheapest factual view</p>
+        <div class="mt-4 space-y-3">{cheapest.map((model, index) => <a href={`${base}models/${model.id}/`} class="flex items-center justify-between gap-3 text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors"><span>{index + 1}. {model.name}</span><span class="font-mono text-xs text-(--color-text-secondary)">$${model.inputPrice.toFixed(2)}</span></a>)}</div>
+        <a href={`${base}cheapest/`} class="inline-flex mt-4 text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">Open cheapest models &rarr;</a>
+      </div>
+    </section>
   </section>
-
-  <script is:inline>
-    (() => {
-      const tabs = document.querySelectorAll('.leaderboard-tab');
-      const panels = document.querySelectorAll('.leaderboard-panel');
-      const searchInput = document.getElementById('leaderboard-search');
-      const providerInput = document.getElementById('leaderboard-provider');
-      const useCaseInput = document.getElementById('leaderboard-use-case');
-      const signalInput = document.getElementById('leaderboard-signal');
-      const sortInput = document.getElementById('leaderboard-sort');
-      const resetButton = document.getElementById('leaderboard-reset');
-      const explorerBody = document.getElementById('leaderboard-explorer-body');
-      const explorerRows = Array.from(document.querySelectorAll('[data-leaderboard-row]'));
-      const emptyState = document.getElementById('leaderboard-empty');
-
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          const target = tab.getAttribute('data-tab');
-
-          tabs.forEach((node) => node.classList.remove('active', 'bg-(--color-accent)/20', 'text-(--color-accent)'));
-          tab.classList.add('active', 'bg-(--color-accent)/20', 'text-(--color-accent)');
-
-          panels.forEach((panel) => panel.classList.add('hidden'));
-          document.getElementById(`panel-${target}`)?.classList.remove('hidden');
-        });
-      });
-
-      tabs[0]?.classList.add('bg-(--color-accent)/20', 'text-(--color-accent)');
-
-      const applyExplorerFilters = () => {
-        const query = (searchInput instanceof HTMLInputElement ? searchInput.value : '').toLowerCase().trim();
-        const provider = providerInput instanceof HTMLSelectElement ? providerInput.value : '';
-        const useCase = useCaseInput instanceof HTMLSelectElement ? useCaseInput.value : '';
-        const signal = signalInput instanceof HTMLSelectElement ? signalInput.value : '';
-        const sort = sortInput instanceof HTMLSelectElement ? sortInput.value : 'meta';
-        const recentCutoff = new Date();
-        recentCutoff.setDate(recentCutoff.getDate() - 180);
-
-        for (const row of explorerRows) {
-          const haystack = row.getAttribute('data-filter') || '';
-          const matchesQuery = !query || haystack.includes(query);
-          const matchesProvider = !provider || row.getAttribute('data-provider') === provider;
-          const matchesUseCase = !useCase || row.getAttribute('data-use-case') === useCase;
-
-          let matchesSignal = true;
-          if (signal === 'open') matchesSignal = row.getAttribute('data-open') === 'true';
-          if (signal === 'api') matchesSignal = row.getAttribute('data-api') === 'true';
-          if (signal === 'high-coverage') matchesSignal = Number(row.getAttribute('data-coverage') || 0) >= 0.6;
-          if (signal === 'recent') {
-            const released = row.getAttribute('data-release') || '';
-            matchesSignal = Boolean(released) && Date.parse(released) >= recentCutoff.getTime();
-          }
-
-          row.classList.toggle('hidden', !(matchesQuery && matchesProvider && matchesUseCase && matchesSignal));
-        }
-
-        const visibleRows = explorerRows.filter((row) => !row.classList.contains('hidden'));
-        const sortedRows = [...visibleRows].sort((a, b) => {
-          if (sort === 'value') {
-            return Number(b.getAttribute('data-value') || 0) - Number(a.getAttribute('data-value') || 0);
-          }
-          if (sort === 'cheap') {
-            return Number(a.getAttribute('data-input') || 0) - Number(b.getAttribute('data-input') || 0);
-          }
-          if (sort === 'coverage') {
-            return Number(b.getAttribute('data-coverage') || 0) - Number(a.getAttribute('data-coverage') || 0);
-          }
-          if (sort === 'recent') {
-            return Date.parse(b.getAttribute('data-release') || '') - Date.parse(a.getAttribute('data-release') || '');
-          }
-          return Number(b.getAttribute('data-meta') || 0) - Number(a.getAttribute('data-meta') || 0);
-        });
-
-        sortedRows.forEach((row) => explorerBody?.appendChild(row));
-        emptyState?.classList.toggle('hidden', visibleRows.length > 0);
-      };
-
-      searchInput?.addEventListener('input', applyExplorerFilters);
-      providerInput?.addEventListener('change', applyExplorerFilters);
-      useCaseInput?.addEventListener('change', applyExplorerFilters);
-      signalInput?.addEventListener('change', applyExplorerFilters);
-      sortInput?.addEventListener('change', applyExplorerFilters);
-      resetButton?.addEventListener('click', () => {
-        if (searchInput instanceof HTMLInputElement) searchInput.value = '';
-        if (providerInput instanceof HTMLSelectElement) providerInput.value = '';
-        if (useCaseInput instanceof HTMLSelectElement) useCaseInput.value = '';
-        if (signalInput instanceof HTMLSelectElement) signalInput.value = '';
-        if (sortInput instanceof HTMLSelectElement) sortInput.value = 'meta';
-        applyExplorerFilters();
-      });
-
-      applyExplorerFilters();
-    })();
-  </script>
 </BaseLayout>

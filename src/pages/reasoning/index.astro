@@ -1,65 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getModelsByCategory, getModelBenchmarks, getBenchmarks } from '../../db/queries';
+import SyntheticMethodologyNote from '../../components/leaderboards/SyntheticMethodologyNote.astro';
+import { getSyntheticLeaderboardView } from '../../data/synthetic-leaderboards';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
-
-const models = getModelsByCategory('llm');
-const allBenchmarks = getBenchmarks();
-
-// Reasoning-related benchmarks
-const reasoningBenchmarkIds = allBenchmarks
-  .filter(b => b.category === 'reasoning' || b.category === 'math' || b.id === 'gpqa-diamond' || b.id === 'math-500' || b.id === 'aime-2025')
-  .map(b => b.id);
-
-const reasoningBenchmarks = allBenchmarks.filter(b => reasoningBenchmarkIds.includes(b.id));
-
-// Models that are known reasoning models (by name/notes pattern)
-const reasoningKeywords = ['o1', 'o3', 'o4', 'think', 'reason', 'deep'];
-const isReasoningModel = (m: typeof models[0]) => {
-  const nameLC = m.name.toLowerCase();
-  const notesLC = (m.notes || '').toLowerCase();
-  return reasoningKeywords.some(k => nameLC.includes(k) || notesLC.includes(k));
-};
-
-// Get reasoning benchmark scores for all models
-const modelReasoningScores = models.map(m => {
-  const benchmarks = getModelBenchmarks(m.id);
-  const reasoningScores = benchmarks.filter(b => reasoningBenchmarkIds.includes(b.benchmark_id));
-  const avgScore = reasoningScores.length > 0
-    ? reasoningScores.reduce((sum, b) => sum + b.score, 0) / reasoningScores.length
-    : 0;
-  return {
-    ...m,
-    isReasoning: isReasoningModel(m),
-    reasoningScores,
-    reasoningAvg: avgScore,
-    reasoningCount: reasoningScores.length,
-  };
-});
-
-// Models with reasoning scores, sorted
-const rankedModels = modelReasoningScores
-  .filter(m => m.reasoningCount > 0)
-  .sort((a, b) => b.reasoningAvg - a.reasoningAvg);
-
-// Pure reasoning models (by name)
-const pureReasoningModels = modelReasoningScores
-  .filter(m => m.isReasoning)
-  .sort((a, b) => b.qualityScore - a.qualityScore);
-
-function formatTokens(n: number): string {
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
-  if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
-  return n.toString();
-}
+const view = getSyntheticLeaderboardView('reasoning', 250);
+const ranked = view.rankedEntries;
+const tracking = [...view.partialEntries, ...view.trackingEntries].slice(0, 12);
+const benchmarkNames = Object.fromEntries(view.benchmarkRegistry.map((benchmark) => [benchmark.id, benchmark.name]));
+const dedicatedReasoning = ranked.filter((model) => /o\d|reason|think|deepseek r1/i.test(model.name) || /reason/i.test(model.notes ?? '')).slice(0, 6);
 ---
 
-<BaseLayout
-  title="AI Reasoning Models — The AI Resource Hub"
-  description="Compare AI reasoning models — o3, o4-mini, DeepSeek R1, and more. Ranked by math, logic, and reasoning benchmark performance."
->
+<BaseLayout title="AI Reasoning Models - The AI Resource Hub" description="Benchmark-backed reasoning leaderboard with explicit evidence thresholds.">
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
       <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
@@ -70,142 +23,21 @@ function formatTokens(n: number): string {
     </nav>
 
     <div class="mb-8">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
-        AI Reasoning Models
-      </h1>
-      <p class="text-(--color-text-secondary) max-w-2xl">
-        Models ranked by reasoning, math, and logic benchmark performance. Reasoning models use extended "thinking" to solve complex multi-step problems.
-      </p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">AI Reasoning Models</h1>
+      <p class="text-(--color-text-secondary) max-w-3xl">This page now ranks reasoning models only when they have enough reasoning-specific benchmark evidence. Thin or missing reasoning coverage stays visible, but unranked.</p>
     </div>
 
-    <!-- Known reasoning models -->
-    {pureReasoningModels.length > 0 && (
-      <div class="mb-10">
-        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Dedicated Reasoning Models</h2>
-        <p class="text-xs text-(--color-text-muted) mb-3">Models specifically designed for extended reasoning and chain-of-thought problem solving.</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {pureReasoningModels.map((m, i) => (
-            <a href={`${base}models/${m.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
-              <div class="flex items-center gap-2 mb-2">
-                <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
-                  #{i + 1}
-                </span>
-                <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
-                <h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm truncate">{m.name}</h3>
-              </div>
-              <p class="text-xs text-(--color-text-muted) mb-2">{m.provider}</p>
-              <div class="flex items-center justify-between mb-2">
-                <span class="font-mono text-sm text-(--color-accent)">{m.qualityScore.toFixed(1)}/100</span>
-                <span class="font-mono text-xs text-(--color-text-secondary)">
-                  {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}
-                </span>
-              </div>
-              {m.reasoningAvg > 0 && (
-                <div class="text-xs text-(--color-text-muted)">
-                  Reasoning avg: <span class="font-mono text-(--color-text-secondary)">{m.reasoningAvg.toFixed(1)}</span>
-                </div>
-              )}
-              {m.notes && (
-                <p class="text-[10px] text-(--color-text-muted) mt-2 line-clamp-2">{m.notes}</p>
-              )}
-            </a>
-          ))}
-        </div>
-      </div>
-    )}
+    <SyntheticMethodologyNote body="Synthetic ranking. Requires 4+ relevant reasoning benchmark rows to rank. Models with fewer rows stay in tracking rather than inheriting a generic reasoning crown." />
 
-    <!-- Reasoning benchmark rankings -->
-    {rankedModels.length > 0 && (
-      <div class="mb-10">
-        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Reasoning Benchmark Rankings</h2>
-        <p class="text-xs text-(--color-text-muted) mb-3">All models ranked by average score across reasoning/math benchmarks ({reasoningBenchmarks.map(b => b.name).join(', ')}).</p>
-        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="border-b border-(--color-border)">
-                <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
-                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
-                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Reasoning Avg</th>
-                {reasoningBenchmarks.slice(0, 3).map(b => (
-                  <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden lg:table-cell">{b.name}</th>
-                ))}
-                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Quality</th>
-                <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rankedModels.map((m, i) => (
-                <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${i < 3 ? 'bg-(--color-accent)/5' : ''}`}>
-                  <td class="py-3 px-2 text-center">
-                    <span class={`text-sm font-bold ${i === 0 ? 'text-amber-400' : i === 1 ? 'text-gray-400' : i === 2 ? 'text-amber-600' : 'text-(--color-text-muted)'}`}>
-                      {i + 1}
-                    </span>
-                  </td>
-                  <td class="py-3 px-4">
-                    <a href={`${base}models/${m.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                      <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.providerColour}`}></span>
-                      <span class="font-medium">{m.name}</span>
-                      {m.isReasoning && <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-400">Reasoning</span>}
-                      {m.openSource && <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400">OSS</span>}
-                    </a>
-                    <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
-                  </td>
-                  <td class="py-3 px-4 text-right">
-                    <span class={`font-mono font-bold ${m.reasoningAvg >= 85 ? 'text-green-400' : m.reasoningAvg >= 70 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'}`}>
-                      {m.reasoningAvg.toFixed(1)}
-                    </span>
-                  </td>
-                  {reasoningBenchmarks.slice(0, 3).map(b => {
-                    const score = m.reasoningScores.find(s => s.benchmark_id === b.id);
-                    return (
-                      <td class="py-3 px-4 text-right hidden lg:table-cell">
-                        <span class="font-mono text-xs text-(--color-text-secondary)">
-                          {score ? score.score.toFixed(1) : '—'}
-                        </span>
-                      </td>
-                    );
-                  })}
-                  <td class="py-3 px-4 text-right hidden sm:table-cell">
-                    <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
-                  </td>
-                  <td class="py-3 px-4 text-right hidden md:table-cell font-mono text-xs text-(--color-text-secondary)">
-                    {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    )}
+    {dedicatedReasoning.length > 0 && <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 my-8">{dedicatedReasoning.map((model) => <a href={`${base}models/${model.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group"><div class="flex items-center gap-2 mb-2"><span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span><h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{model.name}</h3></div><p class="text-xs text-(--color-text-muted)">{model.provider}</p><p class="mt-2 text-sm text-(--color-accent)">{model.score?.toFixed(1)} reasoning score</p></a>)}</div>}
 
-    <!-- What are reasoning models? -->
-    <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-8">
-      <h2 class="text-lg font-semibold text-(--color-text-primary) mb-2">What are reasoning models?</h2>
-      <p class="text-sm text-(--color-text-secondary) leading-relaxed mb-3">
-        Reasoning models (like OpenAI's o-series and DeepSeek R1) use extended "chain-of-thought" processing to work through complex problems step by step. They're particularly strong at:
-      </p>
-      <ul class="text-sm text-(--color-text-secondary) space-y-1 list-disc list-inside">
-        <li><strong class="text-(--color-text-primary)">Mathematics:</strong> Competition-level math problems (AIME, MATH-500)</li>
-        <li><strong class="text-(--color-text-primary)">Science:</strong> Graduate-level science questions (GPQA Diamond)</li>
-        <li><strong class="text-(--color-text-primary)">Coding:</strong> Complex software engineering tasks (SWE-Bench)</li>
-        <li><strong class="text-(--color-text-primary)">Logic:</strong> Multi-step logical deduction and constraint satisfaction</li>
-      </ul>
-      <p class="text-sm text-(--color-text-secondary) leading-relaxed mt-3">
-        The trade-off is higher latency and cost — reasoning models "think" before responding, which takes longer but produces more accurate answers for hard problems.
-      </p>
+    <div class="mb-10 rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead><tr class="border-b border-(--color-border)"><th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th><th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th><th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Reasoning score</th>{Object.values(benchmarkNames).slice(0, 4).map((name) => <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium text-xs hidden xl:table-cell">{name}</th>)}<th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Evidence</th></tr></thead>
+        <tbody>{ranked.map((model, index) => <tr class={`border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors ${index < 3 ? 'bg-(--color-accent)/5' : ''}`}><td class="py-3 px-2 text-center text-sm font-bold text-(--color-text-muted)">{index + 1}</td><td class="py-3 px-4"><a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors"><span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span><span class="font-medium">{model.name}</span></a><p class="text-[10px] text-(--color-text-muted)">{model.provider}</p></td><td class="py-3 px-4 text-right font-mono font-medium text-(--color-accent)">{model.score?.toFixed(1)}</td>{Object.keys(benchmarkNames).slice(0, 4).map((benchmarkId) => { const benchmark = model.relevantBenchmarks.find((item) => item.id === benchmarkId); return <td class="py-3 px-4 text-right text-xs font-mono hidden xl:table-cell">{benchmark?.score !== null && benchmark?.score !== undefined ? benchmark.score.toFixed(1) : '�'}</td>; })}<td class="py-3 px-4 text-right hidden sm:table-cell text-xs text-(--color-text-muted)">{model.relevantBenchmarkCount} rows</td></tr>)}</tbody>
+      </table>
     </div>
 
-    <div class="mt-6 flex flex-wrap justify-center gap-4">
-      <a href={`${base}coding/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
-        Coding models &rarr;
-      </a>
-      <a href={`${base}leaderboard/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
-        Full leaderboard &rarr;
-      </a>
-      <a href={`${base}compare/head-to-head/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
-        Compare head-to-head &rarr;
-      </a>
-    </div>
+    {tracking.length > 0 && <div class="mb-8"><h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Tracking / insufficient evidence</h2><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">{tracking.map((model) => <a href={`${base}models/${model.id}/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group"><div class="flex items-center gap-2 mb-2"><span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span><h3 class="font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors text-sm">{model.name}</h3></div><p class="text-xs text-(--color-text-muted)">{model.provider}</p><p class="mt-2 text-[10px] uppercase tracking-[0.16em] text-(--color-accent)">{model.evidenceTier}</p><p class="mt-1 text-xs text-(--color-text-muted)">{model.reasonIfNotEligible}</p></a>)}</div></div>}
   </section>
 </BaseLayout>

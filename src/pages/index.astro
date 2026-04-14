@@ -9,7 +9,7 @@ import {
   getFrontierNow,
   getLatestActivities,
   getLatestDigest,
-  getMetaLeaderboard,
+  getMetaLeaderboardView,
   normaliseDateTime,
   type AgiFrontierPoint,
 } from '../data/hub-dashboard';
@@ -19,8 +19,10 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 const frontierNowAll = getFrontierNow(24);
 const frontierNow = frontierNowAll.slice(0, 10);
-const metaLeaderboardAll = getMetaLeaderboard(250);
+const metaLeaderboardView = getMetaLeaderboardView(250);
+const metaLeaderboardAll = metaLeaderboardView.ranked;
 const evaluatedLeaderboard = metaLeaderboardAll.slice(0, 10);
+const evaluatedTracking = [...metaLeaderboardView.partial, ...metaLeaderboardView.tracking].slice(0, 4);
 const agiOverview = getAgiOverview();
 const latestDigest = getLatestDigest();
 const digestEntries = latestDigest?.entries.slice(0, 5) ?? [];
@@ -41,7 +43,6 @@ const headlineNews = (getNews() as HeadlineNewsItem[])
 
 const frontierLeader = frontierNow[0] ?? null;
 const evaluatedLeader = evaluatedLeaderboard[0] ?? null;
-const bestOpenModel = metaLeaderboardAll.find((model) => model.openSource) ?? null;
 const bestValueModel = [...metaLeaderboardAll]
   .filter((model) => model.inputPrice > 0 && model.outputPrice > 0)
   .sort((a, b) => b.valueScore - a.valueScore)[0] ?? null;
@@ -489,7 +490,7 @@ const heroStats = [
             </div>
 
             <p class="hub-home-card-note">
-              The evaluated composite now blends normalized benchmark results, the quality layer, and a freshness signal. It also penalizes thin evidence, stale provider generations, and beta or compact variants so old benchmark saturation stops dominating the homepage story.
+              The evaluated composite now only ranks models once they have 4+ relevant benchmark rows. It still blends normalized benchmark results, the quality layer, and a freshness signal, but thinner evidence stays in tracking instead of leaking into the numbered table.
             </p>
 
             <div class="hub-home-table-shell">
@@ -591,21 +592,23 @@ const heroStats = [
               )}
             </div>
 
-            <div class="hub-home-card" data-fresh-at={bestOpenModel?.released ?? ''}>
-              <p class="hub-home-mini-label">Best open model</p>
-              {bestOpenModel ? (
+            <div class="hub-home-card" data-fresh-at={evaluatedTracking[0]?.released ?? ''}>
+              <p class="hub-home-mini-label">Tracking / insufficient evidence</p>
+              {evaluatedTracking.length > 0 ? (
                 <>
                   <h3 class="hub-home-rail-title">
                     <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {bestOpenModel.name}
+                    {evaluatedTracking[0].name}
                   </h3>
                   <p class="hub-home-rail-copy">
-                    The strongest open-weight entry on the weighted ranking right now, with benchmark coverage baked into the score.
+                    {evaluatedTracking[0].reasonIfNotEligible ?? 'This model is visible in public, but it stays out of the numbered table until the benchmark evidence is thick enough.'}
                   </p>
-                  <a href={`${base}open-source/`} class="editorial-link">Open source shortlist</a>
+                  <p class="hub-home-card-note">
+                    {evaluatedTracking.length} tracked model{evaluatedTracking.length === 1 ? '' : 's'} currently sit outside the ranked composite.
+                  </p>
                 </>
               ) : (
-                <div class="empty-surface">Open-weight models will appear here once the ranking layer is populated.</div>
+                <div class="empty-surface">Tracked models will appear here whenever the frontier is ahead of the benchmark evidence.</div>
               )}
             </div>
 
