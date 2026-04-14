@@ -3,11 +3,11 @@ title: "GLM 5: release brief"
 slug: "2026-02-12-glm-5-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "watch"
+priority: "backfill"
 model: "GLM 5"
 provider: "Zhipu AI"
 release_date: "2026-02-12"
-generated_at: "2026-04-13T23:57:30.644Z"
+generated_at: "2026-04-14T03:39:20.488Z"
 ---
 
 # GLM 5: release brief

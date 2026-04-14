@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T01:10:06.465Z",
+  "generatedAt": "2026-04-14T03:39:10.532Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T01:10:05.086Z",
+      "lastCheckedAt": "2026-04-14T03:39:09.383Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -47,10 +47,10 @@
         {
           "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
           "title": "Elevated 401 errors for API endpoints",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-04-12T20:40:24.000Z",
-          "updatedAt": "2026-04-13T23:26:27.000Z",
+          "updatedAt": "2026-04-14T01:26:25.000Z",
           "resolvedAt": null,
           "summary": null
         }
@@ -59,10 +59,10 @@
         {
           "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
           "title": "Elevated 401 errors for API endpoints",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-04-12T20:40:24.000Z",
-          "updatedAt": "2026-04-13T23:26:27.000Z",
+          "updatedAt": "2026-04-14T01:26:25.000Z",
           "resolvedAt": null,
           "summary": null
         },
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T01:10:05.125Z",
+      "lastCheckedAt": "2026-04-14T03:39:09.447Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +199,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T01:10:05.933Z",
+      "lastCheckedAt": "2026-04-14T03:39:09.993Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T01:10:05.381Z",
+      "lastCheckedAt": "2026-04-14T03:39:09.466Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +293,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T01:10:06.245Z",
+      "lastCheckedAt": "2026-04-14T03:39:10.524Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +358,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T01:10:05.213Z",
+      "lastCheckedAt": "2026-04-14T03:39:09.422Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +412,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T01:10:06.457Z",
+      "lastCheckedAt": "2026-04-14T03:39:10.246Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -421,7 +421,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-13T22:48:20.000Z",
+          "id": "together-feed-0-2026-04-14T01:36:12.000Z",
+          "title": "Qwen3 235B A22B Thinking 2507 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-14T01:36:12.000Z",
+          "updatedAt": "2026-04-14T01:36:12.000Z",
+          "resolvedAt": "2026-04-14T01:36:12.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 235B A22B Thinking 2507 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-14T01:19:09.000Z",
+          "title": "Qwen3 235B A22B Thinking 2507 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-14T01:19:09.000Z",
+          "updatedAt": "2026-04-14T01:19:09.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 235B A22B Thinking 2507 went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-13T22:48:20.000Z",
           "title": "Qwen3 235B A22B Thinking 2507 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -432,34 +454,12 @@
           "summary": "Qwen3 235B A22B Thinking 2507 recovered"
         },
         {
-          "id": "together-feed-1-2026-04-13T22:23:29.000Z",
+          "id": "together-feed-3-2026-04-13T22:23:29.000Z",
           "title": "Qwen3 235B A22B Thinking 2507 went down",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-04-13T22:23:29.000Z",
           "updatedAt": "2026-04-13T22:23:29.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Thinking 2507 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-13T21:45:28.000Z",
-          "title": "Qwen3 235B A22B Thinking 2507 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-13T21:45:28.000Z",
-          "updatedAt": "2026-04-13T21:45:28.000Z",
-          "resolvedAt": "2026-04-13T21:45:28.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Thinking 2507 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-13T20:37:19.000Z",
-          "title": "Qwen3 235B A22B Thinking 2507 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-13T20:37:19.000Z",
-          "updatedAt": "2026-04-13T20:37:19.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3 235B A22B Thinking 2507 went down"
@@ -477,7 +477,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T01:10:05.528Z",
+      "lastCheckedAt": "2026-04-14T03:39:09.766Z",
       "overallStatus": "unknown",
       "overallLabel": "Status page available",
       "summary": "Official provider status page reports: Status page available.",
