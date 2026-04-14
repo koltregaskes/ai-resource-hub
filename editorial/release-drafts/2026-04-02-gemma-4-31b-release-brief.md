@@ -7,7 +7,7 @@ priority: "high"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-04-14T15:38:50.780Z"
+generated_at: "2026-04-14T17:21:57.002Z"
 ---
 
 # Gemma 4 31B: release brief
@@ -30,12 +30,12 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 ## Outside coverage and early reactions
 
+- The Verge (2026-04-14): [Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;](https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch) - Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as "Skills" in the Chrome desktop browser, letting you instantly run them across any tabs you select. "Until now, repeating an AI task - like asking for ing…
+- TechCrunch (2026-04-14): [Google adds AI Skills to Chrome to help you save favorite workflows](https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/) - Google is adding "Skills" to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini's browser integration.
 - TechCrunch (2026-04-14): [Google brings its Gemini Personal Intelligence feature to India](https://techcrunch.com/2026/04/14/google-brings-its-gemini-personal-intelligence-feature-to-india/) - The feature lets users connect Google accounts like Gmail and Photos to get personalized answers.
 - The Verge (2026-04-09): [Google’s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations) - Google's latest upgrade for Gemini will allow the chatbot to generate interactive 3D models and simulations in response to your questions. With the new feature, you may see options to rotate the AI-generated model, manually adjust sliders on it, or input different values to change the simulation in real time. When try…
 - The Verge (2026-04-09): [Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm) - Google's Gemini is getting a feature called "notebooks" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…
 - TechCrunch (2026-04-08): [Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/) - Google's new offline-first dictation app uses Gemma AI models to take on the apps like Wispr Flow.
-- TechCrunch (2026-04-07): [Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/) - Google is rolling out new features to make it easier for users to contribute local knowledge to Maps. Most notably, Gemini can now create captions when users are looking to share a photo or video about a place.
-- The Verge (2026-04-07): [Gemini is making it faster for distressed users to reach mental health resources](https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update) - Google says it has updated Gemini to better direct users to get mental health resources during moments of crisis. The change comes as the tech giant faces a wrongful death lawsuit alleging its chatbot "coached" a man to die by suicide, the latest in a string of lawsuits alleging tangible harm from AI products. When [&…
 
 ## Suggested thread / post structure
 
@@ -58,9 +58,9 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 - [Official launch or docs](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
+- [The Verge: Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;](https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch)
+- [TechCrunch: Google adds AI Skills to Chrome to help you save favorite workflows](https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/)
 - [TechCrunch: Google brings its Gemini Personal Intelligence feature to India](https://techcrunch.com/2026/04/14/google-brings-its-gemini-personal-intelligence-feature-to-india/)
 - [The Verge: Google’s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations)
 - [The Verge: Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm)
 - [TechCrunch: Google quietly launched an AI dictation app that works offline](https://techcrunch.com/2026/04/07/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/)
-- [TechCrunch: Google Maps can now write captions for your photos using AI](https://techcrunch.com/2026/04/07/google-maps-can-now-write-captions-for-your-photos-using-ai/)
-- [The Verge: Gemini is making it faster for distressed users to reach mental health resources](https://www.theverge.com/ai-artificial-intelligence/907842/google-gemini-mental-health-interface-update)

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T15:55:25.567Z",
+  "generatedAt": "2026-04-14T17:21:48.528Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T15:55:24.537Z",
+      "lastCheckedAt": "2026-04-14T17:21:46.370Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T15:55:25.208Z",
+      "lastCheckedAt": "2026-04-14T17:21:46.801Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T15:55:24.663Z",
+      "lastCheckedAt": "2026-04-14T17:21:46.861Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T15:55:25.559Z",
+      "lastCheckedAt": "2026-04-14T17:21:47.252Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T15:55:24.541Z",
+      "lastCheckedAt": "2026-04-14T17:21:46.375Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T15:55:25.050Z",
+      "lastCheckedAt": "2026-04-14T17:21:46.620Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,12 +335,20 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T15:55:24.594Z",
+      "lastCheckedAt": "2026-04-14T17:21:46.189Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
         {
           "name": "Fine-tuning",
           "status": "operational"
@@ -356,18 +364,20 @@
         {
           "name": "Audio",
           "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
-        },
-        {
-          "name": "Sora",
-          "status": "operational"
         }
       ],
       "activeIncidents": [],
       "recentIncidents": [
+        {
+          "id": "01KP6EBCNE70DBFZ7Z56VG44N8",
+          "title": "Account Creation Issues",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-14T16:49:17.000Z",
+          "updatedAt": "2026-04-14T17:09:21.000Z",
+          "resolvedAt": "2026-04-14T17:09:21.000Z",
+          "summary": null
+        },
         {
           "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
           "title": "Elevated 401 errors for API endpoints",
@@ -397,16 +407,6 @@
           "updatedAt": "2026-04-10T05:20:19.000Z",
           "resolvedAt": "2026-04-10T05:20:19.000Z",
           "summary": null
-        },
-        {
-          "id": "01KNTTM5EQY332QC4P7ZQA4X0K",
-          "title": "Issues with share link creation on web UI",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-10T04:32:54.000Z",
-          "updatedAt": "2026-04-10T04:46:12.000Z",
-          "resolvedAt": "2026-04-10T04:46:12.000Z",
-          "summary": null
         }
       ]
     },
@@ -421,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T15:55:25.554Z",
+      "lastCheckedAt": "2026-04-14T17:21:48.520Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
