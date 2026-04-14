@@ -262,6 +262,33 @@ interface CachedCliTool {
   notes: string | null;
 }
 
+const MODEL_DISPLAY_NAME_OVERRIDES: Record<string, string> = {
+  'o3': 'O3',
+  'o3-pro': 'O3 Pro',
+  'o4-mini': 'O4 Mini',
+  'deepseek-r1': 'DeepSeek R1',
+  'deepseek-v3': 'DeepSeek V3',
+  'deepseek-v3.2': 'DeepSeek V3.2',
+  'gemini-3.1-pro': 'Gemini 3.1 Pro',
+  'gemini-2.5-pro': 'Gemini 2.5 Pro',
+  'gpt-5.4': 'GPT-5.4',
+  'gpt-5.4-pro': 'GPT-5.4 Pro',
+  'gpt-5.4-mini': 'GPT-5.4 Mini',
+  'gpt-5.4-nano': 'GPT-5.4 Nano',
+  'gpt-5.2': 'GPT-5.2',
+  'glm-5': 'GLM-5',
+  'glm-5-turbo': 'GLM-5 Turbo',
+  'grok-4.20': 'Grok 4.20',
+  'grok-4.20-multi-agent': 'Grok 4.20 Multi-Agent',
+  'kimi-k2.5': 'Kimi K2.5',
+  'qwen3.6-plus': 'Qwen 3.6 Plus',
+  'gemma-4': 'Gemma 4',
+};
+
+function getDisplayModelName(id: string, name: string): string {
+  return MODEL_DISPLAY_NAME_OVERRIDES[id] ?? name;
+}
+
 function toNumber(value: number | string | null | undefined): number {
   if (typeof value === 'number') return value;
   if (typeof value === 'string') {
@@ -276,6 +303,7 @@ function toNumber(value: number | string | null | undefined): number {
 export function getModels(): CachedModel[] {
   return loadCache<CachedModel>('models').map((model) => ({
     ...model,
+    name: getDisplayModelName(model.id, model.name),
     input_price: toNumber(model.input_price),
     output_price: toNumber(model.output_price),
     speed: toNumber(model.speed),

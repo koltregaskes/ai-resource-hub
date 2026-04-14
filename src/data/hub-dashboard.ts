@@ -7,10 +7,11 @@ import {
   getBenchmarkScores,
   getLastScrapeTime,
   getLLMModelsFromDB,
+  getPublicModelsByCategory,
   getRecentModels,
 } from '../db/queries';
 
-type LLMModel = ReturnType<typeof getLLMModelsFromDB>[number];
+type PublicLLMModel = ReturnType<typeof getPublicModelsByCategory>[number];
 type BenchmarkDefinition = ReturnType<typeof getBenchmarks>[number];
 type BenchmarkScoreRow = ReturnType<typeof getBenchmarkScores>[number];
 type RecentModel = ReturnType<typeof getRecentModels>[number];
@@ -69,9 +70,11 @@ export interface MetaLeaderboardEntry {
   name: string;
   provider: string;
   providerColour: string;
+  status: string;
   metaScore: number;
   benchmarkScore: number;
   qualityScore: number;
+  freshnessScore: number;
   benchmarkCount: number;
   coverageRatio: number;
   bestFor: string;
@@ -83,6 +86,26 @@ export interface MetaLeaderboardEntry {
   openSource: boolean;
   apiAvailable: boolean;
   modality: string[];
+}
+
+export interface FrontierNowEntry {
+  id: string;
+  name: string;
+  provider: string;
+  providerColour: string;
+  status: string;
+  released: string | null;
+  inputPrice: number;
+  outputPrice: number;
+  contextWindow: number;
+  qualityScore: number;
+  benchmarkCount: number;
+  coverageRatio: number;
+  openSource: boolean;
+  apiAvailable: boolean;
+  modality: string[];
+  evidenceLabel: string;
+  evidenceState: 'scored' | 'partial' | 'tracking';
 }
 
 export interface AgiFrontierPoint {
@@ -146,6 +169,21 @@ const BEST_FOR_LABELS: Record<string, string> = {
   safety: 'Safety',
   vision: 'Vision',
 };
+
+const FRONTIER_NOW_PRIORITY_IDS = [
+  'gpt-5.4',
+  'claude-opus-4.6',
+  'gemini-3.1-pro',
+  'claude-sonnet-4.6',
+  'grok-4.20',
+  'qwen3.6-plus',
+  'minimax-m2.7',
+  'glm-5',
+  'kimi-k2.5',
+  'gemma-4',
+  'deepseek-r1',
+  'deepseek-v3.2',
+] as const;
 
 const SCRAPER_ACTIVITY_LABELS: Record<string, { title: string; detail: string; href: string }> = {
   'quality-scores': {
@@ -378,13 +416,123 @@ function getBestForLabel(categoryScores: Map<string, { total: number; weight: nu
   return getCategoryLabel(bestCategory);
 }
 
+function getFreshnessScore(released: string | null | undefined): number {
+  if (!released) return 35;
+
+  const releasedAt = Date.parse(released);
+  if (!Number.isFinite(releasedAt)) return 35;
+
+  const daysAgo = (Date.now() - releasedAt) / (1000 * 60 * 60 * 24);
+  if (daysAgo <= 30) return 100;
+  if (daysAgo <= 75) return 95;
+  if (daysAgo <= 120) return 90;
+  if (daysAgo <= 180) return 82;
+  if (daysAgo <= 270) return 68;
+  if (daysAgo <= 365) return 55;
+  if (daysAgo <= 540) return 40;
+  return 24;
+}
+
+function getEvidenceFactor(benchmarkCount: number): number {
+  if (benchmarkCount >= 7) return 1;
+  if (benchmarkCount === 6) return 0.98;
+  if (benchmarkCount === 5) return 0.96;
+  if (benchmarkCount === 4) return 0.93;
+  if (benchmarkCount === 3) return 0.88;
+  if (benchmarkCount === 2) return 0.82;
+  if (benchmarkCount === 1) return 0.7;
+  return 0.5;
+}
+
+function getStatusMultiplier(status: string | null | undefined): number {
+  switch ((status ?? '').toLowerCase()) {
+    case 'active':
+      return 1;
+    case 'tracking':
+      return 0.97;
+    case 'preview':
+      return 0.9;
+    case 'superseded':
+      return 0.82;
+    case 'retired':
+      return 0.65;
+    default:
+      return 0.8;
+  }
+}
+
+function getVariantPenalty(name: string): number {
+  const lower = name.toLowerCase();
+  let penalty = 1;
+
+  if (/\bbeta\b/.test(lower)) penalty *= 0.8;
+  if (/\bpreview\b/.test(lower)) penalty *= 0.88;
+  if (/\bmini\b|\bnano\b|\bflash\b|\bhaiku\b|\blite\b/.test(lower)) penalty *= 0.82;
+
+  return penalty;
+}
+
+function buildProviderLatestReleaseMap(models: PublicLLMModel[]): Map<string, string> {
+  const latestByProvider = new Map<string, string>();
+
+  for (const model of models) {
+    if (!model.released) continue;
+
+    const current = latestByProvider.get(model.provider_id);
+    if (!current || model.released > current) {
+      latestByProvider.set(model.provider_id, model.released);
+    }
+  }
+
+  return latestByProvider;
+}
+
+function getProviderAgePenalty(model: PublicLLMModel, latestByProvider: Map<string, string>): number {
+  if (!model.released) return 0.85;
+
+  const providerLatest = latestByProvider.get(model.provider_id);
+  if (!providerLatest || providerLatest === model.released) return 1;
+
+  const gapDays = (Date.parse(providerLatest) - Date.parse(model.released)) / (1000 * 60 * 60 * 24);
+  if (gapDays >= 240) return 0.55;
+  if (gapDays >= 120) return 0.7;
+  if (gapDays >= 60) return 0.84;
+  if (gapDays >= 30) return 0.92;
+  return 1;
+}
+
+function getFrontierEvidence(
+  benchmarkCount: number,
+  qualityScore: number,
+): Pick<FrontierNowEntry, 'evidenceLabel' | 'evidenceState'> {
+  if (benchmarkCount >= 4) {
+    return {
+      evidenceLabel: `${benchmarkCount} benchmark tracks`,
+      evidenceState: 'scored',
+    };
+  }
+
+  if (benchmarkCount >= 2 || qualityScore > 0) {
+    return {
+      evidenceLabel: benchmarkCount >= 2 ? `${benchmarkCount} public evals` : 'quality layer only',
+      evidenceState: 'partial',
+    };
+  }
+
+  return {
+    evidenceLabel: 'tracking official release',
+    evidenceState: 'tracking',
+  };
+}
+
 export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
-  const models = getLLMModelsFromDB();
+  const models = getPublicModelsByCategory('llm');
   const benchmarks = getBenchmarks().filter((benchmark) => toNumber(benchmark.weight) > 0);
   const benchmarkScores = getBenchmarkScores().filter((row) => row.model_category === 'llm');
   const benchmarkMap = new Map(benchmarks.map((benchmark) => [benchmark.id, benchmark]));
   const totalWeight = benchmarks.reduce((sum, benchmark) => sum + toNumber(benchmark.weight), 0);
   const scoresByModel = new Map<string, BenchmarkScoreRow[]>();
+  const latestByProvider = buildProviderLatestReleaseMap(models);
 
   for (const score of benchmarkScores) {
     if (!scoresByModel.has(score.model_id)) scoresByModel.set(score.model_id, []);
@@ -392,7 +540,7 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
   }
 
   return models
-    .map((model): MetaLeaderboardEntry => {
+    .map((model): MetaLeaderboardEntry | null => {
       const scores = (scoresByModel.get(model.id) ?? []).filter((row) => benchmarkMap.has(row.benchmark_id));
       const categoryScores = new Map<string, { total: number; weight: number }>();
       let weightedScoreTotal = 0;
@@ -416,38 +564,105 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
       const benchmarkScore = coveredWeight > 0 ? weightedScoreTotal / coveredWeight : 0;
       const coverageRatio = totalWeight > 0 ? coveredWeight / totalWeight : 0;
       const coverageFactor = Math.min(1, coverageRatio / 0.55);
-      const qualityScore = toNumber(model.qualityScore);
-      const baseScore = coveredWeight > 0
-        ? benchmarkScore * 0.72 + qualityScore * 0.28
-        : qualityScore * 0.4;
-      const metaScore = baseScore * (0.55 + 0.45 * coverageFactor);
+      const qualityScore = toNumber(model.quality_score);
+      const freshnessScore = getFreshnessScore(model.released);
+
+      if (scores.length === 0 && qualityScore === 0) return null;
+
+      const baseScore = benchmarkScore * 0.5 + qualityScore * 0.25 + freshnessScore * 0.25;
+      const metaScore = baseScore
+        * (0.7 + 0.3 * coverageFactor)
+        * getEvidenceFactor(scores.length)
+        * getStatusMultiplier(model.status)
+        * getProviderAgePenalty(model, latestByProvider)
+        * getVariantPenalty(model.name);
 
       return {
         id: model.id,
         name: model.name,
-        provider: model.provider,
-        providerColour: model.providerColour,
+        provider: model.provider_name,
+        providerColour: model.provider_colour,
+        status: model.status,
         metaScore: Number(metaScore.toFixed(1)),
         benchmarkScore: Number(benchmarkScore.toFixed(1)),
         qualityScore,
+        freshnessScore,
         benchmarkCount: scores.length,
         coverageRatio: Number(coverageRatio.toFixed(3)),
-        bestFor: getBestForLabel(categoryScores),
-        inputPrice: toNumber(model.inputPrice),
-        outputPrice: toNumber(model.outputPrice),
-        contextWindow: toNumber(model.contextWindow),
-        valueScore: toNumber(model.valueScore),
+        bestFor: scores.length > 0 ? getBestForLabel(categoryScores) : 'Frontier tracking',
+        inputPrice: toNumber(model.input_price),
+        outputPrice: toNumber(model.output_price),
+        contextWindow: toNumber(model.context_window),
+        valueScore: (() => {
+          const blended = (toNumber(model.input_price) + 3 * toNumber(model.output_price)) / 4;
+          return blended > 0 && qualityScore > 0 ? Math.round((qualityScore / blended) * 10) : 0;
+        })(),
         released: model.released || null,
-        openSource: Boolean(model.openSource),
-        apiAvailable: Boolean(model.apiAvailable),
+        openSource: Boolean(model.open_source),
+        apiAvailable: Boolean(model.api_available),
         modality: toModalityList(model.modality),
       };
     })
+    .filter((model): model is MetaLeaderboardEntry => Boolean(model))
     .sort((a, b) =>
       b.metaScore - a.metaScore ||
+      b.freshnessScore - a.freshnessScore ||
       b.benchmarkScore - a.benchmarkScore ||
       b.qualityScore - a.qualityScore ||
       a.name.localeCompare(b.name))
+    .slice(0, limit);
+}
+
+export function getFrontierNow(limit = 10): FrontierNowEntry[] {
+  const models = getPublicModelsByCategory('llm');
+  const benchmarkScores = getBenchmarkScores().filter((row) => row.model_category === 'llm');
+  const scoreCounts = new Map<string, number>();
+
+  for (const row of benchmarkScores) {
+    scoreCounts.set(row.model_id, (scoreCounts.get(row.model_id) ?? 0) + 1);
+  }
+
+  const priorityOrder = new Map<string, number>(FRONTIER_NOW_PRIORITY_IDS.map((id, index) => [id, index]));
+
+  return models
+    .filter((model) => (
+      priorityOrder.has(model.id)
+      || (model.released ? Date.parse(model.released) >= Date.now() - (1000 * 60 * 60 * 24 * 180) : false)
+      || (scoreCounts.get(model.id) ?? 0) > 0
+      || toNumber(model.quality_score) > 0
+    ))
+    .map((model): FrontierNowEntry => {
+      const benchmarkCount = scoreCounts.get(model.id) ?? 0;
+      const qualityScore = toNumber(model.quality_score);
+
+      return {
+        id: model.id,
+        name: model.name,
+        provider: model.provider_name,
+        providerColour: model.provider_colour,
+        status: model.status,
+        released: model.released || null,
+        inputPrice: toNumber(model.input_price),
+        outputPrice: toNumber(model.output_price),
+        contextWindow: toNumber(model.context_window),
+        qualityScore,
+        benchmarkCount,
+        coverageRatio: benchmarkCount > 0 ? Number((benchmarkCount / 11).toFixed(3)) : 0,
+        openSource: Boolean(model.open_source),
+        apiAvailable: Boolean(model.api_available),
+        modality: toModalityList(model.modality),
+        ...getFrontierEvidence(benchmarkCount, qualityScore),
+      };
+    })
+    .sort((a, b) => {
+      const priorityDelta = (priorityOrder.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (priorityOrder.get(b.id) ?? Number.MAX_SAFE_INTEGER);
+      if (priorityDelta !== 0) return priorityDelta;
+
+      const releaseDelta = Date.parse(b.released ?? '') - Date.parse(a.released ?? '');
+      if (Number.isFinite(releaseDelta) && releaseDelta !== 0) return releaseDelta;
+
+      return b.qualityScore - a.qualityScore || a.name.localeCompare(b.name);
+    })
     .slice(0, limit);
 }
 
@@ -564,8 +779,8 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
   return [
     {
       id: 'meta',
-      label: 'Composite leaderboard',
-      note: `${getBenchmarks().length} benchmark tracks weighted into the ranking layer.`,
+      label: 'Evaluated composite',
+      note: `${getBenchmarks().length} benchmark tracks feed the benchmark-backed scored view.`,
       updatedAt: benchmarkRefresh,
       href: `${basePath}leaderboard/`,
     },
