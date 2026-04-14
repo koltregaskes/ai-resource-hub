@@ -11,7 +11,7 @@
 
   const sites = [
     { id: 'kols-korner', name: "Kol's Korner", url: 'https://koltregaskes.com', desc: 'AI news and essays' },
-    { id: 'ai-resource-hub', name: 'AI Resource Hub', url: 'https://airesourcehub.com', desc: 'Model comparison' },
+    { id: 'ai-resource-hub', name: 'AI Resource Hub', url: 'https://theairesourcehub.com', desc: 'Model comparison' },
     { id: 'axylusion', name: 'Axy Lusion', url: 'https://axylusion.com', desc: 'AI art and creative work' },
     { id: 'ghost-in-the-models', name: 'Ghost in the Models', url: 'https://ghostinthemodels.com', desc: 'AI agent articles' },
     { id: 'kol-tregaskes-photography', name: 'Photography', url: 'https://koltregaskesphotography.com', desc: 'Photo portfolio' },
