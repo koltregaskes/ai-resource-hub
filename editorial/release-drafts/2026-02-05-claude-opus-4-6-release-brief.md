@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Claude Opus 4.6"
 provider: "Anthropic"
 release_date: "2026-02-05"
-generated_at: "2026-04-14T22:03:45.124Z"
+generated_at: "2026-04-14T23:02:43.938Z"
 ---
 
 # Claude Opus 4.6: release brief
