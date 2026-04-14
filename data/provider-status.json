@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T17:21:48.528Z",
+  "generatedAt": "2026-04-14T17:48:50.894Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T17:21:46.370Z",
+      "lastCheckedAt": "2026-04-14T17:48:49.400Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T17:21:46.801Z",
+      "lastCheckedAt": "2026-04-14T17:48:50.268Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T17:21:46.861Z",
+      "lastCheckedAt": "2026-04-14T17:48:49.640Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T17:21:47.252Z",
+      "lastCheckedAt": "2026-04-14T17:48:50.772Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -205,7 +205,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-04-10T06:57:19.000Z",
+          "id": "fireworks-feed-0-2026-04-14T17:37:54.000Z",
+          "title": "Qwen3 Embedding 8B embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-14T17:37:54.000Z",
+          "updatedAt": "2026-04-14T17:37:54.000Z",
+          "resolvedAt": "2026-04-14T17:37:54.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Qwen3 Embedding 8B embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-1-2026-04-14T17:32:49.000Z",
+          "title": "Qwen3 Embedding 8B embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-14T17:32:49.000Z",
+          "updatedAt": "2026-04-14T17:32:49.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Qwen3 Embedding 8B embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-2-2026-04-10T06:57:19.000Z",
           "title": "OpenAI GPT OSS 20B chat completion API recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -216,7 +238,7 @@
           "summary": "OpenAI GPT OSS 20B chat completion API recovered"
         },
         {
-          "id": "fireworks-feed-1-2026-04-10T06:55:18.000Z",
+          "id": "fireworks-feed-3-2026-04-10T06:55:18.000Z",
           "title": "OpenAI GPT OSS 20B chat completion API went down",
           "status": "investigating",
           "impact": "major",
@@ -225,28 +247,6 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai/",
           "summary": "OpenAI GPT OSS 20B chat completion API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-04-07T20:44:45.000Z",
-          "title": "Llama 3.3 70B Instruct chat completion API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-07T20:44:45.000Z",
-          "updatedAt": "2026-04-07T20:44:45.000Z",
-          "resolvedAt": "2026-04-07T20:44:45.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Llama 3.3 70B Instruct chat completion API recovered"
-        },
-        {
-          "id": "fireworks-feed-3-2026-04-07T20:42:33.000Z",
-          "title": "Llama 3.3 70B Instruct chat completion API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-07T20:42:33.000Z",
-          "updatedAt": "2026-04-07T20:42:33.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Llama 3.3 70B Instruct chat completion API went down"
         }
       ]
     },
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T17:21:46.375Z",
+      "lastCheckedAt": "2026-04-14T17:48:49.641Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T17:21:46.620Z",
+      "lastCheckedAt": "2026-04-14T17:48:49.939Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T17:21:46.189Z",
+      "lastCheckedAt": "2026-04-14T17:48:49.397Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T17:21:48.520Z",
+      "lastCheckedAt": "2026-04-14T17:48:50.885Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
