@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { modelReleaseDesk } from '../../data/model-release-desk.generated';
-import { getMetaLeaderboard } from '../../data/hub-dashboard';
+import { getFrontierNow, getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
+const frontierNow = getFrontierNow(18);
 const rankedModels = getMetaLeaderboard(250);
 const topMeta = rankedModels.slice(0, 24);
 const topValue = [...rankedModels]
@@ -48,8 +49,8 @@ function formatReleaseDate(value: string | null): string {
 ---
 
 <BaseLayout
-  title="AI Composite Leaderboard - The AI Resource Hub"
-  description="Benchmark-weighted leaderboard of AI models. Compare composite score, benchmark coverage, context, and price in one place."
+  title="AI Leaderboard Desk - The AI Resource Hub"
+  description="Current frontier watchlist plus the benchmark-backed evaluated composite for AI models."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -59,27 +60,29 @@ function formatReleaseDate(value: string | null): string {
     </nav>
 
     <div class="mb-8">
-      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Weighted ranking</p>
-      <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">AI Composite Leaderboard</h1>
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Ranking desk</p>
+      <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">AI Leaderboard Desk</h1>
       <p class="text-(--color-text-secondary) max-w-3xl mt-3 leading-7">
-        This page ranks LLMs using the same coverage-aware benchmark blend shown on the homepage. Composite score combines
-        normalized benchmark results, benchmark coverage, and the existing quality layer, so newer models with thin
-        published data do not leapfrog better-documented leaders on hype alone.
+        This page now separates two different questions. <strong>Frontier now</strong> answers what is current across the major labs.
+        <strong>Evaluated composite</strong> answers which models are currently strongest inside the benchmark-backed scored set.
       </p>
 
       {latestTrackedRelease ? (
         <div class="mt-5 rounded-2xl border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
           <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Important</p>
           <p class="mt-2 max-w-4xl text-sm leading-6 text-(--color-text-secondary)">
-            This ranking is for evaluated models only. The newest tracked launch right now is <a href={`${base}new/`} class="text-(--color-accent) transition-colors hover:text-(--color-accent-hover)">{latestTrackedRelease.modelName}</a>, released {latestTrackedRelease.releaseDateLabel}. It stays in the release desk until public benchmark and quality coverage are strong enough to rank it honestly.
+            The old “composite leaderboard” confusion came from treating one scored table as the answer to everything. The frontier lane keeps newer launches visible immediately, while the evaluated composite only ranks models once there is enough public evidence to score them with some confidence.
           </p>
         </div>
       ) : null}
     </div>
 
     <div class="flex flex-wrap gap-2 mb-6 border-b border-(--color-border) pb-2">
-      <button class="leaderboard-tab active px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="meta">
-        Composite score
+      <button class="leaderboard-tab active px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="frontier">
+        Frontier now
+      </button>
+      <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="meta">
+        Evaluated composite
       </button>
       <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="value">
         Best value
@@ -89,7 +92,62 @@ function formatReleaseDate(value: string | null): string {
       </button>
     </div>
 
-    <div class="leaderboard-panel" id="panel-meta">
+    <div class="leaderboard-panel" id="panel-frontier">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">State</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Evidence</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Released</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {frontierNow.map((model) => (
+              <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                <td class="py-3 px-4">
+                  <a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                    <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span>
+                    <span class="font-medium">{model.name}</span>
+                  </a>
+                  <span class="text-[10px] text-(--color-text-muted)">
+                    {model.provider} / {formatContextWindow(model.contextWindow)} context
+                  </span>
+                </td>
+                <td class="py-3 px-4">
+                  <div class="flex flex-wrap gap-1">
+                    <span class={`hub-home-badge hub-home-badge-${model.evidenceState}`}>{model.evidenceState}</span>
+                    <span class="hub-home-badge">{model.status}</span>
+                    {model.openSource ? <span class="hub-home-badge">Open</span> : null}
+                  </div>
+                </td>
+                <td class="py-3 px-4 text-(--color-text-secondary) hidden sm:table-cell">
+                  <div>{model.evidenceLabel}</div>
+                  <div class="text-[10px] text-(--color-text-muted) mt-1">
+                    {model.qualityScore > 0 ? `${model.qualityScore.toFixed(0)} quality score` : 'Awaiting quality score'}
+                  </div>
+                </td>
+                <td class="py-3 px-4 text-(--color-text-muted) hidden md:table-cell">
+                  {formatReleaseDate(model.released)}
+                </td>
+                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
+                  {formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-6 text-sm text-(--color-text-secondary) max-w-3xl">
+        The frontier lane is intentionally not a synthetic score. It keeps the current flagship and launch watchlist visible
+        even when benchmark coverage is still catching up.
+      </p>
+    </div>
+
+    <div class="leaderboard-panel hidden" id="panel-meta">
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
         <table class="w-full text-sm">
           <thead>
@@ -225,8 +283,8 @@ function formatReleaseDate(value: string | null): string {
     </div>
 
     <p class="mt-6 text-sm text-(--color-text-secondary) max-w-3xl">
-      Composite score is coverage-aware by design. Models with thin public benchmark coverage can still appear here, but they are
-      penalized until enough benchmark evidence exists to trust the ranking.
+      Evaluated composite now uses a weighted blend of normalized benchmark results, the existing quality layer, and a freshness signal.
+      It also penalizes thin evidence, stale provider generations, and beta or compact variants so older benchmark saturation does not dominate the story.
     </p>
 
     <div class="mt-10 rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 sm:p-6">

@@ -197,6 +197,80 @@ const benchmarks = getBenchmarks();
       </div>
     </div>
 
+    <!-- Leaderboard Views -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Leaderboard Views</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-4">
+        We now separate <strong>what is current</strong> from <strong>what is heavily benchmarked</strong>. Those are related questions, but they are not the same question.
+      </p>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden mb-4">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">View</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">What it answers</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">How to read it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Frontier now</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Which flagship and newly released models are current right now?</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Curated watchlist with status and evidence. Not a synthetic score.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-(--color-text-primary)">Evaluated composite</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Which models are currently strongest inside the benchmark-backed scored set?</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Weighted score designed to compare models with public evidence, not to replace the frontier watchlist.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Evaluated composite factor</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Weight / effect</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Why it exists</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Normalized benchmark performance</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">50%</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Still the largest input, but no longer strong enough to let old benchmark history dominate the ranking.</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Existing quality layer</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">25%</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Lets broader capability signals still count.</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Freshness</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">25%</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">A stronger recency signal so current generations beat stale leaders unless the evidence gap is overwhelming.</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Evidence multiplier</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Penalty, not bonus</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Thin public evidence gets penalized until coverage improves.</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Provider age penalty</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Penalty, not bonus</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Older provider generations lose ground when a newer public generation exists.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 text-(--color-text-primary)">Variant penalty</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Penalty, not bonus</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Compact and preview variants are stopped from reading like the obvious overall best model.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <!-- Quality Score -->
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Quality Score</h2>

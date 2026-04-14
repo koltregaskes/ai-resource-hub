@@ -1800,6 +1800,39 @@ a {
   background: rgba(255, 255, 255, 0.04);
 }
 
+.hub-home-badge-scored {
+  border-color: rgba(53, 157, 105, 0.35);
+  color: #1f7a52;
+  background: rgba(53, 157, 105, 0.12);
+}
+
+.hub-home-badge-partial {
+  border-color: rgba(198, 108, 47, 0.35);
+  color: #a55322;
+  background: rgba(198, 108, 47, 0.12);
+}
+
+.hub-home-badge-tracking {
+  border-color: rgba(82, 109, 158, 0.32);
+  color: #365a9f;
+  background: rgba(82, 109, 158, 0.12);
+}
+
+[data-theme="dark"] .hub-home-badge-scored {
+  color: #8dd8b0;
+  background: rgba(68, 176, 121, 0.16);
+}
+
+[data-theme="dark"] .hub-home-badge-partial {
+  color: #f4bb8f;
+  background: rgba(239, 140, 83, 0.16);
+}
+
+[data-theme="dark"] .hub-home-badge-tracking {
+  color: #9ec0ff;
+  background: rgba(87, 129, 214, 0.18);
+}
+
 .hub-home-score-cell,
 .hub-home-price-cell {
   text-align: right;
