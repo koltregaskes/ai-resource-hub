@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-14T21:06:49.794Z",
+  "generatedAt": "2026-04-14T22:03:45.512Z",
   "overview": {
-    "generatedAt": "2026-04-14T21:06:49.807Z",
+    "generatedAt": "2026-04-14T22:03:45.523Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
@@ -170,7 +170,7 @@
         "gemini-3-pro-image"
       ],
       "matchingModelNames": [
-        "Gemini 3.1 Pro Preview",
+        "Gemini 3.1 Pro",
         "Gemini 3 Pro",
         "Veo 3",
         "Imagen 4",
@@ -178,7 +178,7 @@
         "Veo 2",
         "Gemini 3 Flash Preview",
         "Imagen 3",
-        "Gemini 2.5 Pro Preview 06-05",
+        "Gemini 2.5 Pro",
         "Gemini 2.0 Flash",
         "Gemini 2.5 Flash",
         "Gemini 2.5 Flash Lite",
@@ -293,11 +293,11 @@
         "GPT-4o Transcribe",
         "GPT Image 1",
         "GPT-5.2",
-        "o4 Mini",
+        "O4 Mini",
         "Whisper Large v3",
-        "o3",
+        "O3",
         "o3 Mini",
-        "o3 Pro",
+        "O3 Pro",
         "GPT-5",
         "GPT-4o Mini TTS",
         "DALL-E 3 HD",

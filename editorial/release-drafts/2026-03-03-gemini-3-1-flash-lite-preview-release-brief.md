@@ -7,7 +7,7 @@ priority: "watch"
 model: "Gemini 3.1 Flash Lite Preview"
 provider: "Google"
 release_date: "2026-03-03"
-generated_at: "2026-04-14T21:06:49.398Z"
+generated_at: "2026-04-14T22:03:45.124Z"
 ---
 
 # Gemini 3.1 Flash Lite Preview: release brief
@@ -29,8 +29,8 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-14): [Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;](https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch) - Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as "Skills" in the Chrome desktop browser, letting you instantly run them across any tabs you select. "Until now, repeating an AI task - like asking for ing…
 - TechCrunch (2026-04-14): [Google adds AI Skills to Chrome to help you save favorite workflows](https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/) - Google is adding "Skills" to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini's browser integration.
+- The Verge (2026-04-14): [Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;](https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch) - Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as "Skills" in the Chrome desktop browser, letting you instantly run them across any tabs you select. "Until now, repeating an AI task - like asking for ing…
 - TechCrunch (2026-04-14): [Google brings its Gemini Personal Intelligence feature to India](https://techcrunch.com/2026/04/14/google-brings-its-gemini-personal-intelligence-feature-to-india/) - The feature lets users connect Google accounts like Gmail and Photos to get personalized answers.
 - The Verge (2026-04-09): [Google’s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations) - Google's latest upgrade for Gemini will allow the chatbot to generate interactive 3D models and simulations in response to your questions. With the new feature, you may see options to rotate the AI-generated model, manually adjust sliders on it, or input different values to change the simulation in real time. When try…
 - The Verge (2026-04-09): [Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm) - Google's Gemini is getting a feature called "notebooks" to help you organize things about certain topics in a single place while using the AI chatbot, the company announced on Wednesday. You can pull in things like files, past conversations, and custom instructions into notebooks that Gemini can then use as context wh…
@@ -55,8 +55,8 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/models)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
-- [The Verge: Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;](https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch)
 - [TechCrunch: Google adds AI Skills to Chrome to help you save favorite workflows](https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/)
+- [The Verge: Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;](https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch)
 - [TechCrunch: Google brings its Gemini Personal Intelligence feature to India](https://techcrunch.com/2026/04/14/google-brings-its-gemini-personal-intelligence-feature-to-india/)
 - [The Verge: Google’s Gemini AI can answer your questions with 3D models and simulations](https://www.theverge.com/tech/909391/google-gemini-ai-3d-models-simulations)
 - [The Verge: Gemini gets notebooks to help you organize projects](https://www.theverge.com/tech/909031/google-gemini-notebooks-notebooklm)

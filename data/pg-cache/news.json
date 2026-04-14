@@ -9,7 +9,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T18:09:12.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-ef4c2cce2d88cead21ac",
@@ -33,19 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:13:03.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
-  },
-  {
-    "id": "news-6c74cb2b376262315135",
-    "title": "Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;",
-    "url": "https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch",
-    "source": "The Verge",
-    "summary": "Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as \"Skills\" in the Chrome desktop browser, letting you instantly run them across any tabs you select. \"Until now, repeating an AI task - like asking for ing…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-6498fc0399f6c99e6048",
@@ -57,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -66,6 +54,18 @@
     "source": "Google",
     "summary": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
     "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-14T17:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:31"
+  },
+  {
+    "id": "news-6c74cb2b376262315135",
+    "title": "Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;",
+    "url": "https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch",
+    "source": "The Verge",
+    "summary": "Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as \"Skills\" in the Chrome desktop browser, letting you instantly run them across any tabs you select. \"Until now, repeating an AI task - like asking for ing…",
+    "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
@@ -81,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T15:30:49.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-7a432c3c6e138cd431f8",
@@ -93,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T14:48:34.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-6439805f84fe4638748d",
@@ -105,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T14:22:44.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-878315b5fa14fb7faf49",
@@ -129,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-88558602673ad26d2f82",
@@ -141,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T00:23:33.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-3879c0aa914e62a6a4ea",
@@ -153,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T00:02:38.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-88ece0f5d540703fa708",
@@ -165,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
+    "discovered_at": "2026-04-14 22:03:29"
   },
   {
     "id": "news-61eb0c3e0730eb6ffa32",
@@ -177,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T19:53:46.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-810241439b11d9ccdfad",
@@ -189,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T19:05:19.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-ee321a485b0332057193",
@@ -201,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T18:55:37.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-80fe4319916b51a6b6e9",
@@ -213,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T16:21:08.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-40a72f109caa3a4c879c",
@@ -225,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T15:41:09.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-a2eadf485a17b08ec139",
@@ -237,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T15:22:29.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-c827dab3756c571a68c3",
@@ -249,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T13:40:03.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-e460519d88b82c07983e",
@@ -261,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T09:25:57.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-0084fb34e765deae4019",
@@ -273,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T07:01:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-f3e62d489285a827b602",
@@ -285,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T06:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
+    "discovered_at": "2026-04-14 22:03:29"
   },
   {
     "id": "news-8ca593a9972966768531",
@@ -297,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-12T21:14:38.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-ee1264040966910e71cf",
@@ -309,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-12T19:58:42.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-e7be160cb97f61cb1b2e",
@@ -321,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-12T15:07:08.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-919404c9c0f28bbe51d2",
@@ -333,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-12T15:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-d2c18189beeacdb17538",
@@ -345,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-12T12:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-05bf911e17465fbd79cd",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-11T17:18:22.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-613102e488742b52d9d5",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-11T15:00:00.000Z",
-    "discovered_at": "2026-04-14 17:21:45"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-d517cf7467c9af2df6c4",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-11T14:00:00.000Z",
-    "discovered_at": "2026-04-14 15:38:42"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-42039e1a5a70917d54be",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-11T13:00:00.000Z",
-    "discovered_at": "2026-04-14 11:18:34"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-eaa386e39ccda85f8452",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T20:27:52.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-b8243e007687ad5f8e3d",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T16:41:34.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-8826a57d20350c71bd35",
@@ -504,28 +504,40 @@
     "discovered_at": "2026-04-13 12:10:09"
   },
   {
-    "id": "news-4dbb1c1ec2bea53d3f8c",
-    "title": "Writing with ChatGPT",
-    "url": "https://openai.com/academy/writing",
+    "id": "news-909c28a2bf070247e0a1",
+    "title": "AI fundamentals",
+    "url": "https://openai.com/academy/what-is-ai",
     "source": "OpenAI",
-    "summary": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+    "summary": "Learn what AI is, how it works, and how tools like ChatGPT use large language models. A clear, beginner-friendly guide to understanding artificial intelligence.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
+    "discovered_at": "2026-04-14 22:03:29"
   },
   {
-    "id": "news-6bccb64e94d4be82ca14",
-    "title": "Creating images with ChatGPT",
-    "url": "https://openai.com/academy/image-generation",
+    "id": "news-67274246ea9f6d1f90cb",
+    "title": "Using projects in ChatGPT",
+    "url": "https://openai.com/academy/projects",
     "source": "OpenAI",
-    "summary": "Learn how to create and refine images with ChatGPT using clear prompts, iterate on designs, and generate high-quality visuals in minutes.",
+    "summary": "Learn how to use orojects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-bab5fd7819ac73550b85",
+    "title": "Personalizing ChatGPT",
+    "url": "https://openai.com/academy/personalization",
+    "source": "OpenAI",
+    "summary": "Learn how to personalize ChatGPT using custom instructions and memory to get more relevant, consistent, and tailored responses.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
   },
   {
     "id": "news-39c29e13e298c113fa19",
@@ -537,19 +549,103 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
+    "discovered_at": "2026-04-14 22:03:29"
   },
   {
-    "id": "news-11c496abc34e390b6245",
-    "title": "Financial services",
-    "url": "https://openai.com/academy/financial-services",
+    "id": "news-4c2fa33ea84fbefabad3",
+    "title": "Working with files in ChatGPT",
+    "url": "https://openai.com/academy/working-with-files",
     "source": "OpenAI",
-    "summary": "Explore AI resources for financial services, including prompt packs, GPTs, guides, and tools to help institutions deploy and scale AI securely.",
+    "summary": "Learn how to upload and work with files in ChatGPT to analyze data, summarize documents, and generate content from PDFs, spreadsheets, and more.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-64e3c6b3c0f5833df34b",
+    "title": "Using custom GPTs",
+    "url": "https://openai.com/academy/custom-gpts",
+    "source": "OpenAI",
+    "summary": "Learn how to build and use custom GPTs to automate workflows, maintain consistent outputs, and create purpose-built AI assistants.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-15f4dca3d35a5110841b",
+    "title": "ChatGPT for customer success teams",
+    "url": "https://openai.com/academy/customer-success",
+    "source": "OpenAI",
+    "summary": "Learn how customer success teams use ChatGPT to manage accounts, improve communication, reduce churn, and drive adoption and renewals.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-534a735927e040208b50",
+    "title": "Brainstorming with ChatGPT",
+    "url": "https://openai.com/academy/brainstorming",
+    "source": "OpenAI",
+    "summary": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-4dbb1c1ec2bea53d3f8c",
+    "title": "Writing with ChatGPT",
+    "url": "https://openai.com/academy/writing",
+    "source": "OpenAI",
+    "summary": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-6bccb64e94d4be82ca14",
+    "title": "Creating images with ChatGPT",
+    "url": "https://openai.com/academy/image-generation",
+    "source": "OpenAI",
+    "summary": "Learn how to create and refine images with ChatGPT using clear prompts, iterate on designs, and generate high-quality visuals in minutes.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-51ce8504ce132f3e46c4",
+    "title": "ChatGPT for marketing teams",
+    "url": "https://openai.com/academy/marketing",
+    "source": "OpenAI",
+    "summary": "Learn how marketing teams use ChatGPT to plan campaigns, generate content, analyze performance, and move from ideas to execution faster.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-183d0cc9c6c922a3b8c2",
+    "title": "ChatGPT for sales teams",
+    "url": "https://openai.com/academy/sales",
+    "source": "OpenAI",
+    "summary": "Learn how sales teams use ChatGPT to research accounts, personalize outreach, manage deals, and improve pipeline and conversion.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
   },
   {
     "id": "news-42d64f92ad8888462308",
@@ -561,19 +657,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
+    "discovered_at": "2026-04-14 22:03:29"
   },
   {
-    "id": "news-909c28a2bf070247e0a1",
-    "title": "AI fundamentals",
-    "url": "https://openai.com/academy/what-is-ai",
+    "id": "news-e626cbb736ceaf978e15",
+    "title": "Research with ChatGPT",
+    "url": "https://openai.com/academy/search-and-deep-research",
     "source": "OpenAI",
-    "summary": "Learn what AI is, how it works, and how tools like ChatGPT use large language models. A clear, beginner-friendly guide to understanding artificial intelligence.",
+    "summary": "Learn how to research with ChatGPT using search and deep research to find up-to-date information, analyze sources, and generate structured insights.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
+    "discovered_at": "2026-04-14 22:03:29"
   },
   {
     "id": "news-e781bd1ce513b7215e47",
@@ -581,6 +677,30 @@
     "url": "https://openai.com/academy/data-analysis",
     "source": "OpenAI",
     "summary": "Learn how to analyze data with ChatGPT by exploring datasets, generating insights, creating visualizations, and turning findings into actionable decisions.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-6ee77fd7519883f45b81",
+    "title": "ChatGPT for managers",
+    "url": "https://openai.com/academy/managers",
+    "source": "OpenAI",
+    "summary": "Learn how managers use ChatGPT to prepare for conversations, write clear feedback, stay organized, and improve team effectiveness.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-14 22:03:29"
+  },
+  {
+    "id": "news-11c496abc34e390b6245",
+    "title": "Financial services",
+    "url": "https://openai.com/academy/financial-services",
+    "source": "OpenAI",
+    "summary": "Explore AI resources for financial services, including prompt packs, GPTs, guides, and tools to help institutions deploy and scale AI securely.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
@@ -605,42 +725,6 @@
     "url": "https://openai.com/academy/healthcare",
     "source": "OpenAI",
     "summary": "Explore how clinicians use ChatGPT to support diagnosis, documentation, and patient care with secure, HIPAA-compliant AI tools.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
-  },
-  {
-    "id": "news-e626cbb736ceaf978e15",
-    "title": "Research with ChatGPT",
-    "url": "https://openai.com/academy/search-and-deep-research",
-    "source": "OpenAI",
-    "summary": "Learn how to research with ChatGPT using search and deep research to find up-to-date information, analyze sources, and generate structured insights.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
-  },
-  {
-    "id": "news-64e3c6b3c0f5833df34b",
-    "title": "Using custom GPTs",
-    "url": "https://openai.com/academy/custom-gpts",
-    "source": "OpenAI",
-    "summary": "Learn how to build and use custom GPTs to automate workflows, maintain consistent outputs, and create purpose-built AI assistants.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:35"
-  },
-  {
-    "id": "news-51ce8504ce132f3e46c4",
-    "title": "ChatGPT for marketing teams",
-    "url": "https://openai.com/academy/marketing",
-    "source": "OpenAI",
-    "summary": "Learn how marketing teams use ChatGPT to plan campaigns, generate content, analyze performance, and move from ideas to execution faster.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
@@ -696,54 +780,6 @@
     "discovered_at": "2026-04-14 21:06:35"
   },
   {
-    "id": "news-15f4dca3d35a5110841b",
-    "title": "ChatGPT for customer success teams",
-    "url": "https://openai.com/academy/customer-success",
-    "source": "OpenAI",
-    "summary": "Learn how customer success teams use ChatGPT to manage accounts, improve communication, reduce churn, and drive adoption and renewals.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 19:40:04"
-  },
-  {
-    "id": "news-6ee77fd7519883f45b81",
-    "title": "ChatGPT for managers",
-    "url": "https://openai.com/academy/managers",
-    "source": "OpenAI",
-    "summary": "Learn how managers use ChatGPT to prepare for conversations, write clear feedback, stay organized, and improve team effectiveness.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 19:40:04"
-  },
-  {
-    "id": "news-67274246ea9f6d1f90cb",
-    "title": "Using projects in ChatGPT",
-    "url": "https://openai.com/academy/projects",
-    "source": "OpenAI",
-    "summary": "Learn how to use orojects in ChatGPT to organize chats, files, and instructions, manage ongoing work, and collaborate more effectively.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 19:40:04"
-  },
-  {
-    "id": "news-534a735927e040208b50",
-    "title": "Brainstorming with ChatGPT",
-    "url": "https://openai.com/academy/brainstorming",
-    "source": "OpenAI",
-    "summary": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-14 19:40:04"
-  },
-  {
     "id": "news-a73b17417cccc9d9d021",
     "title": "ChatGPT for finance teams",
     "url": "https://openai.com/academy/finance",
@@ -766,42 +802,6 @@
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
     "discovered_at": "2026-04-14 19:40:04"
-  },
-  {
-    "id": "news-bab5fd7819ac73550b85",
-    "title": "Personalizing ChatGPT",
-    "url": "https://openai.com/academy/personalization",
-    "source": "OpenAI",
-    "summary": "Learn how to personalize ChatGPT using custom instructions and memory to get more relevant, consistent, and tailored responses.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-13 12:10:08"
-  },
-  {
-    "id": "news-4c2fa33ea84fbefabad3",
-    "title": "Working with files in ChatGPT",
-    "url": "https://openai.com/academy/working-with-files",
-    "source": "OpenAI",
-    "summary": "Learn how to upload and work with files in ChatGPT to analyze data, summarize documents, and generate content from PDFs, spreadsheets, and more.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-13 12:10:08"
-  },
-  {
-    "id": "news-183d0cc9c6c922a3b8c2",
-    "title": "ChatGPT for sales teams",
-    "url": "https://openai.com/academy/sales",
-    "source": "OpenAI",
-    "summary": "Learn how sales teams use ChatGPT to research accounts, personalize outreach, manage deals, and improve pipeline and conversion.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-12 06:01:56"
   },
   {
     "id": "news-676f7f38200e8f5d99ff",
@@ -1389,7 +1389,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:30"
   },
   {
     "id": "news-26343622776fe0042f58",
@@ -1497,7 +1497,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-03T20:30:15.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-ab324ca76ade73622a3c",
@@ -1509,7 +1509,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-f2b31c55fc99db076bcf",
@@ -1521,7 +1521,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-627413d21cd7994148a1",
@@ -1557,7 +1557,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:30:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-72c66a2896d16cbdc0e8",
@@ -1569,7 +1569,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-a9b4cf584547554d66df",
@@ -1617,7 +1617,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-31T16:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-b7d8a313003d561eed8e",
@@ -2181,7 +2181,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-26T17:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-b91c2b9d189bffbdce3d",
@@ -2205,7 +2205,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-26T16:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-5e663af5b54c3c5268ca",
@@ -2229,7 +2229,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-26T15:21:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-aa10e8664c16d8c256b1",
@@ -2253,7 +2253,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-26T15:00:00.000Z",
-    "discovered_at": "2026-04-14 21:06:36"
+    "discovered_at": "2026-04-14 22:03:31"
   },
   {
     "id": "news-cc029635cd8efe0dc34a",
