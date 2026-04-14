@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-04-14T08:14:56.279Z",
+  "generatedAt": "2026-04-14T09:48:48.409Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T08:14:54.972Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Embeddings",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
-          "title": "Elevated 401 errors for API endpoints",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-04-12T20:40:24.000Z",
-          "updatedAt": "2026-04-14T01:26:25.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
-          "title": "Elevated 401 errors for API endpoints",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-04-12T20:40:24.000Z",
-          "updatedAt": "2026-04-14T01:26:25.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KNX13FBVMC6GJHJ2BQBSRKT8",
-          "title": "Some users may experience issues accessing ChatGPT",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-11T01:04:36.000Z",
-          "updatedAt": "2026-04-11T02:00:58.000Z",
-          "resolvedAt": "2026-04-11T01:48:46.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KNTWSXK5MAKGBNNSY093X29H",
-          "title": "Issue with API platform login and account creation",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-10T05:10:59.000Z",
-          "updatedAt": "2026-04-10T05:20:19.000Z",
-          "resolvedAt": "2026-04-10T05:20:19.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KNTTM5EQY332QC4P7ZQA4X0K",
-          "title": "Issues with share link creation on web UI",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-10T04:32:54.000Z",
-          "updatedAt": "2026-04-10T04:46:12.000Z",
-          "resolvedAt": "2026-04-10T04:46:12.000Z",
-          "summary": null
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -109,22 +12,22 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T08:14:54.915Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-04-14T09:48:47.115Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "degraded_performance"
+        },
         {
           "name": "claude.ai",
           "status": "operational"
         },
         {
           "name": "platform.claude.com (formerly console.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
           "status": "operational"
         },
         {
@@ -140,8 +43,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "w3389p5qg7kp",
+          "title": "Degraded service on usage and analytics admin API endpoints",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-14T09:24:51.920Z",
+          "updatedAt": "2026-04-14T09:24:52.008Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/w2qlkm4lprv5",
+          "summary": "We are investigating reports of degraded performance affecting the usage and analytics admin API endpoints. We will provide an update as soon as possible."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "w3389p5qg7kp",
+          "title": "Degraded service on usage and analytics admin API endpoints",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-14T09:24:51.920Z",
+          "updatedAt": "2026-04-14T09:24:52.008Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/w2qlkm4lprv5",
+          "summary": "We are investigating reports of degraded performance affecting the usage and analytics admin API endpoints. We will provide an update as soon as possible."
+        },
         {
           "id": "6jd2m42f8mld",
           "title": "Claude.ai down",
@@ -174,17 +100,6 @@
           "resolvedAt": "2026-04-10T16:51:44.183Z",
           "url": "https://stspg.io/hfbfvplmg5s1",
           "summary": "The issue affecting requests to non-Opus models has been resolved."
-        },
-        {
-          "id": "ccm8hy0pld48",
-          "title": "Some Claude.ai share links were inaccessible",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-10T14:00:00.000Z",
-          "updatedAt": "2026-04-10T17:38:28.361Z",
-          "resolvedAt": "2026-04-10T14:00:00.000Z",
-          "url": "https://stspg.io/x2g8g3pkcqtk",
-          "summary": "Between April 2 and April 10, some users who were not signed in to Claude.ai (web, mobile, desktop) were not able to access some Claude.ai sharing links."
         }
       ]
     },
@@ -199,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T08:14:55.660Z",
+      "lastCheckedAt": "2026-04-14T09:48:47.761Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T08:14:55.193Z",
+      "lastCheckedAt": "2026-04-14T09:48:47.274Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T08:14:56.043Z",
+      "lastCheckedAt": "2026-04-14T09:48:48.214Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T08:14:55.062Z",
+      "lastCheckedAt": "2026-04-14T09:48:47.141Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -402,6 +317,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-14T09:48:47.112Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        },
+        {
+          "name": "Sora",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
+          "title": "Elevated 401 errors for API endpoints",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-12T20:40:24.000Z",
+          "updatedAt": "2026-04-14T08:41:42.000Z",
+          "resolvedAt": "2026-04-14T08:41:42.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KNX13FBVMC6GJHJ2BQBSRKT8",
+          "title": "Some users may experience issues accessing ChatGPT",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-04-11T01:04:36.000Z",
+          "updatedAt": "2026-04-11T02:00:58.000Z",
+          "resolvedAt": "2026-04-11T01:48:46.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KNTWSXK5MAKGBNNSY093X29H",
+          "title": "Issue with API platform login and account creation",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-10T05:10:59.000Z",
+          "updatedAt": "2026-04-10T05:20:19.000Z",
+          "resolvedAt": "2026-04-10T05:20:19.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KNTTM5EQY332QC4P7ZQA4X0K",
+          "title": "Issues with share link creation on web UI",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-04-10T04:32:54.000Z",
+          "updatedAt": "2026-04-10T04:46:12.000Z",
+          "resolvedAt": "2026-04-10T04:46:12.000Z",
+          "summary": null
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -412,7 +413,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T08:14:56.271Z",
+      "lastCheckedAt": "2026-04-14T09:48:48.402Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -477,7 +478,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-14T08:14:55.222Z",
+      "lastCheckedAt": "2026-04-14T09:48:47.345Z",
       "overallStatus": "unknown",
       "overallLabel": "Status page available",
       "summary": "Official provider status page reports: Status page available.",
