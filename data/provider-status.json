@@ -1,191 +1,6 @@
 {
-  "generatedAt": "2026-04-15T18:48:19.369Z",
+  "generatedAt": "2026-04-15T19:41:58.599Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T18:48:18.324Z",
-      "overallStatus": "major_outage",
-      "overallLabel": "Major System Outage",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "FedRAMP",
-          "status": "full_outage"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KP96N94V5AJX22P8APDX6XH2",
-          "title": "ChatGPT FedRAMP workspaces not loading",
-          "status": "investigating",
-          "impact": "critical",
-          "startedAt": "2026-04-15T18:32:35.000Z",
-          "updatedAt": "2026-04-15T18:32:35.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KP96N94V5AJX22P8APDX6XH2",
-          "title": "ChatGPT FedRAMP workspaces not loading",
-          "status": "investigating",
-          "impact": "critical",
-          "startedAt": "2026-04-15T18:32:35.000Z",
-          "updatedAt": "2026-04-15T18:32:35.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KP6EBCNE70DBFZ7Z56VG44N8",
-          "title": "Account Creation Issues",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-14T16:49:17.000Z",
-          "updatedAt": "2026-04-14T17:09:21.000Z",
-          "resolvedAt": "2026-04-14T17:09:21.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
-          "title": "Elevated 401 errors for API endpoints",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-12T20:40:24.000Z",
-          "updatedAt": "2026-04-14T08:41:42.000Z",
-          "resolvedAt": "2026-04-14T08:41:42.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KNX13FBVMC6GJHJ2BQBSRKT8",
-          "title": "Some users may experience issues accessing ChatGPT",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-11T01:04:36.000Z",
-          "updatedAt": "2026-04-11T02:00:58.000Z",
-          "resolvedAt": "2026-04-11T01:48:46.000Z",
-          "summary": null
-        }
-      ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T18:48:19.362Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "together-feed-0-2026-04-15T18:23:20.000Z",
-          "title": "FLUX.1 [schnell] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T18:23:20.000Z",
-          "updatedAt": "2026-04-15T18:23:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 [schnell] went down"
-        },
-        {
-          "id": "together-feed-1-2026-04-15T17:55:39.000Z",
-          "title": "ZAI GLM 5 FP4 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T17:55:39.000Z",
-          "updatedAt": "2026-04-15T17:55:39.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-04-15T18:23:20.000Z",
-          "title": "FLUX.1 [schnell] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T18:23:20.000Z",
-          "updatedAt": "2026-04-15T18:23:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 [schnell] went down"
-        },
-        {
-          "id": "together-feed-1-2026-04-15T17:55:39.000Z",
-          "title": "ZAI GLM 5 FP4 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T17:55:39.000Z",
-          "updatedAt": "2026-04-15T17:55:39.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-15T17:49:44.000Z",
-          "title": "ZAI GLM 5 FP4 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-15T17:49:44.000Z",
-          "updatedAt": "2026-04-15T17:49:44.000Z",
-          "resolvedAt": "2026-04-15T17:49:44.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-15T17:37:42.000Z",
-          "title": "ZAI GLM 5 FP4 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T17:37:42.000Z",
-          "updatedAt": "2026-04-15T17:37:42.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 went down"
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -197,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T18:48:18.366Z",
+      "lastCheckedAt": "2026-04-15T19:41:57.310Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T18:48:19.068Z",
+      "lastCheckedAt": "2026-04-15T19:41:57.989Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T18:48:18.565Z",
+      "lastCheckedAt": "2026-04-15T19:41:57.400Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -381,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T18:48:19.324Z",
+      "lastCheckedAt": "2026-04-15T19:41:58.571Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -446,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T18:48:18.488Z",
+      "lastCheckedAt": "2026-04-15T19:41:57.236Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -500,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T18:48:18.847Z",
+      "lastCheckedAt": "2026-04-15T19:41:57.850Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -508,6 +323,157 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-15T19:41:57.094Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KP96N94V5AJX22P8APDX6XH2",
+          "title": "ChatGPT FedRAMP workspaces not loading",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-04-15T18:32:35.000Z",
+          "updatedAt": "2026-04-15T18:55:03.000Z",
+          "resolvedAt": "2026-04-15T18:55:03.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KP6EBCNE70DBFZ7Z56VG44N8",
+          "title": "Account Creation Issues",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-14T16:49:17.000Z",
+          "updatedAt": "2026-04-14T17:09:21.000Z",
+          "resolvedAt": "2026-04-14T17:09:21.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
+          "title": "Elevated 401 errors for API endpoints",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-12T20:40:24.000Z",
+          "updatedAt": "2026-04-14T08:41:42.000Z",
+          "resolvedAt": "2026-04-14T08:41:42.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KNX13FBVMC6GJHJ2BQBSRKT8",
+          "title": "Some users may experience issues accessing ChatGPT",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-04-11T01:04:36.000Z",
+          "updatedAt": "2026-04-11T02:00:58.000Z",
+          "resolvedAt": "2026-04-11T01:48:46.000Z",
+          "summary": null
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-15T19:41:58.592Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-04-15T19:16:21.000Z",
+          "title": "ZAI GLM 5 FP4 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-15T19:16:21.000Z",
+          "updatedAt": "2026-04-15T19:16:21.000Z",
+          "resolvedAt": "2026-04-15T19:16:21.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-15T18:54:25.000Z",
+          "title": "FLUX.1 [schnell] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-15T18:54:25.000Z",
+          "updatedAt": "2026-04-15T18:54:25.000Z",
+          "resolvedAt": "2026-04-15T18:54:25.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 [schnell] recovered"
+        },
+        {
+          "id": "together-feed-2-2026-04-15T18:23:20.000Z",
+          "title": "FLUX.1 [schnell] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T18:23:20.000Z",
+          "updatedAt": "2026-04-15T18:23:20.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 [schnell] went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-15T17:55:39.000Z",
+          "title": "ZAI GLM 5 FP4 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T17:55:39.000Z",
+          "updatedAt": "2026-04-15T17:55:39.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 went down"
+        }
+      ]
     },
     {
       "id": "xai",
