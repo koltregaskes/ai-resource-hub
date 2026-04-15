@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.3-Codex"
 provider: "OpenAI"
 release_date: "2026-02-24"
-generated_at: "2026-04-15T06:08:31.476Z"
+generated_at: "2026-04-15T08:04:01.792Z"
 ---
 
 # GPT-5.3-Codex: release brief
