@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 14 Apr 2026, 23:57 UTC
+Generated: 15 Apr 2026, 03:37 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -24,7 +24,7 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 14 | O3 Pro | OpenAI | 34.9 | 75.5 / 5 | 37% | Reasoning | $20.00 / $80.00 | 10 Jun 2025 |
 | 15 | GPT-4.1 | OpenAI | 32.9 | 75.7 / 6 | 39% | General use | $2.00 / $8.00 | 14 Apr 2025 |
 | 16 | DeepSeek V3 | DeepSeek | 31.0 | 77.0 / 5 | 31% | Coding | $0.32 / $0.89 | 25 Dec 2024 |
-| 17 | GPT-4o (extended) | OpenAI | 30.4 | 77.0 / 6 | 35% | Coding | $6.00 / $18.00 | 13 May 2024 |
+| 17 | GPT-4o (2024-05-13) | OpenAI | 30.4 | 77.0 / 6 | 35% | Coding | $5.00 / $15.00 | 13 May 2024 |
 | 18 | Grok 3 Beta | xAI | 30.3 | 85.0 / 6 | 38% | Coding | $3.00 / $15.00 | 10 Jun 2025 |
 | 19 | QwQ 32B | Alibaba | 29.8 | 79.2 / 4 | 26% | Coding | $0.15 / $0.58 | 06 Mar 2025 |
 | 20 | Qwen3 235B A22B | Alibaba | 29.4 | 85.6 / 3 | 21% | Chat | $0.46 / $1.82 | 01 Apr 2025 |

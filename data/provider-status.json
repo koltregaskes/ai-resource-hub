@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-15T01:08:52.596Z",
+  "generatedAt": "2026-04-15T03:37:49.616Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T01:08:51.380Z",
+      "lastCheckedAt": "2026-04-15T03:37:48.366Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T01:08:52.106Z",
+      "lastCheckedAt": "2026-04-15T03:37:49.163Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T01:08:51.743Z",
+      "lastCheckedAt": "2026-04-15T03:37:48.634Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T01:08:52.589Z",
+      "lastCheckedAt": "2026-04-15T03:37:49.506Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T01:08:51.594Z",
+      "lastCheckedAt": "2026-04-15T03:37:48.526Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -305,6 +305,26 @@
       ]
     },
     {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-15T03:37:48.812Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -315,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T01:08:51.295Z",
+      "lastCheckedAt": "2026-04-15T03:37:48.390Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -401,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T01:08:52.474Z",
+      "lastCheckedAt": "2026-04-15T03:37:49.608Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -410,7 +430,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-15T01:04:42.000Z",
+          "id": "together-feed-0-2026-04-15T01:29:28.000Z",
+          "title": "Moonshot Kimi K2.5 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-15T01:29:28.000Z",
+          "updatedAt": "2026-04-15T01:29:28.000Z",
+          "resolvedAt": "2026-04-15T01:29:28.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Moonshot Kimi K2.5 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-15T01:05:21.000Z",
+          "title": "Moonshot Kimi K2.5 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T01:05:21.000Z",
+          "updatedAt": "2026-04-15T01:05:21.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Moonshot Kimi K2.5 went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-15T01:04:42.000Z",
           "title": "Deepseek R1 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -421,7 +463,7 @@
           "summary": "Deepseek R1 recovered"
         },
         {
-          "id": "together-feed-1-2026-04-15T00:05:40.000Z",
+          "id": "together-feed-3-2026-04-15T00:05:40.000Z",
           "title": "Moonshot Kimi K2.5 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -430,50 +472,8 @@
           "resolvedAt": "2026-04-15T00:05:40.000Z",
           "url": "https://status.together.ai/",
           "summary": "Moonshot Kimi K2.5 recovered"
-        },
-        {
-          "id": "together-feed-2-2026-04-14T23:49:33.000Z",
-          "title": "Deepseek R1 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-14T23:49:33.000Z",
-          "updatedAt": "2026-04-14T23:49:33.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Deepseek R1 went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-14T23:47:28.000Z",
-          "title": "Moonshot Kimi K2.5 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-14T23:47:28.000Z",
-          "updatedAt": "2026-04-14T23:47:28.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Moonshot Kimi K2.5 went down"
         }
       ]
-    },
-    {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T01:08:51.915Z",
-      "overallStatus": "unknown",
-      "overallLabel": "Status page available",
-      "summary": "Official provider status page reports: Status page available.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "xai",
