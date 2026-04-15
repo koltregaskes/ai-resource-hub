@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-15T14:56:42.845Z",
+  "generatedAt": "2026-04-15T15:21:18.860Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,27 +12,27 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T14:56:40.392Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
+      "lastCheckedAt": "2026-04-15T15:21:17.733Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "major_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "platform.claude.com (formerly console.anthropic.com)",
-          "status": "major_outage"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "major_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Code",
-          "status": "major_outage"
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
         },
         {
           "name": "Claude Cowork",
@@ -47,26 +47,26 @@
         {
           "id": "f00h6l76tsjs",
           "title": "Elevated errors on Claude.ai, API, Claude Code",
-          "status": "investigating",
+          "status": "identified",
           "impact": "critical",
           "startedAt": "2026-04-15T14:53:02.039Z",
-          "updatedAt": "2026-04-15T14:55:35.817Z",
+          "updatedAt": "2026-04-15T15:20:03.216Z",
           "resolvedAt": null,
           "url": "https://stspg.io/k80mg4g9k3sf",
-          "summary": "We are continuing to investigate this issue."
+          "summary": "The Claude API has fully recovered as of 8:01 PT / 16:01 UTC. We are currently working on mitigating the ongoing errors for Claude AI. Claude Code users who are logged in are stil..."
         }
       ],
       "recentIncidents": [
         {
           "id": "f00h6l76tsjs",
           "title": "Elevated errors on Claude.ai, API, Claude Code",
-          "status": "investigating",
+          "status": "identified",
           "impact": "critical",
           "startedAt": "2026-04-15T14:53:02.039Z",
-          "updatedAt": "2026-04-15T14:55:35.817Z",
+          "updatedAt": "2026-04-15T15:20:03.216Z",
           "resolvedAt": null,
           "url": "https://stspg.io/k80mg4g9k3sf",
-          "summary": "We are continuing to investigate this issue."
+          "summary": "The Claude API has fully recovered as of 8:01 PT / 16:01 UTC. We are currently working on mitigating the ongoing errors for Claude AI. Claude Code users who are logged in are stil..."
         },
         {
           "id": "w3389p5qg7kp",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T14:56:41.193Z",
+      "lastCheckedAt": "2026-04-15T15:21:18.643Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -122,7 +122,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-1-2026-04-15T13:58:55.000Z",
+          "id": "together-feed-1-2026-04-15T15:00:53.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T15:00:53.000Z",
+          "updatedAt": "2026-04-15T15:00:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-15T13:58:55.000Z",
           "title": "Deepseek R1 went down",
           "status": "investigating",
           "impact": "major",
@@ -131,22 +142,33 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Deepseek R1 went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-15T12:26:21.000Z",
-          "title": "ZAI GLM 5 FP4 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T12:26:21.000Z",
-          "updatedAt": "2026-04-15T12:26:21.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-15T14:16:46.000Z",
+          "id": "together-feed-0-2026-04-15T15:13:56.000Z",
+          "title": "FLUX.1 Krea [dev] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-15T15:13:56.000Z",
+          "updatedAt": "2026-04-15T15:13:56.000Z",
+          "resolvedAt": "2026-04-15T15:13:56.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-15T15:00:53.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T15:00:53.000Z",
+          "updatedAt": "2026-04-15T15:00:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-15T14:16:46.000Z",
           "title": "Deepseek R1 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -157,7 +179,7 @@
           "summary": "Deepseek R1 recovered"
         },
         {
-          "id": "together-feed-1-2026-04-15T13:58:55.000Z",
+          "id": "together-feed-3-2026-04-15T13:58:55.000Z",
           "title": "Deepseek R1 went down",
           "status": "investigating",
           "impact": "major",
@@ -166,28 +188,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Deepseek R1 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-15T12:39:38.000Z",
-          "title": "FLUX.1 [schnell] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-15T12:39:38.000Z",
-          "updatedAt": "2026-04-15T12:39:38.000Z",
-          "resolvedAt": "2026-04-15T12:39:38.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 [schnell] recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-15T12:26:21.000Z",
-          "title": "ZAI GLM 5 FP4 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T12:26:21.000Z",
-          "updatedAt": "2026-04-15T12:26:21.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 went down"
         }
       ]
     },
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T14:56:40.763Z",
+      "lastCheckedAt": "2026-04-15T15:21:18.401Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T14:56:42.837Z",
+      "lastCheckedAt": "2026-04-15T15:21:17.924Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -296,7 +296,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T14:56:40.920Z",
+      "lastCheckedAt": "2026-04-15T15:21:18.852Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -361,7 +361,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T14:56:40.144Z",
+      "lastCheckedAt": "2026-04-15T15:21:17.831Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -415,7 +415,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T14:56:40.482Z",
+      "lastCheckedAt": "2026-04-15T15:21:18.081Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -435,7 +435,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T14:56:40.186Z",
+      "lastCheckedAt": "2026-04-15T15:21:17.680Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
