@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-15T16:42:37.967Z",
+  "generatedAt": "2026-04-15T17:18:05.859Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T16:42:37.185Z",
+      "lastCheckedAt": "2026-04-15T17:18:04.392Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -104,6 +104,94 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-15T17:18:05.852Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-04-15T16:55:31.000Z",
+          "title": "ZAI GLM 5 FP4 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T16:55:31.000Z",
+          "updatedAt": "2026-04-15T16:55:31.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-15T15:00:53.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T15:00:53.000Z",
+          "updatedAt": "2026-04-15T15:00:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-04-15T16:55:31.000Z",
+          "title": "ZAI GLM 5 FP4 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T16:55:31.000Z",
+          "updatedAt": "2026-04-15T16:55:31.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 went down"
+        },
+        {
+          "id": "together-feed-1-2026-04-15T16:34:28.000Z",
+          "title": "ZAI GLM 5 FP4 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-15T16:34:28.000Z",
+          "updatedAt": "2026-04-15T16:34:28.000Z",
+          "resolvedAt": "2026-04-15T16:34:28.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 recovered"
+        },
+        {
+          "id": "together-feed-2-2026-04-15T15:13:56.000Z",
+          "title": "FLUX.1 Krea [dev] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-15T15:13:56.000Z",
+          "updatedAt": "2026-04-15T15:13:56.000Z",
+          "resolvedAt": "2026-04-15T15:13:56.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] recovered"
+        },
+        {
+          "id": "together-feed-3-2026-04-15T15:00:53.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-15T15:00:53.000Z",
+          "updatedAt": "2026-04-15T15:00:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        }
+      ]
+    },
+    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -114,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T16:42:37.667Z",
+      "lastCheckedAt": "2026-04-15T17:18:05.364Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +222,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T16:42:37.313Z",
+      "lastCheckedAt": "2026-04-15T17:18:05.184Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +296,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T16:42:37.913Z",
+      "lastCheckedAt": "2026-04-15T17:18:05.764Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +361,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T16:42:37.208Z",
+      "lastCheckedAt": "2026-04-15T17:18:04.546Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +415,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T16:42:37.407Z",
+      "lastCheckedAt": "2026-04-15T17:18:05.109Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -347,7 +435,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T16:42:37.147Z",
+      "lastCheckedAt": "2026-04-15T17:18:04.349Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -419,71 +507,6 @@
           "updatedAt": "2026-04-10T05:20:19.000Z",
           "resolvedAt": "2026-04-10T05:20:19.000Z",
           "summary": null
-        }
-      ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-15T16:42:37.960Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-04-15T16:34:28.000Z",
-          "title": "ZAI GLM 5 FP4 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-15T16:34:28.000Z",
-          "updatedAt": "2026-04-15T16:34:28.000Z",
-          "resolvedAt": "2026-04-15T16:34:28.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 recovered"
-        },
-        {
-          "id": "together-feed-1-2026-04-15T15:13:56.000Z",
-          "title": "FLUX.1 Krea [dev] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-15T15:13:56.000Z",
-          "updatedAt": "2026-04-15T15:13:56.000Z",
-          "resolvedAt": "2026-04-15T15:13:56.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] recovered"
-        },
-        {
-          "id": "together-feed-2-2026-04-15T15:00:53.000Z",
-          "title": "FLUX.1 Krea [dev] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T15:00:53.000Z",
-          "updatedAt": "2026-04-15T15:00:53.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-15T14:16:46.000Z",
-          "title": "Deepseek R1 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-15T14:16:46.000Z",
-          "updatedAt": "2026-04-15T14:16:46.000Z",
-          "resolvedAt": "2026-04-15T14:16:46.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Deepseek R1 recovered"
         }
       ]
     },
