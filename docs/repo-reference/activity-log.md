@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 15 Apr 2026, 21:05 UTC
+Generated: 15 Apr 2026, 22:03 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 15 Apr 2026, 21:05 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 15 Apr 2026, 21:05 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 15 Apr 2026, 21:05 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 15 Apr 2026, 21:05 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 15 Apr 2026, 21:05 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 15 Apr 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,102 open roles across 10 tracked companies. | `/jobs/` |
+| 15 Apr 2026, 22:03 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 15 Apr 2026, 22:02 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 15 Apr 2026, 22:02 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 15 Apr 2026, 22:02 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 15 Apr 2026, 22:02 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Apr 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,104 open roles across 10 tracked companies. | `/jobs/` |
 | 09 Apr 2026, 12:00 UTC | digest | Mamba 1 &amp; 2 to Mamba 3 Architectural Upgrade | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sge45s/mamba_1_2_to_mamba_3_architectural_upgrade/) |
 | 09 Apr 2026, 12:00 UTC | digest | Published the 2026-04-09 daily digest | 20 stories captured from 677 sources. | `/news/` |
 | 08 Apr 2026, 12:00 UTC | digest | Finally Abliterated Sarvam 30B and 105B! | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sg5770/finally_abliterated_sarvam_30b_and_105b/) |
