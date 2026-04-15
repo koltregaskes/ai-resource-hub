@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Gemini 3 Flash Preview"
 provider: "Google"
 release_date: "2025-12-17"
-generated_at: "2026-04-15T09:49:03.189Z"
+generated_at: "2026-04-15T11:15:32.042Z"
 ---
 
 # Gemini 3 Flash Preview: release brief
