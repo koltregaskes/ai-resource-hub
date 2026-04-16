@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.4"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-04-16T17:42:14.547Z"
+generated_at: "2026-04-16T19:37:18.836Z"
 ---
 
 # GPT-5.4: release brief
@@ -34,7 +34,7 @@ GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-a
 - OpenAI (2026-04-13): [Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI](https://openai.com/index/cloudflare-openai-agent-cloud) - Cloudflare brings OpenAI's GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.
 - The Verge (2026-04-09): [ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new) - OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers "5x more" usage of its Codex coding tool than the $20 per month Plus subscription and "is best for longer, high-effort Codex sessions," OpenAI says. The company is introducing the new tier as it [&#823…
 - OpenAI (2026-04-01): [Gradient Labs gives every bank customer an AI account manager](https://openai.com/index/gradient-labs) - Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.
-- The Verge (2026-04-16): [OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos) - OpenAI is beefing up its agentic coding and development system Codex with a suite of updates that let it use your computer, generate images, and remember from past experiences. Codex will now be able to operate desktop apps on your computer, OpenAI says in a blog post announcing the update. It can work in the [&#8230;]
+- The Verge (2026-04-16): [OpenAI’s big Codex update is a direct shot at Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos) - OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…
 
 ## Suggested thread / post structure
 
@@ -60,4 +60,4 @@ GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [OpenAI: Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI](https://openai.com/index/cloudflare-openai-agent-cloud)
 - [The Verge: ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new)
 - [OpenAI: Gradient Labs gives every bank customer an AI account manager](https://openai.com/index/gradient-labs)
-- [The Verge: OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos)
+- [The Verge: OpenAI’s big Codex update is a direct shot at Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos)

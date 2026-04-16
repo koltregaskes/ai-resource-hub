@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T17:57:15.598Z",
+  "generatedAt": "2026-04-16T19:37:11.153Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,12 +12,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T17:57:14.128Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-04-16T19:37:10.086Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Claude Cowork",
+          "status": "partial_outage"
+        },
         {
           "name": "claude.ai",
           "status": "operational"
@@ -35,16 +39,35 @@
           "status": "operational"
         },
         {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "qj05p69fff9h",
+          "title": "Claude Cowork not starting for some users",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-16T19:24:38.419Z",
+          "updatedAt": "2026-04-16T19:24:38.515Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/zv6xsc3wm28c",
+          "summary": "We are currently investigating this issue on the v1.3036.0 release of Claude Desktop"
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "qj05p69fff9h",
+          "title": "Claude Cowork not starting for some users",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-16T19:24:38.419Z",
+          "updatedAt": "2026-04-16T19:24:38.515Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/zv6xsc3wm28c",
+          "summary": "We are currently investigating this issue on the v1.3036.0 release of Claude Desktop"
+        },
         {
           "id": "7jbzthbc1dwr",
           "title": "Opus 4.6 elevated rate of errors",
@@ -77,17 +100,6 @@
           "resolvedAt": "2026-04-14T15:21:03.965Z",
           "url": "https://stspg.io/w2qlkm4lprv5",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "6jd2m42f8mld",
-          "title": "Claude.ai down",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-04-13T15:40:43.567Z",
-          "updatedAt": "2026-04-13T16:35:58.082Z",
-          "resolvedAt": "2026-04-13T16:35:58.062Z",
-          "url": "https://stspg.io/b0rjmf00qb07",
-          "summary": "We have resolved the issue resulting in elevated errors on login for Claude.ai and Claude Code betwen 15:31 to 16:19 UTC."
         }
       ]
     },
@@ -102,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T17:57:15.024Z",
+      "lastCheckedAt": "2026-04-16T19:37:10.632Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T17:57:14.453Z",
+      "lastCheckedAt": "2026-04-16T19:37:10.167Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T17:57:15.411Z",
+      "lastCheckedAt": "2026-04-16T19:37:10.972Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T17:57:14.295Z",
+      "lastCheckedAt": "2026-04-16T19:37:10.104Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T17:57:14.646Z",
+      "lastCheckedAt": "2026-04-16T19:37:10.259Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +347,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T17:57:14.140Z",
+      "lastCheckedAt": "2026-04-16T19:37:09.941Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +433,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T17:57:15.590Z",
+      "lastCheckedAt": "2026-04-16T19:37:11.145Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -430,7 +442,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-16T16:06:19.000Z",
+          "id": "together-feed-0-2026-04-16T18:26:40.000Z",
+          "title": "OpenAI GPT OSS 120B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-16T18:26:40.000Z",
+          "updatedAt": "2026-04-16T18:26:40.000Z",
+          "resolvedAt": "2026-04-16T18:26:40.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-16T17:53:35.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-16T17:53:35.000Z",
+          "updatedAt": "2026-04-16T17:53:35.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-16T16:06:19.000Z",
           "title": "FLUX.1 [schnell] recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -441,7 +475,7 @@
           "summary": "FLUX.1 [schnell] recovered"
         },
         {
-          "id": "together-feed-1-2026-04-16T15:11:22.000Z",
+          "id": "together-feed-3-2026-04-16T15:11:22.000Z",
           "title": "FLUX.1 [schnell] went down",
           "status": "investigating",
           "impact": "major",
@@ -450,28 +484,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "FLUX.1 [schnell] went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-16T07:36:12.000Z",
-          "title": "MiniMax M2.5 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-16T07:36:12.000Z",
-          "updatedAt": "2026-04-16T07:36:12.000Z",
-          "resolvedAt": "2026-04-16T07:36:12.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "MiniMax M2.5 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-16T07:16:14.000Z",
-          "title": "MiniMax M2.5 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-16T07:16:14.000Z",
-          "updatedAt": "2026-04-16T07:16:14.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "MiniMax M2.5 went down"
         }
       ]
     },

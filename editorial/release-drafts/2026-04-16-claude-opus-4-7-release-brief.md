@@ -7,7 +7,7 @@ priority: "high"
 model: "Claude Opus 4.7"
 provider: "Anthropic"
 release_date: "2026-04-16"
-generated_at: "2026-04-16T17:42:14.546Z"
+generated_at: "2026-04-16T19:37:18.835Z"
 ---
 
 # Claude Opus 4.7: release brief
@@ -30,7 +30,7 @@ Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned 
 ## Outside coverage and early reactions
 
 - The Verge (2026-04-16): [Anthropic releases a new Opus model amid Mythos Preview buzz](https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity) - Anthropic has released its most powerful "generally available" model to date: Claude Opus 4.7. The company called it a step up from Opus 4.6 for advanced software engineering tasks, particularly in complex coding areas that in the past required more hand-holding. It's also supposed to be better at analyzing images and…
-- The Verge (2026-04-16): [OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos) - OpenAI is beefing up its agentic coding and development system Codex with a suite of updates that let it use your computer, generate images, and remember from past experiences. Codex will now be able to operate desktop apps on your computer, OpenAI says in a blog post announcing the update. It can work in the [&#8230;]
+- The Verge (2026-04-16): [OpenAI’s big Codex update is a direct shot at Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos) - OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…
 
 ## Suggested thread / post structure
 
@@ -52,4 +52,4 @@ Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned 
 - [Official launch or docs](https://docs.anthropic.com)
 - [Provider API/docs](https://docs.anthropic.com)
 - [The Verge: Anthropic releases a new Opus model amid Mythos Preview buzz](https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity)
-- [The Verge: OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos)
+- [The Verge: OpenAI’s big Codex update is a direct shot at Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos)
