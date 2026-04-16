@@ -1,5 +1,125 @@
 [
   {
+    "id": "news-83d70cdcf89025b3f3d0",
+    "title": "Google’s AI Mode update lets you open links without leaving the page",
+    "url": "https://www.theverge.com/tech/913109/google-ai-mode-tabs-sources",
+    "source": "The Verge",
+    "summary": "Google is upgrading AI Mode in Chrome with a new feature that will allow you to open links to sources alongside your chat. Now, instead of automatically opening a new tab, clicking a source will open the website side by side with AI Mode, allowing you to ask follow-up questions about what's on the page. [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T17:00:00.000Z",
+    "discovered_at": "2026-04-16 17:42:03"
+  },
+  {
+    "id": "news-b6d070c7cd846c904953",
+    "title": "OpenAI’s big Codex update is a direct shot at Anthropic’s Claude Code",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
+    "source": "The Verge",
+    "summary": "OpenAI is beefing up its agentic coding and development system Codex with a suite of updates that let it use your computer, generate images, and remember from past experiences. Codex will now be able to operate desktop apps on your computer, OpenAI says in a blog post announcing the update. It can work in the [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T17:00:00.000Z",
+    "discovered_at": "2026-04-16 17:42:03"
+  },
+  {
+    "id": "news-82a2dc4652f988ee34f5",
+    "title": "Google now lets you explore the web side-by-side with AI Mode",
+    "url": "https://techcrunch.com/2026/04/16/google-now-lets-you-explore-the-web-side-by-side-with-ai-mode/",
+    "source": "TechCrunch",
+    "summary": "Now, when you're using AI Mode on Chrome desktop, clicking a link will open the webpage side-by-side with AI Mode.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T17:00:00.000Z",
+    "discovered_at": "2026-04-16 17:42:02"
+  },
+  {
+    "id": "news-7982e6a9800653a0aece",
+    "title": "A new way to explore the web with AI Mode in Chrome",
+    "url": "https://blog.google/products-and-platforms/products/search/ai-mode-chrome/",
+    "source": "Google",
+    "summary": "Today’s upgrades for AI Mode in Chrome transform how you interact with the web",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T17:00:00.000Z",
+    "discovered_at": "2026-04-16 17:42:02"
+  },
+  {
+    "id": "news-7aa8ce21ac099defacf1",
+    "title": "InsightFinder raises $15M to help companies figure out where AI agents go wrong",
+    "url": "https://techcrunch.com/2026/04/16/insightfinder-raises-15m-to-help-companies-figure-out-where-ai-agents-go-wrong/",
+    "source": "TechCrunch",
+    "summary": "According to CEO Helen Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong, it's diagnosing how the entire tech stack operates now that AI is a part of it.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T16:15:00.000Z",
+    "discovered_at": "2026-04-16 17:42:02"
+  },
+  {
+    "id": "news-2ee8a399b0b53a95651c",
+    "title": "AI traffic to US retailers rose 393% in Q1, and it&#8217;s boosting their revenue too",
+    "url": "https://techcrunch.com/2026/04/16/ai-traffic-to-us-retailers-rose-393-in-q1-and-its-boosting-their-revenue-too/",
+    "source": "TechCrunch",
+    "summary": "Adobe says AI traffic to U.S. retail sites also jumped 269% in March, with visitors converting better and generating more revenue than non-AI shoppers.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T16:14:03.000Z",
+    "discovered_at": "2026-04-16 17:42:02"
+  },
+  {
+    "id": "news-aef4c9c206752384fd22",
+    "title": "Gemini can now pull from Google Photos to generate personalized images",
+    "url": "https://www.theverge.com/tech/913202/gemini-personal-intelligence-images-nano-banana",
+    "source": "The Verge",
+    "summary": "Google's Personal Intelligence feature, which lets Gemini pull data from apps like Google Photos to offer responses tailored to you, can now use that data and its Nano Banana 2 image model to create images based on your personal context. With the feature, you can use prompts like \"Design my dream house\" or \"Create a […",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T16:00:00.000Z",
+    "discovered_at": "2026-04-16 17:42:03"
+  },
+  {
+    "id": "news-888bda89762801e5b3d9",
+    "title": "Roblox’s AI assistant gets new agentic tools to plan, build, and test games",
+    "url": "https://techcrunch.com/2026/04/16/robloxs-ai-assistant-gets-new-agentic-tools-to-plan-build-and-test-games/",
+    "source": "TechCrunch",
+    "summary": "The new tools are designed to help creators throughout the entire development process.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T16:00:00.000Z",
+    "discovered_at": "2026-04-16 17:42:02"
+  },
+  {
+    "id": "news-6e7bff1b860f69f890ef",
+    "title": "New ways to create personalized images in the Gemini app",
+    "url": "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
+    "source": "Google",
+    "summary": "Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T16:00:00.000Z",
+    "discovered_at": "2026-04-16 17:42:02"
+  },
+  {
+    "id": "news-20c9291a6c7127f6d281",
+    "title": "Anthropic releases a new Opus model amid Mythos Preview buzz",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity",
+    "source": "The Verge",
+    "summary": "Anthropic has released its most powerful \"generally available\" model to date: Claude Opus 4.7. The company called it a step up from Opus 4.6 for advanced software engineering tasks, particularly in complex coding areas that in the past required more hand-holding. It's also supposed to be better at analyzing images and…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T15:59:24.000Z",
+    "discovered_at": "2026-04-16 17:42:03"
+  },
+  {
     "id": "news-0dcce0bd0b51c0544fd0",
     "title": "Google is now targeting bad ads over bad actors",
     "url": "https://techcrunch.com/2026/04/16/google-blocked-more-ads-but-banned-fewer-advertisers-as-ai-reshapes-enforcement/",
@@ -9,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T15:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-ccd7f0db99b057930a80",
@@ -21,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T14:14:29.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-2780fbdd006f686492b6",
@@ -33,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T14:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:03"
   },
   {
     "id": "news-0bd99ad3569944747410",
@@ -45,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T14:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:03"
   },
   {
     "id": "news-37c761d504b6b2b9aba2",
@@ -57,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T13:49:32.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-bdf44e8c5ba5c26aef07",
@@ -69,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T13:07:09.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:03"
   },
   {
     "id": "news-c86a74345ddd755393f3",
@@ -81,31 +201,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T13:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-a243a06745c6c246b6c4",
     "title": "This simulation startup wants to be the Cursor for physical AI",
     "url": "https://techcrunch.com/2026/04/16/this-simulation-startup-wants-to-be-the-cursor-for-physical-ai/",
     "source": "TechCrunch",
-    "summary": "Antioch raised a $8.5 million seed round to create simulation tools for a new generation of robot builders.",
+    "summary": "Antioch raised an $8.5 million seed round to create simulation tools for a new generation of robot builders.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T12:30:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
+  },
+  {
+    "id": "news-bed35cf1aaf90dde3fe4",
+    "title": "Codex for (almost) everything",
+    "url": "https://openai.com/index/codex-for-almost-everything",
+    "source": "OpenAI",
+    "summary": "The updated Codex app for macOS and Windows adds computer use, in-app browsing, image generation, memory, and plugins to accelerate developer workflows.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T10:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
   },
   {
     "id": "news-6620156e2de6ef8bfdd0",
     "title": "DeepL, known for text translation, now wants to translate your voice",
     "url": "https://techcrunch.com/2026/04/16/deepl-known-for-text-translation-now-wants-to-translate-your-voice/",
     "source": "TechCrunch",
-    "summary": "DeepL says its tech could be used for real-time translation with meeting tools like Zoom and Microsoft Teams",
+    "summary": "DeepL says its tech could be used for real-time translation with meeting tools like Zoom and Microsoft Teams.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T08:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-75a4499fe0eb83f10fe3",
@@ -117,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
+    "discovered_at": "2026-04-16 17:41:57"
   },
   {
     "id": "news-8dec281f01a892571b3e",
@@ -129,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T19:50:31.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:03"
   },
   {
     "id": "news-c8875868e9bb6e0a0a7b",
@@ -141,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T19:28:36.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-edb72a94286be162f254",
@@ -153,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:55:12.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-5ccfa2d013e420b6d593",
@@ -165,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:51:54.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-7cc1e354164c22776663",
@@ -177,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:38:10.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-9f9ca5a8d1780f7e5b6a",
@@ -189,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:33:20.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-5627f2485c5440b0ffaa",
@@ -201,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:22:13.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-38910066e34292b750a5",
@@ -213,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:10:15.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:03"
   },
   {
     "id": "news-6a3c31b1ad62007cf49a",
@@ -225,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T17:58:28.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-fe9d348064945d3d95eb",
@@ -237,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T17:24:18.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-2f9b9f55472cea386810",
@@ -249,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T16:13:30.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:03"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -261,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-9b73bb161864c6734c65",
@@ -357,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T10:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
+    "discovered_at": "2026-04-16 17:41:57"
   },
   {
     "id": "news-5dde142b071896bef232",
@@ -408,24 +540,24 @@
     "discovered_at": "2026-04-16 12:08:17"
   },
   {
-    "id": "news-6c74cb2b376262315135",
-    "title": "Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;",
-    "url": "https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch",
-    "source": "The Verge",
-    "summary": "Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as \"Skills\" in the Chrome desktop browser, letting you instantly run them across any tabs you select. \"Until now, repeating an AI task - like asking for ing…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
-  },
-  {
     "id": "news-ab67017c0110be033177",
     "title": "Turn your best AI prompts into one-click tools in Chrome",
     "url": "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/",
     "source": "Google",
     "summary": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
     "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-14T17:00:00.000Z",
+    "discovered_at": "2026-04-16 17:42:02"
+  },
+  {
+    "id": "news-6c74cb2b376262315135",
+    "title": "Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;",
+    "url": "https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch",
+    "source": "The Verge",
+    "summary": "Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as \"Skills\" in the Chrome desktop browser, letting you instantly run them across any tabs you select. \"Until now, repeating an AI task - like asking for ing…",
+    "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
@@ -501,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-88558602673ad26d2f82",
@@ -537,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
+    "discovered_at": "2026-04-16 17:41:57"
   },
   {
     "id": "news-61eb0c3e0730eb6ffa32",
@@ -657,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T06:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
+    "discovered_at": "2026-04-16 17:41:57"
   },
   {
     "id": "news-8ca593a9972966768531",
@@ -876,6 +1008,162 @@
     "discovered_at": "2026-04-13 12:10:09"
   },
   {
+    "id": "news-2c539797fe263ec51334",
+    "title": "Getting started with ChatGPT",
+    "url": "https://openai.com/academy/getting-started",
+    "source": "OpenAI",
+    "summary": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-183d0cc9c6c922a3b8c2",
+    "title": "ChatGPT for sales teams",
+    "url": "https://openai.com/academy/sales",
+    "source": "OpenAI",
+    "summary": "Learn how sales teams use ChatGPT to research accounts, personalize outreach, manage deals, and improve pipeline and conversion.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-bc7e7f5c918d52a4b698",
+    "title": "Applications of AI at OpenAI",
+    "url": "https://openai.com/academy/applications-of-ai",
+    "source": "OpenAI",
+    "summary": "Explore how OpenAI products like ChatGPT, Codex, and APIs bring AI into real-world use for work, development, and everyday tasks.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-11c496abc34e390b6245",
+    "title": "Financial services",
+    "url": "https://openai.com/academy/financial-services",
+    "source": "OpenAI",
+    "summary": "Explore AI resources for financial services, including prompt packs, GPTs, guides, and tools to help institutions deploy and scale AI securely.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-6ee77fd7519883f45b81",
+    "title": "ChatGPT for managers",
+    "url": "https://openai.com/academy/managers",
+    "source": "OpenAI",
+    "summary": "Learn how managers use ChatGPT to prepare for conversations, write clear feedback, stay organized, and improve team effectiveness.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-15f4dca3d35a5110841b",
+    "title": "ChatGPT for customer success teams",
+    "url": "https://openai.com/academy/customer-success",
+    "source": "OpenAI",
+    "summary": "Learn how customer success teams use ChatGPT to manage accounts, improve communication, reduce churn, and drive adoption and renewals.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-e626cbb736ceaf978e15",
+    "title": "Research with ChatGPT",
+    "url": "https://openai.com/academy/search-and-deep-research",
+    "source": "OpenAI",
+    "summary": "Learn how to research with ChatGPT using search and deep research to find up-to-date information, analyze sources, and generate structured insights.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-e7ee83693ccb7abf4644",
+    "title": "Responsible and safe use of AI",
+    "url": "https://openai.com/academy/responsible-and-safe-use",
+    "source": "OpenAI",
+    "summary": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-4dbb1c1ec2bea53d3f8c",
+    "title": "Writing with ChatGPT",
+    "url": "https://openai.com/academy/writing",
+    "source": "OpenAI",
+    "summary": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-4914e2b883325f11f0bf",
+    "title": "ChatGPT for research",
+    "url": "https://openai.com/academy/research",
+    "source": "OpenAI",
+    "summary": "Learn how to use ChatGPT for research to gather sources, analyze information, and create structured, citation-backed insights.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-534a735927e040208b50",
+    "title": "Brainstorming with ChatGPT",
+    "url": "https://openai.com/academy/brainstorming",
+    "source": "OpenAI",
+    "summary": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-a018ae9534a7624b30ae",
+    "title": "Prompting fundamentals",
+    "url": "https://openai.com/academy/prompting",
+    "source": "OpenAI",
+    "summary": "Learn prompting fundamentals and how to write clear, effective prompts to get better, more useful responses from ChatGPT.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
+    "id": "news-4c2fa33ea84fbefabad3",
+    "title": "Working with files in ChatGPT",
+    "url": "https://openai.com/academy/working-with-files",
+    "source": "OpenAI",
+    "summary": "Learn how to upload and work with files in ChatGPT to analyze data, summarize documents, and generate content from PDFs, spreadsheets, and more.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-10T00:00:00.000Z",
+    "discovered_at": "2026-04-16 17:41:57"
+  },
+  {
     "id": "news-39c29e13e298c113fa19",
     "title": "Using skills",
     "url": "https://openai.com/academy/skills",
@@ -924,18 +1212,6 @@
     "discovered_at": "2026-04-16 15:55:44"
   },
   {
-    "id": "news-183d0cc9c6c922a3b8c2",
-    "title": "ChatGPT for sales teams",
-    "url": "https://openai.com/academy/sales",
-    "source": "OpenAI",
-    "summary": "Learn how sales teams use ChatGPT to research accounts, personalize outreach, manage deals, and improve pipeline and conversion.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
-  },
-  {
     "id": "news-42d64f92ad8888462308",
     "title": "Our response to the Axios developer tool compromise",
     "url": "https://openai.com/index/axios-developer-tool-compromise",
@@ -960,90 +1236,6 @@
     "discovered_at": "2026-04-16 15:55:44"
   },
   {
-    "id": "news-bc7e7f5c918d52a4b698",
-    "title": "Applications of AI at OpenAI",
-    "url": "https://openai.com/academy/applications-of-ai",
-    "source": "OpenAI",
-    "summary": "Explore how OpenAI products like ChatGPT, Codex, and APIs bring AI into real-world use for work, development, and everyday tasks.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
-  },
-  {
-    "id": "news-11c496abc34e390b6245",
-    "title": "Financial services",
-    "url": "https://openai.com/academy/financial-services",
-    "source": "OpenAI",
-    "summary": "Explore AI resources for financial services, including prompt packs, GPTs, guides, and tools to help institutions deploy and scale AI securely.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
-  },
-  {
-    "id": "news-6ee77fd7519883f45b81",
-    "title": "ChatGPT for managers",
-    "url": "https://openai.com/academy/managers",
-    "source": "OpenAI",
-    "summary": "Learn how managers use ChatGPT to prepare for conversations, write clear feedback, stay organized, and improve team effectiveness.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
-  },
-  {
-    "id": "news-15f4dca3d35a5110841b",
-    "title": "ChatGPT for customer success teams",
-    "url": "https://openai.com/academy/customer-success",
-    "source": "OpenAI",
-    "summary": "Learn how customer success teams use ChatGPT to manage accounts, improve communication, reduce churn, and drive adoption and renewals.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
-  },
-  {
-    "id": "news-e626cbb736ceaf978e15",
-    "title": "Research with ChatGPT",
-    "url": "https://openai.com/academy/search-and-deep-research",
-    "source": "OpenAI",
-    "summary": "Learn how to research with ChatGPT using search and deep research to find up-to-date information, analyze sources, and generate structured insights.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
-  },
-  {
-    "id": "news-4dbb1c1ec2bea53d3f8c",
-    "title": "Writing with ChatGPT",
-    "url": "https://openai.com/academy/writing",
-    "source": "OpenAI",
-    "summary": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
-  },
-  {
-    "id": "news-e7ee83693ccb7abf4644",
-    "title": "Responsible and safe use of AI",
-    "url": "https://openai.com/academy/responsible-and-safe-use",
-    "source": "OpenAI",
-    "summary": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
-  },
-  {
     "id": "news-f670b81480b305490e1f",
     "title": "ChatGPT for operations teams",
     "url": "https://openai.com/academy/operations",
@@ -1056,71 +1248,11 @@
     "discovered_at": "2026-04-16 08:53:53"
   },
   {
-    "id": "news-534a735927e040208b50",
-    "title": "Brainstorming with ChatGPT",
-    "url": "https://openai.com/academy/brainstorming",
-    "source": "OpenAI",
-    "summary": "Learn how to use ChatGPT to brainstorm ideas, organize thinking, and turn rough concepts into structured, actionable plans.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 08:53:53"
-  },
-  {
-    "id": "news-2c539797fe263ec51334",
-    "title": "Getting started with ChatGPT",
-    "url": "https://openai.com/academy/getting-started",
-    "source": "OpenAI",
-    "summary": "Learn how to use ChatGPT, start your first conversation, and discover simple ways to write, brainstorm, and solve problems with AI.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 08:53:53"
-  },
-  {
-    "id": "news-4c2fa33ea84fbefabad3",
-    "title": "Working with files in ChatGPT",
-    "url": "https://openai.com/academy/working-with-files",
-    "source": "OpenAI",
-    "summary": "Learn how to upload and work with files in ChatGPT to analyze data, summarize documents, and generate content from PDFs, spreadsheets, and more.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 08:53:53"
-  },
-  {
     "id": "news-64e3c6b3c0f5833df34b",
     "title": "Using custom GPTs",
     "url": "https://openai.com/academy/custom-gpts",
     "source": "OpenAI",
     "summary": "Learn how to build and use custom GPTs to automate workflows, maintain consistent outputs, and create purpose-built AI assistants.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 08:53:53"
-  },
-  {
-    "id": "news-4914e2b883325f11f0bf",
-    "title": "ChatGPT for research",
-    "url": "https://openai.com/academy/research",
-    "source": "OpenAI",
-    "summary": "Learn how to use ChatGPT for research to gather sources, analyze information, and create structured, citation-backed insights.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 08:53:53"
-  },
-  {
-    "id": "news-a018ae9534a7624b30ae",
-    "title": "Prompting fundamentals",
-    "url": "https://openai.com/academy/prompting",
-    "source": "OpenAI",
-    "summary": "Learn prompting fundamentals and how to write clear, effective prompts to get better, more useful responses from ChatGPT.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
@@ -1761,7 +1893,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:44"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-26343622776fe0042f58",
@@ -1869,7 +2001,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-03T20:30:15.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:03"
   },
   {
     "id": "news-ab324ca76ade73622a3c",
@@ -1881,7 +2013,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-f2b31c55fc99db076bcf",
@@ -1893,7 +2025,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-627413d21cd7994148a1",
@@ -1929,7 +2061,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:30:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-72c66a2896d16cbdc0e8",
@@ -1941,7 +2073,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-a9b4cf584547554d66df",
@@ -1989,7 +2121,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-31T16:00:00.000Z",
-    "discovered_at": "2026-04-16 15:55:45"
+    "discovered_at": "2026-04-16 17:42:02"
   },
   {
     "id": "news-b7d8a313003d561eed8e",
@@ -2266,137 +2398,5 @@
     "importance_score": 0.4,
     "published_at": "2026-03-28T20:45:54.000Z",
     "discovered_at": "2026-03-31 19:13:25"
-  },
-  {
-    "id": "news-4c18c1ba0d4d2f3e3a44",
-    "title": "Suno leans into customization with v5.5",
-    "url": "https://www.theverge.com/entertainment/903056/suno-ai-music-v5-5-model",
-    "source": "The Verge",
-    "summary": "Suno just released one of its biggest updates yet with v5.5 of its AI music model. Where previous updates focused mostly on improving fidelity and creating more natural vocals, v5.5 is about giving users more control. It includes three new features: Voices, My Taste, and Custom Models. In the release notes, Suno says…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-28T18:33:10.000Z",
-    "discovered_at": "2026-03-31 19:13:25"
-  },
-  {
-    "id": "news-df471a43db21206abcb4",
-    "title": "Elon Musk’s last co-founder reportedly leaves xAI",
-    "url": "https://techcrunch.com/2026/03/28/elon-musks-last-co-founder-reportedly-leaves-xai/",
-    "source": "TechCrunch",
-    "summary": "All but two of Musk's 11 xAI co-founders departed before this week.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-28T16:11:16.000Z",
-    "discovered_at": "2026-03-31 19:13:25"
-  },
-  {
-    "id": "news-bf0a5c1359d9613752d1",
-    "title": "Anthropic&#8217;s Claude popularity with paying consumers is skyrocketing",
-    "url": "https://techcrunch.com/2026/03/28/anthropics-claude-popularity-with-paying-consumers-is-skyrocketing/",
-    "source": "TechCrunch",
-    "summary": "Estimates for total Claude consumer users are all over the map (we've seen figures ranging from 18 million to 30 million). Anthropic hasn't disclosed this data, but a spokesperson did tell TechCrunch that Claude paid subscriptions have more than doubled this year.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-28T14:15:00.000Z",
-    "discovered_at": "2026-03-31 07:01:01"
-  },
-  {
-    "id": "news-585522ae7a84b50715c4",
-    "title": "Why can’t TikTok identify AI generated ads when I can?",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/900400/tiktok-ai-ads-labels-samsung-disclosure",
-    "source": "The Verge",
-    "summary": "I've been struggling to tell whether the ads appearing in my TikTok feeds have been made with generative AI tools. As someone who spends a great deal of time scrutinizing images and videos for the usual \"tells\" that something was synthetically generated, some of the promotions I've seen have definitely sparked suspici…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-28T14:00:00.000Z",
-    "discovered_at": "2026-03-31 19:13:25"
-  },
-  {
-    "id": "news-6f27b9a829e1b07318fb",
-    "title": "Why OpenAI killed Sora",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/902368/openai-sora-dead-ai-video-generation-competition",
-    "source": "The Verge",
-    "summary": "On Tuesday morning, everything was business as usual at OpenAI. By the end of the day, the company had announced that it would scrap its video-generation app, Sora, and reverse plans for video generation inside ChatGPT; it would wind down a $1 billion Disney deal; it would shuffle the role of a high-level executive; a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-28T12:00:00.000Z",
-    "discovered_at": "2026-03-31 19:13:25"
-  },
-  {
-    "id": "news-757698a9a08dffe5df78",
-    "title": "STADLER reshapes knowledge work at a 230-year-old company",
-    "url": "https://openai.com/index/stadler",
-    "source": "OpenAI",
-    "summary": "Learn how STADLER uses ChatGPT to transform knowledge work, saving time and accelerating productivity across 650 employees.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-27T22:00:00.000Z",
-    "discovered_at": "2026-04-10 17:05:43"
-  },
-  {
-    "id": "news-f1f3f204c806c2d3f0a5",
-    "title": "Why SoftBank’s new $40B loan points to a 2026 OpenAI IPO",
-    "url": "https://techcrunch.com/2026/03/27/why-softbanks-new-40b-loan-points-to-a-2026-openai-ipo/",
-    "source": "TechCrunch",
-    "summary": "Wall Street giants JPMorgan and Goldman Sachs are extending a 12-month, unsecured loan to the Japanese conglomerate.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-27T21:44:45.000Z",
-    "discovered_at": "2026-03-31 07:01:01"
-  },
-  {
-    "id": "news-8c7a10ae5e3ccee91107",
-    "title": "Memory chip giant SK hynix could help end &#8216;RAMmageddon&#8217; with blockbuster US IPO",
-    "url": "https://techcrunch.com/2026/03/27/memory-chip-giant-sk-hynix-could-help-end-rammageddon-with-blockbuster-us-ipo/",
-    "source": "TechCrunch",
-    "summary": "SK hynix’s potential U.S. listing could raise $10-$14 billion to help it build more capacity, encourage others to follow, and end the 'RAMmageddon' memory shortage.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-27T19:11:28.000Z",
-    "discovered_at": "2026-03-31 07:01:01"
-  },
-  {
-    "id": "news-c0641eb0de56205a1688",
-    "title": "The latest in data centers, AI, and energy",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
-    "source": "The Verge",
-    "summary": "Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand warehouses full of energy-hungry servers has also kicked up fights across the world over their impact on power grids, utility bills, nearby communities, and the environment.&#160; From audacious pla…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-27T18:35:53.000Z",
-    "discovered_at": "2026-03-31 19:13:25"
-  },
-  {
-    "id": "news-0cab7d64f3c56e5deebc",
-    "title": "VCs are betting billions on AI&#8217;s next wave, so why is OpenAI killing Sora?",
-    "url": "https://techcrunch.com/podcast/vcs-are-betting-billions-on-ais-next-wave-so-why-is-openai-killing-sora/",
-    "source": "TechCrunch",
-    "summary": "When an 82-year-old Kentucky woman was&#160;offered $26 million&#160;from an AI company that wanted to build a data center on her land, she said no. Sure, that same company can try to rezone&#160;2,000 acres&#160;nearby anyway, but as AI infrastructure stretches further into the real world,&#160;the real world is star…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-27T15:40:19.000Z",
-    "discovered_at": "2026-03-31 07:01:01"
-  },
-  {
-    "id": "news-99dffb2021168ec8cd23",
-    "title": "OpenAI shuts down Sora while Meta gets shut out in court",
-    "url": "https://techcrunch.com/video/openai-shuts-down-sora-while-meta-gets-shut-out-in-court/",
-    "source": "TechCrunch",
-    "summary": "When an 82-year-old Kentucky woman was&#160;offered $26 million&#160;from an AI company that wanted to build a data center on her land, she said no. Sure, that same company can try to rezone&#160;2,000 acres&#160;nearby anyway, but as AI infrastructure stretches further into the real world,&#160;the real world is star…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-27T13:30:00.000Z",
-    "discovered_at": "2026-03-30 19:01:02"
   }
 ]
