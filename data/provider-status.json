@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T21:28:43.612Z",
+  "generatedAt": "2026-04-16T21:58:05.019Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,16 +12,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T21:28:42.735Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-04-16T21:58:03.684Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Claude Cowork",
-          "status": "partial_outage"
-        },
         {
           "name": "claude.ai",
           "status": "operational"
@@ -39,34 +35,26 @@
           "status": "operational"
         },
         {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "qj05p69fff9h",
-          "title": "Claude Cowork not starting for some users",
-          "status": "identified",
-          "impact": "major",
-          "startedAt": "2026-04-16T19:24:38.419Z",
-          "updatedAt": "2026-04-16T20:47:32.519Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/zv6xsc3wm28c",
-          "summary": "The issue has been identified and a fix is being implemented."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "qj05p69fff9h",
           "title": "Claude Cowork not starting for some users",
-          "status": "identified",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-04-16T19:24:38.419Z",
-          "updatedAt": "2026-04-16T20:47:32.519Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-16T21:29:01.704Z",
+          "resolvedAt": "2026-04-16T21:29:01.687Z",
           "url": "https://stspg.io/zv6xsc3wm28c",
-          "summary": "The issue has been identified and a fix is being implemented."
+          "summary": "This incident has been resolved in the v1.3109.0 release of Claude Desktop. Please \"Check for Updates\"."
         },
         {
           "id": "7jbzthbc1dwr",
@@ -114,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T21:28:43.343Z",
+      "lastCheckedAt": "2026-04-16T21:58:04.402Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T21:28:42.875Z",
+      "lastCheckedAt": "2026-04-16T21:58:03.832Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T21:28:43.604Z",
+      "lastCheckedAt": "2026-04-16T21:58:04.793Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T21:28:42.769Z",
+      "lastCheckedAt": "2026-04-16T21:58:03.677Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T21:28:42.927Z",
+      "lastCheckedAt": "2026-04-16T21:58:03.997Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -347,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T21:28:42.639Z",
+      "lastCheckedAt": "2026-04-16T21:58:03.655Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -433,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T21:28:43.552Z",
+      "lastCheckedAt": "2026-04-16T21:58:05.012Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
