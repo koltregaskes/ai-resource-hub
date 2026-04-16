@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 15 Apr 2026, 23:58 UTC
+Generated: 16 Apr 2026, 03:45 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -14,7 +14,7 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 4 | Llama 4 Maverick | Meta | 55.1 | 76.9 / 5 | 28% | Coding | $0.15 / $0.60 | 05 Apr 2025 |
 | 5 | DeepSeek V3.2 | DeepSeek | 48.2 | 87.9 / 3 | 17% | Coding | $0.20 / $0.77 | 29 Sept 2025 |
 | 6 | Gemini 3.1 Pro | Google | 44.7 | 60.4 / 2 | 15% | Chat | $2.00 / $12.00 | 19 Feb 2026 |
-| 7 | O3 | OpenAI | 43.4 | 86.4 / 11 | 68% | General use | $2.00 / $8.00 | 16 Apr 2025 |
+| 7 | O3 | OpenAI | 41.4 | 86.4 / 11 | 68% | General use | $2.00 / $8.00 | 16 Apr 2025 |
 | 8 | GPT-5 | OpenAI | 41.1 | 84.5 / 3 | 23% | Chat | $1.25 / $10.00 | 07 Aug 2025 |
 | 9 | Gemini 2.5 Pro | Google | 39.4 | 81.7 / 11 | 68% | General use | $1.25 / $10.00 | 25 Mar 2025 |
 | 10 | Grok 4 | xAI | 39.0 | 77.4 / 7 | 46% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
