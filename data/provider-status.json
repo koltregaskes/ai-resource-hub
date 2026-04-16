@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T19:49:04.533Z",
+  "generatedAt": "2026-04-16T21:02:05.305Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:49:02.870Z",
+      "lastCheckedAt": "2026-04-16T21:02:03.987Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -47,26 +47,26 @@
         {
           "id": "qj05p69fff9h",
           "title": "Claude Cowork not starting for some users",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-04-16T19:24:38.419Z",
-          "updatedAt": "2026-04-16T19:24:38.515Z",
+          "updatedAt": "2026-04-16T20:47:32.519Z",
           "resolvedAt": null,
           "url": "https://stspg.io/zv6xsc3wm28c",
-          "summary": "We are currently investigating this issue on the v1.3036.0 release of Claude Desktop"
+          "summary": "The issue has been identified and a fix is being implemented."
         }
       ],
       "recentIncidents": [
         {
           "id": "qj05p69fff9h",
           "title": "Claude Cowork not starting for some users",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-04-16T19:24:38.419Z",
-          "updatedAt": "2026-04-16T19:24:38.515Z",
+          "updatedAt": "2026-04-16T20:47:32.519Z",
           "resolvedAt": null,
           "url": "https://stspg.io/zv6xsc3wm28c",
-          "summary": "We are currently investigating this issue on the v1.3036.0 release of Claude Desktop"
+          "summary": "The issue has been identified and a fix is being implemented."
         },
         {
           "id": "7jbzthbc1dwr",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:49:02.856Z",
+      "lastCheckedAt": "2026-04-16T21:02:03.895Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -149,10 +149,10 @@
         {
           "id": "01KPBWZ18HR2G685X2XMZD78EP",
           "title": "Responses API Streaming Error",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-04-16T19:40:52.000Z",
-          "updatedAt": "2026-04-16T19:40:52.000Z",
+          "updatedAt": "2026-04-16T20:31:32.000Z",
           "resolvedAt": null,
           "summary": null
         }
@@ -161,10 +161,10 @@
         {
           "id": "01KPBWZ18HR2G685X2XMZD78EP",
           "title": "Responses API Streaming Error",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-04-16T19:40:52.000Z",
-          "updatedAt": "2026-04-16T19:40:52.000Z",
+          "updatedAt": "2026-04-16T20:31:32.000Z",
           "resolvedAt": null,
           "summary": null
         },
@@ -211,7 +211,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:49:03.574Z",
+      "lastCheckedAt": "2026-04-16T21:02:04.601Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -231,7 +231,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:49:03.035Z",
+      "lastCheckedAt": "2026-04-16T21:02:04.014Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -305,7 +305,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:49:04.040Z",
+      "lastCheckedAt": "2026-04-16T21:02:05.026Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -314,7 +314,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-04-16T16:53:36.000Z",
+          "id": "fireworks-feed-0-2026-04-16T20:32:01.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-16T20:32:01.000Z",
+          "updatedAt": "2026-04-16T20:32:01.000Z",
+          "resolvedAt": "2026-04-16T20:32:01.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-1-2026-04-16T20:26:36.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-16T20:26:36.000Z",
+          "updatedAt": "2026-04-16T20:26:36.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-2-2026-04-16T16:53:36.000Z",
           "title": "Nomic Embed Text v1.5 embeddings API recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -325,7 +347,7 @@
           "summary": "Nomic Embed Text v1.5 embeddings API recovered"
         },
         {
-          "id": "fireworks-feed-1-2026-04-16T16:50:25.000Z",
+          "id": "fireworks-feed-3-2026-04-16T16:50:25.000Z",
           "title": "Nomic Embed Text v1.5 embeddings API went down",
           "status": "investigating",
           "impact": "major",
@@ -334,28 +356,6 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai/",
           "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-04-16T16:38:55.000Z",
-          "title": "OpenAI GPT OSS 120B chat completion API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-16T16:38:55.000Z",
-          "updatedAt": "2026-04-16T16:38:55.000Z",
-          "resolvedAt": "2026-04-16T16:38:55.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "OpenAI GPT OSS 120B chat completion API recovered"
-        },
-        {
-          "id": "fireworks-feed-3-2026-04-16T16:30:49.000Z",
-          "title": "OpenAI GPT OSS 120B chat completion API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-16T16:30:49.000Z",
-          "updatedAt": "2026-04-16T16:30:49.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "OpenAI GPT OSS 120B chat completion API went down"
         }
       ]
     },
@@ -370,7 +370,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:49:02.915Z",
+      "lastCheckedAt": "2026-04-16T21:02:04.033Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -424,7 +424,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:49:03.231Z",
+      "lastCheckedAt": "2026-04-16T21:02:04.331Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -444,7 +444,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:49:04.526Z",
+      "lastCheckedAt": "2026-04-16T21:02:05.297Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
