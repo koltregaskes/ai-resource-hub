@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-2780fbdd006f686492b6",
+    "title": "Character.AI’s new Books mode turns reading into roleplay",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/912997/character-ai-books-mode",
+    "source": "The Verge",
+    "summary": "Mired in controversy and legal woes over concerns about its chatbots' interactions with users, particularly teens, Character.AI seems to be playing it safer with a new \"Books\" mode. The new format lets users step inside familiar worlds for a more structured roleplaying experience, one the company hopes will broaden pe…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T14:00:00.000Z",
+    "discovered_at": "2026-04-16 14:11:06"
+  },
+  {
+    "id": "news-0bd99ad3569944747410",
+    "title": "Ronan Farrow on Sam Altman&#8217;s ‘unconstrained’ relationship with the truth",
+    "url": "https://www.theverge.com/podcast/911753/sam-altman-openai-ronan-farrow-new-yorker-feature-trust-liar-ai-industry",
+    "source": "The Verge",
+    "summary": "Today on Decoder, I’m talking with Ronan Farrow, one of the biggest stars of investigative reporting working today. He broke the Harvey Weinstein story, among many, many others. And just last week, he and co-author Andrew Marantz published an incredible deep-dive feature in The New Yorker about OpenAI CEO Sam Altman,…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T14:00:00.000Z",
+    "discovered_at": "2026-04-16 14:11:06"
+  },
+  {
+    "id": "news-37c761d504b6b2b9aba2",
+    "title": "Meta raises Quest 3 and Quest 3S prices due to RAM shortage",
+    "url": "https://techcrunch.com/2026/04/16/meta-raises-quest-3-and-quest-3s-prices-due-to-ram-shortage/",
+    "source": "TechCrunch",
+    "summary": "Starting April 19, the price of the Meta Quest 3S (128GB) and Meta Quest 3S (256GB) will go up by $50 to $349.99 and $449.99, respectively. The price of the Meta Quest 3 is going up by $100 to $599.99.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T13:49:32.000Z",
+    "discovered_at": "2026-04-16 14:11:06"
+  },
+  {
+    "id": "news-bdf44e8c5ba5c26aef07",
+    "title": "Canva’s AI 2.0 update goes all in on prompt-powered design tools",
+    "url": "https://www.theverge.com/tech/913068/canva-ai-2-update-prompt-based-editing-availability",
+    "source": "The Verge",
+    "summary": "Canva has overhauled its design and workspace suite as it attempts to become the ultimate centralized hub for AI-powered content creation. The platform announced its Canva AI 2.0 update today, introducing updated tools and new prompt-based editing capabilities that allow users to make or adjust their work by describin…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T13:07:09.000Z",
+    "discovered_at": "2026-04-16 14:11:06"
+  },
+  {
+    "id": "news-c86a74345ddd755393f3",
+    "title": "Canva&#8217;s AI assistant can now call various tools to make designs for you",
+    "url": "https://techcrunch.com/2026/04/16/canvas-ai-assistant-can-now-call-various-tools-to-make-designs-for-you/",
+    "source": "TechCrunch",
+    "summary": "The latest version of Canva's AI assistant lets users create editable designs with text prompts.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T13:00:00.000Z",
+    "discovered_at": "2026-04-16 14:11:06"
+  },
+  {
+    "id": "news-a243a06745c6c246b6c4",
+    "title": "This simulation startup wants to be the Cursor for physical AI",
+    "url": "https://techcrunch.com/2026/04/16/this-simulation-startup-wants-to-be-the-cursor-for-physical-ai/",
+    "source": "TechCrunch",
+    "summary": "Antioch raised a $8.5 million seed round to create simulation tools for a new generation of robot builders.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-16T12:30:00.000Z",
+    "discovered_at": "2026-04-16 14:11:06"
+  },
+  {
     "id": "news-6620156e2de6ef8bfdd0",
     "title": "DeepL, known for text translation, now wants to translate your voice",
     "url": "https://techcrunch.com/2026/04/16/deepl-known-for-text-translation-now-wants-to-translate-your-voice/",
@@ -9,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T08:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-75a4499fe0eb83f10fe3",
@@ -21,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-8dec281f01a892571b3e",
@@ -33,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T19:50:31.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-c8875868e9bb6e0a0a7b",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T19:28:36.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-edb72a94286be162f254",
@@ -57,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:55:12.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-5ccfa2d013e420b6d593",
@@ -69,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:51:54.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-7cc1e354164c22776663",
@@ -81,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:38:10.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-9f9ca5a8d1780f7e5b6a",
@@ -93,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:33:20.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-5627f2485c5440b0ffaa",
@@ -105,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:22:13.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-38910066e34292b750a5",
@@ -117,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T18:10:15.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-6a3c31b1ad62007cf49a",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T17:58:28.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-fe9d348064945d3d95eb",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T17:24:18.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-2f9b9f55472cea386810",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T16:13:30.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-9b73bb161864c6734c65",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T14:24:31.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-63f2382a23b4ce12fc46",
@@ -189,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T13:06:54.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-26d0737d5891fb1b158c",
@@ -201,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T13:01:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-7c197359d5f46657a9ef",
@@ -213,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T13:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-5ce8a99e95236a9fec07",
@@ -225,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T13:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-71c1334a9d9aa0f6b04b",
@@ -237,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T13:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-8feb663913c351d71c9e",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T10:55:22.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-f5300dfb721c84fcf0d4",
@@ -261,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T10:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-5dde142b071896bef232",
@@ -273,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T02:31:04.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-cf2ed9bdb79045f96553",
@@ -297,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T18:04:42.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-9c730d3de4885e97d845",
@@ -321,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
-  },
-  {
-    "id": "news-6498fc0399f6c99e6048",
-    "title": "Google adds AI Skills to Chrome to help you save favorite workflows",
-    "url": "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/",
-    "source": "TechCrunch",
-    "summary": "Google is adding “Skills” to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini’s browser integration.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -342,6 +402,18 @@
     "source": "Google",
     "summary": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
     "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-14T17:00:00.000Z",
+    "discovered_at": "2026-04-16 14:11:06"
+  },
+  {
+    "id": "news-6498fc0399f6c99e6048",
+    "title": "Google adds AI Skills to Chrome to help you save favorite workflows",
+    "url": "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/",
+    "source": "TechCrunch",
+    "summary": "Google is adding “Skills” to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini’s browser integration.",
+    "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
@@ -405,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-88558602673ad26d2f82",
@@ -441,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-61eb0c3e0730eb6ffa32",
@@ -561,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-13T06:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-8ca593a9972966768531",
@@ -789,7 +861,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-67274246ea9f6d1f90cb",
@@ -801,7 +873,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-a73b17417cccc9d9d021",
@@ -813,7 +885,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-6bccb64e94d4be82ca14",
@@ -825,7 +897,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-183d0cc9c6c922a3b8c2",
@@ -837,7 +909,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-42d64f92ad8888462308",
@@ -849,7 +921,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-c792fea6548e9ed6f0e4",
@@ -861,7 +933,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-bc7e7f5c918d52a4b698",
@@ -873,7 +945,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-11c496abc34e390b6245",
@@ -885,7 +957,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-6ee77fd7519883f45b81",
@@ -897,7 +969,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-15f4dca3d35a5110841b",
@@ -909,7 +981,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-e626cbb736ceaf978e15",
@@ -921,7 +993,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-4dbb1c1ec2bea53d3f8c",
@@ -933,7 +1005,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-e7ee83693ccb7abf4644",
@@ -945,7 +1017,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-10T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:12"
+    "discovered_at": "2026-04-16 14:10:59"
   },
   {
     "id": "news-f670b81480b305490e1f",
@@ -1665,7 +1737,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-26343622776fe0042f58",
@@ -1773,7 +1845,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-03T20:30:15.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:07"
   },
   {
     "id": "news-ab324ca76ade73622a3c",
@@ -1785,7 +1857,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-f2b31c55fc99db076bcf",
@@ -1797,7 +1869,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-627413d21cd7994148a1",
@@ -1833,7 +1905,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:30:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-72c66a2896d16cbdc0e8",
@@ -1845,7 +1917,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-a9b4cf584547554d66df",
@@ -1893,7 +1965,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-31T16:00:00.000Z",
-    "discovered_at": "2026-04-16 12:08:17"
+    "discovered_at": "2026-04-16 14:11:06"
   },
   {
     "id": "news-b7d8a313003d561eed8e",
@@ -2326,77 +2398,5 @@
     "importance_score": 0.4,
     "published_at": "2026-03-27T01:18:38.000Z",
     "discovered_at": "2026-03-30 19:01:02"
-  },
-  {
-    "id": "news-f4a961abda5f2cdacfec",
-    "title": "Judge sides with Anthropic to temporarily block the Pentagon&#8217;s ban",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/902149/anthropic-dod-pentagon-lawsuit-supply-chain-risk-injunction",
-    "source": "The Verge",
-    "summary": "After Anthropic's weeks-long standoff with the Pentagon, the company won one milestone: A judge granted Anthropic a preliminary injunction in its lawsuit, which sought to reverse its government blacklisting while the judicial process plays out. \"The Department of War's records show that it designated Anthropic as a su…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-27T00:33:44.000Z",
-    "discovered_at": "2026-03-31 07:01:01"
-  },
-  {
-    "id": "news-50eb3519a14f088f3f5d",
-    "title": "You can now transfer your chats and personal information from other chatbots directly into Gemini",
-    "url": "https://techcrunch.com/2026/03/26/you-can-now-transfer-your-chats-and-personal-information-from-other-chatbots-directly-into-gemini/",
-    "source": "TechCrunch",
-    "summary": "Google is launching \"switching tools\" that, just as it sounds, will make it easier for users of other chatbots to switch to Gemini.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-26T23:47:56.000Z",
-    "discovered_at": "2026-03-29 07:00:24"
-  },
-  {
-    "id": "news-21a0cbcef7a262435690",
-    "title": "David Sacks is no longer the White House AI and Crypto Czar",
-    "url": "https://www.theverge.com/policy/902140/david-sacks-out-ai-crypto-czar",
-    "source": "The Verge",
-    "summary": "David Sacks, the venture capitalist and tech billionaire who'd become Silicon Valley's primary advocate inside the White House and a key architect of its aggressive AI policy initiatives, revealed on Thursday that he was no longer a special government employee - and therefore no longer President Donald Trump's Special…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-26T23:40:22.000Z",
-    "discovered_at": "2026-03-31 07:01:01"
-  },
-  {
-    "id": "news-caa45611ec036bcf7167",
-    "title": "Wikipedia cracks down on the use of AI in article writing",
-    "url": "https://techcrunch.com/2026/03/26/wikipedia-cracks-down-on-the-use-of-ai-in-article-writing/",
-    "source": "TechCrunch",
-    "summary": "The site, whose policies are subject to change, has struggled with the issue of AI-generated writing.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-26T21:50:10.000Z",
-    "discovered_at": "2026-03-29 07:00:24"
-  },
-  {
-    "id": "news-19da8d4786a103f1ff94",
-    "title": "Google is making it easier to import another AI’s memory into Gemini",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/902085/google-gemini-import-memory-chat-history",
-    "source": "The Verge",
-    "summary": "After Anthropic updated its tool for copying another AI's memory into Claude earlier this month, Google Gemini is rolling out new \"Import Memory\" and \"Import Chat History\" features on desktop that can help users quickly copy over everything their current AI already knows about them. To use the \"Import Memory\" tool, us…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-26T21:44:37.000Z",
-    "discovered_at": "2026-03-31 07:01:01"
-  },
-  {
-    "id": "news-551174f1344554b806e9",
-    "title": "Apple will reportedly allow other AI chatbots to plug into Siri",
-    "url": "https://www.theverge.com/tech/902048/apple-siri-ai-chatbot-update-ios-27",
-    "source": "The Verge",
-    "summary": "Apple's iOS 27 update will allow users to choose the AI chatbot they want to link with Siri. That's according to a report from Bloomberg's Mark Gurman, who says third-party chatbots downloaded from the App Store, like Google's Gemini or Anthropic's Claude, will be able to fetch replies for Siri - similar to how the [&…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-26T21:31:27.000Z",
-    "discovered_at": "2026-03-29 07:00:24"
   }
 ]
