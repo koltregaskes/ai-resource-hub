@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.4"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-04-16T08:54:04.027Z"
+generated_at: "2026-04-16T10:40:15.526Z"
 ---
 
 # GPT-5.4: release brief
@@ -29,12 +29,12 @@ GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 ## Outside coverage and early reactions
 
+- OpenAI (2026-04-16): [Accelerating the cyber defense ecosystem that protects us all](https://openai.com/index/accelerating-cyber-defense-ecosystem) - Leading security firms and enterprises join OpenAI's Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.
 - OpenAI (2026-04-14): [Trusted access for the next era of cyber defense](https://openai.com/index/scaling-trusted-access-for-cyber-defense) - OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity capabilities advance.
 - OpenAI (2026-04-13): [Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI](https://openai.com/index/cloudflare-openai-agent-cloud) - Cloudflare brings OpenAI's GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.
 - The Verge (2026-04-09): [ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new) - OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers "5x more" usage of its Codex coding tool than the $20 per month Plus subscription and "is best for longer, high-effort Codex sessions," OpenAI says. The company is introducing the new tier as it [&#823…
 - OpenAI (2026-04-01): [Gradient Labs gives every bank customer an AI account manager](https://openai.com/index/gradient-labs) - Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.
 - The Verge (2026-04-09): [Florida launches investigation into OpenAI](https://www.theverge.com/policy/909557/openai-florida-investigation) - Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are "falling into the hands of America's enemies, such as the…
-- TechCrunch (2026-04-08): [OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/) - OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.
 
 ## Suggested thread / post structure
 
@@ -55,9 +55,9 @@ GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 - [Official launch or docs](https://developers.openai.com/api/docs/guides/latest-model)
 - [Provider API/docs](https://platform.openai.com/docs/models)
+- [OpenAI: Accelerating the cyber defense ecosystem that protects us all](https://openai.com/index/accelerating-cyber-defense-ecosystem)
 - [OpenAI: Trusted access for the next era of cyber defense](https://openai.com/index/scaling-trusted-access-for-cyber-defense)
 - [OpenAI: Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI](https://openai.com/index/cloudflare-openai-agent-cloud)
 - [The Verge: ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new)
 - [OpenAI: Gradient Labs gives every bank customer an AI account manager](https://openai.com/index/gradient-labs)
 - [The Verge: Florida launches investigation into OpenAI](https://www.theverge.com/policy/909557/openai-florida-investigation)
-- [TechCrunch: OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)

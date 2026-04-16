@@ -1,5 +1,15 @@
 [
   {
+    "id": 3890,
+    "model_id": "claude-haiku-3.5",
+    "speed": 120,
+    "ttft": 200,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude 3.5 Haiku"
+  },
+  {
     "id": 3859,
     "model_id": "claude-haiku-3.5",
     "speed": 120,
@@ -1248,6 +1258,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude 3.5 Haiku"
+  },
+  {
+    "id": 3888,
+    "model_id": "claude-opus-4",
+    "speed": 30,
+    "ttft": 350,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Opus 4"
   },
   {
     "id": 3857,
@@ -2500,6 +2520,16 @@
     "model_name": "Claude Opus 4"
   },
   {
+    "id": 3886,
+    "model_id": "claude-opus-4.6",
+    "speed": 50,
+    "ttft": 280,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Opus 4.6"
+  },
+  {
     "id": 3855,
     "model_id": "claude-opus-4.6",
     "speed": 50,
@@ -3748,6 +3778,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude Opus 4.6"
+  },
+  {
+    "id": 3889,
+    "model_id": "claude-sonnet-4",
+    "speed": 80,
+    "ttft": 260,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Sonnet 4"
   },
   {
     "id": 3858,
@@ -5000,6 +5040,16 @@
     "model_name": "Claude Sonnet 4"
   },
   {
+    "id": 3887,
+    "model_id": "claude-sonnet-4.6",
+    "speed": 90,
+    "ttft": 240,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Sonnet 4.6"
+  },
+  {
     "id": 3856,
     "model_id": "claude-sonnet-4.6",
     "speed": 90,
@@ -6248,6 +6298,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude Sonnet 4.6"
+  },
+  {
+    "id": 3897,
+    "model_id": "deepseek-r1",
+    "speed": 30,
+    "ttft": 500,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "R1"
   },
   {
     "id": 3866,
@@ -7500,6 +7560,16 @@
     "model_name": "R1"
   },
   {
+    "id": 3896,
+    "model_id": "deepseek-v3.2",
+    "speed": 49,
+    "ttft": 400,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "DeepSeek V3 0324"
+  },
+  {
     "id": 3865,
     "model_id": "deepseek-v3.2",
     "speed": 49,
@@ -8748,6 +8818,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "DeepSeek V3 0324"
+  },
+  {
+    "id": 3894,
+    "model_id": "gemini-2.0-flash",
+    "speed": 400,
+    "ttft": 140,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.0 Flash"
   },
   {
     "id": 3863,
@@ -10000,6 +10080,16 @@
     "model_name": "Gemini 2.0 Flash"
   },
   {
+    "id": 3895,
+    "model_id": "gemini-2.0-flash-lite",
+    "speed": 450,
+    "ttft": 120,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.0 Flash Lite"
+  },
+  {
     "id": 3864,
     "model_id": "gemini-2.0-flash-lite",
     "speed": 450,
@@ -11248,6 +11338,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Gemini 2.0 Flash Lite"
+  },
+  {
+    "id": 3893,
+    "model_id": "gemini-2.5-flash",
+    "speed": 350,
+    "ttft": 160,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.5 Flash"
   },
   {
     "id": 3862,
@@ -12500,6 +12600,16 @@
     "model_name": "Gemini 2.5 Flash"
   },
   {
+    "id": 3892,
+    "model_id": "gemini-2.5-pro",
+    "speed": 90,
+    "ttft": 270,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.5 Pro Preview 06-05"
+  },
+  {
     "id": 3861,
     "model_id": "gemini-2.5-pro",
     "speed": 90,
@@ -13748,6 +13858,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Gemini 2.5 Pro Preview 06-05"
+  },
+  {
+    "id": 3891,
+    "model_id": "gemini-3.1-pro",
+    "speed": 80,
+    "ttft": 300,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 3.1 Pro Preview"
   },
   {
     "id": 3860,
@@ -15000,6 +15120,16 @@
     "model_name": "Gemini 3.1 Pro Preview"
   },
   {
+    "id": 3880,
+    "model_id": "gpt-4.1",
+    "speed": 110,
+    "ttft": 250,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1"
+  },
+  {
     "id": 3849,
     "model_id": "gpt-4.1",
     "speed": 110,
@@ -16248,6 +16378,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4.1"
+  },
+  {
+    "id": 3881,
+    "model_id": "gpt-4.1-mini",
+    "speed": 160,
+    "ttft": 190,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1 Mini"
   },
   {
     "id": 3850,
@@ -17500,6 +17640,16 @@
     "model_name": "GPT-4.1 Mini"
   },
   {
+    "id": 3882,
+    "model_id": "gpt-4.1-nano",
+    "speed": 200,
+    "ttft": 150,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1 Nano"
+  },
+  {
     "id": 3851,
     "model_id": "gpt-4.1-nano",
     "speed": 200,
@@ -18750,6 +18900,16 @@
     "model_name": "GPT-4.1 Nano"
   },
   {
+    "id": 3878,
+    "model_id": "gpt-4o",
+    "speed": 100,
+    "ttft": 290,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4o (extended)"
+  },
+  {
     "id": 3847,
     "model_id": "gpt-4o",
     "speed": 100,
@@ -18757,7 +18917,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-16 08:53:50",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3816,
@@ -18767,7 +18927,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-16 06:13:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3785,
@@ -18777,7 +18937,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-16 03:45:19",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3754,
@@ -18787,7 +18947,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 23:57:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3723,
@@ -18797,7 +18957,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 23:00:24",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3692,
@@ -18807,7 +18967,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 22:02:59",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3661,
@@ -18817,7 +18977,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 21:05:03",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3630,
@@ -18827,7 +18987,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 19:41:50",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3599,
@@ -18837,7 +18997,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 17:17:59",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3568,
@@ -18847,7 +19007,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 15:21:10",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3537,
@@ -18857,7 +19017,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 14:03:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3506,
@@ -18867,7 +19027,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 11:15:17",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3475,
@@ -18877,7 +19037,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 09:48:45",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3444,
@@ -18887,7 +19047,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 08:03:48",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3413,
@@ -18897,7 +19057,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 06:08:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3382,
@@ -18907,7 +19067,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 03:37:43",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3351,
@@ -18917,7 +19077,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 23:57:25",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3320,
@@ -18927,7 +19087,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 23:02:27",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3289,
@@ -18937,7 +19097,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 22:03:26",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3258,
@@ -18947,7 +19107,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 21:06:32",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3227,
@@ -18957,7 +19117,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 19:40:01",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3196,
@@ -18967,7 +19127,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 17:21:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3165,
@@ -18977,7 +19137,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 15:38:32",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3134,
@@ -18987,7 +19147,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 14:09:39",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3103,
@@ -18997,7 +19157,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 11:18:31",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3072,
@@ -19007,7 +19167,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 09:48:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3041,
@@ -19017,7 +19177,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 08:03:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3010,
@@ -19027,7 +19187,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 06:08:32",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2979,
@@ -19037,7 +19197,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 03:39:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2948,
@@ -19047,7 +19207,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 23:57:16",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2917,
@@ -19057,7 +19217,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 23:01:43",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2886,
@@ -19067,7 +19227,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 22:00:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2855,
@@ -19077,7 +19237,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 21:07:31",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2824,
@@ -19087,7 +19247,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 19:36:55",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2793,
@@ -19097,7 +19257,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 17:19:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2762,
@@ -19107,7 +19267,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 15:43:45",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2731,
@@ -19117,7 +19277,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 14:07:42",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2700,
@@ -19127,7 +19287,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 12:10:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2669,
@@ -19137,7 +19297,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 10:55:50",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2638,
@@ -19147,7 +19307,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 09:08:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2607,
@@ -19157,7 +19317,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 06:26:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2576,
@@ -19167,7 +19327,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 03:51:12",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2545,
@@ -19177,7 +19337,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 23:50:43",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2514,
@@ -19187,7 +19347,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 22:54:16",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2483,
@@ -19197,7 +19357,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 21:50:04",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2452,
@@ -19207,7 +19367,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 20:51:34",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2421,
@@ -19217,7 +19377,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 19:50:54",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2390,
@@ -19227,7 +19387,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 19:06:47",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2359,
@@ -19237,7 +19397,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 17:51:22",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2328,
@@ -19247,7 +19407,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 16:56:18",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2297,
@@ -19257,7 +19417,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 15:50:51",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2266,
@@ -19267,7 +19427,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 14:56:41",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2235,
@@ -19277,7 +19437,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 13:33:41",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2204,
@@ -19287,7 +19447,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 11:47:24",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2173,
@@ -19297,7 +19457,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 10:57:45",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2142,
@@ -19307,7 +19467,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 09:58:53",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2111,
@@ -19317,7 +19477,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 09:03:30",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2080,
@@ -19327,7 +19487,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 07:43:14",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2049,
@@ -19337,7 +19497,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 06:01:53",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 2018,
@@ -19347,7 +19507,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 03:44:56",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1987,
@@ -19357,7 +19517,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 23:49:52",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1956,
@@ -19367,7 +19527,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 22:50:52",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1925,
@@ -19377,7 +19537,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 21:47:36",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1894,
@@ -19387,7 +19547,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 20:50:21",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1863,
@@ -19397,7 +19557,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 19:48:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1832,
@@ -19407,7 +19567,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 19:03:55",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1801,
@@ -19417,7 +19577,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 17:48:46",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1770,
@@ -19427,7 +19587,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 16:53:55",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1739,
@@ -19437,7 +19597,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 15:51:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1708,
@@ -19447,7 +19607,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 15:47:10",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1677,
@@ -19457,7 +19617,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 14:53:46",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1646,
@@ -19467,7 +19627,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 13:21:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1615,
@@ -19477,7 +19637,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 11:44:13",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1584,
@@ -19487,7 +19647,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 10:55:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1553,
@@ -19497,7 +19657,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 09:55:43",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1522,
@@ -19507,7 +19667,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 09:00:30",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1491,
@@ -19517,7 +19677,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 07:16:01",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1460,
@@ -19527,7 +19687,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 05:39:13",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1429,
@@ -19537,7 +19697,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 03:18:31",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1398,
@@ -19547,7 +19707,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 23:51:08",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1367,
@@ -19557,7 +19717,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 22:54:58",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1336,
@@ -19567,7 +19727,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 21:53:09",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1305,
@@ -19577,7 +19737,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 20:54:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1274,
@@ -19587,7 +19747,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 19:54:37",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1243,
@@ -19597,7 +19757,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 19:10:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1212,
@@ -19607,7 +19767,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 18:03:24",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1181,
@@ -19617,7 +19777,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 17:05:39",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1150,
@@ -19627,7 +19787,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 16:05:55",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1119,
@@ -19637,7 +19797,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 15:04:08",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1088,
@@ -19647,7 +19807,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 13:47:12",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1057,
@@ -19657,7 +19817,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 12:00:20",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 1026,
@@ -19667,7 +19827,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 11:11:21",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 995,
@@ -19677,7 +19837,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 09:37:34",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 964,
@@ -19687,7 +19847,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 07:58:10",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 933,
@@ -19697,7 +19857,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 07:00:30",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 902,
@@ -19707,7 +19867,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 06:06:21",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 871,
@@ -19717,7 +19877,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 03:39:25",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 840,
@@ -19727,7 +19887,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 23:52:28",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 809,
@@ -19737,7 +19897,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 22:59:52",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 778,
@@ -19747,7 +19907,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 21:56:58",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 747,
@@ -19757,7 +19917,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 21:02:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 716,
@@ -19767,7 +19927,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 19:35:38",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 685,
@@ -19777,7 +19937,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 19:00:25",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 654,
@@ -19787,7 +19947,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 17:21:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 623,
@@ -19797,7 +19957,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 15:53:16",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 592,
@@ -19807,7 +19967,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 10:41:31",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 561,
@@ -19817,7 +19977,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 19:40:26",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 530,
@@ -19827,7 +19987,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 19:00:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 499,
@@ -19837,7 +19997,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 15:34:35",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 468,
@@ -19847,7 +20007,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 15:32:09",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 437,
@@ -19857,7 +20017,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 14:59:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 406,
@@ -19867,7 +20027,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-31 19:12:23",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 375,
@@ -19877,7 +20037,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-31 07:00:49",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 344,
@@ -19887,7 +20047,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-30 19:00:50",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 313,
@@ -19897,7 +20057,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-29 07:00:16",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 282,
@@ -19907,7 +20067,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-28 19:01:17",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 251,
@@ -19917,7 +20077,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-27 10:02:06",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 220,
@@ -19927,7 +20087,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-27 09:57:09",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 189,
@@ -19937,7 +20097,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-23 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 158,
@@ -19947,7 +20107,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-22 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 127,
@@ -19957,7 +20117,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-21 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 96,
@@ -19967,7 +20127,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-20 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 65,
@@ -19977,7 +20137,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-19 07:00:14",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 34,
@@ -19987,7 +20147,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-18 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
   },
   {
     "id": 3,
@@ -19997,7 +20157,17 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o (2024-05-13)"
+    "model_name": "GPT-4o (extended)"
+  },
+  {
+    "id": 3879,
+    "model_id": "gpt-4o-mini",
+    "speed": 150,
+    "ttft": 210,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3848,
@@ -20007,7 +20177,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-16 08:53:50",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3817,
@@ -20017,7 +20187,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-16 06:13:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3786,
@@ -20027,7 +20197,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-16 03:45:19",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3755,
@@ -20037,7 +20207,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 23:57:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3724,
@@ -20047,7 +20217,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 23:00:24",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3693,
@@ -20057,7 +20227,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 22:02:59",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3662,
@@ -20067,7 +20237,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 21:05:03",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3631,
@@ -20077,7 +20247,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 19:41:50",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3600,
@@ -20087,7 +20257,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 17:17:59",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3569,
@@ -20097,7 +20267,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 15:21:10",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3538,
@@ -20107,7 +20277,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 14:03:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3507,
@@ -20117,7 +20287,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 11:15:17",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3476,
@@ -20127,7 +20297,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 09:48:45",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3445,
@@ -20137,7 +20307,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 08:03:48",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3414,
@@ -20147,7 +20317,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 06:08:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3383,
@@ -20157,7 +20327,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-15 03:37:43",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3352,
@@ -20167,7 +20337,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 23:57:25",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3321,
@@ -20177,7 +20347,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 23:02:27",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3290,
@@ -20187,7 +20357,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 22:03:26",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3259,
@@ -20197,7 +20367,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 21:06:32",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3228,
@@ -20207,7 +20377,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 19:40:01",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3197,
@@ -20217,7 +20387,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 17:21:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3166,
@@ -20227,7 +20397,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 15:38:32",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3135,
@@ -20237,7 +20407,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 14:09:39",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3104,
@@ -20247,7 +20417,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 11:18:31",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3073,
@@ -20257,7 +20427,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 09:48:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3042,
@@ -20267,7 +20437,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 08:03:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 3011,
@@ -20277,7 +20447,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 06:08:32",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2980,
@@ -20287,7 +20457,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-14 03:39:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2949,
@@ -20297,7 +20467,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 23:57:16",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2918,
@@ -20307,7 +20477,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 23:01:43",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2887,
@@ -20317,7 +20487,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 22:00:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2856,
@@ -20327,7 +20497,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 21:07:31",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2825,
@@ -20337,7 +20507,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 19:36:55",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2794,
@@ -20347,7 +20517,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 17:19:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2763,
@@ -20357,7 +20527,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 15:43:45",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2732,
@@ -20367,7 +20537,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 14:07:42",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2701,
@@ -20377,7 +20547,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 12:10:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2670,
@@ -20387,7 +20557,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 10:55:50",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2639,
@@ -20397,7 +20567,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 09:08:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2608,
@@ -20407,7 +20577,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 06:26:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2577,
@@ -20417,7 +20587,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-13 03:51:12",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2546,
@@ -20427,7 +20597,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 23:50:43",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2515,
@@ -20437,7 +20607,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 22:54:16",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2484,
@@ -20447,7 +20617,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 21:50:04",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2453,
@@ -20457,7 +20627,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 20:51:34",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2422,
@@ -20467,7 +20637,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 19:50:54",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2391,
@@ -20477,7 +20647,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 19:06:47",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2360,
@@ -20487,7 +20657,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 17:51:22",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2329,
@@ -20497,7 +20667,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 16:56:18",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2298,
@@ -20507,7 +20677,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 15:50:51",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2267,
@@ -20517,7 +20687,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 14:56:41",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2236,
@@ -20527,7 +20697,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 13:33:41",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2205,
@@ -20537,7 +20707,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 11:47:24",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2174,
@@ -20547,7 +20717,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 10:57:45",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2143,
@@ -20557,7 +20727,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 09:58:53",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2112,
@@ -20567,7 +20737,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 09:03:30",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2081,
@@ -20577,7 +20747,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 07:43:14",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2050,
@@ -20587,7 +20757,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 06:01:53",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 2019,
@@ -20597,7 +20767,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-12 03:44:56",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1988,
@@ -20607,7 +20777,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 23:49:52",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1957,
@@ -20617,7 +20787,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 22:50:52",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1926,
@@ -20627,7 +20797,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 21:47:36",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1895,
@@ -20637,7 +20807,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 20:50:21",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1864,
@@ -20647,7 +20817,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 19:48:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1833,
@@ -20657,7 +20827,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 19:03:55",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1802,
@@ -20667,7 +20837,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 17:48:46",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1771,
@@ -20677,7 +20847,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 16:53:55",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1740,
@@ -20687,7 +20857,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 15:51:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1709,
@@ -20697,7 +20867,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 15:47:10",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1678,
@@ -20707,7 +20877,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 14:53:46",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1647,
@@ -20717,7 +20887,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 13:21:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1616,
@@ -20727,7 +20897,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 11:44:13",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1585,
@@ -20737,7 +20907,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 10:55:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1554,
@@ -20747,7 +20917,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 09:55:43",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1523,
@@ -20757,7 +20927,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 09:00:30",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1492,
@@ -20767,7 +20937,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 07:16:01",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1461,
@@ -20777,7 +20947,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 05:39:13",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1430,
@@ -20787,7 +20957,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-11 03:18:31",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1399,
@@ -20797,7 +20967,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 23:51:08",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1368,
@@ -20807,7 +20977,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 22:54:58",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1337,
@@ -20817,7 +20987,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 21:53:09",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1306,
@@ -20827,7 +20997,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 20:54:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1275,
@@ -20837,7 +21007,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 19:54:37",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1244,
@@ -20847,7 +21017,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 19:10:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1213,
@@ -20857,7 +21027,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 18:03:24",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1182,
@@ -20867,7 +21037,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 17:05:39",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1151,
@@ -20877,7 +21047,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 16:05:55",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1120,
@@ -20887,7 +21057,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 15:04:08",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1089,
@@ -20897,7 +21067,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 13:47:12",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1058,
@@ -20907,7 +21077,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 12:00:20",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 1027,
@@ -20917,7 +21087,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 11:11:21",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 996,
@@ -20927,7 +21097,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 09:37:34",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 965,
@@ -20937,7 +21107,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 07:58:10",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 934,
@@ -20947,7 +21117,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 07:00:30",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 903,
@@ -20957,7 +21127,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 06:06:21",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 872,
@@ -20967,7 +21137,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-10 03:39:25",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 841,
@@ -20977,7 +21147,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 23:52:28",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 810,
@@ -20987,7 +21157,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 22:59:52",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 779,
@@ -20997,7 +21167,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 21:56:58",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 748,
@@ -21007,7 +21177,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 21:02:02",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 717,
@@ -21017,7 +21187,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 19:35:38",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 686,
@@ -21027,7 +21197,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 19:00:25",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 655,
@@ -21037,7 +21207,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 17:21:05",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 624,
@@ -21047,7 +21217,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 15:53:16",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 593,
@@ -21057,7 +21227,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-09 10:41:31",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 562,
@@ -21067,7 +21237,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 19:40:26",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 531,
@@ -21077,7 +21247,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 19:00:44",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 500,
@@ -21087,7 +21257,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 15:34:35",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 469,
@@ -21097,7 +21267,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 15:32:09",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 438,
@@ -21107,7 +21277,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-04-08 14:59:40",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 407,
@@ -21117,7 +21287,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-31 19:12:23",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 376,
@@ -21127,7 +21297,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-31 07:00:49",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 345,
@@ -21137,7 +21307,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-30 19:00:50",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 314,
@@ -21147,7 +21317,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-29 07:00:16",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 283,
@@ -21157,7 +21327,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-28 19:01:17",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 252,
@@ -21167,7 +21337,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-27 10:02:06",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 221,
@@ -21177,7 +21347,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-27 09:57:09",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 190,
@@ -21187,7 +21357,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-23 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 159,
@@ -21197,7 +21367,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-22 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 128,
@@ -21207,7 +21377,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-21 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 97,
@@ -21217,7 +21387,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-20 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 66,
@@ -21227,7 +21397,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-19 07:00:14",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 35,
@@ -21237,7 +21407,7 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-18 07:00:15",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
   },
   {
     "id": 4,
@@ -21247,7 +21417,17 @@
     "provider_endpoint": null,
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
-    "model_name": "GPT-4o-mini (2024-07-18)"
+    "model_name": "GPT-4o-mini"
+  },
+  {
+    "id": 3877,
+    "model_id": "gpt-5",
+    "speed": 75,
+    "ttft": 380,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-5"
   },
   {
     "id": 3846,
@@ -22500,6 +22680,16 @@
     "model_name": "GPT-5"
   },
   {
+    "id": 3876,
+    "model_id": "gpt-5.2",
+    "speed": 85,
+    "ttft": 320,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-5.2"
+  },
+  {
     "id": 3845,
     "model_id": "gpt-5.2",
     "speed": 85,
@@ -23748,6 +23938,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-5.2"
+  },
+  {
+    "id": 3901,
+    "model_id": "grok-3",
+    "speed": 70,
+    "ttft": 290,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Grok 3 Beta"
   },
   {
     "id": 3870,
@@ -25000,6 +25200,16 @@
     "model_name": "Grok 3 Beta"
   },
   {
+    "id": 3900,
+    "model_id": "grok-4",
+    "speed": 50,
+    "ttft": 350,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Grok 4"
+  },
+  {
     "id": 3869,
     "model_id": "grok-4",
     "speed": 50,
@@ -26248,6 +26458,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Grok 4"
+  },
+  {
+    "id": 3904,
+    "model_id": "llama-3.3-70b",
+    "speed": 80,
+    "ttft": 280,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 3.3 70B Instruct"
   },
   {
     "id": 3873,
@@ -27500,6 +27720,16 @@
     "model_name": "Llama 3.3 70B Instruct"
   },
   {
+    "id": 3902,
+    "model_id": "llama-4-maverick",
+    "speed": 95,
+    "ttft": 250,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 4 Maverick"
+  },
+  {
     "id": 3871,
     "model_id": "llama-4-maverick",
     "speed": 95,
@@ -28748,6 +28978,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Llama 4 Maverick"
+  },
+  {
+    "id": 3903,
+    "model_id": "llama-4-scout",
+    "speed": 120,
+    "ttft": 220,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 4 Scout"
   },
   {
     "id": 3872,
@@ -30000,6 +30240,16 @@
     "model_name": "Llama 4 Scout"
   },
   {
+    "id": 3898,
+    "model_id": "mistral-large-3",
+    "speed": 80,
+    "ttft": 310,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Mistral Large"
+  },
+  {
     "id": 3867,
     "model_id": "mistral-large-3",
     "speed": 80,
@@ -31248,6 +31498,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Mistral Large"
+  },
+  {
+    "id": 3899,
+    "model_id": "mistral-small-3.1",
+    "speed": 150,
+    "ttft": 180,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Mistral Small 3.1 24B"
   },
   {
     "id": 3868,
@@ -32500,6 +32760,16 @@
     "model_name": "Mistral Small 3.1 24B"
   },
   {
+    "id": 3883,
+    "model_id": "o3",
+    "speed": 15,
+    "ttft": 1200,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o3"
+  },
+  {
     "id": 3852,
     "model_id": "o3",
     "speed": 15,
@@ -33748,6 +34018,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "o3"
+  },
+  {
+    "id": 3884,
+    "model_id": "o3-mini",
+    "speed": 60,
+    "ttft": 600,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o3 Mini"
   },
   {
     "id": 3853,
@@ -35000,6 +35280,16 @@
     "model_name": "o3 Mini"
   },
   {
+    "id": 3885,
+    "model_id": "o4-mini",
+    "speed": 65,
+    "ttft": 550,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o4 Mini"
+  },
+  {
     "id": 3854,
     "model_id": "o4-mini",
     "speed": 65,
@@ -36250,6 +36540,16 @@
     "model_name": "o4 Mini"
   },
   {
+    "id": 3906,
+    "model_id": "qwen-2.5-72b",
+    "speed": 65,
+    "ttft": 340,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Qwen2.5 72B Instruct"
+  },
+  {
     "id": 3875,
     "model_id": "qwen-2.5-72b",
     "speed": 65,
@@ -37498,6 +37798,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Qwen2.5 72B Instruct"
+  },
+  {
+    "id": 3905,
+    "model_id": "qwen3-235b",
+    "speed": 40,
+    "ttft": 420,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-16 10:39:58",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Qwen3 235B A22B"
   },
   {
     "id": 3874,
