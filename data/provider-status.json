@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T19:37:11.153Z",
+  "generatedAt": "2026-04-16T19:49:04.533Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:37:10.086Z",
+      "lastCheckedAt": "2026-04-16T19:49:02.870Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -104,6 +104,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-16T19:49:02.856Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Responses",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KPBWZ18HR2G685X2XMZD78EP",
+          "title": "Responses API Streaming Error",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-16T19:40:52.000Z",
+          "updatedAt": "2026-04-16T19:40:52.000Z",
+          "resolvedAt": null,
+          "summary": null
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KPBWZ18HR2G685X2XMZD78EP",
+          "title": "Responses API Streaming Error",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-16T19:40:52.000Z",
+          "updatedAt": "2026-04-16T19:40:52.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KP96N94V5AJX22P8APDX6XH2",
+          "title": "ChatGPT FedRAMP workspaces not loading",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-04-15T18:32:35.000Z",
+          "updatedAt": "2026-04-15T18:55:03.000Z",
+          "resolvedAt": "2026-04-15T18:55:03.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KP6EBCNE70DBFZ7Z56VG44N8",
+          "title": "Account Creation Issues",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-14T16:49:17.000Z",
+          "updatedAt": "2026-04-14T17:09:21.000Z",
+          "resolvedAt": "2026-04-14T17:09:21.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
+          "title": "Elevated 401 errors for API endpoints",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-12T20:40:24.000Z",
+          "updatedAt": "2026-04-14T08:41:42.000Z",
+          "resolvedAt": "2026-04-14T08:41:42.000Z",
+          "summary": null
+        }
+      ]
+    },
+    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -114,7 +211,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:37:10.632Z",
+      "lastCheckedAt": "2026-04-16T19:49:03.574Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +231,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:37:10.167Z",
+      "lastCheckedAt": "2026-04-16T19:49:03.035Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +305,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:37:10.972Z",
+      "lastCheckedAt": "2026-04-16T19:49:04.040Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +370,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:37:10.104Z",
+      "lastCheckedAt": "2026-04-16T19:49:02.915Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +424,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:37:10.259Z",
+      "lastCheckedAt": "2026-04-16T19:49:03.231Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,92 +432,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:37:09.941Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KP96N94V5AJX22P8APDX6XH2",
-          "title": "ChatGPT FedRAMP workspaces not loading",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-04-15T18:32:35.000Z",
-          "updatedAt": "2026-04-15T18:55:03.000Z",
-          "resolvedAt": "2026-04-15T18:55:03.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KP6EBCNE70DBFZ7Z56VG44N8",
-          "title": "Account Creation Issues",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-14T16:49:17.000Z",
-          "updatedAt": "2026-04-14T17:09:21.000Z",
-          "resolvedAt": "2026-04-14T17:09:21.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KP1PS4WFSH4CVJT0DJBKQ3FT",
-          "title": "Elevated 401 errors for API endpoints",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-12T20:40:24.000Z",
-          "updatedAt": "2026-04-14T08:41:42.000Z",
-          "resolvedAt": "2026-04-14T08:41:42.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KNX13FBVMC6GJHJ2BQBSRKT8",
-          "title": "Some users may experience issues accessing ChatGPT",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-11T01:04:36.000Z",
-          "updatedAt": "2026-04-11T02:00:58.000Z",
-          "resolvedAt": "2026-04-11T01:48:46.000Z",
-          "summary": null
-        }
-      ]
     },
     {
       "id": "together",
@@ -433,7 +444,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T19:37:11.145Z",
+      "lastCheckedAt": "2026-04-16T19:49:04.526Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
