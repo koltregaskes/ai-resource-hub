@@ -1,94 +1,6 @@
 {
-  "generatedAt": "2026-04-16T06:24:49.728Z",
+  "generatedAt": "2026-04-16T08:18:05.680Z",
   "providers": [
-    {
-      "id": "fireworks",
-      "providerId": null,
-      "name": "Fireworks AI",
-      "colour": "#ef4444",
-      "websiteUrl": "https://fireworks.ai",
-      "statusPageUrl": "https://status.fireworks.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T06:24:49.541Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-04-16T06:20:06.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-16T06:20:06.000Z",
-          "updatedAt": "2026-04-16T06:20:06.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-04-15T21:38:30.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T21:38:30.000Z",
-          "updatedAt": "2026-04-15T21:38:30.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-04-16T06:20:06.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-16T06:20:06.000Z",
-          "updatedAt": "2026-04-16T06:20:06.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-1-2026-04-15T21:50:21.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-15T21:50:21.000Z",
-          "updatedAt": "2026-04-15T21:50:21.000Z",
-          "resolvedAt": "2026-04-15T21:50:21.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-2-2026-04-15T21:38:30.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T21:38:30.000Z",
-          "updatedAt": "2026-04-15T21:38:30.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-3-2026-04-15T09:24:15.000Z",
-          "title": "Llama 3.3 70B Instruct chat completion API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-15T09:24:15.000Z",
-          "updatedAt": "2026-04-15T09:24:15.000Z",
-          "resolvedAt": "2026-04-15T09:24:15.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Llama 3.3 70B Instruct chat completion API recovered"
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -100,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T06:24:48.419Z",
+      "lastCheckedAt": "2026-04-16T08:18:04.588Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -134,6 +46,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "7jbzthbc1dwr",
+          "title": "Opus 4.6 elevated rate of errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-16T06:50:56.066Z",
+          "updatedAt": "2026-04-16T07:46:41.216Z",
+          "resolvedAt": "2026-04-16T07:43:32.000Z",
+          "url": "https://stspg.io/90n2vmmkj1df",
+          "summary": "Earlier today we had an outage on Opus 4.6 that started at 23:03 PT / 6:03 UTC and ended at 00:26 PT / 7:26 UTC."
+        },
+        {
           "id": "f00h6l76tsjs",
           "title": "Elevated errors on Claude.ai, API, Claude Code",
           "status": "resolved",
@@ -165,17 +88,6 @@
           "resolvedAt": "2026-04-13T16:35:58.062Z",
           "url": "https://stspg.io/b0rjmf00qb07",
           "summary": "We have resolved the issue resulting in elevated errors on login for Claude.ai and Claude Code betwen 15:31 to 16:19 UTC."
-        },
-        {
-          "id": "qcfvv041lb1k",
-          "title": "Email login down",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-04-11T00:00:20.098Z",
-          "updatedAt": "2026-04-11T00:00:59.545Z",
-          "resolvedAt": "2026-04-11T00:00:20.140Z",
-          "url": "https://stspg.io/tp29skc2n4p9",
-          "summary": "Email login was broken between approximately 3:46 PM and 4:52 PM PDT on April 10, 2026."
         }
       ]
     },
@@ -190,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T06:24:49.195Z",
+      "lastCheckedAt": "2026-04-16T08:18:05.085Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T06:24:48.592Z",
+      "lastCheckedAt": "2026-04-16T08:18:04.593Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -274,6 +186,71 @@
       ]
     },
     {
+      "id": "fireworks",
+      "providerId": null,
+      "name": "Fireworks AI",
+      "colour": "#ef4444",
+      "websiteUrl": "https://fireworks.ai",
+      "statusPageUrl": "https://status.fireworks.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-16T08:18:05.469Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-04-16T06:59:07.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-16T06:59:07.000Z",
+          "updatedAt": "2026-04-16T06:59:07.000Z",
+          "resolvedAt": "2026-04-16T06:59:07.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-1-2026-04-16T06:56:33.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-16T06:56:33.000Z",
+          "updatedAt": "2026-04-16T06:56:33.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-2-2026-04-16T06:32:09.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-16T06:32:09.000Z",
+          "updatedAt": "2026-04-16T06:32:09.000Z",
+          "resolvedAt": "2026-04-16T06:32:09.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-3-2026-04-16T06:20:06.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-16T06:20:06.000Z",
+          "updatedAt": "2026-04-16T06:20:06.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        }
+      ]
+    },
+    {
       "id": "google",
       "providerId": "google",
       "name": "Google",
@@ -284,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T06:24:48.467Z",
+      "lastCheckedAt": "2026-04-16T08:18:04.503Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -338,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T06:24:48.889Z",
+      "lastCheckedAt": "2026-04-16T08:18:04.674Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T06:24:48.361Z",
+      "lastCheckedAt": "2026-04-16T08:18:04.363Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -444,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-16T06:24:49.721Z",
+      "lastCheckedAt": "2026-04-16T08:18:05.673Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -453,7 +430,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-16T00:59:27.000Z",
+          "id": "together-feed-0-2026-04-16T07:36:12.000Z",
+          "title": "MiniMax M2.5 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-16T07:36:12.000Z",
+          "updatedAt": "2026-04-16T07:36:12.000Z",
+          "resolvedAt": "2026-04-16T07:36:12.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.5 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-16T07:16:14.000Z",
+          "title": "MiniMax M2.5 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-16T07:16:14.000Z",
+          "updatedAt": "2026-04-16T07:16:14.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.5 went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-16T00:59:27.000Z",
           "title": "Moonshot Kimi K2.5 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -464,7 +463,7 @@
           "summary": "Moonshot Kimi K2.5 recovered"
         },
         {
-          "id": "together-feed-1-2026-04-16T00:41:44.000Z",
+          "id": "together-feed-3-2026-04-16T00:41:44.000Z",
           "title": "Moonshot Kimi K2.5 went down",
           "status": "investigating",
           "impact": "major",
@@ -473,28 +472,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Moonshot Kimi K2.5 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-16T00:19:29.000Z",
-          "title": "Deepseek R1 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-16T00:19:29.000Z",
-          "updatedAt": "2026-04-16T00:19:29.000Z",
-          "resolvedAt": "2026-04-16T00:19:29.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Deepseek R1 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-15T23:31:32.000Z",
-          "title": "Deepseek R1 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-15T23:31:32.000Z",
-          "updatedAt": "2026-04-15T23:31:32.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Deepseek R1 went down"
         }
       ]
     },
