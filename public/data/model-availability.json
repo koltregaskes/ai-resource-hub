@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-04-16T14:11:31.701Z",
+  "generatedAt": "2026-04-16T15:55:53.342Z",
   "overview": {
-    "generatedAt": "2026-04-16T14:11:31.711Z",
+    "generatedAt": "2026-04-16T15:55:53.356Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 97,
+    "surfacedModels": 98,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -81,7 +81,7 @@
           "llm"
         ]
       },
-      "matchingModelCount": 14,
+      "matchingModelCount": 15,
       "matchingModelIds": [
         "claude-opus-4.5",
         "claude-sonnet-4.5",
@@ -96,7 +96,8 @@
         "claude-3.7-sonnet",
         "claude-mythos-preview",
         "claude-opus-4.1",
-        "claude-opus-4.6-fast"
+        "claude-opus-4.6-fast",
+        "claude-opus-4.7"
       ],
       "matchingModelNames": [
         "Claude Opus 4.5",
@@ -112,7 +113,8 @@
         "Claude 3.7 Sonnet (thinking)",
         "Claude Mythos Preview",
         "Claude Opus 4.1",
-        "Claude Opus 4.6 (Fast)"
+        "Claude Opus 4.6 (Fast)",
+        "Claude Opus 4.7"
       ],
       "surfaceLabel": "Web + App"
     },
@@ -304,12 +306,12 @@
         "GPT-4.1 Mini",
         "OpenAI TTS-1 HD",
         "DALL-E 3",
-        "GPT-4o-mini",
+        "GPT-4o-mini (2024-07-18)",
         "GPT-5 Nano",
         "OpenAI TTS-1",
         "GPT-4.1",
         "GPT-4.1 Nano",
-        "GPT-4o (extended)",
+        "GPT-4o (2024-05-13)",
         "GPT Audio",
         "GPT Audio Mini",
         "GPT-3.5 Turbo",

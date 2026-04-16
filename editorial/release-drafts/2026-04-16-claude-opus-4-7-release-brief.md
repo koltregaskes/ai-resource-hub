@@ -1,22 +1,22 @@
 ---
-title: "MiniMax M2-her: release brief"
-slug: "2026-01-23-minimax-m2-her-release-brief"
+title: "Claude Opus 4.7: release brief"
+slug: "2026-04-16-claude-opus-4-7-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "backfill"
-model: "MiniMax M2-her"
-provider: "MiniMax"
-release_date: "2026-01-23"
-generated_at: "2026-04-16T15:55:52.952Z"
+priority: "high"
+model: "Claude Opus 4.7"
+provider: "Anthropic"
+release_date: "2026-04-16"
+generated_at: "2026-04-16T15:55:52.950Z"
 ---
 
-# MiniMax M2-her: release brief
+# Claude Opus 4.7: release brief
 
-MiniMax's MiniMax M2-her is on the release desk with 0 related stories and 0 benchmark signals to review.
+Anthropic's Claude Opus 4.7 is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
-MiniMax M2-her is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 65.5K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2-her); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.7); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -33,11 +33,11 @@ MiniMax M2-her is a currently tracked release from MiniMax. It is positioned as 
 
 ## Suggested thread / post structure
 
-1. Lead with the hook: what MiniMax actually launched with MiniMax M2-her, and why it matters now.
+1. Lead with the hook: what Anthropic actually launched with Claude Opus 4.7, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
 4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
-5. Keep the chronology explicit: this release landed on 23 Jan 2026 and should be framed against the models it is replacing or competing with.
+5. Keep the chronology explicit: this release landed on 16 Apr 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 
@@ -48,5 +48,5 @@ MiniMax M2-her is a currently tracked release from MiniMax. It is positioned as 
 
 ## Sources
 
-- [Official launch or docs](https://platform.minimaxi.com/docs/api-reference/api-overview)
-- [Provider API/docs](https://platform.minimaxi.com/docs/api-reference/api-overview)
+- [Official launch or docs](https://docs.anthropic.com)
+- [Provider API/docs](https://docs.anthropic.com)

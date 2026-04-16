@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 16 Apr 2026, 14:11 UTC
+Generated: 16 Apr 2026, 15:55 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -8,7 +8,7 @@ This table shows how much of each provider's public model surface is currently r
 | --- | --- | --- | --- | --- | --- | --- |
 | OpenAI | 20 | 44 | 0 | GPT-5.4 Mini (17 Mar 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 10 | 16 | 0 | Gemma 4 31B (2 Apr 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
-| Anthropic | 5 | 8 | 1 | Claude Opus 4.6 (Fast) (7 Apr 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
+| Anthropic | 5 | 9 | 1 | Claude Opus 4.7 (16 Apr 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Alibaba | 4 | 41 | 0 | Qwen3.6 Plus (2 Apr 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | Amazon | 4 | 2 | 0 | n/a | n/a | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |

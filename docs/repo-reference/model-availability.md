@@ -1,6 +1,6 @@
 # Model Availability Snapshot
 
-Generated: 16 Apr 2026, 14:11 UTC
+Generated: 16 Apr 2026, 15:55 UTC
 
 Repo-readable mirror of the regional availability layer. This tracks official country / region restrictions for model access, apps, and APIs where we have verified provider documentation.
 
@@ -8,11 +8,11 @@ Repo-readable mirror of the regional availability layer. This tracks official co
 
 | Metric | Value |
 | --- | --- |
-| Generated | 16 Apr 2026, 14:11 UTC |
+| Generated | 16 Apr 2026, 15:55 UTC |
 | Total rules | 4 |
 | Provider baselines | 3 |
 | Model-specific rules | 1 |
-| Tracked models with availability coverage | 97 |
+| Tracked models with availability coverage | 98 |
 | Latest verification | 09 Apr 2026, 20:49 UTC |
 
 ## Model-Specific Rules
@@ -25,7 +25,7 @@ Repo-readable mirror of the regional availability layer. This tracks official co
 
 | Rule | Provider | Tracked models covered | Surface | Coverage | Last verified | Source |
 | --- | --- | --- | --- | --- | --- | --- |
-| Claude supported locations | Anthropic | 14 | Web + App | Anthropic publishes a supported-location list for Claude access that includes the UK, US, Canada, much of Europe, and a broad set of additional markets. | 09 Apr 2026, 20:47 UTC | [Claude Help Center](https://support.claude.com/en/articles/8461763-where-can-i-access-claude) |
+| Claude supported locations | Anthropic | 15 | Web + App | Anthropic publishes a supported-location list for Claude access that includes the UK, US, Canada, much of Europe, and a broad set of additional markets. | 09 Apr 2026, 20:47 UTC | [Claude Help Center](https://support.claude.com/en/articles/8461763-where-can-i-access-claude) |
 | Google AI Studio and Gemini API | Google | 19 | API + Web | Wide official regional coverage that includes the UK, much of Europe, the US, Canada, Japan, and many additional markets. | 09 Apr 2026, 20:41 UTC | [Google AI for Developers](https://ai.google.dev/gemini-api/docs/available-regions) |
 | OpenAI API access | OpenAI | 62 | API | Broad supported-country coverage across the UK, much of Europe, the Americas, Africa, Asia, and Oceania. The official article is the source of truth for the exact list. | 09 Apr 2026, 20:49 UTC | [OpenAI Help Center](https://help.openai.com/en/articles/5347006-openai-api-supported-countries-and-territories) |
 
