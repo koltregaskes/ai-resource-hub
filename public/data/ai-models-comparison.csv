@@ -9,293 +9,293 @@ Midjourney v6.1,Midjourney,image,active,92,0.01,0,6000,2048,,,No,image,,2024-12-
 Deepgram Nova 3,Deepgram,speech,active,91,0.0043,0,36000,36000,,,No,speech-to-text,Yes,2025-03-01,,,,,,,,,,,,42325.6,deepgram.com/pricing,
 ElevenLabs Turbo v2.5,ElevenLabs,voice,active,90,18,0,5000,600,,,No,text-to-speech,Yes,2024-06-01,,,,,,,,,,,,10,elevenlabs.io/pricing,2026-03-15 06:44:04
 GPT Image 1,OpenAI,image,active,90,0.011,0,32000,1024,,,No,image,Yes,2025-04-23,,,,,,,,,,,,16363.6,openai.com/api/pricing,
-GPT-5.2,OpenAI,llm,active,90,1.75,14,400000,128000,85,320,No,"text,vision",Yes,2025-12-10,1370,,89,,,78,9.5,88,,92,73,11.4,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+GPT-5.2,OpenAI,llm,active,90,1.75,14,400000,128000,85,320,No,"text,vision",Yes,2025-12-10,1370,,89,,,78,9.5,88,,92,73,11.4,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Gemini Audio (STT),Google,speech,active,90,0.003,0,34200,34200,,,No,speech-to-text,Yes,2025-01-01,,,,,,,,,,,,60000,ai.google.dev/pricing,
 Suno v4,Suno,sound,active,90,0.05,0,3000,240,,,No,music,Yes,2024-11-01,,,,,,,,,,,,3600,suno.com/pricing,
 Veo 2,Google,video,active,90,0.15,0,4000,8,,,No,video,Yes,2024-12-01,,,,,,,,,,,,1200,deepmind.google/technologies/veo,
-o4 Mini,OpenAI,llm,active,90,1.1,4.4,200000,100000,65,550,No,"text,vision",Yes,2025-04-16,,,81.4,96.3,96,,,,92.7,,,32.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Claude Opus 4.6,Anthropic,llm,active,89,15,75,1000000,128000,50,280,No,"text,vision",Yes,2026-02-05,1365,,,,,78,9.4,86.5,,90,72,2,Anthropic (official),2026-04-17 19:19:50
+o4 Mini,OpenAI,llm,active,90,1.1,4.4,200000,100000,65,550,No,"text,vision",Yes,2025-04-16,,,81.4,96.3,96,,,,92.7,,,32.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Claude Opus 4.6,Anthropic,llm,active,89,15,75,1000000,128000,50,280,No,"text,vision",Yes,2026-02-05,1365,,,,,78,9.4,86.5,,90,72,2,Anthropic (official),2026-04-17 21:01:46
 FLUX Kontext,Black Forest Labs,image,active,89,0.04,0,8000,1024,,,No,image,Yes,2025-06-18,,,,,,,,,,,,4450,blackforestlabs.ai/pricing,
 Cartesia Sonic 2,Cartesia,voice,active,88,15,0,4000,600,,,No,text-to-speech,Yes,2025-01-29,,,,,,,,,,,,11.7,cartesia.ai/pricing,
 FLUX 1.1 Pro,Black Forest Labs,image,active,88,0.04,0,4000,1024,,,No,image,Yes,2024-10-01,,,,,,,,,,,,4400,blackforestlabs.ai/pricing,
-Grok 4,xAI,llm,active,88,3,15,256000,32768,50,350,No,"text,vision",Yes,2025-07-09,1345,,82,95,,,9.3,84,,89,,9.8,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Grok 4,xAI,llm,active,88,3,15,256000,32768,50,350,No,"text,vision",Yes,2025-07-09,1345,,82,95,,,9.3,84,,89,,9.8,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Ideogram 3,Ideogram,image,active,88,0.02,0,8000,1536,,,No,image,Yes,2025-04-23,,,,,,,,,,,,8800,ideogram.ai/pricing,
 Kling 2,Kling AI,video,active,88,0.06,0,4000,10,,,No,video,Yes,2025-08-01,,,,,,,,,,,,2933.3,klingai.com/pricing,
 Sora,OpenAI,video,active,88,0.15,0,4000,20,,,No,video,Yes,2025-02-01,,,,,,,,,,,,1173.3,openai.com/sora,
 Whisper Large v3,OpenAI,speech,active,88,0.006,0,7200,7200,,,Yes,speech-to-text,Yes,2023-11-06,,,,,,,,,,,,29333.3,openai.com/api/pricing,
-o3,OpenAI,llm,active,88,2,8,200000,100000,15,1200,No,"text,vision",Yes,2025-04-16,1337,92,83.3,96.7,97,69.1,9.1,85,91.6,88.5,74,17.6,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-o3 Pro,OpenAI,llm,active,88,20,80,200000,100000,,,No,"text,vision",Yes,2025-06-10,,,87.5,98,,73,,,96.7,,,1.8,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+o3,OpenAI,llm,active,88,2,8,200000,100000,15,1200,No,"text,vision",Yes,2025-04-16,1337,92,83.3,96.7,97,69.1,9.1,85,91.6,88.5,74,17.6,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+o3 Pro,OpenAI,llm,active,88,20,80,200000,100000,,,No,"text,vision",Yes,2025-06-10,,,87.5,98,,73,,,96.7,,,1.8,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Deepgram Nova 2,Deepgram,speech,active,87,0.0036,0,36000,36000,,,No,speech-to-text,Yes,2024-01-01,,,,,,,,,,,,48333.3,deepgram.com/pricing,
-GPT-5,OpenAI,llm,active,87,1.25,10,400000,128000,75,380,No,"text,vision",Yes,2025-08-07,1355,,86,,,75,,,,,,15.5,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+GPT-5,OpenAI,llm,active,87,1.25,10,400000,128000,75,380,No,"text,vision",Yes,2025-08-07,1355,,86,,,75,,,,,,15.5,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Gen-4,Runway,video,active,87,0.1,0,4000,10,,,No,video,Yes,2025-06-02,,,,,,,,,,,,1740,runwayml.com/pricing,
 Imagen 3,Google,image,active,87,0.04,0,4000,1024,,,No,image,Yes,2024-08-01,,,,,,,,,,,,4350,ai.google.dev/pricing,
-Qwen3 235B A22B,Alibaba,llm,active,87,0.455,1.82,131072,8192,40,420,Yes,text,Yes,2025-04-01,1320,,,92,,,,78,,,,76.5,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Qwen3 235B A22B,Alibaba,llm,active,87,0.455,1.82,131072,8192,40,420,Yes,text,Yes,2025-04-01,1320,,,92,,,,78,,,,76.5,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Udio v2,Udio,sound,active,87,0.04,0,3000,180,,,No,music,Yes,2024-10-01,,,,,,,,,,,,4350,udio.com/pricing,
-Claude Sonnet 4.6,Anthropic,llm,active,86,3,15,1000000,128000,90,240,No,"text,vision",Yes,2026-02-17,1350,,,,,72,,83,,86,,9.6,Anthropic (official),2026-04-17 19:19:50
-DeepSeek V3 0324,DeepSeek,llm,active,86,0.2,0.77,163840,163840,49,400,Yes,text,Yes,2025-09-29,1310,89.5,,,91,,,,,,,177.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Claude Sonnet 4.6,Anthropic,llm,active,86,3,15,1000000,128000,90,240,No,"text,vision",Yes,2026-02-17,1350,,,,,72,,83,,86,,9.6,Anthropic (official),2026-04-17 21:01:46
+DeepSeek V3 0324,DeepSeek,llm,active,86,0.2,0.77,163840,163840,49,400,Yes,text,Yes,2025-09-29,1310,89.5,,,91,,,,,,,177.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 GPT-4o Mini TTS,OpenAI,voice,active,86,12,0,4096,600,,,No,text-to-speech,Yes,2025-03-20,,,,,,,,,,,,14.3,openai.com/api/pricing,
-Mistral Large,Mistral,llm,active,86,2,6,128000,32768,80,310,Yes,text,Yes,2025-06-01,1295,,,,,,,,,,,21.5,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Mistral Large,Mistral,llm,active,86,2,6,128000,32768,80,310,Yes,text,Yes,2025-06-01,1295,,,,,,,,,,,21.5,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Ray 2,Luma AI,video,active,86,0.08,0,4000,10,,,No,video,Yes,2025-03-01,,,,,,,,,,,,2150,lumalabs.ai/pricing,
 AssemblyAI Nano,AssemblyAI,speech,active,85,0.002,0,36000,36000,,,No,speech-to-text,Yes,2024-01-01,,,,,,,,,,,,85000,assemblyai.com/pricing,
 DALL-E 3 HD,OpenAI,image,active,85,0.08,0,4000,1792,,,No,image,Yes,2023-10-01,,,,,,,,,,,,2125,openai.com/api/pricing,
 ElevenLabs Flash,ElevenLabs,voice,active,85,12,0,5000,600,,,No,text-to-speech,Yes,2025-01-01,,,,,,,,,,,,14.2,elevenlabs.io/pricing,2026-03-15 06:44:04
-Grok 3 Beta,xAI,llm,active,85,3,15,131072,32768,70,290,No,text,Yes,2025-06-10,1329,91,68.2,91.5,93.8,,,,83.9,,,9.4,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-R1,DeepSeek,llm,active,85,0.7,2.5,64000,16000,30,500,Yes,text,Yes,2025-01-20,1318,90.8,71.5,97.3,92.5,,8.9,80,79.8,82,65,53.1,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Grok 3 Beta,xAI,llm,active,85,3,15,131072,32768,70,290,No,text,Yes,2025-06-10,1329,91,68.2,91.5,93.8,,,,83.9,,,9.4,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+R1,DeepSeek,llm,active,85,0.7,2.5,64000,16000,30,500,Yes,text,Yes,2025-01-20,1318,90.8,71.5,97.3,92.5,,8.9,80,79.8,82,65,53.1,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Recraft v3,Reka,image,active,85,0.04,0,4000,2048,,,No,image,Yes,2024-10-29,,,,,,,,,,,,4250,recraft.ai/pricing,
 Suno v3.5,Suno,sound,active,85,0.04,0,3000,240,,,No,music,Yes,2024-07-01,,,,,,,,,,,,4250,suno.com/pricing,
-Claude Opus 4,Anthropic,llm,active,84,15,75,200000,32000,30,350,No,"text,vision",Yes,2025-05-22,1330,89,72.1,88.7,95,72.5,,,,,,1.9,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Claude Opus 4,Anthropic,llm,active,84,15,75,200000,32000,30,350,No,"text,vision",Yes,2025-05-22,1330,89,72.1,88.7,95,72.5,,,,,,1.9,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 FLUX.1 Dev,Black Forest Labs,image,active,84,0,0,4000,1024,,,Yes,image,Yes,2024-08-01,,,,,,,,,,,,,blackforestlabs.ai/pricing,
 Kling 1.6,Kling AI,video,active,84,0.04,0,4000,10,,,No,video,Yes,2025-02-01,,,,,,,,,,,,4200,klingai.com/pricing,
-Gemini 2.5 Pro Preview 06-05,Google,llm,active,83,1.25,10,1048576,65536,90,270,No,"text,vision,audio",Yes,2025-03-25,1340,90.5,68.4,90.2,93.2,63.8,9.2,82,86.7,85.5,68,14.8,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Gemini 2.5 Pro Preview 06-05,Google,llm,active,83,1.25,10,1048576,65536,90,270,No,"text,vision,audio",Yes,2025-03-25,1340,90.5,68.4,90.2,93.2,63.8,9.2,82,86.7,85.5,68,14.8,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Gen-4 Turbo,Runway,video,active,83,0.06,0,4000,5,,,No,video,Yes,2025-08-01,,,,,,,,,,,,2766.7,runwayml.com/pricing,
 Ideogram 2,Ideogram,image,active,83,0.01,0,4000,1280,,,No,image,Yes,2024-08-19,,,,,,,,,,,,16600,ideogram.ai/pricing,
 OpenAI TTS-1 HD,OpenAI,voice,active,83,30,0,4096,600,,,No,text-to-speech,Yes,2023-11-06,,,,,,,,,,,,5.5,openai.com/api/pricing,
 Resemble v3,Resemble AI,voice,active,83,20,0,3000,600,,,No,text-to-speech,Yes,2024-06-01,,,,,,,,,,,,8.3,resemble.ai/pricing,
 Stable Image Ultra,Stability AI,image,active,83,0.08,0,4000,1536,,,No,image,Yes,2024-04-01,,,,,,,,,,,,2075,stability.ai/pricing,
-Claude 3.5 Haiku,Anthropic,llm,active,82,0.8,4,200000,8192,120,200,No,"text,vision",Yes,2024-10-22,1260,,,,,,,,,,,34.2,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Command A,Cohere,llm,active,82,2.5,10,256000,8192,,,Yes,text,Yes,2025-03-13,1280,,,,,,,,,,,13.1,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Claude 3.5 Haiku,Anthropic,llm,active,82,0.8,4,200000,8192,120,200,No,"text,vision",Yes,2024-10-22,1260,,,,,,,,,,,34.2,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Command A,Cohere,llm,active,82,2.5,10,256000,8192,,,Yes,text,Yes,2025-03-13,1280,,,,,,,,,,,13.1,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 DALL-E 3,OpenAI,image,active,82,0.04,0,4000,1024,,,No,image,Yes,2023-10-01,,,,,,,,,,,,4100,openai.com/api/pricing,
 Deepgram Aura 2,Deepgram,voice,active,82,15,0,2000,600,,,No,text-to-speech,Yes,2025-03-01,,,,,,,,,,,,10.9,deepgram.com/pricing,
 Gen-3 Alpha,Runway,video,active,82,0.05,0,4000,10,,,No,video,Yes,2024-06-17,,,,,,,,,,,,3280,runwayml.com/pricing,
 Leonardo Phoenix,Leonardo AI,image,active,82,0.015,0,4000,1472,,,No,image,Yes,2024-08-01,,,,,,,,,,,,10933.3,leonardo.ai/pricing,
 PlayHT 2.0,PlayHT,voice,active,82,18,0,3000,600,,,No,text-to-speech,Yes,2024-01-01,,,,,,,,,,,,9.1,play.ht/pricing,
 Sora Turbo,OpenAI,video,active,82,0.06,0,4000,10,,,No,video,Yes,2025-02-01,,,,,,,,,,,,2733.3,openai.com/sora,
-Gemini 2.0 Flash,Google,llm,active,81,0.1,0.4,1048576,8192,400,140,No,"text,vision,audio",Yes,2024-12-01,1270,,,,,,,,,,,324,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Gemini 2.0 Flash,Google,llm,active,81,0.1,0.4,1048576,8192,400,140,No,"text,vision,audio",Yes,2024-12-01,1270,,,,,,,,,,,324,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Pika 2.2,Pika,video,active,81,0.05,0,4000,10,,,No,video,Yes,2025-05-01,,,,,,,,,,,,3240,pika.art/pricing,
 Cartesia Sonic Mini,Cartesia,voice,active,80,8,0,4000,600,,,No,text-to-speech,Yes,2025-06-01,,,,,,,,,,,,20,cartesia.ai/pricing,
 Dream Machine,Luma AI,video,active,80,0.04,0,4000,5,,,No,video,Yes,2024-06-12,,,,,,,,,,,,4000,lumalabs.ai/pricing,
-GPT-4o-mini,OpenAI,llm,active,80,0.15,0.6,128000,16384,150,210,No,"text,vision",Yes,2024-07-18,1240,,,,,,,,,,,213.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+GPT-4o-mini,OpenAI,llm,active,80,0.15,0.6,128000,16384,150,210,No,"text,vision",Yes,2024-07-18,1240,,,,,,,,,,,213.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Stable Diffusion 3.5,Stability AI,image,active,80,0,0,4000,1024,,,Yes,image,Yes,2024-10-22,,,,,,,,,,,,,stability.ai/pricing,
 Udio v1.5,Udio,sound,active,80,0.03,0,3000,120,,,No,music,Yes,2024-06-01,,,,,,,,,,,,5333.3,udio.com/pricing,
 Wan 2.1,Alibaba,video,active,80,0,0,4000,5,,,Yes,video,Yes,2025-02-25,,,,,,,,,,,,,github.com/Wan-Video,
-Claude Sonnet 4,Anthropic,llm,active,79,3,15,1000000,64000,80,260,No,"text,vision",Yes,2025-05-22,1310,88,67.5,85.4,93,53.6,8.8,,,,,8.8,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Command R+ (08-2024),Cohere,llm,active,79,2.5,10,128000,4000,,,Yes,text,Yes,2024-08-01,,,,,,,,,,,,12.6,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Claude Sonnet 4,Anthropic,llm,active,79,3,15,1000000,64000,80,260,No,"text,vision",Yes,2025-05-22,1310,88,67.5,85.4,93,53.6,8.8,,,,,8.8,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Command R+ (08-2024),Cohere,llm,active,79,2.5,10,128000,4000,,,Yes,text,Yes,2024-08-01,,,,,,,,,,,,12.6,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Hailuo I2V-01 Live,Hailuo AI,video,active,79,0.03,0,4000,6,,,No,video,Yes,2024-10-01,,,,,,,,,,,,5266.7,hailuoai.com/pricing,
-Llama 3.3 70B Instruct,Meta,llm,active,79,0.1,0.32,131072,16384,80,280,Yes,text,Yes,2024-12-06,1250,,,,,,,,,,,376.2,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Llama 3.3 70B Instruct,Meta,llm,active,79,0.1,0.32,131072,16384,80,280,Yes,text,Yes,2024-12-06,1250,,,,,,,,,,,376.2,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 FLUX.1 Schnell,Black Forest Labs,image,active,78,0,0,4000,1024,,,Yes,image,Yes,2024-08-01,,,,,,,,,,,,,blackforestlabs.ai/pricing,
-GPT-5 Nano,OpenAI,llm,active,78,0.05,0.4,400000,128000,,,No,"text,vision",Yes,2025-08-07,,,,,,,,,,,,346.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemini 2.5 Flash,Google,llm,active,78,0.3,2.5,1048576,65535,350,160,No,"text,vision,audio",Yes,2025-05-01,1300,86.5,59.2,82.3,88.5,,,,,,,55.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemini 2.5 Flash Lite,Google,llm,active,78,0.1,0.4,1048576,65535,,,No,"text,vision,audio",Yes,2025-05-01,,,,,,,,,,,,312,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nova Pro 1.0,Amazon,llm,active,78,0.8,3.2,300000,5120,,,No,"text,vision",Yes,2024-12-03,,,,,,,,,,,,39,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+GPT-5 Nano,OpenAI,llm,active,78,0.05,0.4,400000,128000,,,No,"text,vision",Yes,2025-08-07,,,,,,,,,,,,346.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemini 2.5 Flash,Google,llm,active,78,0.3,2.5,1048576,65535,350,160,No,"text,vision,audio",Yes,2025-05-01,1300,86.5,59.2,82.3,88.5,,,,,,,55.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemini 2.5 Flash Lite,Google,llm,active,78,0.1,0.4,1048576,65535,,,No,"text,vision,audio",Yes,2025-05-01,,,,,,,,,,,,312,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nova Pro 1.0,Amazon,llm,active,78,0.8,3.2,300000,5120,,,No,"text,vision",Yes,2024-12-03,,,,,,,,,,,,39,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 OpenAI TTS-1,OpenAI,voice,active,78,15,0,4096,600,,,No,text-to-speech,Yes,2023-11-06,,,,,,,,,,,,10.4,openai.com/api/pricing,
 Pika 2,Pika,video,active,78,0.04,0,4000,5,,,No,video,Yes,2024-12-09,,,,,,,,,,,,3900,pika.art/pricing,
-QwQ 32B,Alibaba,llm,active,78,0.15,0.58,131072,131072,,,Yes,text,Yes,2025-03-06,,,63,90.6,88,,,,79.5,,,213.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+QwQ 32B,Alibaba,llm,active,78,0.15,0.58,131072,131072,,,Yes,text,Yes,2025-03-06,,,63,90.6,88,,,,79.5,,,213.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Stable Audio 2,Stability AI,sound,active,78,0,0,2000,180,,,Yes,music,Yes,2024-04-03,,,,,,,,,,,,,stability.ai/stable-audio,
-GPT-4.1,OpenAI,llm,active,77,2,8,1047576,32768,110,250,No,"text,vision",Yes,2025-04-14,1283,90.2,66.3,83,93.4,54.6,,,,,,15.4,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+GPT-4.1,OpenAI,llm,active,77,2,8,1047576,32768,110,250,No,"text,vision",Yes,2025-04-14,1283,90.2,66.3,83,93.4,54.6,,,,,,15.4,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 CogVideoX 1.5,Zhipu AI,video,active,76,0,0,4000,10,,,Yes,video,Yes,2024-12-01,,,,,,,,,,,,,github.com/THUDM/CogVideo,
-DeepSeek V3,DeepSeek,llm,active,76,0.32,0.89,163840,163840,,,Yes,text,Yes,2024-12-25,1275,88.5,59.1,78.3,89.5,,,,,,,125.6,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemini 2.0 Flash Lite,Google,llm,active,76,0.075,0.3,1048576,8192,450,120,No,"text,vision,audio",Yes,2025-02-25,,,,,,,,,,,,405.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Small 3.1 24B,Mistral,llm,active,76,0.35,0.56,128000,131072,150,180,Yes,"text,vision",Yes,2025-03-18,1235,,,,,,,,,,,167,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4.1 Nano,OpenAI,llm,active,75,0.1,0.4,1047576,32768,200,150,No,"text,vision",Yes,2025-04-14,,,,,,,,,,,,300,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4o (extended),OpenAI,llm,active,75,6,18,128000,64000,100,290,No,"text,vision",Yes,2024-05-13,1285,88.7,53.6,76.6,90.2,,8.6,,,,,6.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 4 Maverick,Meta,llm,active,75,0.15,0.6,1048576,16384,95,250,Yes,"text,vision",Yes,2025-04-05,1290,85.5,56,,87.5,,8.5,,,,,200,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+DeepSeek V3,DeepSeek,llm,active,76,0.32,0.89,163840,163840,,,Yes,text,Yes,2024-12-25,1275,88.5,59.1,78.3,89.5,,,,,,,125.6,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemini 2.0 Flash Lite,Google,llm,active,76,0.075,0.3,1048576,8192,450,120,No,"text,vision,audio",Yes,2025-02-25,,,,,,,,,,,,405.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Small 3.1 24B,Mistral,llm,active,76,0.35,0.56,128000,131072,150,180,Yes,"text,vision",Yes,2025-03-18,1235,,,,,,,,,,,167,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4.1 Nano,OpenAI,llm,active,75,0.1,0.4,1047576,32768,200,150,No,"text,vision",Yes,2025-04-14,,,,,,,,,,,,300,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4o (extended),OpenAI,llm,active,75,6,18,128000,64000,100,290,No,"text,vision",Yes,2024-05-13,1285,88.7,53.6,76.6,90.2,,8.6,,,,,6.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 4 Maverick,Meta,llm,active,75,0.15,0.6,1048576,16384,95,250,Yes,"text,vision",Yes,2025-04-05,1290,85.5,56,,87.5,,8.5,,,,,200,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Stable Diffusion XL,Stability AI,image,active,75,0,0,2000,1024,,,Yes,image,Yes,2023-07-26,,,,,,,,,,,,,stability.ai/pricing,
 Amazon Nova Reel,Amazon,video,active,74,0.08,0,4000,6,,,No,video,Yes,2024-12-02,,,,,,,,,,,,1850,aws.amazon.com/nova/pricing,
-Reka Flash 3,Reka,llm,active,74,0.1,0.2,65536,65536,,,No,text,Yes,2025-06-01,,,,,,,,,,,,493.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Sonar,Perplexity,llm,active,74,1,1,127072,8192,,,No,"text,vision",Yes,2025-02-01,,,,,,,,,,,,74,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Command R (08-2024),Cohere,llm,active,73,0.15,0.6,128000,4000,,,Yes,text,Yes,2024-03-11,,,,,,,,,,,,194.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Nemo,Mistral,llm,active,72,0.02,0.04,131072,16384,,,Yes,text,Yes,2024-07-18,,,,,,,,,,,,2400,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Reka Flash 3,Reka,llm,active,74,0.1,0.2,65536,65536,,,No,text,Yes,2025-06-01,,,,,,,,,,,,493.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Sonar,Perplexity,llm,active,74,1,1,127072,8192,,,No,"text,vision",Yes,2025-02-01,,,,,,,,,,,,74,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Command R (08-2024),Cohere,llm,active,73,0.15,0.6,128000,4000,,,Yes,text,Yes,2024-03-11,,,,,,,,,,,,194.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Nemo,Mistral,llm,active,72,0.02,0.04,131072,16384,,,Yes,text,Yes,2024-07-18,,,,,,,,,,,,2400,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 MusicGen Large,Meta,sound,active,72,0,0,2000,30,,,Yes,music,Yes,2023-06-01,,,,,,,,,,,,,github.com/facebookresearch/audiocraft,
-Nova Lite 1.0,Amazon,llm,active,72,0.06,0.24,300000,5120,,,No,"text,vision",Yes,2024-12-03,,,,,,,,,,,,480,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen2.5 72B Instruct,Alibaba,llm,active,71,0.12,0.39,32768,16384,65,340,Yes,text,Yes,2024-09-19,1245,86.1,49,80,86.6,,,,,,,278.4,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nova Micro 1.0,Amazon,llm,active,68,0.035,0.14,128000,5120,,,No,text,Yes,2024-12-03,,,,,,,,,,,,777.1,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Command R7B (12-2024),Cohere,llm,active,65,0.038,0.15,128000,4000,,,Yes,text,Yes,2024-06-01,,,,,,,,,,,,691.5,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.2 Pro,OpenAI,llm,tracking,97,21,168,400000,128000,,,No,"text,vision",Yes,2025-12-10,,,,,,,,,,,,1,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5 Pro,OpenAI,llm,tracking,96,15,120,400000,128000,,,No,"text,vision",Yes,2025-10-06,,,,,,,,,,,,1.4,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemini 3.1 Pro Preview,Google,llm,tracking,96,2,12,1048576,65536,80,300,No,"text,vision,audio",Yes,2026-02-19,1375,,,,,,,,,,,13.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Claude Opus 4.5,Anthropic,llm,tracking,95,5,25,200000,64000,,,No,"text,vision",Yes,2025-11-24,,,,,,,,,,,,6.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Nova Lite 1.0,Amazon,llm,active,72,0.06,0.24,300000,5120,,,No,"text,vision",Yes,2024-12-03,,,,,,,,,,,,480,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen2.5 72B Instruct,Alibaba,llm,active,71,0.12,0.39,32768,16384,65,340,Yes,text,Yes,2024-09-19,1245,86.1,49,80,86.6,,,,,,,278.4,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nova Micro 1.0,Amazon,llm,active,68,0.035,0.14,128000,5120,,,No,text,Yes,2024-12-03,,,,,,,,,,,,777.1,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Command R7B (12-2024),Cohere,llm,active,65,0.038,0.15,128000,4000,,,Yes,text,Yes,2024-06-01,,,,,,,,,,,,691.5,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.2 Pro,OpenAI,llm,tracking,97,21,168,400000,128000,,,No,"text,vision",Yes,2025-12-10,,,,,,,,,,,,1,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5 Pro,OpenAI,llm,tracking,96,15,120,400000,128000,,,No,"text,vision",Yes,2025-10-06,,,,,,,,,,,,1.4,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemini 3.1 Pro Preview,Google,llm,tracking,96,2,12,1048576,65536,80,300,No,"text,vision,audio",Yes,2026-02-19,1375,,,,,,,,,,,13.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Claude Opus 4.5,Anthropic,llm,tracking,95,5,25,200000,64000,,,No,"text,vision",Yes,2025-11-24,,,,,,,,,,,,6.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Gemini 3 Pro,Google,llm,tracking,94,2,12,1048576,65536,,,No,"text,vision,audio,video",Yes,2025-11-18,,,,,,,,,,,,13.4,ai.google.dev/pricing,
-Claude Sonnet 4.5,Anthropic,llm,tracking,93,3,15,1000000,64000,,,No,"text,vision",Yes,2025-09-29,,,,,,,,,,,,10.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-R1 0528,DeepSeek,llm,tracking,91,0.5,2.15,163840,65536,,,Yes,text,Yes,2025-05-28,,,,,,,,,,,,68.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 Max,Alibaba,llm,tracking,90,0.78,3.9,262144,32768,,,Yes,text,Yes,2025-09-01,,,,,,,,,,,,38.5,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemini 3 Flash Preview,Google,llm,tracking,88,0.5,3,1048576,65536,,,No,"text,vision,audio",Yes,2025-12-17,,,,,,,,,,,,50.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 Coder 480B A35B,Alibaba,llm,tracking,88,0.22,1,262144,32768,,,Yes,text,Yes,2025-09-01,,,,,,,,,,,,144.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-o3 Mini,OpenAI,llm,tracking,88,1.1,4.4,200000,100000,60,600,No,text,Yes,2025-01-31,,,,,,,,,,,,32,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Claude Haiku 4.5,Anthropic,llm,tracking,87,1,5,200000,64000,,,No,"text,vision",Yes,2025-10-15,,,,,,,,,,,,29,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Grok 4.1 Fast,xAI,llm,tracking,86,0.2,0.5,2000000,30000,,,No,"text,vision",Yes,2025-11-01,,,,,,,,,,,,245.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Grok 4 Fast,xAI,llm,tracking,85,0.2,0.5,2000000,30000,,,No,"text,vision",Yes,2025-09-19,,,,,,,,,,,,242.9,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Claude Sonnet 4.5,Anthropic,llm,tracking,93,3,15,1000000,64000,,,No,"text,vision",Yes,2025-09-29,,,,,,,,,,,,10.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+R1 0528,DeepSeek,llm,tracking,91,0.5,2.15,163840,65536,,,Yes,text,Yes,2025-05-28,,,,,,,,,,,,68.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 Max,Alibaba,llm,tracking,90,0.78,3.9,262144,32768,,,Yes,text,Yes,2025-09-01,,,,,,,,,,,,38.5,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemini 3 Flash Preview,Google,llm,tracking,88,0.5,3,1048576,65536,,,No,"text,vision,audio",Yes,2025-12-17,,,,,,,,,,,,50.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 Coder 480B A35B,Alibaba,llm,tracking,88,0.22,1,262144,32768,,,Yes,text,Yes,2025-09-01,,,,,,,,,,,,144.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+o3 Mini,OpenAI,llm,tracking,88,1.1,4.4,200000,100000,60,600,No,text,Yes,2025-01-31,,,,,,,,,,,,32,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Claude Haiku 4.5,Anthropic,llm,tracking,87,1,5,200000,64000,,,No,"text,vision",Yes,2025-10-15,,,,,,,,,,,,29,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Grok 4.1 Fast,xAI,llm,tracking,86,0.2,0.5,2000000,30000,,,No,"text,vision",Yes,2025-11-01,,,,,,,,,,,,245.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Grok 4 Fast,xAI,llm,tracking,85,0.2,0.5,2000000,30000,,,No,"text,vision",Yes,2025-09-19,,,,,,,,,,,,242.9,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Command A Reasoning,Cohere,llm,tracking,84,2.5,10,256000,32768,,,Yes,text,Yes,2025-08-01,,,,,,,,,,,,13.4,cohere.com/pricing,
 Llama 3.1 405B,Meta,llm,tracking,84,3,3,131072,32768,,,Yes,text,Yes,2024-07-23,,,,,,,,,,,,28,together.ai/pricing,
-GPT-4.1 Mini,OpenAI,llm,tracking,83,0.4,1.6,1047576,32768,160,190,No,"text,vision",Yes,2025-04-14,,,,,,,,,,,,83,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Grok 3 Mini Beta,xAI,llm,tracking,82,0.3,0.5,131072,32768,,,No,text,Yes,2025-06-10,,,,,,,,,,,,205,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Medium 3,Mistral,llm,tracking,82,0.4,2,131072,16384,,,Yes,"text,vision",Yes,2025-06-01,,,,,,,,,,,,68.3,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nova 2 Lite,Amazon,llm,tracking,82,0.3,2.5,1000000,65535,,,No,"text,vision",Yes,2025-12-02,,,,,,,,,,,,58.6,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Pixtral Large 2411,Mistral,llm,tracking,82,2,6,131072,32768,,,No,"text,vision",Yes,2024-11-18,,,,,,,,,,,,20.5,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Codestral 2508,Mistral,llm,tracking,81,0.3,0.9,256000,32768,,,No,text,Yes,2025-01-14,,,,,,,,,,,,135,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 4 Scout,Meta,llm,tracking,80,0.08,0.3,327680,16384,120,220,Yes,"text,vision",Yes,2025-04-05,,,,,,,,,,,,421.1,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-MiniMax-01,MiniMax,llm,tracking,80,0.2,1.1,1000192,1000192,,,No,"text,vision",Yes,2025-01-15,,,,,,,,,,,,123.1,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nova Premier 1.0,Amazon,llm,tracking,80,2.5,12.5,1000000,32000,,,No,"text,vision",Yes,2025-03-01,,,,,,,,,,,,10.7,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Sonar Pro,Perplexity,llm,tracking,80,3,15,200000,8000,,,No,"text,vision",Yes,2025-02-01,,,,,,,,,,,,8.9,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+GPT-4.1 Mini,OpenAI,llm,tracking,83,0.4,1.6,1047576,32768,160,190,No,"text,vision",Yes,2025-04-14,,,,,,,,,,,,83,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Grok 3 Mini Beta,xAI,llm,tracking,82,0.3,0.5,131072,32768,,,No,text,Yes,2025-06-10,,,,,,,,,,,,205,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Medium 3,Mistral,llm,tracking,82,0.4,2,131072,16384,,,Yes,"text,vision",Yes,2025-06-01,,,,,,,,,,,,68.3,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nova 2 Lite,Amazon,llm,tracking,82,0.3,2.5,1000000,65535,,,No,"text,vision",Yes,2025-12-02,,,,,,,,,,,,58.6,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Pixtral Large 2411,Mistral,llm,tracking,82,2,6,131072,32768,,,No,"text,vision",Yes,2024-11-18,,,,,,,,,,,,20.5,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Codestral 2508,Mistral,llm,tracking,81,0.3,0.9,256000,32768,,,No,text,Yes,2025-01-14,,,,,,,,,,,,135,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 4 Scout,Meta,llm,tracking,80,0.08,0.3,327680,16384,120,220,Yes,"text,vision",Yes,2025-04-05,,,,,,,,,,,,421.1,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+MiniMax-01,MiniMax,llm,tracking,80,0.2,1.1,1000192,1000192,,,No,"text,vision",Yes,2025-01-15,,,,,,,,,,,,123.1,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nova Premier 1.0,Amazon,llm,tracking,80,2.5,12.5,1000000,32000,,,No,"text,vision",Yes,2025-03-01,,,,,,,,,,,,10.7,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Sonar Pro,Perplexity,llm,tracking,80,3,15,200000,8000,,,No,"text,vision",Yes,2025-02-01,,,,,,,,,,,,8.9,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Reka Core,Reka,llm,tracking,78,3,15,128000,4096,,,No,"text,vision,audio,video",Yes,2024-04-15,,,,,,,,,,,,8.7,reka.ai/pricing,
 Jamba 1.5 Large,AI21 Labs,llm,tracking,76,2,8,256000,4096,,,No,text,Yes,2024-08-22,,,,,,,,,,,,15.2,ai21.com/pricing,
 Jamba 1.5 Mini,AI21 Labs,llm,tracking,70,0.2,0.4,256000,4096,,,No,text,Yes,2024-08-22,,,,,,,,,,,,233.3,ai21.com/pricing,
-Claude 3 Haiku,Anthropic,llm,tracking,,0.25,1.25,200000,4096,,,No,"text,vision",Yes,2024-03-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Claude 3 Haiku,Anthropic,llm,tracking,,0.25,1.25,200000,4096,,,No,"text,vision",Yes,2024-03-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Claude 3.5 Sonnet,Anthropic,llm,tracking,,3,15,200000,8192,,,No,"text,vision",Yes,,,,,,,,,,,,,,Anthropic (official),2026-03-31 19:09:12
-Claude 3.7 Sonnet (thinking),Anthropic,llm,tracking,,3,15,200000,64000,,,No,"text,vision",Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Claude Opus 4.1,Anthropic,llm,tracking,,15,75,200000,32000,,,No,"text,vision",Yes,2025-08-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Claude Opus 4.6 (Fast),Anthropic,llm,tracking,,30,150,1000000,128000,,,No,"text,vision",Yes,2026-04-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Claude Opus 4.7,Anthropic,llm,tracking,,5,25,1000000,128000,,,No,"text,vision",Yes,2026-04-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-DeepSeek V3.1,DeepSeek,llm,tracking,,0.15,0.75,32768,7168,,,No,text,Yes,2025-08-21,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-DeepSeek V3.1 Terminus,DeepSeek,llm,tracking,,0.21,0.79,163840,0,,,No,text,Yes,2025-09-22,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-DeepSeek V3.2 Exp,DeepSeek,llm,tracking,,0.27,0.41,163840,65536,,,No,text,Yes,2025-09-29,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-DeepSeek V3.2 Speciale,DeepSeek,llm,tracking,,0.4,1.2,163840,163840,,,No,text,Yes,2025-12-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Devstral 2 2512,Mistral,llm,tracking,,0.4,2,262144,0,,,No,text,Yes,2025-12-09,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Devstral Medium,Mistral,llm,tracking,,0.4,2,131072,0,,,No,text,Yes,2025-07-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Devstral Small 1.1,Mistral,llm,tracking,,0.1,0.3,131072,0,,,No,text,Yes,2025-07-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 4 32B,Zhipu AI,llm,tracking,,0.1,0.1,128000,0,,,No,text,Yes,2025-07-24,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 4.5,Zhipu AI,llm,tracking,,0.6,2.2,131072,98304,,,No,text,Yes,2025-07-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 4.5 Air,Zhipu AI,llm,tracking,,0.13,0.85,131072,98304,,,No,text,Yes,2025-07-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 4.5V,Zhipu AI,llm,tracking,,0.6,1.8,65536,16384,,,No,"text,vision",Yes,2025-08-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 4.6,Zhipu AI,llm,tracking,,0.39,1.9,204800,204800,,,No,text,Yes,2025-09-30,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 4.6V,Zhipu AI,llm,tracking,,0.3,0.9,131072,131072,,,No,"text,vision",Yes,2025-12-08,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 4.7,Zhipu AI,llm,tracking,,0.39,1.75,202752,65535,,,No,text,Yes,2025-12-22,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 4.7 Flash,Zhipu AI,llm,tracking,,0.06,0.4,202752,0,,,No,text,Yes,2026-01-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 5,Zhipu AI,llm,tracking,,0.72,2.3,80000,131072,,,No,text,Yes,2026-02-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 5 Turbo,Zhipu AI,llm,tracking,,1.2,4,202752,131072,,,No,text,Yes,2026-03-15,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 5.1,Zhipu AI,llm,tracking,,0.95,3.15,202752,65535,,,No,text,Yes,2026-04-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GLM 5V Turbo,Zhipu AI,llm,tracking,,1.2,4,202752,131072,,,No,"text,vision",Yes,2026-04-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT Audio,OpenAI,llm,tracking,,2.5,10,128000,16384,,,No,"text,audio",Yes,2026-01-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT Audio Mini,OpenAI,llm,tracking,,0.6,2.4,128000,16384,,,No,"text,audio",Yes,2026-01-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-3.5 Turbo,OpenAI,llm,tracking,,0.5,1.5,16385,4096,,,No,text,Yes,2023-05-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-3.5 Turbo (older v0613),OpenAI,llm,tracking,,1,2,4095,4096,,,No,text,Yes,2024-01-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-3.5 Turbo 16k,OpenAI,llm,tracking,,3,4,16385,4096,,,No,text,Yes,2023-08-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-3.5 Turbo Instruct,OpenAI,llm,tracking,,1.5,2,4095,4096,,,No,text,Yes,2023-09-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4,OpenAI,llm,tracking,,30,60,8191,4096,,,No,text,Yes,2023-05-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4 (older v0314),OpenAI,llm,tracking,,30,60,8191,4096,,,No,text,Yes,2023-05-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4 Turbo (older v1106),OpenAI,llm,tracking,,10,30,128000,4096,,,No,text,Yes,2023-11-06,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4 Turbo Preview,OpenAI,llm,tracking,,10,30,128000,4096,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4o Audio,OpenAI,llm,tracking,,2.5,10,128000,16384,,,No,"text,audio",Yes,2025-08-15,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4o Search Preview,OpenAI,llm,tracking,,2.5,10,128000,16384,,,No,text,Yes,2025-03-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-4o-mini Search Preview,OpenAI,llm,tracking,,0.15,0.6,128000,16384,,,No,text,Yes,2025-03-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5 Chat,OpenAI,llm,tracking,,1.25,10,128000,16384,,,No,"text,vision",Yes,2025-08-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5 Codex,OpenAI,llm,tracking,,1.25,10,400000,128000,,,No,"text,vision",Yes,2025-09-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5 Image,OpenAI,llm,tracking,,10,10,400000,128000,,,No,"text,vision",Yes,2025-10-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5 Image Mini,OpenAI,llm,tracking,,2.5,2,400000,128000,,,No,"text,vision",Yes,2025-10-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5 Mini,OpenAI,llm,tracking,,0.25,2,400000,128000,,,No,"text,vision",Yes,2025-08-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.1,OpenAI,llm,tracking,,1.25,10,400000,128000,,,No,"text,vision",Yes,2025-11-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.1 Chat,OpenAI,llm,tracking,,1.25,10,128000,16384,,,No,"text,vision",Yes,2025-11-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.1-Codex,OpenAI,llm,tracking,,1.25,10,400000,128000,,,No,"text,vision",Yes,2025-11-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.1-Codex-Max,OpenAI,llm,tracking,,1.25,10,400000,128000,,,No,"text,vision",Yes,2025-12-04,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.1-Codex-Mini,OpenAI,llm,tracking,,0.25,2,400000,128000,,,No,"text,vision",Yes,2025-11-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.2 Chat,OpenAI,llm,tracking,,1.75,14,128000,32000,,,No,"text,vision",Yes,2025-12-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.2-Codex,OpenAI,llm,tracking,,1.75,14,400000,128000,,,No,"text,vision",Yes,2026-01-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.3 Chat,OpenAI,llm,tracking,,1.75,14,128000,16384,,,No,"text,vision",Yes,2026-03-03,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.3-Codex,OpenAI,llm,tracking,,1.75,14,400000,128000,,,No,"text,vision",Yes,2026-02-24,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-GPT-5.4,OpenAI,llm,tracking,,2.5,15,1050000,128000,,,No,"text,vision",Yes,2026-03-05,,,,,,,,,,,,,OpenAI (official),2026-04-17 19:19:50
-GPT-5.4 Mini,OpenAI,llm,tracking,,0.75,4.5,400000,128000,,,No,"text,vision",Yes,2026-03-17,,,,,,,,,,,,,OpenAI (official),2026-04-17 19:19:50
-GPT-5.4 Nano,OpenAI,llm,tracking,,0.2,1.25,400000,128000,,,No,"text,vision",Yes,2026-03-17,,,,,,,,,,,,,OpenAI (official),2026-04-17 19:19:50
-GPT-5.4 Pro,OpenAI,llm,tracking,,30,180,1050000,128000,,,No,"text,vision",Yes,2026-03-05,,,,,,,,,,,,,OpenAI (official),2026-04-17 19:19:50
-Gemini 2.5 Flash Lite Preview 09-2025,Google,llm,tracking,,0.1,0.4,1048576,65535,,,No,"text,vision,audio",Yes,2025-09-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemini 2.5 Pro Preview 05-06,Google,llm,tracking,,1.25,10,1048576,65535,,,No,"text,vision,audio",Yes,2025-05-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemini 3.1 Flash Lite Preview,Google,llm,tracking,,0.25,1.5,1048576,65536,,,No,"text,vision,audio",Yes,2026-03-03,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemma 2 27B,Google,llm,tracking,,0.65,0.65,8192,2048,,,No,text,Yes,2024-07-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Claude 3.7 Sonnet (thinking),Anthropic,llm,tracking,,3,15,200000,64000,,,No,"text,vision",Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Claude Opus 4.1,Anthropic,llm,tracking,,15,75,200000,32000,,,No,"text,vision",Yes,2025-08-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Claude Opus 4.6 (Fast),Anthropic,llm,tracking,,30,150,1000000,128000,,,No,"text,vision",Yes,2026-04-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Claude Opus 4.7,Anthropic,llm,tracking,,5,25,1000000,128000,,,No,"text,vision",Yes,2026-04-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+DeepSeek V3.1,DeepSeek,llm,tracking,,0.15,0.75,32768,7168,,,No,text,Yes,2025-08-21,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+DeepSeek V3.1 Terminus,DeepSeek,llm,tracking,,0.21,0.79,163840,0,,,No,text,Yes,2025-09-22,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+DeepSeek V3.2 Exp,DeepSeek,llm,tracking,,0.27,0.41,163840,65536,,,No,text,Yes,2025-09-29,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+DeepSeek V3.2 Speciale,DeepSeek,llm,tracking,,0.4,1.2,163840,163840,,,No,text,Yes,2025-12-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Devstral 2 2512,Mistral,llm,tracking,,0.4,2,262144,0,,,No,text,Yes,2025-12-09,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Devstral Medium,Mistral,llm,tracking,,0.4,2,131072,0,,,No,text,Yes,2025-07-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Devstral Small 1.1,Mistral,llm,tracking,,0.1,0.3,131072,0,,,No,text,Yes,2025-07-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 4 32B,Zhipu AI,llm,tracking,,0.1,0.1,128000,0,,,No,text,Yes,2025-07-24,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 4.5,Zhipu AI,llm,tracking,,0.6,2.2,131072,98304,,,No,text,Yes,2025-07-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 4.5 Air,Zhipu AI,llm,tracking,,0.13,0.85,131072,98304,,,No,text,Yes,2025-07-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 4.5V,Zhipu AI,llm,tracking,,0.6,1.8,65536,16384,,,No,"text,vision",Yes,2025-08-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 4.6,Zhipu AI,llm,tracking,,0.39,1.9,204800,204800,,,No,text,Yes,2025-09-30,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 4.6V,Zhipu AI,llm,tracking,,0.3,0.9,131072,131072,,,No,"text,vision",Yes,2025-12-08,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 4.7,Zhipu AI,llm,tracking,,0.39,1.75,202752,65535,,,No,text,Yes,2025-12-22,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 4.7 Flash,Zhipu AI,llm,tracking,,0.06,0.4,202752,0,,,No,text,Yes,2026-01-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 5,Zhipu AI,llm,tracking,,0.72,2.3,80000,131072,,,No,text,Yes,2026-02-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 5 Turbo,Zhipu AI,llm,tracking,,1.2,4,202752,131072,,,No,text,Yes,2026-03-15,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 5.1,Zhipu AI,llm,tracking,,0.95,3.15,202752,65535,,,No,text,Yes,2026-04-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GLM 5V Turbo,Zhipu AI,llm,tracking,,1.2,4,202752,131072,,,No,"text,vision",Yes,2026-04-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT Audio,OpenAI,llm,tracking,,2.5,10,128000,16384,,,No,"text,audio",Yes,2026-01-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT Audio Mini,OpenAI,llm,tracking,,0.6,2.4,128000,16384,,,No,"text,audio",Yes,2026-01-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-3.5 Turbo,OpenAI,llm,tracking,,0.5,1.5,16385,4096,,,No,text,Yes,2023-05-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-3.5 Turbo (older v0613),OpenAI,llm,tracking,,1,2,4095,4096,,,No,text,Yes,2024-01-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-3.5 Turbo 16k,OpenAI,llm,tracking,,3,4,16385,4096,,,No,text,Yes,2023-08-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-3.5 Turbo Instruct,OpenAI,llm,tracking,,1.5,2,4095,4096,,,No,text,Yes,2023-09-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4,OpenAI,llm,tracking,,30,60,8191,4096,,,No,text,Yes,2023-05-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4 (older v0314),OpenAI,llm,tracking,,30,60,8191,4096,,,No,text,Yes,2023-05-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4 Turbo (older v1106),OpenAI,llm,tracking,,10,30,128000,4096,,,No,text,Yes,2023-11-06,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4 Turbo Preview,OpenAI,llm,tracking,,10,30,128000,4096,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4o Audio,OpenAI,llm,tracking,,2.5,10,128000,16384,,,No,"text,audio",Yes,2025-08-15,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4o Search Preview,OpenAI,llm,tracking,,2.5,10,128000,16384,,,No,text,Yes,2025-03-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-4o-mini Search Preview,OpenAI,llm,tracking,,0.15,0.6,128000,16384,,,No,text,Yes,2025-03-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5 Chat,OpenAI,llm,tracking,,1.25,10,128000,16384,,,No,"text,vision",Yes,2025-08-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5 Codex,OpenAI,llm,tracking,,1.25,10,400000,128000,,,No,"text,vision",Yes,2025-09-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5 Image,OpenAI,llm,tracking,,10,10,400000,128000,,,No,"text,vision",Yes,2025-10-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5 Image Mini,OpenAI,llm,tracking,,2.5,2,400000,128000,,,No,"text,vision",Yes,2025-10-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5 Mini,OpenAI,llm,tracking,,0.25,2,400000,128000,,,No,"text,vision",Yes,2025-08-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.1,OpenAI,llm,tracking,,1.25,10,400000,128000,,,No,"text,vision",Yes,2025-11-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.1 Chat,OpenAI,llm,tracking,,1.25,10,128000,16384,,,No,"text,vision",Yes,2025-11-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.1-Codex,OpenAI,llm,tracking,,1.25,10,400000,128000,,,No,"text,vision",Yes,2025-11-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.1-Codex-Max,OpenAI,llm,tracking,,1.25,10,400000,128000,,,No,"text,vision",Yes,2025-12-04,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.1-Codex-Mini,OpenAI,llm,tracking,,0.25,2,400000,128000,,,No,"text,vision",Yes,2025-11-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.2 Chat,OpenAI,llm,tracking,,1.75,14,128000,32000,,,No,"text,vision",Yes,2025-12-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.2-Codex,OpenAI,llm,tracking,,1.75,14,400000,128000,,,No,"text,vision",Yes,2026-01-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.3 Chat,OpenAI,llm,tracking,,1.75,14,128000,16384,,,No,"text,vision",Yes,2026-03-03,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.3-Codex,OpenAI,llm,tracking,,1.75,14,400000,128000,,,No,"text,vision",Yes,2026-02-24,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+GPT-5.4,OpenAI,llm,tracking,,2.5,15,1050000,128000,,,No,"text,vision",Yes,2026-03-05,,,,,,,,,,,,,OpenAI (official),2026-04-17 21:01:46
+GPT-5.4 Mini,OpenAI,llm,tracking,,0.75,4.5,400000,128000,,,No,"text,vision",Yes,2026-03-17,,,,,,,,,,,,,OpenAI (official),2026-04-17 21:01:46
+GPT-5.4 Nano,OpenAI,llm,tracking,,0.2,1.25,400000,128000,,,No,"text,vision",Yes,2026-03-17,,,,,,,,,,,,,OpenAI (official),2026-04-17 21:01:46
+GPT-5.4 Pro,OpenAI,llm,tracking,,30,180,1050000,128000,,,No,"text,vision",Yes,2026-03-05,,,,,,,,,,,,,OpenAI (official),2026-04-17 21:01:46
+Gemini 2.5 Flash Lite Preview 09-2025,Google,llm,tracking,,0.1,0.4,1048576,65535,,,No,"text,vision,audio",Yes,2025-09-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemini 2.5 Pro Preview 05-06,Google,llm,tracking,,1.25,10,1048576,65535,,,No,"text,vision,audio",Yes,2025-05-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemini 3.1 Flash Lite Preview,Google,llm,tracking,,0.25,1.5,1048576,65536,,,No,"text,vision,audio",Yes,2026-03-03,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemma 2 27B,Google,llm,tracking,,0.65,0.65,8192,2048,,,No,text,Yes,2024-07-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Gemma 2 9B,Google,llm,tracking,,0.03,0.09,8192,0,,,No,text,Yes,2024-06-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-14 11:18:28
-Gemma 3 12B,Google,llm,tracking,,0.04,0.13,131072,0,,,No,"text,vision",Yes,2025-03-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemma 3 27B,Google,llm,tracking,,0.08,0.16,131072,16384,,,No,"text,vision",Yes,2025-03-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemma 3 4B,Google,llm,tracking,,0.04,0.08,131072,0,,,No,"text,vision",Yes,2025-03-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemma 3n 4B,Google,llm,tracking,,0.06,0.12,32768,0,,,No,text,Yes,2025-05-20,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Gemma 4 31B,Google,llm,tracking,,0.13,0.38,262144,16384,,,Yes,"text,vision",Yes,2026-04-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Grok 4.20,xAI,llm,tracking,,2,6,2000000,32768,,,No,"text,vision",Yes,2026-03-31,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Grok 4.20 Multi-Agent,xAI,llm,tracking,,2,6,2000000,32768,,,No,"text,vision",Yes,2026-03-31,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Grok Code Fast 1,xAI,llm,tracking,,0.2,1.5,256000,10000,,,No,text,Yes,2025-08-26,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Inflection 3 Pi,Inflection,llm,tracking,,2.5,10,8000,1024,,,No,text,Yes,2024-10-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Inflection 3 Productivity,Inflection,llm,tracking,,2.5,10,8000,1024,,,No,text,Yes,2024-10-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Jamba Large 1.7,AI21 Labs,llm,tracking,,2,8,256000,4096,,,No,text,Yes,2025-08-08,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Kimi K2 0711,Moonshot AI,llm,tracking,,0.57,2.3,131072,32768,,,No,text,Yes,2026-03-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Kimi K2 0905,Moonshot AI,llm,tracking,,0.4,2,262144,262144,,,No,text,Yes,2025-09-04,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 3 70B Instruct,Meta,llm,tracking,,0.51,0.74,8192,8000,,,No,text,Yes,2024-04-18,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 3 8B Instruct,Meta,llm,tracking,,0.03,0.04,8192,16384,,,No,text,Yes,2024-04-18,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 3.1 70B Instruct,Meta,llm,tracking,,0.4,0.4,131072,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 3.1 8B Instruct,Meta,llm,tracking,,0.02,0.05,16384,16384,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 3.1 Nemotron 70B Instruct,NVIDIA,llm,tracking,,1.2,1.2,131072,16384,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Gemma 3 12B,Google,llm,tracking,,0.04,0.13,131072,0,,,No,"text,vision",Yes,2025-03-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemma 3 27B,Google,llm,tracking,,0.08,0.16,131072,16384,,,No,"text,vision",Yes,2025-03-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemma 3 4B,Google,llm,tracking,,0.04,0.08,131072,0,,,No,"text,vision",Yes,2025-03-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemma 3n 4B,Google,llm,tracking,,0.06,0.12,32768,0,,,No,text,Yes,2025-05-20,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Gemma 4 31B,Google,llm,tracking,,0.13,0.38,262144,16384,,,Yes,"text,vision",Yes,2026-04-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Grok 4.20,xAI,llm,tracking,,2,6,2000000,32768,,,No,"text,vision",Yes,2026-03-31,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Grok 4.20 Multi-Agent,xAI,llm,tracking,,2,6,2000000,32768,,,No,"text,vision",Yes,2026-03-31,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Grok Code Fast 1,xAI,llm,tracking,,0.2,1.5,256000,10000,,,No,text,Yes,2025-08-26,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Inflection 3 Pi,Inflection,llm,tracking,,2.5,10,8000,1024,,,No,text,Yes,2024-10-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Inflection 3 Productivity,Inflection,llm,tracking,,2.5,10,8000,1024,,,No,text,Yes,2024-10-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Jamba Large 1.7,AI21 Labs,llm,tracking,,2,8,256000,4096,,,No,text,Yes,2025-08-08,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Kimi K2 0711,Moonshot AI,llm,tracking,,0.57,2.3,131072,32768,,,No,text,Yes,2026-03-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Kimi K2 0905,Moonshot AI,llm,tracking,,0.4,2,262144,262144,,,No,text,Yes,2025-09-04,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 3 70B Instruct,Meta,llm,tracking,,0.51,0.74,8192,8000,,,No,text,Yes,2024-04-18,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 3 8B Instruct,Meta,llm,tracking,,0.03,0.04,8192,16384,,,No,text,Yes,2024-04-18,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 3.1 70B Instruct,Meta,llm,tracking,,0.4,0.4,131072,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 3.1 8B Instruct,Meta,llm,tracking,,0.02,0.05,16384,16384,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 3.1 Nemotron 70B Instruct,NVIDIA,llm,tracking,,1.2,1.2,131072,16384,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Llama 3.1 Nemotron Ultra 253B v1,NVIDIA,llm,tracking,,0.6,1.8,131072,0,,,No,text,Yes,2025-04-08,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-14 08:03:03
-Llama 3.2 11B Vision Instruct,Meta,llm,tracking,,0.245,0.245,131072,16384,,,No,"text,vision",Yes,2024-09-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 3.2 1B Instruct,Meta,llm,tracking,,0.027,0.2,60000,0,,,No,text,Yes,2024-09-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 3.2 3B Instruct,Meta,llm,tracking,,0.051,0.34,80000,0,,,No,text,Yes,2024-09-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Llama 3.3 Nemotron Super 49B V1.5,NVIDIA,llm,tracking,,0.1,0.4,131072,0,,,No,text,Yes,2025-10-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-MiniMax M1,MiniMax,llm,tracking,,0.4,2.2,1000000,40000,,,No,text,Yes,2025-06-17,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-MiniMax M2,MiniMax,llm,tracking,,0.255,1,196608,196608,,,No,text,Yes,2025-10-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-MiniMax M2-her,MiniMax,llm,tracking,,0.3,1.2,65536,2048,,,No,text,Yes,2026-01-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-MiniMax M2.1,MiniMax,llm,tracking,,0.29,0.95,196608,196608,,,No,text,Yes,2025-12-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-MiniMax M2.5,MiniMax,llm,tracking,,0.118,0.99,196608,65536,,,No,text,Yes,2026-02-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-MiniMax M2.7,MiniMax,llm,tracking,,0.3,1.2,196608,32768,,,No,text,Yes,2026-03-18,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Ministral 3 14B 2512,Mistral,llm,tracking,,0.2,0.2,262144,0,,,No,"text,vision",Yes,2025-12-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Ministral 3 3B 2512,Mistral,llm,tracking,,0.1,0.1,131072,0,,,No,"text,vision",Yes,2025-12-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Ministral 3 8B 2512,Mistral,llm,tracking,,0.15,0.15,262144,0,,,No,"text,vision",Yes,2025-12-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral 7B Instruct v0.1,Mistral,llm,tracking,,0.11,0.19,2824,0,,,No,text,Yes,2023-09-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Large 2407,Mistral,llm,tracking,,2,6,131072,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Large 2411,Mistral,llm,tracking,,2,6,131072,0,,,No,text,Yes,2024-11-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Large 3 2512,Mistral,llm,tracking,,0.5,1.5,262144,0,,,No,"text,vision",Yes,2025-12-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Medium 3.1,Mistral,llm,tracking,,0.4,2,131072,0,,,No,"text,vision",Yes,2025-08-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Small 3,Mistral,llm,tracking,,0.05,0.08,32768,16384,,,No,text,Yes,2025-01-30,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Small 3.2 24B,Mistral,llm,tracking,,0.075,0.2,128000,0,,,No,"text,vision",Yes,2025-06-20,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Small 4,Mistral,llm,tracking,,0.15,0.6,262144,0,,,No,"text,vision",Yes,2026-03-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mistral Small Creative,Mistral,llm,tracking,,0.1,0.3,32768,0,,,No,text,Yes,2025-12-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mixtral 8x22B Instruct,Mistral,llm,tracking,,2,6,65536,0,,,No,text,Yes,2024-04-17,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Mixtral 8x7B Instruct,Mistral,llm,tracking,,0.54,0.54,32768,16384,,,No,text,Yes,2023-12-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nano Banana (Gemini 2.5 Flash Image),Google,llm,tracking,,0.3,2.5,32768,32768,,,No,"text,vision",Yes,2025-10-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nano Banana 2 (Gemini 3.1 Flash Image Preview),Google,llm,tracking,,0.5,3,65536,65536,,,No,"text,vision",Yes,2026-02-26,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nano Banana Pro (Gemini 3 Pro Image Preview),Google,llm,tracking,,2,12,65536,32768,,,No,"text,vision",Yes,2025-11-20,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nemotron 3 Nano 30B A3B,NVIDIA,llm,tracking,,0.05,0.2,262144,0,,,No,text,Yes,2025-12-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nemotron 3 Super,NVIDIA,llm,tracking,,0.09,0.45,262144,0,,,No,text,Yes,2026-03-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nemotron Nano 12B 2 VL,NVIDIA,llm,tracking,,0.2,0.6,131072,0,,,No,"text,vision",Yes,2025-10-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Nemotron Nano 9B V2,NVIDIA,llm,tracking,,0.04,0.16,131072,0,,,No,text,Yes,2025-09-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Phi 4,Microsoft,llm,tracking,,0.065,0.14,16384,16384,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen VL Max,Alibaba,llm,tracking,,0.52,2.08,131072,32768,,,No,"text,vision",Yes,2025-02-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen VL Plus,Alibaba,llm,tracking,,0.137,0.41,131072,8192,,,No,"text,vision",Yes,2025-02-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen-Max,Alibaba,llm,tracking,,1.04,4.16,32768,8192,,,No,text,Yes,2025-02-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen-Plus,Alibaba,llm,tracking,,0.26,0.78,1000000,32768,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen-Turbo,Alibaba,llm,tracking,,0.033,0.13,131072,8192,,,No,text,Yes,2025-02-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen2.5 7B Instruct,Alibaba,llm,tracking,,0.04,0.1,32768,32768,,,No,text,Yes,2024-10-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen2.5 Coder 32B Instruct,Alibaba,llm,tracking,,0.66,1,32768,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Llama 3.2 11B Vision Instruct,Meta,llm,tracking,,0.245,0.245,131072,16384,,,No,"text,vision",Yes,2024-09-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 3.2 1B Instruct,Meta,llm,tracking,,0.027,0.2,60000,0,,,No,text,Yes,2024-09-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 3.2 3B Instruct,Meta,llm,tracking,,0.051,0.34,80000,0,,,No,text,Yes,2024-09-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Llama 3.3 Nemotron Super 49B V1.5,NVIDIA,llm,tracking,,0.1,0.4,131072,0,,,No,text,Yes,2025-10-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+MiniMax M1,MiniMax,llm,tracking,,0.4,2.2,1000000,40000,,,No,text,Yes,2025-06-17,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+MiniMax M2,MiniMax,llm,tracking,,0.255,1,196608,196608,,,No,text,Yes,2025-10-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+MiniMax M2-her,MiniMax,llm,tracking,,0.3,1.2,65536,2048,,,No,text,Yes,2026-01-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+MiniMax M2.1,MiniMax,llm,tracking,,0.29,0.95,196608,196608,,,No,text,Yes,2025-12-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+MiniMax M2.5,MiniMax,llm,tracking,,0.118,0.99,196608,65536,,,No,text,Yes,2026-02-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+MiniMax M2.7,MiniMax,llm,tracking,,0.3,1.2,196608,32768,,,No,text,Yes,2026-03-18,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Ministral 3 14B 2512,Mistral,llm,tracking,,0.2,0.2,262144,0,,,No,"text,vision",Yes,2025-12-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Ministral 3 3B 2512,Mistral,llm,tracking,,0.1,0.1,131072,0,,,No,"text,vision",Yes,2025-12-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Ministral 3 8B 2512,Mistral,llm,tracking,,0.15,0.15,262144,0,,,No,"text,vision",Yes,2025-12-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral 7B Instruct v0.1,Mistral,llm,tracking,,0.11,0.19,2824,0,,,No,text,Yes,2023-09-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Large 2407,Mistral,llm,tracking,,2,6,131072,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Large 2411,Mistral,llm,tracking,,2,6,131072,0,,,No,text,Yes,2024-11-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Large 3 2512,Mistral,llm,tracking,,0.5,1.5,262144,0,,,No,"text,vision",Yes,2025-12-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Medium 3.1,Mistral,llm,tracking,,0.4,2,131072,0,,,No,"text,vision",Yes,2025-08-13,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Small 3,Mistral,llm,tracking,,0.05,0.08,32768,16384,,,No,text,Yes,2025-01-30,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Small 3.2 24B,Mistral,llm,tracking,,0.075,0.2,128000,0,,,No,"text,vision",Yes,2025-06-20,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Small 4,Mistral,llm,tracking,,0.15,0.6,262144,0,,,No,"text,vision",Yes,2026-03-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mistral Small Creative,Mistral,llm,tracking,,0.1,0.3,32768,0,,,No,text,Yes,2025-12-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mixtral 8x22B Instruct,Mistral,llm,tracking,,2,6,65536,0,,,No,text,Yes,2024-04-17,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Mixtral 8x7B Instruct,Mistral,llm,tracking,,0.54,0.54,32768,16384,,,No,text,Yes,2023-12-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nano Banana (Gemini 2.5 Flash Image),Google,llm,tracking,,0.3,2.5,32768,32768,,,No,"text,vision",Yes,2025-10-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nano Banana 2 (Gemini 3.1 Flash Image Preview),Google,llm,tracking,,0.5,3,65536,65536,,,No,"text,vision",Yes,2026-02-26,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nano Banana Pro (Gemini 3 Pro Image Preview),Google,llm,tracking,,2,12,65536,32768,,,No,"text,vision",Yes,2025-11-20,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nemotron 3 Nano 30B A3B,NVIDIA,llm,tracking,,0.05,0.2,262144,0,,,No,text,Yes,2025-12-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nemotron 3 Super,NVIDIA,llm,tracking,,0.09,0.45,262144,0,,,No,text,Yes,2026-03-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nemotron Nano 12B 2 VL,NVIDIA,llm,tracking,,0.2,0.6,131072,0,,,No,"text,vision",Yes,2025-10-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Nemotron Nano 9B V2,NVIDIA,llm,tracking,,0.04,0.16,131072,0,,,No,text,Yes,2025-09-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Phi 4,Microsoft,llm,tracking,,0.065,0.14,16384,16384,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen VL Max,Alibaba,llm,tracking,,0.52,2.08,131072,32768,,,No,"text,vision",Yes,2025-02-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen VL Plus,Alibaba,llm,tracking,,0.137,0.41,131072,8192,,,No,"text,vision",Yes,2025-02-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen-Max,Alibaba,llm,tracking,,1.04,4.16,32768,8192,,,No,text,Yes,2025-02-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen-Plus,Alibaba,llm,tracking,,0.26,0.78,1000000,32768,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen-Turbo,Alibaba,llm,tracking,,0.033,0.13,131072,8192,,,No,text,Yes,2025-02-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen2.5 7B Instruct,Alibaba,llm,tracking,,0.04,0.1,32768,32768,,,No,text,Yes,2024-10-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen2.5 Coder 32B Instruct,Alibaba,llm,tracking,,0.66,1,32768,0,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Qwen2.5 Coder 7B Instruct,Alibaba,llm,tracking,,0.03,0.09,32768,0,,,No,text,Yes,2025-04-15,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-14 11:18:28
-Qwen2.5 VL 32B Instruct,Alibaba,llm,tracking,,0.2,0.6,128000,0,,,No,"text,vision",Yes,2025-03-24,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen2.5 VL 72B Instruct,Alibaba,llm,tracking,,0.25,0.75,32000,32768,,,No,"text,vision",Yes,2025-02-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 14B,Alibaba,llm,tracking,,0.06,0.24,40960,40960,,,No,text,Yes,2025-04-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 235B A22B Instruct 2507,Alibaba,llm,tracking,,0.071,0.1,262144,0,,,No,text,Yes,2025-07-21,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 235B A22B Thinking 2507,Alibaba,llm,tracking,,0.13,0.6,262144,262144,,,No,text,Yes,2025-07-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 30B A3B,Alibaba,llm,tracking,,0.08,0.28,40960,40960,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 30B A3B Instruct 2507,Alibaba,llm,tracking,,0.09,0.3,262144,262144,,,No,text,Yes,2025-07-29,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 30B A3B Thinking 2507,Alibaba,llm,tracking,,0.08,0.4,131072,131072,,,No,text,Yes,2025-08-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 32B,Alibaba,llm,tracking,,0.08,0.24,40960,40960,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 8B,Alibaba,llm,tracking,,0.05,0.4,40960,8192,,,No,text,Yes,2025-04-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 Coder 30B A3B Instruct,Alibaba,llm,tracking,,0.07,0.27,160000,32768,,,No,text,Yes,2025-07-31,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 Coder Flash,Alibaba,llm,tracking,,0.195,0.975,1000000,65536,,,No,text,Yes,2025-09-17,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 Coder Next,Alibaba,llm,tracking,,0.15,0.8,262144,262144,,,No,text,Yes,2026-02-04,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 Coder Plus,Alibaba,llm,tracking,,0.65,3.25,1000000,65536,,,No,text,Yes,2025-09-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 Next 80B A3B Instruct,Alibaba,llm,tracking,,0.09,1.1,262144,0,,,No,text,Yes,2025-09-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 Next 80B A3B Thinking,Alibaba,llm,tracking,,0.098,0.78,131072,32768,,,No,text,Yes,2025-09-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 VL 235B A22B Instruct,Alibaba,llm,tracking,,0.2,0.88,262144,0,,,No,"text,vision",Yes,2025-09-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 VL 235B A22B Thinking,Alibaba,llm,tracking,,0.26,2.6,131072,32768,,,No,"text,vision",Yes,2025-09-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 VL 30B A3B Instruct,Alibaba,llm,tracking,,0.13,0.52,131072,32768,,,No,"text,vision",Yes,2025-10-06,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 VL 30B A3B Thinking,Alibaba,llm,tracking,,0.13,1.56,131072,32768,,,No,"text,vision",Yes,2025-10-06,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 VL 32B Instruct,Alibaba,llm,tracking,,0.104,0.416,131072,32768,,,No,"text,vision",Yes,2025-10-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 VL 8B Instruct,Alibaba,llm,tracking,,0.08,0.5,131072,32768,,,No,"text,vision",Yes,2025-10-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3 VL 8B Thinking,Alibaba,llm,tracking,,0.117,1.365,131072,32768,,,No,"text,vision",Yes,2025-10-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3.5 397B A17B,Alibaba,llm,tracking,,0.39,2.34,262144,65536,,,No,"text,vision",Yes,2026-02-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3.5 Plus 2026-02-15,Alibaba,llm,tracking,,0.26,1.56,1000000,65536,,,No,"text,vision",Yes,2026-02-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3.5-122B-A10B,Alibaba,llm,tracking,,0.26,2.08,262144,65536,,,No,"text,vision",Yes,2026-02-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3.5-27B,Alibaba,llm,tracking,,0.195,1.56,262144,65536,,,No,"text,vision",Yes,2026-02-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3.5-35B-A3B,Alibaba,llm,tracking,,0.163,1.3,262144,65536,,,No,"text,vision",Yes,2026-02-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3.5-9B,Alibaba,llm,tracking,,0.1,0.15,262144,32768,,,No,"text,vision",Yes,2026-03-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3.5-Flash,Alibaba,llm,tracking,,0.065,0.26,1000000,65536,,,No,"text,vision",Yes,2026-02-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Qwen3.6 Plus,Alibaba,llm,tracking,,0.325,1.95,1000000,65536,,,No,"text,vision",Yes,2026-04-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-R1 Distill Llama 70B,DeepSeek,llm,tracking,,0.7,0.8,131072,16384,,,No,text,Yes,2025-01-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-R1 Distill Qwen 32B,DeepSeek,llm,tracking,,0.29,0.29,32768,32768,,,No,text,Yes,2025-01-29,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Reka Edge,Reka,llm,tracking,,0.1,0.1,16384,16384,,,No,"text,vision",Yes,2026-03-20,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Saba,Mistral,llm,tracking,,0.2,0.6,32768,0,,,No,text,Yes,2025-02-17,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Sonar Deep Research,Perplexity,llm,tracking,,2,8,128000,0,,,No,text,Yes,2025-03-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Sonar Pro Search,Perplexity,llm,tracking,,3,15,200000,8000,,,No,"text,vision",Yes,2025-10-30,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Sonar Reasoning Pro,Perplexity,llm,tracking,,2,8,128000,0,,,No,"text,vision",Yes,2025-03-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-Voxtral Small 24B 2507,Mistral,llm,tracking,,0.1,0.3,32000,0,,,No,"text,audio",Yes,2025-10-30,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-WizardLM-2 8x22B,Microsoft,llm,tracking,,0.62,0.62,65535,8000,,,No,text,Yes,2024-04-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-gpt-oss-120b,OpenAI,llm,tracking,,0.039,0.19,131072,0,,,No,text,Yes,2025-08-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-gpt-oss-20b,OpenAI,llm,tracking,,0.03,0.14,131072,131072,,,No,text,Yes,2025-08-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-gpt-oss-safeguard-20b,OpenAI,llm,tracking,,0.075,0.3,131072,65536,,,No,text,Yes,2025-10-29,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-o1,OpenAI,llm,tracking,,15,60,200000,100000,,,No,"text,vision",Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-o1-pro,OpenAI,llm,tracking,,150,600,200000,100000,,,No,"text,vision",Yes,2025-03-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-o3 Deep Research,OpenAI,llm,tracking,,10,40,200000,100000,,,No,"text,vision",Yes,2025-10-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-o3 Mini High,OpenAI,llm,tracking,,1.1,4.4,200000,100000,,,No,text,Yes,2025-02-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-o4 Mini Deep Research,OpenAI,llm,tracking,,2,8,200000,100000,,,No,"text,vision",Yes,2025-10-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
-o4 Mini High,OpenAI,llm,tracking,,1.1,4.4,200000,100000,,,No,"text,vision",Yes,2025-04-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 19:19:49
+Qwen2.5 VL 32B Instruct,Alibaba,llm,tracking,,0.2,0.6,128000,0,,,No,"text,vision",Yes,2025-03-24,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen2.5 VL 72B Instruct,Alibaba,llm,tracking,,0.25,0.75,32000,32768,,,No,"text,vision",Yes,2025-02-01,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 14B,Alibaba,llm,tracking,,0.06,0.24,40960,40960,,,No,text,Yes,2025-04-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 235B A22B Instruct 2507,Alibaba,llm,tracking,,0.071,0.1,262144,0,,,No,text,Yes,2025-07-21,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 235B A22B Thinking 2507,Alibaba,llm,tracking,,0.13,0.6,262144,262144,,,No,text,Yes,2025-07-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 30B A3B,Alibaba,llm,tracking,,0.08,0.28,40960,40960,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 30B A3B Instruct 2507,Alibaba,llm,tracking,,0.09,0.3,262144,262144,,,No,text,Yes,2025-07-29,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 30B A3B Thinking 2507,Alibaba,llm,tracking,,0.08,0.4,131072,131072,,,No,text,Yes,2025-08-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 32B,Alibaba,llm,tracking,,0.08,0.24,40960,40960,,,No,text,Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 8B,Alibaba,llm,tracking,,0.05,0.4,40960,8192,,,No,text,Yes,2025-04-28,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 Coder 30B A3B Instruct,Alibaba,llm,tracking,,0.07,0.27,160000,32768,,,No,text,Yes,2025-07-31,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 Coder Flash,Alibaba,llm,tracking,,0.195,0.975,1000000,65536,,,No,text,Yes,2025-09-17,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 Coder Next,Alibaba,llm,tracking,,0.15,0.8,262144,262144,,,No,text,Yes,2026-02-04,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 Coder Plus,Alibaba,llm,tracking,,0.65,3.25,1000000,65536,,,No,text,Yes,2025-09-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 Next 80B A3B Instruct,Alibaba,llm,tracking,,0.09,1.1,262144,0,,,No,text,Yes,2025-09-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 Next 80B A3B Thinking,Alibaba,llm,tracking,,0.098,0.78,131072,32768,,,No,text,Yes,2025-09-11,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 VL 235B A22B Instruct,Alibaba,llm,tracking,,0.2,0.88,262144,0,,,No,"text,vision",Yes,2025-09-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 VL 235B A22B Thinking,Alibaba,llm,tracking,,0.26,2.6,131072,32768,,,No,"text,vision",Yes,2025-09-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 VL 30B A3B Instruct,Alibaba,llm,tracking,,0.13,0.52,131072,32768,,,No,"text,vision",Yes,2025-10-06,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 VL 30B A3B Thinking,Alibaba,llm,tracking,,0.13,1.56,131072,32768,,,No,"text,vision",Yes,2025-10-06,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 VL 32B Instruct,Alibaba,llm,tracking,,0.104,0.416,131072,32768,,,No,"text,vision",Yes,2025-10-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 VL 8B Instruct,Alibaba,llm,tracking,,0.08,0.5,131072,32768,,,No,"text,vision",Yes,2025-10-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3 VL 8B Thinking,Alibaba,llm,tracking,,0.117,1.365,131072,32768,,,No,"text,vision",Yes,2025-10-14,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3.5 397B A17B,Alibaba,llm,tracking,,0.39,2.34,262144,65536,,,No,"text,vision",Yes,2026-02-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3.5 Plus 2026-02-15,Alibaba,llm,tracking,,0.26,1.56,1000000,65536,,,No,"text,vision",Yes,2026-02-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3.5-122B-A10B,Alibaba,llm,tracking,,0.26,2.08,262144,65536,,,No,"text,vision",Yes,2026-02-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3.5-27B,Alibaba,llm,tracking,,0.195,1.56,262144,65536,,,No,"text,vision",Yes,2026-02-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3.5-35B-A3B,Alibaba,llm,tracking,,0.163,1.3,262144,65536,,,No,"text,vision",Yes,2026-02-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3.5-9B,Alibaba,llm,tracking,,0.1,0.15,262144,32768,,,No,"text,vision",Yes,2026-03-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3.5-Flash,Alibaba,llm,tracking,,0.065,0.26,1000000,65536,,,No,"text,vision",Yes,2026-02-25,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Qwen3.6 Plus,Alibaba,llm,tracking,,0.325,1.95,1000000,65536,,,No,"text,vision",Yes,2026-04-02,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+R1 Distill Llama 70B,DeepSeek,llm,tracking,,0.7,0.8,131072,16384,,,No,text,Yes,2025-01-23,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+R1 Distill Qwen 32B,DeepSeek,llm,tracking,,0.29,0.29,32768,32768,,,No,text,Yes,2025-01-29,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Reka Edge,Reka,llm,tracking,,0.1,0.1,16384,16384,,,No,"text,vision",Yes,2026-03-20,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Saba,Mistral,llm,tracking,,0.2,0.6,32768,0,,,No,text,Yes,2025-02-17,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Sonar Deep Research,Perplexity,llm,tracking,,2,8,128000,0,,,No,text,Yes,2025-03-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Sonar Pro Search,Perplexity,llm,tracking,,3,15,200000,8000,,,No,"text,vision",Yes,2025-10-30,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Sonar Reasoning Pro,Perplexity,llm,tracking,,2,8,128000,0,,,No,"text,vision",Yes,2025-03-07,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+Voxtral Small 24B 2507,Mistral,llm,tracking,,0.1,0.3,32000,0,,,No,"text,audio",Yes,2025-10-30,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+WizardLM-2 8x22B,Microsoft,llm,tracking,,0.62,0.62,65535,8000,,,No,text,Yes,2024-04-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+gpt-oss-120b,OpenAI,llm,tracking,,0.039,0.19,131072,0,,,No,text,Yes,2025-08-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+gpt-oss-20b,OpenAI,llm,tracking,,0.03,0.14,131072,131072,,,No,text,Yes,2025-08-05,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+gpt-oss-safeguard-20b,OpenAI,llm,tracking,,0.075,0.3,131072,65536,,,No,text,Yes,2025-10-29,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+o1,OpenAI,llm,tracking,,15,60,200000,100000,,,No,"text,vision",Yes,,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+o1-pro,OpenAI,llm,tracking,,150,600,200000,100000,,,No,"text,vision",Yes,2025-03-19,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+o3 Deep Research,OpenAI,llm,tracking,,10,40,200000,100000,,,No,"text,vision",Yes,2025-10-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+o3 Mini High,OpenAI,llm,tracking,,1.1,4.4,200000,100000,,,No,text,Yes,2025-02-12,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+o4 Mini Deep Research,OpenAI,llm,tracking,,2,8,200000,100000,,,No,"text,vision",Yes,2025-10-10,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
+o4 Mini High,OpenAI,llm,tracking,,1.1,4.4,200000,100000,,,No,"text,vision",Yes,2025-04-16,,,,,,,,,,,,,openrouter.ai/api/v1/models,2026-04-17 21:01:46
 Claude Mythos Preview,Anthropic,llm,preview,,0,0,0,0,,,No,text,,2026-04-07,,,,,,,,,,,,,,

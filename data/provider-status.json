@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-17T19:45:52.926Z",
+  "generatedAt": "2026-04-17T21:01:57.610Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,19 +12,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-17T19:45:51.693Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-04-17T21:01:56.292Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "name": "platform.claude.com (formerly console.anthropic.com)",
@@ -39,34 +35,26 @@
           "status": "operational"
         },
         {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "4t4qg3vkrz6z",
-          "title": "Errors uploading documents to Google Drive in Claude.ai",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-04-17T18:59:56.526Z",
-          "updatedAt": "2026-04-17T18:59:56.636Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/1085mzzhwf2v",
-          "summary": "We are investigating an issue causing errors when uploading documents to Google Drive from Claude.ai, including the desktop app and Cowork."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "4t4qg3vkrz6z",
           "title": "Errors uploading documents to Google Drive in Claude.ai",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-04-17T18:59:56.526Z",
-          "updatedAt": "2026-04-17T18:59:56.636Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-17T19:56:32.093Z",
+          "resolvedAt": "2026-04-17T19:56:32.077Z",
           "url": "https://stspg.io/1085mzzhwf2v",
-          "summary": "We are investigating an issue causing errors when uploading documents to Google Drive from Claude.ai, including the desktop app and Cowork."
+          "summary": "The issue affecting uploads to Google Drive has been resolved."
         },
         {
           "id": "fkltkq8kgjkh",
@@ -114,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-17T19:45:52.370Z",
+      "lastCheckedAt": "2026-04-17T21:01:56.984Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-17T19:45:51.810Z",
+      "lastCheckedAt": "2026-04-17T21:01:56.436Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-17T19:45:52.606Z",
+      "lastCheckedAt": "2026-04-17T21:01:57.192Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-17T19:45:52.161Z",
+      "lastCheckedAt": "2026-04-17T21:01:56.281Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-17T19:45:51.914Z",
+      "lastCheckedAt": "2026-04-17T21:01:56.643Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -347,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-17T19:45:51.748Z",
+      "lastCheckedAt": "2026-04-17T21:01:56.363Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -433,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-17T19:45:52.919Z",
+      "lastCheckedAt": "2026-04-17T21:01:57.603Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
