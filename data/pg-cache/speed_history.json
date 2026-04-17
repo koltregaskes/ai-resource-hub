@@ -1,5 +1,15 @@
 [
   {
+    "id": 4293,
+    "model_id": "claude-haiku-3.5",
+    "speed": 120,
+    "ttft": 200,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude 3.5 Haiku"
+  },
+  {
     "id": 4262,
     "model_id": "claude-haiku-3.5",
     "speed": 120,
@@ -1378,6 +1388,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude 3.5 Haiku"
+  },
+  {
+    "id": 4291,
+    "model_id": "claude-opus-4",
+    "speed": 30,
+    "ttft": 350,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Opus 4"
   },
   {
     "id": 4260,
@@ -2760,6 +2780,16 @@
     "model_name": "Claude Opus 4"
   },
   {
+    "id": 4289,
+    "model_id": "claude-opus-4.6",
+    "speed": 50,
+    "ttft": 280,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Opus 4.6"
+  },
+  {
     "id": 4258,
     "model_id": "claude-opus-4.6",
     "speed": 50,
@@ -4138,6 +4168,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude Opus 4.6"
+  },
+  {
+    "id": 4292,
+    "model_id": "claude-sonnet-4",
+    "speed": 80,
+    "ttft": 260,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Sonnet 4"
   },
   {
     "id": 4261,
@@ -5520,6 +5560,16 @@
     "model_name": "Claude Sonnet 4"
   },
   {
+    "id": 4290,
+    "model_id": "claude-sonnet-4.6",
+    "speed": 90,
+    "ttft": 240,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Sonnet 4.6"
+  },
+  {
     "id": 4259,
     "model_id": "claude-sonnet-4.6",
     "speed": 90,
@@ -6898,6 +6948,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude Sonnet 4.6"
+  },
+  {
+    "id": 4300,
+    "model_id": "deepseek-r1",
+    "speed": 30,
+    "ttft": 500,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "R1"
   },
   {
     "id": 4269,
@@ -8280,6 +8340,16 @@
     "model_name": "R1"
   },
   {
+    "id": 4299,
+    "model_id": "deepseek-v3.2",
+    "speed": 49,
+    "ttft": 400,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "DeepSeek V3 0324"
+  },
+  {
     "id": 4268,
     "model_id": "deepseek-v3.2",
     "speed": 49,
@@ -9658,6 +9728,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "DeepSeek V3 0324"
+  },
+  {
+    "id": 4297,
+    "model_id": "gemini-2.0-flash",
+    "speed": 400,
+    "ttft": 140,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.0 Flash"
   },
   {
     "id": 4266,
@@ -11040,6 +11120,16 @@
     "model_name": "Gemini 2.0 Flash"
   },
   {
+    "id": 4298,
+    "model_id": "gemini-2.0-flash-lite",
+    "speed": 450,
+    "ttft": 120,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.0 Flash Lite"
+  },
+  {
     "id": 4267,
     "model_id": "gemini-2.0-flash-lite",
     "speed": 450,
@@ -12418,6 +12508,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Gemini 2.0 Flash Lite"
+  },
+  {
+    "id": 4296,
+    "model_id": "gemini-2.5-flash",
+    "speed": 350,
+    "ttft": 160,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.5 Flash"
   },
   {
     "id": 4265,
@@ -13800,6 +13900,16 @@
     "model_name": "Gemini 2.5 Flash"
   },
   {
+    "id": 4295,
+    "model_id": "gemini-2.5-pro",
+    "speed": 90,
+    "ttft": 270,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.5 Pro Preview 06-05"
+  },
+  {
     "id": 4264,
     "model_id": "gemini-2.5-pro",
     "speed": 90,
@@ -15178,6 +15288,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Gemini 2.5 Pro Preview 06-05"
+  },
+  {
+    "id": 4294,
+    "model_id": "gemini-3.1-pro",
+    "speed": 80,
+    "ttft": 300,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 3.1 Pro Preview"
   },
   {
     "id": 4263,
@@ -16560,6 +16680,16 @@
     "model_name": "Gemini 3.1 Pro Preview"
   },
   {
+    "id": 4283,
+    "model_id": "gpt-4.1",
+    "speed": 110,
+    "ttft": 250,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1"
+  },
+  {
     "id": 4252,
     "model_id": "gpt-4.1",
     "speed": 110,
@@ -17938,6 +18068,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4.1"
+  },
+  {
+    "id": 4284,
+    "model_id": "gpt-4.1-mini",
+    "speed": 160,
+    "ttft": 190,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1 Mini"
   },
   {
     "id": 4253,
@@ -19320,6 +19460,16 @@
     "model_name": "GPT-4.1 Mini"
   },
   {
+    "id": 4285,
+    "model_id": "gpt-4.1-nano",
+    "speed": 200,
+    "ttft": 150,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1 Nano"
+  },
+  {
     "id": 4254,
     "model_id": "gpt-4.1-nano",
     "speed": 200,
@@ -20698,6 +20848,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4.1 Nano"
+  },
+  {
+    "id": 4281,
+    "model_id": "gpt-4o",
+    "speed": 100,
+    "ttft": 290,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4o (2024-05-13)"
   },
   {
     "id": 4250,
@@ -22080,6 +22240,16 @@
     "model_name": "GPT-4o (2024-05-13)"
   },
   {
+    "id": 4282,
+    "model_id": "gpt-4o-mini",
+    "speed": 150,
+    "ttft": 210,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4o-mini (2024-07-18)"
+  },
+  {
     "id": 4251,
     "model_id": "gpt-4o-mini",
     "speed": 150,
@@ -23458,6 +23628,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4o-mini (2024-07-18)"
+  },
+  {
+    "id": 4280,
+    "model_id": "gpt-5",
+    "speed": 75,
+    "ttft": 380,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-5"
   },
   {
     "id": 4249,
@@ -24840,6 +25020,16 @@
     "model_name": "GPT-5"
   },
   {
+    "id": 4279,
+    "model_id": "gpt-5.2",
+    "speed": 85,
+    "ttft": 320,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-5.2"
+  },
+  {
     "id": 4248,
     "model_id": "gpt-5.2",
     "speed": 85,
@@ -26218,6 +26408,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-5.2"
+  },
+  {
+    "id": 4304,
+    "model_id": "grok-3",
+    "speed": 70,
+    "ttft": 290,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Grok 3 Beta"
   },
   {
     "id": 4273,
@@ -27600,6 +27800,16 @@
     "model_name": "Grok 3 Beta"
   },
   {
+    "id": 4303,
+    "model_id": "grok-4",
+    "speed": 50,
+    "ttft": 350,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Grok 4"
+  },
+  {
     "id": 4272,
     "model_id": "grok-4",
     "speed": 50,
@@ -28978,6 +29188,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Grok 4"
+  },
+  {
+    "id": 4307,
+    "model_id": "llama-3.3-70b",
+    "speed": 80,
+    "ttft": 280,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 3.3 70B Instruct"
   },
   {
     "id": 4276,
@@ -30360,6 +30580,16 @@
     "model_name": "Llama 3.3 70B Instruct"
   },
   {
+    "id": 4305,
+    "model_id": "llama-4-maverick",
+    "speed": 95,
+    "ttft": 250,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 4 Maverick"
+  },
+  {
     "id": 4274,
     "model_id": "llama-4-maverick",
     "speed": 95,
@@ -31738,6 +31968,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Llama 4 Maverick"
+  },
+  {
+    "id": 4306,
+    "model_id": "llama-4-scout",
+    "speed": 120,
+    "ttft": 220,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 4 Scout"
   },
   {
     "id": 4275,
@@ -33120,6 +33360,16 @@
     "model_name": "Llama 4 Scout"
   },
   {
+    "id": 4301,
+    "model_id": "mistral-large-3",
+    "speed": 80,
+    "ttft": 310,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Mistral Large"
+  },
+  {
     "id": 4270,
     "model_id": "mistral-large-3",
     "speed": 80,
@@ -34498,6 +34748,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Mistral Large"
+  },
+  {
+    "id": 4302,
+    "model_id": "mistral-small-3.1",
+    "speed": 150,
+    "ttft": 180,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Mistral Small 3.1 24B"
   },
   {
     "id": 4271,
@@ -35880,6 +36140,16 @@
     "model_name": "Mistral Small 3.1 24B"
   },
   {
+    "id": 4286,
+    "model_id": "o3",
+    "speed": 15,
+    "ttft": 1200,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o3"
+  },
+  {
     "id": 4255,
     "model_id": "o3",
     "speed": 15,
@@ -37258,6 +37528,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "o3"
+  },
+  {
+    "id": 4287,
+    "model_id": "o3-mini",
+    "speed": 60,
+    "ttft": 600,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o3 Mini"
   },
   {
     "id": 4256,
@@ -38640,6 +38920,16 @@
     "model_name": "o3 Mini"
   },
   {
+    "id": 4288,
+    "model_id": "o4-mini",
+    "speed": 65,
+    "ttft": 550,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o4 Mini"
+  },
+  {
     "id": 4257,
     "model_id": "o4-mini",
     "speed": 65,
@@ -40020,6 +40310,16 @@
     "model_name": "o4 Mini"
   },
   {
+    "id": 4309,
+    "model_id": "qwen-2.5-72b",
+    "speed": 65,
+    "ttft": 340,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Qwen2.5 72B Instruct"
+  },
+  {
     "id": 4278,
     "model_id": "qwen-2.5-72b",
     "speed": 65,
@@ -41398,6 +41698,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Qwen2.5 72B Instruct"
+  },
+  {
+    "id": 4308,
+    "model_id": "qwen3-235b",
+    "speed": 40,
+    "ttft": 420,
+    "provider_endpoint": null,
+    "recorded_at": "2026-04-17 10:22:35",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Qwen3 235B A22B"
   },
   {
     "id": 4277,
