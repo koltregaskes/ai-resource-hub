@@ -7,7 +7,7 @@ priority: "watch"
 model: "Nemotron 3 Super"
 provider: "NVIDIA"
 release_date: "2026-03-11"
-generated_at: "2026-04-17T06:13:31.595Z"
+generated_at: "2026-04-17T08:52:41.475Z"
 ---
 
 # Nemotron 3 Super: release brief
@@ -16,7 +16,7 @@ NVIDIA's Nemotron 3 Super is on the release desk with 1 related story and 0 benc
 
 ## Release summary
 
-Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.10 in / $0.50 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-super-120b-a12b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.09 in / $0.45 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-super-120b-a12b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
