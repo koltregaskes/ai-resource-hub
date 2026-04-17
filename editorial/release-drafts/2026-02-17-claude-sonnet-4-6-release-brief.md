@@ -7,12 +7,12 @@ priority: "watch"
 model: "Claude Sonnet 4.6"
 provider: "Anthropic"
 release_date: "2026-02-17"
-generated_at: "2026-04-17T13:57:44.343Z"
+generated_at: "2026-04-17T15:14:14.631Z"
 ---
 
 # Claude Sonnet 4.6: release brief
 
-Anthropic's Claude Sonnet 4.6 is on the release desk with 4 related stories and 4 benchmark signals to review.
+Anthropic's Claude Sonnet 4.6 is on the release desk with 6 related stories and 4 benchmark signals to review.
 
 ## Release summary
 
@@ -32,8 +32,10 @@ Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positione
 
 ## Outside coverage and early reactions
 
+- Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
 - TechCrunch (2026-04-10): [Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/) - This ban took place after Claude's pricing changed for OpenClaw users last week.
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- TechCrunch (2026-04-17): [Anthropic launches Claude Design, a new product for creating quick visuals](https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/) - The company says Claude Design is intended to help people like founders and product managers without a design background share their ideas more easily.
 - The Verge (2026-04-16): [OpenAI’s big Codex update is a direct shot at Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos) - OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…
 - TechCrunch (2026-04-12): [At the HumanX conference, everyone was talking about Claude](https://techcrunch.com/2026/04/12/at-the-humanx-conference-everyone-was-talking-about-claude/) - Anthropic was the star of the show at San Francisco's AI-centric conference.
 
@@ -56,7 +58,9 @@ Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positione
 
 - [Official launch or docs](https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf)
 - [Provider API/docs](https://docs.anthropic.com)
+- [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
 - [TechCrunch: Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude](https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [TechCrunch: Anthropic launches Claude Design, a new product for creating quick visuals](https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/)
 - [The Verge: OpenAI’s big Codex update is a direct shot at Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos)
 - [TechCrunch: At the HumanX conference, everyone was talking about Claude](https://techcrunch.com/2026/04/12/at-the-humanx-conference-everyone-was-talking-about-claude/)

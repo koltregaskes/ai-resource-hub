@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 17 Apr 2026, 13:57 UTC
+Generated: 17 Apr 2026, 15:14 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,8 +8,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 16 Apr 2026 | Claude Opus 4.7 | Anthropic | tracking | high | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
-| 7 Apr 2026 | Claude Opus 4.6 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 4 | [official](https://docs.anthropic.com) |
+| 16 Apr 2026 | Claude Opus 4.7 | Anthropic | tracking | high | ready for editor | 0 | 4 | [official](https://docs.anthropic.com) |
+| 7 Apr 2026 | Claude Opus 4.6 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 6 | [official](https://docs.anthropic.com) |
 | 7 Apr 2026 | GLM 5.1 | Zhipu AI | tracking | high | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 6 | [official](https://www.anthropic.com/glasswing) |
 | 2 Apr 2026 | Gemma 4 31B | Google | tracking | high | ready for editor | 0 | 6 | [official](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) |
