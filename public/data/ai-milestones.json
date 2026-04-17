@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-17T22:59:49.312Z",
+  "generatedAt": "2026-04-17T23:54:50.336Z",
   "overview": {
-    "generatedForLabel": "Friday, 17 April 2026",
+    "generatedForLabel": "Saturday, 18 April 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -9,14 +9,13 @@
     "exactDateMilestones": 27,
     "homepageEligibleMilestones": 34,
     "nextMilestone": {
-      "id": "llama-3-launch",
-      "title": "Llama 3 released",
-      "nextOccurrenceLabel": "18 Apr 2026",
-      "daysUntil": 1
+      "id": "google-deepmind-formed",
+      "title": "Google DeepMind formed",
+      "nextOccurrenceLabel": "20 Apr 2026",
+      "daysUntil": 2
     }
   },
-  "todayMilestones": [],
-  "upcomingMilestones": [
+  "todayMilestones": [
     {
       "id": "llama-3-launch",
       "slug": "llama-3-launch",
@@ -65,11 +64,13 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1713441600000,
-      "daysUntil": 1,
+      "daysUntil": 0,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-04-18T12:00:00.000Z",
       "nextOccurrenceLabel": "18 Apr 2026"
-    },
+    }
+  ],
+  "upcomingMilestones": [
     {
       "id": "google-deepmind-formed",
       "slug": "google-deepmind-formed",
@@ -115,7 +116,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1681992000000,
-      "daysUntil": 3,
+      "daysUntil": 2,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-04-20T12:00:00.000Z",
       "nextOccurrenceLabel": "20 Apr 2026"
@@ -166,7 +167,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1715601600000,
-      "daysUntil": 26,
+      "daysUntil": 25,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-05-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 May 2026"
@@ -217,7 +218,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1591876800000,
-      "daysUntil": 55,
+      "daysUntil": 54,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-06-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Jun 2026"
@@ -266,7 +267,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1497268800000,
-      "daysUntil": 56,
+      "daysUntil": 55,
       "anniversaryYears": 9,
       "nextOccurrenceIso": "2026-06-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Jun 2026"
@@ -317,7 +318,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1718884800000,
-      "daysUntil": 64,
+      "daysUntil": 63,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-06-20T12:00:00.000Z",
       "nextOccurrenceLabel": "20 Jun 2026"
@@ -368,7 +369,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689076800000,
-      "daysUntil": 85,
+      "daysUntil": 84,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Jul 2026"
@@ -419,10 +420,59 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689681600000,
-      "daysUntil": 92,
+      "daysUntil": 91,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
       "nextOccurrenceLabel": "18 Jul 2026"
+    },
+    {
+      "id": "stable-diffusion-public-release",
+      "slug": "stable-diffusion-public-release",
+      "title": "Stable Diffusion public release",
+      "summary": "Stable Diffusion accelerated open image-generation adoption and made consumer AI image creation a mainstream topic.",
+      "year": 2022,
+      "month": 8,
+      "day": 22,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "modelId": "stable-diffusion",
+      "tags": [
+        "image-generation",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Stability AI",
+          "url": "https://stability.ai/news/stable-diffusion-public-release",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Stability AI",
+        "url": "https://stability.ai/news/stable-diffusion-public-release",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "22 Aug 2022",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1661169600000,
+      "daysUntil": 126,
+      "anniversaryYears": 4,
+      "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
+      "nextOccurrenceLabel": "22 Aug 2026"
     }
   ],
   "latestLaunches": [
