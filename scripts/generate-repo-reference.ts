@@ -122,7 +122,7 @@ function buildIndexDoc(generatedAt: string): string {
       ['Configured news sources', String(newsPipelineSnapshot.summary.configuredSourceCount)],
       ['Availability rules', String(getAvailabilityOverview().totalRules)],
       ['Latest visible refresh', formatDateTime(latestRefresh)],
-      ['Current composite leader', leaderboard ? `${leaderboard.name} (${leaderboard.metaScore.toFixed(1)})` : 'Not yet available'],
+      ['Current evaluated composite leader', leaderboard ? `${leaderboard.name} (${leaderboard.metaScore.toFixed(1)})` : 'Not yet available'],
       ['Latest tracked release', latestRelease ? `${latestRelease.modelName} (${latestRelease.releaseDateLabel})` : 'Not yet available'],
     ],
   );
@@ -131,7 +131,7 @@ function buildIndexDoc(generatedAt: string): string {
     ['File', 'Purpose'],
     [
       [repoLink('refresh-matrix.md', './refresh-matrix.md'), 'Cadence, source types, automation level, and recent visible updates by category.'],
-      [repoLink('composite-leaderboard.md', './composite-leaderboard.md'), 'Top of the benchmark-weighted ranking as rendered for the website.'],
+      [repoLink('composite-leaderboard.md', './composite-leaderboard.md'), 'Top of the evaluated composite ranking as rendered for the website.'],
       [repoLink('latest-releases.md', './latest-releases.md'), 'Newest tracked releases and editor-state visibility from the release desk.'],
       [repoLink('provider-coverage.md', './provider-coverage.md'), 'Per-provider model coverage across active, tracking, and preview states.'],
       [repoLink('model-availability.md', './model-availability.md'), 'Regional availability baselines and model-specific country restrictions.'],

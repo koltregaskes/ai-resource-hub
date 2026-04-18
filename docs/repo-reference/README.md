@@ -8,19 +8,19 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 14 Apr 2026, 21:06 UTC |
+| Generated | 14 Apr 2026, 21:23 UTC |
 | Providers tracked | 39 |
 | Public models | 299 |
 | Active models | 101 |
 | Tracking models | 197 |
 | Preview models | 1 |
 | Benchmarks | 17 |
-| News items in cache | 200 |
-| Release-desk entries | 44 |
+| News items in cache | 7 |
+| Release-desk entries | 45 |
 | Configured news sources | 12 |
 | Availability rules | 4 |
-| Latest visible refresh | 14 Apr 2026, 21:06 UTC |
-| Current composite leader | o3 (86.9) |
+| Latest visible refresh | 14 Apr 2026, 19:44 UTC |
+| Current evaluated composite leader | GPT-5.2 (68.0) |
 | Latest tracked release | Claude Opus 4.6 (Fast) (7 Apr 2026) |
 
 ## Reference Files
@@ -28,7 +28,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | File | Purpose |
 | --- | --- |
 | [refresh-matrix.md](./refresh-matrix.md) | Cadence, source types, automation level, and recent visible updates by category. |
-| [composite-leaderboard.md](./composite-leaderboard.md) | Top of the benchmark-weighted ranking as rendered for the website. |
+| [composite-leaderboard.md](./composite-leaderboard.md) | Top of the evaluated composite ranking as rendered for the website. |
 | [latest-releases.md](./latest-releases.md) | Newest tracked releases and editor-state visibility from the release desk. |
 | [provider-coverage.md](./provider-coverage.md) | Per-provider model coverage across active, tracking, and preview states. |
 | [model-availability.md](./model-availability.md) | Regional availability baselines and model-specific country restrictions. |
