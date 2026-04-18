@@ -7,7 +7,7 @@ priority: "watch"
 model: "Nano Banana 2 (Gemini 3.1 Flash Image Preview)"
 provider: "Google"
 release_date: "2026-02-26"
-generated_at: "2026-04-18T16:57:49.176Z"
+generated_at: "2026-04-18T17:52:58.216Z"
 ---
 
 # Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief
