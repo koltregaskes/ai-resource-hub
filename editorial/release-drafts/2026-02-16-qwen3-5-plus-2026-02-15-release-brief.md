@@ -3,11 +3,11 @@ title: "Qwen3.5 Plus 2026-02-15: release brief"
 slug: "2026-02-16-qwen3-5-plus-2026-02-15-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "watch"
+priority: "backfill"
 model: "Qwen3.5 Plus 2026-02-15"
 provider: "Alibaba"
 release_date: "2026-02-16"
-generated_at: "2026-04-17T23:54:51.240Z"
+generated_at: "2026-04-18T03:28:59.894Z"
 ---
 
 # Qwen3.5 Plus 2026-02-15: release brief
