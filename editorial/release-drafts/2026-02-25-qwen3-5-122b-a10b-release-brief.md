@@ -7,7 +7,7 @@ priority: "watch"
 model: "Qwen3.5-122B-A10B"
 provider: "Alibaba"
 release_date: "2026-02-25"
-generated_at: "2026-04-18T05:49:24.650Z"
+generated_at: "2026-04-18T07:34:30.087Z"
 ---
 
 # Qwen3.5-122B-A10B: release brief
