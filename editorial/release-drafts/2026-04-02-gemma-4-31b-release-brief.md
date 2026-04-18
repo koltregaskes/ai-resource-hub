@@ -7,7 +7,7 @@ priority: "high"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-04-18T10:59:27.805Z"
+generated_at: "2026-04-18T11:48:55.492Z"
 ---
 
 # Gemma 4 31B: release brief
