@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 18 Apr 2026, 13:34 UTC
+Generated: 18 Apr 2026, 14:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Apr 2026, 13:34 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 18 Apr 2026, 13:34 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Apr 2026, 13:34 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 18 Apr 2026, 13:34 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 18 Apr 2026, 13:34 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Apr 2026, 14:57 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 18 Apr 2026, 14:57 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 18 Apr 2026, 14:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Apr 2026, 14:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Apr 2026, 14:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 18 Apr 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,108 open roles across 10 tracked companies. | `/jobs/` |
 | 09 Apr 2026, 12:00 UTC | digest | Mamba 1 &amp; 2 to Mamba 3 Architectural Upgrade | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sge45s/mamba_1_2_to_mamba_3_architectural_upgrade/) |
 | 09 Apr 2026, 12:00 UTC | digest | Published the 2026-04-09 daily digest | 20 stories captured from 677 sources. | `/news/` |
