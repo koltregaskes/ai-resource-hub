@@ -4,8 +4,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { routeAiResourceHubNews } from '../src/data/news-routing';
 import { getCatalogModelsById, getCatalogProvidersById } from './model-catalog';
+import { getAiResourceHubSqlitePath } from './sqlite-path';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
+const DB_PATH = getAiResourceHubSqlitePath();
 const NEWS_CACHE_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'news.json');
 const GENERATED_TS_PATH = path.join(process.cwd(), 'src', 'data', 'model-release-desk.generated.ts');
 const PUBLIC_JSON_PATH = path.join(process.cwd(), 'public', 'data', 'model-release-desk.json');

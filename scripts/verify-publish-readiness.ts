@@ -4,9 +4,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry';
 import { getAiResourceHubNewsRoutingDiagnostics } from '../src/data/news-routing';
+import { getAiResourceHubSqlitePath } from './sqlite-path';
 
 const repoRoot = process.cwd();
-const dbPath = path.join(repoRoot, 'data', 'the-ai-resource-hub.db');
+const dbPath = getAiResourceHubSqlitePath();
 const cacheDir = path.join(repoRoot, 'data', 'pg-cache');
 const publicDataDir = path.join(repoRoot, 'public', 'data');
 const providerStatusPath = path.join(repoRoot, 'data', 'provider-status.json');

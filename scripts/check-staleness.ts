@@ -18,8 +18,9 @@ import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
 import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry.ts';
+import { getAiResourceHubSqlitePath } from './sqlite-path';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
+const DB_PATH = getAiResourceHubSqlitePath();
 const PUBLIC_CACHE_MODELS_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'models.json');
 
 interface StaleModel {

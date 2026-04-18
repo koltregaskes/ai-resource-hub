@@ -24,7 +24,9 @@ try {
 
 const repoRoot = process.cwd();
 const estateRoot = path.resolve(repoRoot, '..', '..');
-const dbPath = path.join(repoRoot, 'data', 'the-ai-resource-hub.db');
+const legacyDbPath = path.join(repoRoot, 'data', 'the-ai-resource-hub.db');
+const localDbDir = path.join(repoRoot, '.local', 'data');
+const localDbPath = path.join(localDbDir, 'the-ai-resource-hub.db');
 const cacheDir = path.join(repoRoot, 'data', 'pg-cache');
 const siteFiltersPath = path.join(
   estateRoot,
@@ -38,6 +40,25 @@ const siteFiltersPath = path.join(
 const PG_URL = process.env.DATABASE_URL || 'postgresql://atos_admin:atos_password@127.0.0.1:5432/atos_db';
 
 if (!existsSync(cacheDir)) mkdirSync(cacheDir, { recursive: true });
+
+function resolveLocalSqlitePath() {
+  mkdirSync(localDbDir, { recursive: true });
+
+  if (existsSync(legacyDbPath) && !existsSync(localDbPath)) {
+    moveSidecarFile(legacyDbPath, localDbPath);
+    moveSidecarFile(`${legacyDbPath}-wal`, `${localDbPath}-wal`);
+    moveSidecarFile(`${legacyDbPath}-shm`, `${localDbPath}-shm`);
+  }
+
+  return localDbPath;
+}
+
+function moveSidecarFile(sourcePath, destinationPath) {
+  if (!existsSync(sourcePath)) return;
+  require('fs').renameSync(sourcePath, destinationPath);
+}
+
+const dbPath = resolveLocalSqlitePath();
 
 const sqlite = new Database(dbPath, { readonly: true });
 sqlite.pragma('foreign_keys = ON');
@@ -387,7 +408,7 @@ await dumpPostgres(pgClient, 'agi_capabilities', 'SELECT * FROM agi_capabilities
 const meta = {
   generated_at: new Date().toISOString(),
   source: 'local sqlite + shared postgres',
-  sqlite_db: dbPath,
+  sqlite_storage: 'local-only',
   shared_postgres_available: Boolean(pgClient),
 };
 writeFileSync(path.join(cacheDir, '_meta.json'), JSON.stringify(meta, null, 2), 'utf8');

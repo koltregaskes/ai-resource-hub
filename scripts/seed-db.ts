@@ -8,10 +8,12 @@
  * and notable people. It's idempotent — safe to run multiple times.
  */
 import Database from 'better-sqlite3';
-import path from 'node:path';
 import fs from 'node:fs';
+import path from 'node:path';
+import { getAiResourceHubLegacySqlitePath, getAiResourceHubSqlitePath } from './sqlite-path';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
+const DB_PATH = getAiResourceHubSqlitePath();
+const LEGACY_DB_PATH = getAiResourceHubLegacySqlitePath();
 
 // Ensure data directory exists
 fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
@@ -23,6 +25,12 @@ if (fs.existsSync(DB_PATH)) {
   if (fs.existsSync(DB_PATH + '-wal')) fs.unlinkSync(DB_PATH + '-wal');
   if (fs.existsSync(DB_PATH + '-shm')) fs.unlinkSync(DB_PATH + '-shm');
 }
+
+if (fs.existsSync(LEGACY_DB_PATH)) {
+  fs.unlinkSync(LEGACY_DB_PATH);
+}
+if (fs.existsSync(LEGACY_DB_PATH + '-wal')) fs.unlinkSync(LEGACY_DB_PATH + '-wal');
+if (fs.existsSync(LEGACY_DB_PATH + '-shm')) fs.unlinkSync(LEGACY_DB_PATH + '-shm');
 
 const db = new Database(DB_PATH);
 db.pragma('journal_mode = WAL');
