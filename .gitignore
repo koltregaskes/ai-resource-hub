@@ -21,7 +21,8 @@ dist/
 .DS_Store
 Thumbs.db
 
-# SQLite WAL/SHM files (the .db itself IS tracked)
+# Local-only SQLite state
+data/the-ai-resource-hub.db
 *.db-wal
 *.db-shm
 

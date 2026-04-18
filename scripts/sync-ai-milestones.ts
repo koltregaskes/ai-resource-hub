@@ -1,11 +1,11 @@
 #!/usr/bin/env npx tsx
 import Database from 'better-sqlite3';
-import path from 'node:path';
 
 import { aiMilestoneSourceRegistry } from '../src/data/ai-milestone-source-registry';
 import { aiMilestoneSeed, validateAiMilestoneSeed } from '../src/data/ai-milestones-seed';
+import { getAiResourceHubSqlitePath } from './sqlite-path';
 
-const DB_PATH = path.join(process.cwd(), 'data', 'the-ai-resource-hub.db');
+const DB_PATH = getAiResourceHubSqlitePath();
 const summary = validateAiMilestoneSeed(aiMilestoneSeed);
 const db = new Database(DB_PATH);
 
