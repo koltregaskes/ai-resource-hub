@@ -7,7 +7,7 @@ priority: "backfill"
 model: "MiniMax M2-her"
 provider: "MiniMax"
 release_date: "2026-01-23"
-generated_at: "2026-04-18T15:51:55.460Z"
+generated_at: "2026-04-18T16:57:49.177Z"
 ---
 
 # MiniMax M2-her: release brief
