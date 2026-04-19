@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-18T19:09:07.842Z",
+  "generatedAt": "2026-04-19T19:00:51.712Z",
   "overview": {
-    "generatedForLabel": "Saturday, 18 April 2026",
+    "generatedForLabel": "Sunday, 19 April 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -12,64 +12,10 @@
       "id": "google-deepmind-formed",
       "title": "Google DeepMind formed",
       "nextOccurrenceLabel": "20 Apr 2026",
-      "daysUntil": 2
+      "daysUntil": 1
     }
   },
-  "todayMilestones": [
-    {
-      "id": "llama-3-launch",
-      "slug": "llama-3-launch",
-      "title": "Llama 3 released",
-      "summary": "Llama 3 strengthened Meta’s position in open-weight models and raised the bar for broadly available open releases.",
-      "year": 2024,
-      "month": 4,
-      "day": 18,
-      "datePrecision": "day",
-      "category": "model_release",
-      "kind": "launch",
-      "significance": "major",
-      "providerId": "meta",
-      "modelId": "llama-3",
-      "tags": [
-        "llama",
-        "meta",
-        "open-weights"
-      ],
-      "status": "verified",
-      "confidence": "medium",
-      "homepageEligible": true,
-      "calendarEligible": true,
-      "exactAnniversaryEligible": true,
-      "sources": [
-        {
-          "label": "Meta",
-          "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
-          "sourceType": "official_news",
-          "role": "canonical",
-          "notes": "English Meta launch post dated April 18, 2024."
-        }
-      ],
-      "canonicalSource": {
-        "label": "Meta",
-        "url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
-        "sourceType": "official_news",
-        "role": "canonical",
-        "notes": "English Meta launch post dated April 18, 2024."
-      },
-      "categoryLabel": "Model release",
-      "kindLabel": "Launch",
-      "significanceLabel": "Major",
-      "statusLabel": "Verified",
-      "dateLabel": "18 Apr 2024",
-      "trackingDateLabel": null,
-      "href": "/new/",
-      "sortKey": 1713441600000,
-      "daysUntil": 0,
-      "anniversaryYears": 2,
-      "nextOccurrenceIso": "2026-04-18T12:00:00.000Z",
-      "nextOccurrenceLabel": "18 Apr 2026"
-    }
-  ],
+  "todayMilestones": [],
   "upcomingMilestones": [
     {
       "id": "google-deepmind-formed",
@@ -116,7 +62,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1681992000000,
-      "daysUntil": 2,
+      "daysUntil": 1,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-04-20T12:00:00.000Z",
       "nextOccurrenceLabel": "20 Apr 2026"
@@ -167,7 +113,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1715601600000,
-      "daysUntil": 25,
+      "daysUntil": 24,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-05-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 May 2026"
@@ -218,7 +164,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1591876800000,
-      "daysUntil": 54,
+      "daysUntil": 53,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-06-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Jun 2026"
@@ -267,7 +213,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1497268800000,
-      "daysUntil": 55,
+      "daysUntil": 54,
       "anniversaryYears": 9,
       "nextOccurrenceIso": "2026-06-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Jun 2026"
@@ -318,7 +264,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1718884800000,
-      "daysUntil": 63,
+      "daysUntil": 62,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-06-20T12:00:00.000Z",
       "nextOccurrenceLabel": "20 Jun 2026"
@@ -369,7 +315,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689076800000,
-      "daysUntil": 84,
+      "daysUntil": 83,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Jul 2026"
@@ -420,7 +366,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689681600000,
-      "daysUntil": 91,
+      "daysUntil": 90,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
       "nextOccurrenceLabel": "18 Jul 2026"
@@ -469,7 +415,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1661169600000,
-      "daysUntil": 126,
+      "daysUntil": 125,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
       "nextOccurrenceLabel": "22 Aug 2026"

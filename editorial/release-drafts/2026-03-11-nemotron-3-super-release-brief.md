@@ -7,7 +7,7 @@ priority: "watch"
 model: "Nemotron 3 Super"
 provider: "NVIDIA"
 release_date: "2026-03-11"
-generated_at: "2026-04-18T19:09:08.740Z"
+generated_at: "2026-04-19T19:00:54.369Z"
 ---
 
 # Nemotron 3 Super: release brief
@@ -29,7 +29,7 @@ Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as
 
 ## Outside coverage and early reactions
 
-- Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- Hugging Face Blog (2026-04-19): [NVIDIA Isaac GR00T N1.7: Open Reasoning VLA Model for Humanoid Robots     2 days ago •  6](https://huggingface.co/blog/nvidia/gr00t-n1-7)
 
 ## Suggested thread / post structure
 
@@ -50,4 +50,4 @@ Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as
 
 - [Official launch or docs](https://docs.api.nvidia.com)
 - [Provider API/docs](https://docs.api.nvidia.com)
-- [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [Hugging Face Blog: NVIDIA Isaac GR00T N1.7: Open Reasoning VLA Model for Humanoid Robots     2 days ago •  6](https://huggingface.co/blog/nvidia/gr00t-n1-7)

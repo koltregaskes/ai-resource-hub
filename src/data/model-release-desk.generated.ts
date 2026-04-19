@@ -1,11 +1,11 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-04-18T19:09:08.618Z",
+  "generatedAt": "2026-04-19T19:00:53.976Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
     "totalReleases": 43,
-    "highPriority": 10,
-    "readyForEditor": 19,
+    "highPriority": 9,
+    "readyForEditor": 7,
     "openSource": 1
   },
   "releases": [
@@ -18,10 +18,10 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-04-16",
       "releaseDateLabel": "16 Apr 2026",
-      "ageDays": 2,
+      "ageDays": 3,
       "status": "tracking",
       "priority": "high",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://docs.anthropic.com",
       "providerStatusUrl": "https://status.claude.com",
       "providerDocsUrl": "https://docs.anthropic.com",
@@ -34,12 +34,12 @@ export const modelReleaseDesk = {
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.7); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.7 is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -51,86 +51,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Opus 4.7, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 16 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Anthropic releases a new Opus model amid Mythos Preview buzz",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "Anthropic has released its most powerful \"generally available\" model to date: Claude Opus 4.7. The company called it a step up from Opus 4.6 for advanced software engineering tasks, particularly in complex coding areas that in the past required more hand-holding. It's also supposed to be better at analyzing images and…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Introducing Claude Design by Anthropic Labs",
-          "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
-          "source": "Anthropic",
-          "date": "2026-04-17",
-          "summary": "Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "Anthropic’s new cybersecurity model could get it back in the government’s good graces",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/914229/tides-turning-anthropic-trump-administration-cybersecurity-mythos-preview",
-          "source": "The Verge",
-          "date": "2026-04-17",
-          "summary": "The Trump administration has spent nearly two months fighting with AI company Anthropic. It's dubbed the company a \"RADICAL LEFT, WOKE COMPANY\" full of \"Leftwing nut jobs\" and a menace to national security. But some of the ice may reportedly be melting between the two, thanks to Anthropic's buzzy new cybersecurity-foc…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Anthropic launches Claude Design, a new product for creating quick visuals",
-          "url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/",
-          "source": "TechCrunch",
-          "date": "2026-04-17",
-          "summary": "The company says Claude Design is intended to help people like founders and product managers without a design background share their ideas more easily.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-04-16-claude-opus-4-7-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "claude-opus-4.6-fast",
@@ -141,10 +70,10 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-04-07",
       "releaseDateLabel": "7 Apr 2026",
-      "ageDays": 11,
+      "ageDays": 12,
       "status": "tracking",
       "priority": "high",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://docs.anthropic.com",
       "providerStatusUrl": "https://status.claude.com",
       "providerDocsUrl": "https://docs.anthropic.com",
@@ -157,12 +86,12 @@ export const modelReleaseDesk = {
       "inputPrice": 30,
       "outputPrice": 150,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Claude Opus 4.6 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $30.00 in / $150.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.6-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -174,102 +103,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Opus 4.6 (Fast), and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 7 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Introducing Claude Design by Anthropic Labs",
-          "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
-          "source": "Anthropic",
-          "date": "2026-04-17",
-          "summary": "Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude",
-          "url": "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/",
-          "source": "TechCrunch",
-          "date": "2026-04-10",
-          "summary": "This ban took place after Claude's pricing changed for OpenClaw users last week.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
-            "hardware"
-          ]
-        },
-        {
-          "title": "Anthropic’s new cybersecurity model could get it back in the government’s good graces",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/914229/tides-turning-anthropic-trump-administration-cybersecurity-mythos-preview",
-          "source": "The Verge",
-          "date": "2026-04-17",
-          "summary": "The Trump administration has spent nearly two months fighting with AI company Anthropic. It's dubbed the company a \"RADICAL LEFT, WOKE COMPANY\" full of \"Leftwing nut jobs\" and a menace to national security. But some of the ice may reportedly be melting between the two, thanks to Anthropic's buzzy new cybersecurity-foc…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Anthropic launches Claude Design, a new product for creating quick visuals",
-          "url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/",
-          "source": "TechCrunch",
-          "date": "2026-04-17",
-          "summary": "The company says Claude Design is intended to help people like founders and product managers without a design background share their ideas more easily.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-04-07-claude-opus-4-6-fast-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "glm-5.1",
@@ -280,7 +122,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-04-07",
       "releaseDateLabel": "7 Apr 2026",
-      "ageDays": 11,
+      "ageDays": 12,
       "status": "tracking",
       "priority": "high",
       "draftStatus": "needs_research",
@@ -296,7 +138,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.95,
       "outputPrice": 3.15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GLM 5.1 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.95 in / $3.15 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5.1 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -332,10 +174,10 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-04-07",
       "releaseDateLabel": "7 Apr 2026",
-      "ageDays": 11,
+      "ageDays": 12,
       "status": "preview",
       "priority": "high",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://www.anthropic.com/glasswing",
       "providerStatusUrl": "https://status.claude.com",
       "providerDocsUrl": "https://docs.anthropic.com",
@@ -350,11 +192,11 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access Anthropic frontier preview launched with Project Glasswing for defensive cybersecurity work. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -367,103 +209,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Mythos Preview, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 7 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Anthropic releases a new Opus model amid Mythos Preview buzz",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "Anthropic has released its most powerful \"generally available\" model to date: Claude Opus 4.7. The company called it a step up from Opus 4.6 for advanced software engineering tasks, particularly in complex coding areas that in the past required more hand-holding. It's also supposed to be better at analyzing images and…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Is Anthropic limiting the release of Mythos to protect the internet — or Anthropic?",
-          "url": "https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/",
-          "source": "TechCrunch",
-          "date": "2026-04-09",
-          "summary": "Anthropic said this week that it limited the release of its newest model, dubbed Mythos, because it is too capable of finding security exploits in software relied upon by users around the world. Are real cybersecurity concerns a cover for a bigger problem at the frontier lab?",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Anthropic debuts preview of powerful new AI model Mythos in new cybersecurity initiative",
-          "url": "https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/",
-          "source": "TechCrunch",
-          "date": "2026-04-07",
-          "summary": "The new model will be used by a small number of high-profile companies to engage in defensive cybersecurity work.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Introducing Claude Design by Anthropic Labs",
-          "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
-          "source": "Anthropic",
-          "date": "2026-04-17",
-          "summary": "Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude",
-          "url": "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/",
-          "source": "TechCrunch",
-          "date": "2026-04-10",
-          "summary": "This ban took place after Claude's pricing changed for OpenClaw users last week.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
-            "hardware"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-04-07-claude-mythos-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gemma-4",
@@ -474,7 +228,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 16,
+      "ageDays": 17,
       "status": "tracking",
       "priority": "high",
       "draftStatus": "ready_for_editor",
@@ -490,9 +244,9 @@ export const modelReleaseDesk = {
       "inputPrice": 0.13,
       "outputPrice": 0.38,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.13 in / $0.38 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemma 4 31B is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemma 4 31B is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -516,96 +270,24 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
+          "title": "Google releases new apps for Windows and MacOS",
+          "url": "https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/",
+          "source": "Ars Technica AI",
+          "date": "2026-04-19",
+          "summary": "",
           "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
-            "hardware"
-          ]
-        },
-        {
-          "title": "Gemini can now pull from Google Photos to generate personalized images",
-          "url": "https://www.theverge.com/tech/913202/gemini-personal-intelligence-images-nano-banana",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "Google's Personal Intelligence feature, which lets Gemini pull data from apps like Google Photos to offer responses tailored to you, can now use that data and its Nano Banana 2 image model to create images based on your personal context. With the feature, you can use prompts like \"Design my dream house\" or \"Create a […",
-          "routingTags": [
-            "announcement",
-            "product_launch",
+            "research_paper",
+            "open_source",
+            "hardware",
             "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google rolls out a native Gemini app for Mac",
-          "url": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
-          "source": "TechCrunch",
-          "date": "2026-04-15",
-          "summary": "You can share anything on their screen with Gemini to get help with what they're looking at in the moment, including local files.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google launches a Gemini AI app on Mac",
-          "url": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
-          "source": "The Verge",
-          "date": "2026-04-15",
-          "summary": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window. Before sharing your [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;",
-          "url": "https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch",
-          "source": "The Verge",
-          "date": "2026-04-14",
-          "summary": "Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as \"Skills\" in the Chrome desktop browser, letting you instantly run them across any tabs you select. \"Until now, repeating an AI task - like asking for ing…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google adds AI Skills to Chrome to help you save favorite workflows",
-          "url": "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "Google is adding \"Skills\" to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini's browser integration.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
             "model_release"
           ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-31b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "qwen3.6-plus",
@@ -616,7 +298,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 16,
+      "ageDays": 17,
       "status": "tracking",
       "priority": "high",
       "draftStatus": "needs_research",
@@ -632,7 +314,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.325,
       "outputPrice": 1.95,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -668,7 +350,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-04-01",
       "releaseDateLabel": "1 Apr 2026",
-      "ageDays": 17,
+      "ageDays": 18,
       "status": "tracking",
       "priority": "high",
       "draftStatus": "needs_research",
@@ -684,7 +366,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GLM 5V Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5v-turbo); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5V Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -720,7 +402,7 @@ export const modelReleaseDesk = {
       "providerColour": "#1da1f2",
       "releaseDate": "2026-03-31",
       "releaseDateLabel": "31 Mar 2026",
-      "ageDays": 18,
+      "ageDays": 19,
       "status": "tracking",
       "priority": "high",
       "draftStatus": "needs_research",
@@ -736,7 +418,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI flagship model. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok 4.20 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -772,7 +454,7 @@ export const modelReleaseDesk = {
       "providerColour": "#1da1f2",
       "releaseDate": "2026-03-31",
       "releaseDateLabel": "31 Mar 2026",
-      "ageDays": 18,
+      "ageDays": 19,
       "status": "tracking",
       "priority": "high",
       "draftStatus": "needs_research",
@@ -788,7 +470,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -824,9 +506,9 @@ export const modelReleaseDesk = {
       "providerColour": "#f59e0b",
       "releaseDate": "2026-03-28",
       "releaseDateLabel": "28 Mar 2026",
-      "ageDays": 21,
+      "ageDays": 22,
       "status": "tracking",
-      "priority": "high",
+      "priority": "watch",
       "draftStatus": "needs_research",
       "officialUrl": "https://platform.moonshot.ai/docs/pricing/tools.en-US",
       "providerStatusUrl": null,
@@ -840,7 +522,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.57,
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Moonshot AI's Kimi K2 0711 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -876,7 +558,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ec4899",
       "releaseDate": "2026-03-20",
       "releaseDateLabel": "20 Mar 2026",
-      "ageDays": 29,
+      "ageDays": 30,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "watch_only",
@@ -892,7 +574,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.1,
       "outputPrice": 0.1,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Reka Edge is a currently tracked release from Reka. It is positioned as an API-available model rather than a local-only release. Tracked context window: 16.4K tokens. Current tracked pricing: $0.10 in / $0.10 out per million tokens. Auto-tracked from OpenRouter discovery (rekaai/reka-edge); awaiting official verification.",
       "dek": "Reka's Reka Edge is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -928,7 +610,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-03-18",
       "releaseDateLabel": "18 Mar 2026",
-      "ageDays": 31,
+      "ageDays": 32,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "needs_research",
@@ -944,7 +626,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.3,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 196.6K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Current MiniMax flagship family line. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "MiniMax's MiniMax M2.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -980,10 +662,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-17",
       "releaseDateLabel": "17 Mar 2026",
-      "ageDays": 32,
+      "ageDays": 33,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://developers.openai.com/api/docs/guides/latest-model",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -996,12 +678,12 @@ export const modelReleaseDesk = {
       "inputPrice": 0.75,
       "outputPrice": 4.5,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-04-18 19:08:52",
+      "pricingUpdated": "2026-04-19 19:00:15",
       "summary": "GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.75 in / $4.50 out per million tokens. Smaller GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Mini is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 Mini is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1013,101 +695,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT-5.4 Mini, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 17 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "Gradient Labs gives every bank customer an AI account manager",
-          "url": "https://openai.com/index/gradient-labs",
-          "source": "OpenAI",
-          "date": "2026-04-01",
-          "summary": "Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.",
-          "routingTags": [
-            "model_release",
-            "inference"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Florida launches investigation into OpenAI",
-          "url": "https://www.theverge.com/policy/909557/openai-florida-investigation",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are \"falling into the hands of America's enemies, such as the…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
-          "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch",
-          "date": "2026-04-08",
-          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI has bought AI personal finance startup Hiro",
-          "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "evaluation"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-03-17-gpt-5-4-mini-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gpt-5.4-nano",
@@ -1118,10 +714,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-17",
       "releaseDateLabel": "17 Mar 2026",
-      "ageDays": 32,
+      "ageDays": 33,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://developers.openai.com/api/docs/guides/latest-model",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -1134,12 +730,12 @@ export const modelReleaseDesk = {
       "inputPrice": 0.2,
       "outputPrice": 1.25,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-04-18 19:08:52",
+      "pricingUpdated": "2026-04-19 19:00:15",
       "summary": "GPT-5.4 Nano is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.20 in / $1.25 out per million tokens. Fastest and cheapest GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Nano is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 Nano is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1151,100 +747,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT-5.4 Nano, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 17 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Florida launches investigation into OpenAI",
-          "url": "https://www.theverge.com/policy/909557/openai-florida-investigation",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are \"falling into the hands of America's enemies, such as the…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
-          "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch",
-          "date": "2026-04-08",
-          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI has bought AI personal finance startup Hiro",
-          "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "evaluation"
-          ]
-        },
-        {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind",
-          "source": "OpenAI",
-          "date": "2026-04-16",
-          "summary": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-03-17-gpt-5-4-nano-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "mistral-small-2603",
@@ -1255,7 +766,7 @@ export const modelReleaseDesk = {
       "providerColour": "#111827",
       "releaseDate": "2026-03-16",
       "releaseDateLabel": "16 Mar 2026",
-      "ageDays": 33,
+      "ageDays": 34,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "needs_research",
@@ -1271,7 +782,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.15,
       "outputPrice": 0.6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Mistral Small 4 is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-small-2603); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Mistral's Mistral Small 4 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1307,7 +818,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-03-15",
       "releaseDateLabel": "15 Mar 2026",
-      "ageDays": 34,
+      "ageDays": 35,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "needs_research",
@@ -1323,7 +834,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5 Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1359,7 +870,7 @@ export const modelReleaseDesk = {
       "providerColour": "#76b900",
       "releaseDate": "2026-03-11",
       "releaseDateLabel": "11 Mar 2026",
-      "ageDays": 38,
+      "ageDays": 39,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "ready_for_editor",
@@ -1375,7 +886,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.09,
       "outputPrice": 0.45,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.09 in / $0.45 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-super-120b-a12b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "NVIDIA's Nemotron 3 Super is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1398,16 +909,16 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
+          "title": "NVIDIA Isaac GR00T N1.7: Open Reasoning VLA Model for Humanoid Robots     2 days ago •  6",
+          "url": "https://huggingface.co/blog/nvidia/gr00t-n1-7",
+          "source": "Hugging Face Blog",
+          "date": "2026-04-19",
+          "summary": "",
           "routingTags": [
+            "open_source",
             "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
+            "tool_use",
+            "agentic_framework",
             "hardware"
           ]
         }
@@ -1426,7 +937,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-03-10",
       "releaseDateLabel": "10 Mar 2026",
-      "ageDays": 39,
+      "ageDays": 40,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "needs_research",
@@ -1442,7 +953,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.1,
       "outputPrice": 0.15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3.5-9B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.10 in / $0.15 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-9b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-9B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1478,10 +989,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-05",
       "releaseDateLabel": "5 Mar 2026",
-      "ageDays": 44,
+      "ageDays": 45,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://developers.openai.com/api/docs/guides/latest-model",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -1494,12 +1005,12 @@ export const modelReleaseDesk = {
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-04-18 19:08:52",
+      "pricingUpdated": "2026-04-19 19:00:15",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1511,87 +1022,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT-5.4, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 5 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Accelerating the cyber defense ecosystem that protects us all",
-          "url": "https://openai.com/index/accelerating-cyber-defense-ecosystem",
-          "source": "OpenAI",
-          "date": "2026-04-16",
-          "summary": "Leading security firms and enterprises join OpenAI's Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.",
-          "routingTags": [
-            "model_release",
-            "api_update"
-          ]
-        },
-        {
-          "title": "Trusted access for the next era of cyber defense",
-          "url": "https://openai.com/index/scaling-trusted-access-for-cyber-defense",
-          "source": "OpenAI",
-          "date": "2026-04-14",
-          "summary": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity capabilities advance.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
-          "url": "https://openai.com/index/cloudflare-openai-agent-cloud",
-          "source": "OpenAI",
-          "date": "2026-04-13",
-          "summary": "Cloudflare brings OpenAI's GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "Gradient Labs gives every bank customer an AI account manager",
-          "url": "https://openai.com/index/gradient-labs",
-          "source": "OpenAI",
-          "date": "2026-04-01",
-          "summary": "Gradient Labs uses GPT-4.1 and GPT-5.4 mini and nano to power AI agents that automate banking support workflows with low latency and high reliability.",
-          "routingTags": [
-            "model_release",
-            "inference"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gpt-5.4-pro",
@@ -1602,10 +1041,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-05",
       "releaseDateLabel": "5 Mar 2026",
-      "ageDays": 44,
+      "ageDays": 45,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://developers.openai.com/api/docs/guides/latest-model",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -1618,12 +1057,12 @@ export const modelReleaseDesk = {
       "inputPrice": 30,
       "outputPrice": 180,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-04-18 19:08:52",
+      "pricingUpdated": "2026-04-19 19:00:15",
       "summary": "GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Premium GPT-5.4 tier. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.4 Pro is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 Pro is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1635,100 +1074,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT-5.4 Pro, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 5 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Florida launches investigation into OpenAI",
-          "url": "https://www.theverge.com/policy/909557/openai-florida-investigation",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are \"falling into the hands of America's enemies, such as the…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
-          "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch",
-          "date": "2026-04-08",
-          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI has bought AI personal finance startup Hiro",
-          "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "evaluation"
-          ]
-        },
-        {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind",
-          "source": "OpenAI",
-          "date": "2026-04-16",
-          "summary": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gpt-5.3-chat",
@@ -1739,10 +1093,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-03",
       "releaseDateLabel": "3 Mar 2026",
-      "ageDays": 46,
+      "ageDays": 47,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.openai.com/docs/models",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -1755,12 +1109,12 @@ export const modelReleaseDesk = {
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GPT-5.3 Chat is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.3-chat); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.3 Chat is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.3 Chat is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1772,100 +1126,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT-5.3 Chat, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 3 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Florida launches investigation into OpenAI",
-          "url": "https://www.theverge.com/policy/909557/openai-florida-investigation",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are \"falling into the hands of America's enemies, such as the…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
-          "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch",
-          "date": "2026-04-08",
-          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI has bought AI personal finance startup Hiro",
-          "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "evaluation"
-          ]
-        },
-        {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind",
-          "source": "OpenAI",
-          "date": "2026-04-16",
-          "summary": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-03-03-gpt-5-3-chat-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gemini-3.1-flash-lite",
@@ -1876,7 +1145,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-03-03",
       "releaseDateLabel": "3 Mar 2026",
-      "ageDays": 46,
+      "ageDays": 47,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "ready_for_editor",
@@ -1892,9 +1161,9 @@ export const modelReleaseDesk = {
       "inputPrice": 0.25,
       "outputPrice": 1.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.25 in / $1.50 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.1-flash-lite-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.1 Flash Lite Preview is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Flash Lite Preview is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1915,96 +1184,24 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
+          "title": "Google releases new apps for Windows and MacOS",
+          "url": "https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/",
+          "source": "Ars Technica AI",
+          "date": "2026-04-19",
+          "summary": "",
           "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
-            "hardware"
-          ]
-        },
-        {
-          "title": "Gemini can now pull from Google Photos to generate personalized images",
-          "url": "https://www.theverge.com/tech/913202/gemini-personal-intelligence-images-nano-banana",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "Google's Personal Intelligence feature, which lets Gemini pull data from apps like Google Photos to offer responses tailored to you, can now use that data and its Nano Banana 2 image model to create images based on your personal context. With the feature, you can use prompts like \"Design my dream house\" or \"Create a […",
-          "routingTags": [
-            "announcement",
-            "product_launch",
+            "research_paper",
+            "open_source",
+            "hardware",
             "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google rolls out a native Gemini app for Mac",
-          "url": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
-          "source": "TechCrunch",
-          "date": "2026-04-15",
-          "summary": "You can share anything on their screen with Gemini to get help with what they're looking at in the moment, including local files.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google launches a Gemini AI app on Mac",
-          "url": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
-          "source": "The Verge",
-          "date": "2026-04-15",
-          "summary": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window. Before sharing your [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;",
-          "url": "https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch",
-          "source": "The Verge",
-          "date": "2026-04-14",
-          "summary": "Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as \"Skills\" in the Chrome desktop browser, letting you instantly run them across any tabs you select. \"Until now, repeating an AI task - like asking for ing…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google adds AI Skills to Chrome to help you save favorite workflows",
-          "url": "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "Google is adding \"Skills\" to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini's browser integration.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
             "model_release"
           ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-03-gemini-3-1-flash-lite-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "gemini-3.1-flash-image",
@@ -2015,7 +1212,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-02-26",
       "releaseDateLabel": "26 Feb 2026",
-      "ageDays": 51,
+      "ageDays": 52,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "ready_for_editor",
@@ -2031,9 +1228,9 @@ export const modelReleaseDesk = {
       "inputPrice": 0.5,
       "outputPrice": 3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 65.5K tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.1-flash-image-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2054,96 +1251,24 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
+          "title": "Google releases new apps for Windows and MacOS",
+          "url": "https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/",
+          "source": "Ars Technica AI",
+          "date": "2026-04-19",
+          "summary": "",
           "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
-            "hardware"
-          ]
-        },
-        {
-          "title": "Gemini can now pull from Google Photos to generate personalized images",
-          "url": "https://www.theverge.com/tech/913202/gemini-personal-intelligence-images-nano-banana",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "Google's Personal Intelligence feature, which lets Gemini pull data from apps like Google Photos to offer responses tailored to you, can now use that data and its Nano Banana 2 image model to create images based on your personal context. With the feature, you can use prompts like \"Design my dream house\" or \"Create a […",
-          "routingTags": [
-            "announcement",
-            "product_launch",
+            "research_paper",
+            "open_source",
+            "hardware",
             "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google rolls out a native Gemini app for Mac",
-          "url": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
-          "source": "TechCrunch",
-          "date": "2026-04-15",
-          "summary": "You can share anything on their screen with Gemini to get help with what they're looking at in the moment, including local files.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google launches a Gemini AI app on Mac",
-          "url": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
-          "source": "The Verge",
-          "date": "2026-04-15",
-          "summary": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window. Before sharing your [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;",
-          "url": "https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch",
-          "source": "The Verge",
-          "date": "2026-04-14",
-          "summary": "Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as \"Skills\" in the Chrome desktop browser, letting you instantly run them across any tabs you select. \"Until now, repeating an AI task - like asking for ing…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google adds AI Skills to Chrome to help you save favorite workflows",
-          "url": "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "Google is adding \"Skills\" to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini's browser integration.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
             "model_release"
           ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-02-26-nano-banana-2-gemini-3-1-flash-image-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "qwen3.5-35b-a3b",
@@ -2154,7 +1279,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-02-25",
       "releaseDateLabel": "25 Feb 2026",
-      "ageDays": 52,
+      "ageDays": 53,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "needs_research",
@@ -2170,7 +1295,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.163,
       "outputPrice": 1.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3.5-35B-A3B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.16 in / $1.30 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-35b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-35B-A3B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2206,7 +1331,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-02-25",
       "releaseDateLabel": "25 Feb 2026",
-      "ageDays": 52,
+      "ageDays": 53,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "needs_research",
@@ -2222,7 +1347,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.195,
       "outputPrice": 1.56,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3.5-27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.20 in / $1.56 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-27b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-27B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2258,7 +1383,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-02-25",
       "releaseDateLabel": "25 Feb 2026",
-      "ageDays": 52,
+      "ageDays": 53,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "needs_research",
@@ -2274,7 +1399,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.26,
       "outputPrice": 2.08,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3.5-122B-A10B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.26 in / $2.08 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-122b-a10b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-122B-A10B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2310,7 +1435,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-02-25",
       "releaseDateLabel": "25 Feb 2026",
-      "ageDays": 52,
+      "ageDays": 53,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "needs_research",
@@ -2326,7 +1451,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.065,
       "outputPrice": 0.26,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3.5-Flash is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.07 in / $0.26 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-flash-02-23); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2362,10 +1487,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-02-24",
       "releaseDateLabel": "24 Feb 2026",
-      "ageDays": 53,
+      "ageDays": 54,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.openai.com/docs/models",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -2378,12 +1503,12 @@ export const modelReleaseDesk = {
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GPT-5.3-Codex is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.3-codex); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.3-Codex is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.3-Codex is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -2395,100 +1520,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT-5.3-Codex, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 24 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Florida launches investigation into OpenAI",
-          "url": "https://www.theverge.com/policy/909557/openai-florida-investigation",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are \"falling into the hands of America's enemies, such as the…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
-          "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch",
-          "date": "2026-04-08",
-          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI has bought AI personal finance startup Hiro",
-          "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "evaluation"
-          ]
-        },
-        {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind",
-          "source": "OpenAI",
-          "date": "2026-04-16",
-          "summary": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-02-24-gpt-5-3-codex-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gemini-3.1-pro",
@@ -2499,7 +1539,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-02-19",
       "releaseDateLabel": "19 Feb 2026",
-      "ageDays": 58,
+      "ageDays": 59,
       "status": "tracking",
       "priority": "watch",
       "draftStatus": "ready_for_editor",
@@ -2515,9 +1555,9 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 12,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 6 related stories and 2 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 1 related story and 2 benchmark signals to review.",
       "whyItMatters": [
         "There are already 2 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2555,96 +1595,24 @@ export const modelReleaseDesk = {
       ],
       "relatedStories": [
         {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
+          "title": "Google releases new apps for Windows and MacOS",
+          "url": "https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/",
+          "source": "Ars Technica AI",
+          "date": "2026-04-19",
+          "summary": "",
           "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
-            "hardware"
-          ]
-        },
-        {
-          "title": "Gemini can now pull from Google Photos to generate personalized images",
-          "url": "https://www.theverge.com/tech/913202/gemini-personal-intelligence-images-nano-banana",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "Google's Personal Intelligence feature, which lets Gemini pull data from apps like Google Photos to offer responses tailored to you, can now use that data and its Nano Banana 2 image model to create images based on your personal context. With the feature, you can use prompts like \"Design my dream house\" or \"Create a […",
-          "routingTags": [
-            "announcement",
-            "product_launch",
+            "research_paper",
+            "open_source",
+            "hardware",
             "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google rolls out a native Gemini app for Mac",
-          "url": "https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/",
-          "source": "TechCrunch",
-          "date": "2026-04-15",
-          "summary": "You can share anything on their screen with Gemini to get help with what they're looking at in the moment, including local files.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google launches a Gemini AI app on Mac",
-          "url": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
-          "source": "The Verge",
-          "date": "2026-04-15",
-          "summary": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window. Before sharing your [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;",
-          "url": "https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch",
-          "source": "The Verge",
-          "date": "2026-04-14",
-          "summary": "Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as \"Skills\" in the Chrome desktop browser, letting you instantly run them across any tabs you select. \"Until now, repeating an AI task - like asking for ing…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google adds AI Skills to Chrome to help you save favorite workflows",
-          "url": "https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "Google is adding \"Skills\" to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini's browser integration.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
             "model_release"
           ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-preview-release-brief.md",
       "benchmarkCount": 2,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "claude-sonnet-4.6",
@@ -2655,9 +1623,9 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-02-17",
       "releaseDateLabel": "17 Feb 2026",
-      "ageDays": 60,
+      "ageDays": 61,
       "status": "active",
-      "priority": "watch",
+      "priority": "backfill",
       "draftStatus": "ready_for_editor",
       "officialUrl": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf",
       "providerStatusUrl": "https://status.claude.com",
@@ -2671,12 +1639,12 @@ export const modelReleaseDesk = {
       "inputPrice": 3,
       "outputPrice": 15,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-04-18 19:08:52",
+      "pricingUpdated": "2026-04-19 19:00:15",
       "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 6 related stories and 4 benchmark signals to review.",
+      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 0 related stories and 4 benchmark signals to review.",
       "whyItMatters": [
         "There are already 4 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -2688,7 +1656,7 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Sonnet 4.6, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 17 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
@@ -2725,98 +1693,11 @@ export const modelReleaseDesk = {
           "source": "Anthropic"
         }
       ],
-      "relatedStories": [
-        {
-          "title": "Introducing Claude Design by Anthropic Labs",
-          "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
-          "source": "Anthropic",
-          "date": "2026-04-17",
-          "summary": "Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude",
-          "url": "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/",
-          "source": "TechCrunch",
-          "date": "2026-04-10",
-          "summary": "This ban took place after Claude's pricing changed for OpenClaw users last week.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
-            "hardware"
-          ]
-        },
-        {
-          "title": "Anthropic’s new cybersecurity model could get it back in the government’s good graces",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/914229/tides-turning-anthropic-trump-administration-cybersecurity-mythos-preview",
-          "source": "The Verge",
-          "date": "2026-04-17",
-          "summary": "The Trump administration has spent nearly two months fighting with AI company Anthropic. It's dubbed the company a \"RADICAL LEFT, WOKE COMPANY\" full of \"Leftwing nut jobs\" and a menace to national security. But some of the ice may reportedly be melting between the two, thanks to Anthropic's buzzy new cybersecurity-foc…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Anthropic launches Claude Design, a new product for creating quick visuals",
-          "url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/",
-          "source": "TechCrunch",
-          "date": "2026-04-17",
-          "summary": "The company says Claude Design is intended to help people like founders and product managers without a design background share their ideas more easily.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-02-17-claude-sonnet-4-6-release-brief.md",
       "benchmarkCount": 4,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "qwen3.5-plus-02-15",
@@ -2827,7 +1708,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-02-16",
       "releaseDateLabel": "16 Feb 2026",
-      "ageDays": 61,
+      "ageDays": 62,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -2843,7 +1724,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.26,
       "outputPrice": 1.56,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3.5 Plus 2026-02-15 is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.26 in / $1.56 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-plus-02-15); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5 Plus 2026-02-15 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2879,7 +1760,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-02-16",
       "releaseDateLabel": "16 Feb 2026",
-      "ageDays": 61,
+      "ageDays": 62,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -2895,7 +1776,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.39,
       "outputPrice": 2.34,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3.5 397B A17B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.39 in / $2.34 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-397b-a17b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5 397B A17B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2931,7 +1812,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-02-12",
       "releaseDateLabel": "12 Feb 2026",
-      "ageDays": 65,
+      "ageDays": 66,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -2947,7 +1828,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.72,
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GLM 5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 80K tokens. Current tracked pricing: $0.72 in / $2.30 out per million tokens. Zhipu flagship GLM 5 line. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2983,7 +1864,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-02-12",
       "releaseDateLabel": "12 Feb 2026",
-      "ageDays": 65,
+      "ageDays": 66,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -2999,7 +1880,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.118,
       "outputPrice": 0.99,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "MiniMax M2.5 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 196.6K tokens. Current tracked pricing: $0.12 in / $0.99 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2.5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "MiniMax's MiniMax M2.5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3035,7 +1916,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-02-05",
       "releaseDateLabel": "5 Feb 2026",
-      "ageDays": 72,
+      "ageDays": 73,
       "status": "active",
       "priority": "backfill",
       "draftStatus": "ready_for_editor",
@@ -3051,12 +1932,12 @@ export const modelReleaseDesk = {
       "inputPrice": 15,
       "outputPrice": 75,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-04-18 19:08:52",
+      "pricingUpdated": "2026-04-19 19:00:15",
       "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 6 related stories and 5 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 0 related stories and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -3068,7 +1949,7 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Opus 4.6, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 5 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
@@ -3113,98 +1994,11 @@ export const modelReleaseDesk = {
           "source": "Anthropic"
         }
       ],
-      "relatedStories": [
-        {
-          "title": "Introducing Claude Design by Anthropic Labs",
-          "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
-          "source": "Anthropic",
-          "date": "2026-04-17",
-          "summary": "Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "Anthropic temporarily banned OpenClaw&#8217;s creator from accessing Claude",
-          "url": "https://techcrunch.com/2026/04/10/anthropic-temporarily-banned-openclaws-creator-from-accessing-claude/",
-          "source": "TechCrunch",
-          "date": "2026-04-10",
-          "summary": "This ban took place after Claude's pricing changed for OpenClaw users last week.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "Project Glasswing",
-          "url": "https://www.anthropic.com/glasswing",
-          "source": "Anthropic",
-          "date": "2026-04-07",
-          "summary": "A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.",
-          "routingTags": [
-            "model_release",
-            "api_update",
-            "ai_agents",
-            "ai_safety",
-            "hardware"
-          ]
-        },
-        {
-          "title": "Anthropic’s new cybersecurity model could get it back in the government’s good graces",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/914229/tides-turning-anthropic-trump-administration-cybersecurity-mythos-preview",
-          "source": "The Verge",
-          "date": "2026-04-17",
-          "summary": "The Trump administration has spent nearly two months fighting with AI company Anthropic. It's dubbed the company a \"RADICAL LEFT, WOKE COMPANY\" full of \"Leftwing nut jobs\" and a menace to national security. But some of the ice may reportedly be melting between the two, thanks to Anthropic's buzzy new cybersecurity-foc…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Anthropic launches Claude Design, a new product for creating quick visuals",
-          "url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/",
-          "source": "TechCrunch",
-          "date": "2026-04-17",
-          "summary": "The company says Claude Design is intended to help people like founders and product managers without a design background share their ideas more easily.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-02-05-claude-opus-4-6-release-brief.md",
       "benchmarkCount": 5,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "qwen3-coder-next",
@@ -3215,7 +2009,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-02-04",
       "releaseDateLabel": "4 Feb 2026",
-      "ageDays": 73,
+      "ageDays": 74,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -3231,7 +2025,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.15,
       "outputPrice": 0.8,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "Qwen3 Coder Next is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.15 in / $0.80 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3-coder-next); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3 Coder Next is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3267,7 +2061,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-01-23",
       "releaseDateLabel": "23 Jan 2026",
-      "ageDays": 85,
+      "ageDays": 86,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -3283,7 +2077,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.3,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "MiniMax M2-her is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 65.5K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2-her); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "MiniMax's MiniMax M2-her is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3319,10 +2113,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-01-19",
       "releaseDateLabel": "19 Jan 2026",
-      "ageDays": 89,
+      "ageDays": 90,
       "status": "tracking",
       "priority": "backfill",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.openai.com/docs/models",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -3335,12 +2129,12 @@ export const modelReleaseDesk = {
       "inputPrice": 2.5,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GPT Audio is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $2.50 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-audio); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT Audio is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT Audio is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -3352,100 +2146,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT Audio, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 19 Jan 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Florida launches investigation into OpenAI",
-          "url": "https://www.theverge.com/policy/909557/openai-florida-investigation",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are \"falling into the hands of America's enemies, such as the…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
-          "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch",
-          "date": "2026-04-08",
-          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI has bought AI personal finance startup Hiro",
-          "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "evaluation"
-          ]
-        },
-        {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind",
-          "source": "OpenAI",
-          "date": "2026-04-16",
-          "summary": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-01-19-gpt-audio-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gpt-audio-mini",
@@ -3456,10 +2165,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-01-19",
       "releaseDateLabel": "19 Jan 2026",
-      "ageDays": 89,
+      "ageDays": 90,
       "status": "tracking",
       "priority": "backfill",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.openai.com/docs/models",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -3472,12 +2181,12 @@ export const modelReleaseDesk = {
       "inputPrice": 0.6,
       "outputPrice": 2.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $0.60 in / $2.40 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-audio-mini); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT Audio Mini is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT Audio Mini is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -3489,100 +2198,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT Audio Mini, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 19 Jan 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Florida launches investigation into OpenAI",
-          "url": "https://www.theverge.com/policy/909557/openai-florida-investigation",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are \"falling into the hands of America's enemies, such as the…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
-          "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch",
-          "date": "2026-04-08",
-          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI has bought AI personal finance startup Hiro",
-          "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "evaluation"
-          ]
-        },
-        {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind",
-          "source": "OpenAI",
-          "date": "2026-04-16",
-          "summary": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-01-19-gpt-audio-mini-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "glm-4.7-flash",
@@ -3593,7 +2217,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-01-19",
       "releaseDateLabel": "19 Jan 2026",
-      "ageDays": 89,
+      "ageDays": 90,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -3609,7 +2233,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.06,
       "outputPrice": 0.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GLM 4.7 Flash is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.06 in / $0.40 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-4.7-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 4.7 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3645,10 +2269,10 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-01-14",
       "releaseDateLabel": "14 Jan 2026",
-      "ageDays": 94,
+      "ageDays": 95,
       "status": "tracking",
       "priority": "backfill",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://platform.openai.com/docs/models",
       "providerStatusUrl": "https://status.openai.com",
       "providerDocsUrl": "https://platform.openai.com/docs/models",
@@ -3661,12 +2285,12 @@ export const modelReleaseDesk = {
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GPT-5.2-Codex is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.2-codex); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.2-Codex is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.2-Codex is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -3678,100 +2302,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what OpenAI actually launched with GPT-5.2-Codex, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 14 Jan 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "ChatGPT has a new $100 per month Pro subscription",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers \"5x more\" usage of its Codex coding tool than the $20 per month Plus subscription and \"is best for longer, high-effort Codex sessions,\" OpenAI says. The company is introducing the new tier as it [&#823…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "OpenAI’s big Codex update is a direct shot at Claude Code",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos",
-          "source": "The Verge",
-          "date": "2026-04-16",
-          "summary": "OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Florida launches investigation into OpenAI",
-          "url": "https://www.theverge.com/policy/909557/openai-florida-investigation",
-          "source": "The Verge",
-          "date": "2026-04-09",
-          "summary": "Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are \"falling into the hands of America's enemies, such as the…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new safety blueprint to address the rise in child sexual exploitation",
-          "url": "https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/",
-          "source": "TechCrunch",
-          "date": "2026-04-08",
-          "summary": "OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI has bought AI personal finance startup Hiro",
-          "url": "https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/",
-          "source": "TechCrunch",
-          "date": "2026-04-14",
-          "summary": "The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "evaluation"
-          ]
-        },
-        {
-          "title": "Introducing GPT-Rosalind for life sciences research",
-          "url": "https://openai.com/index/introducing-gpt-rosalind",
-          "source": "OpenAI",
-          "date": "2026-04-16",
-          "summary": "OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-01-14-gpt-5-2-codex-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "minimax-m2.1",
@@ -3782,7 +2321,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2025-12-23",
       "releaseDateLabel": "23 Dec 2025",
-      "ageDays": 116,
+      "ageDays": 117,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -3798,7 +2337,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.29,
       "outputPrice": 0.95,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "MiniMax M2.1 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 196.6K tokens. Current tracked pricing: $0.29 in / $0.95 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "MiniMax's MiniMax M2.1 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3834,7 +2373,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2025-12-22",
       "releaseDateLabel": "22 Dec 2025",
-      "ageDays": 117,
+      "ageDays": 118,
       "status": "tracking",
       "priority": "backfill",
       "draftStatus": "needs_research",
@@ -3850,7 +2389,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.39,
       "outputPrice": 1.75,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-04-18 19:08:51",
+      "pricingUpdated": "2026-04-19 19:00:14",
       "summary": "GLM 4.7 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.39 in / $1.75 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-4.7); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 4.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [

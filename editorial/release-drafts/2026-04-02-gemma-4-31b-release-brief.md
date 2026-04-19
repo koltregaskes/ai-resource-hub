@@ -7,12 +7,12 @@ priority: "high"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-04-18T19:09:08.739Z"
+generated_at: "2026-04-19T19:00:54.344Z"
 ---
 
 # Gemma 4 31B: release brief
 
-Google's Gemma 4 31B is on the release desk with 6 related stories and 0 benchmark signals to review.
+Google's Gemma 4 31B is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,12 +30,7 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 ## Outside coverage and early reactions
 
-- Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
-- The Verge (2026-04-16): [Gemini can now pull from Google Photos to generate personalized images](https://www.theverge.com/tech/913202/gemini-personal-intelligence-images-nano-banana) - Google's Personal Intelligence feature, which lets Gemini pull data from apps like Google Photos to offer responses tailored to you, can now use that data and its Nano Banana 2 image model to create images based on your personal context. With the feature, you can use prompts like "Design my dream house" or "Create a […
-- TechCrunch (2026-04-15): [Google rolls out a native Gemini app for Mac](https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/) - You can share anything on their screen with Gemini to get help with what they're looking at in the moment, including local files.
-- The Verge (2026-04-15): [Google launches a Gemini AI app on Mac](https://www.theverge.com/tech/912638/google-gemini-mac-app) - Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window. Before sharing your [&#8230;]
-- The Verge (2026-04-14): [Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;](https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch) - Google is launching a new Chrome workflow feature that allows you to reuse your favorite Gemini commands across multiple webpages. Any AI prompts can now be saved as "Skills" in the Chrome desktop browser, letting you instantly run them across any tabs you select. "Until now, repeating an AI task - like asking for ing…
-- TechCrunch (2026-04-14): [Google adds AI Skills to Chrome to help you save favorite workflows](https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/) - Google is adding "Skills" to Chrome, letting users save and reuse AI prompts across websites. The feature builds on Gemini's browser integration.
+- Ars Technica AI (2026-04-19): [Google releases new apps for Windows and MacOS](https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/)
 
 ## Suggested thread / post structure
 
@@ -58,9 +53,4 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 - [Official launch or docs](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
-- [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
-- [The Verge: Gemini can now pull from Google Photos to generate personalized images](https://www.theverge.com/tech/913202/gemini-personal-intelligence-images-nano-banana)
-- [TechCrunch: Google rolls out a native Gemini app for Mac](https://techcrunch.com/2026/04/15/google-rolls-out-a-native-gemini-app-for-mac/)
-- [The Verge: Google launches a Gemini AI app on Mac](https://www.theverge.com/tech/912638/google-gemini-mac-app)
-- [The Verge: Chrome now lets you turn AI prompts into repeatable &#8216;Skills&#8217;](https://www.theverge.com/tech/911658/google-chrome-gemini-ai-skills-availability-launch)
-- [TechCrunch: Google adds AI Skills to Chrome to help you save favorite workflows](https://techcrunch.com/2026/04/14/google-adds-ai-skills-to-chrome-to-help-you-save-favorite-workflows/)
+- [Ars Technica AI: Google releases new apps for Windows and MacOS](https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/)

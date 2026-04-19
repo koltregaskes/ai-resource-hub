@@ -2,17 +2,17 @@
 title: "GPT Audio Mini: release brief"
 slug: "2026-01-19-gpt-audio-mini-release-brief"
 draft_type: "model-release"
-status: "ready_for_editor"
+status: "needs_research"
 priority: "backfill"
 model: "GPT Audio Mini"
 provider: "OpenAI"
 release_date: "2026-01-19"
-generated_at: "2026-04-18T19:09:08.742Z"
+generated_at: "2026-04-19T19:00:54.413Z"
 ---
 
 # GPT Audio Mini: release brief
 
-OpenAI's GPT Audio Mini is on the release desk with 6 related stories and 0 benchmark signals to review.
+OpenAI's GPT Audio Mini is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -21,7 +21,7 @@ GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as a
 ## Why this matters
 
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
+- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
 
 ## Benchmarks and evals to mention
 
@@ -29,19 +29,14 @@ GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as a
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-09): [ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new) - OpenAI has announced a new version of its ChatGPT Pro subscription that costs $100 per month. The new Pro tier offers "5x more" usage of its Codex coding tool than the $20 per month Plus subscription and "is best for longer, high-effort Codex sessions," OpenAI says. The company is introducing the new tier as it [&#823…
-- The Verge (2026-04-16): [OpenAI’s big Codex update is a direct shot at Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos) - OpenAI is beefing up its agentic coding and development system, Codex, with a suite of updates that let it use your computer, generate images, and remember from past experiences. The package of updates comes as OpenAI's rivalry with Anthropic intensifies, following the stellar successes of Claude Code and OpenAI aggre…
-- The Verge (2026-04-09): [Florida launches investigation into OpenAI](https://www.theverge.com/policy/909557/openai-florida-investigation) - Florida Attorney General James Uthmeier is launching an investigation into OpenAI over public safety and national security risks, as reported earlier by Reuters. In a statement on Thursday, Uthmeier says there are concerns that OpenAI's data and technology are "falling into the hands of America's enemies, such as the…
-- TechCrunch (2026-04-08): [OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/) - OpenAI's new Child Safety Blueprint aims to tackle the alarming rise in child sexual exploitation linked to advancements in AI.
-- TechCrunch (2026-04-14): [OpenAI has bought AI personal finance startup Hiro](https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/) - The acquisition indicates a capability that OpenAI is building into ChatGPT: financial planning.
-- OpenAI (2026-04-16): [Introducing GPT-Rosalind for life sciences research](https://openai.com/index/introducing-gpt-rosalind) - OpenAI introduces GPT-Rosalind, a frontier reasoning model built to accelerate drug discovery, genomics analysis, protein reasoning, and scientific research workflows.
+- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
 
 ## Suggested thread / post structure
 
 1. Lead with the hook: what OpenAI actually launched with GPT Audio Mini, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
-4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
+4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
 5. Keep the chronology explicit: this release landed on 19 Jan 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
@@ -55,9 +50,3 @@ GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as a
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [The Verge: ChatGPT has a new $100 per month Pro subscription](https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new)
-- [The Verge: OpenAI’s big Codex update is a direct shot at Claude Code](https://www.theverge.com/ai-artificial-intelligence/913034/openai-codex-updates-use-macos)
-- [The Verge: Florida launches investigation into OpenAI](https://www.theverge.com/policy/909557/openai-florida-investigation)
-- [TechCrunch: OpenAI releases a new safety blueprint to address the rise in child sexual exploitation](https://techcrunch.com/2026/04/08/openai-releases-a-new-safety-blueprint-to-address-the-rise-in-child-sexual-exploitation/)
-- [TechCrunch: OpenAI has bought AI personal finance startup Hiro](https://techcrunch.com/2026/04/13/openai-has-bought-ai-personal-finance-startup-hiro/)
-- [OpenAI: Introducing GPT-Rosalind for life sciences research](https://openai.com/index/introducing-gpt-rosalind)

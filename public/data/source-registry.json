@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-11T15:52:39.462Z",
+  "generatedAt": "2026-04-19T19:00:57.623Z",
   "sourceOfTruth": {
     "estateManifestPath": "W:\\Websites\\estate.yml",
     "siteFiltersPath": "W:\\Websites\\shared\\website-tools\\pipelines\\news\\site-filters.json",
@@ -384,7 +384,19 @@
         "crypto_defi",
         "crypto_regulation"
       ],
-      "excludeTags": [],
+      "excludeTags": [
+        "photography",
+        "camera",
+        "camera_release",
+        "lens",
+        "photo_editing",
+        "lightroom",
+        "photoshop",
+        "capture_one",
+        "photography_ai",
+        "photography_technique",
+        "photography_business"
+      ],
       "includeLabels": [
         {
           "id": "product_launch",
@@ -459,7 +471,52 @@
           "label": "Crypto Regulation"
         }
       ],
-      "excludeLabels": [],
+      "excludeLabels": [
+        {
+          "id": "photography",
+          "label": "Photography"
+        },
+        {
+          "id": "camera",
+          "label": "Camera"
+        },
+        {
+          "id": "camera_release",
+          "label": "Camera Release"
+        },
+        {
+          "id": "lens",
+          "label": "Lens"
+        },
+        {
+          "id": "photo_editing",
+          "label": "Photo Editing"
+        },
+        {
+          "id": "lightroom",
+          "label": "Lightroom"
+        },
+        {
+          "id": "photoshop",
+          "label": "Photoshop"
+        },
+        {
+          "id": "capture_one",
+          "label": "Capture One"
+        },
+        {
+          "id": "photography_ai",
+          "label": "Photography AI"
+        },
+        {
+          "id": "photography_technique",
+          "label": "Photography Technique"
+        },
+        {
+          "id": "photography_business",
+          "label": "Photography Business"
+        }
+      ],
       "minImportanceScore": 0.45,
       "outputFormat": "markdown_digest",
       "outputPath": "W:\\Websites\\sites\\kols-korner\\news-digests",
@@ -517,7 +574,13 @@
         "dataset",
         "training",
         "inference",
-        "hardware"
+        "hardware",
+        "policy",
+        "regulation",
+        "funding",
+        "acquisition",
+        "industry_move",
+        "opinion"
       ],
       "includeLabels": [
         {
@@ -681,6 +744,30 @@
         {
           "id": "hardware",
           "label": "Hardware"
+        },
+        {
+          "id": "policy",
+          "label": "Policy"
+        },
+        {
+          "id": "regulation",
+          "label": "Regulation"
+        },
+        {
+          "id": "funding",
+          "label": "Funding"
+        },
+        {
+          "id": "acquisition",
+          "label": "Acquisition"
+        },
+        {
+          "id": "industry_move",
+          "label": "Industry Move"
+        },
+        {
+          "id": "opinion",
+          "label": "Opinion"
         }
       ],
       "minImportanceScore": 0.4,
@@ -902,7 +989,19 @@
         "agentic_framework",
         "agent_sdk"
       ],
-      "excludeTags": [],
+      "excludeTags": [
+        "photography",
+        "camera",
+        "camera_release",
+        "lens",
+        "photo_editing",
+        "lightroom",
+        "photoshop",
+        "capture_one",
+        "photography_ai",
+        "photography_technique",
+        "photography_business"
+      ],
       "includeLabels": [
         {
           "id": "ai_agents",
@@ -941,7 +1040,52 @@
           "label": "Agent SDK"
         }
       ],
-      "excludeLabels": [],
+      "excludeLabels": [
+        {
+          "id": "photography",
+          "label": "Photography"
+        },
+        {
+          "id": "camera",
+          "label": "Camera"
+        },
+        {
+          "id": "camera_release",
+          "label": "Camera Release"
+        },
+        {
+          "id": "lens",
+          "label": "Lens"
+        },
+        {
+          "id": "photo_editing",
+          "label": "Photo Editing"
+        },
+        {
+          "id": "lightroom",
+          "label": "Lightroom"
+        },
+        {
+          "id": "photoshop",
+          "label": "Photoshop"
+        },
+        {
+          "id": "capture_one",
+          "label": "Capture One"
+        },
+        {
+          "id": "photography_ai",
+          "label": "Photography AI"
+        },
+        {
+          "id": "photography_technique",
+          "label": "Photography Technique"
+        },
+        {
+          "id": "photography_business",
+          "label": "Photography Business"
+        }
+      ],
       "minImportanceScore": 0.4,
       "outputFormat": "markdown_digest",
       "outputPath": "W:\\Websites\\sites\\ghost-in-the-models\\news-digests",
