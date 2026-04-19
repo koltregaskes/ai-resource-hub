@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-19T15:24:16.468Z",
+  "generatedAt": "2026-04-19T16:20:36.482Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T15:24:15.138Z",
+      "lastCheckedAt": "2026-04-19T16:20:35.280Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T15:24:15.847Z",
+      "lastCheckedAt": "2026-04-19T16:20:35.931Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T15:24:15.296Z",
+      "lastCheckedAt": "2026-04-19T16:20:35.368Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T15:24:16.171Z",
+      "lastCheckedAt": "2026-04-19T16:20:36.269Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T15:24:15.118Z",
+      "lastCheckedAt": "2026-04-19T16:20:35.213Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T15:24:15.328Z",
+      "lastCheckedAt": "2026-04-19T16:20:35.290Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T15:24:15.113Z",
+      "lastCheckedAt": "2026-04-19T16:20:35.305Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T15:24:16.460Z",
+      "lastCheckedAt": "2026-04-19T16:20:36.474Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -430,7 +430,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-18T02:52:38.000Z",
+          "id": "together-feed-0-2026-04-19T16:16:59.000Z",
+          "title": "Deepseek V3.1 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-19T16:16:59.000Z",
+          "updatedAt": "2026-04-19T16:16:59.000Z",
+          "resolvedAt": "2026-04-19T16:16:59.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Deepseek V3.1 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-19T16:02:04.000Z",
+          "title": "Deepseek V3.1 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-19T16:02:04.000Z",
+          "updatedAt": "2026-04-19T16:02:04.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Deepseek V3.1 went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-18T02:52:38.000Z",
           "title": "Deepseek R1 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -441,7 +463,7 @@
           "summary": "Deepseek R1 recovered"
         },
         {
-          "id": "together-feed-1-2026-04-18T02:28:39.000Z",
+          "id": "together-feed-3-2026-04-18T02:28:39.000Z",
           "title": "Deepseek R1 went down",
           "status": "investigating",
           "impact": "major",
@@ -450,28 +472,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Deepseek R1 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-18T02:07:33.000Z",
-          "title": "Deepseek R1 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-18T02:07:33.000Z",
-          "updatedAt": "2026-04-18T02:07:33.000Z",
-          "resolvedAt": "2026-04-18T02:07:33.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Deepseek R1 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-18T01:39:57.000Z",
-          "title": "ZAI GLM 5.1 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-18T01:39:57.000Z",
-          "updatedAt": "2026-04-18T01:39:57.000Z",
-          "resolvedAt": "2026-04-18T01:39:57.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5.1 recovered"
         }
       ]
     },
