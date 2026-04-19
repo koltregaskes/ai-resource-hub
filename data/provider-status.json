@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-19T22:05:12.912Z",
+  "generatedAt": "2026-04-19T23:20:48.270Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,10 +12,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T22:05:11.822Z",
+      "lastCheckedAt": "2026-04-19T23:20:47.309Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -43,8 +43,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "34yy5hskyw2v",
+          "title": "Elevated errors on Opus 4.6",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-04-19T22:44:32.175Z",
+          "updatedAt": "2026-04-19T22:44:32.239Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/qlwclyv64k56",
+          "summary": "We are currently investigating this issue."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "34yy5hskyw2v",
+          "title": "Elevated errors on Opus 4.6",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-04-19T22:44:32.175Z",
+          "updatedAt": "2026-04-19T22:44:32.239Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/qlwclyv64k56",
+          "summary": "We are currently investigating this issue."
+        },
         {
           "id": "4t4qg3vkrz6z",
           "title": "Errors uploading documents to Google Drive in Claude.ai",
@@ -77,17 +100,6 @@
           "resolvedAt": "2026-04-16T21:29:01.687Z",
           "url": "https://stspg.io/zv6xsc3wm28c",
           "summary": "This incident has been resolved in the v1.3109.0 release of Claude Desktop. Please \"Check for Updates\"."
-        },
-        {
-          "id": "7jbzthbc1dwr",
-          "title": "Opus 4.6 elevated rate of errors",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-16T06:50:56.066Z",
-          "updatedAt": "2026-04-16T07:46:41.216Z",
-          "resolvedAt": "2026-04-16T07:43:32.000Z",
-          "url": "https://stspg.io/90n2vmmkj1df",
-          "summary": "Earlier today we had an outage on Opus 4.6 that started at 23:03 PT / 6:03 UTC and ended at 00:26 PT / 7:26 UTC."
         }
       ]
     },
@@ -102,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T22:05:12.521Z",
+      "lastCheckedAt": "2026-04-19T23:20:47.800Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T22:05:12.008Z",
+      "lastCheckedAt": "2026-04-19T23:20:47.303Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T22:05:12.591Z",
+      "lastCheckedAt": "2026-04-19T23:20:47.895Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T22:05:11.906Z",
+      "lastCheckedAt": "2026-04-19T23:20:47.200Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T22:05:12.044Z",
+      "lastCheckedAt": "2026-04-19T23:20:47.478Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +347,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T22:05:11.765Z",
+      "lastCheckedAt": "2026-04-19T23:20:47.193Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +433,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-19T22:05:12.904Z",
+      "lastCheckedAt": "2026-04-19T23:20:48.263Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
