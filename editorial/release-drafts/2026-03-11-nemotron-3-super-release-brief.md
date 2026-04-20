@@ -2,17 +2,17 @@
 title: "Nemotron 3 Super: release brief"
 slug: "2026-03-11-nemotron-3-super-release-brief"
 draft_type: "model-release"
-status: "ready_for_editor"
+status: "needs_research"
 priority: "watch"
 model: "Nemotron 3 Super"
 provider: "NVIDIA"
 release_date: "2026-03-11"
-generated_at: "2026-04-19T19:00:54.369Z"
+generated_at: "2026-04-20T07:00:52.063Z"
 ---
 
 # Nemotron 3 Super: release brief
 
-NVIDIA's Nemotron 3 Super is on the release desk with 1 related story and 0 benchmark signals to review.
+NVIDIA's Nemotron 3 Super is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -21,7 +21,7 @@ Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as
 ## Why this matters
 
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
+- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
 
 ## Benchmarks and evals to mention
 
@@ -29,14 +29,14 @@ Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as
 
 ## Outside coverage and early reactions
 
-- Hugging Face Blog (2026-04-19): [NVIDIA Isaac GR00T N1.7: Open Reasoning VLA Model for Humanoid Robots     2 days ago •  6](https://huggingface.co/blog/nvidia/gr00t-n1-7)
+- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
 
 ## Suggested thread / post structure
 
 1. Lead with the hook: what NVIDIA actually launched with Nemotron 3 Super, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
-4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
+4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
 5. Keep the chronology explicit: this release landed on 11 Mar 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
@@ -50,4 +50,3 @@ Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as
 
 - [Official launch or docs](https://docs.api.nvidia.com)
 - [Provider API/docs](https://docs.api.nvidia.com)
-- [Hugging Face Blog: NVIDIA Isaac GR00T N1.7: Open Reasoning VLA Model for Humanoid Robots     2 days ago •  6](https://huggingface.co/blog/nvidia/gr00t-n1-7)

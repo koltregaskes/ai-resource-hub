@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 19 Apr 2026, 19:00 UTC
+Generated: 20 Apr 2026, 07:00 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -12,7 +12,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 7 Apr 2026 | Claude Opus 4.6 (Fast) | Anthropic | tracking | high | needs research | 0 | 0 | [official](https://docs.anthropic.com) |
 | 7 Apr 2026 | GLM 5.1 | Zhipu AI | tracking | high | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | needs research | 0 | 0 | [official](https://www.anthropic.com/glasswing) |
-| 2 Apr 2026 | Gemma 4 31B | Google | tracking | high | ready for editor | 0 | 1 | [official](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) |
+| 2 Apr 2026 | Gemma 4 31B | Google | tracking | high | needs research | 0 | 0 | [official](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) |
 | 2 Apr 2026 | Qwen3.6 Plus | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 1 Apr 2026 | GLM 5V Turbo | Zhipu AI | tracking | high | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | 31 Mar 2026 | Grok 4.20 | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
@@ -24,7 +24,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 17 Mar 2026 | GPT-5.4 Nano | OpenAI | tracking | watch | needs research | 0 | 0 | [official](https://developers.openai.com/api/docs/guides/latest-model) |
 | 16 Mar 2026 | Mistral Small 4 | Mistral | tracking | watch | needs research | 0 | 0 | [official](https://docs.mistral.ai) |
 | 15 Mar 2026 | GLM 5 Turbo | Zhipu AI | tracking | watch | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/update/new-releases) |
-| 11 Mar 2026 | Nemotron 3 Super | NVIDIA | tracking | watch | ready for editor | 0 | 1 | [official](https://docs.api.nvidia.com) |
+| 11 Mar 2026 | Nemotron 3 Super | NVIDIA | tracking | watch | needs research | 0 | 0 | [official](https://docs.api.nvidia.com) |
 | 10 Mar 2026 | Qwen3.5-9B | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 5 Mar 2026 | GPT-5.4 | OpenAI | tracking | watch | needs research | 0 | 0 | [official](https://developers.openai.com/api/docs/guides/latest-model) |
 | 5 Mar 2026 | GPT-5.4 Pro | OpenAI | tracking | watch | needs research | 0 | 0 | [official](https://developers.openai.com/api/docs/guides/latest-model) |

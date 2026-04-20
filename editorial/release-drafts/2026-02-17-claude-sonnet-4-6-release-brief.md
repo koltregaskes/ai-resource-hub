@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Claude Sonnet 4.6"
 provider: "Anthropic"
 release_date: "2026-02-17"
-generated_at: "2026-04-19T19:00:54.395Z"
+generated_at: "2026-04-20T07:00:52.087Z"
 ---
 
 # Claude Sonnet 4.6: release brief

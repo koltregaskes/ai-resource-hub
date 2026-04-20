@@ -2,17 +2,17 @@
 title: "Gemini 3.1 Flash Lite Preview: release brief"
 slug: "2026-03-03-gemini-3-1-flash-lite-preview-release-brief"
 draft_type: "model-release"
-status: "ready_for_editor"
+status: "needs_research"
 priority: "watch"
 model: "Gemini 3.1 Flash Lite Preview"
 provider: "Google"
 release_date: "2026-03-03"
-generated_at: "2026-04-19T19:00:54.379Z"
+generated_at: "2026-04-20T07:00:52.073Z"
 ---
 
 # Gemini 3.1 Flash Lite Preview: release brief
 
-Google's Gemini 3.1 Flash Lite Preview is on the release desk with 1 related story and 0 benchmark signals to review.
+Google's Gemini 3.1 Flash Lite Preview is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -21,7 +21,7 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 ## Why this matters
 
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
+- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
 
 ## Benchmarks and evals to mention
 
@@ -29,14 +29,14 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 
 ## Outside coverage and early reactions
 
-- Ars Technica AI (2026-04-19): [Google releases new apps for Windows and MacOS](https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/)
+- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
 
 ## Suggested thread / post structure
 
 1. Lead with the hook: what Google actually launched with Gemini 3.1 Flash Lite Preview, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
-4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
+4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
 5. Keep the chronology explicit: this release landed on 3 Mar 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
@@ -50,4 +50,3 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/models)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
-- [Ars Technica AI: Google releases new apps for Windows and MacOS](https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/)

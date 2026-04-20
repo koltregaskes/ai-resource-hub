@@ -1,24 +1,9 @@
 [
   {
-    "id": "871de513-1a93-4f8a-b96a-4db4a03e6685",
-    "title": "Google releases new apps for Windows and MacOS",
-    "url": "https://arstechnica.com/gadgets/2026/04/google-launches-search-app-for-windows-gemini-app-for-mac/",
-    "source": "Ars Technica AI",
-    "summary": null,
-    "category": "tech_general",
-    "tags": [
-      "model_release",
-      "product_launch"
-    ],
-    "importance_score": "0.56",
-    "published_at": null,
-    "discovered_at": "2026-04-19T18:00:13.136Z"
-  },
-  {
-    "id": "c7b5250c-0834-4964-925d-ff8192aad1d8",
-    "title": "Allbirds Is Pivoting to AI Compute. Sure, Why Not",
-    "url": "https://www.wired.com/story/allbirds-is-pivoting-to-ai-compute-sure-why-not/",
-    "source": "Wired AI",
+    "id": "1b2081a0-2895-4155-9489-d9869374b43f",
+    "title": "AI chip startup Cerebras files for IPO",
+    "url": "https://techcrunch.com/2026/04/18/ai-chip-startup-cerebras-files-for-ipo/",
+    "source": "TechCrunch AI",
     "summary": null,
     "category": "ai_tools",
     "tags": [
@@ -26,91 +11,6 @@
     ],
     "importance_score": "0.58",
     "published_at": null,
-    "discovered_at": "2026-04-19T18:00:12.413Z"
-  },
-  {
-    "id": "77879905-07c6-413a-b49a-e88230d51d31",
-    "title": "Stanford Study: AI Experts Are Optimistic About AI. The Rest of Us… Not So Much",
-    "url": "https://www.kqed.org/news/12079472/stanford-study-ai-experts-are-optimistic-about-ai-the-rest-of-us-not-so-much",
-    "source": "Stanford HAI",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [
-      "research_paper"
-    ],
-    "importance_score": "0.58",
-    "published_at": null,
-    "discovered_at": "2026-04-19T18:00:11.767Z"
-  },
-  {
-    "id": "a76540a4-bcbb-4da6-ad1f-32b01859e10a",
-    "title": "This New Chip Could Slash Data Center Energy Waste",
-    "url": "https://www.sciencedaily.com/releases/2026/04/260409101103.htm",
-    "source": "ScienceDaily AI",
-    "summary": null,
-    "category": "ai_research",
-    "tags": [
-      "hardware"
-    ],
-    "importance_score": "0.58",
-    "published_at": null,
-    "discovered_at": "2026-04-19T18:00:11.476Z"
-  },
-  {
-    "id": "0e2335d8-589b-407c-8ef3-a578c1afac82",
-    "title": "NVIDIA Isaac GR00T N1.7: Open Reasoning VLA Model for Humanoid Robots     2 days ago •  6",
-    "url": "https://huggingface.co/blog/nvidia/gr00t-n1-7",
-    "source": "Hugging Face Blog",
-    "summary": null,
-    "category": "ai_models",
-    "tags": [
-      "hardware",
-      "reasoning"
-    ],
-    "importance_score": "0.66",
-    "published_at": null,
-    "discovered_at": "2026-04-19T18:00:09.973Z"
-  },
-  {
-    "id": "965964e5-36e2-41e8-b1ea-ae659bc4e3eb",
-    "title": "Stop benchmarking inference providers     5 days ago •  8",
-    "url": "https://huggingface.co/blog/SaylorTwift/benchmarking-on-the-hub",
-    "source": "Hugging Face Blog",
-    "summary": null,
-    "category": "ai_models",
-    "tags": [
-      "inference"
-    ],
-    "importance_score": "0.58",
-    "published_at": null,
-    "discovered_at": "2026-04-19T18:00:09.968Z"
-  },
-  {
-    "id": "afb0cf55-b0d9-479c-949c-b5bed3152e92",
-    "title": "When Speech AI Meets the Long Tail of Languages: Inside the VAANI Dataset     5 days ago •  8",
-    "url": "https://huggingface.co/blog/ARTPARK-IISc/inside-the-vaani-dataset",
-    "source": "Hugging Face Blog",
-    "summary": null,
-    "category": "ai_models",
-    "tags": [
-      "dataset"
-    ],
-    "importance_score": "0.58",
-    "published_at": null,
-    "discovered_at": "2026-04-19T18:00:09.966Z"
-  },
-  {
-    "id": "d26a8393-5453-4b9e-bb39-72a32003f257",
-    "title": "Prepay for the Gemini API to get more control over your spend",
-    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/prepay-gemini-api/",
-    "source": "Google AI Blog",
-    "summary": null,
-    "category": "ai_models",
-    "tags": [
-      "api_update"
-    ],
-    "importance_score": "0.58",
-    "published_at": null,
-    "discovered_at": "2026-04-19T18:00:09.702Z"
+    "discovered_at": "2026-04-20T06:00:15.623Z"
   }
 ]

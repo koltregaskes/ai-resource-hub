@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-19T19:00:51.712Z",
+  "generatedAt": "2026-04-20T07:00:49.451Z",
   "overview": {
-    "generatedForLabel": "Sunday, 19 April 2026",
+    "generatedForLabel": "Monday, 20 April 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -9,14 +9,13 @@
     "exactDateMilestones": 27,
     "homepageEligibleMilestones": 34,
     "nextMilestone": {
-      "id": "google-deepmind-formed",
-      "title": "Google DeepMind formed",
-      "nextOccurrenceLabel": "20 Apr 2026",
-      "daysUntil": 1
+      "id": "gpt-4o-launch",
+      "title": "GPT-4o introduced",
+      "nextOccurrenceLabel": "13 May 2026",
+      "daysUntil": 23
     }
   },
-  "todayMilestones": [],
-  "upcomingMilestones": [
+  "todayMilestones": [
     {
       "id": "google-deepmind-formed",
       "slug": "google-deepmind-formed",
@@ -62,11 +61,13 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1681992000000,
-      "daysUntil": 1,
+      "daysUntil": 0,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-04-20T12:00:00.000Z",
       "nextOccurrenceLabel": "20 Apr 2026"
-    },
+    }
+  ],
+  "upcomingMilestones": [
     {
       "id": "gpt-4o-launch",
       "slug": "gpt-4o-launch",
@@ -113,7 +114,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1715601600000,
-      "daysUntil": 24,
+      "daysUntil": 23,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-05-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 May 2026"
@@ -164,7 +165,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1591876800000,
-      "daysUntil": 53,
+      "daysUntil": 52,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-06-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Jun 2026"
@@ -213,7 +214,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1497268800000,
-      "daysUntil": 54,
+      "daysUntil": 53,
       "anniversaryYears": 9,
       "nextOccurrenceIso": "2026-06-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Jun 2026"
@@ -264,7 +265,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1718884800000,
-      "daysUntil": 62,
+      "daysUntil": 61,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-06-20T12:00:00.000Z",
       "nextOccurrenceLabel": "20 Jun 2026"
@@ -315,7 +316,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689076800000,
-      "daysUntil": 83,
+      "daysUntil": 82,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Jul 2026"
@@ -366,7 +367,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689681600000,
-      "daysUntil": 90,
+      "daysUntil": 89,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
       "nextOccurrenceLabel": "18 Jul 2026"
@@ -415,10 +416,61 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1661169600000,
-      "daysUntil": 125,
+      "daysUntil": 124,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
       "nextOccurrenceLabel": "22 Aug 2026"
+    },
+    {
+      "id": "o1-preview-launch",
+      "slug": "o1-preview-launch",
+      "title": "OpenAI o1-preview launched",
+      "summary": "OpenAI’s o1-preview pushed reasoning-first models into the mainstream product conversation.",
+      "year": 2024,
+      "month": 9,
+      "day": 12,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "o1-preview",
+      "tags": [
+        "reasoning",
+        "openai",
+        "o1"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/index/introducing-openai-o1-preview/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/index/introducing-openai-o1-preview/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "12 Sept 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1726142400000,
+      "daysUntil": 145,
+      "anniversaryYears": 2,
+      "nextOccurrenceIso": "2026-09-12T12:00:00.000Z",
+      "nextOccurrenceLabel": "12 Sept 2026"
     }
   ],
   "latestLaunches": [
