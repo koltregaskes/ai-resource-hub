@@ -1,0 +1,343 @@
+{
+  "generated": "2026-04-19T18:05:02.951Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "[Update] GHOST v2.1: Full Native Windows Support is Live.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sp7yhz/update_ghost_v21_full_native_windows_support_is/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "architecture",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "architecture",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-04-18T20:07:31.000Z",
+      "summary": "FOR THE UNINITIATED:\n\nGHOST is an open source environment manager that breaks the NVIDIA monopoly. It allows you to run high performance AI models on AMD hardware by automatically injecting ZLUDA and ROCm layers into your Windows environment. No Linux, no complex WSL2 setups, and no driver hacking required.\n\nKEY FEATURES\n\nFull Windows Native Support: Runs directly in PowerShell with a hardened virtualization layer.\n\nAuto Hardware Mapping: Scans your system and spoofs the exact RDNA architecture ",
+      "category": "ai_models"
+    },
+    {
+      "title": "RTX PRO 5000 (48GB) vs MacBook Pro M5 MAX (128GB RAM) - The choice for fine-tuning &amp; agentic coding",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sptsxo/rtx_pro_5000_48gb_vs_macbook_pro_m5_max_128gb_ram/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "dataset",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "dataset",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-04-19T14:01:39.000Z",
+      "summary": "TL;DR: \n\nIf you had to choose one for a professional dev who lives in HuggingFace weights, Unsloth scripts to fine-tune, and llama.cpp/vllm servers for local inference, which machine is the better long-term investment?\n\nI’m currently at a crossroads and need some community wisdom. I’m looking to buy for a very specific AI development workflow, and I’m thinking between an NVIDIA RTX PRO 5000 48GB (Blackwell) workstation and a MacBook Pro M5 Max 128GB.\n\nMy job is just needing to fine-tune with sma",
+      "category": "ai_models"
+    },
+    {
+      "title": "Qwen 3.6 + vLLM + Docker + 2x RTX 3090 setup, working great!",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sp761q/qwen_36_vllm_docker_2x_rtx_3090_setup_working/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "evaluation",
+        "api_update",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-18T19:37:17.000Z",
+      "summary": "Our nonprofit association has an AI server with 2x RTX 3090 and I finally switched over to vLLM to get better performance for multiple users.\n\nHere's my docker compose file:\n\n    services:\n      vllm:\n        image: vllm/vllm-openai:latest\n        container_name: vllm\n        deploy:\n          resources:\n            reservations:\n              devices:\n                - driver: nvidia\n                  count: all\n                  capabilities: [gpu]\n        environment:\n          - VLLM_API_KEY",
+      "category": "ai_models"
+    },
+    {
+      "title": "What happens when you rip out the residual stream and replace it with a structured workspace (Research Paper - CWT)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sp5icr/what_happens_when_you_rip_out_the_residual_stream/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "research_paper",
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-18T18:32:53.000Z",
+      "summary": "Over the last month I've been working on a custom architecture that fully replaces the residual stream transformers use with a structured workspace.\n\nThe goal isn't to claim \"I beat transformers\", it's a thought experiment into what happens structurally when you enforce a workspace instead, and where the compute actually goes. \n\nThe findings were fun to discover and very interesting.\n\nCWT has 22.9M core compute (attn+FFN) vs 41.7M in the compute-matched baseline, and comes within 1.7% PPL, rough",
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic locked Claude Code to native apps in Jan 2026. \nAre we still comparing models or just ecosystems",
+      "url": "https://reddit.com/r/ChatGPT/comments/1sppt01/anthropic_locked_claude_code_to_native_apps_in/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-19T10:56:46.000Z",
+      "summary": "Quick context: both vendors publish SWE-bench scores on their own scaffolds. The same model swings 22 points depending on harness design — more than the gap between any two frontier models.\n\nSince January 2026, Claude plans are restricted to Anthropic's native apps. Kilocode, Aider, any third-party tool: can't consume a Max subscription. Codex went the opposite direction and opened up to external integration.\n\nResult: every \"Claude crushes GPT on code\" comparison is Claude on Claude Code vs GPT ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Acceptable prompt processing speed for you?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1spmsxy/acceptable_prompt_processing_speed_for_you/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "architecture",
+        "inference"
+      ],
+      "matching_tags": [
+        "architecture",
+        "inference"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-19T08:00:39.000Z",
+      "summary": "I am currently optimising some ancient hardware to run qwen3 (4xV100s) but the lack of flash attention means that at longer contexts the processing starts to really slow down. \n\nFor agentic coding work what processing speeds and contexts lengths do you consider as acceptable or good?",
+      "category": "ai_models"
+    },
+    {
+      "title": "I tested 8 LLMs as tabletop GMs - a 27B model beat the 405B on narrative quality",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1spfz31/i_tested_8_llms_as_tabletop_gms_a_27b_model_beat/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-19T01:59:17.000Z",
+      "summary": "# Sum B+a+c+k+g+r+o+u+n+d:\n\nI've been working on an open source agentic tabletop GM as a leisure project intended to run on any LLM with tool support. I started it as a [Claude Code skill](https://github.com/Bobby-Gray/claude-dnd-skill) to run D&amp;D sessions and eventually generalized it to be model-agnostic and game system agnostic after wanting to test what it felt like on different backends. Rest assured, D&amp;D purists flamed it immediately because of the AI integration. I set their dimne",
+      "category": "ai_models"
+    },
+    {
+      "title": "5070 Ti (New) vs 3090 (Used) to pair with 4070 for local LLMs?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1spwk7h/5070_ti_new_vs_3090_used_to_pair_with_4070_for/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-19T15:47:26.000Z",
+      "summary": "I'm upgrading my setup to run larger models and need a second GPU to pair with my current RTX 4070 (12GB).\n\n**My Workloads:**\n\nLLMs: Up to 32B dense (Gemma 4 31B) and ~120B MoE (Qwen 122B10A). I mostly run Q4/IQ4/UD MXFP4 quants.\n\nImage diffusion model: FireRed 1.1 (Q4).\n\nTarget: 30+ tps at large contexts (up to 256k). Currently hitting a memory ceiling around 131k context (yesterday using Qwen 3.6 35B3A).\n\n**The Options &amp; Market Constraints:**\n\nRTX 5070 Ti 16GB (New): ~1.2k USD.\n\nRTX 3090 2",
+      "category": "ai_models"
+    },
+    {
+      "title": "Same 9B Qwen weights: 19.1% in Aider vs 45.6% with a scaffold adapted to small local models",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1spufzz/same_9b_qwen_weights_191_in_aider_vs_456_with_a/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-19T14:27:33.000Z",
+      "summary": "I spent the past week testing a simple question:\n\nSmall local models often look weak inside coding agents. But how much of that is actually model weakness, and how much is scaffold mismatch?\n\nSo I held the model fixed and changed only the scaffold.\n\nSame Qwen3.5-9B Q4 weights in both conditions.\n\nSame Aider Polyglot benchmark.\n\nFull 225 exercises.\n\nResults:\n\n\\- vanilla Aider: 19.11%\n\n\\- little-coder: 45.56% mean pass@2 across two full runs\n\nlittle-coder is not a new model. It is a scaffold I ada",
+      "category": "ai_models"
+    },
+    {
+      "title": "Unweight: how we compressed an LLM 22% without sacrificing quality",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1spnx1l/unweight_how_we_compressed_an_llm_22_without/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-19T09:06:39.000Z",
+      "summary": "Summary:\n\nIn LLM inference on modern GPUs (like the NVIDIA H100), the bottleneck is memory bandwidth, not computational speed. The time it takes to move model weights from the GPU's slow main memory (HBM) to its processing cores limits how fast tokens can be generated.\n\n\\*\\*The Solution: Unweight\\*\\*\n\nCloudflare developed Unweight, a \\*\\*lossless\\*\\* compression system that shrinks model weights by 15–22% (saving \\~3 GB of VRAM on an 8B parameter model) while preserving bit-exact outputs, all wi",
+      "category": "ai_models"
+    },
+    {
+      "title": "ChatGPT kept hallucinating my Factorio bottlenecks. So I built an MCP that reads your saves.",
+      "url": "https://reddit.com/r/ChatGPT/comments/1sp7824/chatgpt_kept_hallucinating_my_factorio/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "dataset",
+        "open_source"
+      ],
+      "matching_tags": [
+        "dataset",
+        "open_source"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-18T19:39:29.000Z",
+      "summary": "You've probably asked ChatGPT a question about a game you're playing -- \"is this item worth keeping in D2R,\" \"why is my Factorio base bottlenecked,\" \"how does this card interaction work in Magic,\" -- and the answer was hallucinated. The training data is stale, and the gaps get filled with plausible-sounding nonsense.\n\nI built **Savecraft** to fix that. It's an open-source MCP server that reads your actual game saves and feeds ChatGPT real game data instead of letting it guess.\n\nFor example:\n\n* *",
+      "category": "ai_tools"
+    },
+    {
+      "title": "whats the best harness/app to use my llm with?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1spr7r4/whats_the_best_harnessapp_to_use_my_llm_with/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-19T12:08:16.000Z",
+      "summary": "would be nice if i could just use claude desktop app like i can with claude code/extension but sadly it doesnt work with the app\n\nlooking for something with a nice UI/UX, MCP, built in html/doc preview, research, other features etc. basically something that could replace claude desktop/gemini in terms of what features it has with my local model.\n\nseeing things like hermes? cherry studio? good ol LM studio?",
+      "category": "ai_models"
+    },
+    {
+      "title": "NVIDIA Isaac GR00T N1.7: Open Reasoning VLA Model for Humanoid Robots     2 days ago •  6",
+      "url": "https://huggingface.co/blog/nvidia/gr00t-n1-7",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-19T18:00:09.973Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Advice on becoming a research engineer [D]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sptj32/advice_on_becoming_a_research_engineer_d/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-19T13:50:31.000Z",
+      "summary": "I am thinking about becoming a research engineer, and want to ask your advice on how realistic it is, and which strategies make sense in my situation.\n\nAbout myself: I am in the US, have extensive experience as a Software Engineer (including Staff+ position at one of the top companies), have a math heavy CS degree, and have taken additional ML courses from one of schools offering them to outsiders. I also had applied ML work some time ago, but I didn't like it (that's why I am considering resear",
+      "category": "ai_research"
+    },
+    {
+      "title": "Lore 0.2.0 - the open source local knowledge management app is now much smarter, with a visible reasoning stream, and non-destructive embedding migration",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sp5d6l/lore_020_the_open_source_local_knowledge/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-18T18:27:30.000Z",
+      "summary": "Quick update on Lore, the local-first memory app I posted here around v0.1.0.\n\nIt's a tray app: global shortcut → chat bar → save or recall in natural language. Everything stays on your machine.\n\n\n\nv0.2.0 highlights:\n\n\n\n\\- ThinkingStream: you watch the agent's reasoning, retrieval, and tool calls\n\n  in real time.\n\n\\- Embedding-model migration is now non-destructive. You can swap from\n\n  nomic-embed to mxbai-embed (or whatever) without losing data; the new\n\n  embeddingTableSync rebuilds in place ",
+      "category": "ai_models"
+    },
+    {
+      "title": "Allbirds Is Pivoting to AI Compute. Sure, Why Not",
+      "url": "https://www.wired.com/story/allbirds-is-pivoting-to-ai-compute-sure-why-not/",
+      "source": "Wired AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-19T18:00:12.413Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Stanford Study: AI Experts Are Optimistic About AI. The Rest of Us… Not So Much",
+      "url": "https://www.kqed.org/news/12079472/stanford-study-ai-experts-are-optimistic-about-ai-the-rest-of-us-not-so-much",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-19T18:00:11.767Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "This New Chip Could Slash Data Center Energy Waste",
+      "url": "https://www.sciencedaily.com/releases/2026/04/260409101103.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-19T18:00:11.476Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Stop benchmarking inference providers     5 days ago •  8",
+      "url": "https://huggingface.co/blog/SaylorTwift/benchmarking-on-the-hub",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-19T18:00:09.968Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "When Speech AI Meets the Long Tail of Languages: Inside the VAANI Dataset     5 days ago •  8",
+      "url": "https://huggingface.co/blog/ARTPARK-IISc/inside-the-vaani-dataset",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "dataset"
+      ],
+      "matching_tags": [
+        "dataset"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-04-19T18:00:09.966Z",
+      "summary": null,
+      "category": "ai_models"
+    }
+  ]
+}
