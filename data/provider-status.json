@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T22:28:55.811Z",
+  "generatedAt": "2026-04-20T23:27:56.035Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T22:28:54.104Z",
+      "lastCheckedAt": "2026-04-20T23:27:54.760Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T22:28:55.051Z",
+      "lastCheckedAt": "2026-04-20T23:27:55.468Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T22:28:54.208Z",
+      "lastCheckedAt": "2026-04-20T23:27:54.965Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T22:28:55.599Z",
+      "lastCheckedAt": "2026-04-20T23:27:55.860Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T22:28:54.124Z",
+      "lastCheckedAt": "2026-04-20T23:27:54.799Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T22:28:54.651Z",
+      "lastCheckedAt": "2026-04-20T23:27:55.179Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,10 +335,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T22:28:54.060Z",
+      "lastCheckedAt": "2026-04-20T23:27:54.480Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -366,8 +366,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01KPPJX4KHFAWS8YQE3KW235X7",
+          "title": "Some users will is higher error rates on Codex",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-04-20T23:16:43.000Z",
+          "updatedAt": "2026-04-20T23:16:43.000Z",
+          "resolvedAt": null,
+          "summary": null
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01KPPJX4KHFAWS8YQE3KW235X7",
+          "title": "Some users will is higher error rates on Codex",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-04-20T23:16:43.000Z",
+          "updatedAt": "2026-04-20T23:16:43.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
         {
           "id": "01KPMVSSRWY55RX257730KS2FA",
           "title": "Users may encounter issue with ChatGPT Business after upgrade or adding new seats for up to an hour",
@@ -397,16 +418,6 @@
           "updatedAt": "2026-04-20T18:48:04.000Z",
           "resolvedAt": "2026-04-20T18:48:04.000Z",
           "summary": null
-        },
-        {
-          "id": "01KPBWZ18HR2G685X2XMZD78EP",
-          "title": "Responses API Streaming Error",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-16T19:40:52.000Z",
-          "updatedAt": "2026-04-16T21:21:07.000Z",
-          "resolvedAt": "2026-04-16T21:21:07.000Z",
-          "summary": null
         }
       ]
     },
@@ -421,7 +432,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T22:28:55.804Z",
+      "lastCheckedAt": "2026-04-20T23:27:56.028Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
