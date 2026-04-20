@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="What Is a Harness? - AI Academy Deep Dive - The AI Resource Hub"
+  description="Understand the harness around a model: prompts, routing, tools, retrieval, sandboxes, verification, and why the whole system can feel worse even when the base model has not changed."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}academy/`} class="hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">What Is a Harness?</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Deep Dive</span>
+        <span class="text-xs text-(--color-text-muted)">8 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        What Is a Harness?
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        Users often talk as if "the model" is the whole product. In practice, the model is only one layer. The
+        <a href={`${base}glossary/harness/`} class="text-(--color-accent) hover:underline"> harness</a> is the wider system
+        around the model that shapes what the user actually experiences.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">1. Model versus harness</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          If a coding assistant suddenly feels worse, it may be because the underlying model changed. But it may also be
+          because the prompt changed, the tool router changed, the sandbox slowed down, retries disappeared, or the
+          verification step regressed.
+        </p>
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+          <p class="text-sm text-(--color-text-secondary)">
+            The harness is the scaffolding around the base model: prompts, routing, tools, retrieval, execution environments,
+            verifiers, retries, and grading logic.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. A simple harness diagram</h2>
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="grid gap-3 sm:grid-cols-3 text-sm">
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-4">
+              <p class="font-semibold text-(--color-text-primary)">Input layer</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">System prompt, user prompt, memory, retrieved docs</p>
+            </div>
+            <div class="rounded-lg border border-(--color-accent)/30 bg-(--color-accent)/10 px-3 py-4">
+              <p class="font-semibold text-(--color-text-primary)">Model layer</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">The base LLM does reasoning and token generation</p>
+            </div>
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-4">
+              <p class="font-semibold text-(--color-text-primary)">Execution layer</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Tools, sandbox, verifier, retries, output shaping</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">3. What usually sits in a harness</h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Prompting layer</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              System prompts, instructions, guardrails, hidden examples, and formatting rules that shape the model's behaviour.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Routing layer</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              Rules that decide which model, region, endpoint, or tier handles a request.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Tool layer</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              Search, browser, database, code execution, MCP servers, or app integrations the model can call.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Retrieval layer</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              External context that gets fetched into the prompt, such as documents, knowledge-base chunks, or source pages.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Execution layer</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              Sandboxes, working directories, filesystems, and execution wrappers that determine whether actions actually succeed.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Verification layer</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              Tests, diff checks, assertions, eval harnesses, or human-review loops that catch bad outputs before delivery.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. Why harnesses matter for degradation</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          This is the key practical point: users feel the whole harness, not the naked base model. If the model stays the
+          same but the harness changes, the product can still feel worse.
+        </p>
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <ul class="text-sm text-(--color-text-secondary) space-y-2">
+            <li><strong class="text-(--color-text-primary)">Prompt regression:</strong> the hidden instruction layer gets noisier or more restrictive.</li>
+            <li><strong class="text-(--color-text-primary)">Routing regression:</strong> traffic is sent to a different snapshot, tier, or region.</li>
+            <li><strong class="text-(--color-text-primary)">Tool regression:</strong> browser or code tools fail more often or return lower-quality data.</li>
+            <li><strong class="text-(--color-text-primary)">Context regression:</strong> retrieval fetches worse sources, or prompt compaction loses key context.</li>
+            <li><strong class="text-(--color-text-primary)">Verification regression:</strong> fewer checks mean more incorrect answers get through.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. What a benchmark harness is</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          In evaluation work, a harness is the wrapper that runs the model against a task set in a repeatable way. It
+          decides the prompt template, tool access, execution environment, timeout settings, retry policy, grading logic,
+          and what counts as success.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          This is why benchmark comparisons can be misleading if the harness is not comparable. Two systems can use the
+          same underlying model but produce different results because the harness differs.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">6. What we should track on the Hub</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          For the AI Resource Hub, harness-aware tracking means we should record not just model name and score, but also:
+        </p>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <p class="font-semibold text-(--color-text-primary) mb-2">Operational fields</p>
+            <p class="text-sm text-(--color-text-secondary)">Prompt version, tool set, verifier status, sandbox health, timeout rate, and compaction frequency.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <p class="font-semibold text-(--color-text-primary) mb-2">User-visible fields</p>
+            <p class="text-sm text-(--color-text-secondary)">Time to first token, output speed, success rate, benchmark pass rate, and reported regression incidents.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Read next</h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <a href={`${base}academy/what-is-a-transformer/`} class="p-4 rounded-xl bg-(--color-bg-tertiary) border border-(--color-border) hover:border-(--color-accent)/40 transition-colors">
+            <p class="font-medium text-(--color-text-primary) mb-1">What Is a Transformer?</p>
+            <p class="text-sm text-(--color-text-secondary)">Get the architecture underneath the base model itself.</p>
+          </a>
+          <a href={`${base}academy/model-layers-explained/`} class="p-4 rounded-xl bg-(--color-bg-tertiary) border border-(--color-border) hover:border-(--color-accent)/40 transition-colors">
+            <p class="font-medium text-(--color-text-primary) mb-1">Model Layers Explained</p>
+            <p class="text-sm text-(--color-text-secondary)">Understand what sits inside the model before the harness starts to matter.</p>
+          </a>
+        </div>
+        <div class="mt-5 border-t border-(--color-border) pt-4">
+          <p class="text-sm font-semibold text-(--color-text-primary) mb-2">External sources</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><a href="https://openai.com/index/harness-engineering/" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">OpenAI: Harness engineering</a></li>
+            <li><a href="https://openai.com/index/introducing-swe-bench-verified/" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">OpenAI: SWE-bench Verified</a></li>
+            <li><a href="https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">Anthropic: a postmortem of three recent issues</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </article>
+</BaseLayout>

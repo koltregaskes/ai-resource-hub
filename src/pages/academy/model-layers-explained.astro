@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Model Layers Explained - AI Academy Deep Dive - The AI Resource Hub"
+  description="A practical walkthrough of the layers inside a modern language model: embeddings, attention heads, feed-forward networks, residual paths, and the output head."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}academy/`} class="hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Model Layers Explained</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Deep Dive</span>
+        <span class="text-xs text-(--color-text-muted)">10 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        Model Layers Explained
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        People often say a model has "dozens of layers" or "96 transformer blocks" without explaining what those layers
+        actually do. This page walks through the stack from bottom to top in plain English.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">1. Think of the model as a tower</h2>
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="space-y-2 text-sm">
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-4 py-3 text-center text-(--color-text-primary)">Output head</div>
+            <div class="rounded-lg border border-(--color-accent)/30 bg-(--color-accent)/10 px-4 py-3 text-center text-(--color-text-primary)">Transformer block N</div>
+            <div class="rounded-lg border border-(--color-accent)/30 bg-(--color-accent)/10 px-4 py-3 text-center text-(--color-text-primary)">Transformer block ...</div>
+            <div class="rounded-lg border border-(--color-accent)/30 bg-(--color-accent)/10 px-4 py-3 text-center text-(--color-text-primary)">Transformer block 2</div>
+            <div class="rounded-lg border border-(--color-accent)/30 bg-(--color-accent)/10 px-4 py-3 text-center text-(--color-text-primary)">Transformer block 1</div>
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-4 py-3 text-center text-(--color-text-primary)">Embeddings + position information</div>
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-4 py-3 text-center text-(--color-text-primary)">Input tokens</div>
+          </div>
+        </div>
+        <p class="text-(--color-text-secondary) leading-relaxed mt-4">
+          Each stage refines the representation from the stage below. Lower layers often capture simpler structure,
+          while higher layers tend to carry more abstract task-relevant information.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. Input tokens become embeddings</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          The model does not reason over raw text characters. It starts with tokens, then maps each token to a dense
+          numeric vector called an <a href={`${base}glossary/embedding/`} class="text-(--color-accent) hover:underline">embedding</a>.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          These vectors are where the model's internal geometry begins. Similar meanings or usages can land near one
+          another in this vector space, which makes later operations possible.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">3. Position still matters</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          If the model only saw bags of token vectors, it would not know the difference between "dog bites man" and
+          "man bites dog". So the stack also injects position information. Different model families handle this in
+          slightly different ways, but the purpose is the same: preserve order.
+        </p>
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+          <p class="text-sm text-(--color-text-secondary)">
+            Position is part of why long-context behaviour is hard. Models must preserve not just which tokens exist,
+            but how they relate over long distances.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. Inside the repeated transformer blocks</h2>
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Multi-head attention</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              The block computes attention using several heads in parallel. A single
+              <a href={`${base}glossary/attention-head/`} class="text-(--color-accent) hover:underline">attention head</a>
+              is one learned way of relating tokens to other tokens. Multiple heads let the model capture several kinds
+              of relationships at once.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Feed-forward network</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              After information is mixed across tokens, each token passes through a
+              <a href={`${base}glossary/feed-forward-network/`} class="text-(--color-accent) hover:underline">feed-forward network</a>.
+              This gives the model capacity to transform and sharpen what it has learned from attention.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Residual connections</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              A <a href={`${base}glossary/residual-connection/`} class="text-(--color-accent) hover:underline">residual connection</a>
+              adds the original signal back into a later computation so the network learns refinements instead of replacing the whole signal.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Layer normalization</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              <a href={`${base}glossary/layer-normalization/`} class="text-(--color-accent) hover:underline">Layer normalization</a>
+              keeps activations well-scaled and makes deep stacks more stable to train and run.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. What "more layers" usually means</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          More layers generally means the model can transform the signal more times before making a final prediction.
+          That often increases capacity, but it also increases memory needs, latency, and serving cost.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          More layers does not automatically mean better outputs. Architecture choices, data quality, training recipe,
+          inference stack, and the surrounding harness all matter too.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">6. Where the final answer comes from</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Once the top layer finishes, the model uses an output projection head to score every possible next token in
+          its vocabulary. That score distribution is turned into a probability distribution, and one token is selected
+          according to the decoding settings.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          Then the whole loop repeats with the new token appended. This is why generation feels fluid but is still
+          fundamentally next-token prediction.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Read next</h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <a href={`${base}academy/what-is-a-transformer/`} class="p-4 rounded-xl bg-(--color-bg-tertiary) border border-(--color-border) hover:border-(--color-accent)/40 transition-colors">
+            <p class="font-medium text-(--color-text-primary) mb-1">What Is a Transformer?</p>
+            <p class="text-sm text-(--color-text-secondary)">Step back to the bigger architectural picture.</p>
+          </a>
+          <a href={`${base}academy/what-is-a-harness/`} class="p-4 rounded-xl bg-(--color-bg-tertiary) border border-(--color-border) hover:border-(--color-accent)/40 transition-colors">
+            <p class="font-medium text-(--color-text-primary) mb-1">What Is a Harness?</p>
+            <p class="text-sm text-(--color-text-secondary)">See what happens after the model is wrapped in tools and workflows.</p>
+          </a>
+        </div>
+        <div class="mt-5 border-t border-(--color-border) pt-4">
+          <p class="text-sm font-semibold text-(--color-text-primary) mb-2">External sources</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><a href="https://huggingface.co/learn/llm-course/chapter1/4" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">Hugging Face LLM course: architecture overview</a></li>
+            <li><a href="https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-transformers" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">A visual guide to Transformers</a></li>
+            <li><a href="https://arxiv.org/abs/1706.03762" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">Attention Is All You Need</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </article>
+</BaseLayout>

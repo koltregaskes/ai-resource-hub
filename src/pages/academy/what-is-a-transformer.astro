@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="What Is a Transformer? - AI Academy Deep Dive - The AI Resource Hub"
+  description="A clear guide to the Transformer architecture behind GPT, Claude, Gemini, and modern large language models, with diagrams and source links."
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}academy/`} class="hover:text-(--color-text-secondary) transition-colors">AI Academy</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">What Is a Transformer?</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Deep Dive</span>
+        <span class="text-xs text-(--color-text-muted)">9 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">
+        What Is a Transformer?
+      </h1>
+      <p class="text-lg text-(--color-text-secondary)">
+        The Transformer is the architecture behind GPT, Claude, Gemini, Llama, and most modern language models.
+        If you understand the Transformer, you understand why today's models can track context, write fluently,
+        and still fail in very specific ways.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">1. The short version</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          A <a href={`${base}glossary/transformer/`} class="text-(--color-accent) hover:underline">Transformer</a>
+          is a neural-network design built to process a whole sequence of tokens while constantly asking:
+          <em>which other tokens matter most right now?</em>
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Older language systems struggled with long-range relationships. Transformers improved that by using
+          <a href={`${base}glossary/attention/`} class="text-(--color-accent) hover:underline">attention</a>:
+          a mechanism that lets each token look across the rest of the sequence and weigh what is relevant.
+        </p>
+        <div class="p-4 rounded-xl bg-(--color-accent)/5 border border-(--color-accent)/20">
+          <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-2">Key idea</p>
+          <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+            A Transformer is not "one big thought." It is a stack of repeated blocks. Each block refines the model's
+            internal representation of the text, passes it upward, and helps the model predict the next token.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. Why the Transformer mattered</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Before 2017, many language models processed text in a more step-by-step way. They could work, but they were
+          slower to train and worse at relating distant pieces of information. The 2017 paper
+          <a href="https://arxiv.org/abs/1706.03762" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">
+            Attention Is All You Need
+          </a>
+          changed that.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          The breakthrough was that the model could learn relationships between tokens in parallel, which made larger
+          training runs practical and made long-context behaviour much stronger. That is why the Transformer sits under
+          nearly every frontier language model today.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">3. A simple diagram</h2>
+        <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+          <div class="grid gap-3 sm:grid-cols-5 text-center text-sm">
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-4">
+              <p class="font-semibold text-(--color-text-primary)">Tokens</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Text becomes token IDs</p>
+            </div>
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-4">
+              <p class="font-semibold text-(--color-text-primary)">Embeddings</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Tokens become vectors</p>
+            </div>
+            <div class="rounded-lg border border-(--color-accent)/30 bg-(--color-accent)/10 px-3 py-4">
+              <p class="font-semibold text-(--color-text-primary)">Transformer Blocks</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Attention + FFN + residual paths</p>
+            </div>
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-4">
+              <p class="font-semibold text-(--color-text-primary)">Output Head</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">Scores every next-token option</p>
+            </div>
+            <div class="rounded-lg border border-(--color-border) bg-(--color-bg-tertiary) px-3 py-4">
+              <p class="font-semibold text-(--color-text-primary)">Next Token</p>
+              <p class="text-xs text-(--color-text-muted) mt-1">One choice is sampled</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. What happens inside one block</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          A modern decoder-style model such as GPT or Claude repeats the same broad pattern many times. A single
+          <a href={`${base}glossary/transformer-block/`} class="text-(--color-accent) hover:underline">transformer block</a>
+          usually contains:
+        </p>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Attention</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              Each token compares itself to other tokens and decides what to focus on. This is where pronouns,
+              references, syntax, and long-range relationships get stitched together.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Feed-forward network</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              After attention mixes information across tokens, a per-token network transforms that information into a
+              richer representation.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Residual connections</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              The block keeps a shortcut path so it can add the new transformation without losing the original signal.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+            <h3 class="font-semibold text-(--color-text-primary) mb-2">Layer normalization</h3>
+            <p class="text-sm text-(--color-text-secondary)">
+              The activations are stabilised so the stack trains and runs more reliably across many layers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. Why attention is so powerful</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          Suppose you read: <em>"The trophy would not fit in the suitcase because it was too small."</em>
+          What does <em>it</em> refer to? Humans infer that <em>it</em> means the suitcase. Attention lets the model build
+          similar links by scoring how strongly one token should attend to others.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          In practice, models do this with many
+          <a href={`${base}glossary/attention-head/`} class="text-(--color-accent) hover:underline">attention heads</a>
+          at once. Different heads can specialise in different kinds of relationships: syntax, position, code structure,
+          quotation boundaries, or topic continuity.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">6. What a Transformer is not</h2>
+        <p class="text-(--color-text-secondary) leading-relaxed mb-4">
+          A Transformer is not a human brain, not a database of facts, and not the whole product experience. It is the
+          core model architecture. Once you wrap that model in routing, tools, prompts, retrieval, sandboxes, and
+          verifiers, you get the real system users feel.
+        </p>
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          That is why a model can appear to get "better" or "worse" even if the underlying base model is unchanged:
+          the surrounding harness changes as well. The next deep dive on this is
+          <a href={`${base}academy/what-is-a-harness/`} class="text-(--color-accent) hover:underline">What Is a Harness?</a>.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Read next</h2>
+        <div class="grid gap-3 sm:grid-cols-2">
+          <a href={`${base}academy/model-layers-explained/`} class="p-4 rounded-xl bg-(--color-bg-tertiary) border border-(--color-border) hover:border-(--color-accent)/40 transition-colors">
+            <p class="font-medium text-(--color-text-primary) mb-1">Model Layers Explained</p>
+            <p class="text-sm text-(--color-text-secondary)">Go one level deeper into embeddings, heads, FFNs, residuals, and the output head.</p>
+          </a>
+          <a href={`${base}academy/what-is-a-harness/`} class="p-4 rounded-xl bg-(--color-bg-tertiary) border border-(--color-border) hover:border-(--color-accent)/40 transition-colors">
+            <p class="font-medium text-(--color-text-primary) mb-1">What Is a Harness?</p>
+            <p class="text-sm text-(--color-text-secondary)">See how prompts, tools, verifiers, and routing sit around the model.</p>
+          </a>
+        </div>
+        <div class="mt-5 border-t border-(--color-border) pt-4">
+          <p class="text-sm font-semibold text-(--color-text-primary) mb-2">External sources</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
+            <li><a href="https://arxiv.org/abs/1706.03762" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">Attention Is All You Need (original paper)</a></li>
+            <li><a href="https://huggingface.co/learn/llm-course/chapter1/4" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">Hugging Face LLM course: Transformer architecture</a></li>
+            <li><a href="https://jalammar.github.io/illustrated-transformer/" class="text-(--color-accent) hover:underline" target="_blank" rel="noreferrer">The Illustrated Transformer</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
