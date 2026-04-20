@@ -3,10 +3,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Tooltip from '../../components/Tooltip.astro';
 import BenchmarkTable from '../../components/BenchmarkTable';
 import { getBenchmarkMatrix } from '../../db/queries';
+import { BENCHMARK_RESOURCES } from '../../data/benchmark-resources';
 
 const matrix = getBenchmarkMatrix();
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const benchmarkResources = BENCHMARK_RESOURCES;
 ---
 
 <BaseLayout
@@ -32,6 +34,44 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         technical reports, and
         <Tooltip term="LMSYS Chatbot Arena" tip="A crowdsourced platform where real users compare two anonymous AI models side-by-side and vote for the better one. Over 2 million votes make it the most trusted human preference benchmark." />.
       </p>
+    </div>
+
+    <div class="mb-8 rounded-[1.75rem] border border-(--color-border) bg-(--color-bg-secondary) p-5 sm:p-6">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="text-sm font-semibold text-(--color-text-primary)">External benchmark explorers and degradation trackers</p>
+          <p class="text-xs text-(--color-text-muted) mt-1">
+            Use these when you want deeper repeated-eval views, agent harness tracking, and historical performance beyond this site’s current benchmark matrix.
+          </p>
+        </div>
+      </div>
+      <div class="grid gap-3 mt-5 lg:grid-cols-2">
+        {benchmarkResources.map((resource) => (
+          <article class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">{resource.category}</p>
+                <h2 class="mt-2 text-base font-semibold text-(--color-text-primary)">{resource.name}</h2>
+              </div>
+              <span class="rounded-full bg-(--color-bg-primary) px-2 py-1 text-[10px] text-(--color-text-muted)">{resource.access}</span>
+            </div>
+            <p class="mt-3 text-sm text-(--color-text-secondary)">{resource.description}</p>
+            {resource.notes && <p class="mt-3 text-[11px] text-(--color-text-muted)">{resource.notes}</p>}
+            <div class="mt-4 flex flex-wrap gap-2">
+              {resource.links.map((link) => (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs px-3 py-1.5 rounded-full font-medium bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
 
     <BenchmarkTable

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { OFFICIAL_TOKEN_TOOLS } from '../../data/token-tools';
+import { BENCHMARK_RESOURCES } from '../../data/benchmark-resources';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -43,6 +44,7 @@ const siteUtilities = [
 ];
 
 const tokenTools = OFFICIAL_TOKEN_TOOLS;
+const benchmarkResources = BENCHMARK_RESOURCES;
 
 const tools: AITool[] = [
   { name: 'ChatGPT', url: 'https://chat.openai.com', category: 'chatbot', description: 'OpenAI chat product for writing, coding, browsing, and multimodal work.', pricing: 'Free / paid plans', tags: ['chat', 'coding', 'images'] },
@@ -198,6 +200,53 @@ const grouped = categoryOrder.map((category) => ({
             <p class="mt-3 text-xs text-(--color-text-secondary)">{tool.description}</p>
             {tool.notes && <p class="mt-3 text-[11px] text-(--color-text-muted)">{tool.notes}</p>}
           </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="rounded-[1.75rem] border border-(--color-border) bg-(--color-bg-secondary) p-5 sm:p-6 mb-8">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="text-sm font-semibold text-(--color-text-primary)">Benchmark trackers and eval resources</p>
+          <p class="text-xs text-(--color-text-muted) mt-1">
+            External sources worth checking when you want deeper benchmark explorers, repeated agent measurements, and degradation tracking.
+          </p>
+        </div>
+        <a href={`${base}benchmarks/`} class="text-xs text-(--color-accent) hover:text-(--color-accent-hover)">Open benchmark desk</a>
+      </div>
+      <div class="grid gap-3 mt-5 lg:grid-cols-2">
+        {benchmarkResources.map((resource) => (
+          <article class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">{resource.category}</p>
+                <h2 class="mt-2 text-base font-semibold text-(--color-text-primary)">{resource.name}</h2>
+              </div>
+              <span class="rounded-full bg-(--color-bg-primary) px-2 py-1 text-[10px] text-(--color-text-muted)">{resource.access}</span>
+            </div>
+            <p class="mt-3 text-sm text-(--color-text-secondary)">{resource.description}</p>
+            {resource.notes && <p class="mt-3 text-[11px] text-(--color-text-muted)">{resource.notes}</p>}
+            <ul class="mt-4 space-y-2 text-xs text-(--color-text-secondary)">
+              {resource.highlights.map((highlight) => (
+                <li class="flex gap-2">
+                  <span class="mt-[0.35rem] h-1.5 w-1.5 shrink-0 rounded-full bg-(--color-accent)"></span>
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {resource.links.map((link) => (
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs px-3 py-1.5 rounded-full font-medium bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:bg-(--color-accent)/20 hover:text-(--color-accent) transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </article>
         ))}
       </div>
     </div>
