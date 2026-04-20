@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T18:42:33.965Z",
+  "generatedAt": "2026-04-20T20:26:53.504Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T18:42:32.899Z",
+      "lastCheckedAt": "2026-04-20T20:26:52.200Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T18:42:33.566Z",
+      "lastCheckedAt": "2026-04-20T20:26:52.988Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T18:42:33.112Z",
+      "lastCheckedAt": "2026-04-20T20:26:52.305Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T18:42:33.958Z",
+      "lastCheckedAt": "2026-04-20T20:26:53.300Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T18:42:32.985Z",
+      "lastCheckedAt": "2026-04-20T20:26:52.219Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T18:42:33.270Z",
+      "lastCheckedAt": "2026-04-20T20:26:52.338Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,10 +335,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T18:42:32.895Z",
+      "lastCheckedAt": "2026-04-20T20:26:52.205Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "3 active incidents across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -366,67 +366,36 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01KPNN2V2SMP3TAN3MCJK87W50",
-          "title": "Users unable to load ChatGPT, Codex and API Platform",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-04-20T14:35:33.000Z",
-          "updatedAt": "2026-04-20T18:17:22.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KPNZ1BW91D4S3V5PWWEVQ5F1",
-          "title": "Elevated errors for ChatGPT conversations in Europe",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-04-20T17:29:30.000Z",
-          "updatedAt": "2026-04-20T17:29:30.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KPMVSSRWY55RX257730KS2FA",
-          "title": "Users may encounter issue with ChatGPT Business after upgrade or adding new seats for up to an hour",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-04-20T07:13:42.000Z",
-          "updatedAt": "2026-04-20T09:43:35.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "01KPNN2V2SMP3TAN3MCJK87W50",
-          "title": "Users unable to load ChatGPT, Codex and API Platform",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-04-20T14:35:33.000Z",
-          "updatedAt": "2026-04-20T18:17:22.000Z",
-          "resolvedAt": null,
+          "id": "01KPMVSSRWY55RX257730KS2FA",
+          "title": "Users may encounter issue with ChatGPT Business after upgrade or adding new seats for up to an hour",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-04-20T07:13:42.000Z",
+          "updatedAt": "2026-04-20T19:33:19.000Z",
+          "resolvedAt": "2026-04-20T19:33:19.000Z",
           "summary": null
         },
         {
           "id": "01KPNZ1BW91D4S3V5PWWEVQ5F1",
           "title": "Elevated errors for ChatGPT conversations in Europe",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-04-20T17:29:30.000Z",
-          "updatedAt": "2026-04-20T17:29:30.000Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-20T19:17:46.000Z",
+          "resolvedAt": "2026-04-20T19:17:46.000Z",
           "summary": null
         },
         {
-          "id": "01KPMVSSRWY55RX257730KS2FA",
-          "title": "Users may encounter issue with ChatGPT Business after upgrade or adding new seats for up to an hour",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-04-20T07:13:42.000Z",
-          "updatedAt": "2026-04-20T09:43:35.000Z",
-          "resolvedAt": null,
+          "id": "01KPNN2V2SMP3TAN3MCJK87W50",
+          "title": "Users unable to load ChatGPT, Codex and API Platform",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-20T14:35:33.000Z",
+          "updatedAt": "2026-04-20T18:48:04.000Z",
+          "resolvedAt": "2026-04-20T18:48:04.000Z",
           "summary": null
         },
         {
@@ -452,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T18:42:33.844Z",
+      "lastCheckedAt": "2026-04-20T20:26:53.496Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
