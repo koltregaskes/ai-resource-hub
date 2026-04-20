@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const target = `${base}token-counter/`;
+---
+
+<BaseLayout
+  title="Tokenizer - Redirecting - The AI Resource Hub"
+  description="Friendly alias for the AI Resource Hub tokenizer and token counter."
+>
+  <section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-6">
+      <p class="text-xs font-semibold uppercase tracking-[0.24em] text-(--color-text-muted)">Redirecting</p>
+      <h1 class="mt-3 text-2xl font-bold text-(--color-text-primary)">Tokenizer</h1>
+      <p class="mt-3 text-sm text-(--color-text-secondary)">
+        This friendly route points to the current tokenizer and token counter page.
+      </p>
+      <a href={target} class="mt-4 inline-flex text-sm text-(--color-accent) hover:text-(--color-accent-hover)">
+        Continue to the tokenizer tool
+      </a>
+    </div>
+  </section>
+
+  <meta http-equiv="refresh" content={`0; url=${target}`} />
+  <link rel="canonical" href={target} />
+  <meta name="robots" content="noindex,follow" />
+</BaseLayout>

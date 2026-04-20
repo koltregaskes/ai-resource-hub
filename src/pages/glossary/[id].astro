@@ -23,17 +23,16 @@ if (!term) {
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-// Resolve related terms and see also
-const relatedIds = term.related_terms ? term.related_terms.split(',').map(s => s.trim()) : [];
-const seeAlsoIds = term.see_also ? term.see_also.split(',').map(s => s.trim()) : [];
+const relatedIds = term.related_terms ? term.related_terms.split(',').map((value) => value.trim()) : [];
+const seeAlsoIds = term.see_also ? term.see_also.split(',').map((value) => value.trim()) : [];
 
 const relatedTerms = relatedIds
-  .map(rid => allTerms.find(t => t.id === rid))
-  .filter((t): t is typeof term => t !== undefined);
+  .map((relatedId) => allTerms.find((candidate) => candidate.id === relatedId))
+  .filter((candidate): candidate is typeof term => candidate !== undefined);
 
 const seeAlsoTerms = seeAlsoIds
-  .map(rid => allTerms.find(t => t.id === rid))
-  .filter((t): t is typeof term => t !== undefined);
+  .map((relatedId) => allTerms.find((candidate) => candidate.id === relatedId))
+  .filter((candidate): candidate is typeof term => candidate !== undefined);
 
 const categoryLabels: Record<string, string> = {
   core: 'Core Concepts',
@@ -46,7 +45,6 @@ const categoryLabels: Record<string, string> = {
   infrastructure: 'Infrastructure & Tools',
 };
 
-// Structured data
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'DefinedTerm',
@@ -54,17 +52,16 @@ const structuredData = {
   description: term.definition,
   inDefinedTermSet: {
     '@type': 'DefinedTermSet',
-    name: 'AI Glossary — The AI Resource Hub',
+    name: 'AI Glossary - The AI Resource Hub',
   },
 };
 ---
 
 <BaseLayout
-  title={`${term.term} — AI Glossary — The AI Resource Hub`}
+  title={`${term.term} - AI Glossary - The AI Resource Hub`}
   description={term.plain_english || term.definition}
 >
   <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-    <!-- Breadcrumb -->
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
       <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
       <span class="mx-2">/</span>
@@ -73,7 +70,6 @@ const structuredData = {
       <span class="text-(--color-text-secondary)">{term.term}</span>
     </nav>
 
-    <!-- Term header -->
     <div class="mb-8">
       <div class="flex items-center gap-3 mb-3">
         <span class="text-xs px-2.5 py-1 rounded-full bg-(--color-bg-tertiary) text-(--color-text-muted)">
@@ -85,7 +81,6 @@ const structuredData = {
       </h1>
     </div>
 
-    <!-- Technical definition -->
     <div class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-6">
       <h2 class="text-sm font-semibold text-(--color-text-muted) uppercase tracking-wider mb-3">Definition</h2>
       <p class="text-(--color-text-primary) leading-relaxed">
@@ -93,7 +88,6 @@ const structuredData = {
       </p>
     </div>
 
-    <!-- Plain English -->
     {term.plain_english && (
       <div class="p-6 rounded-xl bg-(--color-accent-glow) border border-(--color-accent)/20 mb-6">
         <h2 class="text-sm font-semibold text-(--color-accent) uppercase tracking-wider mb-3 flex items-center gap-2">
@@ -108,41 +102,38 @@ const structuredData = {
       </div>
     )}
 
-    <!-- Related terms -->
     {relatedTerms.length > 0 && (
       <div class="mb-6">
         <h2 class="text-lg font-semibold text-(--color-text-primary) mb-3">Related Terms</h2>
         <div class="flex flex-wrap gap-2">
-          {relatedTerms.map((rt) => (
+          {relatedTerms.map((relatedTerm) => (
             <a
-              href={`${base}glossary/${rt.id}/`}
+              href={`${base}glossary/${relatedTerm.id}/`}
               class="px-3 py-1.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-sm text-(--color-text-secondary) hover:text-(--color-accent) hover:border-(--color-accent)/50 transition-colors"
             >
-              {rt.term}
+              {relatedTerm.term}
             </a>
           ))}
         </div>
       </div>
     )}
 
-    <!-- See also -->
     {seeAlsoTerms.length > 0 && (
       <div class="mb-6">
         <h2 class="text-lg font-semibold text-(--color-text-primary) mb-3">See Also</h2>
         <div class="flex flex-wrap gap-2">
-          {seeAlsoTerms.map((sa) => (
+          {seeAlsoTerms.map((seeAlsoTerm) => (
             <a
-              href={`${base}glossary/${sa.id}/`}
+              href={`${base}glossary/${seeAlsoTerm.id}/`}
               class="px-3 py-1.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-sm text-(--color-text-secondary) hover:text-(--color-accent) hover:border-(--color-accent)/50 transition-colors"
             >
-              {sa.term}
+              {seeAlsoTerm.term}
             </a>
           ))}
         </div>
       </div>
     )}
 
-    <!-- Navigation -->
     <div class="flex gap-3 mt-8">
       <a
         href={`${base}glossary/`}

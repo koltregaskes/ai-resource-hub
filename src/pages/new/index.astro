@@ -5,7 +5,15 @@ import { modelReleaseDesk } from '../../data/model-release-desk.generated';
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const releases = [...modelReleaseDesk.releases];
+type RelatedStory = {
+  url: string;
+  source: string;
+};
+
+const releases = [...modelReleaseDesk.releases].map((release) => ({
+  ...release,
+  relatedStories: release.relatedStories as readonly RelatedStory[],
+}));
 const readyForEditor = releases.filter((release) => release.draftStatus === 'ready_for_editor');
 const openSourceReleases = releases.filter((release) => release.openSource);
 

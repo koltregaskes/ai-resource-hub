@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { OFFICIAL_TOKEN_TOOLS } from '../../data/token-tools';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -12,6 +13,36 @@ interface AITool {
   pricing: string;
   tags: string[];
 }
+
+const siteUtilities = [
+  {
+    name: 'Pricing calculator',
+    href: `${base}calculator/`,
+    description: 'Estimate monthly API costs across tracked models.',
+  },
+  {
+    name: 'Head-to-head compare',
+    href: `${base}compare/head-to-head/`,
+    description: 'Put several models side by side before choosing.',
+  },
+  {
+    name: 'Tokenizer & token counter',
+    href: `${base}tokenizer/`,
+    description: 'Fast estimate plus official lab token-counting links.',
+  },
+  {
+    name: 'Benchmark explorer',
+    href: `${base}benchmarks/`,
+    description: 'Browse the tests that power the ranking layer.',
+  },
+  {
+    name: 'AI glossary',
+    href: `${base}glossary/`,
+    description: 'Look up jargon, abbreviations, and community terms.',
+  },
+];
+
+const tokenTools = OFFICIAL_TOKEN_TOOLS;
 
 const tools: AITool[] = [
   { name: 'ChatGPT', url: 'https://chat.openai.com', category: 'chatbot', description: 'OpenAI chat product for writing, coding, browsing, and multimodal work.', pricing: 'Free / paid plans', tags: ['chat', 'coding', 'images'] },
@@ -106,7 +137,7 @@ const grouped = categoryOrder.map((category) => ({
 
 <BaseLayout
   title="AI Tools Directory - The AI Resource Hub"
-  description="Curated directory of important AI tools across chat, coding, local models, media generation, research, and developer workflows."
+  description="Curated directory of important AI tools across chat, coding, local models, media generation, research, developer workflows, and official token counting resources."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -115,34 +146,59 @@ const grouped = categoryOrder.map((category) => ({
       <span class="text-(--color-text-secondary)">AI Tools</span>
     </nav>
 
-    <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] mb-8">
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px] mb-8">
       <div class="rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary) p-6 sm:p-8">
         <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Tool stack</p>
         <h1 class="mt-3 text-4xl font-black font-display text-(--color-text-primary)">
           Built-in utilities plus a curated map of the wider AI tool market.
         </h1>
         <p class="mt-4 max-w-2xl text-(--color-text-secondary)">
-          Use this page for two things: the working tools already built into this site, and a curated shortlist of major external products worth knowing about.
-          Vendor pricing and feature lists change fast, so treat external entries as a guide rather than a permanent spec sheet.
+          Use this page for three things: the working tools already built into this site, the official tokenizer and token-counting resources from major labs, and a curated shortlist of important external AI products.
         </p>
       </div>
 
       <div class="rounded-[2rem] border border-(--color-border) bg-(--color-bg-card) p-6">
         <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Use this site first</p>
         <div class="mt-4 space-y-3">
-          <a href={`${base}calculator/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
-            <p class="text-sm font-semibold text-(--color-text-primary)">Pricing calculator</p>
-            <p class="mt-1 text-xs text-(--color-text-secondary)">Estimate monthly API costs across tracked models.</p>
-          </a>
-          <a href={`${base}compare/head-to-head/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
-            <p class="text-sm font-semibold text-(--color-text-primary)">Head-to-head compare</p>
-            <p class="mt-1 text-xs text-(--color-text-secondary)">Put several models side by side before choosing.</p>
-          </a>
-          <a href={`${base}token-counter/`} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
-            <p class="text-sm font-semibold text-(--color-text-primary)">Token counter</p>
-            <p class="mt-1 text-xs text-(--color-text-secondary)">Check token volume and rough API cost instantly.</p>
-          </a>
+          {siteUtilities.map((tool) => (
+            <a href={tool.href} class="block rounded-2xl border border-(--color-border) bg-(--color-bg-primary)/70 p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)">
+              <p class="text-sm font-semibold text-(--color-text-primary)">{tool.name}</p>
+              <p class="mt-1 text-xs text-(--color-text-secondary)">{tool.description}</p>
+            </a>
+          ))}
         </div>
+      </div>
+    </div>
+
+    <div class="rounded-[1.75rem] border border-(--color-border) bg-(--color-bg-secondary) p-5 sm:p-6 mb-8">
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="text-sm font-semibold text-(--color-text-primary)">Official tokenizer and token-counting resources</p>
+          <p class="text-xs text-(--color-text-muted) mt-1">
+            Verified links for model-specific counting. Some are interactive tools, while others are API endpoints or docs-backed workflows.
+          </p>
+        </div>
+        <a href={`${base}tokenizer/`} class="text-xs text-(--color-accent) hover:text-(--color-accent-hover)">Open the tokenizer page</a>
+      </div>
+      <div class="grid gap-3 mt-5 md:grid-cols-2 xl:grid-cols-3">
+        {tokenTools.map((tool) => (
+          <a
+            href={tool.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-4 transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">{tool.lab}</p>
+                <p class="mt-2 text-sm font-semibold text-(--color-text-primary)">{tool.name}</p>
+              </div>
+              <span class="rounded-full bg-(--color-bg-primary) px-2 py-1 text-[10px] text-(--color-text-muted)">{tool.access}</span>
+            </div>
+            <p class="mt-3 text-xs text-(--color-text-secondary)">{tool.description}</p>
+            {tool.notes && <p class="mt-3 text-[11px] text-(--color-text-muted)">{tool.notes}</p>}
+          </a>
+        ))}
       </div>
     </div>
 
@@ -226,27 +282,26 @@ const grouped = categoryOrder.map((category) => ({
     ))}
 
     <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Choosing the Right Tool</h2>
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Choosing the right tool</h2>
       <ul class="text-sm text-(--color-text-secondary) space-y-1 list-disc list-inside">
         <li>Most AI chatbots offer free tiers, so it is worth trying several before paying for one default.</li>
         <li>For coding, Cursor and Claude Code are strong starting points if you want fast repo-aware assistance.</li>
         <li>For local models, start with LM Studio or Ollama before moving to lower-level runtimes like llama.cpp or MLX.</li>
-        <li>For image generation, the right choice depends on whether you care more about art direction, editing, or open local control.</li>
-        <li>OpenRouter is useful when you want one API entry point for many model providers.</li>
+        <li>Use official token-counting tools when prompt cost or context fit really matters.</li>
         <li>Check our <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">LLM comparison</a> for detailed pricing and benchmark data.</li>
       </ul>
     </div>
   </section>
 
   <script>
-    const searchInput = document.getElementById('tool-search') as HTMLInputElement | null;
-    const categoryFilter = document.getElementById('tool-category-filter') as HTMLSelectElement | null;
+    const searchInput = document.getElementById('tool-search');
+    const categoryFilter = document.getElementById('tool-category-filter');
     const cards = Array.from(document.querySelectorAll('[data-tool-card]'));
     const groups = Array.from(document.querySelectorAll('[data-tool-group]'));
 
     function updateToolFilter() {
-      const query = (searchInput?.value ?? '').toLowerCase().trim();
-      const category = categoryFilter?.value ?? '';
+      const query = searchInput instanceof HTMLInputElement ? searchInput.value.toLowerCase().trim() : '';
+      const category = categoryFilter instanceof HTMLSelectElement ? categoryFilter.value : '';
 
       cards.forEach((card) => {
         const haystack = card.getAttribute('data-tool-filter') || '';

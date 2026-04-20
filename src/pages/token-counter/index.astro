@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getModelsByCategory } from '../../db/queries';
+import { OFFICIAL_TOKEN_TOOLS } from '../../data/token-tools';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-// Get LLM models for pricing estimates
 const models = getModelsByCategory('llm')
-  .filter(m => m.inputPrice > 0 || m.outputPrice > 0)
+  .filter((model) => model.inputPrice > 0 || model.outputPrice > 0)
   .sort((a, b) => {
     const blendA = (a.inputPrice + 3 * a.outputPrice) / 4;
     const blendB = (b.inputPrice + 3 * b.outputPrice) / 4;
@@ -15,48 +15,49 @@ const models = getModelsByCategory('llm')
   })
   .slice(0, 20);
 
-const modelsJSON = JSON.stringify(models.map(m => ({
-  id: m.id,
-  name: m.name,
-  provider: m.provider,
-  colour: m.providerColour,
-  inputPrice: m.inputPrice,
-  outputPrice: m.outputPrice,
+const modelsJSON = JSON.stringify(models.map((model) => ({
+  id: model.id,
+  name: model.name,
+  provider: model.provider,
+  colour: model.providerColour,
+  inputPrice: model.inputPrice,
+  outputPrice: model.outputPrice,
 })));
+
+const officialTokenTools = OFFICIAL_TOKEN_TOOLS;
 ---
 
 <BaseLayout
-  title="Token Counter — Estimate Tokens & API Cost — The AI Resource Hub"
-  description="Paste text and instantly see token count estimates across AI models. Calculate API costs for OpenAI GPT, Anthropic Claude, Google Gemini, and more."
+  title="Tokenizer & Token Counter - The AI Resource Hub"
+  description="Estimate prompt tokens quickly, compare rough API cost, and jump out to official token counting tools from OpenAI, Anthropic, Google, xAI, and Cohere."
 >
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
       <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
       <span class="mx-2">/</span>
-      <span class="text-(--color-text-secondary)">Token Counter</span>
+      <span class="text-(--color-text-secondary)">Tokenizer</span>
     </nav>
 
     <div class="mb-8">
       <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
-        Token Counter
+        Tokenizer & Token Counter
       </h1>
-      <p class="text-(--color-text-secondary) max-w-2xl">
-        Paste your text to estimate how many tokens it contains and what it would cost across different AI models. Useful for budgeting API calls and checking context window limits.
+      <p class="text-(--color-text-secondary) max-w-3xl">
+        Use the built-in estimator for a fast answer, then jump to official lab tools when you need an exact or model-specific count.
+        This page is intentionally honest: our on-site counter is quick and useful, but it is still an estimate.
       </p>
     </div>
 
-    <!-- Input -->
     <div class="mb-6">
-      <label for="text-input" class="text-sm font-medium text-(--color-text-primary) mb-2 block">Your Text</label>
+      <label for="text-input" class="text-sm font-medium text-(--color-text-primary) mb-2 block">Your text</label>
       <textarea
         id="text-input"
         rows="8"
-        placeholder="Paste your text here to count tokens..."
+        placeholder="Paste your text here to estimate tokens..."
         class="w-full rounded-xl bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm p-4 focus:outline-none focus:border-(--color-accent) transition-colors resize-y placeholder:text-(--color-text-muted)"
       ></textarea>
     </div>
 
-    <!-- Stats cards -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Characters</p>
@@ -67,7 +68,7 @@ const modelsJSON = JSON.stringify(models.map(m => ({
         <p id="stat-words" class="text-2xl font-bold text-(--color-text-primary)">0</p>
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <p class="text-xs text-(--color-text-muted) mb-1">Estimated Tokens</p>
+        <p class="text-xs text-(--color-text-muted) mb-1">Estimated tokens</p>
         <p id="stat-tokens" class="text-2xl font-bold text-(--color-accent)">0</p>
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
@@ -76,30 +77,71 @@ const modelsJSON = JSON.stringify(models.map(m => ({
       </div>
     </div>
 
-    <!-- Token estimation method -->
     <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-8">
-      <h2 class="text-sm font-semibold text-(--color-text-primary) mb-2">How We Estimate Tokens</h2>
-      <p class="text-xs text-(--color-text-secondary) mb-2">
-        Different models use different tokenisers (GPT uses <code>cl100k_base</code>, Claude uses its own, etc.), so exact counts vary. Our estimate uses the widely-accepted approximation:
+      <h2 class="text-sm font-semibold text-(--color-text-primary) mb-2">How the on-site estimate works</h2>
+      <p class="text-xs text-(--color-text-secondary) mb-3">
+        Different labs use different tokenizers, so exact counts vary by model and request format.
+        The built-in counter uses the common English rule of thumb for quick budgeting:
       </p>
-      <div class="flex items-center gap-4 text-xs">
+      <div class="flex flex-wrap items-center gap-3 text-xs">
         <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
-          <span class="font-mono text-(--color-accent)">1 token ≈ 4 characters</span> (English text)
+          <span class="font-mono text-(--color-accent)">1 token ~= 4 characters</span>
         </div>
         <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
-          <span class="font-mono text-(--color-accent)">1 token ≈ 0.75 words</span>
+          <span class="font-mono text-(--color-accent)">1 token ~= 0.75 words</span>
         </div>
       </div>
-      <p class="text-xs text-(--color-text-muted) mt-2">
-        For exact counts, use the provider's tokeniser: <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">OpenAI Tokenizer</a> or <a href="https://console.anthropic.com/workbench" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Anthropic Workbench</a>.
+      <p class="text-xs text-(--color-text-muted) mt-3">
+        Treat the estimate as a fast budgeting tool, not a billing guarantee. Providers often add system formatting, tool wrappers, or other hidden tokens at request time.
       </p>
     </div>
 
-    <!-- Cost estimates table -->
     <div class="mb-8">
-      <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Cost Estimates (as Input)</h2>
+      <div class="flex items-end justify-between gap-4 mb-3">
+        <div>
+          <h2 class="text-lg font-bold text-(--color-text-primary)">Official token tools</h2>
+          <p class="text-xs text-(--color-text-muted)">
+            Verified provider links for exact or provider-native token counting workflows.
+          </p>
+        </div>
+        <a href={`${base}tools/`} class="text-xs text-(--color-accent) hover:text-(--color-accent-hover)">See full tools directory</a>
+      </div>
+      <div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+        {officialTokenTools.map((tool) => (
+          <a
+            href={tool.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-4 hover:border-(--color-border-hover) transition-colors group"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">{tool.lab}</p>
+                <h3 class="mt-2 text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+                  {tool.name}
+                </h3>
+              </div>
+              <span class="shrink-0 rounded-full bg-(--color-bg-tertiary) px-2 py-1 text-[10px] text-(--color-text-muted)">
+                {tool.access}
+              </span>
+            </div>
+            <p class="mt-3 text-xs text-(--color-text-secondary)">
+              {tool.description}
+            </p>
+            {tool.notes && (
+              <p class="mt-3 text-[11px] text-(--color-text-muted)">
+                {tool.notes}
+              </p>
+            )}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Cost estimates (input side)</h2>
       <p class="text-xs text-(--color-text-muted) mb-3">
-        What this text would cost as input tokens across different models. Output tokens (the model's response) are typically 2-5x more expensive.
+        What this text would cost as input tokens across different models. Output tokens are usually billed separately and often cost more.
       </p>
       <div class="grid gap-3 md:grid-cols-[minmax(0,1fr)_220px_220px] mb-3">
         <input
@@ -134,35 +176,33 @@ const modelsJSON = JSON.stringify(models.map(m => ({
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">x1000 requests</th>
             </tr>
           </thead>
-          <tbody id="cost-table-body">
-            <!-- Populated by JS -->
-          </tbody>
+          <tbody id="cost-table-body"></tbody>
         </table>
       </div>
     </div>
 
-    <!-- Context window check -->
     <div class="mb-8">
-      <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Context Window Check</h2>
-      <p class="text-xs text-(--color-text-muted) mb-3">Does your text fit within common context windows?</p>
-      <div id="context-checks" class="grid sm:grid-cols-3 gap-3">
-        <!-- Populated by JS -->
-      </div>
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Context window check</h2>
+      <p class="text-xs text-(--color-text-muted) mb-3">Does your text fit within a few common context-window tiers?</p>
+      <div id="context-checks" class="grid sm:grid-cols-3 gap-3"></div>
     </div>
 
-    <!-- Cross-links -->
-    <div class="grid sm:grid-cols-3 gap-3">
-      <a href={`${base}calculator/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
-        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Pricing Calculator</p>
-        <p class="text-xs text-(--color-text-muted)">Full cost calculator with usage presets</p>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <a href={`${base}tools/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Tools directory</p>
+        <p class="text-xs text-(--color-text-muted)">See internal utilities plus the wider external tool map.</p>
+      </a>
+      <a href={`${base}glossary/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">AI glossary</p>
+        <p class="text-xs text-(--color-text-muted)">Look up tokenization, MCP, context rot, TTFT, and more.</p>
       </a>
       <a href={`${base}context-window/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
-        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Context Window Comparison</p>
-        <p class="text-xs text-(--color-text-muted)">Compare context sizes across all models</p>
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">Context windows</p>
+        <p class="text-xs text-(--color-text-muted)">Compare context sizes across tracked models.</p>
       </a>
       <a href={`${base}academy/how-llms-work/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/50 transition-colors">
-        <p class="text-sm font-medium text-(--color-text-primary) mb-1">What Are Tokens?</p>
-        <p class="text-xs text-(--color-text-muted)">Learn about tokenisation in our Academy</p>
+        <p class="text-sm font-medium text-(--color-text-primary) mb-1">How LLMs work</p>
+        <p class="text-xs text-(--color-text-muted)">Read the academy explainer on tokens and tokenization.</p>
       </a>
     </div>
   </section>
@@ -174,20 +214,19 @@ const modelsJSON = JSON.stringify(models.map(m => ({
     const sortSelect = document.getElementById('token-sort');
 
     if (providerFilter instanceof HTMLSelectElement) {
-      const providers = [...new Set(models.map(model => model.provider))].sort((a, b) => a.localeCompare(b));
+      const providers = [...new Set(models.map((model) => model.provider))].sort((a, b) => a.localeCompare(b));
       providerFilter.innerHTML = '<option value="">All labs</option>' +
-        providers.map(provider => `<option value="${provider}">${provider}</option>`).join('');
+        providers.map((provider) => `<option value="${provider}">${provider}</option>`).join('');
     }
 
     const contextWindows = [
-      { name: 'GPT-4o / Claude Haiku', tokens: 128000 },
-      { name: 'Claude Opus / Sonnet', tokens: 200000 },
-      { name: 'Gemini Pro', tokens: 1048576 },
+      { name: '128k tier', tokens: 128000 },
+      { name: '200k tier', tokens: 200000 },
+      { name: '1M tier', tokens: 1048576 },
     ];
 
     function estimateTokens(text) {
       if (!text) return 0;
-      // Heuristic: ~4 chars per token for English, adjusted for whitespace and punctuation
       return Math.ceil(text.length / 4);
     }
 
@@ -199,17 +238,17 @@ const modelsJSON = JSON.stringify(models.map(m => ({
       return '$' + cost.toFixed(2);
     }
 
-    function formatNumber(n) {
-      if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
-      if (n >= 1000) return (n / 1000).toFixed(1) + 'K';
-      return n.toLocaleString();
+    function formatNumber(value) {
+      if (value >= 1000000) return (value / 1000000).toFixed(1) + 'M';
+      if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
+      return value.toLocaleString();
     }
 
     function update() {
       const text = document.getElementById('text-input').value;
-      const providerValue = (providerFilter instanceof HTMLSelectElement ? providerFilter.value : '');
-      const searchValue = (modelSearch instanceof HTMLInputElement ? modelSearch.value.toLowerCase().trim() : '');
-      const sortValue = (sortSelect instanceof HTMLSelectElement ? sortSelect.value : 'cost');
+      const providerValue = providerFilter instanceof HTMLSelectElement ? providerFilter.value : '';
+      const searchValue = modelSearch instanceof HTMLInputElement ? modelSearch.value.toLowerCase().trim() : '';
+      const sortValue = sortSelect instanceof HTMLSelectElement ? sortSelect.value : 'cost';
       const chars = text.length;
       const words = text.trim() ? text.trim().split(/\s+/).length : 0;
       const tokens = estimateTokens(text);
@@ -220,7 +259,6 @@ const modelsJSON = JSON.stringify(models.map(m => ({
       document.getElementById('stat-tokens').textContent = tokens.toLocaleString();
       document.getElementById('stat-lines').textContent = lines.toLocaleString();
 
-      // Cost table
       const tbody = document.getElementById('cost-table-body');
       const filteredModels = models
         .filter((model) => {
@@ -246,31 +284,32 @@ const modelsJSON = JSON.stringify(models.map(m => ({
           }
         });
 
-      tbody.innerHTML = filteredModels.map(m => {
-        const cost = (tokens / 1000000) * m.inputPrice;
+      tbody.innerHTML = filteredModels.map((model) => {
+        const cost = (tokens / 1000000) * model.inputPrice;
         const cost1k = cost * 1000;
+        const visibleValue = tokens > 0 ? formatCost(cost) : '-';
+        const visibleBulkValue = tokens > 0 ? formatCost(cost1k) : '-';
         return `<tr class="border-b border-[var(--color-border)]/50 hover:bg-[var(--color-bg-hover)] transition-colors">
           <td class="py-2 px-4">
             <span class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full shrink-0" style="background-color: ${m.colour}"></span>
-              <span class="text-[var(--color-text-primary)]">${m.name}</span>
+              <span class="w-2 h-2 rounded-full shrink-0" style="background-color: ${model.colour}"></span>
+              <span class="text-[var(--color-text-primary)]">${model.name}</span>
             </span>
-            <span class="text-[10px] text-[var(--color-text-muted)]">${m.provider}</span>
+            <span class="text-[10px] text-[var(--color-text-muted)]">${model.provider}</span>
           </td>
-          <td class="py-2 px-4 text-right font-mono text-xs text-[var(--color-text-secondary)]">$${m.inputPrice.toFixed(2)}</td>
-          <td class="py-2 px-4 text-right font-mono text-xs ${tokens > 0 ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-muted)]'}">${tokens > 0 ? formatCost(cost) : '—'}</td>
-          <td class="py-2 px-4 text-right font-mono text-xs text-[var(--color-text-secondary)] hidden sm:table-cell">${tokens > 0 ? formatCost(cost1k) : '—'}</td>
+          <td class="py-2 px-4 text-right font-mono text-xs text-[var(--color-text-secondary)]">$${model.inputPrice.toFixed(2)}</td>
+          <td class="py-2 px-4 text-right font-mono text-xs ${tokens > 0 ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-muted)]'}">${visibleValue}</td>
+          <td class="py-2 px-4 text-right font-mono text-xs text-[var(--color-text-secondary)] hidden sm:table-cell">${visibleBulkValue}</td>
         </tr>`;
       }).join('');
 
-      // Context window checks
       const checksEl = document.getElementById('context-checks');
-      checksEl.innerHTML = contextWindows.map(cw => {
-        const fits = tokens <= cw.tokens;
-        const pct = tokens > 0 ? Math.min((tokens / cw.tokens) * 100, 100) : 0;
+      checksEl.innerHTML = contextWindows.map((contextWindow) => {
+        const fits = tokens <= contextWindow.tokens;
+        const pct = tokens > 0 ? Math.min((tokens / contextWindow.tokens) * 100, 100) : 0;
         return `<div class="p-3 rounded-xl border ${fits ? 'bg-[var(--color-bg-card)] border-[var(--color-border)]' : 'bg-red-500/5 border-red-500/20'}">
-          <p class="text-xs font-medium ${fits ? 'text-[var(--color-text-primary)]' : 'text-red-400'}">${cw.name}</p>
-          <p class="text-xs text-[var(--color-text-muted)]">${formatNumber(cw.tokens)} tokens</p>
+          <p class="text-xs font-medium ${fits ? 'text-[var(--color-text-primary)]' : 'text-red-400'}">${contextWindow.name}</p>
+          <p class="text-xs text-[var(--color-text-muted)]">${formatNumber(contextWindow.tokens)} tokens</p>
           <div class="mt-2 h-1.5 bg-[var(--color-bg-tertiary)] rounded-full overflow-hidden">
             <div class="h-full rounded-full transition-all" style="width: ${pct}%; background-color: ${fits ? 'var(--color-success)' : '#ef4444'}"></div>
           </div>

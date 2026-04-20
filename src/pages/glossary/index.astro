@@ -18,13 +18,12 @@ const categoryLabels: Record<string, string> = {
   infrastructure: 'Infrastructure & Tools',
 };
 
-// Alphabet for jump navigation
-const letters = [...new Set(terms.map(t => t.term[0].toUpperCase()))].sort();
+const letters = [...new Set(terms.map((term) => term.term[0].toUpperCase()))].sort();
 ---
 
 <BaseLayout
-  title="AI Glossary — The AI Resource Hub"
-  description="Plain-English definitions of AI terms. From tokens and transformers to RAG and RLHF — understand AI without the jargon."
+  title="AI Glossary - The AI Resource Hub"
+  description="Plain-English definitions of AI terms. From tokens and transformers to RAG, MCP, and context rot, understand AI without the jargon."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -39,11 +38,10 @@ const letters = [...new Set(terms.map(t => t.term[0].toUpperCase()))].sort();
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
         {terms.length} AI terms explained in plain English. No jargon, no PhD required.
-        Click any term for the full definition with real-world analogies.
+        Click any term for the full definition with practical context.
       </p>
     </div>
 
-    <!-- Alphabet jump -->
     <div class="flex flex-wrap gap-1 mb-8">
       {letters.map((letter) => (
         <a
@@ -55,9 +53,8 @@ const letters = [...new Set(terms.map(t => t.term[0].toUpperCase()))].sort();
       ))}
     </div>
 
-    <!-- Terms by letter -->
     {letters.map((letter) => {
-      const letterTerms = terms.filter(t => t.term[0].toUpperCase() === letter);
+      const letterTerms = terms.filter((term) => term.term[0].toUpperCase() === letter);
       return (
         <div id={`letter-${letter}`} class="mb-8">
           <h2 class="text-2xl font-bold text-(--color-accent) mb-4 sticky top-16 bg-(--color-bg-primary) py-2 z-10">
