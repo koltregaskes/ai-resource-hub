@@ -141,6 +141,30 @@ Why it matters:
 - this is very often what users mean when they say "the model got worse"
 - Theo-style complaints and MarginLab-style measurements both point at this layer as a real source of regression
 
+### Harness Fields Worth Tracking Explicitly
+
+If we want this to be useful in practice, the hub should treat harness state as first-class data.
+
+The most important fields are:
+
+- harness name
+- harness version
+- tool set available
+- tool call count
+- tool error rate
+- timeout rate
+- compaction count
+- compaction frequency
+- patch or apply-change success rate
+- verification-harness pass rate
+- retrieval step count
+- average context growth per run
+
+Why:
+
+- Theo's Nov 3, 2025 degradation video and Dec 5, 2025 workflow video both point at the same pattern: users often blame the model when the real regression lives in compaction, tool integration, patching, or the lack of a clean verification harness
+- MarginLab's trackers are also useful here because they already track non-quality resource metrics like runtime, token usage, and tool calls instead of pretending the only signal is pass rate
+
 ## 8. Retrieval And Memory Degradation
 
 Track whether system architecture around the model is feeding it worse context.
@@ -262,6 +286,9 @@ These are the extra fields most people miss:
 - temperature / major decoding settings when relevant
 - fallback behaviour
 - whether the result came from API, chat app, Bedrock, Vertex, or another reseller
+- verification harness or failing repro used
+- whether compaction happened
+- whether the agent was forced onto a reduced tool path
 
 Without those, "the model got worse" becomes too fuzzy to trust.
 
@@ -291,6 +318,8 @@ Without those, "the model got worse" becomes too fuzzy to trust.
 
 - Anthropic, "A postmortem of three recent issues" (published 17 Sep 2025) for infrastructure-caused response degradation
 - MarginLab degradation trackers for statistical regression detection, baseline framing, and resource-metric tracking
+- Theo Browne, "It's not just you (gpt-5 got dumber)" (published 3 Nov 2025) for a practical degradation framing around compaction, hardware variance, timeouts, tool integration, and dogfooding
+- Theo Browne, "How I code with AI right now" (published 5 Dec 2025) for the verification-harness framing and the importance of clear win conditions
 
 ## Bottom Line
 

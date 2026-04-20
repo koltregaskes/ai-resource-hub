@@ -158,6 +158,38 @@ Primary sources:
 - independent trackers such as MarginLab
 - community reports only when labelled as anecdotal or mixed
 
+## 9. Educational And Creator Sources
+
+What we collect:
+
+- topic-level summaries
+- workflow ideas worth testing
+- quoted claims only when short and source-linked
+- source links, creator, publish date, and topic tags
+
+Primary sources:
+
+- creator videos with reliable transcripts or readable summaries
+- creator blogs and newsletters
+- official talks and engineering explainers
+
+Current candidate creator lane:
+
+- Theo Browne / Theo - t3.gg
+
+Why he is worth tracking:
+
+- recurring commentary on coding-agent regressions
+- useful harness and workflow thinking
+- practical MCP and tool-design criticism
+- strong coverage of how product scaffolding changes the real user experience
+
+Important rule:
+
+- do not mirror or republish full creator transcripts into the hub
+- use creator material as sourced summaries, concept notes, or reading lists
+- where possible, prefer linking to the original YouTube page and a transcript helper page instead of copying long passages
+
 ## Evidence Labels
 
 Every degradation-related note should use one of these:
@@ -219,6 +251,13 @@ Before adding a degradation claim, try to capture:
 - evidence label
 - source URL
 
+If the claim came from a creator source, also capture:
+
+- creator name
+- video or post title
+- publish date
+- whether the point is opinion, anecdote, or externally corroborated
+
 ## Current Gaps
 
 As of 20 Apr 2026, the main gaps are:
@@ -234,3 +273,4 @@ As of 20 Apr 2026, the main gaps are:
 2. Preserve provider status snapshots over time.
 3. Add simple deltas to speed views and model pages.
 4. Add a future public degradation summary page once the data model is real.
+5. Build a small educational-source intake lane for trusted creator material, starting with Theo, using summaries and source cards rather than transcript dumps.
