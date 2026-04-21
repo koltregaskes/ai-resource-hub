@@ -1,22 +1,22 @@
 ---
-title: "Kimi K2 0711: release brief"
-slug: "2026-03-28-kimi-k2-0711-release-brief"
+title: "Kimi K2.6: release brief"
+slug: "2026-04-20-kimi-k2-6-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "watch"
-model: "Kimi K2 0711"
+priority: "high"
+model: "Kimi K2.6"
 provider: "Moonshot AI"
-release_date: "2026-03-28"
-generated_at: "2026-04-21T07:01:07.210Z"
+release_date: "2026-04-20"
+generated_at: "2026-04-21T07:01:07.188Z"
 ---
 
-# Kimi K2 0711: release brief
+# Kimi K2.6: release brief
 
-Moonshot AI's Kimi K2 0711 is on the release desk with 1 related story and 0 benchmark signals to review.
+Moonshot AI's Kimi K2.6 is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
-Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Kimi K2.6 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.60 in / $2.80 out per million tokens. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k2.6); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -33,11 +33,11 @@ Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned a
 
 ## Suggested thread / post structure
 
-1. Lead with the hook: what Moonshot AI actually launched with Kimi K2 0711, and why it matters now.
+1. Lead with the hook: what Moonshot AI actually launched with Kimi K2.6, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
 4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
-5. Keep the chronology explicit: this release landed on 28 Mar 2026 and should be framed against the models it is replacing or competing with.
+5. Keep the chronology explicit: this release landed on 20 Apr 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 

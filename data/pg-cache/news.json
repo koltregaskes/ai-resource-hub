@@ -1,16 +1,131 @@
 [
   {
-    "id": "1b2081a0-2895-4155-9489-d9869374b43f",
-    "title": "AI chip startup Cerebras files for IPO",
-    "url": "https://techcrunch.com/2026/04/18/ai-chip-startup-cerebras-files-for-ipo/",
-    "source": "TechCrunch AI",
+    "id": "9df20722-63dc-47bd-bc3d-183b90653347",
+    "title": "[AINews] Moonshot Kimi K2.6: the world's leading Open Model refreshes to catch up to Opus 4.6 (ahead of DeepSeek v4?)",
+    "url": "https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds",
+    "source": "Latent Space",
     "summary": null,
-    "category": "ai_tools",
+    "category": "ai_research",
     "tags": [
-      "hardware"
+      "model_release",
+      "open_source"
+    ],
+    "importance_score": "0.56",
+    "published_at": null,
+    "discovered_at": "2026-04-21T06:00:30.085Z"
+  },
+  {
+    "id": "2006063a-d1d8-4127-b317-9530a0ccaad8",
+    "title": "Building a Fast Multilingual OCR Model with Synthetic Data     4 days ago •  24",
+    "url": "https://huggingface.co/blog/nvidia/nemotron-ocr-v2",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "dataset"
     ],
     "importance_score": "0.58",
     "published_at": null,
-    "discovered_at": "2026-04-20T06:00:15.623Z"
+    "discovered_at": "2026-04-21T06:00:12.649Z"
+  },
+  {
+    "id": "7101e7c5-218a-4757-b233-0b5e14b1490c",
+    "title": "Start vibe coding in AI Studio with your Google AI subscription.",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-one-ai-studio/",
+    "source": "Google AI Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "pricing_change"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-04-21T06:00:12.403Z"
+  },
+  {
+    "id": "48bbc772-7fc7-4c48-b866-865c0f7af844",
+    "title": "Vessel Browser: The Open Source Browser Designed for Autonomous Agents     3 days ago •  3",
+    "url": "https://huggingface.co/blog/unmodeled-tyler/vessel-browser-for-agents",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "autonomous_systems",
+      "open_source"
+    ],
+    "importance_score": "0.66",
+    "published_at": null,
+    "discovered_at": "2026-04-20T18:00:15.263Z"
+  },
+  {
+    "id": "0ef1c34f-2f81-4c5f-bd48-73b73b377473",
+    "title": "OpenMythos: The Community Rebuilt Claude Mythos in PyTorch",
+    "url": "https://x.com/mkovarski/status/2046040942830928276",
+    "source": "Aligned News (Scoble)",
+    "summary": "Braygent's take on OpenMythos: the community rebuilt Claude Mythos in PyTorch with 1,000+ retweets, demonstrating that open source does not wait for permission from proprietary labs.",
+    "category": "ai_tools",
+    "tags": [
+      "open_source"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-04-20T14:40:59.573Z",
+    "discovered_at": "2026-04-20T18:30:06.753Z"
+  },
+  {
+    "id": "fcd6c22d-ca1e-4a8e-88b3-a833baa55b0f",
+    "title": "Anthropic Launched a Figma Competitor and Nobody Is Talking About It Enough",
+    "url": "https://x.com/theneurondaily/status/2046227398317035871",
+    "source": "Aligned News (Scoble)",
+    "summary": "Braygent's take on Claude Design: it reads your codebase before generating interfaces, making it fundamentally different from generic AI design tools and a direct threat to Figma.",
+    "category": "ai_tools",
+    "tags": [
+      "model_release"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-04-20T14:40:59.573Z",
+    "discovered_at": "2026-04-20T18:30:06.756Z"
+  },
+  {
+    "id": "db4fd1d1-dacb-4ade-9a97-08aa1c6fb484",
+    "title": "GPT-5.5 'Spud' Is Coming Thursday — Polymarket at 75%",
+    "url": "https://x.com/AILeaksAndNews/status/2046227414422802919",
+    "source": "Aligned News (Scoble)",
+    "summary": "Braygent's take on GPT-5.5 'Spud' expected Thursday with 75% Polymarket probability, in the same week as Google Cloud Next, Tencent Hunyuan 3.0, and Qwen3.6-Max-Preview.",
+    "category": "ai_tools",
+    "tags": [
+      "model_release"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-04-20T14:40:59.573Z",
+    "discovered_at": "2026-04-20T18:30:06.760Z"
+  },
+  {
+    "id": "d98013f6-700c-40fc-a33e-46caec02874e",
+    "title": "Scoble: NousResearch CTO Interview Available — Covers AI Architecture and Hermes",
+    "url": "https://x.com/Scobleizer/status/2046126235689099511",
+    "source": "Aligned News (Scoble)",
+    "summary": "Scoble shared his interview with the NousResearch CTO, which covers AI architecture and the technical details behind Hermes. NousResearch is the company behind Scoble's preferred agentic AI platform.",
+    "category": "ai_tools",
+    "tags": [
+      "architecture",
+      "ai_agents"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-04-20T14:39:35.542Z",
+    "discovered_at": "2026-04-20T18:30:06.776Z"
+  },
+  {
+    "id": "b5e69cc3-0695-4812-b338-54b8df9fa250",
+    "title": "Scoble: X API Costs Dropping From $300/Day to $30 — Starting Tomorrow",
+    "url": "https://x.com/Scobleizer/status/2046037305866272811",
+    "source": "Aligned News (Scoble)",
+    "summary": "Scoble expects his X API costs to drop from $300/day to $30/day starting tomorrow. The dramatic reduction would make large-scale social media monitoring much more accessible to developers.",
+    "category": "ai_tools",
+    "tags": [
+      "api_update"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-04-20T14:39:35.542Z",
+    "discovered_at": "2026-04-20T18:30:06.789Z"
   }
 ]

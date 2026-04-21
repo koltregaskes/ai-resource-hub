@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Qwen3 Coder Next"
 provider: "Alibaba"
 release_date: "2026-02-04"
-generated_at: "2026-04-20T07:00:52.098Z"
+generated_at: "2026-04-21T07:01:07.262Z"
 ---
 
 # Qwen3 Coder Next: release brief

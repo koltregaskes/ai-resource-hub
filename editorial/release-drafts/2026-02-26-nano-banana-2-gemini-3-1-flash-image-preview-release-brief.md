@@ -2,17 +2,17 @@
 title: "Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief"
 slug: "2026-02-26-nano-banana-2-gemini-3-1-flash-image-preview-release-brief"
 draft_type: "model-release"
-status: "needs_research"
+status: "ready_for_editor"
 priority: "watch"
 model: "Nano Banana 2 (Gemini 3.1 Flash Image Preview)"
 provider: "Google"
 release_date: "2026-02-26"
-generated_at: "2026-04-20T07:00:52.074Z"
+generated_at: "2026-04-21T07:01:07.236Z"
 ---
 
 # Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief
 
-Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 0 related stories and 0 benchmark signals to review.
+Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 2 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -21,7 +21,7 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 ## Why this matters
 
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
+- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
 
 ## Benchmarks and evals to mention
 
@@ -29,14 +29,15 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 
 ## Outside coverage and early reactions
 
-- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
+- Aligned News (Scoble) (2026-04-20): [GPT-5.5 'Spud' Is Coming Thursday — Polymarket at 75%](https://x.com/AILeaksAndNews/status/2046227414422802919) - Braygent's take on GPT-5.5 'Spud' expected Thursday with 75% Polymarket probability, in the same week as Google Cloud Next, Tencent Hunyuan 3.0, and Qwen3.6-Max-Preview.
+- Google AI Blog (2026-04-21): [Start vibe coding in AI Studio with your Google AI subscription.](https://blog.google/innovation-and-ai/technology/developers-tools/google-one-ai-studio/)
 
 ## Suggested thread / post structure
 
 1. Lead with the hook: what Google actually launched with Nano Banana 2 (Gemini 3.1 Flash Image Preview), and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
-4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
+4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
 5. Keep the chronology explicit: this release landed on 26 Feb 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
@@ -50,3 +51,5 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/models)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
+- [Aligned News (Scoble): GPT-5.5 'Spud' Is Coming Thursday — Polymarket at 75%](https://x.com/AILeaksAndNews/status/2046227414422802919)
+- [Google AI Blog: Start vibe coding in AI Studio with your Google AI subscription.](https://blog.google/innovation-and-ai/technology/developers-tools/google-one-ai-studio/)
