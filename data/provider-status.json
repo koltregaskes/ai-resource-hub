@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T23:27:56.035Z",
+  "generatedAt": "2026-04-21T01:09:58.440Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T23:27:54.760Z",
+      "lastCheckedAt": "2026-04-21T01:09:57.258Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T23:27:55.468Z",
+      "lastCheckedAt": "2026-04-21T01:09:57.972Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T23:27:54.965Z",
+      "lastCheckedAt": "2026-04-21T01:09:57.451Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T23:27:55.860Z",
+      "lastCheckedAt": "2026-04-21T01:09:58.254Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T23:27:54.799Z",
+      "lastCheckedAt": "2026-04-21T01:09:57.344Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T23:27:55.179Z",
+      "lastCheckedAt": "2026-04-21T01:09:57.637Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,10 +335,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T23:27:54.480Z",
+      "lastCheckedAt": "2026-04-21T01:09:57.215Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -354,39 +354,28 @@
           "status": "operational"
         },
         {
-          "name": "Fine-tuning",
+          "name": "Codex Web",
           "status": "operational"
         },
         {
-          "name": "Images",
+          "name": "VS Code extension",
           "status": "operational"
         },
         {
-          "name": "Batch",
+          "name": "Codex API",
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01KPPJX4KHFAWS8YQE3KW235X7",
-          "title": "Some users will is higher error rates on Codex",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-04-20T23:16:43.000Z",
-          "updatedAt": "2026-04-20T23:16:43.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "01KPPJX4KHFAWS8YQE3KW235X7",
-          "title": "Some users will is higher error rates on Codex",
-          "status": "monitoring",
-          "impact": "none",
+          "title": "Some users will see higher error rates on Codex",
+          "status": "resolved",
+          "impact": "minor",
           "startedAt": "2026-04-20T23:16:43.000Z",
-          "updatedAt": "2026-04-20T23:16:43.000Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-20T23:42:43.000Z",
+          "resolvedAt": "2026-04-20T23:13:00.000Z",
           "summary": null
         },
         {
@@ -432,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-20T23:27:56.028Z",
+      "lastCheckedAt": "2026-04-21T01:09:58.433Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
