@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-21T01:09:58.440Z",
+  "generatedAt": "2026-04-21T04:35:39.301Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-21T01:09:57.258Z",
+      "lastCheckedAt": "2026-04-21T04:35:37.975Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-21T01:09:57.972Z",
+      "lastCheckedAt": "2026-04-21T04:35:38.706Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-21T01:09:57.451Z",
+      "lastCheckedAt": "2026-04-21T04:35:38.324Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-21T01:09:58.254Z",
+      "lastCheckedAt": "2026-04-21T04:35:39.061Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-21T01:09:57.344Z",
+      "lastCheckedAt": "2026-04-21T04:35:38.192Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-21T01:09:57.637Z",
+      "lastCheckedAt": "2026-04-21T04:35:38.385Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-21T01:09:57.215Z",
+      "lastCheckedAt": "2026-04-21T04:35:37.917Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -354,11 +354,11 @@
           "status": "operational"
         },
         {
-          "name": "Codex Web",
+          "name": "VS Code extension",
           "status": "operational"
         },
         {
-          "name": "VS Code extension",
+          "name": "Codex Web",
           "status": "operational"
         },
         {
@@ -368,6 +368,16 @@
       ],
       "activeIncidents": [],
       "recentIncidents": [
+        {
+          "id": "01KPPY7B8PMYHJWDNFY9TMJX33",
+          "title": "Some users may encounter issues with GPT-5.4-C model in Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-21T02:34:32.000Z",
+          "updatedAt": "2026-04-21T04:33:18.000Z",
+          "resolvedAt": "2026-04-21T04:33:18.000Z",
+          "summary": null
+        },
         {
           "id": "01KPPJX4KHFAWS8YQE3KW235X7",
           "title": "Some users will see higher error rates on Codex",
@@ -397,16 +407,6 @@
           "updatedAt": "2026-04-20T19:17:46.000Z",
           "resolvedAt": "2026-04-20T19:17:46.000Z",
           "summary": null
-        },
-        {
-          "id": "01KPNN2V2SMP3TAN3MCJK87W50",
-          "title": "Users unable to load ChatGPT, Codex and API Platform",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-04-20T14:35:33.000Z",
-          "updatedAt": "2026-04-20T18:48:04.000Z",
-          "resolvedAt": "2026-04-20T18:48:04.000Z",
-          "summary": null
         }
       ]
     },
@@ -421,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-21T01:09:58.433Z",
+      "lastCheckedAt": "2026-04-21T04:35:39.294Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
