@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-22T10:05:46.269Z",
+  "generatedAt": "2026-04-22T11:43:50.031Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T10:05:44.859Z",
+      "lastCheckedAt": "2026-04-22T11:43:49.081Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T10:05:45.454Z",
+      "lastCheckedAt": "2026-04-22T11:43:49.734Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T10:05:45.074Z",
+      "lastCheckedAt": "2026-04-22T11:43:49.222Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -139,6 +139,17 @@
       ],
       "activeIncidents": [],
       "recentIncidents": [
+        {
+          "id": "5w5lp464fzsj",
+          "title": "【已恢复】DeepSeek API 异常（[Resolved]DeepSeek API Abnormal）",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-04-22T10:23:18.547Z",
+          "updatedAt": "2026-04-22T11:26:32.897Z",
+          "resolvedAt": "2026-04-22T11:26:32.880Z",
+          "url": "https://stspg.io/rkv8w02lxqpw",
+          "summary": "This incident has been resolved."
+        },
         {
           "id": "ck05gk15n1sc",
           "title": "【已解决】DeepSeek Web/APP 快速模式性能异常（[Resolved]DeepSeek Web/APP Instant Mode Performance Abnormal）",
@@ -171,17 +182,6 @@
           "resolvedAt": "2026-03-31T10:05:54.775Z",
           "url": "https://stspg.io/77x3xcn87hnr",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "rjs0ljjlqhsw",
-          "title": "【已解决】DeepSeek 网页/APP 性能异常（[Resolved]DeepSeek Web/APP Service Performance Agnormal）",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-03-29T16:20:14.892Z",
-          "updatedAt": "2026-03-30T02:33:42.815Z",
-          "resolvedAt": "2026-03-30T02:33:42.800Z",
-          "url": "https://stspg.io/pgdvv67fgmqn",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T10:05:46.023Z",
+      "lastCheckedAt": "2026-04-22T11:43:50.023Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T10:05:45.023Z",
+      "lastCheckedAt": "2026-04-22T11:43:49.109Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T10:05:45.217Z",
+      "lastCheckedAt": "2026-04-22T11:43:49.437Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T10:05:44.814Z",
+      "lastCheckedAt": "2026-04-22T11:43:49.034Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T10:05:46.260Z",
+      "lastCheckedAt": "2026-04-22T11:43:49.996Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
