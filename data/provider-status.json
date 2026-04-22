@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-04-22T01:05:39.883Z",
+  "generatedAt": "2026-04-22T04:33:24.820Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T01:05:38.558Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Conversations",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "VS Code extension",
-          "status": "operational"
-        },
-        {
-          "name": "Codex Web",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KPSB0GQZ0G7FT3GAV3H2Q8D8",
-          "title": "ChatGPT free users are seeing errors when having conversations",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-22T00:56:29.000Z",
-          "updatedAt": "2026-04-22T01:00:28.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KPSB0GQZ0G7FT3GAV3H2Q8D8",
-          "title": "ChatGPT free users are seeing errors when having conversations",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-22T00:56:29.000Z",
-          "updatedAt": "2026-04-22T01:00:28.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KPPY7B8PMYHJWDNFY9TMJX33",
-          "title": "Some users may encounter issues with GPT-5.4-C model in Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-21T02:34:32.000Z",
-          "updatedAt": "2026-04-21T04:33:18.000Z",
-          "resolvedAt": "2026-04-21T04:33:18.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KPPJX4KHFAWS8YQE3KW235X7",
-          "title": "Some users will see higher error rates on Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-20T23:16:43.000Z",
-          "updatedAt": "2026-04-20T23:42:43.000Z",
-          "resolvedAt": "2026-04-20T23:13:00.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KPMVSSRWY55RX257730KS2FA",
-          "title": "Users may encounter issue with ChatGPT Business after upgrade or adding new seats for up to an hour",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-20T07:13:42.000Z",
-          "updatedAt": "2026-04-20T19:33:19.000Z",
-          "resolvedAt": "2026-04-20T19:33:19.000Z",
-          "summary": null
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -109,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T01:05:38.585Z",
+      "lastCheckedAt": "2026-04-22T04:33:23.339Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T01:05:39.209Z",
+      "lastCheckedAt": "2026-04-22T04:33:24.148Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T01:05:38.663Z",
+      "lastCheckedAt": "2026-04-22T04:33:23.588Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T01:05:39.603Z",
+      "lastCheckedAt": "2026-04-22T04:33:24.603Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T01:05:38.492Z",
+      "lastCheckedAt": "2026-04-22T04:33:23.863Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T01:05:38.805Z",
+      "lastCheckedAt": "2026-04-22T04:33:23.870Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -420,6 +323,92 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-22T04:33:23.334Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "VS Code extension",
+          "status": "operational"
+        },
+        {
+          "name": "Codex Web",
+          "status": "operational"
+        },
+        {
+          "name": "Codex API",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KPSB0GQZ0G7FT3GAV3H2Q8D8",
+          "title": "ChatGPT free users are seeing errors when having conversations",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-22T00:56:29.000Z",
+          "updatedAt": "2026-04-22T03:35:13.000Z",
+          "resolvedAt": "2026-04-22T03:35:13.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KPPY7B8PMYHJWDNFY9TMJX33",
+          "title": "Some users may encounter issues with GPT-5.4-C model in Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-21T02:34:32.000Z",
+          "updatedAt": "2026-04-21T04:33:18.000Z",
+          "resolvedAt": "2026-04-21T04:33:18.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KPPJX4KHFAWS8YQE3KW235X7",
+          "title": "Some users will see higher error rates on Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-20T23:16:43.000Z",
+          "updatedAt": "2026-04-20T23:42:43.000Z",
+          "resolvedAt": "2026-04-20T23:13:00.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KPMVSSRWY55RX257730KS2FA",
+          "title": "Users may encounter issue with ChatGPT Business after upgrade or adding new seats for up to an hour",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-04-20T07:13:42.000Z",
+          "updatedAt": "2026-04-20T19:33:19.000Z",
+          "resolvedAt": "2026-04-20T19:33:19.000Z",
+          "summary": null
+        }
+      ]
     },
     {
       "id": "together",
@@ -432,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-22T01:05:39.875Z",
+      "lastCheckedAt": "2026-04-22T04:33:24.813Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -452,7 +441,29 @@
           "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
         },
         {
-          "id": "together-feed-1-2026-04-21T23:33:16.000Z",
+          "id": "together-feed-1-2026-04-22T01:36:01.000Z",
+          "title": "Qwen3 235B A22B Instruct 2507 Throughput recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-22T01:36:01.000Z",
+          "updatedAt": "2026-04-22T01:36:01.000Z",
+          "resolvedAt": "2026-04-22T01:36:01.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 235B A22B Instruct 2507 Throughput recovered"
+        },
+        {
+          "id": "together-feed-2-2026-04-22T01:12:08.000Z",
+          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-22T01:12:08.000Z",
+          "updatedAt": "2026-04-22T01:12:08.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-21T23:33:16.000Z",
           "title": "Qwen3 235B A22B Instruct 2507 Throughput recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -461,28 +472,6 @@
           "resolvedAt": "2026-04-21T23:33:16.000Z",
           "url": "https://status.together.ai/",
           "summary": "Qwen3 235B A22B Instruct 2507 Throughput recovered"
-        },
-        {
-          "id": "together-feed-2-2026-04-21T23:15:12.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-21T23:15:12.000Z",
-          "updatedAt": "2026-04-21T23:15:12.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-21T14:56:29.000Z",
-          "title": "Moonshot Kimi K2.5 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-21T14:56:29.000Z",
-          "updatedAt": "2026-04-21T14:56:29.000Z",
-          "resolvedAt": "2026-04-21T14:56:29.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Moonshot Kimi K2.5 recovered"
         }
       ]
     },
