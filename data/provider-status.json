@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-23T01:13:16.938Z",
+  "generatedAt": "2026-04-23T04:38:34.311Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,10 +12,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-23T01:13:15.545Z",
+      "lastCheckedAt": "2026-04-23T04:38:32.997Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -43,30 +43,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "9tyl1z4b03cs",
-          "title": "MCP apps unavailable on Claude.ai",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-04-23T00:41:43.270Z",
-          "updatedAt": "2026-04-23T00:57:59.218Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/rx62k66jm0lj",
-          "summary": "We have resolved the issue impacting MCP Apps on Claude.ai."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "9tyl1z4b03cs",
           "title": "MCP apps unavailable on Claude.ai",
-          "status": "identified",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-04-23T00:41:43.270Z",
-          "updatedAt": "2026-04-23T00:57:59.218Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-23T02:09:00.639Z",
+          "resolvedAt": "2026-04-23T02:09:00.622Z",
           "url": "https://stspg.io/rx62k66jm0lj",
-          "summary": "We have resolved the issue impacting MCP Apps on Claude.ai."
+          "summary": "This incident has been resolved."
         },
         {
           "id": "8482mmb5n1n1",
@@ -114,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-23T01:13:16.329Z",
+      "lastCheckedAt": "2026-04-23T04:38:33.819Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-23T01:13:15.667Z",
+      "lastCheckedAt": "2026-04-23T04:38:33.261Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-23T01:13:16.793Z",
+      "lastCheckedAt": "2026-04-23T04:38:34.106Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-23T01:13:15.601Z",
+      "lastCheckedAt": "2026-04-23T04:38:33.144Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -317,6 +305,26 @@
       ]
     },
     {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-23T04:38:33.512Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -327,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-23T01:13:15.328Z",
+      "lastCheckedAt": "2026-04-23T04:38:32.997Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -413,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-23T01:13:16.930Z",
+      "lastCheckedAt": "2026-04-23T04:38:34.303Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -466,26 +474,6 @@
           "summary": "OpenAI GPT OSS 120B recovered"
         }
       ]
-    },
-    {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-23T01:13:15.980Z",
-      "overallStatus": "unknown",
-      "overallLabel": "Status page available",
-      "summary": "Official provider status page reports: Status page available.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "xai",
