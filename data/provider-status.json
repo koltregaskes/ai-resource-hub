@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-24T16:39:24.327Z",
+  "generatedAt": "2026-04-24T17:38:43.862Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-24T16:39:22.912Z",
+      "lastCheckedAt": "2026-04-24T17:38:42.723Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -46,6 +46,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "s0lttkq5mmt2",
+          "title": "Issues with sign-ups on platform.claude.com",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-24T17:03:54.478Z",
+          "updatedAt": "2026-04-24T17:32:16.149Z",
+          "resolvedAt": "2026-04-24T17:32:16.135Z",
+          "url": "https://stspg.io/6f9452dhsjt6",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "1mx31vhgl3ms",
           "title": "Elevated errors on Claude Opus 4.7",
           "status": "resolved",
@@ -77,17 +88,6 @@
           "resolvedAt": "2026-04-23T15:59:21.781Z",
           "url": "https://stspg.io/pkskbt30gw7r",
           "summary": "We've had an incident between 08:23 PT / 15:23 UTC and 8:35 PT / 15:35 UTC. We have fully recovered."
-        },
-        {
-          "id": "9tyl1z4b03cs",
-          "title": "MCP apps unavailable on Claude.ai",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-23T00:41:43.270Z",
-          "updatedAt": "2026-04-23T02:09:00.639Z",
-          "resolvedAt": "2026-04-23T02:09:00.622Z",
-          "url": "https://stspg.io/rx62k66jm0lj",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-24T16:39:23.997Z",
+      "lastCheckedAt": "2026-04-24T17:38:43.299Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-24T16:39:23.464Z",
+      "lastCheckedAt": "2026-04-24T17:38:42.717Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-24T16:39:24.318Z",
+      "lastCheckedAt": "2026-04-24T17:38:43.415Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-24T16:39:23.391Z",
+      "lastCheckedAt": "2026-04-24T17:38:42.696Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-24T16:39:23.591Z",
+      "lastCheckedAt": "2026-04-24T17:38:42.981Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-24T16:39:22.930Z",
+      "lastCheckedAt": "2026-04-24T17:38:42.587Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-24T16:39:24.301Z",
+      "lastCheckedAt": "2026-04-24T17:38:43.854Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
