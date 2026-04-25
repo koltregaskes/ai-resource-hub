@@ -129,6 +129,121 @@ a {
   transform: translateY(0);
 }
 
+.locale-switcher {
+  position: relative;
+}
+
+.locale-switcher[open] .locale-switcher-trigger {
+  border-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+.locale-switcher-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  list-style: none;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.locale-switcher-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.locale-switcher-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.55rem);
+  z-index: 40;
+  min-width: 16rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 1.25rem;
+  background: var(--color-bg-secondary);
+  padding: 0.8rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.locale-switcher-heading {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.locale-switcher-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.locale-switcher-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  border-radius: 0.95rem;
+  padding: 0.7rem 0.8rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.locale-switcher-link:hover {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.locale-switcher-link.is-current {
+  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+  color: var(--color-text-primary);
+}
+
+.locale-switcher-link.mobile {
+  margin-top: 0.35rem;
+}
+
+.locale-switcher-muted {
+  color: var(--color-text-muted);
+  font-size: 0.76rem;
+}
+
+.translation-banner-shell {
+  border-bottom: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-accent) 10%, var(--color-bg-secondary));
+}
+
+.translation-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.translation-banner-title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.translation-banner-copy {
+  margin: 0.15rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
 ::selection {
   background-color: var(--color-accent-glow);
   color: var(--color-text-primary);

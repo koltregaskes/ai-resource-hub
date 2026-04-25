@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Notícias de IA em português do Brasil"
+  description="Camada de leitura em português do Brasil para a área de notícias do AI Resource Hub."
+  locale="pt-BR"
+  translationState="machine-assisted"
+  translationNote="Esta camada de notícias em português do Brasil é assistida por máquina e permanece fora do índice. O inglês continua sendo a fonte principal enquanto o runtime de tradução diária amadurece."
+  robots="noindex,follow"
+  alternateTranslations={{
+    'en-GB': `${base}news/`,
+    es: `${base}es/news/`,
+    'pt-BR': `${base}pt-br/news/`,
+    'zh-Hans': `${base}zh-hans/news/`,
+  }}
+  localeMenuLinks={{
+    'en-GB': `${base}news/`,
+    es: `${base}es/news/`,
+    'pt-BR': `${base}pt-br/news/`,
+    'zh-Hans': `${base}zh-hans/news/`,
+  }}
+>
+  <section class="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-(--color-text-primary)">Notícias de IA em português do Brasil</h1>
+    <p class="mt-4 text-lg text-(--color-text-secondary)">
+      Esta rota mostra o modelo certo para conteúdo rápido: tradução para leitura, com limites claros, sem transformar tudo em páginas frágeis e indexadas.
+    </p>
+    <div class="mt-8 rounded-[1.4rem] border border-(--color-border-strong) bg-(--color-bg-card) p-6">
+      <h2 class="text-xl font-semibold text-(--color-text-primary)">Como isso deve funcionar</h2>
+      <ul class="mt-4 space-y-3 text-sm leading-6 text-(--color-text-secondary)">
+        <li>O inglês segue como registro principal das notícias diárias.</li>
+        <li>Traduções rápidas podem aparecer aqui para leitura e triagem.</li>
+        <li>Enquanto forem automáticas, continuam `noindex`.</li>
+        <li>Somente versões revisadas viram páginas indexáveis.</li>
+      </ul>
+      <a href={`${base}news/`} class="editorial-button editorial-button-primary mt-6">Abrir notícias em inglês</a>
+    </div>
+  </section>
+</BaseLayout>

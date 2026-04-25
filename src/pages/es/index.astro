@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const quickLinks = [
+  { href: `${base}leaderboard/`, title: 'Clasificación', description: 'Consulta la clasificación compuesta y los modelos líderes actuales.' },
+  { href: `${base}benchmarks/`, title: 'Benchmarks', description: 'Explora MMLU, SWE-bench, HumanEval y otras referencias clave.' },
+  { href: `${base}academy/`, title: 'Academia IA', description: 'Empieza por las guías y explicaciones para entender mejor los modelos.' },
+  { href: `${base}news/`, title: 'Noticias IA', description: 'Sigue la señal diaria en inglés mientras ampliamos la cobertura traducida.' },
+];
+---
+
+<BaseLayout
+  title="El AI Resource Hub en español"
+  description="Una puerta de entrada en español al AI Resource Hub, con rutas revisadas para contenido evergreen y acceso claro al material original en inglés."
+  locale="es"
+  translationState="reviewed"
+  translationNote="Esta portada en español está revisada. El inglés sigue siendo la fuente principal para datos, cambios rápidos y contenido diario."
+  alternateTranslations={{
+    'en-GB': `${base}`,
+    es: `${base}es/`,
+    'pt-BR': `${base}pt-br/`,
+    'zh-Hans': `${base}zh-hans/`,
+  }}
+  localeMenuLinks={{
+    'en-GB': `${base}`,
+    es: `${base}es/`,
+    'pt-BR': `${base}pt-br/`,
+    'zh-Hans': `${base}zh-hans/`,
+  }}
+>
+  <section class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">English home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Español</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="section-kicker">Versión revisada</p>
+      <h1 class="mt-3 text-4xl font-extrabold text-(--color-text-primary)">AI Resource Hub en español</h1>
+      <p class="mt-4 text-lg text-(--color-text-secondary)">
+        Esta es la primera capa multilingüe real del sitio. Sirve como puerta de entrada en español para las secciones más estables mientras el contenido dinámico sigue apoyándose en el original en inglés.
+      </p>
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-2">
+      {quickLinks.map((item) => (
+        <a href={item.href} class="glass-panel glass-panel-hover rounded-[1.4rem] p-5">
+          <h2 class="text-lg font-semibold text-(--color-text-primary)">{item.title}</h2>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">{item.description}</p>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-[1.6rem] border border-(--color-border-strong) bg-(--color-bg-card) p-6">
+      <h2 class="text-xl font-semibold text-(--color-text-primary)">Cómo vamos a mantenerlo actualizado</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        <div>
+          <p class="font-medium text-(--color-text-primary)">Evergreen revisado</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">Academia, glosario y páginas de referencia pueden publicarse en español cuando haya revisión humana.</p>
+        </div>
+        <div>
+          <p class="font-medium text-(--color-text-primary)">Noticias rápidas</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">Las noticias diarias se ofrecerán como ayuda de lectura con traducción asistida, pero sin indexarse hasta ser revisadas.</p>
+        </div>
+        <div>
+          <p class="font-medium text-(--color-text-primary)">Fuente de verdad</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">El inglés sigue siendo el registro principal cuando cambian datos, precios o lanzamientos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

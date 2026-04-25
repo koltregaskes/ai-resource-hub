@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="AI 新闻中文阅读层"
+  description="AI Resource Hub 新闻区的简体中文阅读层。"
+  locale="zh-Hans"
+  translationState="machine-assisted"
+  translationNote="这个新闻中文层目前是机器辅助阅读层，保持 `noindex`。每日动态和数据变化仍以英文新闻页为主。"
+  robots="noindex,follow"
+  alternateTranslations={{
+    'en-GB': `${base}news/`,
+    es: `${base}es/news/`,
+    'pt-BR': `${base}pt-br/news/`,
+    'zh-Hans': `${base}zh-hans/news/`,
+  }}
+  localeMenuLinks={{
+    'en-GB': `${base}news/`,
+    es: `${base}es/news/`,
+    'pt-BR': `${base}pt-br/news/`,
+    'zh-Hans': `${base}zh-hans/news/`,
+  }}
+>
+  <section class="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-(--color-text-primary)">AI 新闻中文阅读层</h1>
+    <p class="mt-4 text-lg text-(--color-text-secondary)">
+      这条路由的意义不是“假装已经全部翻译完成”，而是把动态新闻的正确处理方式先落地：可读、诚实、可持续。
+    </p>
+    <div class="mt-8 rounded-[1.4rem] border border-(--color-border-strong) bg-(--color-bg-card) p-6">
+      <h2 class="text-xl font-semibold text-(--color-text-primary)">运行规则</h2>
+      <ul class="mt-4 space-y-3 text-sm leading-6 text-(--color-text-secondary)">
+        <li>英文新闻页仍是每日更新的主记录。</li>
+        <li>中文层可以作为机器辅助阅读入口。</li>
+        <li>在人工审核前，保持 `noindex`。</li>
+        <li>只有审核完成的页面才进入真正的可索引多语言层。</li>
+      </ul>
+      <a href={`${base}news/`} class="editorial-button editorial-button-primary mt-6">打开英文新闻页</a>
+    </div>
+  </section>
+</BaseLayout>

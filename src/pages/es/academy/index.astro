@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const lanes = [
+  { href: `${base}academy/what-is-ai/`, title: 'Qué es la IA', note: 'Contenido base en inglés mientras completamos más traducciones.' },
+  { href: `${base}academy/how-llms-work/`, title: 'Cómo funcionan los LLM', note: 'Explicación clave para entender tokens, entrenamiento y arquitectura.' },
+  { href: `${base}academy/what-is-a-harness/`, title: 'Qué es un harness', note: 'Importante para degradación, herramientas y calidad real.' },
+];
+---
+
+<BaseLayout
+  title="AI Academy en español"
+  description="Entrada en español para la AI Academy, con rutas evergreen revisadas y una explicación clara de qué sigue en inglés."
+  locale="es"
+  translationState="reviewed"
+  translationNote="La portada de la Academia está revisada en español. Algunas lecciones profundas siguen disponibles solo en inglés por ahora."
+  alternateTranslations={{
+    'en-GB': `${base}academy/`,
+    es: `${base}es/academy/`,
+    'pt-BR': `${base}pt-br/academy/`,
+    'zh-Hans': `${base}zh-hans/academy/`,
+  }}
+  localeMenuLinks={{
+    'en-GB': `${base}academy/`,
+    es: `${base}es/academy/`,
+    'pt-BR': `${base}pt-br/academy/`,
+    'zh-Hans': `${base}zh-hans/academy/`,
+  }}
+>
+  <section class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={`${base}es/`} class="hover:text-(--color-text-secondary) transition-colors">Español</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Academia IA</span>
+    </nav>
+    <h1 class="text-4xl font-extrabold text-(--color-text-primary)">Academia IA</h1>
+    <p class="mt-4 max-w-3xl text-lg text-(--color-text-secondary)">
+      Esta capa multilingüe prioriza las páginas educativas más duraderas. El objetivo no es fingir que todo está traducido, sino abrir el aprendizaje en español de forma honesta y mantenible.
+    </p>
+    <div class="mt-8 space-y-4">
+      {lanes.map((lane) => (
+        <a href={lane.href} class="glass-panel glass-panel-hover block rounded-[1.4rem] p-5">
+          <h2 class="text-lg font-semibold text-(--color-text-primary)">{lane.title}</h2>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">{lane.note}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

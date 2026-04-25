@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const lanes = [
+  { href: `${base}academy/what-is-ai/`, title: 'O que é IA', note: 'Ponto de entrada para quem está começando, ainda com material-base em inglês.' },
+  { href: `${base}academy/how-llms-work/`, title: 'Como os LLMs funcionam', note: 'Aula-chave para entender tokens, treino e arquitetura.' },
+  { href: `${base}academy/what-is-a-harness/`, title: 'O que é um harness', note: 'Essencial para entender regressão, agentes e qualidade percebida.' },
+];
+---
+
+<BaseLayout
+  title="AI Academy em português do Brasil"
+  description="Entrada em português do Brasil para a AI Academy, com foco em conteúdo evergreen e clareza sobre o que ainda depende do inglês."
+  locale="pt-BR"
+  translationState="reviewed"
+  translationNote="A página inicial da Academia está revisada em português do Brasil. Parte das lições profundas continua em inglês enquanto o conjunto traduzido cresce."
+  alternateTranslations={{
+    'en-GB': `${base}academy/`,
+    es: `${base}es/academy/`,
+    'pt-BR': `${base}pt-br/academy/`,
+    'zh-Hans': `${base}zh-hans/academy/`,
+  }}
+  localeMenuLinks={{
+    'en-GB': `${base}academy/`,
+    es: `${base}es/academy/`,
+    'pt-BR': `${base}pt-br/academy/`,
+    'zh-Hans': `${base}zh-hans/academy/`,
+  }}
+>
+  <section class="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={`${base}pt-br/`} class="hover:text-(--color-text-secondary) transition-colors">Português (Brasil)</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Academia de IA</span>
+    </nav>
+    <h1 class="text-4xl font-extrabold text-(--color-text-primary)">Academia de IA</h1>
+    <p class="mt-4 max-w-3xl text-lg text-(--color-text-secondary)">
+      A camada multilíngue começa pelas páginas mais duráveis. Assim conseguimos publicar algo útil em português sem prometer uma tradução completa que ainda não existe.
+    </p>
+    <div class="mt-8 space-y-4">
+      {lanes.map((lane) => (
+        <a href={lane.href} class="glass-panel glass-panel-hover block rounded-[1.4rem] p-5">
+          <h2 class="text-lg font-semibold text-(--color-text-primary)">{lane.title}</h2>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">{lane.note}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

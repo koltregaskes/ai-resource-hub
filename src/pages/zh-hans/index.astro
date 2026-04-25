@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const quickLinks = [
+  { href: `${base}leaderboard/`, title: '排行榜', description: '查看综合排名以及当前领先的模型。' },
+  { href: `${base}benchmarks/`, title: '基准测试', description: '了解 MMLU、SWE-bench、HumanEval 等关键评测。' },
+  { href: `${base}academy/`, title: 'AI 学院', description: '先从解释型内容开始，建立对模型和工具的基本理解。' },
+  { href: `${base}news/`, title: 'AI 新闻', description: '在英文原站跟进每日动态，同时逐步扩展中文入口。' },
+];
+---
+
+<BaseLayout
+  title="AI Resource Hub 中文入口"
+  description="AI Resource Hub 的简体中文入口页，用于承载已审核的常青内容，并明确说明动态内容仍以英文为准。"
+  locale="zh-Hans"
+  translationState="reviewed"
+  translationNote="此简体中文入口页已审核。实时数据、每日新闻和快速更新仍以英文原页为准。"
+  alternateTranslations={{
+    'en-GB': `${base}`,
+    es: `${base}es/`,
+    'pt-BR': `${base}pt-br/`,
+    'zh-Hans': `${base}zh-hans/`,
+  }}
+  localeMenuLinks={{
+    'en-GB': `${base}`,
+    es: `${base}es/`,
+    'pt-BR': `${base}pt-br/`,
+    'zh-Hans': `${base}zh-hans/`,
+  }}
+>
+  <section class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">English home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">简体中文</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="section-kicker">已审核入口</p>
+      <h1 class="mt-3 text-4xl font-extrabold text-(--color-text-primary)">AI Resource Hub 中文入口</h1>
+      <p class="mt-4 text-lg text-(--color-text-secondary)">
+        这是站点第一批真正上线的多语言路由。它优先覆盖稳定的常青内容，同时对每日新闻和快速变化的数据保持诚实。
+      </p>
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-2">
+      {quickLinks.map((item) => (
+        <a href={item.href} class="glass-panel glass-panel-hover rounded-[1.4rem] p-5">
+          <h2 class="text-lg font-semibold text-(--color-text-primary)">{item.title}</h2>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">{item.description}</p>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-[1.6rem] border border-(--color-border-strong) bg-(--color-bg-card) p-6">
+      <h2 class="text-xl font-semibold text-(--color-text-primary)">后续更新方式</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        <div>
+          <p class="font-medium text-(--color-text-primary)">常青内容</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">学院、术语表和方法论等页面适合先翻译并审核，然后作为可索引页面发布。</p>
+        </div>
+        <div>
+          <p class="font-medium text-(--color-text-primary)">快节奏新闻</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">每日新闻可以提供机器辅助阅读层，但在人工审核前保持 `noindex`。</p>
+        </div>
+        <div>
+          <p class="font-medium text-(--color-text-primary)">英文为准</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">模型价格、可用性、基准分数和发布时间变更时，英文页仍是主记录。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

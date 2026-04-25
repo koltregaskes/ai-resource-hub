@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<BaseLayout
+  title="Noticias IA en español"
+  description="Capa de lectura en español para la sección de noticias del AI Resource Hub."
+  locale="es"
+  translationState="machine-assisted"
+  translationNote="Esta capa de noticias en español es asistida por máquina y no debe indexarse todavía. El original en inglés sigue siendo la fuente principal mientras definimos el runtime de traducción diaria."
+  robots="noindex,follow"
+  alternateTranslations={{
+    'en-GB': `${base}news/`,
+    es: `${base}es/news/`,
+    'pt-BR': `${base}pt-br/news/`,
+    'zh-Hans': `${base}zh-hans/news/`,
+  }}
+  localeMenuLinks={{
+    'en-GB': `${base}news/`,
+    es: `${base}es/news/`,
+    'pt-BR': `${base}pt-br/news/`,
+    'zh-Hans': `${base}zh-hans/news/`,
+  }}
+>
+  <section class="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-(--color-text-primary)">Noticias IA en español</h1>
+    <p class="mt-4 text-lg text-(--color-text-secondary)">
+      Esta ruta existe para demostrar el modelo correcto: noticias rápidas con ayuda de lectura en otro idioma, pero sin fingir que ya son páginas revisadas e indexables.
+    </p>
+    <div class="mt-8 rounded-[1.4rem] border border-(--color-border-strong) bg-(--color-bg-card) p-6">
+      <h2 class="text-xl font-semibold text-(--color-text-primary)">Cómo funcionará</h2>
+      <ul class="mt-4 space-y-3 text-sm leading-6 text-(--color-text-secondary)">
+        <li>El inglés seguirá siendo la versión canónica para noticias diarias.</li>
+        <li>Las traducciones rápidas pueden aparecer aquí como ayuda de lectura.</li>
+        <li>Mientras sean automáticas, permanecerán en `noindex`.</li>
+        <li>Solo las versiones revisadas pasarán a ser páginas indexables.</li>
+      </ul>
+      <a href={`${base}news/`} class="editorial-button editorial-button-primary mt-6">Abrir noticias en inglés</a>
+    </div>
+  </section>
+</BaseLayout>

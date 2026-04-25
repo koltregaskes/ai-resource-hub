@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const quickLinks = [
+  { href: `${base}leaderboard/`, title: 'Ranking', description: 'Veja o ranking composto e os modelos de referência do momento.' },
+  { href: `${base}benchmarks/`, title: 'Benchmarks', description: 'Entenda MMLU, SWE-bench, HumanEval e outras medições importantes.' },
+  { href: `${base}academy/`, title: 'Academia de IA', description: 'Comece pelas explicações e guias para entender melhor o ecossistema.' },
+  { href: `${base}news/`, title: 'Notícias de IA', description: 'Acompanhe o fluxo diário em inglês enquanto a camada traduzida cresce.' },
+];
+---
+
+<BaseLayout
+  title="The AI Resource Hub em português do Brasil"
+  description="Primeira camada em português do Brasil para o AI Resource Hub, com rotas evergreen revisadas e clareza sobre o conteúdo dinâmico."
+  locale="pt-BR"
+  translationState="reviewed"
+  translationNote="Esta portada em português do Brasil é revisada. O inglês continua sendo a fonte principal para dados vivos e mudanças rápidas."
+  alternateTranslations={{
+    'en-GB': `${base}`,
+    es: `${base}es/`,
+    'pt-BR': `${base}pt-br/`,
+    'zh-Hans': `${base}zh-hans/`,
+  }}
+  localeMenuLinks={{
+    'en-GB': `${base}`,
+    es: `${base}es/`,
+    'pt-BR': `${base}pt-br/`,
+    'zh-Hans': `${base}zh-hans/`,
+  }}
+>
+  <section class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">English home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Português (Brasil)</span>
+    </nav>
+
+    <div class="max-w-3xl">
+      <p class="section-kicker">Camada revisada</p>
+      <h1 class="mt-3 text-4xl font-extrabold text-(--color-text-primary)">AI Resource Hub em português do Brasil</h1>
+      <p class="mt-4 text-lg text-(--color-text-secondary)">
+        Esta é a primeira implementação multilíngue real do hub. Ela abre as partes mais estáveis do site em português sem fingir que o conteúdo diário já está totalmente traduzido.
+      </p>
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-2">
+      {quickLinks.map((item) => (
+        <a href={item.href} class="glass-panel glass-panel-hover rounded-[1.4rem] p-5">
+          <h2 class="text-lg font-semibold text-(--color-text-primary)">{item.title}</h2>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">{item.description}</p>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-[1.6rem] border border-(--color-border-strong) bg-(--color-bg-card) p-6">
+      <h2 class="text-xl font-semibold text-(--color-text-primary)">Como manter isso atualizado</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        <div>
+          <p class="font-medium text-(--color-text-primary)">Evergreen revisado</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">Academia, glossário e páginas de referência podem virar rotas reais em português depois de revisão.</p>
+        </div>
+        <div>
+          <p class="font-medium text-(--color-text-primary)">Noticiário rápido</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">As notícias diárias podem usar tradução assistida para leitura, mas continuam fora do índice até revisão.</p>
+        </div>
+        <div>
+          <p class="font-medium text-(--color-text-primary)">Fonte principal</p>
+          <p class="mt-2 text-sm text-(--color-text-secondary)">O inglês continua sendo o registro oficial quando preços, benchmark ou disponibilidade mudam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
