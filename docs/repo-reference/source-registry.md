@@ -1,19 +1,19 @@
 # Source Registry Snapshot
 
-Generated: 25 Apr 2026, 15:28 UTC
+Generated: 25 Apr 2026, 15:54 UTC
 
 This is the repo-readable mirror of the shared source registry. It shows where source definitions currently live, how they route into the website estate, and which collection / verification lane each source should use.
 
 Canonical config:
 
-- `W:\Websites\shared\website-tools\pipelines\news\config\sources.json`
-- `W:\Websites\shared\website-tools\pipelines\news\site-filters.json`
+- `shared/website-tools/pipelines/news/config/sources.json`
+- `shared/website-tools/pipelines/news/site-filters.json`
 
 ## Summary
 
 | Metric | Value |
 | --- | --- |
-| Generated | 25 Apr 2026, 15:28 UTC |
+| Generated | 25 Apr 2026, 15:54 UTC |
 | Configured sources | 12 |
 | AI Resource Hub routed sources | 12 |
 | Automated sources | 12 |
