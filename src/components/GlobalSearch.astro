@@ -16,7 +16,6 @@ interface Props {
 
 const { items, baseUrl: _baseUrl = '/' } = Astro.props;
 
-const itemsJSON = JSON.stringify(items);
 const typeLabels: Record<string, string> = {
   model: 'Model',
   provider: 'Provider',
@@ -32,6 +31,11 @@ const typeColors: Record<string, string> = {
   glossary: 'var(--color-danger)',
   guide: 'var(--color-accent-muted)',
 };
+
+const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+const itemsJSON = safeJson(items);
+const typeLabelsJSON = safeJson(typeLabels);
+const typeColorsJSON = safeJson(typeColors);
 ---
 
 <div class="global-search" data-global-search>
@@ -79,12 +83,24 @@ const typeColors: Record<string, string> = {
   </div>
 </div>
 
-<script define:vars={{ itemsJSON, typeLabels, typeColors }}>
+<script is:inline type="application/json" data-global-search-items set:html={itemsJSON}></script>
+<script is:inline type="application/json" data-global-search-labels set:html={typeLabelsJSON}></script>
+<script is:inline type="application/json" data-global-search-colors set:html={typeColorsJSON}></script>
+
+<script is:inline>
   (() => {
-    const root = document.currentScript?.previousElementSibling;
+    const script = document.currentScript;
+    const root = script?.parentElement?.querySelector('[data-global-search]');
     if (!(root instanceof HTMLElement)) return;
 
-    const items = JSON.parse(itemsJSON);
+    const itemsPayload = script?.parentElement?.querySelector('[data-global-search-items]');
+    const labelsPayload = script?.parentElement?.querySelector('[data-global-search-labels]');
+    const colorsPayload = script?.parentElement?.querySelector('[data-global-search-colors]');
+    if (!itemsPayload || !labelsPayload || !colorsPayload) return;
+
+    const items = JSON.parse(itemsPayload.textContent ?? '[]');
+    const typeLabels = JSON.parse(labelsPayload.textContent ?? '{}');
+    const typeColors = JSON.parse(colorsPayload.textContent ?? '{}');
     const trigger = root.querySelector('[data-search-trigger]');
     const overlay = root.querySelector('[data-search-overlay]');
     const backdrop = root.querySelector('[data-search-backdrop]');

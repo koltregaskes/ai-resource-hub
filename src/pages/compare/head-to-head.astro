@@ -21,7 +21,8 @@ for (const m of models) {
 }
 
 // Serialise data for client-side JS
-const modelsJSON = JSON.stringify(models.map(m => ({
+const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+const modelsJSON = safeJson(models.map(m => ({
   id: m.id,
   name: m.name,
   provider: m.provider,
@@ -40,10 +41,11 @@ const modelsJSON = JSON.stringify(models.map(m => ({
   notes: m.notes || '',
 })));
 
-const benchmarksJSON = JSON.stringify(modelBenchmarks);
-const benchmarkNamesJSON = JSON.stringify(
+const benchmarksJSON = safeJson(modelBenchmarks);
+const benchmarkNamesJSON = safeJson(
   Object.fromEntries(allBenchmarks.map(b => [b.id, { name: b.name, category: b.category, max: b.scale_max }]))
 );
+const baseJSON = safeJson(base);
 ---
 
 <BaseLayout
@@ -224,10 +226,26 @@ const benchmarkNamesJSON = JSON.stringify(
     </div>
   </section>
 
-  <script define:vars={{ modelsJSON, benchmarksJSON, benchmarkNamesJSON, base }}>
-    const models = JSON.parse(modelsJSON);
-    const benchmarkScores = JSON.parse(benchmarksJSON);
-    const benchmarkNames = JSON.parse(benchmarkNamesJSON);
+  <script is:inline type="application/json" id="head-to-head-models-data" set:html={modelsJSON}></script>
+  <script is:inline type="application/json" id="head-to-head-benchmark-scores-data" set:html={benchmarksJSON}></script>
+  <script is:inline type="application/json" id="head-to-head-benchmark-names-data" set:html={benchmarkNamesJSON}></script>
+  <script is:inline type="application/json" id="head-to-head-base-data" set:html={baseJSON}></script>
+
+  <script is:inline>
+    const readJsonPayload = (id, fallback) => {
+      const element = document.getElementById(id);
+      if (!element?.textContent) return fallback;
+      try {
+        return JSON.parse(element.textContent);
+      } catch {
+        return fallback;
+      }
+    };
+
+    const models = readJsonPayload('head-to-head-models-data', []);
+    const benchmarkScores = readJsonPayload('head-to-head-benchmark-scores-data', {});
+    const benchmarkNames = readJsonPayload('head-to-head-benchmark-names-data', {});
+    const base = readJsonPayload('head-to-head-base-data', '/');
 
     const selects = document.querySelectorAll('.model-select');
     const addBtn = document.getElementById('add-model-btn');

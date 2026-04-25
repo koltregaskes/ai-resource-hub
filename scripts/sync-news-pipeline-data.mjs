@@ -1,8 +1,35 @@
 import fs from 'node:fs/promises';
+import fsSync from 'node:fs';
 import path from 'node:path';
 
 const repoRoot = process.cwd();
-const estateRoot = path.resolve(repoRoot, '..', '..');
+function resolveEstateRoot() {
+  const candidates = [
+    process.env.WEBSITES_ESTATE_ROOT,
+    path.resolve(repoRoot, '..', '..'),
+    'W:\\Websites',
+    'C:\\Workspaces\\Websites',
+  ].filter(Boolean);
+
+  for (const candidate of candidates) {
+    const siteFilters = path.join(
+      candidate,
+      'shared',
+      'website-tools',
+      'pipelines',
+      'news',
+      'site-filters.json'
+    );
+    const estateManifest = path.join(candidate, 'estate.yml');
+    if (fsSync.existsSync(siteFilters) && fsSync.existsSync(estateManifest)) {
+      return candidate;
+    }
+  }
+
+  return path.resolve(repoRoot, '..', '..');
+}
+
+const estateRoot = resolveEstateRoot();
 const siteFiltersPath = path.join(
   estateRoot,
   'shared',

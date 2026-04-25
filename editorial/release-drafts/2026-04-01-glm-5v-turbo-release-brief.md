@@ -3,11 +3,11 @@ title: "GLM 5V Turbo: release brief"
 slug: "2026-04-01-glm-5v-turbo-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "high"
+priority: "watch"
 model: "GLM 5V Turbo"
 provider: "Zhipu AI"
 release_date: "2026-04-01"
-generated_at: "2026-04-21T07:01:07.205Z"
+generated_at: "2026-04-25T14:25:45.750Z"
 ---
 
 # GLM 5V Turbo: release brief

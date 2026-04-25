@@ -7,7 +7,8 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 const models = getModelsByCategory('llm');
 
-const modelsJSON = JSON.stringify(models.map(m => ({
+const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+const modelsJSON = safeJson(models.map(m => ({
   id: m.id,
   name: m.name,
   provider: m.provider,
@@ -24,6 +25,7 @@ const modelsJSON = JSON.stringify(models.map(m => ({
   apiAvailable: m.apiAvailable,
   notes: m.notes,
 })));
+const baseJSON = safeJson(base);
 ---
 
 <BaseLayout
@@ -80,8 +82,22 @@ const modelsJSON = JSON.stringify(models.map(m => ({
     </div>
   </section>
 
-  <script define:vars={{ modelsJSON, base }}>
-    const models = JSON.parse(modelsJSON);
+  <script is:inline type="application/json" id="quiz-models-data" set:html={modelsJSON}></script>
+  <script is:inline type="application/json" id="quiz-base-data" set:html={baseJSON}></script>
+
+  <script is:inline>
+    const readJsonPayload = (id, fallback) => {
+      const element = document.getElementById(id);
+      if (!element?.textContent) return fallback;
+      try {
+        return JSON.parse(element.textContent);
+      } catch {
+        return fallback;
+      }
+    };
+
+    const models = readJsonPayload('quiz-models-data', []);
+    const base = readJsonPayload('quiz-base-data', '/');
 
     /* ─── Questions ───────────────────────────────────────────── */
     const questions = [

@@ -12,6 +12,8 @@ const cacheDir = path.join(repoRoot, 'data', 'pg-cache');
 const publicDataDir = path.join(repoRoot, 'public', 'data');
 const providerStatusPath = path.join(repoRoot, 'data', 'provider-status.json');
 const releaseDeskPath = path.join(publicDataDir, 'model-release-desk.json');
+const publicModelStatuses = ['active', 'tracking', 'preview'];
+
 interface CacheModel {
   id: string;
   name?: string | null;
@@ -87,7 +89,7 @@ function main() {
   const db = new Database(dbPath, { readonly: true });
   const failures: string[] = [];
 
-  const cacheModels = loadJson<CacheModel>('models').filter((model) => (model.status ?? 'active') !== 'retired');
+  const cacheModels = loadJson<CacheModel>('models').filter((model) => publicModelStatuses.includes((model.status ?? 'active').toLowerCase()));
   const cacheProviders = loadJson<Record<string, unknown>>('providers');
   const cacheBenchmarks = loadJson<Record<string, unknown>>('benchmark_scores');
   const cacheNews = loadJson<CacheNews>('news');
@@ -98,7 +100,11 @@ function main() {
 
   const dbCounts = {
     providers: Number((db.prepare('SELECT COUNT(*) AS count FROM providers').get() as { count: number }).count),
-    models: Number((db.prepare('SELECT COUNT(*) AS count FROM models').get() as { count: number }).count),
+    models: Number((db.prepare(`
+      SELECT COUNT(*) AS count
+      FROM models
+      WHERE LOWER(COALESCE(status, 'active')) IN ('active', 'tracking', 'preview')
+    `).get() as { count: number }).count),
     benchmarkScores: Number((db.prepare('SELECT COUNT(*) AS count FROM benchmark_scores').get() as { count: number }).count),
   };
 

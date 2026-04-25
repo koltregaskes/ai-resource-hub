@@ -3,11 +3,11 @@ title: "Grok 4.20 Multi-Agent: release brief"
 slug: "2026-03-31-grok-4-20-multi-agent-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "high"
+priority: "watch"
 model: "Grok 4.20 Multi-Agent"
 provider: "xAI"
 release_date: "2026-03-31"
-generated_at: "2026-04-21T07:01:07.208Z"
+generated_at: "2026-04-25T14:25:45.750Z"
 ---
 
 # Grok 4.20 Multi-Agent: release brief
@@ -16,7 +16,7 @@ xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related stories and 0 
 
 ## Release summary
 
-Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. Tracking only until benchmark and quality coverage is available. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

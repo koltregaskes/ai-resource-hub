@@ -7,11 +7,11 @@
     "status_url": null,
     "api_docs_url": null,
     "description": "01.AI builds the Yi family and related multilingual foundation models.",
-    "founded": null,
-    "headquarters": null,
-    "ceo": null,
-    "funding": null,
-    "updated_at": "2026-04-21 07:00:14"
+    "founded": "2023-03-01",
+    "headquarters": "Beijing, China",
+    "ceo": "Kai-Fu Lee",
+    "funding": "$1B+",
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "ai21",
@@ -25,7 +25,7 @@
     "headquarters": "Tel Aviv, Israel",
     "ceo": "Yoav Shoham",
     "funding": "$336M",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "alibaba",
@@ -39,21 +39,21 @@
     "headquarters": "Hangzhou, China",
     "ceo": "Daniel Zhang",
     "funding": "Alibaba subsidiary",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "amazon",
     "name": "Amazon",
     "colour": "#ff9900",
     "website": "https://aws.amazon.com/bedrock",
-    "status_url": null,
+    "status_url": "https://health.aws.amazon.com",
     "api_docs_url": "https://docs.aws.amazon.com/bedrock",
     "description": "Amazon publishes the Nova family through AWS Bedrock.",
     "founded": "1994-07-05",
     "headquarters": "Seattle, WA",
     "ceo": "Andy Jassy",
     "funding": "Amazon subsidiary",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "anthropic",
@@ -67,7 +67,7 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Dario Amodei",
     "funding": "$7.6B+",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "assemblyai",
@@ -75,13 +75,13 @@
     "colour": "#ef4444",
     "website": "https://www.assemblyai.com",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://www.assemblyai.com/docs",
     "description": "AI speech-to-text and audio intelligence API platform.",
     "founded": "2017-01-01",
     "headquarters": "San Francisco, CA",
     "ceo": "Dylan Fox",
     "funding": "$115M",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "blackforest",
@@ -95,7 +95,7 @@
     "headquarters": "Freiburg, Germany",
     "ceo": "Robin Rombach",
     "funding": "$31M",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "cartesia",
@@ -103,13 +103,13 @@
     "colour": "#6366f1",
     "website": "https://cartesia.ai",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://docs.cartesia.ai",
     "description": "State-space model AI for ultra-low-latency voice synthesis.",
     "founded": "2023-01-01",
     "headquarters": "San Francisco, CA",
     "ceo": "Karan Goel",
     "funding": "$27M",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "cohere",
@@ -123,7 +123,7 @@
     "headquarters": "Toronto, Canada",
     "ceo": "Aidan Gomez",
     "funding": "$445M+",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "deepseek",
@@ -137,35 +137,35 @@
     "headquarters": "Hangzhou, China",
     "ceo": "Liang Wenfeng",
     "funding": "High-Flyer Capital",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "deepgram",
     "name": "Deepgram",
     "colour": "#13ef93",
     "website": "https://deepgram.com",
-    "status_url": null,
-    "api_docs_url": null,
+    "status_url": "https://status.deepgram.com",
+    "api_docs_url": "https://developers.deepgram.com",
     "description": "Enterprise speech recognition and text-to-speech AI.",
     "founded": "2015-01-01",
     "headquarters": "San Francisco, CA",
     "ceo": "Scott Stephenson",
     "funding": "$86M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "elevenlabs",
     "name": "ElevenLabs",
     "colour": "#2563eb",
     "website": "https://elevenlabs.io",
-    "status_url": null,
-    "api_docs_url": null,
+    "status_url": "https://status.elevenlabs.io",
+    "api_docs_url": "https://elevenlabs.io/docs",
     "description": "Leading AI voice synthesis and cloning platform. Realistic speech generation.",
     "founded": "2022-01-01",
     "headquarters": "New York, NY",
     "ceo": "Mati Staniszewski",
     "funding": "$101M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "google",
@@ -179,21 +179,21 @@
     "headquarters": "London / Mountain View",
     "ceo": "Demis Hassabis",
     "funding": "Alphabet subsidiary",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "veo",
     "name": "Google Veo",
     "colour": "#34a853",
     "website": "https://deepmind.google/technologies/veo",
-    "status_url": null,
+    "status_url": "https://status.cloud.google.com",
     "api_docs_url": null,
     "description": "Google DeepMind's video generation model family.",
     "founded": "2024-05-01",
     "headquarters": "London, UK",
     "ceo": "Demis Hassabis",
     "funding": "Alphabet subsidiary",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "hailuo",
@@ -207,7 +207,7 @@
     "headquarters": "Shanghai, China",
     "ceo": "Yan Junjie",
     "funding": "MiniMax subsidiary",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "ideogram",
@@ -215,13 +215,13 @@
     "colour": "#ff6b6b",
     "website": "https://ideogram.ai",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://developer.ideogram.ai/docs",
     "description": "AI image generation specialising in text rendering within images.",
     "founded": "2023-08-01",
     "headquarters": "Toronto, Canada",
     "ceo": "Mohammad Norouzi",
     "funding": "$80M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "inflection",
@@ -229,13 +229,13 @@
     "colour": "#f97316",
     "website": "https://inflection.ai",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://docs.inflection.ai",
     "description": "Inflection develops conversational and assistant-style language models.",
-    "founded": null,
-    "headquarters": null,
-    "ceo": null,
-    "funding": null,
-    "updated_at": "2026-04-21 07:00:14"
+    "founded": "2022-01-01",
+    "headquarters": "Palo Alto, CA",
+    "ceo": "Sean White",
+    "funding": "$1.5B+",
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "kling",
@@ -249,7 +249,7 @@
     "headquarters": "Beijing, China",
     "ceo": "Su Hua",
     "funding": "Kuaishou subsidiary",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "leonardo",
@@ -263,7 +263,7 @@
     "headquarters": "Sydney, Australia",
     "ceo": "JJ Fiasson",
     "funding": "$31M",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "luma",
@@ -271,13 +271,13 @@
     "colour": "#7c3aed",
     "website": "https://lumalabs.ai",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://docs.lumalabs.ai",
     "description": "Creator of Dream Machine for AI video and 3D generation.",
     "founded": "2021-01-01",
     "headquarters": "Palo Alto, CA",
     "ceo": "Amit Jain",
     "funding": "$43M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "meta",
@@ -285,13 +285,13 @@
     "colour": "#0a66ff",
     "website": "https://ai.meta.com/llama",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://llama.meta.com/docs",
     "description": "Meta publishes the Llama family of open-weight models.",
     "founded": "2013-09-01",
     "headquarters": "Menlo Park, CA",
     "ceo": "Mark Zuckerberg",
     "funding": "Meta subsidiary",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "microsoft",
@@ -301,25 +301,25 @@
     "status_url": null,
     "api_docs_url": "https://learn.microsoft.com/azure/ai-foundry/model-inference/concepts/models",
     "description": "Microsoft publishes Phi-family models and hosts third-party frontier models via Azure AI Foundry.",
-    "founded": null,
-    "headquarters": null,
-    "ceo": null,
-    "funding": null,
-    "updated_at": "2026-04-21 07:00:14"
+    "founded": "1975-04-04",
+    "headquarters": "Redmond, WA",
+    "ceo": "Satya Nadella",
+    "funding": "Public company",
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "midjourney",
     "name": "Midjourney",
     "colour": "#5865f2",
     "website": "https://midjourney.com",
-    "status_url": null,
+    "status_url": "https://status.midjourney.com",
     "api_docs_url": null,
     "description": "Independent research lab producing top-tier AI image generation.",
     "founded": "2021-08-01",
     "headquarters": "San Francisco, CA",
     "ceo": "David Holz",
     "funding": "Self-funded",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "minimax",
@@ -333,7 +333,7 @@
     "headquarters": "Shanghai, China",
     "ceo": "Yan Junjie",
     "funding": "$600M+",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "mistral",
@@ -347,7 +347,7 @@
     "headquarters": "Paris, France",
     "ceo": "Arthur Mensch",
     "funding": "€600M+",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "moonshot",
@@ -361,7 +361,7 @@
     "headquarters": "Beijing, China",
     "ceo": null,
     "funding": null,
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "nvidia",
@@ -371,11 +371,11 @@
     "status_url": null,
     "api_docs_url": "https://docs.api.nvidia.com",
     "description": "NVIDIA publishes Nemotron and hosted inference APIs for open models.",
-    "founded": null,
-    "headquarters": null,
-    "ceo": null,
-    "funding": null,
-    "updated_at": "2026-04-21 07:00:14"
+    "founded": "1993-01-01",
+    "headquarters": "Santa Clara, CA",
+    "ceo": "Jensen Huang",
+    "funding": "Public company",
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "openai",
@@ -389,7 +389,7 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Sam Altman",
     "funding": "$13B+",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "perplexity",
@@ -403,7 +403,7 @@
     "headquarters": "San Francisco, CA",
     "ceo": "Aravind Srinivas",
     "funding": "$500M+",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "pika",
@@ -417,7 +417,7 @@
     "headquarters": "Palo Alto, CA",
     "ceo": "Demi Guo",
     "funding": "$135M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "play-ht",
@@ -425,13 +425,13 @@
     "colour": "#0ea5e9",
     "website": "https://play.ht",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://docs.play.ht",
     "description": "AI voice generation platform with natural conversational voices.",
     "founded": "2016-01-01",
     "headquarters": "San Francisco, CA",
     "ceo": "Hammad Syed",
     "funding": "$20M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "reka",
@@ -445,7 +445,7 @@
     "headquarters": "London, UK",
     "ceo": "Dani Yogatama",
     "funding": "$58M",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "resemble",
@@ -453,13 +453,13 @@
     "colour": "#f43f5e",
     "website": "https://www.resemble.ai",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://docs.resemble.ai",
     "description": "AI voice cloning and synthesis for enterprises.",
     "founded": "2019-01-01",
     "headquarters": "Toronto, Canada",
     "ceo": "Zohaib Ahmed",
     "funding": "$28M",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "runway",
@@ -467,13 +467,27 @@
     "colour": "#00d4ff",
     "website": "https://runwayml.com",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://docs.runwayml.com",
     "description": "AI creative suite. Pioneer in AI video generation with Gen-3 Alpha.",
     "founded": "2018-01-01",
     "headquarters": "New York, NY",
     "ceo": "Cristóbal Valenzuela",
     "funding": "$237M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "ssi",
+    "name": "Safe Superintelligence",
+    "colour": "#000000",
+    "website": "https://ssi.inc",
+    "status_url": null,
+    "api_docs_url": null,
+    "description": "AI safety startup founded by Ilya Sutskever. Focused solely on safe superintelligence.",
+    "founded": "2024-06-19",
+    "headquarters": "Palo Alto, CA",
+    "ceo": "Ilya Sutskever",
+    "funding": "$1B+",
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "stability",
@@ -481,13 +495,13 @@
     "colour": "#a855f7",
     "website": "https://stability.ai",
     "status_url": null,
-    "api_docs_url": null,
+    "api_docs_url": "https://platform.stability.ai/docs",
     "description": "Creator of Stable Diffusion open-source image generation models.",
     "founded": "2019-01-01",
     "headquarters": "London, UK",
     "ceo": "Prem Akkaraju",
     "funding": "$200M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "suno",
@@ -501,7 +515,7 @@
     "headquarters": "Cambridge, MA",
     "ceo": "Mikey Shulman",
     "funding": "$125M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "udio",
@@ -515,7 +529,7 @@
     "headquarters": "New York, NY",
     "ceo": "David Ding",
     "funding": "$10M+",
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "zhipu",
@@ -529,7 +543,7 @@
     "headquarters": "Beijing, China",
     "ceo": "Tang Jie",
     "funding": "$400M+",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   },
   {
     "id": "xai",
@@ -543,6 +557,6 @@
     "headquarters": "Austin, TX",
     "ceo": "Elon Musk",
     "funding": "$6B+",
-    "updated_at": "2026-04-21 07:00:14"
+    "updated_at": "2026-04-25 14:03:00"
   }
 ]

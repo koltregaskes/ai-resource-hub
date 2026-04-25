@@ -370,8 +370,8 @@ VALUES
 -- Inflection AI
 INSERT OR IGNORE INTO models (id, name, provider_id, category, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, status)
 VALUES
-  ('inflection-3', 'Inflection 3.0', 'inflection', 'llm', 0, 0, 8192, 4096, 60, 68, '2024-03-01', 0, 'text', 0, 'Powers the Pi personal AI assistant.', 'active'),
-  ('inflection-2.5', 'Inflection 2.5', 'inflection', 'llm', 0, 0, 8192, 4096, 70, 63, '2024-01-01', 0, 'text', 0, 'Second gen model powering Pi.', 'active');
+  ('inflection-3', 'Inflection 3.0', 'inflection', 'llm', 0, 0, 8192, 4096, 60, 68, '2024-03-01', 0, 'text', 0, 'Legacy Pi assistant model; no current public API pricing tracked.', 'retired'),
+  ('inflection-2.5', 'Inflection 2.5', 'inflection', 'llm', 0, 0, 8192, 4096, 70, 63, '2024-01-01', 0, 'text', 0, 'Legacy Pi assistant model; no current public API pricing tracked.', 'retired');
 
 -- Additional OpenAI
 INSERT OR IGNORE INTO models (id, name, provider_id, category, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, status)

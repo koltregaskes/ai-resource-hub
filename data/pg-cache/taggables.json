@@ -1,1 +1,897 @@
-[]
+[
+  {
+    "tag_id": "coding",
+    "taggable_id": "aider-polyglot",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "aime-2025",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "air-bench",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "arc-challenge",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "bfcl",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "bigcodebench",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "agents",
+    "taggable_id": "gaia",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "gpqa-diamond",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "humaneval",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "livecodebench",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "math-500",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "mathvista",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "healthcare",
+    "taggable_id": "medqa",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "mmmu",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "mmmu-pro",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "simpleqa",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "swe-bench-verified",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "agents",
+    "taggable_id": "tau-bench",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "trustllm",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "agents",
+    "taggable_id": "webarena",
+    "taggable_type": "benchmark"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-3-opus",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-3.5-sonnet",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-3.7-sonnet",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "claude-3.7-sonnet",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-haiku-3.5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-haiku-4.5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-opus-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "claude-opus-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "claude-opus-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-opus-4.5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-opus-4.6",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "claude-sonnet-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-sonnet-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "claude-sonnet-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "claude-sonnet-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-sonnet-4.5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "claude-sonnet-4.6",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "codestral",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "image-generation",
+    "taggable_id": "dall-e-3",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "deepseek-r1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "deepseek-r1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "deepseek-r1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "deepseek-r1-0528",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "deepseek-r1-0528",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "deepseek-r1-0528",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "deepseek-v2.5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "deepseek-v3",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "deepseek-v3",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "deepseek-v3.2",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "deepseek-v3.2",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "deepseek-v3.2",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "image-generation",
+    "taggable_id": "flux-1.1-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gemini-1.5-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gemini-1.5-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gemini-1.5-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gemini-2.0-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gemini-2.0-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gemini-2.0-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gemini-2.0-flash-lite",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gemini-2.5-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gemini-2.5-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gemini-2.5-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "gemini-2.5-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gemini-2.5-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gemini-2.5-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gemini-2.5-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "gemini-2.5-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gemini-3-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gemini-3-flash",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gemini-3-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gemini-3-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gemini-3-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gemini-3.1-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gemini-3.1-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gemini-3.1-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "gpt-4.1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gpt-4.1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gpt-4.1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gpt-4.1-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gpt-4.1-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gpt-4.1-nano",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "gpt-4.1-nano",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gpt-4.5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gpt-4o",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gpt-4o",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gpt-4o-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gpt-5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gpt-5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "gpt-5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "gpt-5.2",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "gpt-5.2",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "gpt-5.2",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "grok-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "grok-4-fast",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "grok-4.1-fast",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "image-generation",
+    "taggable_id": "imagen-3",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "jamba-1.5-large",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "video-generation",
+    "taggable_id": "kling-2.0",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "llama-3.1-405b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "llama-3.1-405b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "llama-3.1-70b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "llama-3.1-70b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "llama-3.1-8b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "llama-3.1-8b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "llama-3.3-70b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "llama-3.3-70b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "llama-4-maverick",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "llama-4-maverick",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "llama-4-maverick",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "llama-4-scout",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "long-context",
+    "taggable_id": "llama-4-scout",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "llama-4-scout",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "llama-4-scout",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "image-generation",
+    "taggable_id": "midjourney-v7",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "mistral-large-2",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "mistral-large-3",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "mistral-nemo",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "mistral-small-3.1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "nemotron-70b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "nemotron-70b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "o1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "o1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "o1-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "o1-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "o3",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "o3",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "o3-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "o3-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "o3-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "o3-pro",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "o4-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "o4-mini",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "phi-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "phi-4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "multimodal",
+    "taggable_id": "phi-4-multimodal",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "phi-4-multimodal",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "phi-4-reasoning",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "phi-4-reasoning",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "phi-4-reasoning",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "video-generation",
+    "taggable_id": "pika-2.1",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "qwen-2.5-72b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "qwen-2.5-coder-32b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "qwen-2.5-coder-32b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "qwen-qwq-32b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "reasoning",
+    "taggable_id": "qwen-qwq-32b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "qwen3-235b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "qwen3-235b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "qwen3-30b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "qwen3-30b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "qwen3-32b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "qwen3-32b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "coding",
+    "taggable_id": "qwen3-coder-480b",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "llm",
+    "taggable_id": "qwen3-max",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "video-generation",
+    "taggable_id": "runway-gen4",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "video-generation",
+    "taggable_id": "sora-turbo",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "image-generation",
+    "taggable_id": "stable-diffusion-3.5",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "video-generation",
+    "taggable_id": "veo-3",
+    "taggable_type": "model"
+  },
+  {
+    "tag_id": "research",
+    "taggable_id": "andrew-ng",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "research",
+    "taggable_id": "ashish-vaswani",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "chris-olah",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "clement-delangue",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "connor-leahy",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "dario-amodei",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "geoffrey-hinton",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "research",
+    "taggable_id": "jakob-uszkoreit",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "jan-leike",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "research",
+    "taggable_id": "jason-wei",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "liang-wenfeng",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "mark-zuckerberg",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "research",
+    "taggable_id": "niki-parmar",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "research",
+    "taggable_id": "noam-brown",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "research",
+    "taggable_id": "noam-shazeer",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "research",
+    "taggable_id": "percy-liang",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "sasha-luccioni",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "sasha-luccioni",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "stuart-russell",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "timnit-gebru",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "open-source",
+    "taggable_id": "yann-lecun",
+    "taggable_type": "person"
+  },
+  {
+    "tag_id": "ai-safety",
+    "taggable_id": "yoshua-bengio",
+    "taggable_type": "person"
+  }
+]

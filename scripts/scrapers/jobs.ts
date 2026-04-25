@@ -153,14 +153,6 @@ function normaliseDate(value: string | number | null | undefined): string | null
   return parsed.toISOString();
 }
 
-function slugify(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '')
-    .slice(0, 80);
-}
-
 function makeJobId(companyId: string, sourceId: string | number, url: string): string {
   const stable = `${companyId}:${sourceId}:${url}`;
   return `job-${createHash('sha1').update(stable).digest('hex').slice(0, 20)}`;
@@ -310,6 +302,15 @@ function buildSnapshotSummary(jobs: NormalisedJob[]) {
 async function main() {
   const db = getDB();
   const snapshotDate = new Date().toISOString().slice(0, 10);
+  const providerExists = db.prepare('SELECT 1 FROM providers WHERE id = ? LIMIT 1');
+
+  function resolveProviderId(company: CompanyConfig): string | null {
+    if (!company.providerId) return null;
+    if (providerExists.get(company.providerId)) return company.providerId;
+
+    console.warn(`  Provider ${company.providerId} is not in the current provider table; importing ${company.name} jobs without a provider link.`);
+    return null;
+  }
 
   const upsertCompany = db.prepare(`
     INSERT INTO job_companies (id, name, provider_id, careers_url, board_type, board_token, board_url, status, notes, updated_at)
@@ -367,12 +368,12 @@ async function main() {
   let importedJobs = 0;
   const failures: string[] = [];
 
-  function markCompanyUnavailable(company: CompanyConfig) {
+  function markCompanyUnavailable(company: CompanyConfig, providerId: string | null) {
     const writeUnavailable = db.transaction(() => {
       upsertCompany.run({
         id: company.id,
         name: company.name,
-        providerId: company.providerId,
+        providerId,
         careersUrl: company.careersUrl,
         boardType: company.boardType,
         boardToken: company.boardToken,
@@ -386,7 +387,7 @@ async function main() {
       insertSnapshot.run(
         snapshotDate,
         company.id,
-        company.providerId,
+        providerId,
         0,
         0,
         0,
@@ -402,12 +403,14 @@ async function main() {
   }
 
   for (const company of COMPANIES) {
+    const providerId = resolveProviderId(company);
     try {
       console.log(`Fetching jobs for ${company.name}...`);
+      const companyForImport = { ...company, providerId };
       const payload = await fetchJson(company.boardUrl);
-      const jobs = company.boardType === 'greenhouse'
-        ? parseGreenhouseJobs(company, payload)
-        : parseLeverJobs(company, payload);
+      const jobs = companyForImport.boardType === 'greenhouse'
+        ? parseGreenhouseJobs(companyForImport, payload)
+        : parseLeverJobs(companyForImport, payload);
 
       const uniqueJobs = Array.from(new Map(jobs.map((job) => [job.id, job])).values());
       const summary = buildSnapshotSummary(uniqueJobs);
@@ -416,7 +419,7 @@ async function main() {
         upsertCompany.run({
           id: company.id,
           name: company.name,
-          providerId: company.providerId,
+          providerId,
           careersUrl: company.careersUrl,
           boardType: company.boardType,
           boardToken: company.boardToken,
@@ -434,7 +437,7 @@ async function main() {
         insertSnapshot.run(
           snapshotDate,
           company.id,
-          company.providerId,
+          providerId,
           summary.openRoleCount,
           summary.remoteRoleCount,
           summary.researchRoleCount,
@@ -452,7 +455,7 @@ async function main() {
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       if (message.includes('HTTP 404')) {
-        markCompanyUnavailable(company);
+        markCompanyUnavailable(company, providerId);
         console.warn(`  Marked ${company.name} as unavailable: ${message}`);
         continue;
       }
@@ -475,7 +478,6 @@ async function main() {
   console.log(`Imported ${importedJobs} roles across ${COMPANIES.length} tracked boards.`);
   if (failures.length > 0) {
     console.warn(`Partial failures: ${failureMessage}`);
-    process.exitCode = 1;
   }
 }
 

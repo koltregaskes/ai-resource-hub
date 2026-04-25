@@ -17,7 +17,7 @@ function main() {
   const db = getDB();
   console.log('Generating model comparison spreadsheet...\n');
 
-  // Get all models with provider info
+  // Export only public launch models; retired/deprecated rows stay in the private DB.
   const models = db.prepare(`
     SELECT
       m.id, m.name, m.provider_id,
@@ -32,6 +32,7 @@ function main() {
       m.notes
     FROM models m
     LEFT JOIN providers p ON p.id = m.provider_id
+    WHERE LOWER(COALESCE(m.status, 'active')) IN ('active', 'tracking', 'preview')
     ORDER BY
       CASE m.status
         WHEN 'active' THEN 0

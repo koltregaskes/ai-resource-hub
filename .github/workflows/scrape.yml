@@ -36,6 +36,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Seed SQLite baseline
+        run: npm run seed
+
       - name: Run full hourly data refresh
         run: npm run scrape
         env:

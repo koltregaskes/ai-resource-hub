@@ -90,7 +90,8 @@ const modelsWithTrends = Object.entries(priceHistoryByModel)
   .slice(0, 8);
 
 // Price-to-quality scatter data
-const scatterData = JSON.stringify(paidModels.map(m => ({
+const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+const scatterData = safeJson(paidModels.map(m => ({
   name: m.name,
   provider: m.provider,
   colour: m.providerColour,
@@ -99,6 +100,7 @@ const scatterData = JSON.stringify(paidModels.map(m => ({
   price: ((m.inputPrice + 3 * m.outputPrice) / 4).toFixed(2),
   id: m.id,
 })));
+const baseJSON = safeJson(base);
 ---
 
 <BaseLayout
@@ -297,8 +299,22 @@ const scatterData = JSON.stringify(paidModels.map(m => ({
     </div>
   </section>
 
-  <script define:vars={{ scatterData, base }}>
-    const data = JSON.parse(scatterData);
+  <script is:inline type="application/json" id="pricing-scatter-data" set:html={scatterData}></script>
+  <script is:inline type="application/json" id="pricing-base-data" set:html={baseJSON}></script>
+
+  <script is:inline>
+    const readJsonPayload = (id, fallback) => {
+      const element = document.getElementById(id);
+      if (!element?.textContent) return fallback;
+      try {
+        return JSON.parse(element.textContent);
+      } catch {
+        return fallback;
+      }
+    };
+
+    const data = readJsonPayload('pricing-scatter-data', []);
+    const base = readJsonPayload('pricing-base-data', '/');
     const chart = document.getElementById('scatter-chart');
     if (chart && data.length > 0) {
       const minX = Math.min(...data.map(d => d.x));

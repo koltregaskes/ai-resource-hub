@@ -15,7 +15,8 @@ const models = getModelsByCategory('llm')
   })
   .slice(0, 20);
 
-const modelsJSON = JSON.stringify(models.map((model) => ({
+const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+const modelsJSON = safeJson(models.map((model) => ({
   id: model.id,
   name: model.name,
   provider: model.provider,
@@ -207,8 +208,11 @@ const officialTokenTools = OFFICIAL_TOKEN_TOOLS;
     </div>
   </section>
 
-  <script define:vars={{ modelsJSON }}>
-    const models = JSON.parse(modelsJSON);
+  <script is:inline type="application/json" id="token-counter-models-data" set:html={modelsJSON}></script>
+
+  <script is:inline>
+    const tokenCounterModelsPayload = document.getElementById('token-counter-models-data');
+    const models = tokenCounterModelsPayload?.textContent ? JSON.parse(tokenCounterModelsPayload.textContent) : [];
     const providerFilter = document.getElementById('token-provider-filter');
     const modelSearch = document.getElementById('token-model-search');
     const sortSelect = document.getElementById('token-sort');

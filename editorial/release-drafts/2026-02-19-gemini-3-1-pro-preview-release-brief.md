@@ -7,16 +7,16 @@ priority: "backfill"
 model: "Gemini 3.1 Pro Preview"
 provider: "Google"
 release_date: "2026-02-19"
-generated_at: "2026-04-21T07:01:07.248Z"
+generated_at: "2026-04-25T14:25:45.756Z"
 ---
 
 # Gemini 3.1 Pro Preview: release brief
 
-Google's Gemini 3.1 Pro Preview is on the release desk with 2 related stories and 2 benchmark signals to review.
+Google's Gemini 3.1 Pro Preview is on the release desk with 4 related stories and 2 benchmark signals to review.
 
 ## Release summary
 
-Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -30,8 +30,10 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 
 ## Outside coverage and early reactions
 
-- Aligned News (Scoble) (2026-04-20): [GPT-5.5 'Spud' Is Coming Thursday — Polymarket at 75%](https://x.com/AILeaksAndNews/status/2046227414422802919) - Braygent's take on GPT-5.5 'Spud' expected Thursday with 75% Polymarket probability, in the same week as Google Cloud Next, Tencent Hunyuan 3.0, and Qwen3.6-Max-Preview.
-- Google AI Blog (2026-04-21): [Start vibe coding in AI Studio with your Google AI subscription.](https://blog.google/innovation-and-ai/technology/developers-tools/google-one-ai-studio/)
+- Reddit r/ClaudeAI (2026-04-24): [We just got our first lead from a Google Ads campaign managed entirely by Claude Cowork.](https://reddit.com/r/ClaudeAI/comments/1susq39/we_just_got_our_first_lead_from_a_google_ads/) - Short backstory. Manage a full marketing team and AI is being pushed heavily throughout the company. No issues with it as we now have a ton of marketing automations in place that save time. We manage roughly $50k monthly google ad spend in a very tough tech saas niche. We launched a campaign and it wasn't doing great. No one's fault per-say, but I felt we were leaving optimizations on the table since we were managing MANY different campaigns with limited resources. Came up with the idea on us
+- Reddit r/ClaudeAI (2026-04-24): [Can we have a feature to show 24-h format instead of American?](https://reddit.com/r/ClaudeAI/comments/1sulp8w/can_we_have_a_feature_to_show_24h_format_instead/) - I understand that Claude is based in San Francisco. Still, only \~7% of world population is using am/pm format, while around 6 billion people use 24-h format. This is extremely confusing for me, I don't see this format every day, is it night or day? (of course I googled already, but why should it require extra effort)
+- Reddit r/ClaudeAI (2026-04-24): [Google Plans to Invest Up to $40 Billion in Anthropic (Gift Link)](https://reddit.com/r/ClaudeAI/comments/1sujusu/google_plans_to_invest_up_to_40_billion_in/) - Per Bloomberg: &gt; Google will invest $10 billion in Anthropic PBC, with another $30 billion potentially to follow, strengthening the relationship between two companies that are at once partners and rivals in the race to build artificial intelligence. &gt; &gt; Anthropic said that Google is committing to invest $10 billion now in cash at a $350 billion valuation, the same amount it was valued at in a funding round in February, not including the recent money raised. The Alphabet Inc.-owned com
+- Ars Technica AI (2026-04-25): [Google will invest as much as $40 billion in Anthropic](https://arstechnica.com/ai/2026/04/google-will-invest-as-much-as-40-billion-in-anthropic/)
 
 ## Suggested thread / post structure
 
@@ -52,5 +54,7 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/changelog)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
-- [Aligned News (Scoble): GPT-5.5 'Spud' Is Coming Thursday — Polymarket at 75%](https://x.com/AILeaksAndNews/status/2046227414422802919)
-- [Google AI Blog: Start vibe coding in AI Studio with your Google AI subscription.](https://blog.google/innovation-and-ai/technology/developers-tools/google-one-ai-studio/)
+- [Reddit r/ClaudeAI: We just got our first lead from a Google Ads campaign managed entirely by Claude Cowork.](https://reddit.com/r/ClaudeAI/comments/1susq39/we_just_got_our_first_lead_from_a_google_ads/)
+- [Reddit r/ClaudeAI: Can we have a feature to show 24-h format instead of American?](https://reddit.com/r/ClaudeAI/comments/1sulp8w/can_we_have_a_feature_to_show_24h_format_instead/)
+- [Reddit r/ClaudeAI: Google Plans to Invest Up to $40 Billion in Anthropic (Gift Link)](https://reddit.com/r/ClaudeAI/comments/1sujusu/google_plans_to_invest_up_to_40_billion_in/)
+- [Ars Technica AI: Google will invest as much as $40 billion in Anthropic](https://arstechnica.com/ai/2026/04/google-will-invest-as-much-as-40-billion-in-anthropic/)

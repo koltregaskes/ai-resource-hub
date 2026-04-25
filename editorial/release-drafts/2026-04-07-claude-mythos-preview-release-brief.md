@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-04-21T07:01:07.198Z"
+generated_at: "2026-04-25T14:25:45.748Z"
 ---
 
 # Claude Mythos Preview: release brief
 
-Anthropic's Claude Mythos Preview is on the release desk with 2 related stories and 0 benchmark signals to review.
+Anthropic's Claude Mythos Preview is on the release desk with 6 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,8 +30,12 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 ## Outside coverage and early reactions
 
-- Aligned News (Scoble) (2026-04-20): [OpenMythos: The Community Rebuilt Claude Mythos in PyTorch](https://x.com/mkovarski/status/2046040942830928276) - Braygent's take on OpenMythos: the community rebuilt Claude Mythos in PyTorch with 1,000+ retweets, demonstrating that open source does not wait for permission from proprietary labs.
-- Aligned News (Scoble) (2026-04-20): [Anthropic Launched a Figma Competitor and Nobody Is Talking About It Enough](https://x.com/theneurondaily/status/2046227398317035871) - Braygent's take on Claude Design: it reads your codebase before generating interfaces, making it fundamentally different from generic AI design tools and a direct threat to Figma.
+- The Verge AI (2026-04-25): [Anthropic’s Mythos breach was humiliating](https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation)
+- Reddit r/ClaudeAI (2026-04-24): [Anyone noticed Anthropic didn't added the model Opus 4.7 and Mythos Preview to there Transparency Hub?](https://reddit.com/r/ClaudeAI/comments/1sukoe9/anyone_noticed_anthropic_didnt_added_the_model/) - [https://www.anthropic.com/transparency](https://www.anthropic.com/transparency)
+- Anthropic News (2026-04-25): [Apr 20, 2026AnnouncementsAnthropic and Amazon expand collaboration for up to 5 gigawatts of new compute](https://www.anthropic.com/news/anthropic-amazon-compute)
+- Anthropic News (2026-04-25): [Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce](https://www.anthropic.com/news/anthropic-nec)
+- Aligned News (Scoble) (2026-04-25): [Anthropic Project Deal — Claude Autonomously Ran a Real Marketplace](https://x.com/AnthropicAI/status/2047835257517588511) - Anthropic's Project Deal had Claude agents conduct 186 real transactions, with Opus outperforming Haiku by 71% in negotiation outcomes.
+- Aligned News (Scoble) (2026-04-25): [@Scobleizer He Is Using Anthropic Claude — Same AI San Francisco Coders Are Using](https://x.com/Scobleizer/status/2047728949841760451) - Scoble notes that lawyer Mike Showalter uses Anthropic Claude, the same AI that SF coders are using to disrupt software firms, calling it remarkable.
 
 ## Suggested thread / post structure
 
@@ -53,5 +57,9 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 - [Official launch or docs](https://www.anthropic.com/glasswing)
 - [Provider API/docs](https://docs.anthropic.com)
-- [Aligned News (Scoble): OpenMythos: The Community Rebuilt Claude Mythos in PyTorch](https://x.com/mkovarski/status/2046040942830928276)
-- [Aligned News (Scoble): Anthropic Launched a Figma Competitor and Nobody Is Talking About It Enough](https://x.com/theneurondaily/status/2046227398317035871)
+- [The Verge AI: Anthropic’s Mythos breach was humiliating](https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation)
+- [Reddit r/ClaudeAI: Anyone noticed Anthropic didn't added the model Opus 4.7 and Mythos Preview to there Transparency Hub?](https://reddit.com/r/ClaudeAI/comments/1sukoe9/anyone_noticed_anthropic_didnt_added_the_model/)
+- [Anthropic News: Apr 20, 2026AnnouncementsAnthropic and Amazon expand collaboration for up to 5 gigawatts of new compute](https://www.anthropic.com/news/anthropic-amazon-compute)
+- [Anthropic News: Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce](https://www.anthropic.com/news/anthropic-nec)
+- [Aligned News (Scoble): Anthropic Project Deal — Claude Autonomously Ran a Real Marketplace](https://x.com/AnthropicAI/status/2047835257517588511)
+- [Aligned News (Scoble): @Scobleizer He Is Using Anthropic Claude — Same AI San Francisco Coders Are Using](https://x.com/Scobleizer/status/2047728949841760451)

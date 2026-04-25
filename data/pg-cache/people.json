@@ -9,7 +9,7 @@
     "twitter": "@aidangomez",
     "website": null,
     "notable_for": "Transformer paper co-author, Cohere",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Cohere"
   },
   {
@@ -22,7 +22,7 @@
     "twitter": null,
     "website": null,
     "notable_for": "Dream Machine, Ray 2, AI video/3D",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Luma AI"
   },
   {
@@ -35,7 +35,20 @@
     "twitter": "@karpathy",
     "website": null,
     "notable_for": "Tesla Autopilot, AI education, nanoGPT",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "andrew-ng",
+    "name": "Andrew Ng",
+    "role": "Founder",
+    "organisation": "DeepLearning.AI / Landing AI",
+    "provider_id": null,
+    "bio": "Co-founder of Google Brain. Former VP and Chief Scientist at Baidu. Stanford professor and pioneer in online AI education.",
+    "twitter": "@AndrewYNg",
+    "website": null,
+    "notable_for": "Google Brain co-founder, Coursera AI courses, deeplearning.ai",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": null
   },
   {
@@ -48,7 +61,7 @@
     "twitter": "@AravSrinivas",
     "website": null,
     "notable_for": "Perplexity AI search, Sonar models",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Perplexity"
   },
   {
@@ -61,8 +74,21 @@
     "twitter": "@arthurmensch",
     "website": null,
     "notable_for": "Mistral AI, European AI leadership",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Mistral"
+  },
+  {
+    "id": "ashish-vaswani",
+    "name": "Ashish Vaswani",
+    "role": "Co-founder",
+    "organisation": "Essential AI",
+    "provider_id": null,
+    "bio": "Co-author of the Transformer paper (\"Attention Is All You Need\"). Co-founded Essential AI.",
+    "twitter": null,
+    "website": null,
+    "notable_for": "Transformer architecture co-inventor, Essential AI",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
   },
   {
     "id": "chris-olah",
@@ -74,8 +100,34 @@
     "twitter": "@ch402",
     "website": null,
     "notable_for": "Neural network visualisation, mechanistic interpretability",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Anthropic"
+  },
+  {
+    "id": "clement-delangue",
+    "name": "Clement Delangue",
+    "role": "CEO",
+    "organisation": "Hugging Face",
+    "provider_id": null,
+    "bio": "Co-founder and CEO of Hugging Face. Built the largest open-source AI community and model hub.",
+    "twitter": "@ClementDelangue",
+    "website": null,
+    "notable_for": "Hugging Face platform, open-source AI community",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "connor-leahy",
+    "name": "Connor Leahy",
+    "role": "CEO",
+    "organisation": "Conjecture",
+    "provider_id": null,
+    "bio": "CEO of Conjecture. Former EleutherAI lead. Prominent AI safety advocate and policy commentator.",
+    "twitter": "@NPCollapse",
+    "website": null,
+    "notable_for": "EleutherAI, Conjecture, AI safety advocacy",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
   },
   {
     "id": "cristobal-valenzuela",
@@ -87,7 +139,7 @@
     "twitter": "@c_valenzuelab",
     "website": null,
     "notable_for": "Runway Gen-3/Gen-4, AI video generation",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Runway"
   },
   {
@@ -100,7 +152,7 @@
     "twitter": "@DanielaAmodei",
     "website": null,
     "notable_for": "Anthropic co-founder, business strategy",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Anthropic"
   },
   {
@@ -113,7 +165,7 @@
     "twitter": "@DarioAmodei",
     "website": null,
     "notable_for": "Anthropic, Claude, AI safety research",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Anthropic"
   },
   {
@@ -126,7 +178,7 @@
     "twitter": null,
     "website": null,
     "notable_for": "Midjourney, AI art generation pioneer",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Midjourney"
   },
   {
@@ -139,7 +191,7 @@
     "twitter": null,
     "website": null,
     "notable_for": "Pika video generation",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Pika"
   },
   {
@@ -152,7 +204,7 @@
     "twitter": "@demaboroshii",
     "website": null,
     "notable_for": "AlphaGo, AlphaFold, Gemini, Nobel Prize",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Google"
   },
   {
@@ -165,7 +217,7 @@
     "twitter": "@dylanjamesfox",
     "website": null,
     "notable_for": "AssemblyAI, Universal-2 speech model",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "AssemblyAI"
   },
   {
@@ -178,7 +230,7 @@
     "twitter": "@elonmusk",
     "website": null,
     "notable_for": "xAI/Grok, Tesla, SpaceX",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "xAI"
   },
   {
@@ -191,7 +243,7 @@
     "twitter": "@EMostaque",
     "website": null,
     "notable_for": "Stable Diffusion, open-source image generation",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Stability AI"
   },
   {
@@ -204,7 +256,7 @@
     "twitter": "@drfeifei",
     "website": null,
     "notable_for": "ImageNet, Stanford HAI, computer vision pioneer",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": null
   },
   {
@@ -217,7 +269,20 @@
     "twitter": "@geoffreyhinton",
     "website": null,
     "notable_for": "Backpropagation, deep learning, Nobel Prize, AI safety warnings",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "georgi-gerganov",
+    "name": "Georgi Gerganov",
+    "role": "Creator of llama.cpp",
+    "organisation": null,
+    "provider_id": null,
+    "bio": "Created llama.cpp, enabling LLMs on consumer hardware.",
+    "twitter": null,
+    "website": "https://github.com/ggerganov",
+    "notable_for": "Creator of llama.cpp and GGML",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": null
   },
   {
@@ -230,8 +295,21 @@
     "twitter": "@gaborade",
     "website": null,
     "notable_for": "OpenAI co-founder, GPT demos",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "OpenAI"
+  },
+  {
+    "id": "harrison-chase",
+    "name": "Harrison Chase",
+    "role": "CEO, LangChain",
+    "organisation": null,
+    "provider_id": null,
+    "bio": "Created LangChain, the most popular LLM application framework.",
+    "twitter": "hwchase17",
+    "website": "https://langchain.com",
+    "notable_for": "Creator of LangChain",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
   },
   {
     "id": "ilya-sutskever",
@@ -243,7 +321,72 @@
     "twitter": null,
     "website": null,
     "notable_for": "AlexNet, OpenAI co-founder, SSI",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "OpenAI"
+  },
+  {
+    "id": "jack-clark",
+    "name": "Jack Clark",
+    "role": "Co-founder, Anthropic",
+    "organisation": null,
+    "provider_id": "anthropic",
+    "bio": "Import AI newsletter. Former OpenAI Policy Director.",
+    "twitter": null,
+    "website": null,
+    "notable_for": "Import AI newsletter",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "Anthropic"
+  },
+  {
+    "id": "jakob-uszkoreit",
+    "name": "Jakob Uszkoreit",
+    "role": "Co-founder",
+    "organisation": "Inceptive",
+    "provider_id": null,
+    "bio": "Co-author of the Transformer paper. Founded Inceptive, applying AI to RNA drug design.",
+    "twitter": null,
+    "website": null,
+    "notable_for": "Transformer co-inventor, Inceptive, RNA drug design",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "jan-leike",
+    "name": "Jan Leike",
+    "role": "Head of Alignment",
+    "organisation": "Anthropic",
+    "provider_id": "anthropic",
+    "bio": "Co-leads Alignment Science at Anthropic. Former leader of OpenAI superalignment team. Focuses on scalable oversight and interpretability.",
+    "twitter": "@janleike",
+    "website": null,
+    "notable_for": "AI alignment research, scalable oversight, superalignment",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "Anthropic"
+  },
+  {
+    "id": "jared-kaplan",
+    "name": "Jared Kaplan",
+    "role": "CSO, Anthropic",
+    "organisation": null,
+    "provider_id": "anthropic",
+    "bio": "Co-founded Anthropic. Neural scaling laws.",
+    "twitter": null,
+    "website": null,
+    "notable_for": "Neural scaling laws",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "Anthropic"
+  },
+  {
+    "id": "jason-wei",
+    "name": "Jason Wei",
+    "role": "Research Scientist",
+    "organisation": "OpenAI",
+    "provider_id": "openai",
+    "bio": "AI researcher known for discovering chain-of-thought prompting and scaling laws for emergent abilities in LLMs.",
+    "twitter": "@_jasonwei",
+    "website": null,
+    "notable_for": "Chain-of-thought prompting, emergent abilities, scaling laws",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "OpenAI"
   },
   {
@@ -256,8 +399,21 @@
     "twitter": "@JeffDean",
     "website": null,
     "notable_for": "MapReduce, TensorFlow, Transformer co-author",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Google"
+  },
+  {
+    "id": "jensen-huang",
+    "name": "Jensen Huang",
+    "role": "CEO",
+    "organisation": "NVIDIA",
+    "provider_id": "nvidia",
+    "bio": "Co-founder and CEO of NVIDIA. Built the dominant AI hardware platform. NVIDIA GPUs power most AI training.",
+    "twitter": null,
+    "website": null,
+    "notable_for": "NVIDIA GPUs, CUDA, AI hardware revolution",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "NVIDIA"
   },
   {
     "id": "jinze-bai",
@@ -269,8 +425,34 @@
     "twitter": null,
     "website": null,
     "notable_for": "Qwen model series, open-weight LLMs",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Alibaba"
+  },
+  {
+    "id": "john-schulman",
+    "name": "John Schulman",
+    "role": "Co-founder & Researcher",
+    "organisation": null,
+    "provider_id": "anthropic",
+    "bio": "Co-founder of OpenAI, later joined Anthropic. Creator of PPO.",
+    "twitter": "johnschulman2",
+    "website": null,
+    "notable_for": "Creator of PPO algorithm",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "Anthropic"
+  },
+  {
+    "id": "kai-fu-lee",
+    "name": "Kai-Fu Lee",
+    "role": "CEO",
+    "organisation": "01.AI",
+    "provider_id": "01ai",
+    "bio": "Former Microsoft and Google executive. Founded 01.AI and Sinovation Ventures. Leading voice on AI in China.",
+    "twitter": "@kaaboroshii",
+    "website": null,
+    "notable_for": "01.AI, Yi models, AI Superpowers author, Sinovation Ventures",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "01.AI"
   },
   {
     "id": "liang-wenfeng",
@@ -282,7 +464,7 @@
     "twitter": null,
     "website": null,
     "notable_for": "DeepSeek R1, efficient open-source AI",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "DeepSeek"
   },
   {
@@ -295,7 +477,7 @@
     "twitter": "@faboroshii",
     "website": null,
     "notable_for": "Llama open-source strategy, Meta AI",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Meta"
   },
   {
@@ -308,7 +490,7 @@
     "twitter": "@maboroshii_s",
     "website": null,
     "notable_for": "ElevenLabs, AI voice synthesis leader",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "ElevenLabs"
   },
   {
@@ -321,7 +503,7 @@
     "twitter": null,
     "website": null,
     "notable_for": "Suno v4, AI music generation",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Suno"
   },
   {
@@ -334,8 +516,86 @@
     "twitter": "@maboroshii",
     "website": null,
     "notable_for": "ChatGPT launch, GPT-4 development",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "OpenAI"
+  },
+  {
+    "id": "mustafa-suleyman",
+    "name": "Mustafa Suleyman",
+    "role": "CEO",
+    "organisation": "Microsoft AI",
+    "provider_id": "microsoft",
+    "bio": "CEO of Microsoft AI. Co-founder of DeepMind. Previously founded Inflection AI.",
+    "twitter": "@mustaboroshii",
+    "website": null,
+    "notable_for": "DeepMind co-founder, Inflection AI, Microsoft AI",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "Microsoft"
+  },
+  {
+    "id": "niki-parmar",
+    "name": "Niki Parmar",
+    "role": "Co-founder",
+    "organisation": "Essential AI",
+    "provider_id": null,
+    "bio": "Co-author of the Transformer paper. Co-founded Essential AI with Ashish Vaswani.",
+    "twitter": null,
+    "website": null,
+    "notable_for": "Transformer co-inventor, Essential AI",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "noam-brown",
+    "name": "Noam Brown",
+    "role": "Research Scientist",
+    "organisation": "OpenAI",
+    "provider_id": "openai",
+    "bio": "AI researcher at OpenAI. Creator of Libratus (poker AI) and Cicero (Diplomacy AI). Pioneer in strategic reasoning AI.",
+    "twitter": "@polyaboroshii",
+    "website": null,
+    "notable_for": "Libratus, Cicero, strategic reasoning, o1/o3 reasoning models",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "OpenAI"
+  },
+  {
+    "id": "noam-shazeer",
+    "name": "Noam Shazeer",
+    "role": "VP Engineering",
+    "organisation": "Google DeepMind",
+    "provider_id": "google",
+    "bio": "Co-author of the Transformer paper. Co-founded Character.AI, which was acquired by Google. Key contributor to PaLM and Gemini.",
+    "twitter": null,
+    "website": null,
+    "notable_for": "Transformer co-inventor, Character.AI, PaLM, Gemini",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "Google"
+  },
+  {
+    "id": "omar-khattab",
+    "name": "Omar Khattab",
+    "role": "Creator of DSPy",
+    "organisation": null,
+    "provider_id": null,
+    "bio": "DSPy framework for programmatic LLM optimization.",
+    "twitter": "lateinteraction",
+    "website": null,
+    "notable_for": "Creator of DSPy",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "percy-liang",
+    "name": "Percy Liang",
+    "role": "Professor",
+    "organisation": "Stanford University",
+    "provider_id": null,
+    "bio": "Associate professor at Stanford. Director of the Center for Research on Foundation Models. Creator of HELM benchmarks.",
+    "twitter": "@percyliang",
+    "website": null,
+    "notable_for": "HELM benchmarks, foundation model evaluation, Stanford CRFM",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
   },
   {
     "id": "robin-rombach",
@@ -347,7 +607,7 @@
     "twitter": null,
     "website": null,
     "notable_for": "Latent Diffusion, Stable Diffusion, FLUX",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Black Forest Labs"
   },
   {
@@ -360,8 +620,34 @@
     "twitter": "@sama",
     "website": null,
     "notable_for": "Leading OpenAI, GPT series, ChatGPT",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "OpenAI"
+  },
+  {
+    "id": "sasha-luccioni",
+    "name": "Sasha Luccioni",
+    "role": "AI & Climate Lead",
+    "organisation": "Hugging Face",
+    "provider_id": null,
+    "bio": "Leading researcher on the environmental impact of AI at Hugging Face. National Geographic Explorer. Advocates for sustainable AI development.",
+    "twitter": "@SashaMTL",
+    "website": null,
+    "notable_for": "AI environmental impact, sustainable AI, Hugging Face",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "satya-nadella",
+    "name": "Satya Nadella",
+    "role": "CEO",
+    "organisation": "Microsoft",
+    "provider_id": "microsoft",
+    "bio": "CEO of Microsoft. Led major AI investments including OpenAI partnership and Copilot integration across Microsoft products.",
+    "twitter": "@sataboroshii",
+    "website": null,
+    "notable_for": "Microsoft-OpenAI partnership, Copilot, Azure AI",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "Microsoft"
   },
   {
     "id": "scott-stephenson",
@@ -373,8 +659,86 @@
     "twitter": "@scottste",
     "website": null,
     "notable_for": "Deepgram Nova, enterprise speech recognition",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Deepgram"
+  },
+  {
+    "id": "swyx",
+    "name": "Shawn Wang (swyx)",
+    "role": "Founder, Latent Space",
+    "organisation": null,
+    "provider_id": null,
+    "bio": "Latent Space podcast and AI engineering community.",
+    "twitter": "swyx",
+    "website": "https://latent.space",
+    "notable_for": "Latent Space podcast",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "simon-willison",
+    "name": "Simon Willison",
+    "role": "Creator of Datasette",
+    "organisation": null,
+    "provider_id": null,
+    "bio": "Django co-creator. Builds open-source AI tools.",
+    "twitter": "simonw",
+    "website": "https://simonwillison.net",
+    "notable_for": "Django co-creator, AI tools",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "stuart-russell",
+    "name": "Stuart Russell",
+    "role": "Professor",
+    "organisation": "UC Berkeley",
+    "provider_id": null,
+    "bio": "Computer science professor at UC Berkeley. Co-author of the definitive AI textbook \"Artificial Intelligence: A Modern Approach.\" Leading voice on AI existential risk.",
+    "twitter": "@StuartJRussell",
+    "website": null,
+    "notable_for": "AI textbook co-author, AI safety advocacy, beneficial AI",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "sundar-pichai",
+    "name": "Sundar Pichai",
+    "role": "CEO",
+    "organisation": "Google / Alphabet",
+    "provider_id": "google",
+    "bio": "CEO of Alphabet and Google. Oversees Google DeepMind and the Gemini model family.",
+    "twitter": "@sundarpichai",
+    "website": null,
+    "notable_for": "Google DeepMind, Gemini launch, Alphabet AI strategy",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": "Google"
+  },
+  {
+    "id": "timnit-gebru",
+    "name": "Timnit Gebru",
+    "role": "Founder",
+    "organisation": "DAIR Institute",
+    "provider_id": null,
+    "bio": "Founder of the Distributed AI Research Institute. Former Google AI ethics researcher. Pioneer in AI fairness and accountability.",
+    "twitter": "@timaboroshii",
+    "website": null,
+    "notable_for": "AI ethics, algorithmic bias research, DAIR Institute",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
+  },
+  {
+    "id": "tri-dao",
+    "name": "Tri Dao",
+    "role": "Professor, Princeton",
+    "organisation": null,
+    "provider_id": null,
+    "bio": "Created Flash Attention. Co-founded Together AI.",
+    "twitter": "tri_dao",
+    "website": null,
+    "notable_for": "Creator of Flash Attention",
+    "updated_at": "2026-04-25 14:02:46",
+    "organisation_name": null
   },
   {
     "id": "yann-lecun",
@@ -386,7 +750,7 @@
     "twitter": "@ylecun",
     "website": null,
     "notable_for": "CNNs, Turing Award, open-source AI advocacy",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": "Meta"
   },
   {
@@ -399,7 +763,7 @@
     "twitter": "@yoshaboroshii",
     "website": null,
     "notable_for": "Turing Award, deep learning, AI governance",
-    "updated_at": "2026-02-22 11:54:42",
+    "updated_at": "2026-04-25 14:02:46",
     "organisation_name": null
   }
 ]

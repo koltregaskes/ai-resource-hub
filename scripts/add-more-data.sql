@@ -13,8 +13,8 @@ VALUES
 -- Inflection AI (Pi)
 INSERT OR IGNORE INTO models (id, name, provider_id, category, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, status)
 VALUES
-('inflection-3', 'Inflection 3.0', 'inflection', 'llm', 0, 0, 8192, 4096, 60, 68, '2024-03-01', 0, 'text', 0, 'Powers the Pi personal AI assistant. Competitive with GPT-4 in conversational tasks.', 'active'),
-('inflection-2.5', 'Inflection 2.5', 'inflection', 'llm', 0, 0, 8192, 4096, 70, 63, '2024-01-01', 0, 'text', 0, 'Second generation model powering Pi. Strong at empathetic conversation.', 'active');
+('inflection-3', 'Inflection 3.0', 'inflection', 'llm', 0, 0, 8192, 4096, 60, 68, '2024-03-01', 0, 'text', 0, 'Legacy Pi assistant model; no current public API pricing tracked.', 'retired'),
+('inflection-2.5', 'Inflection 2.5', 'inflection', 'llm', 0, 0, 8192, 4096, 70, 63, '2024-01-01', 0, 'text', 0, 'Legacy Pi assistant model; no current public API pricing tracked.', 'retired');
 
 -- ─── More recent OpenAI models ──────────────────────────────────
 

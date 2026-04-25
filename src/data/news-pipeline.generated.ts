@@ -1,5 +1,5 @@
 export const newsPipelineSnapshot = {
-  "generatedAt": "2026-04-21T07:01:10.526Z",
+  "generatedAt": "2026-04-25T14:05:26.324Z",
   "sourceOfTruth": {
     "estateManifestPath": "W:\\Websites\\estate.yml",
     "siteFiltersPath": "W:\\Websites\\shared\\website-tools\\pipelines\\news\\site-filters.json",

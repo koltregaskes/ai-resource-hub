@@ -9,6 +9,7 @@
  * - If shared Postgres is unavailable, existing shared cache files are preserved.
  */
 import { createRequire } from 'module';
+import { execFileSync } from 'child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
 
@@ -115,6 +116,58 @@ function preserveOrWriteEmpty(name) {
   }
   writeRows(name, []);
   return [];
+}
+
+function readJsonRows(raw, sourceLabel) {
+  try {
+    const rows = JSON.parse(raw);
+    return Array.isArray(rows) ? rows : [];
+  } catch (error) {
+    console.warn(`  Failed to parse existing ${sourceLabel}: ${error instanceof Error ? error.message : String(error)}`);
+    return [];
+  }
+}
+
+function loadTrackedCacheRows(name) {
+  const relativePath = `data/pg-cache/${name}.json`;
+
+  try {
+    const raw = execFileSync('git', ['show', `HEAD:${relativePath}`], {
+      cwd: repoRoot,
+      encoding: 'utf8',
+      maxBuffer: 64 * 1024 * 1024,
+      stdio: ['ignore', 'pipe', 'ignore'],
+    });
+    return readJsonRows(raw, `${name} cache from git HEAD`);
+  } catch {
+    return [];
+  }
+}
+
+function loadExistingCacheRows(name) {
+  const outPath = path.join(cacheDir, `${name}.json`);
+  const rows = [];
+
+  if (existsSync(outPath)) {
+    rows.push(...readJsonRows(readFileSync(outPath, 'utf8'), `${name} cache file`));
+  }
+
+  rows.push(...loadTrackedCacheRows(name));
+  return rows;
+}
+
+function mergeHistoricalRows(name, newRows, keyForRow, sortRows) {
+  const merged = new Map();
+
+  for (const row of loadExistingCacheRows(name)) {
+    merged.set(keyForRow(row), row);
+  }
+
+  for (const row of newRows) {
+    merged.set(keyForRow(row), row);
+  }
+
+  return writeRows(name, Array.from(merged.values()).sort(sortRows));
 }
 
 function dumpSqlite(name, query, params = []) {
@@ -260,19 +313,57 @@ dumpSqlite('people', `
   LEFT JOIN providers pr ON p.provider_id = pr.id
   ORDER BY p.name
 `);
-dumpSqlite('price_history', `
+const currentPriceHistoryRows = sqlite.prepare(`
   SELECT ph.*, m.name AS model_name, p.name AS provider_name, p.colour AS provider_colour
   FROM price_history ph
   JOIN models m ON ph.model_id = m.id
   JOIN providers p ON m.provider_id = p.id
   ORDER BY ph.model_id, ph.recorded_at ASC
-`);
-dumpSqlite('speed_history', `
+`).all();
+mergeHistoricalRows(
+  'price_history',
+  currentPriceHistoryRows,
+  (row) => [
+    row.model_id,
+    row.input_price,
+    row.output_price,
+    row.recorded_at,
+    row.source,
+  ].join('|'),
+  (a, b) => {
+    const modelOrder = String(a.model_id).localeCompare(String(b.model_id));
+    if (modelOrder !== 0) return modelOrder;
+    const dateOrder = String(a.recorded_at).localeCompare(String(b.recorded_at));
+    if (dateOrder !== 0) return dateOrder;
+    return Number(a.id ?? 0) - Number(b.id ?? 0);
+  },
+);
+
+const currentSpeedHistoryRows = sqlite.prepare(`
   SELECT sh.*, m.name AS model_name
   FROM speed_history sh
   JOIN models m ON sh.model_id = m.id
   ORDER BY sh.model_id, sh.recorded_at DESC
-`);
+`).all();
+mergeHistoricalRows(
+  'speed_history',
+  currentSpeedHistoryRows,
+  (row) => [
+    row.model_id,
+    row.speed,
+    row.ttft,
+    row.provider_endpoint ?? '',
+    row.recorded_at,
+    row.source,
+  ].join('|'),
+  (a, b) => {
+    const modelOrder = String(a.model_id).localeCompare(String(b.model_id));
+    if (modelOrder !== 0) return modelOrder;
+    const dateOrder = String(b.recorded_at).localeCompare(String(a.recorded_at));
+    if (dateOrder !== 0) return dateOrder;
+    return Number(b.id ?? 0) - Number(a.id ?? 0);
+  },
+);
 dumpSqlite('scrape_log', 'SELECT * FROM scrape_log ORDER BY finished_at DESC LIMIT 100');
 dumpSqlite('glossary', 'SELECT * FROM glossary ORDER BY term');
 dumpSqlite('youtube_creators', `

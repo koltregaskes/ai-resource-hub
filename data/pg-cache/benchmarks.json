@@ -1,5 +1,65 @@
 [
   {
+    "id": "gaia",
+    "name": "GAIA",
+    "category": "agent",
+    "description": "General AI Assistant tasks requiring web browsing, reasoning, and tool use",
+    "url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.3,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "tau-bench",
+    "name": "TAU-bench",
+    "category": "agent",
+    "description": "Tool-Agent-User interaction quality across multi-step scenarios",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "webarena",
+    "name": "WebArena",
+    "category": "agent",
+    "description": "Autonomous web navigation and task completion in realistic environments",
+    "url": "https://webarena.dev",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.1,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "aider-polyglot",
+    "name": "Aider Polyglot",
+    "category": "coding",
+    "description": "Multi-language coding: 225 exercises across C++, Go, Java, JS, Python, Rust",
+    "url": "https://aider.chat/docs/leaderboards/",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.1,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "bfcl",
+    "name": "BFCL",
+    "category": "coding",
+    "description": "Berkeley Function Calling Leaderboard — tool/function invocation accuracy",
+    "url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
     "id": "bigcodebench",
     "name": "BigCodeBench",
     "category": "coding",
@@ -9,7 +69,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.1,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "humaneval",
@@ -21,7 +81,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "livecodebench",
@@ -33,7 +93,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.2,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "swe-bench-verified",
@@ -45,7 +105,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.5,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "arena-hard",
@@ -57,7 +117,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.2,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "chatbot-arena-elo",
@@ -69,7 +129,7 @@
     "scale_max": 1400,
     "higher_is_better": 1,
     "weight": 1.5,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "mt-bench",
@@ -81,7 +141,79 @@
     "scale_max": 10,
     "higher_is_better": 1,
     "weight": 0.8,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "creative-writing-bench",
+    "name": "Creative Writing Bench",
+    "category": "domain",
+    "description": "Expert-judged creative writing quality across fiction, poetry, and narrative tasks",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "finqa",
+    "name": "FinQA",
+    "category": "domain",
+    "description": "Financial question answering over earnings reports — numerical reasoning on real SEC filings",
+    "url": "https://arxiv.org/abs/2109.00122",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "financebench",
+    "name": "FinanceBench",
+    "category": "domain",
+    "description": "Open-ended financial analysis — 150 questions over 10-K and 10-Q filings",
+    "url": "https://arxiv.org/abs/2311.11944",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "legalbench",
+    "name": "LegalBench",
+    "category": "domain",
+    "description": "Legal reasoning across 162 tasks: issue-spotting, rule-recall, interpretation",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "medqa",
+    "name": "MedQA",
+    "category": "domain",
+    "description": "US Medical Licensing Exam questions — medical knowledge and reasoning",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "wildbench-creative",
+    "name": "WildBench Creative",
+    "category": "domain",
+    "description": "Creative subset of WildBench — real user creative writing prompts judged by GPT-4",
+    "url": "https://arxiv.org/abs/2406.04770",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "ifeval",
@@ -93,7 +225,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 0.8,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "mmlu",
@@ -105,7 +237,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 0.8,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "mmlu-pro",
@@ -117,7 +249,19 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.2,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "mgsm",
+    "name": "MGSM",
+    "category": "multilingual",
+    "description": "Multilingual Grade School Math — 250 problems in 10 languages",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.7,
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "mmmu",
@@ -129,7 +273,31 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "mmmu-pro",
+    "name": "MMMU-Pro",
+    "category": "multimodal",
+    "description": "Enhanced multimodal understanding — harder than MMMU with no shortcut strategies",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1.2,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "mathvista",
+    "name": "MathVista",
+    "category": "multimodal",
+    "description": "Mathematical reasoning in visual contexts — diagrams, charts, figures",
+    "url": "https://mathvista.github.io",
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1,
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "aime-2025",
@@ -141,7 +309,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.4,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "arc-challenge",
@@ -153,7 +321,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 0.6,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "gpqa-diamond",
@@ -165,7 +333,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.5,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "humanitys-last-exam",
@@ -177,7 +345,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.5,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "livebench",
@@ -189,7 +357,7 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.3,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
   },
   {
     "id": "math-500",
@@ -201,6 +369,42 @@
     "scale_max": 100,
     "higher_is_better": 1,
     "weight": 1.3,
-    "updated_at": "2026-02-22 11:54:42"
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "air-bench",
+    "name": "AIR-Bench",
+    "category": "safety",
+    "description": "AI safety aligned with regulations — 5,694 tests across 314 risk categories",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "simpleqa",
+    "name": "SimpleQA",
+    "category": "safety",
+    "description": "Factual accuracy on straightforward questions — measures hallucination rate",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 1,
+    "updated_at": "2026-04-25 14:02:46"
+  },
+  {
+    "id": "trustllm",
+    "name": "TrustLLM",
+    "category": "safety",
+    "description": "Comprehensive trustworthiness: truthfulness, safety, fairness, robustness, privacy",
+    "url": null,
+    "scale_min": 0,
+    "scale_max": 100,
+    "higher_is_better": 1,
+    "weight": 0.8,
+    "updated_at": "2026-04-25 14:02:46"
   }
 ]

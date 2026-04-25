@@ -5,6 +5,7 @@ $repoRoot = (Resolve-Path (Join-Path $scriptDir '..\..')).Path
 $logDir = Join-Path $repoRoot 'logs'
 $logFile = Join-Path $logDir 'daily-update.log'
 $nodeModulesMarker = Join-Path $repoRoot 'node_modules\astro\package.json'
+$sqliteDbPath = Join-Path $repoRoot '.local\data\the-ai-resource-hub.db'
 
 New-Item -ItemType Directory -Path $logDir -Force | Out-Null
 
@@ -165,6 +166,11 @@ try {
 
   if ($needsInstall) {
     Invoke-Logged 'npm.cmd' @('ci')
+  }
+
+  if (-not (Test-Path $sqliteDbPath)) {
+    Write-Log "Local SQLite database not found; seeding baseline before refresh."
+    Invoke-Logged 'npm.cmd' @('run', 'seed')
   }
 
   Invoke-Logged 'npm.cmd' @('run', 'scrape')
