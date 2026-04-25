@@ -33,8 +33,7 @@ DeepSeek V4 Flash is a currently tracked release from DeepSeek. It is positioned
 - The Verge AI (2026-04-25): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
 - TechCrunch AI (2026-04-25): [DeepSeek previews new AI model that &#8216;closes the gap&#8217; with frontier models](https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/)
 - Simon Willison's Blog (2026-04-25): [DeepSeek V4—almost on the frontier, a fraction of the price](https://simonwillison.net/2026/Apr/24/deepseek-v4/)
-- Smol AI News (2026-04-25): [Apr 24     DeepSeek v4          
-Show details](https://news.smol.ai/issues/26-04-24-deepseek-v4)
+- Smol AI News (2026-04-25): [Apr 24 DeepSeek v4 - Show details](https://news.smol.ai/issues/26-04-24-deepseek-v4)
 - AI Supremacy (2026-04-25): [Massive Layoffs, Meta Surveillance, DeepSeek-V4 in AI News](https://www.ai-supremacy.com/p/massive-layoffs-meta-surveillance-deepseek-v4-preview-ai-news-this-week)
 
 ## Suggested thread / post structure
@@ -60,6 +59,5 @@ Show details](https://news.smol.ai/issues/26-04-24-deepseek-v4)
 - [The Verge AI: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
 - [TechCrunch AI: DeepSeek previews new AI model that &#8216;closes the gap&#8217; with frontier models](https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/)
 - [Simon Willison's Blog: DeepSeek V4—almost on the frontier, a fraction of the price](https://simonwillison.net/2026/Apr/24/deepseek-v4/)
-- [Smol AI News: Apr 24     DeepSeek v4          
-Show details](https://news.smol.ai/issues/26-04-24-deepseek-v4)
+- [Smol AI News: Apr 24 DeepSeek v4 - Show details](https://news.smol.ai/issues/26-04-24-deepseek-v4)
 - [AI Supremacy: Massive Layoffs, Meta Surveillance, DeepSeek-V4 in AI News](https://www.ai-supremacy.com/p/massive-layoffs-meta-surveillance-deepseek-v4-preview-ai-news-this-week)
