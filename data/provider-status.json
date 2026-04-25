@@ -1,6 +1,108 @@
 {
-  "generatedAt": "2026-04-25T06:10:59.010Z",
+  "generatedAt": "2026-04-25T07:54:37.760Z",
   "providers": [
+    {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-25T07:54:36.666Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Code",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "29ryc4sj27jk",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-25T07:48:30.897Z",
+          "updatedAt": "2026-04-25T07:48:31.027Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/4zxh90tl95xk",
+          "summary": "We are currently investigating this issue."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "29ryc4sj27jk",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-25T07:48:30.897Z",
+          "updatedAt": "2026-04-25T07:48:31.027Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/4zxh90tl95xk",
+          "summary": "We are currently investigating this issue."
+        },
+        {
+          "id": "zqsk02ryfmrd",
+          "title": "Claude Code v2.1.120 Crashes on Startup",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-25T01:45:32.619Z",
+          "updatedAt": "2026-04-25T02:35:50.478Z",
+          "resolvedAt": "2026-04-25T02:35:50.465Z",
+          "url": "https://stspg.io/7l6byl14vf9m",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "q93x64nrhwnn",
+          "title": "Elevated error rates on Claude Opus 4.7",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-25T01:35:55.664Z",
+          "updatedAt": "2026-04-25T02:34:30.202Z",
+          "resolvedAt": "2026-04-25T02:34:30.182Z",
+          "url": "https://stspg.io/5vfcjppbplnt",
+          "summary": "The issue affecting requests to Claude Opus 4.7 has been resolved. Impact occurred from 01:24–01:59 UTC."
+        },
+        {
+          "id": "s0lttkq5mmt2",
+          "title": "Issues with sign-ups on platform.claude.com",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-24T17:03:54.478Z",
+          "updatedAt": "2026-04-24T17:32:16.149Z",
+          "resolvedAt": "2026-04-24T17:32:16.135Z",
+          "url": "https://stspg.io/6f9452dhsjt6",
+          "summary": "This incident has been resolved."
+        }
+      ]
+    },
     {
       "id": "together",
       "providerId": null,
@@ -12,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T06:10:58.970Z",
+      "lastCheckedAt": "2026-04-25T07:54:37.604Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -90,96 +192,6 @@
       ]
     },
     {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T06:10:58.113Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "zqsk02ryfmrd",
-          "title": "Claude Code v2.1.120 Crashes on Startup",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-25T01:45:32.619Z",
-          "updatedAt": "2026-04-25T02:35:50.478Z",
-          "resolvedAt": "2026-04-25T02:35:50.465Z",
-          "url": "https://stspg.io/7l6byl14vf9m",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "q93x64nrhwnn",
-          "title": "Elevated error rates on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-25T01:35:55.664Z",
-          "updatedAt": "2026-04-25T02:34:30.202Z",
-          "resolvedAt": "2026-04-25T02:34:30.182Z",
-          "url": "https://stspg.io/5vfcjppbplnt",
-          "summary": "The issue affecting requests to Claude Opus 4.7 has been resolved. Impact occurred from 01:24–01:59 UTC."
-        },
-        {
-          "id": "s0lttkq5mmt2",
-          "title": "Issues with sign-ups on platform.claude.com",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-04-24T17:03:54.478Z",
-          "updatedAt": "2026-04-24T17:32:16.149Z",
-          "resolvedAt": "2026-04-24T17:32:16.135Z",
-          "url": "https://stspg.io/6f9452dhsjt6",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "1mx31vhgl3ms",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-24T10:05:59.992Z",
-          "updatedAt": "2026-04-24T10:59:52.417Z",
-          "resolvedAt": "2026-04-24T10:59:52.400Z",
-          "url": "https://stspg.io/qzp2n5sx9zvd",
-          "summary": "The incident has been resolved. We had 3 blips of unavailability:\n* 2:53 PT / 9:53 UTC -- 2:57 PT / 9:57 UTC\n* 3:01 PT / 10:01 UTC -- 3:06 PT / 10:06 UTC\n* 3:34 PT / 10:34 UTC --..."
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -190,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T06:10:58.692Z",
+      "lastCheckedAt": "2026-04-25T07:54:37.200Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T06:10:58.088Z",
+      "lastCheckedAt": "2026-04-25T07:54:36.742Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -284,7 +296,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T06:10:59.001Z",
+      "lastCheckedAt": "2026-04-25T07:54:37.752Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +361,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T06:10:57.991Z",
+      "lastCheckedAt": "2026-04-25T07:54:36.653Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -403,7 +415,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T06:10:58.037Z",
+      "lastCheckedAt": "2026-04-25T07:54:36.914Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -423,7 +435,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T06:10:57.932Z",
+      "lastCheckedAt": "2026-04-25T07:54:36.368Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
