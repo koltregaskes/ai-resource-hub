@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-25T14:05:26.324Z",
+  "generatedAt": "2026-04-25T15:37:01.490Z",
   "sourceOfTruth": {
-    "estateManifestPath": "W:\\Websites\\estate.yml",
-    "siteFiltersPath": "W:\\Websites\\shared\\website-tools\\pipelines\\news\\site-filters.json",
-    "sourcesPath": "W:\\Websites\\shared\\website-tools\\pipelines\\news\\config\\sources.json"
+    "estateManifestPath": "estate.yml",
+    "siteFiltersPath": "shared/website-tools/pipelines/news/site-filters.json",
+    "sourcesPath": "shared/website-tools/pipelines/news/config/sources.json"
   },
   "summary": {
     "estateSiteCount": 6,
@@ -519,7 +519,7 @@
       ],
       "minImportanceScore": 0.45,
       "outputFormat": "markdown_digest",
-      "outputPath": "W:\\Websites\\sites\\kols-korner\\news-digests",
+      "outputPath": "sites/kols-korner/news-digests",
       "maxArticlesPerRun": 15,
       "sourceCoverageCount": 12,
       "explicitSourceCoverageCount": 12
@@ -772,7 +772,7 @@
       ],
       "minImportanceScore": 0.4,
       "outputFormat": "markdown_digest",
-      "outputPath": "W:\\Websites\\sites\\axylusion\\news-digests",
+      "outputPath": "sites/axylusion/news-digests",
       "maxArticlesPerRun": 10,
       "sourceCoverageCount": 11,
       "explicitSourceCoverageCount": 11
@@ -965,7 +965,7 @@
       ],
       "minImportanceScore": 0.5,
       "outputFormat": "json_and_markdown",
-      "outputPath": "W:\\Websites\\sites\\ai-resource-hub\\src\\data",
+      "outputPath": "sites/ai-resource-hub/src/data",
       "maxArticlesPerRun": 20,
       "sourceCoverageCount": 12,
       "explicitSourceCoverageCount": 12
@@ -1088,7 +1088,7 @@
       ],
       "minImportanceScore": 0.4,
       "outputFormat": "markdown_digest",
-      "outputPath": "W:\\Websites\\sites\\ghost-in-the-models\\news-digests",
+      "outputPath": "sites/ghost-in-the-models/news-digests",
       "maxArticlesPerRun": 10,
       "sourceCoverageCount": 12,
       "explicitSourceCoverageCount": 12
@@ -1186,7 +1186,7 @@
       ],
       "minImportanceScore": 0.4,
       "outputFormat": "markdown_digest",
-      "outputPath": "W:\\Websites\\sites\\kol-tregaskes-photography\\news-digests",
+      "outputPath": "sites/kol-tregaskes-photography/news-digests",
       "maxArticlesPerRun": 10,
       "sourceCoverageCount": 0,
       "explicitSourceCoverageCount": 0
@@ -2174,7 +2174,7 @@
     }
   ],
   "guidance": {
-    "canonicalHome": "Keep the canonical routing config in W:\\Websites\\shared\\website-tools\\pipelines\\news. Surface it in the hub, but do not fork it silently in multiple workspaces.",
+    "canonicalHome": "Keep the canonical routing config in shared/website-tools/pipelines/news. Surface it in the hub, but do not fork it silently in multiple workspaces.",
     "aiResourceHubPolicy": "AI Resource Hub should only show technical AI coverage. Crypto, photography, and off-brief creative items should be blocked at routing time, not hidden later.",
     "sourceHandling": "Use the shared pipeline for source discovery and routing. Mirror it into the website and repo for transparency, but keep the source definitions in one canonical place."
   }

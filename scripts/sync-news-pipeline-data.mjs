@@ -123,6 +123,26 @@ function getHostName(url) {
   }
 }
 
+function toPublicWorkspacePath(value) {
+  if (!value) return null;
+
+  const rawValue = String(value);
+  const windowsEstateRelative = rawValue.replace(
+    /^[A-Za-z]:[\\/]+(?:Workspaces[\\/]+)?Websites[\\/]+/i,
+    ''
+  );
+  if (windowsEstateRelative !== rawValue) {
+    return windowsEstateRelative.replace(/\\/g, '/');
+  }
+
+  const relativePath = path.relative(estateRoot, rawValue);
+  if (relativePath && !relativePath.startsWith('..') && !path.isAbsolute(relativePath)) {
+    return relativePath.replace(/\\/g, '/');
+  }
+
+  return rawValue.replace(/\\/g, '/');
+}
+
 function describeSourceGovernance(source, categories) {
   const host = getHostName(source.url);
   const isXHost = /(^|\.)x\.com$/i.test(host) || /(^|\.)twitter\.com$/i.test(host);
@@ -259,7 +279,7 @@ async function main() {
       })),
       minImportanceScore: configured?.min_importance_score ?? null,
       outputFormat: configured?.output_format ?? null,
-      outputPath: configured?.output_path ?? null,
+      outputPath: toPublicWorkspacePath(configured?.output_path),
       maxArticlesPerRun: configured?.max_articles_per_run ?? null,
       sourceCoverageCount: sourceCoverage.length,
       explicitSourceCoverageCount: sourceCoverage.filter((source) =>
@@ -326,9 +346,9 @@ async function main() {
   const snapshot = {
     generatedAt: new Date().toISOString(),
     sourceOfTruth: {
-      estateManifestPath,
-      siteFiltersPath,
-      sourcesPath,
+      estateManifestPath: toPublicWorkspacePath(estateManifestPath),
+      siteFiltersPath: toPublicWorkspacePath(siteFiltersPath),
+      sourcesPath: toPublicWorkspacePath(sourcesPath),
     },
     summary: {
       estateSiteCount: sites.length,
@@ -374,7 +394,7 @@ async function main() {
     ],
     guidance: {
       canonicalHome:
-        'Keep the canonical routing config in W:\\Websites\\shared\\website-tools\\pipelines\\news. Surface it in the hub, but do not fork it silently in multiple workspaces.',
+        'Keep the canonical routing config in shared/website-tools/pipelines/news. Surface it in the hub, but do not fork it silently in multiple workspaces.',
       aiResourceHubPolicy:
         'AI Resource Hub should only show technical AI coverage. Crypto, photography, and off-brief creative items should be blocked at routing time, not hidden later.',
       sourceHandling:
