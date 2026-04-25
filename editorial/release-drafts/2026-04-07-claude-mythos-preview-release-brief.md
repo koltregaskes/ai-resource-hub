@@ -7,7 +7,7 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-04-25T14:25:45.748Z"
+generated_at: "2026-04-25T15:07:10.908Z"
 ---
 
 # Claude Mythos Preview: release brief
@@ -30,12 +30,12 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 ## Outside coverage and early reactions
 
-- The Verge AI (2026-04-25): [Anthropic’s Mythos breach was humiliating](https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation)
-- Reddit r/ClaudeAI (2026-04-24): [Anyone noticed Anthropic didn't added the model Opus 4.7 and Mythos Preview to there Transparency Hub?](https://reddit.com/r/ClaudeAI/comments/1sukoe9/anyone_noticed_anthropic_didnt_added_the_model/) - [https://www.anthropic.com/transparency](https://www.anthropic.com/transparency)
-- Anthropic News (2026-04-25): [Apr 20, 2026AnnouncementsAnthropic and Amazon expand collaboration for up to 5 gigawatts of new compute](https://www.anthropic.com/news/anthropic-amazon-compute)
-- Anthropic News (2026-04-25): [Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce](https://www.anthropic.com/news/anthropic-nec)
-- Aligned News (Scoble) (2026-04-25): [Anthropic Project Deal — Claude Autonomously Ran a Real Marketplace](https://x.com/AnthropicAI/status/2047835257517588511) - Anthropic's Project Deal had Claude agents conduct 186 real transactions, with Opus outperforming Haiku by 71% in negotiation outcomes.
-- Aligned News (Scoble) (2026-04-25): [@Scobleizer He Is Using Anthropic Claude — Same AI San Francisco Coders Are Using](https://x.com/Scobleizer/status/2047728949841760451) - Scoble notes that lawyer Mike Showalter uses Anthropic Claude, the same AI that SF coders are using to disrupt software firms, calling it remarkable.
+- TechCrunch (2026-04-24): [Google to invest up to $40B in Anthropic in cash and compute](https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/) - Google plans up to $40B investment in Anthropic as AI rivals race to secure massive compute capacity, following the limited release of its powerful, cybersecurity-focused Mythos model.
+- The Verge (2026-04-23): [Anthropic&#8217;s Mythos breach was humiliating](https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation) - Anthropic's tightly controlled rollout of Claude Mythos has taken an awkward turn. After spending weeks insisting the AI model is so capable at cybersecurity that it is too dangerous to release publicly, it appears the model fell into the wrong hands anyway. According to Bloomberg, a "small group of unauthorized users…
+- Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
+- Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
+- The Verge (2026-04-23): [Claude is connecting directly to your personal apps like Spotify, Uber Eats, and TurboTax](https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors) - Claude users can access more apps with Anthropic's AI now thanks to new connectors for everything from hiking to grocery shopping. Anthropic already supported connecting numerous work-related apps to Claude, like Microsoft apps, but this expansion focuses on personal apps like Audible, Spotify, Uber, AllTrails, TripAd…
 
 ## Suggested thread / post structure
 
@@ -57,9 +57,9 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 - [Official launch or docs](https://www.anthropic.com/glasswing)
 - [Provider API/docs](https://docs.anthropic.com)
-- [The Verge AI: Anthropic’s Mythos breach was humiliating](https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation)
-- [Reddit r/ClaudeAI: Anyone noticed Anthropic didn't added the model Opus 4.7 and Mythos Preview to there Transparency Hub?](https://reddit.com/r/ClaudeAI/comments/1sukoe9/anyone_noticed_anthropic_didnt_added_the_model/)
-- [Anthropic News: Apr 20, 2026AnnouncementsAnthropic and Amazon expand collaboration for up to 5 gigawatts of new compute](https://www.anthropic.com/news/anthropic-amazon-compute)
-- [Anthropic News: Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce](https://www.anthropic.com/news/anthropic-nec)
-- [Aligned News (Scoble): Anthropic Project Deal — Claude Autonomously Ran a Real Marketplace](https://x.com/AnthropicAI/status/2047835257517588511)
-- [Aligned News (Scoble): @Scobleizer He Is Using Anthropic Claude — Same AI San Francisco Coders Are Using](https://x.com/Scobleizer/status/2047728949841760451)
+- [TechCrunch: Google to invest up to $40B in Anthropic in cash and compute](https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/)
+- [The Verge: Anthropic&#8217;s Mythos breach was humiliating](https://www.theverge.com/ai-artificial-intelligence/917644/anthropic-claude-mythos-breach-humiliation)
+- [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
+- [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
+- [The Verge: Claude is connecting directly to your personal apps like Spotify, Uber Eats, and TurboTax](https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors)

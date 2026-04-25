@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.3-Codex"
 provider: "OpenAI"
 release_date: "2026-02-24"
-generated_at: "2026-04-25T14:25:45.756Z"
+generated_at: "2026-04-25T15:07:10.909Z"
 ---
 
 # GPT-5.3-Codex: release brief
@@ -29,9 +29,9 @@ GPT-5.3-Codex is a currently tracked release from OpenAI. It is positioned as an
 
 ## Outside coverage and early reactions
 
-- VentureBeat AI (2026-04-25): [Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/orchestration/talking-to-ai-agents-is-one-thing-what-about-when-they-talk-to-each-other-new-startup-band-debuts-universal-orchestrator)
-- VentureBeat AI (2026-04-25): [Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/technology/openais-gpt-5-5-is-here-and-its-no-potato-narrowly-beats-anthropics-claude-mythos-preview-on-terminal-bench-2-0)
-- VentureBeat AI (2026-04-25): [Giant whale breaching in rainbow core with money and code. Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/technology/deepseek-v4-arrives-with-near-state-of-the-art-intelligence-at-1-6th-the-cost-of-opus-4-7-gpt-5-5)
+- The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
+- OpenAI (2026-04-22): [Introducing OpenAI Privacy Filter](https://openai.com/index/introducing-openai-privacy-filter) - OpenAI Privacy Filter is an open-weight model for detecting and redacting personally identifiable information (PII) in text with state-of-the-art accuracy
+- OpenAI (2026-04-21): [Scaling Codex to enterprises worldwide](https://openai.com/index/scaling-codex-to-enterprises-worldwide) - OpenAI launches Codex Labs, partners with with Accenture, PwC, Infosys, and others to help enterprises deploy and scale Codex across the software development lifecycle, and hits 4M Codex WAU.
 
 ## Suggested thread / post structure
 
@@ -52,6 +52,6 @@ GPT-5.3-Codex is a currently tracked release from OpenAI. It is positioned as an
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [VentureBeat AI: Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/orchestration/talking-to-ai-agents-is-one-thing-what-about-when-they-talk-to-each-other-new-startup-band-debuts-universal-orchestrator)
-- [VentureBeat AI: Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/technology/openais-gpt-5-5-is-here-and-its-no-potato-narrowly-beats-anthropics-claude-mythos-preview-on-terminal-bench-2-0)
-- [VentureBeat AI: Giant whale breaching in rainbow core with money and code. Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/technology/deepseek-v4-arrives-with-near-state-of-the-art-intelligence-at-1-6th-the-cost-of-opus-4-7-gpt-5-5)
+- [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
+- [OpenAI: Introducing OpenAI Privacy Filter](https://openai.com/index/introducing-openai-privacy-filter)
+- [OpenAI: Scaling Codex to enterprises worldwide](https://openai.com/index/scaling-codex-to-enterprises-worldwide)

@@ -7,7 +7,7 @@ priority: "watch"
 model: "Nemotron 3 Super"
 provider: "NVIDIA"
 release_date: "2026-03-11"
-generated_at: "2026-04-25T14:25:45.753Z"
+generated_at: "2026-04-25T15:07:10.909Z"
 ---
 
 # Nemotron 3 Super: release brief
@@ -29,7 +29,7 @@ Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as
 
 ## Outside coverage and early reactions
 
-- NVIDIA AI Blog (2026-04-25): [OpenAI’s New GPT-5.5 Powers Codex on NVIDIA Infrastructure — and NVIDIA Is Already Putting It to Work](https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/)
+- Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
 
 ## Suggested thread / post structure
 
@@ -50,4 +50,4 @@ Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as
 
 - [Official launch or docs](https://docs.api.nvidia.com)
 - [Provider API/docs](https://docs.api.nvidia.com)
-- [NVIDIA AI Blog: OpenAI’s New GPT-5.5 Powers Codex on NVIDIA Infrastructure — and NVIDIA Is Already Putting It to Work](https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/)
+- [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)

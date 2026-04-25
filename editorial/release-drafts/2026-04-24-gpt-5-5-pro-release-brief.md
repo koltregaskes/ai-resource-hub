@@ -7,12 +7,12 @@ priority: "high"
 model: "GPT-5.5 Pro"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-04-25T14:25:45.745Z"
+generated_at: "2026-04-25T15:07:10.907Z"
 ---
 
 # GPT-5.5 Pro: release brief
 
-OpenAI's GPT-5.5 Pro is on the release desk with 4 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.5 Pro is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,10 +29,7 @@ GPT-5.5 Pro is a currently tracked release from OpenAI. It is positioned as an A
 
 ## Outside coverage and early reactions
 
-- Simon Willison's Blog (2026-04-25): [GPT-5.5 prompting guide](https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5)
-- VentureBeat AI (2026-04-25): [Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/orchestration/talking-to-ai-agents-is-one-thing-what-about-when-they-talk-to-each-other-new-startup-band-debuts-universal-orchestrator)
-- VentureBeat AI (2026-04-25): [Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/technology/openais-gpt-5-5-is-here-and-its-no-potato-narrowly-beats-anthropics-claude-mythos-preview-on-terminal-bench-2-0)
-- VentureBeat AI (2026-04-25): [Giant whale breaching in rainbow core with money and code. Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/technology/deepseek-v4-arrives-with-near-state-of-the-art-intelligence-at-1-6th-the-cost-of-opus-4-7-gpt-5-5)
+- The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
 
 ## Suggested thread / post structure
 
@@ -53,7 +50,4 @@ GPT-5.5 Pro is a currently tracked release from OpenAI. It is positioned as an A
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [Simon Willison's Blog: GPT-5.5 prompting guide](https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5)
-- [VentureBeat AI: Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/orchestration/talking-to-ai-agents-is-one-thing-what-about-when-they-talk-to-each-other-new-startup-band-debuts-universal-orchestrator)
-- [VentureBeat AI: Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/technology/openais-gpt-5-5-is-here-and-its-no-potato-narrowly-beats-anthropics-claude-mythos-preview-on-terminal-bench-2-0)
-- [VentureBeat AI: Giant whale breaching in rainbow core with money and code. Credit: VentureBeat made with OpenAI ChatGPT Images 2.0](https://venturebeat.com/technology/deepseek-v4-arrives-with-near-state-of-the-art-intelligence-at-1-6th-the-cost-of-opus-4-7-gpt-5-5)
+- [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)

@@ -7,12 +7,12 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-04-25T14:25:45.746Z"
+generated_at: "2026-04-25T15:07:10.907Z"
 ---
 
 # GPT-5.5: release brief
 
-OpenAI's GPT-5.5 is on the release desk with 6 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.5 is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,12 +29,7 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 ## Outside coverage and early reactions
 
-- Aligned News (Scoble) (2026-04-25): [GPT-5.5 Is Now in the API — 38.4% on APEX-Agents vs 1.1% Two Years Ago](https://x.com/mercor_ai/status/2047859197593911522) - GPT-5.5 hits the API with APEX-Agents benchmark jumping from 1.1% (GPT-4o) to 38.4%, representing 35+ points of improvement in under two years.
-- The Verge AI (2026-04-25): [says its new GPT-5.5 model](https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt)
-- Simon Willison's Blog (2026-04-25): [Using GPT-5.5 guide](https://developers.openai.com/api/docs/guides/latest-model)
-- Simon Willison's Blog (2026-04-25): [GPT-5.5 prompting guide](https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5)
-- NVIDIA AI Blog (2026-04-25): [OpenAI’s New GPT-5.5 Powers Codex on NVIDIA Infrastructure — and NVIDIA Is Already Putting It to Work](https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/)
-- Latent Space (2026-04-25): [[AINews] GPT 5.5 and OpenAI Codex Superapp](https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp)
+- The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
 
 ## Suggested thread / post structure
 
@@ -55,9 +50,4 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [Aligned News (Scoble): GPT-5.5 Is Now in the API — 38.4% on APEX-Agents vs 1.1% Two Years Ago](https://x.com/mercor_ai/status/2047859197593911522)
-- [The Verge AI: says its new GPT-5.5 model](https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt)
-- [Simon Willison's Blog: Using GPT-5.5 guide](https://developers.openai.com/api/docs/guides/latest-model)
-- [Simon Willison's Blog: GPT-5.5 prompting guide](https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5)
-- [NVIDIA AI Blog: OpenAI’s New GPT-5.5 Powers Codex on NVIDIA Infrastructure — and NVIDIA Is Already Putting It to Work](https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/)
-- [Latent Space: [AINews] GPT 5.5 and OpenAI Codex Superapp](https://www.latent.space/p/ainews-gpt-55-and-openai-codex-superapp)
+- [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)

@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 25 Apr 2026, 14:25 UTC |
+| Generated | 25 Apr 2026, 15:07 UTC |
 | Providers tracked | 40 |
 | Public models | 317 |
 | Active models | 120 |
 | Tracking models | 196 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 254 |
+| News items in cache | 67 |
 | Release-desk entries | 47 |
 | Configured news sources | 12 |
 | Availability rules | 4 |
-| Latest visible refresh | 25 Apr 2026, 14:03 UTC |
+| Latest visible refresh | 25 Apr 2026, 15:07 UTC |
 | Current evaluated composite leader | Claude Opus 4.6 (67.2) |
 | Latest tracked release | GPT-5.5 Pro (24 Apr 2026) |
 

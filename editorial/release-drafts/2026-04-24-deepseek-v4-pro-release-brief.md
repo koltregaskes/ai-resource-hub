@@ -7,12 +7,12 @@ priority: "high"
 model: "DeepSeek V4 Pro"
 provider: "DeepSeek"
 release_date: "2026-04-24"
-generated_at: "2026-04-25T14:25:45.746Z"
+generated_at: "2026-04-25T15:07:10.907Z"
 ---
 
 # DeepSeek V4 Pro: release brief
 
-DeepSeek's DeepSeek V4 Pro is on the release desk with 6 related stories and 0 benchmark signals to review.
+DeepSeek's DeepSeek V4 Pro is on the release desk with 2 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,12 +29,8 @@ DeepSeek V4 Pro is a currently tracked release from DeepSeek. It is positioned a
 
 ## Outside coverage and early reactions
 
-- Simon Willison's Blog (2026-04-25): [DeepSeek-V4-Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)
-- Latent Space (2026-04-25): [[AINews] DeepSeek V4 Pro (1.6T-A49B) and Flash (284B-A13B), Base and Instruct — runnable on Huawei Ascend chips](https://www.latent.space/p/ainews-deepseek-v4-pro-16t-a49b-and)
-- The Verge AI (2026-04-25): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
-- TechCrunch AI (2026-04-25): [DeepSeek previews new AI model that &#8216;closes the gap&#8217; with frontier models](https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/)
-- Simon Willison's Blog (2026-04-25): [DeepSeek V4—almost on the frontier, a fraction of the price](https://simonwillison.net/2026/Apr/24/deepseek-v4/)
-- Smol AI News (2026-04-25): [Apr 24 DeepSeek v4 - Show details](https://news.smol.ai/issues/26-04-24-deepseek-v4)
+- TechCrunch (2026-04-24): [DeepSeek previews new AI model that &#8216;closes the gap&#8217; with frontier models](https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/) - DeepSeek says both models are more efficient and performant than DeepSeek V3.2 due to architectural improvements, and have almost "closed the gap" with current leading models, both open and closed, on reasoning benchmarks.
+- The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
 
 ## Suggested thread / post structure
 
@@ -55,9 +51,5 @@ DeepSeek V4 Pro is a currently tracked release from DeepSeek. It is positioned a
 
 - [Official launch or docs](https://api-docs.deepseek.com)
 - [Provider API/docs](https://api-docs.deepseek.com)
-- [Simon Willison's Blog: DeepSeek-V4-Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)
-- [Latent Space: [AINews] DeepSeek V4 Pro (1.6T-A49B) and Flash (284B-A13B), Base and Instruct — runnable on Huawei Ascend chips](https://www.latent.space/p/ainews-deepseek-v4-pro-16t-a49b-and)
-- [The Verge AI: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
-- [TechCrunch AI: DeepSeek previews new AI model that &#8216;closes the gap&#8217; with frontier models](https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/)
-- [Simon Willison's Blog: DeepSeek V4—almost on the frontier, a fraction of the price](https://simonwillison.net/2026/Apr/24/deepseek-v4/)
-- [Smol AI News: Apr 24 DeepSeek v4 - Show details](https://news.smol.ai/issues/26-04-24-deepseek-v4)
+- [TechCrunch: DeepSeek previews new AI model that &#8216;closes the gap&#8217; with frontier models](https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/)
+- [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)

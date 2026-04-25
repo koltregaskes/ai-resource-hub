@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Opus 4.7"
 provider: "Anthropic"
 release_date: "2026-04-16"
-generated_at: "2026-04-25T14:25:45.748Z"
+generated_at: "2026-04-25T15:07:10.908Z"
 ---
 
 # Claude Opus 4.7: release brief
 
-Anthropic's Claude Opus 4.7 is on the release desk with 6 related stories and 0 benchmark signals to review.
+Anthropic's Claude Opus 4.7 is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,12 +29,9 @@ Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned 
 
 ## Outside coverage and early reactions
 
-- Reddit r/ClaudeAI (2026-04-25): [Claude Status Update : Elevated error rates on Claude Opus 4.7 on 2026-04-25T01:35:55.000Z](https://reddit.com/r/ClaudeAI/comments/1suyjur/claude_status_update_elevated_error_rates_on/) - This is an automatic post triggered within 2 minutes of an official Claude system status update. Incident: Elevated error rates on Claude Opus 4.7 Check on progress and whether or not the incident has been resolved yet here : https://status.claude.com/incidents/q93x64nrhwnn Also check the Performance Megathread to see what others are reporting : https://www.reddit.com/r/ClaudeAI/comments/1s7f72l/claude_performance_and_bugs_megathread_ongoing/
-- Anthropic News (2026-04-25): [Apr 20, 2026AnnouncementsAnthropic and Amazon expand collaboration for up to 5 gigawatts of new compute](https://www.anthropic.com/news/anthropic-amazon-compute)
-- Anthropic News (2026-04-25): [Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce](https://www.anthropic.com/news/anthropic-nec)
-- Aligned News (Scoble) (2026-04-25): [Anthropic Project Deal — Claude Autonomously Ran a Real Marketplace](https://x.com/AnthropicAI/status/2047835257517588511) - Anthropic's Project Deal had Claude agents conduct 186 real transactions, with Opus outperforming Haiku by 71% in negotiation outcomes.
-- Aligned News (Scoble) (2026-04-25): [@Scobleizer He Is Using Anthropic Claude — Same AI San Francisco Coders Are Using](https://x.com/Scobleizer/status/2047728949841760451) - Scoble notes that lawyer Mike Showalter uses Anthropic Claude, the same AI that SF coders are using to disrupt software firms, calling it remarkable.
-- Reddit r/ClaudeAI (2026-04-24): [Google Plans to Invest Up to $40 Billion in Anthropic (Gift Link)](https://reddit.com/r/ClaudeAI/comments/1sujusu/google_plans_to_invest_up_to_40_billion_in/) - Per Bloomberg: &gt; Google will invest $10 billion in Anthropic PBC, with another $30 billion potentially to follow, strengthening the relationship between two companies that are at once partners and rivals in the race to build artificial intelligence. &gt; &gt; Anthropic said that Google is committing to invest $10 billion now in cash at a $350 billion valuation, the same amount it was valued at in a funding round in February, not including the recent money raised. The Alphabet Inc.-owned com
+- Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
+- The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
+- The Verge (2026-04-23): [Claude is connecting directly to your personal apps like Spotify, Uber Eats, and TurboTax](https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors) - Claude users can access more apps with Anthropic's AI now thanks to new connectors for everything from hiking to grocery shopping. Anthropic already supported connecting numerous work-related apps to Claude, like Microsoft apps, but this expansion focuses on personal apps like Audible, Spotify, Uber, AllTrails, TripAd…
 
 ## Suggested thread / post structure
 
@@ -55,9 +52,6 @@ Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned 
 
 - [Official launch or docs](https://docs.anthropic.com)
 - [Provider API/docs](https://docs.anthropic.com)
-- [Reddit r/ClaudeAI: Claude Status Update : Elevated error rates on Claude Opus 4.7 on 2026-04-25T01:35:55.000Z](https://reddit.com/r/ClaudeAI/comments/1suyjur/claude_status_update_elevated_error_rates_on/)
-- [Anthropic News: Apr 20, 2026AnnouncementsAnthropic and Amazon expand collaboration for up to 5 gigawatts of new compute](https://www.anthropic.com/news/anthropic-amazon-compute)
-- [Anthropic News: Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce](https://www.anthropic.com/news/anthropic-nec)
-- [Aligned News (Scoble): Anthropic Project Deal — Claude Autonomously Ran a Real Marketplace](https://x.com/AnthropicAI/status/2047835257517588511)
-- [Aligned News (Scoble): @Scobleizer He Is Using Anthropic Claude — Same AI San Francisco Coders Are Using](https://x.com/Scobleizer/status/2047728949841760451)
-- [Reddit r/ClaudeAI: Google Plans to Invest Up to $40 Billion in Anthropic (Gift Link)](https://reddit.com/r/ClaudeAI/comments/1sujusu/google_plans_to_invest_up_to_40_billion_in/)
+- [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
+- [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
+- [The Verge: Claude is connecting directly to your personal apps like Spotify, Uber Eats, and TurboTax](https://www.theverge.com/ai-artificial-intelligence/917871/anthropic-claude-personal-app-connectors)
