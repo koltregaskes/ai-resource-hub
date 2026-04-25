@@ -107,7 +107,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </p>
       <div class="mb-4 space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
         <p>@echo off</p>
-        <p>cd /d "C:\Users\YourName\ai-resource-hub"</p>
+        <p>cd /d "%USERPROFILE%\ai-resource-hub"</p>
         <p>&nbsp;</p>
         <p>echo [%date% %time%] Starting data update... &gt;&gt; logs\scrape.log</p>
         <p>call npm run scrape &gt;&gt; logs\scrape.log 2&gt;&amp;1</p>
@@ -124,7 +124,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class="text-(--color-text-muted)"># Create an hourly task</p>
         <p>schtasks /Create /SC HOURLY /MO 1 ^</p>
         <p>&nbsp;&nbsp;/TN "AI Resource Hub - Update Data" ^</p>
-        <p>&nbsp;&nbsp;/TR "C:\Users\YourName\ai-resource-hub\update-data.bat"</p>
+        <p>&nbsp;&nbsp;/TR "%USERPROFILE%\ai-resource-hub\update-data.bat"</p>
       </div>
 
       <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 3: Verify it works</h3>
