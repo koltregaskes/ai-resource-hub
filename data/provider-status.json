@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T20:21:51.571Z",
+  "generatedAt": "2026-04-25T20:56:10.479Z",
   "providers": [
     {
       "id": "together",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T20:21:51.564Z",
+      "lastCheckedAt": "2026-04-25T20:56:10.471Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,20 +20,53 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-1-2026-04-25T12:00:01.000Z",
-          "title": "Scheduled Network Maintenance",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-04-25T12:00:01.000Z",
-          "updatedAt": "2026-04-25T12:00:01.000Z",
+          "id": "together-feed-0-2026-04-25T20:41:06.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T20:41:06.000Z",
+          "updatedAt": "2026-04-25T20:41:06.000Z",
           "resolvedAt": null,
-          "url": "https://status.together.ai/incident/876784",
-          "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
+        },
+        {
+          "id": "together-feed-1-2026-04-25T20:32:32.000Z",
+          "title": "ZAI GLM 5 FP4 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T20:32:32.000Z",
+          "updatedAt": "2026-04-25T20:32:32.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-25T18:34:52.000Z",
+          "id": "together-feed-0-2026-04-25T20:41:06.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T20:41:06.000Z",
+          "updatedAt": "2026-04-25T20:41:06.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
+        },
+        {
+          "id": "together-feed-1-2026-04-25T20:32:32.000Z",
+          "title": "ZAI GLM 5 FP4 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T20:32:32.000Z",
+          "updatedAt": "2026-04-25T20:32:32.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-25T18:34:52.000Z",
           "title": "Google Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -44,7 +77,7 @@
           "summary": "Google Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-1-2026-04-25T12:00:01.000Z",
+          "id": "together-feed-3-2026-04-25T12:00:01.000Z",
           "title": "Scheduled Network Maintenance",
           "status": "reported",
           "impact": "unknown",
@@ -53,28 +86,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/incident/876784",
           "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
-        },
-        {
-          "id": "together-feed-2-2026-04-25T09:57:29.000Z",
-          "title": "FLUX.1 [schnell] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-25T09:57:29.000Z",
-          "updatedAt": "2026-04-25T09:57:29.000Z",
-          "resolvedAt": "2026-04-25T09:57:29.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 [schnell] recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T09:50:32.000Z",
-          "title": "Moonshot Kimi K2.5 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-25T09:50:32.000Z",
-          "updatedAt": "2026-04-25T09:50:32.000Z",
-          "resolvedAt": "2026-04-25T09:50:32.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Moonshot Kimi K2.5 recovered"
         }
       ]
     },
@@ -89,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T20:21:49.966Z",
+      "lastCheckedAt": "2026-04-25T20:56:09.032Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -179,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T20:21:50.810Z",
+      "lastCheckedAt": "2026-04-25T20:56:09.658Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -199,7 +210,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T20:21:50.268Z",
+      "lastCheckedAt": "2026-04-25T20:56:09.246Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -273,7 +284,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T20:21:51.297Z",
+      "lastCheckedAt": "2026-04-25T20:56:10.122Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -338,7 +349,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T20:21:50.300Z",
+      "lastCheckedAt": "2026-04-25T20:56:09.110Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -392,7 +403,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T20:21:50.482Z",
+      "lastCheckedAt": "2026-04-25T20:56:09.362Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -412,7 +423,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T20:21:49.826Z",
+      "lastCheckedAt": "2026-04-25T20:56:08.934Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
