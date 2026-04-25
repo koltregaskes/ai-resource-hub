@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T09:37:09.293Z",
+  "generatedAt": "2026-04-25T10:29:19.632Z",
   "providers": [
     {
       "id": "together",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T09:37:09.285Z",
+      "lastCheckedAt": "2026-04-25T10:29:19.624Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -31,15 +31,15 @@
           "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
         },
         {
-          "id": "together-feed-1-2026-04-25T07:54:17.000Z",
-          "title": "Moonshot Kimi K2.5 went down",
+          "id": "together-feed-3-2026-04-25T09:33:16.000Z",
+          "title": "FLUX.1 [schnell] went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-04-25T07:54:17.000Z",
-          "updatedAt": "2026-04-25T07:54:17.000Z",
+          "startedAt": "2026-04-25T09:33:16.000Z",
+          "updatedAt": "2026-04-25T09:33:16.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
-          "summary": "Moonshot Kimi K2.5 went down"
+          "summary": "FLUX.1 [schnell] went down"
         }
       ],
       "recentIncidents": [
@@ -55,37 +55,37 @@
           "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
         },
         {
-          "id": "together-feed-1-2026-04-25T07:54:17.000Z",
-          "title": "Moonshot Kimi K2.5 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T07:54:17.000Z",
-          "updatedAt": "2026-04-25T07:54:17.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Moonshot Kimi K2.5 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-25T05:16:06.000Z",
-          "title": "Deepseek V3.1 recovered",
+          "id": "together-feed-1-2026-04-25T09:57:29.000Z",
+          "title": "FLUX.1 [schnell] recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-04-25T05:16:06.000Z",
-          "updatedAt": "2026-04-25T05:16:06.000Z",
-          "resolvedAt": "2026-04-25T05:16:06.000Z",
+          "startedAt": "2026-04-25T09:57:29.000Z",
+          "updatedAt": "2026-04-25T09:57:29.000Z",
+          "resolvedAt": "2026-04-25T09:57:29.000Z",
           "url": "https://status.together.ai/",
-          "summary": "Deepseek V3.1 recovered"
+          "summary": "FLUX.1 [schnell] recovered"
         },
         {
-          "id": "together-feed-3-2026-04-25T04:51:16.000Z",
-          "title": "Deepseek V3.1 went down",
+          "id": "together-feed-2-2026-04-25T09:50:32.000Z",
+          "title": "Moonshot Kimi K2.5 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-25T09:50:32.000Z",
+          "updatedAt": "2026-04-25T09:50:32.000Z",
+          "resolvedAt": "2026-04-25T09:50:32.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Moonshot Kimi K2.5 recovered"
+        },
+        {
+          "id": "together-feed-3-2026-04-25T09:33:16.000Z",
+          "title": "FLUX.1 [schnell] went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-04-25T04:51:16.000Z",
-          "updatedAt": "2026-04-25T04:51:16.000Z",
+          "startedAt": "2026-04-25T09:33:16.000Z",
+          "updatedAt": "2026-04-25T09:33:16.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
-          "summary": "Deepseek V3.1 went down"
+          "summary": "FLUX.1 [schnell] went down"
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T09:37:07.955Z",
+      "lastCheckedAt": "2026-04-25T10:29:18.094Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T09:37:08.598Z",
+      "lastCheckedAt": "2026-04-25T10:29:18.907Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T09:37:08.100Z",
+      "lastCheckedAt": "2026-04-25T10:29:18.224Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -296,7 +296,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T09:37:08.894Z",
+      "lastCheckedAt": "2026-04-25T10:29:19.463Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -361,7 +361,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T09:37:07.973Z",
+      "lastCheckedAt": "2026-04-25T10:29:18.118Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -415,7 +415,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T09:37:08.297Z",
+      "lastCheckedAt": "2026-04-25T10:29:18.516Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -435,7 +435,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T09:37:07.853Z",
+      "lastCheckedAt": "2026-04-25T10:29:18.050Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
