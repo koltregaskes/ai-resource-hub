@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T22:18:07.982Z",
+  "generatedAt": "2026-04-25T22:55:20.538Z",
   "providers": [
     {
       "id": "together",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T22:18:07.974Z",
+      "lastCheckedAt": "2026-04-25T22:55:20.530Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-2-2026-04-25T20:41:06.000Z",
+          "id": "together-feed-0-2026-04-25T22:19:00.000Z",
+          "title": "MiniMax M2.5 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T22:19:00.000Z",
+          "updatedAt": "2026-04-25T22:19:00.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.5 went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-25T20:41:06.000Z",
           "title": "Kimi K2.6 went down",
           "status": "investigating",
           "impact": "major",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Kimi K2.6 went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T20:32:32.000Z",
-          "title": "ZAI GLM 5 FP4 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T20:32:32.000Z",
-          "updatedAt": "2026-04-25T20:32:32.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-25T21:10:31.000Z",
+          "id": "together-feed-0-2026-04-25T22:19:00.000Z",
+          "title": "MiniMax M2.5 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T22:19:00.000Z",
+          "updatedAt": "2026-04-25T22:19:00.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.5 went down"
+        },
+        {
+          "id": "together-feed-1-2026-04-25T21:10:31.000Z",
           "title": "ZAI GLM 5 FP4 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "ZAI GLM 5 FP4 recovered"
         },
         {
-          "id": "together-feed-1-2026-04-25T21:04:28.000Z",
+          "id": "together-feed-2-2026-04-25T21:04:28.000Z",
           "title": "Kimi K2.6 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Kimi K2.6 recovered"
         },
         {
-          "id": "together-feed-2-2026-04-25T20:41:06.000Z",
+          "id": "together-feed-3-2026-04-25T20:41:06.000Z",
           "title": "Kimi K2.6 went down",
           "status": "investigating",
           "impact": "major",
@@ -75,17 +86,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Kimi K2.6 went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T20:32:32.000Z",
-          "title": "ZAI GLM 5 FP4 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T20:32:32.000Z",
-          "updatedAt": "2026-04-25T20:32:32.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5 FP4 went down"
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T22:18:05.770Z",
+      "lastCheckedAt": "2026-04-25T22:55:19.241Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T22:18:06.640Z",
+      "lastCheckedAt": "2026-04-25T22:55:19.714Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T22:18:05.918Z",
+      "lastCheckedAt": "2026-04-25T22:55:19.356Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -284,7 +284,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T22:18:07.169Z",
+      "lastCheckedAt": "2026-04-25T22:55:19.968Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +349,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T22:18:05.907Z",
+      "lastCheckedAt": "2026-04-25T22:55:19.243Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -403,7 +403,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T22:18:06.326Z",
+      "lastCheckedAt": "2026-04-25T22:55:19.352Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -423,7 +423,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T22:18:05.767Z",
+      "lastCheckedAt": "2026-04-25T22:55:19.189Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
