@@ -7,12 +7,12 @@ priority: "watch"
 model: "Gemini 3.1 Flash Lite Preview"
 provider: "Google"
 release_date: "2026-03-03"
-generated_at: "2026-04-25T15:54:32.241Z"
+generated_at: "2026-04-25T17:00:21.605Z"
 ---
 
 # Gemini 3.1 Flash Lite Preview: release brief
 
-Google's Gemini 3.1 Flash Lite Preview is on the release desk with 6 related stories and 0 benchmark signals to review.
+Google's Gemini 3.1 Flash Lite Preview is on the release desk with 5 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -34,7 +34,6 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 - The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
 - Google (2026-04-02): [New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/) - Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
-- Google (2026-03-26): [Transform your headphones into a live personal translator on iOS.](https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/) - Google Translate's Live translate with headphones is officially arriving on iOS! And we're expanding the capability for both iOS and Android users to even more countries…
 
 ## Suggested thread / post structure
 
@@ -60,4 +59,3 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 - [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
 - [Google: New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)
-- [Google: Transform your headphones into a live personal translator on iOS.](https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/)
