@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 25 Apr 2026, 20:56 UTC
+Generated: 25 Apr 2026, 21:52 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
