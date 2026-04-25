@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T04:22:16.885Z",
+  "generatedAt": "2026-04-25T06:10:59.010Z",
   "providers": [
     {
       "id": "together",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T04:22:16.877Z",
+      "lastCheckedAt": "2026-04-25T06:10:58.970Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -31,15 +31,15 @@
           "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
         },
         {
-          "id": "together-feed-2-2026-04-25T04:03:10.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
+          "id": "together-feed-2-2026-04-25T04:51:16.000Z",
+          "title": "Deepseek V3.1 went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-04-25T04:03:10.000Z",
-          "updatedAt": "2026-04-25T04:03:10.000Z",
+          "startedAt": "2026-04-25T04:51:16.000Z",
+          "updatedAt": "2026-04-25T04:51:16.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
+          "summary": "Deepseek V3.1 went down"
         }
       ],
       "recentIncidents": [
@@ -55,7 +55,29 @@
           "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
         },
         {
-          "id": "together-feed-1-2026-04-25T04:15:18.000Z",
+          "id": "together-feed-1-2026-04-25T05:16:06.000Z",
+          "title": "Deepseek V3.1 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-25T05:16:06.000Z",
+          "updatedAt": "2026-04-25T05:16:06.000Z",
+          "resolvedAt": "2026-04-25T05:16:06.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Deepseek V3.1 recovered"
+        },
+        {
+          "id": "together-feed-2-2026-04-25T04:51:16.000Z",
+          "title": "Deepseek V3.1 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T04:51:16.000Z",
+          "updatedAt": "2026-04-25T04:51:16.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Deepseek V3.1 went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-25T04:15:18.000Z",
           "title": "Qwen3 235B A22B Instruct 2507 Throughput recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -64,28 +86,6 @@
           "resolvedAt": "2026-04-25T04:15:18.000Z",
           "url": "https://status.together.ai/",
           "summary": "Qwen3 235B A22B Instruct 2507 Throughput recovered"
-        },
-        {
-          "id": "together-feed-2-2026-04-25T04:03:10.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T04:03:10.000Z",
-          "updatedAt": "2026-04-25T04:03:10.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T03:19:51.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T03:19:51.000Z",
-          "updatedAt": "2026-04-25T03:19:51.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T04:22:15.683Z",
+      "lastCheckedAt": "2026-04-25T06:10:58.113Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T04:22:16.260Z",
+      "lastCheckedAt": "2026-04-25T06:10:58.692Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T04:22:15.800Z",
+      "lastCheckedAt": "2026-04-25T06:10:58.088Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -284,7 +284,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T04:22:16.654Z",
+      "lastCheckedAt": "2026-04-25T06:10:59.001Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +349,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T04:22:15.651Z",
+      "lastCheckedAt": "2026-04-25T06:10:57.991Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -403,7 +403,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T04:22:16.004Z",
+      "lastCheckedAt": "2026-04-25T06:10:58.037Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -423,7 +423,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T04:22:15.580Z",
+      "lastCheckedAt": "2026-04-25T06:10:57.932Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
