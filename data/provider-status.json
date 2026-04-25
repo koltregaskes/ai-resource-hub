@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T18:26:54.023Z",
+  "generatedAt": "2026-04-25T19:10:09.386Z",
   "providers": [
     {
       "id": "together",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T18:26:54.015Z",
+      "lastCheckedAt": "2026-04-25T19:10:09.333Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,7 +20,7 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-0-2026-04-25T12:00:01.000Z",
+          "id": "together-feed-1-2026-04-25T12:00:01.000Z",
           "title": "Scheduled Network Maintenance",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +29,22 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/incident/876784",
           "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
-        },
-        {
-          "id": "together-feed-3-2026-04-25T09:33:16.000Z",
-          "title": "FLUX.1 [schnell] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T09:33:16.000Z",
-          "updatedAt": "2026-04-25T09:33:16.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 [schnell] went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-25T12:00:01.000Z",
+          "id": "together-feed-0-2026-04-25T18:34:52.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-25T18:34:52.000Z",
+          "updatedAt": "2026-04-25T18:34:52.000Z",
+          "resolvedAt": "2026-04-25T18:34:52.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-25T12:00:01.000Z",
           "title": "Scheduled Network Maintenance",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +55,7 @@
           "summary": "We will be performing scheduled network maintenance from April 25, 5:00 AM – April 27, 8:00 AM PDT. During this window, some serverless models may experience degraded performance..."
         },
         {
-          "id": "together-feed-1-2026-04-25T09:57:29.000Z",
+          "id": "together-feed-2-2026-04-25T09:57:29.000Z",
           "title": "FLUX.1 [schnell] recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -66,7 +66,7 @@
           "summary": "FLUX.1 [schnell] recovered"
         },
         {
-          "id": "together-feed-2-2026-04-25T09:50:32.000Z",
+          "id": "together-feed-3-2026-04-25T09:50:32.000Z",
           "title": "Moonshot Kimi K2.5 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -75,17 +75,6 @@
           "resolvedAt": "2026-04-25T09:50:32.000Z",
           "url": "https://status.together.ai/",
           "summary": "Moonshot Kimi K2.5 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T09:33:16.000Z",
-          "title": "FLUX.1 [schnell] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T09:33:16.000Z",
-          "updatedAt": "2026-04-25T09:33:16.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 [schnell] went down"
         }
       ]
     },
@@ -100,7 +89,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T18:26:52.558Z",
+      "lastCheckedAt": "2026-04-25T19:10:08.416Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -134,6 +123,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "c3km369dp85h",
+          "title": "Investigated elevated errors and slower responses on claude.ai",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-04-25T18:42:40.706Z",
+          "updatedAt": "2026-04-25T19:02:15.723Z",
+          "resolvedAt": "2026-04-25T19:02:15.710Z",
+          "url": "https://stspg.io/32rqp9dyk7ry",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "87m29x6sk78g",
           "title": "Elevated errors on Claude Opus 4.7",
           "status": "resolved",
@@ -165,17 +165,6 @@
           "resolvedAt": "2026-04-25T02:35:50.465Z",
           "url": "https://stspg.io/7l6byl14vf9m",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "q93x64nrhwnn",
-          "title": "Elevated error rates on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-25T01:35:55.664Z",
-          "updatedAt": "2026-04-25T02:34:30.202Z",
-          "resolvedAt": "2026-04-25T02:34:30.182Z",
-          "url": "https://stspg.io/5vfcjppbplnt",
-          "summary": "The issue affecting requests to Claude Opus 4.7 has been resolved. Impact occurred from 01:24–01:59 UTC."
         }
       ]
     },
@@ -190,7 +179,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T18:26:53.205Z",
+      "lastCheckedAt": "2026-04-25T19:10:09.012Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +199,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T18:26:52.708Z",
+      "lastCheckedAt": "2026-04-25T19:10:08.366Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -284,7 +273,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T18:26:53.471Z",
+      "lastCheckedAt": "2026-04-25T19:10:09.378Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +338,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T18:26:52.599Z",
+      "lastCheckedAt": "2026-04-25T19:10:08.269Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -403,7 +392,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T18:26:52.794Z",
+      "lastCheckedAt": "2026-04-25T19:10:08.533Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -423,7 +412,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-25T18:26:52.648Z",
+      "lastCheckedAt": "2026-04-25T19:10:08.290Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",

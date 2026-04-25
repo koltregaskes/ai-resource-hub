@@ -1,6 +1,6 @@
 # Model Availability Snapshot
 
-Generated: 25 Apr 2026, 17:55 UTC
+Generated: 25 Apr 2026, 19:10 UTC
 
 Repo-readable mirror of the regional availability layer. This tracks official country / region restrictions for model access, apps, and APIs where we have verified provider documentation.
 
@@ -8,7 +8,7 @@ Repo-readable mirror of the regional availability layer. This tracks official co
 
 | Metric | Value |
 | --- | --- |
-| Generated | 25 Apr 2026, 17:55 UTC |
+| Generated | 25 Apr 2026, 19:10 UTC |
 | Total rules | 4 |
 | Provider baselines | 3 |
 | Model-specific rules | 1 |
