@@ -1,6 +1,6 @@
 [
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "anthropic-jobs",
     "provider_id": "anthropic",
     "open_role_count": 453,
@@ -11,13 +11,13 @@
     "gtm_role_count": 109,
     "operations_role_count": 24,
     "other_role_count": 74,
-    "updated_at": "2026-04-25 23:53:47",
+    "updated_at": "2026-04-26 03:54:27",
     "company_name": "Anthropic",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "figureai-jobs",
     "provider_id": null,
     "open_role_count": 100,
@@ -28,13 +28,13 @@
     "gtm_role_count": 0,
     "operations_role_count": 3,
     "other_role_count": 30,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:28",
     "company_name": "Figure",
     "provider_name": null,
     "provider_colour": null
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "deepmind-jobs",
     "provider_id": "google",
     "open_role_count": 83,
@@ -45,13 +45,13 @@
     "gtm_role_count": 0,
     "operations_role_count": 8,
     "other_role_count": 9,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:28",
     "company_name": "Google DeepMind",
     "provider_name": "Google",
     "provider_colour": "#4285f4"
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "mistral-jobs",
     "provider_id": "mistral",
     "open_role_count": 156,
@@ -62,13 +62,13 @@
     "gtm_role_count": 16,
     "operations_role_count": 23,
     "other_role_count": 22,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:27",
     "company_name": "Mistral AI",
     "provider_name": "Mistral",
     "provider_colour": "#111827"
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "runway-jobs",
     "provider_id": "runway",
     "open_role_count": 0,
@@ -79,13 +79,13 @@
     "gtm_role_count": 0,
     "operations_role_count": 0,
     "other_role_count": 0,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:28",
     "company_name": "Runway",
     "provider_name": "Runway",
     "provider_colour": "#00d4ff"
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "scaleai-jobs",
     "provider_id": null,
     "open_role_count": 172,
@@ -96,13 +96,13 @@
     "gtm_role_count": 10,
     "operations_role_count": 26,
     "other_role_count": 19,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:28",
     "company_name": "Scale AI",
     "provider_name": null,
     "provider_colour": null
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "stability-jobs",
     "provider_id": "stability",
     "open_role_count": 13,
@@ -113,13 +113,13 @@
     "gtm_role_count": 5,
     "operations_role_count": 1,
     "other_role_count": 1,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:28",
     "company_name": "Stability AI",
     "provider_name": "Stability AI",
     "provider_colour": "#a855f7"
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "togetherai-jobs",
     "provider_id": null,
     "open_role_count": 48,
@@ -130,13 +130,13 @@
     "gtm_role_count": 2,
     "operations_role_count": 2,
     "other_role_count": 5,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:28",
     "company_name": "Together AI",
     "provider_name": null,
     "provider_colour": null
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "wayve-jobs",
     "provider_id": null,
     "open_role_count": 81,
@@ -147,13 +147,13 @@
     "gtm_role_count": 2,
     "operations_role_count": 3,
     "other_role_count": 12,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:28",
     "company_name": "Wayve",
     "provider_name": null,
     "provider_colour": null
   },
   {
-    "snapshot_date": "2026-04-25",
+    "snapshot_date": "2026-04-26",
     "company_id": "youcom-jobs",
     "provider_id": null,
     "open_role_count": 9,
@@ -164,7 +164,7 @@
     "gtm_role_count": 1,
     "operations_role_count": 1,
     "other_role_count": 1,
-    "updated_at": "2026-04-25 23:53:51",
+    "updated_at": "2026-04-26 03:54:28",
     "company_name": "You.com",
     "provider_name": null,
     "provider_colour": null

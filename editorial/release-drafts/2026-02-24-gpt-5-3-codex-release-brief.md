@@ -3,11 +3,11 @@ title: "GPT-5.3-Codex: release brief"
 slug: "2026-02-24-gpt-5-3-codex-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "watch"
+priority: "backfill"
 model: "GPT-5.3-Codex"
 provider: "OpenAI"
 release_date: "2026-02-24"
-generated_at: "2026-04-25T23:53:54.745Z"
+generated_at: "2026-04-26T03:54:31.853Z"
 ---
 
 # GPT-5.3-Codex: release brief
