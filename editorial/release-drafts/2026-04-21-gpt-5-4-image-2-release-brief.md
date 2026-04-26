@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.4 Image 2"
 provider: "OpenAI"
 release_date: "2026-04-21"
-generated_at: "2026-04-26T20:57:01.580Z"
+generated_at: "2026-04-26T21:53:35.817Z"
 ---
 
 # GPT-5.4 Image 2: release brief
