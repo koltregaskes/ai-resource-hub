@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1113,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:32",
-    "finished_at": "2026-04-26 21:53:32"
+    "started_at": "2026-04-26 22:57:40",
+    "finished_at": "2026-04-26 22:57:40"
   },
   {
     "id": 10,
@@ -14,17 +14,8 @@
     "status": "success",
     "models_updated": 76,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:27",
-    "finished_at": "2026-04-26 21:53:27"
-  },
-  {
-    "id": 8,
-    "scraper": "quality-scores",
-    "status": "computed",
-    "models_updated": 55,
-    "error_message": null,
-    "started_at": "2026-04-26 21:53:19",
-    "finished_at": "2026-04-26 21:53:19"
+    "started_at": "2026-04-26 22:57:35",
+    "finished_at": "2026-04-26 22:57:35"
   },
   {
     "id": 9,
@@ -32,8 +23,17 @@
     "status": "success",
     "models_updated": 99,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:19",
-    "finished_at": "2026-04-26 21:53:19"
+    "started_at": "2026-04-26 22:57:28",
+    "finished_at": "2026-04-26 22:57:28"
+  },
+  {
+    "id": 8,
+    "scraper": "quality-scores",
+    "status": "computed",
+    "models_updated": 55,
+    "error_message": null,
+    "started_at": "2026-04-26 22:57:27",
+    "finished_at": "2026-04-26 22:57:27"
   },
   {
     "id": 6,
@@ -41,8 +41,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:18",
-    "finished_at": "2026-04-26 21:53:18"
+    "started_at": "2026-04-26 22:57:26",
+    "finished_at": "2026-04-26 22:57:26"
   },
   {
     "id": 7,
@@ -50,17 +50,8 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:18",
-    "finished_at": "2026-04-26 21:53:18"
-  },
-  {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "success",
-    "models_updated": 27,
-    "error_message": null,
-    "started_at": "2026-04-26 21:53:17",
-    "finished_at": "2026-04-26 21:53:17"
+    "started_at": "2026-04-26 22:57:26",
+    "finished_at": "2026-04-26 22:57:26"
   },
   {
     "id": 4,
@@ -68,17 +59,17 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:16",
-    "finished_at": "2026-04-26 21:53:16"
+    "started_at": "2026-04-26 22:57:25",
+    "finished_at": "2026-04-26 22:57:25"
   },
   {
-    "id": 2,
-    "scraper": "pricing:openrouter",
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
     "status": "success",
-    "models_updated": 252,
+    "models_updated": 27,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:15",
-    "finished_at": "2026-04-26 21:53:15"
+    "started_at": "2026-04-26 22:57:25",
+    "finished_at": "2026-04-26 22:57:25"
   },
   {
     "id": 3,
@@ -86,8 +77,8 @@
     "status": "success",
     "models_updated": 6,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:15",
-    "finished_at": "2026-04-26 21:53:15"
+    "started_at": "2026-04-26 22:57:24",
+    "finished_at": "2026-04-26 22:57:24"
   },
   {
     "id": 1,
@@ -95,7 +86,16 @@
     "status": "success",
     "models_updated": 37,
     "error_message": null,
-    "started_at": "2026-04-26 21:53:14",
-    "finished_at": "2026-04-26 21:53:14"
+    "started_at": "2026-04-26 22:57:23",
+    "finished_at": "2026-04-26 22:57:23"
+  },
+  {
+    "id": 2,
+    "scraper": "pricing:openrouter",
+    "status": "success",
+    "models_updated": 252,
+    "error_message": null,
+    "started_at": "2026-04-26 22:57:23",
+    "finished_at": "2026-04-26 22:57:23"
   }
 ]
