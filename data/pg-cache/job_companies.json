@@ -9,7 +9,7 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-26 10:05:13",
+    "updated_at": "2026-04-26 11:02:09",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -23,7 +23,7 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/figureai/jobs",
     "status": "active",
     "notes": "Public Greenhouse board; robotics and embodied AI hiring signal",
-    "updated_at": "2026-04-26 10:05:14",
+    "updated_at": "2026-04-26 11:02:12",
     "provider_name": null,
     "provider_colour": null
   },
@@ -37,7 +37,7 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/deepmind/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-26 10:05:13",
+    "updated_at": "2026-04-26 11:02:12",
     "provider_name": "Google",
     "provider_colour": "#4285f4"
   },
@@ -51,7 +51,7 @@
     "board_url": "https://api.lever.co/v0/postings/mistral?mode=json",
     "status": "active",
     "notes": "Public Lever board",
-    "updated_at": "2026-04-26 10:05:13",
+    "updated_at": "2026-04-26 11:02:12",
     "provider_name": "Mistral",
     "provider_colour": "#111827"
   },
@@ -65,7 +65,7 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/scaleai/jobs",
     "status": "active",
     "notes": "Public Greenhouse board; useful as infrastructure hiring signal around AI deployment",
-    "updated_at": "2026-04-26 10:05:13",
+    "updated_at": "2026-04-26 11:02:12",
     "provider_name": null,
     "provider_colour": null
   },
@@ -79,7 +79,7 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/stabilityai/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-26 10:05:13",
+    "updated_at": "2026-04-26 11:02:12",
     "provider_name": "Stability AI",
     "provider_colour": "#a855f7"
   },
@@ -93,7 +93,7 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/togetherai/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-26 10:05:13",
+    "updated_at": "2026-04-26 11:02:12",
     "provider_name": null,
     "provider_colour": null
   },
@@ -107,7 +107,7 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/wayve/jobs",
     "status": "active",
     "notes": "Public Greenhouse board; autonomous-driving AI hiring signal",
-    "updated_at": "2026-04-26 10:05:14",
+    "updated_at": "2026-04-26 11:02:13",
     "provider_name": null,
     "provider_colour": null
   },
@@ -121,7 +121,7 @@
     "board_url": "https://boards-api.greenhouse.io/v1/boards/youcom/jobs",
     "status": "active",
     "notes": "Public Greenhouse board",
-    "updated_at": "2026-04-26 10:05:14",
+    "updated_at": "2026-04-26 11:02:13",
     "provider_name": null,
     "provider_colour": null
   }
