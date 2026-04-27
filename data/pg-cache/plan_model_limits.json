@@ -8,7 +8,7 @@
     "messages_high": null,
     "message_period": "month",
     "notes": "Very high limits",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Google One AI Premium",
     "price_monthly": 20,
     "model_name": "Gemini 2.5 Flash"
@@ -22,7 +22,7 @@
     "messages_high": null,
     "message_period": "month",
     "notes": "High limits with Gemini Advanced",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Google One AI Premium",
     "price_monthly": 20,
     "model_name": "Gemini 2.5 Pro Preview 06-05"
@@ -36,7 +36,7 @@
     "messages_high": 2000,
     "message_period": "5 hours",
     "notes": "20x Pro limits",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Max",
     "price_monthly": 100,
     "model_name": "Claude 3.5 Haiku"
@@ -50,7 +50,7 @@
     "messages_high": 600,
     "message_period": "5 hours",
     "notes": "20x Pro limits",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Max",
     "price_monthly": 100,
     "model_name": "Claude Opus 4.6"
@@ -64,7 +64,7 @@
     "messages_high": 900,
     "message_period": "5 hours",
     "notes": "20x Pro limits",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Max",
     "price_monthly": 100,
     "model_name": "Claude Sonnet 4.6"
@@ -78,7 +78,7 @@
     "messages_high": 80,
     "message_period": "5 hours",
     "notes": "Max model, complex tasks use more",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Plus",
     "price_monthly": 20,
     "model_name": null
@@ -92,7 +92,7 @@
     "messages_high": 600,
     "message_period": "5 hours",
     "notes": "Mini model extends limits ~4x",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Plus",
     "price_monthly": 20,
     "model_name": null
@@ -106,7 +106,7 @@
     "messages_high": 150,
     "message_period": "month",
     "notes": null,
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Plus",
     "price_monthly": 20,
     "model_name": "GPT-4o"
@@ -120,7 +120,7 @@
     "messages_high": 80,
     "message_period": "month",
     "notes": null,
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Plus",
     "price_monthly": 20,
     "model_name": "GPT-5"
@@ -134,7 +134,7 @@
     "messages_high": 50,
     "message_period": "day",
     "notes": null,
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Plus",
     "price_monthly": 20,
     "model_name": "o3 Mini"
@@ -148,7 +148,7 @@
     "messages_high": null,
     "message_period": "day",
     "notes": "Higher Grok 3 limits",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Premium+",
     "price_monthly": 22,
     "model_name": "Grok 3 Beta"
@@ -162,7 +162,7 @@
     "messages_high": 750,
     "message_period": "5 hours",
     "notes": "Max model, complex tasks use more",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 200,
     "model_name": null
@@ -176,7 +176,7 @@
     "messages_high": 6000,
     "message_period": "5 hours",
     "notes": "Mini model extends limits ~4x",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 200,
     "model_name": null
@@ -190,7 +190,7 @@
     "messages_high": 100,
     "message_period": "5 hours",
     "notes": null,
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 20,
     "model_name": "Claude 3.5 Haiku"
@@ -204,7 +204,7 @@
     "messages_high": 30,
     "message_period": "5 hours",
     "notes": null,
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 20,
     "model_name": "Claude Opus 4.6"
@@ -218,7 +218,7 @@
     "messages_high": 45,
     "message_period": "5 hours",
     "notes": null,
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 20,
     "model_name": "Claude Sonnet 4.6"
@@ -232,7 +232,7 @@
     "messages_high": null,
     "message_period": "month",
     "notes": "Unlimited",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 200,
     "model_name": "GPT-5"
@@ -246,7 +246,7 @@
     "messages_high": null,
     "message_period": "month",
     "notes": "Unlimited",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 200,
     "model_name": "GPT-5.2"
@@ -260,7 +260,7 @@
     "messages_high": null,
     "message_period": "month",
     "notes": "Unlimited",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 200,
     "model_name": "o3"
@@ -274,7 +274,7 @@
     "messages_high": null,
     "message_period": "month",
     "notes": "Unlimited",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "Pro",
     "price_monthly": 200,
     "model_name": "o3 Pro"
@@ -288,7 +288,7 @@
     "messages_high": null,
     "message_period": "day",
     "notes": "Grok 4 access",
-    "updated_at": "2026-04-27 22:05:21",
+    "updated_at": "2026-04-27 23:08:53",
     "plan_name": "SuperAI",
     "price_monthly": 30,
     "model_name": "Grok 4"
