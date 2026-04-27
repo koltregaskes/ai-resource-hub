@@ -3,11 +3,11 @@ title: "Qwen3.5-35B-A3B: release brief"
 slug: "2026-02-25-qwen3-5-35b-a3b-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "watch"
+priority: "backfill"
 model: "Qwen3.5-35B-A3B"
 provider: "Alibaba"
 release_date: "2026-02-25"
-generated_at: "2026-04-26T23:54:49.136Z"
+generated_at: "2026-04-27T03:58:34.682Z"
 ---
 
 # Qwen3.5-35B-A3B: release brief

@@ -1,22 +1,22 @@
 ---
-title: "Grok 4.20: release brief"
-slug: "2026-03-31-grok-4-20-release-brief"
+title: "Qwen3.6 35B A3B: release brief"
+slug: "2026-04-27-qwen3-6-35b-a3b-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "watch"
-model: "Grok 4.20"
-provider: "xAI"
-release_date: "2026-03-31"
-generated_at: "2026-04-27T03:58:34.682Z"
+priority: "high"
+model: "Qwen3.6 35B A3B"
+provider: "Alibaba"
+release_date: "2026-04-27"
+generated_at: "2026-04-27T03:58:34.681Z"
 ---
 
-# Grok 4.20: release brief
+# Qwen3.6 35B A3B: release brief
 
-xAI's Grok 4.20 is on the release desk with 0 related stories and 0 benchmark signals to review.
+Alibaba's Qwen3.6 35B A3B is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
-Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Qwen3.6 35B A3B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.16 in / $0.96 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-35b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -33,11 +33,11 @@ Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-av
 
 ## Suggested thread / post structure
 
-1. Lead with the hook: what xAI actually launched with Grok 4.20, and why it matters now.
+1. Lead with the hook: what Alibaba actually launched with Qwen3.6 35B A3B, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
 4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
-5. Keep the chronology explicit: this release landed on 31 Mar 2026 and should be framed against the models it is replacing or competing with.
+5. Keep the chronology explicit: this release landed on 27 Apr 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 
@@ -48,5 +48,5 @@ Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-av
 
 ## Sources
 
-- [Official launch or docs](https://docs.x.ai/developers/models)
-- [Provider API/docs](https://docs.x.ai/developers/models)
+- [Official launch or docs](https://help.aliyun.com/zh/model-studio/model-pricing)
+- [Provider API/docs](https://help.aliyun.com/zh/model-studio/model-pricing)
