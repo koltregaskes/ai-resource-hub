@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 27 Apr 2026, 03:58 UTC
+Generated: 27 Apr 2026, 06:40 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 27 Apr 2026 | Qwen3.5 Plus 2026-04-20 | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| 27 Apr 2026 | Qwen3.6 Flash | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 35B A3B | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 Max Preview | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 27B | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
@@ -26,7 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 1 Apr 2026 | GLM 5V Turbo | Zhipu AI | tracking | watch | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | 31 Mar 2026 | Grok 4.20 | xAI | tracking | watch | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
 | 31 Mar 2026 | Grok 4.20 Multi-Agent | xAI | tracking | watch | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
-| 28 Mar 2026 | Kimi K2 0711 | Moonshot AI | tracking | watch | needs research | 0 | 0 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
-| 20 Mar 2026 | Reka Edge | Reka | tracking | watch | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)

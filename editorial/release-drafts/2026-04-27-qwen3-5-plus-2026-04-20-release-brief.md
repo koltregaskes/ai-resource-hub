@@ -1,22 +1,22 @@
 ---
-title: "Qwen3.6 Max Preview: release brief"
-slug: "2026-04-27-qwen3-6-max-preview-release-brief"
+title: "Qwen3.5 Plus 2026-04-20: release brief"
+slug: "2026-04-27-qwen3-5-plus-2026-04-20-release-brief"
 draft_type: "model-release"
 status: "needs_research"
 priority: "high"
-model: "Qwen3.6 Max Preview"
+model: "Qwen3.5 Plus 2026-04-20"
 provider: "Alibaba"
 release_date: "2026-04-27"
 generated_at: "2026-04-27T06:40:12.220Z"
 ---
 
-# Qwen3.6 Max Preview: release brief
+# Qwen3.5 Plus 2026-04-20: release brief
 
-Alibaba's Qwen3.6 Max Preview is on the release desk with 0 related stories and 0 benchmark signals to review.
+Alibaba's Qwen3.5 Plus 2026-04-20 is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
-Qwen3.6 Max Preview is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $1.30 in / $7.80 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-max-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Qwen3.5 Plus 2026-04-20 is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.40 in / $2.40 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-plus-20260420); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -33,7 +33,7 @@ Qwen3.6 Max Preview is a currently tracked release from Alibaba. It is positione
 
 ## Suggested thread / post structure
 
-1. Lead with the hook: what Alibaba actually launched with Qwen3.6 Max Preview, and why it matters now.
+1. Lead with the hook: what Alibaba actually launched with Qwen3.5 Plus 2026-04-20, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
 4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.

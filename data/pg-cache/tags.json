@@ -4,244 +4,244 @@
     "name": "Mixture of Experts",
     "category": "architecture",
     "description": "Routes inputs to specialized sub-networks",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "vision",
     "name": "Computer Vision",
     "category": "capability",
     "description": "Understanding and processing images",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "function-calling",
     "name": "Function Calling",
     "category": "capability",
     "description": "Models that can invoke external tools",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "long-context",
     "name": "Long Context",
     "category": "capability",
     "description": "Models with very large context windows (100K+ tokens)",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "structured-output",
     "name": "Structured Output",
     "category": "capability",
     "description": "Models that produce formatted JSON or schemas",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "tool-use",
     "name": "Tool Use",
     "category": "capability",
     "description": "AI models calling functions and tools",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "agentic-ai",
     "name": "Agentic AI",
     "category": "concept",
     "description": "AI systems taking autonomous actions",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "distillation",
     "name": "Distillation",
     "category": "technique",
     "description": "Training smaller models from larger ones",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "flash-attention",
     "name": "Flash Attention",
     "category": "technique",
     "description": "IO-aware attention for speed and efficiency",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "grounding",
     "name": "Grounding",
     "category": "technique",
     "description": "Connecting outputs to real-world data",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "synthetic-data",
     "name": "Synthetic Data",
     "category": "technique",
     "description": "AI-generated training data",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "diffusion",
     "name": "Diffusion Models",
     "category": "technology",
     "description": "Generative models that learn by denoising",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "fine-tuning",
     "name": "Fine-Tuning",
     "category": "technology",
     "description": "Adapting pre-trained models for specific tasks",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "quantisation",
     "name": "Quantisation",
     "category": "technology",
     "description": "Reducing model size for efficient inference",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "rag",
     "name": "RAG",
     "category": "technology",
     "description": "Retrieval-Augmented Generation",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "rlhf",
     "name": "RLHF",
     "category": "technology",
     "description": "Reinforcement Learning from Human Feedback",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "transformer",
     "name": "Transformer Architecture",
     "category": "technology",
     "description": "The dominant architecture behind modern AI models",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "agents",
     "name": "AI Agents",
     "category": "topic",
     "description": "Autonomous AI systems that can take actions",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "ai-safety",
     "name": "AI Safety",
     "category": "topic",
     "description": "Research and practices for safe AI development",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "coding",
     "name": "Coding & Programming",
     "category": "topic",
     "description": "AI for code generation, review, and debugging",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "image-generation",
     "name": "Image Generation",
     "category": "topic",
     "description": "AI models that create images from text or other inputs",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "llm",
     "name": "Large Language Models",
     "category": "topic",
     "description": "Models that process and generate text",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "multimodal",
     "name": "Multimodal AI",
     "category": "topic",
     "description": "Models that handle multiple input/output types",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "music-generation",
     "name": "Music Generation",
     "category": "topic",
     "description": "AI models that compose music and sound",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "open-source",
     "name": "Open Source",
     "category": "topic",
     "description": "Openly available models and tools",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "reasoning",
     "name": "Reasoning",
     "category": "topic",
     "description": "Models with advanced logical and mathematical reasoning",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "speech-recognition",
     "name": "Speech Recognition",
     "category": "topic",
     "description": "Converting speech to text",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "text-to-speech",
     "name": "Text-to-Speech",
     "category": "topic",
     "description": "Converting text to spoken audio",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "video-generation",
     "name": "Video Generation",
     "category": "topic",
     "description": "AI models that generate video content",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "creative",
     "name": "Creative Tools",
     "category": "use-case",
     "description": "AI for art, design, music, and creative workflows",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "customer-service",
     "name": "Customer Service",
     "category": "use-case",
     "description": "AI for customer support and chatbots",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "education",
     "name": "Education",
     "category": "use-case",
     "description": "AI in learning and teaching",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "healthcare",
     "name": "Healthcare",
     "category": "use-case",
     "description": "AI applications in medicine and health",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "research",
     "name": "Research",
     "category": "use-case",
     "description": "Using AI to accelerate research and analysis",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   },
   {
     "id": "writing",
     "name": "Writing & Content",
     "category": "use-case",
     "description": "Using AI for writing, editing, and content creation",
-    "updated_at": "2026-04-27 03:58:17"
+    "updated_at": "2026-04-27 06:39:54"
   }
 ]
