@@ -7,12 +7,12 @@ priority: "watch"
 model: "GPT-5.4"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-04-27T11:59:15.301Z"
+generated_at: "2026-04-27T14:25:46.699Z"
 ---
 
 # GPT-5.4: release brief
 
-OpenAI's GPT-5.4 is on the release desk with 4 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.4 is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -32,7 +32,6 @@ GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-a
 - The Verge (2026-04-23): [OpenAI says its new GPT-5.5 model is more efficient and better at coding](https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt) - OpenAI just announced its new GPT-5.5 model, which the company calls its "smartest and most intuitive to use model yet, and the next step toward a new way of getting work done on a computer." OpenAI just released GPT-5.4 last month, but says that the new GPT-5.5 "excels" at tasks like writing and debugging code, [&#82…
 - The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
 - OpenAI (2026-04-22): [Introducing OpenAI Privacy Filter](https://openai.com/index/introducing-openai-privacy-filter) - OpenAI Privacy Filter is an open-weight model for detecting and redacting personally identifiable information (PII) in text with state-of-the-art accuracy
-- OpenAI (2026-04-21): [Scaling Codex to enterprises worldwide](https://openai.com/index/scaling-codex-to-enterprises-worldwide) - OpenAI launches Codex Labs, partners with with Accenture, PwC, Infosys, and others to help enterprises deploy and scale Codex across the software development lifecycle, and hits 4M Codex WAU.
 
 ## Suggested thread / post structure
 
@@ -56,4 +55,3 @@ GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [The Verge: OpenAI says its new GPT-5.5 model is more efficient and better at coding](https://www.theverge.com/ai-artificial-intelligence/917612/openai-gpt-5-5-chatgpt)
 - [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
 - [OpenAI: Introducing OpenAI Privacy Filter](https://openai.com/index/introducing-openai-privacy-filter)
-- [OpenAI: Scaling Codex to enterprises worldwide](https://openai.com/index/scaling-codex-to-enterprises-worldwide)
