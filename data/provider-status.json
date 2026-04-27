@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T10:35:04.757Z",
+  "generatedAt": "2026-04-27T11:59:09.380Z",
   "providers": [
     {
       "id": "together",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T10:35:04.749Z",
+      "lastCheckedAt": "2026-04-27T11:59:09.373Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-1-2026-04-25T23:13:19.000Z",
+          "id": "together-feed-1-2026-04-27T11:35:07.000Z",
+          "title": "Qwen3.5 397B A17B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-27T11:35:07.000Z",
+          "updatedAt": "2026-04-27T11:35:07.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-25T23:13:19.000Z",
           "title": "ZAI GLM 5.1 went down",
           "status": "investigating",
           "impact": "major",
@@ -29,22 +40,33 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "ZAI GLM 5.1 went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T22:19:00.000Z",
-          "title": "MiniMax M2.5 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T22:19:00.000Z",
-          "updatedAt": "2026-04-25T22:19:00.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "MiniMax M2.5 went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-25T23:40:15.000Z",
+          "id": "together-feed-0-2026-04-27T11:55:00.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-27T11:55:00.000Z",
+          "updatedAt": "2026-04-27T11:55:00.000Z",
+          "resolvedAt": "2026-04-27T11:55:00.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-27T11:35:07.000Z",
+          "title": "Qwen3.5 397B A17B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-27T11:35:07.000Z",
+          "updatedAt": "2026-04-27T11:35:07.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-25T23:40:15.000Z",
           "title": "ZAI GLM 5.1 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -55,7 +77,7 @@
           "summary": "ZAI GLM 5.1 recovered"
         },
         {
-          "id": "together-feed-1-2026-04-25T23:13:19.000Z",
+          "id": "together-feed-3-2026-04-25T23:13:19.000Z",
           "title": "ZAI GLM 5.1 went down",
           "status": "investigating",
           "impact": "major",
@@ -64,28 +86,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "ZAI GLM 5.1 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-25T23:03:17.000Z",
-          "title": "MiniMax M2.5 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-25T23:03:17.000Z",
-          "updatedAt": "2026-04-25T23:03:17.000Z",
-          "resolvedAt": "2026-04-25T23:03:17.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "MiniMax M2.5 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T22:19:00.000Z",
-          "title": "MiniMax M2.5 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T22:19:00.000Z",
-          "updatedAt": "2026-04-25T22:19:00.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "MiniMax M2.5 went down"
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T10:35:03.426Z",
+      "lastCheckedAt": "2026-04-27T11:59:08.051Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T10:35:04.258Z",
+      "lastCheckedAt": "2026-04-27T11:59:08.675Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T10:35:03.640Z",
+      "lastCheckedAt": "2026-04-27T11:59:08.152Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -284,7 +284,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T10:35:04.610Z",
+      "lastCheckedAt": "2026-04-27T11:59:09.051Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +349,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T10:35:03.532Z",
+      "lastCheckedAt": "2026-04-27T11:59:08.024Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -403,7 +403,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T10:35:03.875Z",
+      "lastCheckedAt": "2026-04-27T11:59:08.263Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -423,7 +423,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T10:35:03.411Z",
+      "lastCheckedAt": "2026-04-27T11:59:07.939Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
