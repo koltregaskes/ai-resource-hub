@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-27T14:25:38.514Z",
+  "generatedAt": "2026-04-27T14:49:53.270Z",
   "providers": [
     {
       "id": "together",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T14:25:38.507Z",
+      "lastCheckedAt": "2026-04-27T14:49:53.255Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-1-2026-04-27T11:35:07.000Z",
+          "id": "together-feed-0-2026-04-27T14:29:49.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-27T14:29:49.000Z",
+          "updatedAt": "2026-04-27T14:29:49.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-27T11:35:07.000Z",
           "title": "Qwen3.5 397B A17B went down",
           "status": "investigating",
           "impact": "major",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3.5 397B A17B went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T23:13:19.000Z",
-          "title": "ZAI GLM 5.1 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T23:13:19.000Z",
-          "updatedAt": "2026-04-25T23:13:19.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5.1 went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-27T11:55:00.000Z",
+          "id": "together-feed-0-2026-04-27T14:29:49.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-27T14:29:49.000Z",
+          "updatedAt": "2026-04-27T14:29:49.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-1-2026-04-27T11:55:00.000Z",
           "title": "Qwen3.5 397B A17B recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Qwen3.5 397B A17B recovered"
         },
         {
-          "id": "together-feed-1-2026-04-27T11:35:07.000Z",
+          "id": "together-feed-2-2026-04-27T11:35:07.000Z",
           "title": "Qwen3.5 397B A17B went down",
           "status": "investigating",
           "impact": "major",
@@ -66,7 +77,7 @@
           "summary": "Qwen3.5 397B A17B went down"
         },
         {
-          "id": "together-feed-2-2026-04-25T23:40:15.000Z",
+          "id": "together-feed-3-2026-04-25T23:40:15.000Z",
           "title": "ZAI GLM 5.1 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -75,17 +86,6 @@
           "resolvedAt": "2026-04-25T23:40:15.000Z",
           "url": "https://status.together.ai/",
           "summary": "ZAI GLM 5.1 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-04-25T23:13:19.000Z",
-          "title": "ZAI GLM 5.1 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T23:13:19.000Z",
-          "updatedAt": "2026-04-25T23:13:19.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "ZAI GLM 5.1 went down"
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T14:25:36.954Z",
+      "lastCheckedAt": "2026-04-27T14:49:52.090Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T14:25:37.607Z",
+      "lastCheckedAt": "2026-04-27T14:49:52.875Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T14:25:37.140Z",
+      "lastCheckedAt": "2026-04-27T14:49:52.362Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -296,7 +296,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T14:25:38.010Z",
+      "lastCheckedAt": "2026-04-27T14:49:53.262Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -361,7 +361,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T14:25:36.951Z",
+      "lastCheckedAt": "2026-04-27T14:49:52.238Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -415,7 +415,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T14:25:37.166Z",
+      "lastCheckedAt": "2026-04-27T14:49:52.597Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -435,7 +435,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-27T14:25:36.801Z",
+      "lastCheckedAt": "2026-04-27T14:49:51.900Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
