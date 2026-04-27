@@ -1,5 +1,17 @@
 [
   {
+    "id": "news-c2d418f236b3e1f11c8c",
+    "title": "Canonical lays out a plan for AI in Ubuntu Linux",
+    "url": "https://www.theverge.com/tech/919411/canonical-ubuntu-linux-ai-features",
+    "source": "The Verge",
+    "summary": "One of the most popular Linux distributions is about to get an influx of AI features. As reported by Phoronix, Jon Seager, VP of engineering at Ubuntu developer Canonical, shared a blog post on Monday detailing plans to add AI features to the Linux distro over the next year. As the post states, the AI [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-27T20:47:45.000Z",
+    "discovered_at": "2026-04-27 22:05:35"
+  },
+  {
     "id": "news-9b0da070a4335ff23b30",
     "title": "Google employees ask Sundar Pichai to say no to classified military AI use",
     "url": "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter",
@@ -9,19 +21,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T18:17:12.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-949fd0adbedbe4c1d3c7",
     "title": "OpenAI ends Microsoft legal peril over its $50B Amazon deal",
     "url": "https://techcrunch.com/2026/04/27/openai-ends-microsoft-legal-peril-over-its-50b-amazon-deal/",
     "source": "TechCrunch",
-    "summary": "OpenAI has won major concessions from its largest shareholder, Microsoft, that will allow it to sell products on AWS, while Microsoft get more cash in a revenue-share agreement.",
+    "summary": "OpenAI has won major concessions from its largest shareholder, Microsoft, that will allow it to sell products on AWS, while Microsoft gets more cash in a revenue-share agreement.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T17:40:38.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-b2e374065a27a7b27617",
@@ -33,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T17:24:21.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-6ae27ab88bcb243912be",
@@ -45,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T16:15:47.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-3d0a99e3ec2e16de2758",
@@ -57,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T16:13:02.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -69,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T15:50:29.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-a47ac395478d3a6fae85",
@@ -81,7 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:29:23.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
+  },
+  {
+    "id": "news-bc680bc14e9fe206072e",
+    "title": "OpenAI available at FedRAMP Moderate",
+    "url": "https://openai.com/index/openai-available-at-fedramp-moderate",
+    "source": "OpenAI",
+    "summary": "OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-27T14:00:00.000Z",
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-1ed2665c5a5ea65f09d5",
@@ -93,19 +117,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:16:55.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-88e7c1dc90196aa9f363",
     "title": "OpenAI could be making a phone with AI agents replacing apps",
     "url": "https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/",
     "source": "TechCrunch",
-    "summary": "The phone could go into mass production in 2028, an analyst says.",
+    "summary": "There have been plenty of rumors about OpenAI's hardware plans, which involve launching a pair of earbuds. A new note from industry analyst Ming-Chi Kuo suggests that the AI company might be working on a phone in collaboration with MediaTek, Qualcomm, and Luxshare.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:08:59.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -117,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-23c23ebfff4203fca642",
@@ -129,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T11:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-8074842c54eb84e1aade",
@@ -141,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-ce52abc8a3f020a53a6f",
@@ -153,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T06:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-bc507498ac4792876c13",
@@ -165,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-29e3d13268b3eecb87e9",
@@ -177,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-e1e83761f7ea575fa66b",
@@ -189,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-26T16:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-1d38706685c2e58d3faf",
@@ -201,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-26T15:30:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-2032f9324bb884858534",
@@ -213,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-25T21:43:37.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-4f03dd9e8715b3f10ca3",
@@ -225,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-25T20:57:08.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-1a7fca9ffad7b2ce83c6",
@@ -237,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-25T17:17:56.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-5cc9ad3aaa4ac3917c08",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-25T16:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-2c323723d19bfad12b96",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-25T15:03:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-fe4cc6b71bfcb42cbcef",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-25T15:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-47c1d80b30539b51488b",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T20:52:07.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-edecaa564fbb73da1975",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:49:35.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-85c88209ba7c3a610d49",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T18:00:03.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-13e677dbef7d9c00f78f",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T17:45:57.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-bcedfcc9c423ee8b306f",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T17:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-5ece802529a92d1a42a8",
@@ -357,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T16:42:19.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-1198630f5c9cb3d69277",
@@ -369,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T14:43:07.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-ca05023c8c9da8c7a2ea",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T12:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-56f58a9fc7f02169f944",
@@ -393,19 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T09:45:30.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
-  },
-  {
-    "id": "news-5d0c68d9d767ff618054",
-    "title": "Prestigious photo contest answers ‘what is a photo?’",
-    "url": "https://www.theverge.com/gadgets/918016/prestigious-photo-contest-answers-what-is-a-photo",
-    "source": "The Verge",
-    "summary": "We love to muse over how \"real\" photography is defined here at The Verge now that generative AI is so prolific, and the World Press Photo competition might have the answer. The prestigious award celebrates the best of photojournalism, where capturing reality is paramount. The winning entry for 2026 - \"Separated by ICE…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-24T09:40:07.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-6e6cdaf0d6010b4433a5",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-cfbb97f4e142ddd9e19c",
@@ -441,55 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
-  },
-  {
-    "id": "news-7fbf7b2c45e97107db7c",
-    "title": "Working with Codex",
-    "url": "https://openai.com/academy/working-with-codex",
-    "source": "OpenAI",
-    "summary": "Learn how to set up your Codex workspace, create threads and projects, manage files, and start completing tasks with step-by-step guidance.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
-  },
-  {
-    "id": "news-bb94101d867132ebad2f",
-    "title": "Plugins and skills",
-    "url": "https://openai.com/academy/codex-plugins-and-skills",
-    "source": "OpenAI",
-    "summary": "Learn how to use Codex plugins and skills to connect tools, access data, and follow repeatable workflows to automate tasks and improve results.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
-  },
-  {
-    "id": "news-3533fea5413f1a898136",
-    "title": "Top 10 uses for Codex at work",
-    "url": "https://openai.com/academy/top-10-use-cases-codex-for-work",
-    "source": "OpenAI",
-    "summary": "Explore 10 practical Codex use cases to automate tasks, create deliverables, and turn real inputs into outputs across tools, files, and workflows.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
-  },
-  {
-    "id": "news-b2acc3c294f376d2ca8b",
-    "title": "Automations",
-    "url": "https://openai.com/academy/codex-automations",
-    "source": "OpenAI",
-    "summary": "Learn how to automate tasks in Codex using schedules and triggers to create reports, summaries, and recurring workflows without manual effort.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-8a79aaeb639a5ad663c0",
@@ -501,19 +465,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
-    "id": "news-eff960ba78f2d3387cb1",
-    "title": "How to get started with Codex",
-    "url": "https://openai.com/academy/codex-how-to-start",
+    "id": "news-3533fea5413f1a898136",
+    "title": "Top 10 uses for Codex at work",
+    "url": "https://openai.com/academy/top-10-use-cases-codex-for-work",
     "source": "OpenAI",
-    "summary": "Learn how to get started with Codex by setting up projects, creating threads, and completing your first tasks with step-by-step guidance.",
+    "summary": "Explore 10 practical Codex use cases to automate tasks, create deliverables, and turn real inputs into outputs across tools, files, and workflows.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-99a0fa5d4a499cedad3e",
@@ -525,7 +489,55 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
+  },
+  {
+    "id": "news-bb94101d867132ebad2f",
+    "title": "Plugins and skills",
+    "url": "https://openai.com/academy/codex-plugins-and-skills",
+    "source": "OpenAI",
+    "summary": "Learn how to use Codex plugins and skills to connect tools, access data, and follow repeatable workflows to automate tasks and improve results.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-23T10:00:00.000Z",
+    "discovered_at": "2026-04-27 22:05:28"
+  },
+  {
+    "id": "news-eff960ba78f2d3387cb1",
+    "title": "How to get started with Codex",
+    "url": "https://openai.com/academy/codex-how-to-start",
+    "source": "OpenAI",
+    "summary": "Learn how to get started with Codex by setting up projects, creating threads, and completing your first tasks with step-by-step guidance.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-23T10:00:00.000Z",
+    "discovered_at": "2026-04-27 22:05:28"
+  },
+  {
+    "id": "news-b2acc3c294f376d2ca8b",
+    "title": "Automations",
+    "url": "https://openai.com/academy/codex-automations",
+    "source": "OpenAI",
+    "summary": "Learn how to automate tasks in Codex using schedules and triggers to create reports, summaries, and recurring workflows without manual effort.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-23T10:00:00.000Z",
+    "discovered_at": "2026-04-27 22:05:28"
+  },
+  {
+    "id": "news-7fbf7b2c45e97107db7c",
+    "title": "Working with Codex",
+    "url": "https://openai.com/academy/working-with-codex",
+    "source": "OpenAI",
+    "summary": "Learn how to set up your Codex workspace, create threads and projects, manage files, and start completing tasks with step-by-step guidance.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-23T10:00:00.000Z",
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-c366c2c39bd5d1ce1b03",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T00:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-b9cfd90c4451bd3b63ce",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T15:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-5278705df0e56402274e",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-c30ec7b01482ca088673",
@@ -597,19 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
-  },
-  {
-    "id": "news-1b162ea8d4aa8cdfb762",
-    "title": "Workspace agents",
-    "url": "https://openai.com/academy/workspace-agents",
-    "source": "OpenAI",
-    "summary": "Learn how to build, use, and scale workspace agents in ChatGPT to automate repeatable workflows, connect tools, and streamline team operations.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-22T10:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:08"
+    "discovered_at": "2026-04-27 22:05:28"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:34"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-0deaf33f30ef9c0667e0",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:34"
   },
   {
     "id": "news-bafb7f75d833305cc225",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-03T20:30:15.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-ab324ca76ade73622a3c",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-f2b31c55fc99db076bcf",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-da4f0e92fc3703a9901e",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:30:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-72c66a2896d16cbdc0e8",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   },
   {
     "id": "news-010788685e59720c9455",
@@ -789,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-31T16:00:00.000Z",
-    "discovered_at": "2026-04-27 20:18:14"
+    "discovered_at": "2026-04-27 22:05:35"
   }
 ]
