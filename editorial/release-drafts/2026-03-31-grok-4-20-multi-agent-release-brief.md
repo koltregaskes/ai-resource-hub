@@ -7,7 +7,7 @@ priority: "watch"
 model: "Grok 4.20 Multi-Agent"
 provider: "xAI"
 release_date: "2026-03-31"
-generated_at: "2026-04-28T14:40:09.568Z"
+generated_at: "2026-04-28T17:01:53.426Z"
 ---
 
 # Grok 4.20 Multi-Agent: release brief

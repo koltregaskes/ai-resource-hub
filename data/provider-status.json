@@ -1,100 +1,91 @@
 {
-  "generatedAt": "2026-04-28T15:11:12.481Z",
+  "generatedAt": "2026-04-28T17:01:47.696Z",
   "providers": [
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T15:11:11.341Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "lastCheckedAt": "2026-04-28T17:01:47.689Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
       "notes": null,
-      "components": [
-        {
-          "name": "Sora",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "VS Code extension",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        }
-      ],
+      "components": [],
       "activeIncidents": [
         {
-          "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
-          "title": "Elevated error rates in Sora API for some users",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-04-28T13:52:19.000Z",
-          "updatedAt": "2026-04-28T14:18:52.000Z",
+          "id": "together-feed-1-2026-04-28T16:13:50.000Z",
+          "title": "Qwen3.5 9B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T16:13:50.000Z",
+          "updatedAt": "2026-04-28T16:13:50.000Z",
           "resolvedAt": null,
-          "summary": null
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-28T15:59:57.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T15:59:57.000Z",
+          "updatedAt": "2026-04-28T15:59:57.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
-          "title": "Elevated error rates in Sora API for some users",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-04-28T13:52:19.000Z",
-          "updatedAt": "2026-04-28T14:18:52.000Z",
+          "id": "together-feed-0-2026-04-28T16:24:16.000Z",
+          "title": "Kimi K2.6 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-28T16:24:16.000Z",
+          "updatedAt": "2026-04-28T16:24:16.000Z",
+          "resolvedAt": "2026-04-28T16:24:16.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-28T16:13:50.000Z",
+          "title": "Qwen3.5 9B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T16:13:50.000Z",
+          "updatedAt": "2026-04-28T16:13:50.000Z",
           "resolvedAt": null,
-          "summary": null
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B went down"
         },
         {
-          "id": "01KQ0P3DXVK7YQYB4NJBKSQCZC",
-          "title": "Elevated errors on model gpt-5.5 in codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-24T21:24:59.000Z",
-          "updatedAt": "2026-04-24T22:15:07.000Z",
-          "resolvedAt": "2026-04-24T22:15:07.000Z",
-          "summary": null
+          "id": "together-feed-2-2026-04-28T15:59:57.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T15:59:57.000Z",
+          "updatedAt": "2026-04-28T15:59:57.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
         },
         {
-          "id": "01KPXS9FY1X6WHYM2K3BQHJZQW",
-          "title": "Elevated errors in Codex",
+          "id": "together-feed-3-2026-04-28T14:55:08.000Z",
+          "title": "Kimi K2.6 recovered",
           "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-23T18:23:01.000Z",
-          "updatedAt": "2026-04-23T20:29:59.000Z",
-          "resolvedAt": "2026-04-23T20:29:59.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KPXKMRJ72KA5SYTEH509CQA5",
-          "title": "Elevated error rates and latency for Moderation API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-23T16:44:18.000Z",
-          "updatedAt": "2026-04-23T17:57:19.000Z",
-          "resolvedAt": "2026-04-23T17:57:19.000Z",
-          "summary": null
+          "impact": "unknown",
+          "startedAt": "2026-04-28T14:55:08.000Z",
+          "updatedAt": "2026-04-28T14:55:08.000Z",
+          "resolvedAt": "2026-04-28T14:55:08.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 recovered"
         }
       ]
     },
@@ -109,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T15:11:11.263Z",
+      "lastCheckedAt": "2026-04-28T17:01:46.907Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -165,6 +156,17 @@
           "summary": "The incident has now been resolved. The elevated error rate for Haiku 4.5 was between 4:53 PT / 11:53 UTC and 5:36 PT / 12:44 UTC."
         },
         {
+          "id": "7bk0ftl0mpny",
+          "title": "Claude Code Code Review was intermittently failing",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-04-28T06:00:00.000Z",
+          "updatedAt": "2026-04-28T16:36:56.202Z",
+          "resolvedAt": "2026-04-28T06:00:00.000Z",
+          "url": "https://stspg.io/jw32q5lgvrhk",
+          "summary": "Claude Code Code Review intermittently wasn't starting sessions."
+        },
+        {
           "id": "mct55f8gxb7k",
           "title": "Elevated billing related errors on Claude.ai",
           "status": "resolved",
@@ -173,17 +175,6 @@
           "updatedAt": "2026-04-27T15:18:47.296Z",
           "resolvedAt": "2026-04-27T15:18:47.275Z",
           "url": "https://stspg.io/rfmsz6xdfs5c",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "c3km369dp85h",
-          "title": "Investigated elevated errors and slower responses on claude.ai",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-25T18:42:40.706Z",
-          "updatedAt": "2026-04-25T19:02:15.723Z",
-          "resolvedAt": "2026-04-25T19:02:15.710Z",
-          "url": "https://stspg.io/32rqp9dyk7ry",
           "summary": "This incident has been resolved."
         }
       ]
@@ -199,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T15:11:12.041Z",
+      "lastCheckedAt": "2026-04-28T17:01:47.515Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +210,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T15:11:11.523Z",
+      "lastCheckedAt": "2026-04-28T17:01:47.004Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +284,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T15:11:12.473Z",
+      "lastCheckedAt": "2026-04-28T17:01:47.585Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +349,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T15:11:11.375Z",
+      "lastCheckedAt": "2026-04-28T17:01:46.894Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +403,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T15:11:11.697Z",
+      "lastCheckedAt": "2026-04-28T17:01:47.100Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -422,67 +413,88 @@
       "recentIncidents": []
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T15:11:12.389Z",
+      "lastCheckedAt": "2026-04-28T17:01:46.914Z",
       "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
-      "components": [],
+      "components": [
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "VS Code extension",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-28T14:55:08.000Z",
-          "title": "Kimi K2.6 recovered",
+          "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
+          "title": "Elevated error rates in Sora API for some users",
           "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-28T14:55:08.000Z",
-          "updatedAt": "2026-04-28T14:55:08.000Z",
-          "resolvedAt": "2026-04-28T14:55:08.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
+          "impact": "minor",
+          "startedAt": "2026-04-28T13:52:19.000Z",
+          "updatedAt": "2026-04-28T16:10:47.000Z",
+          "resolvedAt": "2026-04-28T16:10:47.000Z",
+          "summary": null
         },
         {
-          "id": "together-feed-1-2026-04-28T14:40:58.000Z",
-          "title": "Kimi K2.6 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T14:40:58.000Z",
-          "updatedAt": "2026-04-28T14:40:58.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-28T13:55:00.000Z",
-          "title": "Kimi K2.6 recovered",
+          "id": "01KQ0P3DXVK7YQYB4NJBKSQCZC",
+          "title": "Elevated errors on model gpt-5.5 in codex",
           "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-28T13:55:00.000Z",
-          "updatedAt": "2026-04-28T13:55:00.000Z",
-          "resolvedAt": "2026-04-28T13:55:00.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
+          "impact": "minor",
+          "startedAt": "2026-04-24T21:24:59.000Z",
+          "updatedAt": "2026-04-24T22:15:07.000Z",
+          "resolvedAt": "2026-04-24T22:15:07.000Z",
+          "summary": null
         },
         {
-          "id": "together-feed-3-2026-04-28T13:34:03.000Z",
-          "title": "Kimi K2.6 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T13:34:03.000Z",
-          "updatedAt": "2026-04-28T13:34:03.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 went down"
+          "id": "01KPXS9FY1X6WHYM2K3BQHJZQW",
+          "title": "Elevated errors in Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-23T18:23:01.000Z",
+          "updatedAt": "2026-04-23T20:29:59.000Z",
+          "resolvedAt": "2026-04-23T20:29:59.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KPXKMRJ72KA5SYTEH509CQA5",
+          "title": "Elevated error rates and latency for Moderation API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-23T16:44:18.000Z",
+          "updatedAt": "2026-04-23T17:57:19.000Z",
+          "resolvedAt": "2026-04-23T17:57:19.000Z",
+          "summary": null
         }
       ]
     },

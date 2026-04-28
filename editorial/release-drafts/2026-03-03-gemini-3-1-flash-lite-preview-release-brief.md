@@ -7,12 +7,12 @@ priority: "watch"
 model: "Gemini 3.1 Flash Lite Preview"
 provider: "Google"
 release_date: "2026-03-03"
-generated_at: "2026-04-28T14:40:09.569Z"
+generated_at: "2026-04-28T17:01:53.426Z"
 ---
 
 # Gemini 3.1 Flash Lite Preview: release brief
 
-Google's Gemini 3.1 Flash Lite Preview is on the release desk with 3 related stories and 0 benchmark signals to review.
+Google's Gemini 3.1 Flash Lite Preview is on the release desk with 4 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,6 +30,7 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- TechCrunch (2026-04-28): [Otter&#8217;s new feature lets users search across their enterprise tools](https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/) - With this launch, users can connect their Gmail, Google Drive, Notion, Jira, and Salesforce accounts and query that data along with existing meeting data. The company said that it will soon allow connections with Microsoft Outlook, Teams, SharePoint, and Slack.
 - Google (2026-04-02): [New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/) - Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
@@ -53,5 +54,6 @@ Gemini 3.1 Flash Lite Preview is a currently tracked release from Google. It is 
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/models)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [TechCrunch: Otter&#8217;s new feature lets users search across their enterprise tools](https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/)
 - [Google: New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)
