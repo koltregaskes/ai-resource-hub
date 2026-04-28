@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Opus 4.7"
 provider: "Anthropic"
 release_date: "2026-04-16"
-generated_at: "2026-04-27T23:09:12.444Z"
+generated_at: "2026-04-28T00:05:30.514Z"
 ---
 
 # Claude Opus 4.7: release brief
 
-Anthropic's Claude Opus 4.7 is on the release desk with 2 related stories and 0 benchmark signals to review.
+Anthropic's Claude Opus 4.7 is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,7 +30,6 @@ Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned 
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
-- The Verge (2026-04-24): [China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model) - Chinese AI company DeepSeek released a preview of its hotly anticipated next-generation AI model V4 on Friday, saying that the open-source model can compete with leading closed-source systems from US rivals including Anthropic, Google, and OpenAI. DeepSeek says V4 marks a major improvement over prior models, especiall…
 
 ## Suggested thread / post structure
 
@@ -52,4 +51,3 @@ Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned 
 - [Official launch or docs](https://docs.anthropic.com)
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
-- [The Verge: China’s DeepSeek previews new AI model a year after jolting US rivals](https://www.theverge.com/ai-artificial-intelligence/918035/deepseek-preview-v4-ai-model)
