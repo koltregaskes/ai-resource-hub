@@ -7,7 +7,7 @@ priority: "high"
 model: "Kimi K2.6"
 provider: "Moonshot AI"
 release_date: "2026-04-20"
-generated_at: "2026-04-28T00:05:30.514Z"
+generated_at: "2026-04-28T04:03:30.530Z"
 ---
 
 # Kimi K2.6: release brief
