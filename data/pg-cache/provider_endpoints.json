@@ -10,7 +10,7 @@
     "output_price": 2.19,
     "measured_at": "2025-01-20",
     "source": "artificial-analysis",
-    "updated_at": "2026-04-28 09:33:22",
+    "updated_at": "2026-04-28 12:01:25",
     "provider_name": "DeepSeek",
     "provider_colour": "#2563eb",
     "model_name": "R1"
@@ -26,7 +26,7 @@
     "output_price": 1.1,
     "measured_at": "2025-09-29",
     "source": "artificial-analysis",
-    "updated_at": "2026-04-28 09:33:22",
+    "updated_at": "2026-04-28 12:01:25",
     "provider_name": "DeepSeek",
     "provider_colour": "#2563eb",
     "model_name": "DeepSeek V3 0324"
@@ -42,7 +42,7 @@
     "output_price": 0,
     "measured_at": "2025-04-05",
     "source": "artificial-analysis",
-    "updated_at": "2026-04-28 09:33:22",
+    "updated_at": "2026-04-28 12:01:25",
     "provider_name": "Meta",
     "provider_colour": "#0a66ff",
     "model_name": "Llama 4 Maverick"
@@ -58,7 +58,7 @@
     "output_price": 0.65,
     "measured_at": "2025-04-10",
     "source": "artificial-analysis",
-    "updated_at": "2026-04-28 09:33:22",
+    "updated_at": "2026-04-28 12:01:25",
     "provider_name": "Amazon",
     "provider_colour": "#ff9900",
     "model_name": "Llama 4 Maverick"
@@ -74,7 +74,7 @@
     "output_price": 1,
     "measured_at": "2024-09-19",
     "source": "artificial-analysis",
-    "updated_at": "2026-04-28 09:33:22",
+    "updated_at": "2026-04-28 12:01:25",
     "provider_name": "Alibaba",
     "provider_colour": "#ff6a00",
     "model_name": "Qwen2.5 72B Instruct"
