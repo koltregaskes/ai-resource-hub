@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-04-28T23:09:47.266Z",
+  "generatedAt": "2026-04-28T23:39:26.283Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:09:45.981Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "VS Code extension",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Codex Web",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "CLI",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "App",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Codex API",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KQB4AMHC9CKFYT863PMXN1YR",
-          "title": "Codex stream is disconnecting intermittently",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-04-28T22:46:00.000Z",
-          "updatedAt": "2026-04-28T22:58:30.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KQB4AMHC9CKFYT863PMXN1YR",
-          "title": "Codex stream is disconnecting intermittently",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-04-28T22:46:00.000Z",
-          "updatedAt": "2026-04-28T22:58:30.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
-          "title": "Elevated error rates in Sora API for some users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-28T13:52:19.000Z",
-          "updatedAt": "2026-04-28T16:10:47.000Z",
-          "resolvedAt": "2026-04-28T16:10:47.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KQ0P3DXVK7YQYB4NJBKSQCZC",
-          "title": "Elevated errors on model gpt-5.5 in codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-24T21:24:59.000Z",
-          "updatedAt": "2026-04-24T22:15:07.000Z",
-          "resolvedAt": "2026-04-24T22:15:07.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KPXS9FY1X6WHYM2K3BQHJZQW",
-          "title": "Elevated errors in Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-23T18:23:01.000Z",
-          "updatedAt": "2026-04-23T20:29:59.000Z",
-          "resolvedAt": "2026-04-23T20:29:59.000Z",
-          "summary": null
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -109,30 +12,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:09:45.989Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-04-28T23:39:24.633Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Cowork",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
@@ -140,8 +43,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "lryjwwy0q9pl",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-28T23:33:07.339Z",
+          "updatedAt": "2026-04-28T23:33:07.498Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/gsg6msbs6shy",
+          "summary": "We are currently investigating this issue."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "lryjwwy0q9pl",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-04-28T23:33:07.339Z",
+          "updatedAt": "2026-04-28T23:33:07.498Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/gsg6msbs6shy",
+          "summary": "We are currently investigating this issue."
+        },
         {
           "id": "9l93x2ht4s5w",
           "title": "Claude.ai unavailable and elevated errors on the API",
@@ -174,17 +100,94 @@
           "resolvedAt": "2026-04-28T12:45:07.680Z",
           "url": "https://stspg.io/v1941b5q9yxp",
           "summary": "The incident has now been resolved. The elevated error rate for Haiku 4.5 was between 4:53 PT / 11:53 UTC and 5:36 PT / 12:44 UTC."
+        }
+      ]
+    },
+    {
+      "id": "fireworks",
+      "providerId": null,
+      "name": "Fireworks AI",
+      "colour": "#ef4444",
+      "websiteUrl": "https://fireworks.ai",
+      "statusPageUrl": "https://status.fireworks.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-28T23:39:25.958Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-04-28T23:37:58.000Z",
+          "title": "Qwen3 VL 30B A3B Thinking chat completion API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T23:37:58.000Z",
+          "updatedAt": "2026-04-28T23:37:58.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Qwen3 VL 30B A3B Thinking chat completion API went down"
         },
         {
-          "id": "7bk0ftl0mpny",
-          "title": "Claude Code Code Review was intermittently failing",
+          "id": "fireworks-feed-2-2026-04-25T03:59:11.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T03:59:11.000Z",
+          "updatedAt": "2026-04-25T03:59:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-04-28T23:37:58.000Z",
+          "title": "Qwen3 VL 30B A3B Thinking chat completion API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T23:37:58.000Z",
+          "updatedAt": "2026-04-28T23:37:58.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Qwen3 VL 30B A3B Thinking chat completion API went down"
+        },
+        {
+          "id": "fireworks-feed-1-2026-04-25T04:02:10.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
           "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-28T06:00:00.000Z",
-          "updatedAt": "2026-04-28T16:36:56.202Z",
-          "resolvedAt": "2026-04-28T06:00:00.000Z",
-          "url": "https://stspg.io/jw32q5lgvrhk",
-          "summary": "Claude Code Code Review intermittently wasn't starting sessions."
+          "impact": "unknown",
+          "startedAt": "2026-04-25T04:02:10.000Z",
+          "updatedAt": "2026-04-25T04:02:10.000Z",
+          "resolvedAt": "2026-04-25T04:02:10.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-2-2026-04-25T03:59:11.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T03:59:11.000Z",
+          "updatedAt": "2026-04-25T03:59:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-3-2026-04-16T20:32:01.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-16T20:32:01.000Z",
+          "updatedAt": "2026-04-16T20:32:01.000Z",
+          "resolvedAt": "2026-04-16T20:32:01.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
         }
       ]
     },
@@ -199,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:09:46.480Z",
+      "lastCheckedAt": "2026-04-28T23:39:25.466Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +222,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:09:46.105Z",
+      "lastCheckedAt": "2026-04-28T23:39:24.896Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -283,71 +286,6 @@
       ]
     },
     {
-      "id": "fireworks",
-      "providerId": null,
-      "name": "Fireworks AI",
-      "colour": "#ef4444",
-      "websiteUrl": "https://fireworks.ai",
-      "statusPageUrl": "https://status.fireworks.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:09:46.816Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-04-25T04:02:10.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-25T04:02:10.000Z",
-          "updatedAt": "2026-04-25T04:02:10.000Z",
-          "resolvedAt": "2026-04-25T04:02:10.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-1-2026-04-25T03:59:11.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T03:59:11.000Z",
-          "updatedAt": "2026-04-25T03:59:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-04-16T20:32:01.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-16T20:32:01.000Z",
-          "updatedAt": "2026-04-16T20:32:01.000Z",
-          "resolvedAt": "2026-04-16T20:32:01.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-3-2026-04-16T20:26:36.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-16T20:26:36.000Z",
-          "updatedAt": "2026-04-16T20:26:36.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        }
-      ]
-    },
-    {
       "id": "google",
       "providerId": "google",
       "name": "Google",
@@ -358,7 +296,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:09:46.055Z",
+      "lastCheckedAt": "2026-04-28T23:39:24.839Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +350,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:09:46.172Z",
+      "lastCheckedAt": "2026-04-28T23:39:25.225Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -420,6 +358,92 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-28T23:39:24.498Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "VS Code extension",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KQB4AMHC9CKFYT863PMXN1YR",
+          "title": "Codex stream is disconnecting intermittently",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-28T22:46:00.000Z",
+          "updatedAt": "2026-04-28T23:12:55.000Z",
+          "resolvedAt": "2026-04-28T23:12:55.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
+          "title": "Elevated error rates in Sora API for some users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-28T13:52:19.000Z",
+          "updatedAt": "2026-04-28T16:10:47.000Z",
+          "resolvedAt": "2026-04-28T16:10:47.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KQ0P3DXVK7YQYB4NJBKSQCZC",
+          "title": "Elevated errors on model gpt-5.5 in codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-24T21:24:59.000Z",
+          "updatedAt": "2026-04-24T22:15:07.000Z",
+          "resolvedAt": "2026-04-24T22:15:07.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KPXS9FY1X6WHYM2K3BQHJZQW",
+          "title": "Elevated errors in Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-23T18:23:01.000Z",
+          "updatedAt": "2026-04-23T20:29:59.000Z",
+          "resolvedAt": "2026-04-23T20:29:59.000Z",
+          "summary": null
+        }
+      ]
     },
     {
       "id": "together",
@@ -432,7 +456,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:09:47.259Z",
+      "lastCheckedAt": "2026-04-28T23:39:26.277Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
