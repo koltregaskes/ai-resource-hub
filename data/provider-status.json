@@ -1,94 +1,6 @@
 {
-  "generatedAt": "2026-04-28T17:21:54.224Z",
+  "generatedAt": "2026-04-28T18:50:09.289Z",
   "providers": [
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T17:21:54.216Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "together-feed-1-2026-04-28T16:13:50.000Z",
-          "title": "Qwen3.5 9B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T16:13:50.000Z",
-          "updatedAt": "2026-04-28T16:13:50.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-28T15:59:57.000Z",
-          "title": "Kimi K2.6 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T15:59:57.000Z",
-          "updatedAt": "2026-04-28T15:59:57.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-04-28T16:24:16.000Z",
-          "title": "Kimi K2.6 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-28T16:24:16.000Z",
-          "updatedAt": "2026-04-28T16:24:16.000Z",
-          "resolvedAt": "2026-04-28T16:24:16.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
-        },
-        {
-          "id": "together-feed-1-2026-04-28T16:13:50.000Z",
-          "title": "Qwen3.5 9B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T16:13:50.000Z",
-          "updatedAt": "2026-04-28T16:13:50.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-28T15:59:57.000Z",
-          "title": "Kimi K2.6 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T15:59:57.000Z",
-          "updatedAt": "2026-04-28T15:59:57.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-28T14:55:08.000Z",
-          "title": "Kimi K2.6 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-28T14:55:08.000Z",
-          "updatedAt": "2026-04-28T14:55:08.000Z",
-          "resolvedAt": "2026-04-28T14:55:08.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -100,30 +12,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T17:21:52.788Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-04-28T18:50:09.282Z",
+      "overallStatus": "partial_outage",
+      "overallLabel": "Partial System Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "major_outage"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
+          "status": "major_outage"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
@@ -131,8 +43,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "9l93x2ht4s5w",
+          "title": "Claude.ai unavailable and elevated errors on the API",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-04-28T17:41:55.352Z",
+          "updatedAt": "2026-04-28T18:33:55.452Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/mz37pbn6yt3w",
+          "summary": "We are continuing to work to resolve the issues preventing users from accessing Claude.ai, and causing elevated authentication errors for requests to the API and Claude Code."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "9l93x2ht4s5w",
+          "title": "Claude.ai unavailable and elevated errors on the API",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-04-28T17:41:55.352Z",
+          "updatedAt": "2026-04-28T18:33:55.452Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/mz37pbn6yt3w",
+          "summary": "We are continuing to work to resolve the issues preventing users from accessing Claude.ai, and causing elevated authentication errors for requests to the API and Claude Code."
+        },
         {
           "id": "x1y91zcb2rp2",
           "title": "Elevated errors on Claude Sonnet 4.5",
@@ -165,17 +100,6 @@
           "resolvedAt": "2026-04-28T06:00:00.000Z",
           "url": "https://stspg.io/jw32q5lgvrhk",
           "summary": "Claude Code Code Review intermittently wasn't starting sessions."
-        },
-        {
-          "id": "mct55f8gxb7k",
-          "title": "Elevated billing related errors on Claude.ai",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-04-27T14:11:29.158Z",
-          "updatedAt": "2026-04-27T15:18:47.296Z",
-          "resolvedAt": "2026-04-27T15:18:47.275Z",
-          "url": "https://stspg.io/rfmsz6xdfs5c",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -190,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T17:21:53.524Z",
+      "lastCheckedAt": "2026-04-28T18:50:08.503Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T17:21:52.979Z",
+      "lastCheckedAt": "2026-04-28T18:50:07.996Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -284,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T17:21:53.866Z",
+      "lastCheckedAt": "2026-04-28T18:50:08.807Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T17:21:52.885Z",
+      "lastCheckedAt": "2026-04-28T18:50:07.868Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -403,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T17:21:53.247Z",
+      "lastCheckedAt": "2026-04-28T18:50:08.158Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -423,7 +347,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T17:21:52.784Z",
+      "lastCheckedAt": "2026-04-28T18:50:07.921Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -495,6 +419,71 @@
           "updatedAt": "2026-04-23T17:57:19.000Z",
           "resolvedAt": "2026-04-23T17:57:19.000Z",
           "summary": null
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-28T18:50:08.905Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-04-28T18:31:12.000Z",
+          "title": "Qwen3.5 9B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-28T18:31:12.000Z",
+          "updatedAt": "2026-04-28T18:31:12.000Z",
+          "resolvedAt": "2026-04-28T18:31:12.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-04-28T16:24:16.000Z",
+          "title": "Kimi K2.6 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-28T16:24:16.000Z",
+          "updatedAt": "2026-04-28T16:24:16.000Z",
+          "resolvedAt": "2026-04-28T16:24:16.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 recovered"
+        },
+        {
+          "id": "together-feed-2-2026-04-28T16:13:50.000Z",
+          "title": "Qwen3.5 9B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T16:13:50.000Z",
+          "updatedAt": "2026-04-28T16:13:50.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B went down"
+        },
+        {
+          "id": "together-feed-3-2026-04-28T15:59:57.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T15:59:57.000Z",
+          "updatedAt": "2026-04-28T15:59:57.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
         }
       ]
     },
