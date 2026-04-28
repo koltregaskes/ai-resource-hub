@@ -1,6 +1,103 @@
 {
-  "generatedAt": "2026-04-28T22:38:53.505Z",
+  "generatedAt": "2026-04-28T23:09:47.266Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-28T23:09:45.981Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "VS Code extension",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex Web",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "CLI",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "App",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex API",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KQB4AMHC9CKFYT863PMXN1YR",
+          "title": "Codex stream is disconnecting intermittently",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-04-28T22:46:00.000Z",
+          "updatedAt": "2026-04-28T22:58:30.000Z",
+          "resolvedAt": null,
+          "summary": null
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KQB4AMHC9CKFYT863PMXN1YR",
+          "title": "Codex stream is disconnecting intermittently",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-04-28T22:46:00.000Z",
+          "updatedAt": "2026-04-28T22:58:30.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
+          "title": "Elevated error rates in Sora API for some users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-28T13:52:19.000Z",
+          "updatedAt": "2026-04-28T16:10:47.000Z",
+          "resolvedAt": "2026-04-28T16:10:47.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KQ0P3DXVK7YQYB4NJBKSQCZC",
+          "title": "Elevated errors on model gpt-5.5 in codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-24T21:24:59.000Z",
+          "updatedAt": "2026-04-24T22:15:07.000Z",
+          "resolvedAt": "2026-04-24T22:15:07.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KPXS9FY1X6WHYM2K3BQHJZQW",
+          "title": "Elevated errors in Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-23T18:23:01.000Z",
+          "updatedAt": "2026-04-23T20:29:59.000Z",
+          "resolvedAt": "2026-04-23T20:29:59.000Z",
+          "summary": null
+        }
+      ]
+    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -12,7 +109,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T22:38:52.001Z",
+      "lastCheckedAt": "2026-04-28T23:09:45.989Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +199,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T22:38:52.676Z",
+      "lastCheckedAt": "2026-04-28T23:09:46.480Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +219,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T22:38:52.077Z",
+      "lastCheckedAt": "2026-04-28T23:09:46.105Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -196,7 +293,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T22:38:53.351Z",
+      "lastCheckedAt": "2026-04-28T23:09:46.816Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +358,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T22:38:52.006Z",
+      "lastCheckedAt": "2026-04-28T23:09:46.055Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +412,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T22:38:52.392Z",
+      "lastCheckedAt": "2026-04-28T23:09:46.172Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -323,92 +420,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T22:38:51.954Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "VS Code extension",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KQA5SDSC9P4VGBZ9EPPR06MH",
-          "title": "Elevated error rates in Sora API for some users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-28T13:52:19.000Z",
-          "updatedAt": "2026-04-28T16:10:47.000Z",
-          "resolvedAt": "2026-04-28T16:10:47.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KQ0P3DXVK7YQYB4NJBKSQCZC",
-          "title": "Elevated errors on model gpt-5.5 in codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-24T21:24:59.000Z",
-          "updatedAt": "2026-04-24T22:15:07.000Z",
-          "resolvedAt": "2026-04-24T22:15:07.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KPXS9FY1X6WHYM2K3BQHJZQW",
-          "title": "Elevated errors in Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-23T18:23:01.000Z",
-          "updatedAt": "2026-04-23T20:29:59.000Z",
-          "resolvedAt": "2026-04-23T20:29:59.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KPXKMRJ72KA5SYTEH509CQA5",
-          "title": "Elevated error rates and latency for Moderation API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-23T16:44:18.000Z",
-          "updatedAt": "2026-04-23T17:57:19.000Z",
-          "resolvedAt": "2026-04-23T17:57:19.000Z",
-          "summary": null
-        }
-      ]
     },
     {
       "id": "together",
@@ -421,7 +432,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T22:38:53.498Z",
+      "lastCheckedAt": "2026-04-28T23:09:47.259Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
