@@ -7,7 +7,7 @@ priority: "high"
 model: "DeepSeek V4 Flash"
 provider: "DeepSeek"
 release_date: "2026-04-24"
-generated_at: "2026-04-29T14:29:55.808Z"
+generated_at: "2026-04-29T16:52:11.602Z"
 ---
 
 # DeepSeek V4 Flash: release brief

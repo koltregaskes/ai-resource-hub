@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Nano Banana 2 (Gemini 3.1 Flash Image Preview)"
 provider: "Google"
 release_date: "2026-02-26"
-generated_at: "2026-04-29T14:29:55.809Z"
+generated_at: "2026-04-29T16:52:11.603Z"
 ---
 
 # Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief
 
-Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 5 related stories and 0 benchmark signals to review.
+Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 6 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,6 +30,7 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- The Verge (2026-04-29): [Google Photos launches an AI try-on feature for clothes you already have](https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe) - Google Photos is launching a new AI-powered feature you can use to virtually try on clothes you already have. Using the photos in your gallery, Google will create a virtual "wardrobe," allowing you to mix and match outfits, save the looks you like, and share them with friends. A video shared by Google shows how [&#823…
 - The Verge (2026-04-29): [General Motors is adding Gemini to four million cars](https://www.theverge.com/transportation/920285/general-motors-gm-gemini-ai-update) - General Motors is planning to bring Google's Gemini AI assistant to around four million vehicles across the US. Model year 2022 and newer Cadillac, Chevrolet, Buick, and GMC vehicles with Google built-in will be eligible for the AI upgrade, which will be rolled out via over-the-air software updates for GM's infotainme…
 - TechCrunch (2026-04-28): [Otter&#8217;s new feature lets users search across their enterprise tools](https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/) - With this launch, users can connect their Gmail, Google Drive, Notion, Jira, and Salesforce accounts and query that data along with existing meeting data. The company said that it will soon allow connections with Microsoft Outlook, Teams, SharePoint, and Slack.
 - Google (2026-04-02): [New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/) - Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.
@@ -55,6 +56,7 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/models)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [The Verge: Google Photos launches an AI try-on feature for clothes you already have](https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe)
 - [The Verge: General Motors is adding Gemini to four million cars](https://www.theverge.com/transportation/920285/general-motors-gm-gemini-ai-update)
 - [TechCrunch: Otter&#8217;s new feature lets users search across their enterprise tools](https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/)
 - [Google: New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/)
