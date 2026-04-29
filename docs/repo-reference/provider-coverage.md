@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 28 Apr 2026, 23:09 UTC
+Generated: 29 Apr 2026, 00:07 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -9,8 +9,8 @@ This table shows how much of each provider's public model surface is currently r
 | OpenAI | 25 | 44 | 0 | GPT-5.5 Pro (24 Apr 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 10 | 17 | 0 | Gemma 4 31B (2 Apr 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 9 | 7 | 1 | Claude Opus 4.7 (16 Apr 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
-| Alibaba | 6 | 42 | 0 | Qwen3.5 Plus 2026-04-20 (27 Apr 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | Meta | 6 | 6 | 0 | n/a | n/a | [docs](https://llama.meta.com/docs) |
+| Alibaba | 5 | 43 | 0 | Qwen3.5 Plus 2026-04-20 (27 Apr 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | DeepSeek | 4 | 9 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | xAI | 4 | 5 | 0 | Grok 4.20 (31 Mar 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |

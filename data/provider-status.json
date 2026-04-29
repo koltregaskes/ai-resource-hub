@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T23:39:26.283Z",
+  "generatedAt": "2026-04-29T00:07:03.018Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,30 +12,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:39:24.633Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-04-29T00:07:01.992Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Code",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
           "status": "operational"
         },
         {
@@ -43,30 +43,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "lryjwwy0q9pl",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-04-28T23:33:07.339Z",
-          "updatedAt": "2026-04-28T23:33:07.498Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/gsg6msbs6shy",
-          "summary": "We are currently investigating this issue."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "lryjwwy0q9pl",
           "title": "Elevated errors on Claude Opus 4.7",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-04-28T23:33:07.339Z",
-          "updatedAt": "2026-04-28T23:33:07.498Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-04-29T00:00:29.060Z",
+          "resolvedAt": "2026-04-29T00:00:29.047Z",
           "url": "https://stspg.io/gsg6msbs6shy",
-          "summary": "We are currently investigating this issue."
+          "summary": "The incident is now resolved. The impact was between 16:25 PT / 23:25 UTC and 16:33 PT / 23:33 UTC."
         },
         {
           "id": "9l93x2ht4s5w",
@@ -104,94 +92,6 @@
       ]
     },
     {
-      "id": "fireworks",
-      "providerId": null,
-      "name": "Fireworks AI",
-      "colour": "#ef4444",
-      "websiteUrl": "https://fireworks.ai",
-      "statusPageUrl": "https://status.fireworks.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:39:25.958Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-04-28T23:37:58.000Z",
-          "title": "Qwen3 VL 30B A3B Thinking chat completion API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T23:37:58.000Z",
-          "updatedAt": "2026-04-28T23:37:58.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Qwen3 VL 30B A3B Thinking chat completion API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-04-25T03:59:11.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T03:59:11.000Z",
-          "updatedAt": "2026-04-25T03:59:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-04-28T23:37:58.000Z",
-          "title": "Qwen3 VL 30B A3B Thinking chat completion API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T23:37:58.000Z",
-          "updatedAt": "2026-04-28T23:37:58.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Qwen3 VL 30B A3B Thinking chat completion API went down"
-        },
-        {
-          "id": "fireworks-feed-1-2026-04-25T04:02:10.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-25T04:02:10.000Z",
-          "updatedAt": "2026-04-25T04:02:10.000Z",
-          "resolvedAt": "2026-04-25T04:02:10.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-2-2026-04-25T03:59:11.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-25T03:59:11.000Z",
-          "updatedAt": "2026-04-25T03:59:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-3-2026-04-16T20:32:01.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-16T20:32:01.000Z",
-          "updatedAt": "2026-04-16T20:32:01.000Z",
-          "resolvedAt": "2026-04-16T20:32:01.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -202,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:39:25.466Z",
+      "lastCheckedAt": "2026-04-29T00:07:02.613Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:39:24.896Z",
+      "lastCheckedAt": "2026-04-29T00:07:02.036Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -286,6 +186,71 @@
       ]
     },
     {
+      "id": "fireworks",
+      "providerId": null,
+      "name": "Fireworks AI",
+      "colour": "#ef4444",
+      "websiteUrl": "https://fireworks.ai",
+      "statusPageUrl": "https://status.fireworks.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-29T00:07:03.011Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-04-28T23:39:57.000Z",
+          "title": "Qwen3 VL 30B A3B Thinking chat completion API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-28T23:39:57.000Z",
+          "updatedAt": "2026-04-28T23:39:57.000Z",
+          "resolvedAt": "2026-04-28T23:39:57.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Qwen3 VL 30B A3B Thinking chat completion API recovered"
+        },
+        {
+          "id": "fireworks-feed-1-2026-04-28T23:37:58.000Z",
+          "title": "Qwen3 VL 30B A3B Thinking chat completion API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-28T23:37:58.000Z",
+          "updatedAt": "2026-04-28T23:37:58.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Qwen3 VL 30B A3B Thinking chat completion API went down"
+        },
+        {
+          "id": "fireworks-feed-2-2026-04-25T04:02:10.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-25T04:02:10.000Z",
+          "updatedAt": "2026-04-25T04:02:10.000Z",
+          "resolvedAt": "2026-04-25T04:02:10.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-3-2026-04-25T03:59:11.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-25T03:59:11.000Z",
+          "updatedAt": "2026-04-25T03:59:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        }
+      ]
+    },
+    {
       "id": "google",
       "providerId": "google",
       "name": "Google",
@@ -296,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:39:24.839Z",
+      "lastCheckedAt": "2026-04-29T00:07:01.966Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -350,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:39:25.225Z",
+      "lastCheckedAt": "2026-04-29T00:07:02.241Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -370,7 +335,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:39:24.498Z",
+      "lastCheckedAt": "2026-04-29T00:07:01.963Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -456,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-28T23:39:26.277Z",
+      "lastCheckedAt": "2026-04-29T00:07:02.951Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
