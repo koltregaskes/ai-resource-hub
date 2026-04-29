@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-29T10:31:38.197Z",
+  "generatedAt": "2026-04-29T11:53:59.343Z",
   "providers": [
     {
       "id": "together",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-29T10:31:38.189Z",
+      "lastCheckedAt": "2026-04-29T11:53:59.335Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-0-2026-04-29T07:56:38.000Z",
+          "id": "together-feed-0-2026-04-29T10:56:49.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-29T10:56:49.000Z",
+          "updatedAt": "2026-04-29T10:56:49.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
+        },
+        {
+          "id": "together-feed-2-2026-04-29T07:56:38.000Z",
           "title": "OpenAI GPT OSS 120B went down",
           "status": "investigating",
           "impact": "major",
@@ -29,22 +40,33 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "OpenAI GPT OSS 120B went down"
-        },
-        {
-          "id": "together-feed-2-2026-04-29T05:29:55.000Z",
-          "title": "DeepSeek V4 Pro went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-29T05:29:55.000Z",
-          "updatedAt": "2026-04-29T05:29:55.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "DeepSeek V4 Pro went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-04-29T07:56:38.000Z",
+          "id": "together-feed-0-2026-04-29T10:56:49.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-29T10:56:49.000Z",
+          "updatedAt": "2026-04-29T10:56:49.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
+        },
+        {
+          "id": "together-feed-1-2026-04-29T10:38:29.000Z",
+          "title": "OpenAI GPT OSS 120B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-29T10:38:29.000Z",
+          "updatedAt": "2026-04-29T10:38:29.000Z",
+          "resolvedAt": "2026-04-29T10:38:29.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B recovered"
+        },
+        {
+          "id": "together-feed-2-2026-04-29T07:56:38.000Z",
           "title": "OpenAI GPT OSS 120B went down",
           "status": "investigating",
           "impact": "major",
@@ -55,35 +77,13 @@
           "summary": "OpenAI GPT OSS 120B went down"
         },
         {
-          "id": "together-feed-1-2026-04-29T06:17:40.000Z",
+          "id": "together-feed-3-2026-04-29T06:17:40.000Z",
           "title": "DeepSeek V4 Pro recovered",
           "status": "resolved",
           "impact": "unknown",
           "startedAt": "2026-04-29T06:17:40.000Z",
           "updatedAt": "2026-04-29T06:17:40.000Z",
           "resolvedAt": "2026-04-29T06:17:40.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "DeepSeek V4 Pro recovered"
-        },
-        {
-          "id": "together-feed-2-2026-04-29T05:29:55.000Z",
-          "title": "DeepSeek V4 Pro went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-29T05:29:55.000Z",
-          "updatedAt": "2026-04-29T05:29:55.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "DeepSeek V4 Pro went down"
-        },
-        {
-          "id": "together-feed-3-2026-04-29T00:55:50.000Z",
-          "title": "DeepSeek V4 Pro recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-29T00:55:50.000Z",
-          "updatedAt": "2026-04-29T00:55:50.000Z",
-          "resolvedAt": "2026-04-29T00:55:50.000Z",
           "url": "https://status.together.ai/",
           "summary": "DeepSeek V4 Pro recovered"
         }
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-29T10:31:36.950Z",
+      "lastCheckedAt": "2026-04-29T11:53:58.427Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-29T10:31:37.584Z",
+      "lastCheckedAt": "2026-04-29T11:53:59.061Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-29T10:31:37.047Z",
+      "lastCheckedAt": "2026-04-29T11:53:58.854Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -284,7 +284,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-29T10:31:37.786Z",
+      "lastCheckedAt": "2026-04-29T11:53:59.310Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +349,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-29T10:31:36.867Z",
+      "lastCheckedAt": "2026-04-29T11:53:58.525Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -403,7 +403,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-29T10:31:37.168Z",
+      "lastCheckedAt": "2026-04-29T11:53:58.677Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -423,7 +423,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-29T10:31:36.905Z",
+      "lastCheckedAt": "2026-04-29T11:53:58.317Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
