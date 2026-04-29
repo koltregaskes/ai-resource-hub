@@ -7,12 +7,12 @@ priority: "watch"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-04-29T06:36:08.377Z"
+generated_at: "2026-04-29T09:22:55.655Z"
 ---
 
 # Gemma 4 31B: release brief
 
-Google's Gemma 4 31B is on the release desk with 4 related stories and 0 benchmark signals to review.
+Google's Gemma 4 31B is on the release desk with 5 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -31,6 +31,7 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- The Verge (2026-04-29): [General Motors is adding Gemini to four million cars](https://www.theverge.com/transportation/920285/general-motors-gm-gemini-ai-update) - General Motors is planning to bring Google's Gemini AI assistant to around four million vehicles across the US. Model year 2022 and newer Cadillac, Chevrolet, Buick, and GMC vehicles with Google built-in will be eligible for the AI upgrade, which will be rolled out via over-the-air software updates for GM's infotainme…
 - TechCrunch (2026-04-28): [Otter&#8217;s new feature lets users search across their enterprise tools](https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/) - With this launch, users can connect their Gmail, Google Drive, Notion, Jira, and Salesforce accounts and query that data along with existing meeting data. The company said that it will soon allow connections with Microsoft Outlook, Teams, SharePoint, and Slack.
 - Google (2026-04-02): [New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/) - Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
@@ -57,6 +58,7 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 - [Official launch or docs](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [The Verge: General Motors is adding Gemini to four million cars](https://www.theverge.com/transportation/920285/general-motors-gm-gemini-ai-update)
 - [TechCrunch: Otter&#8217;s new feature lets users search across their enterprise tools](https://techcrunch.com/2026/04/28/otters-new-feature-lets-users-search-across-their-enterprise-tools/)
 - [Google: New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)

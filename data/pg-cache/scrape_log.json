@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1107,
     "error_message": null,
-    "started_at": "2026-04-29 06:36:05",
-    "finished_at": "2026-04-29 06:36:05"
+    "started_at": "2026-04-29 09:22:52",
+    "finished_at": "2026-04-29 09:22:52"
   },
   {
     "id": 10,
@@ -14,8 +14,8 @@
     "status": "success",
     "models_updated": 76,
     "error_message": null,
-    "started_at": "2026-04-29 06:36:00",
-    "finished_at": "2026-04-29 06:36:00"
+    "started_at": "2026-04-29 09:22:48",
+    "finished_at": "2026-04-29 09:22:48"
   },
   {
     "id": 8,
@@ -23,8 +23,8 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-04-29 06:35:53",
-    "finished_at": "2026-04-29 06:35:53"
+    "started_at": "2026-04-29 09:22:40",
+    "finished_at": "2026-04-29 09:22:40"
   },
   {
     "id": 9,
@@ -32,26 +32,8 @@
     "status": "success",
     "models_updated": 100,
     "error_message": null,
-    "started_at": "2026-04-29 06:35:53",
-    "finished_at": "2026-04-29 06:35:53"
-  },
-  {
-    "id": 7,
-    "scraper": "creative-benchmarks",
-    "status": "fallback",
-    "models_updated": 16,
-    "error_message": null,
-    "started_at": "2026-04-29 06:35:52",
-    "finished_at": "2026-04-29 06:35:52"
-  },
-  {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "success",
-    "models_updated": 27,
-    "error_message": null,
-    "started_at": "2026-04-29 06:35:51",
-    "finished_at": "2026-04-29 06:35:51"
+    "started_at": "2026-04-29 09:22:40",
+    "finished_at": "2026-04-29 09:22:40"
   },
   {
     "id": 6,
@@ -59,8 +41,26 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-04-29 06:35:51",
-    "finished_at": "2026-04-29 06:35:51"
+    "started_at": "2026-04-29 09:22:39",
+    "finished_at": "2026-04-29 09:22:39"
+  },
+  {
+    "id": 7,
+    "scraper": "creative-benchmarks",
+    "status": "fallback",
+    "models_updated": 16,
+    "error_message": null,
+    "started_at": "2026-04-29 09:22:39",
+    "finished_at": "2026-04-29 09:22:39"
+  },
+  {
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
+    "status": "success",
+    "models_updated": 27,
+    "error_message": null,
+    "started_at": "2026-04-29 09:22:38",
+    "finished_at": "2026-04-29 09:22:38"
   },
   {
     "id": 3,
@@ -68,8 +68,8 @@
     "status": "success",
     "models_updated": 6,
     "error_message": null,
-    "started_at": "2026-04-29 06:35:50",
-    "finished_at": "2026-04-29 06:35:50"
+    "started_at": "2026-04-29 09:22:37",
+    "finished_at": "2026-04-29 09:22:37"
   },
   {
     "id": 4,
@@ -77,8 +77,8 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-04-29 06:35:50",
-    "finished_at": "2026-04-29 06:35:50"
+    "started_at": "2026-04-29 09:22:37",
+    "finished_at": "2026-04-29 09:22:37"
   },
   {
     "id": 2,
@@ -86,8 +86,8 @@
     "status": "success",
     "models_updated": 256,
     "error_message": null,
-    "started_at": "2026-04-29 06:35:49",
-    "finished_at": "2026-04-29 06:35:49"
+    "started_at": "2026-04-29 09:22:36",
+    "finished_at": "2026-04-29 09:22:36"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 37,
     "error_message": null,
-    "started_at": "2026-04-29 06:35:48",
-    "finished_at": "2026-04-29 06:35:48"
+    "started_at": "2026-04-29 09:22:35",
+    "finished_at": "2026-04-29 09:22:35"
   }
 ]
