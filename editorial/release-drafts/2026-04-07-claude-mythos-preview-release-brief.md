@@ -7,7 +7,7 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-04-30T20:18:53.785Z"
+generated_at: "2026-04-30T22:08:21.522Z"
 ---
 
 # Claude Mythos Preview: release brief
@@ -30,7 +30,7 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 ## Outside coverage and early reactions
 
-- TechCrunch (2026-04-30): [After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber, too](https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/) - OpenAI will begin rolling out it cybersecurity testing tool, GPT-5.5 Cyber only "to critical cyber defenders" at first.
+- TechCrunch (2026-04-30): [After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber, too](https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/) - OpenAI will begin rolling out its cybersecurity testing tool, GPT-5.5 Cyber only "to critical cyber defenders" at first.
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
 - TechCrunch (2026-04-30): [Sources: Anthropic could raise a new $50B round at a valuation of $900B](https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/) - The maker of Claude has received multiple preemptive offers at valuations in the $850 billion to $900 billion range, according to sources familiar with the matter.

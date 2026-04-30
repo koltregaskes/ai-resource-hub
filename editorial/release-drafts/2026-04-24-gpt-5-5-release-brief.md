@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-04-30T20:18:53.785Z"
+generated_at: "2026-04-30T22:08:21.521Z"
 ---
 
 # GPT-5.5: release brief
@@ -29,7 +29,7 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 ## Outside coverage and early reactions
 
-- TechCrunch (2026-04-30): [After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber, too](https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/) - OpenAI will begin rolling out it cybersecurity testing tool, GPT-5.5 Cyber only "to critical cyber defenders" at first.
+- TechCrunch (2026-04-30): [After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber, too](https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/) - OpenAI will begin rolling out its cybersecurity testing tool, GPT-5.5 Cyber only "to critical cyber defenders" at first.
 - The Verge (2026-04-30): [All the evidence unveiled so far in Musk v. Altman](https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial) - The Musk v. Altman trial is underway, and that means exhibits, or the evidence to be presented in court, are being revealed piece by piece. So far, email exchanges, photos, and corporate documents are circulating from the earliest days of OpenAI - and from before the AI lab even had a name. Some high-level takeaways:…
 - The Verge (2026-04-30): [Elon Musk confirms xAI used OpenAI’s models to train Grok](https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation) - In a federal courtroom in California on Thursday, Elon Musk testified that his own AI startup, xAI, has used OpenAI's models to improve its own. The matter at question is model distillation, a common industry practice by which one larger AI model acts as a "teacher" of sorts to pass on knowledge to a smaller [&#8230;]
 - TechCrunch (2026-04-30): [Elon Musk testifies that xAI trained Grok on OpenAI models](https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/) - "Distillation" is a hot topic as frontier labs try to prevent smaller competitors from copying their models.
