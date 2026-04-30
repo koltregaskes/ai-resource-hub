@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Claude Opus 4.6"
 provider: "Anthropic"
 release_date: "2026-02-05"
-generated_at: "2026-04-29T23:11:03.075Z"
+generated_at: "2026-04-30T00:08:19.766Z"
 ---
 
 # Claude Opus 4.6: release brief
 
-Anthropic's Claude Opus 4.6 is on the release desk with 2 related stories and 5 benchmark signals to review.
+Anthropic's Claude Opus 4.6 is on the release desk with 3 related stories and 5 benchmark signals to review.
 
 ## Release summary
 
@@ -35,6 +35,7 @@ Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned 
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- TechCrunch (2026-04-30): [Sources: Anthropic could raise a new $50B round at a valuation of $900B](https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/) - The maker of Claude has received multiple pre-emptive offers at valuations in the $850 billion to $900 billion range, according to sources familiar with the matter.
 
 ## Suggested thread / post structure
 
@@ -57,3 +58,4 @@ Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned 
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [TechCrunch: Sources: Anthropic could raise a new $50B round at a valuation of $900B](https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/)

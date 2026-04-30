@@ -8,7 +8,7 @@
     "tier_level": 0,
     "source_url": "https://www.anthropic.com/pricing",
     "notes": "Limited access to Claude Sonnet",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -21,7 +21,7 @@
     "tier_level": 1,
     "source_url": "https://www.anthropic.com/pricing",
     "notes": "Access to Claude Opus, Sonnet, Haiku",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -34,7 +34,7 @@
     "tier_level": 2,
     "source_url": "https://www.anthropic.com/pricing",
     "notes": "Per user/month, higher limits",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -47,7 +47,7 @@
     "tier_level": 3,
     "source_url": "https://www.anthropic.com/pricing",
     "notes": "20x more usage than Pro",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -60,7 +60,7 @@
     "tier_level": 4,
     "source_url": "https://www.anthropic.com/pricing",
     "notes": "Custom pricing, SSO, SCIM, audit logs",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -73,7 +73,7 @@
     "tier_level": 0,
     "source_url": "https://ai.google.dev/pricing",
     "notes": "Free tier with rate limits",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "Google",
     "provider_colour": "#4285f4"
   },
@@ -86,7 +86,7 @@
     "tier_level": 1,
     "source_url": "https://one.google.com/about/plans",
     "notes": "Gemini Advanced, 2TB storage",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "Google",
     "provider_colour": "#4285f4"
   },
@@ -99,7 +99,7 @@
     "tier_level": 0,
     "source_url": "https://developers.openai.com/codex/pricing/",
     "notes": "Limited access to GPT-4o-mini and Codex",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   },
@@ -112,7 +112,7 @@
     "tier_level": 1,
     "source_url": "https://developers.openai.com/codex/pricing/",
     "notes": "Access to GPT-5, GPT-4o, o3-mini, Codex",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   },
@@ -125,7 +125,7 @@
     "tier_level": 2,
     "source_url": "https://developers.openai.com/codex/pricing/",
     "notes": "Per user/month, admin controls",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   },
@@ -138,7 +138,7 @@
     "tier_level": 2,
     "source_url": "https://developers.openai.com/codex/pricing/",
     "notes": "Per user/month, higher limits than Plus",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   },
@@ -151,7 +151,7 @@
     "tier_level": 3,
     "source_url": "https://developers.openai.com/codex/pricing/",
     "notes": "Highest limits, o3-pro, GPT-5.2 Pro",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   },
@@ -164,7 +164,7 @@
     "tier_level": 4,
     "source_url": "https://developers.openai.com/codex/pricing/",
     "notes": "Custom pricing, SSO, SOC 2 Type 2",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   },
@@ -177,7 +177,7 @@
     "tier_level": 0,
     "source_url": "https://x.ai/grok",
     "notes": "Limited Grok access via X",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "xAI",
     "provider_colour": "#1da1f2"
   },
@@ -190,7 +190,7 @@
     "tier_level": 1,
     "source_url": "https://x.ai/grok",
     "notes": "X Premium+ subscription",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "xAI",
     "provider_colour": "#1da1f2"
   },
@@ -203,7 +203,7 @@
     "tier_level": 2,
     "source_url": "https://x.ai/grok",
     "notes": "Highest Grok limits, Grok 4 access",
-    "updated_at": "2026-04-29 23:10:43",
+    "updated_at": "2026-04-30 00:08:01",
     "provider_name": "xAI",
     "provider_colour": "#1da1f2"
   }
