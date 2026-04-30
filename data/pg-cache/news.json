@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-f997a4857c3224676938",
+    "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
+    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
+    "source": "The Verge",
+    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. The trial…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T16:39:52.000Z",
+    "discovered_at": "2026-04-30 16:45:02"
+  },
+  {
+    "id": "news-739447c16ae1b46a41a7",
+    "title": "Salesforce is crowdsourcing its AI roadmap — with customers",
+    "url": "https://techcrunch.com/2026/04/30/salesforce-is-crowdsourcing-its-ai-roadmap-with-customers/",
+    "source": "TechCrunch",
+    "summary": "Salesforce lets its customers lead its product roadmap with the thinking that if one enterprise customer has a problem, the others likely do too.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T16:06:49.000Z",
+    "discovered_at": "2026-04-30 16:45:01"
+  },
+  {
+    "id": "news-eaad2ae998256ef1a685",
+    "title": "Here&#8217;s how the new Microsoft and OpenAI deal breaks down",
+    "url": "https://www.theverge.com/tech/921210/microsoft-openai-partnership-divorce-notepad",
+    "source": "The Verge",
+    "summary": "Microsoft's relationship with OpenAI has always been complicated, so I expected the close partnership-turned-situationship to end in tears. After all, executive disagreements, rearranged contracts, and frustrations over AI infrastructure have all regularly been part of the partnership, creating plenty of tension along…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T16:00:00.000Z",
+    "discovered_at": "2026-04-30 16:45:02"
+  },
+  {
+    "id": "news-849c897382f13aefb93b",
+    "title": "Gemini is rolling out to cars with Google built-in",
+    "url": "https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade",
+    "source": "The Verge",
+    "summary": "Google is preparing to update vehicles that have Google built-in with its Gemini AI assistant. This will be an upgrade from the current Google Assistant according to Google's announcement, and promises to provide an improved experience for natural conversations, fetching vehicle-specific information, settings adjustme…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T16:00:00.000Z",
+    "discovered_at": "2026-04-30 16:45:02"
+  },
+  {
+    "id": "news-eb2ddab5d7ad7b7eba02",
+    "title": "X announces a rebuilt ad platform powered by AI",
+    "url": "https://techcrunch.com/2026/04/30/x-announces-a-rebuilt-ad-platform-powered-by-ai/",
+    "source": "TechCrunch",
+    "summary": "X is rolling out a rebuilt ads platform powered by AI as it works to grow revenue again.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T15:14:55.000Z",
+    "discovered_at": "2026-04-30 16:45:01"
+  },
+  {
+    "id": "news-61166691f3f91bf3a95c",
+    "title": "All these smart glasses and nothing to do",
+    "url": "https://www.theverge.com/tech/921159/smart-glasses-review-wearable-even-realities-g2-meta-ray-ban-rokid-lucyd-oakley-meta-vanguard",
+    "source": "The Verge",
+    "summary": "I'm currently wearing a pair of smart glasses called the Even Realities G2. Another two pairs, from Rokid, sit on my desk. A few feet away, I've got the Meta Ray-Ban Display charging alongside their Neural Wristband. In my closet are six pairs of $50 smart sunnies that an overzealous Walmart rep sent me. Those [&#8230…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T15:00:00.000Z",
+    "discovered_at": "2026-04-30 16:45:02"
+  },
+  {
     "id": "news-0aa0df2539e079c2c61d",
     "title": "OpenAI talks about not talking about goblins",
     "url": "https://www.theverge.com/ai-artificial-intelligence/921181/openai-codex-goblins",
@@ -9,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T13:42:29.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:02"
   },
   {
     "id": "news-038917a2d3ea25658eba",
@@ -21,19 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T13:08:23.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:02"
   },
   {
     "id": "news-be1f1b354ae8d593065b",
     "title": "Meta says its business AI now facilitates 10 million conversations a week",
     "url": "https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/",
     "source": "TechCrunch",
-    "summary": "Meta said over 8 billion advertisers have used at least one of its gen AI tools",
+    "summary": "Meta said over 8 billion advertisers have used at least one of its GenAI tools",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T12:08:45.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-fb1a934ac01c20f6fab1",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T11:38:26.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:02"
   },
   {
     "id": "news-7ed1dee0a21a2e57ed78",
@@ -57,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T11:09:01.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:02"
   },
   {
     "id": "news-b426348f2721756568d3",
@@ -69,19 +141,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T11:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:02"
   },
   {
     "id": "news-1ed3f4ba6810ae5a606b",
     "title": "SoftBank is creating a robotics company that builds data centers — and already eyeing a $100B IPO",
     "url": "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/",
     "source": "TechCrunch",
-    "summary": "You need infrastructure to build AI a and robots, but apparently you also need AI and robots to build infrastructure.",
+    "summary": "You need infrastructure to build AI and robots, but apparently you also need AI and robots to build infrastructure.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T03:58:22.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-7e821dbadefeef8b5222",
@@ -93,19 +165,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:14:23.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-50738bf0cb2bec0c663e",
     "title": "Sources: Anthropic could raise a new $50B round at a valuation of $900B",
     "url": "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
     "source": "TechCrunch",
-    "summary": "The maker of Claude has received multiple pre-emptive offers at valuations in the $850 billion to $900 billion range, according to sources familiar with the matter.",
+    "summary": "The maker of Claude has received multiple preemptive offers at valuations in the $850 billion to $900 billion range, according to sources familiar with the matter.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:07:15.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-5717bbd1d86cbb199797",
@@ -117,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:01:24.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:02"
   },
   {
     "id": "news-c24e7980f917002c3a4b",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:58:36.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-dbe4e0b57bcd12a8c14f",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:58:26.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-2c63518bacad45c3cffc",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:55:23.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-953abed23eaa7bc0b490",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:02:23.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-f4817a46365253e2e840",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T22:20:48.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-ea12b04b257affb4da57",
@@ -189,19 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:59:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
-  },
-  {
-    "id": "news-98dd2c492bb0610d1634",
-    "title": "Google Search queries hit an ‘all time high’ last quarter",
-    "url": "https://www.theverge.com/tech/920815/google-alphabet-q1-2026-earnings-sundar-pichai",
-    "source": "The Verge",
-    "summary": "Google Search queries hit an \"all time high\" in the first quarter of 2026, according to a statement from CEO Sundar Pichai published as part of Alphabet's earnings on Wednesday. \"Our AI investments and full stack approach are lighting up every part of the business,\" Pichai says. \"Search had a strong quarter with AI ex…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T20:28:11.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-9645e624644509e4e016",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T18:59:44.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-6e84eeb95311af054593",
@@ -237,31 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T18:33:05.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
-  },
-  {
-    "id": "news-814f8d51f6030bf86dc9",
-    "title": "All the evidence unveiled so far in Musk v. Altman",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial",
-    "source": "The Verge",
-    "summary": "The Musk v. Altman trial is underway, and that means exhibits, or the evidence to be presented in court, are being revealed piece by piece. So far, email exchanges, photos, and corporate documents are circulating from the earliest days of OpenAI - and from before the AI lab even had a name. Some high-level takeaways:…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T18:03:05.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
-  },
-  {
-    "id": "news-4df701c5a72c34eb3174",
-    "title": "Ubuntu’s AI plans have Linux users looking for a &#8216;kill switch&#8217;",
-    "url": "https://www.theverge.com/tech/920723/linux-ubuntu-ai-features-ai-kill-switch",
-    "source": "The Verge",
-    "summary": "Canonical's plan to add AI features to Ubuntu has some users asking for \"a version of Ubuntu that does not include these features,\" while others say they'll stick with older versions of the Linux distro or even switch to a different one. After Canonical's announcement earlier this week that it's bringing AI features t…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T17:32:02.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-4e10e824589246dd495e",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T16:42:33.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-654253e055b16f8605a2",
@@ -285,19 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T16:40:49.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
-  },
-  {
-    "id": "news-bbfaae370ea09c71a869",
-    "title": "Google Photos launches an AI try-on feature for clothes you already have",
-    "url": "https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe",
-    "source": "The Verge",
-    "summary": "Google Photos is launching a new AI-powered feature you can use to virtually try on clothes you already have. Using the photos in your gallery, Google will create a virtual \"wardrobe,\" allowing you to mix and match outfits, save the looks you like, and share them with friends. A video shared by Google shows how [&#823…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T16:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-b34cd1b7aa82269e5a86",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T13:10:57.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-f1c638fe552afe4bab57",
@@ -333,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T13:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
-  },
-  {
-    "id": "news-365748cf847fd7c97091",
-    "title": "Colby Adcock&#8217;s Scout AI raises $100M to train its models for war: We visited its bootcamp",
-    "url": "https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/",
-    "source": "TechCrunch",
-    "summary": "We visited Scout AI's training ground where it's working on AI agents that can help individual soldiers control fleets of autonomous vehicles.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T09:45:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -357,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
-  },
-  {
-    "id": "news-2c170000cfce3f80815e",
-    "title": "At his OpenAI trial, Musk relitigates an old friendship",
-    "url": "https://techcrunch.com/2026/04/28/at-his-openai-trial-musk-relitigates-an-old-friendship/",
-    "source": "TechCrunch",
-    "summary": "It's a story Musk has told before -- in interviews and to author Walter Isaacson for his bestselling biography of Musk -- but Tuesday was the first time he said it under oath.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T00:40:16.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-368128e6f28129236fd9",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-ce52abc8a3f020a53a6f",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T06:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-bc507498ac4792876c13",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-29e3d13268b3eecb87e9",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-e1e83761f7ea575fa66b",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-26T16:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-6e6cdaf0d6010b4433a5",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-cfbb97f4e142ddd9e19c",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-99a0fa5d4a499cedad3e",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-7fbf7b2c45e97107db7c",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-eff960ba78f2d3387cb1",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-8a79aaeb639a5ad663c0",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-b2acc3c294f376d2ca8b",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-3533fea5413f1a898136",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:03"
+    "discovered_at": "2026-04-30 16:44:59"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-0deaf33f30ef9c0667e0",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-bafb7f75d833305cc225",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-03T20:30:15.000Z",
-    "discovered_at": "2026-04-30 14:23:08"
+    "discovered_at": "2026-04-30 16:45:02"
   },
   {
     "id": "news-ab324ca76ade73622a3c",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-f2b31c55fc99db076bcf",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-da4f0e92fc3703a9901e",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:30:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   },
   {
     "id": "news-72c66a2896d16cbdc0e8",
@@ -789,18 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
-  },
-  {
-    "id": "news-010788685e59720c9455",
-    "title": "Build with Veo 3.1 Lite, our most cost-effective video generation model",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/",
-    "source": "Google",
-    "summary": "Veo 3.1 Lite is now available in paid preview through the Gemini API and for testing in Google AI Studio.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-03-31T16:00:00.000Z",
-    "discovered_at": "2026-04-30 14:23:07"
+    "discovered_at": "2026-04-30 16:45:01"
   }
 ]

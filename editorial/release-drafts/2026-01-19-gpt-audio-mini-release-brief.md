@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT Audio Mini"
 provider: "OpenAI"
 release_date: "2026-01-19"
-generated_at: "2026-04-30T14:23:18.482Z"
+generated_at: "2026-04-30T16:45:10.266Z"
 ---
 
 # GPT Audio Mini: release brief
 
-OpenAI's GPT Audio Mini is on the release desk with 2 related stories and 0 benchmark signals to review.
+OpenAI's GPT Audio Mini is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,7 +29,6 @@ GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as a
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-29): [All the evidence unveiled so far in Musk v. Altman](https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial) - The Musk v. Altman trial is underway, and that means exhibits, or the evidence to be presented in court, are being revealed piece by piece. So far, email exchanges, photos, and corporate documents are circulating from the earliest days of OpenAI - and from before the AI lab even had a name. Some high-level takeaways:…
 - OpenAI (2026-04-27): [OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate) - OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.
 
 ## Suggested thread / post structure
@@ -51,5 +50,4 @@ GPT Audio Mini is a currently tracked release from OpenAI. It is positioned as a
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [The Verge: All the evidence unveiled so far in Musk v. Altman](https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial)
 - [OpenAI: OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate)
