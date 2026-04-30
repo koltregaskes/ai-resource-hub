@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 30 Apr 2026, 18:23 UTC
+Generated: 30 Apr 2026, 20:18 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 30 Apr 2026, 18:23 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 30 Apr 2026, 20:18 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 30 Apr 2026, 18:23 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 30 Apr 2026, 18:23 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 30 Apr 2026, 18:23 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 30 Apr 2026, 18:23 UTC |
-| Provider status | Hourly automated refresh | Automated | 30 Apr 2026, 18:23 UTC |
-| Guides and learning | Manual editorial review | Manual | 30 Apr 2026, 18:22 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 30 Apr 2026, 20:18 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 30 Apr 2026, 20:18 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 30 Apr 2026, 20:18 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 30 Apr 2026, 20:18 UTC |
+| Provider status | Hourly automated refresh | Automated | 30 Apr 2026, 20:18 UTC |
+| Guides and learning | Manual editorial review | Manual | 30 Apr 2026, 20:18 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 30 Apr 2026, 18:23 UTC
+- Last refreshed: 30 Apr 2026, 20:18 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 13 May 2026, 12:00 UTC: GPT-4o introduced - Next exact anniversary in 13 days. (`/milestones/`)
-- 30 Apr 2026, 18:23 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 30 Apr 2026, 20:18 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 30 Apr 2026, 18:23 UTC
+- Last refreshed: 30 Apr 2026, 20:18 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -80,7 +80,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 30 Apr 2026, 18:23 UTC
+- Last refreshed: 30 Apr 2026, 20:18 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Apr 2026, 18:23 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 30 Apr 2026, 18:23 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 30 Apr 2026, 20:18 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 30 Apr 2026, 20:18 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 30 Apr 2026, 18:23 UTC
+- Last refreshed: 30 Apr 2026, 20:18 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,15 +111,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Apr 2026, 18:23 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 30 Apr 2026, 18:23 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 30 Apr 2026, 18:23 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 30 Apr 2026, 20:18 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 30 Apr 2026, 20:18 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 30 Apr 2026, 20:18 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 30 Apr 2026, 18:23 UTC
+- Last refreshed: 30 Apr 2026, 20:18 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -131,15 +131,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Apr 2026, 18:20 UTC: OpenAI announces new advanced security for ChatGPT accounts, including a partnership with Yubico - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/))
-- 30 Apr 2026, 18:16 UTC: Elon Musk confirms xAI used OpenAI’s models to train Grok - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation))
-- 30 Apr 2026, 18:03 UTC: Elon Musk testifies that xAI trained Grok on OpenAI models - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/))
+- 30 Apr 2026, 20:14 UTC: Legal AI startup Legora hits $5.6 valuation and its battle with Harvey just got hotter - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/))
+- 30 Apr 2026, 19:27 UTC: After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber, too - TechCrunch (industry) ([source](https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/))
+- 30 Apr 2026, 19:00 UTC: All the evidence unveiled so far in Musk v. Altman - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 30 Apr 2026, 18:23 UTC
+- Last refreshed: 30 Apr 2026, 20:18 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Apr 2026, 18:23 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
-- 30 Apr 2026, 18:23 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
-- 30 Apr 2026, 18:23 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 30 Apr 2026, 20:18 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
+- 30 Apr 2026, 20:18 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 30 Apr 2026, 20:18 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 30 Apr 2026, 18:22 UTC
+- Last refreshed: 30 Apr 2026, 20:18 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Apr 2026, 18:22 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 30 Apr 2026, 18:22 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 30 Apr 2026, 18:22 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 30 Apr 2026, 20:18 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 30 Apr 2026, 20:18 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 30 Apr 2026, 20:18 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
