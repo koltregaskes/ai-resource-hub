@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-d18b5816d363ce114f4b",
+    "title": "OpenAI announces new advanced security for ChatGPT accounts, including a partnership with Yubico",
+    "url": "https://techcrunch.com/2026/04/30/openai-announces-new-advanced-security-for-chatgpt-accounts-including-a-partnership-with-yubico/",
+    "source": "TechCrunch",
+    "summary": "OpenAI is launching additional opt-in protections for ChatGPT accounts. The new security initiative includes a new partnership with security key provider Yubico.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T18:20:03.000Z",
+    "discovered_at": "2026-04-30 18:23:20"
+  },
+  {
+    "id": "news-8845b9ef7ee2eaabada9",
+    "title": "Elon Musk confirms xAI used OpenAI’s models to train Grok",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation",
+    "source": "The Verge",
+    "summary": "In a federal courtroom in California on Thursday, Elon Musk testified that his own AI startup, xAI, has used OpenAI's models to improve its own. The matter at question is model distillation, a common industry practice by which one larger AI model acts as a \"teacher\" of sorts to pass on knowledge to a smaller [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T18:16:57.000Z",
+    "discovered_at": "2026-04-30 18:23:20"
+  },
+  {
+    "id": "news-ea6fedd6efd1cc8ac316",
+    "title": "Elon Musk testifies that xAI trained Grok on OpenAI models",
+    "url": "https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/",
+    "source": "TechCrunch",
+    "summary": "\"Distillation\" is a hot topic as frontier labs try to prevent smaller competitors from copying their models.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T18:03:57.000Z",
+    "discovered_at": "2026-04-30 18:23:20"
+  },
+  {
+    "id": "news-1acbda57c713454cc477",
+    "title": "FDA approval, fundraising, and the reality of building in healthcare according to BioticsAI founder",
+    "url": "https://techcrunch.com/2026/04/30/fda-approval-fundraising-and-the-reality-of-building-in-healthcare-according-to-bioticsai-founder/",
+    "source": "TechCrunch",
+    "summary": "BioticsAI CEO Robhy Bustami joined Isabelle Johannessen on Build Mode to discuss how the company has navigated a highly regulated space and kept the team motivated while cutting through all the red tape.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T17:53:53.000Z",
+    "discovered_at": "2026-04-30 18:23:20"
+  },
+  {
+    "id": "news-aadb61ccb4b1949a66d1",
+    "title": "Google’s Gemini AI assistant is hitting the road in millions of vehicles",
+    "url": "https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/",
+    "source": "TechCrunch",
+    "summary": "Google announced on Thursday that it will begin rolling out Gemini to cars with Google built-in, marking a significant upgrade from the current Google Assistant. The move signals Google’s push to bring more advanced, conversational AI into the driving experience. The announcement follows closely behind news from Gener…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T17:46:54.000Z",
+    "discovered_at": "2026-04-30 18:23:20"
+  },
+  {
+    "id": "news-9de7895dd71bfddbc814",
+    "title": "Stripe introduces Link, a digital wallet that autonomous AI agents can use, too",
+    "url": "https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/",
+    "source": "TechCrunch",
+    "summary": "Link lets users connect cards, banks, and subscriptions, then authorize AI agents to spend securely via approval flows.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T17:15:19.000Z",
+    "discovered_at": "2026-04-30 18:23:20"
+  },
+  {
     "id": "news-f997a4857c3224676938",
     "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
     "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
@@ -8,8 +80,20 @@
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-04-30T16:39:52.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "published_at": "2026-04-30T16:57:14.000Z",
+    "discovered_at": "2026-04-30 18:23:20"
+  },
+  {
+    "id": "news-c2dc89059c0dbaefc60b",
+    "title": "Meta is running get-rich-quick ads for its AI tools",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/915970/meta-manus-ai-ads-website-slop",
+    "source": "The Verge",
+    "summary": "Manus, an AI company Meta acquired for $2 billion last year is running ads promising quick, easy money with AI: Find local businesses without websites or with bad websites, have AI build them one, then call them up and sell it to them. As part of the campaign, Manus was paying content creators to build [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T16:48:13.000Z",
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-739447c16ae1b46a41a7",
@@ -21,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T16:06:49.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-eaad2ae998256ef1a685",
@@ -33,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T16:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-849c897382f13aefb93b",
@@ -45,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T16:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-eb2ddab5d7ad7b7eba02",
@@ -57,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T15:14:55.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-61166691f3f91bf3a95c",
@@ -69,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T15:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-0aa0df2539e079c2c61d",
@@ -81,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T13:42:29.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-038917a2d3ea25658eba",
@@ -93,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T13:08:23.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-be1f1b354ae8d593065b",
@@ -105,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T12:08:45.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-fb1a934ac01c20f6fab1",
@@ -117,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T11:38:26.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-7ed1dee0a21a2e57ed78",
@@ -129,19 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T11:09:01.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
-  },
-  {
-    "id": "news-b426348f2721756568d3",
-    "title": "The more young people use AI, the more they hate it",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/920401/gen-z-ai",
-    "source": "The Verge",
-    "summary": "It's been almost three years since Silicon Valley started aggressively pushing large language model-based chatbots like ChatGPT as the supposedly inevitable future of everything, and there's no group that has felt the pressure quite like Gen Z. Like with many tech trends before it, it's no surprise that young people a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-30T11:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-1ed3f4ba6810ae5a606b",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T03:58:22.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-7e821dbadefeef8b5222",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:14:23.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-50738bf0cb2bec0c663e",
@@ -177,19 +249,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:07:15.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
-    "id": "news-5717bbd1d86cbb199797",
-    "title": "Elon Musk’s worst enemy in court is Elon Musk",
-    "url": "https://www.theverge.com/tech/921022/elon-musk-cross-openai-altman",
-    "source": "The Verge",
-    "summary": "About five hours into Elon Musk's testimony, I typed the following sentence into my notes: \"I have never been more sympathetic to Sam Altman in my life.\" Musk's direct testimony was an improvement over yesterday - even if his lawyer kept asking leading questions to cue him in how to answer. But that memory was [&#8230…",
-    "category": "industry",
+    "id": "news-92f8ee26a85afd656d63",
+    "title": "Introducing Advanced Account Security",
+    "url": "https://openai.com/index/advanced-account-security",
+    "source": "OpenAI",
+    "summary": "Introducing Advanced Account Security: phishing-resistant login, stronger recovery, and enhanced protections to safeguard sensitive data and prevent account takeover.",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-04-30T00:01:24.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "published_at": "2026-04-30T00:00:00.000Z",
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-c24e7980f917002c3a4b",
@@ -201,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:58:36.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-dbe4e0b57bcd12a8c14f",
@@ -213,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:58:26.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-2c63518bacad45c3cffc",
@@ -225,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:55:23.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-953abed23eaa7bc0b490",
@@ -237,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:02:23.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-f4817a46365253e2e840",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T22:20:48.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-ea12b04b257affb4da57",
@@ -261,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:59:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -273,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-9645e624644509e4e016",
@@ -285,43 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T18:59:44.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
-  },
-  {
-    "id": "news-6e84eeb95311af054593",
-    "title": "Parallel Web Systems hits $2B valuation five months after its last big raise",
-    "url": "https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/",
-    "source": "TechCrunch",
-    "summary": "The AI agent-tool startup founded by former Twitter CEO Parag Agrawal has raised $100 million, led by Sequoia, months after raising a previous $100 million.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T18:33:05.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
-  },
-  {
-    "id": "news-4e10e824589246dd495e",
-    "title": "Google Photos uses AI to make the iconic closet from &#8216;Clueless&#8217; a reality",
-    "url": "https://techcrunch.com/2026/04/29/google-photos-uses-ai-to-make-the-iconic-closet-from-clueless-a-reality/",
-    "source": "TechCrunch",
-    "summary": "Google says the new feature will leverage AI technology to automatically create a copy of your wardrobe that's based on the pieces of clothing appearing in your Google Photos library.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T16:42:33.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
-  },
-  {
-    "id": "news-654253e055b16f8605a2",
-    "title": "More Gemini features are coming to Google TV",
-    "url": "https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/",
-    "source": "TechCrunch",
-    "summary": "Google TV just got more Gemini features, including the ability to transform photos and videos with tools Nano Banana and Veo.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T16:40:49.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -333,31 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
-  },
-  {
-    "id": "news-b34cd1b7aa82269e5a86",
-    "title": "Firestorm Labs raises $82M to take drone factories into the field",
-    "url": "https://techcrunch.com/2026/04/29/firestorm-labs-raises-82m-to-take-drone-factories-into-the-field/",
-    "source": "TechCrunch",
-    "summary": "A defense startup just raised $82 million to put drone factories inside shipping containers and bring manufacturing to the front lines.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T13:10:57.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
-  },
-  {
-    "id": "news-f1c638fe552afe4bab57",
-    "title": "Meet Shapes, the app bringing humans and AI into the same group chats",
-    "url": "https://techcrunch.com/2026/04/29/meet-shapes-the-app-bringing-humans-and-ai-into-the-same-group-chats/",
-    "source": "TechCrunch",
-    "summary": "Think Discord chats, but with AI characters in addition to humans.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T13:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -381,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
-  },
-  {
-    "id": "news-368128e6f28129236fd9",
-    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
-    "url": "https://openai.com/index/openai-on-aws",
-    "source": "OpenAI",
-    "summary": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -405,7 +405,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
+  },
+  {
+    "id": "news-368128e6f28129236fd9",
+    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+    "url": "https://openai.com/index/openai-on-aws",
+    "source": "OpenAI",
+    "summary": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-28T00:00:00.000Z",
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-ce52abc8a3f020a53a6f",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T06:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-bc507498ac4792876c13",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-29e3d13268b3eecb87e9",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-e1e83761f7ea575fa66b",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-26T16:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-6e6cdaf0d6010b4433a5",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-cfbb97f4e142ddd9e19c",
@@ -525,19 +537,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
-    "id": "news-99a0fa5d4a499cedad3e",
-    "title": "Codex settings",
-    "url": "https://openai.com/academy/codex-settings",
+    "id": "news-bb94101d867132ebad2f",
+    "title": "Plugins and skills",
+    "url": "https://openai.com/academy/codex-plugins-and-skills",
     "source": "OpenAI",
-    "summary": "Learn how to configure Codex settings, including personalization, detail level, and permissions, to run tasks smoothly and customize your workflow.",
+    "summary": "Learn how to use Codex plugins and skills to connect tools, access data, and follow repeatable workflows to automate tasks and improve results.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-7fbf7b2c45e97107db7c",
@@ -549,7 +561,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
+  },
+  {
+    "id": "news-99a0fa5d4a499cedad3e",
+    "title": "Codex settings",
+    "url": "https://openai.com/academy/codex-settings",
+    "source": "OpenAI",
+    "summary": "Learn how to configure Codex settings, including personalization, detail level, and permissions, to run tasks smoothly and customize your workflow.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-23T10:00:00.000Z",
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-eff960ba78f2d3387cb1",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-8a79aaeb639a5ad663c0",
@@ -573,31 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
-  },
-  {
-    "id": "news-b2acc3c294f376d2ca8b",
-    "title": "Automations",
-    "url": "https://openai.com/academy/codex-automations",
-    "source": "OpenAI",
-    "summary": "Learn how to automate tasks in Codex using schedules and triggers to create reports, summaries, and recurring workflows without manual effort.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
-  },
-  {
-    "id": "news-3533fea5413f1a898136",
-    "title": "Top 10 uses for Codex at work",
-    "url": "https://openai.com/academy/top-10-use-cases-codex-for-work",
-    "source": "OpenAI",
-    "summary": "Explore 10 practical Codex use cases to automate tasks, create deliverables, and turn real inputs into outputs across tools, files, and workflows.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 16:44:59"
+    "discovered_at": "2026-04-30 18:23:13"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:19"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-0deaf33f30ef9c0667e0",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:19"
   },
   {
     "id": "news-bafb7f75d833305cc225",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-03T20:30:15.000Z",
-    "discovered_at": "2026-04-30 16:45:02"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-ab324ca76ade73622a3c",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-f2b31c55fc99db076bcf",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-da4f0e92fc3703a9901e",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:30:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   },
   {
     "id": "news-72c66a2896d16cbdc0e8",
@@ -789,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:00:00.000Z",
-    "discovered_at": "2026-04-30 16:45:01"
+    "discovered_at": "2026-04-30 18:23:20"
   }
 ]

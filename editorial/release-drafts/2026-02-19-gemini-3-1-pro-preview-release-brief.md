@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Gemini 3.1 Pro Preview"
 provider: "Google"
 release_date: "2026-02-19"
-generated_at: "2026-04-30T16:45:10.265Z"
+generated_at: "2026-04-30T18:23:30.285Z"
 ---
 
 # Gemini 3.1 Pro Preview: release brief
 
-Google's Gemini 3.1 Pro Preview is on the release desk with 4 related stories and 2 benchmark signals to review.
+Google's Gemini 3.1 Pro Preview is on the release desk with 5 related stories and 2 benchmark signals to review.
 
 ## Release summary
 
@@ -31,6 +31,7 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- TechCrunch (2026-04-30): [Google’s Gemini AI assistant is hitting the road in millions of vehicles](https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/) - Google announced on Thursday that it will begin rolling out Gemini to cars with Google built-in, marking a significant upgrade from the current Google Assistant. The move signals Google's push to bring more advanced, conversational AI into the driving experience. The announcement follows closely behind news from Gener…
 - The Verge (2026-04-30): [Gemini is rolling out to cars with Google built-in](https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade) - Google is preparing to update vehicles that have Google built-in with its Gemini AI assistant. This will be an upgrade from the current Google Assistant according to Google's announcement, and promises to provide an improved experience for natural conversations, fetching vehicle-specific information, settings adjustme…
 - Google (2026-04-02): [New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/) - Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
@@ -55,6 +56,7 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/changelog)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [TechCrunch: Google’s Gemini AI assistant is hitting the road in millions of vehicles](https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/)
 - [The Verge: Gemini is rolling out to cars with Google built-in](https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade)
 - [Google: New ways to balance cost and reliability in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)

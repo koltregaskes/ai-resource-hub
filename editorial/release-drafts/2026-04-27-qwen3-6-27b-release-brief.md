@@ -7,7 +7,7 @@ priority: "high"
 model: "Qwen3.6 27B"
 provider: "Alibaba"
 release_date: "2026-04-27"
-generated_at: "2026-04-30T16:45:10.264Z"
+generated_at: "2026-04-30T18:23:30.283Z"
 ---
 
 # Qwen3.6 27B: release brief
