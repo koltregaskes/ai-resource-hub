@@ -1,6 +1,108 @@
 {
-  "generatedAt": "2026-04-30T00:08:13.970Z",
+  "generatedAt": "2026-04-30T01:22:35.391Z",
   "providers": [
+    {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-30T01:22:34.392Z",
+      "overallStatus": "major_outage",
+      "overallLabel": "Major System Outage",
+      "summary": "1 active incident across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "major_outage"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "major_outage"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "major_outage"
+        },
+        {
+          "name": "Claude Code",
+          "status": "major_outage"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "major_outage"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "major_outage"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "2gf1jpyty350",
+          "title": "claude.ai and API unavailable",
+          "status": "investigating",
+          "impact": "critical",
+          "startedAt": "2026-04-30T01:20:26.256Z",
+          "updatedAt": "2026-04-30T01:20:26.438Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/znrp4xjyfk2h",
+          "summary": "We are currently investigating this issue."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "2gf1jpyty350",
+          "title": "claude.ai and API unavailable",
+          "status": "investigating",
+          "impact": "critical",
+          "startedAt": "2026-04-30T01:20:26.256Z",
+          "updatedAt": "2026-04-30T01:20:26.438Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/znrp4xjyfk2h",
+          "summary": "We are currently investigating this issue."
+        },
+        {
+          "id": "3yxsctr39y3j",
+          "title": "Elevated errors on Claude Haiku 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-29T13:47:45.184Z",
+          "updatedAt": "2026-04-29T14:14:34.356Z",
+          "resolvedAt": "2026-04-29T14:14:34.340Z",
+          "url": "https://stspg.io/m50jwrs9k9hf",
+          "summary": "The incident is resolved. The elevated error rate was between 05:37 PT / 12:37 UTC and 06:58 PT / 13:37 UTC."
+        },
+        {
+          "id": "lryjwwy0q9pl",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-28T23:33:07.339Z",
+          "updatedAt": "2026-04-29T00:00:29.060Z",
+          "resolvedAt": "2026-04-29T00:00:29.047Z",
+          "url": "https://stspg.io/gsg6msbs6shy",
+          "summary": "The incident is now resolved. The impact was between 16:25 PT / 23:25 UTC and 16:33 PT / 23:33 UTC."
+        },
+        {
+          "id": "9l93x2ht4s5w",
+          "title": "Claude.ai unavailable and elevated errors on the API",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-04-28T17:41:55.352Z",
+          "updatedAt": "2026-04-28T19:15:52.876Z",
+          "resolvedAt": "2026-04-28T19:15:52.858Z",
+          "url": "https://stspg.io/mz37pbn6yt3w",
+          "summary": "This incident has been resolved."
+        }
+      ]
+    },
     {
       "id": "openai",
       "providerId": "openai",
@@ -12,7 +114,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T00:08:12.923Z",
+      "lastCheckedAt": "2026-04-30T01:22:34.398Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -99,96 +201,6 @@
       ]
     },
     {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T00:08:13.004Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "3yxsctr39y3j",
-          "title": "Elevated errors on Claude Haiku 4.5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-29T13:47:45.184Z",
-          "updatedAt": "2026-04-29T14:14:34.356Z",
-          "resolvedAt": "2026-04-29T14:14:34.340Z",
-          "url": "https://stspg.io/m50jwrs9k9hf",
-          "summary": "The incident is resolved. The elevated error rate was between 05:37 PT / 12:37 UTC and 06:58 PT / 13:37 UTC."
-        },
-        {
-          "id": "lryjwwy0q9pl",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-28T23:33:07.339Z",
-          "updatedAt": "2026-04-29T00:00:29.060Z",
-          "resolvedAt": "2026-04-29T00:00:29.047Z",
-          "url": "https://stspg.io/gsg6msbs6shy",
-          "summary": "The incident is now resolved. The impact was between 16:25 PT / 23:25 UTC and 16:33 PT / 23:33 UTC."
-        },
-        {
-          "id": "9l93x2ht4s5w",
-          "title": "Claude.ai unavailable and elevated errors on the API",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-04-28T17:41:55.352Z",
-          "updatedAt": "2026-04-28T19:15:52.876Z",
-          "resolvedAt": "2026-04-28T19:15:52.858Z",
-          "url": "https://stspg.io/mz37pbn6yt3w",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "x1y91zcb2rp2",
-          "title": "Elevated errors on Claude Sonnet 4.5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-28T13:29:56.320Z",
-          "updatedAt": "2026-04-28T13:50:06.623Z",
-          "resolvedAt": "2026-04-28T13:50:06.606Z",
-          "url": "https://stspg.io/65gx9qk9yyd6",
-          "summary": "The incident has now been resolved. The timeline for the elevated errors was 6:22 PT / 13:22 UTC -> 6:39 PT / 13:39 UTC."
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -199,7 +211,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T00:08:13.596Z",
+      "lastCheckedAt": "2026-04-30T01:22:35.129Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +231,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T00:08:13.207Z",
+      "lastCheckedAt": "2026-04-30T01:22:34.564Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +305,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T00:08:13.962Z",
+      "lastCheckedAt": "2026-04-30T01:22:35.384Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +370,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T00:08:13.070Z",
+      "lastCheckedAt": "2026-04-30T01:22:34.370Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +424,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T00:08:13.263Z",
+      "lastCheckedAt": "2026-04-30T01:22:34.721Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -432,7 +444,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T00:08:13.931Z",
+      "lastCheckedAt": "2026-04-30T01:22:35.357Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
