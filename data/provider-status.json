@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T14:23:10.206Z",
+  "generatedAt": "2026-04-30T14:52:39.154Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T14:23:09.015Z",
+      "lastCheckedAt": "2026-04-30T14:52:37.313Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -99,6 +99,94 @@
       ]
     },
     {
+      "id": "fireworks",
+      "providerId": null,
+      "name": "Fireworks AI",
+      "colour": "#ef4444",
+      "websiteUrl": "https://fireworks.ai",
+      "statusPageUrl": "https://status.fireworks.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-30T14:52:38.527Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-04-30T14:48:00.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-30T14:48:00.000Z",
+          "updatedAt": "2026-04-30T14:48:00.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-2-2026-04-30T03:45:38.000Z",
+          "title": "Llama 3.3 70B Instruct chat completion API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-30T03:45:38.000Z",
+          "updatedAt": "2026-04-30T03:45:38.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Llama 3.3 70B Instruct chat completion API went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-04-30T14:48:00.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-30T14:48:00.000Z",
+          "updatedAt": "2026-04-30T14:48:00.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-1-2026-04-30T03:47:38.000Z",
+          "title": "Llama 3.3 70B Instruct chat completion API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-30T03:47:38.000Z",
+          "updatedAt": "2026-04-30T03:47:38.000Z",
+          "resolvedAt": "2026-04-30T03:47:38.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Llama 3.3 70B Instruct chat completion API recovered"
+        },
+        {
+          "id": "fireworks-feed-2-2026-04-30T03:45:38.000Z",
+          "title": "Llama 3.3 70B Instruct chat completion API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-04-30T03:45:38.000Z",
+          "updatedAt": "2026-04-30T03:45:38.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Llama 3.3 70B Instruct chat completion API went down"
+        },
+        {
+          "id": "fireworks-feed-3-2026-04-28T23:39:57.000Z",
+          "title": "Qwen3 VL 30B A3B Thinking chat completion API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-04-28T23:39:57.000Z",
+          "updatedAt": "2026-04-28T23:39:57.000Z",
+          "resolvedAt": "2026-04-28T23:39:57.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Qwen3 VL 30B A3B Thinking chat completion API recovered"
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -109,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T14:23:09.129Z",
+      "lastCheckedAt": "2026-04-30T14:52:37.452Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T14:23:09.594Z",
+      "lastCheckedAt": "2026-04-30T14:52:38.113Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +307,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T14:23:09.197Z",
+      "lastCheckedAt": "2026-04-30T14:52:37.578Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -283,71 +371,6 @@
       ]
     },
     {
-      "id": "fireworks",
-      "providerId": null,
-      "name": "Fireworks AI",
-      "colour": "#ef4444",
-      "websiteUrl": "https://fireworks.ai",
-      "statusPageUrl": "https://status.fireworks.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T14:23:09.848Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-04-30T03:47:38.000Z",
-          "title": "Llama 3.3 70B Instruct chat completion API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-30T03:47:38.000Z",
-          "updatedAt": "2026-04-30T03:47:38.000Z",
-          "resolvedAt": "2026-04-30T03:47:38.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Llama 3.3 70B Instruct chat completion API recovered"
-        },
-        {
-          "id": "fireworks-feed-1-2026-04-30T03:45:38.000Z",
-          "title": "Llama 3.3 70B Instruct chat completion API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-30T03:45:38.000Z",
-          "updatedAt": "2026-04-30T03:45:38.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Llama 3.3 70B Instruct chat completion API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-04-28T23:39:57.000Z",
-          "title": "Qwen3 VL 30B A3B Thinking chat completion API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-04-28T23:39:57.000Z",
-          "updatedAt": "2026-04-28T23:39:57.000Z",
-          "resolvedAt": "2026-04-28T23:39:57.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Qwen3 VL 30B A3B Thinking chat completion API recovered"
-        },
-        {
-          "id": "fireworks-feed-3-2026-04-28T23:37:58.000Z",
-          "title": "Qwen3 VL 30B A3B Thinking chat completion API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-04-28T23:37:58.000Z",
-          "updatedAt": "2026-04-28T23:37:58.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Qwen3 VL 30B A3B Thinking chat completion API went down"
-        }
-      ]
-    },
-    {
       "id": "google",
       "providerId": "google",
       "name": "Google",
@@ -358,7 +381,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T14:23:09.068Z",
+      "lastCheckedAt": "2026-04-30T14:52:37.437Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +435,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T14:23:09.316Z",
+      "lastCheckedAt": "2026-04-30T14:52:37.744Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -432,7 +455,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T14:23:10.198Z",
+      "lastCheckedAt": "2026-04-30T14:52:39.149Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
