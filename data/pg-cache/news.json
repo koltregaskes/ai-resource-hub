@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-b51b3e3060b22be05155",
+    "title": "Anthropic potential $900B+ valuation round could happen within two weeks",
+    "url": "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/",
+    "source": "TechCrunch",
+    "summary": "Anthropic is asking investors to submit allocations for the AI company’s latest fundraise within the next 48 hours, according to sources familiar with the matter.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T23:07:56.000Z",
+    "discovered_at": "2026-04-30 23:08:38"
+  },
+  {
+    "id": "news-cf7f57089e36e8d6276b",
+    "title": "The craziest part of Musk v. Altman happened while the jury was out of the room",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/921713/musk-v-altman-jared-birchall-screw-up-xai",
+    "source": "The Verge",
+    "summary": "Okay, I am not a lawyer so I only understood about half of what just happened. But I am fairly sure, given the context, that Elon Musk's lawyers may have just fucked up big. Jared \"James Brickhouse\" Birchall, Musk's finance guy and all-around fixer, took the stand after Musk today. Most of his testimony was [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T22:59:51.000Z",
+    "discovered_at": "2026-04-30 23:08:38"
+  },
+  {
+    "id": "news-9c478a2d72d74242d80a",
+    "title": "Apple was surprised by AI-driven demand for Macs",
+    "url": "https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/",
+    "source": "TechCrunch",
+    "summary": "Apple said it will be supply-constrained on Mac mini, Studio, and Neo in the next quarter, too.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T22:12:52.000Z",
+    "discovered_at": "2026-04-30 23:08:38"
+  },
+  {
     "id": "news-f4d3c005068135fc9928",
     "title": "Legal AI startup Legora hits $5.6B valuation and its battle with Harvey just got hotter",
     "url": "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T20:14:47.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-a79d883153a05c96d04b",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T19:27:41.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-814f8d51f6030bf86dc9",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T19:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-d18b5816d363ce114f4b",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T18:20:03.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-8845b9ef7ee2eaabada9",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T18:16:57.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-ea6fedd6efd1cc8ac316",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T18:03:57.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-1acbda57c713454cc477",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T17:53:53.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-aadb61ccb4b1949a66d1",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T17:46:54.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-9de7895dd71bfddbc814",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T17:15:19.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T16:57:14.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-c2dc89059c0dbaefc60b",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T16:48:13.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-739447c16ae1b46a41a7",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T16:06:49.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-eaad2ae998256ef1a685",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T16:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-849c897382f13aefb93b",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T16:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-eb2ddab5d7ad7b7eba02",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T15:14:55.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-61166691f3f91bf3a95c",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T15:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-0aa0df2539e079c2c61d",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T13:42:29.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-038917a2d3ea25658eba",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T13:08:23.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-be1f1b354ae8d593065b",
@@ -225,19 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T12:08:45.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
-  },
-  {
-    "id": "news-fb1a934ac01c20f6fab1",
-    "title": "Meta lost 20 million users last quarter",
-    "url": "https://www.theverge.com/tech/921089/meta-earnings-q1-2026-user-decline-ai-investments",
-    "source": "The Verge",
-    "summary": "Meta is planning to pump billions more into AI investments this year, despite noting that millions of users have seemingly started to abandon its platforms. In an earning call on Wednesday, Meta reported that figures for \"Family daily active people\" - the term Meta has coined for all collective users of Facebook, Inst…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-30T11:38:26.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-1ed3f4ba6810ae5a606b",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T03:58:22.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-7e821dbadefeef8b5222",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:14:23.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-50738bf0cb2bec0c663e",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:07:15.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-c24e7980f917002c3a4b",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:58:36.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-dbe4e0b57bcd12a8c14f",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:58:26.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-2c63518bacad45c3cffc",
@@ -321,31 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:55:23.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
-  },
-  {
-    "id": "news-953abed23eaa7bc0b490",
-    "title": "Microsoft says it has over 20M paid Copilot users, and they really are using it",
-    "url": "https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/",
-    "source": "TechCrunch",
-    "summary": "Despite the lingering perception that no one really uses Copilot, Microsoft said on Wednesday that the number of users and engagement is growing.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T23:02:23.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
-  },
-  {
-    "id": "news-f4817a46365253e2e840",
-    "title": "Google Cloud surpasses $20B, but says growth was capacity-constrained",
-    "url": "https://techcrunch.com/2026/04/29/google-cloud-surpasses-20b-but-says-growth-was-capacity-constrained/",
-    "source": "TechCrunch",
-    "summary": "Google Cloud topped $20B in quarterly revenue for the first time, fueled by surging demand for AI. But capacity constraints mean it could have grown even faster.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-29T22:20:48.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-368128e6f28129236fd9",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-ce52abc8a3f020a53a6f",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T06:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-bc507498ac4792876c13",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-29e3d13268b3eecb87e9",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-e1e83761f7ea575fa66b",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-26T16:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-6e6cdaf0d6010b4433a5",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-cfbb97f4e142ddd9e19c",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-bb94101d867132ebad2f",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-7fbf7b2c45e97107db7c",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-99a0fa5d4a499cedad3e",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-eff960ba78f2d3387cb1",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-8a79aaeb639a5ad663c0",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:06"
+    "discovered_at": "2026-04-30 23:08:34"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:37"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-0deaf33f30ef9c0667e0",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:37"
   },
   {
     "id": "news-bafb7f75d833305cc225",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-03T20:30:15.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-ab324ca76ade73622a3c",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-f2b31c55fc99db076bcf",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-da4f0e92fc3703a9901e",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:30:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   },
   {
     "id": "news-72c66a2896d16cbdc0e8",
@@ -789,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:00:00.000Z",
-    "discovered_at": "2026-04-30 22:08:12"
+    "discovered_at": "2026-04-30 23:08:38"
   }
 ]
