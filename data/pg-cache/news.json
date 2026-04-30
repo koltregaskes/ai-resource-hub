@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-1ed3f4ba6810ae5a606b",
+    "title": "SoftBank is creating a robotics company that builds data centers — and already eyeing a $100B IPO",
+    "url": "https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/",
+    "source": "TechCrunch",
+    "summary": "You need infrastructure to build AI a and robots, but apparently you also need AI and robots to build infrastructure.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T03:58:22.000Z",
+    "discovered_at": "2026-04-30 04:02:30"
+  },
+  {
+    "id": "news-7e821dbadefeef8b5222",
+    "title": "Amazon&#8217;s cloud business is surging — and so is its capital spending",
+    "url": "https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/",
+    "source": "TechCrunch",
+    "summary": "The e-commerce giant is making more money than expected from AWS but it's also spending a lot, and will continue to do so in the near term, its chief executive said.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-30T00:14:23.000Z",
+    "discovered_at": "2026-04-30 04:02:30"
+  },
+  {
     "id": "news-50738bf0cb2bec0c663e",
     "title": "Sources: Anthropic could raise a new $50B round at a valuation of $900B",
     "url": "https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/",
@@ -9,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:07:15.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-5717bbd1d86cbb199797",
@@ -21,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:01:24.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-c24e7980f917002c3a4b",
@@ -33,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:58:36.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-dbe4e0b57bcd12a8c14f",
@@ -45,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:58:26.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-2c63518bacad45c3cffc",
@@ -57,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:55:23.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-953abed23eaa7bc0b490",
@@ -69,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T23:02:23.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-f4817a46365253e2e840",
@@ -81,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T22:20:48.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-ea12b04b257affb4da57",
@@ -93,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:59:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-98dd2c492bb0610d1634",
@@ -105,7 +129,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:28:11.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
+  },
+  {
+    "id": "news-6ce07af346a49ef2216f",
+    "title": "Where the goblins came from",
+    "url": "https://openai.com/index/where-the-goblins-came-from",
+    "source": "OpenAI",
+    "summary": "How goblin outputs spread in AI models: timeline, root cause, and fixes behind personality-driven quirks in GPT-5 behavior.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-29T20:00:00.000Z",
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-9645e624644509e4e016",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T18:59:44.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-6e84eeb95311af054593",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T18:33:05.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-814f8d51f6030bf86dc9",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T18:03:05.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-4df701c5a72c34eb3174",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T17:32:02.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-4e10e824589246dd495e",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T16:42:33.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-654253e055b16f8605a2",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T16:40:49.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-bbfaae370ea09c71a869",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T16:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:35:32.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-de636eca8b5da442c7c4",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T14:47:57.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-925bdbda93c44fd94857",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T14:43:41.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-0e9c08de9a3bcccb8606",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T13:57:16.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-b34cd1b7aa82269e5a86",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T13:10:57.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-762cf330424da97b14cb",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T13:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-f1c638fe552afe4bab57",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T13:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-365748cf847fd7c97091",
@@ -297,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T09:45:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -309,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-2c170000cfce3f80815e",
@@ -321,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T00:40:16.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-eb912c20d7d2c30b4de2",
@@ -333,31 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T19:48:02.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
-  },
-  {
-    "id": "news-1d2226ad4d1b1eae9d52",
-    "title": "Amazon launches an AI-powered audio Q&#038;A experience on product pages",
-    "url": "https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/",
-    "source": "TechCrunch",
-    "summary": "Amazon's new \"Join the chat\" feature lets you ask questions about products and receive AI-powered audio responses.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-28T18:49:54.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
-  },
-  {
-    "id": "news-15256c137a16e13c1381",
-    "title": "Google expands Pentagon&#8217;s access to its AI after Anthropic&#8217;s refusal",
-    "url": "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/",
-    "source": "TechCrunch",
-    "summary": "After Anthropic refused to allow the DoD to use its AI for domestic mass surveillance and autonomous weapons, Google has signed a new contract with the department.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-28T18:15:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-368128e6f28129236fd9",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-ce52abc8a3f020a53a6f",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T06:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-bc507498ac4792876c13",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-29e3d13268b3eecb87e9",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-e1e83761f7ea575fa66b",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-26T16:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-cfbb97f4e142ddd9e19c",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-6e6cdaf0d6010b4433a5",
@@ -513,31 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
-  },
-  {
-    "id": "news-b2acc3c294f376d2ca8b",
-    "title": "Automations",
-    "url": "https://openai.com/academy/codex-automations",
-    "source": "OpenAI",
-    "summary": "Learn how to automate tasks in Codex using schedules and triggers to create reports, summaries, and recurring workflows without manual effort.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
-  },
-  {
-    "id": "news-bb94101d867132ebad2f",
-    "title": "Plugins and skills",
-    "url": "https://openai.com/academy/codex-plugins-and-skills",
-    "source": "OpenAI",
-    "summary": "Learn how to use Codex plugins and skills to connect tools, access data, and follow repeatable workflows to automate tasks and improve results.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-7fbf7b2c45e97107db7c",
@@ -549,7 +537,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
+  },
+  {
+    "id": "news-bb94101d867132ebad2f",
+    "title": "Plugins and skills",
+    "url": "https://openai.com/academy/codex-plugins-and-skills",
+    "source": "OpenAI",
+    "summary": "Learn how to use Codex plugins and skills to connect tools, access data, and follow repeatable workflows to automate tasks and improve results.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-23T10:00:00.000Z",
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-3533fea5413f1a898136",
@@ -561,19 +561,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
-    "id": "news-eff960ba78f2d3387cb1",
-    "title": "How to get started with Codex",
-    "url": "https://openai.com/academy/codex-how-to-start",
+    "id": "news-b2acc3c294f376d2ca8b",
+    "title": "Automations",
+    "url": "https://openai.com/academy/codex-automations",
     "source": "OpenAI",
-    "summary": "Learn how to get started with Codex by setting up projects, creating threads, and completing your first tasks with step-by-step guidance.",
+    "summary": "Learn how to automate tasks in Codex using schedules and triggers to create reports, summaries, and recurring workflows without manual effort.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-8a79aaeb639a5ad663c0",
@@ -585,19 +585,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
-    "id": "news-99a0fa5d4a499cedad3e",
-    "title": "Codex settings",
-    "url": "https://openai.com/academy/codex-settings",
+    "id": "news-eff960ba78f2d3387cb1",
+    "title": "How to get started with Codex",
+    "url": "https://openai.com/academy/codex-how-to-start",
     "source": "OpenAI",
-    "summary": "Learn how to configure Codex settings, including personalization, detail level, and permissions, to run tasks smoothly and customize your workflow.",
+    "summary": "Learn how to get started with Codex by setting up projects, creating threads, and completing your first tasks with step-by-step guidance.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:08"
+    "discovered_at": "2026-04-30 04:02:25"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-0deaf33f30ef9c0667e0",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-bafb7f75d833305cc225",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-03T20:30:15.000Z",
-    "discovered_at": "2026-04-30 00:08:12"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-ab324ca76ade73622a3c",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-f2b31c55fc99db076bcf",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-02T16:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-da4f0e92fc3703a9901e",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:30:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-72c66a2896d16cbdc0e8",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-01T13:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   },
   {
     "id": "news-010788685e59720c9455",
@@ -801,6 +801,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-03-31T16:00:00.000Z",
-    "discovered_at": "2026-04-30 00:08:11"
+    "discovered_at": "2026-04-30 04:02:30"
   }
 ]
