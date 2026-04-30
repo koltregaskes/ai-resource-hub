@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T12:04:48.578Z",
+  "generatedAt": "2026-04-30T14:23:10.206Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T12:04:47.205Z",
+      "lastCheckedAt": "2026-04-30T14:23:09.015Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T12:04:47.350Z",
+      "lastCheckedAt": "2026-04-30T14:23:09.129Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -143,6 +143,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "dv9r688vqt8s",
+          "title": "Elevated errors on Claude Haiku 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-30T13:10:09.292Z",
+          "updatedAt": "2026-04-30T14:01:41.413Z",
+          "resolvedAt": "2026-04-30T14:01:41.394Z",
+          "url": "https://stspg.io/7hh9mtmr0z16",
+          "summary": "The incident has been resolved. Error rates were elevated between 5:20 PT / 12:48 PT and 6:48 PT / 13:48 PT."
+        },
+        {
           "id": "2gf1jpyty350",
           "title": "claude.ai and API unavailable",
           "status": "resolved",
@@ -174,17 +185,6 @@
           "resolvedAt": "2026-04-29T00:00:29.047Z",
           "url": "https://stspg.io/gsg6msbs6shy",
           "summary": "The incident is now resolved. The impact was between 16:25 PT / 23:25 UTC and 16:33 PT / 23:33 UTC."
-        },
-        {
-          "id": "9l93x2ht4s5w",
-          "title": "Claude.ai unavailable and elevated errors on the API",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-04-28T17:41:55.352Z",
-          "updatedAt": "2026-04-28T19:15:52.876Z",
-          "resolvedAt": "2026-04-28T19:15:52.858Z",
-          "url": "https://stspg.io/mz37pbn6yt3w",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -199,7 +199,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T12:04:47.903Z",
+      "lastCheckedAt": "2026-04-30T14:23:09.594Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T12:04:47.412Z",
+      "lastCheckedAt": "2026-04-30T14:23:09.197Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +293,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T12:04:48.310Z",
+      "lastCheckedAt": "2026-04-30T14:23:09.848Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +358,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T12:04:47.290Z",
+      "lastCheckedAt": "2026-04-30T14:23:09.068Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -402,6 +402,26 @@
       ]
     },
     {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-04-30T14:23:09.316Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -412,7 +432,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T12:04:48.569Z",
+      "lastCheckedAt": "2026-04-30T14:23:10.198Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -465,26 +485,6 @@
           "summary": "ZAI GLM 5.1 went down"
         }
       ]
-    },
-    {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-04-30T12:04:47.527Z",
-      "overallStatus": "unknown",
-      "overallLabel": "Status page available",
-      "summary": "Official provider status page reports: Status page available.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "xai",
