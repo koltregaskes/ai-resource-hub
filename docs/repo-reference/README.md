@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 30 Apr 2026, 23:08 UTC |
+| Generated | 01 May 2026, 00:04 UTC |
 | Providers tracked | 40 |
-| Public models | 321 |
+| Public models | 322 |
 | Active models | 119 |
-| Tracking models | 201 |
+| Tracking models | 202 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 66 |
-| Release-desk entries | 52 |
+| Release-desk entries | 53 |
 | Configured news sources | 12 |
 | Availability rules | 4 |
-| Latest visible refresh | 30 Apr 2026, 23:08 UTC |
+| Latest visible refresh | 01 May 2026, 00:04 UTC |
 | Current evaluated composite leader | Claude Opus 4.6 (67.2) |
-| Latest tracked release | Qwen3.5 Plus 2026-04-20 (27 Apr 2026) |
+| Latest tracked release | Grok 4.3 (30 Apr 2026) |
 
 ## Reference Files
 

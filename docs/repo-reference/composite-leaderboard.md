@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 30 Apr 2026, 23:08 UTC
+Generated: 01 May 2026, 00:04 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -12,8 +12,8 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 2 | Claude Sonnet 4.6 | Anthropic | 61.2 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
 | 3 | GPT-5.2 | OpenAI | 57.6 | 78.5 / 22 | 67% | multilingual | $1.75 / $14.00 | 10 Dec 2025 |
 | 4 | Llama 4 Maverick | Meta | 57.6 | 77.0 / 10 | 28% | Coding | $0.15 / $0.60 | 05 Apr 2025 |
-| 5 | Phi-4 Reasoning | Microsoft | 51.9 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
-| 6 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.08 / $0.30 | 05 Apr 2025 |
+| 5 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.08 / $0.30 | 05 Apr 2025 |
+| 6 | Phi-4 Reasoning | Microsoft | 49.2 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
 | 7 | GPT-5.2 Pro | OpenAI | 45.9 | 91.3 / 4 | 16% | Chat | $21.00 / $168.00 | 10 Dec 2025 |
 | 8 | Claude Opus 4.5 | Anthropic | 43.0 | 84.3 / 4 | 16% | Chat | $5.00 / $25.00 | 24 Nov 2025 |
 | 9 | GPT-5 Pro | OpenAI | 43.0 | 88.5 / 4 | 16% | Chat | $15.00 / $120.00 | 06 Oct 2025 |

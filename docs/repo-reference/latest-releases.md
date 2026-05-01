@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 30 Apr 2026, 23:08 UTC
+Generated: 01 May 2026, 00:04 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 30 Apr 2026 | Grok 4.3 | xAI | tracking | high | ready for editor | 0 | 2 | [official](https://docs.x.ai/developers/models) |
 | 27 Apr 2026 | Qwen3.5 Plus 2026-04-20 | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 Flash | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 35B A3B | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 2 Apr 2026 | Qwen3.6 Plus | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 1 Apr 2026 | GLM 5V Turbo | Zhipu AI | tracking | watch | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | 31 Mar 2026 | Grok 4.20 | xAI | tracking | watch | ready for editor | 0 | 2 | [official](https://docs.x.ai/developers/models) |
-| 31 Mar 2026 | Grok 4.20 Multi-Agent | xAI | tracking | watch | ready for editor | 0 | 2 | [official](https://docs.x.ai/developers/models) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)

@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 30 Apr 2026, 23:08 UTC
+Generated: 01 May 2026, 00:04 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -12,7 +12,7 @@ This table shows how much of each provider's public model surface is currently r
 | Meta | 6 | 6 | 0 | n/a | n/a | [docs](https://llama.meta.com/docs) |
 | Alibaba | 5 | 43 | 0 | Qwen3.5 Plus 2026-04-20 (27 Apr 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | DeepSeek | 4 | 9 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
-| xAI | 4 | 5 | 0 | Grok 4.20 (31 Mar 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
+| xAI | 4 | 6 | 0 | Grok 4.3 (30 Apr 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
