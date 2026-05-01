@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getBenchmarks, getNews } from '../db/queries';
+import { getNews } from '../db/queries';
 import { getAiMilestonesOverview } from '../data/ai-milestones';
 import { modelReleaseDesk } from '../data/model-release-desk.generated';
+import { getReliabilityFloorOverview } from '../data/reliability-floor';
 import {
   getAgiOverview,
   getDataPulse,
@@ -21,13 +22,19 @@ const frontierNowAll = getFrontierNow(24);
 const frontierNow = frontierNowAll.slice(0, 10);
 const metaLeaderboardAll = getMetaLeaderboard(250);
 const evaluatedLeaderboard = metaLeaderboardAll.slice(0, 10);
+const reliabilityOverview = getReliabilityFloorOverview();
+const reliabilityPreview = [
+  ...reliabilityOverview.ranked,
+  ...reliabilityOverview.partial,
+  ...reliabilityOverview.tracking,
+].slice(0, 8);
+const reliabilityLeader = reliabilityOverview.ranked[0] ?? reliabilityOverview.partial[0] ?? reliabilityOverview.tracking[0] ?? null;
 const agiOverview = getAgiOverview();
 const latestDigest = getLatestDigest();
 const digestEntries = latestDigest?.entries.slice(0, 5) ?? [];
 const dataPulse = getDataPulse(base);
 const activities = getLatestActivities(8, base);
 const milestonesOverview = getAiMilestonesOverview();
-const trackedBenchmarkCount = getBenchmarks().length;
 type HeadlineNewsItem = ReturnType<typeof getNews>[number] & {
   discovered_at?: string | null;
 };
@@ -151,8 +158,8 @@ const heroStats = [
     value: frontierNowAll.length.toLocaleString('en-GB'),
   },
   {
-    label: 'Weighted benchmarks',
-    value: trackedBenchmarkCount.toLocaleString('en-GB'),
+    label: 'Reliability sources',
+    value: reliabilityOverview.sources.length.toLocaleString('en-GB'),
   },
   {
     label: 'Digest stories',
@@ -185,10 +192,10 @@ const heroStats = [
     <div class="hub-home-frame mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
       <div class="hub-home-grid">
         <div class="hub-home-head">
-          <p class="hub-home-kicker">Live AI intelligence</p>
-          <h1 class="hub-home-title">Choose the right AI model faster.</h1>
+          <p class="hub-home-kicker">Reference desk</p>
+          <h1 class="hub-home-title">AI model facts, fast.</h1>
           <p class="hub-home-intro">
-            Start with the current frontier watchlist, cross-check the benchmark-backed composite, then scan what changed today.
+            Find current models, everyday reliability signals, benchmark-backed rankings, prices, releases, and what changed today.
           </p>
 
           <div class="hub-home-actions">
@@ -228,6 +235,19 @@ const heroStats = [
               </div>
               <span class="hub-home-brief-meta">{frontierLeader ? `${frontierLeader.name} is on the watchlist` : 'Current flagship models'}</span>
             </a>
+            <a href={`${base}reliability-floor/`} class="hub-home-brief-link" data-fresh-at={reliabilityOverview.lastUpdated ?? ''}>
+              <div>
+                <p class="hub-home-brief-title">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  Reliability Floor
+                </p>
+              </div>
+              <span class="hub-home-brief-meta">
+                {reliabilityLeader
+                  ? `${reliabilityLeader.evidenceLabel}: ${reliabilityLeader.name}`
+                  : 'Everyday reliability'}
+              </span>
+            </a>
             <a href={`${base}leaderboard/`} class="hub-home-brief-link" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
               <div>
                 <p class="hub-home-brief-title">
@@ -248,89 +268,19 @@ const heroStats = [
                 {agiOverview.currentLeader ? `Frontier peak: ${agiOverview.currentLeader.modelName}` : 'Frontier view'}
               </span>
             </a>
-            <a href={`${base}news/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Daily digest
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">
-                {latestDigest ? `${latestDigest.storyCount ?? digestEntries.length} stories` : 'Awaiting digest'}
-              </span>
-            </a>
-            <a href={`${base}new/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Release desk
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">{latestTrackedRelease ? `Latest tracked: ${latestTrackedRelease.modelName}` : 'Launch radar'}</span>
-            </a>
-            <a href={`${base}milestones/`} class="hub-home-brief-link">
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  AI milestones
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">
-                {milestonesOverview.todayMilestones.length > 0
-                  ? `${milestonesOverview.todayMilestones.length} anniversaries today`
-                  : milestonesOverview.nextMilestone
-                    ? `Next up: ${milestonesOverview.nextMilestone.title}`
-                    : 'Launch and lab dates'}
-              </span>
-            </a>
-            <a href={`${base}changelog/`} class="hub-home-brief-link hub-home-brief-link-wide" data-fresh-at={activities[0]?.date ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Latest activities
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">{activities.length} recent entries</span>
-            </a>
           </div>
         </aside>
       </div>
-
-      {headlineNews.length > 0 ? (
-        <section class="hub-home-news-strip" data-news-rotator>
-          <div class="hub-home-news-strip-head">
-            <p class="hub-home-mini-label">Latest news</p>
-            <a href={`${base}news/`} class="editorial-link">Open the news desk</a>
-          </div>
-
-          <div class="hub-home-news-rail">
-            {headlineNews.map((entry, index) => (
-              <a
-                href={entry.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class={`hub-home-news-card ${index === 0 ? 'is-active' : ''}`}
-                data-news-card
-                data-fresh-at={entry.headlineDate ?? ''}
-              >
-                <p class="hub-home-news-meta">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  {entry.source}
-                  <span>/</span>
-                  {formatDateLabel(entry.headlineDate, { day: 'numeric', month: 'short' })}
-                </p>
-                <h3 class="hub-home-news-title">{entry.title}</h3>
-              </a>
-            ))}
-          </div>
-        </section>
-      ) : null}
 
       <div class="hub-home-surface hub-home-surface-top">
       <div class="hub-home-tab-row" role="tablist" aria-label="Homepage primary views">
         <button class="hub-home-tab is-active" type="button" data-home-tab="frontier" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
           <span class="fresh-dot" data-fresh-dot hidden></span>
           Frontier now
+        </button>
+        <button class="hub-home-tab" type="button" data-home-tab="reliability" data-fresh-at={reliabilityOverview.lastUpdated ?? ''}>
+          <span class="fresh-dot" data-fresh-dot hidden></span>
+          Reliability Floor
         </button>
         <button class="hub-home-tab" type="button" data-home-tab="evaluated" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
           <span class="fresh-dot" data-fresh-dot hidden></span>
@@ -348,17 +298,9 @@ const heroStats = [
             <div class="hub-home-card-head">
               <div>
                 <p class="hub-home-mini-label">Current frontier</p>
-                <h2 class="hub-home-card-title">The homepage now starts with the models that are current, not the models with the oldest benchmark advantage.</h2>
+                <h2 class="hub-home-card-title">Current models first.</h2>
               </div>
               <a href={`${base}leaderboard/`} class="editorial-link">Open the full ranking desk</a>
-            </div>
-
-            <div class="hub-home-chip-row">
-              <a href={`${base}leaderboard/`} class="hub-home-chip">Frontier now</a>
-              <a href={`${base}new/`} class="hub-home-chip">Latest releases</a>
-              <a href={`${base}availability/`} class="hub-home-chip">Availability</a>
-              <a href={`${base}compare/head-to-head/`} class="hub-home-chip">Head-to-head</a>
-              <a href={`${base}open-source/`} class="hub-home-chip">Open models</a>
             </div>
 
             <p class="hub-home-card-note" data-fresh-at={frontierLeader?.released ?? ''}>
@@ -479,6 +421,97 @@ const heroStats = [
               ) : (
                 <div class="empty-surface">Release tracking will surface here as new launches land.</div>
               )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hub-home-panel is-hidden" data-home-panel="reliability">
+        <div class="hub-home-panel-grid">
+          <div class="hub-home-card hub-home-card-main">
+            <div class="hub-home-card-head">
+              <div>
+                <p class="hub-home-mini-label">Everyday reliability</p>
+                <h2 class="hub-home-card-title">The Reliability Floor tracks the basics: facts, grounding, retrieval, memory, abstention, and instruction following.</h2>
+              </div>
+              <a href={`${base}reliability-floor/`} class="editorial-link">Open Reliability Floor</a>
+            </div>
+
+            <p class="hub-home-card-note">
+              This is a floor, not a ceiling score. Models are not treated as reliable until the critical dimensions have comparable evidence.
+              Missing benchmark coverage stays visible instead of being filled with generic quality scores.
+            </p>
+
+            <div class="hub-home-table-shell">
+              <table class="hub-home-table">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th class="hub-home-col-number">Floor</th>
+                    <th class="hub-home-col-number">Evidence</th>
+                    <th class="hub-home-col-number hub-home-col-desktop">Facts</th>
+                    <th class="hub-home-col-number hub-home-col-desktop">Instructions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {reliabilityPreview.map((entry) => {
+                    const facts = entry.dimensions.find((dimension) => dimension.id === 'factuality')?.score ?? null;
+                    const instructions = entry.dimensions.find((dimension) => dimension.id === 'instruction_following')?.score ?? null;
+
+                    return (
+                      <tr data-fresh-at={entry.lastUpdated ?? ''}>
+                        <td>
+                          <a href={`${base}models/${entry.id}/`} class="hub-home-model-link">
+                            <span class="hub-home-provider-dot" style={`background-color: ${entry.providerColour}`}></span>
+                            <span class="fresh-dot" data-fresh-dot hidden></span>
+                            <span>{entry.name}</span>
+                          </a>
+                          <p class="hub-home-model-meta">
+                            {entry.provider}
+                            <span>/</span>
+                            {entry.status}
+                          </p>
+                        </td>
+                        <td class="hub-home-score-cell">
+                          <span class="hub-home-score-secondary">{entry.floorScore === null ? 'Not rankable' : entry.floorScore.toFixed(1)}</span>
+                          <span class="hub-home-score-note">floor score</span>
+                        </td>
+                        <td class="hub-home-score-cell">
+                          <span class="hub-home-score-secondary">{entry.evidenceLabel}</span>
+                          <span class="hub-home-score-note">{entry.scoredDimensions}/{entry.requiredDimensions} dimensions</span>
+                        </td>
+                        <td class="hub-home-score-cell hub-home-col-desktop">
+                          <span class="hub-home-score-secondary">{facts === null ? 'Missing' : facts.toFixed(1)}</span>
+                          <span class="hub-home-score-note">factuality</span>
+                        </td>
+                        <td class="hub-home-score-cell hub-home-col-desktop">
+                          <span class="hub-home-score-secondary">{instructions === null ? 'Missing' : instructions.toFixed(1)}</span>
+                          <span class="hub-home-score-note">instruction following</span>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="hub-home-rail">
+            <div class="hub-home-card">
+              <p class="hub-home-mini-label">Why this exists</p>
+              <h3 class="hub-home-rail-title">Ceiling scores do not prove basic trust.</h3>
+              <p class="hub-home-rail-copy">
+                A model can be excellent at hard tasks and still fail normal users by inventing facts, losing supplied context, or ignoring exact instructions.
+              </p>
+            </div>
+
+            <div class="hub-home-card" data-fresh-at={reliabilityOverview.lastUpdated ?? ''}>
+              <p class="hub-home-mini-label">Current state</p>
+              <h3 class="hub-home-rail-title">{reliabilityOverview.partial.length} partial evidence rows</h3>
+              <p class="hub-home-rail-copy">
+                The first public version is deliberately honest: it shows source coverage and missing dimensions before claiming a reliable winner.
+              </p>
+              <a href={`${base}methodology/`} class="editorial-link">Read scoring rules</a>
             </div>
           </div>
         </div>
@@ -729,6 +762,36 @@ const heroStats = [
         </div>
       </div>
     </div>
+
+      {headlineNews.length > 0 ? (
+        <section class="hub-home-news-strip" data-news-rotator>
+          <div class="hub-home-news-strip-head">
+            <p class="hub-home-mini-label">Latest news</p>
+            <a href={`${base}news/`} class="editorial-link">Open the news desk</a>
+          </div>
+
+          <div class="hub-home-news-rail" data-news-rail>
+            {headlineNews.map((entry, index) => (
+              <a
+                href={entry.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`hub-home-news-card ${index === 0 ? 'is-active' : ''}`}
+                data-news-card
+                data-fresh-at={entry.headlineDate ?? ''}
+              >
+                <p class="hub-home-news-meta">
+                  <span class="fresh-dot" data-fresh-dot hidden></span>
+                  {entry.source}
+                  <span>/</span>
+                  {formatDateLabel(entry.headlineDate, { day: 'numeric', month: 'short' })}
+                </p>
+                <h3 class="hub-home-news-title">{entry.title}</h3>
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
     </div>
   </section>
 
@@ -875,6 +938,7 @@ const heroStats = [
     <p class="hub-home-footnote">
       The homepage now separates the current frontier watchlist from the evaluated composite. The scored view blends normalized benchmark results,
       the existing quality layer, and a freshness signal, then penalizes thin evidence, stale provider generations, and beta or compact variants.
+      Reliability Floor is separate again: it tracks everyday trust basics and refuses to rank models as reliable when critical evidence is missing.
       The AGI panel is a derived frontier signal built from ARC-AGI, GPQA Diamond, Humanity&rsquo;s Last Exam, MMLU-Pro,
       SWE-bench Verified, and Chatbot Arena. Read the <a href={`${base}methodology/`}>methodology</a> before treating any ranking as gospel.
     </p>
@@ -950,6 +1014,7 @@ const heroStats = [
 
         const rotator = document.querySelector('[data-news-rotator]');
         if (rotator) {
+          const rail = /** @type {HTMLElement | null} */ (rotator.querySelector('[data-news-rail]'));
           const cards = Array.from(rotator.querySelectorAll('[data-news-card]'));
           let activeIndex = Math.max(0, cards.findIndex((card) => card.classList.contains('is-active')));
 
@@ -958,12 +1023,11 @@ const heroStats = [
               card.classList.toggle('is-active', cardIndex === index);
             });
 
-            const activeCard = cards[index];
-            if (activeCard && smooth) {
-              activeCard.scrollIntoView({
+            const activeCard = /** @type {HTMLElement | undefined} */ (cards[index]);
+            if (activeCard && rail && smooth) {
+              rail.scrollTo({
+                left: Math.max(0, activeCard.offsetLeft - 16),
                 behavior: 'smooth',
-                block: 'nearest',
-                inline: 'nearest',
               });
             }
           };

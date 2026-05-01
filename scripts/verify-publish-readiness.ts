@@ -86,7 +86,6 @@ function matchesRequirement(model: CacheModel, requirement: FrontierModelRequire
 }
 
 function main() {
-  const db = new Database(dbPath, { readonly: true });
   const failures: string[] = [];
 
   const cacheModels = loadJson<CacheModel>('models').filter((model) => publicModelStatuses.includes((model.status ?? 'active').toLowerCase()));
@@ -97,16 +96,24 @@ function main() {
   const latestSpreadsheet = loadJsonFile<SpreadsheetExport>(path.join(publicDataDir, 'models-latest.json'));
   const providerStatus = loadJsonFile<ProviderStatusSnapshot>(providerStatusPath);
   const releaseDesk = loadJsonFile<ReleaseDeskSnapshot>(releaseDeskPath);
+  const dbAvailable = fs.existsSync(dbPath);
+  const db = dbAvailable ? new Database(dbPath, { readonly: true }) : null;
 
-  const dbCounts = {
-    providers: Number((db.prepare('SELECT COUNT(*) AS count FROM providers').get() as { count: number }).count),
-    models: Number((db.prepare(`
-      SELECT COUNT(*) AS count
-      FROM models
-      WHERE LOWER(COALESCE(status, 'active')) IN ('active', 'tracking', 'preview')
-    `).get() as { count: number }).count),
-    benchmarkScores: Number((db.prepare('SELECT COUNT(*) AS count FROM benchmark_scores').get() as { count: number }).count),
-  };
+  const dbCounts = db
+    ? {
+        providers: Number((db.prepare('SELECT COUNT(*) AS count FROM providers').get() as { count: number }).count),
+        models: Number((db.prepare(`
+          SELECT COUNT(*) AS count
+          FROM models
+          WHERE LOWER(COALESCE(status, 'active')) IN ('active', 'tracking', 'preview')
+        `).get() as { count: number }).count),
+        benchmarkScores: Number((db.prepare('SELECT COUNT(*) AS count FROM benchmark_scores').get() as { count: number }).count),
+      }
+    : {
+        providers: cacheProviders.length,
+        models: cacheModels.length,
+        benchmarkScores: cacheBenchmarks.length,
+      };
 
   if (cacheProviders.length < dbCounts.providers) {
     failures.push(`Provider cache lagging local DB: cache=${cacheProviders.length}, db=${dbCounts.providers}`);
@@ -209,9 +216,10 @@ function main() {
     failures.push('News routing produced no items from mapped official or routed sources.');
   }
 
-  db.close();
+  db?.close();
 
   console.log('Publish readiness verification');
+  console.log(`  SQLite source: ${dbAvailable ? dbPath : 'not present; pg-cache is source of truth'}`);
   console.log(`  Providers: ${cacheProviders.length}/${dbCounts.providers}`);
   console.log(`  Models: ${cacheModels.length}/${dbCounts.models}`);
   console.log(`  Benchmark scores: ${cacheBenchmarks.length}/${dbCounts.benchmarkScores}`);
