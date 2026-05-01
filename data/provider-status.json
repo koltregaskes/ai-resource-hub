@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-01T17:11:55.011Z",
+  "generatedAt": "2026-05-01T17:43:32.427Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T17:11:53.839Z",
+      "lastCheckedAt": "2026-05-01T17:43:31.358Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -99,6 +99,94 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-01T17:43:32.420Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-05-01T17:05:07.000Z",
+          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-01T17:05:07.000Z",
+          "updatedAt": "2026-05-01T17:05:07.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-01T06:28:54.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-01T06:28:54.000Z",
+          "updatedAt": "2026-05-01T06:28:54.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-05-01T17:05:07.000Z",
+          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-01T17:05:07.000Z",
+          "updatedAt": "2026-05-01T17:05:07.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
+        },
+        {
+          "id": "together-feed-1-2026-05-01T06:43:56.000Z",
+          "title": "FLUX.1 Krea [dev] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-01T06:43:56.000Z",
+          "updatedAt": "2026-05-01T06:43:56.000Z",
+          "resolvedAt": "2026-05-01T06:43:56.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] recovered"
+        },
+        {
+          "id": "together-feed-2-2026-05-01T06:28:54.000Z",
+          "title": "FLUX.1 Krea [dev] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-01T06:28:54.000Z",
+          "updatedAt": "2026-05-01T06:28:54.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 Krea [dev] went down"
+        },
+        {
+          "id": "together-feed-3-2026-05-01T03:35:53.000Z",
+          "title": "Whisper Large V3 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-01T03:35:53.000Z",
+          "updatedAt": "2026-05-01T03:35:53.000Z",
+          "resolvedAt": "2026-05-01T03:35:53.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Whisper Large V3 recovered"
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -109,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T17:11:53.871Z",
+      "lastCheckedAt": "2026-05-01T17:43:31.381Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T17:11:54.564Z",
+      "lastCheckedAt": "2026-05-01T17:43:32.004Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +307,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T17:11:54.088Z",
+      "lastCheckedAt": "2026-05-01T17:43:31.630Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +381,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T17:11:54.831Z",
+      "lastCheckedAt": "2026-05-01T17:43:32.398Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +446,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T17:11:54.026Z",
+      "lastCheckedAt": "2026-05-01T17:43:31.455Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +500,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T17:11:54.373Z",
+      "lastCheckedAt": "2026-05-01T17:43:31.743Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -420,71 +508,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T17:11:55.003Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-05-01T06:43:56.000Z",
-          "title": "FLUX.1 Krea [dev] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-01T06:43:56.000Z",
-          "updatedAt": "2026-05-01T06:43:56.000Z",
-          "resolvedAt": "2026-05-01T06:43:56.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] recovered"
-        },
-        {
-          "id": "together-feed-1-2026-05-01T06:28:54.000Z",
-          "title": "FLUX.1 Krea [dev] went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-01T06:28:54.000Z",
-          "updatedAt": "2026-05-01T06:28:54.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 Krea [dev] went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-01T03:35:53.000Z",
-          "title": "Whisper Large V3 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-01T03:35:53.000Z",
-          "updatedAt": "2026-05-01T03:35:53.000Z",
-          "resolvedAt": "2026-05-01T03:35:53.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Whisper Large V3 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-01T03:14:34.000Z",
-          "title": "Whisper Large V3 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-01T03:14:34.000Z",
-          "updatedAt": "2026-05-01T03:14:34.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Whisper Large V3 went down"
-        }
-      ]
     },
     {
       "id": "xai",
