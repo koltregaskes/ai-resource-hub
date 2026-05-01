@@ -7,7 +7,7 @@ priority: "watch"
 model: "Grok 4.20"
 provider: "xAI"
 release_date: "2026-03-31"
-generated_at: "2026-05-01T00:04:34.610Z"
+generated_at: "2026-05-01T04:14:22.830Z"
 ---
 
 # Grok 4.20: release brief
@@ -16,7 +16,7 @@ xAI's Grok 4.20 is on the release desk with 2 related stories and 0 benchmark si
 
 ## Release summary
 
-Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $1.25 in / $2.50 out per million tokens. xAI flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
