@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Opus 4.7"
 provider: "Anthropic"
 release_date: "2026-04-16"
-generated_at: "2026-05-01T17:12:00.907Z"
+generated_at: "2026-05-01T18:11:29.301Z"
 ---
 
 # Claude Opus 4.7: release brief
 
-Anthropic's Claude Opus 4.7 is on the release desk with 2 related stories and 0 benchmark signals to review.
+Anthropic's Claude Opus 4.7 is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,7 +30,6 @@ Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned 
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
-- TechCrunch (2026-04-30): [Sources: Anthropic could raise a new $50B round at a valuation of $900B](https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/) - The maker of Claude has received multiple preemptive offers at valuations in the $850 billion to $900 billion range, according to sources familiar with the matter.
 
 ## Suggested thread / post structure
 
@@ -52,4 +51,3 @@ Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned 
 - [Official launch or docs](https://docs.anthropic.com)
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
-- [TechCrunch: Sources: Anthropic could raise a new $50B round at a valuation of $900B](https://techcrunch.com/2026/04/29/sources-anthropic-could-raise-a-new-50b-round-at-a-valuation-of-900b/)
