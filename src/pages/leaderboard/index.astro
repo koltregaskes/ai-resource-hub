@@ -2,12 +2,19 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { modelReleaseDesk } from '../../data/model-release-desk.generated';
 import { getFrontierNow, getMetaLeaderboard } from '../../data/hub-dashboard';
+import { getReliabilityFloorOverview } from '../../data/reliability-floor';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 const frontierNow = getFrontierNow(18);
 const rankedModels = getMetaLeaderboard(250);
+const reliabilityOverview = getReliabilityFloorOverview();
+const reliabilityRows = [
+  ...reliabilityOverview.ranked,
+  ...reliabilityOverview.partial,
+  ...reliabilityOverview.tracking,
+].slice(0, 24);
 const topMeta = rankedModels.slice(0, 24);
 const topValue = [...rankedModels]
   .filter((model) => model.inputPrice > 0 && model.outputPrice > 0)
@@ -50,7 +57,7 @@ function formatReleaseDate(value: string | null): string {
 
 <BaseLayout
   title="AI Leaderboard Desk - The AI Resource Hub"
-  description="Current frontier watchlist plus the benchmark-backed evaluated composite for AI models."
+  description="Current frontier watchlist, Reliability Floor, and benchmark-backed evaluated composite for AI models."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -63,8 +70,9 @@ function formatReleaseDate(value: string | null): string {
       <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Ranking desk</p>
       <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">AI Leaderboard Desk</h1>
       <p class="text-(--color-text-secondary) max-w-3xl mt-3 leading-7">
-        This page now separates two different questions. <strong>Frontier now</strong> answers what is current across the major labs.
-        <strong>Evaluated composite</strong> answers which models are currently strongest inside the benchmark-backed scored set.
+        This page separates three different questions. <strong>Frontier now</strong> answers what is current.
+        <strong>Reliability Floor</strong> asks whether everyday basics are covered. <strong>Evaluated composite</strong>
+        ranks models inside the benchmark-backed scored set.
       </p>
 
       {latestTrackedRelease ? (
@@ -80,6 +88,9 @@ function formatReleaseDate(value: string | null): string {
     <div class="flex flex-wrap gap-2 mb-6 border-b border-(--color-border) pb-2">
       <button class="leaderboard-tab active px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="frontier">
         Frontier now
+      </button>
+      <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="reliability">
+        Reliability Floor
       </button>
       <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="meta">
         Evaluated composite
@@ -144,6 +155,67 @@ function formatReleaseDate(value: string | null): string {
       <p class="mt-6 text-sm text-(--color-text-secondary) max-w-3xl">
         The frontier lane is intentionally not a synthetic score. It keeps the current flagship and launch watchlist visible
         even when benchmark coverage is still catching up.
+      </p>
+    </div>
+
+    <div class="leaderboard-panel hidden" id="panel-reliability">
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Floor</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Evidence</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Facts</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Instructions</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Coverage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {reliabilityRows.map((entry) => {
+              const facts = entry.dimensions.find((dimension) => dimension.id === 'factuality')?.score ?? null;
+              const instructions = entry.dimensions.find((dimension) => dimension.id === 'instruction_following')?.score ?? null;
+
+              return (
+                <tr class="border-b border-(--color-border)/50 hover:bg-(--color-bg-hover) transition-colors">
+                  <td class="py-3 px-4">
+                    <a href={`${base}models/${entry.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                      <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${entry.providerColour}`}></span>
+                      <span class="font-medium">{entry.name}</span>
+                    </a>
+                    <span class="text-[10px] text-(--color-text-muted)">{entry.provider} / {entry.status}</span>
+                  </td>
+                  <td class="py-3 px-4 text-right">
+                    <span class="font-mono font-medium text-(--color-accent)">
+                      {entry.floorScore === null ? 'Not rankable' : entry.floorScore.toFixed(1)}
+                    </span>
+                  </td>
+                  <td class="py-3 px-4">
+                    <div class="text-(--color-text-secondary)">{entry.evidenceLabel}</div>
+                    <div class="text-[10px] text-(--color-text-muted) mt-1">
+                      {entry.scoredDimensions}/{entry.requiredDimensions} dimensions
+                    </div>
+                  </td>
+                  <td class="py-3 px-4 text-right hidden sm:table-cell text-(--color-text-secondary)">
+                    {facts === null ? 'Missing' : facts.toFixed(1)}
+                  </td>
+                  <td class="py-3 px-4 text-right hidden md:table-cell text-(--color-text-secondary)">
+                    {instructions === null ? 'Missing' : instructions.toFixed(1)}
+                  </td>
+                  <td class="py-3 px-4 text-right text-(--color-text-muted)">
+                    {formatCoverage(entry.evidenceCoverage)}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-6 text-sm text-(--color-text-secondary) max-w-3xl">
+        Reliability Floor is a gated everyday-trust view. It records prompt and harness context where known,
+        shows missing benchmark dimensions explicitly, and does not rank a model as reliable until all critical evidence is present.
+        <a href={`${base}reliability-floor/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">Open the full Reliability Floor page</a>.
       </p>
     </div>
 

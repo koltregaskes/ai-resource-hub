@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getBenchmarkScores, getLastScrapeTime, getPublicModelsByCategory } from '../../db/queries';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
+const models = categories
+  .flatMap((category) => getPublicModelsByCategory(category))
+  .sort((a, b) => {
+    const releasedDelta = Date.parse(b.released ?? '') - Date.parse(a.released ?? '');
+    return releasedDelta || a.provider_name.localeCompare(b.provider_name) || a.name.localeCompare(b.name);
+  });
+const benchmarkCounts = new Map<string, number>();
+
+for (const row of getBenchmarkScores()) {
+  benchmarkCounts.set(row.model_id, (benchmarkCounts.get(row.model_id) ?? 0) + 1);
+}
+
+const providerOptions = Array.from(new Set(models.map((model) => model.provider_name))).sort((a, b) => a.localeCompare(b));
+const categoryOptions = Array.from(new Set(models.map((model) => model.category))).sort((a, b) => a.localeCompare(b));
+const latestModelUpdated = models
+  .map((model) => (model as { updated_at?: string | null }).updated_at ?? model.pricing_updated ?? model.released ?? null)
+  .filter((value): value is string => Boolean(value))
+  .sort((a, b) => Date.parse(b) - Date.parse(a))[0] ?? getLastScrapeTime('models');
+
+function formatDate(value: string | null | undefined): string {
+  if (!value) return 'Unknown';
+  return new Date(value).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+
+function formatTokens(value: number): string {
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(value % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (value >= 1_000) return `${Math.round(value / 1_000)}K`;
+  return value.toLocaleString('en-GB');
+}
+
+function formatPrice(value: number): string {
+  if (value === 0) return 'Free';
+  if (value < 0.01) return `$${value.toFixed(4)}`;
+  if (value < 1) return `$${value.toFixed(3)}`;
+  return `$${value.toFixed(2)}`;
+}
+---
+
+<BaseLayout
+  title="AI Model Directory - The AI Resource Hub"
+  description="A compact, searchable directory of tracked AI models with provider, category, release, context, pricing, and benchmark coverage."
+>
+  <section class="desk-page mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <nav class="text-xs text-(--color-text-muted) mb-3" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Models</span>
+    </nav>
+
+    <header class="desk-header">
+      <div>
+        <p class="desk-kicker">Find models</p>
+        <h1>AI model directory</h1>
+        <p>
+          A fast reference table for the models currently tracked by the Hub. Use it to jump to model pages,
+          compare labs, check release recency, and see where benchmark coverage is still thin.
+        </p>
+      </div>
+      <div class="desk-status-strip" aria-label="Model directory status">
+        <div>
+          <span>{models.length}</span>
+          <p>Tracked models</p>
+        </div>
+        <div>
+          <span>{providerOptions.length}</span>
+          <p>Providers</p>
+        </div>
+        <div>
+          <span>{categoryOptions.length}</span>
+          <p>Categories</p>
+        </div>
+        <div>
+          <span>{formatDate(latestModelUpdated)}</span>
+          <p>Latest update</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="desk-note">
+      This directory is intentionally factual. It does not decide which model is best; for scored views use
+      <a href={`${base}leaderboard/`}>the leaderboard desk</a>, <a href={`${base}reliability-floor/`}>Reliability Floor</a>,
+      or <a href={`${base}compare/head-to-head/`}>head-to-head comparison</a>.
+    </div>
+
+    <section class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Filterable table</p>
+          <h2>Models tracked in the public reference layer</h2>
+        </div>
+        <p>
+          Search by model, provider, category, modality, or status. Missing benchmark coverage remains visible.
+        </p>
+      </div>
+
+      <div class="mt-4 grid gap-3 lg:grid-cols-4">
+        <input
+          id="model-search"
+          type="search"
+          placeholder="Search model, lab, modality..."
+          class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-accent)"
+        />
+        <select id="model-provider" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+          <option value="">All providers</option>
+          {providerOptions.map((provider) => <option value={provider}>{provider}</option>)}
+        </select>
+        <select id="model-category" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+          <option value="">All categories</option>
+          {categoryOptions.map((category) => <option value={category}>{category.toUpperCase()}</option>)}
+        </select>
+        <select id="model-sort" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+          <option value="released">Newest release</option>
+          <option value="name">Model A-Z</option>
+          <option value="provider">Provider A-Z</option>
+          <option value="context">Largest context</option>
+          <option value="price">Cheapest input</option>
+          <option value="coverage">Most benchmark rows</option>
+        </select>
+      </div>
+
+      <div class="desk-table-wrap mt-5">
+        <table class="desk-table" id="model-directory-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Provider</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Released</th>
+              <th>Context</th>
+              <th>Price</th>
+              <th>Benchmarks</th>
+            </tr>
+          </thead>
+          <tbody id="model-directory-body">
+            {models.map((model) => {
+              const count = benchmarkCounts.get(model.id) ?? 0;
+              const modalities = model.modality.split(',').map((item: string) => item.trim()).filter(Boolean);
+
+              return (
+                <tr
+                  data-model-row
+                  data-filter={`${model.name} ${model.provider_name} ${model.category} ${model.status} ${model.modality}`.toLowerCase()}
+                  data-provider={model.provider_name}
+                  data-category={model.category}
+                  data-name={model.name}
+                  data-release={model.released ?? ''}
+                  data-context={model.context_window}
+                  data-price={model.input_price}
+                  data-benchmarks={count}
+                >
+                  <td>
+                    <a href={`${base}models/${model.id}/`} class="desk-model-link">
+                      <span style={`background-color: ${model.provider_colour}`}></span>
+                      <strong>{model.name}</strong>
+                    </a>
+                    <p>{modalities.length > 0 ? modalities.join(', ') : 'Modality not specified'}</p>
+                  </td>
+                  <td>
+                    <a href={`${base}labs/${model.provider_id}/`}>{model.provider_name}</a>
+                  </td>
+                  <td>{model.category.toUpperCase()}</td>
+                  <td>
+                    <span class={`hub-home-badge hub-home-badge-${model.status === 'active' ? 'scored' : 'tracking'}`}>{model.status}</span>
+                  </td>
+                  <td>{formatDate(model.released)}</td>
+                  <td>{model.context_window > 0 ? formatTokens(model.context_window) : 'Unknown'}</td>
+                  <td>{formatPrice(model.input_price)} / {formatPrice(model.output_price)}</td>
+                  <td>{count > 0 ? `${count} rows` : 'No comparable evidence yet'}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      <div id="model-directory-empty" class="hidden mt-4 rounded-xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-5 text-center text-sm text-(--color-text-secondary)">
+        No tracked models match those filters.
+      </div>
+    </section>
+  </section>
+
+  <script is:inline>
+    (() => {
+      const searchInput = document.getElementById('model-search');
+      const providerInput = document.getElementById('model-provider');
+      const categoryInput = document.getElementById('model-category');
+      const sortInput = document.getElementById('model-sort');
+      const body = document.getElementById('model-directory-body');
+      const rows = Array.from(document.querySelectorAll('[data-model-row]'));
+      const emptyState = document.getElementById('model-directory-empty');
+
+      const applyFilters = () => {
+        const query = (searchInput instanceof HTMLInputElement ? searchInput.value : '').trim().toLowerCase();
+        const provider = providerInput instanceof HTMLSelectElement ? providerInput.value : '';
+        const category = categoryInput instanceof HTMLSelectElement ? categoryInput.value : '';
+        const sort = sortInput instanceof HTMLSelectElement ? sortInput.value : 'released';
+
+        for (const row of rows) {
+          const matchesQuery = !query || (row.getAttribute('data-filter') || '').includes(query);
+          const matchesProvider = !provider || row.getAttribute('data-provider') === provider;
+          const matchesCategory = !category || row.getAttribute('data-category') === category;
+          row.classList.toggle('hidden', !(matchesQuery && matchesProvider && matchesCategory));
+        }
+
+        const visibleRows = rows.filter((row) => !row.classList.contains('hidden'));
+        const sortedRows = [...visibleRows].sort((a, b) => {
+          if (sort === 'name') return (a.getAttribute('data-name') || '').localeCompare(b.getAttribute('data-name') || '');
+          if (sort === 'provider') return (a.getAttribute('data-provider') || '').localeCompare(b.getAttribute('data-provider') || '');
+          if (sort === 'context') return Number(b.getAttribute('data-context') || 0) - Number(a.getAttribute('data-context') || 0);
+          if (sort === 'price') return Number(a.getAttribute('data-price') || 0) - Number(b.getAttribute('data-price') || 0);
+          if (sort === 'coverage') return Number(b.getAttribute('data-benchmarks') || 0) - Number(a.getAttribute('data-benchmarks') || 0);
+          return Date.parse(b.getAttribute('data-release') || '') - Date.parse(a.getAttribute('data-release') || '');
+        });
+
+        sortedRows.forEach((row) => body?.appendChild(row));
+        emptyState?.classList.toggle('hidden', visibleRows.length > 0);
+      };
+
+      searchInput?.addEventListener('input', applyFilters);
+      providerInput?.addEventListener('change', applyFilters);
+      categoryInput?.addEventListener('change', applyFilters);
+      sortInput?.addEventListener('change', applyFilters);
+      applyFilters();
+    })();
+  </script>
+</BaseLayout>

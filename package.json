@@ -34,7 +34,8 @@
     "scrape:quality": "tsx scripts/scrapers/quality-scores.ts",
     "scrape:creative": "tsx scripts/scrapers/creative-benchmarks.ts",
     "dump:pg": "node scripts/dump-pg-to-json.mjs",
-    "verify:publish": "tsx scripts/verify-publish-readiness.ts"
+    "verify:publish": "tsx scripts/verify-publish-readiness.ts",
+    "verify:routes": "tsx scripts/verify-route-smoke.ts"
   },
   "dependencies": {
     "@astrojs/prism": "^4.0.1",
