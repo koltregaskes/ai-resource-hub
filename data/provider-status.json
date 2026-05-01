@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-01T11:43:37.018Z",
+  "generatedAt": "2026-05-01T13:53:01.892Z",
   "providers": [
     {
       "id": "openai",
@@ -12,12 +12,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T11:43:35.549Z",
+      "lastCheckedAt": "2026-05-01T13:53:01.144Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Images",
+          "status": "degraded_performance"
+        },
         {
           "name": "Connectors/Apps",
           "status": "degraded_performance"
@@ -37,13 +41,19 @@
         {
           "name": "Fine-tuning",
           "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KQHWZ9710V886SZKWE20HFAX",
+          "title": "Elevated error rates for image generation",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-05-01T13:52:09.000Z",
+          "updatedAt": "2026-05-01T13:52:09.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
         {
           "id": "01KQDM1K1826RP1FFN86ZNA3WG",
           "title": "Partial Disruption of ChatGPT Workspace Connector Write Actions",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KQHWZ9710V886SZKWE20HFAX",
+          "title": "Elevated error rates for image generation",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-05-01T13:52:09.000Z",
+          "updatedAt": "2026-05-01T13:52:09.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
         {
           "id": "01KQGTTQ0XNZDK834NBFFQGMG9",
           "title": "Elevated error rates affecting ChatGPT for some users in Europe",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-04-29T21:59:10.000Z",
           "resolvedAt": null,
           "summary": null
-        },
-        {
-          "id": "01KQBTE67HFNEC7R3J3Y22YC3G",
-          "title": "Users may experience elevated error rate for gpt-4o-mini in the API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-29T05:12:25.000Z",
-          "updatedAt": "2026-04-29T05:41:04.000Z",
-          "resolvedAt": "2026-04-29T05:41:04.000Z",
-          "summary": null
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T11:43:35.551Z",
+      "lastCheckedAt": "2026-05-01T13:53:01.187Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +209,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T11:43:36.398Z",
+      "lastCheckedAt": "2026-05-01T13:53:01.627Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +229,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T11:43:35.868Z",
+      "lastCheckedAt": "2026-05-01T13:53:01.227Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +303,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T11:43:36.793Z",
+      "lastCheckedAt": "2026-05-01T13:53:01.856Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +368,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T11:43:35.683Z",
+      "lastCheckedAt": "2026-05-01T13:53:01.132Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +422,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T11:43:36.169Z",
+      "lastCheckedAt": "2026-05-01T13:53:01.229Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -432,7 +442,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-01T11:43:37.011Z",
+      "lastCheckedAt": "2026-05-01T13:53:01.884Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
