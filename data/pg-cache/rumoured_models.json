@@ -10,7 +10,7 @@
     "sources": "[\"https://9to5google.com\"]",
     "notes": "Android code references suggest a \"Gemini 3.0\" model family. May debut at Google I/O 2026.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "Google",
     "provider_colour": "#4285f4"
   },
@@ -25,7 +25,7 @@
     "sources": "[\"https://x.com\"]",
     "notes": "Elon Musk referenced \"Grok 5\" in posts on X. No confirmed specs or timeline.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "xAI",
     "provider_colour": "#1da1f2"
   },
@@ -40,7 +40,7 @@
     "sources": "[\"https://the-decoder.com\", \"https://twitter.com\"]",
     "notes": "Multiple sources indicate Anthropic is testing a next-generation model family internally. No confirmed timeline.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -55,7 +55,7 @@
     "sources": "[\"https://arxiv.org\"]",
     "notes": "References to \"R2\" training runs spotted in DeepSeek research papers. Expected to improve on R1's reasoning capabilities.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "DeepSeek",
     "provider_colour": "#2563eb"
   },
@@ -70,7 +70,7 @@
     "sources": "[\"https://openrouter.ai\"]",
     "notes": "Model ID \"gpt-5.5\" briefly appeared in OpenRouter's model list before being removed. Likely an intermediate release between GPT-5.2 and GPT-6.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   },
@@ -85,7 +85,7 @@
     "sources": "[\"https://mistral.ai\"]",
     "notes": "Mistral AI hiring postings reference a \"next-gen\" flagship model. Likely successor to Mistral Large 3.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "Mistral",
     "provider_colour": "#111827"
   },
@@ -100,7 +100,7 @@
     "sources": "[\"https://techcrunch.com\"]",
     "notes": "Meta confirmed development of next-generation Llama models. Expected to be significantly larger than Llama 4.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "Meta",
     "provider_colour": "#0a66ff"
   },
@@ -115,7 +115,7 @@
     "sources": "[\"https://the-decoder.com\"]",
     "notes": "References to a Gemini Ultra 2.0 variant spotted in Google API responses. Likely a higher-tier Gemini model for enterprise.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "Google",
     "provider_colour": "#4285f4"
   },
@@ -130,7 +130,7 @@
     "sources": "[\"https://anthropic.com\"]",
     "notes": "Internal codename \"Delphi\" referenced in early API testing. Released as Claude Opus 4 in May 2025.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -145,7 +145,7 @@
     "sources": "[\"https://openai.com/blog\"]",
     "notes": "Originally codenamed \"Orion\" in internal OpenAI documents. Confirmed as GPT-5 at launch.",
     "category": "llm",
-    "updated_at": "2026-05-01 13:52:48",
+    "updated_at": "2026-05-01 15:14:00",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   }
