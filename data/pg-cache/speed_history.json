@@ -5,6 +5,16 @@
     "speed": 120,
     "ttft": 200,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude 3.5 Haiku"
+  },
+  {
+    "id": 15,
+    "model_id": "claude-haiku-3.5",
+    "speed": 120,
+    "ttft": 200,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude 3.5 Haiku"
@@ -1558,6 +1568,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude 3.5 Haiku"
+  },
+  {
+    "id": 13,
+    "model_id": "claude-opus-4",
+    "speed": 30,
+    "ttft": 350,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Opus 4"
   },
   {
     "id": 13,
@@ -3125,6 +3145,16 @@
     "speed": 50,
     "ttft": 280,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Opus 4.6"
+  },
+  {
+    "id": 11,
+    "model_id": "claude-opus-4.6",
+    "speed": 50,
+    "ttft": 280,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude Opus 4.6"
@@ -4678,6 +4708,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude Opus 4.6"
+  },
+  {
+    "id": 14,
+    "model_id": "claude-sonnet-4",
+    "speed": 80,
+    "ttft": 260,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Sonnet 4"
   },
   {
     "id": 14,
@@ -6245,6 +6285,16 @@
     "speed": 90,
     "ttft": 240,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Claude Sonnet 4.6"
+  },
+  {
+    "id": 12,
+    "model_id": "claude-sonnet-4.6",
+    "speed": 90,
+    "ttft": 240,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude Sonnet 4.6"
@@ -7798,6 +7848,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Claude Sonnet 4.6"
+  },
+  {
+    "id": 22,
+    "model_id": "deepseek-r1",
+    "speed": 30,
+    "ttft": 500,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "R1"
   },
   {
     "id": 22,
@@ -9365,6 +9425,16 @@
     "speed": 49,
     "ttft": 400,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "DeepSeek V3 0324"
+  },
+  {
+    "id": 21,
+    "model_id": "deepseek-v3.2",
+    "speed": 49,
+    "ttft": 400,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "DeepSeek V3 0324"
@@ -10918,6 +10988,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "DeepSeek V3 0324"
+  },
+  {
+    "id": 19,
+    "model_id": "gemini-2.0-flash",
+    "speed": 400,
+    "ttft": 140,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.0 Flash"
   },
   {
     "id": 19,
@@ -12485,6 +12565,16 @@
     "speed": 450,
     "ttft": 120,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.0 Flash Lite"
+  },
+  {
+    "id": 20,
+    "model_id": "gemini-2.0-flash-lite",
+    "speed": 450,
+    "ttft": 120,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Gemini 2.0 Flash Lite"
@@ -14038,6 +14128,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Gemini 2.0 Flash Lite"
+  },
+  {
+    "id": 18,
+    "model_id": "gemini-2.5-flash",
+    "speed": 350,
+    "ttft": 160,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.5 Flash"
   },
   {
     "id": 18,
@@ -15605,6 +15705,16 @@
     "speed": 90,
     "ttft": 270,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 2.5 Pro Preview 06-05"
+  },
+  {
+    "id": 17,
+    "model_id": "gemini-2.5-pro",
+    "speed": 90,
+    "ttft": 270,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Gemini 2.5 Pro Preview 06-05"
@@ -17158,6 +17268,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Gemini 2.5 Pro Preview 06-05"
+  },
+  {
+    "id": 16,
+    "model_id": "gemini-3.1-pro",
+    "speed": 80,
+    "ttft": 300,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Gemini 3.1 Pro Preview"
   },
   {
     "id": 16,
@@ -18725,6 +18845,16 @@
     "speed": 110,
     "ttft": 250,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1"
+  },
+  {
+    "id": 5,
+    "model_id": "gpt-4.1",
+    "speed": 110,
+    "ttft": 250,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4.1"
@@ -20278,6 +20408,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4.1"
+  },
+  {
+    "id": 6,
+    "model_id": "gpt-4.1-mini",
+    "speed": 160,
+    "ttft": 190,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1 Mini"
   },
   {
     "id": 6,
@@ -21845,6 +21985,16 @@
     "speed": 200,
     "ttft": 150,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4.1 Nano"
+  },
+  {
+    "id": 7,
+    "model_id": "gpt-4.1-nano",
+    "speed": 200,
+    "ttft": 150,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4.1 Nano"
@@ -23398,6 +23548,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4.1 Nano"
+  },
+  {
+    "id": 3,
+    "model_id": "gpt-4o",
+    "speed": 100,
+    "ttft": 290,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4o"
   },
   {
     "id": 3,
@@ -24965,6 +25125,16 @@
     "speed": 150,
     "ttft": 210,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-4o-mini"
+  },
+  {
+    "id": 4,
+    "model_id": "gpt-4o-mini",
+    "speed": 150,
+    "ttft": 210,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4o-mini"
@@ -26518,6 +26688,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-4o-mini (2024-07-18)"
+  },
+  {
+    "id": 2,
+    "model_id": "gpt-5",
+    "speed": 75,
+    "ttft": 380,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-5"
   },
   {
     "id": 2,
@@ -28085,6 +28265,16 @@
     "speed": 85,
     "ttft": 320,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "GPT-5.2"
+  },
+  {
+    "id": 1,
+    "model_id": "gpt-5.2",
+    "speed": 85,
+    "ttft": 320,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-5.2"
@@ -29638,6 +29828,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "GPT-5.2"
+  },
+  {
+    "id": 26,
+    "model_id": "grok-3",
+    "speed": 70,
+    "ttft": 290,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Grok 3 Beta"
   },
   {
     "id": 26,
@@ -31205,6 +31405,16 @@
     "speed": 50,
     "ttft": 350,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Grok 4"
+  },
+  {
+    "id": 25,
+    "model_id": "grok-4",
+    "speed": 50,
+    "ttft": 350,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Grok 4"
@@ -32758,6 +32968,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Grok 4"
+  },
+  {
+    "id": 29,
+    "model_id": "llama-3.3-70b",
+    "speed": 80,
+    "ttft": 280,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 3.3 70B Instruct"
   },
   {
     "id": 29,
@@ -34325,6 +34545,16 @@
     "speed": 95,
     "ttft": 250,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 4 Maverick"
+  },
+  {
+    "id": 27,
+    "model_id": "llama-4-maverick",
+    "speed": 95,
+    "ttft": 250,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Llama 4 Maverick"
@@ -35878,6 +36108,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Llama 4 Maverick"
+  },
+  {
+    "id": 28,
+    "model_id": "llama-4-scout",
+    "speed": 120,
+    "ttft": 220,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Llama 4 Scout"
   },
   {
     "id": 28,
@@ -37445,6 +37685,16 @@
     "speed": 80,
     "ttft": 310,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Mistral Large"
+  },
+  {
+    "id": 23,
+    "model_id": "mistral-large-3",
+    "speed": 80,
+    "ttft": 310,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Mistral Large"
@@ -38998,6 +39248,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Mistral Large"
+  },
+  {
+    "id": 24,
+    "model_id": "mistral-small-3.1",
+    "speed": 150,
+    "ttft": 180,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Mistral Small 3.1 24B"
   },
   {
     "id": 24,
@@ -40565,6 +40825,16 @@
     "speed": 15,
     "ttft": 1200,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o3"
+  },
+  {
+    "id": 8,
+    "model_id": "o3",
+    "speed": 15,
+    "ttft": 1200,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "o3"
@@ -42118,6 +42388,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "o3"
+  },
+  {
+    "id": 9,
+    "model_id": "o3-mini",
+    "speed": 60,
+    "ttft": 600,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o3 Mini"
   },
   {
     "id": 9,
@@ -43685,6 +43965,16 @@
     "speed": 65,
     "ttft": 550,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "o4 Mini"
+  },
+  {
+    "id": 10,
+    "model_id": "o4-mini",
+    "speed": 65,
+    "ttft": 550,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "o4 Mini"
@@ -45245,6 +45535,16 @@
     "speed": 65,
     "ttft": 340,
     "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Qwen2.5 72B Instruct"
+  },
+  {
+    "id": 31,
+    "model_id": "qwen-2.5-72b",
+    "speed": 65,
+    "ttft": 340,
+    "provider_endpoint": null,
     "recorded_at": "2026-05-02 15:59:22",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Qwen2.5 72B Instruct"
@@ -46798,6 +47098,16 @@
     "recorded_at": "2026-03-15 21:11:06",
     "source": "artificialanalysis.ai (validated)",
     "model_name": "Qwen2.5 72B Instruct"
+  },
+  {
+    "id": 30,
+    "model_id": "qwen3-235b",
+    "speed": 40,
+    "ttft": 420,
+    "provider_endpoint": null,
+    "recorded_at": "2026-05-02 17:04:53",
+    "source": "artificialanalysis.ai (validated)",
+    "model_name": "Qwen3 235B A22B"
   },
   {
     "id": 30,
