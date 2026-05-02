@@ -7,7 +7,7 @@ priority: "backfill"
 model: "GPT-5.2-Codex"
 provider: "OpenAI"
 release_date: "2026-01-14"
-generated_at: "2026-05-02T21:57:10.975Z"
+generated_at: "2026-05-02T23:01:57.308Z"
 ---
 
 # GPT-5.2-Codex: release brief
