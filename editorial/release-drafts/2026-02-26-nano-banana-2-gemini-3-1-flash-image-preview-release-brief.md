@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Nano Banana 2 (Gemini 3.1 Flash Image Preview)"
 provider: "Google"
 release_date: "2026-02-26"
-generated_at: "2026-05-03T11:56:55.231Z"
+generated_at: "2026-05-03T13:46:52.754Z"
 ---
 
 # Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief
 
-Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 4 related stories and 0 benchmark signals to review.
+Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -31,7 +31,6 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
 - TechCrunch (2026-04-30): [Google’s Gemini AI assistant is hitting the road in millions of vehicles](https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/) - The move signals Google's push to bring more advanced, conversational AI into the driving experience.
-- The Verge (2026-04-30): [Gemini is rolling out to cars with Google built-in](https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade) - Google is preparing to update vehicles that have Google built-in with its Gemini AI assistant. This will be an upgrade from the current Google Assistant according to Google's announcement, and promises to provide an improved experience for natural conversations, fetching vehicle-specific information, settings adjustme…
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
 ## Suggested thread / post structure
@@ -55,5 +54,4 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
 - [TechCrunch: Google’s Gemini AI assistant is hitting the road in millions of vehicles](https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/)
-- [The Verge: Gemini is rolling out to cars with Google built-in](https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)
