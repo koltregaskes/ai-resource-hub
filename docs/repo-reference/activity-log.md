@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 03 May 2026, 21:01 UTC
+Generated: 03 May 2026, 21:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 May 2026, 21:00 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 03 May 2026, 21:00 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 03 May 2026, 21:00 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 May 2026, 21:00 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 03 May 2026, 21:00 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 May 2026, 21:58 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 03 May 2026, 21:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 May 2026, 21:58 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 03 May 2026, 21:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 May 2026, 21:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 03 May 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,098 open roles across 10 tracked companies. | `/jobs/` |
 | 20 Apr 2026, 12:00 UTC | digest | Is anyone getting real coding work done with Qwen3.6-35B-A3B-UD-Q4_K_M on a 32GB Mac in opencode, claude code or similar? | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sq94qx/is_anyone_getting_real_coding_work_done_with/) |
 | 20 Apr 2026, 12:00 UTC | digest | Published the 2026-04-20 daily digest | 20 stories captured from tracked sources. | `/news/` |

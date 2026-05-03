@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-03T21:27:02.969Z",
+  "generatedAt": "2026-05-03T21:58:27.531Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-03T21:27:01.897Z",
+      "lastCheckedAt": "2026-05-03T21:58:26.125Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -99,6 +99,94 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-03T21:58:27.524Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-1-2026-05-03T21:28:53.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-03T21:28:53.000Z",
+          "updatedAt": "2026-05-03T21:28:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-03T21:26:04.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-03T21:26:04.000Z",
+          "updatedAt": "2026-05-03T21:26:04.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-05-03T21:43:54.000Z",
+          "title": "Kimi K2.6 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-03T21:43:54.000Z",
+          "updatedAt": "2026-05-03T21:43:54.000Z",
+          "resolvedAt": "2026-05-03T21:43:54.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-05-03T21:28:53.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-03T21:28:53.000Z",
+          "updatedAt": "2026-05-03T21:28:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-03T21:26:04.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-03T21:26:04.000Z",
+          "updatedAt": "2026-05-03T21:26:04.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
+        },
+        {
+          "id": "together-feed-3-2026-05-03T19:59:04.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-03T19:59:04.000Z",
+          "updatedAt": "2026-05-03T19:59:04.000Z",
+          "resolvedAt": "2026-05-03T19:59:04.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -109,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-03T21:27:01.974Z",
+      "lastCheckedAt": "2026-05-03T21:58:26.040Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-03T21:27:02.618Z",
+      "lastCheckedAt": "2026-05-03T21:58:26.774Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +307,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-03T21:27:02.171Z",
+      "lastCheckedAt": "2026-05-03T21:58:26.228Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +381,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-03T21:27:02.961Z",
+      "lastCheckedAt": "2026-05-03T21:58:27.293Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +446,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-03T21:27:02.068Z",
+      "lastCheckedAt": "2026-05-03T21:58:26.169Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +500,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-03T21:27:02.348Z",
+      "lastCheckedAt": "2026-05-03T21:58:26.349Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -420,71 +508,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-03T21:27:02.955Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-05-03T19:59:04.000Z",
-          "title": "Qwen3.5 397B A17B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-03T19:59:04.000Z",
-          "updatedAt": "2026-05-03T19:59:04.000Z",
-          "resolvedAt": "2026-05-03T19:59:04.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B recovered"
-        },
-        {
-          "id": "together-feed-1-2026-05-03T19:40:10.000Z",
-          "title": "Qwen3.5 397B A17B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-03T19:40:10.000Z",
-          "updatedAt": "2026-05-03T19:40:10.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-03T15:23:28.000Z",
-          "title": "Moonshot Kimi K2.5 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-03T15:23:28.000Z",
-          "updatedAt": "2026-05-03T15:23:28.000Z",
-          "resolvedAt": "2026-05-03T15:23:28.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Moonshot Kimi K2.5 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-03T15:03:22.000Z",
-          "title": "Moonshot Kimi K2.5 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-03T15:03:22.000Z",
-          "updatedAt": "2026-05-03T15:03:22.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Moonshot Kimi K2.5 went down"
-        }
-      ]
     },
     {
       "id": "xai",
