@@ -3,11 +3,11 @@ title: "Gemini 3.1 Flash Lite Preview: release brief"
 slug: "2026-03-03-gemini-3-1-flash-lite-preview-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "watch"
+priority: "backfill"
 model: "Gemini 3.1 Flash Lite Preview"
 provider: "Google"
 release_date: "2026-03-03"
-generated_at: "2026-05-02T23:59:14.515Z"
+generated_at: "2026-05-03T04:09:11.443Z"
 ---
 
 # Gemini 3.1 Flash Lite Preview: release brief

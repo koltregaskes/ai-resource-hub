@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 02 May 2026, 23:59 UTC
+Generated: 03 May 2026, 04:09 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -9,7 +9,7 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | Rank | Model | Provider | Composite | Bench | Coverage | Best for | Price | Released |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Claude Opus 4.6 | Anthropic | 67.2 | 75.9 / 16 | 49% | Chat | $15.00 / $75.00 | 05 Feb 2026 |
-| 2 | Claude Sonnet 4.6 | Anthropic | 61.2 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
+| 2 | Claude Sonnet 4.6 | Anthropic | 60.3 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
 | 3 | GPT-5.2 | OpenAI | 57.6 | 78.5 / 22 | 67% | multilingual | $1.75 / $14.00 | 10 Dec 2025 |
 | 4 | Llama 4 Maverick | Meta | 57.6 | 77.0 / 10 | 28% | Coding | $0.15 / $0.60 | 05 Apr 2025 |
 | 5 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.08 / $0.30 | 05 Apr 2025 |

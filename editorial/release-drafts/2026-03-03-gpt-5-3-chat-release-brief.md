@@ -3,11 +3,11 @@ title: "GPT-5.3 Chat: release brief"
 slug: "2026-03-03-gpt-5-3-chat-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "watch"
+priority: "backfill"
 model: "GPT-5.3 Chat"
 provider: "OpenAI"
 release_date: "2026-03-03"
-generated_at: "2026-05-02T23:59:14.515Z"
+generated_at: "2026-05-03T04:09:11.443Z"
 ---
 
 # GPT-5.3 Chat: release brief
