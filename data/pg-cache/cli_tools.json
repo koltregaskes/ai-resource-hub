@@ -22,7 +22,7 @@
     "released": "2023-06-08",
     "status": "active",
     "notes": "One of the earliest AI CLI tools. Git-native workflow — all changes are proposed as commits.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": null,
     "provider_colour": null
   },
@@ -49,7 +49,7 @@
     "released": "2024-04-30",
     "status": "active",
     "notes": "Best for AWS-heavy workflows. Deep integration with AWS services, IAM, CloudFormation.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": "Amazon",
     "provider_colour": "#ff9900"
   },
@@ -76,7 +76,7 @@
     "released": "2025-02-24",
     "status": "active",
     "notes": "Pioneer of the agentic CLI category. $1B+ ARR. Deep integration with Claude models for autonomous task completion.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": "Anthropic",
     "provider_colour": "#d97706"
   },
@@ -103,7 +103,7 @@
     "released": "2024-01-01",
     "status": "active",
     "notes": "Focused on code review rather than code generation. Integrates with CI/CD pipelines.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": null,
     "provider_colour": null
   },
@@ -130,7 +130,7 @@
     "released": "2024-09-01",
     "status": "active",
     "notes": "Knowledge files keep it aligned with repo conventions. No IDE dependency.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": null,
     "provider_colour": null
   },
@@ -157,7 +157,7 @@
     "released": "2025-04-16",
     "status": "active",
     "notes": "Multi-agent parallelism with isolated worktrees. Each agent works on its own branch.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
   },
@@ -184,7 +184,7 @@
     "released": "2025-06-01",
     "status": "active",
     "notes": "Broadest platform support of any CLI tool. Mid-session model switching. LSP integration.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": null,
     "provider_colour": null
   },
@@ -211,7 +211,7 @@
     "released": "2024-06-01",
     "status": "active",
     "notes": "Not a coding agent — a web data tool for agents. Scrape, search, crawl, browse. FIRE-1 autonomous agent.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": null,
     "provider_colour": null
   },
@@ -238,7 +238,7 @@
     "released": "2025-06-25",
     "status": "active",
     "notes": "Largest context window (1M tokens) — 5x Claude Code, 8x Codex. Ideal for large codebases.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": "Google",
     "provider_colour": "#4285f4"
   },
@@ -265,7 +265,7 @@
     "released": "2024-11-01",
     "status": "active",
     "notes": "Co-designed MCP with Anthropic. Block backing gives enterprise credibility. Desktop app + CLI.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": null,
     "provider_colour": null
   },
@@ -292,7 +292,7 @@
     "released": "2024-03-08",
     "status": "active",
     "notes": "2M token effective context via Tree-sitter indexing. Plan-first approach to large tasks.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": null,
     "provider_colour": null
   },
@@ -319,7 +319,7 @@
     "released": "2025-07-15",
     "status": "active",
     "notes": "Based on Gemini CLI architecture. Optimised for Qwen3-Coder (480B MoE). Fully free.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": "Alibaba",
     "provider_colour": "#ff6a00"
   },
@@ -346,7 +346,7 @@
     "released": "2022-04-05",
     "status": "active",
     "notes": "Meta-tool: orchestrates multiple AI agents in one terminal. Written in Rust, GPU-accelerated.",
-    "updated_at": "2026-05-03 17:06:04",
+    "updated_at": "2026-05-03 18:01:09",
     "provider_name": null,
     "provider_colour": null
   }
