@@ -7,7 +7,7 @@ priority: "backfill"
 model: "GLM 4.7 Flash"
 provider: "Zhipu AI"
 release_date: "2026-01-19"
-generated_at: "2026-05-03T19:16:39.048Z"
+generated_at: "2026-05-03T21:01:07.475Z"
 ---
 
 # GLM 4.7 Flash: release brief
