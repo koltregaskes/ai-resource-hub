@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-04T05:04:09.306Z",
+  "generatedAt": "2026-05-04T06:53:19.200Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T05:04:07.833Z",
+      "lastCheckedAt": "2026-05-04T06:53:18.009Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T05:04:07.860Z",
+      "lastCheckedAt": "2026-05-04T06:53:18.022Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +199,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T05:04:08.864Z",
+      "lastCheckedAt": "2026-05-04T06:53:18.641Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T05:04:08.295Z",
+      "lastCheckedAt": "2026-05-04T06:53:18.076Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +293,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T05:04:09.298Z",
+      "lastCheckedAt": "2026-05-04T06:53:19.068Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +358,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T05:04:08.328Z",
+      "lastCheckedAt": "2026-05-04T06:53:17.975Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +412,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T05:04:08.638Z",
+      "lastCheckedAt": "2026-05-04T06:53:18.156Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -432,7 +432,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T05:04:09.255Z",
+      "lastCheckedAt": "2026-05-04T06:53:19.193Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -441,7 +441,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-04T04:58:24.000Z",
+          "id": "together-feed-0-2026-05-04T06:04:21.000Z",
+          "title": "Qwen3 Coder 480B A35B Instruct FP8 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-04T06:04:21.000Z",
+          "updatedAt": "2026-05-04T06:04:21.000Z",
+          "resolvedAt": "2026-05-04T06:04:21.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 Coder 480B A35B Instruct FP8 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-05-04T05:44:19.000Z",
+          "title": "Qwen3 Coder 480B A35B Instruct FP8 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-04T05:44:19.000Z",
+          "updatedAt": "2026-05-04T05:44:19.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 Coder 480B A35B Instruct FP8 went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-04T04:58:24.000Z",
           "title": "Qwen3 Coder 480B A35B Instruct FP8 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -452,7 +474,7 @@
           "summary": "Qwen3 Coder 480B A35B Instruct FP8 recovered"
         },
         {
-          "id": "together-feed-1-2026-05-04T04:32:18.000Z",
+          "id": "together-feed-3-2026-05-04T04:32:18.000Z",
           "title": "Qwen3 Coder 480B A35B Instruct FP8 went down",
           "status": "investigating",
           "impact": "major",
@@ -461,28 +483,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3 Coder 480B A35B Instruct FP8 went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-03T22:33:59.000Z",
-          "title": "Kimi K2.6 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-03T22:33:59.000Z",
-          "updatedAt": "2026-05-03T22:33:59.000Z",
-          "resolvedAt": "2026-05-03T22:33:59.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-03T21:43:54.000Z",
-          "title": "Kimi K2.6 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-03T21:43:54.000Z",
-          "updatedAt": "2026-05-03T21:43:54.000Z",
-          "resolvedAt": "2026-05-03T21:43:54.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
         }
       ]
     },
