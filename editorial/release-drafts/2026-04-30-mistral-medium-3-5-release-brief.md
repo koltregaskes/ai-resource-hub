@@ -1,22 +1,22 @@
 ---
-title: "Qwen3.5 397B A17B: release brief"
-slug: "2026-02-16-qwen3-5-397b-a17b-release-brief"
+title: "Mistral Medium 3.5: release brief"
+slug: "2026-04-30-mistral-medium-3-5-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "backfill"
-model: "Qwen3.5 397B A17B"
-provider: "Alibaba"
-release_date: "2026-02-16"
-generated_at: "2026-05-04T20:40:55.061Z"
+priority: "high"
+model: "Mistral Medium 3.5"
+provider: "Mistral"
+release_date: "2026-04-30"
+generated_at: "2026-05-04T20:40:55.059Z"
 ---
 
-# Qwen3.5 397B A17B: release brief
+# Mistral Medium 3.5: release brief
 
-Alibaba's Qwen3.5 397B A17B is on the release desk with 0 related stories and 0 benchmark signals to review.
+Mistral's Mistral Medium 3.5 is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
-Qwen3.5 397B A17B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.39 in / $2.34 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-397b-a17b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Mistral Medium 3.5 is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-medium-3-5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -33,11 +33,11 @@ Qwen3.5 397B A17B is a currently tracked release from Alibaba. It is positioned 
 
 ## Suggested thread / post structure
 
-1. Lead with the hook: what Alibaba actually launched with Qwen3.5 397B A17B, and why it matters now.
+1. Lead with the hook: what Mistral actually launched with Mistral Medium 3.5, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
 4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
-5. Keep the chronology explicit: this release landed on 16 Feb 2026 and should be framed against the models it is replacing or competing with.
+5. Keep the chronology explicit: this release landed on 30 Apr 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 
@@ -48,5 +48,5 @@ Qwen3.5 397B A17B is a currently tracked release from Alibaba. It is positioned 
 
 ## Sources
 
-- [Official launch or docs](https://help.aliyun.com/zh/model-studio/model-pricing)
-- [Provider API/docs](https://help.aliyun.com/zh/model-studio/model-pricing)
+- [Official launch or docs](https://docs.mistral.ai)
+- [Provider API/docs](https://docs.mistral.ai)

@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 04 May 2026, 18:53 UTC
+Generated: 04 May 2026, 20:40 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -11,13 +11,13 @@ This table shows how much of each provider's public model surface is currently r
 | Anthropic | 9 | 7 | 1 | Claude Opus 4.7 (16 Apr 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 6 | 0 | n/a | n/a | [docs](https://llama.meta.com/docs) |
 | Alibaba | 5 | 43 | 0 | Qwen3.5 Plus 2026-04-20 (27 Apr 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
-| DeepSeek | 4 | 8 | 0 | DeepSeek V4 Flash (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
+| DeepSeek | 4 | 9 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | xAI | 4 | 6 | 0 | Grok 4.3 (30 Apr 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
 | Stability AI | 4 | 0 | 0 | n/a | n/a | [docs](https://platform.stability.ai/docs) |
-| Mistral | 3 | 22 | 0 | Mistral Small 4 (16 Mar 2026) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
+| Mistral | 3 | 23 | 0 | Mistral Medium 3.5 (30 Apr 2026) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
 | Deepgram | 3 | 0 | 0 | n/a | [status](https://status.deepgram.com) | [docs](https://developers.deepgram.com) |
 | ElevenLabs | 3 | 0 | 0 | n/a | [status](https://status.elevenlabs.io) | [docs](https://elevenlabs.io/docs) |
 | Runway | 3 | 0 | 0 | n/a | n/a | [docs](https://docs.runwayml.com) |
