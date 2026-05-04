@@ -1,5 +1,17 @@
 [
   {
+    "id": "news-e3a9e6d92e4249a69757",
+    "title": "OpenAI&#8217;s cozy partner Cerebras is on track for a blockbuster IPO",
+    "url": "https://techcrunch.com/2026/05/04/openais-cozy-partner-cerebras-is-on-track-for-a-blockbuster-ipo/",
+    "source": "TechCrunch",
+    "summary": "AI chip maker Cerebras is heading for a blockbuster IPO that could value it at $26.6 billion or more. It's relationship with OpenAI is deep and rich.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-04T21:53:21.000Z",
+    "discovered_at": "2026-05-04 22:13:53"
+  },
+  {
     "id": "news-864b2e49a316195d80a9",
     "title": "Image AI models now drive app growth, beating chatbot upgrades",
     "url": "https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/",
@@ -9,7 +21,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T19:12:49.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -21,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-4664d6e6ae14d05e10c1",
@@ -33,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T16:57:47.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-bada2219361fecba8e46",
@@ -45,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T16:51:38.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-20ff28cd4375f1dd0ec6",
@@ -57,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T16:45:55.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-8cc665de80ab89a9a53a",
@@ -69,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T16:36:03.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-38b1398a06de41735bde",
@@ -81,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:59:24.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -93,7 +105,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:43:49.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
+  },
+  {
+    "id": "news-3f5239165dd4c022fea1",
+    "title": "Reduce friction and latency for long-running jobs with Webhooks in Gemini API",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/",
+    "source": "Google",
+    "summary": "Event-Driven Webhooks are a push-based notification system that eliminates the need for inefficient polling.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-04T15:30:00.000Z",
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-c1e4dee6d012147dc334",
@@ -105,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T14:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-8a4187a1b3def95e0b7f",
@@ -117,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T13:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-d6581b92c87ef014b979",
@@ -129,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T00:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-202692ec5a7291ca08aa",
@@ -141,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-03T20:16:51.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-7576cf4da7541ebee114",
@@ -153,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-03T18:00:09.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-7608f7b1b29a30f4162e",
@@ -165,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-03T13:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-32370471ff09e36456f3",
@@ -177,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-03T12:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-e4f386980be810dfabe2",
@@ -189,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-02T21:54:58.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-ca5d540b4c05bcd25615",
@@ -201,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-02T16:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-4f6e7b2863e1f5ef172c",
@@ -213,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T23:06:50.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-dd9cbea755815f59ed57",
@@ -225,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T22:13:27.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-814f8d51f6030bf86dc9",
@@ -237,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T19:14:51.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-feb46db50c5cf6b8b13c",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T17:44:29.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-33c1ee68ad64d6fe8253",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T16:02:36.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-ab5b9876bbc58480da48",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T14:09:56.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-c62c13f0b3da6b829459",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T14:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-dcf1e23cffeac00ae28e",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T13:33:15.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-463b07537a43bc421c7b",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T13:25:25.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-6a8bb17a8d2e120d4282",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T11:18:54.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-caf280296532e8b6d657",
@@ -333,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-01T02:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
-  },
-  {
-    "id": "news-b51b3e3060b22be05155",
-    "title": "Sources: Anthropic potential $900B+ valuation round could happen within 2 weeks",
-    "url": "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/",
-    "source": "TechCrunch",
-    "summary": "Anthropic is asking investors to submit allocations for the AI company’s latest fundraise within the next 48 hours, according to sources familiar with the matter.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-30T23:07:56.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-cf7f57089e36e8d6276b",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T22:59:51.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-368128e6f28129236fd9",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-ce52abc8a3f020a53a6f",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T06:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-bc507498ac4792876c13",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-29e3d13268b3eecb87e9",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-e1e83761f7ea575fa66b",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-26T16:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-6e6cdaf0d6010b4433a5",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-cfbb97f4e142ddd9e19c",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-bb94101d867132ebad2f",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-7fbf7b2c45e97107db7c",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-99a0fa5d4a499cedad3e",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-8a79aaeb639a5ad663c0",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:42"
+    "discovered_at": "2026-05-04 22:13:49"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:45"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:46"
+    "discovered_at": "2026-05-04 22:13:53"
   },
   {
     "id": "news-0deaf33f30ef9c0667e0",
@@ -741,6 +753,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-05-04 20:40:45"
+    "discovered_at": "2026-05-04 22:13:53"
   }
 ]
