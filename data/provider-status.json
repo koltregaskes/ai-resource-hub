@@ -1,119 +1,6 @@
 {
-  "generatedAt": "2026-05-04T14:28:51.328Z",
+  "generatedAt": "2026-05-04T14:56:25.847Z",
   "providers": [
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T14:28:50.355Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "2 active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "77j6yv8kc0vn",
-          "title": "Elevated errors on Claude Opus 4.5 and Sonnet 4.5",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-04T13:59:17.710Z",
-          "updatedAt": "2026-05-04T14:27:54.651Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/23s852zsyx18",
-          "summary": "A fix has been implemented and we are monitoring the results."
-        },
-        {
-          "id": "89vbl7qk5dqp",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-05-04T14:07:57.452Z",
-          "updatedAt": "2026-05-04T14:07:57.535Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/115pgb379g4v",
-          "summary": "The issue has been identified and a fix is being implemented."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "89vbl7qk5dqp",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-05-04T14:07:57.452Z",
-          "updatedAt": "2026-05-04T14:07:57.535Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/115pgb379g4v",
-          "summary": "The issue has been identified and a fix is being implemented."
-        },
-        {
-          "id": "77j6yv8kc0vn",
-          "title": "Elevated errors on Claude Opus 4.5 and Sonnet 4.5",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-04T13:59:17.710Z",
-          "updatedAt": "2026-05-04T14:27:54.651Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/23s852zsyx18",
-          "summary": "A fix has been implemented and we are monitoring the results."
-        },
-        {
-          "id": "zxv1xv501678",
-          "title": "Elevated errors on Claude Opus 4.5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-04T08:09:37.657Z",
-          "updatedAt": "2026-05-04T09:49:29.788Z",
-          "resolvedAt": "2026-05-04T09:49:29.769Z",
-          "url": "https://stspg.io/4mxbctc1ncgy",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "dv9r688vqt8s",
-          "title": "Elevated errors on Claude Haiku 4.5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-30T13:10:09.292Z",
-          "updatedAt": "2026-04-30T14:01:41.413Z",
-          "resolvedAt": "2026-04-30T14:01:41.394Z",
-          "url": "https://stspg.io/7hh9mtmr0z16",
-          "summary": "The incident has been resolved. Error rates were elevated between 5:20 PT / 12:48 PT and 6:48 PT / 13:48 PT."
-        }
-      ]
-    },
     {
       "id": "openai",
       "providerId": "openai",
@@ -125,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T14:28:50.356Z",
+      "lastCheckedAt": "2026-05-04T14:56:24.608Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -222,7 +109,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T14:28:51.201Z",
+      "lastCheckedAt": "2026-05-04T14:56:25.840Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -300,6 +187,96 @@
       ]
     },
     {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-04T14:56:24.640Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "77j6yv8kc0vn",
+          "title": "Elevated errors on Claude Opus 4.5 and Sonnet 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-04T13:59:17.710Z",
+          "updatedAt": "2026-05-04T14:45:58.280Z",
+          "resolvedAt": "2026-05-04T14:45:58.262Z",
+          "url": "https://stspg.io/23s852zsyx18",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "89vbl7qk5dqp",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-04T14:07:57.452Z",
+          "updatedAt": "2026-05-04T14:33:46.092Z",
+          "resolvedAt": "2026-05-04T14:33:46.074Z",
+          "url": "https://stspg.io/115pgb379g4v",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "zxv1xv501678",
+          "title": "Elevated errors on Claude Opus 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-04T08:09:37.657Z",
+          "updatedAt": "2026-05-04T09:49:29.788Z",
+          "resolvedAt": "2026-05-04T09:49:29.769Z",
+          "url": "https://stspg.io/4mxbctc1ncgy",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "dv9r688vqt8s",
+          "title": "Elevated errors on Claude Haiku 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-30T13:10:09.292Z",
+          "updatedAt": "2026-04-30T14:01:41.413Z",
+          "resolvedAt": "2026-04-30T14:01:41.394Z",
+          "url": "https://stspg.io/7hh9mtmr0z16",
+          "summary": "The incident has been resolved. Error rates were elevated between 5:20 PT / 12:48 PT and 6:48 PT / 13:48 PT."
+        }
+      ]
+    },
+    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -310,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T14:28:50.956Z",
+      "lastCheckedAt": "2026-05-04T14:56:25.220Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -330,7 +307,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T14:28:50.415Z",
+      "lastCheckedAt": "2026-05-04T14:56:24.528Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -404,7 +381,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T14:28:51.321Z",
+      "lastCheckedAt": "2026-05-04T14:56:25.498Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -469,7 +446,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T14:28:50.269Z",
+      "lastCheckedAt": "2026-05-04T14:56:24.474Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -523,7 +500,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-04T14:28:50.361Z",
+      "lastCheckedAt": "2026-05-04T14:56:24.598Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
