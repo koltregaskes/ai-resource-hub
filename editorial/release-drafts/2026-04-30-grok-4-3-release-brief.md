@@ -2,17 +2,17 @@
 title: "Grok 4.3: release brief"
 slug: "2026-04-30-grok-4-3-release-brief"
 draft_type: "model-release"
-status: "ready_for_editor"
+status: "needs_research"
 priority: "high"
 model: "Grok 4.3"
 provider: "xAI"
 release_date: "2026-04-30"
-generated_at: "2026-05-04T14:28:56.760Z"
+generated_at: "2026-05-04T17:00:39.729Z"
 ---
 
 # Grok 4.3: release brief
 
-xAI's Grok 4.3 is on the release desk with 2 related stories and 0 benchmark signals to review.
+xAI's Grok 4.3 is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -21,7 +21,7 @@ Grok 4.3 is a currently tracked release from xAI. It is positioned as an API-ava
 ## Why this matters
 
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
+- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
 
 ## Benchmarks and evals to mention
 
@@ -29,15 +29,14 @@ Grok 4.3 is a currently tracked release from xAI. It is positioned as an API-ava
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-30): [Elon Musk confirms xAI used OpenAI’s models to train Grok](https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation) - In a federal courtroom in California on Thursday, Elon Musk testified that his own AI startup, xAI, has used OpenAI's models to improve its own. The matter at question is model distillation, a common industry practice by which one larger AI model acts as a "teacher" of sorts to pass on knowledge to a smaller [&#8230;]
-- TechCrunch (2026-04-30): [Elon Musk testifies that xAI trained Grok on OpenAI models](https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/) - "Distillation" is a hot topic as frontier labs try to prevent smaller competitors from copying their models.
+- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
 
 ## Suggested thread / post structure
 
 1. Lead with the hook: what xAI actually launched with Grok 4.3, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
-4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
+4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
 5. Keep the chronology explicit: this release landed on 30 Apr 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
@@ -51,5 +50,3 @@ Grok 4.3 is a currently tracked release from xAI. It is positioned as an API-ava
 
 - [Official launch or docs](https://docs.x.ai/developers/models)
 - [Provider API/docs](https://docs.x.ai/developers/models)
-- [The Verge: Elon Musk confirms xAI used OpenAI’s models to train Grok](https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation)
-- [TechCrunch: Elon Musk testifies that xAI trained Grok on OpenAI models](https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/)

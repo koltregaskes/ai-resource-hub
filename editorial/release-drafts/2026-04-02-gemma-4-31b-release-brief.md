@@ -7,12 +7,12 @@ priority: "watch"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-05-04T14:28:56.761Z"
+generated_at: "2026-05-04T17:00:39.730Z"
 ---
 
 # Gemma 4 31B: release brief
 
-Google's Gemma 4 31B is on the release desk with 3 related stories and 0 benchmark signals to review.
+Google's Gemma 4 31B is on the release desk with 2 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -31,7 +31,6 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
-- TechCrunch (2026-04-30): [Google’s Gemini AI assistant is hitting the road in millions of vehicles](https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/) - The move signals Google's push to bring more advanced, conversational AI into the driving experience.
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
 ## Suggested thread / post structure
@@ -56,5 +55,4 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 - [Official launch or docs](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
-- [TechCrunch: Google’s Gemini AI assistant is hitting the road in millions of vehicles](https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)

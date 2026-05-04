@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT-5.2-Codex"
 provider: "OpenAI"
 release_date: "2026-01-14"
-generated_at: "2026-05-04T14:28:56.763Z"
+generated_at: "2026-05-04T17:00:39.732Z"
 ---
 
 # GPT-5.2-Codex: release brief
 
-OpenAI's GPT-5.2-Codex is on the release desk with 3 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.2-Codex is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,8 +29,6 @@ GPT-5.2-Codex is a currently tracked release from OpenAI. It is positioned as an
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-04-30): [Elon Musk confirms xAI used OpenAI’s models to train Grok](https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation) - In a federal courtroom in California on Thursday, Elon Musk testified that his own AI startup, xAI, has used OpenAI's models to improve its own. The matter at question is model distillation, a common industry practice by which one larger AI model acts as a "teacher" of sorts to pass on knowledge to a smaller [&#8230;]
-- TechCrunch (2026-04-30): [Elon Musk testifies that xAI trained Grok on OpenAI models](https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/) - "Distillation" is a hot topic as frontier labs try to prevent smaller competitors from copying their models.
 - OpenAI (2026-04-27): [OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate) - OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.
 
 ## Suggested thread / post structure
@@ -52,6 +50,4 @@ GPT-5.2-Codex is a currently tracked release from OpenAI. It is positioned as an
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [The Verge: Elon Musk confirms xAI used OpenAI’s models to train Grok](https://www.theverge.com/ai-artificial-intelligence/921546/elon-musk-xai-openai-trial-model-distillation)
-- [TechCrunch: Elon Musk testifies that xAI trained Grok on OpenAI models](https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/)
 - [OpenAI: OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate)
