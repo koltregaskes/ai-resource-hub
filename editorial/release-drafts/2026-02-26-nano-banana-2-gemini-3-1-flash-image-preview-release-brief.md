@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Nano Banana 2 (Gemini 3.1 Flash Image Preview)"
 provider: "Google"
 release_date: "2026-02-26"
-generated_at: "2026-05-05T14:22:12.917Z"
+generated_at: "2026-05-05T16:53:19.241Z"
 ---
 
 # Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief
 
-Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 2 related stories and 0 benchmark signals to review.
+Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,6 +30,7 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- The Verge (2026-05-05): [Google, Microsoft, and xAI will allow the US government to review their new AI models](https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review) - Google DeepMind, Microsoft, and Elon Musk's xAI have agreed to allow the US government to review new AI models before they're released to the public. In an announcement on Tuesday, the Commerce Department's Center for AI Standards and Innovation (CAISI) says it will work with the AI companies to perform "pre-deploymen…
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
 ## Suggested thread / post structure
@@ -52,4 +53,5 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/models)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [The Verge: Google, Microsoft, and xAI will allow the US government to review their new AI models](https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)

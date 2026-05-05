@@ -1,27 +1,111 @@
 [
   {
-    "id": "news-d1233acfbae226b62c7a",
-    "title": "ElevenLabs lists BlackRock, Jamie Foxx and Longoria as new investors",
-    "url": "https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-longoria-as-new-investors/",
+    "id": "news-96a76e6b90cc858c40fa",
+    "title": "Google is partnering with XPRIZE and Range Media Partners on the $3.5 million Future Vision film competition.",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/future-vision-film-competition-xprize/",
+    "source": "Google",
+    "summary": "Google is partnering with XPRIZE and Range Media Partners on the $3.5 million Future Vision film competition.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T16:00:00.000Z",
+    "discovered_at": "2026-05-05 16:53:09"
+  },
+  {
+    "id": "news-ae25110aa248370c1e8f",
+    "title": "PayPal says it&#8217;s &#8216;becoming a technology company again.&#8217; That means AI.",
+    "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
+    "source": "TechCrunch",
+    "summary": "PayPal is pitching an AI-led turnaround, tying automation and restructuring to $1.5B in savings as it cuts jobs and works to modernize its tech stack.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T15:49:55.000Z",
+    "discovered_at": "2026-05-05 16:53:09"
+  },
+  {
+    "id": "news-f997a4857c3224676938",
+    "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
+    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
+    "source": "The Verge",
+    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. Elon Musk…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T15:35:00.000Z",
+    "discovered_at": "2026-05-05 16:53:09"
+  },
+  {
+    "id": "news-c281318b667981b6406f",
+    "title": "Etsy launches its app within ChatGPT as it continues its AI push",
+    "url": "https://techcrunch.com/2026/05/05/etsy-launches-its-app-within-chatgpt-as-it-continues-its-ai-push/",
+    "source": "TechCrunch",
+    "summary": "Etsy's new native app within ChatGPT aims to be a conversational shopping experience for users.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T15:31:37.000Z",
+    "discovered_at": "2026-05-05 16:53:09"
+  },
+  {
+    "id": "news-c91b0067b0fd7869df95",
+    "title": "OpenAI is reportedly launching a phone for ChatGPT",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/924063/openai-phone-rumors-2027-ming-chi-kuo",
+    "source": "The Verge",
+    "summary": "OpenAI's first hardware product might be a phone instead of a mysterious Jony Ive gadget. As reported by MacRumors, supply chain analyst Ming-Chi Kuo shared details about the rumored phone, claiming OpenAI is \"fast-tracking\" it and aiming to start mass production in early 2027. According to Kuo, the phone will run on…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T14:54:00.000Z",
+    "discovered_at": "2026-05-05 16:53:09"
+  },
+  {
+    "id": "news-dbf332cc3fbf19503bce",
+    "title": "Meta will use AI to analyze height and bone structure to identify if users are underage",
+    "url": "https://techcrunch.com/2026/05/05/meta-will-use-ai-to-analyze-height-and-bone-structure-to-identify-if-users-are-underage/",
+    "source": "TechCrunch",
+    "summary": "The visual analysis system is now operating in select countries, but Meta says it's working toward a broader rollout.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T14:27:00.000Z",
+    "discovered_at": "2026-05-05 16:53:09"
+  },
+  {
+    "id": "news-3077be454921454d9152",
+    "title": "Google, Microsoft, and xAI will allow the US government to review their new AI models",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review",
+    "source": "The Verge",
+    "summary": "Google DeepMind, Microsoft, and Elon Musk's xAI have agreed to allow the US government to review new AI models before they're released to the public. In an announcement on Tuesday, the Commerce Department's Center for AI Standards and Innovation (CAISI) says it will work with the AI companies to perform \"pre-deploymen…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T14:26:59.000Z",
+    "discovered_at": "2026-05-05 16:53:09"
+  },
+  {
+    "id": "news-69d9fa3bf423b9d94bc0",
+    "title": "ElevenLabs lists BlackRock, Jamie Foxx and Eva Longoria as new investors",
+    "url": "https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/",
     "source": "TechCrunch",
     "summary": "4. ElevenLabs reveals new investors, hits $500M ARR, and expands enterprise footprint as voice AI becomes a critical interface.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T14:20:50.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-1517b8f5b283bdd34c1f",
     "title": "CopilotKit raises $27M to help devs deploy app-native AI agents",
     "url": "https://techcrunch.com/2026/05/05/copilotkit-raises-27m-to-help-devs-deploy-app-native-ai-agents/",
     "source": "TechCrunch",
-    "summary": "The Seattle-based startup's Series A round was led by Glilot Capital, NFX and SignalFire, TechCrunch has exclusively learned.",
+    "summary": "The Seattle-based startup's Series A round was led by Glilot Capital, NFX, and SignalFire, TechCrunch has exclusively learned.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T14:07:47.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-725df065ecf3585693aa",
@@ -33,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T14:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-6afd9b894bc75de65c4b",
@@ -45,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T13:42:18.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-31790b569e89c8653bbe",
@@ -57,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T13:18:50.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-ff4860ba932b380f6169",
@@ -69,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T13:13:08.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-a8e07e985ec61bb27a40",
@@ -81,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T13:11:58.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-6545b0140b9f4c21982a",
@@ -93,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:08:33.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-0e3920cef6f23c33a4d7",
@@ -105,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T03:31:54.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-50da4b78037c25f08038",
@@ -117,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T23:49:33.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-e3a9e6d92e4249a69757",
@@ -129,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T21:53:21.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-9807ae0752f785d88e85",
@@ -141,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T21:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-864b2e49a316195d80a9",
@@ -153,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T19:12:49.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -165,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-4664d6e6ae14d05e10c1",
@@ -177,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T16:57:47.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-bada2219361fecba8e46",
@@ -189,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T16:51:38.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-20ff28cd4375f1dd0ec6",
@@ -201,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T16:45:55.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-8cc665de80ab89a9a53a",
@@ -213,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T16:36:03.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-38b1398a06de41735bde",
@@ -225,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:59:24.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
-  },
-  {
-    "id": "news-f997a4857c3224676938",
-    "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
-    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
-    "source": "The Verge",
-    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. The trial…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-04T15:43:49.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-c1e4dee6d012147dc334",
@@ -261,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T14:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-8a4187a1b3def95e0b7f",
@@ -273,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T13:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-d6581b92c87ef014b979",
@@ -285,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T00:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-202692ec5a7291ca08aa",
@@ -297,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-03T20:16:51.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-7576cf4da7541ebee114",
@@ -309,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-03T18:00:09.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-7608f7b1b29a30f4162e",
@@ -321,67 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-03T13:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
-  },
-  {
-    "id": "news-32370471ff09e36456f3",
-    "title": "AI music is flooding streaming services — but who wants it?",
-    "url": "https://www.theverge.com/column/921599/ai-music-is-flooding-streaming-services-but-who-wants-it",
-    "source": "The Verge",
-    "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on how AI is changing music and the music industry, follow Terrence O'Brien. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started The use of generative AI [&#823…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-03T12:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
-  },
-  {
-    "id": "news-e4f386980be810dfabe2",
-    "title": "AI-generated actors and scripts are now ineligible for Oscars",
-    "url": "https://techcrunch.com/2026/05/02/ai-generated-actors-and-scripts-are-now-ineligible-for-oscars/",
-    "source": "TechCrunch",
-    "summary": "The Academy of Motion Picture Arts and Sciences said that only performances “credited in the film’s legal billing and demonstrably performed by humans with their consent” will be eligible for Academy Awards.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-02T21:54:58.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
-  },
-  {
-    "id": "news-ca5d540b4c05bcd25615",
-    "title": "The best AI dictation apps, tested and ranked",
-    "url": "https://techcrunch.com/2026/05/02/the-best-ai-powered-dictation-apps-of-2025/",
-    "source": "TechCrunch",
-    "summary": "AI-powered dictation apps are useful for replying to emails, taking notes, and even coding through your voice",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-02T16:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
-  },
-  {
-    "id": "news-4f6e7b2863e1f5ef172c",
-    "title": "Replit&#8217;s Amjad Masad on the Cursor deal, fighting Apple, and why he&#8217;d rather not sell",
-    "url": "https://techcrunch.com/2026/05/01/replits-amjad-masad-on-the-cursor-deal-fighting-apple-and-why-hed-rather-not-sell/",
-    "source": "TechCrunch",
-    "summary": "At TechCrunch's sold-out StrictlyVC event in San Francisco on Thursday night, we covered a lot of ground in a short time, beginning with the question everyone in the industry is asking right now: In a world where rival Cursor is reportedly in talks to be acquired by SpaceX for $60 billion, is Replit also bound to sell?",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-01T23:06:50.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
-  },
-  {
-    "id": "news-814f8d51f6030bf86dc9",
-    "title": "All the evidence revealed so far in Musk v. Altman",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial",
-    "source": "The Verge",
-    "summary": "The Musk v. Altman trial is underway, and that means exhibits, or the evidence to be presented in court, are being revealed piece by piece. So far, email exchanges, photos, and corporate documents are circulating from the earliest days of OpenAI - and from before the AI lab even had a name. Some high-level takeaways:…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-01T19:14:51.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-368128e6f28129236fd9",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-ce52abc8a3f020a53a6f",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T06:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-bc507498ac4792876c13",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-29e3d13268b3eecb87e9",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-e1e83761f7ea575fa66b",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-26T16:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-cfbb97f4e142ddd9e19c",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-6e6cdaf0d6010b4433a5",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T11:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-b2acc3c294f376d2ca8b",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-8a79aaeb639a5ad663c0",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-eff960ba78f2d3387cb1",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T10:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:03"
+    "discovered_at": "2026-05-05 16:53:08"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   },
   {
     "id": "news-0deaf33f30ef9c0667e0",
@@ -753,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-05-05 14:22:05"
+    "discovered_at": "2026-05-05 16:53:09"
   }
 ]

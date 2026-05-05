@@ -7,7 +7,7 @@ priority: "watch"
 model: "Mistral Small 4"
 provider: "Mistral"
 release_date: "2026-03-16"
-generated_at: "2026-05-05T14:22:12.916Z"
+generated_at: "2026-05-05T16:53:19.241Z"
 ---
 
 # Mistral Small 4: release brief
