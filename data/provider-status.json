@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-05-05T16:53:11.699Z",
+  "generatedAt": "2026-05-05T17:07:08.459Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-05T16:53:10.365Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Connectors/Apps",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "VS Code extension",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KQDM1K1826RP1FFN86ZNA3WG",
-          "title": "Partial Disruption of ChatGPT Workspace Connector Write Actions",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-04-29T21:59:10.000Z",
-          "updatedAt": "2026-04-29T21:59:10.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KQSSQK74KJVJVGCS97TV156G",
-          "title": "Issue affecting some pages on the ChatGPT website",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-05-04T15:29:27.000Z",
-          "updatedAt": "2026-05-04T17:10:21.000Z",
-          "resolvedAt": "2026-05-04T17:10:21.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KQHYX4D53W6GT8FDTT9PHBQ3",
-          "title": "Elevated error rate for Responses API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-01T14:25:56.000Z",
-          "updatedAt": "2026-05-01T15:38:32.000Z",
-          "resolvedAt": "2026-05-01T15:38:32.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KQHWZ9710V886SZKWE20HFAX",
-          "title": "Elevated error rates for image generation",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-01T13:52:09.000Z",
-          "updatedAt": "2026-05-01T14:53:56.000Z",
-          "resolvedAt": "2026-05-01T14:53:55.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KQGTTQ0XNZDK834NBFFQGMG9",
-          "title": "Elevated error rates affecting ChatGPT for some users in Europe",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-05-01T03:55:28.000Z",
-          "updatedAt": "2026-05-01T04:02:32.000Z",
-          "resolvedAt": "2026-05-01T04:02:32.000Z",
-          "summary": null
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -109,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-05T16:53:10.315Z",
+      "lastCheckedAt": "2026-05-05T17:07:07.073Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-05T16:53:11.004Z",
+      "lastCheckedAt": "2026-05-05T17:07:07.731Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-05T16:53:10.408Z",
+      "lastCheckedAt": "2026-05-05T17:07:07.138Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-05T16:53:11.300Z",
+      "lastCheckedAt": "2026-05-05T17:07:08.206Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-05T16:53:10.251Z",
+      "lastCheckedAt": "2026-05-05T17:07:07.033Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -402,24 +305,90 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-05T16:53:10.591Z",
+      "lastCheckedAt": "2026-05-05T17:07:07.017Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "VS Code extension",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        }
+      ],
       "activeIncidents": [],
-      "recentIncidents": []
+      "recentIncidents": [
+        {
+          "id": "01KQDM1K1826RP1FFN86ZNA3WG",
+          "title": "Partial Disruption of ChatGPT Workspace Connector Write Actions",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-04-29T21:59:10.000Z",
+          "updatedAt": "2026-05-05T17:00:06.000Z",
+          "resolvedAt": "2026-05-05T17:00:06.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KQSSQK74KJVJVGCS97TV156G",
+          "title": "Issue affecting some pages on the ChatGPT website",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-05-04T15:29:27.000Z",
+          "updatedAt": "2026-05-04T17:10:21.000Z",
+          "resolvedAt": "2026-05-04T17:10:21.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KQHYX4D53W6GT8FDTT9PHBQ3",
+          "title": "Elevated error rate for Responses API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-01T14:25:56.000Z",
+          "updatedAt": "2026-05-01T15:38:32.000Z",
+          "resolvedAt": "2026-05-01T15:38:32.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KQHWZ9710V886SZKWE20HFAX",
+          "title": "Elevated error rates for image generation",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-01T13:52:09.000Z",
+          "updatedAt": "2026-05-01T14:53:56.000Z",
+          "resolvedAt": "2026-05-01T14:53:55.000Z",
+          "summary": null
+        }
+      ]
     },
     {
       "id": "together",
@@ -432,7 +401,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-05T16:53:11.692Z",
+      "lastCheckedAt": "2026-05-05T17:07:08.451Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -485,6 +454,26 @@
           "summary": "Deepseek R1 went down"
         }
       ]
+    },
+    {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-05T17:07:07.298Z",
+      "overallStatus": "unknown",
+      "overallLabel": "Status page available",
+      "summary": "Official provider status page reports: Status page available.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "xai",
