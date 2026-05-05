@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Nano Banana 2 (Gemini 3.1 Flash Image Preview)"
 provider: "Google"
 release_date: "2026-02-26"
-generated_at: "2026-05-05T22:11:45.160Z"
+generated_at: "2026-05-05T23:12:15.089Z"
 ---
 
 # Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief
