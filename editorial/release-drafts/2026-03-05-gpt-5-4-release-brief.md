@@ -3,11 +3,11 @@ title: "GPT-5.4: release brief"
 slug: "2026-03-05-gpt-5-4-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "watch"
+priority: "backfill"
 model: "GPT-5.4"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-05-04T22:14:01.035Z"
+generated_at: "2026-05-05T00:06:42.887Z"
 ---
 
 # GPT-5.4: release brief

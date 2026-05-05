@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 04 May 2026, 22:14 UTC
+Generated: 05 May 2026, 00:06 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,8 +8,8 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 04 May 2026, 22:14 UTC |
-| Reference date | Monday, 4 May 2026 |
+| Generated | 05 May 2026, 00:06 UTC |
+| Reference date | Tuesday, 5 May 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
 | Tracking milestones | 2 |
@@ -25,14 +25,14 @@ No exact anniversary lands on the current Europe/London date snapshot.
 
 | In | Date | Title | Source |
 | --- | --- | --- | --- |
-| 9d | 13 May 2026 | GPT-4o introduced | [OpenAI](https://openai.com/index/hello-gpt-4o/) |
-| 38d | 11 Jun 2026 | GPT-3 launched via the OpenAI API | [OpenAI](https://openai.com/blog/openai-api/) |
-| 39d | 12 Jun 2026 | Attention Is All You Need released | [arXiv](https://arxiv.org/abs/1706.03762) |
-| 47d | 20 Jun 2026 | Claude 3.5 Sonnet launched | [Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) |
-| 68d | 11 Jul 2026 | Claude 2 launched | [Anthropic](https://www.anthropic.com/news/claude-2) |
-| 75d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
-| 110d | 22 Aug 2026 | Stable Diffusion public release | [Stability AI](https://stability.ai/news/stable-diffusion-public-release) |
-| 131d | 12 Sept 2026 | OpenAI o1-preview launched | [OpenAI](https://openai.com/index/introducing-openai-o1-preview/) |
+| 8d | 13 May 2026 | GPT-4o introduced | [OpenAI](https://openai.com/index/hello-gpt-4o/) |
+| 37d | 11 Jun 2026 | GPT-3 launched via the OpenAI API | [OpenAI](https://openai.com/blog/openai-api/) |
+| 38d | 12 Jun 2026 | Attention Is All You Need released | [arXiv](https://arxiv.org/abs/1706.03762) |
+| 46d | 20 Jun 2026 | Claude 3.5 Sonnet launched | [Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) |
+| 67d | 11 Jul 2026 | Claude 2 launched | [Anthropic](https://www.anthropic.com/news/claude-2) |
+| 74d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
+| 109d | 22 Aug 2026 | Stable Diffusion public release | [Stability AI](https://stability.ai/news/stable-diffusion-public-release) |
+| 130d | 12 Sept 2026 | OpenAI o1-preview launched | [OpenAI](https://openai.com/index/introducing-openai-o1-preview/) |
 
 ## Recent Flagship Launches
 
