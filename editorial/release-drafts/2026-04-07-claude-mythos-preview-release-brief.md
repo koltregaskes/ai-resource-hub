@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-05-05T11:37:18.838Z"
+generated_at: "2026-05-05T14:22:12.916Z"
 ---
 
 # Claude Mythos Preview: release brief
 
-Anthropic's Claude Mythos Preview is on the release desk with 2 related stories and 0 benchmark signals to review.
+Anthropic's Claude Mythos Preview is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -32,6 +32,7 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- The Verge (2026-05-05): [Researchers gaslit Claude into giving instructions to build explosives](https://www.theverge.com/ai-artificial-intelligence/923961/security-researchers-mindgard-gaslit-claude-forbidden-information) - Anthropic has spent years building itself up as the safe AI company. But new security research shared with The Verge suggests Claude's carefully crafted helpful personality may itself be a vulnerability. Researchers at AI red-teaming company Mindgard say they got Claude to offer up erotica, malicious code, and instruc…
 
 ## Suggested thread / post structure
 
@@ -55,3 +56,4 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [The Verge: Researchers gaslit Claude into giving instructions to build explosives](https://www.theverge.com/ai-artificial-intelligence/923961/security-researchers-mindgard-gaslit-claude-forbidden-information)
