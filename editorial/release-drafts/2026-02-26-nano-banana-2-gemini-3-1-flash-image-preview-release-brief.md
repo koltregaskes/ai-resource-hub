@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Nano Banana 2 (Gemini 3.1 Flash Image Preview)"
 provider: "Google"
 release_date: "2026-02-26"
-generated_at: "2026-05-06T09:35:46.927Z"
+generated_at: "2026-05-06T12:04:55.644Z"
 ---
 
 # Nano Banana 2 (Gemini 3.1 Flash Image Preview): release brief
@@ -30,8 +30,8 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-07): [Project Glasswing](https://www.anthropic.com/glasswing) - A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world&#x27;s most critical software.
+- The Verge (2026-05-06): [Chrome’s AI features may be hogging 4GB of your computer storage](https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features) - Google Chrome may be taking up more of your storage than expected thanks to a large on-device AI model file that, in some cases, is being automatically downloaded to the browser's system folders. Users who have noticed unexplained drops in their available desktop device storage are now discovering that Chrome is insta…
 - The Verge (2026-05-05): [Google Home&#8217;s Gemini AI can handle more complicated requests](https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade) - Google Home users can now ask Gemini to complete more complex, multi-step tasks and combine multiple tasks in a single command. Google has updated Gemini for Home to Gemini 3.1, which it says will improve the smart home assistant's ability to interpret and act on requests. The upgrade will also make Gemini for Home be…
-- The Verge (2026-05-05): [Google, Microsoft, and xAI will allow the US government to review their new AI models](https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review) - Google DeepMind, Microsoft, and Elon Musk's xAI have agreed to allow the US government to review new AI models before they're released to the public. In an announcement on Tuesday, the Commerce Department's Center for AI Standards and Innovation (CAISI) says it will work with the AI companies to perform "pre-deploymen…
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
 ## Suggested thread / post structure
@@ -54,6 +54,6 @@ Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release fr
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/models)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
 - [Anthropic: Project Glasswing](https://www.anthropic.com/glasswing)
+- [The Verge: Chrome’s AI features may be hogging 4GB of your computer storage](https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features)
 - [The Verge: Google Home&#8217;s Gemini AI can handle more complicated requests](https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade)
-- [The Verge: Google, Microsoft, and xAI will allow the US government to review their new AI models](https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)
