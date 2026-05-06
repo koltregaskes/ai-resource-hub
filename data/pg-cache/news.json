@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-1d1bfdc0279bf4f15458",
+    "title": "How Elon Musk left OpenAI, according to Greg Brockman",
+    "url": "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/",
+    "source": "TechCrunch",
+    "summary": "Cutthroat negotiations between startup founders are rarely shared so publicly, especially when a company becomes as world-changing as OpenAI.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T18:23:54.000Z",
+    "discovered_at": "2026-05-06 18:56:20"
+  },
+  {
+    "id": "news-3c23afd6f16c3e54d03b",
+    "title": "Mira Murati tells the court that she couldn’t trust Sam Altman’s words",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/925338/openai-musk-v-altman-mira-murati",
+    "source": "The Verge",
+    "summary": "Mira Murati, OpenAI's former CTO, has testified under oath that CEO Sam Altman lied to her about the safety standards for a new AI model. In a video deposition shown during the ongoing Musk v. Altman trial on Wednesday, Murati said Altman falsely stated that OpenAI's legal department determined a new AI model did not…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T17:55:53.000Z",
+    "discovered_at": "2026-05-06 18:56:20"
+  },
+  {
+    "id": "news-5b4c238ff41cad0e4b72",
+    "title": "SpaceX may spend up to $119B on &#8216;Terafab&#8217; chip factory in Texas",
+    "url": "https://techcrunch.com/2026/05/06/spacex-may-spend-up-to-119-billion-on-terafab-chip-factory-in-texas/",
+    "source": "TechCrunch",
+    "summary": "The project would be a \"multi-phase, next-generation, vertically integrated semiconductor manufacturing and advanced computing fabrication facility,\" according to the proposal.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T17:23:08.000Z",
+    "discovered_at": "2026-05-06 18:56:20"
+  },
+  {
+    "id": "news-f652c92e96cc29522f1b",
+    "title": "DeepSeek could hit $45B valuation from its first investment round",
+    "url": "https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/",
+    "source": "TechCrunch",
+    "summary": "The Chinese AI lab came to prominence in early 2025 after launching a large language model that trained on a fraction of the compute power and at a fraction of the cost of the big U.S. models like those from OpenAI and Anthropic.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T17:20:34.000Z",
+    "discovered_at": "2026-05-06 18:56:20"
+  },
+  {
     "id": "news-7fd7635574ec5271e661",
     "title": "5 gardening tips you can try right in Search",
     "url": "https://blog.google/products-and-platforms/products/search/gardening-tips/",
@@ -9,11 +57,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-eb5fc0a4ced6a8eb1137",
-    "title": "Google updates AI search to include &#8216;expert advice&#8217; from Reddit and other web forums",
+    "title": "Google updates AI search to include quotes from Reddit and other sources",
     "url": "https://techcrunch.com/2026/05/06/google-updates-ai-search-to-include-expert-advice-from-reddit-and-other-web-forums/",
     "source": "TechCrunch",
     "summary": "While citing web forums and discussion boards can help users find answers to more niche queries, this design choice could also prove chaotic.",
@@ -21,11 +69,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:49:39.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-cf94a008e1d648ffb430",
-    "title": "Khosla-backed robotics startup Genesis AI has gone full-stack, demo shows",
+    "title": "Khosla-backed robotics startup Genesis AI has gone full stack, demo shows",
     "url": "https://techcrunch.com/2026/05/06/khosla-backed-robotics-startup-genesis-ai-has-gone-full-stack-demo-shows/",
     "source": "TechCrunch",
     "summary": "Genesis AI, a startup that raised a $105 million seed round to build foundational AI for robotics, has unveiled its first model, GENE-26.5, but also a demo showcasing a set of robotic hands performing complex tasks.",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:46:38.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:37:32.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-075301c2724398f79c00",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:27:36.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-8ea5f804c10d514b0ad9",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:12:49.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-be370d838a5a7d0f1ec3",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-de77881f8c0a910ff9b2",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T14:30:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-fb25f6ee23901c289c62",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T14:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-5fc818b755da8ca14202",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T13:54:09.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-82fc41339ea59c51fc1f",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T13:00:30.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-f6e064821d2f748dc913",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T11:45:41.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-6dc9f357c63d83ede907",
@@ -153,19 +201,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T10:13:09.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-604a9b96d7c3935db0e0",
     "title": "Peter Sarlin&#8217;s QuTwo reaches $380M valuation in angel round",
     "url": "https://techcrunch.com/2026/05/05/peter-sarlins-qutwo-reaches-380m-valuation-in-angel-round/",
     "source": "TechCrunch",
-    "summary": "QuTwo, the Finnish AI lab founded by former AMD Silo AI CEO Peter Sarlin, is now valued at €325 million (approximately $380 million) after raising a €25 million angel round ($29 million). It's a sign of enduring tailwinds for AI, quantum computing, and sovereign tech, especially for Europe-made companies.",
+    "summary": "Enterprise AI will be QuTwo’s bread and butter. “AI is the north star that we will continue to aim for. Quantum is just a new type of compute,” said Sarlin, who is adamant that QuTwo is an AI company.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T06:47:12.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-7ae4ba12b486b21fd1e0",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T06:34:32.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-94f58b450581f2c916b3",
@@ -189,7 +237,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
+  },
+  {
+    "id": "news-bdecd9008a33c6517ffa",
+    "title": "Introducing ChatGPT Futures: Class of 2026",
+    "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
+    "source": "OpenAI",
+    "summary": "Meet the ChatGPT Futures Class of 2026—26 student innovators using AI to build, research, and drive real-world impact. Discover how this generation is redefining learning, creativity, and opportunity with ChatGPT.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-beac6a64e4732482071f",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T23:50:10.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-18557eb1abeef431c5ad",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T22:57:41.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-8a2de8a282b0bcc104f7",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T21:46:04.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-0d2c9bc6d57845f4d165",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T21:18:23.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-354748940ca77d708a3d",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T20:56:41.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-8f1b3d6208c191ebd0f1",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T20:06:40.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-8a96f156cf6003fc44ba",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T19:54:37.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-526cbec7d7716ce5740d",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T19:45:30.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-bb06116c8ba91172aad0",
@@ -297,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T17:46:10.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-740f87c191239731e8c5",
@@ -309,31 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T17:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
-  },
-  {
-    "id": "news-c0ae36594b3368cc2587",
-    "title": "OpenAI releases GPT-5.5 Instant, a new default model for ChatGPT",
-    "url": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
-    "source": "TechCrunch",
-    "summary": "The company said the model reduces hallucination in sensitive areas such as law, medicine, and finance, while maintaining the low latency of its predecessor.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T17:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
-  },
-  {
-    "id": "news-ed429bcab6b4173a2336",
-    "title": "Book publishers sue Meta over AI&#8217;s &#8216;word-for-word&#8217; copying",
-    "url": "https://www.theverge.com/tech/924230/meta-publishers-lawsuit-ai-copyright",
-    "source": "The Verge",
-    "summary": "Meta is facing a class action lawsuit filed by five major book publishers and one author over claims the company \"engaged in one of the most massive infringements of copyrighted materials in history\" when training its Llama AI models, as reported earlier by The New York Times. In their suit, Macmillan, McGraw Hill, El…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T16:52:38.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -345,55 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
-  },
-  {
-    "id": "news-ae25110aa248370c1e8f",
-    "title": "PayPal says it&#8217;s &#8216;becoming a technology company again&#8217; — that means AI",
-    "url": "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
-    "source": "TechCrunch",
-    "summary": "PayPal is pitching an AI-led turnaround, tying automation and restructuring to $1.5 billion in savings as it cuts jobs and works to modernize its tech stack.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T15:49:55.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
-  },
-  {
-    "id": "news-c281318b667981b6406f",
-    "title": "Etsy launches its app within ChatGPT as it continues its AI push",
-    "url": "https://techcrunch.com/2026/05/05/etsy-launches-its-app-within-chatgpt-as-it-continues-its-ai-push/",
-    "source": "TechCrunch",
-    "summary": "Etsy's new native app within ChatGPT aims to be a conversational shopping experience for users.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T15:31:37.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
-  },
-  {
-    "id": "news-e9800213f3cd4b8c5308",
-    "title": "GPT-5.5 Instant: smarter, clearer, and more personalized",
-    "url": "https://openai.com/index/gpt-5-5-instant",
-    "source": "OpenAI",
-    "summary": "GPT-5.5 Instant updates ChatGPT’s default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
-  },
-  {
-    "id": "news-76cbe027f6a80fda96aa",
-    "title": "GPT-5.5 Instant System Card",
-    "url": "https://openai.com/index/gpt-5-5-instant-system-card",
-    "source": "OpenAI",
-    "summary": null,
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-a654fb66813e953f3285",
@@ -405,7 +393,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
+  },
+  {
+    "id": "news-e9800213f3cd4b8c5308",
+    "title": "GPT-5.5 Instant: smarter, clearer, and more personalized",
+    "url": "https://openai.com/index/gpt-5-5-instant",
+    "source": "OpenAI",
+    "summary": "GPT-5.5 Instant updates ChatGPT’s default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T10:00:00.000Z",
+    "discovered_at": "2026-05-06 18:56:18"
+  },
+  {
+    "id": "news-76cbe027f6a80fda96aa",
+    "title": "GPT-5.5 Instant System Card",
+    "url": "https://openai.com/index/gpt-5-5-instant-system-card",
+    "source": "OpenAI",
+    "summary": null,
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T10:00:00.000Z",
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-c885d324429eab0f41bf",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-9807ae0752f785d88e85",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T21:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-d6581b92c87ef014b979",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -525,19 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
-  },
-  {
-    "id": "news-368128e6f28129236fd9",
-    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
-    "url": "https://openai.com/index/openai-on-aws",
-    "source": "OpenAI",
-    "summary": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -549,7 +549,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
+  },
+  {
+    "id": "news-368128e6f28129236fd9",
+    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+    "url": "https://openai.com/index/openai-on-aws",
+    "source": "OpenAI",
+    "summary": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-04-28T00:00:00.000Z",
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-ce52abc8a3f020a53a6f",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T06:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-bc507498ac4792876c13",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-29e3d13268b3eecb87e9",
@@ -609,19 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
-  },
-  {
-    "id": "news-e1e83761f7ea575fa66b",
-    "title": "Our principles",
-    "url": "https://openai.com/index/our-principles",
-    "source": "OpenAI",
-    "summary": "Our mission is to ensure that AGI benefits all of humanity. Sam Altman shares five principles that guide our work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-26T16:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:03"
+    "discovered_at": "2026-05-06 18:56:18"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:19"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:20"
   },
   {
     "id": "news-0deaf33f30ef9c0667e0",
@@ -777,6 +777,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-07T00:00:00.000Z",
-    "discovered_at": "2026-05-06 16:53:06"
+    "discovered_at": "2026-05-06 18:56:19"
   }
 ]
