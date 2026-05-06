@@ -7,7 +7,7 @@ priority: "watch"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-05-06T22:08:09.174Z"
+generated_at: "2026-05-06T23:05:39.400Z"
 ---
 
 # Gemma 4 31B: release brief

@@ -1,94 +1,6 @@
 {
-  "generatedAt": "2026-05-06T22:08:03.483Z",
+  "generatedAt": "2026-05-06T23:05:33.866Z",
   "providers": [
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-06T22:08:03.435Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "together-feed-0-2026-05-06T21:18:05.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-06T21:18:05.000Z",
-          "updatedAt": "2026-05-06T21:18:05.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-05T11:06:01.000Z",
-          "title": "Qwen3.5 397B A17B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-05T11:06:01.000Z",
-          "updatedAt": "2026-05-05T11:06:01.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-05-06T21:18:05.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-06T21:18:05.000Z",
-          "updatedAt": "2026-05-06T21:18:05.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
-        },
-        {
-          "id": "together-feed-1-2026-05-05T11:32:12.000Z",
-          "title": "Qwen3.5 397B A17B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-05T11:32:12.000Z",
-          "updatedAt": "2026-05-05T11:32:12.000Z",
-          "resolvedAt": "2026-05-05T11:32:12.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B recovered"
-        },
-        {
-          "id": "together-feed-2-2026-05-05T11:06:01.000Z",
-          "title": "Qwen3.5 397B A17B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-05T11:06:01.000Z",
-          "updatedAt": "2026-05-05T11:06:01.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
-        },
-        {
-          "id": "together-feed-3-2026-05-04T17:28:40.000Z",
-          "title": "Deepseek R1 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-04T17:28:40.000Z",
-          "updatedAt": "2026-05-04T17:28:40.000Z",
-          "resolvedAt": "2026-05-04T17:28:40.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Deepseek R1 recovered"
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -100,15 +12,19 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-06T22:08:02.337Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-05-06T23:05:33.025Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Code",
+          "status": "partial_outage"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -116,10 +32,6 @@
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
           "status": "operational"
         },
         {
@@ -131,8 +43,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "snxm62gpxfc9",
+          "title": "Connection failures for organizations restricting GitHub access by IP address",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-05-06T22:32:53.981Z",
+          "updatedAt": "2026-05-06T22:32:54.102Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/0vv7h1hfdddc",
+          "summary": "We have identified an issue affecting organizations that restrict GitHub access by source IP address. A recent infrastructure change altered the IP addresses Anthropic uses for ou..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "snxm62gpxfc9",
+          "title": "Connection failures for organizations restricting GitHub access by IP address",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-05-06T22:32:53.981Z",
+          "updatedAt": "2026-05-06T22:32:54.102Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/0vv7h1hfdddc",
+          "summary": "We have identified an issue affecting organizations that restrict GitHub access by source IP address. A recent infrastructure change altered the IP addresses Anthropic uses for ou..."
+        },
         {
           "id": "437swp24nrf4",
           "title": "Elevated errors across multiple models",
@@ -165,17 +100,6 @@
           "resolvedAt": "2026-05-04T14:33:46.074Z",
           "url": "https://stspg.io/115pgb379g4v",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "zxv1xv501678",
-          "title": "Elevated errors on Claude Opus 4.5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-04T08:09:37.657Z",
-          "updatedAt": "2026-05-04T09:49:29.788Z",
-          "resolvedAt": "2026-05-04T09:49:29.769Z",
-          "url": "https://stspg.io/4mxbctc1ncgy",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -190,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-06T22:08:03.130Z",
+      "lastCheckedAt": "2026-05-06T23:05:33.578Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-06T22:08:02.561Z",
+      "lastCheckedAt": "2026-05-06T23:05:33.006Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -284,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-06T22:08:03.476Z",
+      "lastCheckedAt": "2026-05-06T23:05:33.689Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-06T22:08:02.412Z",
+      "lastCheckedAt": "2026-05-06T23:05:32.928Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -403,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-06T22:08:02.779Z",
+      "lastCheckedAt": "2026-05-06T23:05:32.951Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -423,7 +347,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-06T22:07:58.981Z",
+      "lastCheckedAt": "2026-05-06T23:05:32.949Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -495,6 +419,71 @@
           "updatedAt": "2026-05-01T14:53:56.000Z",
           "resolvedAt": "2026-05-01T14:53:55.000Z",
           "summary": null
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-06T23:05:33.859Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-05-06T22:06:14.000Z",
+          "title": "Qwen3 235B A22B Instruct 2507 Throughput recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-06T22:06:14.000Z",
+          "updatedAt": "2026-05-06T22:06:14.000Z",
+          "resolvedAt": "2026-05-06T22:06:14.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 235B A22B Instruct 2507 Throughput recovered"
+        },
+        {
+          "id": "together-feed-1-2026-05-06T21:18:05.000Z",
+          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-06T21:18:05.000Z",
+          "updatedAt": "2026-05-06T21:18:05.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-05T11:32:12.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-05T11:32:12.000Z",
+          "updatedAt": "2026-05-05T11:32:12.000Z",
+          "resolvedAt": "2026-05-05T11:32:12.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        },
+        {
+          "id": "together-feed-3-2026-05-05T11:06:01.000Z",
+          "title": "Qwen3.5 397B A17B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-05T11:06:01.000Z",
+          "updatedAt": "2026-05-05T11:06:01.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B went down"
         }
       ]
     },
