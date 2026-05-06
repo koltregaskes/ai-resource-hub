@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-06T14:44:57.230Z"
+generated_at: "2026-05-06T16:53:25.472Z"
 ---
 
 # GPT-5.5: release brief
@@ -34,7 +34,7 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - OpenAI (2026-05-05): [GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant) - GPT-5.5 Instant updates ChatGPT's default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.
 - OpenAI (2026-05-05): [GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
 - OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
-- OpenAI (2026-04-27): [OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate) - OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.
+- OpenAI (2026-05-06): [How frontier enterprises are building an AI advantage](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 
 ## Suggested thread / post structure
 
@@ -60,4 +60,4 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [OpenAI: GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant)
 - [OpenAI: GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
 - [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
-- [OpenAI: OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate)
+- [OpenAI: How frontier enterprises are building an AI advantage](https://openai.com/index/introducing-b2b-signals)

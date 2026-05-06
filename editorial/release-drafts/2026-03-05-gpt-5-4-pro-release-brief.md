@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT-5.4 Pro"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-05-06T14:44:57.231Z"
+generated_at: "2026-05-06T16:53:25.473Z"
 ---
 
 # GPT-5.4 Pro: release brief
 
-OpenAI's GPT-5.4 Pro is on the release desk with 2 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.4 Pro is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,6 +30,7 @@ GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an A
 ## Outside coverage and early reactions
 
 - OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
+- OpenAI (2026-05-06): [How frontier enterprises are building an AI advantage](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 - OpenAI (2026-04-27): [OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate) - OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.
 
 ## Suggested thread / post structure
@@ -52,4 +53,5 @@ GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an A
 - [Official launch or docs](https://developers.openai.com/api/docs/guides/latest-model)
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
+- [OpenAI: How frontier enterprises are building an AI advantage](https://openai.com/index/introducing-b2b-signals)
 - [OpenAI: OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate)

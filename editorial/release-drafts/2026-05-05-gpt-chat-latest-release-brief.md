@@ -7,12 +7,12 @@ priority: "high"
 model: "GPT Chat Latest"
 provider: "OpenAI"
 release_date: "2026-05-05"
-generated_at: "2026-05-06T14:44:57.230Z"
+generated_at: "2026-05-06T16:53:25.472Z"
 ---
 
 # GPT Chat Latest: release brief
 
-OpenAI's GPT Chat Latest is on the release desk with 1 related story and 0 benchmark signals to review.
+OpenAI's GPT Chat Latest is on the release desk with 2 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,6 +30,7 @@ GPT Chat Latest is a currently tracked release from OpenAI. It is positioned as 
 ## Outside coverage and early reactions
 
 - OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
+- OpenAI (2026-05-06): [How frontier enterprises are building an AI advantage](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 
 ## Suggested thread / post structure
 
@@ -51,3 +52,4 @@ GPT Chat Latest is a currently tracked release from OpenAI. It is positioned as 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
+- [OpenAI: How frontier enterprises are building an AI advantage](https://openai.com/index/introducing-b2b-signals)
