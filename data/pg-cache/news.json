@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-f997a4857c3224676938",
+    "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
+    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
+    "source": "The Verge",
+    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. Elon Musk,…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T16:21:38.000Z",
+    "discovered_at": "2026-05-07 17:02:47"
+  },
+  {
+    "id": "news-c044e7ba828e542acd92",
+    "title": "How Anthropic’s Mythos has rewritten Firefox’s approach to cybersecurity",
+    "url": "https://techcrunch.com/2026/05/07/how-anthropics-mythos-has-rewritten-firefoxs-approach-to-cybersecurity/",
+    "source": "TechCrunch",
+    "summary": "Security researchers at Mozilla say Anthropic's Mythos has unearthed a wealth of high-severity bugs in Firefox.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T16:05:48.000Z",
+    "discovered_at": "2026-05-07 17:02:47"
+  },
+  {
+    "id": "news-b5cffd1657a47db5f3fa",
+    "title": "Startup Battlefield 200 applications close May 27: A shot at VC access, global visibility, TechCrunch coverage, and $100K",
+    "url": "https://techcrunch.com/2026/05/07/startup-battlefield-200-applications-close-may-27-a-shot-at-vc-access-global-visibility-techcrunch-coverage-and-100k/",
+    "source": "TechCrunch",
+    "summary": "Startup Battlefield 200 applications are open, but only for three more weeks. Apply by May 27 for your shot at VC access, global visibility, TechCrunch coverage, $100,000 equity-free, and more opportunities for major scaling impact.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T15:00:00.000Z",
+    "discovered_at": "2026-05-07 17:02:47"
+  },
+  {
+    "id": "news-1d1975f8c7b5ecd27e12",
+    "title": "Exhibit at TechCrunch Disrupt 2026: Get in front of 10,000 decision-makers before space runs out",
+    "url": "https://techcrunch.com/2026/05/07/exhibit-at-techcrunch-disrupt-2026-get-in-front-of-10000-decision-makers-before-space-runs-out/",
+    "source": "TechCrunch",
+    "summary": "If startup visibility, traction, and real deals matter, you should be on the TechCrunch Disrupt 2026 exhibit floor. Get your 6' exhibit table before your competitor does.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T14:30:00.000Z",
+    "discovered_at": "2026-05-07 17:02:47"
+  },
+  {
     "id": "news-5f96233f714807cb49b5",
     "title": "Aurora&#8217;s Chris Urmson on why self-driving trucks are finally ready to scale",
     "url": "https://techcrunch.com/podcast/auroras-chris-urmson-on-why-self-driving-trucks-are-finally-ready-to-scale/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:24:54.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-608851b1f7f902dd7201",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:15:40.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-6fbc73af09243119175a",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-c405ead2f4be96a69e67",
@@ -45,11 +93,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-7da45bc96137b73cf5e7",
-    "title": "China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open-source AI skyrockets",
+    "title": "China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open source AI skyrockets",
     "url": "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/",
     "source": "TechCrunch",
     "summary": "Moonshot's annualized recurring revenue topped $200 million in April, driven by rapid growth in paid subscriptions and API usage.",
@@ -57,23 +105,23 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:44:25.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-330128a430535f8c6c84",
     "title": "Spotify wants to become the home for AI-generated personal audio",
     "url": "https://techcrunch.com/2026/05/07/spotify-wants-to-become-the-home-for-ai-generated-personal-audio/",
     "source": "TechCrunch",
-    "summary": "Users will be able to create a podcast from Codex or Claude Code and import it to Spotify",
+    "summary": "Users will be able to create a podcast from Codex or Claude Code and import it to Spotify.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-05e80ec6d2f62fe9c07e",
-    "title": "Spotify&#8217;s AI DJ now supports French, German, Italian and Brazilian Portuguese",
+    "title": "Spotify&#8217;s AI DJ now supports French, German, Italian, and Brazilian Portuguese",
     "url": "https://techcrunch.com/2026/05/07/spotifys-ai-dj-now-supports-french-german-italian-and-brazilian-portuguese/",
     "source": "TechCrunch",
     "summary": "Spotify's AI DJ feature now supports French, German, Italian, and Brazilian Portuguese.",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T12:20:04.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -93,31 +141,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-7be8dfa76af045ab4479",
     "title": "Five architects of the AI economy explain where the wheels are coming off",
     "url": "https://techcrunch.com/2026/05/06/five-architects-of-the-ai-economy-explain-where-the-wheels-are-coming-off/",
     "source": "TechCrunch",
-    "summary": "Earlier this week, five people who touch every layer of the AI supply chain sat down at the Milken Global Conference in Beverly Hills, where they talked with TechCrunch about everything from chip shortages to orbital data centers to the possibility that the whole architecture that undergirds the tech is wrong.",
+    "summary": "Earlier this week, five people who touch every layer of the AI supply chain sat down at the Milken Institute Global Conference in Beverly Hills, where they talked with TechCrunch about everything from chip shortages to orbital data centers to the possibility that the whole architecture that undergirds the tech is wron…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T05:25:10.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-682acca1ab2fd865a68d",
     "title": "Musk’s biggest loyalist became his biggest liability",
     "url": "https://www.theverge.com/ai-artificial-intelligence/925665/musk-altman-trial-shivon-zilis-testimony",
     "source": "The Verge",
-    "summary": "I sat down in the Musk v. Altman trial courtroom today, painfully aware that no one was going to ask Shivon Zilis the question on everyone's minds: Girl, what the fuck are you doing? Zilis, who testified under oath that she is the mother of four of Musk's children, was… what's the best way to [&#8230;]",
+    "summary": "I sat down in the Musk v. Altman trial courtroom today, painfully aware that no one was going to ask Shivon Zilis the question on everyone's minds: Girl, what the fuck are you doing? Zilis, who testified under oath that she is the mother of four of Musk's children, was… What's the best way to [&#8230;]",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T23:37:02.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-534b5121c9c699638505",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:57:56.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-de7a083a7aeaf946994c",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:43:24.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-30a5aafec8ba8e52321e",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:32:55.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-79e266a1a3f04e3232ad",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:21:45.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-987ff63a1291be58f684",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T20:18:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-1d1bfdc0279bf4f15458",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T18:23:54.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-3c23afd6f16c3e54d03b",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:55:53.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-5b4c238ff41cad0e4b72",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:23:08.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-f652c92e96cc29522f1b",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:20:34.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-eb5fc0a4ced6a8eb1137",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:49:39.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-cf94a008e1d648ffb430",
@@ -261,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:46:38.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
-  },
-  {
-    "id": "news-f997a4857c3224676938",
-    "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
-    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
-    "source": "The Verge",
-    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. Elon Musk,…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T15:37:32.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-075301c2724398f79c00",
@@ -285,43 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:27:36.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
-  },
-  {
-    "id": "news-8ea5f804c10d514b0ad9",
-    "title": "Apple to pay $250M to settle lawsuit over Siri&#8217;s delayed AI features",
-    "url": "https://techcrunch.com/2026/05/06/apple-to-pay-250m-to-settle-lawsuit-over-siris-delayed-ai-features/",
-    "source": "TechCrunch",
-    "summary": "Apple has agreed to pay $250 million to settle a class action lawsuit for overpromising the arrival of Siri's AI features.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T15:12:49.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
-  },
-  {
-    "id": "news-be370d838a5a7d0f1ec3",
-    "title": "Ethos raises $22.75M from a16z for its expert network with voice onboarding",
-    "url": "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/",
-    "source": "TechCrunch",
-    "summary": "Ethos says it is onboarding 35,000 experts per week.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T15:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
-  },
-  {
-    "id": "news-de77881f8c0a910ff9b2",
-    "title": "At TechCrunch Disrupt 2026, all your M&#038;A questions will be answered",
-    "url": "https://techcrunch.com/2026/05/06/at-techcrunch-disrupt-2026-all-your-ma-questions-will-be-answered/",
-    "source": "TechCrunch",
-    "summary": "Leaders from Coinbase, M13, and Mignano Law Group talk about how M&#038;A is an early-stage strategy at TechCrunch Disrupt 2026. Register to hear this live.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T14:30:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-82fc41339ea59c51fc1f",
@@ -333,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T13:00:30.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-f6e064821d2f748dc913",
@@ -345,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T11:45:41.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-6dc9f357c63d83ede907",
@@ -357,43 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T10:13:09.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
-  },
-  {
-    "id": "news-94a93b54a777d7269e9a",
-    "title": "Singular Bank helps bankers move fast with ChatGPT and Codex",
-    "url": "https://openai.com/index/singular-bank",
-    "source": "OpenAI",
-    "summary": "Singular Bank built Singularity, an internal assistant using ChatGPT and Codex to help bankers save 60–90 minutes daily on meeting prep, portfolio analysis, and follow-up.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
-  },
-  {
-    "id": "news-94f58b450581f2c916b3",
-    "title": "How frontier enterprises are building an AI advantage",
-    "url": "https://openai.com/index/introducing-b2b-signals",
-    "source": "OpenAI",
-    "summary": "OpenAI’s B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
-  },
-  {
-    "id": "news-8665a96e70ff0510ce62",
-    "title": "Uber uses OpenAI to help people earn smarter and book faster",
-    "url": "https://openai.com/index/uber",
-    "source": "OpenAI",
-    "summary": "Uber uses OpenAI to power AI assistants and voice features that help drivers earn smarter and riders book faster across a global real-time marketplace.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-bdecd9008a33c6517ffa",
@@ -405,7 +369,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
+  },
+  {
+    "id": "news-94f58b450581f2c916b3",
+    "title": "How frontier firms are pulling ahead",
+    "url": "https://openai.com/index/introducing-b2b-signals",
+    "source": "OpenAI",
+    "summary": "OpenAI’s B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-07 17:02:44"
+  },
+  {
+    "id": "news-8665a96e70ff0510ce62",
+    "title": "Uber uses OpenAI to help people earn smarter and book faster",
+    "url": "https://openai.com/index/uber",
+    "source": "OpenAI",
+    "summary": "Uber uses OpenAI to power AI assistants and voice features that help drivers earn smarter and riders book faster across a global real-time marketplace.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-07 17:02:44"
+  },
+  {
+    "id": "news-94a93b54a777d7269e9a",
+    "title": "Singular Bank helps bankers move fast with ChatGPT and Codex",
+    "url": "https://openai.com/index/singular-bank",
+    "source": "OpenAI",
+    "summary": "Singular Bank built Singularity, an internal assistant using ChatGPT and Codex to help bankers save 60–90 minutes daily on meeting prep, portfolio analysis, and follow-up.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-76cbe027f6a80fda96aa",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-a654fb66813e953f3285",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-e9800213f3cd4b8c5308",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-c885d324429eab0f41bf",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-9807ae0752f785d88e85",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T21:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-d6581b92c87ef014b979",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-368128e6f28129236fd9",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:58"
+    "discovered_at": "2026-05-07 17:02:44"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:46"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-05-07 14:47:59"
+    "discovered_at": "2026-05-07 17:02:47"
   }
 ]

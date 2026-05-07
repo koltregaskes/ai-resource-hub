@@ -7,7 +7,7 @@ priority: "watch"
 model: "Kimi K2 0711"
 provider: "Moonshot AI"
 release_date: "2026-03-28"
-generated_at: "2026-05-07T14:48:09.760Z"
+generated_at: "2026-05-07T17:02:55.780Z"
 ---
 
 # Kimi K2 0711: release brief
@@ -29,7 +29,7 @@ Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned a
 
 ## Outside coverage and early reactions
 
-- TechCrunch (2026-05-07): [China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open-source AI skyrockets](https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/) - Moonshot's annualized recurring revenue topped $200 million in April, driven by rapid growth in paid subscriptions and API usage.
+- TechCrunch (2026-05-07): [China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open source AI skyrockets](https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/) - Moonshot's annualized recurring revenue topped $200 million in April, driven by rapid growth in paid subscriptions and API usage.
 
 ## Suggested thread / post structure
 
@@ -50,4 +50,4 @@ Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned a
 
 - [Official launch or docs](https://platform.moonshot.ai/docs/pricing/tools.en-US)
 - [Provider API/docs](https://platform.moonshot.ai/docs/pricing/tools.en-US)
-- [TechCrunch: China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open-source AI skyrockets](https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/)
+- [TechCrunch: China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open source AI skyrockets](https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/)
