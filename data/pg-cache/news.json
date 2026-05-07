@@ -1,5 +1,89 @@
 [
   {
+    "id": "news-5f96233f714807cb49b5",
+    "title": "Aurora&#8217;s Chris Urmson on why self-driving trucks are finally ready to scale",
+    "url": "https://techcrunch.com/podcast/auroras-chris-urmson-on-why-self-driving-trucks-are-finally-ready-to-scale/",
+    "source": "TechCrunch",
+    "summary": "Self-driving has been &#8220;almost here&#8221; for over a decade. But somewhere between DARPA&#160;challenges&#160;and a handful of driverless trucks hauling freight between Dallas and Houston, Aurora&#160;co-founder and&#160;CEO&#160;Chris Urmson’s story&#160;changed.&#160;The self-driving truck&#160;company&#160;st…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T14:24:54.000Z",
+    "discovered_at": "2026-05-07 14:47:59"
+  },
+  {
+    "id": "news-608851b1f7f902dd7201",
+    "title": "OpenClaw and Claude can put your AI-generated podcasts in Spotify",
+    "url": "https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts",
+    "source": "The Verge",
+    "summary": "Save to Spotify is a new command-line tool designed specifically for AI agents like OpenClaw, Claude Code, or OpenAI Codex. If you're the kind of person who collects research on a topic, then feeds it through their AI of choice to create audio summaries and personal podcasts, this lets you save them right alongside th…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T14:15:40.000Z",
+    "discovered_at": "2026-05-07 14:47:59"
+  },
+  {
+    "id": "news-6fbc73af09243119175a",
+    "title": "Google’s taking a big swing at AI health with the Fitbit Air",
+    "url": "https://www.theverge.com/gadgets/925458/google-health-fitbit-air-ai-coaching-wearables-fitness-trackers",
+    "source": "The Verge",
+    "summary": "It's a Whoop dupe. That was my first thought when I saw the new $99 Google Fitbit Air. You can hardly blame me. The band is screenless with a metallic fabric clasp. My eyes flickered between the Fitbit Air and my wrist, where I'm wearing a Whoop MG. Was I not seeing double? But as [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T14:00:00.000Z",
+    "discovered_at": "2026-05-07 14:47:59"
+  },
+  {
+    "id": "news-c405ead2f4be96a69e67",
+    "title": "2 days left: Get 50% off a second pass to TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/05/07/2-days-left-get-50-off-a-second-pass-to-techcrunch-disrupt-2026/",
+    "source": "TechCrunch",
+    "summary": "Two days left to save up to $410 on your pass, and get a second one at 50% off to TechCrunch Disrupt 2026. Offer ends May 8, 11:59 p.m. PT. Register now.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T14:00:00.000Z",
+    "discovered_at": "2026-05-07 14:47:59"
+  },
+  {
+    "id": "news-7da45bc96137b73cf5e7",
+    "title": "China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open-source AI skyrockets",
+    "url": "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/",
+    "source": "TechCrunch",
+    "summary": "Moonshot's annualized recurring revenue topped $200 million in April, driven by rapid growth in paid subscriptions and API usage.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T13:44:25.000Z",
+    "discovered_at": "2026-05-07 14:47:59"
+  },
+  {
+    "id": "news-330128a430535f8c6c84",
+    "title": "Spotify wants to become the home for AI-generated personal audio",
+    "url": "https://techcrunch.com/2026/05/07/spotify-wants-to-become-the-home-for-ai-generated-personal-audio/",
+    "source": "TechCrunch",
+    "summary": "Users will be able to create a podcast from Codex or Claude Code and import it to Spotify",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T13:00:00.000Z",
+    "discovered_at": "2026-05-07 14:47:59"
+  },
+  {
+    "id": "news-05e80ec6d2f62fe9c07e",
+    "title": "Spotify&#8217;s AI DJ now supports French, German, Italian and Brazilian Portuguese",
+    "url": "https://techcrunch.com/2026/05/07/spotifys-ai-dj-now-supports-french-german-italian-and-brazilian-portuguese/",
+    "source": "TechCrunch",
+    "summary": "Spotify's AI DJ feature now supports French, German, Italian, and Brazilian Portuguese.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T12:20:04.000Z",
+    "discovered_at": "2026-05-07 14:47:59"
+  },
+  {
     "id": "news-e41b9b9c2133078d6fda",
     "title": "Parloa builds service agents customers want to talk to",
     "url": "https://openai.com/index/parloa",
@@ -9,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-7be8dfa76af045ab4479",
@@ -21,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T05:25:10.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-682acca1ab2fd865a68d",
@@ -33,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T23:37:02.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-534b5121c9c699638505",
@@ -45,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:57:56.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-de7a083a7aeaf946994c",
@@ -57,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:43:24.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-30a5aafec8ba8e52321e",
@@ -69,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:32:55.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-79e266a1a3f04e3232ad",
@@ -81,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:21:45.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-987ff63a1291be58f684",
@@ -93,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T20:18:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-1d1bfdc0279bf4f15458",
@@ -105,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T18:23:54.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-3c23afd6f16c3e54d03b",
@@ -117,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:55:53.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-5b4c238ff41cad0e4b72",
@@ -129,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:23:08.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-f652c92e96cc29522f1b",
@@ -141,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:20:34.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -153,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-eb5fc0a4ced6a8eb1137",
@@ -165,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:49:39.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-cf94a008e1d648ffb430",
@@ -177,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:46:38.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -189,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:37:32.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-075301c2724398f79c00",
@@ -201,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:27:36.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-8ea5f804c10d514b0ad9",
@@ -213,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:12:49.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-be370d838a5a7d0f1ec3",
@@ -225,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-de77881f8c0a910ff9b2",
@@ -237,31 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T14:30:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
-  },
-  {
-    "id": "news-fb25f6ee23901c289c62",
-    "title": "3 days left to lock in 50% off a second ticket to TechCrunch Disrupt 2026",
-    "url": "https://techcrunch.com/2026/05/06/3-days-left-to-lock-in-50-off-a-second-ticket-to-techcrunch-disrupt-2026/",
-    "source": "TechCrunch",
-    "summary": "Three days left to lock in 50% off a second ticket to Disrupt 2026. Buy one TechCrunch Disrupt 2026 ticket, and get a second ticket at 50% off. Gain more visibility in the tech industry. Offer ends May 8 at 11:59 p.m. PT.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T14:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
-  },
-  {
-    "id": "news-5fc818b755da8ca14202",
-    "title": "AI boom pushes Samsung to $1T",
-    "url": "https://techcrunch.com/2026/05/06/ai-boom-pushes-samsung-to-1t/",
-    "source": "TechCrunch",
-    "summary": "Samsung crossed the $1 trillion valuation mark after shares surged on AI-driven chip demand, making it only the second Asian company after TSMC to hit the milestone.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T13:54:09.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-82fc41339ea59c51fc1f",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T13:00:30.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-f6e064821d2f748dc913",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T11:45:41.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-6dc9f357c63d83ede907",
@@ -297,31 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T10:13:09.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
-  },
-  {
-    "id": "news-604a9b96d7c3935db0e0",
-    "title": "Peter Sarlin&#8217;s QuTwo reaches $380M valuation in angel round",
-    "url": "https://techcrunch.com/2026/05/05/peter-sarlins-qutwo-reaches-380m-valuation-in-angel-round/",
-    "source": "TechCrunch",
-    "summary": "Enterprise AI will be QuTwo’s bread and butter. “AI is the north star that we will continue to aim for. Quantum is just a new type of compute,” said Sarlin, who is adamant that QuTwo is an AI company.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T06:47:12.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
-  },
-  {
-    "id": "news-7ae4ba12b486b21fd1e0",
-    "title": "Marc Lore says that AI will soon enable anyone to open a restaurant",
-    "url": "https://techcrunch.com/2026/05/05/marc-lore-says-that-ai-will-soon-enable-anyone-open-a-restaurant/",
-    "source": "TechCrunch",
-    "summary": "Wonder wants to turn its robotic kitchens into AI-powered “restaurant factories,” letting anyone spin up a virtual food brand with a prompt.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T06:34:32.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-94a93b54a777d7269e9a",
@@ -333,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-94f58b450581f2c916b3",
@@ -345,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-8665a96e70ff0510ce62",
@@ -357,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-bdecd9008a33c6517ffa",
@@ -369,43 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
-  },
-  {
-    "id": "news-beac6a64e4732482071f",
-    "title": "SAP bets $1.16B on 18-month-old German AI lab and says yes to NemoClaw",
-    "url": "https://techcrunch.com/2026/05/05/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/",
-    "source": "TechCrunch",
-    "summary": "SAP plans to buy German AI startup Prior Labs and invest heavily in it. It is also prohibiting customers' agents use to a select few like Nvidia's NemoClaw.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T23:50:10.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
-  },
-  {
-    "id": "news-8a2de8a282b0bcc104f7",
-    "title": "Google Home&#8217;s Gemini AI can handle more complicated requests",
-    "url": "https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade",
-    "source": "The Verge",
-    "summary": "Google Home users can now ask Gemini to complete more complex, multi-step tasks and combine multiple tasks in a single command. Google has updated Gemini for Home to Gemini 3.1, which it says will improve the smart home assistant's ability to interpret and act on requests. The upgrade will also make Gemini for Home be…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T21:46:04.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
-  },
-  {
-    "id": "news-0d2c9bc6d57845f4d165",
-    "title": "Apple agrees to pay iPhone owners $250 million for not delivering AI Siri",
-    "url": "https://www.theverge.com/tech/924706/apple-iphone-siri-intelligence-class-action-lawsuit-settlement",
-    "source": "The Verge",
-    "summary": "Apple has agreed to pay $250 million to settle a class action lawsuit that accused it of misleading customers about the availability of its Apple Intelligence features. The proposed settlement would apply to people in the US who purchased all models of the iPhone 16 and the iPhone 15 Pro between June 10th, 2024 and [&…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T21:18:23.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-76cbe027f6a80fda96aa",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-a654fb66813e953f3285",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-e9800213f3cd4b8c5308",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-c885d324429eab0f41bf",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-9807ae0752f785d88e85",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T21:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-d6581b92c87ef014b979",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-368128e6f28129236fd9",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-e6284b864c34a3240869",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-bc680bc14e9fe206072e",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:13"
+    "discovered_at": "2026-05-07 14:47:58"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:14"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-05-07 12:04:15"
+    "discovered_at": "2026-05-07 14:47:59"
   }
 ]
