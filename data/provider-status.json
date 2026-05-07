@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T00:02:20.982Z",
+  "generatedAt": "2026-05-07T01:23:23.235Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-07T00:02:19.774Z",
+      "lastCheckedAt": "2026-05-07T01:23:21.677Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-07T00:02:20.977Z",
+      "lastCheckedAt": "2026-05-07T01:23:23.227Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -122,31 +122,64 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-0-2026-05-06T23:20:14.000Z",
-          "title": "Qwen3.5 397B A17B went down",
+          "id": "together-feed-0-2026-05-07T01:06:53.000Z",
+          "title": "Kimi K2.6 went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-05-06T23:20:14.000Z",
-          "updatedAt": "2026-05-06T23:20:14.000Z",
+          "startedAt": "2026-05-07T01:06:53.000Z",
+          "updatedAt": "2026-05-07T01:06:53.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
+          "summary": "Kimi K2.6 went down"
         },
         {
-          "id": "together-feed-2-2026-05-06T21:18:05.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
+          "id": "together-feed-2-2026-05-07T00:24:05.000Z",
+          "title": "FLUX.1 [schnell] went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-05-06T21:18:05.000Z",
-          "updatedAt": "2026-05-06T21:18:05.000Z",
+          "startedAt": "2026-05-07T00:24:05.000Z",
+          "updatedAt": "2026-05-07T00:24:05.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
+          "summary": "FLUX.1 [schnell] went down"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-06T23:20:14.000Z",
+          "id": "together-feed-0-2026-05-07T01:06:53.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-07T01:06:53.000Z",
+          "updatedAt": "2026-05-07T01:06:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
+        },
+        {
+          "id": "together-feed-1-2026-05-07T00:26:03.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-07T00:26:03.000Z",
+          "updatedAt": "2026-05-07T00:26:03.000Z",
+          "resolvedAt": "2026-05-07T00:26:03.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        },
+        {
+          "id": "together-feed-2-2026-05-07T00:24:05.000Z",
+          "title": "FLUX.1 [schnell] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-07T00:24:05.000Z",
+          "updatedAt": "2026-05-07T00:24:05.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 [schnell] went down"
+        },
+        {
+          "id": "together-feed-3-2026-05-06T23:20:14.000Z",
           "title": "Qwen3.5 397B A17B went down",
           "status": "investigating",
           "impact": "major",
@@ -155,39 +188,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3.5 397B A17B went down"
-        },
-        {
-          "id": "together-feed-1-2026-05-06T22:06:14.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-06T22:06:14.000Z",
-          "updatedAt": "2026-05-06T22:06:14.000Z",
-          "resolvedAt": "2026-05-06T22:06:14.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput recovered"
-        },
-        {
-          "id": "together-feed-2-2026-05-06T21:18:05.000Z",
-          "title": "Qwen3 235B A22B Instruct 2507 Throughput went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-06T21:18:05.000Z",
-          "updatedAt": "2026-05-06T21:18:05.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 235B A22B Instruct 2507 Throughput went down"
-        },
-        {
-          "id": "together-feed-3-2026-05-05T11:32:12.000Z",
-          "title": "Qwen3.5 397B A17B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-05T11:32:12.000Z",
-          "updatedAt": "2026-05-05T11:32:12.000Z",
-          "resolvedAt": "2026-05-05T11:32:12.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B recovered"
         }
       ]
     },
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-07T00:02:20.349Z",
+      "lastCheckedAt": "2026-05-07T01:23:22.611Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-07T00:02:19.839Z",
+      "lastCheckedAt": "2026-05-07T01:23:22.026Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -296,7 +296,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-07T00:02:20.704Z",
+      "lastCheckedAt": "2026-05-07T01:23:23.031Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -361,7 +361,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-07T00:02:19.694Z",
+      "lastCheckedAt": "2026-05-07T01:23:21.907Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -415,7 +415,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-07T00:02:19.788Z",
+      "lastCheckedAt": "2026-05-07T01:23:22.285Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -435,7 +435,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-07T00:02:19.789Z",
+      "lastCheckedAt": "2026-05-07T01:23:21.692Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
