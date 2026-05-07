@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-07T20:37:19.792Z"
+generated_at: "2026-05-07T22:14:32.403Z"
 ---
 
 # GPT-5.5: release brief
@@ -29,12 +29,12 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 ## Outside coverage and early reactions
 
+- OpenAI (2026-05-07): [Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber](https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber) - OpenAI expands Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber, helping verified defenders accelerate vulnerability research and protect critical infrastructure.
 - OpenAI (2026-05-05): [GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant) - GPT-5.5 Instant updates ChatGPT's default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.
 - OpenAI (2026-05-05): [GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
 - TechCrunch (2026-05-07): [OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/) - The company is expanding its efforts to protect ChatGPT users in cases where conversations may turn to self-harm.
 - The Verge (2026-05-07): [OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts) - Save to Spotify is a new command-line tool designed specifically for AI agents like OpenClaw, Claude Code, or OpenAI Codex. If you're the kind of person who collects research on a topic, then feeds it through their AI of choice to create audio summaries and personal podcasts, this lets you save them right alongside th…
 - OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
-- OpenAI (2026-05-06): [How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 
 ## Suggested thread / post structure
 
@@ -55,9 +55,9 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
+- [OpenAI: Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber](https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber)
 - [OpenAI: GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant)
 - [OpenAI: GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
 - [TechCrunch: OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/)
 - [The Verge: OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts)
 - [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
-- [OpenAI: How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals)
