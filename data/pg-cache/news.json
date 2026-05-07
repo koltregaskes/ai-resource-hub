@@ -1,5 +1,101 @@
 [
   {
+    "id": "news-265a65b4e496048bd7c1",
+    "title": "OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm",
+    "url": "https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/",
+    "source": "TechCrunch",
+    "summary": "The company is expanding its efforts to protect ChatGPT users in cases where conversations may turn to self-harm.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T20:20:20.000Z",
+    "discovered_at": "2026-05-07 20:37:10"
+  },
+  {
+    "id": "news-989d85258831304b5be8",
+    "title": "Perplexity&#8217;s Personal Computer is now available to everyone on Mac",
+    "url": "https://techcrunch.com/2026/05/07/perplexitys-personal-computer-is-now-available-everyone-on-mac/",
+    "source": "TechCrunch",
+    "summary": "Perplexity's Personal Computer brings AI agents to your Mac, and is now open to everyone.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T19:57:59.000Z",
+    "discovered_at": "2026-05-07 20:37:10"
+  },
+  {
+    "id": "news-5fbe73cbccde7aa0ef41",
+    "title": "Mira Murati’s deposition pulled back the curtain on Sam Altman’s ouster",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/926383/mira-murati-sam-altman-musk-trial-ouster",
+    "source": "The Verge",
+    "summary": "The week leading up to Thanksgiving 2023 was the AI industry's biggest soap opera moment. OpenAI CEO Sam Altman was abruptly ousted from his role at the ChatGPT-maker. The explanation? That Altman was \"not consistently candid in his communications with the board.\" Now, via witness testimony and trial exhibits in Musk…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T19:55:22.000Z",
+    "discovered_at": "2026-05-07 20:37:11"
+  },
+  {
+    "id": "news-c6a2d3c5ea7f42042763",
+    "title": "Apple&#8217;s AirPods with cameras for AI are apparently close to production",
+    "url": "https://www.theverge.com/tech/926376/apple-airpods-cameras-ai-production",
+    "source": "The Verge",
+    "summary": "Apple's rumored AirPods with cameras are nearing a stage where the company will test early mass production, Bloomberg's Mark Gurman reports. Currently, Apple testers are \"actively using\" prototypes that are in the design validation test stage, which is one step before the production validation test stage. The AirPods'…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T19:39:22.000Z",
+    "discovered_at": "2026-05-07 20:37:11"
+  },
+  {
+    "id": "news-74a9ddc6a1c12547f7bc",
+    "title": "SpaceX has a $55 billion plan to build AI chips in Texas",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/926356/spacex-terafab-plant-cost-ai-chips",
+    "source": "The Verge",
+    "summary": "Elon Musk's plans to get into the AI chip manufacturing business are going to be costly. As the New York Times and CNBC report, SpaceX is planning to invest at least $55 billion into its \"Terafab\" chip plant in Austin, Texas. That's according to the details of a public hearing notice filed in Grimes County, [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T19:26:16.000Z",
+    "discovered_at": "2026-05-07 20:37:11"
+  },
+  {
+    "id": "news-c347902da4798462938c",
+    "title": "Elon Musk&#8217;s lawsuit is putting OpenAI&#8217;s safety record under the microscope",
+    "url": "https://techcrunch.com/2026/05/07/elon-musks-lawsuit-is-putting-openais-safety-record-under-the-microscope/",
+    "source": "TechCrunch",
+    "summary": "Elon Musk's legal effort to dismantle OpenAI may hinge on how its for-profit subsidiary enhances or detracts from the frontier lab's founding mission of ensuring that humanity benefits from artificial general intelligence.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T19:21:21.000Z",
+    "discovered_at": "2026-05-07 20:37:10"
+  },
+  {
+    "id": "news-4827140096bfe134bd58",
+    "title": "Mozilla says 271 vulnerabilities found by Mythos have \"almost no false positives\"",
+    "url": "https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/",
+    "source": "Ars Technica",
+    "summary": "The developer of Firefox says it has \"completely bought in\" on AI-assisted bug discovery.",
+    "category": "research",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T19:18:16.000Z",
+    "discovered_at": "2026-05-07 20:37:11"
+  },
+  {
+    "id": "news-b354130148bdefbe54be",
+    "title": "Bumble is getting rid of the swipe, CEO says",
+    "url": "https://techcrunch.com/2026/05/07/bumble-is-getting-rid-of-the-swipe-ceo-says/",
+    "source": "TechCrunch",
+    "summary": "Based on Whitney Wolfe Herd's past comments about Bumble's new direction, the company is expected to lean into AI -- Bumble is even working on an AI dating assistant called Bee, and the CEO has made many comments over the years about how AI will be \"a supercharger to love and relationships.\"",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T19:06:17.000Z",
+    "discovered_at": "2026-05-07 20:37:10"
+  },
+  {
     "id": "news-4d4a9538598b0338342e",
     "title": "ChatGPT&#8217;s &#8216;Trusted Contact&#8217; will alert loved ones of safety concerns",
     "url": "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification",
@@ -9,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T18:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:11"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -21,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T17:40:50.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:11"
   },
   {
     "id": "news-c044e7ba828e542acd92",
@@ -33,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T16:05:48.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-b5cffd1657a47db5f3fa",
@@ -45,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T15:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-1d1975f8c7b5ecd27e12",
@@ -57,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:30:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-5f96233f714807cb49b5",
@@ -69,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:24:54.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-608851b1f7f902dd7201",
@@ -81,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:15:40.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:11"
   },
   {
     "id": "news-6fbc73af09243119175a",
@@ -93,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:11"
   },
   {
     "id": "news-c405ead2f4be96a69e67",
@@ -105,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-7da45bc96137b73cf5e7",
@@ -117,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:44:25.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-330128a430535f8c6c84",
@@ -129,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-05e80ec6d2f62fe9c07e",
@@ -141,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T12:20:04.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -153,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-4ba89a634a8ba847997e",
@@ -165,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T10:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-7be8dfa76af045ab4479",
@@ -177,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T05:25:10.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-fe948365c4d6a69e5ad5",
@@ -189,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-de2ca3d7578dd51cbe19",
@@ -201,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-682acca1ab2fd865a68d",
@@ -213,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T23:37:02.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:11"
   },
   {
     "id": "news-534b5121c9c699638505",
@@ -225,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:57:56.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-de7a083a7aeaf946994c",
@@ -237,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:43:24.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-30a5aafec8ba8e52321e",
@@ -249,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:32:55.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-79e266a1a3f04e3232ad",
@@ -261,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:21:45.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:11"
   },
   {
     "id": "news-987ff63a1291be58f684",
@@ -273,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T20:18:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:11"
   },
   {
     "id": "news-1d1bfdc0279bf4f15458",
@@ -285,19 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T18:23:54.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
-  },
-  {
-    "id": "news-3c23afd6f16c3e54d03b",
-    "title": "Mira Murati tells the court that she couldn’t trust Sam Altman’s words",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/925338/openai-musk-v-altman-mira-murati",
-    "source": "The Verge",
-    "summary": "Mira Murati, OpenAI's former CTO, has testified under oath that CEO Sam Altman lied to her about the safety standards for a new AI model. In a video deposition shown during the ongoing Musk v. Altman trial on Wednesday, Murati said Altman falsely stated that OpenAI's legal department determined a new AI model did not…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T17:55:53.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-5b4c238ff41cad0e4b72",
@@ -309,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:23:08.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
-  },
-  {
-    "id": "news-f652c92e96cc29522f1b",
-    "title": "DeepSeek could hit $45B valuation from its first investment round",
-    "url": "https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/",
-    "source": "TechCrunch",
-    "summary": "The Chinese AI lab came to prominence in early 2025 after launching a large language model that trained on a fraction of the compute power and at a fraction of the cost of the big U.S. models like those from OpenAI and Anthropic.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T17:20:34.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -333,67 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
-  },
-  {
-    "id": "news-eb5fc0a4ced6a8eb1137",
-    "title": "Google updates AI search to include quotes from Reddit and other sources",
-    "url": "https://techcrunch.com/2026/05/06/google-updates-ai-search-to-include-expert-advice-from-reddit-and-other-web-forums/",
-    "source": "TechCrunch",
-    "summary": "While citing web forums and discussion boards can help users find answers to more niche queries, this design choice could also prove chaotic.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T15:49:39.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
-  },
-  {
-    "id": "news-cf94a008e1d648ffb430",
-    "title": "Khosla-backed robotics startup Genesis AI has gone full stack, demo shows",
-    "url": "https://techcrunch.com/2026/05/06/khosla-backed-robotics-startup-genesis-ai-has-gone-full-stack-demo-shows/",
-    "source": "TechCrunch",
-    "summary": "Genesis AI, a startup that raised a $105 million seed round to build foundational AI for robotics, has unveiled its first model, GENE-26.5, but also a demo showcasing a set of robotic hands performing complex tasks.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T15:46:38.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
-  },
-  {
-    "id": "news-075301c2724398f79c00",
-    "title": "Tinder owner Match Group is slowing hiring to pay for its increased use of AI tools",
-    "url": "https://techcrunch.com/2026/05/06/tinder-owner-match-group-is-slowing-hiring-to-pay-for-its-increased-use-of-ai-tools/",
-    "source": "TechCrunch",
-    "summary": "Match Group said that it's slowing its hiring plans for the rest of the year because AI tools \"cost a lot of money.\"",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T15:27:36.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
-  },
-  {
-    "id": "news-82fc41339ea59c51fc1f",
-    "title": "Google&#8217;s AI search summaries will now quote Reddit",
-    "url": "https://www.theverge.com/tech/924993/google-ai-search-mode-overviews-update-reddit-links",
-    "source": "The Verge",
-    "summary": "Google is updating its AI Search features to make it easier for users to find information from sources they know and trust. One of the more notable changes introduces \"a preview of perspectives\" from firsthand sources like social media, Reddit, and other web forums, effectively linking your search queries with online…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T13:00:30.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
-  },
-  {
-    "id": "news-f6e064821d2f748dc913",
-    "title": "Microsoft’s Office and LinkedIn chief now runs Teams in latest reshuffle",
-    "url": "https://www.theverge.com/tech/924931/microsoft-office-copilot-windows-reorg-shuffle",
-    "source": "The Verge",
-    "summary": "Microsoft's LinkedIn chief, Ryan Roslansky, took on an expanded role at the company as head of Office last year, and he's now getting more responsibilities as part of the latest leadership reshuffle inside Microsoft. Sources tell me that the Microsoft Teams organization is moving to report to Roslansky, who will now l…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T11:45:41.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-8665a96e70ff0510ce62",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-94a93b54a777d7269e9a",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-bdecd9008a33c6517ffa",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-94f58b450581f2c916b3",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -453,31 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
-  },
-  {
-    "id": "news-76cbe027f6a80fda96aa",
-    "title": "GPT-5.5 Instant System Card",
-    "url": "https://openai.com/index/gpt-5-5-instant-system-card",
-    "source": "OpenAI",
-    "summary": null,
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
-  },
-  {
-    "id": "news-e9800213f3cd4b8c5308",
-    "title": "GPT-5.5 Instant: smarter, clearer, and more personalized",
-    "url": "https://openai.com/index/gpt-5-5-instant",
-    "source": "OpenAI",
-    "summary": "GPT-5.5 Instant updates ChatGPT’s default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-a654fb66813e953f3285",
@@ -489,7 +477,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
+  },
+  {
+    "id": "news-e9800213f3cd4b8c5308",
+    "title": "GPT-5.5 Instant: smarter, clearer, and more personalized",
+    "url": "https://openai.com/index/gpt-5-5-instant",
+    "source": "OpenAI",
+    "summary": "GPT-5.5 Instant updates ChatGPT’s default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T10:00:00.000Z",
+    "discovered_at": "2026-05-07 20:37:09"
+  },
+  {
+    "id": "news-76cbe027f6a80fda96aa",
+    "title": "GPT-5.5 Instant System Card",
+    "url": "https://openai.com/index/gpt-5-5-instant-system-card",
+    "source": "OpenAI",
+    "summary": null,
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T10:00:00.000Z",
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-c885d324429eab0f41bf",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-9807ae0752f785d88e85",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T21:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-d6581b92c87ef014b979",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:01"
+    "discovered_at": "2026-05-07 20:37:09"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -753,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -765,6 +777,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-05-07 18:58:02"
+    "discovered_at": "2026-05-07 20:37:10"
   }
 ]

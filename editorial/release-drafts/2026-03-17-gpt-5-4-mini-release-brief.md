@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.4 Mini"
 provider: "OpenAI"
 release_date: "2026-03-17"
-generated_at: "2026-05-07T18:58:10.741Z"
+generated_at: "2026-05-07T20:37:19.793Z"
 ---
 
 # GPT-5.4 Mini: release brief
@@ -29,8 +29,8 @@ GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an 
 
 ## Outside coverage and early reactions
 
+- TechCrunch (2026-05-07): [OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/) - The company is expanding its efforts to protect ChatGPT users in cases where conversations may turn to self-harm.
 - The Verge (2026-05-07): [OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts) - Save to Spotify is a new command-line tool designed specifically for AI agents like OpenClaw, Claude Code, or OpenAI Codex. If you're the kind of person who collects research on a topic, then feeds it through their AI of choice to create audio summaries and personal podcasts, this lets you save them right alongside th…
-- TechCrunch (2026-05-06): [DeepSeek could hit $45B valuation from its first investment round](https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/) - The Chinese AI lab came to prominence in early 2025 after launching a large language model that trained on a fraction of the compute power and at a fraction of the cost of the big U.S. models like those from OpenAI and Anthropic.
 - OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
 - OpenAI (2026-05-06): [How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 - OpenAI (2026-05-07): [Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api) - Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.
@@ -54,8 +54,8 @@ GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an 
 
 - [Official launch or docs](https://developers.openai.com/api/docs/guides/latest-model)
 - [Provider API/docs](https://platform.openai.com/docs/models)
+- [TechCrunch: OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/)
 - [The Verge: OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts)
-- [TechCrunch: DeepSeek could hit $45B valuation from its first investment round](https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/)
 - [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
 - [OpenAI: How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals)
 - [OpenAI: Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api)

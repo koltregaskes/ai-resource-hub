@@ -7,7 +7,7 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-05-07T18:58:10.740Z"
+generated_at: "2026-05-07T20:37:19.793Z"
 ---
 
 # Claude Mythos Preview: release brief
@@ -31,7 +31,7 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
-- TechCrunch (2026-05-06): [DeepSeek could hit $45B valuation from its first investment round](https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/) - The Chinese AI lab came to prominence in early 2025 after launching a large language model that trained on a fraction of the compute power and at a fraction of the cost of the big U.S. models like those from OpenAI and Anthropic.
+- Ars Technica (2026-05-07): [Mozilla says 271 vulnerabilities found by Mythos have "almost no false positives"](https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/) - The developer of Firefox says it has "completely bought in" on AI-assisted bug discovery.
 
 ## Suggested thread / post structure
 
@@ -54,4 +54,4 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 - [Official launch or docs](https://www.anthropic.com/glasswing)
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
-- [TechCrunch: DeepSeek could hit $45B valuation from its first investment round](https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/)
+- [Ars Technica: Mozilla says 271 vulnerabilities found by Mythos have "almost no false positives"](https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/)

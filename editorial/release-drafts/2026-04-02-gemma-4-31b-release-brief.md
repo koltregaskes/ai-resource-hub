@@ -7,12 +7,12 @@ priority: "watch"
 model: "Gemma 4 31B"
 provider: "Google"
 release_date: "2026-04-02"
-generated_at: "2026-05-07T18:58:10.740Z"
+generated_at: "2026-05-07T20:37:19.793Z"
 ---
 
 # Gemma 4 31B: release brief
 
-Google's Gemma 4 31B is on the release desk with 2 related stories and 0 benchmark signals to review.
+Google's Gemma 4 31B is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,7 +30,6 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-05-06): [Google&#8217;s AI search summaries will now quote Reddit](https://www.theverge.com/tech/924993/google-ai-search-mode-overviews-update-reddit-links) - Google is updating its AI Search features to make it easier for users to find information from sources they know and trust. One of the more notable changes introduces "a preview of perspectives" from firsthand sources like social media, Reddit, and other web forums, effectively linking your search queries with online…
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
 ## Suggested thread / post structure
@@ -54,5 +53,4 @@ Gemma 4 31B is a currently tracked release from Google. It belongs in the open-w
 
 - [Official launch or docs](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
-- [The Verge: Google&#8217;s AI search summaries will now quote Reddit](https://www.theverge.com/tech/924993/google-ai-search-mode-overviews-update-reddit-links)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)
