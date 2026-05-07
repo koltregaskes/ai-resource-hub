@@ -7,7 +7,7 @@ priority: "backfill"
 model: "GPT-5.3 Chat"
 provider: "OpenAI"
 release_date: "2026-03-03"
-generated_at: "2026-05-07T17:02:55.781Z"
+generated_at: "2026-05-07T18:58:10.741Z"
 ---
 
 # GPT-5.3 Chat: release brief
@@ -33,7 +33,7 @@ GPT-5.3 Chat is a currently tracked release from OpenAI. It is positioned as an 
 - TechCrunch (2026-05-06): [DeepSeek could hit $45B valuation from its first investment round](https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/) - The Chinese AI lab came to prominence in early 2025 after launching a large language model that trained on a fraction of the compute power and at a fraction of the cost of the big U.S. models like those from OpenAI and Anthropic.
 - OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
 - OpenAI (2026-05-06): [How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
-- OpenAI (2026-04-27): [OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate) - OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.
+- OpenAI (2026-05-07): [Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api) - Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.
 
 ## Suggested thread / post structure
 
@@ -58,4 +58,4 @@ GPT-5.3 Chat is a currently tracked release from OpenAI. It is positioned as an 
 - [TechCrunch: DeepSeek could hit $45B valuation from its first investment round](https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/)
 - [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
 - [OpenAI: How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals)
-- [OpenAI: OpenAI available at FedRAMP Moderate](https://openai.com/index/openai-available-at-fedramp-moderate)
+- [OpenAI: Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api)

@@ -1,5 +1,17 @@
 [
   {
+    "id": "news-4d4a9538598b0338342e",
+    "title": "ChatGPT&#8217;s &#8216;Trusted Contact&#8217; will alert loved ones of safety concerns",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/925874/chatgpt-trusted-contact-emergency-self-harm-notification",
+    "source": "The Verge",
+    "summary": "OpenAI is launching an optional safety feature for ChatGPT that allows adult users to assign an emergency contact for mental health and safety concerns. Friends, family members, or caregivers designated as a \"Trusted Contact\" will be notified if OpenAI detects that a person may have discussed topics like self-harm or…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T18:00:00.000Z",
+    "discovered_at": "2026-05-07 18:58:02"
+  },
+  {
     "id": "news-f997a4857c3224676938",
     "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
     "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
@@ -8,8 +20,8 @@
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-05-07T16:21:38.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "published_at": "2026-05-07T17:40:50.000Z",
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-c044e7ba828e542acd92",
@@ -21,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T16:05:48.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-b5cffd1657a47db5f3fa",
@@ -33,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T15:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-1d1975f8c7b5ecd27e12",
@@ -45,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:30:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-5f96233f714807cb49b5",
@@ -57,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:24:54.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-608851b1f7f902dd7201",
@@ -69,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:15:40.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-6fbc73af09243119175a",
@@ -81,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-c405ead2f4be96a69e67",
@@ -93,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-7da45bc96137b73cf5e7",
@@ -105,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:44:25.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-330128a430535f8c6c84",
@@ -117,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-05e80ec6d2f62fe9c07e",
@@ -129,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T12:20:04.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -141,7 +153,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
+  },
+  {
+    "id": "news-4ba89a634a8ba847997e",
+    "title": "Advancing voice intelligence with new models in the API",
+    "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api",
+    "source": "OpenAI",
+    "summary": "Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T10:00:00.000Z",
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-7be8dfa76af045ab4479",
@@ -153,7 +177,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T05:25:10.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
+  },
+  {
+    "id": "news-fe948365c4d6a69e5ad5",
+    "title": "Introducing Trusted Contact in ChatGPT",
+    "url": "https://openai.com/index/introducing-trusted-contact-in-chatgpt",
+    "source": "OpenAI",
+    "summary": "Introducing Trusted Contact in ChatGPT, an optional safety feature that notifies someone you trust if serious self-harm concerns are detected.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T00:00:00.000Z",
+    "discovered_at": "2026-05-07 18:58:01"
+  },
+  {
+    "id": "news-de2ca3d7578dd51cbe19",
+    "title": "Testing ads in ChatGPT",
+    "url": "https://openai.com/index/testing-ads-in-chatgpt",
+    "source": "OpenAI",
+    "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T00:00:00.000Z",
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-682acca1ab2fd865a68d",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T23:37:02.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-534b5121c9c699638505",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:57:56.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-de7a083a7aeaf946994c",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:43:24.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-30a5aafec8ba8e52321e",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:32:55.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-79e266a1a3f04e3232ad",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T21:21:45.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-987ff63a1291be58f684",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T20:18:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-1d1bfdc0279bf4f15458",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T18:23:54.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-3c23afd6f16c3e54d03b",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:55:53.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-5b4c238ff41cad0e4b72",
@@ -261,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:23:08.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-f652c92e96cc29522f1b",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T17:20:34.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -285,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-eb5fc0a4ced6a8eb1137",
@@ -297,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:49:39.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-cf94a008e1d648ffb430",
@@ -309,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:46:38.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-075301c2724398f79c00",
@@ -321,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T15:27:36.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-82fc41339ea59c51fc1f",
@@ -333,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T13:00:30.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-f6e064821d2f748dc913",
@@ -345,43 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T11:45:41.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
-  },
-  {
-    "id": "news-6dc9f357c63d83ede907",
-    "title": "Chrome’s AI features may be hogging 4GB of your computer storage",
-    "url": "https://www.theverge.com/tech/924933/google-chrome-4gb-gemini-nano-ai-features",
-    "source": "The Verge",
-    "summary": "Google Chrome may be taking up more of your storage than expected thanks to a large on-device AI model file that, in some cases, is being automatically downloaded to the browser's system folders. Users who have noticed unexplained drops in their available desktop device storage are now discovering that Chrome is insta…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T10:13:09.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
-  },
-  {
-    "id": "news-bdecd9008a33c6517ffa",
-    "title": "Introducing ChatGPT Futures: Class of 2026",
-    "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
-    "source": "OpenAI",
-    "summary": "Meet the ChatGPT Futures Class of 2026—26 student innovators using AI to build, research, and drive real-world impact. Discover how this generation is redefining learning, creativity, and opportunity with ChatGPT.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
-  },
-  {
-    "id": "news-94f58b450581f2c916b3",
-    "title": "How frontier firms are pulling ahead",
-    "url": "https://openai.com/index/introducing-b2b-signals",
-    "source": "OpenAI",
-    "summary": "OpenAI’s B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-8665a96e70ff0510ce62",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-94a93b54a777d7269e9a",
@@ -405,7 +417,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
+  },
+  {
+    "id": "news-bdecd9008a33c6517ffa",
+    "title": "Introducing ChatGPT Futures: Class of 2026",
+    "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
+    "source": "OpenAI",
+    "summary": "Meet the ChatGPT Futures Class of 2026—26 student innovators using AI to build, research, and drive real-world impact. Discover how this generation is redefining learning, creativity, and opportunity with ChatGPT.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-07 18:58:01"
+  },
+  {
+    "id": "news-94f58b450581f2c916b3",
+    "title": "How frontier firms are pulling ahead",
+    "url": "https://openai.com/index/introducing-b2b-signals",
+    "source": "OpenAI",
+    "summary": "OpenAI’s B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -417,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-76cbe027f6a80fda96aa",
@@ -429,19 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
-  },
-  {
-    "id": "news-a654fb66813e953f3285",
-    "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
-    "url": "https://openai.com/index/mrc-supercomputer-networking",
-    "source": "OpenAI",
-    "summary": "OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-e9800213f3cd4b8c5308",
@@ -453,7 +477,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
+  },
+  {
+    "id": "news-a654fb66813e953f3285",
+    "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
+    "url": "https://openai.com/index/mrc-supercomputer-networking",
+    "source": "OpenAI",
+    "summary": "OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T10:00:00.000Z",
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-c885d324429eab0f41bf",
@@ -465,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-9807ae0752f785d88e85",
@@ -477,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T21:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -489,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -501,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-d6581b92c87ef014b979",
@@ -513,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -525,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -537,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-0889e6f0be8e183ad6d8",
@@ -549,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T15:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-6d737041e91d8e016ce2",
@@ -561,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T04:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:01"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -573,43 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
-  },
-  {
-    "id": "news-368128e6f28129236fd9",
-    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
-    "url": "https://openai.com/index/openai-on-aws",
-    "source": "OpenAI",
-    "summary": "OpenAI GPT models, Codex, and Managed Agents are now available on AWS, enabling enterprises to build secure AI in their AWS environments.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
-  },
-  {
-    "id": "news-e6284b864c34a3240869",
-    "title": "Our commitment to community safety",
-    "url": "https://openai.com/index/our-commitment-to-community-safety",
-    "source": "OpenAI",
-    "summary": "Learn how OpenAI protects community safety in ChatGPT through model safeguards, misuse detection, policy enforcement, and collaboration with safety experts.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-28T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
-  },
-  {
-    "id": "news-bc680bc14e9fe206072e",
-    "title": "OpenAI available at FedRAMP Moderate",
-    "url": "https://openai.com/index/openai-available-at-fedramp-moderate",
-    "source": "OpenAI",
-    "summary": "OpenAI is available at FedRAMP Moderate authorization for ChatGPT Enterprise and the OpenAI API, enabling secure AI adoption for U.S. federal agencies.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-27T14:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:44"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:46"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-05-07 17:02:47"
+    "discovered_at": "2026-05-07 18:58:02"
   }
 ]
