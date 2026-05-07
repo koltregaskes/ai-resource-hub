@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 07 May 2026, 00:02 UTC
+Generated: 07 May 2026, 04:02 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -32,7 +32,7 @@ This table shows how much of each provider's public model surface is currently r
 | Suno | 2 | 0 | 0 | n/a | n/a | n/a |
 | Udio | 2 | 0 | 0 | n/a | n/a | n/a |
 | Zhipu AI | 1 | 12 | 0 | GLM 5.1 (7 Apr 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
-| NVIDIA | 1 | 6 | 0 | Nemotron 3 Super (11 Mar 2026) | n/a | [docs](https://docs.api.nvidia.com) |
+| NVIDIA | 1 | 5 | 0 | Nemotron 3 Super (11 Mar 2026) | n/a | [docs](https://docs.api.nvidia.com) |
 | Microsoft | 1 | 4 | 0 | n/a | n/a | [docs](https://learn.microsoft.com/azure/ai-foundry/model-inference/concepts/models) |
 | Perplexity | 1 | 4 | 0 | n/a | n/a | [docs](https://docs.perplexity.ai) |
 | Hailuo AI | 1 | 0 | 0 | n/a | n/a | n/a |

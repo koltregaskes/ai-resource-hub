@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Qwen3.5 Plus 2026-02-15"
 provider: "Alibaba"
 release_date: "2026-02-16"
-generated_at: "2026-05-07T00:02:27.429Z"
+generated_at: "2026-05-07T04:02:29.238Z"
 ---
 
 # Qwen3.5 Plus 2026-02-15: release brief
