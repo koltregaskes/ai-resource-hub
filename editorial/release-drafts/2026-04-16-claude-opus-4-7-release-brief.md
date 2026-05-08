@@ -3,11 +3,11 @@ title: "Claude Opus 4.7: release brief"
 slug: "2026-04-16-claude-opus-4-7-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "high"
+priority: "watch"
 model: "Claude Opus 4.7"
 provider: "Anthropic"
 release_date: "2026-04-16"
-generated_at: "2026-05-07T22:14:32.404Z"
+generated_at: "2026-05-08T00:04:35.871Z"
 ---
 
 # Claude Opus 4.7: release brief
