@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Qwen3.5-Flash"
 provider: "Alibaba"
 release_date: "2026-02-25"
-generated_at: "2026-05-08T00:04:35.872Z"
+generated_at: "2026-05-08T03:51:39.626Z"
 ---
 
 # Qwen3.5-Flash: release brief

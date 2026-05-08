@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 08 May 2026, 00:04 UTC
+Generated: 08 May 2026, 03:51 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -17,7 +17,7 @@ This table shows how much of each provider's public model surface is currently r
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
 | Stability AI | 4 | 0 | 0 | n/a | n/a | [docs](https://platform.stability.ai/docs) |
-| Mistral | 3 | 23 | 0 | Mistral Medium 3.5 (30 Apr 2026) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
+| Mistral | 3 | 22 | 0 | Mistral Medium 3.5 (30 Apr 2026) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
 | Deepgram | 3 | 0 | 0 | n/a | [status](https://status.deepgram.com) | [docs](https://developers.deepgram.com) |
 | ElevenLabs | 3 | 0 | 0 | n/a | [status](https://status.elevenlabs.io) | [docs](https://elevenlabs.io/docs) |
 | Runway | 3 | 0 | 0 | n/a | n/a | [docs](https://docs.runwayml.com) |
@@ -32,7 +32,6 @@ This table shows how much of each provider's public model surface is currently r
 | Suno | 2 | 0 | 0 | n/a | n/a | n/a |
 | Udio | 2 | 0 | 0 | n/a | n/a | n/a |
 | Zhipu AI | 1 | 12 | 0 | GLM 5.1 (7 Apr 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
-| NVIDIA | 1 | 5 | 0 | Nemotron 3 Super (11 Mar 2026) | n/a | [docs](https://docs.api.nvidia.com) |
 | Microsoft | 1 | 4 | 0 | n/a | n/a | [docs](https://learn.microsoft.com/azure/ai-foundry/model-inference/concepts/models) |
 | Perplexity | 1 | 4 | 0 | n/a | n/a | [docs](https://docs.perplexity.ai) |
 | Hailuo AI | 1 | 0 | 0 | n/a | n/a | n/a |
@@ -40,6 +39,7 @@ This table shows how much of each provider's public model surface is currently r
 | PlayHT | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.play.ht) |
 | Resemble AI | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.resemble.ai) |
 | MiniMax | 0 | 7 | 0 | MiniMax M2.7 (18 Mar 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
+| NVIDIA | 0 | 6 | 0 | Nemotron 3 Super (11 Mar 2026) | n/a | [docs](https://docs.api.nvidia.com) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
 | AI21 Labs | 0 | 3 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |
 | Moonshot AI | 0 | 3 | 0 | Kimi K2.6 (20 Apr 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |

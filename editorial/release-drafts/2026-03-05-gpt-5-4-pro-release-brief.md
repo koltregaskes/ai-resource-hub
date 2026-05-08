@@ -7,7 +7,7 @@ priority: "backfill"
 model: "GPT-5.4 Pro"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-05-08T00:04:35.872Z"
+generated_at: "2026-05-08T03:51:39.626Z"
 ---
 
 # GPT-5.4 Pro: release brief
