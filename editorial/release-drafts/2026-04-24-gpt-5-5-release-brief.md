@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-08T16:43:39.313Z"
+generated_at: "2026-05-08T18:22:38.371Z"
 ---
 
 # GPT-5.5: release brief
@@ -31,8 +31,8 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 
 - OpenAI (2026-05-07): [Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber](https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber) - OpenAI expands Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber, helping verified defenders accelerate vulnerability research and protect critical infrastructure.
 - TechCrunch (2026-05-07): [OpenAI launches new voice intelligence features in its API](https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/) - The new features could be handy for customer service systems, but OpenAI says they have applications that work across a variety of other fields, including education and creator platforms.
-- OpenAI (2026-05-05): [GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant) - GPT-5.5 Instant updates ChatGPT's default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.
 - OpenAI (2026-05-05): [GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
+- OpenAI (2026-05-05): [GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant) - GPT-5.5 Instant updates ChatGPT's default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.
 - TechCrunch (2026-05-07): [OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/) - The company is expanding its efforts to protect ChatGPT users in cases where conversations may turn to self-harm.
 - The Verge (2026-05-07): [OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts) - Save to Spotify is a new command-line tool designed specifically for AI agents like OpenClaw, Claude Code, or OpenAI Codex. If you're the kind of person who collects research on a topic, then feeds it through their AI of choice to create audio summaries and personal podcasts, this lets you save them right alongside th…
 
@@ -57,7 +57,7 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [OpenAI: Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber](https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber)
 - [TechCrunch: OpenAI launches new voice intelligence features in its API](https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/)
-- [OpenAI: GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant)
 - [OpenAI: GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
+- [OpenAI: GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant)
 - [TechCrunch: OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/)
 - [The Verge: OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts)
