@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-27e7e35598a5159ee318",
+    "title": "PlayStation sees AI as a ‘powerful tool’ to help make games",
+    "url": "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games",
+    "source": "The Verge",
+    "summary": "As part of an earnings presentation on Friday, Sony shared how it's thinking about AI at the company, including many details about how it's evaluating AI as part of making PlayStation games. Generative AI has recently been showing up in bigger games - though many indie developers still reject it - and while Sony calls…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-08T16:30:56.000Z",
+    "discovered_at": "2026-05-08 16:43:30"
+  },
+  {
+    "id": "news-7dd0052ac621c2d1e084",
+    "title": "The “people’s airline” and the enterprise AI gold rush",
+    "url": "https://techcrunch.com/podcast/the-peoples-airline-and-the-enterprise-ai-gold-rush/",
+    "source": "TechCrunch",
+    "summary": "Everyone wants a piece of the&#160;enterprise&#160;AI pie, and this week, we saw a string of companies making their moves. From&#160;Anthropic and OpenAI announcing new joint ventures&#160;targeting enterprise AI deployment to&#160;SAP dropping $1B&#160;on German AI startup Prior Labs,&#160;it&#8217;s&#160;becoming cl…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-08T15:46:17.000Z",
+    "discovered_at": "2026-05-08 16:43:30"
+  },
+  {
+    "id": "news-18abfd036c359508505a",
+    "title": "Microsoft was worried OpenAI would run off to Amazon and ‘shit-talk’ Azure",
+    "url": "https://www.theverge.com/report/926771/microsoft-openai-amazon-worries-shit-talk-azure",
+    "source": "The Verge",
+    "summary": "When OpenAI was busy experimenting with AI-powered gaming bots, Microsoft CEO Satya Nadella and OpenAI CEO Sam Altman were in the early days of forming an AI partnership. Court documents from the ongoing Musk v. Altman trial have provided a rare look at the communications between Microsoft's top executives about inves…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-08T15:25:02.000Z",
+    "discovered_at": "2026-05-08 16:43:30"
+  },
+  {
+    "id": "news-68512a3cbeda65ed975d",
+    "title": "See what happens when creative legends use AI to make ads for small businesses",
+    "url": "https://blog.google/company-news/inside-google/company-announcements/the-small-brief/",
+    "source": "Google",
+    "summary": "Today we're launching The Small Brief, an initiative bringing together three ad industry icons to champion a local businesses they love. Their mission is to build breakt…",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-08T15:00:00.000Z",
+    "discovered_at": "2026-05-08 16:43:30"
+  },
+  {
     "id": "news-a3bf7bcc130ee9e2f247",
     "title": "Last 24 hours to get 50% off a second pass to TechCrunch Disrupt 2026",
     "url": "https://techcrunch.com/2026/05/08/last-24-hours-to-get-50-off-a-second-pass-to-techcrunch-disrupt-2026/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T14:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-4e6bf0b98881dab11e7f",
@@ -21,11 +69,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T13:31:37.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-4141d96cae93b7a0a157",
-    "title": "Why you can never get your doctor to call you back",
+    "title": "The fax machine is the bottleneck in US healthcare, and VCs are starting to notice",
     "url": "https://techcrunch.com/2026/05/07/the-back-office-problem-that-explains-why-specialists-never-call-you-back/",
     "source": "TechCrunch",
     "summary": "Like many AI companies automating work that humans currently do, Basata will eventually face a harder question about where the line is between augmenting workers and displacing them. For now, the founders say the administrative staff they work with aren't worried about that; they're more worried about drowning.",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T04:42:29.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-57ef3b10d01ae8cf11f9",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T22:24:50.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-8c23e63118a53615e3ce",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T21:02:11.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-265a65b4e496048bd7c1",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T20:20:20.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-989d85258831304b5be8",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:57:59.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-5fbe73cbccde7aa0ef41",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:55:22.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-c6a2d3c5ea7f42042763",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:39:22.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-74a9ddc6a1c12547f7bc",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:26:16.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-c347902da4798462938c",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:21:21.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-b354130148bdefbe54be",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:06:17.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-4d4a9538598b0338342e",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T18:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T17:40:50.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-c044e7ba828e542acd92",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T16:05:48.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-b5cffd1657a47db5f3fa",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T15:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-1d1975f8c7b5ecd27e12",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:30:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-5f96233f714807cb49b5",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:24:54.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-608851b1f7f902dd7201",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:15:40.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-6fbc73af09243119175a",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-c405ead2f4be96a69e67",
@@ -261,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T14:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-7da45bc96137b73cf5e7",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:44:25.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-330128a430535f8c6c84",
@@ -285,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-288ea344bbe070b948a8",
@@ -297,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-05e80ec6d2f62fe9c07e",
@@ -309,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T12:20:04.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -321,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-4ba89a634a8ba847997e",
@@ -333,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T10:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-7be8dfa76af045ab4479",
@@ -345,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T05:25:10.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-eed85cf61ed43c59d6f9",
@@ -357,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
-  },
-  {
-    "id": "news-de2ca3d7578dd51cbe19",
-    "title": "Testing ads in ChatGPT",
-    "url": "https://openai.com/index/testing-ads-in-chatgpt",
-    "source": "OpenAI",
-    "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-fe948365c4d6a69e5ad5",
@@ -381,43 +417,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
-    "id": "news-682acca1ab2fd865a68d",
-    "title": "Musk’s biggest loyalist became his biggest liability",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/925665/musk-altman-trial-shivon-zilis-testimony",
-    "source": "The Verge",
-    "summary": "I sat down in the Musk v. Altman trial courtroom today, painfully aware that no one was going to ask Shivon Zilis the question on everyone's minds: Girl, what the fuck are you doing? Zilis, who testified under oath that she is the mother of four of Musk's children, was… What's the best way to [&#8230;]",
-    "category": "industry",
+    "id": "news-de2ca3d7578dd51cbe19",
+    "title": "Testing ads in ChatGPT",
+    "url": "https://openai.com/index/testing-ads-in-chatgpt",
+    "source": "OpenAI",
+    "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-05-06T23:37:02.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
-  },
-  {
-    "id": "news-534b5121c9c699638505",
-    "title": "Barry Diller trusts Sam Altman. But &#8216;trust is irrelevant&#8217; as AGI nears, he says.",
-    "url": "https://techcrunch.com/2026/05/06/barry-diller-trusts-sam-altman-but-trust-is-irrelevant-as-agi-nears-he-says/",
-    "source": "TechCrunch",
-    "summary": "Barry Diller defended OpenAI CEO Sam Altman, while warning that AGI remains an unpredictable force needing guardrails.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T21:57:56.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
-  },
-  {
-    "id": "news-79e266a1a3f04e3232ad",
-    "title": "Google shuts down Project Mariner",
-    "url": "https://www.theverge.com/tech/925559/google-project-mariner-shut-down",
-    "source": "The Verge",
-    "summary": "Google has pulled the plug on Project Mariner, an experimental feature designed to perform tasks for you across the web, as reported earlier by Wired's Maxwell Zeff. The Project Mariner landing page now contains a message that says: \"Thank you for using Project Mariner. It was shut down on May 4th, 2026 and its techno…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T21:21:45.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "published_at": "2026-05-07T00:00:00.000Z",
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -429,43 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
-  },
-  {
-    "id": "news-8665a96e70ff0510ce62",
-    "title": "Uber uses OpenAI to help people earn smarter and book faster",
-    "url": "https://openai.com/index/uber",
-    "source": "OpenAI",
-    "summary": "Uber uses OpenAI to power AI assistants and voice features that help drivers earn smarter and riders book faster across a global real-time marketplace.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
-  },
-  {
-    "id": "news-94a93b54a777d7269e9a",
-    "title": "Singular Bank helps bankers move fast with ChatGPT and Codex",
-    "url": "https://openai.com/index/singular-bank",
-    "source": "OpenAI",
-    "summary": "Singular Bank built Singularity, an internal assistant using ChatGPT and Codex to help bankers save 60–90 minutes daily on meeting prep, portfolio analysis, and follow-up.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
-  },
-  {
-    "id": "news-bdecd9008a33c6517ffa",
-    "title": "Introducing ChatGPT Futures: Class of 2026",
-    "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
-    "source": "OpenAI",
-    "summary": "Meet the ChatGPT Futures Class of 2026—26 student innovators using AI to build, research, and drive real-world impact. Discover how this generation is redefining learning, creativity, and opportunity with ChatGPT.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-94f58b450581f2c916b3",
@@ -477,7 +453,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
+  },
+  {
+    "id": "news-bdecd9008a33c6517ffa",
+    "title": "Introducing ChatGPT Futures: Class of 2026",
+    "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
+    "source": "OpenAI",
+    "summary": "Meet the ChatGPT Futures Class of 2026—26 student innovators using AI to build, research, and drive real-world impact. Discover how this generation is redefining learning, creativity, and opportunity with ChatGPT.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-08 16:43:26"
+  },
+  {
+    "id": "news-94a93b54a777d7269e9a",
+    "title": "Singular Bank helps bankers move fast with ChatGPT and Codex",
+    "url": "https://openai.com/index/singular-bank",
+    "source": "OpenAI",
+    "summary": "Singular Bank built Singularity, an internal assistant using ChatGPT and Codex to help bankers save 60–90 minutes daily on meeting prep, portfolio analysis, and follow-up.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-08 16:43:26"
+  },
+  {
+    "id": "news-8665a96e70ff0510ce62",
+    "title": "Uber uses OpenAI to help people earn smarter and book faster",
+    "url": "https://openai.com/index/uber",
+    "source": "OpenAI",
+    "summary": "Uber uses OpenAI to power AI assistants and voice features that help drivers earn smarter and riders book faster across a global real-time marketplace.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-06T00:00:00.000Z",
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-e9800213f3cd4b8c5308",
@@ -501,19 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
-  },
-  {
-    "id": "news-76cbe027f6a80fda96aa",
-    "title": "GPT-5.5 Instant System Card",
-    "url": "https://openai.com/index/gpt-5-5-instant-system-card",
-    "source": "OpenAI",
-    "summary": null,
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-a654fb66813e953f3285",
@@ -525,7 +525,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
+  },
+  {
+    "id": "news-76cbe027f6a80fda96aa",
+    "title": "GPT-5.5 Instant System Card",
+    "url": "https://openai.com/index/gpt-5-5-instant-system-card",
+    "source": "OpenAI",
+    "summary": null,
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-05T10:00:00.000Z",
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-c885d324429eab0f41bf",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-9807ae0752f785d88e85",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T21:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-d6581b92c87ef014b979",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-92f8ee26a85afd656d63",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-30T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-6ce07af346a49ef2216f",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-29T20:00:00.000Z",
-    "discovered_at": "2026-05-08 14:14:59"
+    "discovered_at": "2026-05-08 16:43:26"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:00"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -753,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -765,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   },
   {
     "id": "news-373936d35ab08bd9aef7",
@@ -777,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T09:00:00.000Z",
-    "discovered_at": "2026-05-08 14:15:01"
+    "discovered_at": "2026-05-08 16:43:30"
   }
 ]
