@@ -1,92 +1,6 @@
 {
-  "generatedAt": "2026-05-08T09:50:22.753Z",
+  "generatedAt": "2026-05-08T10:57:14.682Z",
   "providers": [
-    {
-      "id": "deepseek",
-      "providerId": "deepseek",
-      "name": "DeepSeek",
-      "colour": "#2563eb",
-      "websiteUrl": "https://deepseek.com",
-      "statusPageUrl": "https://status.deepseek.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T09:50:21.504Z",
-      "overallStatus": "major_outage",
-      "overallLabel": "Major System Outage",
-      "summary": "1 active incident across 2 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "API 服务 (API Service)",
-          "status": "major_outage"
-        },
-        {
-          "name": "网页对话服务 (Web Chat Service)",
-          "status": "major_outage"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "vr5w0jpqv068",
-          "title": "DeepSeek 网页/API不可用（DeepSeek Web/API Service Not Available）",
-          "status": "identified",
-          "impact": "critical",
-          "startedAt": "2026-05-08T09:32:08.195Z",
-          "updatedAt": "2026-05-08T09:32:08.277Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/3mb879ydbqgn",
-          "summary": "The issue has been identified and a fix is being implemented."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "vr5w0jpqv068",
-          "title": "DeepSeek 网页/API不可用（DeepSeek Web/API Service Not Available）",
-          "status": "identified",
-          "impact": "critical",
-          "startedAt": "2026-05-08T09:32:08.195Z",
-          "updatedAt": "2026-05-08T09:32:08.277Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/3mb879ydbqgn",
-          "summary": "The issue has been identified and a fix is being implemented."
-        },
-        {
-          "id": "d9c1gqhzsrcl",
-          "title": "【已恢复】DeepSeek 网页/API 性能异常（[Resolved]DeepSeek Web/API Service Degraded Performance）",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-06T07:13:45.515Z",
-          "updatedAt": "2026-05-06T07:20:20.765Z",
-          "resolvedAt": "2026-05-06T07:20:20.747Z",
-          "url": "https://stspg.io/hf658kdwks6y",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "6cqq25c3c5j9",
-          "title": "【已恢复】DeepSeek 网页/API 性能异常（[Resolved]DeepSeek Web/API Service Degraded Performance）",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-06T03:53:04.745Z",
-          "updatedAt": "2026-05-06T04:04:16.889Z",
-          "resolvedAt": "2026-05-06T04:04:16.876Z",
-          "url": "https://stspg.io/tgcfbtmqbpms",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "5w5lp464fzsj",
-          "title": "【已恢复】DeepSeek API 异常（[Resolved]DeepSeek API Abnormal）",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-04-22T10:23:18.547Z",
-          "updatedAt": "2026-04-22T11:26:32.897Z",
-          "resolvedAt": "2026-04-22T11:26:32.880Z",
-          "url": "https://stspg.io/rkv8w02lxqpw",
-          "summary": "This incident has been resolved."
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -98,9 +12,9 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T09:50:21.488Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
+      "lastCheckedAt": "2026-05-08T10:57:13.427Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
@@ -126,33 +40,33 @@
         },
         {
           "name": "Claude for Government",
-          "status": "partial_outage"
+          "status": "operational"
         }
       ],
       "activeIncidents": [
         {
           "id": "378dqscjgghp",
           "title": "Elevated errors across Claude Models",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-05-08T09:49:14.043Z",
-          "updatedAt": "2026-05-08T09:49:14.235Z",
+          "updatedAt": "2026-05-08T10:26:46.752Z",
           "resolvedAt": null,
           "url": "https://stspg.io/zl0w1dmccgf7",
-          "summary": "We are currently investigating this issue."
+          "summary": "We have identified the cause and a fix is being rolled out. As of 10:22 UTC, the remaining impact is limited to Claude Opus 4.1 and Fast Mode for Claude Opus 4.6."
         }
       ],
       "recentIncidents": [
         {
           "id": "378dqscjgghp",
           "title": "Elevated errors across Claude Models",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-05-08T09:49:14.043Z",
-          "updatedAt": "2026-05-08T09:49:14.235Z",
+          "updatedAt": "2026-05-08T10:26:46.752Z",
           "resolvedAt": null,
           "url": "https://stspg.io/zl0w1dmccgf7",
-          "summary": "We are currently investigating this issue."
+          "summary": "We have identified the cause and a fix is being rolled out. As of 10:22 UTC, the remaining impact is limited to Claude Opus 4.1 and Fast Mode for Claude Opus 4.6."
         },
         {
           "id": "snxm62gpxfc9",
@@ -200,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T09:50:22.059Z",
+      "lastCheckedAt": "2026-05-08T10:57:14.113Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -208,6 +122,80 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "deepseek",
+      "providerId": "deepseek",
+      "name": "DeepSeek",
+      "colour": "#2563eb",
+      "websiteUrl": "https://deepseek.com",
+      "statusPageUrl": "https://status.deepseek.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-08T10:57:13.501Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 2 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "API 服务 (API Service)",
+          "status": "operational"
+        },
+        {
+          "name": "网页对话服务 (Web Chat Service)",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "vr5w0jpqv068",
+          "title": "【已恢复】DeepSeek 网页/API不可用（[Resolved]DeepSeek Web/API Service Not Available）",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-05-08T09:32:08.195Z",
+          "updatedAt": "2026-05-08T10:05:49.010Z",
+          "resolvedAt": "2026-05-08T10:05:48.997Z",
+          "url": "https://stspg.io/3mb879ydbqgn",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "d9c1gqhzsrcl",
+          "title": "【已恢复】DeepSeek 网页/API 性能异常（[Resolved]DeepSeek Web/API Service Degraded Performance）",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-06T07:13:45.515Z",
+          "updatedAt": "2026-05-06T07:20:20.765Z",
+          "resolvedAt": "2026-05-06T07:20:20.747Z",
+          "url": "https://stspg.io/hf658kdwks6y",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "6cqq25c3c5j9",
+          "title": "【已恢复】DeepSeek 网页/API 性能异常（[Resolved]DeepSeek Web/API Service Degraded Performance）",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-05-06T03:53:04.745Z",
+          "updatedAt": "2026-05-06T04:04:16.889Z",
+          "resolvedAt": "2026-05-06T04:04:16.876Z",
+          "url": "https://stspg.io/tgcfbtmqbpms",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "5w5lp464fzsj",
+          "title": "【已恢复】DeepSeek API 异常（[Resolved]DeepSeek API Abnormal）",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-04-22T10:23:18.547Z",
+          "updatedAt": "2026-04-22T11:26:32.897Z",
+          "resolvedAt": "2026-04-22T11:26:32.880Z",
+          "url": "https://stspg.io/rkv8w02lxqpw",
+          "summary": "This incident has been resolved."
+        }
+      ]
     },
     {
       "id": "fireworks",
@@ -220,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T09:50:22.428Z",
+      "lastCheckedAt": "2026-05-08T10:57:14.423Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -285,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T09:50:21.348Z",
+      "lastCheckedAt": "2026-05-08T10:57:13.365Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T09:50:21.510Z",
+      "lastCheckedAt": "2026-05-08T10:57:13.455Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -359,7 +347,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T09:50:21.457Z",
+      "lastCheckedAt": "2026-05-08T10:57:13.481Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -445,7 +433,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T09:50:22.748Z",
+      "lastCheckedAt": "2026-05-08T10:57:14.674Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
