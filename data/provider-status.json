@@ -1,6 +1,191 @@
 {
-  "generatedAt": "2026-05-08T14:15:03.475Z",
+  "generatedAt": "2026-05-08T15:10:14.326Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-08T15:10:13.206Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Codex Web",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KR421V8PCTFKA8EJJC2VCGA3",
+          "title": "Degraded Performance with Codex Cloud Tasks",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-05-08T15:07:16.000Z",
+          "updatedAt": "2026-05-08T15:07:16.000Z",
+          "resolvedAt": null,
+          "summary": null
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KR421V8PCTFKA8EJJC2VCGA3",
+          "title": "Degraded Performance with Codex Cloud Tasks",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-05-08T15:07:16.000Z",
+          "updatedAt": "2026-05-08T15:07:16.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KR3S3Q2RE54PVJ7GZPQNEY8Y",
+          "title": "Increased Error Rate for gpt-5.5 model in the API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-08T12:31:00.000Z",
+          "updatedAt": "2026-05-08T14:14:41.000Z",
+          "resolvedAt": "2026-05-08T14:14:41.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KR1Q0SWZESWXQVWQRKRDJCHK",
+          "title": "Elevated transcription failures affecting ChatGPT & Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-07T17:15:58.000Z",
+          "updatedAt": "2026-05-08T08:31:20.000Z",
+          "resolvedAt": "2026-05-08T08:31:20.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KR0PY1JN26FEK5829QZ2F59T",
+          "title": "Increased error rate with image generation in the API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-07T07:55:13.000Z",
+          "updatedAt": "2026-05-07T09:38:00.000Z",
+          "resolvedAt": "2026-05-07T09:38:00.000Z",
+          "summary": null
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-08T15:10:14.318Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-05-08T14:18:55.000Z",
+          "title": "Qwen3.5 9B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-08T14:18:55.000Z",
+          "updatedAt": "2026-05-08T14:18:55.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B went down"
+        },
+        {
+          "id": "together-feed-3-2026-05-07T20:09:51.000Z",
+          "title": "MiniMax M2.7 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-07T20:09:51.000Z",
+          "updatedAt": "2026-05-07T20:09:51.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.7 went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-05-08T14:18:55.000Z",
+          "title": "Qwen3.5 9B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-08T14:18:55.000Z",
+          "updatedAt": "2026-05-08T14:18:55.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B went down"
+        },
+        {
+          "id": "together-feed-1-2026-05-07T20:22:59.000Z",
+          "title": "MiniMax M2.7 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-07T20:22:59.000Z",
+          "updatedAt": "2026-05-07T20:22:59.000Z",
+          "resolvedAt": "2026-05-07T20:22:59.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.7 recovered"
+        },
+        {
+          "id": "together-feed-2-2026-05-07T20:11:43.000Z",
+          "title": "OpenAI GPT OSS 20B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-07T20:11:43.000Z",
+          "updatedAt": "2026-05-07T20:11:43.000Z",
+          "resolvedAt": "2026-05-07T20:11:43.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B recovered"
+        },
+        {
+          "id": "together-feed-3-2026-05-07T20:09:51.000Z",
+          "title": "MiniMax M2.7 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-07T20:09:51.000Z",
+          "updatedAt": "2026-05-07T20:09:51.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.7 went down"
+        }
+      ]
+    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -12,10 +197,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T14:15:02.458Z",
+      "lastCheckedAt": "2026-05-08T15:10:13.121Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "2 active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -45,12 +230,23 @@
       ],
       "activeIncidents": [
         {
+          "id": "fv8psq0wdpkn",
+          "title": "Elevated errors on Claude Sonnet 4.6",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-05-08T15:03:50.656Z",
+          "updatedAt": "2026-05-08T15:07:58.395Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/ld9rfd0x347q",
+          "summary": "A fix has been implemented and we are monitoring the results."
+        },
+        {
           "id": "vtt35dc73941",
           "title": "Elevated Errors on File Operations",
           "status": "investigating",
-          "impact": "none",
+          "impact": "minor",
           "startedAt": "2026-05-08T14:12:26.867Z",
-          "updatedAt": "2026-05-08T14:12:26.927Z",
+          "updatedAt": "2026-05-08T15:03:50.794Z",
           "resolvedAt": null,
           "url": "https://stspg.io/yh3q9c4qgdvk",
           "summary": "We are currently investigating this issue."
@@ -58,12 +254,23 @@
       ],
       "recentIncidents": [
         {
+          "id": "fv8psq0wdpkn",
+          "title": "Elevated errors on Claude Sonnet 4.6",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-05-08T15:03:50.656Z",
+          "updatedAt": "2026-05-08T15:07:58.395Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/ld9rfd0x347q",
+          "summary": "A fix has been implemented and we are monitoring the results."
+        },
+        {
           "id": "vtt35dc73941",
           "title": "Elevated Errors on File Operations",
           "status": "investigating",
-          "impact": "none",
+          "impact": "minor",
           "startedAt": "2026-05-08T14:12:26.867Z",
-          "updatedAt": "2026-05-08T14:12:26.927Z",
+          "updatedAt": "2026-05-08T15:03:50.794Z",
           "resolvedAt": null,
           "url": "https://stspg.io/yh3q9c4qgdvk",
           "summary": "We are currently investigating this issue."
@@ -89,17 +296,6 @@
           "resolvedAt": "2026-05-07T16:36:27.816Z",
           "url": "https://stspg.io/0vv7h1hfdddc",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "9h32bh60z06w",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-07T12:10:17.750Z",
-          "updatedAt": "2026-05-07T12:45:50.410Z",
-          "resolvedAt": "2026-05-07T12:45:50.391Z",
-          "url": "https://stspg.io/q47w2qqgt7ds",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -114,7 +310,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T14:15:03.217Z",
+      "lastCheckedAt": "2026-05-08T15:10:13.822Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +330,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T14:15:02.603Z",
+      "lastCheckedAt": "2026-05-08T15:10:13.350Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +404,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T14:15:03.360Z",
+      "lastCheckedAt": "2026-05-08T15:10:13.928Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +469,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T14:15:02.486Z",
+      "lastCheckedAt": "2026-05-08T15:10:13.203Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +523,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T14:15:02.794Z",
+      "lastCheckedAt": "2026-05-08T15:10:13.540Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,157 +531,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T14:15:02.418Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KR3S3Q2RE54PVJ7GZPQNEY8Y",
-          "title": "Increased Error Rate for gpt-5.5 model in the API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-08T12:31:00.000Z",
-          "updatedAt": "2026-05-08T14:14:41.000Z",
-          "resolvedAt": "2026-05-08T14:14:41.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KR1Q0SWZESWXQVWQRKRDJCHK",
-          "title": "Elevated transcription failures affecting ChatGPT & Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-07T17:15:58.000Z",
-          "updatedAt": "2026-05-08T08:31:20.000Z",
-          "resolvedAt": "2026-05-08T08:31:20.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KR0PY1JN26FEK5829QZ2F59T",
-          "title": "Increased error rate with image generation in the API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-07T07:55:13.000Z",
-          "updatedAt": "2026-05-07T09:38:00.000Z",
-          "resolvedAt": "2026-05-07T09:38:00.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KQDM1K1826RP1FFN86ZNA3WG",
-          "title": "Partial Disruption of ChatGPT Workspace Connector Write Actions",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-04-29T21:59:10.000Z",
-          "updatedAt": "2026-05-05T17:00:06.000Z",
-          "resolvedAt": "2026-05-05T17:00:06.000Z",
-          "summary": null
-        }
-      ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T14:15:03.468Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-05-07T20:22:59.000Z",
-          "title": "MiniMax M2.7 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-07T20:22:59.000Z",
-          "updatedAt": "2026-05-07T20:22:59.000Z",
-          "resolvedAt": "2026-05-07T20:22:59.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "MiniMax M2.7 recovered"
-        },
-        {
-          "id": "together-feed-1-2026-05-07T20:11:43.000Z",
-          "title": "OpenAI GPT OSS 20B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-07T20:11:43.000Z",
-          "updatedAt": "2026-05-07T20:11:43.000Z",
-          "resolvedAt": "2026-05-07T20:11:43.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B recovered"
-        },
-        {
-          "id": "together-feed-2-2026-05-07T20:09:51.000Z",
-          "title": "MiniMax M2.7 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-07T20:09:51.000Z",
-          "updatedAt": "2026-05-07T20:09:51.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "MiniMax M2.7 went down"
-        },
-        {
-          "id": "together-feed-3-2026-05-07T19:29:57.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-07T19:29:57.000Z",
-          "updatedAt": "2026-05-07T19:29:57.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        }
-      ]
     },
     {
       "id": "xai",
