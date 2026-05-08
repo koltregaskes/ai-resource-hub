@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-08T18:22:38.371Z"
+generated_at: "2026-05-08T20:15:44.974Z"
 ---
 
 # GPT-5.5: release brief
@@ -34,7 +34,7 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - OpenAI (2026-05-05): [GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
 - OpenAI (2026-05-05): [GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant) - GPT-5.5 Instant updates ChatGPT's default model with smarter, more accurate answers, reduced hallucinations, and improved personalization controls.
 - TechCrunch (2026-05-07): [OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/) - The company is expanding its efforts to protect ChatGPT users in cases where conversations may turn to self-harm.
-- The Verge (2026-05-07): [OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts) - Save to Spotify is a new command-line tool designed specifically for AI agents like OpenClaw, Claude Code, or OpenAI Codex. If you're the kind of person who collects research on a topic, then feeds it through their AI of choice to create audio summaries and personal podcasts, this lets you save them right alongside th…
+- OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
 
 ## Suggested thread / post structure
 
@@ -60,4 +60,4 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [OpenAI: GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
 - [OpenAI: GPT-5.5 Instant: smarter, clearer, and more personalized](https://openai.com/index/gpt-5-5-instant)
 - [TechCrunch: OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/)
-- [The Verge: OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts)
+- [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)

@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT-5.4 Pro"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-05-08T18:22:38.372Z"
+generated_at: "2026-05-08T20:15:44.975Z"
 ---
 
 # GPT-5.4 Pro: release brief
 
-OpenAI's GPT-5.4 Pro is on the release desk with 6 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.4 Pro is on the release desk with 5 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -31,7 +31,6 @@ GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an A
 
 - TechCrunch (2026-05-07): [OpenAI launches new voice intelligence features in its API](https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/) - The new features could be handy for customer service systems, but OpenAI says they have applications that work across a variety of other fields, including education and creator platforms.
 - TechCrunch (2026-05-07): [OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/) - The company is expanding its efforts to protect ChatGPT users in cases where conversations may turn to self-harm.
-- The Verge (2026-05-07): [OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts) - Save to Spotify is a new command-line tool designed specifically for AI agents like OpenClaw, Claude Code, or OpenAI Codex. If you're the kind of person who collects research on a topic, then feeds it through their AI of choice to create audio summaries and personal podcasts, this lets you save them right alongside th…
 - OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
 - OpenAI (2026-05-06): [How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 - OpenAI (2026-05-07): [Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api) - Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.
@@ -57,7 +56,6 @@ GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an A
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [TechCrunch: OpenAI launches new voice intelligence features in its API](https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/)
 - [TechCrunch: OpenAI introduces new &#8216;Trusted Contact&#8217; safeguard for cases of possible self-harm](https://techcrunch.com/2026/05/07/openai-introduces-new-trusted-contact-safeguard-for-cases-of-possible-self-harm/)
-- [The Verge: OpenClaw and Claude can put your AI-generated podcasts in Spotify](https://www.theverge.com/entertainment/925916/save-to-spotify-ai-podcasts)
 - [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
 - [OpenAI: How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals)
 - [OpenAI: Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api)
