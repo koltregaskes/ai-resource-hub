@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT Chat Latest"
 provider: "OpenAI"
 release_date: "2026-05-05"
-generated_at: "2026-05-08T07:56:32.493Z"
+generated_at: "2026-05-08T09:50:28.444Z"
 ---
 
 # GPT Chat Latest: release brief
