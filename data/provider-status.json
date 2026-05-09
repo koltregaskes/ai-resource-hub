@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-08T23:38:35.270Z",
+  "generatedAt": "2026-05-09T00:09:40.460Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T23:38:34.039Z",
+      "lastCheckedAt": "2026-05-09T00:09:39.111Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T23:38:34.715Z",
+      "lastCheckedAt": "2026-05-09T00:09:39.857Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T23:38:34.178Z",
+      "lastCheckedAt": "2026-05-09T00:09:39.339Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -208,7 +208,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T23:38:35.020Z",
+      "lastCheckedAt": "2026-05-09T00:09:40.274Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,7 +273,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T23:38:34.125Z",
+      "lastCheckedAt": "2026-05-09T00:09:39.225Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,7 +327,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T23:38:34.338Z",
+      "lastCheckedAt": "2026-05-09T00:09:39.472Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T23:38:34.053Z",
+      "lastCheckedAt": "2026-05-09T00:09:38.963Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -381,6 +381,16 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01KR50YN2DBMTXGPC6BQSJN48J",
+          "title": "Elevated errors for Responses API",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-05-09T00:07:17.000Z",
+          "updatedAt": "2026-05-09T00:08:01.000Z",
+          "resolvedAt": "2026-05-09T00:08:01.000Z",
+          "summary": null
+        },
+        {
           "id": "01KR421V8PCTFKA8EJJC2VCGA3",
           "title": "Degraded Performance with Codex Cloud Tasks",
           "status": "resolved",
@@ -409,16 +419,6 @@
           "updatedAt": "2026-05-08T08:31:20.000Z",
           "resolvedAt": "2026-05-08T08:31:20.000Z",
           "summary": null
-        },
-        {
-          "id": "01KR0PY1JN26FEK5829QZ2F59T",
-          "title": "Increased error rate with image generation in the API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-07T07:55:13.000Z",
-          "updatedAt": "2026-05-07T09:38:00.000Z",
-          "resolvedAt": "2026-05-07T09:38:00.000Z",
-          "summary": null
         }
       ]
     },
@@ -433,7 +433,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-08T23:38:35.263Z",
+      "lastCheckedAt": "2026-05-09T00:09:40.453Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
