@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Qwen3.5 397B A17B"
 provider: "Alibaba"
 release_date: "2026-02-16"
-generated_at: "2026-05-09T18:05:19.424Z"
+generated_at: "2026-05-09T19:20:50.452Z"
 ---
 
 # Qwen3.5 397B A17B: release brief
