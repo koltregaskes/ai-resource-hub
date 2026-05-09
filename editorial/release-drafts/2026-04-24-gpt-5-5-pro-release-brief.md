@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.5 Pro"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-09T13:50:27.956Z"
+generated_at: "2026-05-09T15:11:03.632Z"
 ---
 
 # GPT-5.5 Pro: release brief

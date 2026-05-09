@@ -2,17 +2,17 @@
 title: "Kimi K2 0711: release brief"
 slug: "2026-03-28-kimi-k2-0711-release-brief"
 draft_type: "model-release"
-status: "ready_for_editor"
+status: "needs_research"
 priority: "watch"
 model: "Kimi K2 0711"
 provider: "Moonshot AI"
 release_date: "2026-03-28"
-generated_at: "2026-05-09T13:50:27.957Z"
+generated_at: "2026-05-09T15:11:03.633Z"
 ---
 
 # Kimi K2 0711: release brief
 
-Moonshot AI's Kimi K2 0711 is on the release desk with 1 related story and 0 benchmark signals to review.
+Moonshot AI's Kimi K2 0711 is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -21,7 +21,7 @@ Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned a
 ## Why this matters
 
 - Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.
-- Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes.
+- This still needs outside coverage gathering, so the editor should expect a source-light draft first.
 
 ## Benchmarks and evals to mention
 
@@ -29,14 +29,14 @@ Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned a
 
 ## Outside coverage and early reactions
 
-- TechCrunch (2026-05-07): [China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open source AI skyrockets](https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/) - Moonshot's annualized recurring revenue topped $200 million in April, driven by rapid growth in paid subscriptions and API usage.
+- No outside coverage is attached yet. Pull analyst, benchmark, or engineering reactions before publish if possible.
 
 ## Suggested thread / post structure
 
 1. Lead with the hook: what Moonshot AI actually launched with Kimi K2 0711, and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
-4. Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.
+4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
 5. Keep the chronology explicit: this release landed on 28 Mar 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
@@ -50,4 +50,3 @@ Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned a
 
 - [Official launch or docs](https://platform.moonshot.ai/docs/pricing/tools.en-US)
 - [Provider API/docs](https://platform.moonshot.ai/docs/pricing/tools.en-US)
-- [TechCrunch: China&#8217;s Moonshot AI raises $2B at $20B valuation as demand for open source AI skyrockets](https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/)

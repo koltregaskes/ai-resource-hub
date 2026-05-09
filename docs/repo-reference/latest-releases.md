@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 09 May 2026, 13:50 UTC
+Generated: 09 May 2026, 15:11 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -21,7 +21,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 24 Apr 2026 | DeepSeek V4 Pro | DeepSeek | tracking | high | needs research | 0 | 0 | [official](https://api-docs.deepseek.com) |
 | 24 Apr 2026 | DeepSeek V4 Flash | DeepSeek | tracking | high | needs research | 0 | 0 | [official](https://api-docs.deepseek.com) |
 | 21 Apr 2026 | GPT-5.4 Image 2 | OpenAI | tracking | high | ready for editor | 0 | 5 | [official](https://platform.openai.com/docs/models) |
-| 20 Apr 2026 | Kimi K2.6 | Moonshot AI | tracking | high | ready for editor | 0 | 1 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
+| 20 Apr 2026 | Kimi K2.6 | Moonshot AI | tracking | high | needs research | 0 | 0 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
 | 16 Apr 2026 | Claude Opus 4.7 | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
 | 7 Apr 2026 | Claude Opus 4.6 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
