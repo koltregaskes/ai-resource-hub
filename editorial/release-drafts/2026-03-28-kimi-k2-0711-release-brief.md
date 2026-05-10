@@ -7,7 +7,7 @@ priority: "watch"
 model: "Kimi K2 0711"
 provider: "Moonshot AI"
 release_date: "2026-03-28"
-generated_at: "2026-05-10T09:01:25.155Z"
+generated_at: "2026-05-10T10:35:42.710Z"
 ---
 
 # Kimi K2 0711: release brief
