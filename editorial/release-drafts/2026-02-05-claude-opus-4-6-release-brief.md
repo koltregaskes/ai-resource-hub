@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Claude Opus 4.6"
 provider: "Anthropic"
 release_date: "2026-02-05"
-generated_at: "2026-05-10T19:21:51.397Z"
+generated_at: "2026-05-10T21:04:13.960Z"
 ---
 
 # Claude Opus 4.6: release brief
 
-Anthropic's Claude Opus 4.6 is on the release desk with 1 related story and 5 benchmark signals to review.
+Anthropic's Claude Opus 4.6 is on the release desk with 2 related stories and 5 benchmark signals to review.
 
 ## Release summary
 
@@ -34,6 +34,7 @@ Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned 
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
+- TechCrunch (2026-05-10): [Anthropic says ‘evil’ portrayals of AI were responsible for Claude’s blackmail attempts](https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/) - Fictional portrayals of artificial intelligence can have a real effect on AI models, according to Anthropic.
 
 ## Suggested thread / post structure
 
@@ -55,3 +56,4 @@ Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned 
 - [Official launch or docs](https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf)
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
+- [TechCrunch: Anthropic says ‘evil’ portrayals of AI were responsible for Claude’s blackmail attempts](https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/)
