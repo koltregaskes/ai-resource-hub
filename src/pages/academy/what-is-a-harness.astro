@@ -31,6 +31,10 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         <a href={`${base}glossary/harness/`} class="text-(--color-accent) hover:underline"> harness</a> is the wider system
         around the model that shapes what the user actually experiences.
       </p>
+      <p class="mt-4 text-base text-(--color-text-secondary) leading-relaxed">
+        The model is not the whole product. The harness is what users actually feel: the prompts, routing, tools,
+        sandboxes, retrieval, and checks wrapped around the base model.
+      </p>
     </header>
 
     <div class="space-y-8">
@@ -47,6 +51,15 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
             verifiers, retries, and grading logic.
           </p>
         </div>
+      </section>
+
+      <section class="p-5 rounded-xl bg-amber-500/10 border border-amber-400/25">
+        <p class="text-xs uppercase tracking-[0.2em] text-amber-300 mb-2">Why this matters in practice</p>
+        <p class="text-(--color-text-secondary) leading-relaxed">
+          When an AI product feels worse, the base model may not be the thing that changed. A hidden prompt can regress,
+          tools can fail, routing can move traffic to a weaker path, sandboxes can slow down, and verification can become
+          less strict. Harness tracking is how we separate real model degradation from product-layer degradation.
+        </p>
       </section>
 
       <section>
@@ -160,6 +173,9 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
       <section class="p-6 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Read next</h2>
+        <p class="text-sm text-(--color-text-secondary) mb-4">
+          Read the full lesson: What Is a Harness? Then continue with What Is a Transformer.
+        </p>
         <div class="grid gap-3 sm:grid-cols-2">
           <a href={`${base}academy/what-is-a-transformer/`} class="p-4 rounded-xl bg-(--color-bg-tertiary) border border-(--color-border) hover:border-(--color-accent)/40 transition-colors">
             <p class="font-medium text-(--color-text-primary) mb-1">What Is a Transformer?</p>
@@ -168,6 +184,14 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           <a href={`${base}academy/model-layers-explained/`} class="p-4 rounded-xl bg-(--color-bg-tertiary) border border-(--color-border) hover:border-(--color-accent)/40 transition-colors">
             <p class="font-medium text-(--color-text-primary) mb-1">Model Layers Explained</p>
             <p class="text-sm text-(--color-text-secondary)">Understand what sits inside the model before the harness starts to matter.</p>
+          </a>
+        </div>
+        <div class="mt-5 flex flex-col sm:flex-row gap-3">
+          <a href={`${base}academy/what-is-a-transformer/`} class="inline-flex items-center justify-center rounded-lg bg-(--color-accent) px-4 py-2 text-sm font-semibold text-black hover:opacity-90 transition-opacity">
+            Read next: What Is a Transformer?
+          </a>
+          <a href={`${base}academy/`} class="inline-flex items-center justify-center rounded-lg border border-(--color-border) px-4 py-2 text-sm font-semibold text-(--color-text-secondary) hover:text-(--color-text-primary) hover:border-(--color-accent)/40 transition-colors">
+            Continue in AI Academy
           </a>
         </div>
         <div class="mt-5 border-t border-(--color-border) pt-4">
@@ -179,6 +203,19 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           </ul>
         </div>
       </section>
+
+      <aside class="mt-12 p-6 sm:p-8 rounded-2xl border border-blue-500/20 bg-blue-500/5">
+        <p class="text-xs font-bold tracking-[0.18em] uppercase text-blue-400 mb-3">AI OPERATOR STARTER PACK</p>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-3">Want this as a clean PDF, plus a worksheet, reference card, and prompt kit?</h2>
+        <p class="text-(--color-text-secondary) mb-5 leading-relaxed">
+          The Starter Pack packages this lesson with two deeper ones, four exercises, a printable Harness
+          Reference Card for the wall by your monitor, and ten operator prompts. First 100 readers get
+          founder pricing of £9.
+        </p>
+        <a href={`${base}starter-pack/`} class="inline-block px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition-colors">
+          Join the waitlist →
+        </a>
+      </aside>
     </div>
   </article>
 </BaseLayout>
