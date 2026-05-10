@@ -7,7 +7,7 @@ priority: "watch"
 model: "GLM 5V Turbo"
 provider: "Zhipu AI"
 release_date: "2026-04-01"
-generated_at: "2026-05-10T12:01:51.826Z"
+generated_at: "2026-05-10T13:53:40.822Z"
 ---
 
 # GLM 5V Turbo: release brief
