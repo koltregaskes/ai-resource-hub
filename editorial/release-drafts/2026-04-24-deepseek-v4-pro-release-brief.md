@@ -7,7 +7,7 @@ priority: "high"
 model: "DeepSeek V4 Pro"
 provider: "DeepSeek"
 release_date: "2026-04-24"
-generated_at: "2026-05-10T00:01:52.959Z"
+generated_at: "2026-05-10T04:12:29.815Z"
 ---
 
 # DeepSeek V4 Pro: release brief
