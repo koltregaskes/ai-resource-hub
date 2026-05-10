@@ -7,7 +7,7 @@ priority: "watch"
 model: "Qwen3.6 Plus"
 provider: "Alibaba"
 release_date: "2026-04-02"
-generated_at: "2026-05-10T21:04:13.959Z"
+generated_at: "2026-05-10T22:02:57.044Z"
 ---
 
 # Qwen3.6 Plus: release brief
