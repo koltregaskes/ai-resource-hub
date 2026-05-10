@@ -7,7 +7,7 @@ priority: "high"
 model: "Grok 4.3"
 provider: "xAI"
 release_date: "2026-04-30"
-generated_at: "2026-05-10T04:12:29.814Z"
+generated_at: "2026-05-10T06:45:04.622Z"
 ---
 
 # Grok 4.3: release brief
