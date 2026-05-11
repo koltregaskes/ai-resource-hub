@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-05-11T04:22:39.946Z",
+  "generatedAt": "2026-05-11T05:43:21.365Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-11T04:22:38.356Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "File uploads",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KRAA341YK58M05V2DFGDRMFB",
-          "title": "Users may experience elevated errors in ChatGPT uploading files and Codex Cloud creating tasks",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-11T01:23:13.000Z",
-          "updatedAt": "2026-05-11T03:23:58.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KRAA341YK58M05V2DFGDRMFB",
-          "title": "Users may experience elevated errors in ChatGPT uploading files and Codex Cloud creating tasks",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-11T01:23:13.000Z",
-          "updatedAt": "2026-05-11T03:23:58.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KR50YN2DBMTXGPC6BQSJN48J",
-          "title": "Elevated errors for Responses API",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-09T00:07:17.000Z",
-          "updatedAt": "2026-05-09T00:08:01.000Z",
-          "resolvedAt": "2026-05-09T00:08:01.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KR421V8PCTFKA8EJJC2VCGA3",
-          "title": "Degraded Performance with Codex Cloud Tasks",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-08T15:07:16.000Z",
-          "updatedAt": "2026-05-08T16:17:19.000Z",
-          "resolvedAt": "2026-05-08T16:17:19.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KR3S3Q2RE54PVJ7GZPQNEY8Y",
-          "title": "Increased Error Rate for gpt-5.5 model in the API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-08T12:31:00.000Z",
-          "updatedAt": "2026-05-08T14:14:41.000Z",
-          "resolvedAt": "2026-05-08T14:14:41.000Z",
-          "summary": null
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -109,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-11T04:22:38.360Z",
+      "lastCheckedAt": "2026-05-11T05:43:20.123Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-11T04:22:39.132Z",
+      "lastCheckedAt": "2026-05-11T05:43:20.731Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +122,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-11T04:22:38.500Z",
+      "lastCheckedAt": "2026-05-11T05:43:20.211Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 2 tracked components.",
@@ -293,7 +196,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-11T04:22:39.466Z",
+      "lastCheckedAt": "2026-05-11T05:43:21.082Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +261,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-11T04:22:38.452Z",
+      "lastCheckedAt": "2026-05-11T05:43:20.150Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -412,7 +315,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-11T04:22:38.810Z",
+      "lastCheckedAt": "2026-05-11T05:43:20.367Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -420,6 +323,92 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-11T05:43:20.027Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KRAA341YK58M05V2DFGDRMFB",
+          "title": "Users may experience elevated errors in ChatGPT uploading files and Codex Cloud creating tasks",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-11T01:23:13.000Z",
+          "updatedAt": "2026-05-11T05:35:41.000Z",
+          "resolvedAt": "2026-05-11T05:35:41.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KR50YN2DBMTXGPC6BQSJN48J",
+          "title": "Elevated errors for Responses API",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-05-09T00:07:17.000Z",
+          "updatedAt": "2026-05-09T00:08:01.000Z",
+          "resolvedAt": "2026-05-09T00:08:01.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KR421V8PCTFKA8EJJC2VCGA3",
+          "title": "Degraded Performance with Codex Cloud Tasks",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-08T15:07:16.000Z",
+          "updatedAt": "2026-05-08T16:17:19.000Z",
+          "resolvedAt": "2026-05-08T16:17:19.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KR3S3Q2RE54PVJ7GZPQNEY8Y",
+          "title": "Increased Error Rate for gpt-5.5 model in the API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-08T12:31:00.000Z",
+          "updatedAt": "2026-05-08T14:14:41.000Z",
+          "resolvedAt": "2026-05-08T14:14:41.000Z",
+          "summary": null
+        }
+      ]
     },
     {
       "id": "together",
@@ -432,7 +421,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-11T04:22:39.938Z",
+      "lastCheckedAt": "2026-05-11T05:43:21.358Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -441,7 +430,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-11T00:10:24.000Z",
+          "id": "together-feed-0-2026-05-11T05:20:13.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-11T05:20:13.000Z",
+          "updatedAt": "2026-05-11T05:20:13.000Z",
+          "resolvedAt": "2026-05-11T05:20:13.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-05-11T04:54:59.000Z",
+          "title": "Qwen3.5 397B A17B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-11T04:54:59.000Z",
+          "updatedAt": "2026-05-11T04:54:59.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-11T00:10:24.000Z",
           "title": "Kimi K2.6 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -452,7 +463,7 @@
           "summary": "Kimi K2.6 recovered"
         },
         {
-          "id": "together-feed-1-2026-05-10T23:57:59.000Z",
+          "id": "together-feed-3-2026-05-10T23:57:59.000Z",
           "title": "Kimi K2.6 went down",
           "status": "investigating",
           "impact": "major",
@@ -461,28 +472,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Kimi K2.6 went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-10T21:55:14.000Z",
-          "title": "Llama 3 8B Instruct Lite recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-10T21:55:14.000Z",
-          "updatedAt": "2026-05-10T21:55:14.000Z",
-          "resolvedAt": "2026-05-10T21:55:14.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Llama 3 8B Instruct Lite recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-10T21:38:11.000Z",
-          "title": "Llama 3 8B Instruct Lite went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-10T21:38:11.000Z",
-          "updatedAt": "2026-05-10T21:38:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Llama 3 8B Instruct Lite went down"
         }
       ]
     },
