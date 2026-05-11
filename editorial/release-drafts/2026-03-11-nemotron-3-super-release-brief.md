@@ -3,11 +3,11 @@ title: "Nemotron 3 Super: release brief"
 slug: "2026-03-11-nemotron-3-super-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "watch"
+priority: "backfill"
 model: "Nemotron 3 Super"
 provider: "NVIDIA"
 release_date: "2026-03-11"
-generated_at: "2026-05-10T23:06:16.095Z"
+generated_at: "2026-05-11T00:06:34.361Z"
 ---
 
 # Nemotron 3 Super: release brief
