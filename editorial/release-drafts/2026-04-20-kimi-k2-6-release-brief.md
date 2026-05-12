@@ -3,11 +3,11 @@ title: "Kimi K2.6: release brief"
 slug: "2026-04-20-kimi-k2-6-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "high"
+priority: "watch"
 model: "Kimi K2.6"
 provider: "Moonshot AI"
 release_date: "2026-04-20"
-generated_at: "2026-05-11T23:10:07.379Z"
+generated_at: "2026-05-12T00:10:05.429Z"
 ---
 
 # Kimi K2.6: release brief
