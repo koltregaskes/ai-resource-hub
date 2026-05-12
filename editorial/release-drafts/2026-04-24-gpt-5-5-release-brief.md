@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-12T09:48:29.247Z"
+generated_at: "2026-05-12T12:15:03.361Z"
 ---
 
 # GPT-5.5: release brief
@@ -30,11 +30,11 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 ## Outside coverage and early reactions
 
 - OpenAI (2026-05-07): [Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber](https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber) - OpenAI expands Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber, helping verified defenders accelerate vulnerability research and protect critical infrastructure.
-- TechCrunch (2026-05-07): [OpenAI launches new voice intelligence features in its API](https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/) - The new features could be handy for customer service systems, but OpenAI says they have applications that work across a variety of other fields, including education and creator platforms.
 - OpenAI (2026-05-05): [GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
 - The Verge (2026-05-11): [OpenAI just released its answer to Claude Mythos](https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai) - OpenAI is launching Daybreak, an AI initiative focused on detecting and patching vulnerabilities before attackers find them. Daybreak uses the Codex Security AI agent that launched in March to create a threat model based on an organization's code and focus on possible attack paths, validate likely vulnerabilities, and…
 - OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
 - OpenAI (2026-05-11): [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) - OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.
+- OpenAI (2026-05-06): [How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 
 ## Suggested thread / post structure
 
@@ -56,8 +56,8 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [OpenAI: Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber](https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber)
-- [TechCrunch: OpenAI launches new voice intelligence features in its API](https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/)
 - [OpenAI: GPT-5.5 Instant System Card](https://openai.com/index/gpt-5-5-instant-system-card)
 - [The Verge: OpenAI just released its answer to Claude Mythos](https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai)
 - [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
 - [OpenAI: OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company)
+- [OpenAI: How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals)

@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Gemini 3.1 Pro Preview"
 provider: "Google"
 release_date: "2026-02-19"
-generated_at: "2026-05-12T09:48:29.248Z"
+generated_at: "2026-05-12T12:15:03.362Z"
 ---
 
 # Gemini 3.1 Pro Preview: release brief
