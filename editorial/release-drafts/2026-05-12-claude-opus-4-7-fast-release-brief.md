@@ -1,22 +1,22 @@
 ---
-title: "GLM 4.7 Flash: release brief"
-slug: "2026-01-19-glm-4-7-flash-release-brief"
+title: "Claude Opus 4.7 (Fast): release brief"
+slug: "2026-05-12-claude-opus-4-7-fast-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "backfill"
-model: "GLM 4.7 Flash"
-provider: "Zhipu AI"
-release_date: "2026-01-19"
-generated_at: "2026-05-12T20:49:08.644Z"
+priority: "high"
+model: "Claude Opus 4.7 (Fast)"
+provider: "Anthropic"
+release_date: "2026-05-12"
+generated_at: "2026-05-12T20:49:08.642Z"
 ---
 
-# GLM 4.7 Flash: release brief
+# Claude Opus 4.7 (Fast): release brief
 
-Zhipu AI's GLM 4.7 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.
+Anthropic's Claude Opus 4.7 (Fast) is on the release desk with 0 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
-GLM 4.7 Flash is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.06 in / $0.40 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-4.7-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Claude Opus 4.7 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $30.00 in / $150.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.7-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 
@@ -33,11 +33,11 @@ GLM 4.7 Flash is a currently tracked release from Zhipu AI. It is positioned as 
 
 ## Suggested thread / post structure
 
-1. Lead with the hook: what Zhipu AI actually launched with GLM 4.7 Flash, and why it matters now.
+1. Lead with the hook: what Anthropic actually launched with Claude Opus 4.7 (Fast), and why it matters now.
 2. Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.
 3. Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.
 4. Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.
-5. Keep the chronology explicit: this release landed on 19 Jan 2026 and should be framed against the models it is replacing or competing with.
+5. Keep the chronology explicit: this release landed on 12 May 2026 and should be framed against the models it is replacing or competing with.
 
 ## Editor checklist
 
@@ -48,5 +48,5 @@ GLM 4.7 Flash is a currently tracked release from Zhipu AI. It is positioned as 
 
 ## Sources
 
-- [Official launch or docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5)
-- [Provider API/docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5)
+- [Official launch or docs](https://docs.anthropic.com)
+- [Provider API/docs](https://docs.anthropic.com)
