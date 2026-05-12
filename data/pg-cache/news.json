@@ -1,5 +1,197 @@
 [
   {
+    "id": "news-ab7e0cb8a0c9f6ab533c",
+    "title": "Musk mulled handing OpenAI to his children, Altman testifies",
+    "url": "https://techcrunch.com/2026/05/12/musk-mulled-handing-openai-to-his-children-altman-testifies/",
+    "source": "TechCrunch",
+    "summary": "OpenAI's CEO recalls a \"particularly hair-raising\" conversation with the SpaceX founder.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T18:05:15.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-e59127372d5ab307edb3",
+    "title": "Anthropic warns investors against secondary platforms offering access to its shares",
+    "url": "https://techcrunch.com/2026/05/12/anthropic-warns-investors-against-secondary-platforms-offering-access-to-its-shares/",
+    "source": "TechCrunch",
+    "summary": "The company named Open Doors Partners, Unicorns Exchange, Pachamama Capital, Lionheart Ventures, Hiive, Forge Global, Sydecar and Upmarket as companies that are not authorized to provide access to buy or sell its shares.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:36:34.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-491dd889bae5a5638fa3",
+    "title": "Sam Altman says Elon Musk’s mind games were damaging OpenAI",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/928861/openai-sam-altman-elon-musk-damage",
+    "source": "The Verge",
+    "summary": "OpenAI CEO Sam Altman says Elon Musk did \"huge damage\" to the culture of the AI startup. During testimony as part of Musk's lawsuit against OpenAI, Altman said Musk required OpenAI president Greg Brockman and former chief scientist Ilya Sutskever to rank researchers by their accomplishments and \"take a chainsaw throug…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:34:09.000Z",
+    "discovered_at": "2026-05-12 18:16:45"
+  },
+  {
+    "id": "news-707aacc0773b32a5042d",
+    "title": "Report: Google and SpaceX in talks to put data centers into orbit",
+    "url": "https://techcrunch.com/2026/05/12/report-google-and-spacex-in-talks-to-put-data-centers-into-orbit/",
+    "source": "TechCrunch",
+    "summary": "Google and SpaceX are in talks to build data centers in orbit, pitching space as the future home for AI compute, even as costs today remain far higher than on the ground.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:30:57.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-b005c648c35cb1be3ab8",
+    "title": "Everything Google announced at its Android Show, from Googlebooks to vibe-coded widgets",
+    "url": "https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/",
+    "source": "TechCrunch",
+    "summary": "Google unveiled its new AI-first Googlebooks laptops, more agentic Gemini features, vibe-coded Android widgets, Gemini in Chrome, refreshed Android Auto, and more ahead of I/O.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:01:00.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-af203b3a684162e83a33",
+    "title": "Gemini&#8217;s latest updates are all about controlling your phone",
+    "url": "https://www.theverge.com/tech/928724/gemini-intelligence-android-io-autofill",
+    "source": "The Verge",
+    "summary": "It is, once again, Gemini season. Google is announcing a host of new Gemini features during its pre-I/O Android showcase, many of which aim to help use your phone for you. You'll find Gemini in more places, like Chrome on Android, in your autofill suggestions, and all up in your apps - if you want. [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:00:00.000Z",
+    "discovered_at": "2026-05-12 18:16:45"
+  },
+  {
+    "id": "news-d78a1aba539ab6c0e809",
+    "title": "The 9 biggest new features in Android 17",
+    "url": "https://www.theverge.com/tech/928653/google-android-17-9-biggest-new-features-android-show-io",
+    "source": "The Verge",
+    "summary": "Would it shock you to hear that Android 17 is filled with new AI-enabled features, like improved dictation and vibe-coded widgets? Fortunately, that's not all. The platform is getting non-AI updates too, from an emoji overhaul to a new screentime tool that helps you avoid distracting apps. Google has just revealed the…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:00:00.000Z",
+    "discovered_at": "2026-05-12 18:16:45"
+  },
+  {
+    "id": "news-a3e7b96aa54c1272405e",
+    "title": "Google adds Gemini-powered Dictation to Gboard, which could be bad news for dictation startups",
+    "url": "https://techcrunch.com/2026/05/12/google-adds-gemini-powered-dictation-to-gboard-which-could-be-bad-news-for-dictation-startups/",
+    "source": "TechCrunch",
+    "summary": "Google's transcription feature will initially launch with Samsung Galaxy and Google Pixel phones",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:00:00.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-8c75c03bf4e2da7064d7",
+    "title": "Google&#8217;s &#8216;Create My Widget&#8217; feature will let you vibe code your own widgets",
+    "url": "https://techcrunch.com/2026/05/12/googles-create-my-widget-feature-will-let-you-vibe-code-your-own-widgets/",
+    "source": "TechCrunch",
+    "summary": "The new feature will first launch on the latest Samsung Galaxy and Google Pixel phones this summer.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:00:00.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-f0ccdc3aa9f2bb75f368",
+    "title": "The AI legal services industry is heating up. Anthropic is getting in on the action.",
+    "url": "https://techcrunch.com/2026/05/12/the-ai-legal-services-industry-is-heating-up-anthropic-is-getting-in-on-the-action/",
+    "source": "TechCrunch",
+    "summary": "As the AI legal services industry heats up, Anthropic is launching its own suite of features designed to assist law firms.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:00:00.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-9b20e4e2f1441373cd49",
+    "title": "Google brings agentic AI and vibe-coded widgets to Android",
+    "url": "https://techcrunch.com/2026/05/12/google-brings-agentic-ai-and-vibe-coded-widgets-to-android/",
+    "source": "TechCrunch",
+    "summary": "Gemini Intelligence will also include Gboard based dictation and form filling capabilities",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T17:00:00.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-778e565095326912a278",
+    "title": "Threads tests a Meta AI integration that works similarly to Grok",
+    "url": "https://techcrunch.com/2026/05/12/threads-tests-a-meta-ai-integration-that-works-similarly-to-grok/",
+    "source": "TechCrunch",
+    "summary": "The feature is designed to help people get real-time context about trends and breaking stories, as well as receive recommendations, all within conversations.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T16:34:36.000Z",
+    "discovered_at": "2026-05-12 18:16:44"
+  },
+  {
+    "id": "news-b1a28ee8a09f5c93e51c",
+    "title": "Parents say ChatGPT got their son killed with bad advice on party drugs",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/928691/openai-chatgpt-wrongful-death-overdose",
+    "source": "The Verge",
+    "summary": "The family of a 19-year-old college student is suing OpenAI over claims that his conversations with ChatGPT led to an accidental overdose. In the lawsuit filed on Tuesday, Sam Nelson's parents allege ChatGPT \"encouraged\" the teen to \"consume a combination of substances that any licensed medical professional would have…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T16:30:33.000Z",
+    "discovered_at": "2026-05-12 18:16:45"
+  },
+  {
+    "id": "news-462c2a7706ff4d93c284",
+    "title": "Sam Altman takes the stand in trial against Elon Musk",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/916975/altman-takes-stand-elon-musk-openai-trial",
+    "source": "The Verge",
+    "summary": "OpenAI CEO Sam Altman has begun his testimony against Elon Musk in a high-profile jury trial in a California federal courtroom. Altman, alongside OpenAI president Greg Brockman, is a primary defendant in the trial brought by Musk. Altman, Brockman, and Musk were all part of the initial founding team at OpenAI, with Mu…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T16:05:20.000Z",
+    "discovered_at": "2026-05-12 18:16:45"
+  },
+  {
+    "id": "news-f6b6b76d606c34bb1f15",
+    "title": "George Clooney, Tom Hanks, and Meryl Streep back new &#8216;Human Consent Standard&#8217; for AI licensing",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/928534/rsl-media-human-consent-standard",
+    "source": "The Verge",
+    "summary": "Hollywood actors and producers are standing behind a new AI licensing standard that will tell AI systems whether they'll need to pay to use a person's likeness, creative work, characters, and designs. With the Human Consent Standard, people can set terms for the use of their work or likeness, including giving AI syste…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T16:00:00.000Z",
+    "discovered_at": "2026-05-12 18:16:45"
+  },
+  {
+    "id": "news-d2b0ce69efcb94c32960",
+    "title": "Rivian’s AI-powered voice assistant is ready to roll",
+    "url": "https://www.theverge.com/transportation/928651/rivian-ai-voice-assistant-r1-r2",
+    "source": "The Verge",
+    "summary": "Rivian's AI-powered voice assistant is rolling out today to the company's vehicle fleet. The assistant will be available through a software update to all compatible Rivian Gen 1 and Gen 2 vehicle owners who subscribe to the company's Connect Plus cellular service, which costs $15 a month or $150 a year, or are in an […",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T15:51:38.000Z",
+    "discovered_at": "2026-05-12 18:16:45"
+  },
+  {
     "id": "news-07745aaa1612e7f27c54",
     "title": "Dessn raises $6M for its production focused design tool",
     "url": "https://techcrunch.com/2026/05/12/dessn-raises-6m-for-its-production-focused-design-tool/",
@@ -9,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T13:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-a3f3f9a64c52b71f99ed",
@@ -21,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T11:30:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-780a836a9e315d4f7308",
@@ -33,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T04:52:35.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-c2e6ca3e854f832d1291",
@@ -45,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:09:01.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-2801e9858940db634e41",
@@ -57,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T23:05:01.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:45"
   },
   {
     "id": "news-7224de2c82ef139386bf",
@@ -69,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T23:04:10.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-7be23ac9118dc59ebfaa",
@@ -81,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T22:19:15.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:45"
   },
   {
     "id": "news-1df024eea7b38307becf",
@@ -93,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T17:02:35.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-eb9a6b2347db550491ef",
@@ -105,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T16:09:42.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-f997a4857c3224676938",
-    "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
-    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
-    "source": "The Verge",
-    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. Elon Musk,…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-11T15:27:12.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:45"
   },
   {
     "id": "news-e13dc335beb06d7df67f",
@@ -129,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T15:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
-  },
-  {
-    "id": "news-f38dcd88cde7c860e94a",
-    "title": "Joanna Stern is not a robot, but she lived with them",
-    "url": "https://www.theverge.com/podcast/926752/joanna-stern-i-am-not-a-robot-new-things-media-youtube-ai-automation",
-    "source": "The Verge",
-    "summary": "My guest today is longtime friend of the show Joanna Stern. You all know Joanna: she is the former senior personal technology columnist for The Wall Street Journal, a former Decoder guest host, one of my cofounders here at The Verge, and also just one of my very closest friends. I mention that because Joanna [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-11T14:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-88258d4a60b28dcbd4ab",
@@ -153,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T13:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-4ca12da2ae6a65c2eb13",
@@ -165,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-ee5564e4d43f904019c8",
@@ -177,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -189,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-68e94ee2f13a7ca6fb82",
@@ -201,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-c6001eb523d14c95b13b",
@@ -213,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-10T21:15:30.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-9f58cd996763457de3f2",
@@ -225,139 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-10T20:40:41.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-8b2b7d8ed6f9b5ab1207",
-    "title": "We’re feeling cynical about xAI’s big deal with Anthropic",
-    "url": "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/",
-    "source": "TechCrunch",
-    "summary": "On the latest episode of the Equity podcast, we discussed what xAI's deal with Anthropic might mean for parent company SpaceX.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-10T15:34:25.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-9226d8bc5499344c291a",
-    "title": "Voice AI in India is hard — Wispr Flow is betting on it anyway",
-    "url": "https://techcrunch.com/2026/05/09/voice-ai-in-india-is-hard-wispr-flow-is-betting-on-it-anyway/",
-    "source": "TechCrunch",
-    "summary": "Wispr Flow says growth accelerated in India after its Hinglish rollout, even as voice AI products continue to face challenges.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-10T02:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-c7c11ee24f5445df5f0b",
-    "title": "So you&#8217;ve heard these AI terms and nodded along; let&#8217;s fix that",
-    "url": "https://techcrunch.com/2026/05/09/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
-    "source": "TechCrunch",
-    "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-09T21:45:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-d1860b86b11366ac9cb4",
-    "title": "Nvidia has already committed $40B to equity AI deals this year",
-    "url": "https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/",
-    "source": "TechCrunch",
-    "summary": "Nvidia continues to be a big investor in the AI ecosystem.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-09T14:43:30.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-18e393ee2491bab3884c",
-    "title": "Laid-off Oracle workers tried to negotiate better severance. Oracle said no.",
-    "url": "https://techcrunch.com/2026/05/08/laid-off-oracle-workers-tried-to-negotiate-better-severance-oracle-said-no/",
-    "source": "TechCrunch",
-    "summary": "Some found out they didn't qualify for WARN Act protections like two-months notice because the company had classified them as remote workers.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T22:59:05.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-be27dd67aaedd773e5fc",
-    "title": "Intel&#8217;s comeback story is even wilder than it seems",
-    "url": "https://techcrunch.com/2026/05/08/intels-comeback-story-is-even-wilder-than-it-seems/",
-    "source": "TechCrunch",
-    "summary": "Intel's stock has risen a stunning 490% over the past year, a bet by Wall Street that may be running well ahead of the company's actual turnaround.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T20:02:52.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-c0641eb0de56205a1688",
-    "title": "All the latest updates on AI data centers",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
-    "source": "The Verge",
-    "summary": "Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand warehouses full of energy-hungry servers has also kicked up fights across the world over their impact on power grids, utility bills, nearby communities, and the environment.&#160; From audacious pla…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T18:45:08.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-430d9b1e9426668ecc22",
-    "title": "Cloudflare says AI made 1,100 jobs obsolete, even as revenue hit a record high",
-    "url": "https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/",
-    "source": "TechCrunch",
-    "summary": "Cloudflare announced its first large-scale layoff. CEO Matthew Prince says because of AI efficiency gains, the company doesn't need as many support roles.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T18:33:21.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-27e7e35598a5159ee318",
-    "title": "PlayStation sees AI as a ‘powerful tool’ to help make games",
-    "url": "https://www.theverge.com/games/926914/sony-playstation-ai-powerful-tool-games",
-    "source": "The Verge",
-    "summary": "As part of an earnings presentation on Friday, Sony shared how it's thinking about AI at the company, including many details about how it's evaluating AI as part of making PlayStation games. Generative AI has recently been showing up in bigger games - though many indie developers still reject it - and while Sony calls…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T16:30:56.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-7dd0052ac621c2d1e084",
-    "title": "The “people’s airline” and the enterprise AI gold rush",
-    "url": "https://techcrunch.com/podcast/the-peoples-airline-and-the-enterprise-ai-gold-rush/",
-    "source": "TechCrunch",
-    "summary": "Everyone wants a piece of the&#160;enterprise&#160;AI pie, and this week, we saw a string of companies making their moves. From&#160;Anthropic and OpenAI announcing new joint ventures&#160;targeting enterprise AI deployment to&#160;SAP dropping $1B&#160;on German AI startup Prior Labs,&#160;it&#8217;s&#160;becoming cl…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T15:46:17.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-18abfd036c359508505a",
-    "title": "Microsoft was worried OpenAI would run off to Amazon and ‘shit-talk’ Azure",
-    "url": "https://www.theverge.com/report/926771/microsoft-openai-amazon-worries-shit-talk-azure",
-    "source": "The Verge",
-    "summary": "When OpenAI was busy experimenting with AI-powered gaming bots, Microsoft CEO Satya Nadella and OpenAI CEO Sam Altman were in the early days of forming an AI partnership. Court documents from the ongoing Musk v. Altman trial have provided a rare look at the communications between Microsoft's top executives about inves…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T15:25:02.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -369,31 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-a3bf7bcc130ee9e2f247",
-    "title": "Last 24 hours to get 50% off a second pass to TechCrunch Disrupt 2026",
-    "url": "https://techcrunch.com/2026/05/08/last-24-hours-to-get-50-off-a-second-pass-to-techcrunch-disrupt-2026/",
-    "source": "TechCrunch",
-    "summary": "Last day to buy one pass and get a second one at 50% off to TechCrunch Disrupt 2026. Bring a partner, co-founder, or colleague at half off. Register now.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T14:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
-  },
-  {
-    "id": "news-4e6bf0b98881dab11e7f",
-    "title": "Everybody wants to rule the AI world",
-    "url": "https://www.theverge.com/podcast/926707/openai-ceo-murati-musk-trial-vergecast",
-    "source": "The Verge",
-    "summary": "Sometimes, companies pick CEOs based on carefully laid succession plans designed to maximize investor confidence and future performance. Other times, apparently, companies pick CEOs based on a bunch of video calls while the current CEO is texting the former CEO about who the new CEO even is. Such was the story of The…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T13:31:37.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-91ec1ce9a5cf0cecc4b0",
@@ -405,19 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T12:30:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
-  },
-  {
-    "id": "news-c44ec34e01a3116bff92",
-    "title": "Nanoleaf bets its future on robots, red light therapy, and AI",
-    "url": "https://www.theverge.com/tech/926342/nanoleaf-smart-lighting-ai-robotics-red-light-wellness",
-    "source": "The Verge",
-    "summary": "Smart lighting company Nanoleaf has been unusually quiet recently. While competitors such as Govee and Philips Hue have been pumping out new products and innovative features at an impressive pace, Nanoleaf has launched just a handful of smart lighting products in the last two years. There's a reason for this lull - th…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T12:15:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-12 15:45:32"
+    "discovered_at": "2026-05-12 18:16:45"
   },
   {
     "id": "news-288ea344bbe070b948a8",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-4ba89a634a8ba847997e",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T10:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-eed85cf61ed43c59d6f9",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-de2ca3d7578dd51cbe19",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-fe948365c4d6a69e5ad5",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-9195cc0cde7d707470cd",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T08:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-bdecd9008a33c6517ffa",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-94f58b450581f2c916b3",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-94a93b54a777d7269e9a",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-8665a96e70ff0510ce62",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-76cbe027f6a80fda96aa",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-a654fb66813e953f3285",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T10:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:27"
+    "discovered_at": "2026-05-12 18:16:42"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:30"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -789,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-12 15:45:31"
+    "discovered_at": "2026-05-12 18:16:44"
   }
 ]

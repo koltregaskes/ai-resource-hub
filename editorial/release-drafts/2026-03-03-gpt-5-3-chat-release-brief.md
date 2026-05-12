@@ -7,7 +7,7 @@ priority: "backfill"
 model: "GPT-5.3 Chat"
 provider: "OpenAI"
 release_date: "2026-03-03"
-generated_at: "2026-05-12T15:45:40.505Z"
+generated_at: "2026-05-12T18:16:53.545Z"
 ---
 
 # GPT-5.3 Chat: release brief
