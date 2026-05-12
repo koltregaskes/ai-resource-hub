@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-12T06:46:55.471Z",
+  "generatedAt": "2026-05-12T08:13:30.585Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-12T06:46:54.334Z",
+      "lastCheckedAt": "2026-05-12T08:13:28.865Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-12T06:46:54.884Z",
+      "lastCheckedAt": "2026-05-12T08:13:30.093Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -110,80 +110,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "deepseek",
-      "providerId": "deepseek",
-      "name": "DeepSeek",
-      "colour": "#2563eb",
-      "websiteUrl": "https://deepseek.com",
-      "statusPageUrl": "https://status.deepseek.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-12T06:46:54.512Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 2 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "API 服务 (API Service)",
-          "status": "operational"
-        },
-        {
-          "name": "网页对话服务 (Web Chat Service)",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "vr5w0jpqv068",
-          "title": "【已恢复】DeepSeek 网页/API不可用（[Resolved]DeepSeek Web/API Service Not Available）",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-05-08T09:32:08.195Z",
-          "updatedAt": "2026-05-08T10:05:49.010Z",
-          "resolvedAt": "2026-05-08T10:05:48.997Z",
-          "url": "https://stspg.io/3mb879ydbqgn",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "d9c1gqhzsrcl",
-          "title": "【已恢复】DeepSeek 网页/API 性能异常（[Resolved]DeepSeek Web/API Service Degraded Performance）",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-06T07:13:45.515Z",
-          "updatedAt": "2026-05-06T07:20:20.765Z",
-          "resolvedAt": "2026-05-06T07:20:20.747Z",
-          "url": "https://stspg.io/hf658kdwks6y",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "6cqq25c3c5j9",
-          "title": "【已恢复】DeepSeek 网页/API 性能异常（[Resolved]DeepSeek Web/API Service Degraded Performance）",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-06T03:53:04.745Z",
-          "updatedAt": "2026-05-06T04:04:16.889Z",
-          "resolvedAt": "2026-05-06T04:04:16.876Z",
-          "url": "https://stspg.io/tgcfbtmqbpms",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "5w5lp464fzsj",
-          "title": "【已恢复】DeepSeek API 异常（[Resolved]DeepSeek API Abnormal）",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-04-22T10:23:18.547Z",
-          "updatedAt": "2026-04-22T11:26:32.897Z",
-          "resolvedAt": "2026-04-22T11:26:32.880Z",
-          "url": "https://stspg.io/rkv8w02lxqpw",
-          "summary": "This incident has been resolved."
-        }
-      ]
     },
     {
       "id": "fireworks",
@@ -196,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-12T06:46:55.311Z",
+      "lastCheckedAt": "2026-05-12T08:13:30.472Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +187,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-12T06:46:54.392Z",
+      "lastCheckedAt": "2026-05-12T08:13:29.586Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -315,7 +241,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-12T06:46:54.501Z",
+      "lastCheckedAt": "2026-05-12T08:13:29.744Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -335,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-12T06:46:54.341Z",
+      "lastCheckedAt": "2026-05-12T08:13:28.823Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -421,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-12T06:46:55.464Z",
+      "lastCheckedAt": "2026-05-12T08:13:30.561Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -430,7 +356,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-12T05:28:18.000Z",
+          "id": "together-feed-0-2026-05-12T07:46:23.000Z",
+          "title": "Qwen3 Coder 480B A35B Instruct FP8 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-12T07:46:23.000Z",
+          "updatedAt": "2026-05-12T07:46:23.000Z",
+          "resolvedAt": "2026-05-12T07:46:23.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 Coder 480B A35B Instruct FP8 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-05-12T07:13:21.000Z",
+          "title": "Qwen3 Coder 480B A35B Instruct FP8 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-12T07:13:21.000Z",
+          "updatedAt": "2026-05-12T07:13:21.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3 Coder 480B A35B Instruct FP8 went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-12T05:28:18.000Z",
           "title": "Qwen3 Coder 480B A35B Instruct FP8 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -441,7 +389,7 @@
           "summary": "Qwen3 Coder 480B A35B Instruct FP8 recovered"
         },
         {
-          "id": "together-feed-1-2026-05-12T03:46:21.000Z",
+          "id": "together-feed-3-2026-05-12T03:46:21.000Z",
           "title": "Qwen3 Coder 480B A35B Instruct FP8 went down",
           "status": "investigating",
           "impact": "major",
@@ -450,30 +398,28 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3 Coder 480B A35B Instruct FP8 went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-12T01:58:15.000Z",
-          "title": "Qwen3 Coder 480B A35B Instruct FP8 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-12T01:58:15.000Z",
-          "updatedAt": "2026-05-12T01:58:15.000Z",
-          "resolvedAt": "2026-05-12T01:58:15.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 Coder 480B A35B Instruct FP8 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-12T01:01:29.000Z",
-          "title": "Qwen3 Coder 480B A35B Instruct FP8 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-12T01:01:29.000Z",
-          "updatedAt": "2026-05-12T01:01:29.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 Coder 480B A35B Instruct FP8 went down"
         }
       ]
+    },
+    {
+      "id": "deepseek",
+      "providerId": "deepseek",
+      "name": "DeepSeek",
+      "colour": "#2563eb",
+      "websiteUrl": "https://deepseek.com",
+      "statusPageUrl": "https://status.deepseek.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "error",
+      "lastCheckedAt": null,
+      "overallStatus": "unknown",
+      "overallLabel": "Status unavailable",
+      "summary": null,
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "xai",
