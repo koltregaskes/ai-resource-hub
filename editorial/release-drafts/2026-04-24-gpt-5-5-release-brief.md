@@ -7,12 +7,12 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-12T20:49:08.643Z"
+generated_at: "2026-05-12T22:22:29.424Z"
 ---
 
 # GPT-5.5: release brief
 
-OpenAI's GPT-5.5 is on the release desk with 6 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.5 is on the release desk with 5 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,10 +30,9 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 ## Outside coverage and early reactions
 
 - OpenAI (2026-05-07): [Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber](https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber) - OpenAI expands Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber, helping verified defenders accelerate vulnerability research and protect critical infrastructure.
+- OpenAI (2026-05-12): [How NVIDIA engineers and researchers build with Codex](https://openai.com/index/nvidia) - Teams use Codex with GPT-5.5 to ship production systems and turn research ideas into runnable experiments.
 - The Verge (2026-05-11): [OpenAI just released its answer to Claude Mythos](https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai) - OpenAI is launching Daybreak, an AI initiative focused on detecting and patching vulnerabilities before attackers find them. Daybreak uses the Codex Security AI agent that launched in March to create a threat model based on an organization's code and focus on possible attack paths, validate likely vulnerabilities, and…
-- OpenAI (2026-05-05): [Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking) - OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
 - OpenAI (2026-05-11): [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) - OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.
-- OpenAI (2026-05-06): [How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 - OpenAI (2026-05-07): [Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api) - Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.
 
 ## Suggested thread / post structure
@@ -56,8 +55,7 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [OpenAI: Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber](https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber)
+- [OpenAI: How NVIDIA engineers and researchers build with Codex](https://openai.com/index/nvidia)
 - [The Verge: OpenAI just released its answer to Claude Mythos](https://www.theverge.com/ai-artificial-intelligence/928342/openai-daybreak-security-ai)
-- [OpenAI: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)](https://openai.com/index/mrc-supercomputer-networking)
 - [OpenAI: OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company)
-- [OpenAI: How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals)
 - [OpenAI: Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api)

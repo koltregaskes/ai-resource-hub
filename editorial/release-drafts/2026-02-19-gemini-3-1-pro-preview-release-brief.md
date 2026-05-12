@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Gemini 3.1 Pro Preview"
 provider: "Google"
 release_date: "2026-02-19"
-generated_at: "2026-05-12T20:49:08.644Z"
+generated_at: "2026-05-12T22:22:29.426Z"
 ---
 
 # Gemini 3.1 Pro Preview: release brief
@@ -32,7 +32,7 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 
 - TechCrunch (2026-05-12): [Everything Google announced at its Android Show, from Googlebooks to vibe-coded widgets](https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/) - Google unveiled its new AI-first Googlebooks laptops, more agentic Gemini features, vibe-coded Android widgets, Gemini in Chrome, refreshed Android Auto, and more ahead of I/O.
 - The Verge (2026-05-12): [Gemini&#8217;s latest updates are all about controlling your phone](https://www.theverge.com/tech/928724/gemini-intelligence-android-io-autofill) - It is, once again, Gemini season. Google is announcing a host of new Gemini features during its pre-I/O Android showcase, many of which aim to help use your phone for you. You'll find Gemini in more places, like Chrome on Android, in your autofill suggestions, and all up in your apps - if you want. [&#8230;]
-- TechCrunch (2026-05-12): [Google brings agentic AI and vibe-coded widgets to Android](https://techcrunch.com/2026/05/12/google-brings-agentic-ai-and-vibe-coded-widgets-to-android/) - Gemini Intelligence will also include Gboard based dictation and form filling capabilities
+- TechCrunch (2026-05-12): [Google brings agentic AI and vibe-coded widgets to Android](https://techcrunch.com/2026/05/12/google-brings-agentic-ai-and-vibe-coded-widgets-to-android/) - Gemini Intelligence will also include Gboard-based dictation and form-filling capabilities.
 - TechCrunch (2026-05-12): [Google adds Gemini-powered dictation to Gboard, which could be bad news for dictation startups](https://techcrunch.com/2026/05/12/google-adds-gemini-powered-dictation-to-gboard-which-could-be-bad-news-for-dictation-startups/) - Google's transcription feature will initially launch with Samsung Galaxy and Google Pixel phones.
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
