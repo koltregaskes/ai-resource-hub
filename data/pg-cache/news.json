@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-5502a50a46d6e39ecfd7",
+    "title": "Building a safe, effective sandbox to enable Codex on Windows",
+    "url": "https://openai.com/index/building-codex-windows-sandbox",
+    "source": "OpenAI",
+    "summary": "Learn how OpenAI built a secure sandbox for Codex on Windows, enabling safe, efficient coding agents with controlled file access and network restrictions.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T00:00:00.000Z",
+    "discovered_at": "2026-05-13 19:05:35"
+  },
+  {
+    "id": "news-e501e1effa7f61df380a",
+    "title": "Mark Zuckerberg announces &#8216;completely private&#8217; encrypted Meta AI chat",
+    "url": "https://www.theverge.com/tech/929791/meta-ai-incognito-chats",
+    "source": "The Verge",
+    "summary": "Meta CEO Mark Zuckerberg says its new Incognito Chat is \"the first major AI product where there is no log of your conversations stored on servers.\" Messages in Incognito Chat aren't saved or stored in users' chat history, similar to incognito modes on other AI chatbots, but Meta says its version is different because i…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T16:45:43.000Z",
+    "discovered_at": "2026-05-13 19:05:37"
+  },
+  {
     "id": "news-05cdfe099c67677fe1c9",
     "title": "Who trusts Sam Altman?",
     "url": "https://techcrunch.com/2026/05/13/who-trusts-sam-altman/",
@@ -9,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T16:31:04.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-e7c8b2b6505a0ae2ee12",
@@ -21,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T16:22:01.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-1a442dacfe548c92207c",
@@ -33,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T16:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-4090480ae9e039db171a",
@@ -45,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T15:30:37.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -57,43 +81,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T15:28:21.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-b6e87bdbc9f18ff763f5",
     "title": "Amazon launches an AI shopping assistant for the search bar, powered by Alexa+",
     "url": "https://techcrunch.com/2026/05/13/amazon-launches-an-ai-shopping-assistant-for-the-search-bar-powered-by-alexa/",
     "source": "TechCrunch",
-    "summary": "Alexa for Shopping is a new personalized AI shopping assistant in the Amazon search bar that replaces its Rufus assistant.",
+    "summary": "Alexa for Shopping offers a voice- and touch-enabled shopping experience across mobile, desktop, and Echo Show smart displays. Alexa for Shopping provides more personalized recommendations and automates the shopping experience across Amazon and other online retailers.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T14:59:32.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
-  },
-  {
-    "id": "news-96287f7ceb9f83c041d0",
-    "title": "Introducing the 6 stages at TechCrunch Disrupt 2026 — built for today’s tougher startup market",
-    "url": "https://techcrunch.com/2026/05/13/introducing-the-6-stages-of-techcrunch-disrupt-2026-built-for-todays-tougher-startup-market/",
-    "source": "TechCrunch",
-    "summary": "From October 13-15, TechCrunch Disrupt 2026 will feature 200+ sessions across six stages, led by 250+ tech leaders shaping the industry today. Register now to save up to $410, plus 50% off a second pass.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-13T14:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-d8e96c8124cdd63f772a",
     "title": "Anthropic now has more business customers than OpenAI, according to Ramp data",
     "url": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/",
     "source": "TechCrunch",
-    "summary": "For the first time, Anthropic has more verified business customers than OpenAI, according to this month’s AI Index from the fintech firm Ramp.",
+    "summary": "A survey compiled from fintech firm Ramp’s clients’ expense data shows 34.4% of participating businesses are paying for Anthropic services, more than any other AI lab, while only 32.3% pay for OpenAI.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T14:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-663b262b7c41dbd61b1f",
@@ -105,7 +117,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T14:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
+  },
+  {
+    "id": "news-96287f7ceb9f83c041d0",
+    "title": "Introducing the 6 stages at TechCrunch Disrupt 2026 — built for today’s tougher startup market",
+    "url": "https://techcrunch.com/2026/05/13/introducing-the-6-stages-of-techcrunch-disrupt-2026-built-for-todays-tougher-startup-market/",
+    "source": "TechCrunch",
+    "summary": "From October 13-15, TechCrunch Disrupt 2026 will feature 200+ sessions across six stages, led by 250+ tech leaders shaping the industry today. Register now to save up to $410, plus 50% off a second pass.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T14:00:00.000Z",
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-15990841cbba33d9eb1b",
@@ -117,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T13:27:09.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-27d5b48813c4d56528b2",
@@ -129,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T13:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-1b6a4b14a9ab1cdea1fa",
@@ -141,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T12:11:33.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-cef662ce22a5f2add7fe",
@@ -153,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T09:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-9f51a76b447c3ce4026f",
@@ -165,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T00:26:48.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-001b12047d3c0d1a675a",
@@ -177,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T23:23:14.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-509b3435a7f767f41e38",
@@ -189,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T20:35:23.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-ab7e0cb8a0c9f6ab533c",
@@ -201,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T18:05:15.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-e59127372d5ab307edb3",
@@ -213,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:36:34.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-491dd889bae5a5638fa3",
@@ -225,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:34:09.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-707aacc0773b32a5042d",
@@ -237,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:30:57.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-b005c648c35cb1be3ab8",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:01:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-af203b3a684162e83a33",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-d78a1aba539ab6c0e809",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-8c75c03bf4e2da7064d7",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-9b20e4e2f1441373cd49",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-f0ccdc3aa9f2bb75f368",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-a3e7b96aa54c1272405e",
@@ -321,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
-  },
-  {
-    "id": "news-b1a28ee8a09f5c93e51c",
-    "title": "Parents say ChatGPT got their son killed with bad advice on party drugs",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/928691/openai-chatgpt-wrongful-death-overdose",
-    "source": "The Verge",
-    "summary": "The family of a 19-year-old college student is suing OpenAI over claims that his conversations with ChatGPT led to an accidental overdose. In the lawsuit filed on Tuesday, Sam Nelson's parents allege ChatGPT \"encouraged\" the teen to \"consume a combination of substances that any licensed medical professional would have…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T16:30:33.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-7d12c750a4ea6f388e20",
@@ -345,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T15:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
-  },
-  {
-    "id": "news-8a196e8c3ae2cd2beeba",
-    "title": "AutoScout24 scales engineering with AI-powered workflows",
-    "url": "https://openai.com/index/autoscout24",
-    "source": "OpenAI",
-    "summary": "Learn how AutoScout24 Group uses Codex and ChatGPT to speed development cycles, improve code quality, and expand AI adoption.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-c31ba2e9026be78e6eac",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-6498bc3d305077cef694",
@@ -381,7 +381,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
+  },
+  {
+    "id": "news-8a196e8c3ae2cd2beeba",
+    "title": "AutoScout24 scales engineering with AI-powered workflows",
+    "url": "https://openai.com/index/autoscout24",
+    "source": "OpenAI",
+    "summary": "Learn how AutoScout24 Group uses Codex and ChatGPT to speed development cycles, improve code quality, and expand AI adoption.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T00:00:00.000Z",
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-e13dc335beb06d7df67f",
@@ -393,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T15:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
-  },
-  {
-    "id": "news-ee5564e4d43f904019c8",
-    "title": "OpenAI Campus Network: Student club interest form",
-    "url": "https://openai.com/index/openai-campus-network-student-club-interest-form",
-    "source": "OpenAI",
-    "summary": "Join the OpenAI Campus Network—connect student clubs worldwide, access AI tools, host events, and build an AI-powered campus community.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-4ca12da2ae6a65c2eb13",
@@ -417,7 +417,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
+  },
+  {
+    "id": "news-ee5564e4d43f904019c8",
+    "title": "OpenAI Campus Network: Student club interest form",
+    "url": "https://openai.com/index/openai-campus-network-student-club-interest-form",
+    "source": "OpenAI",
+    "summary": "Join the OpenAI Campus Network—connect student clubs worldwide, access AI tools, host events, and build an AI-powered campus community.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-11T10:00:00.000Z",
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-68e94ee2f13a7ca6fb82",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-91ec1ce9a5cf0cecc4b0",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T12:30:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-13 16:32:19"
+    "discovered_at": "2026-05-13 19:05:37"
   },
   {
     "id": "news-288ea344bbe070b948a8",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-4ba89a634a8ba847997e",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T10:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-eed85cf61ed43c59d6f9",
@@ -525,19 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
-  },
-  {
-    "id": "news-de2ca3d7578dd51cbe19",
-    "title": "Testing ads in ChatGPT",
-    "url": "https://openai.com/index/testing-ads-in-chatgpt",
-    "source": "OpenAI",
-    "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-fe948365c4d6a69e5ad5",
@@ -549,7 +549,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
+  },
+  {
+    "id": "news-de2ca3d7578dd51cbe19",
+    "title": "Testing ads in ChatGPT",
+    "url": "https://openai.com/index/testing-ads-in-chatgpt",
+    "source": "OpenAI",
+    "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-07T00:00:00.000Z",
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-9195cc0cde7d707470cd",
@@ -573,31 +585,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T08:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
-    "id": "news-94a93b54a777d7269e9a",
-    "title": "Singular Bank helps bankers move fast with ChatGPT and Codex",
-    "url": "https://openai.com/index/singular-bank",
+    "id": "news-94f58b450581f2c916b3",
+    "title": "How frontier firms are pulling ahead",
+    "url": "https://openai.com/index/introducing-b2b-signals",
     "source": "OpenAI",
-    "summary": "Singular Bank built Singularity, an internal assistant using ChatGPT and Codex to help bankers save 60–90 minutes daily on meeting prep, portfolio analysis, and follow-up.",
+    "summary": "OpenAI’s B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
-  },
-  {
-    "id": "news-bdecd9008a33c6517ffa",
-    "title": "Introducing ChatGPT Futures: Class of 2026",
-    "url": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
-    "source": "OpenAI",
-    "summary": "Meet the ChatGPT Futures Class of 2026—26 student innovators using AI to build, research, and drive real-world impact. Discover how this generation is redefining learning, creativity, and opportunity with ChatGPT.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:15"
+    "discovered_at": "2026-05-13 19:05:35"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:17"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -789,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-13 16:32:18"
+    "discovered_at": "2026-05-13 19:05:36"
   }
 ]

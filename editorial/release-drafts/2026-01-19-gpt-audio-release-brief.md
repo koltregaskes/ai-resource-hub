@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT Audio"
 provider: "OpenAI"
 release_date: "2026-01-19"
-generated_at: "2026-05-13T16:32:27.075Z"
+generated_at: "2026-05-13T19:05:47.574Z"
 ---
 
 # GPT Audio: release brief
 
-OpenAI's GPT Audio is on the release desk with 2 related stories and 0 benchmark signals to review.
+OpenAI's GPT Audio is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,6 +30,7 @@ GPT Audio is a currently tracked release from OpenAI. It is positioned as an API
 ## Outside coverage and early reactions
 
 - OpenAI (2026-05-11): [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) - OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.
+- OpenAI (2026-05-06): [How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 - OpenAI (2026-05-07): [Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api) - Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.
 
 ## Suggested thread / post structure
@@ -52,4 +53,5 @@ GPT Audio is a currently tracked release from OpenAI. It is positioned as an API
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [OpenAI: OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company)
+- [OpenAI: How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals)
 - [OpenAI: Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api)
