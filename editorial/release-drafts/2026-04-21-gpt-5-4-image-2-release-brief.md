@@ -3,11 +3,11 @@ title: "GPT-5.4 Image 2: release brief"
 slug: "2026-04-21-gpt-5-4-image-2-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "high"
+priority: "watch"
 model: "GPT-5.4 Image 2"
 provider: "OpenAI"
 release_date: "2026-04-21"
-generated_at: "2026-05-12T22:22:29.424Z"
+generated_at: "2026-05-13T00:13:00.866Z"
 ---
 
 # GPT-5.4 Image 2: release brief
