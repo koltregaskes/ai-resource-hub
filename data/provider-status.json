@@ -1,6 +1,94 @@
 {
-  "generatedAt": "2026-05-13T04:58:37.914Z",
+  "generatedAt": "2026-05-13T05:34:18.052Z",
   "providers": [
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-13T05:34:18.045Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-05-13T05:19:12.000Z",
+          "title": "Llama 3 8B Instruct Lite went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-13T05:19:12.000Z",
+          "updatedAt": "2026-05-13T05:19:12.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Llama 3 8B Instruct Lite went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-13T03:44:47.000Z",
+          "title": "OpenAI GPT OSS 20B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-13T03:44:47.000Z",
+          "updatedAt": "2026-05-13T03:44:47.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-05-13T05:19:12.000Z",
+          "title": "Llama 3 8B Instruct Lite went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-13T05:19:12.000Z",
+          "updatedAt": "2026-05-13T05:19:12.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Llama 3 8B Instruct Lite went down"
+        },
+        {
+          "id": "together-feed-1-2026-05-13T04:05:47.000Z",
+          "title": "OpenAI GPT OSS 20B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-13T04:05:47.000Z",
+          "updatedAt": "2026-05-13T04:05:47.000Z",
+          "resolvedAt": "2026-05-13T04:05:47.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B recovered"
+        },
+        {
+          "id": "together-feed-2-2026-05-13T03:44:47.000Z",
+          "title": "OpenAI GPT OSS 20B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-13T03:44:47.000Z",
+          "updatedAt": "2026-05-13T03:44:47.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B went down"
+        },
+        {
+          "id": "together-feed-3-2026-05-13T01:24:23.000Z",
+          "title": "FLUX.1 [schnell] recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-13T01:24:23.000Z",
+          "updatedAt": "2026-05-13T01:24:23.000Z",
+          "resolvedAt": "2026-05-13T01:24:23.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 [schnell] recovered"
+        }
+      ]
+    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -12,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T04:58:36.638Z",
+      "lastCheckedAt": "2026-05-13T05:34:16.230Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T04:58:37.364Z",
+      "lastCheckedAt": "2026-05-13T05:34:17.418Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T04:58:37.652Z",
+      "lastCheckedAt": "2026-05-13T05:34:17.670Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -187,7 +275,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T04:58:36.628Z",
+      "lastCheckedAt": "2026-05-13T05:34:16.702Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -241,7 +329,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T04:58:36.816Z",
+      "lastCheckedAt": "2026-05-13T05:34:17.085Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +349,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T04:58:36.584Z",
+      "lastCheckedAt": "2026-05-13T05:34:16.113Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -333,71 +421,6 @@
           "updatedAt": "2026-05-08T16:17:19.000Z",
           "resolvedAt": "2026-05-08T16:17:19.000Z",
           "summary": null
-        }
-      ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T04:58:37.907Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-05-13T04:05:47.000Z",
-          "title": "OpenAI GPT OSS 20B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-13T04:05:47.000Z",
-          "updatedAt": "2026-05-13T04:05:47.000Z",
-          "resolvedAt": "2026-05-13T04:05:47.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B recovered"
-        },
-        {
-          "id": "together-feed-1-2026-05-13T03:44:47.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-13T03:44:47.000Z",
-          "updatedAt": "2026-05-13T03:44:47.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-13T01:24:23.000Z",
-          "title": "FLUX.1 [schnell] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-13T01:24:23.000Z",
-          "updatedAt": "2026-05-13T01:24:23.000Z",
-          "resolvedAt": "2026-05-13T01:24:23.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 [schnell] recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-12T23:50:05.000Z",
-          "title": "Qwen2.5 7B Instruct Turbo recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-12T23:50:05.000Z",
-          "updatedAt": "2026-05-12T23:50:05.000Z",
-          "resolvedAt": "2026-05-12T23:50:05.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen2.5 7B Instruct Turbo recovered"
         }
       ]
     },
