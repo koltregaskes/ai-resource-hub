@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Nemotron 3 Super"
 provider: "NVIDIA"
 release_date: "2026-03-11"
-generated_at: "2026-05-13T13:27:07.929Z"
+generated_at: "2026-05-13T16:32:27.075Z"
 ---
 
 # Nemotron 3 Super: release brief

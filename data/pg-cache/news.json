@@ -1,7 +1,127 @@
 [
   {
+    "id": "news-05cdfe099c67677fe1c9",
+    "title": "Who trusts Sam Altman?",
+    "url": "https://techcrunch.com/2026/05/13/who-trusts-sam-altman/",
+    "source": "TechCrunch",
+    "summary": "\"I believe I am an honest and trustworthy business person,\" Altman testified in federal court.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T16:31:04.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-e7c8b2b6505a0ae2ee12",
+    "title": "Origin Lab raises $8M to help video game companies sell data to world-model builders",
+    "url": "https://techcrunch.com/2026/05/13/origin-lab-raises-8m-to-help-video-game-companies-sell-data-to-world-model-builders/",
+    "source": "TechCrunch",
+    "summary": "Origin Lab will serve as a marketplace where AI labs can buy high-quality licensed data, and video-game companies can sell it.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T16:22:01.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-1a442dacfe548c92207c",
+    "title": "Anthropic courts a new kind of customer: small business owners",
+    "url": "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/",
+    "source": "TechCrunch",
+    "summary": "For founders and investors, Anthropic's new offering signals that the AI platform wars are expanding downmarket and that the next major battleground for user acquisition isn't the Fortune 500; it's the 36 million small businesses that make up the backbone of the U.S. economy.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T16:00:00.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-4090480ae9e039db171a",
+    "title": "Microsoft doesn’t want any of this",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/929692/microsoft-musk-altman-openai-trial",
+    "source": "The Verge",
+    "summary": "Maybe I'm just punch-drunk in my third week attending Musk v. Altman, but I have become very, very fond of Microsoft during the course of this trial. They don't want to be here any more than I do. Their opening statement was honestly one of the most Microsoft things I've ever seen. More than anything [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T15:30:37.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-f997a4857c3224676938",
+    "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
+    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
+    "source": "The Verge",
+    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. Elon Musk,…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T15:28:21.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-b6e87bdbc9f18ff763f5",
+    "title": "Amazon launches an AI shopping assistant for the search bar, powered by Alexa+",
+    "url": "https://techcrunch.com/2026/05/13/amazon-launches-an-ai-shopping-assistant-for-the-search-bar-powered-by-alexa/",
+    "source": "TechCrunch",
+    "summary": "Alexa for Shopping is a new personalized AI shopping assistant in the Amazon search bar that replaces its Rufus assistant.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T14:59:32.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-96287f7ceb9f83c041d0",
+    "title": "Introducing the 6 stages at TechCrunch Disrupt 2026 — built for today’s tougher startup market",
+    "url": "https://techcrunch.com/2026/05/13/introducing-the-6-stages-of-techcrunch-disrupt-2026-built-for-todays-tougher-startup-market/",
+    "source": "TechCrunch",
+    "summary": "From October 13-15, TechCrunch Disrupt 2026 will feature 200+ sessions across six stages, led by 250+ tech leaders shaping the industry today. Register now to save up to $410, plus 50% off a second pass.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T14:00:00.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-d8e96c8124cdd63f772a",
+    "title": "Anthropic now has more business customers than OpenAI, according to Ramp data",
+    "url": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/",
+    "source": "TechCrunch",
+    "summary": "For the first time, Anthropic has more verified business customers than OpenAI, according to this month’s AI Index from the fintech firm Ramp.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T14:00:00.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-663b262b7c41dbd61b1f",
+    "title": "WhatsApp adds an incognito mode in Meta AI chats",
+    "url": "https://techcrunch.com/2026/05/13/whatsapp-adds-an-incognito-mode-in-meta-ai-chats/",
+    "source": "TechCrunch",
+    "summary": "Meta said these incognito conversations are not saved, and messages will disappear by default once you close the chat.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T14:00:00.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
+    "id": "news-15990841cbba33d9eb1b",
+    "title": "Poppy debuts a proactive AI assistant to help organize your digital life",
+    "url": "https://techcrunch.com/2026/05/13/poppy-debuts-a-proactive-ai-assistant-to-help-organize-your-digital-life/",
+    "source": "TechCrunch",
+    "summary": "Poppy is an AI-powered app that connects your calendar, email, messages, and other services to surface reminders, suggestions, and tasks based on what’s happening in your life.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-13T13:27:09.000Z",
+    "discovered_at": "2026-05-13 16:32:18"
+  },
+  {
     "id": "news-27d5b48813c4d56528b2",
-    "title": "Alexa is moving into Amazon.com",
+    "title": "Alexa is moving into Amazon․com",
     "url": "https://www.theverge.com/ai-artificial-intelligence/929457/amazon-announces-alexa-for-shopping-ai-assistant-rufus",
     "source": "The Verge",
     "summary": "Amazon is bringing Alexa Plus to Amazon.com, integrating its LLM-powered AI assistant directly into the company's shopping experience. Beginning today, when you type a query into Amazon, you'll be talking to Alexa for Shopping, the company's new shopping assistant, powered by Alexa Plus. So, while a search for \"toilet…",
@@ -9,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T13:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-1b6a4b14a9ab1cdea1fa",
@@ -21,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T12:11:33.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-cef662ce22a5f2add7fe",
@@ -33,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T09:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-9f51a76b447c3ce4026f",
@@ -45,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T00:26:48.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-001b12047d3c0d1a675a",
@@ -57,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T23:23:14.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-509b3435a7f767f41e38",
@@ -69,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T20:35:23.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-ab7e0cb8a0c9f6ab533c",
@@ -81,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T18:05:15.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-e59127372d5ab307edb3",
@@ -93,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:36:34.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-491dd889bae5a5638fa3",
@@ -105,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:34:09.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-707aacc0773b32a5042d",
@@ -117,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:30:57.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-b005c648c35cb1be3ab8",
@@ -129,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:01:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-af203b3a684162e83a33",
@@ -141,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-d78a1aba539ab6c0e809",
@@ -153,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-8c75c03bf4e2da7064d7",
@@ -165,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-9b20e4e2f1441373cd49",
@@ -177,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-f0ccdc3aa9f2bb75f368",
@@ -189,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-a3e7b96aa54c1272405e",
@@ -201,19 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
-  },
-  {
-    "id": "news-778e565095326912a278",
-    "title": "Threads tests a Meta AI integration that works similarly to Grok",
-    "url": "https://techcrunch.com/2026/05/12/threads-tests-a-meta-ai-integration-that-works-similarly-to-grok/",
-    "source": "TechCrunch",
-    "summary": "The feature is designed to help people get real-time context about trends and breaking stories, as well as receive recommendations, all within conversations.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T16:34:36.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-b1a28ee8a09f5c93e51c",
@@ -225,31 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T16:30:33.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
-  },
-  {
-    "id": "news-462c2a7706ff4d93c284",
-    "title": "Sam Altman takes the stand in trial against Elon Musk",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/916975/altman-takes-stand-elon-musk-openai-trial",
-    "source": "The Verge",
-    "summary": "OpenAI CEO Sam Altman has begun his testimony against Elon Musk in a high-profile jury trial in a California federal courtroom. Altman, alongside OpenAI president Greg Brockman, is a primary defendant in the trial brought by Musk. Altman, Brockman, and Musk were all part of the initial founding team at OpenAI, with Mu…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T16:05:20.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
-  },
-  {
-    "id": "news-f6b6b76d606c34bb1f15",
-    "title": "George Clooney, Tom Hanks, and Meryl Streep back new &#8216;Human Consent Standard&#8217; for AI licensing",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/928534/rsl-media-human-consent-standard",
-    "source": "The Verge",
-    "summary": "Hollywood actors and producers are standing behind a new AI licensing standard that will tell AI systems whether they'll need to pay to use a person's likeness, creative work, characters, and designs. With the Human Consent Standard, people can set terms for the use of their work or likeness, including giving AI syste…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T16:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-7d12c750a4ea6f388e20",
@@ -261,55 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T15:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
-  },
-  {
-    "id": "news-07745aaa1612e7f27c54",
-    "title": "Dessn raises $6M for its production-focused design tool",
-    "url": "https://techcrunch.com/2026/05/12/dessn-raises-6m-for-its-production-focused-design-tool/",
-    "source": "TechCrunch",
-    "summary": "A new startup called Dessn has raised $6 million to build AI-powered design tools that work directly with production codebases.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T13:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
-  },
-  {
-    "id": "news-a3f3f9a64c52b71f99ed",
-    "title": "AI voice startup Vapi hits $500M valuation after winning Amazon Ring over 40 rivals",
-    "url": "https://techcrunch.com/2026/05/12/vapi-hits-500m-valuation-as-amazon-ring-chose-its-ai-platform-over-40-rivals/",
-    "source": "TechCrunch",
-    "summary": "Vapi says its enterprise business has grown tenfold since early 2025 as companies shift customer support and sales calls to AI agents.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T11:30:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
-  },
-  {
-    "id": "news-780a836a9e315d4f7308",
-    "title": "Thinking Machines wants to build an AI that actually listens while it talks",
-    "url": "https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/",
-    "source": "TechCrunch",
-    "summary": "Right now, every AI model you've ever used works the same way. You talk, it listens. It responds, you listen. Thinking Machines is trying to change that by building a model that processes your input and generates a response at the same time, so it's more like a phone call than a text chain.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T04:52:35.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
-  },
-  {
-    "id": "news-c2e6ca3e854f832d1291",
-    "title": "Riding an AI rally, Robinhood preps second retail venture IPO",
-    "url": "https://techcrunch.com/2026/05/11/riding-an-ai-rally-robinhood-preps-second-retail-venture-ipo/",
-    "source": "TechCrunch",
-    "summary": "Robinhood files confidentially for its second venture fund, this time targeting growth and early-stage startups.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T00:09:01.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-8a196e8c3ae2cd2beeba",
@@ -321,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-c31ba2e9026be78e6eac",
@@ -333,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-6498bc3d305077cef694",
@@ -345,31 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
-  },
-  {
-    "id": "news-7224de2c82ef139386bf",
-    "title": "GM just laid off hundreds of IT workers to hire those with stronger AI skills",
-    "url": "https://techcrunch.com/2026/05/11/gm-just-laid-off-hundreds-of-it-workers-to-hire-those-with-stronger-ai-skills/",
-    "source": "TechCrunch",
-    "summary": "Some of the positions focus on AI-native development, data engineering and analytics, cloud-based engineering, and agent and model development as well as prompt engineering and new AI workflows.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-11T23:04:10.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
-  },
-  {
-    "id": "news-1df024eea7b38307becf",
-    "title": "Digg tries again, this time as an AI news aggregator",
-    "url": "https://techcrunch.com/2026/05/11/digg-tries-again-this-time-as-an-ai-news-aggregator/",
-    "source": "TechCrunch",
-    "summary": "In an email to beta testers, the company said the site's goal is to \"track the most influential voices in a space\" and to surface the news that's actually worth \"paying attention to.\"",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-11T17:02:35.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-e13dc335beb06d7df67f",
@@ -381,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T15:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
-  },
-  {
-    "id": "news-88258d4a60b28dcbd4ab",
-    "title": "There aren&#8217;t enough rockets for space data centers — Cowboy Space raised $275M to build them",
-    "url": "https://techcrunch.com/2026/05/11/there-arent-enough-rockets-for-space-data-centers-cowboy-space-raised-275-million-to-build-them/",
-    "source": "TechCrunch",
-    "summary": "The apparently insatiable demand for AI compute has data center entrepreneurs looking to the stars. There's a key problem: There aren't enough rockets to put data centers in orbit around Earth, and they're too expensive.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-11T13:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-ee5564e4d43f904019c8",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-4ca12da2ae6a65c2eb13",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-68e94ee2f13a7ca6fb82",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-91ec1ce9a5cf0cecc4b0",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T12:30:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-13 13:26:57"
+    "discovered_at": "2026-05-13 16:32:19"
   },
   {
     "id": "news-288ea344bbe070b948a8",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-4ba89a634a8ba847997e",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T10:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-eed85cf61ed43c59d6f9",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-de2ca3d7578dd51cbe19",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-fe948365c4d6a69e5ad5",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-9195cc0cde7d707470cd",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T08:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-94a93b54a777d7269e9a",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-bdecd9008a33c6517ffa",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:15"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:17"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   },
   {
     "id": "news-ab67017c0110be033177",
@@ -789,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-14T17:00:00.000Z",
-    "discovered_at": "2026-05-13 13:26:56"
+    "discovered_at": "2026-05-13 16:32:18"
   }
 ]
