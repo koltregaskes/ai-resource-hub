@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-13T08:10:33.086Z",
+  "generatedAt": "2026-05-13T08:23:32.632Z",
   "providers": [
     {
       "id": "openai",
@@ -12,12 +12,28 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T08:10:26.379Z",
+      "lastCheckedAt": "2026-05-13T08:23:31.042Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "CLI",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex API",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Audio",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "VS Code extension",
+          "status": "degraded_performance"
+        },
         {
           "name": "Responses",
           "status": "operational"
@@ -25,25 +41,19 @@
         {
           "name": "Fine-tuning",
           "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KRG6MF021JQ997JCR7R8Y9A0",
+          "title": "Codex 5.5 engines are experiencing high error rate",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-05-13T08:18:13.000Z",
+          "updatedAt": "2026-05-13T08:18:13.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
         {
           "id": "01KRG0AZKH41DV4D9SNJSXM33Q",
           "title": "Realtime API  - SIP/WebRTC flow are down",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KRG6MF021JQ997JCR7R8Y9A0",
+          "title": "Codex 5.5 engines are experiencing high error rate",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-05-13T08:18:13.000Z",
+          "updatedAt": "2026-05-13T08:18:13.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
         {
           "id": "01KRG0AZKH41DV4D9SNJSXM33Q",
           "title": "Realtime API  - SIP/WebRTC flow are down",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-05-11T05:35:41.000Z",
           "resolvedAt": "2026-05-11T05:35:41.000Z",
           "summary": null
-        },
-        {
-          "id": "01KR50YN2DBMTXGPC6BQSJN48J",
-          "title": "Elevated errors for Responses API",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-09T00:07:17.000Z",
-          "updatedAt": "2026-05-09T00:08:01.000Z",
-          "resolvedAt": "2026-05-09T00:08:01.000Z",
-          "summary": null
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T08:10:26.441Z",
+      "lastCheckedAt": "2026-05-13T08:23:31.078Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -199,7 +209,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T08:10:32.308Z",
+      "lastCheckedAt": "2026-05-13T08:23:32.126Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +229,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T08:10:32.593Z",
+      "lastCheckedAt": "2026-05-13T08:23:32.467Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -284,7 +294,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T08:10:31.811Z",
+      "lastCheckedAt": "2026-05-13T08:23:31.422Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -338,7 +348,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T08:10:32.033Z",
+      "lastCheckedAt": "2026-05-13T08:23:31.775Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -358,7 +368,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T08:10:32.719Z",
+      "lastCheckedAt": "2026-05-13T08:23:32.625Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
