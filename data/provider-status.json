@@ -1,91 +1,100 @@
 {
-  "generatedAt": "2026-05-13T05:34:18.052Z",
+  "generatedAt": "2026-05-13T08:10:33.086Z",
   "providers": [
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T05:34:18.045Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
+      "lastCheckedAt": "2026-05-13T08:10:26.379Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
-      "components": [],
-      "activeIncidents": [
+      "components": [
         {
-          "id": "together-feed-0-2026-05-13T05:19:12.000Z",
-          "title": "Llama 3 8B Instruct Lite went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-13T05:19:12.000Z",
-          "updatedAt": "2026-05-13T05:19:12.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Llama 3 8B Instruct Lite went down"
+          "name": "Responses",
+          "status": "operational"
         },
         {
-          "id": "together-feed-2-2026-05-13T03:44:47.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KRG0AZKH41DV4D9SNJSXM33Q",
+          "title": "Realtime API  - SIP/WebRTC flow are down",
           "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-13T03:44:47.000Z",
-          "updatedAt": "2026-05-13T03:44:47.000Z",
+          "impact": "minor",
+          "startedAt": "2026-05-13T06:28:11.000Z",
+          "updatedAt": "2026-05-13T06:37:18.000Z",
           "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
+          "summary": null
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-13T05:19:12.000Z",
-          "title": "Llama 3 8B Instruct Lite went down",
+          "id": "01KRG0AZKH41DV4D9SNJSXM33Q",
+          "title": "Realtime API  - SIP/WebRTC flow are down",
           "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-13T05:19:12.000Z",
-          "updatedAt": "2026-05-13T05:19:12.000Z",
+          "impact": "minor",
+          "startedAt": "2026-05-13T06:28:11.000Z",
+          "updatedAt": "2026-05-13T06:37:18.000Z",
           "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Llama 3 8B Instruct Lite went down"
+          "summary": null
         },
         {
-          "id": "together-feed-1-2026-05-13T04:05:47.000Z",
-          "title": "OpenAI GPT OSS 20B recovered",
+          "id": "01KRBZTV511HR7SWVFZJ0438D6",
+          "title": "Elevated error rates with GPT 5.5",
           "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-13T04:05:47.000Z",
-          "updatedAt": "2026-05-13T04:05:47.000Z",
-          "resolvedAt": "2026-05-13T04:05:47.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B recovered"
+          "impact": "minor",
+          "startedAt": "2026-05-11T17:02:24.000Z",
+          "updatedAt": "2026-05-11T20:12:12.000Z",
+          "resolvedAt": "2026-05-11T17:59:00.000Z",
+          "summary": null
         },
         {
-          "id": "together-feed-2-2026-05-13T03:44:47.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
+          "id": "01KRAA341YK58M05V2DFGDRMFB",
+          "title": "Users may experience elevated errors in ChatGPT uploading files and Codex Cloud creating tasks",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-11T01:23:13.000Z",
+          "updatedAt": "2026-05-11T05:35:41.000Z",
+          "resolvedAt": "2026-05-11T05:35:41.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KR50YN2DBMTXGPC6BQSJN48J",
+          "title": "Elevated errors for Responses API",
+          "status": "resolved",
           "impact": "major",
-          "startedAt": "2026-05-13T03:44:47.000Z",
-          "updatedAt": "2026-05-13T03:44:47.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        },
-        {
-          "id": "together-feed-3-2026-05-13T01:24:23.000Z",
-          "title": "FLUX.1 [schnell] recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-13T01:24:23.000Z",
-          "updatedAt": "2026-05-13T01:24:23.000Z",
-          "resolvedAt": "2026-05-13T01:24:23.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "FLUX.1 [schnell] recovered"
+          "startedAt": "2026-05-09T00:07:17.000Z",
+          "updatedAt": "2026-05-09T00:08:01.000Z",
+          "resolvedAt": "2026-05-09T00:08:01.000Z",
+          "summary": null
         }
       ]
     },
@@ -100,7 +109,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T05:34:16.230Z",
+      "lastCheckedAt": "2026-05-13T08:10:26.441Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +199,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T05:34:17.418Z",
+      "lastCheckedAt": "2026-05-13T08:10:32.308Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T05:34:17.670Z",
+      "lastCheckedAt": "2026-05-13T08:10:32.593Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -275,7 +284,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T05:34:16.702Z",
+      "lastCheckedAt": "2026-05-13T08:10:31.811Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -329,7 +338,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T05:34:17.085Z",
+      "lastCheckedAt": "2026-05-13T08:10:32.033Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,88 +348,67 @@
       "recentIncidents": []
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-13T05:34:16.113Z",
+      "lastCheckedAt": "2026-05-13T08:10:32.719Z",
       "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
       "notes": null,
-      "components": [
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
-        }
-      ],
+      "components": [],
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "01KRBZTV511HR7SWVFZJ0438D6",
-          "title": "Elevated error rates with GPT 5.5",
+          "id": "together-feed-0-2026-05-13T06:50:44.000Z",
+          "title": "OpenAI GPT OSS 120B recovered",
           "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-11T17:02:24.000Z",
-          "updatedAt": "2026-05-11T20:12:12.000Z",
-          "resolvedAt": "2026-05-11T17:59:00.000Z",
-          "summary": null
+          "impact": "unknown",
+          "startedAt": "2026-05-13T06:50:44.000Z",
+          "updatedAt": "2026-05-13T06:50:44.000Z",
+          "resolvedAt": "2026-05-13T06:50:44.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B recovered"
         },
         {
-          "id": "01KRAA341YK58M05V2DFGDRMFB",
-          "title": "Users may experience elevated errors in ChatGPT uploading files and Codex Cloud creating tasks",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-11T01:23:13.000Z",
-          "updatedAt": "2026-05-11T05:35:41.000Z",
-          "resolvedAt": "2026-05-11T05:35:41.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KR50YN2DBMTXGPC6BQSJN48J",
-          "title": "Elevated errors for Responses API",
-          "status": "resolved",
+          "id": "together-feed-1-2026-05-13T06:26:57.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-05-09T00:07:17.000Z",
-          "updatedAt": "2026-05-09T00:08:01.000Z",
-          "resolvedAt": "2026-05-09T00:08:01.000Z",
-          "summary": null
+          "startedAt": "2026-05-13T06:26:57.000Z",
+          "updatedAt": "2026-05-13T06:26:57.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
         },
         {
-          "id": "01KR421V8PCTFKA8EJJC2VCGA3",
-          "title": "Degraded Performance with Codex Cloud Tasks",
+          "id": "together-feed-2-2026-05-13T05:37:14.000Z",
+          "title": "Llama 3 8B Instruct Lite recovered",
           "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-08T15:07:16.000Z",
-          "updatedAt": "2026-05-08T16:17:19.000Z",
-          "resolvedAt": "2026-05-08T16:17:19.000Z",
-          "summary": null
+          "impact": "unknown",
+          "startedAt": "2026-05-13T05:37:14.000Z",
+          "updatedAt": "2026-05-13T05:37:14.000Z",
+          "resolvedAt": "2026-05-13T05:37:14.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Llama 3 8B Instruct Lite recovered"
+        },
+        {
+          "id": "together-feed-3-2026-05-13T05:19:12.000Z",
+          "title": "Llama 3 8B Instruct Lite went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-13T05:19:12.000Z",
+          "updatedAt": "2026-05-13T05:19:12.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Llama 3 8B Instruct Lite went down"
         }
       ]
     },
