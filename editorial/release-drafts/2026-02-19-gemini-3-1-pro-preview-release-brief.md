@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Gemini 3.1 Pro Preview"
 provider: "Google"
 release_date: "2026-02-19"
-generated_at: "2026-05-14T04:57:13.075Z"
+generated_at: "2026-05-14T08:03:08.353Z"
 ---
 
 # Gemini 3.1 Pro Preview: release brief
 
-Google's Gemini 3.1 Pro Preview is on the release desk with 3 related stories and 2 benchmark signals to review.
+Google's Gemini 3.1 Pro Preview is on the release desk with 1 related story and 2 benchmark signals to review.
 
 ## Release summary
 
@@ -30,8 +30,6 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 
 ## Outside coverage and early reactions
 
-- TechCrunch (2026-05-12): [Everything Google announced at its Android Show, from Googlebooks to vibe-coded widgets](https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/) - Google unveiled its new AI-first Googlebooks laptops, more agentic Gemini features, vibe-coded Android widgets, Gemini in Chrome, refreshed Android Auto, and more ahead of I/O.
-- TechCrunch (2026-05-12): [Google adds Gemini-powered dictation to Gboard, which could be bad news for dictation startups](https://techcrunch.com/2026/05/12/google-adds-gemini-powered-dictation-to-gboard-which-could-be-bad-news-for-dictation-startups/) - Google's transcription feature will initially launch with Samsung Galaxy and Google Pixel phones.
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
 ## Suggested thread / post structure
@@ -53,6 +51,4 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/changelog)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
-- [TechCrunch: Everything Google announced at its Android Show, from Googlebooks to vibe-coded widgets](https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/)
-- [TechCrunch: Google adds Gemini-powered dictation to Gboard, which could be bad news for dictation startups](https://techcrunch.com/2026/05/12/google-adds-gemini-powered-dictation-to-gboard-which-could-be-bad-news-for-dictation-startups/)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)
