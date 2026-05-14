@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-14T21:21:38.408Z",
+  "generatedAt": "2026-05-14T21:49:56.740Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-14T21:21:36.749Z",
+      "lastCheckedAt": "2026-05-14T21:49:55.033Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-14T21:21:37.843Z",
+      "lastCheckedAt": "2026-05-14T21:49:56.376Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-14T21:21:38.340Z",
+      "lastCheckedAt": "2026-05-14T21:49:56.731Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -199,7 +199,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-14T21:21:37.206Z",
+      "lastCheckedAt": "2026-05-14T21:49:55.775Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-14T21:21:37.596Z",
+      "lastCheckedAt": "2026-05-14T21:49:55.994Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -273,10 +273,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-14T21:21:36.674Z",
+      "lastCheckedAt": "2026-05-14T21:49:55.060Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -304,27 +304,16 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01KRM4H2T37TNSS7BCSGXVS8RQ",
-          "title": "Codex Cloud and Code Review experiencing high failure rate",
-          "status": "investigating",
-          "impact": "none",
-          "startedAt": "2026-05-14T20:58:23.000Z",
-          "updatedAt": "2026-05-14T21:18:25.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "01KRM4H2T37TNSS7BCSGXVS8RQ",
           "title": "Codex Cloud and Code Review experiencing high failure rate",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-05-14T20:58:23.000Z",
-          "updatedAt": "2026-05-14T21:18:25.000Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-05-14T21:28:20.000Z",
+          "resolvedAt": "2026-05-14T21:28:20.000Z",
           "summary": null
         },
         {
@@ -370,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-14T21:21:38.400Z",
+      "lastCheckedAt": "2026-05-14T21:49:56.645Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
