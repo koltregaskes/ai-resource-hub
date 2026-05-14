@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Claude Sonnet 4.6"
 provider: "Anthropic"
 release_date: "2026-02-17"
-generated_at: "2026-05-14T18:05:46.114Z"
+generated_at: "2026-05-14T20:01:19.066Z"
 ---
 
 # Claude Sonnet 4.6: release brief
 
-Anthropic's Claude Sonnet 4.6 is on the release desk with 2 related stories and 5 benchmark signals to review.
+Anthropic's Claude Sonnet 4.6 is on the release desk with 4 related stories and 5 benchmark signals to review.
 
 ## Release summary
 
@@ -34,6 +34,8 @@ Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positione
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
+- The Verge (2026-05-14): [OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview) - OpenAI is going to let users access Codex, its desktop AI tool that can write code and use apps on your computer, from the ChatGPT app on your phone. Following the surge in popularity for Anthropic's Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on "side quests," [&#8230;]
+- The Verge (2026-05-14): [Microsoft starts canceling Claude Code licenses](https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad) - Microsoft first started opening up access to Claude Code in December, inviting thousands of its own developers to use Anthropic's AI coding tool daily. It was part of an effort to get project managers, designers, and other employees to experiment with coding for the first time, and sources tell me that Claude Code has…
 - TechCrunch (2026-05-13): [Anthropic&#8217;s Cat Wu says that, in the future, AI will anticipate your needs before you know what they are](https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/) - The head of product for Claude Code and Cowork says that the next big step for AI is proactivity.
 
 ## Suggested thread / post structure
@@ -56,4 +58,6 @@ Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positione
 - [Official launch or docs](https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf)
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
+- [The Verge: OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview)
+- [The Verge: Microsoft starts canceling Claude Code licenses](https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad)
 - [TechCrunch: Anthropic&#8217;s Cat Wu says that, in the future, AI will anticipate your needs before you know what they are](https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/)

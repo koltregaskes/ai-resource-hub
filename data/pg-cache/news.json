@@ -1,5 +1,65 @@
 [
   {
+    "id": "news-6c4f14d628f0cdef3f07",
+    "title": "OpenAI’s Codex is now in the ChatGPT mobile app",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview",
+    "source": "The Verge",
+    "summary": "OpenAI is going to let users access Codex, its desktop AI tool that can write code and use apps on your computer, from the ChatGPT app on your phone. Following the surge in popularity for Anthropic's Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on \"side quests,\" [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-14T20:00:00.000Z",
+    "discovered_at": "2026-05-14 20:01:05"
+  },
+  {
+    "id": "news-77bafaafd1f86cef4545",
+    "title": "What happens when AI starts building itself?",
+    "url": "https://techcrunch.com/2026/05/14/what-happens-when-ai-starts-building-itself/",
+    "source": "TechCrunch",
+    "summary": "Richard Socher's new $650 million startup wants to build an AI that can research and improve itself indefinitely — and he insists it will actually ship products.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-14T19:57:20.000Z",
+    "discovered_at": "2026-05-14 20:01:04"
+  },
+  {
+    "id": "news-c169e8cac334b6efa858",
+    "title": "OpenAI is reportedly preparing legal action against Apple; it wouldn&#8217;t be the first partner to feel burned",
+    "url": "https://techcrunch.com/2026/05/14/openai-is-reportedly-preparing-legal-action-against-apple-it-wouldnt-be-the-first-partner-to-feel-burned/",
+    "source": "TechCrunch",
+    "summary": "According to Bloomberg, OpenAI has enlisted an outside law firm to work through its options.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-14T19:12:03.000Z",
+    "discovered_at": "2026-05-14 20:01:04"
+  },
+  {
+    "id": "news-19465d5a29f180de114d",
+    "title": "Clawdmeter turns your Claude Code usage stats into a tiny desktop dashboard",
+    "url": "https://techcrunch.com/2026/05/14/clawdmeter-turns-your-claude-code-usage-stats-into-a-tiny-desktop-dashboard/",
+    "source": "TechCrunch",
+    "summary": "A new open source gadget called Clawdmeter turns Claude Code usage stats into a tiny desktop dashboard for AI coding power users.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-14T19:05:01.000Z",
+    "discovered_at": "2026-05-14 20:01:04"
+  },
+  {
+    "id": "news-76e5a237b85b49ceae80",
+    "title": "Microsoft starts canceling Claude Code licenses",
+    "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
+    "source": "The Verge",
+    "summary": "Microsoft first started opening up access to Claude Code in December, inviting thousands of its own developers to use Anthropic's AI coding tool daily. It was part of an effort to get project managers, designers, and other employees to experiment with coding for the first time, and sources tell me that Claude Code has…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-14T19:00:00.000Z",
+    "discovered_at": "2026-05-14 20:01:05"
+  },
+  {
     "id": "news-d090b33adaf3b44af486",
     "title": "Use this map to find the data centers in your backyard",
     "url": "https://www.theverge.com/policy/930629/data-center-policy-map-interactive",
@@ -9,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T17:40:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-a1c2499d8764670823f9",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T16:30:02.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-f997a4857c3224676938",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T15:46:04.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-b2fcc782bbcdfa4e04c3",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T15:24:53.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-f2b54e004f3e141942b0",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T15:20:18.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-6f56a1a556199e25028c",
@@ -69,19 +129,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:01:14.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-28673d321b7e3edb5128",
     "title": "Wirestock raises $23M to supply creative multimodal data to AI labs",
     "url": "https://techcrunch.com/2026/05/14/wirestock-raises-23m-to-supply-multi-modal-data-to-ai-labs/",
     "source": "TechCrunch",
-    "summary": "Wirestock has over 700,000 creators on its platform, which supplies photos, videos and 3D content to AI labs.",
+    "summary": "The company pivoted to being a data provider in 2023 and now supplies datasets of images, videos, design assets, and gaming and 3D content to AI labs.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-9d74f3e32f36b8494801",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-c4e22450466067fd7954",
@@ -105,19 +165,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T11:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-b7b38e74e742defea6c8",
     "title": "Who decides what AI tells you? Campbell Brown, once Meta&#8217;s news chief, has thoughts",
     "url": "https://techcrunch.com/2026/05/13/who-decides-what-ai-tells-you-campbell-brown-once-metas-news-chief-has-thoughts/",
     "source": "TechCrunch",
-    "summary": "\"The conversation is sort of happening in Silicon Valley around one thing, and a totally different conversation is happening among consumers.\"",
+    "summary": "\"The conversation is sort of happening in Silicon Valley around one thing, and a totally different conversation is happening among consumers,\" Campbell Brown said at StrictlyVC.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T06:05:31.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-d0737d171ae3440b9895",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T05:24:39.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-fd608667e64cf7a52089",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-37e27e85296af8744c07",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T22:04:28.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-b3157c3aab972087379e",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T21:45:09.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-fb583ee1854295e874f8",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T19:49:42.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-15392568329bf159c704",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T19:28:06.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-e501e1effa7f61df380a",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T16:45:43.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-05cdfe099c67677fe1c9",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T16:31:04.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-e7c8b2b6505a0ae2ee12",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T16:22:01.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-1a442dacfe548c92207c",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T16:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-4090480ae9e039db171a",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T15:30:37.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-b6e87bdbc9f18ff763f5",
@@ -261,31 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T14:59:32.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
-  },
-  {
-    "id": "news-d8e96c8124cdd63f772a",
-    "title": "Anthropic now has more business customers than OpenAI, according to Ramp data",
-    "url": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/",
-    "source": "TechCrunch",
-    "summary": "A survey compiled from fintech firm Ramp’s clients’ expense data shows 34.4% of participating businesses are paying for Anthropic services, more than any other AI lab, while only 32.3% pay for OpenAI.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-13T14:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
-  },
-  {
-    "id": "news-663b262b7c41dbd61b1f",
-    "title": "WhatsApp adds an incognito mode in Meta AI chats",
-    "url": "https://techcrunch.com/2026/05/13/whatsapp-adds-an-incognito-mode-in-meta-ai-chats/",
-    "source": "TechCrunch",
-    "summary": "Meta said these incognito conversations are not saved, and messages will disappear by default once you close the chat.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-13T14:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-96287f7ceb9f83c041d0",
@@ -297,19 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T14:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
-  },
-  {
-    "id": "news-15990841cbba33d9eb1b",
-    "title": "Poppy debuts a proactive AI assistant to help organize your digital life",
-    "url": "https://techcrunch.com/2026/05/13/poppy-debuts-a-proactive-ai-assistant-to-help-organize-your-digital-life/",
-    "source": "TechCrunch",
-    "summary": "Poppy is an AI-powered app that connects your calendar, email, messages, and other services to surface reminders, suggestions, and tasks based on what’s happening in your life.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-13T13:27:09.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-27d5b48813c4d56528b2",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T13:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-5502a50a46d6e39ecfd7",
@@ -333,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T11:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
-  },
-  {
-    "id": "news-cef662ce22a5f2add7fe",
-    "title": "Data centers are coming for rural America",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/928963/data-center-rural-america-jobs-jay-maine",
-    "source": "The Verge",
-    "summary": "At its peak, the Androscoggin paper mill in Jay, Maine, a rural town about 67 miles northwest of Portland, employed about 1,500 people - until a pulp digester exploded in 2020, forcing the mill to close permanently. In 2023, the 1.4 million-square-foot facility was purchased through a joint venture by JGT2 Redevelopme…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-13T09:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-49432bd70e0887aa2f25",
@@ -357,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
-  },
-  {
-    "id": "news-001b12047d3c0d1a675a",
-    "title": "Sam Altman was winning on the stand, but it might not be enough",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/929129/sam-altman-testimony-elon-musk-openai-trial",
-    "source": "The Verge",
-    "summary": "After two weeks of hearing from assorted witnesses that he was a lying snake, the jury finally heard from the lying snake himself: Sam Altman. At the end of the testimony, his lawyer William Savitt asked him how it felt to be accused of stealing a charity. \"We created, through a ton of hard work, [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T23:23:14.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-7d12c750a4ea6f388e20",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T15:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-c31ba2e9026be78e6eac",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-6498bc3d305077cef694",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-8a196e8c3ae2cd2beeba",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-e13dc335beb06d7df67f",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T15:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-ee5564e4d43f904019c8",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-4ca12da2ae6a65c2eb13",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-68e94ee2f13a7ca6fb82",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-91ec1ce9a5cf0cecc4b0",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T12:30:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:05"
   },
   {
     "id": "news-288ea344bbe070b948a8",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-4ba89a634a8ba847997e",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T10:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-eed85cf61ed43c59d6f9",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-de2ca3d7578dd51cbe19",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-fe948365c4d6a69e5ad5",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:00"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:36"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   },
   {
     "id": "news-a797ae4cd684e3afaa9e",
@@ -777,6 +777,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-14 18:05:37"
+    "discovered_at": "2026-05-14 20:01:04"
   }
 ]

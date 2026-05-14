@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT-5.2-Codex"
 provider: "OpenAI"
 release_date: "2026-01-14"
-generated_at: "2026-05-14T18:05:46.115Z"
+generated_at: "2026-05-14T20:01:19.066Z"
 ---
 
 # GPT-5.2-Codex: release brief
 
-OpenAI's GPT-5.2-Codex is on the release desk with 2 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.2-Codex is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,6 +29,7 @@ GPT-5.2-Codex is a currently tracked release from OpenAI. It is positioned as an
 
 ## Outside coverage and early reactions
 
+- The Verge (2026-05-14): [OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview) - OpenAI is going to let users access Codex, its desktop AI tool that can write code and use apps on your computer, from the ChatGPT app on your phone. Following the surge in popularity for Anthropic's Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on "side quests," [&#8230;]
 - OpenAI (2026-05-11): [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) - OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.
 - OpenAI (2026-05-07): [Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api) - Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.
 
@@ -51,5 +52,6 @@ GPT-5.2-Codex is a currently tracked release from OpenAI. It is positioned as an
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
+- [The Verge: OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview)
 - [OpenAI: OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company)
 - [OpenAI: Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api)
