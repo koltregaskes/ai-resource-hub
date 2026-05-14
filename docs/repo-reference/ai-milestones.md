@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 13 May 2026, 22:37 UTC
+Generated: 14 May 2026, 00:14 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,33 +8,31 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 13 May 2026, 22:37 UTC |
-| Reference date | Wednesday, 13 May 2026 |
+| Generated | 14 May 2026, 00:14 UTC |
+| Reference date | Thursday, 14 May 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
 | Tracking milestones | 2 |
 | Exact-date anniversaries | 27 |
-| Anniversaries today | 1 |
+| Anniversaries today | 0 |
 | Next exact milestone | GPT-3 launched via the OpenAI API (11 Jun 2026) |
 
 ## Today in AI
 
-| Title | Category | Years | Source |
-| --- | --- | --- | --- |
-| GPT-4o introduced | Model release | 2 | [OpenAI](https://openai.com/index/hello-gpt-4o/) |
+No exact anniversary lands on the current Europe/London date snapshot.
 
 ## Coming Up Next
 
 | In | Date | Title | Source |
 | --- | --- | --- | --- |
-| 29d | 11 Jun 2026 | GPT-3 launched via the OpenAI API | [OpenAI](https://openai.com/blog/openai-api/) |
-| 30d | 12 Jun 2026 | Attention Is All You Need released | [arXiv](https://arxiv.org/abs/1706.03762) |
-| 38d | 20 Jun 2026 | Claude 3.5 Sonnet launched | [Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) |
-| 59d | 11 Jul 2026 | Claude 2 launched | [Anthropic](https://www.anthropic.com/news/claude-2) |
-| 66d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
-| 101d | 22 Aug 2026 | Stable Diffusion public release | [Stability AI](https://stability.ai/news/stable-diffusion-public-release) |
-| 122d | 12 Sept 2026 | OpenAI o1-preview launched | [OpenAI](https://openai.com/index/introducing-openai-o1-preview/) |
-| 137d | 27 Sept 2026 | Mistral 7B released | [Mistral AI](https://mistral.ai/news/about-mistral-ai) |
+| 28d | 11 Jun 2026 | GPT-3 launched via the OpenAI API | [OpenAI](https://openai.com/blog/openai-api/) |
+| 29d | 12 Jun 2026 | Attention Is All You Need released | [arXiv](https://arxiv.org/abs/1706.03762) |
+| 37d | 20 Jun 2026 | Claude 3.5 Sonnet launched | [Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) |
+| 58d | 11 Jul 2026 | Claude 2 launched | [Anthropic](https://www.anthropic.com/news/claude-2) |
+| 65d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
+| 100d | 22 Aug 2026 | Stable Diffusion public release | [Stability AI](https://stability.ai/news/stable-diffusion-public-release) |
+| 121d | 12 Sept 2026 | OpenAI o1-preview launched | [OpenAI](https://openai.com/index/introducing-openai-o1-preview/) |
+| 136d | 27 Sept 2026 | Mistral 7B released | [Mistral AI](https://mistral.ai/news/about-mistral-ai) |
 
 ## Recent Flagship Launches
 
