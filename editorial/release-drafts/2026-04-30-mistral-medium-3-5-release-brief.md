@@ -7,7 +7,7 @@ priority: "high"
 model: "Mistral Medium 3.5"
 provider: "Mistral"
 release_date: "2026-04-30"
-generated_at: "2026-05-14T15:30:43.662Z"
+generated_at: "2026-05-14T18:05:46.112Z"
 ---
 
 # Mistral Medium 3.5: release brief
