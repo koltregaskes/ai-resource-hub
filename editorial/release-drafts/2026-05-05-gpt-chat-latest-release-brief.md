@@ -7,12 +7,12 @@ priority: "high"
 model: "GPT Chat Latest"
 provider: "OpenAI"
 release_date: "2026-05-05"
-generated_at: "2026-05-14T00:14:10.190Z"
+generated_at: "2026-05-14T04:57:13.073Z"
 ---
 
 # GPT Chat Latest: release brief
 
-OpenAI's GPT Chat Latest is on the release desk with 3 related stories and 0 benchmark signals to review.
+OpenAI's GPT Chat Latest is on the release desk with 2 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,7 +30,6 @@ GPT Chat Latest is a currently tracked release from OpenAI. It is positioned as 
 ## Outside coverage and early reactions
 
 - OpenAI (2026-05-11): [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) - OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.
-- OpenAI (2026-05-06): [How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals) - OpenAI's B2B Signals research shows how frontier enterprises deepen AI adoption, scale Codex-powered agentic workflows, and build durable competitive advantage.
 - OpenAI (2026-05-07): [Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api) - Explore new realtime voice models in the OpenAI API that can reason, translate, and transcribe speech, enabling more natural and intelligent voice experiences.
 
 ## Suggested thread / post structure
@@ -53,5 +52,4 @@ GPT Chat Latest is a currently tracked release from OpenAI. It is positioned as 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [OpenAI: OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company)
-- [OpenAI: How frontier firms are pulling ahead](https://openai.com/index/introducing-b2b-signals)
 - [OpenAI: Advancing voice intelligence with new models in the API](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api)
