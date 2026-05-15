@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-6d7b974ab310c2fdf240",
+    "title": "Does Trump Mobile know how many stripes are on the American flag?",
+    "url": "https://www.theverge.com/gadgets/931347/trump-mobile-t1-phone-logo-flag-stars-stripes",
+    "source": "The Verge",
+    "summary": "Where's the Trump phone? We're going to keep talking about it every week. We've reached out, as usual, to ask about the Trump phone's whereabouts. This week, despite our best hopes, we still don't have our phone - but we do have some fresh doubts about the company's patriotic credentials. This has been a momentous [&#…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T16:47:16.000Z",
+    "discovered_at": "2026-05-15 17:00:13"
+  },
+  {
+    "id": "news-a811b8cd3f5f49a62a04",
+    "title": "Google updates its spam rules to include attempts to ‘manipulate’ AI",
+    "url": "https://www.theverge.com/tech/931416/google-ai-search-spam-policy",
+    "source": "The Verge",
+    "summary": "Google updated its spam policy to mark attempts to \"manipulate\" its AI model in search results as spam, including results in AI Overview or AI Mode in Search, as Search Engine Land reports: \"In the context of Google Search, spam refers to techniques used to deceive users or manipulate our Search systems into featuring…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T16:42:59.000Z",
+    "discovered_at": "2026-05-15 17:00:13"
+  },
+  {
+    "id": "news-9fc059ee8d7be6e63d25",
+    "title": "OpenAI now wants ChatGPT to access your bank accounts",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/931122/openai-chatgpt-financial-accounts-plaid-connection",
+    "source": "The Verge",
+    "summary": "Your trust in AI is about to be put to the test: OpenAI will soon let you give the chatbot direct access to your bank accounts. The new feature announced in preview today will allow users to \"securely connect\" ChatGPT with Plaid - the bank-to-app bridging platform used by 12,000 financial institutions, including Schwa…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T16:00:00.000Z",
+    "discovered_at": "2026-05-15 17:00:13"
+  },
+  {
+    "id": "news-7c1aec8136cd38658994",
+    "title": "OpenAI launches ChatGPT for personal finance, will let you connect bank accounts",
+    "url": "https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/",
+    "source": "TechCrunch",
+    "summary": "Once users connect their accounts, they will see a dashboard of their portfolio performance, spending, subscriptions, and upcoming payments.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T16:00:00.000Z",
+    "discovered_at": "2026-05-15 17:00:12"
+  },
+  {
     "id": "news-edc5010f00119444304f",
     "title": "The promises and pitfalls of personalized health",
     "url": "https://www.theverge.com/column/931148/optimizer-pmos-pcos-personalized-health",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T14:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:13"
   },
   {
     "id": "news-5d75227922b66e0465c6",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T14:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-d9c742e591ee86ce7b1d",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T12:19:48.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-902e23ad1f9daa9f9a57",
@@ -45,7 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T11:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:13"
+  },
+  {
+    "id": "news-ada6c1425188ba304200",
+    "title": "A new personal finance experience in ChatGPT",
+    "url": "https://openai.com/index/personal-finance-chatgpt",
+    "source": "OpenAI",
+    "summary": "Preview a new personal finance experience in ChatGPT for Pro users in the U.S. Securely connect your financial accounts and get AI-powered insights and guidance grounded in your financial context, goals, and priorities.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T00:00:00.000Z",
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-480547a4ce8cc315de0f",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T22:47:51.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-954408b3e6dd2544452f",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T22:21:46.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:13"
   },
   {
     "id": "news-2f6cebd063e65cbe96b0",
@@ -81,19 +141,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T21:30:44.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-323f3b498545fc16dee3",
     "title": "Behold, the Elon Musk jackass trophy",
     "url": "https://www.theverge.com/ai-artificial-intelligence/930893/elon-musk-sam-altman-trial-ai-safety-jackass-statue",
     "source": "The Verge",
-    "summary": "Yesterday, in Musk v. Altman, before the jurors came in, Sam Altman's team passed up what looked - from a distance - like a little league trophy. It was not. Yvonne Gonzalez Rogers had the lawyers read the inscription aloud for the press: \"Never stop being a jackass.\" It's a commemoration OpenAI employees bought for […",
+    "summary": "Yesterday, in Musk v. Altman, before the jurors came in, Sam Altman's team passed up what looked - from a distance - like a Little League trophy. It was not. Judge Yvonne Gonzalez Rogers had the lawyers read the inscription aloud for the press: \"Never stop being a jackass.\" It's a commemoration OpenAI employees bought…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T20:59:23.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:13"
   },
   {
     "id": "news-210a0f1afb83f10fd595",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T20:58:55.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-ca03c8de33d6b9a62c81",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T20:30:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-6c4f14d628f0cdef3f07",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T20:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:13"
   },
   {
     "id": "news-77bafaafd1f86cef4545",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T19:57:20.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-c169e8cac334b6efa858",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T19:12:03.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-19465d5a29f180de114d",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T19:05:01.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-76e5a237b85b49ceae80",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T19:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:13"
   },
   {
     "id": "news-d090b33adaf3b44af486",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T17:40:00.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:13"
   },
   {
     "id": "news-a1c2499d8764670823f9",
@@ -201,31 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T16:30:02.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
-  },
-  {
-    "id": "news-f997a4857c3224676938",
-    "title": "Live updates from Elon Musk and Sam Altman’s court battle over the future of OpenAI",
-    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
-    "source": "The Verge",
-    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. Elon Musk,…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-14T15:46:04.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
-  },
-  {
-    "id": "news-b2fcc782bbcdfa4e04c3",
-    "title": "Americans do not want AI data centers in their backyards",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/930477/ai-data-centers-gallup-survey-70-percent-opposition",
-    "source": "The Verge",
-    "summary": "Over 70 percent of Americans oppose AI data center construction in their area, according to a new Gallup survey. Just 7 percent said they were \"strongly\" in favor of new data centers. According to Gallup, data centers are so strongly disliked that Americans would prefer to live near a nuclear power plant than a data […",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-14T15:24:53.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-f2b54e004f3e141942b0",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T15:20:18.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-6f56a1a556199e25028c",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:01:14.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-28673d321b7e3edb5128",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-9d74f3e32f36b8494801",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-3e12c692082774f4849d",
@@ -285,19 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T13:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
-  },
-  {
-    "id": "news-c4e22450466067fd7954",
-    "title": "You can make an app for that",
-    "url": "https://www.theverge.com/tech/928905/vibe-code-personal-software-revolution",
-    "source": "The Verge",
-    "summary": "The tyranny of software is almost over. Since the first computer programmers wrote the first computer programs, we, the users of that software, have been forced to live in the worlds those programs create. The features are the features. The design is the design. Want something else, something better? Learn to code, I…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-14T11:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-b7b38e74e742defea6c8",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T06:05:31.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-d0737d171ae3440b9895",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T05:24:39.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-fd608667e64cf7a52089",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T00:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-b3157c3aab972087379e",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T21:45:09.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-fb583ee1854295e874f8",
@@ -357,19 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T19:49:42.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
-  },
-  {
-    "id": "news-15392568329bf159c704",
-    "title": "Anthropic&#8217;s Cat Wu says that, in the future, AI will anticipate your needs before you know what they are",
-    "url": "https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/",
-    "source": "TechCrunch",
-    "summary": "The head of product for Claude Code and Cowork says that the next big step for AI is proactivity.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-13T19:28:06.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-5502a50a46d6e39ecfd7",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T11:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-49432bd70e0887aa2f25",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T00:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-7d12c750a4ea6f388e20",
@@ -405,31 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T15:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
-  },
-  {
-    "id": "news-6498bc3d305077cef694",
-    "title": "How NVIDIA engineers and researchers build with Codex",
-    "url": "https://openai.com/index/nvidia",
-    "source": "OpenAI",
-    "summary": "Teams use Codex with GPT-5.5 to ship production systems and turn research ideas into runnable experiments.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
-  },
-  {
-    "id": "news-8a196e8c3ae2cd2beeba",
-    "title": "AutoScout24 scales engineering with AI-powered workflows",
-    "url": "https://openai.com/index/autoscout24",
-    "source": "OpenAI",
-    "summary": "Learn how AutoScout24 Group uses Codex and ChatGPT to speed development cycles, improve code quality, and expand AI adoption.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-c31ba2e9026be78e6eac",
@@ -441,7 +429,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
+  },
+  {
+    "id": "news-6498bc3d305077cef694",
+    "title": "How NVIDIA engineers and researchers build with Codex",
+    "url": "https://openai.com/index/nvidia",
+    "source": "OpenAI",
+    "summary": "Teams use Codex with GPT-5.5 to ship production systems and turn research ideas into runnable experiments.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T00:00:00.000Z",
+    "discovered_at": "2026-05-15 17:00:07"
+  },
+  {
+    "id": "news-8a196e8c3ae2cd2beeba",
+    "title": "AutoScout24 scales engineering with AI-powered workflows",
+    "url": "https://openai.com/index/autoscout24",
+    "source": "OpenAI",
+    "summary": "Learn how AutoScout24 Group uses Codex and ChatGPT to speed development cycles, improve code quality, and expand AI adoption.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T00:00:00.000Z",
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-e13dc335beb06d7df67f",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T15:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-4ca12da2ae6a65c2eb13",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-ee5564e4d43f904019c8",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-68e94ee2f13a7ca6fb82",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-91ec1ce9a5cf0cecc4b0",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T12:30:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-15 14:32:54"
+    "discovered_at": "2026-05-15 17:00:13"
   },
   {
     "id": "news-288ea344bbe070b948a8",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-4ba89a634a8ba847997e",
@@ -573,19 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T10:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
-  },
-  {
-    "id": "news-de2ca3d7578dd51cbe19",
-    "title": "Testing ads in ChatGPT",
-    "url": "https://openai.com/index/testing-ads-in-chatgpt",
-    "source": "OpenAI",
-    "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-07T00:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:47"
+    "discovered_at": "2026-05-15 17:00:07"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -765,18 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
-  },
-  {
-    "id": "news-a797ae4cd684e3afaa9e",
-    "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/",
-    "source": "Google",
-    "summary": "Gemini 3.1 Flash TTS is now available across Google products.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-15T15:00:00.000Z",
-    "discovered_at": "2026-05-15 14:32:53"
+    "discovered_at": "2026-05-15 17:00:12"
   }
 ]
