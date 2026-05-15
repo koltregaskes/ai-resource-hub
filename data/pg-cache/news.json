@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-59911f201be4108ebbfc",
+    "title": "OpenAI keeps shuffling its executives in bid to win AI agent battle",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle",
+    "source": "The Verge",
+    "summary": "OpenAI announced yet another reorganization Friday, consolidating certain areas and making company president Greg Brockman the official lead of all things product. In a memo viewed by The Verge, Brockman wrote that since OpenAI's product strategy for this year is to go all-in on AI agents, the company is combining its…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T18:21:35.000Z",
+    "discovered_at": "2026-05-15 18:51:25"
+  },
+  {
+    "id": "news-b632b77e441f564ad6f2",
+    "title": "Silicon Valley’s vacationland needs a new energy provider just as AI is driving prices up",
+    "url": "https://techcrunch.com/2026/05/15/silicon-valleys-vacationland-needs-a-new-energy-provider-just-as-ai-is-driving-prices-up/",
+    "source": "TechCrunch",
+    "summary": "Lake Tahoe, Silicon Valley's favorite ski spot, is about to get hit with higher energy prices as AI drives demand for electricity.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T18:14:44.000Z",
+    "discovered_at": "2026-05-15 18:51:25"
+  },
+  {
+    "id": "news-2df07e73eb3b66fe4e30",
+    "title": "AI radio hosts demonstrate why AI can’t be trusted alone",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies",
+    "source": "The Verge",
+    "summary": "Andon Labs has been running a series of experiments in which AI agents run businesses without human intervention. Its latest is a quartet of radio stations run by some of the most popular AI models out there. \"Thinking Frequencies\" is run by Claude, \"OpenAIR\" by ChatGPT, \"Backlink Broadcast\" by Google's Gemini, and \"G…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T17:09:16.000Z",
+    "discovered_at": "2026-05-15 18:51:25"
+  },
+  {
     "id": "news-6d7b974ab310c2fdf240",
     "title": "Does Trump Mobile know how many stripes are on the American flag?",
     "url": "https://www.theverge.com/gadgets/931347/trump-mobile-t1-phone-logo-flag-stars-stripes",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T16:47:16.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-a811b8cd3f5f49a62a04",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T16:42:59.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-9fc059ee8d7be6e63d25",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T16:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-7c1aec8136cd38658994",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T16:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-edc5010f00119444304f",
@@ -57,19 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T14:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-5d75227922b66e0465c6",
-    "title": "Runway started by helping filmmakers. Now it wants to beat Google at AI.",
+    "title": "Runway started by helping filmmakers — now it wants to beat Google at AI",
     "url": "https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/",
     "source": "TechCrunch",
-    "summary": "AI video generation startup Runway is betting that video generation is the path to world models. And that being an AI outsider is an advantage, not a liability.",
+    "summary": "AI video-generation startup Runway is betting that video generation is the path to world models. And that being an AI outsider is an advantage, not a liability.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T14:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-d9c742e591ee86ce7b1d",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T12:19:48.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-902e23ad1f9daa9f9a57",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T11:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-ada6c1425188ba304200",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-480547a4ce8cc315de0f",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T22:47:51.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-954408b3e6dd2544452f",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T22:21:46.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-2f6cebd063e65cbe96b0",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T21:30:44.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-323f3b498545fc16dee3",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T20:59:23.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-210a0f1afb83f10fd595",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T20:58:55.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-ca03c8de33d6b9a62c81",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T20:30:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-6c4f14d628f0cdef3f07",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T20:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-77bafaafd1f86cef4545",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T19:57:20.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-c169e8cac334b6efa858",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T19:12:03.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-19465d5a29f180de114d",
@@ -225,31 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T19:05:01.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
-  },
-  {
-    "id": "news-76e5a237b85b49ceae80",
-    "title": "Microsoft starts canceling Claude Code licenses",
-    "url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
-    "source": "The Verge",
-    "summary": "Microsoft first started opening up access to Claude Code in December, inviting thousands of its own developers to use Anthropic's AI coding tool daily. It was part of an effort to get project managers, designers, and other employees to experiment with coding for the first time, and sources tell me that Claude Code has…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-14T19:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
-  },
-  {
-    "id": "news-d090b33adaf3b44af486",
-    "title": "Use this map to find the data centers in your backyard",
-    "url": "https://www.theverge.com/policy/930629/data-center-policy-map-interactive",
-    "source": "The Verge",
-    "summary": "When Oregon resident Isabelle Reksopuro heard Google was gobbling up public land to fuel its data centers in her home state, she didn't initially know what to believe. \"There's a lot of misinformation about data centers,\" she said. \"Google has denied taking that land.\" Technically, she explains, The Dalles, a city nea…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-14T17:40:00.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-a1c2499d8764670823f9",
@@ -261,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T16:30:02.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-f2b54e004f3e141942b0",
@@ -273,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T15:20:18.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-6f56a1a556199e25028c",
@@ -285,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:01:14.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-28673d321b7e3edb5128",
@@ -297,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-9d74f3e32f36b8494801",
@@ -309,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T14:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-3e12c692082774f4849d",
@@ -321,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T13:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-b7b38e74e742defea6c8",
@@ -333,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T06:05:31.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-d0737d171ae3440b9895",
@@ -345,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T05:24:39.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-fd608667e64cf7a52089",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-14T00:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-b3157c3aab972087379e",
@@ -369,19 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T21:45:09.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
-  },
-  {
-    "id": "news-fb583ee1854295e874f8",
-    "title": "Musk’s xAI is running nearly 50 gas turbines unchecked at its Mississippi data center",
-    "url": "https://techcrunch.com/2026/05/13/musks-xai-is-running-nearly-50-gas-turbines-unchecked-at-its-mississippi-data-center/",
-    "source": "TechCrunch",
-    "summary": "Gas turbines at xAI's Colossus 2 data center have drawn a lawsuit over the company's use of \"mobile\" gas turbines as power plants.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-13T19:49:42.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-5502a50a46d6e39ecfd7",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T11:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-49432bd70e0887aa2f25",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-13T00:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-7d12c750a4ea6f388e20",
@@ -417,19 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T15:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
-  },
-  {
-    "id": "news-c31ba2e9026be78e6eac",
-    "title": "What Parameter Golf taught us about AI-assisted research",
-    "url": "https://openai.com/index/what-parameter-golf-taught-us",
-    "source": "OpenAI",
-    "summary": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-6498bc3d305077cef694",
@@ -441,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-8a196e8c3ae2cd2beeba",
@@ -453,7 +441,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-12T00:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
+  },
+  {
+    "id": "news-c31ba2e9026be78e6eac",
+    "title": "What Parameter Golf taught us about AI-assisted research",
+    "url": "https://openai.com/index/what-parameter-golf-taught-us",
+    "source": "OpenAI",
+    "summary": "Parameter Golf brought together 1,000+ participants and 2,000+ submissions to explore AI-assisted machine learning research, coding agents, quantization, and novel model design under strict constraints.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-12T00:00:00.000Z",
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-e13dc335beb06d7df67f",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T15:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-4ca12da2ae6a65c2eb13",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-ee5564e4d43f904019c8",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T10:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-68e94ee2f13a7ca6fb82",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-91ec1ce9a5cf0cecc4b0",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T12:30:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-15 17:00:13"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-288ea344bbe070b948a8",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T13:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-e41b9b9c2133078d6fda",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T11:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-4ba89a634a8ba847997e",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T10:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:07"
+    "discovered_at": "2026-05-15 18:51:23"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-f98304eba2d040c798ef",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-8a4b231f355d20da360c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-27T13:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-ebab479a84effc413413",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-24T19:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-ea9543e1b1187c9af8c8",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T12:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-1539442f8f9c23d566a4",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-23T09:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-93a049d060bc295bd11c",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-22T12:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-97921ff38ae588f6b70d",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-21T14:30:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-0d7a887ebfbfd8b255ee",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T14:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-afabafae073055fd13ee",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-17T00:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-7982e6a9800653a0aece",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T17:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   },
   {
     "id": "news-6e7bff1b860f69f890ef",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-04-16T16:00:00.000Z",
-    "discovered_at": "2026-05-15 17:00:12"
+    "discovered_at": "2026-05-15 18:51:25"
   }
 ]

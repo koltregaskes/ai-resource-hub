@@ -7,12 +7,12 @@ priority: "backfill"
 model: "Gemini 3.1 Pro Preview"
 provider: "Google"
 release_date: "2026-02-19"
-generated_at: "2026-05-15T17:00:21.685Z"
+generated_at: "2026-05-15T18:51:34.679Z"
 ---
 
 # Gemini 3.1 Pro Preview: release brief
 
-Google's Gemini 3.1 Pro Preview is on the release desk with 1 related story and 2 benchmark signals to review.
+Google's Gemini 3.1 Pro Preview is on the release desk with 2 related stories and 2 benchmark signals to review.
 
 ## Release summary
 
@@ -30,6 +30,7 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 
 ## Outside coverage and early reactions
 
+- The Verge (2026-05-15): [AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies) - Andon Labs has been running a series of experiments in which AI agents run businesses without human intervention. Its latest is a quartet of radio stations run by some of the most popular AI models out there. "Thinking Frequencies" is run by Claude, "OpenAIR" by ChatGPT, "Backlink Broadcast" by Google's Gemini, and "G…
 - Google (2026-04-16): [New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/) - Nano Banana 2 now uses your personal context and Google Photos to create images that reflect your unique life.
 
 ## Suggested thread / post structure
@@ -51,4 +52,5 @@ Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positio
 
 - [Official launch or docs](https://ai.google.dev/gemini-api/docs/changelog)
 - [Provider API/docs](https://ai.google.dev/gemini-api/docs/models)
+- [The Verge: AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies)
 - [Google: New ways to create personalized images in the Gemini app](https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/)
