@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-15T17:00:15.114Z",
+  "generatedAt": "2026-05-15T18:11:32.106Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-15T17:00:13.718Z",
+      "lastCheckedAt": "2026-05-15T18:11:30.545Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-15T17:00:14.731Z",
+      "lastCheckedAt": "2026-05-15T18:11:31.564Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-15T17:00:14.932Z",
+      "lastCheckedAt": "2026-05-15T18:11:31.969Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -187,7 +187,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-15T17:00:14.092Z",
+      "lastCheckedAt": "2026-05-15T18:11:30.994Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -241,7 +241,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-15T17:00:14.368Z",
+      "lastCheckedAt": "2026-05-15T18:11:31.462Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-15T17:00:13.761Z",
+      "lastCheckedAt": "2026-05-15T18:11:30.630Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 25 tracked components.",
@@ -358,7 +358,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-15T17:00:15.108Z",
+      "lastCheckedAt": "2026-05-15T18:11:32.099Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -367,7 +367,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-15T08:43:54.000Z",
+          "id": "together-feed-0-2026-05-15T17:28:52.000Z",
+          "title": "MiniMax M2.7 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-15T17:28:52.000Z",
+          "updatedAt": "2026-05-15T17:28:52.000Z",
+          "resolvedAt": "2026-05-15T17:28:52.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.7 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-05-15T17:07:51.000Z",
+          "title": "MiniMax M2.7 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-15T17:07:51.000Z",
+          "updatedAt": "2026-05-15T17:07:51.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "MiniMax M2.7 went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-15T08:43:54.000Z",
           "title": "MiniMax M2.7 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -378,7 +400,7 @@
           "summary": "MiniMax M2.7 recovered"
         },
         {
-          "id": "together-feed-1-2026-05-15T08:28:49.000Z",
+          "id": "together-feed-3-2026-05-15T08:28:49.000Z",
           "title": "MiniMax M2.7 went down",
           "status": "investigating",
           "impact": "major",
@@ -387,28 +409,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "MiniMax M2.7 went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-15T05:07:04.000Z",
-          "title": "Kimi K2.6 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-15T05:07:04.000Z",
-          "updatedAt": "2026-05-15T05:07:04.000Z",
-          "resolvedAt": "2026-05-15T05:07:04.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-15T04:45:57.000Z",
-          "title": "Kimi K2.6 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-15T04:45:57.000Z",
-          "updatedAt": "2026-05-15T04:45:57.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 went down"
         }
       ]
     },
