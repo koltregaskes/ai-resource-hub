@@ -7,7 +7,7 @@ priority: "high"
 model: "Qwen3.6 Flash"
 provider: "Alibaba"
 release_date: "2026-04-27"
-generated_at: "2026-05-14T23:10:57.822Z"
+generated_at: "2026-05-15T00:09:54.254Z"
 ---
 
 # Qwen3.6 Flash: release brief
