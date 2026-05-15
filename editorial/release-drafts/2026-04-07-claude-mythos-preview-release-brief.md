@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-05-15T20:23:02.236Z"
+generated_at: "2026-05-15T22:10:15.526Z"
 ---
 
 # Claude Mythos Preview: release brief
 
-Anthropic's Claude Mythos Preview is on the release desk with 3 related stories and 0 benchmark signals to review.
+Anthropic's Claude Mythos Preview is on the release desk with 2 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -31,7 +31,6 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
-- The Verge (2026-05-14): [OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview) - OpenAI is going to let users access Codex, its desktop AI tool that can write code and use apps on your computer, from the ChatGPT app on your phone. Following the surge in popularity for Anthropic's Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on "side quests," [&#8230;]
 - Ars Technica (2026-05-07): [Mozilla says 271 vulnerabilities found by Mythos have "almost no false positives"](https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/) - The developer of Firefox says it has "completely bought in" on AI-assisted bug discovery.
 
 ## Suggested thread / post structure
@@ -55,5 +54,4 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 - [Official launch or docs](https://www.anthropic.com/glasswing)
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
-- [The Verge: OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview)
 - [Ars Technica: Mozilla says 271 vulnerabilities found by Mythos have "almost no false positives"](https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/)

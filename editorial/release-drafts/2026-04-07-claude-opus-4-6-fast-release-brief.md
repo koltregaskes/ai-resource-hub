@@ -7,12 +7,12 @@ priority: "watch"
 model: "Claude Opus 4.6 (Fast)"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-05-15T20:23:02.237Z"
+generated_at: "2026-05-15T22:10:15.526Z"
 ---
 
 # Claude Opus 4.6 (Fast): release brief
 
-Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 2 related stories and 0 benchmark signals to review.
+Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,7 +30,6 @@ Claude Opus 4.6 (Fast) is a currently tracked release from Anthropic. It is posi
 ## Outside coverage and early reactions
 
 - Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
-- The Verge (2026-05-14): [OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview) - OpenAI is going to let users access Codex, its desktop AI tool that can write code and use apps on your computer, from the ChatGPT app on your phone. Following the surge in popularity for Anthropic's Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on "side quests," [&#8230;]
 
 ## Suggested thread / post structure
 
@@ -52,4 +51,3 @@ Claude Opus 4.6 (Fast) is a currently tracked release from Anthropic. It is posi
 - [Official launch or docs](https://docs.anthropic.com)
 - [Provider API/docs](https://docs.anthropic.com)
 - [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
-- [The Verge: OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview)

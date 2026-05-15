@@ -7,7 +7,7 @@ priority: "high"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-15T20:23:02.236Z"
+generated_at: "2026-05-15T22:10:15.526Z"
 ---
 
 # GPT-5.5: release brief
@@ -34,7 +34,7 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - OpenAI (2026-05-12): [How NVIDIA engineers and researchers build with Codex](https://openai.com/index/nvidia) - Teams use Codex with GPT-5.5 to ship production systems and turn research ideas into runnable experiments.
 - The Verge (2026-05-15): [AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies) - Andon Labs has been running a series of experiments in which AI agents run businesses without human intervention. Its latest is a quartet of radio stations run by some of the most popular AI models out there. "Thinking Frequencies" is run by Claude, "OpenAIR" by ChatGPT, "Backlink Broadcast" by Google's Gemini, and "G…
 - The Verge (2026-05-15): [OpenAI now wants ChatGPT to access your bank accounts](https://www.theverge.com/ai-artificial-intelligence/931122/openai-chatgpt-financial-accounts-plaid-connection) - Your trust in AI is about to be put to the test: OpenAI will soon let you give the chatbot direct access to your bank accounts. The new feature announced in preview today will allow users to "securely connect" ChatGPT with Plaid - the bank-to-app bridging platform used by 12,000 financial institutions, including Schwa…
-- The Verge (2026-05-14): [OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview) - OpenAI is going to let users access Codex, its desktop AI tool that can write code and use apps on your computer, from the ChatGPT app on your phone. Following the surge in popularity for Anthropic's Claude Code, OpenAI has been working quickly to try and catch up, including by cutting back on "side quests," [&#8230;]
+- OpenAI (2026-05-11): [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) - OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.
 
 ## Suggested thread / post structure
 
@@ -60,4 +60,4 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [OpenAI: How NVIDIA engineers and researchers build with Codex](https://openai.com/index/nvidia)
 - [The Verge: AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies)
 - [The Verge: OpenAI now wants ChatGPT to access your bank accounts](https://www.theverge.com/ai-artificial-intelligence/931122/openai-chatgpt-financial-accounts-plaid-connection)
-- [The Verge: OpenAI’s Codex is now in the ChatGPT mobile app](https://www.theverge.com/ai-artificial-intelligence/930763/openai-codex-chatgpt-ios-android-app-preview)
+- [OpenAI: OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company)
