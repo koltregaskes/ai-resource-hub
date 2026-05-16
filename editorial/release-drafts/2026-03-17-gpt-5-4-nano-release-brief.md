@@ -7,7 +7,7 @@ priority: "watch"
 model: "GPT-5.4 Nano"
 provider: "OpenAI"
 release_date: "2026-03-17"
-generated_at: "2026-05-16T15:13:59.737Z"
+generated_at: "2026-05-16T17:12:48.430Z"
 ---
 
 # GPT-5.4 Nano: release brief
