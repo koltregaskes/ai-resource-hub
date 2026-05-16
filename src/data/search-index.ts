@@ -154,9 +154,13 @@ export function getSearchIndex(base: string): SearchItem[] {
   }
 
   const sectionPages = [
+    { id: 'models', title: 'AI Model Directory', description: 'Search and filter tracked AI models by provider, category, status, release date, pricing, and benchmark coverage' },
+    { id: 'benchmarks', title: 'AI Benchmark Library', description: 'Benchmark matrix, external benchmark sources, and reliability-eval references' },
+    { id: 'reliability-floor', title: 'Reliability Floor', description: 'Everyday trust benchmark for factuality, grounding, retrieval, memory, abstention, and instruction following' },
     { id: 'reports', title: 'AI Reports', description: 'Recurring AI reports, indexes, and research dashboards worth tracking' },
     { id: 'events', title: 'AI Events', description: 'Recurring AI conferences and industry events worth watching' },
     { id: 'news', title: 'AI News', description: 'Latest AI news — model releases, research, funding, and industry updates' },
+    { id: 'updates', title: 'Updates & Freshness', description: 'Refresh categories, source cadence, and recent website data changes' },
     { id: 'youtube', title: 'AI YouTube Channels', description: 'Curated list of the best YouTube channels covering AI' },
     { id: 'twitter', title: 'AI on X/Twitter', description: 'Curated list of the top AI accounts to follow on X/Twitter' },
     { id: 'jobs', title: 'AI Jobs Market', description: 'Track live AI-company openings, remote share, and role mix across public ATS boards' },

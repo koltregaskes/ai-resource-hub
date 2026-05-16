@@ -190,6 +190,37 @@ Important rule:
 - use creator material as sourced summaries, concept notes, or reading lists
 - where possible, prefer linking to the original YouTube page and a transcript helper page instead of copying long passages
 
+## 10. Reliability Floor
+
+What we collect:
+
+- factuality, groundedness, retrieval, instruction-following, and memory or abstention scores
+- raw score and normalized score where comparable
+- benchmark/source name and source URL
+- model, provider, and release status
+- prompt style, system prompt, zero-shot or few-shot setup, tool access, temperature or reasoning effort where known
+- judge type, repeats, evaluation framework, measured date, published date, and ingested date where known
+
+Primary sources:
+
+- SimpleQA
+- FACTS Grounding
+- IFEval
+- RULER
+- HELMET
+- CRAG
+- LongMemEval
+- LiveBench category-level results
+- HELM scenario-level results
+
+Important rules:
+
+- do not use general quality scores as fallback reliability evidence
+- do not map aggregate benchmark rows into a specific Reliability Floor dimension unless the source exposes the relevant category or scenario
+- keep missing dimensions visible as `No comparable evidence yet`
+- treat each result as `model + prompt + harness + judge`, not the model alone
+- only label a model `Reliable for general use` when all critical dimensions are present and each critical dimension is at least 85
+
 ## Evidence Labels
 
 Every degradation-related note should use one of these:

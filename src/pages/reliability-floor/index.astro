@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  getReliabilityFloorOverview,
+  RELIABILITY_DIMENSIONS,
+  type ReliabilityDimensionScore,
+} from '../../data/reliability-floor';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const overview = getReliabilityFloorOverview();
+const entries = overview.entries;
+const rankedEntries = overview.ranked;
+const partialEntries = overview.partial;
+const trackingEntries = overview.tracking.slice(0, 12);
+
+function formatDate(value: string | null | undefined): string {
+  if (!value) return 'Awaiting evidence';
+  return new Date(value).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+
+function formatScore(value: number | null): string {
+  return value === null ? 'No comparable evidence yet' : value.toFixed(1);
+}
+
+function getDimension(entryDimensions: ReliabilityDimensionScore[], id: ReliabilityDimensionScore['id']): ReliabilityDimensionScore {
+  return entryDimensions.find((dimension) => dimension.id === id) ?? {
+    ...RELIABILITY_DIMENSIONS.find((dimension) => dimension.id === id)!,
+    score: null,
+    evidenceStatus: 'missing',
+    sourceScores: [],
+  };
+}
+
+const sourceRows = overview.sources.map((source) => ({
+  ...source,
+  dimensionMeta: overview.dimensions.find((dimension) => dimension.id === source.dimension),
+}));
+---
+
+<BaseLayout
+  title="Reliability Floor - Everyday AI Model Reliability - The AI Resource Hub"
+  description="A transparent Reliability Floor for factuality, groundedness, retrieval, memory, abstention, and instruction following."
+>
+  <section class="desk-page mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <nav class="text-xs text-(--color-text-muted) mb-3" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Reliability Floor</span>
+    </nav>
+
+    <header class="desk-header">
+      <div>
+        <p class="desk-kicker">Meta-benchmark / everyday reliability</p>
+        <h1>Reliability Floor</h1>
+        <p>
+          A model should not look reliable just because it is brilliant at hard maths or coding.
+          This view tracks the basic failures normal users still hit: wrong facts, unsupported claims,
+          missed retrieval, forgotten context, and ignored instructions.
+        </p>
+      </div>
+      <div class="desk-status-strip" aria-label="Reliability Floor status">
+        <div>
+          <span>{rankedEntries.length}</span>
+          <p>Rank eligible</p>
+        </div>
+        <div>
+          <span>{partialEntries.length}</span>
+          <p>Partial evidence</p>
+        </div>
+        <div>
+          <span>{overview.sources.length}</span>
+          <p>Tracked sources</p>
+        </div>
+        <div>
+          <span>{formatDate(overview.lastUpdated)}</span>
+          <p>Last evidence</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="desk-note">
+      Reliability Floor is intentionally strict. It uses a gated score: the weighted average is capped by the weakest
+      critical dimension, and a model cannot be labelled reliable until factuality, groundedness, retrieval, and
+      instruction following are all present.
+    </div>
+
+    <div class="desk-tabs" aria-label="Reliability Floor sections">
+      <a href="#floor-table">Floor table</a>
+      <a href="#dimensions">Dimensions</a>
+      <a href="#sources">Sources and harness context</a>
+      <a href={`${base}methodology/`}>Methodology</a>
+    </div>
+
+    <section id="floor-table" class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Current evidence</p>
+          <h2>Everyday reliability by model</h2>
+        </div>
+        <p>
+          Missing benchmark data stays visible. It is not treated as zero, and it is not filled with generic quality scores.
+        </p>
+      </div>
+
+      <div class="desk-table-wrap">
+        <table class="desk-table reliability-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Floor</th>
+              <th>Evidence</th>
+              <th>Facts</th>
+              <th>Grounding</th>
+              <th>Retrieval</th>
+              <th>Instructions</th>
+              <th>Memory</th>
+              <th>Updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            {entries.map((entry) => {
+              const facts = getDimension(entry.dimensions, 'factuality');
+              const grounding = getDimension(entry.dimensions, 'groundedness');
+              const retrieval = getDimension(entry.dimensions, 'retrieval');
+              const instructions = getDimension(entry.dimensions, 'instruction_following');
+              const memory = getDimension(entry.dimensions, 'memory_abstention');
+
+              return (
+                <tr>
+                  <td>
+                    <a href={`${base}models/${entry.id}/`} class="desk-model-link">
+                      <span style={`background-color: ${entry.providerColour}`}></span>
+                      <strong>{entry.name}</strong>
+                    </a>
+                    <p>{entry.provider} / {entry.status}</p>
+                  </td>
+                  <td>
+                    <strong>{entry.floorScore === null ? 'Not rankable' : entry.floorScore.toFixed(1)}</strong>
+                    <p>{entry.weightedAverage === null ? 'No floor score yet' : `${entry.weightedAverage.toFixed(1)} weighted avg`}</p>
+                  </td>
+                  <td>
+                    <span class={`desk-badge desk-badge-${entry.evidenceLabel.toLowerCase().replace(/[^a-z]+/g, '-')}`}>
+                      {entry.evidenceLabel}
+                    </span>
+                    <p>{entry.scoredDimensions}/{entry.requiredDimensions} dimensions</p>
+                  </td>
+                  <td>{formatScore(facts.score)}</td>
+                  <td>{formatScore(grounding.score)}</td>
+                  <td>{formatScore(retrieval.score)}</td>
+                  <td>{formatScore(instructions.score)}</td>
+                  <td>{formatScore(memory.score)}</td>
+                  <td>{formatDate(entry.lastUpdated)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="dimensions" class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Scoring shape</p>
+          <h2>Dimensions and weights</h2>
+        </div>
+        <p>
+          The headline score is a floor, not a trophy cabinet. Weak critical basics cap the final number.
+        </p>
+      </div>
+      <div class="desk-grid desk-grid-five">
+        {overview.dimensions.map((dimension) => (
+          <article class="desk-panel">
+            <p class="desk-kicker">{dimension.critical ? 'Critical' : 'Supporting'}</p>
+            <h3>{dimension.label}</h3>
+            <strong>{Math.round(dimension.weight * 100)}%</strong>
+            <p>{dimension.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="sources" class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Prompt and harness context</p>
+          <h2>Tracked benchmark sources</h2>
+        </div>
+        <p>
+          Benchmark outcomes measure model plus prompt plus harness plus judge. V1 records that context instead of
+          pretending prompt robustness is already a clean headline metric.
+        </p>
+      </div>
+
+      <div class="desk-table-wrap">
+        <table class="desk-table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Dimension</th>
+              <th>Prompt context</th>
+              <th>Harness</th>
+              <th>Judge</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sourceRows.map((source) => (
+              <tr>
+                <td>
+                  <a href={source.sourceUrl} target="_blank" rel="noopener noreferrer">{source.name}</a>
+                  <p>{source.sourceType}</p>
+                </td>
+                <td>{source.dimensionMeta?.label ?? source.dimension}</td>
+                <td>{source.promptContext}</td>
+                <td>{source.harnessContext}</td>
+                <td>{source.judgeContext}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {trackingEntries.length > 0 ? (
+      <section class="desk-section">
+        <div class="desk-section-head">
+          <div>
+            <p class="desk-kicker">Watchlist</p>
+            <h2>Current models still waiting for comparable evidence</h2>
+          </div>
+          <p>
+            These remain visible because absence of evidence is useful information in a live reference hub.
+          </p>
+        </div>
+        <div class="desk-inline-list">
+          {trackingEntries.map((entry) => (
+            <a href={`${base}models/${entry.id}/`}>
+              {entry.name}
+              <span>{entry.provider}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ) : null}
+  </section>
+</BaseLayout>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getProviders, getBenchmarks } from '../../db/queries';
+import { RELIABILITY_DIMENSIONS, RELIABILITY_SOURCES } from '../../data/reliability-floor';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -218,6 +219,11 @@ const benchmarks = getBenchmarks();
               <td class="py-3 px-4 text-(--color-text-secondary)">Which flagship and newly released models are current right now?</td>
               <td class="py-3 px-4 text-(--color-text-muted) text-xs">Curated watchlist with status and evidence. Not a synthetic score.</td>
             </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Reliability Floor</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Does the model clear everyday trust basics: facts, grounding, retrieval, instructions, memory, and abstention?</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Strict floor score. Missing critical dimensions are shown as missing, not filled with generic quality scores.</td>
+            </tr>
             <tr>
               <td class="py-3 px-4 text-(--color-text-primary)">Evaluated composite</td>
               <td class="py-3 px-4 text-(--color-text-secondary)">Which models are currently strongest inside the benchmark-backed scored set?</td>
@@ -266,6 +272,91 @@ const benchmarks = getBenchmarks();
               <td class="py-3 px-4 text-(--color-text-secondary)">Penalty, not bonus</td>
               <td class="py-3 px-4 text-(--color-text-muted) text-xs">Compact and preview variants are stopped from reading like the obvious overall best model.</td>
             </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Reliability Floor -->
+    <div class="mb-10">
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Reliability Floor</h2>
+      <p class="text-sm text-(--color-text-secondary) mb-4">
+        Reliability Floor is the Hub's strict everyday-trust meta-benchmark. It is designed for the normal-user basics that still break too often: factual accuracy, grounded answers, retrieval from supplied context, exact instruction following, memory, and abstention.
+      </p>
+
+      <div class="grid gap-4 lg:grid-cols-[1.15fr_0.85fr] mb-4">
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-border)">
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Dimension</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Weight</th>
+                <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              {RELIABILITY_DIMENSIONS.map((dimension) => (
+                <tr class="border-b border-(--color-border)/50">
+                  <td class="py-3 px-4 text-(--color-text-primary)">
+                    {dimension.label}
+                    <p class="mt-1 text-xs text-(--color-text-muted)">{dimension.description}</p>
+                  </td>
+                  <td class="py-3 px-4 text-(--color-text-secondary)">{Math.round(dimension.weight * 100)}%</td>
+                  <td class="py-3 px-4 text-(--color-text-muted) text-xs">{dimension.critical ? 'Critical gate' : 'Supporting signal'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
+          <h3 class="text-sm font-semibold text-(--color-text-primary)">Floor score rule</h3>
+          <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+            We compute the weighted average only from comparable evidence, then cap the headline score at the weakest critical dimension plus 10 points. A model cannot be labelled <strong>Reliable for general use</strong> unless factuality, groundedness, retrieval, and instruction following are all present and each is at least 85.
+          </p>
+          <div class="mt-4 rounded-lg border border-(--color-border) bg-(--color-bg-primary) p-3 font-mono text-xs text-(--color-accent)">
+            floor = min(weighted average, weakest critical dimension + 10)
+          </div>
+          <p class="mt-3 text-xs leading-5 text-(--color-text-muted)">
+            Missing evidence is rendered as "No comparable evidence yet". It is never replaced with the general quality score or provider marketing claims.
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 mb-4">
+        <h3 class="text-sm font-semibold text-(--color-text-primary)">Prompt and harness context</h3>
+        <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
+          Benchmark outcomes measure <strong>model + prompt + harness + judge</strong>, not the model alone. V1 records prompt style, zero-shot or few-shot setup, system prompt, tool access, temperature or reasoning effort, judge type, repeats, and evaluation framework wherever the source makes that available. Prompt robustness is important, but it stays context-first until the data is strong enough to score honestly.
+        </p>
+        <p class="mt-3 text-xs leading-5 text-(--color-text-muted)">
+          Future internal harness families are documented as Know, Check, Or Abstain; Grounded Answer Only; and Follow The Exact Brief. Supporting references include PromptBench, RobustAlpacaEval, lm-evaluation-harness, Epoch methodology, and Artificial Analysis methodology.
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-(--color-border)">
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Tracked source</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Dimension</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">How it is used</th>
+            </tr>
+          </thead>
+          <tbody>
+            {RELIABILITY_SOURCES.map((source) => {
+              const dimension = RELIABILITY_DIMENSIONS.find((item) => item.id === source.dimension);
+
+              return (
+                <tr class="border-b border-(--color-border)/50">
+                  <td class="py-3 px-4 text-(--color-text-primary)">
+                    <a href={source.sourceUrl} target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">{source.name}</a>
+                    <p class="mt-1 text-xs text-(--color-text-muted)">{source.sourceType}</p>
+                  </td>
+                  <td class="py-3 px-4 text-(--color-text-secondary)">{dimension?.label ?? source.dimension}</td>
+                  <td class="py-3 px-4 text-(--color-text-muted) text-xs">{source.notes}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
