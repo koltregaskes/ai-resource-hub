@@ -3,11 +3,11 @@ title: "DeepSeek V4 Flash: release brief"
 slug: "2026-04-24-deepseek-v4-flash-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "high"
+priority: "watch"
 model: "DeepSeek V4 Flash"
 provider: "DeepSeek"
 release_date: "2026-04-24"
-generated_at: "2026-05-15T23:11:14.372Z"
+generated_at: "2026-05-16T00:06:33.471Z"
 ---
 
 # DeepSeek V4 Flash: release brief

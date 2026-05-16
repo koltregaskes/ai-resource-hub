@@ -3,11 +3,11 @@ title: "Mistral Small 4: release brief"
 slug: "2026-03-16-mistral-small-4-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "watch"
+priority: "backfill"
 model: "Mistral Small 4"
 provider: "Mistral"
 release_date: "2026-03-16"
-generated_at: "2026-05-15T23:11:14.372Z"
+generated_at: "2026-05-16T00:06:33.472Z"
 ---
 
 # Mistral Small 4: release brief

@@ -3,11 +3,11 @@ title: "GPT-5.5 Pro: release brief"
 slug: "2026-04-24-gpt-5-5-pro-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "high"
+priority: "watch"
 model: "GPT-5.5 Pro"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-15T23:11:14.371Z"
+generated_at: "2026-05-16T00:06:33.471Z"
 ---
 
 # GPT-5.5 Pro: release brief
