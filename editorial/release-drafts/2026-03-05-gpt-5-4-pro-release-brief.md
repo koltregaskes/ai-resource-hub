@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT-5.4 Pro"
 provider: "OpenAI"
 release_date: "2026-03-05"
-generated_at: "2026-05-16T08:59:09.975Z"
+generated_at: "2026-05-16T10:36:53.075Z"
 ---
 
 # GPT-5.4 Pro: release brief
 
-OpenAI's GPT-5.4 Pro is on the release desk with 4 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.4 Pro is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -32,7 +32,6 @@ GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an A
 - TechCrunch (2026-05-15): [OpenAI launches ChatGPT for personal finance, will let you connect bank accounts](https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/) - Once users connect their accounts, they will see a dashboard of their portfolio performance, spending, subscriptions, and upcoming payments.
 - The Verge (2026-05-15): [AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies) - Andon Labs has been running a series of experiments in which AI agents run businesses without human intervention. Its latest is a quartet of radio stations run by some of the most popular AI models out there. "Thinking Frequencies" is run by Claude, "OpenAIR" by ChatGPT, "Backlink Broadcast" by Google's Gemini, and "G…
 - The Verge (2026-05-15): [OpenAI now wants ChatGPT to access your bank accounts](https://www.theverge.com/ai-artificial-intelligence/931122/openai-chatgpt-financial-accounts-plaid-connection) - Your trust in AI is about to be put to the test: OpenAI will soon let you give the chatbot direct access to your bank accounts. The new feature announced in preview today will allow users to "securely connect" ChatGPT with Plaid - the bank-to-app bridging platform used by 12,000 financial institutions, including Schwa…
-- OpenAI (2026-05-11): [OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company) - OpenAI launches DeployCo, a new enterprise deployment company built to help organizations bring frontier AI into production and turn it into measurable business impact.
 
 ## Suggested thread / post structure
 
@@ -56,4 +55,3 @@ GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an A
 - [TechCrunch: OpenAI launches ChatGPT for personal finance, will let you connect bank accounts](https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/)
 - [The Verge: AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies)
 - [The Verge: OpenAI now wants ChatGPT to access your bank accounts](https://www.theverge.com/ai-artificial-intelligence/931122/openai-chatgpt-financial-accounts-plaid-connection)
-- [OpenAI: OpenAI launches DeployCo to help businesses build around intelligence](https://openai.com/index/openai-launches-the-deployment-company)
