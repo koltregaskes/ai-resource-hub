@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// The waitlist Worker URL — replaced after `wrangler deploy`.
+// Update this constant once the Worker URL is known.
+const WAITLIST_ENDPOINT = 'https://llatos-waitlist.kolstregaskes.workers.dev/waitlist';
+---
+
+<BaseLayout
+  title="AI Operator Starter Pack — The AI Resource Hub"
+  description="Three lessons, four exercises, one reference card, ten prompts. For people who want to run AI tools properly, not just use them."
+  ogImage={`${base}og-starter-pack.svg`}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <header class="mb-12">
+      <p class="text-sm font-bold tracking-[0.18em] uppercase text-blue-400 mb-4">AI OPERATOR STARTER PACK</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-(--color-text-primary) leading-[1.05] mb-6">
+        Stop blaming the model.
+      </h1>
+      <p class="text-xl text-(--color-text-secondary) leading-relaxed">
+        A small, deliberate pack for people who want to run AI tools properly. Three lessons, four exercises,
+        a reference card, ten prompts. One zip you keep on your desk forever.
+      </p>
+    </header>
+
+    <section class="mb-10 p-6 sm:p-8 rounded-2xl border border-blue-500/20 bg-blue-500/5">
+      <p class="text-sm font-bold tracking-[0.14em] uppercase text-blue-400 mb-3">Pre-launch — join the waitlist</p>
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-3">First 100 readers get founder pricing</h2>
+      <p class="text-(--color-text-secondary) mb-6 leading-relaxed">
+        We're polishing the final PDFs. Drop your email and you'll be the first to know when it ships —
+        plus a one-time founder price of <strong class="text-(--color-text-primary)">£9</strong> instead
+        of the standard £12. No spam. Cancel any time.
+      </p>
+
+      <form id="starter-pack-waitlist" class="grid gap-4">
+        <label class="block">
+          <span class="text-sm font-medium text-(--color-text-primary) mb-2 block">Your email</span>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+            class="w-full px-4 py-3 rounded-xl border border-(--color-border) bg-(--color-bg-card) text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </label>
+        <label class="block">
+          <span class="text-sm font-medium text-(--color-text-primary) mb-2 block">
+            What's the most recent thing where you suspected the harness — not the model — was wrong?
+            <span class="text-(--color-text-muted) font-normal">Optional — used for content prioritisation only.</span>
+          </span>
+          <textarea
+            name="qualitative_response"
+            rows="3"
+            placeholder="A specific moment, if one comes to mind…"
+            class="w-full px-4 py-3 rounded-xl border border-(--color-border) bg-(--color-bg-card) text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+        </label>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+        <button
+          type="submit"
+          class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Join the waitlist
+        </button>
+        <div id="starter-pack-status" class="text-sm text-(--color-text-secondary) min-h-[1.5em]" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">What's in the pack</h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="p-5 rounded-xl border border-(--color-border) bg-(--color-bg-card)">
+          <h3 class="font-bold text-(--color-text-primary) mb-2">1. The three lessons (PDF)</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            <em>What Is a Harness?</em>, <em>What Is a Transformer?</em>, and <em>Model Layers Explained</em> —
+            retypeset as one clean reading object with a cover and contents page.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl border border-(--color-border) bg-(--color-bg-card)">
+          <h3 class="font-bold text-(--color-text-primary) mb-2">2. The Operator Worksheet</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Four exercises: harness audit, regression diary, prompt failure taxonomy,
+            and a "before you ship" checklist.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl border border-(--color-border) bg-(--color-bg-card)">
+          <h3 class="font-bold text-(--color-text-primary) mb-2">3. The Harness Reference Card</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            One printable A5 page. Three-layer diagram on the front, five harness failure modes on the back.
+            Built for the wall by your monitor.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl border border-(--color-border) bg-(--color-bg-card)">
+          <h3 class="font-bold text-(--color-text-primary) mb-2">4. The Operator Prompt Kit</h3>
+          <p class="text-sm text-(--color-text-secondary)">
+            Ten deliberate prompts for Claude, ChatGPT, and Gemini — each with the operator reasoning,
+            not just the text. No 500-prompt megalists.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Who this is for</h2>
+      <ul class="grid gap-2 text-(--color-text-secondary) leading-relaxed">
+        <li>People moving from "AI user" to "AI operator".</li>
+        <li>Teams who want every member to share the same mental model before picking tools.</li>
+        <li>Consultants who need a clean reference to hand to clients.</li>
+        <li>Writers and researchers who want to stop blaming the model for harness behaviour.</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Who this is not for</h2>
+      <ul class="grid gap-2 text-(--color-text-secondary) leading-relaxed">
+        <li>People who want a 12-week course.</li>
+        <li>People who want the maths behind transformers — this is operator material, not engineering.</li>
+        <li>People who want a 500-prompt "prompt engineering" bundle — this pack is deliberately small.</li>
+      </ul>
+    </section>
+
+    <p class="text-sm text-(--color-text-muted) mb-8">
+      Personal learning use. Teams should buy one per person. Refunds within 14 days, no questions.
+    </p>
+  </article>
+
+  <script define:vars={{ WAITLIST_ENDPOINT }}>
+    const form = document.getElementById('starter-pack-waitlist');
+    const status = document.getElementById('starter-pack-status');
+    if (form && status) {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const button = form.querySelector('button[type="submit"]');
+        if (!(button instanceof HTMLButtonElement)) return;
+
+        const data = new FormData(form);
+        // honeypot — silently succeed if filled
+        if (data.get('website')) {
+          status.textContent = 'Thanks!';
+          form.reset();
+          return;
+        }
+
+        const email = String(data.get('email') ?? '').trim();
+        const qualitative = String(data.get('qualitative_response') ?? '').trim();
+        if (!email) {
+          status.textContent = 'Please enter your email.';
+          return;
+        }
+
+        button.disabled = true;
+        const originalText = button.textContent;
+        button.textContent = 'Joining…';
+        status.textContent = '';
+
+        try {
+          const response = await fetch(WAITLIST_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email,
+              product_slug: 'ai-operator-starter-pack',
+              source_page: window.location.pathname,
+              qualitative_response: qualitative || undefined,
+            }),
+          });
+          const body = await response.json();
+          if (response.ok && body.ok) {
+            window.location.href = `${window.location.pathname.replace(/\/$/, '')}/joined`;
+            return;
+          }
+          if (body && body.error === 'invalid_email') {
+            status.textContent = 'That email looks off — try again?';
+          } else {
+            status.textContent = "Sorry — couldn't add you. Try again in a moment?";
+          }
+        } catch {
+          status.textContent = 'Network blip — try again?';
+        } finally {
+          button.disabled = false;
+          button.textContent = originalText;
+        }
+      });
+    }
+  </script>
+</BaseLayout>
