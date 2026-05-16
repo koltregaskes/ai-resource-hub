@@ -7,7 +7,7 @@ priority: "watch"
 model: "Reka Edge"
 provider: "Reka"
 release_date: "2026-03-20"
-generated_at: "2026-05-16T22:02:50.565Z"
+generated_at: "2026-05-16T23:05:50.070Z"
 ---
 
 # Reka Edge: release brief
