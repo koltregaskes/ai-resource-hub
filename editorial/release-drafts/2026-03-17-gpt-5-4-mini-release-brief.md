@@ -3,11 +3,11 @@ title: "GPT-5.4 Mini: release brief"
 slug: "2026-03-17-gpt-5-4-mini-release-brief"
 draft_type: "model-release"
 status: "ready_for_editor"
-priority: "watch"
+priority: "backfill"
 model: "GPT-5.4 Mini"
 provider: "OpenAI"
 release_date: "2026-03-17"
-generated_at: "2026-05-16T23:05:50.071Z"
+generated_at: "2026-05-17T00:06:30.651Z"
 ---
 
 # GPT-5.4 Mini: release brief

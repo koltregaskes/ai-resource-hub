@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 16 May 2026, 23:05 UTC
+Generated: 17 May 2026, 00:06 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -22,9 +22,9 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 12 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $2.00 / $8.00 | 16 Apr 2025 |
 | 13 | Claude Opus 4 | Anthropic | 38.6 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
 | 14 | Gemini 2.5 Pro | Google | 38.1 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
-| 15 | Gemini 3 Pro | Google | 37.9 | 81.2 / 3 | 13% | Chat | $2.00 / $12.00 | 18 Nov 2025 |
-| 16 | Grok 4 | xAI | 37.1 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
-| 17 | DeepSeek R1 | DeepSeek | 36.7 | 70.9 / 19 | 58% | General use | $0.70 / $2.50 | 20 Jan 2025 |
+| 15 | Grok 4 | xAI | 37.1 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
+| 16 | DeepSeek R1 | DeepSeek | 36.7 | 70.9 / 19 | 58% | General use | $0.70 / $2.50 | 20 Jan 2025 |
+| 17 | Gemini 3 Pro | Google | 36.2 | 81.2 / 3 | 13% | Chat | $2.00 / $12.00 | 18 Nov 2025 |
 | 18 | Claude Sonnet 4 | Anthropic | 35.9 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
 | 19 | Claude Sonnet 4.5 | Anthropic | 35.6 | 76.7 / 3 | 13% | Chat | $3.00 / $15.00 | 29 Sept 2025 |
 | 20 | Phi-4 Reasoning | Microsoft | 34.5 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |

@@ -7,12 +7,12 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-05-16T23:05:50.070Z"
+generated_at: "2026-05-17T00:06:30.651Z"
 ---
 
 # Claude Mythos Preview: release brief
 
-Anthropic's Claude Mythos Preview is on the release desk with 2 related stories and 0 benchmark signals to review.
+Anthropic's Claude Mythos Preview is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,7 +30,6 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 ## Outside coverage and early reactions
 
-- Anthropic (2026-04-17): [Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs) - Today, we're launching Claude Design, a new Anthropic Labs product that lets you collaborate with Claude to create polished visual work like designs, prototypes, slides, one-pagers, and more.
 - Ars Technica (2026-05-07): [Mozilla says 271 vulnerabilities found by Mythos have "almost no false positives"](https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/) - The developer of Firefox says it has "completely bought in" on AI-assisted bug discovery.
 
 ## Suggested thread / post structure
@@ -53,5 +52,4 @@ Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access 
 
 - [Official launch or docs](https://www.anthropic.com/glasswing)
 - [Provider API/docs](https://docs.anthropic.com)
-- [Anthropic: Introducing Claude Design by Anthropic Labs](https://www.anthropic.com/news/claude-design-anthropic-labs)
 - [Ars Technica: Mozilla says 271 vulnerabilities found by Mythos have "almost no false positives"](https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/)
