@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-17T00:06:21.744Z",
+  "generatedAt": "2026-05-17T01:30:41.732Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-17T00:06:20.082Z",
+      "lastCheckedAt": "2026-05-17T01:30:40.276Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-17T00:06:21.023Z",
+      "lastCheckedAt": "2026-05-17T01:30:41.266Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-17T00:06:21.199Z",
+      "lastCheckedAt": "2026-05-17T01:30:41.528Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -187,7 +187,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-17T00:06:20.486Z",
+      "lastCheckedAt": "2026-05-17T01:30:40.549Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -241,7 +241,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-17T00:06:20.662Z",
+      "lastCheckedAt": "2026-05-17T01:30:40.635Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,10 +261,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-17T00:06:20.048Z",
+      "lastCheckedAt": "2026-05-17T01:30:40.337Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -292,27 +292,16 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01KRP6FM6HSKWB3MS1EJTY6AT4",
-          "title": "GPT5.5 Performance Degradation",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-05-15T16:11:01.000Z",
-          "updatedAt": "2026-05-16T00:35:00.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "01KRP6FM6HSKWB3MS1EJTY6AT4",
           "title": "GPT5.5 Performance Degradation",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-05-15T16:11:01.000Z",
-          "updatedAt": "2026-05-16T00:35:00.000Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-05-17T00:15:05.000Z",
+          "resolvedAt": "2026-05-17T00:15:05.000Z",
           "summary": null
         },
         {
@@ -358,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-17T00:06:21.320Z",
+      "lastCheckedAt": "2026-05-17T01:30:41.724Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
