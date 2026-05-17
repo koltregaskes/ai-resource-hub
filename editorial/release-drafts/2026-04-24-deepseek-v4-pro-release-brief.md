@@ -7,7 +7,7 @@ priority: "watch"
 model: "DeepSeek V4 Pro"
 provider: "DeepSeek"
 release_date: "2026-04-24"
-generated_at: "2026-05-17T17:12:32.274Z"
+generated_at: "2026-05-17T18:10:59.041Z"
 ---
 
 # DeepSeek V4 Pro: release brief
