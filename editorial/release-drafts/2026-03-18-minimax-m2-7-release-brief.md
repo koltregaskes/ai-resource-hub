@@ -3,11 +3,11 @@ title: "MiniMax M2.7: release brief"
 slug: "2026-03-18-minimax-m2-7-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "watch"
+priority: "backfill"
 model: "MiniMax M2.7"
 provider: "MiniMax"
 release_date: "2026-03-18"
-generated_at: "2026-05-17T23:10:37.277Z"
+generated_at: "2026-05-18T00:10:43.744Z"
 ---
 
 # MiniMax M2.7: release brief
