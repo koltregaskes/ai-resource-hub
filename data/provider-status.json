@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18T04:58:01.360Z",
+  "generatedAt": "2026-05-18T08:59:07.385Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-18T04:57:59.894Z",
+      "lastCheckedAt": "2026-05-18T08:59:06.252Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -46,6 +46,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "fvddmdx8z6y7",
+          "title": "Elevated errors on Claude Haiku 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-18T06:12:16.416Z",
+          "updatedAt": "2026-05-18T08:07:44.275Z",
+          "resolvedAt": "2026-05-18T08:07:44.258Z",
+          "url": "https://stspg.io/2714qpyvwbd5",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "v9s6d0jt84hj",
           "title": "Elevated error rates on requests to multiple models",
           "status": "resolved",
@@ -77,17 +88,6 @@
           "resolvedAt": "2026-05-14T22:25:06.764Z",
           "url": "https://stspg.io/yw56b4cmlf2s",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "yn24rtdnf77b",
-          "title": "Claude.ai is experiencing elevated error rates",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-13T12:21:57.633Z",
-          "updatedAt": "2026-05-13T14:45:32.603Z",
-          "resolvedAt": "2026-05-13T14:45:32.586Z",
-          "url": "https://stspg.io/hctlccf3y6s8",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-18T04:58:00.772Z",
+      "lastCheckedAt": "2026-05-18T08:59:07.069Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-18T04:58:01.113Z",
+      "lastCheckedAt": "2026-05-18T08:59:07.378Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -187,7 +187,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-18T04:58:00.210Z",
+      "lastCheckedAt": "2026-05-18T08:59:06.580Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -231,26 +231,6 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-18T04:58:00.393Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -261,7 +241,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-18T04:57:59.911Z",
+      "lastCheckedAt": "2026-05-18T08:59:06.121Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -347,7 +327,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-18T04:58:01.352Z",
+      "lastCheckedAt": "2026-05-18T08:59:07.300Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -356,48 +336,48 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-18T02:40:08.000Z",
-          "title": "Qwen3.5 397B A17B recovered",
+          "id": "together-feed-0-2026-05-18T05:50:46.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-05-18T02:40:08.000Z",
-          "updatedAt": "2026-05-18T02:40:08.000Z",
-          "resolvedAt": "2026-05-18T02:40:08.000Z",
+          "startedAt": "2026-05-18T05:50:46.000Z",
+          "updatedAt": "2026-05-18T05:50:46.000Z",
+          "resolvedAt": "2026-05-18T05:50:46.000Z",
           "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B recovered"
+          "summary": "Google Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-1-2026-05-18T02:27:01.000Z",
-          "title": "Qwen3.5 397B A17B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-18T02:27:01.000Z",
-          "updatedAt": "2026-05-18T02:27:01.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-17T13:43:55.000Z",
-          "title": "Meta Llama Guard 4 12B recovered",
+          "id": "together-feed-1-2026-05-18T05:41:29.000Z",
+          "title": "Moonshot Kimi K2.5 recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-05-17T13:43:55.000Z",
-          "updatedAt": "2026-05-17T13:43:55.000Z",
-          "resolvedAt": "2026-05-17T13:43:55.000Z",
+          "startedAt": "2026-05-18T05:41:29.000Z",
+          "updatedAt": "2026-05-18T05:41:29.000Z",
+          "resolvedAt": "2026-05-18T05:41:29.000Z",
           "url": "https://status.together.ai/",
-          "summary": "Meta Llama Guard 4 12B recovered"
+          "summary": "Moonshot Kimi K2.5 recovered"
         },
         {
-          "id": "together-feed-3-2026-05-17T13:12:28.000Z",
-          "title": "Meta Llama Guard 4 12B went down",
+          "id": "together-feed-2-2026-05-18T05:29:25.000Z",
+          "title": "Moonshot Kimi K2.5 went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-05-17T13:12:28.000Z",
-          "updatedAt": "2026-05-17T13:12:28.000Z",
+          "startedAt": "2026-05-18T05:29:25.000Z",
+          "updatedAt": "2026-05-18T05:29:25.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
-          "summary": "Meta Llama Guard 4 12B went down"
+          "summary": "Moonshot Kimi K2.5 went down"
+        },
+        {
+          "id": "together-feed-3-2026-05-18T05:28:51.000Z",
+          "title": "DeepSeek V4 Pro recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-18T05:28:51.000Z",
+          "updatedAt": "2026-05-18T05:28:51.000Z",
+          "resolvedAt": "2026-05-18T05:28:51.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "DeepSeek V4 Pro recovered"
         }
       ]
     },
@@ -416,7 +396,27 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-18T08:59:06.759Z",
+      "overallStatus": "unknown",
+      "overallLabel": "Status page available",
+      "summary": "Official provider status page reports: Status page available.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
