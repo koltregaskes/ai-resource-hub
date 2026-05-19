@@ -148,11 +148,19 @@ function loadExistingCacheRows(name) {
   const outPath = path.join(cacheDir, `${name}.json`);
   const rows = [];
 
+  // NB: never use `rows.push(...arr)` here — these caches grow into
+  // tens of thousands of rows (e.g. price_history is ~27 MB) and the
+  // spread blows V8's argument limit with RangeError: Maximum call
+  // stack size exceeded. Append item-by-item instead.
   if (existsSync(outPath)) {
-    rows.push(...readJsonRows(readFileSync(outPath, 'utf8'), `${name} cache file`));
+    for (const row of readJsonRows(readFileSync(outPath, 'utf8'), `${name} cache file`)) {
+      rows.push(row);
+    }
   }
 
-  rows.push(...loadTrackedCacheRows(name));
+  for (const row of loadTrackedCacheRows(name)) {
+    rows.push(row);
+  }
   return rows;
 }
 
