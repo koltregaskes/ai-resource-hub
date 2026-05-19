@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T12:30:37.061Z",
+  "generatedAt": "2026-05-19T16:02:43.606Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-19T12:30:31.023Z",
+      "lastCheckedAt": "2026-05-19T16:02:42.139Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -46,6 +46,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "f9yk8lqw384x",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-05-19T14:03:04.432Z",
+          "updatedAt": "2026-05-19T15:40:47.336Z",
+          "resolvedAt": "2026-05-19T15:40:47.319Z",
+          "url": "https://stspg.io/x1ckjv977mf5",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "qkwdrjxvkb9s",
           "title": "Elevated errors on Claude Opus 4.7",
           "status": "resolved",
@@ -77,17 +88,6 @@
           "resolvedAt": "2026-05-19T04:51:51.164Z",
           "url": "https://stspg.io/212syk16lf55",
           "summary": "This issue has been resolved."
-        },
-        {
-          "id": "6qbg6ft2r9j4",
-          "title": "Elevated errors for Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-18T22:10:49.001Z",
-          "updatedAt": "2026-05-18T22:19:34.949Z",
-          "resolvedAt": "2026-05-18T22:19:34.931Z",
-          "url": "https://stspg.io/wyyn9n652gsz",
-          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 21:47 to 22:18 UTC."
         }
       ]
     },
@@ -102,7 +102,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-19T12:30:37.054Z",
+      "lastCheckedAt": "2026-05-19T16:02:43.204Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-19T12:30:33.243Z",
+      "lastCheckedAt": "2026-05-19T16:02:43.445Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -187,7 +187,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-19T12:30:31.375Z",
+      "lastCheckedAt": "2026-05-19T16:02:42.489Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -241,7 +241,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-19T12:30:31.728Z",
+      "lastCheckedAt": "2026-05-19T16:02:42.890Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-19T12:30:30.944Z",
+      "lastCheckedAt": "2026-05-19T16:02:42.044Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-19T12:30:33.741Z",
+      "lastCheckedAt": "2026-05-19T16:02:43.599Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -356,45 +356,45 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-19T07:38:01.000Z",
-          "title": "Qwen3 Coder 480B A35B Instruct FP8 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-19T07:38:01.000Z",
-          "updatedAt": "2026-05-19T07:38:01.000Z",
-          "resolvedAt": "2026-05-19T07:38:01.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 Coder 480B A35B Instruct FP8 recovered"
-        },
-        {
-          "id": "together-feed-1-2026-05-19T07:24:18.000Z",
-          "title": "Qwen3 Coder 480B A35B Instruct FP8 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-19T07:24:18.000Z",
-          "updatedAt": "2026-05-19T07:24:18.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3 Coder 480B A35B Instruct FP8 went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-19T07:09:58.000Z",
+          "id": "together-feed-0-2026-05-19T14:47:07.000Z",
           "title": "Qwen3.5 397B A17B recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-05-19T07:09:58.000Z",
-          "updatedAt": "2026-05-19T07:09:58.000Z",
-          "resolvedAt": "2026-05-19T07:09:58.000Z",
+          "startedAt": "2026-05-19T14:47:07.000Z",
+          "updatedAt": "2026-05-19T14:47:07.000Z",
+          "resolvedAt": "2026-05-19T14:47:07.000Z",
           "url": "https://status.together.ai/",
           "summary": "Qwen3.5 397B A17B recovered"
         },
         {
-          "id": "together-feed-3-2026-05-19T06:44:57.000Z",
+          "id": "together-feed-1-2026-05-19T14:25:12.000Z",
           "title": "Qwen3.5 397B A17B went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-05-19T06:44:57.000Z",
-          "updatedAt": "2026-05-19T06:44:57.000Z",
+          "startedAt": "2026-05-19T14:25:12.000Z",
+          "updatedAt": "2026-05-19T14:25:12.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-19T13:35:07.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-19T13:35:07.000Z",
+          "updatedAt": "2026-05-19T13:35:07.000Z",
+          "resolvedAt": "2026-05-19T13:35:07.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        },
+        {
+          "id": "together-feed-3-2026-05-19T13:20:53.000Z",
+          "title": "Qwen3.5 397B A17B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-19T13:20:53.000Z",
+          "updatedAt": "2026-05-19T13:20:53.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3.5 397B A17B went down"
@@ -416,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
