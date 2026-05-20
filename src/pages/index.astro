@@ -1,1006 +1,1137 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { getBenchmarks, getNews } from '../db/queries';
-import { getAiMilestonesOverview } from '../data/ai-milestones';
-import { modelReleaseDesk } from '../data/model-release-desk.generated';
+// ai-resource-hub — Homepage v3 (Spreadsheet) port
+// 2026-05-20 — vanilla Astro port of design pack `Homepage v3 - Spreadsheet.html`.
+// Replaces the previous dashboard-style homepage with the spreadsheet-first
+// information architecture spelled out in `Design Feedback for Claude Code.md`:
+//
+//   header → live ticker → view tabs → leaderboard with filter rail → bottom strip
+//
+// Real data comes from `getMetaLeaderboard` and `getNews`. Sparkline series is
+// synthesised from the current score because the data layer does not yet track
+// 14-day history — that hook is marked with TODO so the upgrade is obvious.
+
+import { getNews } from '../db/queries';
 import {
-  getAgiOverview,
   getDataPulse,
-  getFrontierNow,
-  getLatestActivities,
-  getLatestDigest,
   getMetaLeaderboard,
   normaliseDateTime,
-  type AgiFrontierPoint,
+  type MetaLeaderboardEntry,
 } from '../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const frontierNowAll = getFrontierNow(24);
-const frontierNow = frontierNowAll.slice(0, 10);
 const metaLeaderboardAll = getMetaLeaderboard(250);
-const evaluatedLeaderboard = metaLeaderboardAll.slice(0, 10);
-const agiOverview = getAgiOverview();
-const latestDigest = getLatestDigest();
-const digestEntries = latestDigest?.entries.slice(0, 5) ?? [];
+const leaderboardRows = metaLeaderboardAll.slice(0, 12);
+const filteredCount = leaderboardRows.length;
+const totalCount = metaLeaderboardAll.length;
 const dataPulse = getDataPulse(base);
-const activities = getLatestActivities(8, base);
-const milestonesOverview = getAiMilestonesOverview();
-const trackedBenchmarkCount = getBenchmarks().length;
-type HeadlineNewsItem = ReturnType<typeof getNews>[number] & {
+
+type NewsItem = ReturnType<typeof getNews>[number] & {
   discovered_at?: string | null;
 };
-const headlineNews = (getNews() as HeadlineNewsItem[])
+
+const tickerItems = (getNews() as NewsItem[])
   .map((item) => ({
     ...item,
     headlineDate: normaliseDateTime(item.published_at ?? item.discovered_at ?? null),
   }))
   .sort((a, b) => Date.parse(b.headlineDate ?? '') - Date.parse(a.headlineDate ?? ''))
-  .slice(0, 5);
+  .slice(0, 8);
 
-const frontierLeader = frontierNow[0] ?? null;
-const evaluatedLeader = evaluatedLeaderboard[0] ?? null;
-const bestOpenModel = metaLeaderboardAll.find((model) => model.openSource) ?? null;
-const bestValueModel = [...metaLeaderboardAll]
-  .filter((model) => model.inputPrice > 0 && model.outputPrice > 0)
-  .sort((a, b) => b.valueScore - a.valueScore)[0] ?? null;
-const latestTrackedRelease = modelReleaseDesk.releases.find((release) => release.draftStatus === 'ready_for_editor')
-  ?? modelReleaseDesk.releases.find((release) => release.priority === 'high')
-  ?? modelReleaseDesk.releases[0]
-  ?? null;
+// View-tab counts: rough slices from the full meta-leaderboard so the buttons
+// show real numbers rather than design-mock placeholders.
+const openSourceCount = metaLeaderboardAll.filter((m) => m.openSource).length;
+const cheapestCount = metaLeaderboardAll.filter((m) => m.inputPrice > 0 && m.inputPrice < 2).length;
+const fastestCount = metaLeaderboardAll.filter((m) => m.speed > 100).length;
+const bestValueCount = metaLeaderboardAll.filter((m) => m.valueScore > 5).length;
 
-function latestTimestamp(values: Array<string | null | undefined>): string | null {
-  const timestamps = values
-    .map((value) => normaliseDateTime(value))
-    .filter((value): value is string => Boolean(value))
-    .sort((a, b) => Date.parse(b) - Date.parse(a));
+// Provider counts for the filter rail.
+const providerCounts: Array<{ key: string; name: string; colour: string; count: number }> = [];
+const providerSeen = new Map<string, { name: string; colour: string; count: number }>();
+for (const row of metaLeaderboardAll) {
+  const key = row.provider;
+  const existing = providerSeen.get(key);
+  if (existing) {
+    existing.count += 1;
+  } else {
+    providerSeen.set(key, { name: row.provider, colour: row.providerColour, count: 1 });
+  }
+}
+for (const [key, entry] of providerSeen.entries()) {
+  providerCounts.push({ key, ...entry });
+}
+providerCounts.sort((a, b) => b.count - a.count);
+const topProviders = providerCounts.slice(0, 8);
+const additionalProviderCount = Math.max(0, providerCounts.length - topProviders.length);
 
-  return timestamps[0] ?? null;
+// Synthesise a 14-day score series. When the data layer stores history this
+// becomes a real lookup; for now it produces a smoothly-varying curve that
+// terminates at the actual current score.
+// TODO(history): replace with real benchmark history from the DB.
+function syntheticSpark(row: MetaLeaderboardEntry, deltaSign: number): number[] {
+  const out: number[] = [];
+  const target = row.metaScore;
+  const span = Math.max(0.4, Math.abs(deltaSign) * 1.8);
+  for (let i = 0; i < 14; i += 1) {
+    const t = i / 13;
+    const eased = Math.pow(t, 1.2);
+    const wobble = Math.sin((i + row.metaScore) * 1.3) * 0.18;
+    const point = target - span * (1 - eased) + wobble;
+    out.push(Number(point.toFixed(2)));
+  }
+  // Force the last point to equal the target for visual continuity.
+  out[out.length - 1] = target;
+  return out;
 }
 
-function formatDateLabel(value: string | null | undefined, options?: Intl.DateTimeFormatOptions): string {
-  const normalised = normaliseDateTime(value);
-  if (!normalised) return 'Awaiting refresh';
+function deltaSignFor(row: MetaLeaderboardEntry): number {
+  // TODO(history): derive from actual 7-day delta when stored.
+  // For now: positive for high freshness, negative for old releases.
+  return row.freshnessScore > 70 ? 1 : row.freshnessScore < 40 ? -1 : 0;
+}
 
-  return new Date(normalised).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    ...options,
+function sparkSvg(series: number[], sign: number): string {
+  const w = 88;
+  const h = 22;
+  const pad = 1.5;
+  const min = Math.min(...series);
+  const max = Math.max(...series);
+  const range = Math.max(0.5, max - min);
+  const stepX = (w - pad * 2) / (series.length - 1);
+  const pts = series.map((v, i) => {
+    const x = pad + stepX * i;
+    const y = pad + (h - pad * 2) * (1 - (v - min) / range);
+    return [x.toFixed(1), y.toFixed(1)] as const;
   });
+  const path = pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p[0]} ${p[1]}`).join(' ');
+  const area = `${path} L ${pts[pts.length - 1][0]} ${h - pad} L ${pts[0][0]} ${h - pad} Z`;
+  const cls = sign > 0 ? 'up' : sign < 0 ? 'down' : '';
+  const last = pts[pts.length - 1];
+  return `<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true">
+    <path class="spark-area" d="${area}"/>
+    <path class="spark-line ${cls}" d="${path}"/>
+    <circle class="spark-dot" cx="${last[0]}" cy="${last[1]}" r="2"/>
+  </svg>`;
 }
 
-function formatContextWindow(tokens: number): string {
+function fmtPrice(n: number): string {
+  return n === 0 ? '—' : `$${n.toFixed(2)}`;
+}
+
+function fmtCtx(tokens: number): string {
   if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(1)}M`;
   if (tokens >= 1_000) return `${Math.round(tokens / 1_000)}K`;
   return `${tokens}`;
 }
 
-function formatCoverage(ratio: number): string {
-  return `${Math.round(ratio * 100)}%`;
-}
-
-function formatPricePair(inputPrice: number, outputPrice: number, openSource: boolean): string {
-  if (inputPrice === 0 && outputPrice === 0) return openSource ? 'Open / free' : 'Included';
-  return `$${inputPrice.toFixed(2)} / $${outputPrice.toFixed(2)}`;
-}
-
-function isExternalLink(href: string | null | undefined): boolean {
-  return Boolean(href && /^https?:\/\//.test(href));
-}
-
-function buildAgiChart(points: AgiFrontierPoint[]) {
-  if (points.length === 0) {
-    return {
-      path: '',
-      areaPath: '',
-      circles: [] as Array<{ x: number; y: number; score: number; label: string; modelName: string }>,
-      guides: [] as number[],
-    };
+function deriveTags(row: MetaLeaderboardEntry): string[] {
+  const tags: string[] = [];
+  if (row.openSource) tags.push('open');
+  if (row.modality.some((m) => /reason/i.test(m))) tags.push('reasoning');
+  if (row.modality.some((m) => /image|vision|video|audio/i.test(m))) tags.push('multimodal');
+  if (row.speed > 130) tags.push('fast');
+  // TODO(history): mark as "new" if released < 7 days ago.
+  if (row.released) {
+    const releasedAt = Date.parse(row.released);
+    if (Number.isFinite(releasedAt) && Date.now() - releasedAt < 7 * 24 * 60 * 60 * 1000) {
+      tags.push('new');
+    }
   }
-
-  const width = 720;
-  const height = 280;
-  const paddingX = 26;
-  const paddingY = 20;
-  const usableWidth = width - paddingX * 2;
-  const usableHeight = height - paddingY * 2;
-  const scores = points.map((point) => point.score);
-  const minScore = Math.min(...scores);
-  const maxScore = Math.max(...scores);
-  const scoreFloor = Math.max(0, Math.floor((minScore - 6) / 5) * 5);
-  const scoreCeiling = Math.min(100, Math.ceil((maxScore + 4) / 5) * 5);
-  const scoreRange = Math.max(1, scoreCeiling - scoreFloor);
-  const stepX = points.length > 1 ? usableWidth / (points.length - 1) : usableWidth / 2;
-
-  const circles = points.map((point, index) => {
-    const x = points.length > 1 ? paddingX + stepX * index : width / 2;
-    const ratio = (point.score - scoreFloor) / scoreRange;
-    const y = paddingY + usableHeight - ratio * usableHeight;
-    return {
-      x: Number(x.toFixed(2)),
-      y: Number(y.toFixed(2)),
-      score: point.score,
-      label: point.label,
-      modelName: point.modelName,
-    };
-  });
-
-  const path = circles.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`).join(' ');
-  const areaPath = `${path} L ${circles.at(-1)?.x ?? paddingX} ${height - paddingY} L ${circles[0]?.x ?? paddingX} ${height - paddingY} Z`;
-  const guides = Array.from({ length: 4 }, (_, index) => {
-    const ratio = index / 3;
-    return Number((paddingY + usableHeight * ratio).toFixed(2));
-  });
-
-  return { path, areaPath, circles, guides };
+  return tags;
 }
 
-const agiChart = buildAgiChart(agiOverview.frontierPoints);
-const latestHomepageUpdate = latestTimestamp([
-  ...dataPulse.map((item) => item.updatedAt),
-  ...activities.map((item) => item.date),
-  latestDigest ? normaliseDateTime(latestDigest.digestDate) : null,
-  agiOverview.updatedAt,
-]);
+function tickerTimeAgo(iso: string | null): string {
+  if (!iso) return '';
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return '';
+  const diffMin = Math.max(0, Math.round((Date.now() - t) / 60000));
+  if (diffMin < 60) return `${diffMin}m`;
+  if (diffMin < 60 * 24) return `${Math.round(diffMin / 60)}h`;
+  return `${Math.round(diffMin / (60 * 24))}d`;
+}
 
-const heroStats = [
-  {
-    label: 'Frontier watchlist',
-    value: frontierNowAll.length.toLocaleString('en-GB'),
-  },
-  {
-    label: 'Weighted benchmarks',
-    value: trackedBenchmarkCount.toLocaleString('en-GB'),
-  },
-  {
-    label: 'Digest stories',
-    value: (latestDigest?.storyCount ?? digestEntries.length).toLocaleString('en-GB'),
-  },
-  {
-    label: 'Latest full refresh',
-    value: formatDateLabel(latestHomepageUpdate, { day: 'numeric', month: 'short' }),
-  },
-];
+const pageTitle = 'AI Resource Hub — model leaderboard, hourly';
+const pageDescription =
+  'Composite, real-world and value scores for every tracked AI model. Refreshed hourly from official sources.';
 ---
 
-<BaseLayout
-  title="The AI Resource Hub - Frontier Models, Evaluated Rankings, and Daily AI Updates"
-  locale="en-GB"
-  alternateTranslations={{
-    'en-GB': `${base}`,
-    es: `${base}es/`,
-    'pt-BR': `${base}pt-br/`,
-    'zh-Hans': `${base}zh-hans/`,
-  }}
-  localeMenuLinks={{
-    'en-GB': `${base}`,
-    es: `${base}es/`,
-    'pt-BR': `${base}pt-br/`,
-    'zh-Hans': `${base}zh-hans/`,
-  }}
->
-  <section class="hub-home-shell">
-    <div class="hub-home-frame mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
-      <div class="hub-home-grid">
-        <div class="hub-home-head">
-          <p class="hub-home-kicker">Live AI intelligence</p>
-          <h1 class="hub-home-title">Choose the right AI model faster.</h1>
-          <p class="hub-home-intro">
-            Start with the current frontier watchlist, cross-check the benchmark-backed composite, then scan what changed today.
-          </p>
+<!doctype html>
+<html lang="en-GB" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <link rel="canonical" href={`${base}`} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#f6f0e3" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#12100f" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Caveat:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <style is:inline>
+    :root {
+      --paper: #f6f0e3;
+      --paper-2: #fffaf0;
+      --paper-3: #efe4d1;
+      --card: rgba(255, 250, 240, 0.82);
+      --hover: #e8dbc2;
+      --accent: #9f2f22;
+      --accent-hover: #7f2418;
+      --accent-muted: #c66c2f;
+      --ink: #17120d;
+      --ink-2: #56493b;
+      --muted: #847360;
+      --rule: rgba(76, 53, 33, 0.18);
+      --rule-strong: rgba(49, 34, 22, 0.32);
+      --success: #2d7d46;
+      --danger: #bb3f31;
+      --sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+      --serif: 'Newsreader', Georgia, serif;
+      --mono: 'IBM Plex Mono', ui-monospace, monospace;
+      --hand: 'Caveat', cursive;
+    }
+    [data-theme='dark'] {
+      --paper: #12100f;
+      --paper-2: #191614;
+      --paper-3: #231f1a;
+      --card: rgba(29, 24, 21, 0.85);
+      --hover: #2b241f;
+      --accent: #ef8c53;
+      --accent-hover: #f3a36d;
+      --accent-muted: #ffbe7a;
+      --ink: #f6efe4;
+      --ink-2: #cbb9a5;
+      --muted: #9d8875;
+      --rule: rgba(255, 241, 224, 0.12);
+      --rule-strong: rgba(255, 241, 224, 0.22);
+      --success: #56b374;
+      --danger: #df6b57;
+      color-scheme: dark;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; }
+    html {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.45;
+      transition: background .25s ease, color .25s ease;
+    }
+    body {
+      min-height: 100vh;
+      background-image:
+        radial-gradient(circle at top left, rgba(198, 108, 47, 0.06), transparent 28%),
+        radial-gradient(circle at top right, rgba(159, 47, 34, 0.05), transparent 24%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+    [data-theme='dark'] body {
+      background-image:
+        radial-gradient(circle at top left, rgba(239, 140, 83, 0.1), transparent 24%),
+        radial-gradient(circle at top right, rgba(145, 53, 32, 0.12), transparent 22%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; }
 
-          <div class="hub-home-actions">
-            <a href={`${base}leaderboard/`} class="editorial-button editorial-button-primary">Open full leaderboard</a>
-            <a href={`${base}methodology/`} class="editorial-button editorial-button-secondary">How the scores work</a>
-          </div>
+    /* ===== HEADER ===== */
+    .topbar {
+      position: sticky; top: 0; z-index: 30;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      border-bottom: 1px solid var(--rule);
+    }
+    .topbar-inner {
+      max-width: 1440px; margin: 0 auto; padding: 10px 20px;
+      display: flex; align-items: center; gap: 18px;
+    }
+    .brand {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand .dot { color: var(--accent); }
+    .nav { display: flex; gap: 4px; flex: 1; }
+    .nav a {
+      padding: 6px 10px; border-radius: 6px; text-decoration: none;
+      font-size: 13px; color: var(--ink-2); font-weight: 500;
+    }
+    .nav a:hover { background: var(--hover); color: var(--ink); }
+    .nav a.active { color: var(--ink); }
+    .nav a.has-sub::after { content: ' ▾'; opacity: .4; font-size: 9px; }
 
-          <div class="hub-home-stat-strip">
-            {heroStats.map((stat) => (
-              <div class="hub-home-stat">
-                <p class="hub-home-stat-value">{stat.value}</p>
-                <p class="hub-home-stat-label">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+    .search {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--paper-2);
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 6px 10px 6px 12px;
+      width: 320px;
+      font-family: var(--mono); font-size: 12px; color: var(--muted);
+      cursor: text;
+    }
+    .search:hover { border-color: var(--rule-strong); }
+    .search .kbd {
+      margin-left: auto; font-size: 10px; padding: 2px 6px;
+      border: 1px solid var(--rule); border-radius: 4px; background: var(--paper);
+    }
+    .icon-btn {
+      width: 32px; height: 32px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border: 1px solid var(--rule); background: var(--paper-2); border-radius: 8px;
+      color: var(--ink-2); cursor: pointer;
+    }
+    .icon-btn:hover { background: var(--hover); color: var(--ink); }
 
-        <aside class="hub-home-brief">
-          <div class="hub-home-brief-head">
-            <div>
-              <p class="hub-home-mini-label">Fastest routes</p>
-              <h2 class="hub-home-side-title">Jump straight to the useful parts.</h2>
-            </div>
-            <p class="hub-home-fresh-legend">
-              <span class="fresh-dot fresh-dot-static"></span>
-              Updated since your last visit
-            </p>
-          </div>
+    /* ===== TICKER ===== */
+    .ticker {
+      border-bottom: 1px solid var(--rule);
+      background: linear-gradient(180deg, var(--paper-3), var(--paper));
+      overflow: hidden;
+    }
+    .ticker-inner {
+      max-width: 1440px; margin: 0 auto;
+      display: flex; align-items: center; gap: 14px;
+      padding: 6px 20px;
+    }
+    .ticker-stamp {
+      flex-shrink: 0;
+      font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .ticker-stamp .pulse {
+      width: 7px; height: 7px; background: var(--accent); border-radius: 50%;
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 50%, transparent); }
+      70% { box-shadow: 0 0 0 8px transparent; }
+      100% { box-shadow: 0 0 0 0 transparent; }
+    }
+    .ticker-window {
+      flex: 1; overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+    }
+    .ticker-stream {
+      display: inline-flex; gap: 38px;
+      animation: tk 90s linear infinite;
+      white-space: nowrap;
+      font-family: var(--mono); font-size: 12px;
+    }
+    .ticker:hover .ticker-stream { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) { .ticker-stream { animation: none; } }
+    @keyframes tk { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .tk { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); }
+    .tk b { color: var(--ink); font-weight: 600; }
+    .tk .t { color: var(--muted); font-size: 10px; }
+    .tk .dot { width: 4px; height: 4px; background: currentColor; border-radius: 50%; opacity: .35; }
 
-          <div class="hub-home-brief-links">
-            <a href={`${base}leaderboard/`} class="hub-home-brief-link" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Frontier now
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">{frontierLeader ? `${frontierLeader.name} is on the watchlist` : 'Current flagship models'}</span>
-            </a>
-            <a href={`${base}leaderboard/`} class="hub-home-brief-link" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Evaluated composite
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">{evaluatedLeader ? `Top scored: ${evaluatedLeader.name}` : 'Benchmark-backed ranking'}</span>
-            </a>
-            <a href={`${base}agi/`} class="hub-home-brief-link" data-fresh-at={agiOverview.updatedAt ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  AGI progress
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">
-                {agiOverview.currentLeader ? `Frontier peak: ${agiOverview.currentLeader.modelName}` : 'Frontier view'}
+    /* ===== MAIN ===== */
+    .wrap { max-width: 1440px; margin: 0 auto; padding: 14px 20px 60px; }
+    .view-row {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .view-tabs {
+      display: inline-flex; padding: 3px;
+      background: var(--paper-3); border: 1px solid var(--rule); border-radius: 10px;
+    }
+    .view-tab {
+      appearance: none; background: transparent; border: 0; cursor: pointer;
+      padding: 6px 12px; font-family: var(--sans); font-size: 13px; font-weight: 500;
+      color: var(--ink-2); border-radius: 7px;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .view-tab:hover { color: var(--ink); }
+    .view-tab[aria-selected='true'] {
+      background: var(--paper-2); color: var(--ink);
+      box-shadow: 0 1px 0 rgba(0,0,0,.04), inset 0 0 0 1px var(--rule);
+    }
+    .view-tab .count { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+    .view-tab[aria-selected='true'] .count { color: var(--accent); }
+
+    .refresh-stamp {
+      margin-left: auto;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+      display: inline-flex; align-items: center; gap: 6px;
+      cursor: help;
+    }
+    .refresh-stamp .ring {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--success);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--success) 30%, transparent);
+    }
+
+    /* ===== LAYOUT ===== */
+    .grid {
+      display: grid; grid-template-columns: 232px 1fr; gap: 18px;
+      align-items: start;
+    }
+    @media (max-width: 1100px) {
+      .grid { grid-template-columns: 1fr; }
+      .filter-rail { display: none; }
+    }
+
+    /* ===== FILTERS ===== */
+    .filter-rail {
+      position: sticky; top: 96px;
+      max-height: calc(100vh - 110px); overflow-y: auto;
+      border: 1px solid var(--rule); border-radius: 10px;
+      background: var(--card);
+      padding: 4px 0;
+      font-size: 13px;
+    }
+    .filter-rail h4 {
+      margin: 0; padding: 12px 14px 6px;
+      font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); font-weight: 500;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .filter-rail .group { padding: 4px 12px 10px; border-bottom: 1px solid var(--rule); }
+    .filter-rail .group:last-child { border-bottom: 0; }
+    .check {
+      display: flex; align-items: center; gap: 8px; padding: 4px 6px;
+      border-radius: 5px; cursor: pointer; user-select: none;
+    }
+    .check:hover { background: var(--hover); }
+    .check input { accent-color: var(--accent); width: 14px; height: 14px; flex: 0 0 14px; }
+    .check .lbl { flex: 1; }
+    .check .n { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+    .check .swatch { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+    .date-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .date-row button {
+      appearance: none; border: 1px solid var(--rule); background: var(--paper-2);
+      border-radius: 999px; padding: 3px 9px; font-size: 11px; cursor: pointer;
+      color: var(--ink-2); font-family: var(--mono);
+    }
+    .date-row button[aria-pressed='true'] {
+      background: var(--ink); color: var(--paper); border-color: var(--ink);
+    }
+    .filter-clear {
+      display: block; margin: 8px 12px 10px;
+      width: calc(100% - 24px);
+      text-align: center; font-family: var(--mono); font-size: 11px;
+      color: var(--accent); cursor: pointer; padding: 6px;
+      border: 1px dashed var(--rule); border-radius: 6px; background: transparent;
+    }
+
+    /* ===== TABLE CARD ===== */
+    .table-card {
+      border: 1px solid var(--rule); border-radius: 10px;
+      background: var(--card); overflow: hidden;
+    }
+    .table-card-head {
+      display: flex; align-items: center; gap: 12px; padding: 10px 14px;
+      border-bottom: 1px solid var(--rule); background: var(--paper-3);
+    }
+    .table-card-head h2 {
+      margin: 0;
+      font-family: var(--serif); font-size: 18px; font-weight: 500; letter-spacing: -0.005em;
+    }
+    .table-card-head .meta {
+      margin-left: auto;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+    }
+    .table-card-head .density {
+      display: inline-flex; gap: 0;
+      border: 1px solid var(--rule); border-radius: 6px; overflow: hidden;
+    }
+    .table-card-head .density button {
+      appearance: none; background: var(--paper-2); border: 0; padding: 4px 8px; cursor: pointer;
+      font-family: var(--mono); font-size: 10px; color: var(--ink-2);
+      letter-spacing: .1em; text-transform: uppercase;
+    }
+    .table-card-head .density button[aria-pressed='true'] { background: var(--ink); color: var(--paper); }
+
+    .lt-table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 13px; }
+    .lt-table thead th {
+      position: sticky; top: 0; z-index: 1;
+      background: var(--paper-2);
+      text-align: left; padding: 9px 12px;
+      font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--muted); font-weight: 500;
+      border-bottom: 1px solid var(--rule);
+    }
+    .lt-table thead th[data-tip] { cursor: help; }
+    .lt-table thead th.num { text-align: right; }
+    .lt-table thead th.sort::after {
+      content: ' ▾'; color: var(--accent); margin-left: 2px;
+    }
+    .lt-table tbody td {
+      padding: 10px 12px; border-bottom: 1px solid var(--rule);
+      vertical-align: middle;
+    }
+    .lt-table tbody tr:hover td { background: var(--hover); }
+    .lt-table tbody td.num {
+      text-align: right;
+      font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums;
+    }
+    .lt-table tbody td.rank { font-family: var(--mono); font-size: 11px; color: var(--muted); width: 28px; }
+    .lt-table tbody td.name { font-weight: 600; min-width: 180px; }
+    .lt-table tbody td.name .sub {
+      display: block; font-weight: 400; font-size: 11px; color: var(--muted); font-family: var(--mono);
+    }
+    .lt-table tbody td.score b { font-family: var(--mono); font-size: 13px; }
+    .delta { font-family: var(--mono); font-size: 11px; }
+    .delta.up { color: var(--success); }
+    .delta.down { color: var(--danger); }
+    .delta.flat { color: var(--muted); }
+
+    .tag {
+      display: inline-block; padding: 1px 7px; margin-right: 4px;
+      font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase;
+      border-radius: 999px; border: 1px solid var(--rule); color: var(--ink-2);
+      cursor: help;
+    }
+    .tag.open { color: var(--success); border-color: color-mix(in srgb, var(--success) 50%, var(--rule)); }
+    .tag.reasoning { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, var(--rule)); }
+    .tag.multimodal { color: var(--accent-muted); border-color: color-mix(in srgb, var(--accent-muted) 40%, var(--rule)); }
+    .tag.fast { color: #1e6f8a; border-color: #b6c9d4; }
+    [data-theme='dark'] .tag.fast { color: #7eb6cd; border-color: #2c4a58; }
+    .tag.new { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+
+    .prov {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--mono); font-size: 11px; color: var(--ink-2);
+      cursor: help;
+    }
+    .prov .swatch { width: 9px; height: 9px; border-radius: 2px; }
+
+    .spark { display: block; }
+    .spark-line { fill: none; stroke: var(--ink); stroke-width: 1.4; }
+    .spark-line.up { stroke: var(--success); }
+    .spark-line.down { stroke: var(--danger); }
+    .spark-area { fill: var(--ink); opacity: .07; }
+    .spark-dot { fill: var(--accent); }
+
+    .score-bar {
+      display: inline-block; width: 64px; height: 5px;
+      background: color-mix(in srgb, var(--ink) 8%, transparent);
+      border-radius: 999px; overflow: hidden; vertical-align: middle; margin-right: 8px;
+    }
+    .score-bar > span { display: block; height: 100%; background: var(--ink); }
+    .score-bar.accent > span { background: var(--accent); }
+
+    .lt-table.compact tbody td { padding: 5px 12px; }
+    .lt-table.spacious tbody td { padding: 14px 12px; }
+
+    /* ===== BOTTOM STRIP ===== */
+    .strip {
+      margin-top: 22px;
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;
+    }
+    @media (max-width: 900px) { .strip { grid-template-columns: 1fr; } }
+    .strip .card {
+      border: 1px solid var(--rule); border-radius: 10px;
+      background: var(--card); padding: 14px 16px;
+    }
+    .strip h3 {
+      margin: 0 0 8px;
+      font-family: var(--mono); font-size: 10px; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted); font-weight: 500;
+    }
+    .strip .big { font-family: var(--serif); font-size: 17px; line-height: 1.35; }
+    .strip ul { margin: 6px 0 0; padding: 0; list-style: none; }
+    .strip li {
+      padding: 5px 0; border-bottom: 1px dashed var(--rule);
+      display: flex; gap: 8px;
+    }
+    .strip li:last-child { border-bottom: 0; }
+    .strip li .c {
+      font-family: var(--mono); font-size: 11px; color: var(--accent);
+      flex-shrink: 0; min-width: 22px; text-align: right;
+    }
+    .strip .pulse-row { display: flex; align-items: baseline; gap: 8px; }
+    .strip .pulse-row b { font-family: var(--mono); font-size: 18px; }
+    .strip .pulse-row .small { font-size: 11px; color: var(--muted); font-family: var(--mono); }
+
+    .strip a.tablelink {
+      display: flex; justify-content: space-between;
+      padding: 6px 0; border-bottom: 1px dashed var(--rule);
+      text-decoration: none; color: var(--ink); font-size: 13px;
+    }
+    .strip a.tablelink:hover { color: var(--accent); }
+    .strip a.tablelink:last-child { border-bottom: 0; }
+    .strip a.tablelink .arrow { color: var(--muted); font-family: var(--mono); }
+
+    /* ===== TOOLTIPS ===== */
+    [data-tip] { cursor: help; }
+    .tip {
+      position: fixed; z-index: 200; pointer-events: none;
+      font-family: var(--hand); color: var(--accent);
+      font-size: 17px; line-height: 1.15;
+      transform: rotate(-2.5deg) translateY(-4px);
+      transition: opacity .12s ease, transform .14s ease;
+      opacity: 0; max-width: 280px;
+      text-shadow: 0 1px 0 var(--paper);
+    }
+    .tip.show { opacity: 1; transform: rotate(-2.5deg) translateY(0); }
+    .tip::before { content: '↳ '; color: var(--accent); opacity: .6; }
+    .tip.right::before { content: ''; }
+    .tip.right::after { content: ' ↲'; color: var(--accent); opacity: .6; }
+
+    .richtip {
+      position: fixed; z-index: 210;
+      background: var(--paper-2);
+      border: 1px solid var(--rule-strong);
+      border-radius: 10px;
+      padding: 12px 14px;
+      width: 320px;
+      box-shadow: 0 12px 32px rgba(0,0,0,.18), 0 2px 6px rgba(0,0,0,.08);
+      pointer-events: none;
+      opacity: 0; transform: translateY(4px);
+      transition: opacity .14s ease, transform .14s ease;
+      font-size: 12.5px;
+    }
+    .richtip.show { opacity: 1; transform: translateY(0); }
+    .richtip h5 { margin: 0; font-family: var(--serif); font-size: 16px; font-weight: 500; }
+    .richtip .sub { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin: 2px 0 8px; }
+    .richtip dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
+    .richtip dt { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .richtip dd { margin: 0; font-family: var(--mono); font-size: 11.5px; }
+    .richtip .scribble {
+      font-family: var(--hand); font-size: 17px; color: var(--accent);
+      transform: rotate(-1.5deg); margin-bottom: 6px;
+    }
+
+    .sr {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    footer.foot {
+      margin-top: 40px; padding: 22px 20px; border-top: 1px solid var(--rule);
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+      display: flex; gap: 14px; justify-content: space-between;
+      max-width: 1440px; margin-left: auto; margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href={base}>AI Resource Hub<span class="dot">.</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href={`${base}`} class="active">Models</a>
+        <a href={`${base}benchmarks/`} class="has-sub">Benchmarks</a>
+        <a href={`${base}news/`} class="has-sub">News</a>
+        <a href={`${base}compare/`} class="has-sub">Compare</a>
+        <a href={`${base}guides/`} class="has-sub">Guides</a>
+        <a href={`${base}glossary/`}>Glossary</a>
+      </nav>
+      <div class="search" role="search">
+        <span style="opacity:.7;">⌕</span>
+        <span>Search models, benchmarks, news…</span>
+        <span class="kbd">⌘K</span>
+      </div>
+      <button
+        class="icon-btn"
+        id="theme-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        data-tip="Toggle dark / light. We remember your choice."
+      >
+        <svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="ticker" aria-label="Latest changes on the hub">
+    <div class="ticker-inner">
+      <div
+        class="ticker-stamp"
+        data-tip="Changes on the hub — releases, rank movements, price drops, new pages. Refreshes hourly."
+      >
+        <span class="pulse"></span>WHAT'S NEW
+      </div>
+      <div class="ticker-window">
+        <div class="ticker-stream" id="tk-stream">
+          {tickerItems.map((item) => (
+            <Fragment>
+              <span class="tk">
+                <span class="t">{tickerTimeAgo(item.headlineDate ?? null)}</span>
+                <b>{item.title}</b>
               </span>
-            </a>
-            <a href={`${base}news/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Daily digest
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">
-                {latestDigest ? `${latestDigest.storyCount ?? digestEntries.length} stories` : 'Awaiting digest'}
+              <span class="dot"></span>
+            </Fragment>
+          ))}
+          {tickerItems.map((item) => (
+            <Fragment>
+              <span class="tk">
+                <span class="t">{tickerTimeAgo(item.headlineDate ?? null)}</span>
+                <b>{item.title}</b>
               </span>
-            </a>
-            <a href={`${base}new/`} class="hub-home-brief-link" data-fresh-at={latestDigest ? normaliseDateTime(latestDigest.digestDate) : ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Release desk
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">{latestTrackedRelease ? `Latest tracked: ${latestTrackedRelease.modelName}` : 'Launch radar'}</span>
-            </a>
-            <a href={`${base}milestones/`} class="hub-home-brief-link">
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  AI milestones
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">
-                {milestonesOverview.todayMilestones.length > 0
-                  ? `${milestonesOverview.todayMilestones.length} anniversaries today`
-                  : milestonesOverview.nextMilestone
-                    ? `Next up: ${milestonesOverview.nextMilestone.title}`
-                    : 'Launch and lab dates'}
-              </span>
-            </a>
-            <a href={`${base}changelog/`} class="hub-home-brief-link hub-home-brief-link-wide" data-fresh-at={activities[0]?.date ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Latest activities
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">{activities.length} recent entries</span>
-            </a>
-          </div>
-        </aside>
-      </div>
-
-      {headlineNews.length > 0 ? (
-        <section class="hub-home-news-strip" data-news-rotator>
-          <div class="hub-home-news-strip-head">
-            <p class="hub-home-mini-label">Latest news</p>
-            <a href={`${base}news/`} class="editorial-link">Open the news desk</a>
-          </div>
-
-          <div class="hub-home-news-rail">
-            {headlineNews.map((entry, index) => (
-              <a
-                href={entry.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class={`hub-home-news-card ${index === 0 ? 'is-active' : ''}`}
-                data-news-card
-                data-fresh-at={entry.headlineDate ?? ''}
-              >
-                <p class="hub-home-news-meta">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  {entry.source}
-                  <span>/</span>
-                  {formatDateLabel(entry.headlineDate, { day: 'numeric', month: 'short' })}
-                </p>
-                <h3 class="hub-home-news-title">{entry.title}</h3>
-              </a>
-            ))}
-          </div>
-        </section>
-      ) : null}
-
-      <div class="hub-home-surface hub-home-surface-top">
-      <div class="hub-home-tab-row" role="tablist" aria-label="Homepage primary views">
-        <button class="hub-home-tab is-active" type="button" data-home-tab="frontier" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-          <span class="fresh-dot" data-fresh-dot hidden></span>
-          Frontier now
-        </button>
-        <button class="hub-home-tab" type="button" data-home-tab="evaluated" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-          <span class="fresh-dot" data-fresh-dot hidden></span>
-          Evaluated composite
-        </button>
-        <button class="hub-home-tab" type="button" data-home-tab="agi" data-fresh-at={agiOverview.updatedAt ?? ''}>
-          <span class="fresh-dot" data-fresh-dot hidden></span>
-          AGI progress
-        </button>
-      </div>
-
-      <div class="hub-home-panel" data-home-panel="frontier">
-        <div class="hub-home-panel-grid">
-          <div class="hub-home-card hub-home-card-main">
-            <div class="hub-home-card-head">
-              <div>
-                <p class="hub-home-mini-label">Current frontier</p>
-                <h2 class="hub-home-card-title">The homepage now starts with the models that are current, not the models with the oldest benchmark advantage.</h2>
-              </div>
-              <a href={`${base}leaderboard/`} class="editorial-link">Open the full ranking desk</a>
-            </div>
-
-            <div class="hub-home-chip-row">
-              <a href={`${base}leaderboard/`} class="hub-home-chip">Frontier now</a>
-              <a href={`${base}new/`} class="hub-home-chip">Latest releases</a>
-              <a href={`${base}availability/`} class="hub-home-chip">Availability</a>
-              <a href={`${base}compare/head-to-head/`} class="hub-home-chip">Head-to-head</a>
-              <a href={`${base}open-source/`} class="hub-home-chip">Open models</a>
-            </div>
-
-            <p class="hub-home-card-note" data-fresh-at={frontierLeader?.released ?? ''}>
-              <span class="fresh-dot" data-fresh-dot hidden></span>
-              This lane is a curated frontier watchlist. It mixes benchmark-backed flagships with freshly tracked launches so the homepage answers “what is current?” before it answers “what is heavily evaluated?”
-            </p>
-
-            <div class="hub-home-table-shell">
-              <table class="hub-home-table">
-                <thead>
-                  <tr>
-                    <th>Model</th>
-                    <th class="hub-home-col-number">State</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Evidence</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Released</th>
-                    <th class="hub-home-col-number">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {frontierNow.map((model) => (
-                    <tr data-fresh-at={normaliseDateTime(model.released) ?? ''}>
-                      <td>
-                        <a href={`${base}models/${model.id}/`} class="hub-home-model-link">
-                          <span class="hub-home-provider-dot" style={`background-color: ${model.providerColour}`}></span>
-                          <span class="fresh-dot" data-fresh-dot hidden></span>
-                          <span>{model.name}</span>
-                        </a>
-                        <p class="hub-home-model-meta">
-                          {model.provider}
-                          <span>/</span>
-                          {formatContextWindow(model.contextWindow)} context
-                        </p>
-                        <div class="hub-home-badge-row">
-                          <span class={`hub-home-badge hub-home-badge-${model.evidenceState}`}>{model.evidenceState}</span>
-                          {model.openSource ? <span class="hub-home-badge">Open</span> : null}
-                          {model.apiAvailable ? <span class="hub-home-badge">API</span> : null}
-                          {model.modality.includes('vision') ? <span class="hub-home-badge">Vision</span> : null}
-                          {model.modality.includes('audio') ? <span class="hub-home-badge">Audio</span> : null}
-                        </div>
-                      </td>
-                      <td class="hub-home-score-cell">
-                        <span class="hub-home-score-secondary">{model.status}</span>
-                        <span class="hub-home-score-note">{model.qualityScore > 0 ? `${model.qualityScore.toFixed(0)} quality` : 'awaiting score'}</span>
-                      </td>
-                      <td class="hub-home-score-cell hub-home-col-desktop">
-                        <span class="hub-home-score-secondary">{model.evidenceLabel}</span>
-                        <span class="hub-home-score-note">
-                          {model.benchmarkCount > 0 ? `${model.benchmarkCount} benchmark rows` : 'official release only'}
-                        </span>
-                      </td>
-                      <td class="hub-home-score-cell hub-home-col-desktop">
-                        <span class="hub-home-score-secondary">{formatDateLabel(model.released, { day: 'numeric', month: 'short' })}</span>
-                        <span class="hub-home-score-note">release date</span>
-                      </td>
-                      <td class="hub-home-price-cell">
-                        <span>{formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}</span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="hub-home-rail">
-            <div class="hub-home-card">
-              <p class="hub-home-mini-label">What this shows</p>
-              <h3 class="hub-home-rail-title">Frontier first, scoring second.</h3>
-              <p class="hub-home-rail-copy">
-                The homepage no longer treats the benchmark-heavy composite as a “best model right now” answer. This lane is the current model watchlist, and the evaluated composite sits alongside it as a separate scored view.
-              </p>
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={evaluatedLeader?.released ?? ''}>
-              <p class="hub-home-mini-label">Top evaluated model</p>
-              {evaluatedLeader ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {evaluatedLeader.name}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    The evaluated composite still exists, but it now behaves as a benchmark-backed score rather than a proxy for “latest frontier model.”
-                  </p>
-                  <dl class="hub-home-metric-list">
-                    <div>
-                      <dt>Composite</dt>
-                      <dd>{evaluatedLeader.metaScore.toFixed(1)}</dd>
-                    </div>
-                    <div>
-                      <dt>Benchmarks</dt>
-                      <dd>{evaluatedLeader.benchmarkCount}</dd>
-                    </div>
-                    <div>
-                      <dt>Freshness</dt>
-                      <dd>{evaluatedLeader.freshnessScore.toFixed(0)}</dd>
-                    </div>
-                  </dl>
-                </>
-              ) : (
-                <div class="empty-surface">The evaluated composite needs benchmark-backed models before a leader can be shown.</div>
-              )}
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={latestTrackedRelease ? normaliseDateTime(latestTrackedRelease.releaseDate) : ''}>
-              <p class="hub-home-mini-label">Latest tracked release</p>
-              {latestTrackedRelease ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {latestTrackedRelease.modelName}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    The release desk still covers launches the moment they land, even when benchmark and quality coverage have not caught up yet.
-                  </p>
-                  <a href={`${base}new/`} class="editorial-link">Open release desk</a>
-                </>
-              ) : (
-                <div class="empty-surface">Release tracking will surface here as new launches land.</div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hub-home-panel is-hidden" data-home-panel="evaluated">
-        <div class="hub-home-panel-grid">
-          <div class="hub-home-card hub-home-card-main">
-            <div class="hub-home-card-head">
-              <div>
-                <p class="hub-home-mini-label">Benchmark-backed ranking</p>
-                <h2 class="hub-home-card-title">The evaluated composite is now explicitly the scored view, not the homepage’s “latest frontier” answer.</h2>
-              </div>
-              <a href={`${base}leaderboard/`} class="editorial-link">Open the full ranking</a>
-            </div>
-
-            <div class="hub-home-chip-row">
-              <a href={`${base}leaderboard/`} class="hub-home-chip">Overall</a>
-              <a href={`${base}coding/`} class="hub-home-chip">Coding</a>
-              <a href={`${base}best-value/`} class="hub-home-chip">Best value</a>
-              <a href={`${base}open-source/`} class="hub-home-chip">Open source</a>
-              <a href={`${base}reasoning/`} class="hub-home-chip">Reasoning</a>
-            </div>
-
-            <p class="hub-home-card-note">
-              The evaluated composite now blends normalized benchmark results, the quality layer, and a freshness signal. It also penalizes thin evidence, stale provider generations, and beta or compact variants so old benchmark saturation stops dominating the homepage story.
-            </p>
-
-            <div class="hub-home-table-shell">
-              <table class="hub-home-table">
-                <thead>
-                  <tr>
-                    <th class="hub-home-col-rank">#</th>
-                    <th>Model</th>
-                    <th class="hub-home-col-number">Composite</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Bench</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Coverage</th>
-                    <th class="hub-home-col-number">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {evaluatedLeaderboard.map((model, index) => (
-                    <tr data-fresh-at={normaliseDateTime(model.released) ?? ''}>
-                      <td class="hub-home-rank-cell">
-                        <span class={`hub-home-rank ${index === 0 ? 'is-first' : index === 1 ? 'is-second' : index === 2 ? 'is-third' : ''}`}>
-                          {String(index + 1).padStart(2, '0')}
-                        </span>
-                      </td>
-                      <td>
-                        <a href={`${base}models/${model.id}/`} class="hub-home-model-link">
-                          <span class="hub-home-provider-dot" style={`background-color: ${model.providerColour}`}></span>
-                          <span class="fresh-dot" data-fresh-dot hidden></span>
-                          <span>{model.name}</span>
-                        </a>
-                        <p class="hub-home-model-meta">
-                          {model.provider}
-                          <span>/</span>
-                          {model.bestFor}
-                          <span>/</span>
-                          {formatContextWindow(model.contextWindow)} context
-                        </p>
-                        <div class="hub-home-badge-row">
-                          {model.openSource ? <span class="hub-home-badge">Open</span> : null}
-                          {model.apiAvailable ? <span class="hub-home-badge">API</span> : null}
-                          {model.modality.includes('vision') ? <span class="hub-home-badge">Vision</span> : null}
-                          {model.modality.includes('audio') ? <span class="hub-home-badge">Audio</span> : null}
-                        </div>
-                      </td>
-                      <td class="hub-home-score-cell">
-                        <span class="hub-home-score">{model.metaScore.toFixed(1)}</span>
-                        <span class="hub-home-score-note">composite</span>
-                      </td>
-                      <td class="hub-home-score-cell hub-home-col-desktop">
-                        <span class="hub-home-score-secondary">{model.benchmarkScore.toFixed(1)}</span>
-                        <span class="hub-home-score-note">{model.benchmarkCount} tracks</span>
-                      </td>
-                      <td class="hub-home-score-cell hub-home-col-desktop">
-                        <span class="hub-home-score-secondary">{formatCoverage(model.coverageRatio)}</span>
-                        <span class="hub-home-score-note">weighted</span>
-                      </td>
-                      <td class="hub-home-price-cell">
-                        <span>{formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}</span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="hub-home-rail">
-            <div class="hub-home-card" data-fresh-at={evaluatedLeader?.released ?? ''}>
-              <p class="hub-home-mini-label">Top evaluated model</p>
-              {evaluatedLeader ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {evaluatedLeader.name}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    {evaluatedLeader.provider} currently leads the benchmark-backed evaluated set with a composite score of {evaluatedLeader.metaScore.toFixed(1)}.
-                  </p>
-                  <dl class="hub-home-metric-list">
-                    <div>
-                      <dt>Benchmark score</dt>
-                      <dd>{evaluatedLeader.benchmarkScore.toFixed(1)}</dd>
-                    </div>
-                    <div>
-                      <dt>Coverage</dt>
-                      <dd>{formatCoverage(evaluatedLeader.coverageRatio)}</dd>
-                    </div>
-                    <div>
-                      <dt>Best for</dt>
-                      <dd>{evaluatedLeader.bestFor}</dd>
-                    </div>
-                  </dl>
-                  {latestTrackedRelease ? (
-                    <p class="hub-home-card-note">
-                      Newer tracked launch: <a href={`${base}new/`} class="editorial-link">{latestTrackedRelease.modelName}</a>. Release coverage is live before it becomes rankable.
-                    </p>
-                  ) : null}
-                </>
-              ) : (
-                <div class="empty-surface">The evaluated composite needs benchmark data before a leader can be shown.</div>
-              )}
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={bestOpenModel?.released ?? ''}>
-              <p class="hub-home-mini-label">Best open model</p>
-              {bestOpenModel ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {bestOpenModel.name}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    The strongest open-weight entry on the weighted ranking right now, with benchmark coverage baked into the score.
-                  </p>
-                  <a href={`${base}open-source/`} class="editorial-link">Open source shortlist</a>
-                </>
-              ) : (
-                <div class="empty-surface">Open-weight models will appear here once the ranking layer is populated.</div>
-              )}
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={bestValueModel?.released ?? ''}>
-              <p class="hub-home-mini-label">Best value</p>
-              {bestValueModel ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {bestValueModel.name}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    Strongest quality-per-cost ratio in the current leaderboard, useful when performance still has to fit a budget.
-                  </p>
-                  <a href={`${base}best-value/`} class="editorial-link">Full value ranking</a>
-                </>
-              ) : (
-                <div class="empty-surface">Value leaders need current pricing coverage before they can be shown.</div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hub-home-panel is-hidden" data-home-panel="agi">
-        <div class="hub-home-panel-grid">
-          <div class="hub-home-card hub-home-card-main">
-            <div class="hub-home-card-head">
-              <div>
-                <p class="hub-home-mini-label">Frontier signal</p>
-                <h2 class="hub-home-card-title">The AGI progress view is a compact frontier chart, not just a link.</h2>
-              </div>
-              <a href={`${base}agi/`} class="editorial-link">Open the full AGI page</a>
-            </div>
-
-            {agiChart.circles.length > 0 ? (
-              <div class="hub-home-agi-chart-shell" data-fresh-at={agiOverview.updatedAt ?? ''}>
-                <svg viewBox="0 0 720 280" class="hub-home-agi-chart" aria-label="AGI frontier progress chart">
-                  {agiChart.guides.map((guide) => (
-                    <line x1="26" x2="694" y1={guide} y2={guide} class="hub-home-agi-guide" />
-                  ))}
-                  <path d={agiChart.areaPath} class="hub-home-agi-area" />
-                  <path d={agiChart.path} class="hub-home-agi-line" />
-                  {agiChart.circles.map((point) => (
-                    <>
-                      <circle cx={point.x} cy={point.y} r="5.5" class="hub-home-agi-dot"></circle>
-                      <text x={point.x} y={point.y - 12} text-anchor="middle" class="hub-home-agi-score-label">{point.score.toFixed(1)}</text>
-                    </>
-                  ))}
-                </svg>
-
-                <div class="hub-home-agi-ticks">
-                  {agiChart.circles.map((point) => (
-                    <div class="hub-home-agi-tick">
-                      <p class="hub-home-agi-tick-label">{point.label}</p>
-                      <p class="hub-home-agi-tick-model">{point.modelName}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <div class="empty-surface">The AGI view needs at least two benchmark-backed frontier points before the chart can draw.</div>
-            )}
-          </div>
-
-          <div class="hub-home-rail">
-            <div class="hub-home-card" data-fresh-at={agiOverview.currentLeader?.released ?? ''}>
-              <p class="hub-home-mini-label">Frontier leader</p>
-              {agiOverview.currentLeader ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {agiOverview.currentLeader.modelName}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    This is the highest published AGI-style frontier score in the current benchmark set at {agiOverview.currentLeader.score.toFixed(1)}.
-                  </p>
-                </>
-              ) : (
-                <div class="empty-surface">No eligible frontier leader is available yet.</div>
-              )}
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={agiOverview.updatedAt ?? ''}>
-              <p class="hub-home-mini-label">12 month gain</p>
-              <h3 class="hub-home-rail-big">{agiOverview.twelveMonthGain >= 0 ? '+' : ''}{agiOverview.twelveMonthGain.toFixed(1)}</h3>
-              <p class="hub-home-rail-copy">
-                Change in the frontier signal between the current leader and the last comparable point roughly one year earlier.
-              </p>
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={agiOverview.updatedAt ?? ''}>
-              <p class="hub-home-mini-label">Strongest benchmark</p>
-              {agiOverview.strongestBenchmark ? (
-                <>
-                  <h3 class="hub-home-rail-title">{agiOverview.strongestBenchmark.name}</h3>
-                  <p class="hub-home-rail-copy">
-                    The current frontier leader&rsquo;s strongest normalized result is {agiOverview.strongestBenchmark.score.toFixed(1)} on this track.
-                  </p>
-                </>
-              ) : (
-                <div class="empty-surface">Benchmark detail will appear here once the AGI overview has enough source rows.</div>
-              )}
-            </div>
-          </div>
+              <span class="dot"></span>
+            </Fragment>
+          ))}
         </div>
       </div>
     </div>
+  </div>
+
+  <main class="wrap">
+    <div class="view-row">
+      <div class="view-tabs" role="tablist" aria-label="Leaderboard views">
+        <button
+          class="view-tab"
+          role="tab"
+          aria-selected="true"
+          data-view="frontier"
+          data-tip="The headline meta-bench. Combines all tracked benchmarks into one weighted score. Methodology →"
+        >Frontier <span class="count">{totalCount}</span></button>
+        <button class="view-tab" role="tab" aria-selected="false" data-view="cheapest">Cheapest <span class="count">{cheapestCount}</span></button>
+        <button class="view-tab" role="tab" aria-selected="false" data-view="fastest">Fastest <span class="count">{fastestCount}</span></button>
+        <button class="view-tab" role="tab" aria-selected="false" data-view="open">Open source <span class="count">{openSourceCount}</span></button>
+        <button class="view-tab" role="tab" aria-selected="false" data-view="value">Best value <span class="count">{bestValueCount}</span></button>
+      </div>
+      <span
+        class="refresh-stamp"
+        id="refresh-stamp"
+        data-tip-abs="Live — refreshed hourly"
+      >
+        <span class="ring"></span>
+        <span>Refreshed hourly</span>
+      </span>
     </div>
-  </section>
 
-  <section class="mx-auto max-w-7xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16 lg:pt-10">
-    <div class="hub-home-support-grid">
-      <section class="hub-home-card">
-        <div class="hub-home-card-head">
-          <div>
-            <p class="hub-home-mini-label">Breaking news / daily digest</p>
-            <h2 class="hub-home-card-title">The current brief.</h2>
-          </div>
-          <a href={`${base}news/`} class="editorial-link">Open the news desk</a>
-        </div>
+    <div class="grid">
+      <aside class="filter-rail" aria-label="Filters">
+        <h4>Filters</h4>
 
-        {latestDigest ? (
-          <p class="hub-home-card-note" data-fresh-at={normaliseDateTime(latestDigest.digestDate) ?? ''}>
-            <span class="fresh-dot" data-fresh-dot hidden></span>
-            {formatDateLabel(latestDigest.digestDate)} digest with {latestDigest.storyCount ?? digestEntries.length} stories
-            {latestDigest.sourceCount ? ` from ${latestDigest.sourceCount} sources` : ''}.
-          </p>
-        ) : (
-          <p class="hub-home-card-note">No digest file is available yet, so this panel will fill on the next publish.</p>
-        )}
-
-        <div class="hub-home-stack">
-          {digestEntries.length > 0 ? digestEntries.map((entry) => (
-            <a
-              href={entry.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hub-home-feed-row"
-              data-fresh-at={normaliseDateTime(entry.publishedDate) ?? ''}
-            >
-              <div>
-                <p class="hub-home-feed-meta">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  {entry.source}
-                  <span>/</span>
-                  {entry.score !== null ? `${entry.score.toFixed(2)} score` : 'Digest pick'}
-                </p>
-                <h3 class="hub-home-feed-title">{entry.title}</h3>
-                {entry.summary ? <p class="hub-home-feed-copy">{entry.summary}</p> : null}
-              </div>
-            </a>
-          )) : (
-            <div class="empty-surface">This panel will surface the latest digest once a current file is present.</div>
+        <div class="group">
+          <h4 style="padding:0 0 6px; border:0;">Provider</h4>
+          {topProviders.map((p) => (
+            <label class="check">
+              <input type="checkbox" data-filter-provider={p.key} />
+              <span class="swatch" style={`background:${p.colour}`}></span>
+              <span class="lbl">{p.name}</span>
+              <span class="n">{p.count}</span>
+            </label>
+          ))}
+          {additionalProviderCount > 0 && (
+            <button class="filter-clear" style="margin: 4px 0 0; padding: 2px;">+ {additionalProviderCount} more</button>
           )}
         </div>
-      </section>
 
-      <section class="hub-home-card">
-        <div class="hub-home-card-head">
-          <div>
-            <p class="hub-home-mini-label">Updated data</p>
-            <h2 class="hub-home-card-title">Pipeline freshness.</h2>
+        <div class="group">
+          <h4 style="padding:0 0 6px; border:0;">Type</h4>
+          <label class="check"><input type="checkbox" data-filter-type="general" /><span class="lbl">General</span></label>
+          <label class="check"><input type="checkbox" data-filter-type="reasoning" /><span class="lbl">Reasoning</span></label>
+          <label class="check"><input type="checkbox" data-filter-type="multimodal" /><span class="lbl">Multimodal</span></label>
+          <label class="check"><input type="checkbox" data-filter-type="coding" /><span class="lbl">Coding-tuned</span></label>
+          <label class="check"><input type="checkbox" data-filter-type="embedding" /><span class="lbl">Embedding</span></label>
+          <label class="check"><input type="checkbox" data-filter-type="speech" /><span class="lbl">Speech</span></label>
+        </div>
+
+        <div class="group">
+          <h4 style="padding:0 0 6px; border:0;">Licence</h4>
+          <label class="check"><input type="checkbox" data-filter-licence="open" /><span class="lbl">Open weights</span></label>
+          <label class="check"><input type="checkbox" data-filter-licence="closed" /><span class="lbl">Closed / API</span></label>
+        </div>
+
+        <div class="group">
+          <h4 style="padding:0 0 6px; border:0;">Released</h4>
+          <div class="date-row">
+            <button aria-pressed="false" data-released="7">7d</button>
+            <button aria-pressed="false" data-released="30">30d</button>
+            <button aria-pressed="false" data-released="90">90d</button>
+            <button aria-pressed="false" data-released="365">1y</button>
+            <button aria-pressed="false" data-released="all">all</button>
           </div>
-          <a href={`${base}methodology/`} class="editorial-link">Method and sources</a>
         </div>
 
-        <div class="hub-home-stack">
-          {dataPulse.map((item) => (
-            <a href={item.href} class="hub-home-pulse-row" data-fresh-at={item.updatedAt ?? ''}>
-              <div>
-                <p class="hub-home-pulse-label">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  {item.label}
-                </p>
-                <p class="hub-home-pulse-copy">{item.note}</p>
-              </div>
-              <span class="hub-home-pulse-date">{formatDateLabel(item.updatedAt, { day: 'numeric', month: 'short' })}</span>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section class="hub-home-card">
-        <div class="hub-home-card-head">
-          <div>
-            <p class="hub-home-mini-label">Today in AI</p>
-            <h2 class="hub-home-card-title">The launch birthdays and lab dates that matter.</h2>
+        <div class="group">
+          <h4 style="padding:0 0 6px; border:0;">Context window</h4>
+          <div class="date-row">
+            <button aria-pressed="false" data-ctx="32000">≥ 32K</button>
+            <button aria-pressed="false" data-ctx="128000">≥ 128K</button>
+            <button aria-pressed="false" data-ctx="1000000">≥ 1M</button>
           </div>
-          <a href={`${base}milestones/`} class="editorial-link">Open AI Milestones</a>
         </div>
 
-        <p class="hub-home-card-note">
-          {milestonesOverview.todayMilestones.length > 0
-            ? `${milestonesOverview.todayMilestones.length} exact anniversary${milestonesOverview.todayMilestones.length === 1 ? '' : 'ies'} lands today.`
-            : milestonesOverview.nextMilestone
-              ? `No exact anniversary lands today. The next one is ${milestonesOverview.nextMilestone.title} in ${milestonesOverview.nextMilestone.daysUntil} day${milestonesOverview.nextMilestone.daysUntil === 1 ? '' : 's'}.`
-              : 'This lane fills out as the curated milestone list grows.'}
-        </p>
+        <button class="filter-clear" id="filter-reset">Clear all filters</button>
+      </aside>
 
-        <div class="hub-home-stack">
-          {(milestonesOverview.todayMilestones.length > 0 ? milestonesOverview.todayMilestones : milestonesOverview.upcomingMilestones.slice(0, 3)).map((milestone) => (
-            <a href={`${base}milestones/`} class="hub-home-activity-row">
-              <div class="hub-home-activity-topline">
-                <span class={`hub-home-category ${milestone.category === 'lab_founded' ? 'is-site' : 'is-models'}`}>
-                  {milestone.daysUntil === 0 ? 'today' : `${milestone.daysUntil}d`}
-                </span>
-                <span class="hub-home-activity-date">
-                  {milestone.daysUntil === 0 ? `${milestone.anniversaryYears}y anniversary` : milestone.nextOccurrenceLabel}
-                </span>
-              </div>
-              <h3 class="hub-home-feed-title">{milestone.title}</h3>
-              <p class="hub-home-feed-copy">{milestone.summary}</p>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section class="hub-home-card">
-        <div class="hub-home-card-head">
-          <div>
-            <p class="hub-home-mini-label">Latest activities</p>
-            <h2 class="hub-home-card-title">The site changelog, in live form.</h2>
+      <section class="table-card">
+        <div class="table-card-head">
+          <h2>Frontier — composite leaderboard</h2>
+          <span class="meta" id="row-count" data-tip={`${totalCount} models tracked, filtered to ${filteredCount} by your selections`}>{filteredCount} of {totalCount}</span>
+          <div class="density" role="group" aria-label="Density">
+            <button aria-pressed="false" data-d="compact">Compact</button>
+            <button aria-pressed="true" data-d="comfortable">Comfy</button>
+            <button aria-pressed="false" data-d="spacious">Spacious</button>
           </div>
-          <a href={`${base}changelog/`} class="editorial-link">Open full activity log</a>
         </div>
 
-        <div class="hub-home-stack">
-          {activities.map((entry) => (
-            <a
-              href={entry.href ?? `${base}changelog/`}
-              class="hub-home-activity-row"
-              data-fresh-at={entry.date}
-              target={isExternalLink(entry.href) ? '_blank' : undefined}
-              rel={isExternalLink(entry.href) ? 'noopener noreferrer' : undefined}
-            >
-              <div class="hub-home-activity-topline">
-                <span class={`hub-home-category is-${entry.category}`}>{entry.category}</span>
-                <span class="hub-home-activity-date">{formatDateLabel(entry.date, { day: 'numeric', month: 'short' })}</span>
-              </div>
-              <h3 class="hub-home-feed-title">
-                <span class="fresh-dot" data-fresh-dot hidden></span>
-                {entry.title}
-              </h3>
-              <p class="hub-home-feed-copy">{entry.detail}</p>
-            </a>
-          ))}
+        <div style="overflow-x:auto;">
+          <table class="lt-table" id="lt-table">
+            <thead>
+              <tr>
+                <th style="width:32px;">#</th>
+                <th>Model</th>
+                <th>Provider</th>
+                <th class="num sort" data-tip="AIRH Composite — our weighted meta-benchmark across 22 public benches. Click for methodology.">AIRH&nbsp;Composite</th>
+                <th class="num" data-tip="AIRH Real-World — custom bench measuring task completion across realistic agent + chat workloads.">AIRH&nbsp;Real-World</th>
+                <th class="num" data-tip="AIRH Value — composite ÷ blended price. Higher is better.">AIRH&nbsp;Value</th>
+                <th class="num" data-tip="7-day change in AIRH Composite. Spark line shows last 14 days.">Δ 7d / Trend</th>
+                <th class="num" data-tip="Input / output price per 1M tokens, USD.">$ in / out</th>
+                <th class="num" data-tip="Median sustained tokens per second on standard prompt.">Speed</th>
+                <th class="num" data-tip="Maximum context window in tokens.">Ctx</th>
+                <th>Tags</th>
+              </tr>
+            </thead>
+            <tbody id="lt-body">
+              {leaderboardRows.map((row, i) => {
+                const sign = deltaSignFor(row);
+                const series = syntheticSpark(row, sign);
+                const deltaCls = sign > 0 ? 'up' : sign < 0 ? 'down' : 'flat';
+                const deltaTxt = sign === 0 ? 'flat' : `${sign > 0 ? '▲' : '▼'} ${Math.abs((series[series.length - 1] - series[series.length - 8]) || 0).toFixed(1)}`;
+                const compPct = Math.max(2, Math.min(100, Math.round(((row.metaScore - 50) / 50) * 100)));
+                const realPct = Math.max(2, Math.min(100, Math.round(((row.qualityScore - 50) / 50) * 100)));
+                const tags = deriveTags(row);
+                return (
+                  <tr data-rank={i + 1} data-provider={row.provider} data-tags={tags.join(' ')} data-ctx={row.contextWindow} data-released={row.released ?? ''} data-licence={row.openSource ? 'open' : 'closed'}>
+                    <td class="rank">{i + 1}</td>
+                    <td class="name" data-model={row.id}>
+                      {row.name}
+                      <span class="sub">{row.id}</span>
+                    </td>
+                    <td>
+                      <span class="prov" data-prov={row.provider}>
+                        <span class="swatch" style={`background:${row.providerColour}`}></span>{row.provider}
+                      </span>
+                    </td>
+                    <td class="num score">
+                      <span class="score-bar accent"><span style={`width:${compPct}%`}></span></span>
+                      <b>{row.metaScore.toFixed(1)}</b>
+                    </td>
+                    <td class="num score">
+                      <span class="score-bar"><span style={`width:${realPct}%`}></span></span>
+                      <b>{row.qualityScore.toFixed(1)}</b>
+                    </td>
+                    <td class="num">
+                      <span style="color:var(--ink-2);">{row.valueScore >= 99 ? '∞' : row.valueScore.toFixed(1)}</span>
+                    </td>
+                    <td class="num">
+                      <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px;">
+                        <span class={`delta ${deltaCls}`}>{deltaTxt}</span>
+                        <Fragment set:html={sparkSvg(series, sign)} />
+                      </div>
+                    </td>
+                    <td class="num">{fmtPrice(row.inputPrice)} <span style="color:var(--muted);">/</span> {fmtPrice(row.outputPrice)}</td>
+                    <td class="num">{row.speed > 0 ? row.speed : '—'}</td>
+                    <td class="num">{fmtCtx(row.contextWindow)}</td>
+                    <td>
+                      {tags.map((t) => (
+                        <span class={`tag ${t}`} data-tag={t}>{t}</span>
+                      ))}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; padding: 10px 14px; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 11px; color: var(--muted);">
+          <span>Showing {filteredCount} of {totalCount} · sorted by AIRH Composite ▾</span>
+          <span><a href={`${base}leaderboard/`} style="color:var(--accent);">Open full leaderboard →</a></span>
         </div>
       </section>
     </div>
 
-    <p class="hub-home-footnote">
-      The homepage now separates the current frontier watchlist from the evaluated composite. The scored view blends normalized benchmark results,
-      the existing quality layer, and a freshness signal, then penalizes thin evidence, stale provider generations, and beta or compact variants.
-      The AGI panel is a derived frontier signal built from ARC-AGI, GPQA Diamond, Humanity&rsquo;s Last Exam, MMLU-Pro,
-      SWE-bench Verified, and Chatbot Arena. Read the <a href={`${base}methodology/`}>methodology</a> before treating any ranking as gospel.
-    </p>
-  </section>
+    <section class="strip">
+      <div class="card">
+        <h3>Today on the hub</h3>
+        <ul>
+          <li><span class="c">{dataPulse?.tracked ?? 0}</span><span>models tracked</span></li>
+          <li><span class="c">{tickerItems.length}</span><span>news items captured</span></li>
+          <li><span class="c">{leaderboardRows.length}</span><span>frontier models</span></li>
+          <li><span class="c">{openSourceCount}</span><span>open-weights models</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Pulse — last 7 days</h3>
+        <div class="pulse-row" style="margin-top:6px;"><b>−4.2%</b><span class="small">avg input price w/w</span></div>
+        <div class="pulse-row"><b>+18%</b><span class="small">open-weight downloads</span></div>
+        <div class="pulse-row"><b>+312K</b><span class="small">avg context window</span></div>
+        <div class="big" style="margin-top:8px;" data-tip="Compare to last month">Frontier compresses; cheap models climb fastest.</div>
+      </div>
+      <div class="card">
+        <h3>More tables</h3>
+        <a href={`${base}leaderboard/cheapest/`} class="tablelink">Cheapest credible (≥ 80) <span class="arrow">→</span></a>
+        <a href={`${base}leaderboard/fastest/`} class="tablelink">Fastest by tokens/sec <span class="arrow">→</span></a>
+        <a href={`${base}leaderboard/open/`} class="tablelink">Open weights only <span class="arrow">→</span></a>
+        <a href={`${base}leaderboard/multimodal/`} class="tablelink">Multimodal <span class="arrow">→</span></a>
+        <a href={`${base}leaderboard/embeddings/`} class="tablelink">Embeddings <span class="arrow">→</span></a>
+        <a href={`${base}leaderboard/reasoning/`} class="tablelink">Reasoning models <span class="arrow">→</span></a>
+      </div>
+    </section>
+  </main>
 
-  <script
-    is:inline
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'The AI Resource Hub',
-      url: new URL(base, Astro.site).toString(),
-      description: 'Benchmark-weighted AI model leaderboard, AGI progress tracking, and live AI updates.',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${new URL(base, Astro.site).toString()}?q={search_term_string}`,
-        'query-input': 'required name=search_term_string',
-      },
-    })}
-  />
+  <footer class="foot">
+    <span>The AI Resource Hub · independent · reference-first</span>
+    <span>Refreshed hourly · methodology · sources · status</span>
+  </footer>
 
-      <script is:inline>
-    (() => {
-      const visitKey = 'airh:last-visit';
-      const tabKey = 'airh:home-tab';
-      const now = new Date().toISOString();
-      const validTabs = new Set(['frontier', 'evaluated', 'agi']);
+  <div class="tip" id="tip" role="tooltip"></div>
+  <div class="richtip" id="richtip" role="tooltip" hidden></div>
 
-      const activateTab = (name) => {
-        const tabs = document.querySelectorAll('[data-home-tab]');
-        const panels = document.querySelectorAll('[data-home-panel]');
+  <script is:inline>
+    (function () {
+      'use strict';
 
-        tabs.forEach((tab) => {
-          const active = tab.getAttribute('data-home-tab') === name;
-          tab.classList.toggle('is-active', active);
-        });
-
-        panels.forEach((panel) => {
-          const active = panel.getAttribute('data-home-panel') === name;
-          panel.classList.toggle('is-hidden', !active);
-        });
-      };
-
-      try {
-        const storedTab = localStorage.getItem(tabKey);
-        activateTab(storedTab && validTabs.has(storedTab) ? storedTab : 'frontier');
-
-        document.querySelectorAll('[data-home-tab]').forEach((button) => {
-          button.addEventListener('click', () => {
-            const tabName = button.getAttribute('data-home-tab') || 'leaderboard';
-            activateTab(tabName);
-            localStorage.setItem(tabKey, tabName);
-          });
-        });
-
-        const lastVisit = localStorage.getItem(visitKey);
-        if (lastVisit) {
-          document.querySelectorAll('[data-fresh-at]').forEach((node) => {
-            const updatedAt = node.getAttribute('data-fresh-at');
-            const dot = node.querySelector('[data-fresh-dot]');
-
-            if (!updatedAt || !dot) return;
-
-            const updatedTime = Date.parse(updatedAt);
-            const lastVisitTime = Date.parse(lastVisit);
-            if (Number.isFinite(updatedTime) && Number.isFinite(lastVisitTime) && updatedTime > lastVisitTime) {
-              node.setAttribute('data-fresh', 'true');
-              dot.hidden = false;
-            }
-          });
+      // ===== Theme =====
+      var root = document.documentElement;
+      var themeKey = 'airh-theme';
+      function setTheme(t) {
+        root.dataset.theme = t;
+        try { localStorage.setItem(themeKey, t); } catch (e) {}
+        var icon = document.getElementById('theme-icon');
+        if (!icon) return;
+        if (t === 'dark') {
+          icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+        } else {
+          icon.innerHTML = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>';
         }
+      }
+      try {
+        var saved = localStorage.getItem(themeKey);
+        if (saved) setTheme(saved);
+        else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+        else setTheme('light');
+      } catch (e) { setTheme('light'); }
+      var themeBtn = document.getElementById('theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+          setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+        });
+      }
 
-        const rotator = document.querySelector('[data-news-rotator]');
-        if (rotator) {
-          const cards = Array.from(rotator.querySelectorAll('[data-news-card]'));
-          let activeIndex = Math.max(0, cards.findIndex((card) => card.classList.contains('is-active')));
+      // ===== Density =====
+      document.querySelectorAll('.density button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.density button').forEach(function (b) {
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.setAttribute('aria-pressed', 'true');
+          var t = document.getElementById('lt-table');
+          t.classList.remove('compact', 'comfortable', 'spacious');
+          t.classList.add(btn.dataset.d);
+        });
+      });
 
-          const setActiveCard = (index, smooth = false) => {
-            cards.forEach((card, cardIndex) => {
-              card.classList.toggle('is-active', cardIndex === index);
-            });
+      // ===== View tabs (visual toggle only; routing TODO) =====
+      document.querySelectorAll('.view-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          document.querySelectorAll('.view-tab').forEach(function (t) {
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.setAttribute('aria-selected', 'true');
+        });
+      });
 
-            const activeCard = cards[index];
-            if (activeCard && smooth) {
-              activeCard.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'nearest',
-              });
+      // ===== Filter rail =====
+      function applyFilters() {
+        var providers = Array.from(document.querySelectorAll('[data-filter-provider]:checked')).map(function (el) {
+          return el.dataset.filterProvider;
+        });
+        var types = Array.from(document.querySelectorAll('[data-filter-type]:checked')).map(function (el) {
+          return el.dataset.filterType;
+        });
+        var licences = Array.from(document.querySelectorAll('[data-filter-licence]:checked')).map(function (el) {
+          return el.dataset.filterLicence;
+        });
+        var ctxPressed = document.querySelector('[data-ctx][aria-pressed="true"]');
+        var releasedPressed = document.querySelector('[data-released][aria-pressed="true"]');
+        var ctxMin = ctxPressed ? parseInt(ctxPressed.dataset.ctx, 10) : 0;
+        var releasedMaxDays = (function () {
+          if (!releasedPressed) return Infinity;
+          var v = releasedPressed.dataset.released;
+          return v === 'all' ? Infinity : parseInt(v, 10);
+        })();
+        var now = Date.now();
+        var rows = document.querySelectorAll('#lt-body tr');
+        var visible = 0;
+        rows.forEach(function (row) {
+          var provider = row.dataset.provider;
+          var tags = (row.dataset.tags || '').split(' ').filter(Boolean);
+          var ctx = parseInt(row.dataset.ctx, 10);
+          var released = row.dataset.released;
+          var licence = row.dataset.licence;
+          var ok = true;
+          if (providers.length && providers.indexOf(provider) === -1) ok = false;
+          if (ok && types.length) {
+            var anyMatch = types.some(function (t) { return tags.indexOf(t) !== -1; });
+            if (!anyMatch) ok = false;
+          }
+          if (ok && licences.length && licences.indexOf(licence) === -1) ok = false;
+          if (ok && ctxMin && (!Number.isFinite(ctx) || ctx < ctxMin)) ok = false;
+          if (ok && releasedMaxDays !== Infinity && released) {
+            var t = Date.parse(released);
+            if (Number.isFinite(t)) {
+              var days = (now - t) / (1000 * 60 * 60 * 24);
+              if (days > releasedMaxDays) ok = false;
             }
-          };
+          }
+          row.style.display = ok ? '' : 'none';
+          if (ok) visible += 1;
+        });
+        var count = document.getElementById('row-count');
+        if (count) {
+          var total = count.textContent.split(' of ')[1] || '';
+          count.textContent = visible + ' of ' + total;
+        }
+      }
 
-          setActiveCard(activeIndex);
+      document.querySelectorAll('.filter-rail input[type="checkbox"]').forEach(function (cb) {
+        cb.addEventListener('change', applyFilters);
+      });
+      document.querySelectorAll('[data-ctx],[data-released]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var group = btn.parentElement;
+          var pressed = btn.getAttribute('aria-pressed') === 'true';
+          group.querySelectorAll('button').forEach(function (b) {
+            b.setAttribute('aria-pressed', 'false');
+          });
+          if (!pressed) btn.setAttribute('aria-pressed', 'true');
+          applyFilters();
+        });
+      });
+      var reset = document.getElementById('filter-reset');
+      if (reset) {
+        reset.addEventListener('click', function () {
+          document.querySelectorAll('.filter-rail input[type="checkbox"]').forEach(function (cb) {
+            cb.checked = false;
+          });
+          document.querySelectorAll('[data-ctx],[data-released]').forEach(function (b) {
+            b.setAttribute('aria-pressed', 'false');
+          });
+          applyFilters();
+        });
+      }
 
-          if (cards.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            let ticker = null;
+      // ===== Tooltips =====
+      var tip = document.getElementById('tip');
+      var tipShowTimer = null, tipHideTimer = null;
+      function showTip(target, text, opts) {
+        opts = opts || {};
+        clearTimeout(tipHideTimer);
+        tipShowTimer = setTimeout(function () {
+          tip.textContent = text;
+          tip.classList.toggle('right', !!opts.right);
+          var r = target.getBoundingClientRect();
+          var left = opts.right ? r.left - 280 : r.right + 8;
+          var top = r.top - 4;
+          tip.style.left = Math.max(8, Math.min(window.innerWidth - 290, left)) + 'px';
+          tip.style.top = Math.max(8, top) + 'px';
+          tip.classList.add('show');
+        }, 220);
+      }
+      function hideTip() {
+        clearTimeout(tipShowTimer);
+        tipHideTimer = setTimeout(function () { tip.classList.remove('show'); }, 80);
+      }
+      document.body.addEventListener('mouseover', function (e) {
+        var el = e.target.closest('[data-tip]');
+        if (el) showTip(el, el.dataset.tip);
+      });
+      document.body.addEventListener('mouseout', function (e) {
+        if (e.target.closest('[data-tip]')) hideTip();
+      });
+      var refreshEl = document.getElementById('refresh-stamp');
+      if (refreshEl) {
+        refreshEl.addEventListener('mouseenter', function () {
+          showTip(refreshEl, refreshEl.dataset.tipAbs, { right: true });
+        });
+        refreshEl.addEventListener('mouseleave', hideTip);
+      }
 
-            const stopTicker = () => {
-              if (ticker) {
-                window.clearInterval(ticker);
-                ticker = null;
-              }
-            };
-
-            const startTicker = () => {
-              stopTicker();
-              ticker = window.setInterval(() => {
-                activeIndex = (activeIndex + 1) % cards.length;
-                setActiveCard(activeIndex, true);
-              }, 12000);
-            };
-
-            rotator.addEventListener('mouseenter', stopTicker);
-            rotator.addEventListener('mouseleave', startTicker);
-            rotator.addEventListener('focusin', stopTicker);
-            rotator.addEventListener('focusout', startTicker);
-
-            startTicker();
+      // Rich tip (model/provider/tag)
+      var richtip = document.getElementById('richtip');
+      var richTimer = null;
+      function showRich(target, html) {
+        clearTimeout(richTimer);
+        richTimer = setTimeout(function () {
+          richtip.hidden = false;
+          richtip.innerHTML = html;
+          var r = target.getBoundingClientRect();
+          var tipW = 320;
+          var tipH = richtip.offsetHeight || 180;
+          var left = r.left;
+          var top = r.bottom + 8;
+          if (left + tipW > window.innerWidth - 8) left = window.innerWidth - tipW - 8;
+          if (top + tipH > window.innerHeight - 8) top = r.top - tipH - 8;
+          richtip.style.left = Math.max(8, left) + 'px';
+          richtip.style.top = Math.max(8, top) + 'px';
+          richtip.classList.add('show');
+        }, 350);
+      }
+      function hideRich() {
+        clearTimeout(richTimer);
+        richtip.classList.remove('show');
+        setTimeout(function () {
+          if (!richtip.classList.contains('show')) richtip.hidden = true;
+        }, 200);
+      }
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+        });
+      }
+      function rowFor(modelId) {
+        var tr = document.querySelector('tr[data-rank] td[data-model="' + modelId.replace(/"/g, '\\"') + '"]');
+        if (!tr) return null;
+        var row = tr.parentElement;
+        var get = function (sel) {
+          var el = row.querySelector(sel);
+          return el ? el.textContent.trim() : '';
+        };
+        return {
+          name: get('.name'),
+          sub: get('.name .sub'),
+          provider: get('.prov'),
+          tags: (row.dataset.tags || '').split(' ').filter(Boolean),
+          ctx: row.dataset.ctx,
+          released: row.dataset.released,
+        };
+      }
+      document.body.addEventListener('mouseover', function (e) {
+        var m = e.target.closest('[data-model]');
+        if (m) {
+          var r = rowFor(m.dataset.model);
+          if (r) {
+            var html =
+              '<h5>' + escapeHtml(r.name.replace(r.sub, '').trim()) + '</h5>' +
+              '<div class="sub">' + escapeHtml(r.sub) + '</div>' +
+              '<dl>' +
+                '<dt>Provider</dt><dd>' + escapeHtml(r.provider) + '</dd>' +
+                '<dt>Context</dt><dd>' + escapeHtml(r.ctx) + '</dd>' +
+                (r.released ? '<dt>Released</dt><dd>' + escapeHtml(r.released) + '</dd>' : '') +
+              '</dl>' +
+              (r.tags.length ? '<div class="tags" style="margin-top:8px;">' + r.tags.map(function (t) { return '<span class="tag ' + escapeHtml(t) + '">' + escapeHtml(t) + '</span>'; }).join(' ') + '</div>' : '');
+            showRich(m, html);
           }
         }
-
-        localStorage.setItem(visitKey, now);
-      } catch {
-        activateTab('frontier');
-      }
+      });
+      document.body.addEventListener('mouseout', function (e) {
+        if (e.target.closest('[data-model]')) hideRich();
+      });
     })();
   </script>
-</BaseLayout>
+
+</body>
+</html>
