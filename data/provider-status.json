@@ -1,6 +1,103 @@
 {
-  "generatedAt": "2026-05-21T19:28:42.266Z",
+  "generatedAt": "2026-05-21T21:17:27.458Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-21T21:17:25.700Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Conversations",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KS5CYS472SA003BQSXSBM8EW",
+          "title": "Elevated error rates on ChatGPT paid plans",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-05-21T13:52:46.000Z",
+          "updatedAt": "2026-05-21T21:02:29.000Z",
+          "resolvedAt": null,
+          "summary": null
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KS5CYS472SA003BQSXSBM8EW",
+          "title": "Elevated error rates on ChatGPT paid plans",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-05-21T13:52:46.000Z",
+          "updatedAt": "2026-05-21T21:02:29.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KS19AHSEE3DAX1HHKNQB166F",
+          "title": "API users may see increased error rates for GPT-5.4 and GPT-5.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-19T23:32:19.000Z",
+          "updatedAt": "2026-05-20T00:37:42.000Z",
+          "resolvedAt": "2026-05-20T00:37:42.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KRP6FM6HSKWB3MS1EJTY6AT4",
+          "title": "GPT5.5 Performance Degradation",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-05-15T16:11:01.000Z",
+          "updatedAt": "2026-05-17T00:15:05.000Z",
+          "resolvedAt": "2026-05-17T00:15:05.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KRM4H2T37TNSS7BCSGXVS8RQ",
+          "title": "Codex Cloud and Code Review experiencing high failure rate",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-05-14T20:58:23.000Z",
+          "updatedAt": "2026-05-14T21:28:20.000Z",
+          "resolvedAt": "2026-05-14T21:28:20.000Z",
+          "summary": null
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-21T19:28:41.420Z",
+      "lastCheckedAt": "2026-05-21T21:17:26.599Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-21T19:28:40.733Z",
+      "lastCheckedAt": "2026-05-21T21:17:25.689Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -66,6 +163,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "zvlgr3k8lny0",
+          "title": "Elevated errors on Claude.ai",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-21T20:24:32.488Z",
+          "updatedAt": "2026-05-21T21:08:57.378Z",
+          "resolvedAt": "2026-05-21T21:08:57.362Z",
+          "url": "https://stspg.io/16wtbm7m7hdy",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "4znk51f63g93",
           "title": "Elevated errors on Claude Opus 4.7",
           "status": "resolved",
@@ -97,17 +205,6 @@
           "resolvedAt": "2026-05-19T15:40:47.319Z",
           "url": "https://stspg.io/x1ckjv977mf5",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "qkwdrjxvkb9s",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-19T08:41:05.690Z",
-          "updatedAt": "2026-05-19T10:08:03.677Z",
-          "resolvedAt": "2026-05-19T10:08:03.663Z",
-          "url": "https://stspg.io/hq91gydspk6r",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -122,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-21T19:28:41.735Z",
+      "lastCheckedAt": "2026-05-21T21:17:27.005Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-21T19:28:42.120Z",
+      "lastCheckedAt": "2026-05-21T21:17:27.379Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-21T19:28:41.283Z",
+      "lastCheckedAt": "2026-05-21T21:17:26.389Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -251,92 +348,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-21T19:28:40.690Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KS5CYS472SA003BQSXSBM8EW",
-          "title": "Elevated error rates on ChatGPT paid plans",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-21T13:52:46.000Z",
-          "updatedAt": "2026-05-21T15:23:34.000Z",
-          "resolvedAt": "2026-05-21T15:23:34.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KS19AHSEE3DAX1HHKNQB166F",
-          "title": "API users may see increased error rates for GPT-5.4 and GPT-5.5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-19T23:32:19.000Z",
-          "updatedAt": "2026-05-20T00:37:42.000Z",
-          "resolvedAt": "2026-05-20T00:37:42.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KRP6FM6HSKWB3MS1EJTY6AT4",
-          "title": "GPT5.5 Performance Degradation",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-05-15T16:11:01.000Z",
-          "updatedAt": "2026-05-17T00:15:05.000Z",
-          "resolvedAt": "2026-05-17T00:15:05.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KRM4H2T37TNSS7BCSGXVS8RQ",
-          "title": "Codex Cloud and Code Review experiencing high failure rate",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-05-14T20:58:23.000Z",
-          "updatedAt": "2026-05-14T21:28:20.000Z",
-          "resolvedAt": "2026-05-14T21:28:20.000Z",
-          "summary": null
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -347,7 +358,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-21T19:28:42.259Z",
+      "lastCheckedAt": "2026-05-21T21:17:27.451Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -416,7 +427,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
