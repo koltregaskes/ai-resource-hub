@@ -7,7 +7,7 @@ priority: "high"
 model: "Grok Build 0.1"
 provider: "xAI"
 release_date: "2026-05-20"
-generated_at: "2026-05-24T13:57:22.745Z"
+generated_at: "2026-05-24T15:20:22.077Z"
 ---
 
 # Grok Build 0.1: release brief

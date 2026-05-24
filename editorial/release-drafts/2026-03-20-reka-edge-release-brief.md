@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Reka Edge"
 provider: "Reka"
 release_date: "2026-03-20"
-generated_at: "2026-05-24T13:57:22.746Z"
+generated_at: "2026-05-24T15:20:22.078Z"
 ---
 
 # Reka Edge: release brief

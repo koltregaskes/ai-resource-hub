@@ -7,7 +7,7 @@ priority: "high"
 model: "Qwen3.7 Max"
 provider: "Alibaba"
 release_date: "2026-05-21"
-generated_at: "2026-05-24T13:57:22.745Z"
+generated_at: "2026-05-24T15:20:22.076Z"
 ---
 
 # Qwen3.7 Max: release brief
