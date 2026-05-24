@@ -1,794 +1,667 @@
 [
   {
-    "id": "news-02da75fb0c0e25221c74",
-    "title": "I tried Amazon&#8217;s Bee wearable and am both intrigued and slightly creeped out",
-    "url": "https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out/",
-    "source": "TechCrunch",
-    "summary": "Like other AI wearables, Amazon's Bee offers an odd combination of convenience and privacy anxiety.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-24T15:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-cc09eb87a07d29fb9814",
-    "title": "Hackers are learning to exploit chatbot &#8216;personalities&#8217;",
-    "url": "https://www.theverge.com/column/935545/hackers-ai-chatbots",
-    "source": "The Verge",
-    "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on AI mischief, follow Robert Hart. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started Hacking the first generation of AI chatbots was a laughably simple affai…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-24T12:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-b15baeeedd1d38cffefa",
-    "title": "Ferrari is using IBM&#8217;s AI to create F1 superfans",
-    "url": "https://techcrunch.com/2026/05/23/ferrari-is-using-ai-to-create-f1-superfans/",
-    "source": "TechCrunch",
-    "summary": "IBM and Scuderia Ferrari HP take TechCrunch inside how they are redefining the fan experience.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-23T15:08:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-4e9cfd70d984939eace2",
-    "title": "Elon Musk has given up on solar power (on Earth)",
-    "url": "https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/",
-    "source": "TechCrunch",
-    "summary": "Elon Muks's xAI has gone all in on natural gas, while SpaceX is obsessed with orbital data centers. What happened to the \"solar-electric economy\" he promised?",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-23T13:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-65518546ec7371e49f41",
-    "title": "Google’s new anything-to-anything AI model is wild",
-    "url": "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video",
-    "source": "The Verge",
-    "summary": "Last year I deepfaked my kid's stuffed animal to make it look like his plush deer was on vacation. It was an experiment to see if I could re-create the events depicted in a Gemini ad Google was running, and I never showed the videos of Buddy the deer on his adventures to my four-year-old. [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-23T11:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-48a55c9b577118519985",
-    "title": "AI is being used to resurrect the voices of dead pilots",
-    "url": "https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/",
-    "source": "TechCrunch",
-    "summary": "People used AI on a spectrogram image of cockpit recordings to reconstruct them, forcing the NTSB to temporarily block access to its docket system.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T23:03:33.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-8d56d277ed4bf10e2c22",
-    "title": "Google goes for the glitter with disco-ball icons: &#8216;Are y&#8217;all sure you still want this?&#8217;",
-    "url": "https://techcrunch.com/2026/05/22/google-goes-for-the-glitter-with-disco-ball-icons-are-yall-sure-you-still-want-this/",
-    "source": "TechCrunch",
-    "summary": "You can now disco ball-ify your entire Pixel home screen, says Google.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T21:02:36.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-93da6cc8c34d4acf62b4",
-    "title": "How VCs and founders use inflated ‘ARR’ to crown AI startups",
-    "url": "https://techcrunch.com/2026/05/22/how-vcs-and-founders-use-inflated-arr-to-kingmake-ai-startups/",
-    "source": "TechCrunch",
-    "summary": "Some AI startups are stretching traditional revenue metrics when talking about progress publicly. And their investors are fully aware.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T20:40:48.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-1d62850b492982291e5f",
-    "title": "Google&#8217;s AI search is so broken it can &#8216;disregard&#8217; what you&#8217;re looking for",
-    "url": "https://www.theverge.com/tech/936176/google-ai-overviews-search-disregard",
-    "source": "The Verge",
-    "summary": "Google's AI Overviews are running into an interesting problem right now. Earlier on Friday, if you searched for the term \"disregard,\" the AI Overview section would include a response like what you'd see from a more traditional AI chatbot instead of the typical AI summary, as spotted on X. As you can see in the [&#8230…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T20:39:54.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-3dac49e45d41fc72c9d2",
-    "title": "Elon Musk can&#8217;t hear you over the sound of his $1.75 trillion IPO",
-    "url": "https://techcrunch.com/podcast/elon-musk-cant-hear-you-over-the-sound-of-his-1-75-trillion-ipo/",
-    "source": "TechCrunch",
-    "summary": "The SpaceX S-1 is finally here, and the story it tells goes&#160;way further&#160;than rockets. The filing runs to 36 pages of risk factors alone, and the numbers inside match the ambition: a&#160;$28 trillion&#160;total addressable market, a pay package tied to&#160;establishing&#160;a Mars colony, and a valuation ta…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T18:17:07.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-3405d5d5834dae606da3",
-    "title": "Catch up on the Dialogues stage at Google I/O 2026.",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap/",
-    "source": "Google",
-    "summary": "A recap of the 2026 I/O Dialogues, where leaders discuss the future of AI, quantum computing, robotics and creativity.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-ec246dd40441aa0cf3b6",
-    "title": "Elon, stop trying to make Grok happen",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen",
-    "source": "The Verge",
-    "summary": "There is a harsh truth about Elon Musk's \"truth-seeking\" AI chatbot Grok: It's not very good, and not many people are using it. That's the takeaway of a new Reuters report, which found that Grok barely appears in federal records of how the US government used AI last year. It's not the only sign xAI's [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T17:17:06.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-fdbee54decf1843775e0",
-    "title": "You can no longer Google the word &#8216;disregard&#8217;",
-    "url": "https://techcrunch.com/2026/05/22/you-can-no-longer-google-the-word-disregard/",
-    "source": "TechCrunch",
-    "summary": "After Google Search's AI update, the word \"disregard\" now effectively breaks the search interface.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T16:16:48.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-0eb1a299e000b2918444",
-    "title": "We tried Google’s AI glasses and they’re almost there",
-    "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/",
-    "source": "TechCrunch",
-    "summary": "Google demoed prototype Android XR glasses that overlay Gemini-powered translation, navigation, and other information directly into your field of view.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T15:37:15.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-2bbaa690f06aea392367",
-    "title": "The literary world isn’t prepared for AI",
-    "url": "https://www.theverge.com/tech/936073/ai-writing-granta-commonwealth-prize",
-    "source": "The Verge",
-    "summary": "Since 2012, the British literary magazine Granta has published the regional winners of the annual Commonwealth Short Story Prize. This year, however, there was something off about one of the selections for the prestigious award: It appears to have been written by AI. Jamir Nazir's \"The Serpent in the Grove\" has many o…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T14:30:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-0d9bea72717a7bb835d2",
-    "title": "SpaceX files to go public, and the math requires a little faith",
-    "url": "https://techcrunch.com/video/spacex-files-to-go-public-and-the-math-requires-a-little-faith/",
-    "source": "TechCrunch",
-    "summary": "The SpaceX S-1 is finally here, and the story it tells goes&#160;way further&#160;than rockets. The filing runs to 36 pages of risk factors alone, and the numbers inside match the ambition: a&#160;$28 trillion&#160;total addressable market, a pay package tied to&#160;establishing&#160;a Mars colony, and a valuation ta…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T14:30:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-46e5ed29e76c3e445dbf",
-    "title": "Spotify says its AI remix tool is for superfans, but I&#8217;m not convinced",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/936072/spotify-umg-ai-music-remix-cover-superfan",
-    "source": "The Verge",
-    "summary": "AI covers and remixes of songs are already a blight on the internet. Spotify, YouTube, TikTok, and Instagram are awash in flat reggae versions of \"Smells Like Teen Spirit,\" dinky country renditions of The Weeknd, and monotonous Motown reimaginings of AC/DC. Now, a new tool from Spotify will make them even easier to ge…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T14:20:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-e816f2c368f1b7ef7996",
-    "title": "Samsung&#8217;s memory chip employees negotiated $340,000 bonuses this year",
-    "url": "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus",
-    "source": "The Verge",
-    "summary": "Details have emerged about a tentative deal struck between Samsung and semiconductor employees who had threatened to strike. The deal reportedly makes some workers eligible for average annual bonuses of $340,000. The proposed 18-day strike had hinged on Samsung's bonus cap for employees in the semiconductor division a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T11:05:25.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-4ce39150a4dcc4b87dd2",
-    "title": "How Virgin Atlantic ships faster with Codex",
-    "url": "https://openai.com/index/virgin-atlantic",
-    "source": "OpenAI",
-    "summary": "How Virgin Atlantic used Codex to ship its revamped mobile app on a fixed holiday travel deadline, reaching near-total unit test coverage and zero P1 defects.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-ef1db9edff97d09f04e4",
-    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
-    "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
-    "source": "OpenAI",
-    "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-f997a4857c3224676938",
-    "title": "All of the updates from Elon Musk and Sam Altman’s battle over OpenAI",
-    "url": "https://www.theverge.com/tech/917225/sam-altman-elon-musk-openai-lawsuit",
-    "source": "The Verge",
-    "summary": "Sam Altman and Elon Musk are facing off in a high-stakes trial that could alter the future of OpenAI and its most well-known product, ChatGPT. In 2024, Musk filed a lawsuit accusing OpenAI of abandoning its founding mission of developing AI to benefit humanity and shifting focus to boosting profits instead. After near…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T20:15:18.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-cfe0e458b37fc6f0020f",
-    "title": "In desperate times, graduates find hope in humiliating tech CEOs",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/935602/graduates-boo-ai-ceos",
-    "source": "The Verge",
-    "summary": "University graduates are booing and heckling corporate executives who praise AI during their commencement ceremonies, and the only people who seem to be genuinely surprised by this are the executives themselves. In a procession of viral videos, 2026 commencement speakers like former Google CEO Eric Schmidt face loud a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T20:00:06.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-846beef31b8a35341321",
-    "title": "Spotify and Universal Music strike deal allowing fan-made AI covers and remixes",
-    "url": "https://techcrunch.com/2026/05/21/spotify-and-universal-music-strike-deal-allowing-fan-made-ai-covers-and-remixes/",
-    "source": "TechCrunch",
-    "summary": "Spotify is partnering with Universal Music Group￼ to let Premium subscribers create AI-generated song covers and remixes, with participating artists receiving a share of the revenue.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T19:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-07e273c194223c69c304",
-    "title": "Six search engines worth trying now that Google isn’t really Google anymore",
-    "url": "https://techcrunch.com/2026/05/21/six-search-engines-worth-trying-now-that-google-isnt-really-google-anymore/",
-    "source": "TechCrunch",
-    "summary": "Google is about to look really different, and if you're not a fan of the AI overview feature, then you're not going to like what's coming.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T19:19:05.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-a3645b672c98f73d9d3e",
-    "title": "Trump delays AI security executive order, saying language &#8216;could have been a blocker&#8217;",
-    "url": "https://techcrunch.com/2026/05/21/trump-delays-ai-security-executive-order-i-dont-want-to-get-in-the-way-of-that-leading/",
-    "source": "TechCrunch",
-    "summary": "President Trump delayed signing an executive order that would have required pre-release government security reviews of AI models, citing dissatisfaction with the order's language.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T17:30:45.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-5f4be0ce075f58420210",
-    "title": "This AI guitar pedal let me roll my own effects",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/935219/polyend-endless-ai-guitar-effects-pedal",
-    "source": "The Verge",
-    "summary": "I'm not sure anyone was really asking for an AI guitar pedal. But it was inevitable that someone would build one. One of the first to take the plunge is Polyend, a well-respected music gear maker with a reputation for building niche, idiosyncratic devices. The company has built grooveboxes around old-school trackers a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T17:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-09aab2c4ebef3ecf8b9c",
-    "title": "Spotify launches an ElevenLabs-powered audiobook creation tool",
-    "url": "https://techcrunch.com/2026/05/21/spotify-launches-an-elevenlabs-powered-audiobook-creation-tool/",
-    "source": "TechCrunch",
-    "summary": "The AI-powered audiobook generation won't bind authors to an exclusive contract, meaning they are free to publish their generated audiobooks anywhere.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T15:27:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-c76596ec789a69157120",
-    "title": "Spotify takes on Google&#8217;s NotebookLM with its new app",
-    "url": "https://techcrunch.com/2026/05/21/spotify-debuts-a-new-desktop-app-for-creating-personal-podcasts/",
-    "source": "TechCrunch",
-    "summary": "Spotify is releasing the new desktop app as a research preview in more than 20 markets.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T15:27:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-14a50fe1a261b20db8e4",
-    "title": "Spotify adds AI-powered Q&#038;A and briefing generation features to podcasts",
-    "url": "https://techcrunch.com/2026/05/21/spotify-adds-ai-powered-qa-and-briefing-generation-features-to-podcasts/",
-    "source": "TechCrunch",
-    "summary": "Spotify will let you generate daily or weekly briefs based on your prompts",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T15:27:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-2c7283b80fb217cf9262",
-    "title": "Hark raises $700M Series A for its secretive &#8216;universal&#8217; AI interface",
-    "url": "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/",
-    "source": "TechCrunch",
-    "summary": "Hark expects to release its first multimodal models this summer, which it says will power a personal AI platform that works with existing products and services. The company expects to follow that with hardware devices built specifically for those systems.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T14:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-dddeb9df04e13fbbe343",
-    "title": "The Path, founded by Tony Robbins and Calm alums, hopes to offer safer AI therapy",
-    "url": "https://techcrunch.com/2026/05/21/the-path-founded-by-tony-robbins-and-calm-alums-wants-to-offer-safer-ai-therapy/",
-    "source": "TechCrunch",
-    "summary": "The Path says its AI model has scored 95 on the mental health safety AI benchmark, Vera-MH. This compares to a top score of 65 for the consumer bots.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T14:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-85a3fdb43c804c3bf0ce",
-    "title": "AdventHealth advances whole-person care with OpenAI",
-    "url": "https://openai.com/index/adventhealth",
-    "source": "OpenAI",
-    "summary": "AdventHealth is using ChatGPT for Healthcare to streamline workflows, reduce administrative burden, and return more time to patient care.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-21T12:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-ed67995bed7d0b38c02f",
-    "title": "We’re announcing new community investments in Missouri.",
-    "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/missouri-programs/",
-    "source": "Google",
-    "summary": "We’re helping build the state’s next-generation workforce and investing in energy programs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-02632956ebdcc20d0248",
-    "title": "100 things we announced at I/O 2026",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
-    "source": "Google",
-    "summary": "This year at Google I/O 2026, we announced Gemini Omni, Google Antigravity, Universal Cart and so much more. Here are the highlights.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-369fda15542c315a2832",
-    "title": "A new experiment brings better group meetings to Google Beam",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-group-meetings/",
-    "source": "Google",
-    "summary": "See and hear your colleagues in true-to-life size and sound, making hybrid meetings feel more inclusive and connected.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-cb920945cfca046c0cf2",
-    "title": "How Ramp engineers accelerate code review with Codex",
-    "url": "https://openai.com/index/ramp",
-    "source": "OpenAI",
-    "summary": "How Ramp engineers use Codex with GPT-5.5 to review code and ship improvements, allowing them to get substantive feedback in minutes instead of hours.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-52bd1afbd88b05927463",
-    "title": "The next phase of OpenAI’s Education for Countries",
-    "url": "https://openai.com/index/the-next-phase-of-education-for-countries",
-    "source": "OpenAI",
-    "summary": "OpenAI advances Education for Countries, expanding AI adoption in schools with new partnerships, teacher training, and tools to improve global learning outcomes.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-7f625f66633806e06a2f",
-    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
-    "source": "OpenAI",
-    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-e0640ad0320ce67f7a7e",
-    "title": "Introducing OpenAI for Singapore",
-    "url": "https://openai.com/index/introducing-openai-for-singapore",
-    "source": "OpenAI",
-    "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T20:30:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-3d6d30af3414a6740245",
-    "title": "Google just redesigned the search box for the first time in 25 years — here’s why it matters more than you think.",
-    "url": "https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think",
-    "source": "VentureBeat",
-    "summary": "For a quarter century, the Google search box has been one of the most recognizable interfaces in computing: a thin white rectangle, a blinking cursor, a few typed words, and a list of blue links. On Tuesday, Google will formally retire that paradigm. At its annual I/O developer conference , Google announced a sweeping…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-5af6fbd7f1ce709e04b5",
-    "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
-    "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
-    "source": "Google",
-    "summary": "Introducing a $100 AI Ultra plan — plus, new features and benefits for Google AI Plus, Pro and Ultra subscribers.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-1f203743494c93f90574",
-    "title": "A new era for AI Search",
-    "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
-    "source": "Google",
-    "summary": "We shared the next step in our journey to bring together the best of a search engine with the best of AI.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-e4e059ae9ebc65abc0eb",
-    "title": "Gemini 3.5: frontier intelligence with action",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-    "source": "Google",
-    "summary": "At Google I/O we released Gemini 3.5, our latest series of models combining frontier intelligence with action.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-ab50a6a962f16cada480",
-    "title": "I/O 2026: Welcome to the agentic Gemini era",
-    "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
-    "source": "Google",
-    "summary": "The latest from Google I/O: See how we’re helping you get more done with Gemini.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-4a09b699f249cb6fb1ac",
-    "title": "New ways to create and get things done in Google Workspace",
-    "url": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
-    "source": "Google",
-    "summary": "Announcing new voice capabilities in Gmail, Docs and Keep, a new design tool called Google Pics and updates to AI Inbox.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-8fc9597adf555bd4e2dd",
-    "title": "How AI Mode is changing the way people search in the U.S.",
-    "url": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/",
-    "source": "Google",
-    "summary": "One year after launch, see how AI Mode’s users are shifting from keywords to natural language queries.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-eeffe9e815ad9a588e80",
-    "title": "I/O 2026",
-    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
-    "source": "Google",
-    "summary": "At Google I/O 2026, we shared how we’re making AI more helpful for everyone. See everything we announced.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-4f1431164463c27111bb",
-    "title": "Advancing content provenance for a safer, more transparent AI ecosystem",
-    "url": "https://openai.com/index/advancing-content-provenance",
-    "source": "OpenAI",
-    "summary": "OpenAI advances AI content provenance with Content Credentials, SynthID, and a verification tool to help people identify and trust AI-generated media.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T10:45:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-210c7a7c782649817dd4",
-    "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
-    "url": "https://openai.com/index/dell-codex-enterprise-partnership",
-    "source": "OpenAI",
-    "summary": "OpenAI and Dell partner to bring Codex to hybrid and on-premise environments, helping enterprises deploy AI coding agents securely across data and workflows.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-18T10:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-f0106247dee486f08fe9",
-    "title": "OpenAI and Malta partner to bring ChatGPT Plus to all citizens",
-    "url": "https://openai.com/index/malta-chatgpt-plus-partnership",
-    "source": "OpenAI",
-    "summary": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-16T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-cca00ce687818d9ad6ab",
-    "title": "How data science teams use Codex",
-    "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
-    "source": "OpenAI",
-    "summary": "See how data science teams can use Codex to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-b5b1610b252a64e98869",
-    "title": "How business operations teams use Codex",
-    "url": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
-    "source": "OpenAI",
-    "summary": "See how business operations teams can use Codex to create initiative briefs, strategy updates, leadership decision packets, progress updates, and more from real work inputs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-ada6c1425188ba304200",
-    "title": "A new personal finance experience in ChatGPT",
-    "url": "https://openai.com/index/personal-finance-chatgpt",
-    "source": "OpenAI",
-    "summary": "Preview a new personal finance experience in ChatGPT for Pro users in the U.S. Securely connect your financial accounts and get AI-powered insights and guidance grounded in your financial context, goals, and priorities.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-c64312c3121cafd6f0ef",
-    "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
-    "url": "https://openai.com/index/databricks",
-    "source": "OpenAI",
-    "summary": "Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-248b5ff0699922b23d03",
-    "title": "How sales teams use Codex",
-    "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-    "source": "OpenAI",
-    "summary": "See how sales teams can use Codex to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-ca03c8de33d6b9a62c81",
-    "title": "Sea's View on the Future of Agentic Software Development with Codex",
-    "url": "https://openai.com/index/sea-david-chen",
-    "source": "OpenAI",
-    "summary": "Sea Limited's CPO explains why the company is deploying Codex across engineering teams to accelerate AI-native software development in Asia.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-14T20:30:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-3e12c692082774f4849d",
-    "title": "Work with Codex from anywhere",
-    "url": "https://openai.com/index/work-with-codex-from-anywhere",
-    "source": "OpenAI",
-    "summary": "Use Codex anywhere with the ChatGPT mobile app. Monitor, steer, and approve coding tasks in real time across devices and remote environments.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-14T13:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-fd608667e64cf7a52089",
-    "title": "Helping ChatGPT better recognize context in sensitive conversations",
-    "url": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations",
-    "source": "OpenAI",
-    "summary": "Learn how new ChatGPT safety updates improve context awareness in sensitive conversations, helping detect risk over time and respond more safely.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-14T00:00:00.000Z",
-    "discovered_at": "2026-05-24 17:14:57"
-  },
-  {
-    "id": "news-519f0d44ef2371172488",
-    "title": "The new AI-powered Google Finance is expanding to Europe.",
-    "url": "https://blog.google/products-and-platforms/products/search/ai-powered-google-finance-in-europe/",
-    "source": "Google",
-    "summary": "This week, the new, AI-powered Google Finance is launching across Europe, with full local language support. This reimagined experience offers a suite of powerful capabil…",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-68512a3cbeda65ed975d",
-    "title": "See what happens when creative legends use AI to make ads for small businesses.",
-    "url": "https://blog.google/company-news/inside-google/company-announcements/the-small-brief/",
-    "source": "Google",
-    "summary": "Today we're launching The Small Brief, an initiative bringing together three ad industry icons to champion a local businesses they love. Their mission is to build breakt…",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-4827140096bfe134bd58",
-    "title": "Mozilla says 271 vulnerabilities found by Mythos have \"almost no false positives\"",
-    "url": "https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/",
-    "source": "Ars Technica",
-    "summary": "The developer of Firefox says it has \"completely bought in\" on AI-assisted bug discovery.",
-    "category": "research",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-7fd7635574ec5271e661",
-    "title": "5 gardening tips you can try right in Search",
-    "url": "https://blog.google/products-and-platforms/products/search/gardening-tips/",
-    "source": "Google",
-    "summary": "We’ve rounded up the top ways you can use Google’s AI Mode, Search Live and Shopping to help your plants thrive.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-96a76e6b90cc858c40fa",
-    "title": "Google is partnering with XPRIZE and Range Media Partners on the $3.5 million Future Vision film competition.",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/future-vision-film-competition-xprize/",
-    "source": "Google",
-    "summary": "Google is partnering with XPRIZE and Range Media Partners on the $3.5 million Future Vision film competition.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-4e60ba9595b8ef99526a",
-    "title": "The latest AI news we announced in April 2026",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/",
-    "source": "Google",
-    "summary": "Here are Google’s latest AI updates from April 2026",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-3f5239165dd4c022fea1",
-    "title": "Reduce friction and latency for long-running jobs with Webhooks in Gemini API",
-    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/",
-    "source": "Google",
-    "summary": "Event-Driven Webhooks are a push-based notification system that eliminates the need for inefficient polling.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
-  },
-  {
-    "id": "news-f98304eba2d040c798ef",
-    "title": "Celebrating 20 years of Google Translate: Fun facts, tips and new features to try",
-    "url": "https://blog.google/products-and-platforms/products/translate/fun-facts-google-translate-20-years/",
-    "source": "Google",
-    "summary": "Google’s sharing 20 fun facts to celebrate Google Translate turning 20, from its roots as a 2006 AI experiment to supporting almost 250 languages today.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-24 17:15:02"
+    "id": "879d30d7-ada8-4c6e-9c61-5530668c9737",
+    "title": "Subbarao Kambhampati, an ASU AI professor, flags ICML 2026 registration showing &#x27;Sold Out&#x27; during the early bird window — Organizers confirmed spots remain reserved for paper authors.",
+    "url": "https://www.digg.com/ai/t6v80uzj?rank=11",
+    "source": "Digg AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "research_paper"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-05-24T18:00:12.608Z"
+  },
+  {
+    "id": "8120ac39-628e-4eb0-9e57-67b3109ba1de",
+    "title": "Chinese creator CuiMao releases the final video in a series detailing the origin story of Anthropic CEO Dario Amodei — The seedance2 collaboration features a hidden Easter egg.",
+    "url": "https://www.digg.com/ai/vz785dra?rank=5",
+    "source": "Digg AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "model_release",
+      "product_launch",
+      "industry_move"
+    ],
+    "importance_score": "0.74",
+    "published_at": null,
+    "discovered_at": "2026-05-24T18:00:12.589Z"
+  },
+  {
+    "id": "9bb06aef-0bcb-4a0a-bc21-c5faea75ac2a",
+    "title": "Nomad List founder Pieter Levels reports a Claude Code CLI bug that resets his effort setting to medium daily — A research engineer suggests the issue affects outdated CLI versions.",
+    "url": "https://www.digg.com/ai/jryhwh3j?rank=4",
+    "source": "Digg AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "research_paper"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-05-24T18:00:12.586Z"
+  },
+  {
+    "id": "ccab3c7d-dca0-4b1d-a15e-77855a441ca0",
+    "title": "Emad Mostaque says a single researcher can now manage several thousand GPUs for AI training with modern automation — Historically, one researcher managed 1,000 A100 GPUs.",
+    "url": "https://www.digg.com/ai/2uz3vny4?rank=3",
+    "source": "Digg AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "hardware"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-05-24T18:00:12.583Z"
+  },
+  {
+    "id": "1ebdd22b-19df-4b0a-9434-037db45b623d",
+    "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
+    "url": "https://www.digg.com/ai/dzxn82lm?rank=1",
+    "source": "Digg AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "research_paper"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-05-24T18:00:12.579Z"
+  },
+  {
+    "id": "46e255c3-e143-4b6b-a0f4-a4df73de7c07",
+    "title": "BitCPM-CANN: Native 1.58-Bit Large Language Model Training on Ascend NPU",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tmf63y/bitcpmcann_native_158bit_large_language_model/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Paper: https://github.com/OpenBMB/MiniCPM/blob/main/docs/BitCPM_CANN.pdf ### Abstract &gt;We present BitCPM-CANN, a systematic family-level study of 1.58-bit (ternary) quantization-aware training (QAT) on the Huawei Ascend NPU platform. To address two practical gaps for extreme low-bit LLMs—whether ternary weights preserve capabili- ties on complex reasoning tasks at on-device scales, and how to make end-to-end 1.58-bit training natively available outside the CUDA ecosystem—we port our prior GPU-based pipeline to CANN, MindSpeed, and Megatron-LM, and train four models (BitCPM- CANN-0.5B/1B/3B/8B) strictly aligned with their full-precision MiniCPM4 counterparts in architecture and pre-training data. Across 11 benchmarks spanning commonsense reasoning, domain knowledge, and mathematics &amp; reasoning, the 1B, 3B, and 8B variants retain 95.7%–97.2% of full-precision performance, with the 3B variant achieving parity on BBH and the 3B/8B variants recovering nearly all of GSM8K. The 0.5B variant retains 90.1%, with the residual gap concentrated on mathematics, indicating that capacity—not the quantizer—is the bottleneck at sub-billion scales. Our QAT integration adds only a 4.5% traini…",
+    "category": "ai_models",
+    "tags": [
+      "benchmark",
+      "evaluation",
+      "research_paper",
+      "architecture",
+      "dataset",
+      "training",
+      "hardware",
+      "creative_workflow",
+      "reasoning"
+    ],
+    "importance_score": "0.90",
+    "published_at": "2026-05-24T15:24:26.000Z",
+    "discovered_at": "2026-05-24T17:32:34.538Z"
+  },
+  {
+    "id": "d48ee411-1a32-410e-9cbc-81067c6c2cf4",
+    "title": "GPU VRAM only for small models with llama.cpp: is it possible?",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tmeknt/gpu_vram_only_for_small_models_with_llamacpp_is/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "I'm still in my learning process and so far I've been able to make satisfying use of my setup (4070 with 12GB VRAM + 32GB RAM and iGPU for my GUI). I've been able to run both Gemma4 26B and Qwen 3.6 35B MoEs up to high quants with large context and have about 40 t/s with both. However, I'd like to try a smaller model, ideally a quant of Qwen3.5-9B, with full VRAM usage and no host memory to slow down things. In theory it should be possible, but even gemma4-e2b with a low quant (Q4_IXS) with small context (8192) ends up using about 3.5 GB of RAM on top of the GPU. I've tried all the command line options I could find with llama-server, but so far...no cigar. What am I doing wrong?",
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "hardware"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-24T15:02:03.000Z",
+    "discovered_at": "2026-05-24T17:32:35.093Z"
+  },
+  {
+    "id": "e46bdae1-eb0e-4d00-b043-c8a2c86cbde2",
+    "title": "Thermocompute constant time inference [P]",
+    "url": "https://reddit.com/r/MachineLearning/comments/1tmebju/thermocompute_constant_time_inference_p/",
+    "source": "Reddit r/MachineLearning",
+    "summary": "I invented thermocompute! It makes machine learning super fast!",
+    "category": "ai_research",
+    "tags": [
+      "inference"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-05-24T14:52:23.000Z",
+    "discovered_at": "2026-05-24T17:32:23.767Z"
+  },
+  {
+    "id": "2b5ac5c9-74e3-4a0b-b5f5-01cb705b122e",
+    "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "api_update",
+      "tool_use",
+      "reasoning"
+    ],
+    "importance_score": "0.82",
+    "published_at": "2026-05-24T14:22:25.000Z",
+    "discovered_at": "2026-05-24T17:32:36.324Z"
+  },
+  {
+    "id": "f6d0948d-bd7c-4b8f-a580-a8a0ab3aabf4",
+    "title": "Created a desktop dev tools app entirely using Claude design and Claude sonnet",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1tmd7c0/created_a_desktop_dev_tools_app_entirely_using/",
+    "source": "Reddit r/ClaudeAI",
+    "summary": "There are a handful of developer tools I use almost every day, and over time I realized I was constantly relying on random websites while basically trusting them not to store, inspect, or share whatever data I pasted into them. I looked at existing tool collections like CyberChef and DevToys. CyberChef is powerful, but I personally didn’t like the Docker-centric workflow, and while DevToys is great, it still didn’t cover all the tools I regularly need. I also wasn’t a fan of the UI/UX direction of most existing options. So I decided to build my own. I had some unused Claude design credits, so I spent a couple of hours refining the product requirements, workflows, and overall visual direction. After that, I used Claude Sonnet 4.6 to help iterate on the tech stack, architecture, implementation process, and generated designs. From there, I built the core of the app and spent the next two days refining it into something I felt comfortable releasing for my own use and for anyone else who might find it useful. The project is called dev-core-tools. It’s completely free and open source.",
+    "category": "ai_tools",
+    "tags": [
+      "architecture",
+      "creative_workflow",
+      "open_source"
+    ],
+    "importance_score": "0.54",
+    "published_at": "2026-05-24T14:08:31.000Z",
+    "discovered_at": "2026-05-24T17:32:33.759Z"
+  },
+  {
+    "id": "f40f508b-48fa-4435-a195-104c66655113",
+    "title": "Crucible - local open source application for dataset handling",
+    "url": "https://reddit.com/r/StableDiffusion/comments/1tmb7n7/crucible_local_open_source_application_for/",
+    "source": "Reddit r/StableDiffusion",
+    "summary": "Hi, I've created **Crucible,** a local dataset management app aimed at diffusion models. No cloud, no subscriptions, runs on your own hardware. Developed for myself but decided to open source. Video showcase: [https://www.youtube.com/watch?v=Ig4j5ijovCI](https://www.youtube.com/watch?v=Ig4j5ijovCI) Github: [https://github.com/Blandmarrow/Crucible](https://github.com/Blandmarrow/Crucible) **Key features:** * Caption images in batch using local ML models (Ollama, Florence-2, PaliGemma-2) * Score every image across aesthetic quality, technical quality, watermark detection, and style similarity * ML upscaling and LUT color grading * Filter &amp; curate via search, quality flags, and score ranges * Batch edit captions, crops, and resizes * Version datasets with named snapshots and branches — restore any prior state * Object detection and phrase grounding via Florence-2 bounding-box detection * Built-in file browser with generation metadata preview (A1111 + ComfyUI) * Export to Kohya, AI Toolkit, or plain folder with per-export filtering and resizing * Split view — run any two pages side-by-side I'll keep updating it as my own workflow evolves. Would love feedback on what's missing, par…",
+    "category": "creative_tools",
+    "tags": [
+      "architecture",
+      "dataset",
+      "creative_workflow",
+      "open_source"
+    ],
+    "importance_score": "0.62",
+    "published_at": "2026-05-24T12:44:48.000Z",
+    "discovered_at": "2026-05-24T17:32:39.570Z"
+  },
+  {
+    "id": "3828fd0c-ed4e-427c-9ff8-803bc5c57276",
+    "title": "Working on a cgo-free CUDA binding in Go for ML stuff Week 3 - open source [P]",
+    "url": "https://reddit.com/r/MachineLearning/comments/1tmb4qw/working_on_a_cgofree_cuda_binding_in_go_for_ml/",
+    "source": "Reddit r/MachineLearning",
+    "summary": "At our work we use CUDA in Rust since the company switched to it recently. Rust has pretty good Driver API bindings but it made me wonder why the hell we cant have something decent in Go without cgo. I mostly build ML tools in the last month and Go is my main language for pretty much everything. Problem is most Go CUDA projects still need cgo and the full toolkit at build time. That breaks cross compilation and makes Docker images huge which sucks when working on machine learning projects. So last month I started messing around with a proof of concept that loads [libcuda.so](http://libcuda.so) at runtime using purego. No cgo at all. Biggest pain was thread affinity. CUDA keeps context per thread so goroutines switching around kept breaking things. I built a simple executor that locks an OS thread with runtime.LockOSThread and funnels all calls through a channel. Heres roughly what using it looks like right now: func run() error { cuda.Init() dev, _ := cuda.GetDevice(0) ctx, _ := dev.Primary() defer ctx.Close() a, _ := cuda.Alloc[float32](ctx, 1024) b, _ := cuda.Alloc[float32](ctx, 1024) c, _ := cuda.Alloc[float32](ctx, 1024) stream, _ := ctx.NewStream() start, _ := ctx.NewEvent()…",
+    "category": "ai_research",
+    "tags": [
+      "api_update",
+      "open_source"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-24T12:41:07.000Z",
+    "discovered_at": "2026-05-24T17:32:23.854Z"
+  },
+  {
+    "id": "ff644c9a-018c-4441-b198-ef608c5b2aab",
+    "title": "PapersWithCode new features - week 1 [P]",
+    "url": "https://reddit.com/r/MachineLearning/comments/1tmawv5/paperswithcode_new_features_week_1_p/",
+    "source": "Reddit r/MachineLearning",
+    "summary": "Hi, Niels here from the open-source team at Hugging Face. It's been one week since I [launched](https://www.reddit.com/r/MachineLearning/comments/1tgmwqr/reviving_paperswithcode_by_hugging_face_p/) [paperswithcode.co](http://paperswithcode.co), a revival of the website we all loved. It allows us to keep track of the state-of-the-art (SOTA) across various domains of AI, from agents to computer vision and time-series forecasting. The reception has been great, and I'm excited to extend this over the next few months. This week, I've added the following features: \\- Support for multiple metrics for a given benchmark: leaderboards now support multiple metrics, see e.g., the [Open ASR Leaderboard](https://paperswithcode.co/benchmark/open-asr-leaderboard) for automatic speech recognition, which supports both Word Error Rate (WER) and the Inverse Real-Time Factor (RTFx) metrics, or the [Object Detection leaderboard](https://paperswithcode.co/benchmark/coco-val2017), which now also reports frames-per-second (FPS) besides mean average precision (mAP) on COCO. https://preview.redd.it/owlxn0b5u23h1.png?width=2878&amp;format=png&amp;auto=webp&amp;s=1dff2f8feab4f160f77c97ceeb5d90e82382e63c \\- Su…",
+    "category": "ai_research",
+    "tags": [
+      "model_release",
+      "benchmark",
+      "open_source"
+    ],
+    "importance_score": "0.74",
+    "published_at": "2026-05-24T12:31:12.000Z",
+    "discovered_at": "2026-05-24T17:32:23.566Z"
+  },
+  {
+    "id": "276b4abc-9156-4b85-9b8e-67da1a172cbf",
+    "title": "Claude working autonomously",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1tm9gm5/claude_working_autonomously/",
+    "source": "Reddit r/ClaudeAI",
+    "summary": "Goodmorning, Has anyone figure out how to configure Claude so that it runs autonomously, almost like Openclaw? I wanted to figure out if it could just autonomously respond to LinkedIn messages and reach out on my behalf? I know i can do this within cowork with mcp servers and tools but didn’t know if managed agents or the SDK would be my best option to try and create this full system",
+    "category": "ai_tools",
+    "tags": [
+      "api_update",
+      "tool_use",
+      "mcp"
+    ],
+    "importance_score": "0.54",
+    "published_at": "2026-05-24T11:21:02.000Z",
+    "discovered_at": "2026-05-24T12:00:11.398Z"
+  },
+  {
+    "id": "ad60c2f1-faa0-4224-b595-fe4e16c3e238",
+    "title": "gemma 4 e2b quality degrades after ~30-40 continuous inferences on 4gb vram?",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tm9ao9/gemma_4_e2b_quality_degrades_after_3040/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "running gemma e2b via llama-server for continuous background tasks on a 1650 4gb. works great initially but after maybe 30-40 calls the outputs start getting noticeably worse — shorter responses, missing fields in json output, sometimes just empty. restarting llama-server fixes it immediately. using: flash-attn on, single slot, 6144 context, ngl 15 anyone seen this? is this a kv cache thing or just vram fragmentation over time? if there's a way to handle it without restarting the whole server",
+    "category": "ai_models",
+    "tags": [
+      "model_release"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-05-24T11:12:45.000Z",
+    "discovered_at": "2026-05-24T12:00:12.771Z"
+  },
+  {
+    "id": "43028722-fccf-45a9-a128-3938783f5482",
+    "title": "How I do use the recent llama.cpp native tools to do web rag a.k.a. web_fetch (or anything else for the matter) directly from inside the llama-server's webui",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tm93ng/how_i_do_use_the_recent_llamacpp_native_tools_to/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "As some other fellow lllmers I've discovered few days ago that the amazing llama.cpp project has just added native tools functionalities into the server. After having enabled the relative options into llama-server and played a bit with the most harmless of them all, get\\_datetime, I've bit the bullet and cautiously enabled the big boss: exec\\_shell\\_command. Building upon my recent sandboxing efforts relative to pi coding agent, another fantastic tool, I implemented this workflow to more safely use it into linux by multi-sandboxing: step 0) enabled llama-server options for native tools step 1) install firejail system wide step 2) create a new linux user called vmagents (a.k.a. \"virtual machine agent smith\") to prevent escalation or messing up with my own user workspace home dir step 3) login into vmagents user and install smolmachines, an easy to use OCI virtual machine containers harness step 4) create a VM called minivm and start it to pull in a bare bones busybox commands based Alpine linux OCI image step 5) create the script minivm-exec (and make it executable) into vmagents exec dir to spinup the sandbox VM, exec a given command into it into further firejail sandbox, turn it…",
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "creative_workflow"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-24T11:02:32.000Z",
+    "discovered_at": "2026-05-24T12:00:12.707Z"
+  },
+  {
+    "id": "8d52754a-f96b-43b2-987c-ecb4b2e45d55",
+    "title": "What would 2x RTX 3060 12GB get me?",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tm8902/what_would_2x_rtx_3060_12gb_get_me/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "TLDR: I’m considering buying 2 RTX 3060 12GB as opposed to single 24GB card to gain experience and need to know what can be realistically accomplished with this setup. Sorry in advance, I know you guys are probably tired of these kinds of post but I wanted to shoot my shot at asking. Last year I bought an RX 5700 XT 8GB for gaming and when I tried local ai models, for the life of me I couldn’t get it to work. So all my inference was CPU only. I have 32GB RAM and I’m looking to upgrade that at some point. So the rest of the hardware, I know I gotta take care of (RAM, PSU, etc). What I’m trying to accomplish is, first of all, agentic coding (I know I shouldn’t get my hopes up there and it will definitely not become my daily driver at this scale, but if centering a div can be accomplished in less than 5 minutes, maybe that’s a win). The second goal is to gain experience with workflows, putting models with heavy chains that could be applicable to small business tasks… and I mention wanting 2 cards instead of one for the experience of running multiple GPUs. So with this in mind, what models can this VRAM power actually accomplish in your experience? Thanks guys.",
+    "category": "ai_models",
+    "tags": [
+      "inference",
+      "ai_agents"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-24T10:16:32.000Z",
+    "discovered_at": "2026-05-24T12:00:12.720Z"
+  },
+  {
+    "id": "44dc7491-baa5-4a4c-916d-b735ccd6f2ea",
+    "title": "Task-observer makes your skills self-improving and automates skill creation",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1tm887i/taskobserver_makes_your_skills_selfimproving_and/",
+    "source": "Reddit r/ClaudeAI",
+    "summary": "This recently crossed 500 stars on GitHub, mainly thanks to a [comment](https://www.reddit.com/r/ClaudeAI/comments/1sx44bc/comment/oik7ose/) in this sub (❤️), so I decided to properly introduce it to those who don't know it yet. Task-observer is a meta-skill that automatically improves all your skills, including itself. It also logs gaps in your work that can be filled with new skills. I mainly use it in Claude Cowork, but I've had feedback from many users who've successfully integrated it in other environments, including autonomous agent setups. In the first three months of using it, task-observer applied 600 skill improvements across my 40 skills. Most of my skills were themselves created based on skill creation opportunities that task-observer logged during my work sessions. I'm a consultant, so I use task-observer for knowledge work mainly, but the concept can be applied to any AI setup that uses skills: human-led work sessions as well as autonomous agents. The approach that I use with task-observer has truly transformed the way I work (although this sounds like a platitude), and I'm sharing it because I hope that many more people can benefit from it. This is an open-source pr…",
+    "category": "ai_tools",
+    "tags": [
+      "ai_agents",
+      "autonomous_systems",
+      "open_source"
+    ],
+    "importance_score": "0.54",
+    "published_at": "2026-05-24T10:15:17.000Z",
+    "discovered_at": "2026-05-24T12:00:11.734Z"
+  },
+  {
+    "id": "0bb3faf7-d562-4ccb-9330-bf5a6393d343",
+    "title": "I made a Claude Code plugin that draws matplotlib figures in that soft-pastel \"alignment research blog\" style",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1tm7w3d/i_made_a_claude_code_plugin_that_draws_matplotlib/",
+    "source": "Reddit r/ClaudeAI",
+    "summary": "You know the look — the figures in Anthropic's research posts. Bold sans-serif titles, scatter points under a smoothed trend line with a shaded band, those bars with the slightly rounded tops, little ↓better badges in the corner. I kept wanting my own plots to look like that and kept rebuilding the same matplotlib boilerplate, so I packaged it into a Claude Code skill. It's called nice-figures. Once it's installed, you just describe the plot you want and Claude picks it up automatically: &gt;\"training-curve plot of these RL scores with a smoothed trend and shaded band, research-blog style\" &gt;\"grouped bar chart comparing three models across four evals, with the rounded bar tops\" Bring your own CSV/arrays and it maps them onto the closest chart; describe a figure with no data and it generates a clearly-marked synthetic placeholder. Under the hood it's one skill plus a small style helper (matplotlib + numpy, no other deps) and 16 chart recipes — training curves, grouped bars, ROC, heatmaps, scaling-law scatter, forest plots, Pareto fronts, etc. White background by default so the output is paper/conference-ready, with an opt-in cream background for the blog look. Install: /plugin ma…",
+    "category": "ai_tools",
+    "tags": [
+      "evaluation",
+      "research_paper",
+      "ai_safety",
+      "policy"
+    ],
+    "importance_score": "0.62",
+    "published_at": "2026-05-24T09:56:11.000Z",
+    "discovered_at": "2026-05-24T12:00:11.376Z"
+  },
+  {
+    "id": "5756992b-6608-4747-b7d5-bcf9ad554b80",
+    "title": "Why not dynamic active parameters (and other questions for the knowledgeable)",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tm5mi2/why_not_dynamic_active_parameters_and_other/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Why do we have to choose between MoE or Dense models? Wouldn't it be possible to have a model where the user can select the number of active parameters? If the user chooses them all, it is dense. So based on a task, a user could decide how many active parameters it needs. Or even automate some scripts to find the best relation for that specific task. Or it could happen automatically: depending on the difficulty of the task, the model could decide how many active parameters it needs. If I need the most intelligence possible, I could trade in speed. But If I need speed, I could trade on intelligence. Without having to load several models at once to the RAM (which usually I can't). In the same direction, if for some tasks I need speed and not intelligence, wouldn't it be possible to use the MTP part of the model alone? Instead of using it to predict for the rest of the model, couldn't the MTP part just answer directly to save on time and compute on some tasks? The third question is why cannot a model modify its weights on the run to really learn from failures. Everytime a model hits the same error several times, and has to do tests or even research until finding a solution, it gets a…",
+    "category": "ai_models",
+    "tags": [
+      "research_paper",
+      "architecture",
+      "inference",
+      "hardware"
+    ],
+    "importance_score": "0.82",
+    "published_at": "2026-05-24T07:48:13.000Z",
+    "discovered_at": "2026-05-24T12:00:12.682Z"
+  },
+  {
+    "id": "137aff01-8423-4050-ad79-2eda9205d9e5",
+    "title": "Claude code - Cultivate your context window to get the max out of your tokens",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1tm594m/claude_code_cultivate_your_context_window_to_get/",
+    "source": "Reddit r/ClaudeAI",
+    "summary": "Many times during the start of the session or when you have cleared or compacted the session, claude tends to read the entire codebase resulting in context window bloating. if your repo is large and/or if you are working with multiple repos it means your context window will have a lot of stuff which are not really relevant for the feature work that you are doing rn. Instead of claude having to read the entire codebase you have a map of your repos at different granularity and guide claude using [claude.md](http://claude.md) file to read the map. this helps claude get the context better without the context window bloating. if you are working on typescript/javascript based repos you can check what i built here in this repo: [https://github.com/justinjamesmathew/tokenmax-mcp](https://github.com/justinjamesmathew/tokenmax-mcp) the idea is to have three tiers of structural context loaded at three different times. The Registry is a small directory of every repo that is registered, with a short paragraph for each covering what it does, what stack it uses, where it lives, and when it was last indexed. It loads automatically into every Claude Code session via \\~/.claude/[CLAUDE.md](http://c…",
+    "category": "ai_tools",
+    "tags": [
+      "api_update",
+      "tool_use",
+      "mcp"
+    ],
+    "importance_score": "0.54",
+    "published_at": "2026-05-24T07:27:11.000Z",
+    "discovered_at": "2026-05-24T12:00:11.459Z"
+  },
+  {
+    "id": "63d30201-0feb-4089-8ac4-6c7faca26922",
+    "title": "Qwen3.6-35B-A3B-Uncensored-Genesis-APEX-MTP",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tm3toi/qwen3635ba3buncensoredgenesisapexmtp/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Here model: [https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF](https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF) Safetensors: [https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-FP8-Safetensors](https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-FP8-Safetensors) *Testing results in Open Code on hardware (Beelink gtr9 pro + Strix Halo) done by my friend on Q8\\_K\\_P - MTP quant:* 1. 5 sessions with 200k context, not a single glitch, no loops, no repeated tool calls. 2. After 120k tokens he suddenly gave another task that doesn't intersect with what it was doing at all, and it calmly picked up and solved it correctly. 3. Uncensored with MTP support with APEX and APEX Compact quantization. 4. Safetensors support for Apple MLX conversion for Mac users. MTP-Safetensors now in development. **Recommended quant:** APEX, MTP-APEX **Recommended settings for LM Studio:** [System Prompt](https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensored-Genesis-V2-APEX-MTP-GGUF/raw/main/System_Prompt.txt) [Chat Template](https://huggingface.co/LuffyTheFox/Qwen3.6-35B-A3B-Uncensore…",
+    "category": "ai_models",
+    "tags": [
+      "model_release"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-05-24T06:08:22.000Z",
+    "discovered_at": "2026-05-24T12:00:12.560Z"
+  },
+  {
+    "id": "1663ea57-6312-4836-b75d-695f95b0820b",
+    "title": "I built a local GUI for the TradingAgents framework — works with Ollama",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tm2ct0/i_built_a_local_gui_for_the_tradingagents/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "https://preview.redd.it/i90oxxk7n03h1.png?width=1898&amp;format=png&amp;auto=webp&amp;s=7d219c804fda7dfe122b84fcdb6d0d6883818c68 A while back I came across [TradingAgents](https://github.com/TauricResearch/TradingAgents) — a really cool multi-agent LLM stock analysis framework where like a dozen \"agents\" (market analyst, news analyst, bull researcher, bear researcher, risk team, etc.) debate a stock and produce a final trade recommendation. The output is genuinely interesting to read. Problem: it ships as a CLI. You pick options in a terminal, watch logs scroll, then go hunt for markdown files on disk. The reports are good, the experience of getting to them isn't. So I forked it and bolted on a web GUI. Runs locally, talks to whatever LLM provider you have a key for (OpenAI, Anthropic, Google, OpenRouter, DeepSeek, Ollama, xAI, Qwen, GLM, MiniMax). All Apache 2.0. Some things I ended up adding because I wanted them: * Live pipeline visualization showing which agent is working * Reports tab with a 3-pane reader, table-of-contents, search * A \"report length\" knob (Concise / Standard / Comprehensive) — concise mode saves \\~50% tokens * Multi-session chat where you can pin past report…",
+    "category": "ai_models",
+    "tags": [
+      "creative_workflow",
+      "ai_agents",
+      "multi_agent",
+      "open_source"
+    ],
+    "importance_score": "0.82",
+    "published_at": "2026-05-24T04:51:09.000Z",
+    "discovered_at": "2026-05-24T12:00:12.751Z"
+  },
+  {
+    "id": "5118c6dc-7d12-4028-bc56-eaaab6a78cb7",
+    "title": "Vision-capable LLMs vs. OCR for long-document (including charts, images, tables, etc.) QA",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tm0800/visioncapable_llms_vs_ocr_for_longdocument/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "I benchmarked vision-capable LLMs (the \"just attach the PDF and let the model read it\" pattern) against OCR-based pipelines on 30 long, image-heavy PDFs from MMLongBench-Doc ([https://github.com/mayubo2333/MMLongBench-Doc](https://github.com/mayubo2333/MMLongBench-Doc)). There were 171 questions in total, using Claude Sonnet 4.5 as the LLM. Post-retry results: |Approach|Accuracy|$/query| |:-|:-|:-| |LlamaCloud premium + full-context|59.6%|$0.1885| |Azure premium + full-context|58.5%|$0.2051| |Azure basic + full-context|54.4%|$0.1062| |Agentic RAG|53.2%|$0.0827| |**Native PDF (vision LLM)**|**52.0%**|**$0.2552**| |LlamaCloud basic + full-context|50.9%|$0.1049| Native PDF came 5th of 6 on accuracy and was the most expensive arm at $0.2552 per query. Two findings: Vision underperformed on chart-heavy and table-heavy pages, the territory that the \"vision LLMs make OCR obsolete\" claim most often points to. Premium OCR with layout extraction held up better there. The native-PDF arm had a 7% intrinsic failure rate (related to PDF file size) that survived retries. There were 27 first-pass failures, with 5 attempts of exponential backoff per failed query. Fifteen recovered, and 12 stayed p…",
+    "category": "ai_models",
+    "tags": [
+      "research_paper",
+      "ai_agents"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-24T03:05:31.000Z",
+    "discovered_at": "2026-05-24T12:00:12.593Z"
+  },
+  {
+    "id": "de0bcb37-a38a-4133-a110-d0928783c2e3",
+    "title": "Is there any reason for an uncensored model if you have no interest in roleplaying?",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlzvfs/is_there_any_reason_for_an_uncensored_model_if/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "My rag I've been building is much in response to having a LLM that I feel more confident in knowing where the knowledge base is coming from especially after the Open AI deal with the Pentagon. So, when I saw \"uncensored\" heretic models, I thought that was the main usage of those models and thought I would need them. But in doing various tests, it seems there's random problems that come up with them that don't come up in regular versions. And then even when I do run into something like qwen3.6 acting like it's giving me a more state approved answer for a no-no topic, I've found that if I just put a prompt ahead of it to not give me any propaganda, it basically \"jailbreaks\" the answer. But, if the model isn't trained on the info anyways, then there's not really a benefit to it. Are uncensored models just for people wanting...the *special* roleplaying? Before I write them off. Genuinely curious, not judging how people use them.",
+    "category": "ai_models",
+    "tags": [
+      "training",
+      "industry_move"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-24T02:49:19.000Z",
+    "discovered_at": "2026-05-24T12:00:12.578Z"
+  },
+  {
+    "id": "b1c55281-b7a4-4707-8d40-e681b902a406",
+    "title": "llampart 1.0.0 - I released a standalone local web UI for llama-server with translations, extended settings and a polished conversation sidebar",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlwoho/llampart_100_i_released_a_standalone_local_web_ui/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Hi everyone, I’ve just published the first public release of **llampart 1.0.0**: [https://github.com/mchowy-troll/llampart](https://github.com/mchowy-troll/llampart) llampart is a standalone local web UI designed to work with \\`llama-server\\`. It started from the \\`llama-ui\\` work in the \\`llama.cpp\\` project, but over time I customized it into a separate interface focused on local use, everyday comfort, and a more complete desktop-style experience. The goal was not to build another hosted chat service, but a clean local UI that feels pleasant to use for longer sessions while keeping the workflow simple. Some highlights: * **standalone** local web UI for \\`llama-server\\` * **extended settings interface with appearance**, model, MCP, tools, data, and advanced sections * localized interface: **English, Polish, German, French, Italian, and Spanish** * **two-column conversation sidebar** with conversation date/time display, conversation pinning, selective conversation deletion, delete-all while preserving pinned conversations * local import/export workflow that avoids exporting sensitive settings by default * llama-server connection workflow * MCP-related UI flows for servers, tools,…",
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "creative_workflow",
+      "tool_use",
+      "mcp"
+    ],
+    "importance_score": "0.82",
+    "published_at": "2026-05-24T00:19:41.000Z",
+    "discovered_at": "2026-05-24T12:00:12.671Z"
+  },
+  {
+    "id": "0681085d-106e-4107-8eb9-b4fc21726edf",
+    "title": "llama.cpp server have built-in native tools (exec_shell, edit_file, etc.)",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tluma3/llamacpp_server_have_builtin_native_tools_exec/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "https://preview.redd.it/24uvk7o4sy2h1.png?width=1440&amp;format=png&amp;auto=webp&amp;s=542570e3057b6f44c1e7e8d92130f575fb69cfa2 https://preview.redd.it/l4bbm7o4sy2h1.png?width=1440&amp;format=png&amp;auto=webp&amp;s=3dc0edd978da23fecf81e86a269a06de643247d1 I was messing around with running local models recently, and while digging through the llama.cpp server docs, I noticed this experimental flag just sitting right there: `--tools TOOL1,TOOL2,...` It natively supports `read_file`, `file_glob_search`, `grep_search`, `exec_shell_command`, `write_file`, `edit_file`, `apply_diff`, and `get_datetime`. That is a battery of tools that basically turns `llama-server` into a mini agent harness. You really don't need anything more than your trusty `.gguf` file and the llama.cpp binary for basic AI assistance in your projects. Note that file operations are relative to folder from which you started the server. There also isn't any security sandboxing yet, like a whitelist of allowed commands or strict denial of file operations outside the original folder. So, be very cautious with what you expose! But still, I'm pretty amazed that llama.cpp is gaining these abilities natively. It completely e…",
+    "category": "ai_models",
+    "tags": [
+      "model_release"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-05-23T22:48:30.000Z",
+    "discovered_at": "2026-05-24T12:00:12.605Z"
+  },
+  {
+    "id": "d2e0f15d-33ab-4bc3-88a5-62245c4112c9",
+    "title": "Command A+ (218B MoE) running on Apple Silicon — MLX port, PR open",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlqxeh/command_a_218b_moe_running_on_apple_silicon_mlx/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Cohere dropped Command A+ on the 20th (218B total / 25B active, 128 experts top-8, Apache 2.0). Wrote a cohere2\\_moe implementation for mlx-lm to get it running on Apple Silicon. Architecture notes for anyone digging into this model: \\- Single shared expert with a larger intermediate (16384 = 4096×4) combined with the routed output via (routed + shared)/2 \\- Sigmoid routing (not softmax), normalized top-8 \\- Sliding window 3:1 (3 sliding + 1 full), interleaved RoPE on sliding layers only \\- Parallel attn+MLP block off the same LayerNorm \\- Gotcha that cost me a few iterations: the biases in the W4A4 checkpoint are NVFP4 quantization artifacts — the BF16 model is entirely bias-free. sanitize() handles both formats. I couldn't validate locally (W4A4 needs \\~132GB, my M3 Max is 128). [https://github.com/vlbosch](https://github.com/vlbosch) ran it on a bigger box: BF16→Q8 conversion + clean generation, tool calling, multi-turn with KV-cache continuation, 22.9 tok/s gen / 57.6 tok/s prompt, 241GB peak. PR is open on ml-explore/mlx-lm (in review). Happy to take feedback or fixes — and if someone with 192GB+ wants to test the W4A4 path directly, would love the error output. [https://gith…",
+    "category": "ai_models",
+    "tags": [
+      "architecture",
+      "tool_use",
+      "open_source"
+    ],
+    "importance_score": "0.74",
+    "published_at": "2026-05-23T20:14:51.000Z",
+    "discovered_at": "2026-05-24T12:00:12.740Z"
+  },
+  {
+    "id": "9be1c48b-93d8-4894-9033-074d7e005d6e",
+    "title": "Embeddings for NVIDIA's Nemotron Personas",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlqcbi/embeddings_for_nvidias_nemotron_personas/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "I extracted embedding vectors for nvidia/Nemotron-Personas dataset. It's an incredible resource consisting of millions of synthetic personas with detailed backgrounds (names, ages, occupations, hobbies, and more), but finding specific personas or clustering them is difficult. To solve this, I used Qwen 0.6B to compute embeddings. While 0.6B is lightweight, it works perfectly for running semantic searches or finding K-Nearest Neighbors to build out persona groups. You can find the precomputed embedding vectors (Korea, Japan, France, USA). Please check out web demo. * Dataset:[ https://huggingface.co/collections/tantara/nemotron-personas-embedding](https://huggingface.co/collections/tantara/nemotron-personas-embedding) * Web Demo:[ https://www.microworld.dev/](https://www.microworld.dev/) Let me know what you think or if you end up using it for any of your local agent projects!",
+    "category": "ai_models",
+    "tags": [
+      "dataset",
+      "hardware"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-23T19:51:58.000Z",
+    "discovered_at": "2026-05-24T12:00:12.761Z"
+  },
+  {
+    "id": "f33b6241-bb2b-4608-b16b-c8a45a7f4bfb",
+    "title": "Does GPU spacing matter if we’re undervolting anyways?",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlonbw/does_gpu_spacing_matter_if_were_undervolting/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "How close can GPU cards be to each other on the mobo to remain safe and keep the hardware healthy over time? I have 4x 5060ti16gb cards in my mobo (I know 5060ti’s are not ideal when it comes to bandwidth, but I found a few at a decent price so it felt worth it at the time). They do fit on my mobo, but they seem pretty close to each other. These GPUs are supposed to be pretty power efficient, but I’ll probably undervolt them a bit anyways to limit power consumption. No liquid cooling or anything else here, just case fans (10 fans here). Is this amount of spacing cause for alarm or might damage the components over time, or am I just overthinking all this?",
+    "category": "ai_models",
+    "tags": [
+      "pricing_change",
+      "hardware"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-23T18:45:50.000Z",
+    "discovered_at": "2026-05-24T12:00:12.619Z"
+  },
+  {
+    "id": "e6396f45-21c7-4419-9afd-e1cef9f008ba",
+    "title": "Per-pixel bounding-box regression + DBSCAN for handwritten word detection - visual walkthrough of WordDetectorNet [P]",
+    "url": "https://reddit.com/r/MachineLearning/comments/1tloksk/perpixel_boundingbox_regression_dbscan_for/",
+    "source": "Reddit r/MachineLearning",
+    "summary": "[Overview of WordDetectorNN architecture.](https://preview.redd.it/qnfoh3sqjx2h1.png?width=1559&amp;format=png&amp;auto=webp&amp;s=7bd8a500ad2cbfe701e91d7c08dff609037d558a) Sharing a visual breakdown of WordDetectorNet, Harald Scheidl's handwritten-word detection model. I think the design choice at its core is unusual enough to be worth a closer look - and I haven't seen it written up in detail anywhere else. **The mechanism:** Instead of anchor-based detection + NMS, every pixel the network classifies as a \"word pixel\" also regresses 4 scalar distances (top/right/bottom/left) to the enclosing bounding box. Each word pixel therefore reconstructs one candidate box, producing thousands of overlapping candidates per word. These are then collapsed with DBSCAN using `distance = 1 − IoU` as the metric, taking the median box per cluster as the final detection. **Architecture:** ResNet18 backbone (modified to 1-channel grayscale input, with intermediate features exposed after each residual block) → FPN-style decoder that upscales and concatenates features at all scales → head producing 6 output channels per pixel (2 segmentation logits + 4 distance values). Loss = cross-entropy + IoU, equ…",
+    "category": "ai_research",
+    "tags": [
+      "architecture"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-05-23T18:43:00.000Z",
+    "discovered_at": "2026-05-24T12:00:08.795Z"
+  },
+  {
+    "id": "42fcac7f-9ef8-433f-8f14-0fabb67a3039",
+    "title": "NVFP4 + MTP - voilà on llama.cpp",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlohld/nvfp4_mtp_voilà_on_llamacpp/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "As in title - NVFP4 + MTP at once on llama.cpp [https://github.com/ggml-org/llama.cpp/releases/tag/b9297](https://github.com/ggml-org/llama.cpp/releases/tag/b9297)",
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "product_launch"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-23T18:39:22.000Z",
+    "discovered_at": "2026-05-24T12:00:12.730Z"
+  },
+  {
+    "id": "9dd74b1f-0c4f-4084-a8fd-30c4238d27a5",
+    "title": "I fine-tuned an LLM to be C-3PO to test which training data format works best for persona injection [P]",
+    "url": "https://reddit.com/r/MachineLearning/comments/1tlnvf0/i_finetuned_an_llm_to_be_c3po_to_test_which/",
+    "source": "Reddit r/MachineLearning",
+    "summary": "Tested three formats: chat demos, first-person statements (\"I am C-3PO...\"), and synthetic Wikipedia-style docs. Same model, same LoRA config, 500 examples each. First-person statements won on generalization, which I didn't expect. The synthetic doc model was the weirdest result: it knew C-3PO was anxious but only expressed it 37% of the time. Knowing a trait vs feeling it are apparently different things in weight space. **Code and GitHub repo link are included inside!**",
+    "category": "ai_research",
+    "tags": [
+      "dataset",
+      "training"
+    ],
+    "importance_score": "0.66",
+    "published_at": "2026-05-23T18:15:35.000Z",
+    "discovered_at": "2026-05-24T12:00:08.248Z"
+  },
+  {
+    "id": "a74b8a9b-3af7-419a-acd7-52cc43831467",
+    "title": "Run Chrome’s tiny Gemma4 (aka Gemini Nano) directly on PC without GPU",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlnqzj/run_chromes_tiny_gemma4_aka_gemini_nano_directly/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Everyone remembers that sneaky download of Gemini Nano earlier this month? and if you talk to it, it will happily tell you it’s a Gemma. Since some friends were interested but don’t want to talk to it via dev tools like talking to some poor house elf via a keyhole on a locked door, made a 5 minute vibe coded extension to run it. Nothing required just need Google chrome, 16gb RAM, and some disk space. No llama.cpp, no vllm etc. no tinkering (no fun I know). It’s quite fast and smooth, feels like ~20t/s+ on my laptop without gpu. I have no actual information on how fast though. All handled by chrome. It has 9216 tokens available per session, set by chrome. The model is run in chrome fully local. Use case…. Um spelling check so google wont know my spelling sucks ? Quick summary of long internet post? Just cute ? Anyway here is the one click add extension: https://chromewebstore.google.com/detail/dobby/ehinjcinljpggpokocmkbcaedpjdbbbe?authuser=0&amp;hl=en-GB&amp;pli=1 Or if you want to tinker a little and don’t want to call it Dobby(the house elf of chrome) here’s the repo: https://github.com/herryupmay/Dobby",
+    "category": "ai_models",
+    "tags": [
+      "hardware"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-05-23T18:10:48.000Z",
+    "discovered_at": "2026-05-24T12:00:12.659Z"
+  },
+  {
+    "id": "82f6bef8-af51-492d-8c08-b9575eeaebd0",
+    "title": "An experiment with attention.    wop • about 9 hours ago •  3",
+    "url": "https://huggingface.co/blog/wop/attention-experiment",
+    "source": "Hugging Face Blog",
+    "summary": null,
+    "category": "ai_models",
+    "tags": [
+      "architecture"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-05-23T18:00:22.665Z"
+  },
+  {
+    "id": "5db2dafe-2aa0-438b-9336-96ecb72271b3",
+    "title": "Jiaxin Wen positions vintage language models such as Talkie as baselines for testing pre-training and post-training technique interactions rather than rediscovering results like relativity — Alexander Doria prefers synthetic pretraining for controlled model behavior experiments.",
+    "url": "https://www.digg.com/ai/4k0x0pbn?rank=13",
+    "source": "Digg AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "training"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-05-23T18:00:21.872Z"
+  },
+  {
+    "id": "4860b1e7-8542-4b1d-ab7f-f44fad443ae9",
+    "title": "DanNet achieved the first deep convolutional neural network wins across four computer vision contests from May 2011 to September 2012, researcher Lucas Beyer notes, before ImageNet became the dominant benchmark — Contests covered handwriting recognition, traffic signs, segmentation and detection.",
+    "url": "https://www.digg.com/ai/q1nub7qa?rank=12",
+    "source": "Digg AI",
+    "summary": null,
+    "category": "ai_tools",
+    "tags": [
+      "benchmark"
+    ],
+    "importance_score": "0.58",
+    "published_at": null,
+    "discovered_at": "2026-05-23T18:00:21.870Z"
+  },
+  {
+    "id": "29c52ba0-697c-463b-a41b-b96e39fa8646",
+    "title": "Built an MCP server for cross-Asia streaming queries. Claude can now answer \"where can I watch X in Y\" for 30 markets.",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1tlklvm/built_an_mcp_server_for_crossasia_streaming/",
+    "source": "Reddit r/ClaudeAI",
+    "summary": "The problem: I run [ottasia.com](http://ottasia.com), a streaming aggregator for 30 markets across South Asia, SEA, East Asia, Central Asia, the Levant, the Gulf, and MENA. Users were asking Claude, \"Where can I watch \\[show\\] in \\[country\\]\" and Claude was just guessing, sometimes confidently wrong, sometimes citing JustWatch, which has thin coverage outside the US/UK. What I shipped today: an MCP server that gives Claude live access to OTTASIA's data. Install in the Claude Desktop config: { \"mcpServers\": { \"ottasia\": { \"command\": \"npx\", \"args\": \\[\"-y\", \"@ottasia/mcp-server\"\\] } } } Restart Claude. Three tools become available: \\- where\\_to\\_watch(title, country) for specific lookups \\- whats\\_new\\_on(provider, country) for \"what's new on Netflix India this month\" type queries \\- search\\_titles(q, country) for ambiguous queries like \"joker\" Three things I learned building this: 1. Tool descriptions are the killer feature. Claude picks the right tool based on the description alone; no orchestration prompt is needed. I list all 30 country codes and 24 provider slugs inline in the description, so Claude doesn't have to guess what's valid input. 2. Thin-client architecture wins for d…",
+    "category": "ai_tools",
+    "tags": [
+      "architecture",
+      "tool_use",
+      "mcp"
+    ],
+    "importance_score": "0.54",
+    "published_at": "2026-05-23T16:10:28.000Z",
+    "discovered_at": "2026-05-23T17:30:13.300Z"
+  },
+  {
+    "id": "030b3bcf-6cf1-4247-9533-254e8ce2b45f",
+    "title": "Any reason to run dense over MOE for RAGs?",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlkgq6/any_reason_to_run_dense_over_moe_for_rags/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "I tend to use Claude for a lot of research and I also increasingly worry about things like misinformation or things in the model I can't audit. So, I'm building my own all in one RAG with big datasets like all of Wiki, research papers, all the typical big data sets people like to grab. Then lots of books as well. Then, I do a lot of stuff like claim and argument extraction and such, but I won't get deep into that yet, it's still getting built. I was using qwen3.6 27b MTP for my inline chat for a while without even considering MOE cause this sub kinda led me to thinking MOE = bad. 27b = king. But, I started doing tests with it and I'm getting much better answers with qwen3.6 35b APEX. It seems to be grabbing way more information, bringing up way more points than what dense was finding. Dense didn't seem to compete hardly really. 150 tok/s is also nicer than 60 tok/s (I'm running a single 3090). I know people are much more interested in models for coding (believe me, I like it as well), but is there an advantage MOE has over dense for RAG specifically? If anybody even does RAG anymore, information that's not bot driven seems hard to find sometimes.",
+    "category": "ai_models",
+    "tags": [
+      "research_paper",
+      "architecture",
+      "reasoning"
+    ],
+    "importance_score": "0.74",
+    "published_at": "2026-05-23T16:04:50.000Z",
+    "discovered_at": "2026-05-23T17:30:14.413Z"
+  },
+  {
+    "id": "cf1e9398-4189-4a55-9c0b-c1cefcc3e411",
+    "title": "Benchmarked Needle 26M vs Qwen3-0.6B on CPU function calling, 50 queries across 5 difficulty tiers. The 23x smaller model wins on accuracy and is 4.4x faster.",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tljs5o/benchmarked_needle_26m_vs_qwen306b_on_cpu/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Ran a head-to-head on two open-weight models for tool-calling on a 4-core CPU, no GPU, no cherry-picking. Wanted to see if the small specialist (Needle, 26M, distilled from Gemini 3.1 for function calls) actually holds up against a small generalist (Qwen3-0.6B) that also does tools. Setup: 50 queries across 5 tiers (simple, paraphrased, implicit, ambiguous, edge cases including foreign language and a \"don't call any tool\" trap). 5 mock tools. Three metrics per run: parse\\_success, tool\\_match, args\\_match. Same queries, same eval rubric, same hardware. Headline numbers: Needle (26M) Qwen3 (0.6B) tool_match overall 72.0% 56.0% parse_success 84.0% 54.0% args_match | match 97.2% 100.0% mean latency 10.9s 47.9s The interesting part is not the overall win, it's the failure shapes. They diverge completely: * **Needle** fails by picking the wrong tool. When it does pick a tool, args are right 97% of the time. Its sin is selection, mostly routing system commands to search\\_web instead of run\\_command. * **Qwen3** fails by not calling a tool at all. Every single one of its 22 misses is a parse failure where it answered in prose instead of emitting `&lt;tool_call&gt;` tags. When it does emi…",
+    "category": "ai_models",
+    "tags": [
+      "api_update",
+      "inference",
+      "hardware",
+      "tool_use"
+    ],
+    "importance_score": "0.82",
+    "published_at": "2026-05-23T15:38:34.000Z",
+    "discovered_at": "2026-05-23T17:30:14.459Z"
+  },
+  {
+    "id": "c1c02907-dbea-461b-b28e-c9bf1bca66c7",
+    "title": "My experience using Claude code with Local Llm, and full guide on how to set it up",
+    "url": "https://reddit.com/r/ClaudeAI/comments/1tlir65/my_experience_using_claude_code_with_local_llm/",
+    "source": "Reddit r/ClaudeAI",
+    "summary": "Wanted to share a workflow I tested on a real flight, in case anyone else is trying to set up offline Claude Code. The core idea: using ollama to pull the needed model of what you need, and then use it to run claude code The setup, in order: 1. Pull a model on home wifi the night before. \\`ollama pull &lt;model&gt;\\` — \\~9 GB for a 14B, \\~17 GB for a 26B. Don't try this at the gate. 2. In Claude Code, point at Ollama. The cleanest path I found is wrapping it in two aliases: alias claude-local='ollama launch claude --model gemma4:26b' alias claude-cloud='claude' 3. Verify on the ground with wifi physically off. If it works in airplane mode at home, it works at 10 km in the sky. Where I got it wrong: I prepped qwen2.5-coder:14b first because it's the model everyone recommends in local-LLM threads. On the flight, it choked on Claude Code's tool loop; one call took 25 seconds, another took 52. For a workflow that chains five or six tool calls per task, that's unusable. Switched mid-flight to gemma4:26b (which I'd pulled as a backup). Different category of model, RL-trained for tool use, not just code completion. The tool loop ran at a usable speed. The gap analysis I was running on a…",
+    "category": "ai_tools",
+    "tags": [
+      "model_release",
+      "api_update",
+      "inference",
+      "creative_workflow",
+      "tool_use"
+    ],
+    "importance_score": "0.70",
+    "published_at": "2026-05-23T14:58:46.000Z",
+    "discovered_at": "2026-05-23T17:30:13.139Z"
+  },
+  {
+    "id": "1561527d-cd6e-4910-9641-a2b46ce17cf5",
+    "title": "What is the current best Small Language Model that can be run without GPU?",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tli757/what_is_the_current_best_small_language_model/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Curious with all the new model release this year, whats the best one in terms of accuracy and speed that you've ran without GPU. What is your deployment stack?",
+    "category": "ai_models",
+    "tags": [
+      "model_release",
+      "inference",
+      "hardware"
+    ],
+    "importance_score": "0.74",
+    "published_at": "2026-05-23T14:36:27.000Z",
+    "discovered_at": "2026-05-23T17:30:14.381Z"
+  },
+  {
+    "id": "5c34c061-02ef-43a7-9e9b-cbc1bc5fbb3a",
+    "title": "7900XTX idle power draw when running headless?",
+    "url": "https://reddit.com/r/LocalLLaMA/comments/1tlhqw6/7900xtx_idle_power_draw_when_running_headless/",
+    "source": "Reddit r/LocalLLaMA",
+    "summary": "Anybody running 7900XTXs headless on Linux and can chime in about the power draw? From my research (3 year old youtube videos) they all complained about idle being too high with an empty desktop - so made me question whether a big difference is expected when running headless.",
+    "category": "ai_models",
+    "tags": [
+      "research_paper"
+    ],
+    "importance_score": "0.58",
+    "published_at": "2026-05-23T14:18:48.000Z",
+    "discovered_at": "2026-05-23T17:30:14.541Z"
   }
 ]
