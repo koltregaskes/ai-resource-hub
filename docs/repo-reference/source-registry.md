@@ -1,6 +1,6 @@
 # Source Registry Snapshot
 
-Generated: 24 May 2026, 16:23 UTC
+Generated: 24 May 2026, 16:55 UTC
 
 This is the repo-readable mirror of the shared source registry. It shows where source definitions currently live, how they route into the website estate, and which collection / verification lane each source should use.
 
@@ -13,13 +13,13 @@ Canonical config:
 
 | Metric | Value |
 | --- | --- |
-| Generated | 24 May 2026, 16:23 UTC |
-| Configured sources | 12 |
-| AI Resource Hub routed sources | 12 |
-| Automated sources | 12 |
+| Generated | 24 May 2026, 16:55 UTC |
+| Configured sources | 13 |
+| AI Resource Hub routed sources | 13 |
+| Automated sources | 13 |
 | Manual-review-only sources | 0 |
 | Official-first verification lanes | 4 |
-| Cross-check verification lanes | 8 |
+| Cross-check verification lanes | 9 |
 
 ## Tracked Sources
 
@@ -30,6 +30,7 @@ Canonical config:
 | [arXiv cs.AI](https://export.arxiv.org/rss/cs.AI) | export.arxiv.org | Research / open source | Automated public source | Cross-check before promotion | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Research Feed, Academic | Active |
 | [arXiv cs.LG](https://export.arxiv.org/rss/cs.LG) | export.arxiv.org | Research / open source | Automated public source | Cross-check before promotion | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Research Feed, Academic | Active |
 | [Ben's Bites](https://www.bensbites.co/) | bensbites.co | Digest / newsletter | Automated public source | Cross-check before promotion | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Newsletter, Curated Digest | Partial |
+| [Digg AI](https://www.digg.com/ai) | digg.com | Research / open source | Automated public source | Cross-check before promotion | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Industry Media, Curated Digest, Open Source | Active |
 | [Google DeepMind Blog](https://deepmind.google/blog/) | deepmind.google | Official lab / provider | Automated public source | Official-first | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Provider Blog, Research Lab | Active |
 | [Hugging Face Blog](https://huggingface.co/blog/feed.xml) | huggingface.co | Official lab / provider | Automated public source | Official-first | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Platform Blog, Open Source | Active |
 | [Meta AI Blog](https://ai.meta.com/blog/) | ai.meta.com | Official lab / provider | Automated public source | Official-first | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Provider Blog, Research Lab | Active |
