@@ -52,6 +52,14 @@ const outputPath = path.join(repoRoot, 'src', 'data', 'news-pipeline.generated.t
 const publicDataDir = path.join(repoRoot, 'public', 'data');
 const publicSourceRegistryPath = path.join(publicDataDir, 'source-registry.json');
 
+function getMissingEstateConfigPaths() {
+  return [siteFiltersPath, sourcesPath, estateManifestPath].filter((candidate) => !fsSync.existsSync(candidate));
+}
+
+function canReuseCommittedSnapshot() {
+  return fsSync.existsSync(outputPath) && fsSync.existsSync(publicSourceRegistryPath);
+}
+
 const SITE_OVERRIDES = {
   'kols-korner': {
     name: "Kol's Korner",
@@ -229,6 +237,24 @@ function describeSourceGovernance(source, categories) {
 }
 
 async function main() {
+  const missingEstateConfigPaths = getMissingEstateConfigPaths();
+  if (missingEstateConfigPaths.length > 0) {
+    if (canReuseCommittedSnapshot()) {
+      console.log(
+        [
+          'WARN: shared website news routing config is unavailable in this environment.',
+          'Keeping committed news pipeline snapshots unchanged.',
+          `Missing: ${missingEstateConfigPaths.map((candidate) => path.relative(repoRoot, candidate)).join(', ')}`,
+        ].join(' ')
+      );
+      return;
+    }
+
+    throw new Error(
+      `Missing shared website news routing config and no committed snapshot is available: ${missingEstateConfigPaths.join(', ')}`
+    );
+  }
+
   const [siteFiltersRaw, sourcesRaw, estateRaw] = await Promise.all([
     fs.readFile(siteFiltersPath, 'utf8'),
     fs.readFile(sourcesPath, 'utf8'),
