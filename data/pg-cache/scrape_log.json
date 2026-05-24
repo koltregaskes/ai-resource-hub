@@ -1,111 +1,12 @@
 [
   {
-    "id": 22,
-    "scraper": "jobs",
-    "status": "success",
-    "models_updated": 1072,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:51",
-    "finished_at": "2026-05-24 19:00:51"
-  },
-  {
-    "id": 21,
-    "scraper": "news:rss",
-    "status": "success",
-    "models_updated": 76,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:43",
-    "finished_at": "2026-05-24 19:00:43"
-  },
-  {
-    "id": 20,
-    "scraper": "registry:normalise-status",
-    "status": "success",
-    "models_updated": 0,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:33",
-    "finished_at": "2026-05-24 19:00:33"
-  },
-  {
-    "id": 19,
-    "scraper": "quality-scores",
-    "status": "computed",
-    "models_updated": 55,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:31",
-    "finished_at": "2026-05-24 19:00:31"
-  },
-  {
-    "id": 18,
-    "scraper": "creative-benchmarks",
-    "status": "fallback",
-    "models_updated": 16,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:29",
-    "finished_at": "2026-05-24 19:00:29"
-  },
-  {
-    "id": 17,
-    "scraper": "speed",
-    "status": "success",
-    "models_updated": 31,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:27",
-    "finished_at": "2026-05-24 19:00:27"
-  },
-  {
-    "id": 16,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "success",
-    "models_updated": 27,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:25",
-    "finished_at": "2026-05-24 19:00:25"
-  },
-  {
-    "id": 15,
-    "scraper": "pricing:validator",
-    "status": "success",
-    "models_updated": 0,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:23",
-    "finished_at": "2026-05-24 19:00:23"
-  },
-  {
-    "id": 14,
-    "scraper": "official-pricing",
-    "status": "success",
-    "models_updated": 6,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:22",
-    "finished_at": "2026-05-24 19:00:22"
-  },
-  {
-    "id": 13,
-    "scraper": "pricing:openrouter",
-    "status": "success",
-    "models_updated": 247,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:21",
-    "finished_at": "2026-05-24 19:00:21"
-  },
-  {
-    "id": 12,
-    "scraper": "catalog:sync",
-    "status": "success",
-    "models_updated": 37,
-    "error_message": null,
-    "started_at": "2026-05-24 19:00:19",
-    "finished_at": "2026-05-24 19:00:19"
-  },
-  {
     "id": 11,
     "scraper": "jobs",
     "status": "success",
     "models_updated": 1072,
     "error_message": null,
-    "started_at": "2026-05-24 16:23:13",
-    "finished_at": "2026-05-24 16:23:13"
+    "started_at": "2026-05-24 19:38:28",
+    "finished_at": "2026-05-24 19:38:28"
   },
   {
     "id": 10,
@@ -113,8 +14,8 @@
     "status": "success",
     "models_updated": 76,
     "error_message": null,
-    "started_at": "2026-05-24 16:23:07",
-    "finished_at": "2026-05-24 16:23:07"
+    "started_at": "2026-05-24 19:38:23",
+    "finished_at": "2026-05-24 19:38:23"
   },
   {
     "id": 9,
@@ -122,17 +23,8 @@
     "status": "success",
     "models_updated": 106,
     "error_message": null,
-    "started_at": "2026-05-24 16:23:04",
-    "finished_at": "2026-05-24 16:23:04"
-  },
-  {
-    "id": 8,
-    "scraper": "quality-scores",
-    "status": "computed",
-    "models_updated": 55,
-    "error_message": null,
-    "started_at": "2026-05-24 16:23:03",
-    "finished_at": "2026-05-24 16:23:03"
+    "started_at": "2026-05-24 19:38:20",
+    "finished_at": "2026-05-24 19:38:20"
   },
   {
     "id": 7,
@@ -140,17 +32,17 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-05-24 16:23:02",
-    "finished_at": "2026-05-24 16:23:02"
+    "started_at": "2026-05-24 19:38:19",
+    "finished_at": "2026-05-24 19:38:19"
   },
   {
-    "id": 6,
-    "scraper": "speed",
-    "status": "success",
-    "models_updated": 31,
+    "id": 8,
+    "scraper": "quality-scores",
+    "status": "computed",
+    "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-05-24 16:23:01",
-    "finished_at": "2026-05-24 16:23:01"
+    "started_at": "2026-05-24 19:38:19",
+    "finished_at": "2026-05-24 19:38:19"
   },
   {
     "id": 5,
@@ -158,8 +50,17 @@
     "status": "success",
     "models_updated": 27,
     "error_message": null,
-    "started_at": "2026-05-24 16:23:00",
-    "finished_at": "2026-05-24 16:23:00"
+    "started_at": "2026-05-24 19:38:18",
+    "finished_at": "2026-05-24 19:38:18"
+  },
+  {
+    "id": 6,
+    "scraper": "speed",
+    "status": "success",
+    "models_updated": 31,
+    "error_message": null,
+    "started_at": "2026-05-24 19:38:18",
+    "finished_at": "2026-05-24 19:38:18"
   },
   {
     "id": 4,
@@ -167,17 +68,8 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-05-24 16:22:59",
-    "finished_at": "2026-05-24 16:22:59"
-  },
-  {
-    "id": 3,
-    "scraper": "official-pricing",
-    "status": "success",
-    "models_updated": 6,
-    "error_message": null,
-    "started_at": "2026-05-24 16:22:58",
-    "finished_at": "2026-05-24 16:22:58"
+    "started_at": "2026-05-24 19:38:17",
+    "finished_at": "2026-05-24 19:38:17"
   },
   {
     "id": 2,
@@ -185,8 +77,17 @@
     "status": "success",
     "models_updated": 247,
     "error_message": null,
-    "started_at": "2026-05-24 16:22:57",
-    "finished_at": "2026-05-24 16:22:57"
+    "started_at": "2026-05-24 19:38:16",
+    "finished_at": "2026-05-24 19:38:16"
+  },
+  {
+    "id": 3,
+    "scraper": "official-pricing",
+    "status": "success",
+    "models_updated": 6,
+    "error_message": null,
+    "started_at": "2026-05-24 19:38:16",
+    "finished_at": "2026-05-24 19:38:16"
   },
   {
     "id": 1,
@@ -194,7 +95,7 @@
     "status": "success",
     "models_updated": 37,
     "error_message": null,
-    "started_at": "2026-05-24 16:22:56",
-    "finished_at": "2026-05-24 16:22:56"
+    "started_at": "2026-05-24 19:38:15",
+    "finished_at": "2026-05-24 19:38:15"
   }
 ]
