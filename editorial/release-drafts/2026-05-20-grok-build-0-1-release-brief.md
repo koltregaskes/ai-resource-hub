@@ -7,7 +7,7 @@ priority: "high"
 model: "Grok Build 0.1"
 provider: "xAI"
 release_date: "2026-05-20"
-generated_at: "2026-05-24T15:20:22.077Z"
+generated_at: "2026-05-24T16:23:18.398Z"
 ---
 
 # Grok Build 0.1: release brief
@@ -29,7 +29,7 @@ Grok Build 0.1 is a currently tracked release from xAI. It is positioned as an A
 
 ## Outside coverage and early reactions
 
-- The Verge (2026-05-22): [Elon, stop trying to make Grok happen](https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen) - There is a harsh truth about Elon Musk's "truth-seeking" AI chatbot Grok: It's not very good, and not many people are using it. That's the takeaway of a new Reuters report, which found that Grok barely appears in federal records of how the US government used AI last year. It's not the only sign xAI's [&#8230;]
+- Aligned News (Scoble) (2026-05-22): [Braygent post idea 2: The talent density at our launch party @CAISconf is insane 🔥 packed with researchers from MIT, Stanford, Harvard, Princeton, Berkeley, UW; OpenAI, Meta, Google, Anthropic, xAI and ](https://t.co/j8JETakMSg) - A Braygent style posting idea with the required why and post framing.
 
 ## Suggested thread / post structure
 
@@ -50,4 +50,4 @@ Grok Build 0.1 is a currently tracked release from xAI. It is positioned as an A
 
 - [Official launch or docs](https://docs.x.ai/developers/models)
 - [Provider API/docs](https://docs.x.ai/developers/models)
-- [The Verge: Elon, stop trying to make Grok happen](https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen)
+- [Aligned News (Scoble): Braygent post idea 2: The talent density at our launch party @CAISconf is insane 🔥 packed with researchers from MIT, Stanford, Harvard, Princeton, Berkeley, UW; OpenAI, Meta, Google, Anthropic, xAI and ](https://t.co/j8JETakMSg)

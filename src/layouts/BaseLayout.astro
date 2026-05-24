@@ -22,6 +22,7 @@ interface Props {
   translationState?: TranslationState;
   translationNote?: string;
   robots?: string;
+  compactChrome?: boolean;
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   translationState = locale === DEFAULT_LOCALE ? 'source' : 'reviewed',
   translationNote,
   robots,
+  compactChrome = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -244,6 +246,58 @@ const footerSections = [
     ],
   },
 ];
+
+const compactNav = [
+  {
+    label: 'Models',
+    href: `${base}models/`,
+    children: [
+      { href: `${base}models/`, label: 'Model Directory', note: 'Tracked models by provider, price, and status' },
+      { href: `${base}leaderboard/`, label: 'Leaderboard', note: 'Frontier, value, speed, and evaluated views' },
+      { href: `${base}new/`, label: 'Release Desk', note: 'Newly tracked launches and briefs' },
+    ],
+  },
+  {
+    label: 'Benchmarks',
+    href: `${base}benchmarks/`,
+    children: [
+      { href: `${base}benchmarks/`, label: 'Benchmark Library', note: 'External eval sources and caveats' },
+      { href: `${base}methodology/`, label: 'Methodology', note: 'How AIRH scores and evidence states work' },
+      { href: `${base}reliability-floor/`, label: 'Reliability Floor', note: 'Everyday trust basics' },
+    ],
+  },
+  {
+    label: 'News',
+    href: `${base}news/`,
+    children: [
+      { href: `${base}news/`, label: 'News Desk', note: 'Latest captured AI signal' },
+      { href: `${base}updates/`, label: 'Updates', note: 'Data freshness and site changes' },
+      { href: `${base}changelog/`, label: 'Changelog', note: 'Recent hub activity' },
+    ],
+  },
+  {
+    label: 'Compare',
+    href: `${base}compare/llm/`,
+    children: [
+      { href: `${base}compare/llm/`, label: 'LLM Compare', note: 'Prices, speed, context, and quality' },
+      { href: `${base}compare/head-to-head/`, label: 'Head-to-Head', note: 'Compare two models directly' },
+      { href: `${base}best-value/`, label: 'Best Value', note: 'Quality per blended cost' },
+    ],
+  },
+  {
+    label: 'Guides',
+    href: `${base}guides/`,
+    children: [
+      { href: `${base}guides/`, label: 'Guides', note: 'Practical explainers and buying decisions' },
+      { href: `${base}academy/`, label: 'AI Academy', note: 'Structured learning path' },
+      { href: `${base}prompts/`, label: 'Prompt Library', note: 'Reusable prompt patterns' },
+    ],
+  },
+  {
+    label: 'Glossary',
+    href: `${base}glossary/`,
+  },
+];
 ---
 
 <!doctype html>
@@ -269,7 +323,7 @@ const footerSections = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
       rel="stylesheet"
     />
 
@@ -296,13 +350,15 @@ const footerSections = [
     <script is:inline>
       (function () {
         try {
+          const validThemes = new Set(['dark', 'light', 'cream', 'paper', 'slate', 'contrast']);
           const saved = localStorage.getItem('theme');
-          const theme = saved === 'light' ? 'light' : 'dark';
+          const theme = saved && validThemes.has(saved) ? saved : 'dark';
           document.documentElement.setAttribute('data-theme', theme);
 
           const themeColorMeta = document.querySelector('meta[name="theme-color"]');
           if (themeColorMeta) {
-            themeColorMeta.setAttribute('content', theme === 'dark' ? '#12100f' : '#f6f0e3');
+            const lightTheme = theme === 'light' || theme === 'cream' || theme === 'paper';
+            themeColorMeta.setAttribute('content', lightTheme ? '#f6f0e3' : '#12100f');
           }
         } catch (_) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -312,6 +368,86 @@ const footerSections = [
   </head>
   <body class="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary) flex flex-col">
     <a class="skip-link" href="#main-content">Skip to content</a>
+    {compactChrome && (
+      <header class="airh-compact-topbar">
+        <nav class="airh-compact-nav" aria-label="Primary">
+          <a href={base} class="airh-compact-brand">
+            <span>AI Resource Hub<span class="airh-brand-dot">.</span></span>
+          </a>
+
+          <div class="airh-compact-links">
+            {compactNav.map((item) => (
+              item.children ? (
+                <div class="nav-dropdown-group relative">
+                  <a href={item.href} class="airh-compact-link">
+                    {item.label}
+                    <svg class="nav-chevron h-3 w-3 opacity-50 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </a>
+                  <div class="nav-dropdown absolute left-0 top-full hidden pt-2">
+                    <div class="min-w-[270px] rounded-lg border border-(--color-border-strong) bg-(--color-bg-secondary) p-2 shadow-[0_18px_38px_rgba(0,0,0,0.18)]">
+                      {item.children.map((child) => (
+                        <a href={child.href} class="group flex items-start gap-3 rounded-md px-3 py-2.5 transition-colors hover:bg-(--color-bg-primary)">
+                          <div class="mt-1 h-1.5 w-1.5 shrink-0 rounded-sm bg-(--color-accent) opacity-70 group-hover:opacity-100"></div>
+                          <div>
+                            <p class="text-sm font-semibold text-(--color-text-primary)">{child.label}</p>
+                            {child.note && <p class="mt-0.5 text-xs leading-5 text-(--color-text-muted)">{child.note}</p>}
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <a href={item.href} class="airh-compact-link">{item.label}</a>
+              )
+            ))}
+          </div>
+
+          <div class="airh-compact-actions">
+            <GlobalSearch items={searchIndex} baseUrl={base} variant="compact" />
+
+            <div class="airh-layout-switcher" role="group" aria-label="Homepage layout">
+              <button type="button" class="airh-tool-icon is-active" data-airh-layout-switch="spreadsheet" data-airh-tip="Spreadsheet view. Dense data first.">
+                <span aria-hidden="true">▦</span>
+                <span class="sr-only">Spreadsheet</span>
+              </button>
+              <button type="button" class="airh-tool-icon is-disabled" aria-disabled="true" data-airh-layout-switch="dossier" data-airh-tip="Dossier view is parked for the next pass.">
+                <span aria-hidden="true">▤</span>
+                <span class="sr-only">Dossier</span>
+              </button>
+              <button type="button" class="airh-tool-icon is-disabled" aria-disabled="true" data-airh-layout-switch="monitor" data-airh-tip="Monitor view is parked for the next pass.">
+                <span aria-hidden="true">▥</span>
+                <span class="sr-only">Monitor</span>
+              </button>
+              <button type="button" class="airh-tool-icon" data-airh-layout-switch="terminal" data-airh-tip="Try Terminal mode. We remember your choice.">
+                <span aria-hidden="true">›_</span>
+                <span class="sr-only">Terminal</span>
+              </button>
+            </div>
+
+            <details class="airh-theme-menu">
+              <summary class="airh-tool-icon" data-airh-tip="Pick a palette. We remember your choice.">
+                <span aria-hidden="true">◐</span>
+                <span class="sr-only">Theme picker</span>
+              </summary>
+              <div class="airh-theme-panel">
+                <button type="button" data-theme-choice="dark"><span style="background:#12100f"></span>Dark</button>
+                <button type="button" data-theme-choice="light"><span style="background:#f6f0e3"></span>Cream</button>
+                <button type="button" data-theme-choice="paper"><span style="background:#fffaf0"></span>Paper</button>
+                <button type="button" data-theme-choice="slate"><span style="background:#1f2933"></span>Slate</button>
+                <button type="button" data-theme-choice="contrast"><span style="background:#050505"></span>Contrast</button>
+              </div>
+            </details>
+
+            <button type="button" class="airh-signin-placeholder" data-airh-tip="Coming soon: sign in to save filters, watchlist, and layout.">Sign in</button>
+          </div>
+        </nav>
+      </header>
+    )}
+
+    {!compactChrome && (
     <header class="sticky top-0 z-50 border-b border-(--color-border-strong) bg-(--color-bg-primary)/92 backdrop-blur-md">
       <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Primary">
         <a href={base} class="flex shrink-0 items-center gap-3">
@@ -468,6 +604,7 @@ const footerSections = [
         </div>
       </div>
     </header>
+    )}
 
     {(locale !== DEFAULT_LOCALE || translationState !== 'source' || translationNote) && (
       <div class="translation-banner-shell">
@@ -545,22 +682,41 @@ const footerSections = [
       const moonIcon = document.getElementById('theme-icon-moon');
       const sunIcon = document.getElementById('theme-icon-sun');
       const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+      const validThemes = new Set(['dark', 'light', 'cream', 'paper', 'slate', 'contrast']);
+
+      function isLightTheme(theme: string) {
+        return theme === 'light' || theme === 'cream' || theme === 'paper';
+      }
+
+      function setTheme(theme: string) {
+        const nextTheme = validThemes.has(theme) ? theme : 'dark';
+        document.documentElement.setAttribute('data-theme', nextTheme);
+        localStorage.setItem('theme', nextTheme);
+        updateThemeIcons();
+      }
 
       function updateThemeIcons() {
-        const theme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-        const isDark = theme === 'dark';
+        const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const isDark = !isLightTheme(theme);
         moonIcon?.classList.toggle('hidden', isDark);
         sunIcon?.classList.toggle('hidden', !isDark);
-        themeColorMeta?.setAttribute('content', isDark ? '#12100f' : '#f6f0e3');
+        themeColorMeta?.setAttribute('content', isLightTheme(theme) ? '#f6f0e3' : '#12100f');
+
+        document.querySelectorAll<HTMLElement>('[data-theme-choice]').forEach((button) => {
+          button.classList.toggle('is-active', button.getAttribute('data-theme-choice') === theme);
+        });
       }
       updateThemeIcons();
 
       themeToggle?.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', nextTheme);
-        localStorage.setItem('theme', nextTheme);
-        updateThemeIcons();
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        setTheme(isLightTheme(currentTheme) ? 'dark' : 'light');
+      });
+
+      document.querySelectorAll<HTMLElement>('[data-theme-choice]').forEach((button) => {
+        button.addEventListener('click', () => {
+          setTheme(button.getAttribute('data-theme-choice') || 'dark');
+        });
       });
 
       const groups = document.querySelectorAll('.nav-dropdown-group');

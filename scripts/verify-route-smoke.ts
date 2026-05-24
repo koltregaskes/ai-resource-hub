@@ -12,7 +12,7 @@ const repoRoot = process.cwd();
 const distRoot = path.join(repoRoot, 'dist');
 
 const checks: RouteCheck[] = [
-  { route: '/', file: 'index.html', expectedText: 'AI model facts, fast.' },
+  { route: '/', file: 'index.html', expectedText: 'Frontier - composite leaderboard' },
   { route: '/leaderboard/', file: path.join('leaderboard', 'index.html'), expectedText: 'Reliability Floor' },
   { route: '/benchmarks/', file: path.join('benchmarks', 'index.html'), expectedText: 'AI Model Benchmarks' },
   { route: '/models/', file: path.join('models', 'index.html'), expectedText: 'AI model directory' },

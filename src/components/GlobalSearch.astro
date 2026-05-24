@@ -12,9 +12,11 @@ interface SearchItem {
 interface Props {
   items: SearchItem[];
   baseUrl?: string;
+  variant?: 'default' | 'compact';
 }
 
-const { items, baseUrl: _baseUrl = '/' } = Astro.props;
+const { items, baseUrl: _baseUrl = '/', variant = 'default' } = Astro.props;
+const isCompact = variant === 'compact';
 
 const typeLabels: Record<string, string> = {
   model: 'Model',
@@ -41,15 +43,21 @@ const typeColorsJSON = safeJson(typeColors);
 <div class="global-search" data-global-search>
   <button
     type="button"
-    class="flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-tertiary)] px-3 py-1.5 text-sm text-[var(--color-text-muted)] transition-colors hover:border-[var(--color-border-hover)] hover:text-[var(--color-text-secondary)]"
+    class={isCompact
+      ? 'airh-search-pill'
+      : 'flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-tertiary)] px-3 py-1.5 text-sm text-[var(--color-text-muted)] transition-colors hover:border-[var(--color-border-hover)] hover:text-[var(--color-text-secondary)]'}
     aria-label="Search"
     data-search-trigger
   >
     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
     </svg>
-    <span class="hidden sm:inline">Search</span>
-    <kbd class="hidden items-center gap-0.5 rounded border border-[var(--color-border)] bg-[var(--color-bg-primary)] px-1.5 py-0.5 font-mono text-[10px] text-[var(--color-text-muted)] sm:inline-flex">
+    <span class={isCompact ? 'airh-search-placeholder' : 'hidden sm:inline'}>
+      {isCompact ? 'Search models, benchmarks, news...' : 'Search'}
+    </span>
+    <kbd class={isCompact
+      ? 'airh-search-kbd'
+      : 'hidden items-center gap-0.5 rounded border border-[var(--color-border)] bg-[var(--color-bg-primary)] px-1.5 py-0.5 font-mono text-[10px] text-[var(--color-text-muted)] sm:inline-flex'}>
       Ctrl+K
     </kbd>
   </button>

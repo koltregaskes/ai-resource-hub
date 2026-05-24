@@ -1,91 +1,105 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getNews } from '../db/queries';
-import { getAiMilestonesOverview } from '../data/ai-milestones';
-import { modelReleaseDesk } from '../data/model-release-desk.generated';
-import { getReliabilityFloorOverview } from '../data/reliability-floor';
 import {
-  getAgiOverview,
   getDataPulse,
-  getFrontierNow,
   getLatestActivities,
   getLatestDigest,
   getMetaLeaderboard,
   normaliseDateTime,
-  type AgiFrontierPoint,
 } from '../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const frontierNowAll = getFrontierNow(24);
-const frontierNow = frontierNowAll.slice(0, 10);
-const metaLeaderboardAll = getMetaLeaderboard(250);
-const evaluatedLeaderboard = metaLeaderboardAll.slice(0, 10);
-const reliabilityOverview = getReliabilityFloorOverview();
-const reliabilityPreview = [
-  ...reliabilityOverview.ranked,
-  ...reliabilityOverview.partial,
-  ...reliabilityOverview.tracking,
-].slice(0, 8);
-const reliabilityLeader = reliabilityOverview.ranked[0] ?? reliabilityOverview.partial[0] ?? reliabilityOverview.tracking[0] ?? null;
-const agiOverview = getAgiOverview();
-const latestDigest = getLatestDigest();
-const digestEntries = latestDigest?.entries.slice(0, 5) ?? [];
-const dataPulse = getDataPulse(base);
-const activities = getLatestActivities(8, base);
-const milestonesOverview = getAiMilestonesOverview();
 type HeadlineNewsItem = ReturnType<typeof getNews>[number] & {
   discovered_at?: string | null;
 };
+
+type HomeRow = {
+  id: string;
+  rank: number;
+  name: string;
+  provider: string;
+  providerKey: string;
+  providerColour: string;
+  status: string;
+  href: string;
+  composite: number;
+  realWorld: number;
+  benchmarkScore: number;
+  qualityScore: number;
+  valueScore: number;
+  inputPrice: number;
+  outputPrice: number;
+  blendedPrice: number;
+  speed: number;
+  contextWindow: number;
+  released: string | null;
+  releasedLabel: string;
+  releasedDays: number | null;
+  openSource: boolean;
+  apiAvailable: boolean;
+  modality: string[];
+  bestFor: string;
+  benchmarkCount: number;
+  coverageRatio: number;
+  typeKeys: string[];
+  licenceKey: 'open' | 'closed';
+  tags: string[];
+  trendKind: 'new' | 'flat' | 'pending';
+  trendLabel: string;
+};
+
+const metaLeaderboardAll = getMetaLeaderboard(250);
+const dataPulse = getDataPulse(base);
+const activities = getLatestActivities(14, base);
+const latestDigest = getLatestDigest();
+const digestEntries = latestDigest?.entries.slice(0, 5) ?? [];
 const headlineNews = (getNews() as HeadlineNewsItem[])
   .map((item) => ({
     ...item,
     headlineDate: normaliseDateTime(item.published_at ?? item.discovered_at ?? null),
   }))
   .sort((a, b) => Date.parse(b.headlineDate ?? '') - Date.parse(a.headlineDate ?? ''))
-  .slice(0, 5);
+  .slice(0, 6);
 
-const frontierLeader = frontierNow[0] ?? null;
-const evaluatedLeader = evaluatedLeaderboard[0] ?? null;
-const bestOpenModel = metaLeaderboardAll.find((model) => model.openSource) ?? null;
-const bestValueModel = [...metaLeaderboardAll]
-  .filter((model) => model.inputPrice > 0 && model.outputPrice > 0)
-  .sort((a, b) => b.valueScore - a.valueScore)[0] ?? null;
-const latestTrackedRelease = modelReleaseDesk.releases.find((release) => release.draftStatus === 'ready_for_editor')
-  ?? modelReleaseDesk.releases.find((release) => release.priority === 'high')
-  ?? modelReleaseDesk.releases[0]
-  ?? null;
-
-function latestTimestamp(values: Array<string | null | undefined>): string | null {
-  const timestamps = values
-    .map((value) => normaliseDateTime(value))
-    .filter((value): value is string => Boolean(value))
-    .sort((a, b) => Date.parse(b) - Date.parse(a));
-
-  return timestamps[0] ?? null;
+function slug(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'unknown';
 }
 
-function formatDateLabel(value: string | null | undefined, options?: Intl.DateTimeFormatOptions): string {
+function formatDateLabel(value: string | null | undefined): string {
   const normalised = normaliseDateTime(value);
   if (!normalised) return 'Awaiting refresh';
-
   return new Date(normalised).toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'short',
     year: 'numeric',
-    ...options,
   });
 }
 
-function formatContextWindow(tokens: number): string {
-  if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(1)}M`;
-  if (tokens >= 1_000) return `${Math.round(tokens / 1_000)}K`;
-  return `${tokens}`;
+function formatRelativeTime(value: string | null | undefined): string {
+  const normalised = normaliseDateTime(value);
+  if (!normalised) return 'awaiting refresh';
+  const diffMinutes = Math.max(0, Math.round((Date.now() - Date.parse(normalised)) / 60000));
+  if (diffMinutes < 1) return 'just now';
+  if (diffMinutes < 60) return `${diffMinutes}m ago`;
+  const diffHours = Math.round(diffMinutes / 60);
+  if (diffHours < 48) return `${diffHours}h ago`;
+  return `${Math.round(diffHours / 24)}d ago`;
 }
 
-function formatCoverage(ratio: number): string {
-  return `${Math.round(ratio * 100)}%`;
+function daysSince(value: string | null | undefined): number | null {
+  const normalised = normaliseDateTime(value);
+  if (!normalised) return null;
+  const diff = Math.floor((Date.now() - Date.parse(normalised)) / 86400000);
+  return Number.isFinite(diff) ? Math.max(0, diff) : null;
+}
+
+function formatContextWindow(tokens: number): string {
+  if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(tokens % 1_000_000 === 0 ? 0 : 1)}M`;
+  if (tokens >= 1_000) return `${Math.round(tokens / 1_000)}K`;
+  return tokens > 0 ? `${tokens}` : 'n/a';
 }
 
 function formatPricePair(inputPrice: number, outputPrice: number, openSource: boolean): string {
@@ -93,978 +107,990 @@ function formatPricePair(inputPrice: number, outputPrice: number, openSource: bo
   return `$${inputPrice.toFixed(2)} / $${outputPrice.toFixed(2)}`;
 }
 
-function isExternalLink(href: string | null | undefined): boolean {
-  return Boolean(href && /^https?:\/\//.test(href));
+function formatScore(value: number): string {
+  return value > 0 ? value.toFixed(1) : 'pending';
 }
 
-function buildAgiChart(points: AgiFrontierPoint[]) {
-  if (points.length === 0) {
-    return {
-      path: '',
-      areaPath: '',
-      circles: [] as Array<{ x: number; y: number; score: number; label: string; modelName: string }>,
-      guides: [] as number[],
-    };
-  }
-
-  const width = 720;
-  const height = 280;
-  const paddingX = 26;
-  const paddingY = 20;
-  const usableWidth = width - paddingX * 2;
-  const usableHeight = height - paddingY * 2;
-  const scores = points.map((point) => point.score);
-  const minScore = Math.min(...scores);
-  const maxScore = Math.max(...scores);
-  const scoreFloor = Math.max(0, Math.floor((minScore - 6) / 5) * 5);
-  const scoreCeiling = Math.min(100, Math.ceil((maxScore + 4) / 5) * 5);
-  const scoreRange = Math.max(1, scoreCeiling - scoreFloor);
-  const stepX = points.length > 1 ? usableWidth / (points.length - 1) : usableWidth / 2;
-
-  const circles = points.map((point, index) => {
-    const x = points.length > 1 ? paddingX + stepX * index : width / 2;
-    const ratio = (point.score - scoreFloor) / scoreRange;
-    const y = paddingY + usableHeight - ratio * usableHeight;
-    return {
-      x: Number(x.toFixed(2)),
-      y: Number(y.toFixed(2)),
-      score: point.score,
-      label: point.label,
-      modelName: point.modelName,
-    };
-  });
-
-  const path = circles.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`).join(' ');
-  const areaPath = `${path} L ${circles.at(-1)?.x ?? paddingX} ${height - paddingY} L ${circles[0]?.x ?? paddingX} ${height - paddingY} Z`;
-  const guides = Array.from({ length: 4 }, (_, index) => {
-    const ratio = index / 3;
-    return Number((paddingY + usableHeight * ratio).toFixed(2));
-  });
-
-  return { path, areaPath, circles, guides };
+function scoreWidth(value: number): string {
+  return `${Math.max(4, Math.min(100, value))}%`;
 }
 
-const agiChart = buildAgiChart(agiOverview.frontierPoints);
-const latestHomepageUpdate = latestTimestamp([
+function getTypeKeys(model: { name: string; bestFor: string; modality: string[] }): string[] {
+  const haystack = `${model.name} ${model.bestFor} ${model.modality.join(' ')}`.toLowerCase();
+  const keys = new Set(['general']);
+  if (/reason|math|logic|o\d\b/.test(haystack)) keys.add('reasoning');
+  if (/vision|image|audio|video|multimodal/.test(haystack)) keys.add('multimodal');
+  if (/coding|code|software|developer|swe/.test(haystack)) keys.add('coding');
+  return Array.from(keys);
+}
+
+function getTags(model: {
+  name: string;
+  bestFor: string;
+  modality: string[];
+  openSource: boolean;
+  apiAvailable: boolean;
+  speed: number;
+  releasedDays: number | null;
+}): string[] {
+  const haystack = `${model.name} ${model.bestFor} ${model.modality.join(' ')}`.toLowerCase();
+  const tags = new Set<string>();
+  if (model.openSource) tags.add('open');
+  if (/reason|math|logic|o\d\b/.test(haystack)) tags.add('reasoning');
+  if (/vision|image|audio|video|multimodal/.test(haystack)) tags.add('multimodal');
+  if (model.speed >= 100) tags.add('fast');
+  if (model.releasedDays !== null && model.releasedDays <= 14) tags.add('new');
+  if (model.apiAvailable && !model.openSource) tags.add('api');
+  return Array.from(tags);
+}
+
+const rows: HomeRow[] = metaLeaderboardAll.map((model, index) => {
+  const providerKey = slug(model.provider);
+  const releasedDays = daysSince(model.released);
+  const blendedPrice = (model.inputPrice + 3 * model.outputPrice) / 4;
+  const typeKeys = getTypeKeys(model);
+  const realWorld = model.qualityScore;
+  const trendKind: HomeRow['trendKind'] = releasedDays !== null && releasedDays <= 14
+    ? 'new'
+    : model.benchmarkCount > 0
+      ? 'flat'
+      : 'pending';
+  const trendLabel = trendKind === 'new' ? 'new' : trendKind === 'flat' ? 'flat' : 'pending';
+
+  const row = {
+    id: model.id,
+    rank: index + 1,
+    name: model.name,
+    provider: model.provider,
+    providerKey,
+    providerColour: model.providerColour || '#847360',
+    status: model.status,
+    href: `${base}models/${model.id}/`,
+    composite: model.metaScore,
+    realWorld,
+    benchmarkScore: model.benchmarkScore,
+    qualityScore: model.qualityScore,
+    valueScore: model.valueScore,
+    inputPrice: model.inputPrice,
+    outputPrice: model.outputPrice,
+    blendedPrice,
+    speed: model.speed,
+    contextWindow: model.contextWindow,
+    released: normaliseDateTime(model.released),
+    releasedLabel: formatDateLabel(model.released),
+    releasedDays,
+    openSource: model.openSource,
+    apiAvailable: model.apiAvailable,
+    modality: model.modality,
+    bestFor: model.bestFor,
+    benchmarkCount: model.benchmarkCount,
+    coverageRatio: model.coverageRatio,
+    typeKeys,
+    licenceKey: (model.openSource ? 'open' : 'closed') as HomeRow['licenceKey'],
+    tags: [] as string[],
+    trendKind,
+    trendLabel,
+  };
+
+  row.tags = getTags(row);
+  return row;
+});
+
+const providerOptions = Array.from(
+  rows.reduce((map, row) => {
+    const entry = map.get(row.providerKey) ?? {
+      key: row.providerKey,
+      label: row.provider,
+      colour: row.providerColour,
+      count: 0,
+    };
+    entry.count += 1;
+    map.set(row.providerKey, entry);
+    return map;
+  }, new Map<string, { key: string; label: string; colour: string; count: number }>())
+    .values(),
+).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+
+const typeOptions = [
+  { key: 'general', label: 'General', count: rows.filter((row) => row.typeKeys.includes('general')).length },
+  { key: 'reasoning', label: 'Reasoning', count: rows.filter((row) => row.typeKeys.includes('reasoning')).length },
+  { key: 'multimodal', label: 'Multimodal', count: rows.filter((row) => row.typeKeys.includes('multimodal')).length },
+  { key: 'coding', label: 'Coding-tuned', count: rows.filter((row) => row.typeKeys.includes('coding')).length },
+  { key: 'embedding', label: 'Embedding', count: 0 },
+  { key: 'speech', label: 'Speech', count: 0 },
+];
+
+const licenceOptions = [
+  { key: 'open', label: 'Open weights', count: rows.filter((row) => row.openSource).length },
+  { key: 'closed', label: 'Closed / API', count: rows.filter((row) => !row.openSource).length },
+];
+
+const releaseOptions = [
+  { key: '7', label: '7d' },
+  { key: '30', label: '30d' },
+  { key: '90', label: '90d' },
+  { key: '365', label: '1y' },
+  { key: 'all', label: 'all' },
+];
+
+const contextOptions = [
+  { key: '32000', label: '>= 32K' },
+  { key: '128000', label: '>= 128K' },
+  { key: '1000000', label: '>= 1M' },
+];
+
+const viewCounts = {
+  frontier: rows.length,
+  cheapest: rows.filter((row) => row.blendedPrice > 0).length,
+  fastest: rows.filter((row) => row.speed > 0).length,
+  open: rows.filter((row) => row.openSource).length,
+  value: rows.filter((row) => row.valueScore > 0).length,
+};
+
+const latestTimestamp = [
   ...dataPulse.map((item) => item.updatedAt),
   ...activities.map((item) => item.date),
   latestDigest ? normaliseDateTime(latestDigest.digestDate) : null,
-  agiOverview.updatedAt,
-]);
+]
+  .filter((value): value is string => Boolean(value))
+  .sort((a, b) => Date.parse(b) - Date.parse(a))[0] ?? null;
 
-const heroStats = [
-  {
-    label: 'Frontier watchlist',
-    value: frontierNowAll.length.toLocaleString('en-GB'),
-  },
-  {
-    label: 'Reliability sources',
-    value: reliabilityOverview.sources.length.toLocaleString('en-GB'),
-  },
-  {
-    label: 'Digest stories',
-    value: (latestDigest?.storyCount ?? digestEntries.length).toLocaleString('en-GB'),
-  },
-  {
-    label: 'Latest full refresh',
-    value: formatDateLabel(latestHomepageUpdate, { day: 'numeric', month: 'short' }),
-  },
+const nextRefreshLabel = latestTimestamp
+  ? new Date(Date.parse(latestTimestamp) + 60 * 60 * 1000).toLocaleString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZoneName: 'short',
+  })
+  : 'next scheduled hourly run';
+
+const tickerItems = [
+  ...activities.slice(0, 8).map((entry) => ({
+    time: formatRelativeTime(entry.date),
+    label: entry.title,
+    detail: entry.detail,
+    href: entry.href ?? `${base}changelog/`,
+    type: entry.category,
+  })),
+  ...headlineNews.slice(0, 4).map((entry) => ({
+    time: formatRelativeTime(entry.headlineDate),
+    label: entry.title,
+    detail: entry.source,
+    href: entry.url,
+    type: 'news',
+  })),
+].slice(0, 10);
+
+const duplicatedTickerItems = [...tickerItems, ...tickerItems];
+const initialRows = rows.slice(0, 12);
+const openRows = rows.filter((row) => row.openSource);
+const speedRows = rows.filter((row) => row.speed > 0);
+const latestRows = rows.filter((row) => row.releasedDays !== null && row.releasedDays <= 30);
+const topValue = [...rows].filter((row) => row.valueScore > 0).sort((a, b) => b.valueScore - a.valueScore)[0] ?? null;
+
+const tableLinks = [
+  { href: `${base}cheapest/`, label: 'Cheapest credible (>= 70)' },
+  { href: `${base}fastest/`, label: 'Fastest by tokens/sec' },
+  { href: `${base}open-source/`, label: 'Open weights only' },
+  { href: `${base}multimodal/`, label: 'Multimodal' },
+  { href: `${base}context-window/`, label: 'Longest context' },
+  { href: `${base}reasoning/`, label: 'Reasoning models' },
 ];
+
+const homepagePayload = JSON.stringify({
+  rows,
+  tickerItems,
+  base,
+  latestTimestamp,
+  nextRefreshLabel,
+  viewCounts,
+}).replace(/</g, '\\u003c');
 ---
 
 <BaseLayout
-  title="The AI Resource Hub - Frontier Models, Evaluated Rankings, and Daily AI Updates"
-  locale="en-GB"
-  alternateTranslations={{
-    'en-GB': `${base}`,
-    es: `${base}es/`,
-    'pt-BR': `${base}pt-br/`,
-    'zh-Hans': `${base}zh-hans/`,
-  }}
-  localeMenuLinks={{
-    'en-GB': `${base}`,
-    es: `${base}es/`,
-    'pt-BR': `${base}pt-br/`,
-    'zh-Hans': `${base}zh-hans/`,
-  }}
+  title="AI Resource Hub - Live Model Leaderboard, Pricing, Benchmarks, and AI News"
+  description="A dense, hourly refreshed reference desk for AI models, prices, benchmark-backed rankings, releases, and live AI updates."
+  compactChrome
 >
-  <section class="hub-home-shell">
-    <div class="hub-home-frame mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
-      <div class="hub-home-grid">
-        <div class="hub-home-head">
-          <p class="hub-home-kicker">Reference desk</p>
-          <h1 class="hub-home-title">AI model facts, fast.</h1>
-          <p class="hub-home-intro">
-            Find current models, everyday reliability signals, benchmark-backed rankings, prices, releases, and what changed today.
-          </p>
-
-          <div class="hub-home-actions">
-            <a href={`${base}leaderboard/`} class="editorial-button editorial-button-primary">Open full leaderboard</a>
-            <a href={`${base}methodology/`} class="editorial-button editorial-button-secondary">How the scores work</a>
-          </div>
-
-          <div class="hub-home-stat-strip">
-            {heroStats.map((stat) => (
-              <div class="hub-home-stat">
-                <p class="hub-home-stat-value">{stat.value}</p>
-                <p class="hub-home-stat-label">{stat.label}</p>
-              </div>
-            ))}
+  <div class="airh-home" data-airh-home>
+    <section class="airh-layout-panel" data-airh-layout-panel="spreadsheet">
+      <div class="airh-ticker" aria-label="Latest changes on the hub">
+        <div class="airh-ticker-inner">
+          <a href={`${base}updates/`} class="airh-ticker-stamp" data-airh-tip="Changes on the hub: releases, model rows, price data, source snapshots, and news. Refreshes hourly.">
+            <span class="airh-pulse-dot"></span>
+            <span>What's new</span>
+          </a>
+          <div class="airh-ticker-window">
+            <div class="airh-ticker-stream">
+              {duplicatedTickerItems.map((item) => (
+                <a href={item.href} class="airh-ticker-item">
+                  <span class="airh-ticker-time">{item.time}</span>
+                  <strong>{item.label}</strong>
+                  <span>{item.detail}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-
-        <aside class="hub-home-brief">
-          <div class="hub-home-brief-head">
-            <div>
-              <p class="hub-home-mini-label">Fastest routes</p>
-              <h2 class="hub-home-side-title">Jump straight to the useful parts.</h2>
-            </div>
-            <p class="hub-home-fresh-legend">
-              <span class="fresh-dot fresh-dot-static"></span>
-              Updated since your last visit
-            </p>
-          </div>
-
-          <div class="hub-home-brief-links">
-            <a href={`${base}leaderboard/`} class="hub-home-brief-link" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Frontier now
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">{frontierLeader ? `${frontierLeader.name} is on the watchlist` : 'Current flagship models'}</span>
-            </a>
-            <a href={`${base}reliability-floor/`} class="hub-home-brief-link" data-fresh-at={reliabilityOverview.lastUpdated ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Reliability Floor
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">
-                {reliabilityLeader
-                  ? `${reliabilityLeader.evidenceLabel}: ${reliabilityLeader.name}`
-                  : 'Everyday reliability'}
-              </span>
-            </a>
-            <a href={`${base}leaderboard/`} class="hub-home-brief-link" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  Evaluated composite
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">{evaluatedLeader ? `Top scored: ${evaluatedLeader.name}` : 'Benchmark-backed ranking'}</span>
-            </a>
-            <a href={`${base}agi/`} class="hub-home-brief-link" data-fresh-at={agiOverview.updatedAt ?? ''}>
-              <div>
-                <p class="hub-home-brief-title">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  AGI progress
-                </p>
-              </div>
-              <span class="hub-home-brief-meta">
-                {agiOverview.currentLeader ? `Frontier peak: ${agiOverview.currentLeader.modelName}` : 'Frontier view'}
-              </span>
-            </a>
-          </div>
-        </aside>
       </div>
 
-      <div class="hub-home-surface hub-home-surface-top">
-      <div class="hub-home-tab-row" role="tablist" aria-label="Homepage primary views">
-        <button class="hub-home-tab is-active" type="button" data-home-tab="frontier" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-          <span class="fresh-dot" data-fresh-dot hidden></span>
-          Frontier now
-        </button>
-        <button class="hub-home-tab" type="button" data-home-tab="reliability" data-fresh-at={reliabilityOverview.lastUpdated ?? ''}>
-          <span class="fresh-dot" data-fresh-dot hidden></span>
-          Reliability Floor
-        </button>
-        <button class="hub-home-tab" type="button" data-home-tab="evaluated" data-fresh-at={dataPulse[0]?.updatedAt ?? ''}>
-          <span class="fresh-dot" data-fresh-dot hidden></span>
-          Evaluated composite
-        </button>
-        <button class="hub-home-tab" type="button" data-home-tab="agi" data-fresh-at={agiOverview.updatedAt ?? ''}>
-          <span class="fresh-dot" data-fresh-dot hidden></span>
-          AGI progress
-        </button>
-      </div>
+      <div class="airh-spreadsheet-wrap">
+        <div class="airh-view-row">
+          <div class="airh-view-tabs" role="tablist" aria-label="Leaderboard views">
+            <button type="button" class="airh-view-tab is-active" role="tab" aria-selected="true" data-airh-view="frontier" data-airh-tip="Headline AIRH composite, sorted by current evidence-backed score.">
+              Frontier <span>{viewCounts.frontier}</span>
+            </button>
+            <button type="button" class="airh-view-tab" role="tab" aria-selected="false" data-airh-view="cheapest" data-airh-tip="Paid models sorted by blended input/output price.">
+              Cheapest <span>{viewCounts.cheapest}</span>
+            </button>
+            <button type="button" class="airh-view-tab" role="tab" aria-selected="false" data-airh-view="fastest" data-airh-tip="Models with speed data, sorted by tokens per second.">
+              Fastest <span>{viewCounts.fastest}</span>
+            </button>
+            <button type="button" class="airh-view-tab" role="tab" aria-selected="false" data-airh-view="open" data-airh-tip="Open-weight rows only.">
+              Open source <span>{viewCounts.open}</span>
+            </button>
+            <button type="button" class="airh-view-tab" role="tab" aria-selected="false" data-airh-view="value" data-airh-tip="Quality-per-cost view using the existing AIRH value score.">
+              Best value <span>{viewCounts.value}</span>
+            </button>
+          </div>
 
-      <div class="hub-home-panel" data-home-panel="frontier">
-        <div class="hub-home-panel-grid">
-          <div class="hub-home-card hub-home-card-main">
-            <div class="hub-home-card-head">
-              <div>
-                <p class="hub-home-mini-label">Current frontier</p>
-                <h2 class="hub-home-card-title">Current models first.</h2>
-              </div>
-              <a href={`${base}leaderboard/`} class="editorial-link">Open the full ranking desk</a>
+          <span
+            class="airh-refresh-stamp"
+            id="airh-refresh-stamp"
+            data-airh-tip={`Latest source snapshot: ${latestTimestamp ? formatDateLabel(latestTimestamp) : 'awaiting refresh'}. Next expected refresh: ${nextRefreshLabel}.`}
+          >
+            <span></span>
+            Refreshed {formatRelativeTime(latestTimestamp)}
+          </span>
+        </div>
+
+        <div class="airh-data-grid">
+          <aside class="airh-filter-rail" aria-label="Filters">
+            <div class="airh-filter-title">
+              <span>Filters</span>
+              <span class="airh-active-filter-count" data-airh-active-filters hidden>0 active</span>
             </div>
 
-            <p class="hub-home-card-note" data-fresh-at={frontierLeader?.released ?? ''}>
-              <span class="fresh-dot" data-fresh-dot hidden></span>
-              This lane is a curated frontier watchlist. It mixes benchmark-backed flagships with freshly tracked launches so the homepage answers “what is current?” before it answers “what is heavily evaluated?”
-            </p>
+            <div class="airh-filter-group">
+              <h2>Provider</h2>
+              {providerOptions.slice(0, 10).map((option) => (
+                <label class="airh-check">
+                  <input type="checkbox" checked data-filter-provider={option.key} />
+                  <span class="airh-provider-swatch" style={`background:${option.colour}`}></span>
+                  <span>{option.label}</span>
+                  <em>{option.count}</em>
+                </label>
+              ))}
+            </div>
 
-            <div class="hub-home-table-shell">
-              <table class="hub-home-table">
+            <div class="airh-filter-group">
+              <h2>Type</h2>
+              {typeOptions.map((option) => (
+                <label class="airh-check">
+                  <input type="checkbox" checked data-filter-type={option.key} />
+                  <span>{option.label}</span>
+                  <em>{option.count}</em>
+                </label>
+              ))}
+            </div>
+
+            <div class="airh-filter-group">
+              <h2>Licence</h2>
+              {licenceOptions.map((option) => (
+                <label class="airh-check">
+                  <input type="checkbox" checked data-filter-licence={option.key} />
+                  <span>{option.label}</span>
+                  <em>{option.count}</em>
+                </label>
+              ))}
+            </div>
+
+            <div class="airh-filter-group">
+              <h2>Released</h2>
+              <div class="airh-pill-row" data-filter-release-group>
+                {releaseOptions.map((option) => (
+                  <button type="button" aria-pressed={option.key === 'all' ? 'true' : 'false'} data-filter-release={option.key}>{option.label}</button>
+                ))}
+              </div>
+            </div>
+
+            <div class="airh-filter-group">
+              <h2>Context window</h2>
+              <div class="airh-pill-row" data-filter-context-group>
+                {contextOptions.map((option) => (
+                  <button type="button" aria-pressed="false" data-filter-context={option.key}>{option.label}</button>
+                ))}
+              </div>
+            </div>
+
+            <button type="button" class="airh-filter-clear" data-airh-reset-filters>Clear all filters</button>
+          </aside>
+
+          <section class="airh-table-card" aria-labelledby="airh-table-title">
+            <div class="airh-table-card-head">
+              <h1 id="airh-table-title">Frontier - composite leaderboard</h1>
+              <span class="airh-table-meta" data-airh-table-count data-airh-tip={`Tracked table rows from ${rows.length} current public LLM entries.`}>{Math.min(12, rows.length)} of {rows.length}</span>
+              <div class="airh-density" role="group" aria-label="Table density">
+                <button type="button" data-density="compact" aria-pressed="false">Compact</button>
+                <button type="button" data-density="comfortable" aria-pressed="true">Comfy</button>
+                <button type="button" data-density="spacious" aria-pressed="false">Spacious</button>
+              </div>
+            </div>
+
+            <div class="airh-table-scroll">
+              <table class="airh-leaderboard-table comfortable" data-airh-table>
                 <thead>
                   <tr>
-                    <th>Model</th>
-                    <th class="hub-home-col-number">State</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Evidence</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Released</th>
-                    <th class="hub-home-col-number">Price</th>
+                    <th data-airh-tip="Rank inside the current view after filters and sorting.">#</th>
+                    <th data-airh-tip="Model page, provider, release label, and evidence tags.">Model</th>
+                    <th data-airh-tip="Provider or lab. Hover a provider for a quick provider summary.">Provider</th>
+                    <th class="num sort" data-airh-tip="AIRH Composite: weighted blend of benchmark coverage, quality layer, freshness, and evidence penalties. Methodology page has the detail.">AIRH Composite</th>
+                    <th class="num" data-airh-tip="AIRH Real-World: currently backed by the existing AIRH quality layer until the dedicated real-world harness is published.">AIRH Real-World</th>
+                    <th class="num" data-airh-tip="AIRH Value: quality divided by blended token price when pricing is available.">AIRH Value</th>
+                    <th class="num" data-airh-tip="No historical 7-day score series exists in the current cache, so this cell truthfully marks new, flat, or pending.">Delta 7d / Trend</th>
+                    <th class="num" data-airh-tip="Input / output price per 1M tokens, USD where available.">$ in / out</th>
+                    <th class="num" data-airh-tip="Tracked tokens per second. Blank data stays pending rather than guessed.">Speed</th>
+                    <th class="num" data-airh-tip="Maximum context window in tokens.">Ctx</th>
+                    <th data-airh-tip="Tags are derived from source fields: open weights, modality, speed, release date, and evidence type.">Tags</th>
                   </tr>
                 </thead>
-                <tbody>
-                  {frontierNow.map((model) => (
-                    <tr data-fresh-at={normaliseDateTime(model.released) ?? ''}>
-                      <td>
-                        <a href={`${base}models/${model.id}/`} class="hub-home-model-link">
-                          <span class="hub-home-provider-dot" style={`background-color: ${model.providerColour}`}></span>
-                          <span class="fresh-dot" data-fresh-dot hidden></span>
-                          <span>{model.name}</span>
+                <tbody data-airh-table-body>
+                  {initialRows.map((row, index) => (
+                    <tr data-row-id={row.id}>
+                      <td class="rank">{index + 1}</td>
+                      <td class="model-cell">
+                        <a href={row.href} data-airh-rich="model" data-airh-model-id={row.id}>
+                          {row.name}
+                          <span>{row.id}</span>
                         </a>
-                        <p class="hub-home-model-meta">
-                          {model.provider}
-                          <span>/</span>
-                          {formatContextWindow(model.contextWindow)} context
-                        </p>
-                        <div class="hub-home-badge-row">
-                          <span class={`hub-home-badge hub-home-badge-${model.evidenceState}`}>{model.evidenceState}</span>
-                          {model.openSource ? <span class="hub-home-badge">Open</span> : null}
-                          {model.apiAvailable ? <span class="hub-home-badge">API</span> : null}
-                          {model.modality.includes('vision') ? <span class="hub-home-badge">Vision</span> : null}
-                          {model.modality.includes('audio') ? <span class="hub-home-badge">Audio</span> : null}
-                        </div>
                       </td>
-                      <td class="hub-home-score-cell">
-                        <span class="hub-home-score-secondary">{model.status}</span>
-                        <span class="hub-home-score-note">{model.qualityScore > 0 ? `${model.qualityScore.toFixed(0)} quality` : 'awaiting score'}</span>
-                      </td>
-                      <td class="hub-home-score-cell hub-home-col-desktop">
-                        <span class="hub-home-score-secondary">{model.evidenceLabel}</span>
-                        <span class="hub-home-score-note">
-                          {model.benchmarkCount > 0 ? `${model.benchmarkCount} benchmark rows` : 'official release only'}
+                      <td>
+                        <span class="airh-provider-chip" data-airh-rich="provider" data-airh-provider-key={row.providerKey}>
+                          <span style={`background:${row.providerColour}`}></span>
+                          {row.provider}
                         </span>
                       </td>
-                      <td class="hub-home-score-cell hub-home-col-desktop">
-                        <span class="hub-home-score-secondary">{formatDateLabel(model.released, { day: 'numeric', month: 'short' })}</span>
-                        <span class="hub-home-score-note">release date</span>
+                      <td class="num score">
+                        <span class="score-bar accent"><span style={`width:${scoreWidth(row.composite)}`}></span></span>
+                        <b>{formatScore(row.composite)}</b>
                       </td>
-                      <td class="hub-home-price-cell">
-                        <span>{formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}</span>
+                      <td class="num score">
+                        <span class="score-bar"><span style={`width:${scoreWidth(row.realWorld)}`}></span></span>
+                        <b>{formatScore(row.realWorld)}</b>
+                      </td>
+                      <td class="num">{row.valueScore > 0 ? row.valueScore.toLocaleString('en-GB') : 'pending'}</td>
+                      <td class="num">
+                        <span class={`airh-delta is-${row.trendKind}`}>{row.trendLabel}</span>
+                        <span class="airh-flatline" aria-hidden="true"></span>
+                      </td>
+                      <td class="num">{formatPricePair(row.inputPrice, row.outputPrice, row.openSource)}</td>
+                      <td class="num">{row.speed > 0 ? row.speed : 'pending'}</td>
+                      <td class="num">{formatContextWindow(row.contextWindow)}</td>
+                      <td>
+                        {row.tags.map((tag) => (
+                          <span class={`airh-tag is-${tag}`} data-airh-rich="tag" data-airh-tag={tag}>{tag}</span>
+                        ))}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </div>
 
-          <div class="hub-home-rail">
-            <div class="hub-home-card">
-              <p class="hub-home-mini-label">What this shows</p>
-              <h3 class="hub-home-rail-title">Frontier first, scoring second.</h3>
-              <p class="hub-home-rail-copy">
-                The homepage no longer treats the benchmark-heavy composite as a “best model right now” answer. This lane is the current model watchlist, and the evaluated composite sits alongside it as a separate scored view.
-              </p>
+            <div class="airh-empty-state" data-airh-empty-state hidden>
+              <p>No rows match those filters.</p>
+              <button type="button" data-airh-reset-filters>Reset filters</button>
             </div>
 
-            <div class="hub-home-card" data-fresh-at={evaluatedLeader?.released ?? ''}>
-              <p class="hub-home-mini-label">Top evaluated model</p>
-              {evaluatedLeader ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {evaluatedLeader.name}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    The evaluated composite still exists, but it now behaves as a benchmark-backed score rather than a proxy for “latest frontier model.”
-                  </p>
-                  <dl class="hub-home-metric-list">
-                    <div>
-                      <dt>Composite</dt>
-                      <dd>{evaluatedLeader.metaScore.toFixed(1)}</dd>
-                    </div>
-                    <div>
-                      <dt>Benchmarks</dt>
-                      <dd>{evaluatedLeader.benchmarkCount}</dd>
-                    </div>
-                    <div>
-                      <dt>Freshness</dt>
-                      <dd>{evaluatedLeader.freshnessScore.toFixed(0)}</dd>
-                    </div>
-                  </dl>
-                </>
-              ) : (
-                <div class="empty-surface">The evaluated composite needs benchmark-backed models before a leader can be shown.</div>
-              )}
+            <div class="airh-table-foot">
+              <span data-airh-table-summary>Showing {Math.min(12, rows.length)} of {rows.length} - sorted by AIRH Composite</span>
+              <a href={`${base}leaderboard/`}>Open full leaderboard &rarr;</a>
             </div>
-
-            <div class="hub-home-card" data-fresh-at={latestTrackedRelease ? normaliseDateTime(latestTrackedRelease.releaseDate) : ''}>
-              <p class="hub-home-mini-label">Latest tracked release</p>
-              {latestTrackedRelease ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {latestTrackedRelease.modelName}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    The release desk still covers launches the moment they land, even when benchmark and quality coverage have not caught up yet.
-                  </p>
-                  <a href={`${base}new/`} class="editorial-link">Open release desk</a>
-                </>
-              ) : (
-                <div class="empty-surface">Release tracking will surface here as new launches land.</div>
-              )}
-            </div>
-          </div>
+          </section>
         </div>
-      </div>
 
-      <div class="hub-home-panel is-hidden" data-home-panel="reliability">
-        <div class="hub-home-panel-grid">
-          <div class="hub-home-card hub-home-card-main">
-            <div class="hub-home-card-head">
-              <div>
-                <p class="hub-home-mini-label">Everyday reliability</p>
-                <h2 class="hub-home-card-title">The Reliability Floor tracks the basics: facts, grounding, retrieval, memory, abstention, and instruction following.</h2>
-              </div>
-              <a href={`${base}reliability-floor/`} class="editorial-link">Open Reliability Floor</a>
-            </div>
+        <section class="airh-bottom-strip" aria-label="More AI Resource Hub signals">
+          <div class="airh-strip-card">
+            <h2>Today on the hub</h2>
+            <ul>
+              <li><span>{latestRows.length}</span><a href={`${base}new/`}>models released in the last 30 days</a></li>
+              <li><span>{dataPulse.length}</span><a href={`${base}updates/`}>freshness lanes reporting</a></li>
+              <li><span>{digestEntries.length}</span><a href={`${base}news/`}>digest stories surfaced</a></li>
+              <li><span>{headlineNews.length}</span><a href={`${base}news/`}>headline items captured</a></li>
+            </ul>
+          </div>
 
-            <p class="hub-home-card-note">
-              This is a floor, not a ceiling score. Models are not treated as reliable until the critical dimensions have comparable evidence.
-              Missing benchmark coverage stays visible instead of being filled with generic quality scores.
+          <div class="airh-strip-card">
+            <h2>Pulse - current table</h2>
+            <p class="airh-pulse-row"><strong>{rows.length}</strong><span>ranked public LLM rows</span></p>
+            <p class="airh-pulse-row"><strong>{openRows.length}</strong><span>open-weight rows</span></p>
+            <p class="airh-pulse-row"><strong>{speedRows.length}</strong><span>rows with speed data</span></p>
+            <p class="airh-strip-note">
+              {topValue ? `Value leader: ${topValue.name}` : 'Value leaders appear when price data is present.'}
             </p>
-
-            <div class="hub-home-table-shell">
-              <table class="hub-home-table">
-                <thead>
-                  <tr>
-                    <th>Model</th>
-                    <th class="hub-home-col-number">Floor</th>
-                    <th class="hub-home-col-number">Evidence</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Facts</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Instructions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {reliabilityPreview.map((entry) => {
-                    const facts = entry.dimensions.find((dimension) => dimension.id === 'factuality')?.score ?? null;
-                    const instructions = entry.dimensions.find((dimension) => dimension.id === 'instruction_following')?.score ?? null;
-
-                    return (
-                      <tr data-fresh-at={entry.lastUpdated ?? ''}>
-                        <td>
-                          <a href={`${base}models/${entry.id}/`} class="hub-home-model-link">
-                            <span class="hub-home-provider-dot" style={`background-color: ${entry.providerColour}`}></span>
-                            <span class="fresh-dot" data-fresh-dot hidden></span>
-                            <span>{entry.name}</span>
-                          </a>
-                          <p class="hub-home-model-meta">
-                            {entry.provider}
-                            <span>/</span>
-                            {entry.status}
-                          </p>
-                        </td>
-                        <td class="hub-home-score-cell">
-                          <span class="hub-home-score-secondary">{entry.floorScore === null ? 'Not rankable' : entry.floorScore.toFixed(1)}</span>
-                          <span class="hub-home-score-note">floor score</span>
-                        </td>
-                        <td class="hub-home-score-cell">
-                          <span class="hub-home-score-secondary">{entry.evidenceLabel}</span>
-                          <span class="hub-home-score-note">{entry.scoredDimensions}/{entry.requiredDimensions} dimensions</span>
-                        </td>
-                        <td class="hub-home-score-cell hub-home-col-desktop">
-                          <span class="hub-home-score-secondary">{facts === null ? 'Missing' : facts.toFixed(1)}</span>
-                          <span class="hub-home-score-note">factuality</span>
-                        </td>
-                        <td class="hub-home-score-cell hub-home-col-desktop">
-                          <span class="hub-home-score-secondary">{instructions === null ? 'Missing' : instructions.toFixed(1)}</span>
-                          <span class="hub-home-score-note">instruction following</span>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
           </div>
 
-          <div class="hub-home-rail">
-            <div class="hub-home-card">
-              <p class="hub-home-mini-label">Why this exists</p>
-              <h3 class="hub-home-rail-title">Ceiling scores do not prove basic trust.</h3>
-              <p class="hub-home-rail-copy">
-                A model can be excellent at hard tasks and still fail normal users by inventing facts, losing supplied context, or ignoring exact instructions.
-              </p>
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={reliabilityOverview.lastUpdated ?? ''}>
-              <p class="hub-home-mini-label">Current state</p>
-              <h3 class="hub-home-rail-title">{reliabilityOverview.partial.length} partial evidence rows</h3>
-              <p class="hub-home-rail-copy">
-                The first public version is deliberately honest: it shows source coverage and missing dimensions before claiming a reliable winner.
-              </p>
-              <a href={`${base}methodology/`} class="editorial-link">Read scoring rules</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hub-home-panel is-hidden" data-home-panel="evaluated">
-        <div class="hub-home-panel-grid">
-          <div class="hub-home-card hub-home-card-main">
-            <div class="hub-home-card-head">
-              <div>
-                <p class="hub-home-mini-label">Benchmark-backed ranking</p>
-                <h2 class="hub-home-card-title">The evaluated composite is now explicitly the scored view, not the homepage’s “latest frontier” answer.</h2>
-              </div>
-              <a href={`${base}leaderboard/`} class="editorial-link">Open the full ranking</a>
-            </div>
-
-            <div class="hub-home-chip-row">
-              <a href={`${base}leaderboard/`} class="hub-home-chip">Overall</a>
-              <a href={`${base}coding/`} class="hub-home-chip">Coding</a>
-              <a href={`${base}best-value/`} class="hub-home-chip">Best value</a>
-              <a href={`${base}open-source/`} class="hub-home-chip">Open source</a>
-              <a href={`${base}reasoning/`} class="hub-home-chip">Reasoning</a>
-            </div>
-
-            <p class="hub-home-card-note">
-              The evaluated composite now blends normalized benchmark results, the quality layer, and a freshness signal. It also penalizes thin evidence, stale provider generations, and beta or compact variants so old benchmark saturation stops dominating the homepage story.
-            </p>
-
-            <div class="hub-home-table-shell">
-              <table class="hub-home-table">
-                <thead>
-                  <tr>
-                    <th class="hub-home-col-rank">#</th>
-                    <th>Model</th>
-                    <th class="hub-home-col-number">Composite</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Bench</th>
-                    <th class="hub-home-col-number hub-home-col-desktop">Coverage</th>
-                    <th class="hub-home-col-number">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {evaluatedLeaderboard.map((model, index) => (
-                    <tr data-fresh-at={normaliseDateTime(model.released) ?? ''}>
-                      <td class="hub-home-rank-cell">
-                        <span class={`hub-home-rank ${index === 0 ? 'is-first' : index === 1 ? 'is-second' : index === 2 ? 'is-third' : ''}`}>
-                          {String(index + 1).padStart(2, '0')}
-                        </span>
-                      </td>
-                      <td>
-                        <a href={`${base}models/${model.id}/`} class="hub-home-model-link">
-                          <span class="hub-home-provider-dot" style={`background-color: ${model.providerColour}`}></span>
-                          <span class="fresh-dot" data-fresh-dot hidden></span>
-                          <span>{model.name}</span>
-                        </a>
-                        <p class="hub-home-model-meta">
-                          {model.provider}
-                          <span>/</span>
-                          {model.bestFor}
-                          <span>/</span>
-                          {formatContextWindow(model.contextWindow)} context
-                        </p>
-                        <div class="hub-home-badge-row">
-                          {model.openSource ? <span class="hub-home-badge">Open</span> : null}
-                          {model.apiAvailable ? <span class="hub-home-badge">API</span> : null}
-                          {model.modality.includes('vision') ? <span class="hub-home-badge">Vision</span> : null}
-                          {model.modality.includes('audio') ? <span class="hub-home-badge">Audio</span> : null}
-                        </div>
-                      </td>
-                      <td class="hub-home-score-cell">
-                        <span class="hub-home-score">{model.metaScore.toFixed(1)}</span>
-                        <span class="hub-home-score-note">composite</span>
-                      </td>
-                      <td class="hub-home-score-cell hub-home-col-desktop">
-                        <span class="hub-home-score-secondary">{model.benchmarkScore.toFixed(1)}</span>
-                        <span class="hub-home-score-note">{model.benchmarkCount} tracks</span>
-                      </td>
-                      <td class="hub-home-score-cell hub-home-col-desktop">
-                        <span class="hub-home-score-secondary">{formatCoverage(model.coverageRatio)}</span>
-                        <span class="hub-home-score-note">weighted</span>
-                      </td>
-                      <td class="hub-home-price-cell">
-                        <span>{formatPricePair(model.inputPrice, model.outputPrice, model.openSource)}</span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="hub-home-rail">
-            <div class="hub-home-card" data-fresh-at={evaluatedLeader?.released ?? ''}>
-              <p class="hub-home-mini-label">Top evaluated model</p>
-              {evaluatedLeader ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {evaluatedLeader.name}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    {evaluatedLeader.provider} currently leads the benchmark-backed evaluated set with a composite score of {evaluatedLeader.metaScore.toFixed(1)}.
-                  </p>
-                  <dl class="hub-home-metric-list">
-                    <div>
-                      <dt>Benchmark score</dt>
-                      <dd>{evaluatedLeader.benchmarkScore.toFixed(1)}</dd>
-                    </div>
-                    <div>
-                      <dt>Coverage</dt>
-                      <dd>{formatCoverage(evaluatedLeader.coverageRatio)}</dd>
-                    </div>
-                    <div>
-                      <dt>Best for</dt>
-                      <dd>{evaluatedLeader.bestFor}</dd>
-                    </div>
-                  </dl>
-                  {latestTrackedRelease ? (
-                    <p class="hub-home-card-note">
-                      Newer tracked launch: <a href={`${base}new/`} class="editorial-link">{latestTrackedRelease.modelName}</a>. Release coverage is live before it becomes rankable.
-                    </p>
-                  ) : null}
-                </>
-              ) : (
-                <div class="empty-surface">The evaluated composite needs benchmark data before a leader can be shown.</div>
-              )}
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={bestOpenModel?.released ?? ''}>
-              <p class="hub-home-mini-label">Best open model</p>
-              {bestOpenModel ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {bestOpenModel.name}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    The strongest open-weight entry on the weighted ranking right now, with benchmark coverage baked into the score.
-                  </p>
-                  <a href={`${base}open-source/`} class="editorial-link">Open source shortlist</a>
-                </>
-              ) : (
-                <div class="empty-surface">Open-weight models will appear here once the ranking layer is populated.</div>
-              )}
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={bestValueModel?.released ?? ''}>
-              <p class="hub-home-mini-label">Best value</p>
-              {bestValueModel ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {bestValueModel.name}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    Strongest quality-per-cost ratio in the current leaderboard, useful when performance still has to fit a budget.
-                  </p>
-                  <a href={`${base}best-value/`} class="editorial-link">Full value ranking</a>
-                </>
-              ) : (
-                <div class="empty-surface">Value leaders need current pricing coverage before they can be shown.</div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hub-home-panel is-hidden" data-home-panel="agi">
-        <div class="hub-home-panel-grid">
-          <div class="hub-home-card hub-home-card-main">
-            <div class="hub-home-card-head">
-              <div>
-                <p class="hub-home-mini-label">Frontier signal</p>
-                <h2 class="hub-home-card-title">The AGI progress view is a compact frontier chart, not just a link.</h2>
-              </div>
-              <a href={`${base}agi/`} class="editorial-link">Open the full AGI page</a>
-            </div>
-
-            {agiChart.circles.length > 0 ? (
-              <div class="hub-home-agi-chart-shell" data-fresh-at={agiOverview.updatedAt ?? ''}>
-                <svg viewBox="0 0 720 280" class="hub-home-agi-chart" aria-label="AGI frontier progress chart">
-                  {agiChart.guides.map((guide) => (
-                    <line x1="26" x2="694" y1={guide} y2={guide} class="hub-home-agi-guide" />
-                  ))}
-                  <path d={agiChart.areaPath} class="hub-home-agi-area" />
-                  <path d={agiChart.path} class="hub-home-agi-line" />
-                  {agiChart.circles.map((point) => (
-                    <>
-                      <circle cx={point.x} cy={point.y} r="5.5" class="hub-home-agi-dot"></circle>
-                      <text x={point.x} y={point.y - 12} text-anchor="middle" class="hub-home-agi-score-label">{point.score.toFixed(1)}</text>
-                    </>
-                  ))}
-                </svg>
-
-                <div class="hub-home-agi-ticks">
-                  {agiChart.circles.map((point) => (
-                    <div class="hub-home-agi-tick">
-                      <p class="hub-home-agi-tick-label">{point.label}</p>
-                      <p class="hub-home-agi-tick-model">{point.modelName}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <div class="empty-surface">The AGI view needs at least two benchmark-backed frontier points before the chart can draw.</div>
-            )}
-          </div>
-
-          <div class="hub-home-rail">
-            <div class="hub-home-card" data-fresh-at={agiOverview.currentLeader?.released ?? ''}>
-              <p class="hub-home-mini-label">Frontier leader</p>
-              {agiOverview.currentLeader ? (
-                <>
-                  <h3 class="hub-home-rail-title">
-                    <span class="fresh-dot" data-fresh-dot hidden></span>
-                    {agiOverview.currentLeader.modelName}
-                  </h3>
-                  <p class="hub-home-rail-copy">
-                    This is the highest published AGI-style frontier score in the current benchmark set at {agiOverview.currentLeader.score.toFixed(1)}.
-                  </p>
-                </>
-              ) : (
-                <div class="empty-surface">No eligible frontier leader is available yet.</div>
-              )}
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={agiOverview.updatedAt ?? ''}>
-              <p class="hub-home-mini-label">12 month gain</p>
-              <h3 class="hub-home-rail-big">{agiOverview.twelveMonthGain >= 0 ? '+' : ''}{agiOverview.twelveMonthGain.toFixed(1)}</h3>
-              <p class="hub-home-rail-copy">
-                Change in the frontier signal between the current leader and the last comparable point roughly one year earlier.
-              </p>
-            </div>
-
-            <div class="hub-home-card" data-fresh-at={agiOverview.updatedAt ?? ''}>
-              <p class="hub-home-mini-label">Strongest benchmark</p>
-              {agiOverview.strongestBenchmark ? (
-                <>
-                  <h3 class="hub-home-rail-title">{agiOverview.strongestBenchmark.name}</h3>
-                  <p class="hub-home-rail-copy">
-                    The current frontier leader&rsquo;s strongest normalized result is {agiOverview.strongestBenchmark.score.toFixed(1)} on this track.
-                  </p>
-                </>
-              ) : (
-                <div class="empty-surface">Benchmark detail will appear here once the AGI overview has enough source rows.</div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-      {headlineNews.length > 0 ? (
-        <section class="hub-home-news-strip" data-news-rotator>
-          <div class="hub-home-news-strip-head">
-            <p class="hub-home-mini-label">Latest news</p>
-            <a href={`${base}news/`} class="editorial-link">Open the news desk</a>
-          </div>
-
-          <div class="hub-home-news-rail" data-news-rail>
-            {headlineNews.map((entry, index) => (
-              <a
-                href={entry.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class={`hub-home-news-card ${index === 0 ? 'is-active' : ''}`}
-                data-news-card
-                data-fresh-at={entry.headlineDate ?? ''}
-              >
-                <p class="hub-home-news-meta">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  {entry.source}
-                  <span>/</span>
-                  {formatDateLabel(entry.headlineDate, { day: 'numeric', month: 'short' })}
-                </p>
-                <h3 class="hub-home-news-title">{entry.title}</h3>
-              </a>
+          <div class="airh-strip-card">
+            <h2>More tables</h2>
+            {tableLinks.map((link) => (
+              <a href={link.href} class="airh-table-link">{link.label}<span>&rarr;</span></a>
             ))}
           </div>
         </section>
-      ) : null}
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section class="mx-auto max-w-7xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16 lg:pt-10">
-    <div class="hub-home-support-grid">
-      <section class="hub-home-card">
-        <div class="hub-home-card-head">
+    <section class="airh-layout-panel airh-terminal-panel is-hidden" data-airh-layout-panel="terminal" aria-label="AI Resource Hub terminal view">
+      <div class="airh-terminal-shell">
+        <header class="airh-terminal-head">
           <div>
-            <p class="hub-home-mini-label">Breaking news / daily digest</p>
-            <h2 class="hub-home-card-title">The current brief.</h2>
+            <p>AI Resource Hub / terminal</p>
+            <h1>Type the table.</h1>
           </div>
-          <a href={`${base}news/`} class="editorial-link">Open the news desk</a>
-        </div>
-
-        {latestDigest ? (
-          <p class="hub-home-card-note" data-fresh-at={normaliseDateTime(latestDigest.digestDate) ?? ''}>
-            <span class="fresh-dot" data-fresh-dot hidden></span>
-            {formatDateLabel(latestDigest.digestDate)} digest with {latestDigest.storyCount ?? digestEntries.length} stories
-            {latestDigest.sourceCount ? ` from ${latestDigest.sourceCount} sources` : ''}.
-          </p>
-        ) : (
-          <p class="hub-home-card-note">No digest file is available yet, so this panel will fill on the next publish.</p>
-        )}
-
-        <div class="hub-home-stack">
-          {digestEntries.length > 0 ? digestEntries.map((entry) => (
-            <a
-              href={entry.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hub-home-feed-row"
-              data-fresh-at={normaliseDateTime(entry.publishedDate) ?? ''}
-            >
-              <div>
-                <p class="hub-home-feed-meta">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  {entry.source}
-                  <span>/</span>
-                  {entry.score !== null ? `${entry.score.toFixed(2)} score` : 'Digest pick'}
-                </p>
-                <h3 class="hub-home-feed-title">{entry.title}</h3>
-                {entry.summary ? <p class="hub-home-feed-copy">{entry.summary}</p> : null}
-              </div>
-            </a>
-          )) : (
-            <div class="empty-surface">This panel will surface the latest digest once a current file is present.</div>
-          )}
-        </div>
-      </section>
-
-      <section class="hub-home-card">
-        <div class="hub-home-card-head">
           <div>
-            <p class="hub-home-mini-label">Updated data</p>
-            <h2 class="hub-home-card-title">Pipeline freshness.</h2>
+            <span>Refreshed {formatRelativeTime(latestTimestamp)}</span>
+            <span>{rows.length} models</span>
+            <span>{dataPulse.length} lanes</span>
           </div>
-          <a href={`${base}methodology/`} class="editorial-link">Method and sources</a>
+        </header>
+
+        <div class="airh-terminal-log" data-airh-terminal-log aria-live="polite"></div>
+
+        <form class="airh-terminal-form" data-airh-terminal-form>
+          <label for="airh-terminal-input">airh &gt;</label>
+          <input id="airh-terminal-input" data-airh-terminal-input autocomplete="off" spellcheck="false" placeholder="top 10, compare gpt claude, news --today, price sonnet, visual" />
+          <button type="submit">Run</button>
+        </form>
+
+        <div class="airh-terminal-hints">
+          <span>since-last-visit</span>
+          <span>top 10</span>
+          <span>compare A B</span>
+          <span>news --today</span>
+          <span>price MODEL</span>
+          <span>visual</span>
         </div>
+      </div>
+    </section>
 
-        <div class="hub-home-stack">
-          {dataPulse.map((item) => (
-            <a href={item.href} class="hub-home-pulse-row" data-fresh-at={item.updatedAt ?? ''}>
-              <div>
-                <p class="hub-home-pulse-label">
-                  <span class="fresh-dot" data-fresh-dot hidden></span>
-                  {item.label}
-                </p>
-                <p class="hub-home-pulse-copy">{item.note}</p>
-              </div>
-              <span class="hub-home-pulse-date">{formatDateLabel(item.updatedAt, { day: 'numeric', month: 'short' })}</span>
-            </a>
-          ))}
-        </div>
-      </section>
+    <div class="airh-tip-card" data-airh-simple-tip role="tooltip" hidden></div>
+    <div class="airh-rich-tip" data-airh-rich-tip role="tooltip" hidden></div>
+  </div>
 
-      <section class="hub-home-card">
-        <div class="hub-home-card-head">
-          <div>
-            <p class="hub-home-mini-label">Today in AI</p>
-            <h2 class="hub-home-card-title">The launch birthdays and lab dates that matter.</h2>
-          </div>
-          <a href={`${base}milestones/`} class="editorial-link">Open AI Milestones</a>
-        </div>
+  <script is:inline type="application/json" id="airh-home-data" set:html={homepagePayload}></script>
 
-        <p class="hub-home-card-note">
-          {milestonesOverview.todayMilestones.length > 0
-            ? `${milestonesOverview.todayMilestones.length} exact anniversary${milestonesOverview.todayMilestones.length === 1 ? '' : 'ies'} lands today.`
-            : milestonesOverview.nextMilestone
-              ? `No exact anniversary lands today. The next one is ${milestonesOverview.nextMilestone.title} in ${milestonesOverview.nextMilestone.daysUntil} day${milestonesOverview.nextMilestone.daysUntil === 1 ? '' : 's'}.`
-              : 'This lane fills out as the curated milestone list grows.'}
-        </p>
-
-        <div class="hub-home-stack">
-          {(milestonesOverview.todayMilestones.length > 0 ? milestonesOverview.todayMilestones : milestonesOverview.upcomingMilestones.slice(0, 3)).map((milestone) => (
-            <a href={`${base}milestones/`} class="hub-home-activity-row">
-              <div class="hub-home-activity-topline">
-                <span class={`hub-home-category ${milestone.category === 'lab_founded' ? 'is-site' : 'is-models'}`}>
-                  {milestone.daysUntil === 0 ? 'today' : `${milestone.daysUntil}d`}
-                </span>
-                <span class="hub-home-activity-date">
-                  {milestone.daysUntil === 0 ? `${milestone.anniversaryYears}y anniversary` : milestone.nextOccurrenceLabel}
-                </span>
-              </div>
-              <h3 class="hub-home-feed-title">{milestone.title}</h3>
-              <p class="hub-home-feed-copy">{milestone.summary}</p>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section class="hub-home-card">
-        <div class="hub-home-card-head">
-          <div>
-            <p class="hub-home-mini-label">Latest activities</p>
-            <h2 class="hub-home-card-title">The site changelog, in live form.</h2>
-          </div>
-          <a href={`${base}changelog/`} class="editorial-link">Open full activity log</a>
-        </div>
-
-        <div class="hub-home-stack">
-          {activities.map((entry) => (
-            <a
-              href={entry.href ?? `${base}changelog/`}
-              class="hub-home-activity-row"
-              data-fresh-at={entry.date}
-              target={isExternalLink(entry.href) ? '_blank' : undefined}
-              rel={isExternalLink(entry.href) ? 'noopener noreferrer' : undefined}
-            >
-              <div class="hub-home-activity-topline">
-                <span class={`hub-home-category is-${entry.category}`}>{entry.category}</span>
-                <span class="hub-home-activity-date">{formatDateLabel(entry.date, { day: 'numeric', month: 'short' })}</span>
-              </div>
-              <h3 class="hub-home-feed-title">
-                <span class="fresh-dot" data-fresh-dot hidden></span>
-                {entry.title}
-              </h3>
-              <p class="hub-home-feed-copy">{entry.detail}</p>
-            </a>
-          ))}
-        </div>
-      </section>
-    </div>
-
-    <p class="hub-home-footnote">
-      The homepage now separates the current frontier watchlist from the evaluated composite. The scored view blends normalized benchmark results,
-      the existing quality layer, and a freshness signal, then penalizes thin evidence, stale provider generations, and beta or compact variants.
-      Reliability Floor is separate again: it tracks everyday trust basics and refuses to rank models as reliable when critical evidence is missing.
-      The AGI panel is a derived frontier signal built from ARC-AGI, GPQA Diamond, Humanity&rsquo;s Last Exam, MMLU-Pro,
-      SWE-bench Verified, and Chatbot Arena. Read the <a href={`${base}methodology/`}>methodology</a> before treating any ranking as gospel.
-    </p>
-  </section>
-
-  <script
-    is:inline
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'The AI Resource Hub',
-      url: new URL(base, Astro.site).toString(),
-      description: 'Benchmark-weighted AI model leaderboard, AGI progress tracking, and live AI updates.',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${new URL(base, Astro.site).toString()}?q={search_term_string}`,
-        'query-input': 'required name=search_term_string',
-      },
-    })}
-  />
-
-      <script is:inline>
+  <script is:inline>
     (() => {
-      const visitKey = 'airh:last-visit';
-      const tabKey = 'airh:home-tab';
-      const now = new Date().toISOString();
-      const validTabs = new Set(['frontier', 'evaluated', 'agi']);
+      const payload = document.getElementById('airh-home-data');
+      if (!payload) return;
 
-      const activateTab = (name) => {
-        const tabs = document.querySelectorAll('[data-home-tab]');
-        const panels = document.querySelectorAll('[data-home-panel]');
+      const data = JSON.parse(payload.textContent || '{}');
+      const rows = data.rows || [];
+      const tickerItems = data.tickerItems || [];
+      const base = data.base || '/';
 
-        tabs.forEach((tab) => {
-          const active = tab.getAttribute('data-home-tab') === name;
-          tab.classList.toggle('is-active', active);
-        });
+      const table = document.querySelector('[data-airh-table]');
+      const tbody = document.querySelector('[data-airh-table-body]');
+      const emptyState = document.querySelector('[data-airh-empty-state]');
+      const tableTitle = document.getElementById('airh-table-title');
+      const tableCount = document.querySelector('[data-airh-table-count]');
+      const tableSummary = document.querySelector('[data-airh-table-summary]');
+      const activeFilterCount = document.querySelector('[data-airh-active-filters]');
+      const providerInputs = Array.from(document.querySelectorAll('[data-filter-provider]'));
+      const typeInputs = Array.from(document.querySelectorAll('[data-filter-type]'));
+      const licenceInputs = Array.from(document.querySelectorAll('[data-filter-licence]'));
+      const releaseButtons = Array.from(document.querySelectorAll('[data-filter-release]'));
+      const contextButtons = Array.from(document.querySelectorAll('[data-filter-context]'));
+      const viewButtons = Array.from(document.querySelectorAll('[data-airh-view]'));
+      const densityButtons = Array.from(document.querySelectorAll('[data-density]'));
 
-        panels.forEach((panel) => {
-          const active = panel.getAttribute('data-home-panel') === name;
-          panel.classList.toggle('is-hidden', !active);
-        });
+      const viewConfigs = {
+        frontier: {
+          title: 'Frontier - composite leaderboard',
+          sortLabel: 'AIRH Composite',
+          filter: () => true,
+          sort: (a, b) => b.composite - a.composite || b.qualityScore - a.qualityScore || a.name.localeCompare(b.name),
+        },
+        cheapest: {
+          title: 'Cheapest - credible paid rows',
+          sortLabel: 'blended token price',
+          filter: (row) => row.blendedPrice > 0,
+          sort: (a, b) => a.blendedPrice - b.blendedPrice || b.composite - a.composite,
+        },
+        fastest: {
+          title: 'Fastest - tokens per second',
+          sortLabel: 'speed',
+          filter: (row) => row.speed > 0,
+          sort: (a, b) => b.speed - a.speed || b.composite - a.composite,
+        },
+        open: {
+          title: 'Open source - open-weight rows',
+          sortLabel: 'AIRH Composite',
+          filter: (row) => row.openSource,
+          sort: (a, b) => b.composite - a.composite || b.valueScore - a.valueScore,
+        },
+        value: {
+          title: 'Best value - quality per cost',
+          sortLabel: 'AIRH Value',
+          filter: (row) => row.valueScore > 0,
+          sort: (a, b) => b.valueScore - a.valueScore || b.composite - a.composite,
+        },
       };
 
-      try {
-        const storedTab = localStorage.getItem(tabKey);
-        activateTab(storedTab && validTabs.has(storedTab) ? storedTab : 'frontier');
+      const state = {
+        view: 'frontier',
+        release: 'all',
+        context: null,
+        density: localStorage.getItem('airh:density') || 'comfortable',
+      };
 
-        document.querySelectorAll('[data-home-tab]').forEach((button) => {
-          button.addEventListener('click', () => {
-            const tabName = button.getAttribute('data-home-tab') || 'leaderboard';
-            activateTab(tabName);
-            localStorage.setItem(tabKey, tabName);
-          });
-        });
+      const escapeHtml = (value) => String(value ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
 
-        const lastVisit = localStorage.getItem(visitKey);
-        if (lastVisit) {
-          document.querySelectorAll('[data-fresh-at]').forEach((node) => {
-            const updatedAt = node.getAttribute('data-fresh-at');
-            const dot = node.querySelector('[data-fresh-dot]');
+      const selectedValues = (inputs) => new Set(inputs.filter((input) => input.checked).map((input) => input.getAttribute(input.dataset.filterProvider !== undefined ? 'data-filter-provider' : input.dataset.filterType !== undefined ? 'data-filter-type' : 'data-filter-licence')));
 
-            if (!updatedAt || !dot) return;
+      const formatScore = (value) => value > 0 ? Number(value).toFixed(1) : 'pending';
+      const formatContext = (tokens) => {
+        if (tokens >= 1000000) return `${Number(tokens / 1000000).toFixed(tokens % 1000000 === 0 ? 0 : 1)}M`;
+        if (tokens >= 1000) return `${Math.round(tokens / 1000)}K`;
+        return tokens > 0 ? String(tokens) : 'n/a';
+      };
+      const formatPrice = (row) => {
+        if (row.inputPrice === 0 && row.outputPrice === 0) return row.openSource ? 'Open / free' : 'Included';
+        return `$${Number(row.inputPrice).toFixed(2)} <span class="muted">/</span> $${Number(row.outputPrice).toFixed(2)}`;
+      };
+      const scoreWidth = (value) => `${Math.max(4, Math.min(100, Number(value) || 0))}%`;
 
-            const updatedTime = Date.parse(updatedAt);
-            const lastVisitTime = Date.parse(lastVisit);
-            if (Number.isFinite(updatedTime) && Number.isFinite(lastVisitTime) && updatedTime > lastVisitTime) {
-              node.setAttribute('data-fresh', 'true');
-              dot.hidden = false;
-            }
-          });
+      function passesFilters(row) {
+        const providers = selectedValues(providerInputs);
+        const types = selectedValues(typeInputs);
+        const licences = selectedValues(licenceInputs);
+        if (!providers.has(row.providerKey)) return false;
+        if (!row.typeKeys.some((key) => types.has(key))) return false;
+        if (!licences.has(row.licenceKey)) return false;
+        if (state.release !== 'all') {
+          const maxDays = Number(state.release);
+          if (row.releasedDays === null || row.releasedDays > maxDays) return false;
         }
-
-        const rotator = document.querySelector('[data-news-rotator]');
-        if (rotator) {
-          const rail = /** @type {HTMLElement | null} */ (rotator.querySelector('[data-news-rail]'));
-          const cards = Array.from(rotator.querySelectorAll('[data-news-card]'));
-          let activeIndex = Math.max(0, cards.findIndex((card) => card.classList.contains('is-active')));
-
-          const setActiveCard = (index, smooth = false) => {
-            cards.forEach((card, cardIndex) => {
-              card.classList.toggle('is-active', cardIndex === index);
-            });
-
-            const activeCard = /** @type {HTMLElement | undefined} */ (cards[index]);
-            if (activeCard && rail && smooth) {
-              rail.scrollTo({
-                left: Math.max(0, activeCard.offsetLeft - 16),
-                behavior: 'smooth',
-              });
-            }
-          };
-
-          setActiveCard(activeIndex);
-
-          if (cards.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            let ticker = null;
-
-            const stopTicker = () => {
-              if (ticker) {
-                window.clearInterval(ticker);
-                ticker = null;
-              }
-            };
-
-            const startTicker = () => {
-              stopTicker();
-              ticker = window.setInterval(() => {
-                activeIndex = (activeIndex + 1) % cards.length;
-                setActiveCard(activeIndex, true);
-              }, 12000);
-            };
-
-            rotator.addEventListener('mouseenter', stopTicker);
-            rotator.addEventListener('mouseleave', startTicker);
-            rotator.addEventListener('focusin', stopTicker);
-            rotator.addEventListener('focusout', startTicker);
-
-            startTicker();
-          }
-        }
-
-        localStorage.setItem(visitKey, now);
-      } catch {
-        activateTab('frontier');
+        if (state.context !== null && row.contextWindow < state.context) return false;
+        return true;
       }
+
+      function getCurrentRows() {
+        const config = viewConfigs[state.view] || viewConfigs.frontier;
+        return rows
+          .filter((row) => config.filter(row))
+          .filter(passesFilters)
+          .sort(config.sort);
+      }
+
+      function renderTags(row) {
+        if (!row.tags.length) return '<span class="airh-tag is-muted">tracked</span>';
+        return row.tags.map((tag) => `<span class="airh-tag is-${escapeHtml(tag)}" data-airh-rich="tag" data-airh-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</span>`).join('');
+      }
+
+      function renderRow(row, index) {
+        return `
+          <tr data-row-id="${escapeHtml(row.id)}">
+            <td class="rank">${index + 1}</td>
+            <td class="model-cell">
+              <a href="${escapeHtml(row.href)}" data-airh-rich="model" data-airh-model-id="${escapeHtml(row.id)}">
+                ${escapeHtml(row.name)}
+                <span>${escapeHtml(row.id)}</span>
+              </a>
+            </td>
+            <td>
+              <span class="airh-provider-chip" data-airh-rich="provider" data-airh-provider-key="${escapeHtml(row.providerKey)}">
+                <span style="background:${escapeHtml(row.providerColour)}"></span>
+                ${escapeHtml(row.provider)}
+              </span>
+            </td>
+            <td class="num score"><span class="score-bar accent"><span style="width:${scoreWidth(row.composite)}"></span></span><b>${formatScore(row.composite)}</b></td>
+            <td class="num score"><span class="score-bar"><span style="width:${scoreWidth(row.realWorld)}"></span></span><b>${formatScore(row.realWorld)}</b></td>
+            <td class="num">${row.valueScore > 0 ? Number(row.valueScore).toLocaleString('en-GB') : 'pending'}</td>
+            <td class="num"><span class="airh-delta is-${escapeHtml(row.trendKind)}">${escapeHtml(row.trendLabel)}</span><span class="airh-flatline" aria-hidden="true"></span></td>
+            <td class="num">${formatPrice(row)}</td>
+            <td class="num">${row.speed > 0 ? escapeHtml(row.speed) : 'pending'}</td>
+            <td class="num">${escapeHtml(formatContext(row.contextWindow))}</td>
+            <td>${renderTags(row)}</td>
+          </tr>
+        `;
+      }
+
+      function countFilterDeviations() {
+        let count = 0;
+        if (providerInputs.some((input) => !input.checked)) count += 1;
+        if (typeInputs.some((input) => !input.checked)) count += 1;
+        if (licenceInputs.some((input) => !input.checked)) count += 1;
+        if (state.release !== 'all') count += 1;
+        if (state.context !== null) count += 1;
+        return count;
+      }
+
+      function syncFilterUi() {
+        releaseButtons.forEach((button) => {
+          button.setAttribute('aria-pressed', String(button.getAttribute('data-filter-release') === state.release));
+        });
+        contextButtons.forEach((button) => {
+          button.setAttribute('aria-pressed', String(Number(button.getAttribute('data-filter-context')) === state.context));
+        });
+        viewButtons.forEach((button) => {
+          const active = button.getAttribute('data-airh-view') === state.view;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-selected', String(active));
+        });
+        densityButtons.forEach((button) => {
+          button.setAttribute('aria-pressed', String(button.getAttribute('data-density') === state.density));
+        });
+        table?.classList.remove('compact', 'comfortable', 'spacious');
+        table?.classList.add(state.density);
+
+        const deviations = countFilterDeviations();
+        if (activeFilterCount) {
+          activeFilterCount.hidden = deviations === 0;
+          activeFilterCount.textContent = `${deviations} active`;
+        }
+      }
+
+      function renderTable() {
+        if (!tbody) return;
+        const config = viewConfigs[state.view] || viewConfigs.frontier;
+        const currentRows = getCurrentRows();
+        const visibleRows = currentRows.slice(0, 12);
+        tbody.innerHTML = visibleRows.map(renderRow).join('');
+        if (tableTitle) tableTitle.textContent = config.title;
+        if (tableCount) tableCount.textContent = `${visibleRows.length} of ${currentRows.length}`;
+        if (tableSummary) tableSummary.textContent = `Showing ${visibleRows.length} of ${currentRows.length} - sorted by ${config.sortLabel}`;
+        if (emptyState) emptyState.hidden = currentRows.length !== 0;
+        syncFilterUi();
+      }
+
+      function resetFilters() {
+        [...providerInputs, ...typeInputs, ...licenceInputs].forEach((input) => { input.checked = true; });
+        state.release = 'all';
+        state.context = null;
+        renderTable();
+      }
+
+      [...providerInputs, ...typeInputs, ...licenceInputs].forEach((input) => input.addEventListener('change', renderTable));
+      releaseButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          state.release = button.getAttribute('data-filter-release') || 'all';
+          renderTable();
+        });
+      });
+      contextButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const value = Number(button.getAttribute('data-filter-context'));
+          state.context = state.context === value ? null : value;
+          renderTable();
+        });
+      });
+      viewButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          state.view = button.getAttribute('data-airh-view') || 'frontier';
+          renderTable();
+        });
+      });
+      densityButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          state.density = button.getAttribute('data-density') || 'comfortable';
+          localStorage.setItem('airh:density', state.density);
+          renderTable();
+        });
+      });
+      document.querySelectorAll('[data-airh-reset-filters]').forEach((button) => button.addEventListener('click', resetFilters));
+
+      renderTable();
+
+      const simpleTip = document.querySelector('[data-airh-simple-tip]');
+      const richTip = document.querySelector('[data-airh-rich-tip]');
+      let simpleTimer = 0;
+      let richTimer = 0;
+      let activeTipTarget = null;
+
+      function placeTip(target, tip, width) {
+        const rect = target.getBoundingClientRect();
+        const tipHeight = tip.offsetHeight || 120;
+        let left = rect.left;
+        let top = rect.bottom + 8;
+        if (left + width > window.innerWidth - 10) left = window.innerWidth - width - 10;
+        if (top + tipHeight > window.innerHeight - 10) top = rect.top - tipHeight - 8;
+        tip.style.left = `${Math.max(10, left)}px`;
+        tip.style.top = `${Math.max(10, top)}px`;
+      }
+
+      function hideTips() {
+        window.clearTimeout(simpleTimer);
+        window.clearTimeout(richTimer);
+        activeTipTarget = null;
+        if (simpleTip) {
+          simpleTip.hidden = true;
+          simpleTip.classList.remove('is-visible');
+        }
+        if (richTip) {
+          richTip.hidden = true;
+          richTip.classList.remove('is-visible');
+        }
+      }
+
+      function showSimpleTip(target) {
+        const text = target.getAttribute('data-airh-tip');
+        if (!text || !simpleTip) return;
+        window.clearTimeout(simpleTimer);
+        simpleTimer = window.setTimeout(() => {
+          simpleTip.innerHTML = `<span>${escapeHtml(text)}</span>`;
+          simpleTip.hidden = false;
+          placeTip(target, simpleTip, 280);
+          simpleTip.classList.add('is-visible');
+        }, 220);
+      }
+
+      const tagDescriptions = {
+        open: 'Open weights: downloadable or self-hostable depending on the licence and provider.',
+        reasoning: 'Reasoning-oriented row, inferred from source fields and benchmark/use-case labels.',
+        multimodal: 'Accepts more than text, such as image, audio, or video fields in the source cache.',
+        fast: 'Speed field is at or above 100 tokens/sec in the current cache.',
+        new: 'Released within the last 14 days in the current source cache.',
+        api: 'Closed/API-hosted row with API availability marked in the cache.',
+        tracked: 'Tracked row without a stronger derived tag.',
+      };
+
+      function richModelHtml(row) {
+        return `
+          <div class="scribble">${escapeHtml(row.bestFor || 'Tracked model')}</div>
+          <h2>${escapeHtml(row.name)}</h2>
+          <p class="sub">${escapeHtml(row.id)} - ${escapeHtml(row.releasedLabel)}</p>
+          <dl>
+            <dt>Provider</dt><dd>${escapeHtml(row.provider)}</dd>
+            <dt>AIRH Composite</dt><dd>${formatScore(row.composite)}</dd>
+            <dt>AIRH Quality</dt><dd>${formatScore(row.qualityScore)}</dd>
+            <dt>Price</dt><dd>${formatPrice(row)}</dd>
+            <dt>Speed</dt><dd>${row.speed > 0 ? `${escapeHtml(row.speed)} t/s` : 'pending'}</dd>
+            <dt>Context</dt><dd>${escapeHtml(formatContext(row.contextWindow))}</dd>
+          </dl>
+          <div class="footer">
+            <a href="${escapeHtml(row.href)}">Open page</a>
+            <a href="${base}compare/head-to-head/">Compare</a>
+            <span>Watchlist soon</span>
+          </div>
+        `;
+      }
+
+      function richProviderHtml(providerKey) {
+        const providerRows = rows.filter((row) => row.providerKey === providerKey).sort((a, b) => b.composite - a.composite);
+        const first = providerRows[0];
+        if (!first) return '';
+        return `
+          <div class="scribble">${providerRows.length} tracked row${providerRows.length === 1 ? '' : 's'}</div>
+          <h2><span class="provider-dot" style="background:${escapeHtml(first.providerColour)}"></span>${escapeHtml(first.provider)}</h2>
+          <p class="sub">Top rows on AIRH Composite</p>
+          <dl>
+            ${providerRows.slice(0, 3).map((row) => `<dt>${escapeHtml(row.name)}</dt><dd>${formatScore(row.composite)}</dd>`).join('')}
+          </dl>
+          <div class="footer">
+            <a href="${base}labs/">Provider pages</a>
+            <a href="${base}compare/providers/">Compare providers</a>
+          </div>
+        `;
+      }
+
+      function richTagHtml(tag) {
+        return `
+          <div class="scribble">tag</div>
+          <h2>${escapeHtml(tag)}</h2>
+          <p class="sub">${escapeHtml(tagDescriptions[tag] || 'Derived from the current source cache.')}</p>
+          <div class="footer"><span>Use the filters to narrow rows</span></div>
+        `;
+      }
+
+      function showRichTip(target) {
+        if (!richTip) return;
+        const type = target.getAttribute('data-airh-rich');
+        let html = '';
+        if (type === 'model') {
+          const row = rows.find((item) => item.id === target.getAttribute('data-airh-model-id'));
+          if (row) html = richModelHtml(row);
+        } else if (type === 'provider') {
+          html = richProviderHtml(target.getAttribute('data-airh-provider-key'));
+        } else if (type === 'tag') {
+          html = richTagHtml(target.getAttribute('data-airh-tag'));
+        }
+        if (!html) return;
+        window.clearTimeout(richTimer);
+        richTimer = window.setTimeout(() => {
+          richTip.innerHTML = html;
+          richTip.hidden = false;
+          placeTip(target, richTip, 330);
+          richTip.classList.add('is-visible');
+        }, 260);
+      }
+
+      function handleTipIntent(event) {
+        const richTarget = event.target.closest?.('[data-airh-rich]');
+        if (richTarget) {
+          if (activeTipTarget === richTarget) return;
+          if (activeTipTarget) hideTips();
+          activeTipTarget = richTarget;
+          showRichTip(richTarget);
+          return;
+        }
+        const simpleTarget = event.target.closest?.('[data-airh-tip]');
+        if (simpleTarget) {
+          if (activeTipTarget === simpleTarget) return;
+          if (activeTipTarget) hideTips();
+          activeTipTarget = simpleTarget;
+          showSimpleTip(simpleTarget);
+        }
+      }
+
+      document.body.addEventListener('mouseover', handleTipIntent);
+      document.body.addEventListener('mousemove', handleTipIntent);
+      document.body.addEventListener('focusin', handleTipIntent);
+      document.body.addEventListener('mouseout', (event) => {
+        if (event.target.closest?.('[data-airh-rich], [data-airh-tip]')) hideTips();
+      });
+      document.body.addEventListener('focusout', (event) => {
+        if (event.target.closest?.('[data-airh-rich], [data-airh-tip]')) hideTips();
+      });
+      window.addEventListener('scroll', hideTips, { passive: true });
+      window.addEventListener('resize', hideTips);
+
+      const layoutKey = 'airh:home-layout';
+      const panels = Array.from(document.querySelectorAll('[data-airh-layout-panel]'));
+      const layoutButtons = Array.from(document.querySelectorAll('[data-airh-layout-switch]'));
+      const terminalInput = document.querySelector('[data-airh-terminal-input]');
+      const terminalLog = document.querySelector('[data-airh-terminal-log]');
+      const terminalForm = document.querySelector('[data-airh-terminal-form]');
+
+      function setLayout(layout) {
+        const safeLayout = layout === 'terminal' ? 'terminal' : 'spreadsheet';
+        panels.forEach((panel) => {
+          panel.classList.toggle('is-hidden', panel.getAttribute('data-airh-layout-panel') !== safeLayout);
+        });
+        layoutButtons.forEach((button) => {
+          button.classList.toggle('is-active', button.getAttribute('data-airh-layout-switch') === safeLayout);
+        });
+        localStorage.setItem(layoutKey, safeLayout);
+        if (safeLayout === 'terminal') window.setTimeout(() => terminalInput?.focus(), 50);
+      }
+
+      function appendTerminal(kind, html) {
+        if (!terminalLog) return;
+        const block = document.createElement('div');
+        block.className = `airh-terminal-block is-${kind}`;
+        block.innerHTML = html;
+        terminalLog.appendChild(block);
+        terminalLog.scrollTop = terminalLog.scrollHeight;
+      }
+
+      function findRow(query) {
+        const q = String(query || '').trim().toLowerCase();
+        if (!q) return null;
+        return rows.find((row) => row.id.toLowerCase() === q)
+          || rows.find((row) => row.name.toLowerCase() === q)
+          || rows.find((row) => row.id.toLowerCase().includes(q) || row.name.toLowerCase().includes(q));
+      }
+
+      function runTerminal(command, echo = true) {
+        const raw = String(command || '').trim();
+        const lower = raw.toLowerCase();
+        if (!raw) return;
+        if (echo) appendTerminal('command', `<span>airh &gt;</span> ${escapeHtml(raw)}`);
+
+        if (lower === 'visual' || lower === 'spreadsheet') {
+          appendTerminal('ok', 'Returning to spreadsheet view.');
+          setLayout('spreadsheet');
+          return;
+        }
+
+        if (lower === 'help' || lower === '?') {
+          appendTerminal('result', '<strong>Commands</strong><br>since-last-visit<br>top 10<br>compare A B<br>news --today<br>price MODEL<br>visual');
+          return;
+        }
+
+        if (lower === 'since-last-visit') {
+          const items = tickerItems.slice(0, 8).map((item) => `<li><span>${escapeHtml(item.time)}</span>${escapeHtml(item.label)}</li>`).join('');
+          appendTerminal('result', `<strong>Since last visit</strong><ul>${items}</ul>`);
+          return;
+        }
+
+        if (/^top\s+\d+/.test(lower)) {
+          const limit = Math.max(1, Math.min(20, Number(lower.match(/\d+/)?.[0] || 10)));
+          const topRows = [...rows].sort((a, b) => b.composite - a.composite).slice(0, limit);
+          appendTerminal('result', `<strong>Top ${limit}</strong><ol>${topRows.map((row) => `<li>${escapeHtml(row.name)} <span>${formatScore(row.composite)}</span></li>`).join('')}</ol>`);
+          return;
+        }
+
+        if (lower.startsWith('compare ')) {
+          const terms = raw.slice(8).split(/\s+/).filter(Boolean);
+          const midpoint = Math.ceil(terms.length / 2);
+          const a = findRow(terms.slice(0, midpoint).join(' '));
+          const b = findRow(terms.slice(midpoint).join(' '));
+          if (!a || !b) {
+            appendTerminal('warn', 'Could not find both models. Try a shorter model name.');
+            return;
+          }
+          appendTerminal('result', `<strong>${escapeHtml(a.name)} vs ${escapeHtml(b.name)}</strong><dl><dt>Composite</dt><dd>${formatScore(a.composite)} / ${formatScore(b.composite)}</dd><dt>Price</dt><dd>${formatPrice(a)} / ${formatPrice(b)}</dd><dt>Speed</dt><dd>${a.speed || 'pending'} / ${b.speed || 'pending'}</dd><dt>Context</dt><dd>${formatContext(a.contextWindow)} / ${formatContext(b.contextWindow)}</dd></dl>`);
+          return;
+        }
+
+        if (lower === 'news --today' || lower === 'news') {
+          const items = tickerItems.slice(0, 8).map((item) => `<li>${escapeHtml(item.label)} <span>${escapeHtml(item.time)}</span></li>`).join('');
+          appendTerminal('result', `<strong>News and activity</strong><ul>${items}</ul>`);
+          return;
+        }
+
+        if (lower.startsWith('price ')) {
+          const row = findRow(raw.slice(6));
+          if (!row) {
+            appendTerminal('warn', 'Model not found.');
+            return;
+          }
+          appendTerminal('result', `<strong>${escapeHtml(row.name)}</strong><br>${formatPrice(row)} per 1M tokens<br>Blended: ${row.blendedPrice > 0 ? `$${Number(row.blendedPrice).toFixed(2)}` : 'not priced'}`);
+          return;
+        }
+
+        appendTerminal('warn', 'Unknown command. Type help for the short list.');
+      }
+
+      layoutButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          if (button.getAttribute('aria-disabled') === 'true') return;
+          setLayout(button.getAttribute('data-airh-layout-switch') || 'spreadsheet');
+        });
+      });
+
+      function submitTerminalCommand() {
+        const command = terminalInput?.value || '';
+        if (terminalInput) terminalInput.value = '';
+        runTerminal(command);
+      }
+
+      terminalForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        submitTerminalCommand();
+      });
+      terminalInput?.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter') return;
+        event.preventDefault();
+        submitTerminalCommand();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && localStorage.getItem(layoutKey) === 'terminal') {
+          setLayout('spreadsheet');
+        }
+      });
+
+      appendTerminal('intro', '<span># welcome back - running since-last-visit</span>');
+      runTerminal('since-last-visit', false);
+      setLayout(localStorage.getItem(layoutKey) === 'terminal' ? 'terminal' : 'spreadsheet');
     })();
   </script>
 </BaseLayout>

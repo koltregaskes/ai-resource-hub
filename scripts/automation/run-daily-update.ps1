@@ -113,6 +113,7 @@ function Test-IgnorableGeneratedChange {
 
   $normalised = $path.Replace('\', '/')
   return (
+    $normalised -match '^data/pg-cache/.+\.json$' -or
     $normalised -eq 'data/provider-status.json' -or
     $normalised -eq 'public/data/ai-models-comparison.csv' -or
     $normalised -eq 'public/data/ai-models-comparison.json' -or

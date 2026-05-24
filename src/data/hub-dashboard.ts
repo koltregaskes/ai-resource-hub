@@ -81,6 +81,7 @@ export interface MetaLeaderboardEntry {
   inputPrice: number;
   outputPrice: number;
   contextWindow: number;
+  speed: number;
   valueScore: number;
   released: string | null;
   openSource: boolean;
@@ -98,6 +99,7 @@ export interface FrontierNowEntry {
   inputPrice: number;
   outputPrice: number;
   contextWindow: number;
+  speed: number;
   qualityScore: number;
   benchmarkCount: number;
   coverageRatio: number;
@@ -593,6 +595,7 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
         inputPrice: toNumber(model.input_price),
         outputPrice: toNumber(model.output_price),
         contextWindow: toNumber(model.context_window),
+        speed: toNumber(model.speed),
         valueScore: (() => {
           const blended = (toNumber(model.input_price) + 3 * toNumber(model.output_price)) / 4;
           return blended > 0 && qualityScore > 0 ? Math.round((qualityScore / blended) * 10) : 0;
@@ -645,6 +648,7 @@ export function getFrontierNow(limit = 10): FrontierNowEntry[] {
         inputPrice: toNumber(model.input_price),
         outputPrice: toNumber(model.output_price),
         contextWindow: toNumber(model.context_window),
+        speed: toNumber(model.speed),
         qualityScore,
         benchmarkCount,
         coverageRatio: benchmarkCount > 0 ? Number((benchmarkCount / 11).toFixed(3)) : 0,
