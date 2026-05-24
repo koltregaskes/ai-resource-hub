@@ -6,16 +6,14 @@
  * Tables are prefixed with hub_ to avoid collisions.
  */
 import pg from 'pg';
-
-const DATABASE_URL = process.env.DATABASE_URL
-  || 'postgresql://atos_admin:atos_password@127.0.0.1:5432/atos_db';
+import { getDatabaseUrl } from './database-url';
 
 let _pool: pg.Pool | null = null;
 
 export function getPool(): pg.Pool {
   if (_pool) return _pool;
   _pool = new pg.Pool({
-    connectionString: DATABASE_URL,
+    connectionString: getDatabaseUrl(),
     max: 10,
     idleTimeoutMillis: 30_000,
     connectionTimeoutMillis: 10_000,

@@ -12,6 +12,7 @@ import { createRequire } from 'module';
 import { execFileSync } from 'child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
+import { getOptionalEnv } from './lib/load-env.mjs';
 
 const require = createRequire(import.meta.url);
 const Database = require('better-sqlite3');
@@ -38,7 +39,7 @@ const siteFiltersPath = path.join(
   'site-filters.json',
 );
 
-const PG_URL = process.env.DATABASE_URL || 'postgresql://atos_admin:atos_password@127.0.0.1:5432/atos_db';
+const PG_URL = getOptionalEnv('DATABASE_URL');
 
 if (!existsSync(cacheDir)) mkdirSync(cacheDir, { recursive: true });
 
@@ -246,6 +247,10 @@ function filterSharedNews(rows) {
 
 async function connectPostgres() {
   if (!Client) return null;
+  if (!PG_URL) {
+    console.warn('  Shared Postgres skipped: DATABASE_URL is not set');
+    return null;
+  }
   try {
     const client = new Client({ connectionString: PG_URL });
     await client.connect();
