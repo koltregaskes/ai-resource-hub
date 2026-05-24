@@ -7,7 +7,7 @@ priority: "backfill"
 model: "Mistral Small 4"
 provider: "Mistral"
 release_date: "2026-03-16"
-generated_at: "2026-05-24T11:41:08.277Z"
+generated_at: "2026-05-24T13:57:22.747Z"
 ---
 
 # Mistral Small 4: release brief

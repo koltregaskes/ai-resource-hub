@@ -7,7 +7,7 @@ priority: "high"
 model: "Gemini 3.5 Flash"
 provider: "Google"
 release_date: "2026-05-19"
-generated_at: "2026-05-24T11:41:08.276Z"
+generated_at: "2026-05-24T13:57:22.745Z"
 ---
 
 # Gemini 3.5 Flash: release brief

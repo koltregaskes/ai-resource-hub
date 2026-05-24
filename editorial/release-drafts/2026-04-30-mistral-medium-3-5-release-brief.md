@@ -7,7 +7,7 @@ priority: "watch"
 model: "Mistral Medium 3.5"
 provider: "Mistral"
 release_date: "2026-04-30"
-generated_at: "2026-05-24T11:41:08.276Z"
+generated_at: "2026-05-24T13:57:22.746Z"
 ---
 
 # Mistral Medium 3.5: release brief

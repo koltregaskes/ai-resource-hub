@@ -7,7 +7,7 @@ priority: "high"
 model: "Claude Mythos Preview"
 provider: "Anthropic"
 release_date: "2026-04-07"
-generated_at: "2026-05-24T11:41:08.276Z"
+generated_at: "2026-05-24T13:57:22.745Z"
 ---
 
 # Claude Mythos Preview: release brief
