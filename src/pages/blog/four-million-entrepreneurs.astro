@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const publishedAt = '2026-05-05';
+---
+
+<BaseLayout
+  title="What the OpenAI entrepreneurship report didn't say — AI Resource Hub"
+  description="OpenAI says 4 million people used ChatGPT to start, plan, run, or grow a business in March 2026. Here's the part the report skipped — and why most of those four million won't earn anything."
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+    <nav class="text-xs text-(--color-text-muted) mb-6" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">What the OpenAI entrepreneurship report didn't say</span>
+    </nav>
+
+    <header class="mb-10">
+      <p class="text-xs font-bold tracking-[0.18em] uppercase text-blue-400 mb-3">ESSAY · 5 May 2026</p>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-(--color-text-primary) leading-[1.05] mb-4">
+        What the OpenAI entrepreneurship report didn't say
+      </h1>
+      <p class="text-lg sm:text-xl text-(--color-text-secondary) leading-relaxed">
+        Four million people used ChatGPT to start, plan, run, or grow a business in March 2026.
+        That's the headline. Here's the part the report skipped — and why most of those four million
+        won't earn anything from it.
+      </p>
+    </header>
+
+    <div class="space-y-6 text-(--color-text-secondary) text-base sm:text-lg leading-relaxed">
+      <p>
+        OpenAI published a report this month called <em>Empowering Entrepreneurship in ChatGPT</em>.
+        The headline number is good: by their conservative estimate, <strong>at least four million people
+        used ChatGPT to start, plan, run, or grow a business</strong> in a single month. That's roughly
+        one in fifty active ChatGPT users — across retail, services, trades, health, education, and the
+        long tail.
+      </p>
+
+      <p>
+        It's a confidence-building stat for anyone using AI tools to run something small. We're not
+        outliers. Four million of us are doing the same thing.
+      </p>
+
+      <p>
+        And then the report stops being useful.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) pt-4">What the report says</h2>
+
+      <p>
+        The report's most-quoted breakdowns are by industry (retail, professional services, trades,
+        health, beauty) and by activity (marketing, branding, operations, customer service). Both are
+        the top of the funnel. The single biggest activity, at 26%, is <strong>marketing and
+        copywriting</strong>. The next is <strong>branding and identity</strong>, at 9 to 15% depending on
+        cohort.
+      </p>
+
+      <p>
+        That much is worth knowing. The model is doing what marketers and brand consultants used
+        to do, for free, all day, for four million people.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) pt-4">What the report doesn't say</h2>
+
+      <p>The report is carefully silent on five things, and the silence is the point.</p>
+
+      <p>
+        <strong>It doesn't say what worked.</strong> The methodology uses privacy-preserving classifiers
+        to count messages. There's no visibility into which businesses earned a pound, which ones
+        stalled, and which ones never made it past a slide deck. Four million people <em>used</em>
+        ChatGPT for business. The report cannot tell you how many of them <em>have</em> a business.
+      </p>
+
+      <p>
+        <strong>It doesn't break down digital products.</strong> The industry buckets — retail,
+        professional services, trades — are offline-shaped. Solo creators selling PDFs, prompt kits,
+        Notion templates, AI music, faceless YouTube channels, and digital downloads don't have a
+        column in the chart. They're absorbed into "professional services" and rounded out of view.
+        The single largest growth lane in the AI economy doesn't appear as a category.
+      </p>
+
+      <p>
+        <strong>It doesn't quantify revenue.</strong> No median earnings, no time-to-first-sale, no
+        conversion rates, no customer acquisition cost. The closest the report comes is observing
+        that "active entrepreneurs are disproportionately represented on higher-tier plans". In other
+        words: the people earning enough from AI tools to justify £20 a month for ChatGPT Plus are
+        the cohort doing it seriously. That's the only revenue signal in the document.
+      </p>
+
+      <p>
+        <strong>It doesn't name a single person.</strong> No case studies. No founders. No real names.
+        The whole document is in the third person plural — "entrepreneurs do X", "founders use Y" —
+        which is exactly how a corporate report avoids the awkward question of which specific X and
+        which specific Y actually paid the rent.
+      </p>
+
+      <p>
+        <strong>And it doesn't explain why most of those four million will earn nothing.</strong>
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) pt-4">Why most of the four million won't earn</h2>
+
+      <p>
+        I don't have OpenAI's data, but I can tell you what I see in operator forums, indie-hacker
+        communities, and the people who actually email me. The pattern is the same every time. The
+        4 million includes:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-2 text-(--color-text-secondary)">
+        <li>People who asked ChatGPT to "write a business plan for my idea" and have done nothing since.</li>
+        <li>People who generated a brand identity, designed a logo in Midjourney, and stopped there.</li>
+        <li>People who drafted a Substack post a month for six months and never sent the first one.</li>
+        <li>People who built a Notion template, didn't list it anywhere, and called the project finished.</li>
+        <li>People who watched a "how I made $10K with AI" YouTube video and ran the same prompt.</li>
+      </ul>
+
+      <p>
+        None of this is an insult. We've all been in at least one of those categories at least once.
+        The reason most of the four million won't earn isn't laziness. It's that <strong>the model
+        produces output, and output isn't the product</strong>. The product is a finished, distributed,
+        pricing-decided, checkout-wired, customer-supported, kept-up-to-date thing. ChatGPT can write
+        every word of a business; it cannot ship one.
+      </p>
+
+      <p>
+        The operators who do earn — and four million is enough that there are tens of thousands of
+        them — share one feature. They treat the AI as a layer in a system they're running, not as
+        the system itself. They know which layer changed when the output gets worse. They close the
+        loop themselves.
+      </p>
+
+      <h2 class="text-2xl font-bold text-(--color-text-primary) pt-4">What to do with the four-million number</h2>
+
+      <p>
+        Use it as motivation, not as evidence. The number is real. The market is real. The
+        opportunity is real. What the OpenAI report can't give you is the <em>operating discipline</em>
+        that turns "I used ChatGPT for my business" into "I run a business that uses ChatGPT".
+      </p>
+
+      <p>
+        That's what I write about here, and that's what the AI Operator Starter Pack is built around.
+        Three lessons on what's actually under the hood (model, harness, layers), four exercises
+        that turn vague AI frustration into evidence, a printable reference card for the wall, and
+        ten operator-grade prompts for the work that matters. £9 for the first 100 readers; £12
+        afterwards.
+      </p>
+
+      <aside class="mt-12 p-6 sm:p-8 rounded-2xl border border-blue-500/20 bg-blue-500/5">
+        <p class="text-xs font-bold tracking-[0.18em] uppercase text-blue-400 mb-3">AI OPERATOR STARTER PACK</p>
+        <h3 class="text-2xl font-bold text-(--color-text-primary) mb-3">Want the system the report didn't describe?</h3>
+        <p class="text-(--color-text-secondary) mb-5 leading-relaxed">
+          The Starter Pack is the operating discipline behind the four-million number — what most of
+          them don't have, and what separates "used ChatGPT" from "ran a business that uses ChatGPT".
+          First 100 readers get founder pricing of £9.
+        </p>
+        <a
+          href={`${base}starter-pack/`}
+          class="inline-block px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold transition-colors"
+        >
+          Join the waitlist →
+        </a>
+      </aside>
+
+      <p class="text-sm text-(--color-text-muted) pt-8">
+        — Kol Tregaskes, AI Resource Hub. Published {publishedAt}.
+        OpenAI's full report is at{' '}
+        <a
+          href="https://cdn.openai.com/pdf/32153121-f87f-4320-a725-9c94ee8d9b30/empowering-entrepreneurship-in-chatgpt-report.pdf"
+          class="text-(--color-accent) hover:underline"
+          target="_blank"
+          rel="noopener"
+        >openai.com</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>
