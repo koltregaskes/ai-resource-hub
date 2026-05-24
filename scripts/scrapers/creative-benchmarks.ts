@@ -20,6 +20,8 @@
  *   - Write to both SQLite and Postgres so all sites benefit
  */
 import { getDB, logScrapeRun } from './base';
+import { getOptionalDatabaseUrl } from '../../src/db/database-url';
+import pg from 'pg';
 import type Database from 'better-sqlite3';
 
 interface CreativeScore {
@@ -129,18 +131,14 @@ function getKnownScores(): CreativeScore[] {
 
 // ─── Write to Postgres (shared creative_benchmarks) ────────────
 async function writeToPostgres(scores: CreativeScore[]): Promise<number> {
-  let pg;
-  try {
-    // Dynamic import — pg may not be installed in the Hub's node_modules
-    const pgPath = 'W:/Agent Workspace 2/src/backend/node_modules/pg';
-    pg = require(pgPath);
-  } catch {
-    console.log('  Postgres pg module not found — skipping shared DB write');
+  const databaseUrl = getOptionalDatabaseUrl();
+  if (!databaseUrl) {
+    console.log('  DATABASE_URL not set - skipping shared DB write');
     return 0;
   }
 
   const client = new pg.Client({
-    connectionString: 'postgresql://atos_admin:atos_password@127.0.0.1:5432/atos_db',
+    connectionString: databaseUrl,
   });
 
   try {
