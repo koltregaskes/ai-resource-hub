@@ -3,11 +3,11 @@ title: "Qwen3.6 27B: release brief"
 slug: "2026-04-27-qwen3-6-27b-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "high"
+priority: "watch"
 model: "Qwen3.6 27B"
 provider: "Alibaba"
 release_date: "2026-04-27"
-generated_at: "2026-05-18T04:41:58.327Z"
+generated_at: "2026-05-24T10:58:42.537Z"
 ---
 
 # Qwen3.6 27B: release brief
@@ -16,7 +16,7 @@ Alibaba's Qwen3.6 27B is on the release desk with 0 related stories and 0 benchm
 
 ## Release summary
 
-Qwen3.6 27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.32 in / $3.20 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-27b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
+Qwen3.6 27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.30 in / $3.20 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-27b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.
 
 ## Why this matters
 

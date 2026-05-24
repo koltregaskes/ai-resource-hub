@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 18 May 2026, 04:41 UTC
+Generated: 24 May 2026, 10:58 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -14,20 +14,20 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 4 | Claude Sonnet 4.6 | Anthropic | 55.0 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
 | 5 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.08 / $0.30 | 05 Apr 2025 |
 | 6 | GPT-5.2 Pro | OpenAI | 45.9 | 91.3 / 4 | 16% | Chat | $21.00 / $168.00 | 10 Dec 2025 |
-| 7 | Claude Opus 4.5 | Anthropic | 43.0 | 84.3 / 4 | 16% | Chat | $5.00 / $25.00 | 24 Nov 2025 |
-| 8 | GPT-5 Pro | OpenAI | 43.0 | 88.5 / 4 | 16% | Chat | $15.00 / $120.00 | 06 Oct 2025 |
-| 9 | Gemini 3.1 Pro | Google | 41.9 | 60.4 / 2 | 9% | Chat | $2.00 / $12.00 | 19 Feb 2026 |
-| 10 | Qwen3 Max | Alibaba | 41.4 | 86.1 / 4 | 15% | Coding | $0.78 / $3.90 | 01 Sept 2025 |
-| 11 | DeepSeek V3.2 | DeepSeek | 41.2 | 74.6 / 6 | 21% | General use | $0.20 / $0.77 | 29 Sept 2025 |
-| 12 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $2.00 / $8.00 | 16 Apr 2025 |
-| 13 | Claude Opus 4 | Anthropic | 38.6 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
-| 14 | Gemini 2.5 Pro | Google | 38.1 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
-| 15 | Grok 4 | xAI | 37.1 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
-| 16 | DeepSeek R1 | DeepSeek | 36.7 | 70.9 / 19 | 58% | General use | $0.70 / $2.50 | 20 Jan 2025 |
-| 17 | Gemini 3 Pro | Google | 36.2 | 81.2 / 3 | 13% | Chat | $2.00 / $12.00 | 18 Nov 2025 |
-| 18 | Claude Sonnet 4 | Anthropic | 35.9 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
-| 19 | Claude Sonnet 4.5 | Anthropic | 35.6 | 76.7 / 3 | 13% | Chat | $3.00 / $15.00 | 29 Sept 2025 |
-| 20 | Phi-4 Reasoning | Microsoft | 34.5 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
+| 7 | GPT-5 Pro | OpenAI | 43.0 | 88.5 / 4 | 16% | Chat | $15.00 / $120.00 | 06 Oct 2025 |
+| 8 | Claude Opus 4.5 | Anthropic | 41.2 | 84.3 / 4 | 16% | Chat | $5.00 / $25.00 | 24 Nov 2025 |
+| 9 | DeepSeek V3.2 | DeepSeek | 41.2 | 74.6 / 6 | 21% | General use | $0.20 / $0.77 | 29 Sept 2025 |
+| 10 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $2.00 / $8.00 | 16 Apr 2025 |
+| 11 | Gemini 3.1 Pro | Google | 38.2 | 60.4 / 2 | 9% | Chat | $2.00 / $12.00 | 19 Feb 2026 |
+| 12 | Gemini 2.5 Pro | Google | 38.1 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
+| 13 | Grok 4 | xAI | 37.1 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
+| 14 | DeepSeek R1 | DeepSeek | 36.7 | 70.9 / 19 | 58% | General use | $0.70 / $2.50 | 20 Jan 2025 |
+| 15 | Claude Opus 4 | Anthropic | 36.6 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
+| 16 | Gemini 3 Pro | Google | 36.2 | 81.2 / 3 | 13% | Chat | $2.00 / $12.00 | 18 Nov 2025 |
+| 17 | Claude Sonnet 4.5 | Anthropic | 35.6 | 76.7 / 3 | 13% | Chat | $3.00 / $15.00 | 29 Sept 2025 |
+| 18 | Phi-4 Reasoning | Microsoft | 34.5 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
+| 19 | Grok 3 | xAI | 34.3 | 84.7 / 7 | 24% | General use | $3.00 / $15.00 | 10 Jun 2025 |
+| 20 | Claude Sonnet 4 | Anthropic | 34.0 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
 
 Notes:
 

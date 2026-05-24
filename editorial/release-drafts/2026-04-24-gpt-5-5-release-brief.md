@@ -7,12 +7,12 @@ priority: "watch"
 model: "GPT-5.5"
 provider: "OpenAI"
 release_date: "2026-04-24"
-generated_at: "2026-05-18T04:41:58.328Z"
+generated_at: "2026-05-24T10:58:42.537Z"
 ---
 
 # GPT-5.5: release brief
 
-OpenAI's GPT-5.5 is on the release desk with 4 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.5 is on the release desk with 3 related stories and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -30,9 +30,8 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 ## Outside coverage and early reactions
 
 - OpenAI (2026-05-15): [Databricks brings GPT-5.5 to enterprise agent workflows](https://openai.com/index/databricks) - Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.
-- TechCrunch (2026-05-15): [OpenAI launches ChatGPT for personal finance, will let you connect bank accounts](https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/) - Once users connect their accounts, they will see a dashboard of their portfolio performance, spending, subscriptions, and upcoming payments.
-- OpenAI (2026-05-12): [How NVIDIA engineers and researchers build with Codex](https://openai.com/index/nvidia) - Teams use Codex with GPT-5.5 to ship production systems and turn research ideas into runnable experiments.
-- The Verge (2026-05-15): [AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies) - Andon Labs has been running a series of experiments in which AI agents run businesses without human intervention. Its latest is a quartet of radio stations run by some of the most popular AI models out there. "Thinking Frequencies" is run by Claude, "OpenAIR" by ChatGPT, "Backlink Broadcast" by Google's Gemini, and "G…
+- OpenAI (2026-05-20): [How Ramp engineers accelerate code review with Codex](https://openai.com/index/ramp) - How Ramp engineers use Codex with GPT-5.5 to review code and ship improvements, allowing them to get substantive feedback in minutes instead of hours.
+- OpenAI (2026-05-19): [Introducing OpenAI for Singapore](https://openai.com/index/introducing-openai-for-singapore) - OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.
 
 ## Suggested thread / post structure
 
@@ -54,6 +53,5 @@ GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-a
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
 - [OpenAI: Databricks brings GPT-5.5 to enterprise agent workflows](https://openai.com/index/databricks)
-- [TechCrunch: OpenAI launches ChatGPT for personal finance, will let you connect bank accounts](https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/)
-- [OpenAI: How NVIDIA engineers and researchers build with Codex](https://openai.com/index/nvidia)
-- [The Verge: AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies)
+- [OpenAI: How Ramp engineers accelerate code review with Codex](https://openai.com/index/ramp)
+- [OpenAI: Introducing OpenAI for Singapore](https://openai.com/index/introducing-openai-for-singapore)

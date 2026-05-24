@@ -7,12 +7,12 @@ priority: "backfill"
 model: "GPT-5.3-Codex"
 provider: "OpenAI"
 release_date: "2026-02-24"
-generated_at: "2026-05-18T04:41:58.329Z"
+generated_at: "2026-05-24T10:58:42.538Z"
 ---
 
 # GPT-5.3-Codex: release brief
 
-OpenAI's GPT-5.3-Codex is on the release desk with 2 related stories and 0 benchmark signals to review.
+OpenAI's GPT-5.3-Codex is on the release desk with 1 related story and 0 benchmark signals to review.
 
 ## Release summary
 
@@ -29,8 +29,7 @@ GPT-5.3-Codex is a currently tracked release from OpenAI. It is positioned as an
 
 ## Outside coverage and early reactions
 
-- TechCrunch (2026-05-15): [OpenAI launches ChatGPT for personal finance, will let you connect bank accounts](https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/) - Once users connect their accounts, they will see a dashboard of their portfolio performance, spending, subscriptions, and upcoming payments.
-- The Verge (2026-05-15): [AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies) - Andon Labs has been running a series of experiments in which AI agents run businesses without human intervention. Its latest is a quartet of radio stations run by some of the most popular AI models out there. "Thinking Frequencies" is run by Claude, "OpenAIR" by ChatGPT, "Backlink Broadcast" by Google's Gemini, and "G…
+- OpenAI (2026-05-19): [Introducing OpenAI for Singapore](https://openai.com/index/introducing-openai-for-singapore) - OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.
 
 ## Suggested thread / post structure
 
@@ -51,5 +50,4 @@ GPT-5.3-Codex is a currently tracked release from OpenAI. It is positioned as an
 
 - [Official launch or docs](https://platform.openai.com/docs/models)
 - [Provider API/docs](https://platform.openai.com/docs/models)
-- [TechCrunch: OpenAI launches ChatGPT for personal finance, will let you connect bank accounts](https://techcrunch.com/2026/05/15/openai-launches-chatgpt-for-personal-finance-will-let-you-connect-bank-accounts/)
-- [The Verge: AI radio hosts demonstrate why AI can’t be trusted alone](https://www.theverge.com/ai-artificial-intelligence/931479/andon-labs-ai-radio-companies)
+- [OpenAI: Introducing OpenAI for Singapore](https://openai.com/index/introducing-openai-for-singapore)

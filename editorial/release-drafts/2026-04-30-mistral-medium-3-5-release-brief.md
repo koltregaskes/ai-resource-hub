@@ -3,11 +3,11 @@ title: "Mistral Medium 3.5: release brief"
 slug: "2026-04-30-mistral-medium-3-5-release-brief"
 draft_type: "model-release"
 status: "needs_research"
-priority: "high"
+priority: "watch"
 model: "Mistral Medium 3.5"
 provider: "Mistral"
 release_date: "2026-04-30"
-generated_at: "2026-05-18T04:41:58.327Z"
+generated_at: "2026-05-24T10:58:42.537Z"
 ---
 
 # Mistral Medium 3.5: release brief
