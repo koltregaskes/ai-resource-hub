@@ -39,13 +39,13 @@
   },
   "dependencies": {
     "@astrojs/prism": "^4.0.1",
-    "@astrojs/react": "^4.4.2",
+    "@astrojs/react": "^5.0.5",
     "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.2.2",
     "@types/pg": "^8.20.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^5.18.1",
+    "astro": "^6.3.7",
     "better-sqlite3": "^12.8.0",
     "chart.js": "^4.5.1",
     "pg": "^8.20.0",
@@ -62,7 +62,7 @@
     "tsx": "^4.21.0"
   },
   "overrides": {
-    "vite": "^6.4.2",
+    "vite": "^7.3.2",
     "rollup": "^4.59.0",
     "devalue": "^5.8.1",
     "fast-uri": "^3.1.2",

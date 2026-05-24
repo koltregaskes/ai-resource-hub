@@ -69,6 +69,9 @@ jobs:
       - name: Generate release desk and editorial drafts
         run: npm run generate:release-desk
 
+      - name: Sync news pipeline snapshot
+        run: npm run sync:news-pipeline
+
       - name: Generate regional availability export
         run: npm run generate:availability
 
@@ -86,14 +89,14 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet -- data/pg-cache data/provider-status.json public/data src/data/model-release-desk.generated.ts editorial/release-drafts docs/repo-reference || echo "changed=true" >> "$GITHUB_OUTPUT"
+          git diff --quiet -- data/pg-cache data/provider-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts docs/repo-reference || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated data
         if: steps.changes.outputs.changed == 'true' || inputs.force_rebuild == 'true'
         run: |
           git config user.name "The AI Resource Hub Bot"
           git config user.email "bot@theairesourcehub.com"
-          git add data/pg-cache data/provider-status.json public/data src/data/model-release-desk.generated.ts editorial/release-drafts docs/repo-reference
+          git add data/pg-cache data/provider-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts docs/repo-reference
           git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
           git push
 
