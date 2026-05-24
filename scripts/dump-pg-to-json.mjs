@@ -149,10 +149,14 @@ function loadExistingCacheRows(name) {
   const rows = [];
 
   if (existsSync(outPath)) {
-    rows.push(...readJsonRows(readFileSync(outPath, 'utf8'), `${name} cache file`));
+    for (const row of readJsonRows(readFileSync(outPath, 'utf8'), `${name} cache file`)) {
+      rows.push(row);
+    }
   }
 
-  rows.push(...loadTrackedCacheRows(name));
+  for (const row of loadTrackedCacheRows(name)) {
+    rows.push(row);
+  }
   return rows;
 }
 
