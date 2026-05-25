@@ -3999,3 +3999,351 @@ a {
     min-height: 50vh;
   }
 }
+
+/* Site-wide v3 reference-desk sweep: carry the spreadsheet design beyond the homepage. */
+.airh-compact-menu {
+  display: none;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.airh-compact-menu > summary {
+  min-width: auto;
+  padding: 0 0.65rem;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.airh-compact-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.airh-compact-menu-panel {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.55rem);
+  z-index: 90;
+  display: grid;
+  gap: 0.75rem;
+  width: min(86vw, 30rem);
+  max-height: min(72vh, 34rem);
+  overflow-y: auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  background: var(--color-bg-secondary);
+  padding: 0.75rem;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+.airh-compact-menu-panel p {
+  margin: 0 0 0.35rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.airh-compact-menu-panel div div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.2rem;
+}
+
+.airh-compact-menu-panel a {
+  border-top: 1px solid var(--color-border);
+  padding: 0.48rem 0.25rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.airh-compact-menu-panel a:hover {
+  color: var(--color-text-primary);
+}
+
+.airh-site-ticker {
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary));
+  overflow: hidden;
+}
+
+.airh-site-ticker-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  width: min(100%, 1440px);
+  min-height: 32px;
+  margin: 0 auto;
+  padding: 0.32rem 1rem;
+}
+
+.airh-site-ticker-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 0 0 auto;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.airh-site-ticker-window {
+  flex: 1 1 auto;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 4%, black 96%, transparent);
+}
+
+.airh-site-ticker-stream {
+  display: inline-flex;
+  gap: 1.25rem;
+  min-width: max-content;
+  animation: airh-marquee 54s linear infinite;
+}
+
+.airh-site-ticker:hover .airh-site-ticker-stream {
+  animation-play-state: paused;
+}
+
+.airh-site-ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.airh-site-ticker-item:hover {
+  color: var(--color-text-primary);
+}
+
+.airh-site-ticker-item span {
+  color: var(--color-text-muted);
+}
+
+.airh-site-ticker-item b {
+  color: var(--color-accent);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main {
+  min-width: 0;
+  overflow-x: hidden;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 36%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 30%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 22%, transparent), transparent 18rem),
+    var(--color-bg-primary);
+  background-size: 160px 160px, 160px 160px, auto, auto;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main * {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  width: 100%;
+  max-width: min(80rem, calc(100vw - 2rem)) !important;
+  padding-top: clamp(1rem, 2vw, 1.8rem) !important;
+  padding-bottom: clamp(2rem, 4vw, 4rem) !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  margin-bottom: 0.7rem !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono);
+  font-size: 0.68rem !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  max-width: 20ch;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 3.2rem) !important;
+  font-weight: 650 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.02em !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(h2, h3) {
+  color: var(--color-text-primary) !important;
+  letter-spacing: 0 !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(p) {
+  color: var(--color-text-secondary);
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where([class*="tracking-"]) {
+  letter-spacing: 0.12em;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-bg-card)"][class*="border"]),
+body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-bg-secondary)"][class*="border"]),
+body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-accent)"][class*="border"]),
+body.airh-sitewide-system:not(.airh-home-page) main :where(.glass-panel),
+body.airh-sitewide-system:not(.airh-home-page) main :where(.hero-note-card, .coverage-card, .entry-card, .hub-home-card, .hub-home-brief, .hub-home-surface, .hub-home-news-strip, .hub-home-brief-link, .hub-home-feed-row, .hub-home-pulse-row, .hub-home-activity-row, .activity-shell, .activity-row, .activity-summary-card, .desk-panel, .desk-note) {
+  border-top-color: var(--color-border-strong) !important;
+  border-bottom-color: var(--color-border) !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 50%, transparent) !important;
+  box-shadow: none !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where([class*="shadow"]) {
+  box-shadow: none !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where([class*="rounded-2xl"], [class*="rounded-[1."], [class*="rounded-[2"]) {
+  border-radius: 0.4rem !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(.rounded-full, [class*="rounded-full"]) {
+  border-radius: 999px !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  font-size: 0.84rem;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(.table-scroll-container, .desk-table-wrap, .hub-home-table-shell, [class*="overflow-x-auto"], [class*="overflow-hidden"]) {
+  max-width: 100%;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(thead tr) {
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--color-bg-tertiary) 72%, transparent) !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono);
+  font-size: 0.66rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(td, th) {
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(tbody tr:hover) {
+  background: var(--color-bg-hover);
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea) {
+  border-radius: 0.35rem !important;
+  background: var(--color-bg-secondary) !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(code, pre) {
+  border-radius: 0.35rem !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*="border"]:not(.airh-compact-link):not(.airh-site-ticker-item)) {
+  text-decoration: none;
+}
+
+@media (max-width: 1180px) {
+  .airh-compact-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 760px) {
+  body.airh-sitewide-system:not(.airh-home-page) main {
+    background-size: 160px 160px, 160px 160px, auto, auto;
+  }
+
+  body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+    max-width: 100vw !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  body.airh-sitewide-system:not(.airh-home-page) main :where([class*="grid-cols-2"], [class*="grid-cols-3"], [class*="grid-cols-4"], [class*="grid-cols-5"], [class*="grid-cols-6"], .desk-header, .desk-status-strip, .desk-section-head) {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.airh-sitewide-system:not(.airh-home-page) main :where(.desk-section-head, .activity-hero, .activity-toolbar, .hub-home-brief-head, .hub-home-card-head) {
+    align-items: stretch !important;
+    flex-direction: column !important;
+  }
+
+  body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+    max-width: 100%;
+    font-size: clamp(2rem, 14vw, 2.65rem) !important;
+    overflow-wrap: anywhere;
+  }
+
+  body.airh-sitewide-system:not(.airh-home-page) main :where(p, h2, h3, li, a, span, strong) {
+    overflow-wrap: anywhere;
+  }
+
+  body.airh-sitewide-system:not(.airh-home-page) main :where(.leaderboard-tab) {
+    flex: 1 1 9rem;
+    white-space: normal;
+  }
+
+  body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+    min-width: 48rem;
+  }
+
+  body.airh-sitewide-system:not(.airh-home-page) main :where(.desk-table, .hub-home-table) {
+    min-width: 48rem;
+  }
+
+  .airh-site-ticker-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .airh-site-ticker-window {
+    width: 100%;
+  }
+
+  .airh-site-ticker-item {
+    max-width: 80vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .airh-compact-menu-panel {
+    left: auto;
+    right: 0;
+  }
+
+  .airh-compact-menu-panel div div {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .airh-site-ticker-stream {
+    animation: none;
+  }
+}

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import GlobalSearch from '../components/GlobalSearch.astro';
+import { getLatestActivities } from '../data/hub-dashboard';
 import { getSearchIndex } from '../data/search-index';
 import {
   buildAlternateTranslations,
@@ -35,13 +36,16 @@ const {
   translationState = locale === DEFAULT_LOCALE ? 'source' : 'reviewed',
   translationNote,
   robots,
-  compactChrome = false,
+  compactChrome = true,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const searchIndex = getSearchIndex(base);
+const basePath = new URL(base, Astro.site).pathname;
+const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const isHomePage = currentPath === basePath;
 const localeMeta = getLocaleMeta(locale);
 const localeSwitcherLinks = buildLocaleSwitcherLinks(base, locale, localeMenuLinks);
 const alternateLocaleLinks = buildAlternateTranslations(base, alternateTranslations);
@@ -298,6 +302,29 @@ const compactNav = [
     href: `${base}glossary/`,
   },
 ];
+
+function formatTickerTime(value: string): string {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return 'live';
+
+  const diffHours = Math.floor((Date.now() - parsed.getTime()) / (1000 * 60 * 60));
+  if (diffHours < 1) return 'now';
+  if (diffHours < 24) return `${diffHours}h`;
+
+  const diffDays = Math.floor(diffHours / 24);
+  if (diffDays < 10) return `${diffDays}d`;
+
+  return parsed.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+}
+
+const latestActivities = getLatestActivities(10, base);
+const globalTickerItems = latestActivities.map((item) => ({
+  href: item.href ?? `${base}updates/`,
+  time: formatTickerTime(item.date),
+  title: item.title,
+  category: item.category,
+}));
+const latestTickerDate = latestActivities[0]?.date ?? null;
 ---
 
 <!doctype html>
@@ -366,7 +393,7 @@ const compactNav = [
       })();
     </script>
   </head>
-  <body class="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary) flex flex-col">
+  <body class:list={['airh-sitewide-system min-h-screen bg-(--color-bg-primary) text-(--color-text-primary) flex flex-col', { 'airh-home-page': isHomePage }]}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     {compactChrome && (
       <header class="airh-compact-topbar">
@@ -374,6 +401,25 @@ const compactNav = [
           <a href={base} class="airh-compact-brand">
             <span>AI Resource Hub<span class="airh-brand-dot">.</span></span>
           </a>
+
+          <details class="airh-compact-menu">
+            <summary class="airh-tool-icon" data-airh-tip="Open site sections.">
+              <span aria-hidden="true">Menu</span>
+              <span class="sr-only">Navigation menu</span>
+            </summary>
+            <div class="airh-compact-menu-panel">
+              {mobileSections.map((section) => (
+                <div>
+                  <p>{section.title}</p>
+                  <div>
+                    {section.links.map((link) => (
+                      <a href={link.href}>{link.label}</a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
 
           <div class="airh-compact-links">
             {compactNav.map((item) => (
@@ -445,6 +491,32 @@ const compactNav = [
           </div>
         </nav>
       </header>
+    )}
+
+    {compactChrome && !isHomePage && globalTickerItems.length > 0 && (
+      <div class="airh-site-ticker" aria-label="Latest AI Resource Hub updates">
+        <div class="airh-site-ticker-inner">
+          <a
+            href={`${base}updates/`}
+            class="airh-site-ticker-stamp"
+            data-airh-tip={latestTickerDate ? `Latest source activity: ${new Date(latestTickerDate).toLocaleString('en-GB')}.` : 'Latest source activity from the Hub data pipeline.'}
+          >
+            <span class="airh-pulse-dot"></span>
+            What's new
+          </a>
+          <div class="airh-site-ticker-window">
+            <div class="airh-site-ticker-stream">
+              {[...globalTickerItems, ...globalTickerItems].map((item) => (
+                <a href={item.href} class="airh-site-ticker-item">
+                  <span>{item.time}</span>
+                  <b>{item.category}</b>
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     )}
 
     {!compactChrome && (
