@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 25 May 2026, 12:43 UTC
+Generated: 25 May 2026, 16:02 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 25 May 2026, 12:43 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 25 May 2026, 12:43 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 25 May 2026, 12:43 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 25 May 2026, 12:43 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 25 May 2026, 12:43 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 25 May 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,071 open roles across 10 tracked companies. | `/jobs/` |
-| 20 Apr 2026, 12:00 UTC | digest | Is anyone getting real coding work done with Qwen3.6-35B-A3B-UD-Q4_K_M on a 32GB Mac in opencode, claude code or similar? | Reddit r/LocalLLaMA featured in the latest daily brief. | [open](https://reddit.com/r/LocalLLaMA/comments/1sq94qx/is_anyone_getting_real_coding_work_done_with/) |
-| 20 Apr 2026, 12:00 UTC | digest | Published the 2026-04-20 daily digest | 20 stories captured from tracked sources. | `/news/` |
-| 20 Apr 2026, 12:00 UTC | digest | SGOCR: A Spatially-Grounded OCR-focused Pipeline &amp; V1 Dataset [P] | Reddit r/MachineLearning featured in the latest daily brief. | [open](https://reddit.com/r/MachineLearning/comments/1sqdrqg/sgocr_a_spatiallygrounded_ocrfocused_pipeline_v1/) |
-| 19 Apr 2026, 12:00 UTC | digest | Elon Endorses OpenClaw for X API — This Changes Everything for AI Agents | Aligned News (Scoble) featured in the latest daily brief. | [open](https://x.com/BonairoFi/status/2045823726919258175) |
+| 25 May 2026, 16:02 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 25 May 2026, 16:02 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 25 May 2026, 16:02 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 25 May 2026, 16:02 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 25 May 2026, 16:02 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 25 May 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,070 open roles across 10 tracked companies. | `/jobs/` |
+| 25 May 2026, 12:00 UTC | digest | OpenGuardrails: An Open-Source Context-Aware AI Guardrails Platform | Papers With Code featured in the latest daily brief. | [open](https://paperswithcode.com/papers/2510.19169) |
+| 25 May 2026, 12:00 UTC | digest | Published the 2026-05-25 daily digest | 7 stories captured from tracked sources. | `/news/` |
+| 25 May 2026, 12:00 UTC | digest | Workbench Launches Open Source BullMQ Dashboard For Node Backends | Aligned News (Scoble) featured in the latest daily brief. | [open](https://x.com/pontusab/status/2058588422001029549) |
+| 24 May 2026, 12:00 UTC | digest | SpecBench Tests Reward Hacking In Long Horizon Coding Agents | Aligned News (Scoble) featured in the latest daily brief. | [open](https://x.com/WecoAI/status/2057503162945118637) |
 | 02 Apr 2026, 16:33 UTC | data | NeurIPS 2026 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | ICML 2026 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
