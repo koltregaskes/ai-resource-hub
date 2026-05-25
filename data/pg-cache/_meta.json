@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-25T04:48:49.689Z",
+  "generated_at": "2026-05-25T07:00:46.629Z",
   "source": "local sqlite + shared postgres",
   "sqlite_storage": "local-only",
-  "shared_postgres_available": false
+  "shared_postgres_available": true
 }

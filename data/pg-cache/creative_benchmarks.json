@@ -19,7 +19,7 @@
     "model_url": "https://hyper3d.ai",
     "pricing_note": "Credits-based",
     "scraped_at": "2026-04-01T10:52:11.177Z",
-    "updated_at": "2026-05-23T05:00:04.432Z"
+    "updated_at": "2026-05-25T05:00:02.779Z"
   },
   {
     "id": "b9d2c279-0f96-45c5-9b6e-24e493cddd5d",
@@ -40,7 +40,7 @@
     "model_url": "https://www.meshy.ai",
     "pricing_note": "Free tier / $20/mo",
     "scraped_at": "2026-04-01T10:52:11.179Z",
-    "updated_at": "2026-05-23T05:00:04.435Z"
+    "updated_at": "2026-05-25T05:00:02.782Z"
   },
   {
     "id": "5c644222-9668-40e4-b2f5-8a503bf48528",
@@ -61,7 +61,7 @@
     "model_url": "https://www.tripo3d.ai",
     "pricing_note": "Free tier / Pro",
     "scraped_at": "2026-04-01T10:52:11.182Z",
-    "updated_at": "2026-05-23T05:00:04.437Z"
+    "updated_at": "2026-05-25T05:00:02.783Z"
   },
   {
     "id": "bd6f9469-2f45-4376-8a54-edfe3ba4af25",
@@ -82,7 +82,7 @@
     "model_url": "https://deepmind.google",
     "pricing_note": "Free via Gemini",
     "scraped_at": "2026-04-01T10:52:11.136Z",
-    "updated_at": "2026-05-23T05:00:04.373Z"
+    "updated_at": "2026-05-25T05:00:02.714Z"
   },
   {
     "id": "e3b884be-b3b6-4bf0-a283-9712975e98fb",
@@ -104,7 +104,7 @@
     "model_url": "https://openai.com",
     "pricing_note": "ChatGPT Plus $20/mo",
     "scraped_at": "2026-04-01T10:52:11.133Z",
-    "updated_at": "2026-05-23T05:00:04.376Z"
+    "updated_at": "2026-05-25T05:00:02.716Z"
   },
   {
     "id": "276928c1-412b-4573-a66b-59b31a9545b9",
@@ -125,8 +125,8 @@
     "considerations": "Requires ChatGPT subscription.",
     "model_url": "https://openai.com",
     "pricing_note": "ChatGPT Plus $20/mo",
-    "scraped_at": "2026-05-24T19:00:31.888Z",
-    "updated_at": "2026-05-24T19:00:31.888Z"
+    "scraped_at": "2026-05-25T07:00:22.492Z",
+    "updated_at": "2026-05-25T07:00:22.492Z"
   },
   {
     "id": "a5d75d74-db09-4a2d-aa15-d13340a824dc",
@@ -147,7 +147,7 @@
     "model_url": "https://www.midjourney.com",
     "pricing_note": "From $10/mo",
     "scraped_at": "2026-04-01T10:52:11.138Z",
-    "updated_at": "2026-05-23T05:00:04.379Z"
+    "updated_at": "2026-05-25T05:00:02.718Z"
   },
   {
     "id": "7a830621-ac07-4c7b-bc05-37561d3b5960",
@@ -168,70 +168,7 @@
     "model_url": "https://www.adobe.com/products/firefly.html",
     "pricing_note": "Creative Cloud",
     "scraped_at": "2026-04-01T10:52:11.140Z",
-    "updated_at": "2026-05-23T05:00:04.381Z"
-  },
-  {
-    "id": "bd44d5da-c4fd-4909-b1c9-bd79e0bcbd1e",
-    "model_name": "Midjourney v7",
-    "model_maker": "Midjourney",
-    "category": "image_generation",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "90.00",
-    "score_type": "score_100",
-    "meta_score": "90.00",
-    "meta_rank": 1,
-    "strengths": [
-      "Artistic quality",
-      "Cinematic look"
-    ],
-    "considerations": "Discord or web UI only. No API.",
-    "model_url": "https://www.midjourney.com",
-    "pricing_note": "From $10/mo",
-    "scraped_at": "2026-04-01T10:52:11.120Z",
-    "updated_at": "2026-05-23T05:00:04.410Z"
-  },
-  {
-    "id": "ef69a54e-2b01-4b11-9c0e-697acbebdcd1",
-    "model_name": "Flux 2 Max",
-    "model_maker": "Black Forest Labs",
-    "category": "image_generation",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "85.00",
-    "score_type": "score_100",
-    "meta_score": "85.00",
-    "meta_rank": 2,
-    "strengths": [
-      "Photorealism",
-      "Open-source"
-    ],
-    "considerations": "Requires technical setup for local use.",
-    "model_url": "https://blackforestlabs.ai",
-    "pricing_note": "Open source / API",
-    "scraped_at": "2026-04-01T10:52:11.123Z",
-    "updated_at": "2026-05-23T05:00:04.412Z"
-  },
-  {
-    "id": "259a8611-1ef6-4ebe-9573-05f9b325a515",
-    "model_name": "Gemini 3 Pro Image",
-    "model_maker": "Google",
-    "category": "image_generation",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "84.00",
-    "score_type": "score_100",
-    "meta_score": "84.00",
-    "meta_rank": 3,
-    "strengths": [
-      "Speed",
-      "Free tier"
-    ],
-    "considerations": "Quality varies by prompt style.",
-    "model_url": "https://deepmind.google",
-    "pricing_note": "Free via Gemini",
-    "scraped_at": "2026-04-01T10:52:11.125Z",
-    "updated_at": "2026-05-23T05:00:04.414Z"
+    "updated_at": "2026-05-25T05:00:02.720Z"
   },
   {
     "id": "3334e8b6-fe5d-49d0-a4af-68684f9dd0fe",
@@ -242,8 +179,8 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/image-generation",
     "raw_score": "1268.00",
     "score_type": "elo",
-    "meta_score": "83.00",
-    "meta_rank": 4,
+    "meta_score": "91.00",
+    "meta_rank": 1,
     "strengths": [
       "Overall quality leader",
       "Text rendering",
@@ -252,8 +189,8 @@
     "considerations": "Requires ChatGPT Pro for best quality. Rate limited.",
     "model_url": "https://openai.com",
     "pricing_note": "ChatGPT Plus $20/mo",
-    "scraped_at": "2026-05-24T19:00:31.848Z",
-    "updated_at": "2026-05-24T19:00:31.848Z"
+    "scraped_at": "2026-05-25T07:00:22.461Z",
+    "updated_at": "2026-05-25T07:00:22.461Z"
   },
   {
     "id": "ee9a81c5-8af3-4660-ab1e-67620dc87ec0",
@@ -264,8 +201,8 @@
     "source_url": null,
     "raw_score": "92.00",
     "score_type": "score_100",
-    "meta_score": "83.00",
-    "meta_rank": 4,
+    "meta_score": "91.00",
+    "meta_rank": 1,
     "strengths": [
       "Overall quality leader",
       "Text rendering",
@@ -275,7 +212,7 @@
     "model_url": "https://openai.com",
     "pricing_note": "ChatGPT Plus $20/mo",
     "scraped_at": "2026-04-01T10:52:11.118Z",
-    "updated_at": "2026-05-23T05:00:04.417Z"
+    "updated_at": "2026-05-25T05:00:02.751Z"
   },
   {
     "id": "cd281ca7-195c-4351-a23e-72dbd6de7b33",
@@ -286,8 +223,8 @@
     "source_url": "https://lmarena.ai/?arena=image",
     "raw_score": "1264.00",
     "score_type": "elo",
-    "meta_score": "83.00",
-    "meta_rank": 4,
+    "meta_score": "91.00",
+    "meta_rank": 1,
     "strengths": [
       "Overall quality leader",
       "Text rendering",
@@ -296,65 +233,29 @@
     "considerations": "Requires ChatGPT Pro for best quality. Rate limited.",
     "model_url": "https://openai.com",
     "pricing_note": "ChatGPT Plus $20/mo",
-    "scraped_at": "2026-05-24T19:00:31.865Z",
-    "updated_at": "2026-05-24T19:00:31.865Z"
+    "scraped_at": "2026-05-25T07:00:22.474Z",
+    "updated_at": "2026-05-25T07:00:22.474Z"
   },
   {
-    "id": "3d75743a-5ac5-46e1-a997-88208cf20220",
-    "model_name": "Reve Image",
-    "model_maker": "Reve",
+    "id": "bd44d5da-c4fd-4909-b1c9-bd79e0bcbd1e",
+    "model_name": "Midjourney v7",
+    "model_maker": "Midjourney",
     "category": "image_generation",
     "source_name": "Expert Review",
     "source_url": null,
-    "raw_score": "80.00",
+    "raw_score": "90.00",
     "score_type": "score_100",
-    "meta_score": "80.00",
-    "meta_rank": 5,
+    "meta_score": "89.00",
+    "meta_rank": 2,
     "strengths": [
-      "Surprise newcomer",
-      "Competitive pricing"
+      "Artistic quality",
+      "Cinematic look"
     ],
-    "considerations": "New entrant, longevity uncertain.",
-    "model_url": "https://www.reveimage.com",
-    "pricing_note": "Pay per generation",
-    "scraped_at": "2026-04-01T10:52:11.127Z",
-    "updated_at": "2026-05-23T05:00:04.419Z"
-  },
-  {
-    "id": "441b361e-ef3b-4c81-a140-970b3330377f",
-    "model_name": "Gemini 3 Pro Image",
-    "model_maker": "Google",
-    "category": "image_generation",
-    "source_name": "Artificial Analysis",
-    "source_url": "https://artificialanalysis.ai/leaderboards/image-generation",
-    "raw_score": "1198.00",
-    "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
-    "strengths": null,
-    "considerations": null,
-    "model_url": null,
-    "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.860Z",
-    "updated_at": "2026-05-24T19:00:31.860Z"
-  },
-  {
-    "id": "57417118-e47d-45e3-882d-21b7809b5759",
-    "model_name": "Flux 2 Max",
-    "model_maker": "Black Forest Labs",
-    "category": "image_generation",
-    "source_name": "Artificial Analysis",
-    "source_url": "https://artificialanalysis.ai/leaderboards/image-generation",
-    "raw_score": "1205.00",
-    "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
-    "strengths": null,
-    "considerations": null,
-    "model_url": null,
-    "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.858Z",
-    "updated_at": "2026-05-24T19:00:31.858Z"
+    "considerations": "Discord or web UI only. No API.",
+    "model_url": "https://www.midjourney.com",
+    "pricing_note": "From $10/mo",
+    "scraped_at": "2026-04-01T10:52:11.120Z",
+    "updated_at": "2026-05-25T05:00:02.754Z"
   },
   {
     "id": "f72be265-adb5-4d72-9b1c-3af7e69424c1",
@@ -365,14 +266,113 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/image-generation",
     "raw_score": "1241.00",
     "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
+    "meta_score": "89.00",
+    "meta_rank": 2,
     "strengths": null,
     "considerations": null,
     "model_url": null,
     "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.853Z",
-    "updated_at": "2026-05-24T19:00:31.853Z"
+    "scraped_at": "2026-05-25T07:00:22.465Z",
+    "updated_at": "2026-05-25T07:00:22.465Z"
+  },
+  {
+    "id": "ef69a54e-2b01-4b11-9c0e-697acbebdcd1",
+    "model_name": "Flux 2 Max",
+    "model_maker": "Black Forest Labs",
+    "category": "image_generation",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "85.00",
+    "score_type": "score_100",
+    "meta_score": "77.00",
+    "meta_rank": 3,
+    "strengths": [
+      "Photorealism",
+      "Open-source"
+    ],
+    "considerations": "Requires technical setup for local use.",
+    "model_url": "https://blackforestlabs.ai",
+    "pricing_note": "Open source / API",
+    "scraped_at": "2026-04-01T10:52:11.123Z",
+    "updated_at": "2026-05-25T05:00:02.757Z"
+  },
+  {
+    "id": "57417118-e47d-45e3-882d-21b7809b5759",
+    "model_name": "Flux 2 Max",
+    "model_maker": "Black Forest Labs",
+    "category": "image_generation",
+    "source_name": "Artificial Analysis",
+    "source_url": "https://artificialanalysis.ai/leaderboards/image-generation",
+    "raw_score": "1205.00",
+    "score_type": "elo",
+    "meta_score": "77.00",
+    "meta_rank": 3,
+    "strengths": null,
+    "considerations": null,
+    "model_url": null,
+    "pricing_note": null,
+    "scraped_at": "2026-05-25T07:00:22.468Z",
+    "updated_at": "2026-05-25T07:00:22.468Z"
+  },
+  {
+    "id": "259a8611-1ef6-4ebe-9573-05f9b325a515",
+    "model_name": "Gemini 3 Pro Image",
+    "model_maker": "Google",
+    "category": "image_generation",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "84.00",
+    "score_type": "score_100",
+    "meta_score": "75.00",
+    "meta_rank": 4,
+    "strengths": [
+      "Speed",
+      "Free tier"
+    ],
+    "considerations": "Quality varies by prompt style.",
+    "model_url": "https://deepmind.google",
+    "pricing_note": "Free via Gemini",
+    "scraped_at": "2026-04-01T10:52:11.125Z",
+    "updated_at": "2026-05-25T05:00:02.759Z"
+  },
+  {
+    "id": "441b361e-ef3b-4c81-a140-970b3330377f",
+    "model_name": "Gemini 3 Pro Image",
+    "model_maker": "Google",
+    "category": "image_generation",
+    "source_name": "Artificial Analysis",
+    "source_url": "https://artificialanalysis.ai/leaderboards/image-generation",
+    "raw_score": "1198.00",
+    "score_type": "elo",
+    "meta_score": "75.00",
+    "meta_rank": 4,
+    "strengths": null,
+    "considerations": null,
+    "model_url": null,
+    "pricing_note": null,
+    "scraped_at": "2026-05-25T07:00:22.470Z",
+    "updated_at": "2026-05-25T07:00:22.470Z"
+  },
+  {
+    "id": "3d75743a-5ac5-46e1-a997-88208cf20220",
+    "model_name": "Reve Image",
+    "model_maker": "Reve",
+    "category": "image_generation",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "80.00",
+    "score_type": "score_100",
+    "meta_score": "67.00",
+    "meta_rank": 5,
+    "strengths": [
+      "Surprise newcomer",
+      "Competitive pricing"
+    ],
+    "considerations": "New entrant, longevity uncertain.",
+    "model_url": "https://www.reveimage.com",
+    "pricing_note": "Pay per generation",
+    "scraped_at": "2026-04-01T10:52:11.127Z",
+    "updated_at": "2026-05-25T05:00:02.762Z"
   },
   {
     "id": "7e82ecfa-f915-4901-a5fd-3659601a7303",
@@ -383,14 +383,14 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/image-generation",
     "raw_score": "1175.00",
     "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
+    "meta_score": "67.00",
+    "meta_rank": 5,
     "strengths": null,
     "considerations": null,
     "model_url": null,
     "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.862Z",
-    "updated_at": "2026-05-24T19:00:31.862Z"
+    "scraped_at": "2026-05-25T07:00:22.472Z",
+    "updated_at": "2026-05-25T07:00:22.472Z"
   },
   {
     "id": "e9cb61c6-4c98-4f7b-9cbc-e761e263f577",
@@ -412,7 +412,7 @@
     "model_url": "https://suno.com",
     "pricing_note": "Free tier / $10/mo Pro",
     "scraped_at": "2026-04-01T10:52:11.157Z",
-    "updated_at": "2026-05-23T05:00:04.384Z"
+    "updated_at": "2026-05-25T05:00:02.724Z"
   },
   {
     "id": "33830334-e8fd-4643-b14b-69eb73b4e047",
@@ -433,7 +433,7 @@
     "model_url": "https://www.udio.com",
     "pricing_note": "Free tier / $10/mo",
     "scraped_at": "2026-04-01T10:52:11.159Z",
-    "updated_at": "2026-05-23T05:00:04.385Z"
+    "updated_at": "2026-05-25T05:00:02.727Z"
   },
   {
     "id": "99fba54b-78d3-4aed-b651-aed4c59b8b0d",
@@ -454,7 +454,7 @@
     "model_url": "https://www.aiva.ai",
     "pricing_note": "Free / $15/mo Pro",
     "scraped_at": "2026-04-01T10:52:11.162Z",
-    "updated_at": "2026-05-23T05:00:04.387Z"
+    "updated_at": "2026-05-25T05:00:02.729Z"
   },
   {
     "id": "f55a19e1-4c31-42af-b575-a2dd63bddd57",
@@ -476,7 +476,7 @@
     "model_url": "https://magnific.ai",
     "pricing_note": "$39/mo",
     "scraped_at": "2026-04-01T10:52:11.185Z",
-    "updated_at": "2026-05-23T05:00:04.390Z"
+    "updated_at": "2026-05-25T05:00:02.731Z"
   },
   {
     "id": "5029b1f5-d358-44b3-9ee8-aed035c50fdd",
@@ -497,7 +497,7 @@
     "model_url": "https://www.topazlabs.com",
     "pricing_note": "$199 lifetime",
     "scraped_at": "2026-04-01T10:52:11.188Z",
-    "updated_at": "2026-05-23T05:00:04.393Z"
+    "updated_at": "2026-05-25T05:00:02.733Z"
   },
   {
     "id": "73a07f0a-1dad-446d-8e4a-74e118aa6289",
@@ -518,7 +518,7 @@
     "model_url": "https://www.topazlabs.com/bloom",
     "pricing_note": "Subscription",
     "scraped_at": "2026-04-01T10:52:11.191Z",
-    "updated_at": "2026-05-23T05:00:04.395Z"
+    "updated_at": "2026-05-25T05:00:02.735Z"
   },
   {
     "id": "93d62833-4e46-4b30-84f8-c0eb307068e5",
@@ -539,49 +539,7 @@
     "model_url": "https://upscayl.org",
     "pricing_note": "Free",
     "scraped_at": "2026-04-01T10:52:11.193Z",
-    "updated_at": "2026-05-23T05:00:04.398Z"
-  },
-  {
-    "id": "0b8ce649-cd1a-4e55-8294-0ac6f5a98559",
-    "model_name": "Runway Gen-4.5",
-    "model_maker": "Runway",
-    "category": "video_generation",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "91.00",
-    "score_type": "score_100",
-    "meta_score": "91.00",
-    "meta_rank": 1,
-    "strengths": [
-      "Cinematic quality",
-      "Motion control"
-    ],
-    "considerations": null,
-    "model_url": "https://runwayml.com",
-    "pricing_note": "Free tier / $15/mo",
-    "scraped_at": "2026-04-01T10:52:11.149Z",
-    "updated_at": "2026-05-23T05:00:04.421Z"
-  },
-  {
-    "id": "0a3e0634-731e-48a8-8405-1b5dedc2bb5d",
-    "model_name": "Seedance 2.0",
-    "model_maker": "ByteDance",
-    "category": "video_generation",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "88.00",
-    "score_type": "score_100",
-    "meta_score": "88.00",
-    "meta_rank": 2,
-    "strengths": [
-      "Best audio-visual sync",
-      "Motion speciality"
-    ],
-    "considerations": null,
-    "model_url": "https://seedance.ai",
-    "pricing_note": "Credits",
-    "scraped_at": "2026-04-01T10:52:11.151Z",
-    "updated_at": "2026-05-23T05:00:04.423Z"
+    "updated_at": "2026-05-25T05:00:02.738Z"
   },
   {
     "id": "c021df85-c411-43a3-8ed7-6ea1d170869c",
@@ -592,8 +550,8 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/video-generation",
     "raw_score": "1245.00",
     "score_type": "elo",
-    "meta_score": "86.00",
-    "meta_rank": 3,
+    "meta_score": "96.00",
+    "meta_rank": 1,
     "strengths": [
       "Up to 2 min duration",
       "4K 60fps",
@@ -602,8 +560,8 @@
     "considerations": "Chinese platform.",
     "model_url": "https://klingai.com",
     "pricing_note": "Free tier / credits",
-    "scraped_at": "2026-05-24T19:00:31.867Z",
-    "updated_at": "2026-05-24T19:00:31.867Z"
+    "scraped_at": "2026-05-25T07:00:22.475Z",
+    "updated_at": "2026-05-25T07:00:22.475Z"
   },
   {
     "id": "1c24f29b-ecae-4185-886e-1b916beb5f78",
@@ -614,8 +572,8 @@
     "source_url": null,
     "raw_score": "92.00",
     "score_type": "score_100",
-    "meta_score": "86.00",
-    "meta_rank": 3,
+    "meta_score": "96.00",
+    "meta_rank": 1,
     "strengths": [
       "Up to 2 min duration",
       "4K 60fps",
@@ -625,85 +583,28 @@
     "model_url": "https://klingai.com",
     "pricing_note": "Free tier / credits",
     "scraped_at": "2026-04-01T10:52:11.146Z",
-    "updated_at": "2026-05-23T05:00:04.426Z"
+    "updated_at": "2026-05-25T05:00:02.766Z"
   },
   {
-    "id": "9cf365ad-863d-4452-86e5-63b80de060cd",
-    "model_name": "Veo 3.1",
-    "model_maker": "Google",
+    "id": "0b8ce649-cd1a-4e55-8294-0ac6f5a98559",
+    "model_name": "Runway Gen-4.5",
+    "model_maker": "Runway",
     "category": "video_generation",
     "source_name": "Expert Review",
     "source_url": null,
-    "raw_score": "86.00",
+    "raw_score": "91.00",
     "score_type": "score_100",
-    "meta_score": "86.00",
-    "meta_rank": 4,
+    "meta_score": "88.00",
+    "meta_rank": 2,
     "strengths": [
-      "4K resolution",
-      "Spatial audio"
+      "Cinematic quality",
+      "Motion control"
     ],
     "considerations": null,
-    "model_url": "https://deepmind.google/technologies/veo/",
-    "pricing_note": "Via Google AI Studio",
-    "scraped_at": "2026-04-01T10:52:11.153Z",
-    "updated_at": "2026-05-23T05:00:04.428Z"
-  },
-  {
-    "id": "6d1000e3-f2b5-45e0-9a02-71f4a48528c6",
-    "model_name": "Sora 2",
-    "model_maker": "OpenAI",
-    "category": "video_generation",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "85.00",
-    "score_type": "score_100",
-    "meta_score": "85.00",
-    "meta_rank": 5,
-    "strengths": [
-      "Stunning narratives",
-      "Up to 25s"
-    ],
-    "considerations": null,
-    "model_url": "https://openai.com/sora",
-    "pricing_note": "ChatGPT Plus",
-    "scraped_at": "2026-04-01T10:52:11.155Z",
-    "updated_at": "2026-05-23T05:00:04.430Z"
-  },
-  {
-    "id": "1ae30dff-b62e-4c09-b242-b0937d5899af",
-    "model_name": "Seedance 2.0",
-    "model_maker": "ByteDance",
-    "category": "video_generation",
-    "source_name": "Artificial Analysis",
-    "source_url": "https://artificialanalysis.ai/leaderboards/video-generation",
-    "raw_score": "1192.00",
-    "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
-    "strengths": null,
-    "considerations": null,
-    "model_url": null,
-    "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.873Z",
-    "updated_at": "2026-05-24T19:00:31.873Z"
-  },
-  {
-    "id": "714ba257-9bc4-4930-bdbe-4851eb247d76",
-    "model_name": "Veo 3.1",
-    "model_maker": "Google",
-    "category": "video_generation",
-    "source_name": "Artificial Analysis",
-    "source_url": "https://artificialanalysis.ai/leaderboards/video-generation",
-    "raw_score": "1180.00",
-    "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
-    "strengths": null,
-    "considerations": null,
-    "model_url": null,
-    "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.875Z",
-    "updated_at": "2026-05-24T19:00:31.875Z"
+    "model_url": "https://runwayml.com",
+    "pricing_note": "Free tier / $15/mo",
+    "scraped_at": "2026-04-01T10:52:11.149Z",
+    "updated_at": "2026-05-25T05:00:02.769Z"
   },
   {
     "id": "247c7247-422a-4a7b-9dfa-ab90a993ec42",
@@ -714,14 +615,92 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/video-generation",
     "raw_score": "1218.00",
     "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
+    "meta_score": "88.00",
+    "meta_rank": 2,
     "strengths": null,
     "considerations": null,
     "model_url": null,
     "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.870Z",
-    "updated_at": "2026-05-24T19:00:31.870Z"
+    "scraped_at": "2026-05-25T07:00:22.477Z",
+    "updated_at": "2026-05-25T07:00:22.477Z"
+  },
+  {
+    "id": "0a3e0634-731e-48a8-8405-1b5dedc2bb5d",
+    "model_name": "Seedance 2.0",
+    "model_maker": "ByteDance",
+    "category": "video_generation",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "88.00",
+    "score_type": "score_100",
+    "meta_score": "80.00",
+    "meta_rank": 3,
+    "strengths": [
+      "Best audio-visual sync",
+      "Motion speciality"
+    ],
+    "considerations": null,
+    "model_url": "https://seedance.ai",
+    "pricing_note": "Credits",
+    "scraped_at": "2026-04-01T10:52:11.151Z",
+    "updated_at": "2026-05-25T05:00:02.772Z"
+  },
+  {
+    "id": "1ae30dff-b62e-4c09-b242-b0937d5899af",
+    "model_name": "Seedance 2.0",
+    "model_maker": "ByteDance",
+    "category": "video_generation",
+    "source_name": "Artificial Analysis",
+    "source_url": "https://artificialanalysis.ai/leaderboards/video-generation",
+    "raw_score": "1192.00",
+    "score_type": "elo",
+    "meta_score": "80.00",
+    "meta_rank": 3,
+    "strengths": null,
+    "considerations": null,
+    "model_url": null,
+    "pricing_note": null,
+    "scraped_at": "2026-05-25T07:00:22.479Z",
+    "updated_at": "2026-05-25T07:00:22.479Z"
+  },
+  {
+    "id": "9cf365ad-863d-4452-86e5-63b80de060cd",
+    "model_name": "Veo 3.1",
+    "model_maker": "Google",
+    "category": "video_generation",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "86.00",
+    "score_type": "score_100",
+    "meta_score": "75.00",
+    "meta_rank": 4,
+    "strengths": [
+      "4K resolution",
+      "Spatial audio"
+    ],
+    "considerations": null,
+    "model_url": "https://deepmind.google/technologies/veo/",
+    "pricing_note": "Via Google AI Studio",
+    "scraped_at": "2026-04-01T10:52:11.153Z",
+    "updated_at": "2026-05-25T05:00:02.773Z"
+  },
+  {
+    "id": "714ba257-9bc4-4930-bdbe-4851eb247d76",
+    "model_name": "Veo 3.1",
+    "model_maker": "Google",
+    "category": "video_generation",
+    "source_name": "Artificial Analysis",
+    "source_url": "https://artificialanalysis.ai/leaderboards/video-generation",
+    "raw_score": "1180.00",
+    "score_type": "elo",
+    "meta_score": "75.00",
+    "meta_rank": 4,
+    "strengths": null,
+    "considerations": null,
+    "model_url": null,
+    "pricing_note": null,
+    "scraped_at": "2026-05-25T07:00:22.481Z",
+    "updated_at": "2026-05-25T07:00:22.481Z"
   },
   {
     "id": "1fdeccaa-8f6a-4fc1-84e0-55aefd85a882",
@@ -732,14 +711,35 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/video-generation",
     "raw_score": "1168.00",
     "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
+    "meta_score": "72.00",
+    "meta_rank": 5,
     "strengths": null,
     "considerations": null,
     "model_url": null,
     "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.877Z",
-    "updated_at": "2026-05-24T19:00:31.877Z"
+    "scraped_at": "2026-05-25T07:00:22.483Z",
+    "updated_at": "2026-05-25T07:00:22.483Z"
+  },
+  {
+    "id": "6d1000e3-f2b5-45e0-9a02-71f4a48528c6",
+    "model_name": "Sora 2",
+    "model_maker": "OpenAI",
+    "category": "video_generation",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "85.00",
+    "score_type": "score_100",
+    "meta_score": "72.00",
+    "meta_rank": 5,
+    "strengths": [
+      "Stunning narratives",
+      "Up to 25s"
+    ],
+    "considerations": null,
+    "model_url": "https://openai.com/sora",
+    "pricing_note": "ChatGPT Plus",
+    "scraped_at": "2026-04-01T10:52:11.155Z",
+    "updated_at": "2026-05-25T05:00:02.776Z"
   },
   {
     "id": "873e5b82-312f-49ef-86df-1ed5e66b39e9",
@@ -750,7 +750,7 @@
     "source_url": null,
     "raw_score": "95.00",
     "score_type": "score_100",
-    "meta_score": "88.00",
+    "meta_score": "97.00",
     "meta_rank": 1,
     "strengths": [
       "Best realism & emotion",
@@ -761,7 +761,7 @@
     "model_url": "https://elevenlabs.io",
     "pricing_note": "Free tier / $5/mo Starter",
     "scraped_at": "2026-04-01T10:52:11.166Z",
-    "updated_at": "2026-05-23T05:00:04.401Z"
+    "updated_at": "2026-05-25T05:00:02.740Z"
   },
   {
     "id": "ce8bc73e-4583-4e6c-8aea-1779a82f897b",
@@ -772,7 +772,7 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/tts",
     "raw_score": "1105.00",
     "score_type": "elo",
-    "meta_score": "88.00",
+    "meta_score": "97.00",
     "meta_rank": 1,
     "strengths": [
       "Best realism & emotion",
@@ -782,71 +782,8 @@
     "considerations": "Premium pricing.",
     "model_url": "https://elevenlabs.io",
     "pricing_note": "Free tier / $5/mo Starter",
-    "scraped_at": "2026-05-24T19:00:31.879Z",
-    "updated_at": "2026-05-24T19:00:31.879Z"
-  },
-  {
-    "id": "69af5b8f-ddf4-4a74-b413-5d49c02deb1d",
-    "model_name": "Inworld TTS 1.5 Max",
-    "model_maker": "Inworld",
-    "category": "voice_tts",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "88.00",
-    "score_type": "score_100",
-    "meta_score": "88.00",
-    "meta_rank": 2,
-    "strengths": [
-      "Top arena ELO",
-      "Sub-250ms latency"
-    ],
-    "considerations": null,
-    "model_url": "https://inworld.ai",
-    "pricing_note": "API pricing",
-    "scraped_at": "2026-04-01T10:52:11.168Z",
-    "updated_at": "2026-05-23T05:00:04.403Z"
-  },
-  {
-    "id": "48dcb08b-b799-4568-a019-e6518f3ee4ce",
-    "model_name": "Speech-02-Turbo",
-    "model_maker": "MiniMax",
-    "category": "voice_tts",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "84.00",
-    "score_type": "score_100",
-    "meta_score": "84.00",
-    "meta_rank": 3,
-    "strengths": [
-      "Strong naturalness",
-      "Competitive pricing"
-    ],
-    "considerations": null,
-    "model_url": "https://www.minimax.io",
-    "pricing_note": "API pricing",
-    "scraped_at": "2026-04-01T10:52:11.171Z",
-    "updated_at": "2026-05-23T05:00:04.406Z"
-  },
-  {
-    "id": "a5ce16e3-55a5-473f-8d2d-5613c47eb1cb",
-    "model_name": "OpenAI TTS-1",
-    "model_maker": "OpenAI",
-    "category": "voice_tts",
-    "source_name": "Expert Review",
-    "source_url": null,
-    "raw_score": "83.00",
-    "score_type": "score_100",
-    "meta_score": "83.00",
-    "meta_rank": 4,
-    "strengths": [
-      "Simple API",
-      "ChatGPT integration"
-    ],
-    "considerations": null,
-    "model_url": "https://openai.com",
-    "pricing_note": "API pricing",
-    "scraped_at": "2026-04-01T10:52:11.174Z",
-    "updated_at": "2026-05-23T05:00:04.408Z"
+    "scraped_at": "2026-05-25T07:00:22.484Z",
+    "updated_at": "2026-05-25T07:00:22.484Z"
   },
   {
     "id": "5fc403f2-bd56-423b-a9ab-1745f959b2de",
@@ -857,14 +794,56 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/tts",
     "raw_score": "1098.00",
     "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
+    "meta_score": "90.00",
+    "meta_rank": 2,
     "strengths": null,
     "considerations": null,
     "model_url": null,
     "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.882Z",
-    "updated_at": "2026-05-24T19:00:31.882Z"
+    "scraped_at": "2026-05-25T07:00:22.486Z",
+    "updated_at": "2026-05-25T07:00:22.486Z"
+  },
+  {
+    "id": "69af5b8f-ddf4-4a74-b413-5d49c02deb1d",
+    "model_name": "Inworld TTS 1.5 Max",
+    "model_maker": "Inworld",
+    "category": "voice_tts",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "88.00",
+    "score_type": "score_100",
+    "meta_score": "90.00",
+    "meta_rank": 2,
+    "strengths": [
+      "Top arena ELO",
+      "Sub-250ms latency"
+    ],
+    "considerations": null,
+    "model_url": "https://inworld.ai",
+    "pricing_note": "API pricing",
+    "scraped_at": "2026-04-01T10:52:11.168Z",
+    "updated_at": "2026-05-25T05:00:02.742Z"
+  },
+  {
+    "id": "48dcb08b-b799-4568-a019-e6518f3ee4ce",
+    "model_name": "Speech-02-Turbo",
+    "model_maker": "MiniMax",
+    "category": "voice_tts",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "84.00",
+    "score_type": "score_100",
+    "meta_score": "76.00",
+    "meta_rank": 3,
+    "strengths": [
+      "Strong naturalness",
+      "Competitive pricing"
+    ],
+    "considerations": null,
+    "model_url": "https://www.minimax.io",
+    "pricing_note": "API pricing",
+    "scraped_at": "2026-04-01T10:52:11.171Z",
+    "updated_at": "2026-05-25T05:00:02.744Z"
   },
   {
     "id": "8b8c46f2-3bae-4fd3-a6ef-40dada7aab68",
@@ -875,14 +854,35 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/tts",
     "raw_score": "1072.00",
     "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
+    "meta_score": "76.00",
+    "meta_rank": 3,
     "strengths": null,
     "considerations": null,
     "model_url": null,
     "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.884Z",
-    "updated_at": "2026-05-24T19:00:31.884Z"
+    "scraped_at": "2026-05-25T07:00:22.488Z",
+    "updated_at": "2026-05-25T07:00:22.488Z"
+  },
+  {
+    "id": "a5ce16e3-55a5-473f-8d2d-5613c47eb1cb",
+    "model_name": "OpenAI TTS-1",
+    "model_maker": "OpenAI",
+    "category": "voice_tts",
+    "source_name": "Expert Review",
+    "source_url": null,
+    "raw_score": "83.00",
+    "score_type": "score_100",
+    "meta_score": "73.00",
+    "meta_rank": 4,
+    "strengths": [
+      "Simple API",
+      "ChatGPT integration"
+    ],
+    "considerations": null,
+    "model_url": "https://openai.com",
+    "pricing_note": "API pricing",
+    "scraped_at": "2026-04-01T10:52:11.174Z",
+    "updated_at": "2026-05-25T05:00:02.747Z"
   },
   {
     "id": "05abacf2-7e78-4726-8d1a-7ea32b8204b2",
@@ -893,13 +893,13 @@
     "source_url": "https://artificialanalysis.ai/leaderboards/tts",
     "raw_score": "1065.00",
     "score_type": "elo",
-    "meta_score": null,
-    "meta_rank": null,
+    "meta_score": "73.00",
+    "meta_rank": 4,
     "strengths": null,
     "considerations": null,
     "model_url": null,
     "pricing_note": null,
-    "scraped_at": "2026-05-24T19:00:31.886Z",
-    "updated_at": "2026-05-24T19:00:31.886Z"
+    "scraped_at": "2026-05-25T07:00:22.490Z",
+    "updated_at": "2026-05-25T07:00:22.490Z"
   }
 ]
