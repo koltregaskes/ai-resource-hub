@@ -1,0 +1,164 @@
+{
+  "generated": "2026-05-25T14:37:37.143Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-18",
+  "article_count": 10,
+  "archived_story_count": 90,
+  "articles": [
+    {
+      "title": "The leaderboard “you can&#8217;t game,” funded by the companies it ranks",
+      "url": "https://techcrunch.com/video/the-leaderboard-you-cant-game-funded-by-the-companies-it-ranks/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "benchmark",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-03-18T16:30:00.000Z",
+      "summary": "Artificial intelligence&#160;models are multiplying fast, and competition is stiff. With so many players crowding the space, which one will be the best&#160;— and who decides that?&#160;Arena, formerly LM Arena, has&#160;emerged&#160;as the de facto public leaderboard for frontier LLMs, influencing funding, launches, and PR cycles. In just seven months, the startup went from a&#160;UC&#160;Berkeley PhD research [&#8230;]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The PhD students who became the judges of the AI industry",
+      "url": "https://techcrunch.com/podcast/the-phd-students-who-became-the-judges-of-the-ai-industry/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "benchmark",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-03-18T15:00:00.000Z",
+      "summary": "Artificial intelligence&#160;models are multiplying fast, and competition is stiff. With so many players crowding the space, which one will be the best&#160;— and who decides that?&#160;Arena, formerly LM Arena, has&#160;emerged&#160;as the de facto public leaderboard for frontier LLMs, influencing funding, launches, and PR cycles. In just seven months, the startup went from a&#160;UC&#160;Berkeley PhD research [&#8230;]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia is quietly building a multibillion-dollar behemoth to rival its chips business",
+      "url": "https://techcrunch.com/2026/03/18/nvidia-networking-division-building-a-multibillion-dollar-behemoth-to-rival-its-chips-business/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-03-18T20:01:19.000Z",
+      "summary": "Nvidia's networking business raked in $11 billion last quarter despite getting significantly less fanfare than chips and gaming.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The Gemini-powered features in Google Workspace that are worth using",
+      "url": "https://techcrunch.com/2026/03/18/the-gemini-powered-features-in-google-workspace-that-are-worth-using/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8799999999999999,
+      "date": "2026-03-18T16:43:18.000Z",
+      "summary": "From summarizing emails, drafting content, organizing data, and tracking meetings, here are all the best Gemini features in Google Workspace.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Patreon CEO calls AI companies&#8217; fair use argument &#8216;bogus,&#8217; says creators should be paid",
+      "url": "https://techcrunch.com/2026/03/18/patreon-ceo-calls-ai-companies-fair-use-argument-bogus-says-creators-should-be-paid/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "dataset"
+      ],
+      "matching_tags": [
+        "dataset"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-18T17:54:31.000Z",
+      "summary": "Patreon CEO Jack Conte says AI companies should pay creators for training data, arguing their fair use defense falls apart when they license content from major publishers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nightingale – open-source karaoke app that works with any song on your computer",
+      "url": "https://nightingale.cafe/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-03-18T08:06:24.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "A ngrok-style secure tunnel server written in Rust and Open Source",
+      "url": "https://github.com/joaoh82/rustunnel",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.71,
+      "date": "2026-03-18T14:00:43.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Nvidia greenboost: transparently extend GPU VRAM using system RAM/NVMe",
+      "url": "https://gitlab.com/IsolatedOctopi/nvidia_greenboost",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-15T15:59:09.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Nvidia NemoClaw",
+      "url": "https://github.com/NVIDIA/NemoClaw",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-18T15:31:07.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The Download: The Pentagon&#8217;s new AI plans, and next-gen nuclear reactors",
+      "url": "https://www.technologyreview.com/2026/03/18/1134371/the-download-the-pentagons-new-ai-plans-and-next-gen-nuclear-reactors/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-03-18T12:38:00.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. The Pentagon is planning for AI companies to train on classified data,&#160;defense&#160;official says&#160; The Pentagon plans to set up secure environments for generative AI companies to train military-specific versions of their&#8230;",
+      "category": "ai_research"
+    }
+  ]
+}

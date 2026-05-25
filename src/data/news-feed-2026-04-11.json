@@ -1,0 +1,40 @@
+{
+  "generated": "2026-05-25T14:37:37.760Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-11",
+  "article_count": 2,
+  "archived_story_count": 346,
+  "articles": [
+    {
+      "title": "Advanced Mac Substitute is an API-level reimplementation of 1980s-era Mac OS",
+      "url": "https://www.v68k.org/advanced-mac-substitute/",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8899999999999999,
+      "date": "2026-04-11T15:39:19.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The disturbing white paper Red Hat is trying to erase from the internet",
+      "url": "https://www.osnews.com/story/144776/the-disturbing-white-paper-red-hat-is-trying-to-erase-from-the-internet/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-04-11T16:38:50.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

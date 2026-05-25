@@ -1,0 +1,326 @@
+{
+  "generated": "2026-05-25T14:37:38.059Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-21",
+  "article_count": 20,
+  "archived_story_count": 644,
+  "articles": [
+    {
+      "title": "[AINews] Moonshot Kimi K2.6: the world's leading Open Model refreshes to catch up to Opus 4.6 (ahead of DeepSeek v4?)",
+      "url": "https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.9,
+      "date": "2026-04-21T06:00:30.085Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "LinkedIn Launched Blind AI Model Comparison — Finally a Practical Evaluation Tool",
+      "url": "https://x.com/DataconomyMedia/status/2046589880226996228",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T14:56:45.085Z",
+      "summary": "Braygent wants to post about LinkedIn Crosscheck enabling blind AI model comparison, calling it the most practical AI evaluation tool for enterprise buyers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Building a Fast Multilingual OCR Model with Synthetic Data     4 days ago •  24",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-ocr-v2",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-21T06:00:12.649Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Start vibe coding in AI Studio with your Google AI subscription.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-one-ai-studio/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-21T06:00:12.403Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "1/4 Qwen3.6-35B-A3B: Agentic Coding Power, Now Open Source \n\nWe are excited to release Qwen3.6-35B-A3B, a sparse mixture-of-experts (MoE) model with 35 billion total parameters and only 3 billion active parameters.\n\nCore Capabilities:\n• Exceptional Agentic Coding: Engineered",
+      "url": "https://x.com/Ali_TongyiLab/status/2044771299483107739",
+      "source": "X / @ali_tongyilab",
+      "tags": [
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "architecture",
+        "open_source"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-16T13:34:02.000Z",
+      "summary": "1/4 Qwen3.6-35B-A3B: Agentic Coding Power, Now Open Source \n\nWe are excited to release Qwen3.6-35B-A3B, a sparse mixture-of-experts (MoE) model with 35 billion total parameters and only 3 billion active parameters.\n\nCore Capabilities:\n• Exceptional Agentic Coding: Engineered",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenClaw v2026.4.20 released",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.4.20",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-21T19:19:35.000Z",
+      "summary": "## 2026.4.20\n\n### Changes\n\n- Onboard/wizard: restyle the setup security disclaimer with a single yellow warning banner, section headings and bulleted checklists, and un-dim the note body so key guidance is easy to scan; add a loading spinner during the initial model catalog load so the wizard no longer goes blank while it runs; add an \"API key\" placeholder to provider API key prompts. (#69553) Thanks @Patrick-Erichsen.\n- Agents/prompts: strengthen the default system prompt and OpenAI GPT-5 overl",
+      "category": "ai_tools"
+    },
+    {
+      "title": "BREAKING: OpenAI just shadow-dropped a massive GPT Pro update. And it is completely slaughtering Claude Opus 4.7 in frontend coding.\n\nNo official announcement. No release notes. But the performance gap is suddenly staggering.\nWe just ran a head-to-head benchmark across GPT",
+      "url": "https://x.com/arrakis_ai/status/2045748361521991780",
+      "source": "X / @arrakis_ai",
+      "tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-19T06:16:32.000Z",
+      "summary": "BREAKING: OpenAI just shadow-dropped a massive GPT Pro update. And it is completely slaughtering Claude Opus 4.7 in frontend coding.\n\nNo official announcement. No release notes. But the performance gap is suddenly staggering.\nWe just ran a head-to-head benchmark across GPT",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Recursive Superintelligence Raised $500M in Months — Google and Nvidia Backed It",
+      "url": "https://x.com/PMZepto/status/2046573427893444891",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T14:56:45.085Z",
+      "summary": "Braygent wants to post about Recursive Superintelligence raising $500M at $4B in months, calling it one of the most important new AI companies of 2026.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "DeepSeek Is Raising Outside Money for the First Time — $300M at $10B",
+      "url": "https://x.com/shawnchauhan1/status/2046529459101294796",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T14:56:45.085Z",
+      "summary": "Braygent wants to post about DeepSeek's first outside funding round at $10B despite team departures and V4 delays, noting the brand is worth $10B even in transition.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Perplexity Computer Just Launched — OpenClaw for the Rest of Us",
+      "url": "https://x.com/davidlee/status/2046589300188598440",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T14:56:45.085Z",
+      "summary": "Braygent wants to post about Perplexity Computer launching as mainstream computer-use AI, calling it OpenClaw for the rest of us and a major step toward mainstream agent adoption.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Multilingual Tool Calling in 70+ Languages, On Device     about 12 hours ago •  3",
+      "url": "https://huggingface.co/blog/Bronsn/tiny-facade",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-21T06:00:12.672Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "MultiWorld: Scalable Multi-Agent Multi-View Video World Models",
+      "url": "https://paperswithcode.com/papers/2604.18564",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.9,
+      "date": "2026-04-21T18:00:24.827Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Tim Cook&#39;s Legacy Is Turning Apple Into a Subscription",
+      "url": "https://www.wired.com/story/apple-tim-cook-subscription-business/",
+      "source": "Wired AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-21T18:00:18.759Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble: Mac Minis and Mac Studios Sold Out Because of AI",
+      "url": "https://x.com/Scobleizer/status/2046456536470540294",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-21T14:55:24.550Z",
+      "summary": "Scoble noted Mac Minis and Mac Studios have sold out because of AI demand, arguing the real problem is too much AI demand, not too little Apple AI capability.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@Filmora_Editor adds AI Eye Contact Correction powered by @NVIDIA_AI_PC Maxine — fix eye contact in one click",
+      "url": "https://x.com/Filmora_Editor/status/2046348186584047721",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-20T23:53:38.094Z",
+      "summary": "Filmora added AI Eye Contact Correction powered by NVIDIA Maxine, fixing eye contact in recorded videos with one click. The feature addresses a common issue in video content creation.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Swarms Could Hijack Democracy Without Anyone Noticing",
+      "url": "https://www.sciencedaily.com/releases/2026/04/260420014748.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-21T18:00:17.882Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Save the traces! 🐳     about 6 hours ago •  5",
+      "url": "https://huggingface.co/blog/pcuenq/save-the-traces",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-21T18:00:15.842Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "DenseOn with the LateOn: Open State-of-the-Art Single and Multi-Vector Models     about 4 hours ago •  10",
+      "url": "https://huggingface.co/blog/lightonai/denseon-lateon",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-21T18:00:15.829Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic’s Claude Mythos Dilemma: When Superpowered AI Gets Risky",
+      "url": "https://www.forbes.com/sites/geruiwang/2026/04/16/anthropics-claude-mythos-dilemma-when-superpowered-ai-gets-risky/",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-21T06:00:14.035Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenGame: Open Agentic Coding for Games",
+      "url": "https://paperswithcode.com/papers/2604.18394",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-21T18:00:24.823Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

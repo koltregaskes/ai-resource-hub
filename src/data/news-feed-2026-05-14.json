@@ -1,0 +1,324 @@
+{
+  "generated": "2026-05-25T14:37:38.677Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-14",
+  "article_count": 20,
+  "archived_story_count": 592,
+  "articles": [
+    {
+      "title": "- be anthropic - build claude code - need more training data for a specific task - raise usage limits - be stupid so users have to teach claude - enough training data for specific task - lower rate limits - model becomes capable - increase…",
+      "url": "https://x.com/simoarcher/status/2054880974253543742",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release",
+        "pricing_change",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change",
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T11:06:16.000Z",
+      "summary": "- be anthropic - build claude code - need more training data for a specific task - raise usage limits - be stupid so users have to teach claude - enough training data for specific task - lower rate limits - model becomes capable - increase price - release new model - repeat",
+      "category": "ai_models"
+    },
+    {
+      "title": "What if the models get so smart that they are able to improve compute efficiency so much that capital efficiency improves dramatically? Before you dismiss this idea Anthropic has been consistently saying each new model is much more compute…",
+      "url": "https://x.com/WaterworldCapi1/status/2054898322301710554",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T12:15:12.000Z",
+      "summary": "What if the models get so smart that they are able to improve compute efficiency so much that capital efficiency improves dramatically? Before you dismiss this idea Anthropic has been consistently saying each new model is much more compute efficient.",
+      "category": "ai_models"
+    },
+    {
+      "title": "fake jobs discourse has turned into fake infrastructure as each new model proves it can handle a task chain that is not novel enough to trip up an llm, of which they have scaling laws for, allowing the size of datacenter to determine the d…",
+      "url": "https://x.com/jicapal/status/2054894604218999213",
+      "source": "X search / AI vibes",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T12:00:26.000Z",
+      "summary": "fake jobs discourse has turned into fake infrastructure as each new model proves it can handle a task chain that is not novel enough to trip up an llm, of which they have scaling laws for, allowing the size of datacenter to determine the dollar amount of automation you can",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The updated Agents SDK is now available in TypeScript, with support for sandbox agents and an open-source harness built in.",
+      "url": "https://x.com/OpenAIDevs/status/2051725072873001338",
+      "source": "X / @openaidevs",
+      "tags": [
+        "api_update",
+        "open_source"
+      ],
+      "matching_tags": [
+        "api_update",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-05T18:05:51.000Z",
+      "summary": "The updated Agents SDK is now available in TypeScript, with support for sandbox agents and an open-source harness built in.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MiniCPM-V 4.5: Cooking Efficient MLLMs via Architecture, Data, and\n  Training Recipe",
+      "url": "https://paperswithcode.com/papers/2509.18154",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.76,
+      "date": "2026-05-14T06:03:36.922Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "CPEP: Contrastive Pose-EMG Pre-training Enhances Gesture Generalization on EMG Signals",
+      "url": "https://machinelearning.apple.com/research/cpep-contrastive",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "training"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "training"
+      ],
+      "importance": 0.66,
+      "date": "2026-05-14T06:03:40.195Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI is turning Codex into a land grab. 2 free months for enterprises that switch is not a launch perk. It is a migration weapon aimed at Cursor, Copilot, and every AI coding seat. AI coding is moving from demos to distribution wars. Who…",
+      "url": "https://x.com/lookmeintheai/status/2054896584752529891",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T12:08:18.000Z",
+      "summary": "OpenAI is turning Codex into a land grab. 2 free months for enterprises that switch is not a launch perk. It is a migration weapon aimed at Cursor, Copilot, and every AI coding seat. AI coding is moving from demos to distribution wars. Who wins: model, IDE, or procurement?",
+      "category": "ai_models"
+    },
+    {
+      "title": "The AI Agent War just got real. OpenAI has Workspace Agents. Anthropic has Claude Cowork. Google is about to launch Gemini Spark. A 24/7 AI that works FOR you without being asked. The battle for your daily life has begun.",
+      "url": "https://x.com/AINewsHungama/status/2054895627142840544",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T12:04:30.000Z",
+      "summary": "The AI Agent War just got real. OpenAI has Workspace Agents. Anthropic has Claude Cowork. Google is about to launch Gemini Spark. A 24/7 AI that works FOR you without being asked. The battle for your daily life has begun.",
+      "category": "ai_models"
+    },
+    {
+      "title": "This is one of the most useful AI agent resources I’ve seen in a while. The Anthropic engineer behind “Building Effective Agents” just released a 14-minute breakdown packed with practical insights. The kind of stuff that saves days of tria…",
+      "url": "https://x.com/allen_explains/status/2054895206890389765",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T12:02:50.000Z",
+      "summary": "This is one of the most useful AI agent resources I’ve seen in a while. The Anthropic engineer behind “Building Effective Agents” just released a 14-minute breakdown packed with practical insights. The kind of stuff that saves days of trial and error when building agents",
+      "category": "ai_models"
+    },
+    {
+      "title": "Have you recently done any research on AI & Agents? If so, you must join https:// t.me/spark_coded/ and type this in General channel: I'm invited by @ValHallaBuilder The perks: A chance to gain some perks before the upcomming release of Sp…",
+      "url": "https://x.com/ValHallaBuilder/status/2054889142358528232",
+      "source": "X search / Agent workflows",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T11:38:44.000Z",
+      "summary": "Have you recently done any research on AI & Agents? If so, you must join https:// t.me/spark_coded/ and type this in General channel: I'm invited by @ValHallaBuilder The perks: A chance to gain some perks before the upcomming release of Spark Self Evolving agent !",
+      "category": "ai_agents"
+    },
+    {
+      "title": "How Dangerous Is Anthropic’s Mythos AI? https:// ift.tt/vodGwVi Last month, Anthropic made a remarkable announcement about its new model, Claude Mythos Preview: it was so good at finding security vulnerabilities in software that the compan…",
+      "url": "https://x.com/f1tym1/status/2054888109930648003",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T11:34:38.000Z",
+      "summary": "How Dangerous Is Anthropic’s Mythos AI? https:// ift.tt/vodGwVi Last month, Anthropic made a remarkable announcement about its new model, Claude Mythos Preview: it was so good at finding security vulnerabilities in software that the company would not release it to the general …",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenAI not having yet released its iOS app for Codex is actually crazy.",
+      "url": "https://x.com/BenjaminBadejo/status/2054886023474069907",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T11:26:20.000Z",
+      "summary": "OpenAI not having yet released its iOS app for Codex is actually crazy.",
+      "category": "ai_models"
+    },
+    {
+      "title": "@canva and @AnthropicAI Launch AI-Powered Marketing Workflow for Small Businesses Read More: https:// martech360.com/news/media-gro wth/canva-and-anthropic-launch-ai-powered-marketing-workflow-for-small-businesses/ … #Anthropic #CampaignCr…",
+      "url": "https://x.com/360MarTech/status/2054882377474986188",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T11:11:51.000Z",
+      "summary": "@canva and @AnthropicAI Launch AI-Powered Marketing Workflow for Small Businesses Read More: https:// martech360.com/news/media-gro wth/canva-and-anthropic-launch-ai-powered-marketing-workflow-for-small-businesses/ … #Anthropic #CampaignCreation #Canva #marketingcampaigns #marketingecosystem #martech360 #news",
+      "category": "ai_models"
+    },
+    {
+      "title": "How Dangerous Is Anthropic’s Mythos AI?: Last month, Anthropic made a remarkable announcement about its new model, Claude Mythos Preview: it was so good at finding security vulnerabilities in software that the company would not release it…",
+      "url": "https://x.com/shah_sheikh/status/2054881450953245159",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T11:08:10.000Z",
+      "summary": "How Dangerous Is Anthropic’s Mythos AI?: Last month, Anthropic made a remarkable announcement about its new model, Claude Mythos Preview: it was so good at finding security vulnerabilities in software that the company would not release it to the general…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Microsoft is exploring a deal to acquire Inception, an AI lab that recently released Mercury 2, the world's first reasoning diffusion LLM, according to Reuters. Imagine diffusion Copilot",
+      "url": "https://x.com/testingcatalog/status/2054863887200047340",
+      "source": "X / @testingcatalog",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T09:58:22.000Z",
+      "summary": "Microsoft is exploring a deal to acquire Inception, an AI lab that recently released Mercury 2, the world's first reasoning diffusion LLM, according to Reuters. Imagine diffusion Copilot",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Samsung Galaxy Z Fold 8, Galaxy Z Flip 8 to launch with Google's Gemini Intelligence features",
+      "url": "https://x.com/Gadgets360/status/2054886242865852849",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-14T11:27:12.000Z",
+      "summary": "Samsung Galaxy Z Fold 8, Galaxy Z Flip 8 to launch with Google's Gemini Intelligence features",
+      "category": "ai_models"
+    },
+    {
+      "title": "We’re donating Petri, our open-source alignment tool, to @meridianlabs_ai , so its development can continue independently. Working with Meridian Labs, we’ve also released a major update that improves the adaptability, realism, and depth of…",
+      "url": "https://x.com/AnthropicAI/status/2052494460966019137",
+      "source": "X / @anthropicai",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-05-07T21:03:07.000Z",
+      "summary": "We’re donating Petri, our open-source alignment tool, to @meridianlabs_ai , so its development can continue independently. Working with Meridian Labs, we’ve also released a major update that improves the adaptability, realism, and depth of Petri’s tests.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Transport yourself to 19th-century France with \"The Seine at Giverny\" by Claude Monet Available in various sizes as a stunning unframed or framed poster print. Perfect for your home or as a gift! Free UK shipping Shop now: £34.99 https://…",
+      "url": "https://x.com/PeriodPrints/status/2054894713375703194",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9199999999999999,
+      "date": "2026-05-14T12:00:52.000Z",
+      "summary": "Transport yourself to 19th-century France with \"The Seine at Giverny\" by Claude Monet Available in various sizes as a stunning unframed or framed poster print. Perfect for your home or as a gift! Free UK shipping Shop now: £34.99 https:// shortlink.store/fmn5psodxphl #Impressionism",
+      "category": "ai_models"
+    },
+    {
+      "title": "Arena AI Model ELO History",
+      "url": "https://mayerwin.github.io/AI-Arena-History/",
+      "source": "Hacker News",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.86,
+      "date": "2026-05-14T03:19:05.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "New arXiv policy: 1-year ban for hallucinated references",
+      "url": "https://twitter.com/tdietterich/status/2055000956144935055",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-14T20:39:12.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "generated": "2026-05-25T14:37:37.904Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-15",
+  "article_count": 7,
+  "archived_story_count": 418,
+  "articles": [
+    {
+      "title": "Qwen Code v0.14.5 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.14.5",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-15T15:33:06.000Z",
+      "summary": "## What's Changed\n* feat(cli/sdk): expose /context usage data in non-interactive mode and SDK API by @wenshao in https://github.com/QwenLM/qwen-code/pull/2916\n* feat(cli): add startup performance profiler by @doudouOUC in https://github.com/QwenLM/qwen-code/pull/3232\n* feat(core): implement fork subagent for context sharing by @wenshao in https://github.com/QwenLM/qwen-code/pull/2936\n* feat(vscode-ide-companion): add /account for account display by @qqqys in https://github.com/QwenLM/qwen-code/p",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Direct Win32 API, Weird-Shaped Windows, and Why They Mostly Disappeared",
+      "url": "https://warped3.substack.com/p/direct-win32-api-weird-shaped-windows",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8899999999999999,
+      "date": "2026-04-15T09:24:31.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "CPUs Aren't Dead. Gemma2B Out Scored GPT-3.5 Turbo on Test That Made It Famous",
+      "url": "https://seqpu.com/CPUsArentDead/",
+      "source": "Hacker News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.82,
+      "date": "2026-04-15T17:07:36.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Open Source Isn't Dead. Cal.com Just Learned the Wrong Lesson",
+      "url": "https://www.strix.ai/blog/cal-com-is-closing-its-code-due-to-ai-threats",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.82,
+      "date": "2026-04-15T15:43:37.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Google Gemma 4 Runs Natively on iPhone with Full Offline AI Inference",
+      "url": "https://www.gizmoweek.com/gemma-4-runs-iphone/",
+      "source": "Hacker News",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-04-15T05:19:06.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "My adventure in designing API keys",
+      "url": "https://vjay15.github.io/blog/apikeys/",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7699999999999999,
+      "date": "2026-04-12T13:17:45.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Gemini CLI v0.38.1 released",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.38.1",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-04-15T17:56:33.000Z",
+      "summary": "## What's Changed\n* fix(patch): cherry-pick 050c303 to release/v0.38.0-pr-25317 to patch version v0.38.0 and create version 0.38.1 by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/25466\n\n\n**Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.38.0...v0.38.1",
+      "category": "ai_tools"
+    }
+  ]
+}

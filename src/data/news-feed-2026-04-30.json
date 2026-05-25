@@ -1,0 +1,342 @@
+{
+  "generated": "2026-05-25T14:37:38.261Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-30",
+  "article_count": 20,
+  "archived_story_count": 692,
+  "articles": [
+    {
+      "title": "After 100 million tokens, performance was still going up. What we're seeing here is not the capability ceiling. From the report: \"Performance on TLO continues to scale with the amount of inference compute spent, and we have not yet observe…",
+      "url": "https://x.com/polynoamial/status/2049883449327243413",
+      "source": "X / @polynoamial",
+      "tags": [
+        "evaluation",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T16:07:53.000Z",
+      "summary": "After 100 million tokens, performance was still going up. What we're seeing here is not the capability ceiling. From the report: \"Performance on TLO continues to scale with the amount of inference compute spent, and we have not yet observed a plateau with the best models.\"",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SambaNova SN50 vs NVIDIA Blackwell B200 — 5x Performance Claim for Sovereign AI",
+      "url": "https://x.com/SambaNovaAI/status/2049866363959747021",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T15:19:07.178Z",
+      "summary": "SambaNova claims 5x faster than NVIDIA Blackwell B200 for sovereign AI. A bold claim against the current benchmark — the sovereign AI market is where this comparison matters most.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen-Scope: a window into the LLM's brain Qwen Team has released Qwen-Scope - official Sparse Autoencoders (SAEs) for the whole Qwen 3.5 line, covering models from 2B to 35B MoE. Instead of wrestling with opaque hidden states and fiddly pr…",
+      "url": "https://x.com/OzAIHub/status/2049816102797283669",
+      "source": "X / @ozaihub",
+      "tags": [
+        "model_release",
+        "architecture",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T11:40:17.000Z",
+      "summary": "Qwen-Scope: a window into the LLM's brain Qwen Team has released Qwen-Scope - official Sparse Autoencoders (SAEs) for the whole Qwen 3.5 line, covering models from 2B to 35B MoE. Instead of wrestling with opaque hidden states and fiddly probability tweaks during inference,",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Demis Hassabis — The West Is Losing to China on Open Source AI",
+      "url": "https://x.com/MatthewBerman/status/2049711479847637086",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "architecture",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T05:23:49.823Z",
+      "summary": "Demis Hassabis warns the West is losing to China on open source AI, while revealing Google lacks compute for two frontier models. The alarm from the most informed voice in Western AI deserves attention.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta's Best Quarter Ever — Stock Fell 10% Anyway",
+      "url": "https://x.com/heyshrutimishra/status/2049863492145176995",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T15:20:23.436Z",
+      "summary": "Braygent's take: Meta's best quarter ever plus 10% stock drop equals the AI spending paradox. The market is pricing future uncertainty, not current performance.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Released Sparse Autoencoders — You Can Now Steer AI Models Without Prompting",
+      "url": "https://x.com/Alibaba_Qwen/status/2049861145574690992",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T15:20:23.436Z",
+      "summary": "Braygent's take: Qwen-Scope is a paradigm shift — steer AI by manipulating internals, not prompts. The interpretability research that actually matters for real control.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MiMo-V2.5-Pro Matches Opus 4.6 at 8x Lower Cost — Open Weights",
+      "url": "https://x.com/itsPaulAi/status/2049862276832715177",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T15:20:23.436Z",
+      "summary": "Braygent's take: MiMo-V2.5-Pro at 8x lower cost than Opus 4.6 is the open vs closed model story of 2026. The gap is closing fast.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "New mystery model on OpenRouter \"Owl-Alpha\" \"Owl Alpha is a high-performance foundation model designed for agentic workloads. Natively supports tool use, and long-context tasks, with strong performance in code generation, automated workflo…",
+      "url": "https://x.com/AiBattle_/status/2049860414398136451",
+      "source": "X / @aibattle_",
+      "tags": [
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T14:36:22.000Z",
+      "summary": "New mystery model on OpenRouter \"Owl-Alpha\" \"Owl Alpha is a high-performance foundation model designed for agentic workloads. Natively supports tool use, and long-context tasks, with strong performance in code generation, automated workflows, and complex instruction execution.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "DeepSeek Cracks NVIDIA's CUDA Moat — Hardware Commoditization Accelerates",
+      "url": "https://x.com/amazedsaint/status/2047298945601118622",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T05:23:49.823Z",
+      "summary": "DeepSeek's TileKernels achieve near-peak performance across all major AI hardware platforms, cracking NVIDIA's CUDA moat. The development accelerates hardware commoditization and benefits alternative chip makers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+      "url": "https://paperswithcode.com/papers/2604.26951",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-30T18:04:42.915Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "[AINews] The Inference Inflection",
+      "url": "https://www.latent.space/p/ainews-the-inference-inflection",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-30T06:13:46.734Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "What We Might Learn From the Immune Systems of Centenarians",
+      "url": "https://www.fightaging.org/archives/2026/04/what-we-might-learn-from-the-immune-systems-of-centenarians/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-30T10:11:18.000Z",
+      "summary": "In the matter of treating aging as a medical condition, emulating centenarians is not good enough; these survivors to advanced old age are still greatly impacted by aging, are frail and vulnerable, with high mortality rates. Nonetheless, the study of centenarian biochemistry might tell us something about which aspects of aging are more or less important than others. For example, see this review of what is known of the immune systems of centenarians. That there are noteworthy differences in immune aging in this population points to the importance of the age-related decline of immune function in degenerative aging, something that should be given significant attention by the research and development communities. Immunosenescence refers to the gradual decline in immune efficacy linked to aging, resulting in [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "The MCP Era Feels Like Déjà Vu     1 day ago •  3",
+      "url": "https://huggingface.co/blog/Navid-AI/mcp-era-feels-like-deja-vu",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T18:04:33.505Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Most people use Claude Code like autocomplete. This tutorial shows how to use it like a system: agentic loops, subagents, MCP servers, real workflows. That’s the difference between “AI help” and real leverage. https:// claudedigest.com/tut…",
+      "url": "https://x.com/ClaudeDigest/status/2049902211292127462",
+      "source": "X / @claudedigest",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T17:22:27.000Z",
+      "summary": "Most people use Claude Code like autocomplete. This tutorial shows how to use it like a system: agentic loops, subagents, MCP servers, real workflows. That’s the difference between “AI help” and real leverage. https:// claudedigest.com/tutorials/mdx/ mastering-claude-code …",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@astridwilde1: Inference Will Eat the World — The $300B+ AI Investment Will Return in Under 4 Years",
+      "url": "https://x.com/astridwilde1/status/2049863463388729806",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T15:19:06.106Z",
+      "summary": "Inference will eat the world — and the $300B+ being invested will return in under 4 years. The infrastructure being built today is the foundation of the next computing paradigm.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI just released GPT-5.5 (Apr 23)—its \"smartest & most intuitive\" model yet. Excels at agentic coding, computer use & multi-step professional tasks. Now on Amazon Bedrock too. The frontier keeps moving fast! #AI #GPT5 #OpenAI",
+      "url": "https://x.com/CGenai25884/status/2049761238901731681",
+      "source": "X / @cgenai25884",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T08:02:16.000Z",
+      "summary": "OpenAI just released GPT-5.5 (Apr 23)—its \"smartest & most intuitive\" model yet. Excels at agentic coding, computer use & multi-step professional tasks. Now on Amazon Bedrock too. The frontier keeps moving fast! #AI #GPT5 #OpenAI",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Ineffable Intelligence $1.1B — The Bet That Human Data Is Running Out",
+      "url": "https://x.com/TFNBreakingNews/status/2049074941853929538",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "dataset"
+      ],
+      "matching_tags": [
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-04-30T05:23:49.823Z",
+      "summary": "David Silver's $1.1B raise bets that human training data is running out and AI must learn from experience. The AlphaGo creator's track record makes this the most important AI investment thesis of 2026.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openai model release cycle is clearly compressing: gpt-5: aug 7, 2025 gpt-5.1: nov 12, 2025 — 97 days gpt-5.2: dec 11, 2025 — 29 days gpt-5.3-codex: feb 5, 2026 — 56 days gpt-5.4: mar 5, 2026 — 28 days gpt-5.5: apr 23, 2026 — 49 days gpt-5…",
+      "url": "https://x.com/W1nggx/status/2049902260273152100",
+      "source": "X / @w1nggx",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-04-30T17:22:38.000Z",
+      "summary": "openai model release cycle is clearly compressing: gpt-5: aug 7, 2025 gpt-5.1: nov 12, 2025 — 97 days gpt-5.2: dec 11, 2025 — 29 days gpt-5.3-codex: feb 5, 2026 — 56 days gpt-5.4: mar 5, 2026 — 28 days gpt-5.5: apr 23, 2026 — 49 days gpt-5.6 should launch around early june",
+      "category": "ai_tools"
+    },
+    {
+      "title": "There’s a Code with Claude event next week (May 6) that will include a livestream At last year’s Code with Claude event (May 22, 2025), Anthropic revealed the Claude 4 series, so they might announce a new model there again",
+      "url": "https://x.com/AiBattle_/status/2049900723228352702",
+      "source": "X / @aibattle_",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.95,
+      "date": "2026-04-30T17:16:32.000Z",
+      "summary": "There’s a Code with Claude event next week (May 6) that will include a livestream At last year’s Code with Claude event (May 22, 2025), Anthropic revealed the Claude 4 series, so they might announce a new model there again",
+      "category": "ai_tools"
+    },
+    {
+      "title": "you can see @AnthropicAI is getting distracted (sadly) Claude Code performance started going downhill before they released Claude Design wish they just kept obsessing on frontier models for technical tasks",
+      "url": "https://x.com/bartydoeswhat/status/2049816148275835265",
+      "source": "X / @bartydoeswhat",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.95,
+      "date": "2026-04-30T11:40:28.000Z",
+      "summary": "you can see @AnthropicAI is getting distracted (sadly) Claude Code performance started going downhill before they released Claude Design wish they just kept obsessing on frontier models for technical tasks",
+      "category": "ai_tools"
+    }
+  ]
+}

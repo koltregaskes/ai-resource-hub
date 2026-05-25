@@ -1,0 +1,312 @@
+{
+  "generated": "2026-05-25T14:37:38.828Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-21",
+  "article_count": 20,
+  "archived_story_count": 634,
+  "articles": [
+    {
+      "title": "[AINews] OpenAI GPT-next disproves 80 year old Erdős planar unit distance problem for under $1000",
+      "url": "https://www.latent.space/p/ainews-openai-gpt-next-disproves",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-21T18:00:21.921Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Math Result Is The Post Because It Changes The AI Capability Debate",
+      "url": "https://x.com/OpenAI/status/2056769932709544021",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T23:34:07.376Z",
+      "summary": "The OpenAI Erdős result is the strongest post candidate because it moves the debate from chatbots to scientific reasoning.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Announces Financial Results for First Quarter Fiscal 2027",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
+      "source": "The Verge AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-21T06:22:40.911Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "I/O 2026: Welcome to the agentic Gemini era\n      \n    \n    \n    \n      The latest from Google I/O: See how we’re helping you get more done with Gemini.",
+      "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-21T18:00:17.580Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Yum Brands And Nvidia Partner To Roll Out Restaurant AI Across 500 Stores",
+      "url": "https://www.ubergizmo.com/2026/05/yum-brands-and-nvidia-launch-restaurant-ai-partnership/",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T14:40:34.755Z",
+      "summary": "Yum Brands is using Nvidia software to expand AI across Pizza Hut, Taco Bell, KFC, and Habit Burger operations. The rollout targets voice ordering, computer vision, and restaurant analytics.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble: Compute As A Service Puts Space Datacenters Into The AI Conversation",
+      "url": "https://x.com/Scobleizer/status/2057236607783321661",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T14:37:44.004Z",
+      "summary": "Robert highlighted a San Francisco demo day company putting NVIDIA datacenters in space and framed it as compute as a service. The post connects SpaceX, orbital infrastructure, and AI compute economics.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble: The Demo Day Video Behind The Space Compute Story",
+      "url": "https://x.com/Scobleizer/status/2057236731255202111",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T14:37:44.004Z",
+      "summary": "Robert posted the video tied to the compute as a service thread. It gives readers the source material behind his space datacenter observation.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble: Energy Is Free In Space",
+      "url": "https://x.com/Scobleizer/status/2057250426920321418",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T14:37:44.004Z",
+      "summary": "Robert replied that energy is free in space during discussion of orbital compute. The comment captures the economic thesis behind putting AI compute outside terrestrial datacenters.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble: Being First Does Not Matter In Space Compute",
+      "url": "https://x.com/Scobleizer/status/2057250171604619468",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T14:37:44.004Z",
+      "summary": "Robert argued that being first does not matter and used Kodak as the cautionary analogy. The comment came in a SpaceX and orbital compute discussion.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble: Another Company Already Has A Space Compute Asset Up",
+      "url": "https://x.com/Scobleizer/status/2057243778684186809",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T14:37:44.004Z",
+      "summary": "Robert noted that another company already has one up in a discussion about SpaceX and orbital compute. The post reinforces that the category is already active, not hypothetical.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia’s revenue blows past Wall Street expectations as AI boom accelerates",
+      "url": "https://www.theguardian.com/technology/2026/may/20/nvidia-revenue-ai-boom",
+      "source": "The Guardian Tech",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T06:22:34.065Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Anthropic will pay xAI $1.25B per month for compute",
+      "url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T06:22:33.570Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia posts another record quarter, reveals $43B of holdings in startups",
+      "url": "https://techcrunch.com/2026/05/20/nvidia-posts-another-record-quarter-reveals-43-billion-of-holdings-in-startups/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T06:22:33.565Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Jensen Huang says he&#8217;s found a &#8216;brand new&#8217; $200B market for Nvidia",
+      "url": "https://techcrunch.com/2026/05/20/jensen-huang-says-hes-found-a-brand-new-200b-market-for-nvidia/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-21T06:22:33.557Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "SpaceX Compute Is The Infrastructure Post Because Rockets Became Data Centers",
+      "url": "https://x.com/elonmusk/status/2057216493863506312",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-20T23:34:07.377Z",
+      "summary": "SpaceX compute as a service is a major post candidate because it reframes SpaceX as AI infrastructure, not only launch and connectivity.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nemotron Labs Diffusion Is The Model Post Because Architecture Diversity Matters",
+      "url": "https://x.com/shizhediao/status/2057136063479886199",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-20T23:34:07.377Z",
+      "summary": "Nemotron Labs Diffusion is worth posting because it tests whether language generation can move beyond standard autoregressive decoding.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Eyck Freymann | AI and Strategic Stability: A Framework for U.S.–China Technology Competition",
+      "url": "https://hai.stanford.edu/events/eyck-freymann-ai-and-strategic-stability",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-21T18:00:18.714Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Vocabulary-Augmented Prompting for Sango — Production African Language AI Without a Parallel Corpus    MEYNG • 8 days ago •  2",
+      "url": "https://huggingface.co/blog/MEYNG/sangoai",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-21T18:00:17.619Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "New Approach to Scaling Laws Could Change How AI Models Are Trained",
+      "url": "https://hai.stanford.edu/news/new-approach-to-scaling-laws-could-change-how-ai-models-are-trained",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-21T06:22:33.543Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Technology usually creates jobs for young, skilled workers. Will AI do the same?",
+      "url": "https://news.mit.edu/2026/technology-creates-jobs-young-skilled-workers-ai-0521",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-21T06:22:32.388Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "generated": "2026-05-25T14:37:38.890Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-24",
+  "article_count": 7,
+  "archived_story_count": 365,
+  "articles": [
+    {
+      "title": "SpecBench Tests Reward Hacking In Long Horizon Coding Agents",
+      "url": "https://x.com/WecoAI/status/2057503162945118637",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-05-24T18:23:12.339Z",
+      "summary": "SpecBench is a benchmark for measuring reward hacking in long horizon coding agents, a useful anomaly in the agent evaluation stack.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The Real AI Question Is Whether Product Behavior Beats Press Releases",
+      "url": "https://x.com/aiedge_/status/2058384253042467194",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-24T18:23:13.327Z",
+      "summary": "Claude Mythos appearing in product surfaces raises the question of whether AI news now breaks through interfaces before announcements.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Deriving the PPO Loss from First Principles    garg-aayush • Dec 25, 2025 •  44",
+      "url": "https://huggingface.co/blog/garg-aayush/ppo-from-first-principle",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-24T18:00:13.987Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI",
+      "url": "https://paperswithcode.com/papers/2512.16676",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-24T18:00:25.659Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "🥇Top AI Papers of the Week",
+      "url": "https://nlp.elvissaravia.com/p/top-ai-papers-of-the-week-c9b",
+      "source": "NLP News (Elvis Saravia)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-24T18:00:25.122Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "SpaceX's Starship V3—still a work in progress—mostly successful on first flight",
+      "url": "https://arstechnica.com/space/2026/05/spacexs-starship-v3-still-a-work-in-progress-mostly-successful-on-first-flight/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-24T18:00:17.755Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Higher Predicted Age by a Metabolomic Aging Clock Correlates with Dementia Risk",
+      "url": "https://www.fightaging.org/archives/2026/05/higher-predicted-age-by-a-metabolomic-aging-clock-correlates-with-dementia-risk/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-05-20T10:11:52.000Z",
+      "summary": "Given access to a large body of biological data from people of various ages, creating an aging clock from that data is fairly straightforward and costs relatively little in time and funding. Thus clocks are proliferating, a new one published by an academic research group every few months. Most will vanish into obscurity. The problem is not the lack of a perfect clock for any given situation, but the lack of understanding as to how any given clock will react to a novel potential approach to slowing or reversing aging. The real potential value of clocks is not risk estimation for patients, but rather the rapid assessment of potential therapies to treat aging. But that latter use is challenging when one can't trust that a [&#8230;]",
+      "category": "health_research"
+    }
+  ]
+}

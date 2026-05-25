@@ -1,0 +1,179 @@
+{
+  "generated": "2026-05-25T14:37:37.971Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-17",
+  "article_count": 11,
+  "archived_story_count": 370,
+  "articles": [
+    {
+      "title": "ComfyUI v0.19.3 released",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.19.3",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-17T20:06:34.000Z",
+      "summary": "## What's Changed\r\n* nodes_textgen: Implement use_default_template for LTX by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/13451\r\n* fix(api-nodes): corrected StabilityAI price badges by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/13454\r\n* [Partner Nodes] add new \"arrow-1.1\" and \"arrow-1.1-max\" SVG models by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/13447\r\n* Update workflow templates to v0.9.57 by @comfyui-wiki in https://github.com/Comfy-Org/ComfyUI/pull/13455\r",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Crush v0.60.0 released",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.60.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-17T16:55:33.000Z",
+      "summary": "# Secret release\r\n\r\nYou're not supposed to read through the changelog below.\r\n\r\n## Changelog\r\n### New!\r\n* ea86101bf6c61ee05ca3e887ea65d2f5ff9e68d7: feat(hyper): use openai-compatible endpoint for hyper (#2640) (@andreynering)\r\n\r\n---\r\n\r\n<details>\r\n<summary>Verifying the artifacts</summary>\r\n\r\nFirst, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.60.0/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/",
+      "category": "ai_tools"
+    },
+    {
+      "title": "We Reproduced Anthropic's Mythos Findings with Public Models",
+      "url": "https://blog.vidocsecurity.com/blog/we-reproduced-anthropics-mythos-findings-with-public-models",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-04-17T14:09:32.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Landmark ancient-genome study shows surprise acceleration of human evolution",
+      "url": "https://www.nature.com/articles/d41586-026-01204-5",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.83,
+      "date": "2026-04-17T22:30:28.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "PROBoter – Open-source platform for automated PCB analysis",
+      "url": "https://www.schutzwerk.com/en/blog/proboter-01/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7899999999999999,
+      "date": "2026-04-17T06:19:45.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "CadQuery is an open-source Python library for building 3D CAD models",
+      "url": "https://cadquery.github.io/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-04-14T23:20:39.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Precision over perception: Why architecture matters in benchmarking",
+      "url": "https://www.redhat.com/en/blog/precision-over-perception-why-architecture-matters-benchmarking",
+      "source": "Hacker News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-04-13T14:36:57.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "ReBot-DevArm: open-source Robotic Arm",
+      "url": "https://github.com/Seeed-Projects/reBot-DevArm",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-04-13T11:39:12.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Vercel CLI vercel@51.7.0 released",
+      "url": "https://github.com/vercel/vercel/releases/tag/vercel%4051.7.0",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-04-17T22:38:37.000Z",
+      "summary": "### Minor Changes\n\n-   [detect-services] If a vercel.toml exists, update the vercel.toml ([#15895](https://github.com/vercel/vercel/pull/15895))\n\n-   Use correct filename in messages when config file is not vercel.json ([#15893](https://github.com/vercel/vercel/pull/15893))\n\n-   [services] move Python workers to v2beta triggers with private routing ([#15920](https://github.com/vercel/vercel/pull/15920))\n\n### Patch Changes\n\n-   Include `action` and `resource` fields from API 403 responses in non-",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini CLI v0.38.2 released",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.38.2",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-04-17T18:38:59.000Z",
+      "summary": "## What's Changed\n* fix(patch): cherry-pick 14b2f35 to release/v0.38.1-pr-24974 to patch version v0.38.1 and create version 0.38.2 by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/25585\n\n\n**Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.38.1...v0.38.2",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ComfyUI v0.19.2 released",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.19.2",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-04-17T15:34:59.000Z",
+      "summary": "## What's Changed\r\n* Fix OOM regression in _apply() for quantized models during inference by @jkyamog in https://github.com/Comfy-Org/ComfyUI/pull/13372\r\n* Add a way to disable default template in text gen node. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/13424\r\n* Use `ErnieTEModel_` not `ErnieTEModel`. by @bedovyy in https://github.com/Comfy-Org/ComfyUI/pull/13431\r\n* [Partner Nodes] add 1080p resolution for SeeDance 2.0 model by @bigcat88 in https://github.com/Comfy-Org/Comf",
+      "category": "ai_tools"
+    }
+  ]
+}

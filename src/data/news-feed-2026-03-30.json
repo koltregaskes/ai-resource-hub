@@ -1,0 +1,119 @@
+{
+  "generated": "2026-05-25T14:37:37.494Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-30",
+  "article_count": 7,
+  "archived_story_count": 75,
+  "articles": [
+    {
+      "title": "AI chip startup Rebellions raises $400 million at $2.3B valuation in pre-IPO round",
+      "url": "https://techcrunch.com/2026/03/30/ai-chip-startup-rebellions-raises-400-million-at-2-3b-valuation-in-pre-ipo-round/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-03-30T13:00:00.000Z",
+      "summary": "The startup, which is planning to go public later this year, designs chips specifically for AI inference, another challenger to Nvidia's dominance.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "There are more AI health tools than ever—but how well do they work?",
+      "url": "https://www.technologyreview.com/2026/03/30/1134795/there-are-more-ai-health-tools-than-ever-but-how-well-do-they-work/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.83,
+      "date": "2026-03-30T16:00:00.000Z",
+      "summary": "Earlier this month, Microsoft launched Copilot Health, a new space within its Copilot app where users will be able to connect their medical records and ask specific questions about their health. A couple of days earlier, Amazon had announced that Health AI, an LLM-based tool previously restricted to members of its One Medical service, would&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "ScaleOps raises $130M to improve computing efficiency amid AI demand",
+      "url": "https://techcrunch.com/2026/03/30/scaleops-130m-series-c-kubernetes-efficiency-ai-demand-funding/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.75,
+      "date": "2026-03-30T13:52:02.000Z",
+      "summary": "ScaleOps just raised $130M to tackle GPU shortages and soaring AI cloud costs by automating infrastructure in real time.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Vulnerability research is cooked",
+      "url": "https://sockpuppet.org/blog/2026/03/30/vulnerability-research-is-cooked/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5700000000000001,
+      "date": "2026-03-30T18:43:38.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Hamilton-Jacobi-Bellman Equation: Reinforcement Learning and Diffusion Models",
+      "url": "https://dani2442.github.io/posts/continuous-rl/",
+      "source": "Hacker News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.5700000000000001,
+      "date": "2026-03-30T07:34:04.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Inside the stealthy startup that pitched brainless human clones",
+      "url": "https://www.technologyreview.com/2026/03/30/1134780/r3-bio-brainless-human-clones-full-body-replacement-john-schloendorn-aging-longevity/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.57,
+      "date": "2026-03-30T09:00:00.000Z",
+      "summary": "After operating in secrecy for years, a startup company called R3 Bio, in Richmond, California, suddenly shared details about its work last week—saying it had raised money to create nonsentient monkey “organ sacks” as an alternative to animal testing. In an interview with Wired, R3 listed three investors: billionaire Tim Draper, the Singapore-based fund Immortal&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "The Download: brainless human clones and the first uterus kept alive outside a body",
+      "url": "https://www.technologyreview.com/2026/03/30/1134836/the-download-brainless-human-clones-first-uterus-kept-alive-outside-body/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.51,
+      "date": "2026-03-30T12:10:00.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Inside the stealthy startup that pitched brainless human clones&#160; After&#160;operating&#160;in secrecy for years, R3 Bio, a California-based startup, suddenly revealed last week that it had raised money to create&#160;nonsentient&#160;monkey “organ sacks”&#8230;",
+      "category": "ai_research"
+    }
+  ]
+}

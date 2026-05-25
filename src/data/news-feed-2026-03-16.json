@@ -1,0 +1,119 @@
+{
+  "generated": "2026-05-25T14:37:37.089Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-16",
+  "article_count": 7,
+  "archived_story_count": 67,
+  "articles": [
+    {
+      "title": "Speed at the cost of quality: Study of use of Cursor AI in open source projects",
+      "url": "https://arxiv.org/abs/2511.04427",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper",
+        "inference",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference",
+        "open_source"
+      ],
+      "importance": 0.87,
+      "date": "2026-03-16T17:07:37.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Nvidia Launches Vera CPU, Purpose-Built for Agentic AI",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-launches-vera-cpu-purpose-built-for-agentic-ai",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.84,
+      "date": "2026-03-16T20:01:02.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Nango (YC W23, API Access for Agents and Apps) Is Hiring",
+      "url": "https://jobs.ashbyhq.com/Nango",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.82,
+      "date": "2026-03-16T12:03:13.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Launch HN: Chamber (YC W26) – An AI Teammate for GPU Infrastructure",
+      "url": "https://www.usechamber.io/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-03-16T17:09:34.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Linux 7.1 to Retire UDP-Lite – Allows for Better Performance with Cleansed Code",
+      "url": "https://www.phoronix.com/news/Linux-7.1-Retiring-UDP-Lite",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-16T10:41:01.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Where does engineering go? Retreat findings and insights [pdf]",
+      "url": "https://www.thoughtworks.com/content/dam/thoughtworks/documents/report/tw_future%20_of_software_development_retreat_%20key_takeaways.pdf",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-11T20:40:51.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Leanstral: Open-source agent for trustworthy coding and formal proof engineering",
+      "url": "https://mistral.ai/news/leanstral",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-16T20:59:40.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

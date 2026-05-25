@@ -1,0 +1,316 @@
+{
+  "generated": "2026-05-25T14:37:38.574Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-11",
+  "article_count": 20,
+  "archived_story_count": 572,
+  "articles": [
+    {
+      "title": "Interfaze: A new model architecture built for high accuracy at scale",
+      "url": "https://interfaze.ai/blog/interfaze-a-new-model-architecture-built-for-high-accuracy-at-scale",
+      "source": "Hacker News",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-05-11T16:22:31.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Digitize your paper notes with Gemini.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-11T18:00:15.662Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "What Matters for Diffusion-Friendly Latent Manifold? Prior-Aligned Autoencoders for Latent Diffusion",
+      "url": "https://paperswithcode.com/papers/2605.07915",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.76,
+      "date": "2026-05-11T18:00:35.538Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "\"OncoAgent: A Dual-Tier Multi-Agent Framework for Privacy-Preserving Oncology Clinical Decision Support\"     1 day ago •  8",
+      "url": "https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/oncoagent-official-paper",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-11T06:00:14.053Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Show HN: E2a – Open-source email gateway for AI agents",
+      "url": "https://github.com/Mnexa-AI/e2a",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.9199999999999999,
+      "date": "2026-05-11T20:26:17.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Two Years of Local AI on a Laptop: When Open Models Outpaced Moore's Law    mishig • about 8 hours ago •  12",
+      "url": "https://huggingface.co/blog/mishig/local-moores-law",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-11T18:00:16.415Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "CUDA-oxide: Nvidia's official Rust to CUDA compiler",
+      "url": "https://nvlabs.github.io/cuda-oxide/index.html",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-05-11T15:55:07.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "CUDA Proves Nvidia Is a Software Company",
+      "url": "https://www.wired.com/story/cuda-proves-nvidia-is-a-software-company/",
+      "source": "Wired AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-11T18:00:21.005Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hugging Face on JFrog Artifactory: An Enterprise Guide (and What Changes in June 2026)    jeffboudier • 3 days ago •  4",
+      "url": "https://huggingface.co/blog/jeffboudier/jfrog-artifactory-june-2026",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-11T18:00:16.428Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Claude Security",
+      "url": "https://claude.com/product/claude-security",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-11T18:00:12.694Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Flow-OPD: On-Policy Distillation for Flow Matching Models",
+      "url": "https://paperswithcode.com/papers/2605.08063",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.76,
+      "date": "2026-05-11T18:00:35.523Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "HyperEyes: Dual-Grained Efficiency-Aware Reinforcement Learning for Parallel Multimodal Search Agents",
+      "url": "https://paperswithcode.com/papers/2605.07177",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-11T18:00:35.533Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "HumanNet: Scaling Human-centric Video Learning to One Million Hours",
+      "url": "https://paperswithcode.com/papers/2605.06747",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-11T18:00:35.526Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Reality TV · Los AngelesSpencer Pratt talks Los Angeles mayoral campaign, debate performance: Watch the full interview80% Right coverage: 15 sources",
+      "url": "https://ground.news/article/spencer-pratt-talks-los-angeles-mayoral-campaign-debate-performance-watch-the-full-interview_b0fa8a",
+      "source": "Ground News AI",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-11T06:00:23.541Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Photobiomodulation as an Approach to Restore Lost Function in Neuromuscular Junctions",
+      "url": "https://www.fightaging.org/archives/2026/05/photobiomodulation-as-an-approach-to-restore-lost-function-in-neuromuscular-junctions/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-05-11T18:35:20.000Z",
+      "summary": "Evidence suggests that one of the major components of muscle aging is degeneration of neuromuscular junctions, the structures linking the nervous system to muscle fibers. Absent the signaling from nervous system to muscle, muscles will degenerate. That signaling is necessary for muscle tissue maintenance and growth. Thus a loss of function in neuromuscular junctions will contribute to the characteristic age-related loss of muscle mass and strength that leads inexorably to the line in the sand that marks the conditions known as sarcopenia and dynapenia. Can the degeneration of neuromuscular junctions be reversed to any great degree? Today's open access paper provides animal study evidence for photobiomodulation to achieve this goal, though it must be said that the broader context surrounding the widespread clinical use of [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "General Science",
+      "url": "https://research.google/blog/label/general-science",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.58,
+      "date": "2026-05-11T18:01:11.299Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Education Innovation",
+      "url": "https://research.google/blog/label/education-innovation",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.58,
+      "date": "2026-05-11T18:01:11.297Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Economics &amp; Electronic Commerce",
+      "url": "https://research.google/blog/label/economics-electronic-commerce",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.58,
+      "date": "2026-05-11T18:01:11.294Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Distributed Systems &amp; Parallel Computing",
+      "url": "https://research.google/blog/label/distributed-systems-parallel-computing",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.58,
+      "date": "2026-05-11T18:01:11.292Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Data Mining &amp; Modeling",
+      "url": "https://research.google/blog/label/data-mining-modeling",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.58,
+      "date": "2026-05-11T18:01:11.289Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

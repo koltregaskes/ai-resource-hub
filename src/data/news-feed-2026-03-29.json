@@ -1,0 +1,85 @@
+{
+  "generated": "2026-05-25T14:37:37.465Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-29",
+  "article_count": 5,
+  "archived_story_count": 57,
+  "articles": [
+    {
+      "title": "OpenYak – An open-source Cowork that runs any model and owns your filesystem",
+      "url": "https://github.com/openyak/desktop",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.82,
+      "date": "2026-03-29T04:26:13.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "AyaFlow: A high-performance, eBPF-based network traffic analyzer written in Rust",
+      "url": "https://github.com/DavidHavoc/ayaFlow",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.71,
+      "date": "2026-03-29T15:28:27.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "A laser-based process that enables adhesive-free paper packaging",
+      "url": "https://www.fraunhofer.de/en/press/research-news/2026/march-2026/sealing-paper-packaging-without-adhesives.html",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-28T22:50:49.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Modeling what makes paper-folding puzzles hard",
+      "url": "https://www.dailyunfold.com/blog/spatial-difficulty",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-25T12:47:04.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Computer chip material inspired by the human brain could slash AI energy use",
+      "url": "https://www.cam.ac.uk/research/news/new-computer-chip-material-inspired-by-the-human-brain-could-slash-ai-energy-use",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-28T23:04:14.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

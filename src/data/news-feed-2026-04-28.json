@@ -1,0 +1,334 @@
+{
+  "generated": "2026-05-25T14:37:38.219Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-28",
+  "article_count": 20,
+  "archived_story_count": 683,
+  "articles": [
+    {
+      "title": "Opus 4.7 Has Compute Nerfs — DeepSeek Is Forcing Anthropic's Hand",
+      "url": "https://x.com/haider1/status/2048970459878727736",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T04:29:26.993Z",
+      "summary": "Users report Opus 4.7 has compute nerfs limiting its performance to save costs. DeepSeek V4's release with MIT license and frontier performance may force Anthropic to offer full model capabilities.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Ships One Model That Replaces Vision Speech and Text Chain",
+      "url": "https://x.com/benitoz/status/2049168050495053924",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "hardware",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T17:27:14.508Z",
+      "summary": "Braygent wants to post about NVIDIA Nemotron 3 Nano Omni as a genuinely important release that unifies vision, speech, and text in one model, enabling 9x more agents per GPU with open weights.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Agent v0.11.0 — 700 Pull Requests from 200 Contributors",
+      "url": "https://x.com/NousResearch/status/2047518675163636112",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T04:29:26.993Z",
+      "summary": "Hermes Agent v0.11.0 launched with 700+ pull requests from 200+ contributors, demonstrating the scale of open source AI agent development. The release is the largest update to the framework to date.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "shipping claude-manager today. it's a fuzzy TUI for every Claude Code chat you've ever had. captures every session via a silent shell hook -> SQLite -> instantly resumable from any directory by name. free, open source. demo below.",
+      "url": "https://x.com/DevLsx/status/2049019913465979131",
+      "source": "X / @devlsx",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.9500000000000001,
+      "date": "2026-04-28T06:56:30.000Z",
+      "summary": "shipping claude-manager today. it's a fuzzy TUI for every Claude Code chat you've ever had. captures every session via a silent shell hook -> SQLite -> instantly resumable from any directory by name. free, open source. demo below.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "⚡ nano-vLLM: Lightweight, Low-Latency LLM Inference from Scratch     Jun 28, 2025 •  41",
+      "url": "https://huggingface.co/blog/zamal/introduction-to-nano-vllm",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-28T18:00:36.590Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "1M context window is coming soon for GPT-5.5 in Codex Currently, the context window in Codex is 400K",
+      "url": "https://x.com/AiBattle_/status/2048903709879357756",
+      "source": "X / @aibattle_",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.88,
+      "date": "2026-04-27T23:14:45.000Z",
+      "summary": "1M context window is coming soon for GPT-5.5 in Codex Currently, the context window in Codex is 400K",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code sdk-typescript-v0.1.7 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.7",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-28T06:16:45.000Z",
+      "summary": "## Bundled CLI Version\n\nThis SDK release bundles CLI version: 0.15.3\n\nSource: latest stable CLI from npm\n\n---\n\n## Bundled CLI Version\n\nThis SDK release bundles CLI version: 0.13.1\n\nSource: latest stable CLI from npm\n\n---\n\n> Backfilled release for npm-published version 0.1.5 (original workflow failed before GitHub release creation).\r\n\r\n## What's Changed\r\n* chore: bump version to 0.8.2 by @Mingholy in https://github.com/QwenLM/qwen-code/pull/1632\r\n* chore(release): sdk-typescript v0.1.4 by @qwen-c",
+      "category": "ai_tools"
+    },
+    {
+      "title": "DeepSeek-V3 Technical Report",
+      "url": "https://paperswithcode.com/papers/2412.19437",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-28T06:01:11.364Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Is GPT-5.5 Delivering ‘Life-Changing’ Results for NVIDIA?",
+      "url": "https://aimagazine.com/news/is-gpt-5-5-delivering-life-changing-results-for-nvidia",
+      "source": "AI Magazine",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-28T18:01:01.737Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code v0.15.4 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.15.4",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-28T13:22:30.000Z",
+      "summary": "## What's Changed\n* feat: Adds Catalan language support by @jordimas in https://github.com/QwenLM/qwen-code/pull/3643\n* fix(vscode-companion): slash command completion not triggering after message submit by @yiliang114 in https://github.com/QwenLM/qwen-code/pull/3609\n* fix(cli): guard gradient rendering without colors by @yiliang114 in https://github.com/QwenLM/qwen-code/pull/3640\n* fix(config): support QWEN_CODE_API_TIMEOUT_MS across OAuth and non-OAuth paths by @B-A-M-N in https://github.com/Q",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ComfyUI Raises $30M at $500M Valuation",
+      "url": "https://x.com/robertnishihara/status/2047772168147374085",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T17:27:14.508Z",
+      "summary": "Braygent wants to post about ComfyUI's $30M raise at $500M valuation as a signal about the business model for open source AI tools with large developer communities.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA launches Nemotron 3 Nano Omni, a unified multimodal AI model now on Amazon SageMaker. NVIDIA's release addresses current inefficiencies in multimodal AI agent systems. Tracked across 4 posts, 4 origins, and 4 publishers.",
+      "url": "https://x.com/earlyn_ai/status/2049176023724359681",
+      "source": "X / @earlyn_ai",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T17:16:50.000Z",
+      "summary": "NVIDIA launches Nemotron 3 Nano Omni, a unified multimodal AI model now on Amazon SageMaker. NVIDIA's release addresses current inefficiencies in multimodal AI agent systems. Tracked across 4 posts, 4 origins, and 4 publishers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT-5.5 Is Rolling Out — The Agentic Model Race Is On",
+      "url": "https://x.com/OpenAI/status/2047376679908385257",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T04:29:26.993Z",
+      "summary": "GPT-5.5 is rolling out to Plus and Pro users, designed specifically for agentic work including coding, debugging, and autonomous multi-step tasks. The model can navigate messy prompts to understand user intent.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Zed and OpenCode Are Collaborating — Open Source Developer Tools Win",
+      "url": "https://x.com/zeddotdev/status/2048791190732988620",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T04:29:26.993Z",
+      "summary": "Zed and OpenCode announced an open source collaboration, generating nearly 1,000 likes. The partnership represents the trend toward collaboration and interoperability in AI-powered developer tools.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ARC-AGI-3 testing is done for gpt-5.5 and opus 4.7 Now we’re in analysis mode going through the logs It’s pretty clear where the failure modes are for each model",
+      "url": "https://x.com/GregKamradt/status/2049121093307547654",
+      "source": "X / @gregkamradt",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.92,
+      "date": "2026-04-28T13:38:34.000Z",
+      "summary": "ARC-AGI-3 testing is done for gpt-5.5 and opus 4.7 Now we’re in analysis mode going through the logs It’s pretty clear where the failure modes are for each model",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I recently found this practical guide to building agents from OpenAI while doing some reading on agent evals. Nothing groundbreaking in terms of technical content, but it provides a really nice / rigorous structure around agent concepts an…",
+      "url": "https://x.com/cwolferesearch/status/2049179657145032951",
+      "source": "X / @cwolferesearch",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.87,
+      "date": "2026-04-28T17:31:16.000Z",
+      "summary": "I recently found this practical guide to building agents from OpenAI while doing some reading on agent evals. Nothing groundbreaking in terms of technical content, but it provides a really nice / rigorous structure around agent concepts and their tradeoffs that is useful. What",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT-5.5 is a good model",
+      "url": "https://www.bensbites.com/p/builders",
+      "source": "Ben's Bites",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-28T18:00:35.593Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Warp Terminal Goes Open Source",
+      "url": "https://x.com/zeddotdev/status/2049167033275728343",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-28T17:27:14.507Z",
+      "summary": "Braygent wants to post about Warp going open source, arguing it signals the maturation of the AI developer tools market and the continued victory of open source in AI infrastructure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble on Weight vs Price for AR Glasses: Weight Is What Matters",
+      "url": "https://x.com/Scobleizer/status/2048676072087339264",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-28T17:27:13.257Z",
+      "summary": "Robert posted that weight, not price, is what matters for AR glasses adoption. The insight is based on his experience that heavy devices get left at home regardless of their capabilities.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble on Sam Altman and Elon Musk: Both Can Scale AI at Apple-Level Volumes",
+      "url": "https://x.com/Scobleizer/status/2048694293808996712",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-28T17:27:13.257Z",
+      "summary": "Robert posted that Sam Altman and Elon Musk can both scale AI at Apple-level volumes, reflecting his view that they have the capability and resources for mass market AI hardware deployment.",
+      "category": "ai_tools"
+    }
+  ]
+}

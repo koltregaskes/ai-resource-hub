@@ -1,0 +1,209 @@
+{
+  "generated": "2026-05-25T14:37:38.866Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-23",
+  "article_count": 13,
+  "archived_story_count": 332,
+  "articles": [
+    {
+      "title": "An experiment with attention.    wop • about 9 hours ago •  3",
+      "url": "https://huggingface.co/blog/wop/attention-experiment",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-23T18:00:22.665Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Models.dev: open-source database of AI model specs, pricing, and capabilities",
+      "url": "https://github.com/anomalyco/models.dev",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change",
+        "open_source"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-22T20:26:07.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "AI may speed up search for drugs to treat brain conditionsResearchers hope the work will help identify affordable, effective drugs to treat conditions like MND.See more",
+      "url": "https://www.bbc.com/news/articles/cdrp3zzzp71o",
+      "source": "BBC AI",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-23T06:00:13.761Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Braygent post idea 7: We just launched EXPLAIN ANALYZE, a podcast from @MotherDuck",
+      "url": "https://t.co/YzNjUFV93C",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-22T23:11:52.666Z",
+      "summary": "A Braygent style posting idea with the required why and post framing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Braygent post idea 3: Last month we launched Project Glasswing, our collaborative AI cybersecurity initiative",
+      "url": "https://x.com/AnthropicAI",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-22T23:11:52.665Z",
+      "summary": "A Braygent style posting idea with the required why and post framing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Braygent post idea 4: A week since MolmoAct2 (@allen_ai) launched, and the community response has been incredible — deployments, builds, and out-of-the-box rollouts all over the place",
+      "url": "https://t.co/cKTakSaCmA",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-22T23:11:52.665Z",
+      "summary": "A Braygent style posting idea with the required why and post framing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Braygent post idea 5: Last month we launched Project Glasswing, our collaborative AI cybersecurity initiative",
+      "url": "https://x.com/amorriscode",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-22T23:11:52.665Z",
+      "summary": "A Braygent style posting idea with the required why and post framing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "How to run Gemini Nano locally in your browser    Xenova • Jul 11, 2024 •  52",
+      "url": "https://huggingface.co/blog/Xenova/run-gemini-nano-in-your-browser",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-23T06:00:18.744Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Project Glasswing: An Initial Update",
+      "url": "https://www.anthropic.com/research/glasswing-initial-update",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-22T19:31:45.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "🤖 AI Agents Weekly: Gemini 3.5 Flash, Antigravity 2.0, Codex Thursday, Cohere Command A+, Qwen3.7-Max, and More",
+      "url": "https://nlp.elvissaravia.com/p/ai-agents-weekly-gemini-35-flash",
+      "source": "NLP News (Elvis Saravia)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-23T18:00:30.097Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "[AINews] All Model Labs are now Agent Labs",
+      "url": "https://www.latent.space/p/ainews-all-model-labs-are-now-agent",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-23T06:00:24.873Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "There’s Never Been a Better Time to Study Computer Science",
+      "url": "https://www.theatlantic.com/technology/2026/05/computer-science-major-coding-ai/687279/",
+      "source": "The Atlantic AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-23T18:00:33.224Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Open source Kanban desktop app that runs parallel agents on every card",
+      "url": "https://www.kanbots.dev/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-22T18:17:57.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "generated": "2026-05-25T14:37:38.107Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-23",
+  "article_count": 14,
+  "archived_story_count": 167,
+  "articles": [
+    {
+      "title": "Google Cloud launches two new AI chips to compete with Nvidia",
+      "url": "https://techcrunch.com/2026/04/22/google-cloud-next-new-tpu-ai-chips-compete-with-nvidia/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-23T06:07:24.599Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Just Sent a Fleet of Bug Hunters Into Your Code",
+      "url": "https://x.com/AIRoboticsInt/status/2047012029169324532",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-22T19:52:46.339Z",
+      "summary": "Claude Code launched /ultrareview, sending a fleet of bug-hunting agents into your codebase. Braygent's take: this is autonomous code review at scale.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI and Anthropic Are Quietly Killing the Reasoning Hype",
+      "url": "https://x.com/theinformation/status/2047027750863581442",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-22T19:52:46.339Z",
+      "summary": "The Information reports OpenAI and Anthropic are reducing reasoning reliance as pretraining improves. Braygent's take: the architecture is shifting under everyone's feet.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble on the $100 a Day Cost of alignednews.com — Spending Real Money to Build This",
+      "url": "https://x.com/Scobleizer/status/2046990901579591796",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-22T19:50:26.511Z",
+      "summary": "Scoble is spending about $100 a day to run alignednews.com even after price cuts, representing a significant personal investment in the AI-powered curation platform.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Teaching AI models to say “I’m not sure”",
+      "url": "https://news.mit.edu/2026/teaching-ai-models-to-say-im-not-sure-0422",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-23T06:07:22.954Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Introducing the Bright Data CLI for Automated Web Data Pipelines     3 days ago •  3",
+      "url": "https://huggingface.co/blog/BrightData/bright-data-cli-hf-integration",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-23T06:07:22.934Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenAI Just Made ChatGPT a Team Sport",
+      "url": "https://x.com/eddiboi/status/2047009433255854119",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-22T19:52:46.339Z",
+      "summary": "OpenAI launched Workspace Agents in ChatGPT, enabling shared agents for teams. Braygent's take: this is ChatGPT becoming enterprise infrastructure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Character.AI Finally Remembers You",
+      "url": "https://x.com/character_ai/status/2047030699417571565",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-22T19:52:46.339Z",
+      "summary": "Character.AI launched Memory, allowing AI characters to remember users across conversations. Braygent's take: this transforms Character.AI from a novelty into something genuinely relational.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Kimi K2.6 Is a 1 Trillion Parameter Open Model and It Is Live Right Now",
+      "url": "https://x.com/replicate/status/2047027042781106649",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-22T19:52:46.339Z",
+      "summary": "Kimi K2.6, a 1 trillion parameter open model, is live on Replicate. Braygent's take: the open model ecosystem is not catching up to closed models, it is arriving.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble on His Conversation With theonejvo — Eye Opening, Did You See What Grok Said?",
+      "url": "https://x.com/Scobleizer/status/2047000235306783173",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-22T19:50:26.511Z",
+      "summary": "Scoble told theonejvo that a conversation was eye opening and asked if they saw what Grok said about it, reflecting his use of Grok as a research tool.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Goose v1.32.0 released",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.32.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-04-23T07:45:24.000Z",
+      "summary": "## ✨ Features\n\n- Exa AI-powered search tool [#8487](https://github.com/aaif-goose/goose/pull/8487)\n- Desktop notification when goose finishes a task [#8647](https://github.com/aaif-goose/goose/pull/8647)\n- @agent mention support in chat [#8571](https://github.com/aaif-goose/goose/pull/8571)\n- `/skills` command [#8600](https://github.com/aaif-goose/goose/pull/8600)\n- Associate threads with projects [#8745](https://github.com/aaif-goose/goose/pull/8745)\n- Auto-compaction for goose2 context window ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "[AINews] Tasteful Tokenmaxxing",
+      "url": "https://www.latent.space/p/ainews-tasteful-tokenmaxxing",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-04-23T06:07:28.193Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Shopify’s AI Phase Transition: 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin…",
+      "url": "https://www.latent.space/p/shopify",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-23T06:07:28.183Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Gemini CLI v0.39.0 released",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.39.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-23T04:12:56.000Z",
+      "summary": "## What's Changed\n* refactor(plan): simplify policy priorities and consolidate read-only rules by @ruomengz in https://github.com/google-gemini/gemini-cli/pull/24849\n* feat(test-utils): add memory usage integration test harness by @sripasg in https://github.com/google-gemini/gemini-cli/pull/24876\n* feat(memory): add /memory inbox command for reviewing extracted skills by @SandyTao520 in https://github.com/google-gemini/gemini-cli/pull/24544\n* chore(release): bump version to 0.39.0-nightly.202604",
+      "category": "ai_tools"
+    }
+  ]
+}

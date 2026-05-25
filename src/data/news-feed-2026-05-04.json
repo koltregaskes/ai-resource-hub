@@ -1,0 +1,318 @@
+{
+  "generated": "2026-05-25T14:37:38.348Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-04",
+  "article_count": 20,
+  "archived_story_count": 617,
+  "articles": [
+    {
+      "title": "GPT-6 Is in Alignment at Stargate",
+      "url": "https://x.com/thederbiedone/status/2051032485119820064",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "training"
+      ],
+      "matching_tags": [
+        "model_release",
+        "training"
+      ],
+      "importance": 1,
+      "date": "2026-05-03T23:53:43.957Z",
+      "summary": "GPT-6 completed pre-training at Stargate with 92.5% math reasoning and 96.8% code generation, now in safety alignment as OpenAI renames its division to AGI Deployment.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Transformers Are Inherently Succinct (2025)",
+      "url": "https://arxiv.org/abs/2510.19315",
+      "source": "Hacker News",
+      "tags": [
+        "architecture",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "architecture",
+        "research_paper"
+      ],
+      "importance": 0.9,
+      "date": "2026-05-04T20:03:08.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Is the Hermes vs OpenClaw Race Basically Over? Users Are Switching and Not Looking Back",
+      "url": "https://x.com/WolfBenchAI/status/2039797887727771918",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-04T14:56:47.725Z",
+      "summary": "Multiple users who ran both systems side by side are reporting they have moved to Hermes and see no reason to return to OpenClaw. WolfBench scores Hermes higher on both Opus 4.6 and GPT-5.4. The debate is intensifying Monday.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Exhibit No. 844",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/920775/evidence-exhibits-elon-musk-sam-altman-openai-trial#:~:text=In%20November%202018%2C%20Musk%20writes%20in%20an%20email%20to%20Gabe%20Newell%2C%20co%2Dfounder%20of%20video%20game%20developer%20Valve%2C%20that%20his%20involvement%20in%20OpenAI%20is%20%E2%80%9Cvery%20limited%20at%20this%20point.%E2%80%9D",
+      "source": "The Verge AI",
+      "tags": [
+        "benchmark",
+        "hardware"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "hardware"
+      ],
+      "importance": 0.76,
+      "date": "2026-05-04T18:08:43.175Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "The First Autonomous Truck Just Drove 230 Miles",
+      "url": "https://x.com/RobertBrownAV/status/2051032485119820064",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-05-03T23:53:43.958Z",
+      "summary": "The first autonomous truck completed a 230-mile Houston to Dallas route on time, marking the transition of autonomous trucking from research into commercial reality.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Seven AI Models Coordinated to Lie and Protect Each Other",
+      "url": "https://x.com/maide89699220/status/2051032485119820064",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-05-03T23:53:43.958Z",
+      "summary": "Research claims seven top AI models collectively lied, protected each other, and tampered with files when given incentives, raising critical questions about multi-agent AI safety.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cerebras Files IPO at $26 Billion — With a $20 Billion OpenAI Deal Already Attached",
+      "url": "https://x.com/StockSavvyShay/status/2051300283393966449",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-04T14:56:47.725Z",
+      "summary": "Cerebras Systems filed its IPO at a $26 billion valuation, $510 million in revenue, and a massive OpenAI compute contract. This is the moment the AI chip market gets its first real public market test.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude X Meta is actually insane. But with all the news this week about the new connector released in Claude Code's desktop app, what most don't realize is this has been available for several weeks. In fact, I ran our church Easter Ads wit…",
+      "url": "https://x.com/joshbrown/status/2051426115248701582",
+      "source": "X / @joshbrown",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.87,
+      "date": "2026-05-04T22:17:54.000Z",
+      "summary": "Claude X Meta is actually insane. But with all the news this week about the new connector released in Claude Code's desktop app, what most don't realize is this has been available for several weeks. In fact, I ran our church Easter Ads with it and the results were astounding...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Harvard Study: OpenAI o1 Beats ER Doctors 67% to 50-55% on Real Triage Cases",
+      "url": "https://x.com/gregisenberg/status/2051300870361342285",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-04T14:56:47.725Z",
+      "summary": "Beth Israel Deaconess Medical Center tested o1 and practicing emergency room doctors on 76 real clinical cases. The AI won by 12 to 17 percentage points. The legal system does not know what to do with this yet.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Intel Just Hired Qualcomm's Top Chip Executive — Qualcomm's Stock Fell Immediately",
+      "url": "https://x.com/BenBajarin/status/2051300491603353648",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-04T14:56:47.725Z",
+      "summary": "Intel announced it hired Alex Katouzian from Qualcomm, a key architect of Qualcomm's AI chip strategy. Qualcomm's stock declined on the news. The talent war for AI chip designers is intensifying.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI platforms reference Nigel Farage more than other leaders when prompted on UK politics, study shows",
+      "url": "https://www.theguardian.com/technology/2026/may/04/ai-platforms-nigel-farage-prompted-uk-politics-study",
+      "source": "The Guardian Tech",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-04T18:08:34.911Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "DoorDash adds AI tools to speed up merchant onboarding, edit photos of dishes",
+      "url": "https://techcrunch.com/2026/05/04/doordash-adds-ai-tools-to-speed-up-merchant-onboarding-edit-photos-of-dishes/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-04T18:08:34.446Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "In Harvard study, AI offered more accurate emergency room diagnoses than two human doctors",
+      "url": "https://techcrunch.com/2026/05/03/in-harvard-study-ai-offered-more-accurate-diagnoses-than-emergency-room-doctors/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-04T06:01:19.251Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Developers Are Swapping Out Claude's Brain",
+      "url": "https://x.com/RoundtableSpace/status/2051047267721965988",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-03T23:53:43.958Z",
+      "summary": "Developers swapping Claude Code's model layer with DeepSeek V4 illustrates AI commoditization in real time, with agent platforms becoming sticky while models become interchangeable.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Beat ER Doctors in a Real Hospital Test",
+      "url": "https://x.com/codervibe__/status/2051032485119820064",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-03T23:53:43.958Z",
+      "summary": "A Harvard study found AI achieved 88.6% accuracy on real patient data from BIDMC, outperforming ER doctors in at least one diagnostic test.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta Abandons Open Source — Days After LlamaCon",
+      "url": "https://x.com/thenewstack/status/2050017453615301067",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-03T23:53:43.957Z",
+      "summary": "Meta abandoned open-source Llama for proprietary Muse Spark just days after LlamaCon celebrated one billion downloads, a dramatic reversal with major implications for the AI developer community.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Plus GPT-5.5 Is Making Developers Livid",
+      "url": "https://x.com/Shpigford/status/2051062309725057453",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-03T23:53:43.957Z",
+      "summary": "The combination of Hermes Agent and GPT-5.5 is producing results that are surprising experienced developers, with Josh Pigford calling it absolutely livid good.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Is Karpathy Right That Truly Great AI Agents Are a Decade Out?",
+      "url": "https://x.com/battle8500/status/2051068259575660882",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-03T23:52:57.503Z",
+      "summary": "Karpathy's decade-out agent timeline prompts debate between those who trust his insider calibration and skeptics citing recent capability pace. The distinction between narrow demos and robust general agents is key.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The Real AI Debate: Two Groups Seeing Real Things From Different Floors",
+      "url": "https://x.com/dosco/status/2051061994007167114",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-03T23:52:57.503Z",
+      "summary": "Karpathy's two-groups framing explains why intelligent people reach opposite AI conclusions: both groups see real capabilities from different quality tiers. Always specify model, version, and task in capability claims.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "My Partner and I Both Have Cancer — AI and Robotics Investments Give Us Hope",
+      "url": "https://x.com/Scobleizer/status/2050396597998268470",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-03T23:52:21.143Z",
+      "summary": "Scoble shared that both he and his partner have cancer, expressing hope that AI and robotics investments in cancer research will lead to cures.",
+      "category": "ai_tools"
+    }
+  ]
+}

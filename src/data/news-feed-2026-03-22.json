@@ -1,0 +1,130 @@
+{
+  "generated": "2026-05-25T14:37:37.251Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-22",
+  "article_count": 8,
+  "archived_story_count": 88,
+  "articles": [
+    {
+      "title": "Elon Musk unveils chip manufacturing plans for SpaceX and Tesla",
+      "url": "https://techcrunch.com/2026/03/22/elon-musk-unveils-chip-manufacturing-plans-for-spacex-and-tesla/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-03-22T16:20:00.000Z",
+      "summary": "Elon Musk recently outlined ambitious plans for a chip-building collaboration Tesla and SpaceX — but he has a history of overpromising.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "An exclusive tour of Amazon&#8217;s Trainium lab, the chip that&#8217;s won over Anthropic, OpenAI, even Apple",
+      "url": "https://techcrunch.com/2026/03/22/an-exclusive-tour-of-amazons-trainium-lab-the-chip-thats-won-over-anthropic-openai-even-apple/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-03-22T12:00:00.000Z",
+      "summary": "Shortly after Amazon announced its $50 billion investment in OpenAI, AWS invited me on a private tour of the chip lab at the heart of the deal.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Do you want to build a robot snowman?",
+      "url": "https://techcrunch.com/2026/03/22/do-you-want-to-build-a-robot-snowman/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-22T19:45:07.000Z",
+      "summary": "On the latest episode of the Equity podcast, we recapped CEO Jensen Huang’s GTC keynote and debated what it means for Nvidia’s future.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cross-Model Void Convergence: GPT-5.2 and Claude Opus 4.6 Deterministic Silence",
+      "url": "https://zenodo.org/records/18976656",
+      "source": "Hacker News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.82,
+      "date": "2026-03-22T07:07:15.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Flash-MoE: Running a 397B Parameter Model on a Laptop",
+      "url": "https://github.com/danveloper/flash-moe",
+      "source": "Hacker News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-03-22T11:30:03.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "HopTab–free,open source macOS app switcher and tiler that replaces Cmd+Tab",
+      "url": "https://www.royalbhati.com/hoptab",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-03-22T06:23:59.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "More common mistakes to avoid when creating system architecture diagrams",
+      "url": "https://www.ilograph.com/blog/posts/more-common-diagram-mistakes/",
+      "source": "Hacker News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-22T11:51:52.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "How to Attract AI Bots to Your Open Source Project",
+      "url": "https://nesbitt.io/2026/03/21/how-to-attract-ai-bots-to-your-open-source-project.html",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-21T20:58:01.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

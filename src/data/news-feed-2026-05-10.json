@@ -1,0 +1,57 @@
+{
+  "generated": "2026-05-25T14:37:38.538Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-10",
+  "article_count": 3,
+  "archived_story_count": 320,
+  "articles": [
+    {
+      "title": "BM25 for Python: Achieving high performance while simplifying dependencies with *BM25S*⚡     Jul 9, 2024 •  83",
+      "url": "https://huggingface.co/blog/xhluca/bm25s",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-10T18:00:19.552Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "CyberSecQwen-4B: Why Defensive Cyber Needs Small, Specialized, Locally-Runnable Models     2 days ago •  4",
+      "url": "https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/cybersecqwen-4b",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-10T18:00:19.540Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Adam's Law: Textual Frequency Law on Large Language Models",
+      "url": "https://paperswithcode.com/papers/2604.02176",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.76,
+      "date": "2026-05-10T18:00:40.355Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

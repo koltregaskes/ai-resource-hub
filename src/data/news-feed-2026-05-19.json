@@ -1,0 +1,318 @@
+{
+  "generated": "2026-05-25T14:37:38.787Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-19",
+  "article_count": 20,
+  "archived_story_count": 634,
+  "articles": [
+    {
+      "title": "Metric and Relative Monocular Depth Estimation: An Overview. Fine-Tuning Depth Anything V2 👐 📚    Isayoften • Jul 10, 2024 •  96",
+      "url": "https://huggingface.co/blog/Isayoften/monocular-depth-estimation-guide",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-05-19T19:45:36.125Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "EMO: Pretraining mixture of experts for emergent modularity    allenai • 11 days ago •  37",
+      "url": "https://huggingface.co/blog/allenai/emo",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-19T19:45:36.113Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Introducing Managed Agents in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/managed-agents-gemini-api/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-19T19:45:36.097Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Everyone in the space is talking about the ERC8004 and X402 for On-Chain agent, but we focussed our attention on ETH Tbilisi 2.2 on the brain in a fire chat with @elchiapp from @qvac about the importance of Open Source and Self-Sovereign A…",
+      "url": "https://x.com/ethtbilisi/status/2056638420500222197",
+      "source": "X search / AI vibes",
+      "tags": [
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "architecture",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-19T07:29:44.000Z",
+      "summary": "Everyone in the space is talking about the ERC8004 and X402 for On-Chain agent, but we focussed our attention on ETH Tbilisi 2.2 on the brain in a fire chat with @elchiapp from @qvac about the importance of Open Source and Self-Sovereign AI.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Juggling multiple ongoing agents is hard mental work. Anthropic just released Agent View to fight that. But it's not enough. I still need to review the work they produce, keep track of the tasks and goals, and make sure I don't forget some…",
+      "url": "https://x.com/JanCervinka/status/2056637502644236568",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-19T07:26:05.000Z",
+      "summary": "Juggling multiple ongoing agents is hard mental work. Anthropic just released Agent View to fight that. But it's not enough. I still need to review the work they produce, keep track of the tasks and goals, and make sure I don't forget something in the process. You can solve this",
+      "category": "ai_models"
+    },
+    {
+      "title": "Hackers exploit Langflow CVE-2026-33017 to launch KeyHunter, a botnet using NATS-as-C2 for LLMjacking and automated AWS and OpenAI credential theft. https:// meterpreter.org/nats-as-c2-cri tical-langflow-exploit-exploded-to-fuel-llmjacking…",
+      "url": "https://x.com/the_yellow_fall/status/2056631860307136772",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-19T07:03:40.000Z",
+      "summary": "Hackers exploit Langflow CVE-2026-33017 to launch KeyHunter, a botnet using NATS-as-C2 for LLMjacking and automated AWS and OpenAI credential theft. https:// meterpreter.org/nats-as-c2-cri tical-langflow-exploit-exploded-to-fuel-llmjacking-and-cloud-credential-theft/ …",
+      "category": "ai_models"
+    },
+    {
+      "title": "Google DeepMind just released a cool demo that integrates Gemini right into a user's mouse pointer. A simple but impactful interface upgrade for the AI era:",
+      "url": "https://x.com/Andreina0210/status/2056629808881123840",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-19T06:55:31.000Z",
+      "summary": "Google DeepMind just released a cool demo that integrates Gemini right into a user's mouse pointer. A simple but impactful interface upgrade for the AI era:",
+      "category": "ai_models"
+    },
+    {
+      "title": "Whatever flash model is released today by Google will probably end up being the model that also powers Siri in September. This will be by far the most used model in the world if you count: - AI Overviews - Gemini free - Android - Siri And…",
+      "url": "https://x.com/GaelBreton/status/2056625299001921950",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-19T06:37:36.000Z",
+      "summary": "Whatever flash model is released today by Google will probably end up being the model that also powers Siri in September. This will be by far the most used model in the world if you count: - AI Overviews - Gemini free - Android - Siri And so far from what I'm seeing in",
+      "category": "ai_models"
+    },
+    {
+      "title": "situation report: - UI built - wallet connection - contract calls wired - indexer (to show real on-chain data) - app launch it’s been so much fun, later today i’ll tilt towards codex for debugging cuz claude is after my sanity keep buildin…",
+      "url": "https://x.com/affanyjoe/status/2056623999413633052",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-19T06:32:26.000Z",
+      "summary": "situation report: - UI built - wallet connection - contract calls wired - indexer (to show real on-chain data) - app launch it’s been so much fun, later today i’ll tilt towards codex for debugging cuz claude is after my sanity keep building on @arc happy",
+      "category": "ai_models"
+    },
+    {
+      "title": "Elon lost his case against OpenAI. Whatever the merits, one less lawsuit clouding the AI landscape. The real race isn't in court—it's in shipping better models. Back to building.",
+      "url": "https://x.com/tomcopygen/status/2056632365984698409",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-19T07:05:41.000Z",
+      "summary": "Elon lost his case against OpenAI. Whatever the merits, one less lawsuit clouding the AI landscape. The real race isn't in court—it's in shipping better models. Back to building.",
+      "category": "ai_models"
+    },
+    {
+      "title": "The Gemini app becomes more agentic, delivering proactive, 24/7 help",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-19T19:45:36.082Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Robert Praises Levangie Labs Cognitive Architecture",
+      "url": "https://x.com/Scobleizer/status/2056312775677554753",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-18T23:33:39.691Z",
+      "summary": "Robert described Levangie Labs as a cognitive architecture layer that improves underlying LLMs.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini for Science: AI experiments and tools for a new era of discovery",
+      "url": "https://blog.google/innovation-and-ai/technology/research/gemini-for-science-io-2026/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-19T19:45:36.088Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Gemini for Science",
+      "url": "https://ai.google/science/gemini-for-science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-19T19:45:35.187Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "May 19, 2026AnnouncementsKPMG integrates Claude across its core business and workforce of more than 276,000 in strategic alliance",
+      "url": "https://www.anthropic.com/news/anthropic-kpmg",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-19T19:45:33.934Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Forget Electrons, This Breakthrough Uses Light-matter Particles to Power AI",
+      "url": "https://www.sciencedaily.com/releases/2026/05/260518041341.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-19T06:07:34.496Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "How to get support",
+      "url": "https://support.claude.com/en/articles/9015913-how-to-get-support",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-19T06:07:31.207Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "What if AI could manage your cloud operations for you? I reviewed #ClaudPilot AI Deploy Apps Faster Monitor Performance Automate Cloud Tasks Manage Everything in ONE Dashboard Perfect for SaaS owners & businesses https:// mowdudahmed.com/c…",
+      "url": "https://x.com/MowdudA01660264/status/2056638989323374777",
+      "source": "X search / Agent workflows",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-19T07:32:00.000Z",
+      "summary": "What if AI could manage your cloud operations for you? I reviewed #ClaudPilot AI Deploy Apps Faster Monitor Performance Automate Cloud Tasks Manage Everything in ONE Dashboard Perfect for SaaS owners & businesses https:// mowdudahmed.com/claudpilot #ai #Automation",
+      "category": "ai_agents"
+    },
+    {
+      "title": "Anthropic pays engineers $750,000+ to understand how LLMs work. Stanford AI professor Andrew Ng just released a FREE 2.5-hour course covering prompting, reasoning, hallucinations, and AI workflows. It breaks down how LLMs interpret prompts…",
+      "url": "https://x.com/hrswatigupta/status/2056624755537821728",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-19T06:35:26.000Z",
+      "summary": "Anthropic pays engineers $750,000+ to understand how LLMs work. Stanford AI professor Andrew Ng just released a FREE 2.5-hour course covering prompting, reasoning, hallucinations, and AI workflows. It breaks down how LLMs interpret prompts, zero-shot vs few-shot, and context",
+      "category": "ai_models"
+    },
+    {
+      "title": "Lance: Unified Multimodal Modeling by Multi-Task Synergy",
+      "url": "https://paperswithcode.com/papers/2605.18678",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-19T19:45:44.350Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

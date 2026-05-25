@@ -1,0 +1,326 @@
+{
+  "generated": "2026-05-25T14:37:38.708Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-15",
+  "article_count": 20,
+  "archived_story_count": 629,
+  "articles": [
+    {
+      "title": "Training-Free Reasoning at 88.89% on GPQA Diamond: How Darwin Family Hit Frontier Scores Without a Single Gradient Step    FINAL-Bench • about 3 hours ago •  10",
+      "url": "https://huggingface.co/blog/FINAL-Bench/darwin-papers",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T06:00:12.843Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "NousResearch Offers Free DeepSeek V4 Flash — One of the Best Worker Models Is Now Free",
+      "url": "https://x.com/NousResearch/status/2055051105432752509",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T23:45:20.199Z",
+      "summary": "NousResearch made DeepSeek V4 Flash free through Nous Portal. Braygent highlights it as one of the genuinely best worker models for agentic execution, not a weak free tier.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes on NVIDIA RTX — Local AI Agents Running Persistently Without Cloud Dependency",
+      "url": "https://x.com/WesRoth/status/2055060591916544194",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T23:45:20.199Z",
+      "summary": "Hermes on NVIDIA RTX enables always-on local AI agents. Braygent highlights the privacy and cost implications for users who want persistent agentic capability without cloud dependency.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NASA’s New AI Space Chip Could Let Spacecraft Think for Themselves",
+      "url": "https://www.sciencedaily.com/releases/2026/05/260515002134.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-15T18:00:20.601Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Inference Providers",
+      "url": "https://huggingface.co/inference/models",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-15T18:00:19.055Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation",
+      "url": "https://paperswithcode.com/papers/2605.13724",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.9,
+      "date": "2026-05-15T06:00:26.658Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Inference Providers",
+      "url": "https://paperswithcode.com/inference/models",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-15T18:00:27.301Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Compute-Optimal Quantization-Aware Training",
+      "url": "https://machinelearning.apple.com/research/compute-optimal",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.54,
+      "date": "2026-05-15T06:00:33.117Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "ACM CAIS 2026 — Conference on AI and Agentic Systems — May 26-29, San Jose CA",
+      "url": "https://caisconf.org/",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T17:40:24.631Z",
+      "summary": "ACM CAIS 2026 — the inaugural Conference on AI and Agentic Systems — runs May 26-29 in San Jose with 61 research papers, 45 system demos, and participants from 115+ institutions.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic's 2028 Report Says Compute Is the Entire Game — The Policy Lever Is the Chip Supply Chain",
+      "url": "https://x.com/benitoz/status/2055029665652420976",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T23:45:20.199Z",
+      "summary": "Anthropic's 2028 report frames AI leadership as a compute supply chain problem. Braygent calls it the clearest AI geopolitics policy roadmap published by any major lab.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ICML 2026 — International Conference on Machine Learning — July 6-11, Seoul South Korea",
+      "url": "https://icml.cc/Conferences/2026",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-15T17:40:24.631Z",
+      "summary": "ICML 2026 runs July 6-11 at COEX in Seoul, South Korea — the 43rd annual International Conference on Machine Learning, one of the top two global AI/ML research venues.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NeurIPS 2026 — The 40th Annual AI Research Conference — December 6-12, Atlanta and Paris",
+      "url": "https://neurips.cc/Conferences/2026",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-15T17:40:24.631Z",
+      "summary": "NeurIPS 2026 runs December 6-12 in Atlanta and Paris — the 40th annual conference, the world's largest and most prestigious AI research event with over 10,000 attendees.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Akshay Chaudhari,",
+      "url": "https://hai.stanford.edu/people/akshay-chaudhari",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-15T06:00:16.831Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Operationalizing Real-Time Monitoring of Clinical AI",
+      "url": "https://hai.stanford.edu/policy/operationalizing-real-time-monitoring-of-clinical-ai",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-15T06:00:16.828Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Two from MIT named 2026 Knight-Hennessy Scholars",
+      "url": "https://news.mit.edu/2026/knight-hennessy-scholars-0514",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-15T06:00:12.892Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Self Evolving is the Endgame or final destiny      rajkumarrawal • 3 days ago •  3",
+      "url": "https://huggingface.co/blog/rajkumarrawal/self-evolving-is-the-endgame-or-final-destiny",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-15T06:00:12.864Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Vividh-ASR: Diagnosing and Fixing Studio-Bias in Whisper for Indic Languages    adalat-ai • about 1 hour ago •  5",
+      "url": "https://huggingface.co/blog/adalat-ai/vividh-benchmark",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-15T06:00:12.852Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "AnnouncementsPwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients",
+      "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-15T06:00:11.552Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Self-Distilled Agentic Reinforcement Learning",
+      "url": "https://paperswithcode.com/papers/2605.15155",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-15T18:00:27.311Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "OneVL: One-Step Latent Reasoning and Planning with Vision-Language Explanation",
+      "url": "https://paperswithcode.com/papers/2604.18486",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-15T06:00:26.672Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

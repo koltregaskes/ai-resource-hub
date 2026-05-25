@@ -1,0 +1,55 @@
+{
+  "generated": "2026-05-25T14:37:37.049Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-15",
+  "article_count": 3,
+  "archived_story_count": 55,
+  "articles": [
+    {
+      "title": "Show HN: Open-source playground to red-team AI agents with exploits published",
+      "url": "https://github.com/fabraix/playground",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.8799999999999999,
+      "date": "2026-03-15T22:29:46.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "LLM Architecture Gallery",
+      "url": "https://sebastianraschka.com/llm-architecture-gallery/",
+      "source": "Hacker News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-15T16:01:09.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "What makes Intel Optane stand out (2023)",
+      "url": "https://blog.zuthof.nl/2023/06/02/what-makes-intel-optane-stand-out/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-15T15:09:41.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

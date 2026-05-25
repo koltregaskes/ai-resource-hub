@@ -1,0 +1,330 @@
+{
+  "generated": "2026-05-25T14:37:38.506Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-09",
+  "article_count": 20,
+  "archived_story_count": 631,
+  "articles": [
+    {
+      "title": "Unbelievable! Run 70B LLM Inference on a Single 4GB GPU with This NEW Technique     Nov 30, 2023 •  47",
+      "url": "https://huggingface.co/blog/lyogavin/airllm",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-09T18:00:17.944Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "AI evals are becoming the new compute bottleneck     10 days ago •  26",
+      "url": "https://huggingface.co/blog/evaleval/eval-costs-bottleneck",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-09T18:00:17.916Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Gemini API File Search is now multimodal",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-10T03:22:02.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Diffusion Language Models: The New Paradigm     Jun 10, 2025 •  48",
+      "url": "https://huggingface.co/blog/ProCreations/diffusion-language-model",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-09T18:00:17.950Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond     Jan 19 •  16",
+      "url": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "training"
+      ],
+      "matching_tags": [
+        "model_release",
+        "training"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-09T18:00:17.937Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Boosting multimodal inference performance by >10% with a single Python dict",
+      "url": "https://modal.com/blog/boosting-multimodal-inference-performance-by-greater-than-10-with-a-single-python-dictionary",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.85,
+      "date": "2026-05-06T17:45:00.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "[AINews] GPT-Realtime-2, -Translate, and -Whisper: new SOTA realtime voice APIs",
+      "url": "https://www.latent.space/p/ainews-gpt-realtime-2-translate-and",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.76,
+      "date": "2026-05-09T18:00:24.848Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Junyue Cao on How the Body Ages, Cell by Cell",
+      "url": "https://lifespan.io/junyue-cao-on-how-the-body-ages-cell-by-cell/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=junyue-cao-on-how-the-body-ages-cell-by-cell",
+      "source": "Lifespan.io Research",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.67,
+      "date": "2026-05-08T16:09:48.000Z",
+      "summary": "Dr. Junyue Cao is a professor at the Rockefeller University, and his lab develops ultra-high-throughput single-cell technologies and applies them to the biology of aging. In a recent paper published in Science, his team used a technique called [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "ARIS: Autonomous Research via Adversarial Multi-Agent Collaboration",
+      "url": "https://paperswithcode.com/papers/2605.03042",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T18:00:29.626Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI launches new voice intelligence features in its API",
+      "url": "https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-09T18:00:20.148Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Games people — and machines — play: Untangling strategic reasoning to advance AI",
+      "url": "https://news.mit.edu/2026/untangling-strategic-reasoning-to-advance-ai-gabriele-farina-0505",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-09T18:00:17.981Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Introducing the agentic robotics appstore for 10,000 Reachy Minis     3 days ago •  31",
+      "url": "https://huggingface.co/blog/clem/reachymini-appstore",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-09T18:00:17.906Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "The context window has been shattered: Subquadratic debuts a 12M token window",
+      "url": "https://thenewstack.io/subquadratic-12-million-context-window/",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.85,
+      "date": "2026-05-09T15:15:39.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "EU Parliamentary Research Service calls VPNs \"a loophole that needs closing\"",
+      "url": "https://cyberinsider.com/eu-calls-vpns-a-loophole-that-needs-closing-in-age-verification-push/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-05-09T05:52:12.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "‘No one has done this in the wild’: study observes AI replicate itself",
+      "url": "https://www.theguardian.com/technology/2026/may/07/no-one-has-done-this-in-the-wild-study-observes-ai-replicate-itself",
+      "source": "The Guardian Tech",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-09T18:00:20.545Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Google developers significantly misstate carbon emissions of proposed UK datacentres",
+      "url": "https://www.theguardian.com/technology/2026/may/09/google-developers-significantly-misstate-carbon-emissions-of-proposed-uk-datacentres",
+      "source": "The Guardian Tech",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-09T18:00:20.525Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Intel&#8217;s comeback story is even wilder than it seems",
+      "url": "https://techcrunch.com/2026/05/08/intels-comeback-story-is-even-wilder-than-it-seems/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-09T18:00:20.135Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia has already committed $40B to equity AI deals this year",
+      "url": "https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-09T18:00:20.131Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Inside the 2026 AI Index Report | Stanford HAI",
+      "url": "https://hai.stanford.edu/events/inside-the-2026-ai-index-report",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-09T18:00:20.119Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Stanford Merges AI and Data Science Efforts Under Single Institute",
+      "url": "https://hai.stanford.edu/news/stanford-merges-ai-and-data-science-efforts-under-single-institute",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-09T18:00:20.114Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

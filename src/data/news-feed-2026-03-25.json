@@ -1,0 +1,190 @@
+{
+  "generated": "2026-05-25T14:37:37.342Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-25",
+  "article_count": 12,
+  "archived_story_count": 95,
+  "articles": [
+    {
+      "title": "The AI Hype Index: AI goes to war",
+      "url": "https://www.technologyreview.com/2026/03/25/1134571/the-ai-hype-index-ai-goes-to-war/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.87,
+      "date": "2026-03-25T09:00:00.000Z",
+      "summary": "AI is at war. Anthropic and the Pentagon feuded over how to weaponize Anthropic’s AI model Claude; then OpenAI swept the Pentagon off its feet with an “opportunistic and sloppy” deal. Users quit ChatGPT in droves. People marched through London in the biggest protest against AI to date. If you’re keeping score, Anthropic—the company founded&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Arm’s CEO Insists the Market Needs His New CPU. It Could Piss Everyone Off",
+      "url": "https://www.wired.com/story/arms-ceo-insists-the-market-needs-his-new-cpu-it-could-piss-everyone-off/",
+      "source": "Wired AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-25T10:00:00.000Z",
+      "summary": "Arm just confirmed the rumors: It’s producing its own chip for the first time. CEO Rene Haas explains why this won’t alienate the many chipmakers who license the company’s designs.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ARC-AGI-3 benchmark is out now",
+      "url": "https://arcprize.org/tasks/ls20",
+      "source": "Hacker News",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.84,
+      "date": "2026-03-25T19:46:22.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "90% of Claude-linked output going to GitHub repos w <2 stars",
+      "url": "https://www.claudescode.dev/?window=since_launch",
+      "source": "Hacker News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.73,
+      "date": "2026-03-25T18:16:40.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Agentic commerce runs on truth and context",
+      "url": "https://www.technologyreview.com/2026/03/25/1134516/agentic-commerce-runs-on-truth-and-context/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7200000000000001,
+      "date": "2026-03-25T11:48:13.000Z",
+      "summary": "Imagine telling a digital agent, “Use my points and book a family trip to Italy. Keep it within budget, pick hotels we’ve liked before, and handle the details.” Instead of returning a list of links, the agent assembles an itinerary and executes the purchase. That shift, from assistance to execution, is what makes agentic AI&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "This startup wants to change how mathematicians do math",
+      "url": "https://www.technologyreview.com/2026/03/25/1134642/this-startup-wants-to-change-how-mathematicians-do-math/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-25T13:59:17.000Z",
+      "summary": "Axiom Math, a startup based in Palo Alto, California, has released a free new AI tool for mathematicians, designed to discover mathematical patterns that could unlock solutions to long-standing problems. The tool, called Axplorer, is a redesign of an existing one called PatternBoost that François Charton, now a research scientist at Axiom, co-developed in 2024&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Fun with CSF firmware (RK3588 GPU firmware)",
+      "url": "https://icecream95.gitlab.io/fun-with-csf-firmware.html",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-21T22:43:49.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Open source isn't a tip jar – it's time to charge for access",
+      "url": "https://www.theregister.com/2026/03/25/open_source_bill_opinion/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-25T11:59:36.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Intel Device Modeling Language for virtual platforms",
+      "url": "https://github.com/intel/device-modeling-language",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-21T08:35:51.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The Download: reawakening frozen brains, and the AI Hype Index returns",
+      "url": "https://www.technologyreview.com/2026/03/25/1134636/the-download-reawakening-frozen-brains-and-the-ai-hype-index-returns/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6699999999999999,
+      "date": "2026-03-25T12:47:44.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. This scientist rewarmed and studied pieces of his friend’s cryopreserved brain&#160; L. Stephen&#160;Coles’s&#160;brain sits in a vat at a storage facility in Arizona. It has been held there at a temperature&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Why this battery company is pivoting to AI",
+      "url": "https://www.technologyreview.com/2026/03/25/1134657/battery-company-ai-pivot-ses/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-03-25T15:02:50.000Z",
+      "summary": "Qichao Hu doesn’t mince words about how he sees the state of the battery industry. “Almost every Western battery company has either died or is going to die. It’s kind of the reality,” he says. Hu is the CEO of SES AI, a Massachusetts-based battery company. It once had aims of making huge amounts of&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Roundtables: The Next Era of Space Exploration",
+      "url": "https://www.technologyreview.com/2026/03/25/1134664/roundtables-the-next-era-of-space-exploration/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-03-25T17:26:26.000Z",
+      "summary": "Listen to the session or watch below Whether it&#8217;s the race to find life on Mars, the campaign to outsmart killer asteroids, or the quest to make the moon a permanent home to astronauts, scientists&#8217; efforts in space can tell us more about where humanity is headed. This subscriber-only discussion examines the progress and possibilities&#8230;",
+      "category": "ai_research"
+    }
+  ]
+}

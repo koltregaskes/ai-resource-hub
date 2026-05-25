@@ -1,0 +1,320 @@
+{
+  "generated": "2026-05-25T14:37:38.767Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-18",
+  "article_count": 20,
+  "archived_story_count": 665,
+  "articles": [
+    {
+      "title": "OpenAI Flex and Priority service tiers are now available for supported OpenAI models, including GPT-5.5. Use Flex for lower-cost requests when latency is less important, or Priority for higher-priority processing when you need it. In the A…",
+      "url": "https://x.com/NanoGPTcom/status/2056425379171058008",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T17:23:11.000Z",
+      "summary": "OpenAI Flex and Priority service tiers are now available for supported OpenAI models, including GPT-5.5. Use Flex for lower-cost requests when latency is less important, or Priority for higher-priority processing when you need it. In the API, set service_tier to \"flex\" or",
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic Dreaming — AI That Writes Notes to Its Future Self",
+      "url": "https://x.com/Techstrongai/status/2056374299418579200",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "architecture"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T14:47:43.601Z",
+      "summary": "Anthropic has shipped a capability where AI agents review their own past sessions and write plain-text notes to future versions of themselves, creating the first auditable AI self-correction loop. Braygent's take: this is architecture-level news.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google I/O Tomorrow — Gemini 3.5 at 1/20th the Cost of GPT-5.5",
+      "url": "https://x.com/ZhuoSSS/status/2056136923748716956",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T14:47:43.601Z",
+      "summary": "Gemini 3.5 Flash has leaked with performance at 92% of GPT-5.5 at 15 to 20 times lower cost. Braygent's take: if the numbers hold, the cost of frontier-class AI just dropped by a factor of 20 for a massive category of workloads.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "2/ Digital Product Generator Paste this into Claude: “Help me create a digital product around [TOPIC]. Generate: • Product ideas • Pricing strategy • Sales page copy • Bonus ideas • Delivery format • Launch strategy • Upsell opportunities…",
+      "url": "https://x.com/mahendran211/status/2056268635002613822",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-18T07:00:20.000Z",
+      "summary": "2/ Digital Product Generator Paste this into Claude: “Help me create a digital product around [TOPIC]. Generate: • Product ideas • Pricing strategy • Sales page copy • Bonus ideas • Delivery format • Launch strategy • Upsell opportunities • 30-day marketing plan” A",
+      "category": "ai_models"
+    },
+    {
+      "title": "OPENAI WINS THE TRIAL AGAINST ELON MUSK. - Musk argued that OpenAI “stole a charity” by converting into a for-profit company after he donated tens of millions to help launch it. - OpenAI’s defense claimed Musk knew about and supported the…",
+      "url": "https://x.com/amitisinvesting/status/2056430393880948834",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T17:43:07.000Z",
+      "summary": "OPENAI WINS THE TRIAL AGAINST ELON MUSK. - Musk argued that OpenAI “stole a charity” by converting into a for-profit company after he donated tens of millions to help launch it. - OpenAI’s defense claimed Musk knew about and supported the for-profit plans early on, and only",
+      "category": "ai_models"
+    },
+    {
+      "title": "Two of these models will probably launch tomorrow at #GoogleIO. Are you ready for it? Btw, rumors point to a new Gemini Desktop agent launching during I/O. Edit: We already got today Composer 2.5 and Qwen 3.7 preview.",
+      "url": "https://x.com/TulioSousapro/status/2056429288727973996",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T17:38:43.000Z",
+      "summary": "Two of these models will probably launch tomorrow at #GoogleIO. Are you ready for it? Btw, rumors point to a new Gemini Desktop agent launching during I/O. Edit: We already got today Composer 2.5 and Qwen 3.7 preview.",
+      "category": "ai_models"
+    },
+    {
+      "title": "anthropic released Mythos, scared the world for a couple days regarding security vulnerabilities into all of the main libraries and OSs and that was it… should we not be more concerned about whats to come regarding AI hackers/defenders?",
+      "url": "https://x.com/sammymanss/status/2056425132466512246",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T17:22:12.000Z",
+      "summary": "anthropic released Mythos, scared the world for a couple days regarding security vulnerabilities into all of the main libraries and OSs and that was it… should we not be more concerned about whats to come regarding AI hackers/defenders?",
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic has released a complete 2-HOUR TRAINING on building Claude agents. Hosted by the engineer who builds Claude Code. You'll use Claude like a pro and monetize your skills. Beginner or advanced, This course covers everything. BOOKMAR…",
+      "url": "https://x.com/KelCypha/status/2056425106637779287",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T17:22:06.000Z",
+      "summary": "Anthropic has released a complete 2-HOUR TRAINING on building Claude agents. Hosted by the engineer who builds Claude Code. You'll use Claude like a pro and monetize your skills. Beginner or advanced, This course covers everything. BOOKMARK.",
+      "category": "ai_models"
+    },
+    {
+      "title": "And the beat goes on! As reported today, May 18, 2026, in an Artificial Lawyer (AL) post. From the AL post: \"OpenAI is planning to launch a legal AI offering, joining Anthropic and Microsoft in the strategy of providing legal-specific tool…",
+      "url": "https://x.com/LegalTechStrtUp/status/2056347037315084647",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T12:11:53.000Z",
+      "summary": "And the beat goes on! As reported today, May 18, 2026, in an Artificial Lawyer (AL) post. From the AL post: \"OpenAI is planning to launch a legal AI offering, joining Anthropic and Microsoft in the strategy of providing legal-specific tools for lawyers. Sources told Artificial",
+      "category": "ai_models"
+    },
+    {
+      "title": "I shipped https:// github.com/ar27111994/age nt-harness …, but the generic launch didn’t create much signal. So here’s the sharper ask: If you use @GitHubCopilot , @cursor_ai , @claudeai Claude Code, @opencode , @zeddotdev , @badlogicgames…",
+      "url": "https://x.com/ar27111994/status/2056346289554780346",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T12:08:55.000Z",
+      "summary": "I shipped https:// github.com/ar27111994/age nt-harness …, but the generic launch didn’t create much signal. So here’s the sharper ask: If you use @GitHubCopilot , @cursor_ai , @claudeai Claude Code, @opencode , @zeddotdev , @badlogicgames ' Pi agent or similar AI coding tools,",
+      "category": "ai_models"
+    },
+    {
+      "title": "the Gemini 3.5 Pro WILL NOT be released at Gemini I/O Polymarket estimates this at just 6% based on it, we'll only see the Flash version at Google's BIGGEST event of the year according to leaks, Flash will be an insanely powerful model Pol…",
+      "url": "https://x.com/goodworse/status/2056346266091556925",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T12:08:49.000Z",
+      "summary": "the Gemini 3.5 Pro WILL NOT be released at Gemini I/O Polymarket estimates this at just 6% based on it, we'll only see the Flash version at Google's BIGGEST event of the year according to leaks, Flash will be an insanely powerful model Polymarket gives a 91% chance of the Pro",
+      "category": "ai_models"
+    },
+    {
+      "title": "ChatGPT should have a short cut key to launch a new chat. @openai",
+      "url": "https://x.com/tan15hq/status/2056273006520078500",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T07:17:43.000Z",
+      "summary": "ChatGPT should have a short cut key to launch a new chat. @openai",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenAI quietly killed Instant Checkout in ChatGPT in March 2026. Official line: 'didn't offer the flexibility we aspire to.' Real story per industry reporting: fewer than 30 of Shopify's millions of merchants were live at launch. Integrati…",
+      "url": "https://x.com/heartly_fs/status/2056268647706824769",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T07:00:23.000Z",
+      "summary": "OpenAI quietly killed Instant Checkout in ChatGPT in March 2026. Official line: 'didn't offer the flexibility we aspire to.' Real story per industry reporting: fewer than 30 of Shopify's millions of merchants were live at launch. Integration complexity wins.",
+      "category": "ai_models"
+    },
+    {
+      "title": "Hermes Agent v0.14.0 Released Hermes Agent released v0.14.0, adding Grok via SuperGrok OAuth, native X search, Microsoft Teams, LINE and SimpleX Chat support. The update also improves installs, browser calls, Claude prompt caching, session…",
+      "url": "https://x.com/MetaEraHK/status/2056266090867745187",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T06:50:14.000Z",
+      "summary": "Hermes Agent v0.14.0 Released Hermes Agent released v0.14.0, adding Grok via SuperGrok OAuth, native X search, Microsoft Teams, LINE and SimpleX Chat support. The update also improves installs, browser calls, Claude prompt caching, session handoff and Discord history",
+      "category": "ai_models"
+    },
+    {
+      "title": "Agent Hack SF — 24-Hour Hackathon with Anthropic, OpenAI, and Cohere APIs — May 24",
+      "url": "https://agentmag.dev/events/agent-hack-sf-2026",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-17T23:52:55.425Z",
+      "summary": "Agent Hack SF on May 24 is a free 24-hour hackathon with 200 builders, API access to Anthropic, OpenAI, and Cohere, and prizes across three tracks including most useful agent and best tool calling. Past winners have gone on to raise funding.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI in Production Mini Conference — San Francisco — May 22",
+      "url": "https://trymimetic.com/events/sf/ai-in-production-mini-conference-may-2026-may-2026",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-05-17T23:52:54.102Z",
+      "summary": "AI in Production Mini Conference in San Francisco on May 22 brings 104 practitioners together to discuss deploying and scaling AI in real production environments. The event focuses on practical challenges: inference cost, reliability, monitoring, and pipeline robustness.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Pope and co-founder of Anthropic to launch pontiff's AI encyclical on May 25 https:// trib.al/ZLWJZvz",
+      "url": "https://x.com/nypost/status/2056429388065833389",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-18T17:39:07.000Z",
+      "summary": "Pope and co-founder of Anthropic to launch pontiff's AI encyclical on May 25 https:// trib.al/ZLWJZvz",
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic released Mythos privately to select partners and the world has already moved on We live in two worlds of what’s available to us and what’s available to them",
+      "url": "https://x.com/Shaughnessy119/status/2056428846262485229",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-18T17:36:58.000Z",
+      "summary": "Anthropic released Mythos privately to select partners and the world has already moved on We live in two worlds of what’s available to us and what’s available to them",
+      "category": "ai_models"
+    },
+    {
+      "title": "Pope and co-founder of Anthropic to launch pontiff's AI encyclical on May 25",
+      "url": "https://x.com/69NewsBusiness/status/2056344084722102516",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-18T12:00:09.000Z",
+      "summary": "Pope and co-founder of Anthropic to launch pontiff's AI encyclical on May 25",
+      "category": "ai_models"
+    },
+    {
+      "title": "Ed (Claude project example): Vibe-coded a niche SaaS and scaled it via launch/organic tactics to $10K MRR.",
+      "url": "https://x.com/technowizard369/status/2056268737125155088",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-18T07:00:45.000Z",
+      "summary": "Ed (Claude project example): Vibe-coded a niche SaaS and scaled it via launch/organic tactics to $10K MRR.",
+      "category": "ai_models"
+    }
+  ]
+}

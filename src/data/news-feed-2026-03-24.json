@@ -1,0 +1,295 @@
+{
+  "generated": "2026-05-25T14:37:37.308Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-24",
+  "article_count": 19,
+  "archived_story_count": 101,
+  "articles": [
+    {
+      "title": "Anthropic hands Claude Code more control, but keeps it on a leash",
+      "url": "https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.97,
+      "date": "2026-03-24T21:00:30.000Z",
+      "summary": "Anthropic’s new auto mode for Claude Code lets AI execute tasks with fewer approvals, reflecting a broader shift toward more autonomous tools that balance speed with safety through built-in safeguards.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI adds open source tools to help developers build for teen safety",
+      "url": "https://techcrunch.com/2026/03/24/openai-adds-open-source-tools-to-help-developers-build-for-teen-safety/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.94,
+      "date": "2026-03-24T18:41:34.000Z",
+      "summary": "Rather than working from scratch to figure out how to make AI safer for teens, developers can use these policies to fortify what they build.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Agile Robots becomes the latest robotics company to partner with Google DeepMind",
+      "url": "https://techcrunch.com/2026/03/24/agile-robots-becomes-the-latest-robotics-company-to-partner-with-google-deepmind/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.94,
+      "date": "2026-03-24T12:05:00.000Z",
+      "summary": "Agile Robots will incorporate Google DeepMind's robotics foundation models into its bots while collecting data for the AI research lab.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google TV&#8217;s new Gemini features keep fans updated on sports teams and more",
+      "url": "https://techcrunch.com/2026/03/24/google-tv-new-gemini-features-keep-fans-updated-on-sports-teams-deep-dives-visual-answers/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8799999999999999,
+      "date": "2026-03-24T19:12:11.000Z",
+      "summary": "Three Gemini-powered features are coming to your Google TV. This includes visual responses, deep dives, and sports briefs.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Arm Is Now Making Its Own Chips",
+      "url": "https://www.wired.com/story/chip-design-firm-arm-is-making-its-own-ai-cpu/",
+      "source": "Wired AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8799999999999999,
+      "date": "2026-03-24T17:00:00.000Z",
+      "summary": "The chip design firm says Meta, OpenAI, Cerebras, and Cloudflare are among the first customers of its new artificial intelligence hardware.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Arm is releasing the first in-house chip in its 35-year history",
+      "url": "https://techcrunch.com/2026/03/24/arm-is-releasing-its-first-in-house-chip-in-its-35-year-history/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-24T19:48:54.000Z",
+      "summary": "Arm is producing its own CPU for the first time. It developed the CPU with Meta, which is also the chip's first customer.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Talat&#8217;s AI meeting notes stay on your machine, not in the cloud",
+      "url": "https://techcrunch.com/2026/03/24/talats-ai-meeting-notes-stay-on-your-machine-not-in-the-cloud/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-24T18:41:33.000Z",
+      "summary": "The subscription-free AI meeting notes app is a local-first twist on notetaking tools like Granola.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Chris Hayes Has Some Advice for Keeping Up With the News",
+      "url": "https://www.wired.com/story/the-big-interview-podcast-chris-hayes/",
+      "source": "Wired AI",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-24T10:30:00.000Z",
+      "summary": "The host of MS Now’s All In, knows how hard it is to stay current. But he also knows where you should focus your attention—and it starts with a sober view of AI.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Self-propagating malware poisons open source software and wipes Iran-based machines",
+      "url": "https://arstechnica.com/security/2026/03/self-propagating-malware-poisons-open-source-software-and-wipes-iran-based-machines/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-03-24T12:38:09.000Z",
+      "summary": "Development houses: It's time to check your networks for infections.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Hypura – A storage-tier-aware LLM inference scheduler for Apple Silicon",
+      "url": "https://github.com/t8/hypura",
+      "source": "Hacker News",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.73,
+      "date": "2026-03-24T16:02:22.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Wine 11 rewrites how Linux runs Windows games at kernel with massive speed gains",
+      "url": "https://www.xda-developers.com/wine-11-rewrites-linux-runs-windows-games-speed-gains/",
+      "source": "Hacker News",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-24T18:34:52.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Exclusive eBook: Are we ready to hand AI agents the keys?",
+      "url": "https://www.technologyreview.com/2026/03/24/1134531/exclusive-ebook-are-we-ready-to-hand-ai-agents-the-keys/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-24T18:17:13.000Z",
+      "summary": "We’re starting to give AI agents real autonomy, but are we prepared for what could happen next? This subscriber-only eBook explores this and angles from experts, such as “If we continue on the current path … we are basically playing Russian roulette with humanity.” by Grace Huckins June 12, 2025 Related Stories: Access all subscriber-only&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "io_uring, libaio performance across Linux kernels and an unexpected IOMMU trap",
+      "url": "https://blog.ydb.tech/how-io-uring-overtook-libaio-performance-across-linux-kernels-and-an-unexpected-iommu-trap-ea6126d9ef14",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-24T13:21:24.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Pool spare GPU capacity to run LLMs at larger scale",
+      "url": "https://github.com/michaelneale/mesh-llm",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-24T05:57:00.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Study: Workers who fall for 'corporate bullshit' may be worse at their jobs",
+      "url": "https://www.theguardian.com/business/2026/mar/23/corporate-speak-study",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-23T22:53:44.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "This scientist rewarmed and studied pieces of his friend’s cryopreserved brain",
+      "url": "https://www.technologyreview.com/2026/03/24/1134562/cryopreservation-brain-cryonics-organ-transplantation/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6699999999999999,
+      "date": "2026-03-24T16:43:36.000Z",
+      "summary": "L. Stephen Coles’s brain sits cushioned in a vat at a storage facility in Arizona. It has been held there at a temperature of around −146 degrees °C for over a decade, largely undisturbed. That is, apart from the time, a little over a year ago, when scientists slowly lifted the brain to take photos&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "The Download: tracing AI-fueled delusions, and OpenAI admits Microsoft risks",
+      "url": "https://www.technologyreview.com/2026/03/24/1134540/the-download-tracing-ai-fueled-delusions-openai-warns-microsoft-risks/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6699999999999999,
+      "date": "2026-03-24T12:28:27.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. The hardest question to answer about AI-fueled&#160;delusions&#160; What&#160;actually happens&#160;when people spiral into delusion with AI? To find out, Stanford researchers&#160;analyzed&#160;transcripts from chatbot users who experienced these spirals.&#160; Their findings suggest that&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "MSA: Memory Sparse Attention",
+      "url": "https://github.com/EverMind-AI/MSA",
+      "source": "Hacker News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-21T14:47:58.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Building Liberal Compute",
+      "url": "https://simongrimm.substack.com/p/building-liberal-compute",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-18T21:07:29.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

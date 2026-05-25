@@ -1,0 +1,316 @@
+{
+  "generated": "2026-05-25T14:37:38.846Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-22",
+  "article_count": 20,
+  "archived_story_count": 512,
+  "articles": [
+    {
+      "title": "Let that sink in for a moment. DeepSeek v4 pro 75% discount. Permanent! In: $0.43 Out: $0.87 If you read the DeepSeek v4 tech paper you know that this model is insanely good when it comes to efficiency. Only 27% compute and only 10% cache…",
+      "url": "https://x.com/kimmonismus/status/2057868472965640194",
+      "source": "X / @kimmonismus",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-22T16:57:31.000Z",
+      "summary": "Let that sink in for a moment. DeepSeek v4 pro 75% discount. Permanent! In: $0.43 Out: $0.87 If you read the DeepSeek v4 tech paper you know that this model is insanely good when it comes to efficiency. Only 27% compute and only 10% cache compares to v3.2. SemiAnalysis wrote",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+      "url": "https://paperswithcode.com/papers/2605.22791",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-22T18:00:22.993Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Claude + MCP + SVG icons. I wrote a practical guide showing how Claude can use http:// SVGIcons.com as a custom connector to search and retrieve SVG icons directly inside a developer workflow. https:// svgicons.com/articles/svgic ons-claud…",
+      "url": "https://x.com/svg_icons/status/2057874901252370492",
+      "source": "X search / Agent workflows",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-22T17:23:04.000Z",
+      "summary": "Claude + MCP + SVG icons. I wrote a practical guide showing how Claude can use http:// SVGIcons.com as a custom connector to search and retrieve SVG icons directly inside a developer workflow. https:// svgicons.com/articles/svgic ons-claude-custom-connector … #Claude #MCP #AI #WebDev",
+      "category": "ai_agents"
+    },
+    {
+      "title": "SKILL.md is becoming the quiet standard for AI coding tools. Anthropic released it in December. Now 16+ tools support it. Claude Code, Cursor, GitHub Copilot, Windsurf, Cline. Nobody had a press conference. No launch event. It just spread…",
+      "url": "https://x.com/georgeorch/status/2057870602933830101",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-22T17:05:59.000Z",
+      "summary": "SKILL.md is becoming the quiet standard for AI coding tools. Anthropic released it in December. Now 16+ tools support it. Claude Code, Cursor, GitHub Copilot, Windsurf, Cline. Nobody had a press conference. No launch event. It just spread because it solved a real problem:",
+      "category": "ai_models"
+    },
+    {
+      "title": "Can Long-Horizon Coding Agents Finally Run Without Falling Apart?",
+      "url": "https://t.co/92eI9NURvZ",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 1,
+      "date": "2026-05-22T16:15:25.816Z",
+      "summary": "Qwen 3.7 Max is being discussed as a model that can sustain long autonomous coding sessions, raising the question of whether endurance is becoming the new benchmark for coding agents.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Most security tools watch what runs in production. Perplexity just released one that scans what's sitting on developer laptops. Bumblebee fills the gap between SBOMs (what shipped) and EDR (what executed). It's a read-only inventory of eve…",
+      "url": "https://x.com/AlphaSignalAI/status/2057875938180755757",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.99,
+      "date": "2026-05-22T17:27:11.000Z",
+      "summary": "Most security tools watch what runs in production. Perplexity just released one that scans what's sitting on developer laptops. Bumblebee fills the gap between SBOMs (what shipped) and EDR (what executed). It's a read-only inventory of every installed package, extension, and dev",
+      "category": "ai_models"
+    },
+    {
+      "title": "Berkeley CS staff are apparently shipping hidden Claude/Cursor hooks inside assignment repos now if you open the project in Cursor or Claude Code it allegedly pings course staff automatically universities are now writing anti-agent telemet…",
+      "url": "https://x.com/rayandabbagh/status/2057876653750247705",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.95,
+      "date": "2026-05-22T17:30:02.000Z",
+      "summary": "Berkeley CS staff are apparently shipping hidden Claude/Cursor hooks inside assignment repos now if you open the project in Cursor or Claude Code it allegedly pings course staff automatically universities are now writing anti-agent telemetry into homework starter code 2026",
+      "category": "ai_models"
+    },
+    {
+      "title": "I built \"zero2claude\", a free course that takes people from zero terminal experience to shipping with Claude Code. The curriculum goes from absolute zero → software basics → Claude Code fundamentals → advanced usage. No shortcuts, no assum…",
+      "url": "https://x.com/IShmool/status/2057872918348976191",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9199999999999999,
+      "date": "2026-05-22T17:15:11.000Z",
+      "summary": "I built \"zero2claude\", a free course that takes people from zero terminal experience to shipping with Claude Code. The curriculum goes from absolute zero → software basics → Claude Code fundamentals → advanced usage. No shortcuts, no assumptions. 17,000+ students. 7",
+      "category": "ai_models"
+    },
+    {
+      "title": "Just crossed a massive milestone: 20 total models are now available to mix and match in the visual canvas and standalone agents. The newest additions: Gemini 3.5 Flash & 3.1 Flash Lite Preview GPT-5.5 & GPT-5.5-pro GPT-5.4 (mini/nano/pro)…",
+      "url": "https://x.com/AgentSwarmsAI/status/2057867080897343792",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-22T16:52:00.000Z",
+      "summary": "Just crossed a massive milestone: 20 total models are now available to mix and match in the visual canvas and standalone agents. The newest additions: Gemini 3.5 Flash & 3.1 Flash Lite Preview GPT-5.5 & GPT-5.5-pro GPT-5.4 (mini/nano/pro) Stop waiting months for",
+      "category": "ai_models"
+    },
+    {
+      "title": "Why Open Models Are the Only Sustainable Way to Teach AI    penelopegittos • about 4 hours ago •  6",
+      "url": "https://huggingface.co/blog/penelopegittos/building-in-ai-with-academia-hub",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-22T18:00:12.672Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "LeRobot Humanoid: An Open, Low-Cost, 3D-Printed Humanoid for Robot Learning    VirgileBatto • about 18 hours ago •  6",
+      "url": "https://huggingface.co/blog/VirgileBatto/lerobot-humanoid",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-22T06:00:20.890Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects",
+      "url": "https://paperswithcode.com/papers/2605.21572",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-22T18:00:22.987Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Aravind Srinivas built Perplexity into something most people said couldn't exist. a search engine that actually answers you no blue links no rabbit holes just the answer, with sources he's shipping fast, thinking long, and making the big p…",
+      "url": "https://x.com/ShraddhaShips/status/2057876751682838977",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-22T17:30:25.000Z",
+      "summary": "Aravind Srinivas built Perplexity into something most people said couldn't exist. a search engine that actually answers you no blue links no rabbit holes just the answer, with sources he's shipping fast, thinking long, and making the big players nervous. worth following if you",
+      "category": "ai_models"
+    },
+    {
+      "title": "How do you transform a static paper diagram into a dynamic, real-time dashboard? Discover how Value Stream Mapping (VSM) is evolving from the Toyota Production System to Industry 4.0 automation. Read the complete guide here:",
+      "url": "https://x.com/innovar_O_morir/status/2057873868627316850",
+      "source": "X search / Agent workflows",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-22T17:18:58.000Z",
+      "summary": "How do you transform a static paper diagram into a dynamic, real-time dashboard? Discover how Value Stream Mapping (VSM) is evolving from the Toyota Production System to Industry 4.0 automation. Read the complete guide here:",
+      "category": "ai_agents"
+    },
+    {
+      "title": "\"SpaceX released its filing for an initial public offering late on Wednesday and is likely to target a raise of about $75 billion at a valuation of roughly $1.75 trillion, SpaceX, OpenAI and Anthropic are shaping up to deliver the largest…",
+      "url": "https://x.com/Pettunia14/status/2057866826613146001",
+      "source": "X search / AI model updates",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-22T16:50:59.000Z",
+      "summary": "\"SpaceX released its filing for an initial public offering late on Wednesday and is likely to target a raise of about $75 billion at a valuation of roughly $1.75 trillion, SpaceX, OpenAI and Anthropic are shaping up to deliver the largest wave of initial public offerings in",
+      "category": "ai_models"
+    },
+    {
+      "title": "L2P: Unlocking Latent Potential for Pixel Generation",
+      "url": "https://paperswithcode.com/papers/2605.12013",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-22T18:00:22.990Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Mega-ASR: Towards In-the-wild^2 Speech Recognition via Scaling up Real-world Acoustic Simulation",
+      "url": "https://paperswithcode.com/papers/2605.19833",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-22T06:00:28.601Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "[AINews] New AI Infra unicorns: Exa, Modal, TurboPuffer",
+      "url": "https://www.latent.space/p/ainews-new-ai-infra-unicorns-exa",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-22T06:00:25.607Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Giving Agents Computers — Ivan Burazin, Daytona",
+      "url": "https://www.latent.space/p/daytona",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-22T06:00:25.598Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Samsung’s memory chip employees negotiated $340,000 bonuses this year",
+      "url": "https://www.theverge.com/tech/936002/samsung-memory-chip-employees-deal-strike-bonus",
+      "source": "The Verge AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-22T18:00:25.382Z",
+      "summary": null,
+      "category": "ai_tools"
+    }
+  ]
+}

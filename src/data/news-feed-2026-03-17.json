@@ -1,0 +1,314 @@
+{
+  "generated": "2026-05-25T14:37:37.118Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-17",
+  "article_count": 20,
+  "archived_story_count": 140,
+  "articles": [
+    {
+      "title": "Niv-AI exits stealth to wring more power performance out of GPUs",
+      "url": "https://techcrunch.com/2026/03/17/niv-ai-exits-stealth-to-wring-more-power-performance-out-of-gpus/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-03-17T13:00:00.000Z",
+      "summary": "The company raised $12 million in seed funding to measure and manage GPU power surges.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nurturing agentic AI beyond the toddler stage",
+      "url": "https://www.technologyreview.com/2026/03/16/1133979/nurturing-agentic-ai-beyond-the-toddler-stage/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark"
+      ],
+      "importance": 0.86,
+      "date": "2026-03-16T13:00:00.000Z",
+      "summary": "Parents of young children face a lot of fears about developmental milestones, from infancy through adulthood. The number of months it takes a baby to learn to talk or walk is often used as a benchmark for wellness, or an indicator of additional tests needed to properly diagnose a potential health condition. A parent rejoices&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Mistral bets on ‘build-your-own AI’ as it takes on OpenAI, Anthropic in the enterprise",
+      "url": "https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "dataset"
+      ],
+      "matching_tags": [
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-03-17T21:00:00.000Z",
+      "summary": "Mistral Forge lets enterprises train custom AI models from scratch on their own data, challenging rivals that rely on fine-tuning and retrieval-based approaches.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia&#8217;s version of OpenClaw could solve its biggest problem: security",
+      "url": "https://techcrunch.com/2026/03/16/nvidias-version-of-openclaw-could-solve-its-biggest-problem-security/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-03-16T22:45:51.000Z",
+      "summary": "Nvidia announced an open enterprise AI agent platform, called NemoClaw, that is built off of viral OpenClaw.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "How to watch Jensen Huang’s Nvidia GTC 2026 keynote — and what to expect",
+      "url": "https://techcrunch.com/2026/03/16/nvidia-gtc-how-to-watch-jensen-huang-2026-keynote/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.99,
+      "date": "2026-03-16T17:51:46.000Z",
+      "summary": "GTC is Nvidia's flagship annual event, where the chipmaker typically announces new products, partnerships, and its vision for the future of computing. Huang's keynote will focus on Nvidia's role in the future of computing and AI.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Another deep tech chip startup becomes a unicorn: Frore hits $1.64B",
+      "url": "https://techcrunch.com/2026/03/16/another-deep-tech-chip-startup-becomes-a-unicorn-frore-hits-1-64b/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-03-16T17:47:32.000Z",
+      "summary": "At Nvidia CEO Jensen Huang's urging, Frore developed liquid-cooling tech for chips. That shift helped it raise $143 million.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "China’s OpenClaw Boom Is a Gold Rush for AI Companies",
+      "url": "https://www.wired.com/story/china-is-going-all-in-on-openclaw/",
+      "source": "Wired AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-03-13T12:00:00.000Z",
+      "summary": "Hype around the open source agent is driving people to rent cloud servers and buy AI subscriptions just to try it, creating a windfall for tech companies.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI sidesteps Nvidia with unusually fast coding model on plate-sized chips",
+      "url": "https://arstechnica.com/ai/2026/02/openai-sidesteps-nvidia-with-unusually-fast-coding-model-on-plate-sized-chips/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.85,
+      "date": "2026-02-12T22:56:02.000Z",
+      "summary": "OpenAI's new GPT‑5.3‑Codex‑Spark is 15 times faster at coding than its predecessor.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Jensen Huang just put Nvidia&#8217;s Blackwell and Vera Rubin sales projections into the $1 trillion stratosphere",
+      "url": "https://techcrunch.com/2026/03/16/jensen-just-put-nvidias-blackwell-and-vera-rubin-sales-projections-into-the-1-trillion-stratosphere/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-16T21:41:37.000Z",
+      "summary": "Nvidia CEO Jensen Huang said he expects $1 trillion worth of orders for the chips.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia’s DLSS 5 uses generative AI to boost photorealism in video games, with ambitions beyond gaming",
+      "url": "https://techcrunch.com/2026/03/16/nvidias-dlss-5-uses-generative-ai-to-boost-photo-realism-in-video-games-with-ambitions-beyond-gaming/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-16T19:12:19.000Z",
+      "summary": "Nvidia’s new DLSS 5 uses generative AI and structured graphics data to make video games more realistic. CEO Jensen Huang says the approach could eventually spread to other industries.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Maps Gets Chatty With a New Gemini-Powered Interface",
+      "url": "https://www.wired.com/story/google-maps-ask-maps-gemini-powered-tool/",
+      "source": "Wired AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8,
+      "date": "2026-03-12T12:30:00.000Z",
+      "summary": "“Ask Maps,” rolling out today to Google Maps on mobile, lets you ask Gemini questions about locations and even to plan trips on your behalf.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Mistral AI Releases Forge",
+      "url": "https://mistral.ai/news/forge",
+      "source": "Hacker News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.79,
+      "date": "2026-03-17T21:04:26.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The Download: OpenAI’s US military deal, and Grok&#8217;s CSAM lawsuit",
+      "url": "https://www.technologyreview.com/2026/03/17/1134322/the-download-openi-us-military-deal-grok-xai-csam-lawsuit/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-03-17T12:26:48.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Where OpenAI’s technology could show up in Iran&#160; OpenAI has controversially agreed to give the Pentagon access to its AI. But where exactly could its tech show up, and which applications&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "The Pentagon is planning for AI companies to train on classified data, defense official says",
+      "url": "https://www.technologyreview.com/2026/03/17/1134351/the-pentagon-is-planning-for-ai-companies-to-train-on-classified-data-defense-official-says/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.76,
+      "date": "2026-03-17T22:30:46.000Z",
+      "summary": "The Pentagon is discussing plans to set up secure environments for generative AI companies to train military-specific versions of their models on classified data, MIT Technology Review has learned.&#160; AI models like Anthropic’s Claude are already used to answer questions in classified settings; applications include analyzing targets in Iran. But allowing models to train on&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Where OpenAI’s technology could show up in Iran",
+      "url": "https://www.technologyreview.com/2026/03/16/1134315/where-openais-technology-could-show-up-in-iran/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.75,
+      "date": "2026-03-16T17:06:21.000Z",
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. It&#8217;s been just over two weeks since OpenAI reached a controversial agreement to allow the Pentagon to use its AI in classified environments. There are still pressing questions about what exactly OpenAI’s&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust",
+      "url": "https://github.com/peters/horizon",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-17T18:14:24.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "If you thought the code writing speed was your problem; you have bigger problems",
+      "url": "https://andrewmurphy.io/blog/if-you-thought-the-speed-of-writing-code-was-your-problem-you-have-bigger-problems",
+      "source": "Hacker News",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-17T17:48:50.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Chrome extension adjusts video speed based on how fast the speaker is talking",
+      "url": "https://github.com/ywong137/speech-speed",
+      "source": "Hacker News",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-13T06:18:17.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Canopy Height Maps v2",
+      "url": "https://ai.meta.com/blog/world-resources-institute-dino-canopy-height-maps-v2/?_fb_noscript=1",
+      "source": "Hacker News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-12T18:24:10.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The Download: Early adopters cash in on China’s OpenClaw craze, and US batteries slump",
+      "url": "https://www.technologyreview.com/2026/03/12/1134207/the-download-china-openclaw-ai-craze-us-battery-industry-downturn/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-12T13:02:48.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Hustlers are cashing in on China’s&#160;OpenClaw&#160;AI craze&#160; In January, Beijing-based software engineer Feng Qingyang started tinkering with&#160;OpenClaw, a new AI tool that can take over a device and autonomously complete tasks.&#8230;",
+      "category": "ai_research"
+    }
+  ]
+}

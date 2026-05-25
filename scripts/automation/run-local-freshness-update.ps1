@@ -66,23 +66,14 @@ try {
     'data/pg-cache',
     'data/provider-status.json',
     'public/data',
-    'src/data/news-feed-latest.json',
     'src/data/news-pipeline.generated.ts',
     'src/data/model-release-desk.generated.ts'
-  )
-  $datedNewsArtifacts = @(
-    'src/data/news-feed-*.json',
-    'src/data/digest-*.md'
   )
   Write-Log 'Restoring generated publish artifacts after local-only verification so the checkout stays clean.'
   Invoke-Logged 'git' (@('restore', '--source', 'HEAD', '--worktree', '--') + $publishPaths)
   Invoke-Logged 'git' (@('add', '--renormalize', '--') + $publishPaths)
   Invoke-Logged 'git' (@('restore', '--staged', '--') + $publishPaths)
-
-  $untrackedDatedNewsArtifacts = @(& git ls-files --others --exclude-standard -- $datedNewsArtifacts 2>$null)
-  if ($untrackedDatedNewsArtifacts.Count -gt 0) {
-    Invoke-Logged 'git' (@('clean', '-f', '--') + $untrackedDatedNewsArtifacts)
-  }
+  Write-Log 'Leaving news feed and digest artifacts in place; the shared site filter owns local news freshness.'
 
   Write-Log 'Local-only freshness update completed successfully.'
   exit 0

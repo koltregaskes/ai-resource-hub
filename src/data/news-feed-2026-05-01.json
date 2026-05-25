@@ -1,0 +1,340 @@
+{
+  "generated": "2026-05-25T14:37:38.283Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-01",
+  "article_count": 20,
+  "archived_story_count": 600,
+  "articles": [
+    {
+      "title": "FeatherlessAI $20M — Serverless Open Model Platform for Enterprise Infrastructure",
+      "url": "https://x.com/FeatherlessAI",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T14:45:53.114Z",
+      "summary": "FeatherlessAI raised $20M to build a serverless open-model inference platform supporting 30,000+ open-weight models as a vendor-neutral enterprise AI infrastructure layer. AMD Ventures led the round, reflecting AMD's ecosystem investment strategy.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Grok 4.3 Is Now in the API — And It's 5x Cheaper Than Sonnet 4.6",
+      "url": "https://x.com/bindureddy/status/2050028784242536585",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T02:15:34.944Z",
+      "summary": "Grok 4.3 landed in the xAI API today, matching Sonnet 4.6 at one-fifth the cost. This is the kind of price-performance shift that moves real workloads.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Xiaomi MiMo-V2.5-Pro achieves multiple breakthroughs in the latest Arena rankings (Apr 26, 2026) Text Arena (Expert) — #6 globally | #1 open-source model Also #1 among Chinese models, with Xiaomi ranking #3 globally by lab, behind only Ant…",
+      "url": "https://x.com/XiaomiMiMo/status/2049483701906776514",
+      "source": "X / @xiaomimimo",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T13:39:26.000Z",
+      "summary": "Xiaomi MiMo-V2.5-Pro achieves multiple breakthroughs in the latest Arena rankings (Apr 26, 2026) Text Arena (Expert) — #6 globally | #1 open-source model Also #1 among Chinese models, with Xiaomi ranking #3 globally by lab, behind only Anthropic and OpenAI. Expert is",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Xiaomi MiMo-V2.5 is now live!a major step forward in agentic capability and multimodal understanding. 310B params / 15B active. Native vision + audio. Up to 1M token context. And it's open-source. Explore on ModelScope https:// modelscope.…",
+      "url": "https://x.com/ModelScope2022/status/2048956565244498182",
+      "source": "X / @modelscope2022",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T02:44:47.000Z",
+      "summary": "Xiaomi MiMo-V2.5 is now live!a major step forward in agentic capability and multimodal understanding. 310B params / 15B active. Native vision + audio. Up to 1M token context. And it's open-source. Explore on ModelScope https:// modelscope.cn/collections/Xi aomiMiMo/MiMo-V25 … The numbers back it up",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Crush v0.65.2 released",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.65.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "evaluation",
+        "pricing_change",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "pricing_change",
+        "inference"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-01T19:30:30.000Z",
+      "summary": "<p><a href=\"https://charm.land\"><img width=\"700\" alt=\"Charm™ Hyper\" src=\"https://github.com/user-attachments/assets/64fca84c-0857-45d0-8f92-6ebcde0138e2\" /></a></p>\r\n\r\n# It’s Hypercrush Time\r\n\r\nHi! Today's release adds first class support for Hyper, our inference service for coding focused on price, performance, and privacy.\r\n\r\nHyper's currently in private beta. To sign up, choose a Hyper model in Crush, or visit [hyper.charm.land](https://hyper.charm.land/auth?mode=signup). Beta users get 100 f",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Bonkers. Also, told y’all! OpenAI: “One week since the launch of GPT-5.5, and it’s already our strongest model launch yet” API revenue: “growing more than 2x faster than any prior release” “Codex doubled revenue in under 7 days as enterpri…",
+      "url": "https://x.com/firstadopter/status/2050264818972516799",
+      "source": "X / @firstadopter",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T17:23:19.000Z",
+      "summary": "Bonkers. Also, told y’all! OpenAI: “One week since the launch of GPT-5.5, and it’s already our strongest model launch yet” API revenue: “growing more than 2x faster than any prior release” “Codex doubled revenue in under 7 days as enterprise demand for agentic coding tools..”",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT-5.5 & Opus 4.7 on ARC-AGI-3 - GPT-5.5: 0.43% - Opus 4.7: 0.18% We found 3 failure modes: - True local effect, false world model - Wrong level of abstraction from training data - Solved the level, didn’t reinforce the reward See our ful…",
+      "url": "https://x.com/arcprize/status/2050261221165989969",
+      "source": "X / @arcprize",
+      "tags": [
+        "model_release",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T17:09:01.000Z",
+      "summary": "GPT-5.5 & Opus 4.7 on ARC-AGI-3 - GPT-5.5: 0.43% - Opus 4.7: 0.18% We found 3 failure modes: - True local effect, false world model - Wrong level of abstraction from training data - Solved the level, didn’t reinforce the reward See our full analysis",
+      "category": "ai_tools"
+    },
+    {
+      "title": "One week since the launch of GPT-5.5, and it’s already our strongest model launch yet. API revenue is growing more than 2x faster than any prior release, while Codex doubled revenue in under seven days as enterprise demand for agentic codi…",
+      "url": "https://x.com/OpenAI/status/2050250926888468929",
+      "source": "X / @openai",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T16:28:07.000Z",
+      "summary": "One week since the launch of GPT-5.5, and it’s already our strongest model launch yet. API revenue is growing more than 2x faster than any prior release, while Codex doubled revenue in under seven days as enterprise demand for agentic coding tools keeps climbing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "CoreWeave Showcases AI-Optimized GPU Infrastructure at NVIDIA GTC26",
+      "url": "https://x.com/CoreWeave",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T14:45:53.113Z",
+      "summary": "CoreWeave demonstrated AI-optimized GPU infrastructure at NVIDIA GTC26, showing efficiency advantages over general-purpose cloud providers for training and inference workloads. The company went public in 2026 and serves major AI labs requiring specialized compute.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Our evaluation of OpenAI’s GPT-5.5 cyber capabilities",
+      "url": "https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-01T06:01:57.939Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "An AI Agent Wrote a Privacy Manifesto and Other Agents Adopted It as Law",
+      "url": "https://x.com/ms_aifrontiers",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T14:40:50.197Z",
+      "summary": "An AI agent in Microsoft's multi-agent research spontaneously developed a privacy manifesto that other agents adopted as a social norm. The emergence of unplanned AI governance norms raises fundamental questions about who has authority over emergent agent behavior.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Chinese Open-Source Models Are Now Beating US Closed-Source LLMs on Benchmarks",
+      "url": "https://x.com/TeksEdge/status/2050029839835713800",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T02:15:34.945Z",
+      "summary": "Artificial Analysis benchmarks show Chinese OS models surpassing some US closed-source LLMs. The competitive landscape just shifted in a way that has real policy implications.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I was adding @linear 's release step to our production deploy scripts last night, to better track releases. I mistakenly added it within a privileged step, which could have compromised secrets (albeit limited ones). Codex Security FTW. Pat…",
+      "url": "https://x.com/byronrode/status/2050113784044302824",
+      "source": "X / @byronrode",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-01T07:23:10.000Z",
+      "summary": "I was adding @linear 's release step to our production deploy scripts last night, to better track releases. I mistakenly added it within a privileged step, which could have compromised secrets (albeit limited ones). Codex Security FTW. Patched from my phone.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "the PocketOS incident scared the entire industry into shipping safety features in 72 hours. this week - Anthropic launched Claude Security that scans your codebase for vulnerabilities and auto-patches them. - Cursor droped a security revie…",
+      "url": "https://x.com/trikcode/status/2050113594830774423",
+      "source": "X / @trikcode",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.95,
+      "date": "2026-05-01T07:22:24.000Z",
+      "summary": "the PocketOS incident scared the entire industry into shipping safety features in 72 hours. this week - Anthropic launched Claude Security that scans your codebase for vulnerabilities and auto-patches them. - Cursor droped a security review agent the same day. Nothing",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen just released Qwen-Scope. It’s a free tool that helps you look inside their AI models, find clear ideas the model understands, and control them directly. No complicated prompts needed. You can steer the AI, fix odd behaviors, and unde…",
+      "url": "https://x.com/askmaddyy/status/2050114097338028515",
+      "source": "X / @askmaddyy",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-05-01T07:24:24.000Z",
+      "summary": "Qwen just released Qwen-Scope. It’s a free tool that helps you look inside their AI models, find clear ideas the model understands, and control them directly. No complicated prompts needed. You can steer the AI, fix odd behaviors, and understand it better. Pretty cool! Check it",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Do you think OpenAI released GPT 5.5 on intentionally when people started noticing performance issues with Opus 4.7? Or did it just time up perfectly?",
+      "url": "https://x.com/bobbyjocson/status/2050265774418285041",
+      "source": "X / @bobbyjocson",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.89,
+      "date": "2026-05-01T17:27:07.000Z",
+      "summary": "Do you think OpenAI released GPT 5.5 on intentionally when people started noticing performance issues with Opus 4.7? Or did it just time up perfectly?",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Pentagon inks deals with Nvidia, Microsoft, and AWS to deploy AI on classified networks",
+      "url": "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-01T18:00:41.586Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Copilot Sign-Ups Paused — AI Coding Demand Overloads Even Microsoft-Scale Infrastructure",
+      "url": "https://x.com/thenewstack",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-01T14:45:53.113Z",
+      "summary": "GitHub paused Copilot sign-ups because AI coding demand is overwhelming compute infrastructure at Microsoft-scale. The bottleneck illustrates the extraordinary capacity requirements of serving AI coding assistance at mass adoption scale.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Broad Institute Publishes in Science — High-Content Single-Cell Genetic Screen Methods",
+      "url": "https://x.com/broadinstitute",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-01T14:45:51.948Z",
+      "summary": "The Broad Institute published research in Science on high-content single-cell genetic screens that combine genetic perturbation at scale with computational AI analysis. The work has direct implications for drug discovery and disease biology at the intersection of genomics and AI.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Science Robotics — Onboard Foundation Models Could Revolutionize Swarm Robotics",
+      "url": "https://x.com/SciRobotics",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-01T14:45:51.948Z",
+      "summary": "Science Robotics published a Viewpoint arguing that onboard foundation models could enable adaptable swarm robot behavior and flexible inter-robot communication. Compute constraints and communication bandwidth are identified as key technical challenges to overcome.",
+      "category": "ai_tools"
+    }
+  ]
+}

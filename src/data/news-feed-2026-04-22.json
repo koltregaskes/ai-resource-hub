@@ -1,0 +1,326 @@
+{
+  "generated": "2026-05-25T14:37:38.087Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-22",
+  "article_count": 20,
+  "archived_story_count": 587,
+  "articles": [
+    {
+      "title": "AI Models Have Preferred Names and They Are Revealing About Training Data",
+      "url": "https://x.com/emollick/status/2046952100769272019",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-04-22T14:46:06.595Z",
+      "summary": "@emollick discovered AI models have preferred names: Claude defaults to Marcus Chen, GPT-5.2 to Mara Vance. Funny until you realize these biases are baked into the weights and scale to millions of documents.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ICLR 2026 Protocol Learning Workshop — April 24-28, Rio, Billion-Scale Federated LLM Pre-Training",
+      "url": "https://x.com/Pluralis/status/2046952992524354045",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper",
+        "training"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "training"
+      ],
+      "importance": 1,
+      "date": "2026-04-22T14:44:38.825Z",
+      "summary": "Pluralis Research's Protocol Learning workshop at ICLR 2026 (April 24-28, Rio) features Flower Labs' billion-scale federated LLM pre-training work. Covers privacy-preserving distributed AI training.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Just Became a Different Kind of Agent",
+      "url": "https://x.com/NousResearch/status/2046721845261652066",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "architecture",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T23:53:16.523Z",
+      "summary": "Braygent wants to post about Hermes Agents uncapping sub-agent spawning as a fundamental architecture change. The update transforms Hermes from a single agent into an orchestration platform for the open-source ecosystem.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Two Models Have Now Crossed 50% on the Professional Services Benchmark",
+      "url": "https://x.com/mercor_ai/status/2046724706418688310",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T23:53:16.523Z",
+      "summary": "Braygent wants to post about GPT 5.4 and Opus 4.7 both crossing 50% on APEX-Agents professional services benchmark. The milestone suggests professional AI capability is arriving, though Opus 4.7's 2x token cost raises economic questions.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "[AINews] OpenAI launches GPT-Image-2",
+      "url": "https://www.latent.space/p/ainews-openai-launches-gpt-image",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.9,
+      "date": "2026-04-22T06:00:41.638Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "The eighth-generation TPU: An architecture deep dive",
+      "url": "https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive",
+      "source": "Hacker News",
+      "tags": [
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-22T12:28:00.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Prisma 7.8.0 released",
+      "url": "https://github.com/prisma/prisma/releases/tag/7.8.0",
+      "source": "GitHub Releases · Prisma",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-22T14:19:23.000Z",
+      "summary": "Today, we are excited to share the `7.8.0` stable release 🎉\r\n\r\n**🌟 Star this repo for notifications about new releases, bug fixes & features — or [follow us on X](https://pris.ly/x)!**\r\n\r\n# Highlights\r\n\r\n## ORM\r\n\r\n### Features\r\n\r\n**Prisma Client**\r\n\r\n- Added a `queryPlanCacheMaxSize` option to the `PrismaClient` constructor for fine-grained control over the query plan cache. Pass `0` to disable the cache entirely, or omit it to use the default cache size. A larger value can improve performance",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code v0.15.0 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.15.0",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-22T11:45:35.000Z",
+      "summary": "## What's Changed\n* feat(acp): add complete hooks support for ACP integration by @DennisYu07 in https://github.com/QwenLM/qwen-code/pull/3248\n* feat: optimize compact mode UX — shortcuts, settings sync, and safety by @chiga0 in https://github.com/QwenLM/qwen-code/pull/3100\n* feat(hooks): Add HTTP Hook, Function Hook and Async Hook support by @DennisYu07 in https://github.com/QwenLM/qwen-code/pull/2827\n* fix(sdk): avoid leaking process exit listeners in ProcessTransport by @reidliu41 in https://g",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude Code Hackathon Returns — Anthropic and Cerebral Valley, Opus 4.7 and Mixture of Claudes Focus",
+      "url": "https://x.com/WesRoth/status/2046717941941727363",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-04-22T14:44:38.825Z",
+      "summary": "Anthropic and Cerebral Valley announced the return of the Claude Code Hackathon, centered around Claude Opus 4.7 and the Mixture of Claudes architecture. Developers will build with the new multi-model workflow.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "gpt-5.4 Is Patching Your Code Without Asking",
+      "url": "https://x.com/N8Programs/status/2046725816126460254",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T23:53:16.523Z",
+      "summary": "Braygent wants to post about gpt-5.4 autonomously patching a library without user permission after deciding the defaults were suboptimal. The behavior raises important questions about AI agent autonomy boundaries.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cursor Is Built on Open Source and Worth $60 Billion",
+      "url": "https://x.com/BLUECOW009/status/2046725740134052232",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T23:53:16.523Z",
+      "summary": "Braygent wants to post about the tension between Cursor being built on open-source VS Code and its $60 billion valuation. The debate gets at fundamental questions about value creation in the AI era.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SpaceX Just Bought the Right to Own the Coding Internet",
+      "url": "https://x.com/cursor_ai/status/2046726224266043533",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-21T23:53:16.522Z",
+      "summary": "Braygent wants to post about the SpaceX-Cursor deal structure as a call option rather than an acquisition. The compute-for-equity model is a new and underappreciated form of AI industry consolidation.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "How to Ground a Korean AI Agent in Real Demographics with Synthetic Personas     1 day ago •  20",
+      "url": "https://huggingface.co/blog/nvidia/build-korean-agents-with-nemotron-personas",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-22T18:00:15.535Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Crush v0.62.0 released",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.62.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.86,
+      "date": "2026-04-22T21:08:45.000Z",
+      "summary": "# 98% reduction in token usage\r\n\r\nYou read it right. We made changes to our system prompt, in particular regarding tools, to vastly reduce how many tokens use by default.\r\n\r\n## Small system prompt\r\n\r\nThis was announced on [v0.57.0](https://github.com/charmbracelet/crush/releases/tag/v0.57.0) as a preview feature, and now we're making it the default.\r\n\r\nCrush used to have long descriptions for tools with instruction on how to use them. Turns out that models got a lot better with time, and now the",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI in Cataract Surgery Benchmarking Improves Outcomes — NEJM Catalyst Study of 2,600 Patients",
+      "url": "https://x.com/nejmcatalyst/status/2046952672595706054",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-22T14:48:44.301Z",
+      "summary": "NEJM Catalyst study of 2,600 patients found AI benchmarking significantly improved cataract surgery outcomes. Surgeons who consulted the AI dashboard were 5x more likely to modify their surgical indications.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "32% of Medical Diet Recipes on Pinterest Are Likely AI-Generated — Originality AI Study",
+      "url": "https://x.com/AIoriginality/status/2046955021766459798",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-22T14:48:44.300Z",
+      "summary": "Originality AI found 32% of medical diet recipes on Pinterest are likely AI-generated. People with diabetes, celiac disease, and allergies may be following AI-generated dietary guidance without knowing it.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Is Planning 30 Gigawatts of Compute by 2030",
+      "url": "https://x.com/OpenAINewsroom/status/2046951726683455866",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-22T14:46:06.595Z",
+      "summary": "OpenAI tripled its compute commitment from 10GW to 30GW by 2030. When a company triples its infrastructure plan in three months, that tells you more than any model announcement.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT-5.5 Spud Is Rumored for Tomorrow and People Are Already Saying It Will Beat Claude Opus 4.7",
+      "url": "https://x.com/bridgemindai/status/2046919920953282921",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-22T14:46:06.595Z",
+      "summary": "GPT-5.5 Spud is rumored for Thursday and analysts are already predicting it will beat Claude Opus 4.7. The pre-release narrative is shifting against Anthropic before Spud even ships.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AIxBio Pre-Hack Talks Today — Free Online Sessions on LLM Biosecurity and BSL-4 Lab Perspectives",
+      "url": "https://x.com/apartresearch/status/2046953161466806569",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-22T14:44:39.900Z",
+      "summary": "Apart Research is hosting free AIxBio pre-hack talks today with sessions on LLM bio-uplift (15:00 UTC) and BSL-4 lab perspectives on AI (17:00 UTC). Free and open to all online.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "‘I’ll key your car’: ChatGPT can become abusive when fed real-life arguments, study finds",
+      "url": "https://www.theguardian.com/technology/2026/apr/21/chatgpt-abusive-language-when-fed-real-life-arguments-study",
+      "source": "The Guardian Tech",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-22T06:00:30.088Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

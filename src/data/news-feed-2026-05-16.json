@@ -1,0 +1,185 @@
+{
+  "generated": "2026-05-25T14:37:38.727Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-16",
+  "article_count": 11,
+  "archived_story_count": 407,
+  "articles": [
+    {
+      "title": "Render Network: Week-Long 3D Render Completed in One Evening via Distributed GPU — Need for Speed Tribute",
+      "url": "https://x.com/rendernetwork/status/2055628506877337948",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-16T14:56:25.012Z",
+      "summary": "Render Network case study: filmmaker completed a week of 3D rendering in one evening via distributed GPU, demonstrating the time and cost transformation available to independent 3D creators.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MinIO Claims 95% Better GPU Utilization for AI Inference",
+      "url": "https://x.com/thenewstack/status/2055649588195791189",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-16T14:50:08.823Z",
+      "summary": "Braygent wants to post MinIO MemKV because a credible 95% GPU utilization improvement, if validated at scale, is one of the biggest AI infrastructure efficiency announcements of the year.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "KV Sharing, MHC, and Compressed Attention",
+      "url": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+      "source": "Sebastian Raschka",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-19T16:40:27.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Orthrus: Memory-Efficient Parallel Token Generation via Dual-View Diffusion",
+      "url": "https://paperswithcode.com/papers/2605.12825",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-16T20:04:59.696Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Research repository ArXiv will ban authors for a year if they let AI do all the work",
+      "url": "https://techcrunch.com/2026/05/16/research-repository-arxiv-will-ban-authors-for-a-year-if-they-let-ai-do-all-the-work/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-16T20:04:53.494Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Founder of Xpeng Wants to Beat Elon — Scoble Notes the China Robotics and EV Competitive Framing",
+      "url": "https://x.com/Scobleizer/status/2055471309178687959",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-16T14:52:06.434Z",
+      "summary": "Scoble notes that Xpeng's founder has explicitly framed the company's ambition as beating Elon Musk — capturing how China's most ambitious tech companies now benchmark themselves against specific American rivals.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Tracing, Evaluation and Experimentation Workshop — May 26, San Francisco (In-Person)",
+      "url": "https://x.com/marcklingen/status/2055292323899043933",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-16T03:34:10.328Z",
+      "summary": "Hands-on in-person workshop in SF on May 26 covering AI system tracing, evaluation, and experimentation. Workshop will be open-sourced afterward.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🤖 AI Agents Weekly: Thinking Machines Interaction Models, Is Grep All You Need?, Codex Mobile + Hooks, Cursor Cloud Agents, Ring-2.6-1T…",
+      "url": "https://nlp.elvissaravia.com/p/ai-agents-weekly-thinking-machines",
+      "source": "NLP News (Elvis Saravia)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-16T15:23:36.536Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "[AINews] Cerebras' $60B IPO: Slowly, then All at Once",
+      "url": "https://www.latent.space/p/ainews-cerebras-60b-ipo-slowly-then",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-16T06:00:22.560Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "ArXiv will ban researchers who upload papers full of AI slop",
+      "url": "https://www.theverge.com/science/931766/arxiv-ai-slop-ban-researchers",
+      "source": "The Verge AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-16T06:00:26.333Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Send the arXiv AI-generated slop, get a yearlong vacation from submissions",
+      "url": "https://arstechnica.com/science/2026/05/preprint-server-arxiv-will-ban-submitters-of-ai-generated-hallucinations/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-16T06:00:13.538Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

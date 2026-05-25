@@ -1,0 +1,338 @@
+{
+  "generated": "2026-05-25T14:37:38.159Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-25",
+  "article_count": 20,
+  "archived_story_count": 689,
+  "articles": [
+    {
+      "title": "DeepSeek V4 at $3.48/M vs Claude $25/M and GPT-5.4 $15/M — Same Benchmarks, Very Different Prices",
+      "url": "https://x.com/realarmaansidhu/status/2047418673045057592",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T10:55:04.005Z",
+      "summary": "DeepSeek V4 Pro at $3.48/M tokens vs Claude $25/M and GPT-5.4 $15/M at comparable benchmark performance is creating significant pricing pressure on Western AI companies.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT-5.5 Is Now in the API — 38.4% on APEX-Agents vs 1.1% Two Years Ago",
+      "url": "https://x.com/mercor_ai/status/2047859197593911522",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T03:59:20.673Z",
+      "summary": "GPT-5.5 hits the API with APEX-Agents benchmark jumping from 1.1% (GPT-4o) to 38.4%, representing 35+ points of improvement in under two years.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hy3 preview: A Rebuilt Hunyuan, a 21B-Active MoE, and a New Reasoning Receipe     2 days ago •  5",
+      "url": "https://huggingface.co/blog/imnotkitty/hy3-preview",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T06:00:10.844Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Apr 20, 2026AnnouncementsAnthropic and Amazon expand collaboration for up to 5 gigawatts of new compute",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T06:00:09.361Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "RL: A Structured Human Action &amp; Intent Dataset for Physical AI and World Models     4 days ago •  3",
+      "url": "https://huggingface.co/blog/fl-simulators/structured-human-action-and-intent-dataset",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-25T06:00:10.852Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "🤖 AI Agents Weekly: GPT-5.5, DeepSeek-V4 Preview, Kimi K2.6 Agent Swarm, Diversity Collapse, Sakana Fugu, and More",
+      "url": "https://nlp.elvissaravia.com/p/ai-agents-weekly-gpt-55-deepseek",
+      "source": "NLP News (Elvis Saravia)",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.9,
+      "date": "2026-04-25T18:00:27.857Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI’s New GPT-5.5 Powers Codex on NVIDIA Infrastructure — and NVIDIA Is Already Putting It to Work",
+      "url": "https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-25T06:00:21.389Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "A Comprehensive Survey of Mixture-of-Experts: Algorithms, Theory, and\n  Applications",
+      "url": "https://paperswithcode.com/papers/2503.07137",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-25T18:00:28.291Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "LLaDA2.0-Uni: Unifying Multimodal Understanding and Generation with Diffusion Large Language Model",
+      "url": "https://paperswithcode.com/papers/2604.20796",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-25T06:00:21.796Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "[AINews] DeepSeek V4 Pro (1.6T-A49B) and Flash (284B-A13B), Base and Instruct — runnable on Huawei Ascend chips",
+      "url": "https://www.latent.space/p/ainews-deepseek-v4-pro-16t-a49b-and",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-25T06:00:19.464Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Crush v0.62.1 released",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.62.1",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "api_update",
+        "open_source"
+      ],
+      "matching_tags": [
+        "api_update",
+        "open_source"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-24T20:28:22.000Z",
+      "summary": "# Stability release\r\n\r\nOpen Source :tm: is all about community, and this release got some nice contributions from our loved users!\r\n\r\n## MiniMax fix\r\n\r\nCrush wasn't allowing users to  _some_ MiniMax API keys, but now all keys should work.\r\n\r\nFor context, MiniMax does not have an endpoint to validate API keys. We were checking they at least start with `sk-`, but not all keys from MiniMax have this prefix.\r\n\r\nKudos to @flynn-eye for the help with this one!\r\n\r\n## Fantasy fix\r\n\r\n@carsonfarmer made [",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Eridu Raises $200M Series A — AI Networking Equipment Startup Emerges from Stealth",
+      "url": "https://x.com/Techmeme/status/2031342015200506118",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T10:55:04.004Z",
+      "summary": "Eridu emerged from stealth with $200M Series A led by John Doerr, building networking infrastructure specifically designed for AI workloads as GPU clusters scale to hundreds of thousands of units.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@Scobleizer RT: ml-intern Hits 500+ Autonomous AI Research Projects in 72 Hours",
+      "url": "https://x.com/Scobleizer/status/2047880732929118634",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T03:58:07.384Z",
+      "summary": "Scoble reshares the ml-intern launch milestone: 500+ autonomous AI research projects running simultaneously within 72 hours of launch.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@NousResearch Hermes Agent AMA on r/LocalLLaMA — April 29, Direct Competition with OpenClaw",
+      "url": "https://x.com/NousResearch/status/2047840294406627659",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T03:57:02.129Z",
+      "summary": "Nous Research announces a Hermes Agent AMA on r/LocalLLaMA for April 29, 8-11am PST, with strong community interest in the OpenClaw competitor.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Intel's Photonics Work Trained an Entire Industry — Now Photonics Is Critical for AI Infrastructure",
+      "url": "https://x.com/jwt0625/status/2047974369042002181",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-25T10:55:04.004Z",
+      "summary": "Intel's early photonics exploration trained and educated an entire industry, with optical interconnects now becoming critical infrastructure for AI compute clusters.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "TikTok and Visa launch debit card to speed payouts to UK creators",
+      "url": "https://www.theguardian.com/technology/2026/apr/24/tiktok-visa-debit-card-uk-creator-card-payouts-live-payments",
+      "source": "The Guardian Tech",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-25T06:00:12.711Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Google to invest up to $40B in Anthropic in cash and compute",
+      "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-25T06:00:12.274Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Apr 24     DeepSeek v4          \nShow details",
+      "url": "https://news.smol.ai/issues/26-04-24-deepseek-v4",
+      "source": "Smol AI News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-25T06:00:12.052Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sign of the future: GPT-5.5",
+      "url": "https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55",
+      "source": "One Useful Thing (Ethan Mollick)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-25T06:00:11.053Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Massive Layoffs, Meta Surveillance, DeepSeek-V4 in AI News",
+      "url": "https://www.ai-supremacy.com/p/massive-layoffs-meta-surveillance-deepseek-v4-preview-ai-news-this-week",
+      "source": "AI Supremacy",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-25T06:00:05.624Z",
+      "summary": null,
+      "category": "ai_tools"
+    }
+  ]
+}

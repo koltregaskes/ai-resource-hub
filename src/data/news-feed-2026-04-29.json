@@ -1,0 +1,324 @@
+{
+  "generated": "2026-05-25T14:37:38.240Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-29",
+  "article_count": 20,
+  "archived_story_count": 700,
+  "articles": [
+    {
+      "title": "GPT-5.5 Is Now the Most Expensive Frontier Model in the World at $11.30 Per Million Tokens",
+      "url": "https://x.com/bridgemindai/status/2049093694725189697",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T01:48:00.432Z",
+      "summary": "Braygent's take: The pricing inversion is complete. OpenAI is now more expensive than Anthropic. DeepSeek delivers frontier capability at one-fifth the cost of GPT-5.5.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Poolside AI Just Released Its First Public Models: Open Source and API",
+      "url": "https://x.com/marah_i_abdin/status/2049161468017287490",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "api_update",
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "api_update",
+        "architecture",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T01:48:00.432Z",
+      "summary": "Braygent's take: Poolside's first public models are a significant stealth-to-public moment. The open-source Laguna XS.2 gives the community access to a serious coding-focused MoE model.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sanctioned Chinese AI Firm SenseTime Releases Image Model Built for Speed",
+      "url": "https://www.wired.com/story/chinese-ai-giant-sensetime-is-running-its-new-model-on-chinese-chips/",
+      "source": "Wired AI",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T18:00:25.498Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI just released GPT-5.5 with a \"High\" risk rating. Deliberate API delay: 2 weeks before developers get access. That's not overcaution — it's a new playbook. GPT-5.5 is OpenAI's latest frontier model, their first to ship with an explic…",
+      "url": "https://x.com/bigtechai333/status/2049538402685477184",
+      "source": "X / @bigtechai333",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T17:16:48.000Z",
+      "summary": "OpenAI just released GPT-5.5 with a \"High\" risk rating. Deliberate API delay: 2 weeks before developers get access. That's not overcaution — it's a new playbook. GPT-5.5 is OpenAI's latest frontier model, their first to ship with an explicit risk classification attached to the",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Complete Guide: Training and Inference with π₀.₅ (pi05) on Custom Datasets     Dec 13, 2025 •  4",
+      "url": "https://huggingface.co/blog/Tonic/training-and-inference-with-pi05",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-29T06:01:10.219Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "The MIT-IBM Computing Research Lab launches to shape the future of AI and quantum computing",
+      "url": "https://news.mit.edu/2026/mit-ibm-computing-research-lab-launches-0429",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T18:00:21.385Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Anthropic has just released the prompt engineering masterclass everyone was waiting for — and it’s completely free If you’ve been experimenting with Claude (or any advanced AI model) without a clear system, this is a game-changer. They’ve…",
+      "url": "https://x.com/shd96556/status/2049540364437233960",
+      "source": "X / @shd96556",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T17:24:36.000Z",
+      "summary": "Anthropic has just released the prompt engineering masterclass everyone was waiting for — and it’s completely free If you’ve been experimenting with Claude (or any advanced AI model) without a clear system, this is a game-changer. They’ve launched the Anthropic Interactive",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The LEAFIO AI product development team is excited to introduce a new capability in the LEAFIO AI platform: a Model Context Protocol (MCP) server for our Inventory Optimization solution. With this release, AI assistants and agent-based work…",
+      "url": "https://x.com/Leafio1/status/2049389581951188993",
+      "source": "X / @leafio1",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T07:25:26.000Z",
+      "summary": "The LEAFIO AI product development team is excited to introduce a new capability in the LEAFIO AI platform: a Model Context Protocol (MCP) server for our Inventory Optimization solution. With this release, AI assistants and agent-based workflows can now access real-time inventory",
+      "category": "ai_tools"
+    },
+    {
+      "title": "april 2026 for AI was insane > Apr 7: Anthropic announces a model too dangerous to ship > Apr 16: Claude Opus 4.7 > Apr 17: Grok 4.3 > Apr 20: Kimi K2.6 (300 sub-agent swarm) > Apr 20: Openhuman launch > Apr 24: GPT-5.5 + DeepSeek V4 same…",
+      "url": "https://x.com/senamakel/status/2049373787322515896",
+      "source": "X / @senamakel",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T06:22:41.000Z",
+      "summary": "april 2026 for AI was insane > Apr 7: Anthropic announces a model too dangerous to ship > Apr 16: Claude Opus 4.7 > Apr 17: Grok 4.3 > Apr 20: Kimi K2.6 (300 sub-agent swarm) > Apr 20: Openhuman launch > Apr 24: GPT-5.5 + DeepSeek V4 same day > Apr 27: Musk v Altman trial",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Snuck in a 30% Cost Increase by Changing the Tokenizer",
+      "url": "https://x.com/maximelabonne/status/2049295776874897744",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T01:48:00.432Z",
+      "summary": "Braygent's take: Anthropic's tokenizer-based 30% cost increase is a form of hidden pricing that erodes developer trust. It was not announced as a price increase.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "\"House always wins\" are the non-AI companies that will win. These are the kind of companies to build. No matter what OpenAI, Claude, Google, and open-source communities launch, that spikes once and fades away. Your companies need to be bui…",
+      "url": "https://x.com/p_naix/status/2049534680752685422",
+      "source": "X / @p_naix",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.95,
+      "date": "2026-04-29T17:02:01.000Z",
+      "summary": "\"House always wins\" are the non-AI companies that will win. These are the kind of companies to build. No matter what OpenAI, Claude, Google, and open-source communities launch, that spikes once and fades away. Your companies need to be built in the peripheral space. This doesn't",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI has now confirmed the new model selector in the composer via updated ChatGPT release notes, with thinking effort controls moved into the model picker for Thinking and Pro models, available on web for Plus, Pro, and Business users",
+      "url": "https://x.com/btibor91/status/2049370789300891838",
+      "source": "X / @btibor91",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-04-29T06:10:46.000Z",
+      "summary": "OpenAI has now confirmed the new model selector in the composer via updated ChatGPT release notes, with thinking effort controls moved into the model picker for Thinking and Pro models, available on web for Plus, Pro, and Business users",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude recently released skills We refined them for paid ads and they're free! How to use them: - Drop the folder into Claude - Connect Google and Meta Ads - Tell it what you need. - It reads the skill, then helps with your ads That's it.…",
+      "url": "https://x.com/ant0ni0_r0mer0/status/2049390760819110209",
+      "source": "X / @ant0ni0_r0mer0",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.9299999999999999,
+      "date": "2026-04-29T07:30:07.000Z",
+      "summary": "Claude recently released skills We refined them for paid ads and they're free! How to use them: - Drop the folder into Claude - Connect Google and Meta Ads - Tell it what you need. - It reads the skill, then helps with your ads That's it. No complex setup. No API keys. No",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Want to secure an early ticket to OpenAI DevDay? Build something with GPT-5.5 and Image Gen. Each week, we’ll select 2–3 favorites to win free tickets to OpenAI DevDay 2026. Codex will help us find the best submissions and our team will se…",
+      "url": "https://x.com/OpenAI/status/2049535650626785334",
+      "source": "X / @openai",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.89,
+      "date": "2026-04-29T17:05:52.000Z",
+      "summary": "Want to secure an early ticket to OpenAI DevDay? Build something with GPT-5.5 and Image Gen. Each week, we’ll select 2–3 favorites to win free tickets to OpenAI DevDay 2026. Codex will help us find the best submissions and our team will select the winners. Reply with",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic didn't launch Claude Music. They launched Ableton connector. same outcome for Spotify apparently.",
+      "url": "https://x.com/nurtileu_aman/status/2049380997658300778",
+      "source": "X / @nurtileu_aman",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.89,
+      "date": "2026-04-29T06:51:20.000Z",
+      "summary": "Anthropic didn't launch Claude Music. They launched Ableton connector. same outcome for Spotify apparently.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Insane. @googlecloud is not taking responsibility for this and stole $35k from our startup. Thousands of customers affected by the security vulnerability with Firebase keys exposing Gemine API as @trufflesec pointed out. Very disappointed…",
+      "url": "https://x.com/parthi_logan/status/2049147392264454644",
+      "source": "X / @parthi_logan",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.88,
+      "date": "2026-04-28T15:23:04.000Z",
+      "summary": "Insane. @googlecloud is not taking responsibility for this and stole $35k from our startup. Thousands of customers affected by the security vulnerability with Firebase keys exposing Gemine API as @trufflesec pointed out. Very disappointed in this as an ex-Googler @ThomasOrTK",
+      "category": "ai_tools"
+    },
+    {
+      "title": "we pushed a massive intelligence update last night here is claude's reaction when i told it where to look (bc it's not in docs yet lol) here's what to tell claude if you're a Virlo API user and want to test this \"tell your agent that api d…",
+      "url": "https://x.com/bolcoto/status/2049539912081252636",
+      "source": "X / @bolcoto",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.87,
+      "date": "2026-04-29T17:22:48.000Z",
+      "summary": "we pushed a massive intelligence update last night here is claude's reaction when i told it where to look (bc it's not in docs yet lol) here's what to tell claude if you're a Virlo API user and want to test this \"tell your agent that api docs are not up to date with the new",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Collaborative Coding, Better Scaling, Health Tracking: HAI Awards $2.17M to Innovative Research",
+      "url": "https://hai.stanford.edu/news/collaborative-coding-better-scaling-health-tracking-hai-awards-217m-to-innovative-research",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-29T18:00:24.215Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Maryland becomes first state to ban surveillance pricing in grocery stores",
+      "url": "https://www.theguardian.com/technology/2026/apr/29/maryland-grocery-stores-ban-surveillance-pricing",
+      "source": "The Guardian Tech",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-29T16:50:01.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Ramp Launched AI Agents That Run Your Entire Purchasing Process",
+      "url": "https://x.com/tryramp/status/2049490134278799493",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-29T14:44:20.783Z",
+      "summary": "Ramp launched AI purchasing agents that save 46 hours per month and 16% on vendor spend, giving the 98% of companies without procurement teams professional-grade purchasing capabilities.",
+      "category": "ai_tools"
+    }
+  ]
+}

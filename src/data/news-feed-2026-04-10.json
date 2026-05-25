@@ -1,0 +1,160 @@
+{
+  "generated": "2026-05-25T14:37:37.729Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-10",
+  "article_count": 10,
+  "archived_story_count": 178,
+  "articles": [
+    {
+      "title": "Google and Intel deepen AI infrastructure partnership",
+      "url": "https://techcrunch.com/2026/04/09/google-and-intel-deepen-ai-infrastructure-partnership/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T06:00:22.613Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "@Techmeme Alibaba's Pivot from Open Source to MaaS — A Signal for Global AI Policy",
+      "url": "https://x.com/Techmeme/status/2042465278462955882",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-10T05:16:08.371Z",
+      "summary": "Alibaba's strategic pivot from open source AI to monetizable Model-as-a-Service models, accompanied by leadership changes, signals a broader shift in how major AI companies are thinking about commercialization and governance.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@hugobowne AI Observability Engineer — The Most In-Demand Role Nobody Is Hiring For",
+      "url": "https://x.com/hugobowne/status/2042464629214101663",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-10T05:16:12.382Z",
+      "summary": "Analysis of 1,400+ real AI agent deployments reveals that AI observability is the critical gap in most enterprise AI deployments. The skills to build monitoring and evaluation infrastructure for AI agents are in high demand.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "YouTube locked my accounts and I can't cancel my subscription",
+      "url": "https://pocketables.com/2026/04/ai-music-corporate-control-and-the-creator-who-cant-even-leave.html",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-04-10T05:03:22.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "A philosophy of work",
+      "url": "https://news.mit.edu/2026/philosophy-work-michal-masny-0409",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-10T06:00:17.857Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Observe 2026 — June 4, San Francisco — 700+ AI Builders at Shack15",
+      "url": "https://x.com/arizeai/status/2027111507860025508",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-10T05:16:13.355Z",
+      "summary": "Observe 2026 returns on June 4 at Shack15 in San Francisco, bringing together 700+ AI builders for a full day of talks, demos, and deep dives into AI observability, evaluation, and agents.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@AIFutureBrief OpenAI Chief Scientist on the Path to Automated AI Research — Extending RL Beyond Current Applications",
+      "url": "https://x.com/AIFutureBrief/status/2042463364069147062",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-10T05:16:09.371Z",
+      "summary": "OpenAI's Chief Scientist has outlined a path to automated AI research through extending reinforcement learning beyond current applications, projecting a fully automated AI researcher by 2028.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Credit: VentureBeat made with OpenAI GPT-Image-1.5",
+      "url": "https://venturebeat.com/orchestration/openai-introduces-chatgpt-pro-usd100-tier-with-5x-usage-limits-for-codex",
+      "source": "VentureBeat AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-10T06:00:32.705Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "ChatGPT has a new $100 per month Pro subscription",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new",
+      "source": "The Verge AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-10T06:00:32.144Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "How Close Is Too Close? Applying Fluid Dynamics Research Methods to PC Cooling",
+      "url": "https://www.lttlabs.com/articles/2026/04/04/how-close-is-too-close-applying-fundamental-fluid-dynamics-research-methods-to-pc-cooling",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-05T17:32:45.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

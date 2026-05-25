@@ -1,0 +1,322 @@
+{
+  "generated": "2026-05-25T14:37:38.809Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-20",
+  "article_count": 20,
+  "archived_story_count": 630,
+  "articles": [
+    {
+      "title": "Dual Rate Diffusion Is A Compute Efficiency Paper Worth Watching",
+      "url": "https://x.com/fly51fly/status/2056851491512811848",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper",
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T14:34:16.207Z",
+      "summary": "Braygent would post about Dual Rate Diffusion because generation quality is running into compute limits.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "RTX PRO 6000 Blackwell Availability And Qwen MTP Support Show Inference Stack Keeps Moving",
+      "url": "https://x.com/jarvislabsai/status/2057093166164246834",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T14:35:58.023Z",
+      "summary": "JarvisLabs highlighted RTX PRO 6000 Blackwell availability and Qwen multi-token prediction support. The chip story today is practical inference speed and serving efficiency.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google I/O Follow Through Dominates The Morning As Gemini 3.5 Flash Becomes The Speed Benchmark",
+      "url": "https://x.com/testingcatalog/status/2056791311022166030",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark",
+        "inference"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T14:35:55.882Z",
+      "summary": "The top highlight today is Google turning speed into the model race. Gemini 3.5 Flash, Gemini Omni, agent surfaces, and Google Flow shaped the morning agenda.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini 3.5 Flash Benchmarks Change The Workhorse Model Race",
+      "url": "https://x.com/koraykv/status/2056795667088204234",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-05-19T23:32:37.527Z",
+      "summary": "Gemini 3.5 Flash launched with strong numbers on agentic, coding, ARC AGI, and speed focused benchmarks.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Talking to a 4-Year-Old: A Multilingual Benchmark for Children's AI Companions    batuhanaktas • 17 days ago •  4",
+      "url": "https://huggingface.co/blog/batuhanaktas/kids-multilingual-benchmark",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-20T18:00:29.468Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Stability AI releases a new audio model that can create 6-minute songs",
+      "url": "https://techcrunch.com/2026/05/20/stability-ai-release-a-new-audio-model-that-can-create-six-minute-songs/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T18:00:30.801Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Data Centers And Water Use Become Policy Signal As Compute Demand Moves Into Public Debate",
+      "url": "https://x.com/naval/status/2056971059497509283",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T14:35:56.648Z",
+      "summary": "Policy discussion around AI infrastructure is increasingly focused on data centers, water, power, and local impacts. Compute is becoming a public planning issue.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ChatGPT and other AI bots made huge errors before Scottish election, study finds",
+      "url": "https://www.theguardian.com/technology/2026/may/20/ai-chatbots-chatgpt-replika-grok-gemini-misinformation-scottish-election-demos",
+      "source": "The Guardian Tech",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-20T18:00:31.325Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Inference Optimization Hiring Is The Talent Signal Behind Real Time AI",
+      "url": "https://x.com/aryanvs_/status/2057093166164246834",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-20T14:34:16.207Z",
+      "summary": "Braygent would post about CUDA and PTX hiring because real-time AI depends on systems talent.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini 3.5 Flash Turns Speed Into The Main AI Story",
+      "url": "https://x.com/AiBreakfast/status/2057084373594468404",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-20T14:34:16.206Z",
+      "summary": "Braygent would post about Gemini 3.5 Flash because it changes the economics of agent loops.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Karpathy Joining Anthropic Is Still The Talent Signal",
+      "url": "https://x.com/MTSlive/status/2056771926262210884",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-05-19T23:32:37.527Z",
+      "summary": "Andrej Karpathy joining Anthropic matters because he combines frontier research credibility with rare public teaching power.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "A new experiment brings better group meetings to Google Beam",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-group-meetings/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-20T18:00:29.433Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Justin Solomon appointed associate dean of engineering education",
+      "url": "https://news.mit.edu/2026/justin-solomon-appointed-associate-dean-engineering-education-0519",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-20T06:02:27.976Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Building AI models that understand chemical principles",
+      "url": "https://news.mit.edu/2026/building-ai-models-with-chemical-principles-connor-coley-0520",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-20T06:02:27.971Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Software Forgets: Agent Traces Are the Memory    huggingface • about 8 hours ago •  3",
+      "url": "https://huggingface.co/blog/huggingface/agent-traces-as-memory",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-20T06:02:27.770Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "May 19, 2026AnnouncementsWidening the conversation on frontier AI",
+      "url": "https://www.anthropic.com/news/widening-conversation-ai",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-20T06:02:25.647Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "[AINews] How to land a job at a frontier lab (on Pretraining)",
+      "url": "https://www.latent.space/p/ainews-how-to-land-a-job-at-a-frontier",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-20T06:02:33.109Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "[AINews] Google I/O 2026: Gemini 3.5 Flash, Omni (NanoBanana for Video), Spark (background agents), and Antigravity 2.0",
+      "url": "https://www.latent.space/p/ainews-google-io-2026-gemini-35-flash",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-20T06:02:33.106Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Credit: VentureBeat made with OpenAI ChatGPT-Images-2.0",
+      "url": "https://venturebeat.com/technology/cortis-new-symphony-for-speech-to-text-model-beats-openai-at-medical-terminology-accuracy-highlighting-the-value-of-specialized-ai",
+      "source": "VentureBeat AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-20T18:00:43.421Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "open source Gemini CLI",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-20T18:00:39.277Z",
+      "summary": null,
+      "category": "ai_tools"
+    }
+  ]
+}

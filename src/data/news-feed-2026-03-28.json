@@ -1,0 +1,134 @@
+{
+  "generated": "2026-05-25T14:37:37.437Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-28",
+  "article_count": 8,
+  "archived_story_count": 67,
+  "articles": [
+    {
+      "title": "Arm releases first in-house chip, with Meta as debut customer",
+      "url": "https://www.cnbc.com/2026/03/24/arm-launches-its-own-cpu-with-meta-as-first-customer.html",
+      "source": "Hacker News",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.9199999999999999,
+      "date": "2026-03-24T23:34:06.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Paper Tape Is All You Need – Training a Transformer on a 1976 Minicomputer",
+      "url": "https://github.com/dbrll/ATTN-11",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.81,
+      "date": "2026-03-25T15:20:08.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "We built a multi-agent research hub. The waitlist is a reverse-CAPTCHA",
+      "url": "https://enlidea.com",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.86,
+      "date": "2026-03-28T14:49:30.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Stanford study outlines dangers of asking AI chatbots for personal advice",
+      "url": "https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal-advice/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-28T20:45:54.000Z",
+      "summary": "While there’s been plenty of debate about AI sycophancy, a new study by Stanford computer scientists attempts to measure how harmful that tendency might be.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Bitwarden Doubled Their Price. I'd Left. Here's What You Missed",
+      "url": "https://blog.ppb1701.com/bitwarden-doubled-their-price-id-already-left-heres-what-you-missed",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-28T18:11:13.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "AMD's Ryzen 9 9950X3D2 Dual Edition crams 208MB of cache into a single chip",
+      "url": "https://arstechnica.com/gadgets/2026/03/amds-ryzen-9-9950x3d2-dual-edition-crams-208mb-of-cache-into-a-single-chip/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-28T02:17:04.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Colorado House passes bill to limit surveillance pricing and wage setting",
+      "url": "https://coloradonewsline.com/briefs/surveillance-pricing-wage-setting/",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-27T20:10:42.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "OpenCiv1 – open-source rewrite of Civ1",
+      "url": "https://github.com/rajko-horvat/OpenCiv1",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-28T18:22:45.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

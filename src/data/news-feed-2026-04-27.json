@@ -1,0 +1,354 @@
+{
+  "generated": "2026-05-25T14:37:38.199Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-04-27",
+  "article_count": 20,
+  "archived_story_count": 683,
+  "articles": [
+    {
+      "title": "Performant local mixture-of-experts CPU inference with GPU acceleration in llama.cpp     Jan 30 •  21",
+      "url": "https://huggingface.co/blog/Doctor-Shotgun/llamacpp-moe-offload-guide",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T18:00:35.489Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Qwen 3.6 Max Preview just dropped on OpenRouter. One trillion parameters. Released today. $1.30/$7.80 per million tokens. 262K context. Sparse mixture-of-experts. Optimized for agentic coding and tool use. No open weights. Alibaba's bigges…",
+      "url": "https://x.com/bridgemindai/status/2048816878454194460",
+      "source": "X / @bridgemindai",
+      "tags": [
+        "api_update",
+        "pricing_change",
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "api_update",
+        "pricing_change",
+        "architecture",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T17:29:43.000Z",
+      "summary": "Qwen 3.6 Max Preview just dropped on OpenRouter. One trillion parameters. Released today. $1.30/$7.80 per million tokens. 262K context. Sparse mixture-of-experts. Optimized for agentic coding and tool use. No open weights. Alibaba's biggest model ever. And it costs less",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Kimodo — Motion Diffusion for Humanoid Robots Trained on 700 Hours of Mocap",
+      "url": "https://x.com/AIKumarvels/status/2048294442063970777",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture",
+        "training",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "architecture",
+        "training",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T15:59:13.833Z",
+      "summary": "Braygent's take: NVIDIA Kimodo plus Sonic gives humanoid developers a complete open source motion stack. NVIDIA is winning the physical AI era the same way it won LLM compute.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NYU Global AI Frontier Lab Seminar — Stephan Mandt on Diffusion Models, April 27",
+      "url": "https://x.com/kchonyc/status/2048753454873563298",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper",
+        "architecture",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T15:57:33.675Z",
+      "summary": "NYU Global AI Frontier Lab hosted Stephan Mandt today on diffusion models for scientific inference. The public seminar series continues with upcoming sessions on frontier AI research.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "When intelligence becomes abundant, attention becomes the bottleneck. The rate-limiting step moves from typing-speed to judgment-under-fatigue. A 22-year-old spinning up 50 agents to outwork everyone hits a wall that isn't compute. It's ho…",
+      "url": "https://x.com/arunprakashml/status/2048598928019571165",
+      "source": "X / @arunprakashml",
+      "tags": [
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T03:03:40.000Z",
+      "summary": "When intelligence becomes abundant, attention becomes the bottleneck. The rate-limiting step moves from typing-speed to judgment-under-fatigue. A 22-year-old spinning up 50 agents to outwork everyone hits a wall that isn't compute. It's how many PRs their brain can review",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ComfyUI v0.20.1 released",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.20.1",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "api_update",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "api_update",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-27T21:53:26.000Z",
+      "summary": "## What's Changed\r\n* feat: SUPIR model support (CORE-17) by @kijai in https://github.com/Comfy-Org/ComfyUI/pull/13250\r\n* Some optimizations to make Ernie inference a bit faster. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/13472\r\n* fix: append directory type annotation to internal files endpoint (CORE-71) by @Abdulrehman-PIAIC80387 in https://github.com/Comfy-Org/ComfyUI/pull/13305\r\n* Add link to Intel portable to Readme. by @comfyanonymous in https://github.com/Comfy-Org/Comf",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Sonic Makes Humanoid Robots Cheap — Open Source Forever",
+      "url": "https://x.com/JoseCSancho/status/2048587841882439784",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "hardware",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T15:59:13.833Z",
+      "summary": "Braygent's take: NVIDIA Sonic is the moment humanoid robotics becomes accessible to startups. The economics changed permanently today.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT-5.5 Is Now Live in the API — Every Developer Just Got an Upgrade",
+      "url": "https://x.com/gdb/status/2047745639195508754",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T05:20:50.989Z",
+      "summary": "GPT-5.5 is live in the OpenAI API — Braygent would post about this as the release that upgrades every developer building on OpenAI, not just ChatGPT users.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Launched Deep Research and Deep Research Max — Two Tiers of Autonomous Research",
+      "url": "https://x.com/GoogleDeepMind/status/2046643710302028087",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T05:20:50.989Z",
+      "summary": "Google's two-tier research agent strategy — Braygent would post about Deep Research vs Deep Research Max as smart product thinking that most people missed this week.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic is limiting token use like never before whilst deepseek has just released preview versions of its highly anticipated V4 At $1.74/$3.48 per 1M input/output tokens, V4 Pro comes in significantly cheaper than GPT-5.5 ($5/$30) and Op…",
+      "url": "https://x.com/ca1vint/status/2048729610511151311",
+      "source": "X / @ca1vint",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.9700000000000001,
+      "date": "2026-04-27T11:42:57.000Z",
+      "summary": "Anthropic is limiting token use like never before whilst deepseek has just released preview versions of its highly anticipated V4 At $1.74/$3.48 per 1M input/output tokens, V4 Pro comes in significantly cheaper than GPT-5.5 ($5/$30) and Opus 4.7 ($5/$25). Perfect for anyone on",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Efficiency isn't just about speed anymore — it's about the massive reduction in the cost of intelligence. NVIDIA and @OpenAI 's partnership leverages the GB200 NVL72 to deliver a 35x reduction in token costs, bringing enterprise-grade AI t…",
+      "url": "https://x.com/NVIDIAAP/status/2048582909045379291",
+      "source": "X / @nvidiaap",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.96,
+      "date": "2026-04-27T02:00:01.000Z",
+      "summary": "Efficiency isn't just about speed anymore — it's about the massive reduction in the cost of intelligence. NVIDIA and @OpenAI 's partnership leverages the GB200 NVL72 to deliver a 35x reduction in token costs, bringing enterprise-grade AI to an unprecedented scale. Trained and",
+      "category": "ai_tools"
+    },
+    {
+      "title": "New model on OpenRouter qwen/qwen3.6-27b Context: 262,144 tokens Pricing: $0.20 / $1.56 per 1M tokens (in/out)",
+      "url": "https://x.com/gptbotio/status/2048594830188482965",
+      "source": "X / @gptbotio",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.93,
+      "date": "2026-04-27T02:47:23.000Z",
+      "summary": "New model on OpenRouter qwen/qwen3.6-27b Context: 262,144 tokens Pricing: $0.20 / $1.56 per 1M tokens (in/out)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Show HN: Utilyze – an open source GPU monitoring tool more accurate than nvtop",
+      "url": "https://www.systalyze.com/utilyze",
+      "source": "Hacker News",
+      "tags": [
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-27T13:55:43.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "OpenAI Releases GPT-5.5 The new model tops the benchmarks against its main rivals, Claude Opus 4.7 and Google's Gemini 3.1 Pro, even outperforming GPT-5.4 Pro in some areas. The model is built for agentic tasks and ease of use: GPT-5.5 fig…",
+      "url": "https://x.com/News_pulse360/status/2048733780744278450",
+      "source": "X / @news_pulse360",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T11:59:31.000Z",
+      "summary": "OpenAI Releases GPT-5.5 The new model tops the benchmarks against its main rivals, Claude Opus 4.7 and Google's Gemini 3.1 Pro, even outperforming GPT-5.4 Pro in some areas. The model is built for agentic tasks and ease of use: GPT-5.5 figures out what you're trying to do",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI has introduced Privacy Filter, a locally runnable open-weight AI model for context-aware detection and redaction of personally identifiable information in text. The model is now available on platforms like Hugging Face and GitHub. h…",
+      "url": "https://x.com/AlternativeTo/status/2048666474181808532",
+      "source": "X / @alternativeto",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T07:32:04.000Z",
+      "summary": "OpenAI has introduced Privacy Filter, a locally runnable open-weight AI model for context-aware detection and redaction of personally identifiable information in text. The model is now available on platforms like Hugging Face and GitHub. https:// alternativeto.net/news/2026/4/op enai-releases-privacy-filter-a-local-open-weight-model-built-for-personal-data-masking/ …",
+      "category": "ai_tools"
+    },
+    {
+      "title": "two model releases shipped on the same day, april 24. it’s worth putting them next to each other. // openai released GPT-5.5 at $5/$30 per million in/out tokens. closed weights, 1M context, agent stack baked in. // deepseek released V4 the…",
+      "url": "https://x.com/witcheer/status/2048665173326532861",
+      "source": "X / @witcheer",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T07:26:54.000Z",
+      "summary": "two model releases shipped on the same day, april 24. it’s worth putting them next to each other. // openai released GPT-5.5 at $5/$30 per million in/out tokens. closed weights, 1M context, agent stack baked in. // deepseek released V4 the same day. V4-Pro at $1.74/$3.48,",
+      "category": "ai_tools"
+    },
+    {
+      "title": "A quick guide to add @SurfAI MCP to claude 1-Get your API key from Surf dashboard 2-Claim free credits 3-Run in terminal (Replace your api key) : claude mcp add surf -e SURF_API_KEY=YOUR_API_KEY -- npx -y @surf -ai/surf-mcp 5-Verify: claud…",
+      "url": "https://x.com/0xAirr/status/2048663698806620544",
+      "source": "X / @0xairr",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T07:21:02.000Z",
+      "summary": "A quick guide to add @SurfAI MCP to claude 1-Get your API key from Surf dashboard 2-Claim free credits 3-Run in terminal (Replace your api key) : claude mcp add surf -e SURF_API_KEY=YOUR_API_KEY -- npx -y @surf -ai/surf-mcp 5-Verify: claude mcp list You should see Surf MCP",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ACL 2026 — Association for Computational Linguistics Conference Features UniSonate as Oral",
+      "url": "https://2026.aclweb.org/",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T05:22:01.509Z",
+      "summary": "ACL 2026 features UniSonate as an oral presentation — the top tier of accepted papers — alongside major advances in language models, multimodal systems, and AI safety research.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Cloud Next 2026 — Major AI Announcements Including Gemini Enterprise Agent Platform",
+      "url": "https://cloud.google.com/blog/topics/google-cloud-next",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T05:22:01.509Z",
+      "summary": "Google Cloud Next 2026 featured major AI launches including the Gemini Enterprise Agent Platform and Deep Research agents, signaling Google's aggressive push into enterprise AI.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@MilkRoadAI Breaks Down GPT-5.5 — What It Actually Does and What Developers Should Know",
+      "url": "https://x.com/archiveXjunkie/status/2047385824665514405",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-27T05:18:00.938Z",
+      "summary": "MilkRoadAI published a GPT-5.5 breakdown video explaining what the model actually does for agentic work and what developers should know about applying it in production workflows.",
+      "category": "ai_tools"
+    }
+  ]
+}

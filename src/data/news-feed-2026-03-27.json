@@ -1,0 +1,160 @@
+{
+  "generated": "2026-05-25T14:37:37.402Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-27",
+  "article_count": 10,
+  "archived_story_count": 86,
+  "articles": [
+    {
+      "title": "AI Research Is Getting Harder to Separate From Geopolitics",
+      "url": "https://www.wired.com/story/made-in-china-ai-research-is-starting-to-split-along-geopolitical-lines/",
+      "source": "Wired AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-03-27T21:46:39.000Z",
+      "summary": "A policy change announced by NeurIPS, the world’s leading AI research conference, drew widespread backlash from Chinese researchers this week and then was quickly reversed.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Memory chip giant SK hynix could help end &#8216;RAMmageddon&#8217; with blockbuster US IPO",
+      "url": "https://techcrunch.com/2026/03/27/memory-chip-giant-sk-hynix-could-help-end-rammageddon-with-blockbuster-us-ipo/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.94,
+      "date": "2026-03-27T19:11:28.000Z",
+      "summary": "SK hynix’s potential U.S. listing could raise $10-$14 billion to help it build more capacity, encourage others to follow, and end the 'RAMmageddon' memory shortage.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I Asked ChatGPT 500 Questions. Here Are the Ads I Saw Most Often",
+      "url": "https://www.wired.com/story/i-asked-chatgpt-500-questions-here-are-the-ads-i-saw-most-often/",
+      "source": "Wired AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-03-27T10:30:00.000Z",
+      "summary": "Ads are rolling out across the US on ChatGPT’s free tier. I asked OpenAI's bot 500 questions to see what these ads were like and how they related to my prompts.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "$500 GPU outperforms Claude Sonnet on coding benchmarks",
+      "url": "https://github.com/itigges22/ATLAS",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7899999999999999,
+      "date": "2026-03-26T17:31:24.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: Open-Source Animal Crossing–Style UI for Claude Code Agents",
+      "url": "https://github.com/outworked/outworked/releases/tag/v0.3.0",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7699999999999999,
+      "date": "2026-03-27T17:25:05.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Matlab Alternatives 2026: Benchmarks, GPU, Browser and Compatibility Compared",
+      "url": "https://runmat.com/blog/free-matlab-alternatives",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-03-25T01:02:55.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Capability-Based Security for Redox: Namespace and CWD as Capabilities",
+      "url": "https://www.redox-os.org/news/nlnet-cap-nsmgr-cwd/",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-27T19:06:44.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Netflix raises prices for every subscription tier by up to 12.5 percent",
+      "url": "https://arstechnica.com/gadgets/2026/03/netflix-increases-prices-for-all-plans-by-up-to-2-per-month/",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-27T16:25:50.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The Download: the internet’s best weather app, and why people freeze their brains",
+      "url": "https://www.technologyreview.com/2026/03/27/1134755/the-download-best-weather-forecasting-app-why-people-freeze-brains/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-03-27T12:32:54.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. How a couple of ski bums built the internet’s best weather app&#160; The best snow-forecasting app for skiers&#160;isn’t&#160;a&#160;federally-funded&#160;service or a big-name brand.&#160;It’s&#160;OpenSnow, a startup that uses government data, its own AI&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Here&#8217;s why some people choose cryonics to store their bodies and brains after death",
+      "url": "https://www.technologyreview.com/2026/03/27/1134705/cryonics-store-bodies-brains-after-death/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-03-27T09:00:00.000Z",
+      "summary": "This week I reported on some rather unusual research that focuses on the brain of L. Stephen Coles. Coles was a gerontologist who died from pancreatic cancer in 2014. He had spent the latter part of his career specializing in human longevity. And before he died, he decided to have his brain preserved by a&#8230;",
+      "category": "ai_research"
+    }
+  ]
+}

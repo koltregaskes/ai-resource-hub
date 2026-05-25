@@ -1,0 +1,330 @@
+{
+  "generated": "2026-05-25T14:37:38.305Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-02",
+  "article_count": 20,
+  "archived_story_count": 459,
+  "articles": [
+    {
+      "title": "Tool orchestration > model benchmarks. MCP connects any model to any tool without API keys. That's the real shift: system design matters more than intelligence scores. Built 13 tools across Claude, Codex, local. Same shipping pace. Archite…",
+      "url": "https://x.com/HudBeer/status/2050622456436818111",
+      "source": "X / @hudbeer",
+      "tags": [
+        "evaluation",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T17:04:26.000Z",
+      "summary": "Tool orchestration > model benchmarks. MCP connects any model to any tool without API keys. That's the real shift: system design matters more than intelligence scores. Built 13 tools across Claude, Codex, local. Same shipping pace. Architecture wins.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI models are now available on Amazon Bedrock, letting you run GPT-4o and o1 through AWS's managed inference layer. No separate OpenAI account needed, bills through your AWS spend. Worth it if you're already deep in the AWS ecosystem a…",
+      "url": "https://x.com/OpenSourceAIHub/status/2050625627540123871",
+      "source": "X / @opensourceaihub",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T17:17:03.000Z",
+      "summary": "OpenAI models are now available on Amazon Bedrock, letting you run GPT-4o and o1 through AWS's managed inference layer. No separate OpenAI account needed, bills through your AWS spend. Worth it if you're already deep in the AWS ecosystem and want unified billing + enterprise",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@ValsAI: GPT-5.5 Benchmarks — Terminal Bench 82.7%, Expert SWE 73.1%, BrowseComp 84.4%",
+      "url": "https://x.com/ValsAI/status/2047376725177504177",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:22:17.033Z",
+      "summary": "Vals AI published GPT-5.5's full benchmark profile: Terminal Bench 82.7%, Expert SWE 73.1%, GDPval 84.9%, OSWorld 78.7%, BrowseComp 84.4%. It ranks #2 on the overall Vals Index.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "xAI's latest model release shows Musk betting hard on reasoning speed over raw scale. Key insight: while everyone else chases parameter counts, xAI is optimizing for inference efficiency. Lower cost per token = faster adoption in enterpris…",
+      "url": "https://x.com/DKnowledgeVault/status/2050576050174726229",
+      "source": "X / @dknowledgevault",
+      "tags": [
+        "pricing_change",
+        "inference"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T14:00:02.000Z",
+      "summary": "xAI's latest model release shows Musk betting hard on reasoning speed over raw scale. Key insight: while everyone else chases parameter counts, xAI is optimizing for inference efficiency. Lower cost per token = faster adoption in enterprise. This is the move that quietly wins",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Got Attention. Infrastructure Comes Next. @OpenAI didn’t just launch products, it reset the market’s attention. Every breakthrough in AI creates more demand for compute, verification, and infrastructure that can scale beyond closed syst…",
+      "url": "https://x.com/OriginsNetwork_/status/2050534969584595041",
+      "source": "X / @originsnetwork_",
+      "tags": [
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "architecture",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T11:16:48.000Z",
+      "summary": "AI Got Attention. Infrastructure Comes Next. @OpenAI didn’t just launch products, it reset the market’s attention. Every breakthrough in AI creates more demand for compute, verification, and infrastructure that can scale beyond closed systems. As more AI agents are being",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The ARC-AGI-3 Data Says Something Anthropic Does Not Want You to Notice",
+      "url": "https://x.com/haider1/status/2050349556211020091",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T23:49:55.116Z",
+      "summary": "Braygent highlights that Opus 4.6 outscores Opus 4.7 on ARC-AGI-3, identifying an underreported capability regression in Anthropic's model update as the real story behind the benchmark results.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google may be testing a new Gemini 3 Flash model on the Arena right now The model seems to be showing up on Codearena unusually often, which is usually a good indication that they are testing a new model When DeepSeek tested V4, the model…",
+      "url": "https://x.com/AiBattle_/status/2050440005475033519",
+      "source": "X / @aibattle_",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 0.92,
+      "date": "2026-05-02T04:59:27.000Z",
+      "summary": "Google may be testing a new Gemini 3 Flash model on the Arena right now The model seems to be showing up on Codearena unusually often, which is usually a good indication that they are testing a new model When DeepSeek tested V4, the model showed up very frequently in the text",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🤖 AI Agents Weekly: Codex for Everyday Work, Cursor SDK, Mistral Workflows, LLM Knowledge Bases, Agentic Harness Engineering, and More",
+      "url": "https://nlp.elvissaravia.com/p/ai-agents-weekly-codex-for-everyday",
+      "source": "NLP News (Elvis Saravia)",
+      "tags": [
+        "research_paper",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 0.9,
+      "date": "2026-05-02T18:00:31.861Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "MoCapAnything V2: End-to-End Motion Capture for Arbitrary Skeletons",
+      "url": "https://paperswithcode.com/papers/2604.28130",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-02T06:01:31.928Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "ACM CAIS 2026 — May 26-29 in San Jose: Four Days on AI and Agentic Systems",
+      "url": "https://x.com/CAISconf/status/2042703186038014224",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:23:29.285Z",
+      "summary": "ACM CAIS 2026 runs May 26-29 in San Jose with four days focused on AI and agentic systems, including a full workshop day. Early-bird pricing runs through May 5.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Two Papers Accepted at ICML 2026 — Machine Learning's Premier Conference Fills Up",
+      "url": "https://x.com/tourzhao/status/2049934754494005653",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:23:29.285Z",
+      "summary": "Multiple researchers announced ICML 2026 acceptances this week, including a spotlight paper and collaborative work on causal and statistical learning methods.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@WesRoth: Meta Launches Ads MCP — Claude and ChatGPT Can Now Manage Meta Ad Accounts",
+      "url": "https://x.com/WesRoth/status/2050606311440531809",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:23:29.285Z",
+      "summary": "Meta launched its Ads MCP and CLI, creating a direct bridge for frontier AI models like Claude and ChatGPT to access and interact with the Meta Ads ecosystem through natural language.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Kept having dreams last night about the game system... I think why this is weighing so heavy is because I don't want to launch with any Gemini api calls(cheap, fast, practically free but I dunno if scalable) so I'm actually building base t…",
+      "url": "https://x.com/genondemand3d/status/2050539325763293222",
+      "source": "X / @genondemand3d",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T11:34:07.000Z",
+      "summary": "Kept having dreams last night about the game system... I think why this is weighing so heavy is because I don't want to launch with any Gemini api calls(cheap, fast, practically free but I dunno if scalable) so I'm actually building base training and mcp and hopefully it'll grow",
+      "category": "ai_tools"
+    },
+    {
+      "title": "http:// B.AI just went live and it feels less like a product launch, and more like a shift in how AI infrastructure is accessed. One API key now unlocks major frontier models: Claude, GPT, Gemini, Kimi, GLM, MiniMax - all in a single abstr…",
+      "url": "https://x.com/JackSSS_ETH/status/2050476492509827146",
+      "source": "X / @jacksss_eth",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T07:24:26.000Z",
+      "summary": "http:// B.AI just went live and it feels less like a product launch, and more like a shift in how AI infrastructure is accessed. One API key now unlocks major frontier models: Claude, GPT, Gemini, Kimi, GLM, MiniMax - all in a single abstraction layer. For builders,",
+      "category": "ai_tools"
+    },
+    {
+      "title": "KodHau is live! If you work with AI agents, have dev team and never update your documentation, tired of explaining Claude Code or Cursor your codebase, past decisions & architecture - give it a try, it's free! http:// kodhau.com With this…",
+      "url": "https://x.com/im_zhas/status/2050475990875275626",
+      "source": "X / @im_zhas",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T07:22:26.000Z",
+      "summary": "KodHau is live! If you work with AI agents, have dev team and never update your documentation, tired of explaining Claude Code or Cursor your codebase, past decisions & architecture - give it a try, it's free! http:// kodhau.com With this MCP your agent will now have",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Just Beat Claude Code in GitHub Stars and Nobody Is Talking About It",
+      "url": "https://x.com/aakashgupta/status/2050349093969694825",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T23:49:55.116Z",
+      "summary": "Braygent highlights the Hermes GitHub star milestone as the underreported open source AI agent story of the week, arguing it signals a turning point in open versus closed AI competition.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Grok 4.3 Just Launched for Real — Not Beta, Not Early Access, Full Release",
+      "url": "https://x.com/Techmeme/status/2050348591110344717",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T23:49:55.116Z",
+      "summary": "Braygent frames Grok 4.3's full launch as underreported compared to its beta announcement, highlighting always-on reasoning, Custom Voices, and Imagine Agent Mode as significant additions.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Codex released /pets just yesterday It went giga viral overnight people are make /pet versions of the actual house pets and even themselves This has mspaintify/scriblification potential Trenches love pets and AI The one that launche…",
+      "url": "https://x.com/WorkForUrBags/status/2050534946389844149",
+      "source": "X / @workforurbags",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.95,
+      "date": "2026-05-02T11:16:42.000Z",
+      "summary": "OpenAI Codex released /pets just yesterday It went giga viral overnight people are make /pet versions of the actual house pets and even themselves This has mspaintify/scriblification potential Trenches love pets and AI The one that launched previously had bad ticker,",
+      "category": "ai_tools"
+    },
+    {
+      "title": "xAI Token Processing Collapsed 90% — From 6 Trillion to 0.6 Trillion Per Week",
+      "url": "https://x.com/ttunguz/status/2046815725285945820",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-02T16:22:17.034Z",
+      "summary": "Tomasz Tunguz reported that xAI's token processing volume collapsed from 6 trillion tokens per week in late 2025 to 0.6 trillion by April 2026 — a 90% decline that explains the 11% GPU utilization.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Everyone on X seems to be building a business. That’s why this platform is such a good place for inspiration. Ideas, products, launches, failures, growth lessons, AI tools, SaaS, local businesses — it’s all here. You just need to pay atten…",
+      "url": "https://x.com/Compinder/status/2050629132996780052",
+      "source": "X / @compinder",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.93,
+      "date": "2026-05-02T17:30:58.000Z",
+      "summary": "Everyone on X seems to be building a business. That’s why this platform is such a good place for inspiration. Ideas, products, launches, failures, growth lessons, AI tools, SaaS, local businesses — it’s all here. You just need to pay attention.",
+      "category": "ai_tools"
+    }
+  ]
+}

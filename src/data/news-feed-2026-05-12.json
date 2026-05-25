@@ -1,0 +1,230 @@
+{
+  "generated": "2026-05-25T14:37:38.612Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-12",
+  "article_count": 14,
+  "archived_story_count": 612,
+  "articles": [
+    {
+      "title": "Simplifying Alignment: From RLHF to Direct Preference Optimization (DPO)    ariG23498 • Jan 19, 2025 •  50",
+      "url": "https://huggingface.co/blog/ariG23498/rlhf-to-dpo",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "dataset",
+        "training"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset",
+        "training"
+      ],
+      "importance": 1,
+      "date": "2026-05-12T18:00:16.479Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Safety Evals Should Project Test-Time Compute    Cerru02 • about 24 hours ago •  3",
+      "url": "https://huggingface.co/blog/Cerru02/safety-evals-should-project-ttc",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.94,
+      "date": "2026-05-12T18:00:16.474Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Forever Healthy Releases AI4L 1.0 for Practical Longevity",
+      "url": "https://lifespan.io/forever-healthy-releases-ai4l-1-0-for-practical-longevity/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=forever-healthy-releases-ai4l-1-0-for-practical-longevity",
+      "source": "Lifespan.io Research",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.96,
+      "date": "2026-05-12T16:00:07.000Z",
+      "summary": "We are super excited to share with you that today we released AI4L &#8211; &#8220;AI for Practical Longevity&#8221;, an open-source system that enables anyone to produce rigorous, evidence-based reviews of health and [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "5 Questions for Russell Wald",
+      "url": "https://www.politico.com/newsletters/digital-future-daily/2026/05/08/5-questions-for-russell-wald-00911932",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-12T18:00:20.103Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Universal AI is “a pathway to AI fluency that’s accessible and approachable to anyone, anywhere”",
+      "url": "https://news.mit.edu/2026/universal-ai-pathway-to-ai-fluency-accessible-to-anyone-0512",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-12T18:00:16.506Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Q&A: Expanding MIT’s global reach through Universal Learning",
+      "url": "https://news.mit.edu/2026/qa-expanding-mit-global-reach-through-universal-learning-0512",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-12T18:00:16.503Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "You do the work. Big Tech takes the model.    urroxyz • about 18 hours ago •  3",
+      "url": "https://huggingface.co/blog/urroxyz/you-do-the-work",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-12T18:00:16.477Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Pixal3D: Pixel-Aligned 3D Generation from Images",
+      "url": "https://paperswithcode.com/papers/2605.10922",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.76,
+      "date": "2026-05-12T18:00:33.755Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA and SAP Bring Trust to Specialized Agents",
+      "url": "https://blogs.nvidia.com/blog/sap-specialized-agents/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-12T18:00:32.085Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "SpaceX completes fueling test, setting stage for first launch of Starship V3",
+      "url": "https://arstechnica.com/space/2026/05/spacex-completes-fueling-test-setting-stage-for-first-launch-of-starship-v3/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-12T18:00:22.252Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Credit: VentureBeat made with ChatGPT-Images-2.0",
+      "url": "https://venturebeat.com/technology/thinking-machines-shows-off-preview-of-near-realtime-ai-voice-and-video-conversation-with-new-interaction-models",
+      "source": "VentureBeat AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-12T06:00:45.042Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Lawsuit says ChatGPT told FSU shooter that targeting children would bring more attention",
+      "url": "https://www.nbcnews.com/news/us-news/openai-sued-chatgpts-alleged-role-guiding-fsu-shooter-rcna344443",
+      "source": "The Verge AI",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-05-12T06:00:40.185Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Intel to Make Apple Chips in Landmark Foundry Pact",
+      "url": "https://aimagazine.com/news/intel-to-make-apple-chips-in-new-deal",
+      "source": "AI Magazine",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.58,
+      "date": "2026-05-12T18:00:48.061Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sample and Map from a Single Convex Potential: Generation using Conjugate Moment Measures",
+      "url": "https://machinelearning.apple.com/research/sample-and-map",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.58,
+      "date": "2026-05-12T06:00:48.602Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

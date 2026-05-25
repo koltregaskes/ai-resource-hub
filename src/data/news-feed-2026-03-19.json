@@ -1,0 +1,147 @@
+{
+  "generated": "2026-05-25T14:37:37.169Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-03-19",
+  "article_count": 9,
+  "archived_story_count": 98,
+  "articles": [
+    {
+      "title": "Multiverse Computing pushes its compressed AI models into the mainstream",
+      "url": "https://techcrunch.com/2026/03/19/multiverse-computing-pushes-its-compressed-ai-models-into-the-mainstream/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-03-19T08:00:00.000Z",
+      "summary": "After compressing models from major AI labs, including OpenAI, Meta, DeepSeek, and Mistral AI, Multiverse Computing has launched both an app that showcases the capabilities of its compressed models and an API that makes them more widely available.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "‘Uncanny Valley’: Nvidia’s ‘Super Bowl of AI,’ Tesla Disappoints, and Meta’s VR Metaverse ‘Shutdown’",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-nvidia-gtc-tesla-disappointed-fans-meta-horizon-worlds/",
+      "source": "Wired AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8499999999999999,
+      "date": "2026-03-19T21:43:56.000Z",
+      "summary": "In this episode, we dive into Nvidia’s annual developer conference and what CEO Jensen Huang is saying about the future of the company.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hyper-optimized reverse geocoding API",
+      "url": "https://github.com/traccar/traccar-geocoder",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7599999999999999,
+      "date": "2026-03-19T14:38:51.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "NanoGPT Slowrun: 10x Data Efficiency with Infinite Compute",
+      "url": "https://qlabs.sh/10x",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.73,
+      "date": "2026-03-19T18:51:25.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Scaling Karpathy's Autoresearch: What Happens When the Agent Gets a GPU Cluster",
+      "url": "https://blog.skypilot.co/scaling-autoresearch/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-19T16:55:45.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Ramtrack.eu – RAM Price Intelligence",
+      "url": "https://ramtrack.eu",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-19T12:39:46.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The Download: Quantum computing for health, and why the world doesn&#8217;t recycle more nuclear waste",
+      "url": "https://www.technologyreview.com/2026/03/19/1134413/the-download-quantum-computing-health-recycling-nuclear-waste/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-19T12:17:02.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. A $5 million prize awaits proof that quantum computers can solve health care problems&#160; In a laboratory on the outskirts of Oxford, a quantum computer built from atoms and light awaits&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Gluon: Explicit Performance",
+      "url": "https://www.lei.chat/posts/gluon-explicit-performance/",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-16T15:20:01.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Why the world doesn’t recycle more nuclear waste",
+      "url": "https://www.technologyreview.com/2026/03/19/1134399/nuclear-waste-reprocessing/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-03-19T10:00:00.000Z",
+      "summary": "The prospect of making trash useful is always fascinating to me. Whether it’s used batteries, solar panels, or spent nuclear fuel, getting use out of something destined for disposal sounds like a win all around. In nuclear energy, figuring out what to do with waste has always been a challenge, since the material needs to&#8230;",
+      "category": "ai_research"
+    }
+  ]
+}
