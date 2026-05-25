@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T21:51:42.262Z",
+  "generatedAt": "2026-05-25T23:20:15.894Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-25T21:51:41.673Z",
+      "lastCheckedAt": "2026-05-25T23:20:15.159Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-25T21:51:41.016Z",
+      "lastCheckedAt": "2026-05-25T23:20:14.662Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-25T21:51:41.966Z",
+      "lastCheckedAt": "2026-05-25T23:20:15.502Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-25T21:51:42.176Z",
+      "lastCheckedAt": "2026-05-25T23:20:15.786Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-25T21:51:41.436Z",
+      "lastCheckedAt": "2026-05-25T23:20:15.015Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-25T21:51:41.021Z",
+      "lastCheckedAt": "2026-05-25T23:20:14.537Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-25T21:51:42.254Z",
+      "lastCheckedAt": "2026-05-25T23:20:15.887Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -356,7 +356,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-23T12:59:49.000Z",
+          "id": "together-feed-0-2026-05-25T22:04:56.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-25T22:04:56.000Z",
+          "updatedAt": "2026-05-25T22:04:56.000Z",
+          "resolvedAt": "2026-05-25T22:04:56.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-05-25T21:51:54.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-25T21:51:54.000Z",
+          "updatedAt": "2026-05-25T21:51:54.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-23T12:59:49.000Z",
           "title": "Google Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -367,7 +389,7 @@
           "summary": "Google Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-1-2026-05-23T12:41:57.000Z",
+          "id": "together-feed-3-2026-05-23T12:41:57.000Z",
           "title": "Google Gemma 4 31B IT went down",
           "status": "investigating",
           "impact": "major",
@@ -376,28 +398,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-22T05:11:38.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-22T05:11:38.000Z",
-          "updatedAt": "2026-05-22T05:11:38.000Z",
-          "resolvedAt": "2026-05-22T05:11:38.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-22T04:58:46.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-22T04:58:46.000Z",
-          "updatedAt": "2026-05-22T04:58:46.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT went down"
         }
       ]
     },
