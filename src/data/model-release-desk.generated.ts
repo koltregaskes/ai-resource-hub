@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-05-25T07:00:52.240Z",
+  "generatedAt": "2026-05-25T12:43:39.466Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -34,7 +34,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2.5,
       "outputPrice": 7.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.7 Max is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.50 in / $7.50 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.7-max); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.7 Max is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -86,7 +86,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1,
       "outputPrice": 2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Grok Build 0.1 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 256K tokens. Current tracked pricing: $1.00 in / $2.00 out per million tokens. Auto-tracked from OpenRouter discovery (x-ai/grok-build-0.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok Build 0.1 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -109,18 +109,17 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "xAI releases Grok Build 0.1.219, fixing kitty terminal layout issues and paste-related data loss",
-          "url": "https://www.digg.com/ai/hlcz47lw",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
+          "title": "Elon, stop trying to make Grok happen",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen",
+          "source": "The Verge",
+          "date": "2026-05-22",
+          "summary": "There is a harsh truth about Elon Musk's \"truth-seeking\" AI chatbot Grok: It's not very good, and not many people are using it. That's the takeaway of a new Reuters report, which found that Grok barely appears in federal records of how the US government used AI last year. It's not the only sign xAI's [&#8230;]",
           "routingTags": [
             "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
           ]
         }
       ],
@@ -141,7 +140,7 @@ export const modelReleaseDesk = {
       "ageDays": 6,
       "status": "tracking",
       "priority": "high",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://ai.google.dev/gemini-api/docs/models",
       "providerStatusUrl": "https://status.cloud.google.com",
       "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
@@ -154,12 +153,12 @@ export const modelReleaseDesk = {
       "inputPrice": 1.5,
       "outputPrice": 9,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Gemini 3.5 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $9.00 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.5-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.5 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.5 Flash is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -171,15 +170,90 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Google actually launched with Gemini 3.5 Flash, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Keep the chronology explicit: this release landed on 19 May 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Google’s new anything-to-anything AI model is wild",
+          "url": "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video",
+          "source": "The Verge",
+          "date": "2026-05-23",
+          "summary": "Last year I deepfaked my kid's stuffed animal to make it look like his plush deer was on vacation. It was an experiment to see if I could re-create the events depicted in a Gemini ad Google was running, and I never showed the videos of Buddy the deer on his adventures to my four-year-old. [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "We tried Google’s AI glasses and they’re almost there",
+          "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/",
+          "source": "TechCrunch",
+          "date": "2026-05-22",
+          "summary": "Google demoed prototype Android XR glasses that overlay Gemini-powered translation, navigation, and other information directly into your field of view.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Spotify takes on Google&#8217;s NotebookLM with its new app",
+          "url": "https://techcrunch.com/2026/05/21/spotify-debuts-a-new-desktop-app-for-creating-personal-podcasts/",
+          "source": "TechCrunch",
+          "date": "2026-05-21",
+          "summary": "Spotify is releasing the new desktop app as a research preview in more than 20 markets.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "100 things we announced at I/O 2026",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+          "source": "Google",
+          "date": "2026-05-20",
+          "summary": "This year at Google I/O 2026, we announced Gemini Omni, Google Antigravity, Universal Cart and so much more. Here are the highlights.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
+          "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+          "source": "Google",
+          "date": "2026-05-19",
+          "summary": "Introducing a $100 AI Ultra plan — plus, new features and benefits for Google AI Plus, Pro and Ultra subscribers.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini 3.5: frontier intelligence with action",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+          "source": "Google",
+          "date": "2026-05-19",
+          "summary": "At Google I/O we released Gemini 3.5, our latest series of models combining frontier intelligence with action.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-05-19-gemini-3-5-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "claude-opus-4.7-fast",
@@ -193,7 +267,7 @@ export const modelReleaseDesk = {
       "ageDays": 13,
       "status": "tracking",
       "priority": "high",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://docs.anthropic.com",
       "providerStatusUrl": "https://status.claude.com",
       "providerDocsUrl": "https://docs.anthropic.com",
@@ -206,12 +280,12 @@ export const modelReleaseDesk = {
       "inputPrice": 30,
       "outputPrice": 150,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Claude Opus 4.7 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $30.00 in / $150.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.7-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.7 (Fast) is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.7 (Fast) is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -223,90 +297,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Opus 4.7 (Fast), and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 12 May 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Chinese creator CuiMao releases a fictional cinematic parody about Anthropic and CEO Dario Amodei made with seedance2 AI — The dramatic fan-fiction references the floral Claude logo.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=6",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=4",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Chinese creator CuiMao releases the final video in a series detailing the origin story of Anthropic CEO Dario Amodei — The seedance2 collaboration features a hidden Easter egg.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=5",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=1",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "I made a Claude Code plugin that draws matplotlib figures in that soft-pastel \"alignment research blog\" style",
-          "url": "https://reddit.com/r/ClaudeAI/comments/1tm7w3d/i_made_a_claude_code_plugin_that_draws_matplotlib/",
-          "source": "Reddit r/ClaudeAI",
-          "date": "2026-05-24",
-          "summary": "You know the look — the figures in Anthropic's research posts. Bold sans-serif titles, scatter points under a smoothed trend line with a shaded band, those bars with the slightly rounded tops, little ↓better badges in the corner. I kept wanting my own plots to look like that and kept rebuilding the same matplotlib boilerplate, so I packaged it into a Claude Code skill. It's called nice-figures. Once it's installed, you just describe the plot you want and Claude picks it up automatically: &gt;\"training-curve plot of these RL scores with a smoothed trend and shaded band, research-blog style\" &gt;\"grouped bar chart comparing three models across four evals, with the rounded bar tops\" Bring your own CSV/arrays and it maps them onto the closest chart; describe a figure with no data and it generates a clearly-marked synthetic placeholder. Under the hood it's one skill plus a small style helper (matplotlib + numpy, no other deps) and 16 chart recipes — training curves, grouped bars, ROC, heatmaps, scaling-law scatter, forest plots, Pareto fronts, etc. White background by default so the output is paper/conference-ready, with an opt-in cream background for the blog look. Install: /plugin ma…",
-          "routingTags": [
-            "model_release",
-            "evaluation",
-            "research_paper",
-            "training",
-            "ai_safety"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-05-12-claude-opus-4-7-fast-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gpt-chat",
@@ -333,7 +332,7 @@ export const modelReleaseDesk = {
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GPT Chat Latest is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-chat-latest); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT Chat Latest is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -356,15 +355,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -400,7 +397,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access Anthropic frontier preview launched with Project Glasswing for defensive cybersecurity work. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -423,94 +420,23 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "The Real AI Question Is Whether Product Behavior Beats Press Releases",
-          "url": "https://x.com/aiedge_/status/2058384253042467194",
-          "source": "Aligned News (Scoble)",
-          "date": "2026-05-24",
-          "summary": "Claude Mythos appearing in product surfaces raises the question of whether AI news now breaks through interfaces before announcements.",
+          "title": "Mozilla says 271 vulnerabilities found by Mythos have \"almost no false positives\"",
+          "url": "https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/",
+          "source": "Ars Technica",
+          "date": "2026-05-07",
+          "summary": "The developer of Firefox says it has \"completely bought in\" on AI-assisted bug discovery.",
           "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Chinese creator CuiMao releases a fictional cinematic parody about Anthropic and CEO Dario Amodei made with seedance2 AI — The dramatic fan-fiction references the floral Claude logo.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=6",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
+            "research_paper",
             "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=4",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Chinese creator CuiMao releases the final video in a series detailing the origin story of Anthropic CEO Dario Amodei — The seedance2 collaboration features a hidden Easter egg.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=5",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=1",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "I made a Claude Code plugin that draws matplotlib figures in that soft-pastel \"alignment research blog\" style",
-          "url": "https://reddit.com/r/ClaudeAI/comments/1tm7w3d/i_made_a_claude_code_plugin_that_draws_matplotlib/",
-          "source": "Reddit r/ClaudeAI",
-          "date": "2026-05-24",
-          "summary": "You know the look — the figures in Anthropic's research posts. Bold sans-serif titles, scatter points under a smoothed trend line with a shaded band, those bars with the slightly rounded tops, little ↓better badges in the corner. I kept wanting my own plots to look like that and kept rebuilding the same matplotlib boilerplate, so I packaged it into a Claude Code skill. It's called nice-figures. Once it's installed, you just describe the plot you want and Claude picks it up automatically: &gt;\"training-curve plot of these RL scores with a smoothed trend and shaded band, research-blog style\" &gt;\"grouped bar chart comparing three models across four evals, with the rounded bar tops\" Bring your own CSV/arrays and it maps them onto the closest chart; describe a figure with no data and it generates a clearly-marked synthetic placeholder. Under the hood it's one skill plus a small style helper (matplotlib + numpy, no other deps) and 16 chart recipes — training curves, grouped bars, ROC, heatmaps, scaling-law scatter, forest plots, Pareto fronts, etc. White background by default so the output is paper/conference-ready, with an opt-in cream background for the blog look. Install: /plugin ma…",
-          "routingTags": [
-            "model_release",
-            "evaluation",
-            "research_paper",
-            "training",
-            "ai_safety"
+            "hardware",
+            "policy"
           ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-04-07-claude-mythos-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "grok-4.3",
@@ -524,7 +450,7 @@ export const modelReleaseDesk = {
       "ageDays": 25,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://docs.x.ai/developers/models",
       "providerStatusUrl": "https://status.x.ai",
       "providerDocsUrl": "https://docs.x.ai/developers/models",
@@ -537,12 +463,12 @@ export const modelReleaseDesk = {
       "inputPrice": 1.25,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Grok 4.3 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $1.25 in / $2.50 out per million tokens. Auto-tracked from OpenRouter discovery (x-ai/grok-4.3); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "xAI's Grok 4.3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "dek": "xAI's Grok 4.3 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -554,15 +480,30 @@ export const modelReleaseDesk = {
         "Lead with the hook: what xAI actually launched with Grok 4.3, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Keep the chronology explicit: this release landed on 30 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Elon, stop trying to make Grok happen",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen",
+          "source": "The Verge",
+          "date": "2026-05-22",
+          "summary": "There is a harsh truth about Elon Musk's \"truth-seeking\" AI chatbot Grok: It's not very good, and not many people are using it. That's the takeaway of a new Reuters report, which found that Grok barely appears in federal records of how the US government used AI last year. It's not the only sign xAI's [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-04-30-grok-4-3-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "mistral-medium-3-5",
@@ -589,7 +530,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.5,
       "outputPrice": 7.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Mistral Medium 3.5 is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-medium-3-5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Mistral's Mistral Medium 3.5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -641,7 +582,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.3,
       "outputPrice": 1.8,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.5 Plus 2026-04-20 is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.30 in / $1.80 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-plus-20260420); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5 Plus 2026-04-20 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -693,7 +634,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.188,
       "outputPrice": 1.125,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.6 Flash is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.19 in / $1.13 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -732,7 +673,7 @@ export const modelReleaseDesk = {
       "ageDays": 28,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
@@ -745,12 +686,12 @@ export const modelReleaseDesk = {
       "inputPrice": 0.15,
       "outputPrice": 1,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.6 35B A3B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.15 in / $1.00 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-35b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.6 35B A3B is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.6 35B A3B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -762,40 +703,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Alibaba actually launched with Qwen3.6 35B A3B, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 27 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Could someone please help explain these results?",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmwgen/could_someone_please_help_explain_these_results/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-25",
-          "summary": "I'm running Qwen3.6-35B-A3B-UD-Q4\\_K\\_XL.gguf on 12 GB VRAM and 32 GB RAM via the TurboQuant variant of llama.cpp. I increased the --n-cpu-moe value from 8 to 30, and my inference rate doubled! (17 to 34 tok/s). Shouldn't it have slowed down from the CPU having to do so much more work? Here is the command I'm using: llama-cli -m Qwen3.6-35B-A3B-UD-Q4\\_K\\_XL.gguf -ngl 999 --n-cpu-moe 30 -fa on --cache-type-k turbo4 --cache-type-v turbo3 -c 262144 -t 6 -b 2048 -ub 512 --temp 0.6 --top-k 20 --top-p 0.95 --min-p 0 --no-mmap Increasing it further to 41 didn't touch the inference rate. What's going on? And if you're feeling charitable, could you also tell me how I might squeeze a little more speed out of this setup, if possible?",
-          "routingTags": [
-            "model_release",
-            "architecture",
-            "inference"
-          ]
-        },
-        {
-          "title": "qwen3.6-35b-a3b-mtp running on GTX 1060 6GB",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tml97m/qwen3635ba3bmtp_running_on_gtx_1060_6gb/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "I have this old 10-year old Dell T5810 workstation with 32GB ddr3(?) memory and a E5-2698v3 (16 cores 32 threads), a GTX 1060 6GB that's used for mining back in the old days (paid itself back many times over). I managed to get the model running with LMStudio in Windows(!). My settings are: Model: unsloth qwen3.6-35B-a3b-MTP-GGUF UD Q4\\_K\\_XL Ctx length:131072 GPU offload 41 CPU threadpool size 16 Max concurrent 4 Number of experts 8 Number of MOE layers offloaded to CPU 41 MTP max draft 3 KV quantization both Q4\\_0 prefill 16k about 130-150tps decode 4k about 16tps Very usable for chat.",
-          "routingTags": [
-            "model_release",
-            "architecture",
-            "hardware"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-04-27-qwen3-6-35b-a3b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "qwen3.6-max",
@@ -822,7 +738,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.04,
       "outputPrice": 6.24,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.6 Max Preview is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $1.04 in / $6.24 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-max-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 Max Preview is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -874,7 +790,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.3,
       "outputPrice": 3.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.6 27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.30 in / $3.20 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-27b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 27B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -926,7 +842,7 @@ export const modelReleaseDesk = {
       "inputPrice": 30,
       "outputPrice": 180,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GPT-5.5 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.5-pro); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.5 Pro is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -949,15 +865,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -991,9 +905,9 @@ export const modelReleaseDesk = {
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "OpenAI's GPT-5.5 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.5 is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1014,22 +928,41 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+          "url": "https://openai.com/index/databricks",
+          "source": "OpenAI",
+          "date": "2026-05-15",
+          "summary": "Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.",
           "routingTags": [
             "model_release",
-            "evaluation",
-            "api_update"
+            "benchmark"
+          ]
+        },
+        {
+          "title": "How Ramp engineers accelerate code review with Codex",
+          "url": "https://openai.com/index/ramp",
+          "source": "OpenAI",
+          "date": "2026-05-20",
+          "summary": "How Ramp engineers use Codex with GPT-5.5 to review code and ship improvements, allowing them to get substantive feedback in minutes instead of hours.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
+          "routingTags": [
+            "model_release"
           ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-04-24-gpt-5-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "deepseek-v4-pro",
@@ -1056,7 +989,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.435,
       "outputPrice": 0.87,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "DeepSeek V4 Pro is a currently tracked release from DeepSeek. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.43 in / $0.87 out per million tokens. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4-pro); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "DeepSeek's DeepSeek V4 Pro is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1108,7 +1041,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.1,
       "outputPrice": 0.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "DeepSeek V4 Flash is a currently tracked release from DeepSeek. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.10 in / $0.20 out per million tokens. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "DeepSeek's DeepSeek V4 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1160,7 +1093,7 @@ export const modelReleaseDesk = {
       "inputPrice": 8,
       "outputPrice": 15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GPT-5.4 Image 2 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 272K tokens. Current tracked pricing: $8.00 in / $15.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.4-image-2); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.4 Image 2 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1183,15 +1116,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -1225,7 +1156,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.73,
       "outputPrice": 3.49,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Kimi K2.6 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.73 in / $3.49 out per million tokens. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k2.6); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Moonshot AI's Kimi K2.6 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1264,7 +1195,7 @@ export const modelReleaseDesk = {
       "ageDays": 39,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://docs.anthropic.com",
       "providerStatusUrl": "https://status.claude.com",
       "providerDocsUrl": "https://docs.anthropic.com",
@@ -1277,12 +1208,12 @@ export const modelReleaseDesk = {
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.7); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.7 is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1294,90 +1225,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Opus 4.7, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 16 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Chinese creator CuiMao releases a fictional cinematic parody about Anthropic and CEO Dario Amodei made with seedance2 AI — The dramatic fan-fiction references the floral Claude logo.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=6",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=4",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Chinese creator CuiMao releases the final video in a series detailing the origin story of Anthropic CEO Dario Amodei — The seedance2 collaboration features a hidden Easter egg.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=5",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=1",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "I made a Claude Code plugin that draws matplotlib figures in that soft-pastel \"alignment research blog\" style",
-          "url": "https://reddit.com/r/ClaudeAI/comments/1tm7w3d/i_made_a_claude_code_plugin_that_draws_matplotlib/",
-          "source": "Reddit r/ClaudeAI",
-          "date": "2026-05-24",
-          "summary": "You know the look — the figures in Anthropic's research posts. Bold sans-serif titles, scatter points under a smoothed trend line with a shaded band, those bars with the slightly rounded tops, little ↓better badges in the corner. I kept wanting my own plots to look like that and kept rebuilding the same matplotlib boilerplate, so I packaged it into a Claude Code skill. It's called nice-figures. Once it's installed, you just describe the plot you want and Claude picks it up automatically: &gt;\"training-curve plot of these RL scores with a smoothed trend and shaded band, research-blog style\" &gt;\"grouped bar chart comparing three models across four evals, with the rounded bar tops\" Bring your own CSV/arrays and it maps them onto the closest chart; describe a figure with no data and it generates a clearly-marked synthetic placeholder. Under the hood it's one skill plus a small style helper (matplotlib + numpy, no other deps) and 16 chart recipes — training curves, grouped bars, ROC, heatmaps, scaling-law scatter, forest plots, Pareto fronts, etc. White background by default so the output is paper/conference-ready, with an opt-in cream background for the blog look. Install: /plugin ma…",
-          "routingTags": [
-            "model_release",
-            "evaluation",
-            "research_paper",
-            "training",
-            "ai_safety"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-04-16-claude-opus-4-7-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "claude-opus-4.6-fast",
@@ -1391,7 +1247,7 @@ export const modelReleaseDesk = {
       "ageDays": 48,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://docs.anthropic.com",
       "providerStatusUrl": "https://status.claude.com",
       "providerDocsUrl": "https://docs.anthropic.com",
@@ -1404,12 +1260,12 @@ export const modelReleaseDesk = {
       "inputPrice": 30,
       "outputPrice": 150,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Claude Opus 4.6 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $30.00 in / $150.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.6-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.6 (Fast) is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1421,90 +1277,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Opus 4.6 (Fast), and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 7 Apr 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Chinese creator CuiMao releases a fictional cinematic parody about Anthropic and CEO Dario Amodei made with seedance2 AI — The dramatic fan-fiction references the floral Claude logo.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=6",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=4",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Chinese creator CuiMao releases the final video in a series detailing the origin story of Anthropic CEO Dario Amodei — The seedance2 collaboration features a hidden Easter egg.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=5",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=1",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "I made a Claude Code plugin that draws matplotlib figures in that soft-pastel \"alignment research blog\" style",
-          "url": "https://reddit.com/r/ClaudeAI/comments/1tm7w3d/i_made_a_claude_code_plugin_that_draws_matplotlib/",
-          "source": "Reddit r/ClaudeAI",
-          "date": "2026-05-24",
-          "summary": "You know the look — the figures in Anthropic's research posts. Bold sans-serif titles, scatter points under a smoothed trend line with a shaded band, those bars with the slightly rounded tops, little ↓better badges in the corner. I kept wanting my own plots to look like that and kept rebuilding the same matplotlib boilerplate, so I packaged it into a Claude Code skill. It's called nice-figures. Once it's installed, you just describe the plot you want and Claude picks it up automatically: &gt;\"training-curve plot of these RL scores with a smoothed trend and shaded band, research-blog style\" &gt;\"grouped bar chart comparing three models across four evals, with the rounded bar tops\" Bring your own CSV/arrays and it maps them onto the closest chart; describe a figure with no data and it generates a clearly-marked synthetic placeholder. Under the hood it's one skill plus a small style helper (matplotlib + numpy, no other deps) and 16 chart recipes — training curves, grouped bars, ROC, heatmaps, scaling-law scatter, forest plots, Pareto fronts, etc. White background by default so the output is paper/conference-ready, with an opt-in cream background for the blog look. Install: /plugin ma…",
-          "routingTags": [
-            "model_release",
-            "evaluation",
-            "research_paper",
-            "training",
-            "ai_safety"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-04-07-claude-opus-4-6-fast-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "glm-5.1",
@@ -1531,7 +1312,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.98,
       "outputPrice": 3.08,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GLM 5.1 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.98 in / $3.08 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5.1 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1583,9 +1364,9 @@ export const modelReleaseDesk = {
       "inputPrice": 0.12,
       "outputPrice": 0.37,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.12 in / $0.37 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemma 4 31B is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemma 4 31B is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1609,23 +1390,75 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Google’s new anything-to-anything AI model is wild",
+          "url": "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video",
+          "source": "The Verge",
+          "date": "2026-05-23",
+          "summary": "Last year I deepfaked my kid's stuffed animal to make it look like his plush deer was on vacation. It was an experiment to see if I could re-create the events depicted in a Gemini ad Google was running, and I never showed the videos of Buddy the deer on his adventures to my four-year-old. [&#8230;]",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
           ]
         },
         {
-          "title": "gemma 4 e2b quality degrades after ~30-40 continuous inferences on 4gb vram?",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tm9ao9/gemma_4_e2b_quality_degrades_after_3040/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "running gemma e2b via llama-server for continuous background tasks on a 1650 4gb. works great initially but after maybe 30-40 calls the outputs start getting noticeably worse — shorter responses, missing fields in json output, sometimes just empty. restarting llama-server fixes it immediately. using: flash-attn on, single slot, 6144 context, ngl 15 anyone seen this? is this a kv cache thing or just vram fragmentation over time? if there's a way to handle it without restarting the whole server",
+          "title": "We tried Google’s AI glasses and they’re almost there",
+          "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/",
+          "source": "TechCrunch",
+          "date": "2026-05-22",
+          "summary": "Google demoed prototype Android XR glasses that overlay Gemini-powered translation, navigation, and other information directly into your field of view.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Spotify takes on Google&#8217;s NotebookLM with its new app",
+          "url": "https://techcrunch.com/2026/05/21/spotify-debuts-a-new-desktop-app-for-creating-personal-podcasts/",
+          "source": "TechCrunch",
+          "date": "2026-05-21",
+          "summary": "Spotify is releasing the new desktop app as a research preview in more than 20 markets.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "100 things we announced at I/O 2026",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+          "source": "Google",
+          "date": "2026-05-20",
+          "summary": "This year at Google I/O 2026, we announced Gemini Omni, Google Antigravity, Universal Cart and so much more. Here are the highlights.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
+          "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+          "source": "Google",
+          "date": "2026-05-19",
+          "summary": "Introducing a $100 AI Ultra plan — plus, new features and benefits for Google AI Plus, Pro and Ultra subscribers.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini 3.5: frontier intelligence with action",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+          "source": "Google",
+          "date": "2026-05-19",
+          "summary": "At Google I/O we released Gemini 3.5, our latest series of models combining frontier intelligence with action.",
           "routingTags": [
             "model_release"
           ]
@@ -1633,8 +1466,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-31b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "qwen3.6-plus",
@@ -1661,7 +1494,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.325,
       "outputPrice": 1.95,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1713,7 +1546,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GLM 5V Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5v-turbo); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5V Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1752,7 +1585,7 @@ export const modelReleaseDesk = {
       "ageDays": 55,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://docs.x.ai/developers/models",
       "providerStatusUrl": "https://status.x.ai",
       "providerDocsUrl": "https://docs.x.ai/developers/models",
@@ -1765,12 +1598,12 @@ export const modelReleaseDesk = {
       "inputPrice": 1.25,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $1.25 in / $2.50 out per million tokens. xAI flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "xAI's Grok 4.20 is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "dek": "xAI's Grok 4.20 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1782,15 +1615,30 @@ export const modelReleaseDesk = {
         "Lead with the hook: what xAI actually launched with Grok 4.20, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Keep the chronology explicit: this release landed on 31 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Elon, stop trying to make Grok happen",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen",
+          "source": "The Verge",
+          "date": "2026-05-22",
+          "summary": "There is a harsh truth about Elon Musk's \"truth-seeking\" AI chatbot Grok: It's not very good, and not many people are using it. That's the takeaway of a new Reuters report, which found that Grok barely appears in federal records of how the US government used AI last year. It's not the only sign xAI's [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-03-31-grok-4-20-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "grok-4.20-multi-agent",
@@ -1804,7 +1652,7 @@ export const modelReleaseDesk = {
       "ageDays": 55,
       "status": "tracking",
       "priority": "watch",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://docs.x.ai/developers/models",
       "providerStatusUrl": "https://status.x.ai",
       "providerDocsUrl": "https://docs.x.ai/developers/models",
@@ -1817,12 +1665,12 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. xAI multi-agent Grok variant. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "dek": "xAI's Grok 4.20 Multi-Agent is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -1834,15 +1682,30 @@ export const modelReleaseDesk = {
         "Lead with the hook: what xAI actually launched with Grok 4.20 Multi-Agent, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Keep the chronology explicit: this release landed on 31 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Elon, stop trying to make Grok happen",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen",
+          "source": "The Verge",
+          "date": "2026-05-22",
+          "summary": "There is a harsh truth about Elon Musk's \"truth-seeking\" AI chatbot Grok: It's not very good, and not many people are using it. That's the takeaway of a new Reuters report, which found that Grok barely appears in federal records of how the US government used AI last year. It's not the only sign xAI's [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-03-31-grok-4-20-multi-agent-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "kimi-k2.5",
@@ -1869,7 +1732,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.57,
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Moonshot AI's Kimi K2 0711 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1921,7 +1784,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.1,
       "outputPrice": 0.1,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Reka Edge is a currently tracked release from Reka. It is positioned as an API-available model rather than a local-only release. Tracked context window: 16.4K tokens. Current tracked pricing: $0.10 in / $0.10 out per million tokens. Auto-tracked from OpenRouter discovery (rekaai/reka-edge); awaiting official verification.",
       "dek": "Reka's Reka Edge is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1973,7 +1836,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.279,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.28 in / $1.20 out per million tokens. Current MiniMax flagship family line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "MiniMax's MiniMax M2.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2025,7 +1888,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.75,
       "outputPrice": 4.5,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-05-25 07:00:15",
+      "pricingUpdated": "2026-05-25 12:43:17",
       "summary": "GPT-5.4 Mini is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.75 in / $4.50 out per million tokens. Smaller GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.4 Mini is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2048,15 +1911,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -2090,7 +1951,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.2,
       "outputPrice": 1.25,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-05-25 07:00:15",
+      "pricingUpdated": "2026-05-25 12:43:17",
       "summary": "GPT-5.4 Nano is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $0.20 in / $1.25 out per million tokens. Fastest and cheapest GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.4 Nano is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2113,15 +1974,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -2155,7 +2014,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.15,
       "outputPrice": 0.6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Mistral Small 4 is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-small-2603); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Mistral's Mistral Small 4 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2207,7 +2066,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5 Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2259,7 +2118,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.09,
       "outputPrice": 0.45,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Nemotron 3 Super is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.09 in / $0.45 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-super-120b-a12b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "NVIDIA's Nemotron 3 Super is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2298,7 +2157,7 @@ export const modelReleaseDesk = {
       "ageDays": 76,
       "status": "tracking",
       "priority": "backfill",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
@@ -2311,12 +2170,12 @@ export const modelReleaseDesk = {
       "inputPrice": 0.04,
       "outputPrice": 0.15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.5-9B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.04 in / $0.15 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-9b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Alibaba's Qwen3.5-9B is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Alibaba's Qwen3.5-9B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -2328,27 +2187,15 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Alibaba actually launched with Qwen3.5-9B, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 10 Mar 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "GPU VRAM only for small models with llama.cpp: is it possible?",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmeknt/gpu_vram_only_for_small_models_with_llamacpp_is/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "I'm still in my learning process and so far I've been able to make satisfying use of my setup (4070 with 12GB VRAM + 32GB RAM and iGPU for my GUI). I've been able to run both Gemma4 26B and Qwen 3.6 35B MoEs up to high quants with large context and have about 40 t/s with both. However, I'd like to try a smaller model, ideally a quant of Qwen3.5-9B, with full VRAM usage and no host memory to slow down things. In theory it should be possible, but even gemma4-e2b with a low quant (Q4_IXS) with small context (8192) ends up using about 3.5 GB of RAM on top of the GPU. I've tried all the command line options I could find with llama-server, but so far...no cigar. What am I doing wrong?",
-          "routingTags": [
-            "model_release",
-            "hardware"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-03-10-qwen3-5-9b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "gpt-5.4",
@@ -2375,7 +2222,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-05-25 07:00:15",
+      "pricingUpdated": "2026-05-25 12:43:17",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.4 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2398,15 +2245,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -2440,7 +2285,7 @@ export const modelReleaseDesk = {
       "inputPrice": 30,
       "outputPrice": 180,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-05-25 07:00:15",
+      "pricingUpdated": "2026-05-25 12:43:17",
       "summary": "GPT-5.4 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Premium GPT-5.4 tier. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.4 Pro is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2463,15 +2308,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -2505,7 +2348,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GPT-5.3 Chat is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.3-chat); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.3 Chat is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2528,15 +2371,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -2557,7 +2398,7 @@ export const modelReleaseDesk = {
       "ageDays": 88,
       "status": "tracking",
       "priority": "backfill",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://ai.google.dev/gemini-api/docs/models",
       "providerStatusUrl": "https://status.cloud.google.com",
       "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
@@ -2570,12 +2411,12 @@ export const modelReleaseDesk = {
       "inputPrice": 0.5,
       "outputPrice": 3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Nano Banana 2 (Gemini 3.1 Flash Image Preview) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.50 in / $3.00 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.1-flash-image-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -2587,15 +2428,90 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Google actually launched with Nano Banana 2 (Gemini 3.1 Flash Image Preview), and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Keep the chronology explicit: this release landed on 26 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Google’s new anything-to-anything AI model is wild",
+          "url": "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video",
+          "source": "The Verge",
+          "date": "2026-05-23",
+          "summary": "Last year I deepfaked my kid's stuffed animal to make it look like his plush deer was on vacation. It was an experiment to see if I could re-create the events depicted in a Gemini ad Google was running, and I never showed the videos of Buddy the deer on his adventures to my four-year-old. [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "We tried Google’s AI glasses and they’re almost there",
+          "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/",
+          "source": "TechCrunch",
+          "date": "2026-05-22",
+          "summary": "Google demoed prototype Android XR glasses that overlay Gemini-powered translation, navigation, and other information directly into your field of view.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Spotify takes on Google&#8217;s NotebookLM with its new app",
+          "url": "https://techcrunch.com/2026/05/21/spotify-debuts-a-new-desktop-app-for-creating-personal-podcasts/",
+          "source": "TechCrunch",
+          "date": "2026-05-21",
+          "summary": "Spotify is releasing the new desktop app as a research preview in more than 20 markets.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "100 things we announced at I/O 2026",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+          "source": "Google",
+          "date": "2026-05-20",
+          "summary": "This year at Google I/O 2026, we announced Gemini Omni, Google Antigravity, Universal Cart and so much more. Here are the highlights.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
+          "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+          "source": "Google",
+          "date": "2026-05-19",
+          "summary": "Introducing a $100 AI Ultra plan — plus, new features and benefits for Google AI Plus, Pro and Ultra subscribers.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini 3.5: frontier intelligence with action",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+          "source": "Google",
+          "date": "2026-05-19",
+          "summary": "At Google I/O we released Gemini 3.5, our latest series of models combining frontier intelligence with action.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-02-26-nano-banana-2-gemini-3-1-flash-image-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "qwen3.5-35b-a3b",
@@ -2622,7 +2538,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.139,
       "outputPrice": 1,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.5-35B-A3B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $1.00 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-35b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-35B-A3B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2674,7 +2590,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.195,
       "outputPrice": 1.56,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.5-27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.20 in / $1.56 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-27b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-27B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2726,7 +2642,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.26,
       "outputPrice": 2.08,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.5-122B-A10B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.26 in / $2.08 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-122b-a10b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-122B-A10B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2778,7 +2694,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.065,
       "outputPrice": 0.26,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.5-Flash is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.07 in / $0.26 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-flash-02-23); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5-Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2830,7 +2746,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.75,
       "outputPrice": 14,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GPT-5.3-Codex is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $1.75 in / $14.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.3-codex); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.3-Codex is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2853,15 +2769,13 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
+          "title": "Introducing OpenAI for Singapore",
+          "url": "https://openai.com/index/introducing-openai-for-singapore",
+          "source": "OpenAI",
+          "date": "2026-05-19",
+          "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
           "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
+            "model_release"
           ]
         }
       ],
@@ -2895,12 +2809,12 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 12,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
-      "summary": "Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 0 related stories and 2 benchmark signals to review.",
+      "pricingUpdated": "2026-05-25 12:43:16",
+      "summary": "Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 6 related stories and 2 benchmark signals to review.",
       "whyItMatters": [
         "There are already 2 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -2912,7 +2826,7 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Google actually launched with Gemini 3.1 Pro Preview, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Keep the chronology explicit: this release landed on 19 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
@@ -2933,11 +2847,86 @@ export const modelReleaseDesk = {
           "source": "Google"
         }
       ],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "Google’s new anything-to-anything AI model is wild",
+          "url": "https://www.theverge.com/tech/936507/gemini-omni-hands-on-deepfake-ai-video",
+          "source": "The Verge",
+          "date": "2026-05-23",
+          "summary": "Last year I deepfaked my kid's stuffed animal to make it look like his plush deer was on vacation. It was an experiment to see if I could re-create the events depicted in a Gemini ad Google was running, and I never showed the videos of Buddy the deer on his adventures to my four-year-old. [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "We tried Google’s AI glasses and they’re almost there",
+          "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/",
+          "source": "TechCrunch",
+          "date": "2026-05-22",
+          "summary": "Google demoed prototype Android XR glasses that overlay Gemini-powered translation, navigation, and other information directly into your field of view.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Spotify takes on Google&#8217;s NotebookLM with its new app",
+          "url": "https://techcrunch.com/2026/05/21/spotify-debuts-a-new-desktop-app-for-creating-personal-podcasts/",
+          "source": "TechCrunch",
+          "date": "2026-05-21",
+          "summary": "Spotify is releasing the new desktop app as a research preview in more than 20 markets.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "100 things we announced at I/O 2026",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+          "source": "Google",
+          "date": "2026-05-20",
+          "summary": "This year at Google I/O 2026, we announced Gemini Omni, Google Antigravity, Universal Cart and so much more. Here are the highlights.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
+          "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+          "source": "Google",
+          "date": "2026-05-19",
+          "summary": "Introducing a $100 AI Ultra plan — plus, new features and benefits for Google AI Plus, Pro and Ultra subscribers.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Gemini 3.5: frontier intelligence with action",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+          "source": "Google",
+          "date": "2026-05-19",
+          "summary": "At Google I/O we released Gemini 3.5, our latest series of models combining frontier intelligence with action.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-preview-release-brief.md",
       "benchmarkCount": 2,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "claude-sonnet-4.6",
@@ -2964,12 +2953,12 @@ export const modelReleaseDesk = {
       "inputPrice": 3,
       "outputPrice": 15,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-05-25 07:00:15",
-      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 6 related stories and 5 benchmark signals to review.",
+      "pricingUpdated": "2026-05-25 12:43:17",
+      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 0 related stories and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -2981,7 +2970,7 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Sonnet 4.6, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 17 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
@@ -3026,96 +3015,11 @@ export const modelReleaseDesk = {
           "source": "Anthropic"
         }
       ],
-      "relatedStories": [
-        {
-          "title": "Gemma 4 2B handling structured JSON output + tool calling + reasoning traces correctly via Spring AI / LM Studio — including identifying a real Java bug in code review",
-          "url": "https://reddit.com/r/LocalLLaMA/comments/1tmdk11/gemma_4_2b_handling_structured_json_output_tool/",
-          "source": "Reddit r/LocalLLaMA",
-          "date": "2026-05-24",
-          "summary": "Wanted to share a result I didn't expect to work. Running google/gemma-4-e2b locally through LM Studio, exposed via OpenAI-compatible endpoint, called from a Spring Boot app using Spring AI's ChatClient abstraction. Three things I tested: 1. STRUCTURED OUTPUT (schema-conformant JSON) Used BeanOutputConverter to force the model to return a CodeReview object with specific fields (issues, qualityScore, suggestions, summary). Sent it a Java snippet with a == vs .equals() string comparison bug. Result: Perfect JSON, no markdown wrapping, all fields populated correctly. Correctly identified the bug AND suggested a Streams refactor. Quality score 50/100 — interestingly identical to what Claude Sonnet 4.6 returned on the same input, while GPT-4o was less strict and gave 55. 2. TOOL CALLING Registered a weather function with @Tool annotation. Asked \"should I bring an umbrella in Riga?\". Result: Model correctly decided to invoke the tool, extracted \"Riga\" as the location parameter, received the mock weather response, and wrapped it back into natural language. No hand-holding, no \"I would call the weather tool if I had access\" — it actually called it. 3. REASONING TRACES LM Studio's response…",
-          "routingTags": [
-            "model_release",
-            "evaluation",
-            "api_update"
-          ]
-        },
-        {
-          "title": "Created a desktop dev tools app entirely using Claude design and Claude sonnet",
-          "url": "https://reddit.com/r/ClaudeAI/comments/1tmd7c0/created_a_desktop_dev_tools_app_entirely_using/",
-          "source": "Reddit r/ClaudeAI",
-          "date": "2026-05-24",
-          "summary": "There are a handful of developer tools I use almost every day, and over time I realized I was constantly relying on random websites while basically trusting them not to store, inspect, or share whatever data I pasted into them. I looked at existing tool collections like CyberChef and DevToys. CyberChef is powerful, but I personally didn't like the Docker-centric workflow, and while DevToys is great, it still didn't cover all the tools I regularly need. I also wasn't a fan of the UI/UX direction of most existing options. So I decided to build my own. I had some unused Claude design credits, so I spent a couple of hours refining the product requirements, workflows, and overall visual direction. After that, I used Claude Sonnet 4.6 to help iterate on the tech stack, architecture, implementation process, and generated designs. From there, I built the core of the app and spent the next two days refining it into something I felt comfortable releasing for my own use and for anyone else who might find it useful. The project is called dev-core-tools. It's completely free and open source.",
-          "routingTags": [
-            "model_release",
-            "architecture",
-            "open_source"
-          ]
-        },
-        {
-          "title": "Chinese creator CuiMao releases a fictional cinematic parody about Anthropic and CEO Dario Amodei made with seedance2 AI — The dramatic fan-fiction references the floral Claude logo.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=6",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=4",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Chinese creator CuiMao releases the final video in a series detailing the origin story of Anthropic CEO Dario Amodei — The seedance2 collaboration features a hidden Easter egg.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=5",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=1",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-02-17-claude-sonnet-4-6-release-brief.md",
       "benchmarkCount": 5,
-      "storyCount": 6,
-      "sourceCount": 7
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "qwen3.5-plus-02-15",
@@ -3142,7 +3046,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.26,
       "outputPrice": 1.56,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.5 Plus 2026-02-15 is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.26 in / $1.56 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-plus-02-15); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5 Plus 2026-02-15 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3194,7 +3098,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.39,
       "outputPrice": 2.34,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3.5 397B A17B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.39 in / $2.34 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-397b-a17b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5 397B A17B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3246,7 +3150,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.6,
       "outputPrice": 1.92,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "GLM 5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $0.60 in / $1.92 out per million tokens. Zhipu flagship GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3298,7 +3202,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.15,
       "outputPrice": 1.15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "MiniMax M2.5 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.15 in / $1.15 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m2.5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "MiniMax's MiniMax M2.5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3350,12 +3254,12 @@ export const modelReleaseDesk = {
       "inputPrice": 15,
       "outputPrice": 75,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-05-25 07:00:15",
-      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 5 related stories and 5 benchmark signals to review.",
+      "pricingUpdated": "2026-05-25 12:43:17",
+      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 0 related stories and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -3367,7 +3271,7 @@ export const modelReleaseDesk = {
         "Lead with the hook: what Anthropic actually launched with Claude Opus 4.6, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Keep the chronology explicit: this release landed on 5 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [
@@ -3412,86 +3316,11 @@ export const modelReleaseDesk = {
           "source": "Anthropic"
         }
       ],
-      "relatedStories": [
-        {
-          "title": "Chinese creator CuiMao releases a fictional cinematic parody about Anthropic and CEO Dario Amodei made with seedance2 AI — The dramatic fan-fiction references the floral Claude logo.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=6",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=4",
-          "source": "Digg AI",
-          "date": "2026-05-25",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Chinese creator CuiMao releases the final video in a series detailing the origin story of Anthropic CEO Dario Amodei — The seedance2 collaboration features a hidden Easter egg.",
-          "url": "https://www.digg.com/ai/vz785dra?rank=5",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "Andrej Karpathy joining Anthropic sparks industry debate over the prestige of Member of Technical Staff titles — Yi Tay says AI research and engineering roles are merging",
-          "url": "https://www.digg.com/ai/dzxn82lm?rank=1",
-          "source": "Digg AI",
-          "date": "2026-05-24",
-          "summary": "",
-          "routingTags": [
-            "announcement",
-            "model_release",
-            "open_source",
-            "ai_agents",
-            "research_paper",
-            "industry_move"
-          ]
-        },
-        {
-          "title": "I made a Claude Code plugin that draws matplotlib figures in that soft-pastel \"alignment research blog\" style",
-          "url": "https://reddit.com/r/ClaudeAI/comments/1tm7w3d/i_made_a_claude_code_plugin_that_draws_matplotlib/",
-          "source": "Reddit r/ClaudeAI",
-          "date": "2026-05-24",
-          "summary": "You know the look — the figures in Anthropic's research posts. Bold sans-serif titles, scatter points under a smoothed trend line with a shaded band, those bars with the slightly rounded tops, little ↓better badges in the corner. I kept wanting my own plots to look like that and kept rebuilding the same matplotlib boilerplate, so I packaged it into a Claude Code skill. It's called nice-figures. Once it's installed, you just describe the plot you want and Claude picks it up automatically: &gt;\"training-curve plot of these RL scores with a smoothed trend and shaded band, research-blog style\" &gt;\"grouped bar chart comparing three models across four evals, with the rounded bar tops\" Bring your own CSV/arrays and it maps them onto the closest chart; describe a figure with no data and it generates a clearly-marked synthetic placeholder. Under the hood it's one skill plus a small style helper (matplotlib + numpy, no other deps) and 16 chart recipes — training curves, grouped bars, ROC, heatmaps, scaling-law scatter, forest plots, Pareto fronts, etc. White background by default so the output is paper/conference-ready, with an opt-in cream background for the blog look. Install: /plugin ma…",
-          "routingTags": [
-            "model_release",
-            "evaluation",
-            "research_paper",
-            "training",
-            "ai_safety"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-02-05-claude-opus-4-6-release-brief.md",
       "benchmarkCount": 5,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "qwen3-coder-next",
@@ -3518,7 +3347,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.11,
       "outputPrice": 0.8,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-05-25 07:00:14",
+      "pricingUpdated": "2026-05-25 12:43:16",
       "summary": "Qwen3 Coder Next is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.11 in / $0.80 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3-coder-next); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3 Coder Next is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
