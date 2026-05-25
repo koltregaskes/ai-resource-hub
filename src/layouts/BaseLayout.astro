@@ -199,54 +199,46 @@ const mobileSections = [
 
 const footerSections = [
   {
-    title: 'Find',
+    title: 'Main pages',
     links: [
       { href: `${base}models/`, label: 'Model directory' },
-      { href: `${base}leaderboard/`, label: 'Leaderboard desk' },
-      { href: `${base}compare/llm/`, label: 'LLM comparison' },
-      { href: `${base}compare/head-to-head/`, label: 'Head-to-head' },
-      { href: `${base}new/`, label: 'Release desk' },
-    ],
-  },
-  {
-    title: 'Benchmarks',
-    links: [
-      { href: `${base}reliability-floor/`, label: 'Reliability Floor' },
       { href: `${base}benchmarks/`, label: 'Benchmark library' },
-      { href: `${base}agi/`, label: 'AGI progress' },
-      { href: `${base}coding/`, label: 'Coding models' },
-      { href: `${base}reasoning/`, label: 'Reasoning models' },
+      { href: `${base}compare/llm/`, label: 'Compare models' },
+      { href: `${base}news/`, label: 'AI news' },
+      { href: `${base}guides/`, label: 'Guides' },
+      { href: `${base}glossary/`, label: 'Glossary' },
     ],
   },
   {
-    title: 'Prices',
+    title: 'Reference tools',
     links: [
-      { href: `${base}calculator/`, label: 'Pricing calculator' },
+      { href: `${base}leaderboard/`, label: 'Leaderboard desk' },
       { href: `${base}best-value/`, label: 'Best value' },
       { href: `${base}cheapest/`, label: 'Cheapest models' },
+      { href: `${base}calculator/`, label: 'Pricing calculator' },
       { href: `${base}pricing-trends/`, label: 'Pricing trends' },
       { href: `${base}token-counter/`, label: 'Token counter' },
     ],
   },
   {
-    title: 'Learn',
+    title: 'More from Kol',
     links: [
-      { href: `${base}guides/`, label: 'Guides' },
-      { href: `${base}academy/`, label: 'AI Academy' },
-      { href: `${base}glossary/`, label: 'Glossary' },
-      { href: `${base}prompts/`, label: 'Prompt library' },
-      { href: `${base}methodology/`, label: 'Methodology' },
+      { href: 'https://koltregaskes.com/', label: "Kol's Korner", external: true },
+      { href: 'https://axylusion.com/', label: 'Axy Lusion', external: true },
+      { href: 'https://ghostinthemodels.com/', label: 'Ghost in the Models', external: true },
+      { href: 'https://koltregaskesphotography.com/', label: 'KT Photography', external: true },
     ],
   },
   {
-    title: 'Sources',
+    title: 'Contact and social',
     links: [
-      { href: `${base}references/`, label: 'References' },
+      { href: `${base}about/`, label: 'About this hub' },
       { href: `${base}collection-policy/`, label: 'Collection policy' },
-      { href: `${base}updates/`, label: 'Updates & freshness' },
-      { href: `${base}changelog/`, label: 'Changelog' },
-      { href: `${base}news/`, label: 'AI news' },
+      { href: `${base}methodology/`, label: 'Methodology' },
       { href: `${base}news/pipeline/`, label: 'News pipeline' },
+      { href: `${base}rss.xml`, label: 'RSS feed' },
+      { href: 'https://x.com/koltregaskes', label: 'X / Twitter', external: true },
+      { href: 'https://github.com/koltregaskes/ai-resource-hub', label: 'GitHub repo', external: true },
     ],
   },
 ];
@@ -698,7 +690,7 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
     <footer class="relative mt-auto border-t border-(--color-border-strong) bg-(--color-bg-secondary)">
       <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-(--color-accent)/40 to-transparent"></div>
       <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr_1fr]">
+        <div class="grid gap-10 lg:grid-cols-[1.35fr_1fr_1fr_1fr_1fr]">
           <div class="max-w-sm">
             <div class="mb-4 flex items-center gap-2.5">
               <img src={`${base}favicon.svg`} alt="" class="h-8 w-8 rounded-[0.95rem] border border-(--color-border-strong) bg-(--color-bg-tertiary) p-0.5 shadow-[0_10px_24px_rgba(0,0,0,0.16)]" width="32" height="32" />
@@ -720,6 +712,8 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
                 {section.links.map((link) => (
                   <a
                     href={link.href}
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener noreferrer' : undefined}
                     class="block text-sm text-(--color-text-secondary) transition-colors hover:text-(--color-text-primary)"
                   >
                     {link.label}
@@ -730,9 +724,37 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
           ))}
         </div>
 
+        <section
+          class="mt-10 grid gap-4 border-y border-(--color-border) py-5 md:grid-cols-[minmax(160px,0.8fr)_minmax(240px,1.5fr)_auto] md:items-center"
+          aria-label="Elusion Works umbrella"
+        >
+          <div>
+            <p class="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-(--color-accent)">Umbrella home</p>
+            <a
+              href="https://elusionworks.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-1 block font-display text-xl font-semibold text-(--color-text-primary) transition-colors hover:text-(--color-accent)"
+            >
+              Elusion Works
+            </a>
+          </div>
+          <p class="max-w-2xl text-sm leading-6 text-(--color-text-secondary)">
+            The showcase for Kol's websites, tools, games, and web experiments.
+          </p>
+          <a
+            href="https://elusionworks.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs font-semibold uppercase tracking-[0.18em] text-(--color-accent) transition-colors hover:text-(--color-text-primary)"
+          >
+            Visit Elusion Works -&gt;
+          </a>
+        </section>
+
         <div class="mt-10 flex flex-col gap-2 border-t border-(--color-border) pt-6 text-xs uppercase tracking-[0.18em] text-(--color-text-muted) sm:flex-row sm:items-center sm:justify-between">
-          <span>Copyright {new Date().getFullYear()} The AI Resource Hub</span>
-          <p>Independent reference for research and comparison.</p>
+          <span>Copyright {new Date().getFullYear()} The AI Resource Hub / Kol Tregaskes</span>
+          <p>Independent reference for research, comparison, corrections, and source review.</p>
         </div>
       </div>
     </footer>
