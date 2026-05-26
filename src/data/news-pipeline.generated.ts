@@ -1,5 +1,5 @@
 export const newsPipelineSnapshot = {
-  "generatedAt": "2026-05-25T07:00:55.639Z",
+  "generatedAt": "2026-05-26T07:14:32.161Z",
   "sourceOfTruth": {
     "estateManifestPath": "estate.yml",
     "siteFiltersPath": "shared/website-tools/pipelines/news/site-filters.json",
@@ -188,7 +188,7 @@ export const newsPipelineSnapshot = {
     {
       "id": "crypto_defi",
       "label": "Crypto Defi",
-      "keywordCount": 8
+      "keywordCount": 6
     },
     {
       "id": "crypto_regulation",
@@ -198,7 +198,7 @@ export const newsPipelineSnapshot = {
     {
       "id": "crypto_trading",
       "label": "Crypto Trading",
-      "keywordCount": 10
+      "keywordCount": 9
     },
     {
       "id": "dataset",
