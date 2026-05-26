@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 26 May 2026, 08:42 UTC |
+| Generated | 26 May 2026, 16:14 UTC |
 | Providers tracked | 40 |
 | Public models | 322 |
 | Active models | 113 |
 | Tracking models | 208 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 66 |
+| News items in cache | 50 |
 | Release-desk entries | 53 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 26 May 2026, 08:42 UTC |
+| Latest visible refresh | 26 May 2026, 16:14 UTC |
 | Current evaluated composite leader | Claude Opus 4.6 (67.2) |
 | Latest tracked release | Qwen3.7 Max (21 May 2026) |
 
