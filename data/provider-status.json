@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T16:45:52.162Z",
+  "generatedAt": "2026-05-27T18:13:16.808Z",
   "providers": [
     {
       "id": "openai",
@@ -12,14 +12,22 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T16:45:50.167Z",
+      "lastCheckedAt": "2026-05-27T18:13:15.478Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "3 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
+          "name": "CLI",
+          "status": "degraded_performance"
+        },
+        {
           "name": "Embeddings",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex API",
           "status": "degraded_performance"
         },
         {
@@ -27,30 +35,22 @@
           "status": "degraded_performance"
         },
         {
+          "name": "VS Code extension",
+          "status": "degraded_performance"
+        },
+        {
           "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
           "status": "operational"
         }
       ],
       "activeIncidents": [
         {
-          "id": "01KSN40TAYQYGAKFA50HNH22YG",
-          "title": "Android ChatGPT Business users having trouble switching workspaces",
-          "status": "investigating",
+          "id": "01KSN9ATSF1WCJ5ZTQSR1H9CC7",
+          "title": "Codex Context Compaction Latency",
+          "status": "identified",
           "impact": "minor",
-          "startedAt": "2026-05-27T16:24:26.000Z",
-          "updatedAt": "2026-05-27T16:30:20.000Z",
+          "startedAt": "2026-05-27T17:57:17.000Z",
+          "updatedAt": "2026-05-27T17:57:17.000Z",
           "resolvedAt": null,
           "summary": null
         },
@@ -60,19 +60,29 @@
           "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-05-27T14:47:02.000Z",
-          "updatedAt": "2026-05-27T15:59:22.000Z",
+          "updatedAt": "2026-05-27T17:54:42.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KSN40TAYQYGAKFA50HNH22YG",
+          "title": "Android ChatGPT Business users having trouble switching workspaces",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-05-27T16:24:26.000Z",
+          "updatedAt": "2026-05-27T16:30:20.000Z",
           "resolvedAt": null,
           "summary": null
         }
       ],
       "recentIncidents": [
         {
-          "id": "01KSN40TAYQYGAKFA50HNH22YG",
-          "title": "Android ChatGPT Business users having trouble switching workspaces",
-          "status": "investigating",
+          "id": "01KSN9ATSF1WCJ5ZTQSR1H9CC7",
+          "title": "Codex Context Compaction Latency",
+          "status": "identified",
           "impact": "minor",
-          "startedAt": "2026-05-27T16:24:26.000Z",
-          "updatedAt": "2026-05-27T16:30:20.000Z",
+          "startedAt": "2026-05-27T17:57:17.000Z",
+          "updatedAt": "2026-05-27T17:57:17.000Z",
           "resolvedAt": null,
           "summary": null
         },
@@ -82,7 +92,17 @@
           "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-05-27T14:47:02.000Z",
-          "updatedAt": "2026-05-27T15:59:22.000Z",
+          "updatedAt": "2026-05-27T17:54:42.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KSN40TAYQYGAKFA50HNH22YG",
+          "title": "Android ChatGPT Business users having trouble switching workspaces",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-05-27T16:24:26.000Z",
+          "updatedAt": "2026-05-27T16:30:20.000Z",
           "resolvedAt": null,
           "summary": null
         },
@@ -94,16 +114,6 @@
           "startedAt": "2026-05-26T17:01:35.000Z",
           "updatedAt": "2026-05-27T16:16:36.000Z",
           "resolvedAt": "2026-05-27T06:01:00.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KSJZHDY7E780KF9J2ZZ8M0GE",
-          "title": "Users unable to access chat support on help center",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-26T20:27:39.000Z",
-          "updatedAt": "2026-05-26T20:30:52.000Z",
-          "resolvedAt": "2026-05-26T20:30:52.000Z",
           "summary": null
         }
       ]
@@ -119,7 +129,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T16:45:51.156Z",
+      "lastCheckedAt": "2026-05-27T18:13:16.013Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,7 +149,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T16:45:50.214Z",
+      "lastCheckedAt": "2026-05-27T18:13:15.581Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -229,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T16:45:51.416Z",
+      "lastCheckedAt": "2026-05-27T18:13:16.306Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -249,7 +259,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T16:45:52.155Z",
+      "lastCheckedAt": "2026-05-27T18:13:16.564Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -314,7 +324,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T16:45:50.807Z",
+      "lastCheckedAt": "2026-05-27T18:13:15.757Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -368,7 +378,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T16:45:51.978Z",
+      "lastCheckedAt": "2026-05-27T18:13:16.485Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
