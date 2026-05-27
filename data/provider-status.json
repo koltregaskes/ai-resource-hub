@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T14:43:52.775Z",
+  "generatedAt": "2026-05-27T16:45:52.162Z",
   "providers": [
     {
       "id": "openai",
@@ -12,14 +12,18 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T14:43:51.236Z",
+      "lastCheckedAt": "2026-05-27T16:45:50.167Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "FedRAMP",
+          "name": "Embeddings",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Audio",
           "status": "degraded_performance"
         },
         {
@@ -37,33 +41,59 @@
         {
           "name": "Batch",
           "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
         {
-          "id": "01KSJKR3EXTMKY0C287HS1BR8P",
-          "title": "Login issues for FedRAMP users who recently logged out",
+          "id": "01KSN40TAYQYGAKFA50HNH22YG",
+          "title": "Android ChatGPT Business users having trouble switching workspaces",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-05-27T16:24:26.000Z",
+          "updatedAt": "2026-05-27T16:30:20.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KSMYEEWP0BZYANSMAXWJ3K59",
+          "title": "Elevated Latency and Errors on API",
           "status": "monitoring",
           "impact": "minor",
-          "startedAt": "2026-05-26T17:01:35.000Z",
-          "updatedAt": "2026-05-27T05:31:12.000Z",
+          "startedAt": "2026-05-27T14:47:02.000Z",
+          "updatedAt": "2026-05-27T15:59:22.000Z",
           "resolvedAt": null,
           "summary": null
         }
       ],
       "recentIncidents": [
         {
-          "id": "01KSJKR3EXTMKY0C287HS1BR8P",
-          "title": "Login issues for FedRAMP users who recently logged out",
+          "id": "01KSN40TAYQYGAKFA50HNH22YG",
+          "title": "Android ChatGPT Business users having trouble switching workspaces",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-05-27T16:24:26.000Z",
+          "updatedAt": "2026-05-27T16:30:20.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KSMYEEWP0BZYANSMAXWJ3K59",
+          "title": "Elevated Latency and Errors on API",
           "status": "monitoring",
           "impact": "minor",
-          "startedAt": "2026-05-26T17:01:35.000Z",
-          "updatedAt": "2026-05-27T05:31:12.000Z",
+          "startedAt": "2026-05-27T14:47:02.000Z",
+          "updatedAt": "2026-05-27T15:59:22.000Z",
           "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KSJKR3EXTMKY0C287HS1BR8P",
+          "title": "Login issues for FedRAMP users who recently logged out",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-26T17:01:35.000Z",
+          "updatedAt": "2026-05-27T16:16:36.000Z",
+          "resolvedAt": "2026-05-27T06:01:00.000Z",
           "summary": null
         },
         {
@@ -74,26 +104,6 @@
           "startedAt": "2026-05-26T20:27:39.000Z",
           "updatedAt": "2026-05-26T20:30:52.000Z",
           "resolvedAt": "2026-05-26T20:30:52.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KS88SRADTWQW27NYRAXMBAQN",
-          "title": "Increase in users hitting Codex rate limits",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-22T16:37:50.000Z",
-          "updatedAt": "2026-05-23T10:58:21.000Z",
-          "resolvedAt": "2026-05-23T10:58:20.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KS695P8GHC0NCMFE96C34KJ1",
-          "title": "Elevated latency and error rates for ChatGPT 5.5 Thinking",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-21T22:05:52.000Z",
-          "updatedAt": "2026-05-21T23:22:55.000Z",
-          "resolvedAt": "2026-05-21T23:22:55.000Z",
           "summary": null
         }
       ]
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T14:43:51.852Z",
+      "lastCheckedAt": "2026-05-27T16:45:51.156Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T14:43:51.210Z",
+      "lastCheckedAt": "2026-05-27T16:45:50.214Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +229,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T14:43:52.131Z",
+      "lastCheckedAt": "2026-05-27T16:45:51.416Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +249,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T14:43:52.460Z",
+      "lastCheckedAt": "2026-05-27T16:45:52.155Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +314,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T14:43:51.460Z",
+      "lastCheckedAt": "2026-05-27T16:45:50.807Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -358,7 +368,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T14:43:52.474Z",
+      "lastCheckedAt": "2026-05-27T16:45:51.978Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -367,7 +377,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-26T08:47:53.000Z",
+          "id": "together-feed-0-2026-05-27T16:16:16.000Z",
+          "title": "ZAI GLM 5 FP4 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-05-27T16:16:16.000Z",
+          "updatedAt": "2026-05-27T16:16:16.000Z",
+          "resolvedAt": "2026-05-27T16:16:16.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-05-27T15:24:02.000Z",
+          "title": "ZAI GLM 5 FP4 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-05-27T15:24:02.000Z",
+          "updatedAt": "2026-05-27T15:24:02.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5 FP4 went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-26T08:47:53.000Z",
           "title": "Qwen3.5 9B recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -378,7 +410,7 @@
           "summary": "Qwen3.5 9B recovered"
         },
         {
-          "id": "together-feed-1-2026-05-26T08:23:53.000Z",
+          "id": "together-feed-3-2026-05-26T08:23:53.000Z",
           "title": "Qwen3.5 9B went down",
           "status": "investigating",
           "impact": "major",
@@ -387,28 +419,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3.5 9B went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-25T22:04:56.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-25T22:04:56.000Z",
-          "updatedAt": "2026-05-25T22:04:56.000Z",
-          "resolvedAt": "2026-05-25T22:04:56.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-25T21:51:54.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-25T21:51:54.000Z",
-          "updatedAt": "2026-05-25T21:51:54.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
         }
       ]
     },

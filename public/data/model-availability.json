@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-27T12:31:05.871Z",
+  "generatedAt": "2026-05-27T16:45:59.076Z",
   "overview": {
-    "generatedAt": "2026-05-27T12:31:05.882Z",
+    "generatedAt": "2026-05-27T16:45:59.087Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
@@ -331,8 +331,8 @@
         "o1-mini",
         "GPT-4.1 Mini",
         "GPT-4.1 Nano",
-        "GPT-4o (2024-05-13)",
-        "GPT-4o-mini",
+        "GPT-4o",
+        "GPT-4o-mini (2024-07-18)",
         "GPT Audio",
         "GPT Audio Mini",
         "GPT Chat Latest",

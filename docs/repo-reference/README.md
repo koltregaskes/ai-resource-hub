@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 27 May 2026, 12:31 UTC |
+| Generated | 27 May 2026, 16:45 UTC |
 | Providers tracked | 40 |
 | Public models | 322 |
 | Active models | 113 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 53 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 27 May 2026, 12:31 UTC |
+| Latest visible refresh | 27 May 2026, 16:45 UTC |
 | Current evaluated composite leader | Claude Opus 4.6 (67.2) |
 | Latest tracked release | Qwen3.7 Max (21 May 2026) |
 
