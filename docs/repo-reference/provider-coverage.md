@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 28 May 2026, 17:01 UTC
+Generated: 28 May 2026, 19:44 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -8,7 +8,7 @@ This table shows how much of each provider's public model surface is currently r
 | --- | --- | --- | --- | --- | --- | --- |
 | OpenAI | 25 | 45 | 0 | GPT Chat Latest (5 May 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 10 | 18 | 0 | Gemini 3.5 Flash (19 May 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
-| Anthropic | 8 | 9 | 1 | Claude Opus 4.7 (Fast) (12 May 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
+| Anthropic | 8 | 11 | 1 | Claude Opus 4.8 (Fast) (27 May 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 6 | 0 | n/a | n/a | [docs](https://llama.meta.com/docs) |
 | Alibaba | 5 | 40 | 0 | Qwen3.7 Max (21 May 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | DeepSeek | 4 | 9 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |

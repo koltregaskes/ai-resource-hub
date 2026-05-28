@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 28 May 2026, 17:01 UTC
+Generated: 28 May 2026, 19:44 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 27 May 2026 | Claude Opus 4.8 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
+| 27 May 2026 | Claude Opus 4.8 | Anthropic | tracking | high | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
 | 21 May 2026 | Qwen3.7 Max | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 20 May 2026 | Grok Build 0.1 | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
 | 19 May 2026 | Gemini 3.5 Flash | Google | tracking | high | ready for editor | 0 | 4 | [official](https://ai.google.dev/gemini-api/docs/models) |
@@ -22,11 +24,9 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 27 Apr 2026 | Qwen3.6 Max Preview | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 27B | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 24 Apr 2026 | GPT-5.5 Pro | OpenAI | tracking | watch | ready for editor | 0 | 1 | [official](https://platform.openai.com/docs/models) |
-| 24 Apr 2026 | GPT-5.5 | OpenAI | tracking | watch | ready for editor | 0 | 3 | [official](https://platform.openai.com/docs/models) |
+| 24 Apr 2026 | GPT-5.5 | OpenAI | tracking | watch | ready for editor | 0 | 4 | [official](https://platform.openai.com/docs/models) |
 | 24 Apr 2026 | DeepSeek V4 Pro | DeepSeek | tracking | watch | needs research | 0 | 0 | [official](https://api-docs.deepseek.com) |
 | 24 Apr 2026 | DeepSeek V4 Flash | DeepSeek | tracking | watch | needs research | 0 | 0 | [official](https://api-docs.deepseek.com) |
 | 21 Apr 2026 | GPT-5.4 Image 2 | OpenAI | tracking | watch | ready for editor | 0 | 1 | [official](https://platform.openai.com/docs/models) |
-| 20 Apr 2026 | Kimi K2.6 | Moonshot AI | tracking | watch | needs research | 0 | 0 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
-| 16 Apr 2026 | Claude Opus 4.7 | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
