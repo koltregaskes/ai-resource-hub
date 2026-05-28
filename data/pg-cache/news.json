@@ -1,5 +1,197 @@
 [
   {
+    "id": "news-215cc629463f0bde637f",
+    "title": "Anthropic releases Opus 4.8 with new &#8216;dynamic workflow&#8217; tool",
+    "url": "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
+    "source": "TechCrunch",
+    "summary": "The new Opus model comes with a tool called Dynamic Workflows, for coordinating swarms of subagents.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T17:00:09.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-a8e64a26d282b58fb9fb",
+    "title": "A $2,000 AI-generated film will make its debut at Tribeca",
+    "url": "https://www.theverge.com/entertainment/939067/ai-film-dreams-of-violets-tribeca",
+    "source": "The Verge",
+    "summary": "Next month's Tribeca Festival will include the premiere of an AI-generated film: Dreams of Violets. The 75-minute film is a fictional dramatization of the Iranian government's mass killing of protestors in January, with the people and images fully created by AI, as reported earlier by The Hollywood Reporter. Dreams of…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T16:08:45.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-d3938e4ad600a413a13c",
+    "title": "YouTube takes baby steps to being a real podcast app",
+    "url": "https://www.theverge.com/streaming/939051/youtube-premium-podcast-features",
+    "source": "The Verge",
+    "summary": "New features coming to YouTube could make it better for listening to podcasts, rolling out to Premium subscribers starting today on Android and coming later to iOS. A new \"on-the-go mode\" shifts YouTube into an audio-first layout, with larger, simplified playback buttons, a still image in place of the video, and a tim…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T16:05:00.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-409530355c13bdbc7ddf",
+    "title": "How long is Anthropic&#8217;s lease with SpaceX? Opinions vary.",
+    "url": "https://techcrunch.com/2026/05/28/how-long-is-anthropics-lease-with-spacex-opinions-vary/",
+    "source": "TechCrunch",
+    "summary": "Elon Musk is publicly reframing xAI’s massive Anthropic compute deal as short-term and cancellable, despite SpaceX’s own S-1 filing describing payments through May 2029.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T15:36:00.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-a64a1af4911882abcb8c",
+    "title": "Sesame, the conversational AI startup from Oculus founders, launches its iOS app",
+    "url": "https://techcrunch.com/2026/05/28/sesame-the-conversational-ai-startup-from-oculus-founders-launches-its-ios-app/",
+    "source": "TechCrunch",
+    "summary": "Sesame’s new iOS app brings its conversational AI agents to the public, offering more natural back-and-forth interactions designed to feel less like traditional chatbots and more like talking to a person.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T15:35:43.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-52646498064ef2761133",
+    "title": "Catch up on 12 major I/O 2026 moments",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/",
+    "source": "Google",
+    "summary": "Here are 12 of the biggest Google I/O 2026 keynote moments, including news about Gemini Omni, Gemini 3.5 Flash and more.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T15:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-ffbb231cfa20bf0a9d08",
+    "title": "Sneak peek at new Siri app reveals Apple&#8217;s plans to take on ChatGPT and more",
+    "url": "https://techcrunch.com/2026/05/28/sneak-peek-at-new-siri-app-reveals-apples-plans-to-take-on-chatgpt-and-more/",
+    "source": "TechCrunch",
+    "summary": "New renders offer a closer look at Apple’s planned AI overhaul for iOS 27, including a redesigned Siri experience powered and standalone Siri app.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:45:13.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-28aa13332bf322b9e301",
+    "title": "These new iOS 27 renders hint at Siri’s big redesign",
+    "url": "https://www.theverge.com/tech/938915/ios-27-siri-renders-bloomberg",
+    "source": "The Verge",
+    "summary": "Apple's long-awaited Siri overhaul, expected to arrive in iOS 27, might look a lot like ChatGPT with a splash of Liquid Glass. Renders from Bloomberg offer a preview of iOS 27, including the new app and chat interface for Siri. The renders are \"based on information viewed by Bloomberg and people with knowledge of [App…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:33:31.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-61de5c0b6e0589a824e9",
+    "title": "RSI is the new AGI — and it&#8217;s just as hard to pin down",
+    "url": "https://techcrunch.com/2026/05/28/rsi-is-the-new-agi-and-its-just-as-hard-to-pin-down/",
+    "source": "TechCrunch",
+    "summary": "A new crop of AI labs are focused on recursive self-improvement — but the goal is proving elusive.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:30:17.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-8afb8076f110359d7c3a",
+    "title": "At TechCrunch Disrupt 2026: Databricks’ co-founder on what kills enterprise AI deals",
+    "url": "https://techcrunch.com/2026/05/28/techcrunch-disrupt-2026-databricks-co-founder-on-what-kills-enterprise-ai-deals/",
+    "source": "TechCrunch",
+    "summary": "Enterprise AI is entering a different phase now, one where enterprises are no longer evaluating whether AI is exciting. They are evaluating whether it is safe to deploy broadly.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:30:00.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-d554aedc88808e5e7b71",
+    "title": "YouTube adds new podcast features, including an AI recommendation tool and &#8216;Auto speed&#8217;",
+    "url": "https://techcrunch.com/2026/05/28/youtube-adds-new-podcast-features-including-an-ai-recommendation-tool-and-auto-speed/",
+    "source": "TechCrunch",
+    "summary": "The update signals YouTube's ongoing efforts to compete with other platforms for podcast audiences.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:28:47.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-a4452148646413191970",
+    "title": "CNN sues Perplexity over ‘verbatim’ copycat articles",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/938893/cnn-perplexity-ai-copyright-lawsuit",
+    "source": "The Verge",
+    "summary": "CNN has filed a lawsuit against Perplexity, claiming that the startup's AI tools generate \"verbatim\" copies of its work, as reported earlier by CNN. The lawsuit, filed in a New York court on Thursday, also alleges that Perplexity provides users with information locked behind CNN's subscription. Perplexity, which offer…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:08:36.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-489abb5daea1956379fd",
+    "title": "Rivian’s software chief thinks you don&#8217;t need CarPlay or buttons",
+    "url": "https://www.theverge.com/podcast/929940/rivian-wassym-bensaid-software-volkswagen-carplay-assistant-ai",
+    "source": "The Verge",
+    "summary": "Today, I’m talking with Wassym Bensaid, the chief software officer at Rivian, and the co-CEO of Rivian’s platform joint venture with Volkswagen, which everyone just calls RV Tech. That joint venture kicked off about a year and a half ago with a nearly $6 billion investment from Volkswagen. It effectively puts Wassym i…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-3655c76183d35e3c1fc5",
+    "title": "2 days left: Lock in ticket savings of up to $410 to TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/05/28/2-days-left-lock-in-ticket-savings-of-up-to-410-to-techcrunch-disrupt-2026/",
+    "source": "TechCrunch",
+    "summary": "Savings of up to $410 on TechCrunch Disrupt 2026 tickets end tomorrow, May 29, 11:59 p.m. PT. Register now to save and join 10,000+ tech leaders on October 13-15 in San Francisco.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-d9dddcb5b5e7d2610717",
+    "title": "Visa invests in Replit to power agentic payments for developers",
+    "url": "https://techcrunch.com/2026/05/28/visa-invests-in-replit-to-power-agentic-payments-for-developers/",
+    "source": "TechCrunch",
+    "summary": "Visa said that over 1,000 employees has been using Replit for prototyping and development",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T14:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-7a983c75a9bc41ed8b27",
+    "title": "Has the hunt for AI compute uncovered the next Cerebras?",
+    "url": "https://techcrunch.com/2026/05/28/has-the-hunt-for-ai-compute-uncovered-the-next-cerebras/",
+    "source": "TechCrunch",
+    "summary": "General Compute is betting SambaNova will be the next breakout chipmaker.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T13:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
     "id": "news-2a84881edf73b779dd43",
     "title": "YouTube will let you ask AI to make a custom video feed",
     "url": "https://www.theverge.com/streaming/938759/youtube-custom-ai-feed-prompt-availability",
@@ -9,19 +201,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T08:49:07.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-7ed81bda34a5ca5ff8d9",
     "title": "Vertu wants CEOs to run companies from an AI foldable starting at $6,880",
     "url": "https://techcrunch.com/2026/05/28/vertu-wants-ceos-to-run-companies-from-an-ai-foldable-starting-at-6880/",
     "source": "TechCrunch",
-    "summary": "Built on top of the open-source Hermes project, Vertu's new foldable combines AI-agent workflows, enterprise integrations, and ultra-premium luxury finishes.",
+    "summary": "Built on top of the open source Hermes project, Vertu's new foldable combines AI-agent workflows, enterprise integrations, and ultra-premium luxury finishes.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T07:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-b4d0e41acafd9dbbe7a6",
@@ -33,7 +225,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:17:41.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
+  },
+  {
+    "id": "news-3e9dde27d0980f7870e1",
+    "title": "OpenAI’s Frontier Governance Framework",
+    "url": "https://openai.com/index/openai-frontier-governance-framework",
+    "source": "OpenAI",
+    "summary": "Explore OpenAI’s Frontier Governance Framework and how our AI safety, security, and risk practices align with emerging EU and California regulations.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T00:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-fb999f0220ea2a81e040",
@@ -45,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T20:10:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-1e9bd05baaeba9ee8905",
@@ -57,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T19:39:45.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-b8fadf34df6a7fca0c67",
@@ -69,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T18:39:17.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-c13e753add11c309fbfb",
@@ -81,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T18:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-2eed09f142a3bb96066a",
@@ -93,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T16:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-71c34489d50958ca28dc",
@@ -105,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T15:40:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-819fd8ad239ba0f5a998",
@@ -117,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T14:36:10.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-9f605ab2148cbed63419",
@@ -129,19 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T14:15:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-8ff63c21f8923ead1029",
-    "title": "ElevenLabs&#8217; new music-generation model can switch genres mid-track",
-    "url": "https://techcrunch.com/2026/05/27/elevenlabss-new-music-generation-model-can-switch-genres-mid-track/",
-    "source": "TechCrunch",
-    "summary": "ElevenLabs' new model will let users regenerate a section of a song without affecting the rest of the track.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T14:14:10.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-e9973cb6d6d8571957fb",
@@ -153,55 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T14:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-bc991d8e1a8e2c670a60",
-    "title": "SOND, a sleep tech startup from Bose&#8217;s former head of sleep, exits stealth with $7M",
-    "url": "https://techcrunch.com/2026/05/27/sond-a-sleep-tech-startup-from-boses-former-head-of-sleep-exits-stealth-with-7m/",
-    "source": "TechCrunch",
-    "summary": "SOND introduced its debut product: Dreambuds, a closed-loop, in-ear system that captures 12 physiological signals from the wearer, then acts on them in real time to help consumers get better sleep.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T14:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-19417fa11c3b75f51de8",
-    "title": "TechCrunch Disrupt 2026 Early Bird ticket savings end in 3 days",
-    "url": "https://techcrunch.com/2026/05/27/techcrunch-disrupt-2026-early-bird-ticket-savings-end-in-3-days/",
-    "source": "TechCrunch",
-    "summary": "There are only 3 days left to save up to $410 on your ticket to TechCrunch Disrupt 2026. Early Bird pricing ends May 29 at 11:59 p.m. PT, and once the deadline passes, ticket prices increase. If you plan to attend one of the most influential gatherings in tech this year, now is the time to lock in your pass before rat…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T14:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-368aa051a05dd9d75e2c",
-    "title": "China is increasingly keeping its best AI talent to itself",
-    "url": "https://techcrunch.com/2026/05/27/china-is-increasingly-keeping-its-best-ai-talent-to-itself/",
-    "source": "TechCrunch",
-    "summary": "China's AI boom is producing world-class talent, and Beijing is increasingly reluctant to let them go elsewhere.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T13:48:41.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-d967f8081212a6790675",
-    "title": "ClickHouse triples annualized revenue to $250M, charting a path toward an IPO",
-    "url": "https://techcrunch.com/2026/05/27/clickhouse-triples-annualized-revenue-to-250m-charting-a-path-toward-an-ipo/",
-    "source": "TechCrunch",
-    "summary": "The database provider is eyeing a public debut within the next few years.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T13:04:20.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-98ff7fa7290f3b79395c",
@@ -213,67 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T13:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-6fcbe7591c756410810c",
-    "title": "YouTube will now automatically label AI videos",
-    "url": "https://techcrunch.com/2026/05/27/youtube-will-now-automatically-label-ai-videos/",
-    "source": "TechCrunch",
-    "summary": "YouTube will now automatically label videos that use significant photorealistic AI, instead of relying solely on creators to disclose AI-generated content themselves. It's also making AI labels more prominent.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T13:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-9f401d659dbc07eefa33",
-    "title": "Tech CEOs are apparently suffering from AI psychosis",
-    "url": "https://techcrunch.com/2026/05/27/tech-ceos-are-apparently-suffering-from-ai-psychosis/",
-    "source": "TechCrunch",
-    "summary": "\"CEOs are uniquely prone to AI psychosis,\" Box CEO Aaron Levie opines. Maybe that explains the almost religious belief in AI productivity gains.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T12:30:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-8687cbf0743164202a7b",
-    "title": "Robinhood now lets your AI agents trade stocks",
-    "url": "https://techcrunch.com/2026/05/27/robinhood-now-lets-your-ai-agents-trade-stocks/",
-    "source": "TechCrunch",
-    "summary": "While these agents would be able to read and analyze users' portfolios to come up with trading strategies and suggest investments, they'll only be able to access the pre-loaded balance in the dedicated wallet to place orders.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T12:30:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-a2692b98733854a58a5b",
-    "title": "The Pope isn’t AGI-pilled",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/937933/pope-ai-encyclical-tech-industry-reactions",
-    "source": "The Verge",
-    "summary": "On Monday, Pope Leo XIV unveiled an encyclical letter addressing the societal implications of artificial intelligence. The letter, titled Magnifica Humanitas, warned that the \"use of AI is never a purely technical matter: when it enters processes that affect people's lives, it touches on rights, opportunities, status…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T12:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-a596679862fc59634717",
-    "title": "The AI fight brewing inside The New York Times",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/937689/new-york-times-tech-guild-ai-monitoring-performance-union-contract",
-    "source": "The Verge",
-    "summary": "How newsrooms should use AI - or if they should at all - has been a recurrent debate within the media industry over the last several years. Increasingly, these rules are being hammered out at the bargaining table between unions and publishers. Right now, employees at The New York Times are gearing up for a [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T12:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-a1f161b6a344e4fa2c08",
@@ -285,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T11:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-9da64821c60f866d060a",
@@ -297,31 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T07:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
-  },
-  {
-    "id": "news-cce08bbed68c801e3e12",
-    "title": "Did the Pope use AI to write about the dangers of AI?",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/937801/pope-leo-xiv-magnifica-humanitas-ai-pangram",
-    "source": "The Verge",
-    "summary": "It's possible that AI was used to write parts of Pope Leo XIV's latest encyclical about AI's impact on humanity. An analysis by Linch Zhang posted on the forum LessWrong found certain paragraphs of Magnifica Humanitas to be between 40 percent and 100 percent written by AI, according to the popular AI detector Pangram.…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T00:38:11.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-fae225528858b04cbf90",
-    "title": "Election information and safeguards in 2026",
-    "url": "https://openai.com/index/election-safeguards-2026",
-    "source": "OpenAI",
-    "summary": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-b36c91942c4f0187bc1b",
@@ -333,19 +393,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
-    "id": "news-8fb858abec4f578f2d44",
-    "title": "DuckDuckGo installs are up 30% as users reject being ‘force-fed’ Google’s AI Search",
-    "url": "https://techcrunch.com/2026/05/26/duckduckgo-installs-are-up-30-as-users-reject-being-force-fed-googles-ai-search/",
-    "source": "TechCrunch",
-    "summary": "Google overhauled Search at I/O 2026, replacing blue links with AI agents. The backlash has been swift. DuckDuckGo app installs spiked 30% as users seek a way out.",
-    "category": "industry",
+    "id": "news-fae225528858b04cbf90",
+    "title": "Election information and safeguards in 2026",
+    "url": "https://openai.com/index/election-safeguards-2026",
+    "source": "OpenAI",
+    "summary": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-05-26T22:32:56.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "published_at": "2026-05-27T00:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -357,43 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-416c0678d8f061689226",
-    "title": "OpenRouter more than doubles valuation to $1.3B in a year",
-    "url": "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/",
-    "source": "TechCrunch",
-    "summary": "OpenRouter has raised a $113 million Series B led by CapitalG. Its 5x growth in usage over six months indicates the multi-AI-model future is here.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-26T18:33:01.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-9025a1088f4c020b806b",
-    "title": "Sundar Pichai on AI, the future of search, and what’s happening to the web",
-    "url": "https://www.theverge.com/podcast/936445/sundar-pichai-ai-search-google-zero-youtube-web",
-    "source": "The Verge",
-    "summary": "Today, I’m talking with Google and Alphabet CEO Sundar Pichai, in a conversation we recorded just after the Google I/O developer conference. This is the fifth year Sundar and I have sat down after I/O, and it’s become one of my favorite Decoder traditions. There’s always a lot of news at I/O, and this year [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-26T14:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-9b94c10bcd01bfe86c6e",
-    "title": "Nobody wants to tell me why they only listen to their own Suno slop",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/937059/nobody-wants-to-tell-me-why-they-only-listen-their-own-suno-slop",
-    "source": "The Verge",
-    "summary": "There's this alarming trend in the Suno subreddit. People aren't just prompting AI songs; they're sitting around listening almost exclusively to their own slop. And in some cases, they proudly proclaim that they don't listen to music on traditional streaming platforms anymore - it's just AI all day. \"Does anyone just…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-26T12:46:03.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-2958e44acb3bbf9966c3",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -417,19 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-ef1db9edff97d09f04e4",
-    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
-    "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
-    "source": "OpenAI",
-    "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-4ce39150a4dcc4b87dd2",
@@ -441,7 +453,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
+  },
+  {
+    "id": "news-ef1db9edff97d09f04e4",
+    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
+    "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
+    "source": "OpenAI",
+    "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-22T00:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-85a3fdb43c804c3bf0ce",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-21T12:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -489,31 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-52bd1afbd88b05927463",
-    "title": "The next phase of OpenAI’s Education for Countries",
-    "url": "https://openai.com/index/the-next-phase-of-education-for-countries",
-    "source": "OpenAI",
-    "summary": "OpenAI advances Education for Countries, expanding AI adoption in schools with new partnerships, teacher training, and tools to improve global learning outcomes.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
-  },
-  {
-    "id": "news-7f625f66633806e06a2f",
-    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
-    "source": "OpenAI",
-    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-cb920945cfca046c0cf2",
@@ -525,7 +525,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
+  },
+  {
+    "id": "news-52bd1afbd88b05927463",
+    "title": "The next phase of OpenAI’s Education for Countries",
+    "url": "https://openai.com/index/the-next-phase-of-education-for-countries",
+    "source": "OpenAI",
+    "summary": "OpenAI advances Education for Countries, expanding AI adoption in schools with new partnerships, teacher training, and tools to improve global learning outcomes.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-20T00:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:36"
+  },
+  {
+    "id": "news-7f625f66633806e06a2f",
+    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
+    "source": "OpenAI",
+    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-20T00:00:00.000Z",
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-e0640ad0320ce67f7a7e",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T20:30:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -573,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -585,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -597,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -609,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -621,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -633,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-4f1431164463c27111bb",
@@ -645,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T10:45:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-210c7a7c782649817dd4",
@@ -657,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-18T10:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-f0106247dee486f08fe9",
@@ -669,43 +693,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-16T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
-    "id": "news-ada6c1425188ba304200",
-    "title": "A new personal finance experience in ChatGPT",
-    "url": "https://openai.com/index/personal-finance-chatgpt",
+    "id": "news-248b5ff0699922b23d03",
+    "title": "How sales teams use Codex",
+    "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
     "source": "OpenAI",
-    "summary": "Preview a new personal finance experience in ChatGPT for Pro users in the U.S. Securely connect your financial accounts and get AI-powered insights and guidance grounded in your financial context, goals, and priorities.",
+    "summary": "See how sales teams can use Codex to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
-    "id": "news-c64312c3121cafd6f0ef",
-    "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
-    "url": "https://openai.com/index/databricks",
+    "id": "news-b5b1610b252a64e98869",
+    "title": "How business operations teams use Codex",
+    "url": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
     "source": "OpenAI",
-    "summary": "Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.",
+    "summary": "See how business operations teams can use Codex to create initiative briefs, strategy updates, leadership decision packets, progress updates, and more from real work inputs.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
-  },
-  {
-    "id": "news-cca00ce687818d9ad6ab",
-    "title": "How data science teams use Codex",
-    "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
-    "source": "OpenAI",
-    "summary": "See how data science teams can use Codex to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:00"
+    "discovered_at": "2026-05-28 17:01:36"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -753,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -765,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -777,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -789,18 +801,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
-  },
-  {
-    "id": "news-f98304eba2d040c798ef",
-    "title": "Celebrating 20 years of Google Translate: Fun facts, tips and new features to try",
-    "url": "https://blog.google/products-and-platforms/products/translate/fun-facts-google-translate-20-years/",
-    "source": "Google",
-    "summary": "Google’s sharing 20 fun facts to celebrate Google Translate turning 20, from its roots as a 2006 AI experiment to supporting almost 250 languages today.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-04-28T16:00:00.000Z",
-    "discovered_at": "2026-05-28 12:44:01"
+    "discovered_at": "2026-05-28 17:01:40"
   }
 ]
