@@ -1,7 +1,55 @@
 [
   {
+    "id": "news-12919de6dcce25989e01",
+    "title": "The internet is being rebuilt for machines",
+    "url": "https://techcrunch.com/2026/05/28/the-internet-is-being-rebuilt-for-machines/",
+    "source": "TechCrunch",
+    "summary": "As AI agents move from experiments to production, AWS, Cloudflare, and others are redesigning cloud infrastructure for a future dominated by machine-generated internet traffic instead of human users.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T21:24:01.000Z",
+    "discovered_at": "2026-05-28 22:05:14"
+  },
+  {
+    "id": "news-bc3ca44337a2442474e8",
+    "title": "Fed up with vibe coders, dev sneaks data-nuking prompt injection into their code",
+    "url": "https://arstechnica.com/security/2026/05/fed-up-with-vibe-coders-dev-sneaks-data-nuking-prompt-injection-into-their-code/",
+    "source": "Ars Technica",
+    "summary": "Undisclosed addition in jqwik instructed AI coding agents to delete app output.",
+    "category": "research",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T20:29:53.000Z",
+    "discovered_at": "2026-05-28 22:05:14"
+  },
+  {
+    "id": "news-11e6e2adfb18488571ba",
+    "title": "Microsoft 365 Copilot gets a speed boost and cleaner design",
+    "url": "https://www.theverge.com/tech/939273/microsoft-365-copilot-redesign",
+    "source": "The Verge",
+    "summary": "Microsoft is launching a revamped version of Microsoft 365 Copilot, offering a cleaner design that the company claims loads twice as fast. As part of this update, Copilot will provide more reliable and structured responses that are easier to scan, according to Microsoft. The redesign, which is rolling out across deskt…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T20:14:07.000Z",
+    "discovered_at": "2026-05-28 22:05:14"
+  },
+  {
+    "id": "news-e14094841cd1fac6d0c8",
+    "title": "Asana acquires no-code agent-builder StackAI",
+    "url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stack-ai/",
+    "source": "TechCrunch",
+    "summary": "Asana will incorporate StackAI into its growing suite of AI workflow tools.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T20:06:07.000Z",
+    "discovered_at": "2026-05-28 22:05:14"
+  },
+  {
     "id": "news-9ee607688cc207501fbf",
-    "title": "Anthropic raises $65 Billion, nears $1T valuation ahead of IPO",
+    "title": "Anthropic raises $65 billion, nears $1T valuation ahead of IPO",
     "url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/",
     "source": "TechCrunch",
     "summary": "Anthropic has closed a $65 billion Series H round at a $965 billion post-money valuation, marking what could be the AI startup's final private fundraise before a highly anticipated IPO.",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T18:52:51.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-350fe0bcb65ebc02f5f7",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T18:32:25.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-a7fee3fac6f2b1a3a1cd",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:30:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-215cc629463f0bde637f",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:00:09.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-2259730a105ce65dc6a6",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-a8e64a26d282b58fb9fb",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T16:08:45.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-d3938e4ad600a413a13c",
@@ -81,11 +129,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T16:05:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-409530355c13bdbc7ddf",
-    "title": "How long is Anthropic&#8217;s lease with SpaceX? Opinions vary.",
+    "title": "How long is Anthropic&#8217;s lease with SpaceX? Opinions vary",
     "url": "https://techcrunch.com/2026/05/28/how-long-is-anthropics-lease-with-spacex-opinions-vary/",
     "source": "TechCrunch",
     "summary": "Elon Musk is publicly reframing xAI’s massive Anthropic compute deal as short-term and cancellable, despite SpaceX’s own S-1 filing describing payments through May 2029.",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:36:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-a64a1af4911882abcb8c",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:35:43.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-ffbb231cfa20bf0a9d08",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:45:13.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-28aa13332bf322b9e301",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:33:31.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-61de5c0b6e0589a824e9",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:30:17.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-8afb8076f110359d7c3a",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:30:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-d554aedc88808e5e7b71",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:28:47.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-a4452148646413191970",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:08:36.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-489abb5daea1956379fd",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-d9dddcb5b5e7d2610717",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-3655c76183d35e3c1fc5",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-7a983c75a9bc41ed8b27",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T13:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-2a84881edf73b779dd43",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T08:49:07.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-7ed81bda34a5ca5ff8d9",
@@ -261,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T07:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-b4d0e41acafd9dbbe7a6",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:17:41.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-3e9dde27d0980f7870e1",
@@ -285,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-fb999f0220ea2a81e040",
@@ -297,31 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T20:10:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
-  },
-  {
-    "id": "news-1e9bd05baaeba9ee8905",
-    "title": "Payroll startup Remote says it grew revenue 50% per employee without adding headcount",
-    "url": "https://techcrunch.com/2026/05/27/payroll-startup-remote-says-it-grew-revenue-50-per-employee-without-adding-headcount/",
-    "source": "TechCrunch",
-    "summary": "Payroll service provider Remote recently surpassed $300 million in annual recurring revenue (ARR) and became cash-flow positive, thanks to a 50% increase in revenue per employee resulting from AI adoption.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T19:39:45.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
-  },
-  {
-    "id": "news-b8fadf34df6a7fca0c67",
-    "title": "Your SEO strategy is optimized for a search engine that no longer exists.",
-    "url": "https://techcrunch.com/podcast/your-seo-strategy-is-optimized-for-a-search-engine-that-no-longer-exists/",
-    "source": "TechCrunch",
-    "summary": "Google I/O made it official: AI-generated answers are now front and&#160;center&#160;in search, and most brands have almost no visibility into how AI is describing them to their customers.&#160;For anyone who has spent years building a strategy around 10 blue links, the rules just changed in a pretty significant way.&…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T18:39:17.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-71c34489d50958ca28dc",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T15:40:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-819fd8ad239ba0f5a998",
@@ -345,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T14:36:10.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
-  },
-  {
-    "id": "news-e9973cb6d6d8571957fb",
-    "title": "This smart bird feeder captures more of my backyard drama",
-    "url": "https://www.theverge.com/tech/937628/coolfly-aura-smart-bird-feeder-review",
-    "source": "The Verge",
-    "summary": "Since moving to South Carolina's Lowcountry, I've been spellbound by the myriad of beautiful birds that share the coast with us - ospreys raising their babies in towering nests beside the road to my daughter's school, roseate spoonbills wading in the marsh on my morning walks, eagles circling over my son's tennis matc…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T14:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-a1f161b6a344e4fa2c08",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T11:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-9da64821c60f866d060a",
@@ -381,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T07:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
-  },
-  {
-    "id": "news-fae225528858b04cbf90",
-    "title": "Election information and safeguards in 2026",
-    "url": "https://openai.com/index/election-safeguards-2026",
-    "source": "OpenAI",
-    "summary": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-b36c91942c4f0187bc1b",
@@ -405,7 +405,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
+  },
+  {
+    "id": "news-fae225528858b04cbf90",
+    "title": "Election information and safeguards in 2026",
+    "url": "https://openai.com/index/election-safeguards-2026",
+    "source": "OpenAI",
+    "summary": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-27T00:00:00.000Z",
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-05-28 19:44:10"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-2958e44acb3bbf9966c3",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-4ce39150a4dcc4b87dd2",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-ef1db9edff97d09f04e4",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-85a3fdb43c804c3bf0ce",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-21T12:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -513,19 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
-  },
-  {
-    "id": "news-7f625f66633806e06a2f",
-    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
-    "source": "OpenAI",
-    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-cb920945cfca046c0cf2",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-52bd1afbd88b05927463",
@@ -549,7 +549,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
+  },
+  {
+    "id": "news-7f625f66633806e06a2f",
+    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
+    "source": "OpenAI",
+    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-20T00:00:00.000Z",
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-e0640ad0320ce67f7a7e",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T20:30:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-4f1431164463c27111bb",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T10:45:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-210c7a7c782649817dd4",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-18T10:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-f0106247dee486f08fe9",
@@ -693,19 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-16T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
-  },
-  {
-    "id": "news-c64312c3121cafd6f0ef",
-    "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
-    "url": "https://openai.com/index/databricks",
-    "source": "OpenAI",
-    "summary": "Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-248b5ff0699922b23d03",
@@ -717,7 +717,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-15T00:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:07"
+    "discovered_at": "2026-05-28 22:05:08"
+  },
+  {
+    "id": "news-c64312c3121cafd6f0ef",
+    "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+    "url": "https://openai.com/index/databricks",
+    "source": "OpenAI",
+    "summary": "Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-15T00:00:00.000Z",
+    "discovered_at": "2026-05-28 22:05:08"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -753,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-28 19:44:10"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -765,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -777,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -789,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   },
   {
     "id": "news-3f5239165dd4c022fea1",
@@ -801,6 +813,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T15:30:00.000Z",
-    "discovered_at": "2026-05-28 19:44:09"
+    "discovered_at": "2026-05-28 22:05:14"
   }
 ]
