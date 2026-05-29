@@ -1,113 +1,6 @@
 {
-  "generatedAt": "2026-05-29T04:40:11.230Z",
+  "generatedAt": "2026-05-29T05:57:37.287Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T04:40:07.961Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Login",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Conversations",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KSRVTZVW4J7NZ3WXM74DG4KX",
-          "title": "Users may encounter issues with conversations",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-29T03:18:24.000Z",
-          "updatedAt": "2026-05-29T03:29:07.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KSRVH1TAV8Q47M91F6V4V6X0",
-          "title": "Users may encounter issues logging in or creating an account",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-29T03:12:59.000Z",
-          "updatedAt": "2026-05-29T03:28:48.000Z",
-          "resolvedAt": null,
-          "summary": null
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KSRVTZVW4J7NZ3WXM74DG4KX",
-          "title": "Users may encounter issues with conversations",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-29T03:18:24.000Z",
-          "updatedAt": "2026-05-29T03:29:07.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KSRVH1TAV8Q47M91F6V4V6X0",
-          "title": "Users may encounter issues logging in or creating an account",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-29T03:12:59.000Z",
-          "updatedAt": "2026-05-29T03:28:48.000Z",
-          "resolvedAt": null,
-          "summary": null
-        },
-        {
-          "id": "01KSR5D08APXRBVK8S120N4PDX",
-          "title": "Business plan subscription checkout issues on web and mobile web",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-05-28T20:46:17.000Z",
-          "updatedAt": "2026-05-29T01:29:51.000Z",
-          "resolvedAt": "2026-05-29T01:29:51.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KSN9ATSF1WCJ5ZTQSR1H9CC7",
-          "title": "Codex Context Compaction Latency",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-27T17:57:17.000Z",
-          "updatedAt": "2026-05-28T06:59:35.000Z",
-          "resolvedAt": "2026-05-28T06:59:35.000Z",
-          "summary": null
-        }
-      ]
-    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -119,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T04:40:08.636Z",
+      "lastCheckedAt": "2026-05-29T05:57:36.582Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T04:40:11.223Z",
+      "lastCheckedAt": "2026-05-29T05:57:35.746Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -229,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T04:40:08.914Z",
+      "lastCheckedAt": "2026-05-29T05:57:36.827Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -249,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T04:40:09.138Z",
+      "lastCheckedAt": "2026-05-29T05:57:37.251Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -314,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T04:40:08.398Z",
+      "lastCheckedAt": "2026-05-29T05:57:36.262Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -358,6 +251,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-05-29T05:57:35.572Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        },
+        {
+          "name": "Files",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KSRVTZVW4J7NZ3WXM74DG4KX",
+          "title": "Users may encounter issues with conversations",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-29T03:18:24.000Z",
+          "updatedAt": "2026-05-29T04:58:14.000Z",
+          "resolvedAt": "2026-05-29T04:58:14.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KSRVH1TAV8Q47M91F6V4V6X0",
+          "title": "Users may encounter issues logging in or creating an account",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-29T03:12:59.000Z",
+          "updatedAt": "2026-05-29T04:57:55.000Z",
+          "resolvedAt": "2026-05-29T04:57:55.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KSR5D08APXRBVK8S120N4PDX",
+          "title": "Business plan subscription checkout issues on web and mobile web",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-05-28T20:46:17.000Z",
+          "updatedAt": "2026-05-29T01:29:51.000Z",
+          "resolvedAt": "2026-05-29T01:29:51.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KSN9ATSF1WCJ5ZTQSR1H9CC7",
+          "title": "Codex Context Compaction Latency",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-27T17:57:17.000Z",
+          "updatedAt": "2026-05-28T06:59:35.000Z",
+          "resolvedAt": "2026-05-28T06:59:35.000Z",
+          "summary": null
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -368,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T04:40:09.115Z",
+      "lastCheckedAt": "2026-05-29T05:57:37.279Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -437,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
