@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T17:55:37.586Z",
+  "generatedAt": "2026-05-29T19:39:40.950Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T17:55:36.702Z",
+      "lastCheckedAt": "2026-05-29T19:39:40.190Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T17:55:35.712Z",
+      "lastCheckedAt": "2026-05-29T19:39:39.350Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -66,6 +66,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "2zr0rkdxjdtc",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-05-29T18:35:22.808Z",
+          "updatedAt": "2026-05-29T19:12:08.332Z",
+          "resolvedAt": "2026-05-29T19:12:08.252Z",
+          "url": "https://stspg.io/03j611vnshfp",
+          "summary": "This issue has been resolved."
+        },
+        {
           "id": "5s24h0pbdj5d",
           "title": "Elevated errors on Claude Opus 4.8",
           "status": "resolved",
@@ -97,17 +108,6 @@
           "resolvedAt": "2026-05-28T09:17:07.377Z",
           "url": "https://stspg.io/ghgwbs73kc7s",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "rtr7z82cqmp9",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-27T08:04:03.976Z",
-          "updatedAt": "2026-05-27T09:41:14.140Z",
-          "resolvedAt": "2026-05-27T09:41:14.101Z",
-          "url": "https://stspg.io/c36rbp3h49c7",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T17:55:36.939Z",
+      "lastCheckedAt": "2026-05-29T19:39:40.513Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T17:55:37.294Z",
+      "lastCheckedAt": "2026-05-29T19:39:40.757Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T17:55:36.354Z",
+      "lastCheckedAt": "2026-05-29T19:39:39.848Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T17:55:35.732Z",
+      "lastCheckedAt": "2026-05-29T19:39:39.213Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-29T17:55:37.238Z",
+      "lastCheckedAt": "2026-05-29T19:39:40.943Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -416,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

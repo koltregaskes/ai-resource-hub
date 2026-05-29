@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-944dd86b3cacec948339",
+    "title": "Take our I/O 2026 quiz, vibe coded in Google AI Studio.",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/",
+    "source": "Google",
+    "summary": "We used Google AI Studio to vibe code a quiz about our top I/O 2026 announcements.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T19:00:00.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-b59d5931a7bbec9bb542",
+    "title": "So you&#8217;ve heard these AI terms and nodded along; let&#8217;s fix that",
+    "url": "https://techcrunch.com/2026/05/29/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+    "source": "TechCrunch",
+    "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T18:49:19.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-74e8a7cb166fabc6d72b",
+    "title": "What happens when companies become too AI-pilled?",
+    "url": "https://techcrunch.com/video/what-happens-when-companies-become-too-ai-pilled/",
+    "source": "TechCrunch",
+    "summary": "The people deciding that AI can replace your job are also the ones least likely to understand what your job truly involves, according to Box founder Aaron Levie, who pointed to this as an example of &#8220;AI psychosis.” Indeed, ClickUp recently cut 22% of its workforce for AI agents, tech layoffs in 2026 are already…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T17:57:05.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-7cf4cb4b6cfd66908a4d",
+    "title": "Tech companies desperately want to film you doing chores",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/940007/ai-companies-will-pay-for-robot-training-data",
+    "source": "The Verge",
+    "summary": "This week, an AI training startup called Shift said it would clean New Yorkers' homes for free. It has plans to expand into other cities as well, including London, and looking around my flat, I get the appeal. But there's a catch. There's always a catch. In exchange for the cleaning, Shift wants footage of [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T17:37:43.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-bf7abda633b2cc922140",
+    "title": "9 demos of Gemini Omni and Gemini 3.5 in action",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
+    "source": "Google",
+    "summary": "Watch 9 videos showing the capabilities of Gemini Omni and Gemini 3.5, announced at Google I/O 2026.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T17:30:00.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-bf0218d80e91d2d17c3d",
+    "title": "After Nvidia&#8217;s $20B not-aqui-hire, AI chip startup Groq reportedly raising $650M",
+    "url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-aqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+    "source": "TechCrunch",
+    "summary": "Chipmaker Groq is looking to raise $650 million in internal funding as it pivots from hardware to focus more on AI inference, the process of refining the way AI models respond to prompted requests, per Axios.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T17:27:13.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
     "id": "news-82d27a9e2c10c0cf95a1",
     "title": "Cognition&#8217;s Scott Wu says AI coding agents shouldn&#8217;t replace humans",
     "url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
@@ -9,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T16:13:47.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-a5126ef298c20973ad11",
@@ -21,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T14:15:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-70973a40c6ba2c40fc2f",
@@ -33,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T14:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-1c3c4c0cf715766ebc12",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T13:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-67acb84a52f2be0301f5",
@@ -57,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:25:12.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-b87402dcad4d26e37515",
@@ -69,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -81,7 +153,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-507ec0fdf6297e193b5d",
+    "title": "How Braintrust turns customer requests into code with Codex",
+    "url": "https://openai.com/index/braintrust",
+    "source": "OpenAI",
+    "summary": "How Braintrust engineers use Codex with GPT-5.5 to run experiments and code faster.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T12:00:00.000Z",
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-e63fa88b5624cf9ab322",
@@ -93,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-0a62db37e3180a488752",
@@ -105,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T11:58:40.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-875677d6fc7eebce3697",
@@ -117,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T10:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-8337eeb248ea1830c3c0",
@@ -129,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T03:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-5471d9492ea3f34d8b5d",
@@ -141,7 +225,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T00:44:37.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-33e1df4abe4ea5f373c2",
+    "title": "A shared playbook for trustworthy third party evaluations",
+    "url": "https://openai.com/index/trustworthy-third-party-evaluations-foundations",
+    "source": "OpenAI",
+    "summary": "OpenAI shares guidance on third-party AI evaluations, covering how to assess model capabilities, safeguards, and validity for frontier systems.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T00:00:00.000Z",
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-12919de6dcce25989e01",
@@ -153,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T21:24:01.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -165,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-11e6e2adfb18488571ba",
@@ -177,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:14:07.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-e14094841cd1fac6d0c8",
@@ -189,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:06:07.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-9ee607688cc207501fbf",
@@ -201,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T18:52:51.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-350fe0bcb65ebc02f5f7",
@@ -213,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T18:32:25.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-a7fee3fac6f2b1a3a1cd",
@@ -225,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:30:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-215cc629463f0bde637f",
@@ -237,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:00:09.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-2259730a105ce65dc6a6",
@@ -249,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-a8e64a26d282b58fb9fb",
@@ -261,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T16:08:45.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-d3938e4ad600a413a13c",
@@ -273,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T16:05:00.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-409530355c13bdbc7ddf",
@@ -285,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:36:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-a64a1af4911882abcb8c",
@@ -297,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:35:43.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -309,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-ffbb231cfa20bf0a9d08",
@@ -321,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:45:13.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-28aa13332bf322b9e301",
@@ -333,43 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:33:31.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
-  },
-  {
-    "id": "news-61de5c0b6e0589a824e9",
-    "title": "RSI is the new AGI — and it&#8217;s just as hard to pin down",
-    "url": "https://techcrunch.com/2026/05/28/rsi-is-the-new-agi-and-its-just-as-hard-to-pin-down/",
-    "source": "TechCrunch",
-    "summary": "A new crop of AI labs are focused on recursive self-improvement — but the goal is proving elusive.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T14:30:17.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-8afb8076f110359d7c3a",
-    "title": "At TechCrunch Disrupt 2026: Databricks’ co-founder on what kills enterprise AI deals",
-    "url": "https://techcrunch.com/2026/05/28/techcrunch-disrupt-2026-databricks-co-founder-on-what-kills-enterprise-ai-deals/",
-    "source": "TechCrunch",
-    "summary": "Enterprise AI is entering a different phase now, one where enterprises are no longer evaluating whether AI is exciting. They are evaluating whether it is safe to deploy broadly.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T14:30:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-d554aedc88808e5e7b71",
-    "title": "YouTube adds new podcast features, including an AI recommendation tool and &#8216;Auto speed&#8217;",
-    "url": "https://techcrunch.com/2026/05/28/youtube-adds-new-podcast-features-including-an-ai-recommendation-tool-and-auto-speed/",
-    "source": "TechCrunch",
-    "summary": "The update signals YouTube's ongoing efforts to compete with other platforms for podcast audiences.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T14:28:47.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-a4452148646413191970",
@@ -381,19 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:08:36.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
-  },
-  {
-    "id": "news-489abb5daea1956379fd",
-    "title": "Rivian’s software chief thinks you don&#8217;t need CarPlay or buttons",
-    "url": "https://www.theverge.com/podcast/929940/rivian-wassym-bensaid-software-volkswagen-carplay-assistant-ai",
-    "source": "The Verge",
-    "summary": "Today, I’m talking with Wassym Bensaid, the chief software officer at Rivian, and the co-CEO of Rivian’s platform joint venture with Volkswagen, which everyone just calls RV Tech. That joint venture kicked off about a year and a half ago with a nearly $6 billion investment from Volkswagen. It effectively puts Wassym i…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T14:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-c4a9a577612daa8d7698",
@@ -405,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T12:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-3e9dde27d0980f7870e1",
@@ -417,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-cb031b5cf3e3be67bd75",
@@ -429,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-a1f161b6a344e4fa2c08",
@@ -441,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T11:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-9da64821c60f866d060a",
@@ -453,19 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T07:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
-  },
-  {
-    "id": "news-fae225528858b04cbf90",
-    "title": "Election information and safeguards in 2026",
-    "url": "https://openai.com/index/election-safeguards-2026",
-    "source": "OpenAI",
-    "summary": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-b36c91942c4f0187bc1b",
@@ -477,7 +513,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
+  },
+  {
+    "id": "news-fae225528858b04cbf90",
+    "title": "Election information and safeguards in 2026",
+    "url": "https://openai.com/index/election-safeguards-2026",
+    "source": "OpenAI",
+    "summary": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-27T00:00:00.000Z",
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -489,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-2958e44acb3bbf9966c3",
@@ -501,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -513,19 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-ef1db9edff97d09f04e4",
-    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
-    "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
-    "source": "OpenAI",
-    "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-4ce39150a4dcc4b87dd2",
@@ -537,7 +573,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
+  },
+  {
+    "id": "news-ef1db9edff97d09f04e4",
+    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
+    "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
+    "source": "OpenAI",
+    "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-22T00:00:00.000Z",
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-85a3fdb43c804c3bf0ce",
@@ -549,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-21T12:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -561,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -573,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -585,31 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-52bd1afbd88b05927463",
-    "title": "The next phase of OpenAI’s Education for Countries",
-    "url": "https://openai.com/index/the-next-phase-of-education-for-countries",
-    "source": "OpenAI",
-    "summary": "OpenAI advances Education for Countries, expanding AI adoption in schools with new partnerships, teacher training, and tools to improve global learning outcomes.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
-  },
-  {
-    "id": "news-cb920945cfca046c0cf2",
-    "title": "How Ramp engineers accelerate code review with Codex",
-    "url": "https://openai.com/index/ramp",
-    "source": "OpenAI",
-    "summary": "How Ramp engineers use Codex with GPT-5.5 to review code and ship improvements, allowing them to get substantive feedback in minutes instead of hours.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-7f625f66633806e06a2f",
@@ -621,19 +645,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
-    "id": "news-e0640ad0320ce67f7a7e",
-    "title": "Introducing OpenAI for Singapore",
-    "url": "https://openai.com/index/introducing-openai-for-singapore",
+    "id": "news-52bd1afbd88b05927463",
+    "title": "The next phase of OpenAI’s Education for Countries",
+    "url": "https://openai.com/index/the-next-phase-of-education-for-countries",
     "source": "OpenAI",
-    "summary": "OpenAI for Singapore launches a multi-year AI partnership to expand deployment, build local talent, and support businesses and public services with AI.",
+    "summary": "OpenAI advances Education for Countries, expanding AI adoption in schools with new partnerships, teacher training, and tools to improve global learning outcomes.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-05-19T20:30:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "published_at": "2026-05-20T00:00:00.000Z",
+    "discovered_at": "2026-05-29 19:39:37"
+  },
+  {
+    "id": "news-cb920945cfca046c0cf2",
+    "title": "How Ramp engineers accelerate code review with Codex",
+    "url": "https://openai.com/index/ramp",
+    "source": "OpenAI",
+    "summary": "How Ramp engineers use Codex with GPT-5.5 to review code and ship improvements, allowing them to get substantive feedback in minutes instead of hours.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-20T00:00:00.000Z",
+    "discovered_at": "2026-05-29 19:39:37"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -645,79 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
-  },
-  {
-    "id": "news-5af6fbd7f1ce709e04b5",
-    "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
-    "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
-    "source": "Google",
-    "summary": "Introducing a $100 AI Ultra plan — plus, new features and benefits for Google AI Plus, Pro and Ultra subscribers.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-1f203743494c93f90574",
-    "title": "A new era for AI Search",
-    "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
-    "source": "Google",
-    "summary": "We shared the next step in our journey to bring together the best of a search engine with the best of AI.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-e4e059ae9ebc65abc0eb",
-    "title": "Gemini 3.5: frontier intelligence with action",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-    "source": "Google",
-    "summary": "At Google I/O we released Gemini 3.5, our latest series of models combining frontier intelligence with action.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-ab50a6a962f16cada480",
-    "title": "I/O 2026: Welcome to the agentic Gemini era",
-    "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
-    "source": "Google",
-    "summary": "The latest from Google I/O: See how we’re helping you get more done with Gemini.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-4a09b699f249cb6fb1ac",
-    "title": "New ways to create and get things done in Google Workspace",
-    "url": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
-    "source": "Google",
-    "summary": "Announcing new voice capabilities in Gmail, Docs and Keep, a new design tool called Google Pics and updates to AI Inbox.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-8fc9597adf555bd4e2dd",
-    "title": "How AI Mode is changing the way people search in the U.S.",
-    "url": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/",
-    "source": "Google",
-    "summary": "One year after launch, see how AI Mode’s users are shifting from keywords to natural language queries.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -729,19 +693,79 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
-    "id": "news-4f1431164463c27111bb",
-    "title": "Advancing content provenance for a safer, more transparent AI ecosystem",
-    "url": "https://openai.com/index/advancing-content-provenance",
-    "source": "OpenAI",
-    "summary": "OpenAI advances AI content provenance with Content Credentials, SynthID, and a verification tool to help people identify and trust AI-generated media.",
+    "id": "news-5af6fbd7f1ce709e04b5",
+    "title": "Everything new in our Google AI subscriptions, fresh from I/O 2026",
+    "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/",
+    "source": "Google",
+    "summary": "Introducing a $100 AI Ultra plan — plus, new features and benefits for Google AI Plus, Pro and Ultra subscribers.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-05-19T10:45:00.000Z",
-    "discovered_at": "2026-05-29 16:52:49"
+    "published_at": "2026-05-19T17:45:00.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-1f203743494c93f90574",
+    "title": "A new era for AI Search",
+    "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+    "source": "Google",
+    "summary": "We shared the next step in our journey to bring together the best of a search engine with the best of AI.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-19T17:45:00.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-e4e059ae9ebc65abc0eb",
+    "title": "Gemini 3.5: frontier intelligence with action",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+    "source": "Google",
+    "summary": "At Google I/O we released Gemini 3.5, our latest series of models combining frontier intelligence with action.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-19T17:45:00.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-ab50a6a962f16cada480",
+    "title": "I/O 2026: Welcome to the agentic Gemini era",
+    "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/",
+    "source": "Google",
+    "summary": "The latest from Google I/O: See how we’re helping you get more done with Gemini.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-19T17:45:00.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-4a09b699f249cb6fb1ac",
+    "title": "New ways to create and get things done in Google Workspace",
+    "url": "https://blog.google/products-and-platforms/products/workspace/workspace-updates/",
+    "source": "Google",
+    "summary": "Announcing new voice capabilities in Gmail, Docs and Keep, a new design tool called Google Pics and updates to AI Inbox.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-19T17:45:00.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
+  },
+  {
+    "id": "news-8fc9597adf555bd4e2dd",
+    "title": "How AI Mode is changing the way people search in the U.S.",
+    "url": "https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/",
+    "source": "Google",
+    "summary": "One year after launch, see how AI Mode’s users are shifting from keywords to natural language queries.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-19T17:45:00.000Z",
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -753,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -765,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -777,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-29 16:52:59"
+    "discovered_at": "2026-05-29 19:39:38"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -789,30 +813,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-96a76e6b90cc858c40fa",
-    "title": "Google is partnering with XPRIZE and Range Media Partners on the $3.5 million Future Vision film competition.",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/future-vision-film-competition-xprize/",
-    "source": "Google",
-    "summary": "Google is partnering with XPRIZE and Range Media Partners on the $3.5 million Future Vision film competition.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
-  },
-  {
-    "id": "news-4e60ba9595b8ef99526a",
-    "title": "The latest AI news we announced in April 2026",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/",
-    "source": "Google",
-    "summary": "Here are Google’s latest AI updates from April 2026",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-29 16:52:58"
+    "discovered_at": "2026-05-29 19:39:38"
   }
 ]
