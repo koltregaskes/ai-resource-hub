@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-82d27a9e2c10c0cf95a1",
+    "title": "Cognition&#8217;s Scott Wu says AI coding agents shouldn&#8217;t replace humans",
+    "url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+    "source": "TechCrunch",
+    "summary": "Cognition makes Devin, the first and arguably most successful AI coding agent. But famed coder Wu says it isn't designed to supplant human programmers.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T16:13:47.000Z",
+    "discovered_at": "2026-05-29 16:52:58"
+  },
+  {
+    "id": "news-a5126ef298c20973ad11",
+    "title": "Today is the last day to apply to speak at TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/05/29/today-is-the-last-day-to-apply-to-speak-at-techcrunch-disrupt-2026/",
+    "source": "TechCrunch",
+    "summary": "Submit your session topic before today ends for a chance to speak at TechCrunch Disrupt 2026. Apply now to share your insight and help shape the conversations defining the tech industry.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T14:15:00.000Z",
+    "discovered_at": "2026-05-29 16:52:58"
+  },
+  {
+    "id": "news-70973a40c6ba2c40fc2f",
+    "title": "Final 24 hours to save up to $410 on your TechCrunch Disrupt 2026 ticket",
+    "url": "https://techcrunch.com/2026/05/29/final-24-hours-to-save-up-to-410-on-your-techcrunch-disrupt-2026-ticket/",
+    "source": "TechCrunch",
+    "summary": "You now have until tonight at 11:59 p.m. PT to lock in Early Bird savings of up to $410 for TechCrunch Disrupt 2026 before prices increase. Join 10,000+ tech leaders in October for one of the most anticipated tech events of the year. Register now.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T14:00:00.000Z",
+    "discovered_at": "2026-05-29 16:52:58"
+  },
+  {
+    "id": "news-1c3c4c0cf715766ebc12",
+    "title": "Kiwibit’s AI-powered bird feeder is my new backyard buddy",
+    "url": "https://techcrunch.com/2026/05/29/kiwibits-ai-powered-bird-feeder-is-my-new-backyard-buddy/",
+    "source": "TechCrunch",
+    "summary": "If you're looking for a fun way to connect with nature while collecting bird species on an app like Pokémon, give this smart feeder a try.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T13:00:00.000Z",
+    "discovered_at": "2026-05-29 16:52:58"
+  },
+  {
     "id": "news-67acb84a52f2be0301f5",
     "title": "Jony Ive’s funky Ferrari",
     "url": "https://www.theverge.com/podcast/939589/ferrari-luce-jony-ive-vergecast",
@@ -9,7 +57,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:25:12.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
+  },
+  {
+    "id": "news-b87402dcad4d26e37515",
+    "title": "This chip startup just raised $135M on a bet that AI&#8217;s biggest bottleneck isn&#8217;t compute &#8212; it&#8217;s memory",
+    "url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+    "source": "TechCrunch",
+    "summary": "South Korean chip startup XCENA is betting that AI's real bottleneck is not compute, but memory.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T12:00:00.000Z",
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -21,7 +81,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
+  },
+  {
+    "id": "news-e63fa88b5624cf9ab322",
+    "title": "Boston Children’s uses AI to unlock new diagnoses",
+    "url": "https://openai.com/index/boston-childrens-hospital",
+    "source": "OpenAI",
+    "summary": "Boston Children’s Hospital uses OpenAI technology to improve patient care, reduce operational burden, and help diagnose more than 40 rare disease cases.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-29T12:00:00.000Z",
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-0a62db37e3180a488752",
@@ -33,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T11:58:40.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-875677d6fc7eebce3697",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T10:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-8337eeb248ea1830c3c0",
@@ -57,11 +129,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T03:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-5471d9492ea3f34d8b5d",
-    "title": "Glean&#8217;s top line crosses $300M as AI budget-cutting becomes its major selling point",
+    "title": "Glean&#8217;s top line crosses $300M as AI budget cutting becomes its major selling point",
     "url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
     "source": "TechCrunch",
     "summary": "The enterprise AI search startup tripled its annual revenue even as tech giants entered the category.",
@@ -69,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T00:44:37.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-12919de6dcce25989e01",
@@ -81,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T21:24:01.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -93,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-11e6e2adfb18488571ba",
@@ -105,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:14:07.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-e14094841cd1fac6d0c8",
@@ -117,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:06:07.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-9ee607688cc207501fbf",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T18:52:51.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-350fe0bcb65ebc02f5f7",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T18:32:25.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-a7fee3fac6f2b1a3a1cd",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:30:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-215cc629463f0bde637f",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:00:09.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-2259730a105ce65dc6a6",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T17:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-a8e64a26d282b58fb9fb",
@@ -189,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T16:08:45.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-d3938e4ad600a413a13c",
@@ -201,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T16:05:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-409530355c13bdbc7ddf",
@@ -213,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:36:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-a64a1af4911882abcb8c",
@@ -225,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:35:43.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -237,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-ffbb231cfa20bf0a9d08",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:45:13.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-28aa13332bf322b9e301",
@@ -261,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:33:31.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-61de5c0b6e0589a824e9",
@@ -273,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:30:17.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-8afb8076f110359d7c3a",
@@ -285,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:30:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-d554aedc88808e5e7b71",
@@ -297,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:28:47.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-a4452148646413191970",
@@ -309,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:08:36.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-489abb5daea1956379fd",
@@ -321,43 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T14:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
-  },
-  {
-    "id": "news-d9dddcb5b5e7d2610717",
-    "title": "Visa invests in Replit to power agentic payments for developers",
-    "url": "https://techcrunch.com/2026/05/28/visa-invests-in-replit-to-power-agentic-payments-for-developers/",
-    "source": "TechCrunch",
-    "summary": "Visa said that over 1,000 employees have been using Replit for prototyping and development.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T14:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
-  },
-  {
-    "id": "news-3655c76183d35e3c1fc5",
-    "title": "2 days left: Lock in ticket savings of up to $410 to TechCrunch Disrupt 2026",
-    "url": "https://techcrunch.com/2026/05/28/2-days-left-lock-in-ticket-savings-of-up-to-410-to-techcrunch-disrupt-2026/",
-    "source": "TechCrunch",
-    "summary": "Savings of up to $410 on TechCrunch Disrupt 2026 tickets end tomorrow, May 29, 11:59 p.m. PT. Register now to save and join 10,000+ tech leaders on October 13-15 in San Francisco.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T14:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
-  },
-  {
-    "id": "news-7a983c75a9bc41ed8b27",
-    "title": "Has the hunt for AI compute uncovered the next Cerebras?",
-    "url": "https://techcrunch.com/2026/05/28/has-the-hunt-for-ai-compute-uncovered-the-next-cerebras/",
-    "source": "TechCrunch",
-    "summary": "General Compute is betting SambaNova will be the next breakout chipmaker.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T13:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-c4a9a577612daa8d7698",
@@ -369,43 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T12:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
-  },
-  {
-    "id": "news-7ed81bda34a5ca5ff8d9",
-    "title": "Vertu wants CEOs to run companies from an AI foldable starting at $6,880",
-    "url": "https://techcrunch.com/2026/05/28/vertu-wants-ceos-to-run-companies-from-an-ai-foldable-starting-at-6880/",
-    "source": "TechCrunch",
-    "summary": "Built on top of the open source Hermes project, Vertu's new foldable combines AI-agent workflows, enterprise integrations, and ultra-premium luxury finishes.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T07:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
-  },
-  {
-    "id": "news-b4d0e41acafd9dbbe7a6",
-    "title": "Why Google&#8217;s AI can&#8217;t spell Google (or anything else)",
-    "url": "https://techcrunch.com/2026/05/27/why-googles-ai-cant-spell-google-or-anything-else/",
-    "source": "TechCrunch",
-    "summary": "Google is embarrassing itself, again.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T00:17:41.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
-  },
-  {
-    "id": "news-cb031b5cf3e3be67bd75",
-    "title": "MUFG aims to become AI-native with OpenAI",
-    "url": "https://openai.com/index/mufg",
-    "source": "OpenAI",
-    "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-3e9dde27d0980f7870e1",
@@ -417,7 +417,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
+  },
+  {
+    "id": "news-cb031b5cf3e3be67bd75",
+    "title": "MUFG aims to become AI-native with OpenAI",
+    "url": "https://openai.com/index/mufg",
+    "source": "OpenAI",
+    "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-28T00:00:00.000Z",
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-a1f161b6a344e4fa2c08",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T11:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-9da64821c60f866d060a",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T07:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-fae225528858b04cbf90",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-b36c91942c4f0187bc1b",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-2958e44acb3bbf9966c3",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-ef1db9edff97d09f04e4",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-4ce39150a4dcc4b87dd2",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-85a3fdb43c804c3bf0ce",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-21T12:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -573,31 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
-  },
-  {
-    "id": "news-cb920945cfca046c0cf2",
-    "title": "How Ramp engineers accelerate code review with Codex",
-    "url": "https://openai.com/index/ramp",
-    "source": "OpenAI",
-    "summary": "How Ramp engineers use Codex with GPT-5.5 to review code and ship improvements, allowing them to get substantive feedback in minutes instead of hours.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
-  },
-  {
-    "id": "news-7f625f66633806e06a2f",
-    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
-    "source": "OpenAI",
-    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-52bd1afbd88b05927463",
@@ -609,7 +597,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
+  },
+  {
+    "id": "news-cb920945cfca046c0cf2",
+    "title": "How Ramp engineers accelerate code review with Codex",
+    "url": "https://openai.com/index/ramp",
+    "source": "OpenAI",
+    "summary": "How Ramp engineers use Codex with GPT-5.5 to review code and ship improvements, allowing them to get substantive feedback in minutes instead of hours.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-20T00:00:00.000Z",
+    "discovered_at": "2026-05-29 16:52:49"
+  },
+  {
+    "id": "news-7f625f66633806e06a2f",
+    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
+    "source": "OpenAI",
+    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-20T00:00:00.000Z",
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-e0640ad0320ce67f7a7e",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T20:30:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-4f1431164463c27111bb",
@@ -729,19 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T10:45:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
-  },
-  {
-    "id": "news-210c7a7c782649817dd4",
-    "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
-    "url": "https://openai.com/index/dell-codex-enterprise-partnership",
-    "source": "OpenAI",
-    "summary": "OpenAI and Dell partner to bring Codex to hybrid and on-premise environments, helping enterprises deploy AI coding agents securely across data and workflows.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-18T10:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:28"
+    "discovered_at": "2026-05-29 16:52:49"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:59"
   },
   {
     "id": "news-7fd7635574ec5271e661",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-96a76e6b90cc858c40fa",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-05T16:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   },
   {
     "id": "news-4e60ba9595b8ef99526a",
@@ -813,6 +813,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-04T17:00:00.000Z",
-    "discovered_at": "2026-05-29 12:26:36"
+    "discovered_at": "2026-05-29 16:52:58"
   }
 ]
