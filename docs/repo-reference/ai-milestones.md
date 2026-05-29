@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 29 May 2026, 08:50 UTC
+Generated: 29 May 2026, 12:26 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,7 +8,7 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 29 May 2026, 08:50 UTC |
+| Generated | 29 May 2026, 12:26 UTC |
 | Reference date | Friday, 29 May 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
