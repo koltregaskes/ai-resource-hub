@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 30 May 2026, 14:46 UTC
+Generated: 30 May 2026, 16:14 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,13 +8,13 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 27 May 2026 | Claude Opus 4.8 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
-| 27 May 2026 | Claude Opus 4.8 | Anthropic | tracking | high | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
+| 27 May 2026 | Claude Opus 4.8 (Fast) | Anthropic | tracking | high | needs research | 0 | 0 | [official](https://docs.anthropic.com) |
+| 27 May 2026 | Claude Opus 4.8 | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
 | 21 May 2026 | Qwen3.7 Max | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 20 May 2026 | Grok Build 0.1 | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
-| 19 May 2026 | Gemini 3.5 Flash | Google | tracking | high | ready for editor | 0 | 5 | [official](https://ai.google.dev/gemini-api/docs/models) |
-| 12 May 2026 | Claude Opus 4.7 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
-| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
+| 19 May 2026 | Gemini 3.5 Flash | Google | tracking | high | ready for editor | 0 | 6 | [official](https://ai.google.dev/gemini-api/docs/models) |
+| 12 May 2026 | Claude Opus 4.7 (Fast) | Anthropic | tracking | high | needs research | 0 | 0 | [official](https://docs.anthropic.com) |
+| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/glasswing) |
 | 5 May 2026 | GPT Chat Latest | OpenAI | tracking | watch | ready for editor | 0 | 1 | [official](https://platform.openai.com/docs/models) |
 | 30 Apr 2026 | Grok 4.3 | xAI | tracking | watch | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
 | 30 Apr 2026 | Mistral Medium 3.5 | Mistral | tracking | watch | needs research | 0 | 0 | [official](https://docs.mistral.ai) |
