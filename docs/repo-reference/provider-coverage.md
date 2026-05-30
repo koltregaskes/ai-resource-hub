@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 30 May 2026, 12:14 UTC
+Generated: 30 May 2026, 14:46 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -16,7 +16,7 @@ This table shows how much of each provider's public model surface is currently r
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
 | Stability AI | 4 | 0 | 0 | n/a | n/a | [docs](https://platform.stability.ai/docs) |
-| Mistral | 3 | 22 | 0 | Mistral Medium 3.5 (30 Apr 2026) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
+| Mistral | 3 | 21 | 0 | Mistral Medium 3.5 (30 Apr 2026) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
 | Deepgram | 3 | 0 | 0 | n/a | [status](https://status.deepgram.com) | [docs](https://developers.deepgram.com) |
 | ElevenLabs | 3 | 0 | 0 | n/a | [status](https://status.elevenlabs.io) | [docs](https://elevenlabs.io/docs) |
 | Runway | 3 | 0 | 0 | n/a | n/a | [docs](https://docs.runwayml.com) |
