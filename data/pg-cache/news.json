@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-049ea755e155bca531bb",
+    "title": "Nvidia chases $200B CPU market with AI agent PCs from Microsoft, Dell, and HP",
+    "url": "https://techcrunch.com/2026/06/01/nvidia-chases-200b-cpu-market-with-ai-agent-pcs-from-microsoft-dell-and-hp/",
+    "source": "TechCrunch",
+    "summary": "If Nvidia has cracked a way to bring AI agents easily, safely and usefully to the masses, it could — and should — be big.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T21:35:00.000Z",
+    "discovered_at": "2026-06-01 22:15:58"
+  },
+  {
+    "id": "news-8dc8d8751a475a4d6d31",
+    "title": "Florida sues OpenAI, Sam Altman, in first-of-its-kind lawsuit over violent incidents",
+    "url": "https://techcrunch.com/2026/06/01/florida-sues-openai-sam-altman-in-first-of-its-kind-lawsuit-over-violent-incidents/",
+    "source": "TechCrunch",
+    "summary": "The lawsuit partially revolves around a shooting at Florida State University last year, and ChatGPT's alleged role in the incident.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T20:03:40.000Z",
+    "discovered_at": "2026-06-01 22:15:58"
+  },
+  {
+    "id": "news-2419b6ab48c14634abbd",
+    "title": "This could be Windows’ M1 moment — but expect it to cost a ton",
+    "url": "https://www.theverge.com/tech/941215/windows-laptops-nvidia-rtx-spark-apple-m1-arm-price-ram",
+    "source": "The Verge",
+    "summary": "Nvidia's announcement that it's getting into the consumer laptop chip space with RTX Spark is huge. Apple has proved for years that Arm-based chips can perform incredibly well while also delivering great battery life - at least on the Mac. In the Windows world, performance hasn't fully matched up under Qualcomm chips,…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T20:02:31.000Z",
+    "discovered_at": "2026-06-01 22:15:58"
+  },
+  {
+    "id": "news-638dc762f5b7383dca8b",
+    "title": "Gemini’s new AI agent is about as good as Google’s demo",
+    "url": "https://www.theverge.com/tech/941138/google-gemini-spark-ai-agent-hands-on",
+    "source": "The Verge",
+    "summary": "Google's new \"24/7\" AI agent, Gemini Spark, can be shockingly good at doing things on your behalf. But I'm not sure it's worth the financial cost and potential privacy tradeoffs. The company gave me access to Spark last week. Google advertises Spark as an AI agent that can take on tasks and work on them [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T20:00:00.000Z",
+    "discovered_at": "2026-06-01 22:15:58"
+  },
+  {
+    "id": "news-a4b75e4f5f78650d86ab",
+    "title": "Meta&#8217;s own AI was exploited to hijack Instagram accounts",
+    "url": "https://www.theverge.com/tech/941179/meta-instagram-ai-support-chatbot-exploit-hacked",
+    "source": "The Verge",
+    "summary": "Meta's AI support chatbot helped hackers hijack Instagram accounts, as reported earlier by 404 Media. In a video shared on Telegram, a hacker shows how they could take over an account by asking Meta's chatbot to switch the email associated with someone else's profile and then reset the password. The issue, which Meta…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T19:20:47.000Z",
+    "discovered_at": "2026-06-01 22:15:58"
+  },
+  {
+    "id": "news-f8a25912a86ee846a461",
+    "title": "Water access is now a risk factor in SpaceX&#8217;s IPO",
+    "url": "https://techcrunch.com/2026/06/01/water-access-is-now-a-risk-factor-in-spacexs-ipo/",
+    "source": "TechCrunch",
+    "summary": "The company says it needs \"significant\" water resources to cool its data centers, and that access to abundant, affordable water is a challenge.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T18:19:53.000Z",
+    "discovered_at": "2026-06-01 22:15:58"
+  },
+  {
     "id": "news-835af53f538849b02bd1",
     "title": "Anthropic has officially filed to go public",
     "url": "https://www.theverge.com/ai-artificial-intelligence/941016/anthropic-has-officially-filed-to-go-public",
@@ -9,31 +81,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:40:38.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-14ca8e9e17c2372b14a5",
     "title": "Anthropic files to go public",
     "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
     "source": "TechCrunch",
-    "summary": "The company said Monday it has filed confidentially for an IPO.",
+    "summary": "Anthropic, now an AI powerhouse that has landed top-tier enterprise customers, was once considered an underdog in the emerging world of large language models.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:36:55.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-fe21b03da87010f66ea4",
     "title": "This AI weather startup is out-forecasting government agencies",
     "url": "https://techcrunch.com/2026/06/01/this-ai-weather-startup-is-out-forecasting-government-agencies/",
     "source": "TechCrunch",
-    "summary": "Windborne Systems' newest weather forecasting model beats the best government predictions by days.",
+    "summary": "WindBorne benefits from its unique combination of model-building and data collection. The company now has about 400 balloons in flight gathering sensor readings at any given time, launched from 15 sites around the globe. The advances in its current model come from improvements in how the data collected by the balloons…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-4e4360776d53ebd55e4d",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-d0eeabe5782cd8bb3067",
@@ -57,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T14:49:10.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-b88ad20ba6c940b7e9d4",
@@ -69,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T14:39:03.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-516a4214aab695ea1cd3",
@@ -81,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T14:30:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-9d13d98ea5029578828d",
@@ -93,7 +165,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T14:06:44.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
+  },
+  {
+    "id": "news-dadd123def02abdbcf17",
+    "title": "Building the infrastructure for the Intelligence Age in Michigan",
+    "url": "https://openai.com/index/stargate-michigan-data-center",
+    "source": "OpenAI",
+    "summary": "OpenAI breaks ground on a 1GW data center project in Michigan as part of Stargate, building AI infrastructure to expand access, create jobs, and support communities.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T12:00:00.000Z",
+    "discovered_at": "2026-06-01 22:15:53"
+  },
+  {
+    "id": "news-00ed5eb9be7b5a27ef97",
+    "title": "OpenAI frontier models and Codex are now available on AWS",
+    "url": "https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws",
+    "source": "OpenAI",
+    "summary": "OpenAI frontier models and Codex are now generally available on AWS, giving enterprises a new path to build with OpenAI through the AWS environments, controls, and procurement workflows they already use. Customers can get started with OpenAI on AWS and move faster from evaluation to production.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T10:00:00.000Z",
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-3a5b6804157e3727e228",
@@ -105,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-31T21:05:14.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-2effc53c7f1e1b22b024",
@@ -117,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-31T15:30:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-2fb8fa2bf43210727acf",
@@ -129,11 +225,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-31T13:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-2f6bdff59a90598d7a7e",
-    "title": "SoftBank says it will invest up to €75 billion to build French data centers",
+    "title": "SoftBank says it will invest up to €75B to build French data centers",
     "url": "https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/",
     "source": "TechCrunch",
     "summary": "The goal, the firm said, is to develop and operate up to 5 gigawatts of additional data center capacity.",
@@ -141,19 +237,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T21:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-74c5c0a94fa13f7dd373",
-    "title": "&#8216;What a joke&#8217;: Github Copilot&#8217;s new token-based billing spurs consternation among devs",
+    "title": "&#8216;What a joke&#8217;: GitHub Copilot&#8217;s new token-based billing spurs consternation among devs",
     "url": "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/",
     "source": "TechCrunch",
-    "summary": "The golden age of Microsoft's Github Copilot appears to be at an end.",
+    "summary": "The golden age of Microsoft's GitHub Copilot appears to be at an end.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T16:30:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-d2b66db25e0a9edf07e2",
@@ -165,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T15:59:58.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-724f3d4ba4918188cbfe",
@@ -177,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T15:30:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-1921d9234596863910c4",
@@ -189,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T14:49:27.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-948d1df3e7508ceca79e",
@@ -201,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T13:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-94ece9d06432f907642a",
@@ -213,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T13:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-3b918a4e33f333a6d01c",
@@ -225,19 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T13:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
-  },
-  {
-    "id": "news-f6a8eb281042e82cd7b7",
-    "title": "The SpaceX IPO is great for Elon Musk and terrible for you",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/940001/elon-musk-spacex-ipo-ai",
-    "source": "The Verge",
-    "summary": "I haven't seen anything as stupid as the WeWork IPO document in a very long time - that is, until Elon Musk filed to take SpaceX public. WeWork was a joke. SpaceX is a threat. And if Musk and his bankers have their way, you are going to be their bagholder. Lots of the top-line [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-30T12:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-bfab3dca5f767fcc607d",
@@ -249,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T22:14:22.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-944dd86b3cacec948339",
@@ -261,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T19:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-b59d5931a7bbec9bb542",
@@ -273,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T18:49:19.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-74e8a7cb166fabc6d72b",
@@ -285,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:57:05.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
-  },
-  {
-    "id": "news-7cf4cb4b6cfd66908a4d",
-    "title": "Tech companies desperately want to film you doing chores",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/940007/ai-companies-will-pay-for-robot-training-data",
-    "source": "The Verge",
-    "summary": "This week, an AI training startup called Shift said it would clean New Yorkers' homes for free. It has plans to expand into other cities as well, including London, and looking around my flat, I get the appeal. But there's a catch. There's always a catch. In exchange for the cleaning, Shift wants footage of [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T17:37:43.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-bf7abda633b2cc922140",
@@ -309,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:30:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-dd03918bf5396b7c43e0",
@@ -321,55 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:27:13.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
-  },
-  {
-    "id": "news-82d27a9e2c10c0cf95a1",
-    "title": "Cognition&#8217;s Scott Wu says AI coding agents shouldn&#8217;t replace humans",
-    "url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
-    "source": "TechCrunch",
-    "summary": "Cognition makes Devin, the first and arguably most successful AI coding agent. But famed coder Wu says it isn't designed to supplant human programmers.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T16:13:47.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
-  },
-  {
-    "id": "news-a5126ef298c20973ad11",
-    "title": "Today is the last day to apply to speak at TechCrunch Disrupt 2026",
-    "url": "https://techcrunch.com/2026/05/29/today-is-the-last-day-to-apply-to-speak-at-techcrunch-disrupt-2026/",
-    "source": "TechCrunch",
-    "summary": "Submit your session topic before today ends for a chance to speak at TechCrunch Disrupt 2026. Apply now to share your insight and help shape the conversations defining the tech industry.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T14:15:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
-  },
-  {
-    "id": "news-70973a40c6ba2c40fc2f",
-    "title": "Final 24 hours to save up to $410 on your TechCrunch Disrupt 2026 ticket",
-    "url": "https://techcrunch.com/2026/05/29/final-24-hours-to-save-up-to-410-on-your-techcrunch-disrupt-2026-ticket/",
-    "source": "TechCrunch",
-    "summary": "You now have until tonight at 11:59 p.m. PT to lock in Early Bird savings of up to $410 for TechCrunch Disrupt 2026 before prices increase. Join 10,000+ tech leaders in October for one of the most anticipated tech events of the year. Register now.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T14:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
-  },
-  {
-    "id": "news-67acb84a52f2be0301f5",
-    "title": "Jony Ive’s funky Ferrari",
-    "url": "https://www.theverge.com/podcast/939589/ferrari-luce-jony-ive-vergecast",
-    "source": "The Verge",
-    "summary": "Most people will never own, drive, or even sit inside a Ferrari Luce. (If you can, or do… hit us up.) There's still no question that Ferrari's first electric vehicle is one of the most interesting, surprising cars of the year. With a decidedly un-Ferrari look, and lots of new technology and designs courtesy of [&#8230…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T12:25:12.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-507ec0fdf6297e193b5d",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-e63fa88b5624cf9ab322",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-8337eeb248ea1830c3c0",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T03:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-33e1df4abe4ea5f373c2",
@@ -429,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -441,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-c4a9a577612daa8d7698",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T12:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-cb031b5cf3e3be67bd75",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-3e9dde27d0980f7870e1",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-a1f161b6a344e4fa2c08",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T11:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-9da64821c60f866d060a",
@@ -513,19 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T07:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
-  },
-  {
-    "id": "news-b36c91942c4f0187bc1b",
-    "title": "Warp’s big bet on building open source with GPT-5.5",
-    "url": "https://openai.com/index/warp",
-    "source": "OpenAI",
-    "summary": "Warp uses GPT-5.5 and OpenAI models to coordinate coding agents across local, cloud, and open-source development workflows.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-fae225528858b04cbf90",
@@ -537,7 +549,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
+  },
+  {
+    "id": "news-b36c91942c4f0187bc1b",
+    "title": "Warp’s big bet on building open source with GPT-5.5",
+    "url": "https://openai.com/index/warp",
+    "source": "OpenAI",
+    "summary": "Warp uses GPT-5.5 and OpenAI models to coordinate coding agents across local, cloud, and open-source development workflows.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-27T00:00:00.000Z",
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-2958e44acb3bbf9966c3",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -573,19 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
-  },
-  {
-    "id": "news-4ce39150a4dcc4b87dd2",
-    "title": "How Virgin Atlantic ships faster with Codex",
-    "url": "https://openai.com/index/virgin-atlantic",
-    "source": "OpenAI",
-    "summary": "How Virgin Atlantic used Codex to ship its revamped mobile app on a fixed holiday travel deadline, reaching near-total unit test coverage and zero P1 defects.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-ef1db9edff97d09f04e4",
@@ -597,7 +609,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
+  },
+  {
+    "id": "news-4ce39150a4dcc4b87dd2",
+    "title": "How Virgin Atlantic ships faster with Codex",
+    "url": "https://openai.com/index/virgin-atlantic",
+    "source": "OpenAI",
+    "summary": "How Virgin Atlantic used Codex to ship its revamped mobile app on a fixed holiday travel deadline, reaching near-total unit test coverage and zero P1 defects.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-22T00:00:00.000Z",
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-85a3fdb43c804c3bf0ce",
@@ -609,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-21T12:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -621,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -633,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -645,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-cb920945cfca046c0cf2",
@@ -657,31 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
-  },
-  {
-    "id": "news-7f625f66633806e06a2f",
-    "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
-    "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture",
-    "source": "OpenAI",
-    "summary": "An OpenAI model solved the 80-year-old unit distance problem, disproving a major conjecture in discrete geometry and marking a milestone in AI-driven mathematics.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
-  },
-  {
-    "id": "news-52bd1afbd88b05927463",
-    "title": "The next phase of OpenAI’s Education for Countries",
-    "url": "https://openai.com/index/the-next-phase-of-education-for-countries",
-    "source": "OpenAI",
-    "summary": "OpenAI advances Education for Countries, expanding AI adoption in schools with new partnerships, teacher training, and tools to improve global learning outcomes.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:14"
+    "discovered_at": "2026-06-01 22:15:53"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -813,6 +813,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-06-01 18:15:19"
+    "discovered_at": "2026-06-01 22:15:58"
   }
 ]
