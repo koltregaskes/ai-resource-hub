@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 31 May 2026, 23:18 UTC |
+| Generated | 01 Jun 2026, 05:13 UTC |
 | Providers tracked | 40 |
-| Public models | 318 |
+| Public models | 319 |
 | Active models | 113 |
-| Tracking models | 204 |
+| Tracking models | 205 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 68 |
-| Release-desk entries | 55 |
+| Release-desk entries | 56 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 31 May 2026, 23:18 UTC |
+| Latest visible refresh | 01 Jun 2026, 05:13 UTC |
 | Current evaluated composite leader | Claude Opus 4.6 (67.2) |
-| Latest tracked release | Claude Opus 4.8 (Fast) (27 May 2026) |
+| Latest tracked release | MiniMax M3 (31 May 2026) |
 
 ## Reference Files
 
