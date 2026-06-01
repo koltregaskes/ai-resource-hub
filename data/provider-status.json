@@ -1,6 +1,103 @@
 {
-  "generatedAt": "2026-06-01T12:08:17.093Z",
+  "generatedAt": "2026-06-01T17:04:24.944Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-01T17:04:23.398Z",
+      "overallStatus": "partial_outage",
+      "overallLabel": "Partial System Outage",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Conversations",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KT204M76EYZYJX7WYG1B2QPH",
+          "title": "Decreased ChatGPT availability for Free users",
+          "status": "monitoring",
+          "impact": "major",
+          "startedAt": "2026-06-01T16:26:44.000Z",
+          "updatedAt": "2026-06-01T16:56:58.000Z",
+          "resolvedAt": null,
+          "summary": null
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KT204M76EYZYJX7WYG1B2QPH",
+          "title": "Decreased ChatGPT availability for Free users",
+          "status": "monitoring",
+          "impact": "major",
+          "startedAt": "2026-06-01T16:26:44.000Z",
+          "updatedAt": "2026-06-01T16:56:58.000Z",
+          "resolvedAt": null,
+          "summary": null
+        },
+        {
+          "id": "01KSSY9D28AM92BCDXRTS4CDKZ",
+          "title": "Users May Experience Issues Accessing ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-29T13:20:28.000Z",
+          "updatedAt": "2026-05-29T13:28:52.000Z",
+          "resolvedAt": "2026-05-29T13:28:52.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KSRVTZVW4J7NZ3WXM74DG4KX",
+          "title": "Users may encounter issues with conversations",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-29T03:18:24.000Z",
+          "updatedAt": "2026-05-29T04:58:14.000Z",
+          "resolvedAt": "2026-05-29T04:58:14.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KSRVH1TAV8Q47M91F6V4V6X0",
+          "title": "Users may encounter issues logging in or creating an account",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-05-29T03:12:59.000Z",
+          "updatedAt": "2026-05-29T04:57:55.000Z",
+          "resolvedAt": "2026-05-29T04:57:55.000Z",
+          "summary": null
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T12:08:16.281Z",
+      "lastCheckedAt": "2026-06-01T17:04:24.367Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T12:08:15.672Z",
+      "lastCheckedAt": "2026-06-01T17:04:23.349Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -66,6 +163,28 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "8p6f4r16xxmp",
+          "title": "Elevated errors on Claude Sonnet 4.6",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-01T14:40:22.947Z",
+          "updatedAt": "2026-06-01T15:41:10.765Z",
+          "resolvedAt": "2026-06-01T15:41:10.741Z",
+          "url": "https://stspg.io/nypdcrtdn3t0",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "qc88nvqjv99m",
+          "title": "Elevated errors for Claude Opus 4.7",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-01T12:15:34.802Z",
+          "updatedAt": "2026-06-01T13:33:56.060Z",
+          "resolvedAt": "2026-06-01T13:33:56.047Z",
+          "url": "https://stspg.io/9r2pkqq2zhh6",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "z4pz8z34hr4x",
           "title": "Sonnet 4.5 elevated errors",
           "status": "resolved",
@@ -86,28 +205,6 @@
           "resolvedAt": "2026-06-01T07:22:22.384Z",
           "url": "https://stspg.io/09t6472c707k",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "694jznhm6tsl",
-          "title": "opus 4.7 elevated errors",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-30T22:58:03.318Z",
-          "updatedAt": "2026-05-31T00:16:20.556Z",
-          "resolvedAt": "2026-05-31T00:16:20.528Z",
-          "url": "https://stspg.io/5sy83gs4ytbw",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "2zr0rkdxjdtc",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-29T18:35:22.808Z",
-          "updatedAt": "2026-05-29T19:12:08.332Z",
-          "resolvedAt": "2026-05-29T19:12:08.252Z",
-          "url": "https://stspg.io/03j611vnshfp",
-          "summary": "This issue has been resolved."
         }
       ]
     },
@@ -122,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T12:08:16.599Z",
+      "lastCheckedAt": "2026-06-01T17:04:24.560Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T12:08:17.086Z",
+      "lastCheckedAt": "2026-06-01T17:04:24.798Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T12:08:16.095Z",
+      "lastCheckedAt": "2026-06-01T17:04:23.902Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -251,92 +348,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T12:08:15.682Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
-        },
-        {
-          "name": "Files",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KSSY9D28AM92BCDXRTS4CDKZ",
-          "title": "Users May Experience Issues Accessing ChatGPT",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-29T13:20:28.000Z",
-          "updatedAt": "2026-05-29T13:28:52.000Z",
-          "resolvedAt": "2026-05-29T13:28:52.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KSRVTZVW4J7NZ3WXM74DG4KX",
-          "title": "Users may encounter issues with conversations",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-29T03:18:24.000Z",
-          "updatedAt": "2026-05-29T04:58:14.000Z",
-          "resolvedAt": "2026-05-29T04:58:14.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KSRVH1TAV8Q47M91F6V4V6X0",
-          "title": "Users may encounter issues logging in or creating an account",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-29T03:12:59.000Z",
-          "updatedAt": "2026-05-29T04:57:55.000Z",
-          "resolvedAt": "2026-05-29T04:57:55.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KSR5D08APXRBVK8S120N4PDX",
-          "title": "Business plan subscription checkout issues on web and mobile web",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-05-28T20:46:17.000Z",
-          "updatedAt": "2026-05-29T01:29:51.000Z",
-          "resolvedAt": "2026-05-29T01:29:51.000Z",
-          "summary": null
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -347,7 +358,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T12:08:16.900Z",
+      "lastCheckedAt": "2026-06-01T17:04:24.937Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
