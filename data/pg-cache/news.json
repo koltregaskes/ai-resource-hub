@@ -1,5 +1,101 @@
 [
   {
+    "id": "news-835af53f538849b02bd1",
+    "title": "Anthropic has officially filed to go public",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/941016/anthropic-has-officially-filed-to-go-public",
+    "source": "The Verge",
+    "summary": "After months of speculation about whether OpenAI or Anthropic would be first in their race to IPO, Anthropic on Monday reached a key milestone: filing to kick off the process with the U.S. Securities and Exchange Commission. The filing sets the stage for what's sure to be a massive IPO. As of its fundraise last [&#823…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T16:40:38.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
+    "id": "news-14ca8e9e17c2372b14a5",
+    "title": "Anthropic files to go public",
+    "url": "https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/",
+    "source": "TechCrunch",
+    "summary": "The company said Monday it has filed confidentially for an IPO.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T16:36:55.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
+    "id": "news-fe21b03da87010f66ea4",
+    "title": "This AI weather startup is out-forecasting government agencies",
+    "url": "https://techcrunch.com/2026/06/01/this-ai-weather-startup-is-out-forecasting-government-agencies/",
+    "source": "TechCrunch",
+    "summary": "Windborne Systems' newest weather forecasting model beats the best government predictions by days.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T16:00:00.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
+    "id": "news-4e4360776d53ebd55e4d",
+    "title": "How we used Gemini to build Google I/O 2026",
+    "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/",
+    "source": "Google",
+    "summary": "Learn how Googlers used AI to produce Google I/O 2026.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T16:00:00.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
+    "id": "news-d0eeabe5782cd8bb3067",
+    "title": "DuckDuckGo makes its &#8216;no-AI&#8217; search engine easier to access as its traffic booms",
+    "url": "https://techcrunch.com/2026/06/01/duckduckgo-makes-its-no-ai-search-engine-easier-to-access-as-its-traffic-booms/",
+    "source": "TechCrunch",
+    "summary": "Alternative search engine DuckDuckGo launches 'no AI' web extensions for Chrome and Firefox users.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T14:49:10.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
+    "id": "news-b88ad20ba6c940b7e9d4",
+    "title": "Microsoft to unveil new AI models and Windows improvements at Build",
+    "url": "https://www.theverge.com/report/940861/microsoft-build-ai-models-windows-dev-mode-what-to-expect",
+    "source": "The Verge",
+    "summary": "Microsoft is heading to San Francisco this week in a bid to win back developers at its Build conference. I've been attending Build since the days when Microsoft called it the Professional Developers Conference, and I can't remember a more pivotal moment. As Microsoft continues to reshuffle its entire business around A…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T14:39:03.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
+    "id": "news-516a4214aab695ea1cd3",
+    "title": "AI is blowing up music. How should the Grammys handle it?",
+    "url": "https://www.theverge.com/podcast/940831/ai-grammys-music-recording-harvey-mason",
+    "source": "The Verge",
+    "summary": "Today I’m talking with Harvey Mason Jr., who is CEO of the Recording Academy — that’s the outfit that puts on the Grammy Awards. I last talked to Harvey in 2024, when it was obvious that generative AI would upend the music industry, but still not exactly clear how that would happen.&#160; Well, it’s been [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T14:30:00.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
+    "id": "news-9d13d98ea5029578828d",
+    "title": "Strava blames zero-code AI apps and scrapers as it tightens API access",
+    "url": "https://www.theverge.com/gadgets/940854/strava-restricts-api-access-ai-apps",
+    "source": "The Verge",
+    "summary": "The popular fitness-tracking platform, Strava, is restricting access to its API as part of efforts to clamp down on AI scraping, as reported earlier by TechCrunch. Developers who want to build an app using Strava's data now need to pay for a flat $11.99 / month subscription. In an update on its developer hub, Strava […",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-01T14:06:44.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
     "id": "news-3a5b6804157e3727e228",
     "title": "Erin Brockovich takes aim at data center secrecy",
     "url": "https://techcrunch.com/2026/05/31/erin-brockovich-takes-aim-at-data-center-secrecy/",
@@ -9,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-31T21:05:14.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-2effc53c7f1e1b22b024",
@@ -21,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-31T15:30:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-2fb8fa2bf43210727acf",
@@ -33,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-31T13:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-2f6bdff59a90598d7a7e",
@@ -45,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T21:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-74c5c0a94fa13f7dd373",
@@ -57,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T16:30:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-d2b66db25e0a9edf07e2",
@@ -69,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T15:59:58.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-724f3d4ba4918188cbfe",
@@ -81,7 +177,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T15:30:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
+  },
+  {
+    "id": "news-1921d9234596863910c4",
+    "title": "The groupthink boom: what 3 top VCs really think about the AI frenzy",
+    "url": "https://techcrunch.com/2026/05/30/the-groupthink-boom-what-three-top-vcs-really-think-about-the-ai-frenzy/",
+    "source": "TechCrunch",
+    "summary": "\"If you're 22 years old in San Francisco and building something in AI, there may be a seed term sheet in your inbox — but if you're 19, oh my God, this means you're really good; you might already have a Series A [offer],\" said one, half-kiddingly.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-30T14:49:27.000Z",
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-948d1df3e7508ceca79e",
@@ -93,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T13:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-94ece9d06432f907642a",
@@ -105,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T13:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-3b918a4e33f333a6d01c",
@@ -117,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T13:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-f6a8eb281042e82cd7b7",
@@ -129,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-30T12:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-bfab3dca5f767fcc607d",
@@ -141,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T22:14:22.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-944dd86b3cacec948339",
@@ -153,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T19:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-b59d5931a7bbec9bb542",
@@ -165,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T18:49:19.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-74e8a7cb166fabc6d72b",
@@ -177,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:57:05.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-7cf4cb4b6cfd66908a4d",
@@ -189,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:37:43.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-bf7abda633b2cc922140",
@@ -201,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:30:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-dd03918bf5396b7c43e0",
@@ -213,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:27:13.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-82d27a9e2c10c0cf95a1",
@@ -225,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T16:13:47.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-a5126ef298c20973ad11",
@@ -237,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T14:15:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-78d00f9679baf97430b0",
-    "title": "Does your CEO have AI psychosis? Aaron Levie thinks most of them do.",
-    "url": "https://techcrunch.com/podcast/does-your-ceo-have-ai-psychosis-aaron-levie-thinks-most-of-them-do/",
-    "source": "TechCrunch",
-    "summary": "The people deciding that AI can replace your job are also the ones least likely to understand what your job truly involves, according to Box founder Aaron Levie, who pointed to this as an example of &#8220;AI psychosis.” Indeed, ClickUp recently cut 22% of its workforce for AI agents, tech layoffs in 2026 are already…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T14:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-70973a40c6ba2c40fc2f",
@@ -261,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T14:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-1c3c4c0cf715766ebc12",
-    "title": "Kiwibit’s AI-powered bird feeder is my new backyard buddy",
-    "url": "https://techcrunch.com/2026/05/29/kiwibits-ai-powered-bird-feeder-is-my-new-backyard-buddy/",
-    "source": "TechCrunch",
-    "summary": "If you're looking for a fun way to connect with nature while collecting bird species on an app like Pokémon, give this smart feeder a try.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T13:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-67acb84a52f2be0301f5",
@@ -285,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:25:12.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-b87402dcad4d26e37515",
-    "title": "This chip startup just raised $135M on a bet that AI&#8217;s biggest bottleneck isn&#8217;t compute &#8212; it&#8217;s memory",
-    "url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
-    "source": "TechCrunch",
-    "summary": "South Korean chip startup XCENA is betting that AI's real bottleneck is not compute, but memory.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -309,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-507ec0fdf6297e193b5d",
@@ -321,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-e63fa88b5624cf9ab322",
@@ -333,31 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
-  },
-  {
-    "id": "news-0a62db37e3180a488752",
-    "title": "This AI startup will clean your home for free to train future robots",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/939765/ai-training-data-startup-shift-free-cleaning",
-    "source": "The Verge",
-    "summary": "AI training startup Shift wants to clean your home for free. The catch - because, despite what its website says, there's always a catch - is that it will record cleaners as they scrub, vacuum, dust, tidy, and wash, and use that footage to train robots. Shift announced the unusual offer on social media on [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T11:58:40.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-875677d6fc7eebce3697",
-    "title": "Adobe’s conversational AI agent is a mediocre design intern",
-    "url": "https://www.theverge.com/tech/939686/adobes-conversational-ai-agent-is-a-mediocre-design-intern",
-    "source": "The Verge",
-    "summary": "AI image tools rarely make me feel like I'm part of the creative process. They are, after all, mostly designed so that people with no design experience can type in a few words and get back a usable result. So I was pleasantly surprised by Adobe's latest take on an AI image assistant: It's a [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T10:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-8337eeb248ea1830c3c0",
@@ -369,19 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T03:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
-  },
-  {
-    "id": "news-5471d9492ea3f34d8b5d",
-    "title": "Glean&#8217;s top line crosses $300M as AI budget cutting becomes its major selling point",
-    "url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point/",
-    "source": "TechCrunch",
-    "summary": "The enterprise AI search startup tripled its annual revenue even as tech giants entered the category.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T00:44:37.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-33e1df4abe4ea5f373c2",
@@ -393,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -405,31 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-11e6e2adfb18488571ba",
-    "title": "Microsoft 365 Copilot gets a speed boost and cleaner design",
-    "url": "https://www.theverge.com/tech/939273/microsoft-365-copilot-redesign",
-    "source": "The Verge",
-    "summary": "Microsoft is launching a revamped version of Microsoft 365 Copilot, offering a cleaner design that the company claims loads twice as fast. As part of this update, Copilot will provide more reliable and structured responses that are easier to scan, according to Microsoft. The redesign, which is rolling out across deskt…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T20:14:07.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-2259730a105ce65dc6a6",
-    "title": "Claude’s new model is more ‘honest’ when it messes up",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/939094/anthropic-claude-4-8-opus-honesty-effort",
-    "source": "The Verge",
-    "summary": "Anthropic is releasing Claude Opus 4.8 on Thursday, and the company is touting the model's \"honesty.\" According to Anthropic, it trains \"all [its] models to be honest - for instance, to avoid making claims that they can't support.\" But it notes that \"a general problem with AI models is that they sometimes jump to conc…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-28T17:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-c4a9a577612daa8d7698",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T12:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-cb031b5cf3e3be67bd75",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-3e9dde27d0980f7870e1",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-a1f161b6a344e4fa2c08",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T11:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-9da64821c60f866d060a",
@@ -501,19 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T07:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
-  },
-  {
-    "id": "news-fae225528858b04cbf90",
-    "title": "Election information and safeguards in 2026",
-    "url": "https://openai.com/index/election-safeguards-2026",
-    "source": "OpenAI",
-    "summary": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-b36c91942c4f0187bc1b",
@@ -525,7 +525,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
+  },
+  {
+    "id": "news-fae225528858b04cbf90",
+    "title": "Election information and safeguards in 2026",
+    "url": "https://openai.com/index/election-safeguards-2026",
+    "source": "OpenAI",
+    "summary": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-27T00:00:00.000Z",
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-2958e44acb3bbf9966c3",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -561,19 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-ef1db9edff97d09f04e4",
-    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
-    "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
-    "source": "OpenAI",
-    "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-4ce39150a4dcc4b87dd2",
@@ -585,7 +585,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
+  },
+  {
+    "id": "news-ef1db9edff97d09f04e4",
+    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
+    "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
+    "source": "OpenAI",
+    "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-22T00:00:00.000Z",
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-85a3fdb43c804c3bf0ce",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-21T12:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -633,19 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-52bd1afbd88b05927463",
-    "title": "The next phase of OpenAI’s Education for Countries",
-    "url": "https://openai.com/index/the-next-phase-of-education-for-countries",
-    "source": "OpenAI",
-    "summary": "OpenAI advances Education for Countries, expanding AI adoption in schools with new partnerships, teacher training, and tools to improve global learning outcomes.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-cb920945cfca046c0cf2",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-7f625f66633806e06a2f",
@@ -669,7 +669,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T00:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:07"
+    "discovered_at": "2026-06-01 18:15:14"
+  },
+  {
+    "id": "news-52bd1afbd88b05927463",
+    "title": "The next phase of OpenAI’s Education for Countries",
+    "url": "https://openai.com/index/the-next-phase-of-education-for-countries",
+    "source": "OpenAI",
+    "summary": "OpenAI advances Education for Countries, expanding AI adoption in schools with new partnerships, teacher training, and tools to improve global learning outcomes.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-05-20T00:00:00.000Z",
+    "discovered_at": "2026-06-01 18:15:14"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -753,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -765,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -777,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -789,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -801,18 +813,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
-  },
-  {
-    "id": "news-7fd7635574ec5271e661",
-    "title": "5 gardening tips you can try right in Search",
-    "url": "https://blog.google/products-and-platforms/products/search/gardening-tips/",
-    "source": "Google",
-    "summary": "We’ve rounded up the top ways you can use Google’s AI Mode, Search Live and Shopping to help your plants thrive.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-06T16:00:00.000Z",
-    "discovered_at": "2026-06-01 12:08:14"
+    "discovered_at": "2026-06-01 18:15:19"
   }
 ]
