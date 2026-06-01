@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-01T05:30:10.791Z",
+  "generatedAt": "2026-06-01T10:58:51.380Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T05:30:10.076Z",
+      "lastCheckedAt": "2026-06-01T10:58:50.878Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T05:30:09.627Z",
+      "lastCheckedAt": "2026-06-01T10:58:50.216Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -66,6 +66,28 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "z4pz8z34hr4x",
+          "title": "Sonnet 4.5 elevated errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-01T09:08:55.932Z",
+          "updatedAt": "2026-06-01T09:28:37.898Z",
+          "resolvedAt": "2026-06-01T09:28:37.883Z",
+          "url": "https://stspg.io/22x7sjxvzqm1",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "rk70zc69m54p",
+          "title": "Opus 4.7 elevated errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-01T06:48:44.543Z",
+          "updatedAt": "2026-06-01T07:22:22.401Z",
+          "resolvedAt": "2026-06-01T07:22:22.384Z",
+          "url": "https://stspg.io/09t6472c707k",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "694jznhm6tsl",
           "title": "opus 4.7 elevated errors",
           "status": "resolved",
@@ -86,28 +108,6 @@
           "resolvedAt": "2026-05-29T19:12:08.252Z",
           "url": "https://stspg.io/03j611vnshfp",
           "summary": "This issue has been resolved."
-        },
-        {
-          "id": "5s24h0pbdj5d",
-          "title": "Elevated errors on Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-29T08:30:14.324Z",
-          "updatedAt": "2026-05-29T08:45:43.324Z",
-          "resolvedAt": "2026-05-29T08:45:43.307Z",
-          "url": "https://stspg.io/2zd5npm1vfzq",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "8q00jfj4yfv6",
-          "title": "Billing and subscription management issues",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-28T19:04:04.091Z",
-          "updatedAt": "2026-05-28T19:23:57.832Z",
-          "resolvedAt": "2026-05-28T19:23:57.798Z",
-          "url": "https://stspg.io/1bm8nzs3bzw2",
-          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 18:27 UTC to 19:05 UTC."
         }
       ]
     },
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T05:30:10.434Z",
+      "lastCheckedAt": "2026-06-01T10:58:51.225Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T05:30:10.783Z",
+      "lastCheckedAt": "2026-06-01T10:58:51.336Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T05:30:09.721Z",
+      "lastCheckedAt": "2026-06-01T10:58:50.627Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T05:30:09.628Z",
+      "lastCheckedAt": "2026-06-01T10:58:50.194Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-01T05:30:10.716Z",
+      "lastCheckedAt": "2026-06-01T10:58:51.373Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -356,7 +356,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-31T06:11:12.000Z",
+          "id": "together-feed-0-2026-06-01T05:58:04.000Z",
+          "title": "ZAI GLM 5.1 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-01T05:58:04.000Z",
+          "updatedAt": "2026-06-01T05:58:04.000Z",
+          "resolvedAt": "2026-06-01T05:58:04.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5.1 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-01T05:46:04.000Z",
+          "title": "ZAI GLM 5.1 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-01T05:46:04.000Z",
+          "updatedAt": "2026-06-01T05:46:04.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "ZAI GLM 5.1 went down"
+        },
+        {
+          "id": "together-feed-2-2026-05-31T06:11:12.000Z",
           "title": "DeepSeek V4 Pro recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -367,34 +389,12 @@
           "summary": "DeepSeek V4 Pro recovered"
         },
         {
-          "id": "together-feed-1-2026-05-31T05:56:46.000Z",
+          "id": "together-feed-3-2026-05-31T05:56:46.000Z",
           "title": "DeepSeek V4 Pro went down",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-05-31T05:56:46.000Z",
           "updatedAt": "2026-05-31T05:56:46.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "DeepSeek V4 Pro went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-31T01:13:54.000Z",
-          "title": "DeepSeek V4 Pro recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-31T01:13:54.000Z",
-          "updatedAt": "2026-05-31T01:13:54.000Z",
-          "resolvedAt": "2026-05-31T01:13:54.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "DeepSeek V4 Pro recovered"
-        },
-        {
-          "id": "together-feed-3-2026-05-31T00:59:54.000Z",
-          "title": "DeepSeek V4 Pro went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-31T00:59:54.000Z",
-          "updatedAt": "2026-05-31T00:59:54.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "DeepSeek V4 Pro went down"
@@ -416,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
