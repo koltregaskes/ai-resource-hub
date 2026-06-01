@@ -5,6 +5,7 @@ $repoRoot = (Resolve-Path (Join-Path $scriptDir '..\..')).Path
 $logDir = Join-Path $repoRoot 'logs'
 $logFile = Join-Path $logDir 'local-freshness-update.log'
 $nodeModulesMarker = Join-Path $repoRoot 'node_modules\astro\package.json'
+$restoreAfterVerify = $env:AIRH_LOCAL_REFRESH_RESTORE -eq '1'
 
 New-Item -ItemType Directory -Path $logDir -Force | Out-Null
 
@@ -48,7 +49,12 @@ Push-Location $repoRoot
 
 try {
   Write-Log "Starting local-only freshness update for $repoRoot"
-  Write-Log 'Safety mode: no git pull, no build, no commit, no push, no deploy, no publish.'
+  Write-Log 'Safety mode: no git pull, no commit, no push, no deploy, no publish.'
+  if ($restoreAfterVerify) {
+    Write-Log 'Restore mode: generated publish artifacts will be restored after verification.'
+  } else {
+    Write-Log 'Refresh mode: generated publish artifacts will be left in place for the local preview and fallback cache.'
+  }
 
   if (-not (Test-Path $nodeModulesMarker)) {
     Write-Log "node_modules marker not found. Skipping local freshness; daily update can reinstall dependencies." 'WARN'
@@ -62,17 +68,21 @@ try {
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
   Invoke-Logged 'npm.cmd' @('run', 'verify:publish')
 
-  $publishPaths = @(
-    'data/pg-cache',
-    'data/provider-status.json',
-    'public/data',
-    'src/data/news-pipeline.generated.ts',
-    'src/data/model-release-desk.generated.ts'
-  )
-  Write-Log 'Restoring generated publish artifacts after local-only verification so the checkout stays clean.'
-  Invoke-Logged 'git' (@('restore', '--source', 'HEAD', '--worktree', '--') + $publishPaths)
-  Invoke-Logged 'git' (@('add', '--renormalize', '--') + $publishPaths)
-  Invoke-Logged 'git' (@('restore', '--staged', '--') + $publishPaths)
+  if ($restoreAfterVerify) {
+    $publishPaths = @(
+      'data/pg-cache',
+      'data/provider-status.json',
+      'public/data',
+      'src/data/news-pipeline.generated.ts',
+      'src/data/model-release-desk.generated.ts'
+    )
+    Write-Log 'Restoring generated publish artifacts after local-only verification because AIRH_LOCAL_REFRESH_RESTORE=1.'
+    Invoke-Logged 'git' (@('restore', '--source', 'HEAD', '--worktree', '--') + $publishPaths)
+    Invoke-Logged 'git' (@('add', '--renormalize', '--') + $publishPaths)
+    Invoke-Logged 'git' (@('restore', '--staged', '--') + $publishPaths)
+  } else {
+    Write-Log 'Generated publish artifacts remain refreshed locally; use AIRH_LOCAL_REFRESH_RESTORE=1 for dry-run restore mode.'
+  }
   Write-Log 'Leaving news feed and digest artifacts in place; the shared site filter owns local news freshness.'
 
   Write-Log 'Local-only freshness update completed successfully.'
