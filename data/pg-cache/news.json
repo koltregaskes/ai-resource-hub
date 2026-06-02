@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-1317a58a147d30dd0c03",
+    "title": "Microsoft Build 2026: the 7 biggest announcements",
+    "url": "https://www.theverge.com/tech/941738/microsoft-build-2026-biggest-announcements",
+    "source": "The Verge",
+    "summary": "Microsoft just kicked off Build 2026 with a keynote from CEO Satya Nadella and other company leaders. As expected, it was filled with announcements, ranging from new Surface hardware to an always-on personal assistant and updates across Microsoft's in-house AI models. If you didn't watch the event live, you can catch…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-02T19:23:52.000Z",
+    "discovered_at": "2026-06-02 19:25:47"
+  },
+  {
+    "id": "news-7f9fddadd6b68c0e2130",
+    "title": "Uber caps employee AI spending after blowing through budget in four months",
+    "url": "https://techcrunch.com/2026/06/02/uber-caps-employee-ai-spending-after-blowing-through-budget-in-four-months/",
+    "source": "TechCrunch",
+    "summary": "Uber's cutback has occurred after the company had reportedly encouraged staff to use AI as much as possible.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-02T19:11:48.000Z",
+    "discovered_at": "2026-06-02 19:25:47"
+  },
+  {
+    "id": "news-908f145551698926c8d9",
+    "title": "New Microsoft tool lets devs spin up AI behavior tests using text descriptions",
+    "url": "https://techcrunch.com/2026/06/02/new-microsoft-tool-lets-devs-spin-up-ai-behavior-tests-using-text-descriptions/",
+    "source": "TechCrunch",
+    "summary": "Microsoft on Tuesday took the wraps off Adaptive Spec-driven Scoring for Evaluation and Regression Testing, an open-source framework for spinning up AI evaluations.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-02T19:02:21.000Z",
+    "discovered_at": "2026-06-02 19:25:47"
+  },
+  {
+    "id": "news-10e299e4765bda70bf1d",
+    "title": "Trump signs executive order to review AI models before they’re released",
+    "url": "https://www.theverge.com/policy/941775/trump-ai-executive-order",
+    "source": "The Verge",
+    "summary": "President Donald Trump signed an executive order Tuesday creating a \"voluntary framework\" for AI companies to share their frontier models with the federal government before they're released \"to promote secure innovation and strengthen the cybersecurity of critical infrastructure.\" The order says the US AI industry has…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-02T18:33:42.000Z",
+    "discovered_at": "2026-06-02 19:25:47"
+  },
+  {
     "id": "news-075926a9117b5c4a393f",
     "title": "Martin Scorsese becomes the latest — and most unlikely — Hollywood voice for AI",
     "url": "https://techcrunch.com/2026/06/02/martin-scorsese-becomes-the-latest-and-most-unlikely-hollywood-voice-for-ai/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T18:16:53.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-62afec8372110ca7c4f9",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T18:12:44.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-c5e2177ce5311d621e6c",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T18:02:44.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-76f0d9acd80242c78dc6",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T18:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-035c903e2c7b0063035a",
@@ -57,19 +105,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T18:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-693c9d711865a735e361",
     "title": "Microsoft offers devs a better way to control AI agent behavior",
     "url": "https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior/",
     "source": "TechCrunch",
-    "summary": "The specification lets developer, compliance and security teams define their own policies for agents to follow in portable policy files.",
+    "summary": "The specification lets developer, compliance, and security teams define their own policies for agents to follow in portable policy files.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T18:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
+  },
+  {
+    "id": "news-e42dce6dd0eff3ab38a0",
+    "title": "Google rolls out fake call detection to protect against AI deepfake impersonation scams",
+    "url": "https://techcrunch.com/2026/06/02/google-rolls-out-fake-call-detection-to-protect-against-ai-deepfake-impersonation-scams/",
+    "source": "TechCrunch",
+    "summary": "As people increasingly refuse to answer calls from unknown numbers, scammers are shifting their tactics by spoofing trusted phone numbers and using AI deepfake technology to sound like authority figures, family members, or employers.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-02T18:00:00.000Z",
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-51a6f2f1f6da364110f9",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T17:47:28.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-b29e52a94a1b31b13453",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T17:31:02.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-88f776c85a454dfd90f0",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T16:30:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-ec28701a10d3def6fda9",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T16:23:08.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-31f39eabff831a5c6a8e",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T16:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-233303198687abb0a6fd",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T15:59:58.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-dcf96489a383f0e46ddc",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T14:44:21.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-a983a21ac4cf0ef2084d",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T12:38:08.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-ce28044b9514faaac341",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T12:32:59.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-5c441427ce0707c4f774",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T12:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-6421a7340260ea9bc215",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T12:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-597005b4447f780c0176",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T09:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-00e733aa1592981948ee",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T07:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-8c810ea5d0c79d2f8080",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T02:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-16c1b9fdcd09b5fd2399",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T22:55:09.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-049ea755e155bca531bb",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T21:35:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-8dc8d8751a475a4d6d31",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T20:03:40.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-2419b6ab48c14634abbd",
@@ -285,31 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T20:02:31.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
-  },
-  {
-    "id": "news-638dc762f5b7383dca8b",
-    "title": "Gemini’s new AI agent is about as good as Google’s demo",
-    "url": "https://www.theverge.com/tech/941138/google-gemini-spark-ai-agent-hands-on",
-    "source": "The Verge",
-    "summary": "Google's new \"24/7\" AI agent, Gemini Spark, can be shockingly good at doing things on your behalf. But I'm not sure it's worth the financial cost and potential privacy tradeoffs. The company gave me access to Spark last week. Google advertises Spark as an AI agent that can take on tasks and work on them [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-01T20:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
-  },
-  {
-    "id": "news-a4b75e4f5f78650d86ab",
-    "title": "Meta&#8217;s own AI was exploited to hijack Instagram accounts",
-    "url": "https://www.theverge.com/tech/941179/meta-instagram-ai-support-chatbot-exploit-hacked",
-    "source": "The Verge",
-    "summary": "Meta's AI support chatbot helped hackers hijack Instagram accounts, as reported earlier by 404 Media. In a video shared on Telegram, a hacker shows how they could take over an account by asking Meta's chatbot to switch the email associated with someone else's profile and then reset the password. The issue, which Meta…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-01T19:20:47.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-f8a25912a86ee846a461",
@@ -321,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T18:19:53.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-c8b9a6b007c10efde106",
@@ -333,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T17:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-14ca8e9e17c2372b14a5",
@@ -345,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:36:55.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-fe21b03da87010f66ea4",
@@ -357,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-4e4360776d53ebd55e4d",
@@ -369,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
-  },
-  {
-    "id": "news-d0eeabe5782cd8bb3067",
-    "title": "DuckDuckGo makes its &#8216;no-AI&#8217; search engine easier to access as its traffic booms",
-    "url": "https://techcrunch.com/2026/06/01/duckduckgo-makes-its-no-ai-search-engine-easier-to-access-as-its-traffic-booms/",
-    "source": "TechCrunch",
-    "summary": "Alternative search engine DuckDuckGo launches 'no AI' web extensions for Chrome and Firefox users.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-01T14:49:10.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-dadd123def02abdbcf17",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T12:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-00ed5eb9be7b5a27ef97",
@@ -405,31 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T10:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
-  },
-  {
-    "id": "news-3a5b6804157e3727e228",
-    "title": "Erin Brockovich takes aim at data center secrecy",
-    "url": "https://techcrunch.com/2026/05/31/erin-brockovich-takes-aim-at-data-center-secrecy/",
-    "source": "TechCrunch",
-    "summary": "Environmental activist Erin Brockovich has a new mission.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-31T21:05:14.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
-  },
-  {
-    "id": "news-2effc53c7f1e1b22b024",
-    "title": "Making sense of the debate over AI psychosis",
-    "url": "https://techcrunch.com/2026/05/31/making-sense-of-the-debate-over-ai-psychosis/",
-    "source": "TechCrunch",
-    "summary": "On the latest episode of Equity, we debate whether tech CEOs are \"uniquely prone to AI psychosis.\"",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-31T15:30:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-944dd86b3cacec948339",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T19:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-bf7abda633b2cc922140",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:30:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-507ec0fdf6297e193b5d",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-e63fa88b5624cf9ab322",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-8337eeb248ea1830c3c0",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T03:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-33e1df4abe4ea5f373c2",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T00:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-06-02 18:25:49"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-c4a9a577612daa8d7698",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T12:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-cb031b5cf3e3be67bd75",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-3e9dde27d0980f7870e1",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-a1f161b6a344e4fa2c08",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T11:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-9da64821c60f866d060a",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T07:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-fae225528858b04cbf90",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-b36c91942c4f0187bc1b",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-27T00:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:40"
+    "discovered_at": "2026-06-02 19:25:45"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-06-02 18:25:49"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:47"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-68512a3cbeda65ed975d",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-08T15:00:00.000Z",
-    "discovered_at": "2026-06-02 18:25:48"
+    "discovered_at": "2026-06-02 19:25:46"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -813,6 +813,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-06-02 18:25:49"
+    "discovered_at": "2026-06-02 19:25:47"
   }
 ]
