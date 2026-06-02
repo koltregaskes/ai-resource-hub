@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T11:52:08.759Z",
+  "generatedAt": "2026-06-02T13:25:48.404Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T11:52:07.995Z",
+      "lastCheckedAt": "2026-06-02T13:25:47.700Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T11:52:07.363Z",
+      "lastCheckedAt": "2026-06-02T13:25:47.303Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T11:52:08.289Z",
+      "lastCheckedAt": "2026-06-02T13:25:48.164Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T11:52:08.574Z",
+      "lastCheckedAt": "2026-06-02T13:25:48.396Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T11:52:07.743Z",
+      "lastCheckedAt": "2026-06-02T13:25:47.493Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T11:52:07.291Z",
+      "lastCheckedAt": "2026-06-02T13:25:47.301Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -295,6 +295,16 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01KT43GBSRNH7HG9YE93GPNG63",
+          "title": "Guest users are experiencing elevated error rate when using ChatGPT conversations.",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-02T12:04:04.000Z",
+          "updatedAt": "2026-06-02T13:16:09.000Z",
+          "resolvedAt": "2026-06-02T13:16:09.000Z",
+          "summary": null
+        },
+        {
           "id": "01KT204M76EYZYJX7WYG1B2QPH",
           "title": "Decreased ChatGPT availability for Free users",
           "status": "resolved",
@@ -323,16 +333,6 @@
           "updatedAt": "2026-05-29T04:58:14.000Z",
           "resolvedAt": "2026-05-29T04:58:14.000Z",
           "summary": null
-        },
-        {
-          "id": "01KSRVH1TAV8Q47M91F6V4V6X0",
-          "title": "Users may encounter issues logging in or creating an account",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-29T03:12:59.000Z",
-          "updatedAt": "2026-05-29T04:57:55.000Z",
-          "resolvedAt": "2026-05-29T04:57:55.000Z",
-          "summary": null
         }
       ]
     },
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T11:52:08.677Z",
+      "lastCheckedAt": "2026-06-02T13:25:48.340Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
