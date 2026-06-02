@@ -1244,7 +1244,8 @@ const homepagePayload = JSON.stringify({
       window.addEventListener('scroll', hideTips, { passive: true });
       window.addEventListener('resize', hideTips);
 
-      const layoutKey = 'airh:home-layout';
+      const displayModeKey = 'airh:display-mode';
+      const legacyLayoutKey = 'airh:home-layout';
       const validLayouts = new Set(['spreadsheet', 'dossier', 'monitor', 'terminal']);
       const panels = Array.from(document.querySelectorAll('[data-airh-layout-panel]'));
       const layoutButtons = Array.from(document.querySelectorAll('[data-airh-layout-switch]'));
@@ -1260,9 +1261,21 @@ const homepagePayload = JSON.stringify({
         layoutButtons.forEach((button) => {
           button.classList.toggle('is-active', button.getAttribute('data-airh-layout-switch') === safeLayout);
         });
+        document.documentElement.setAttribute('data-airh-display-mode', safeLayout);
         document.documentElement.setAttribute('data-airh-layout', safeLayout);
-        localStorage.setItem(layoutKey, safeLayout);
+        document.body?.setAttribute('data-airh-display-mode', safeLayout);
+        localStorage.setItem(displayModeKey, safeLayout);
+        localStorage.setItem(legacyLayoutKey, safeLayout);
         if (safeLayout === 'terminal') window.setTimeout(() => terminalInput?.focus(), 50);
+      }
+
+      function setGlobalLayout(layout) {
+        if (typeof window.airhSetDisplayMode === 'function') {
+          window.airhSetDisplayMode(layout);
+          return;
+        }
+
+        setLayout(layout);
       }
 
       function appendTerminal(kind, html) {
@@ -1290,7 +1303,7 @@ const homepagePayload = JSON.stringify({
 
         if (lower === 'visual' || lower === 'spreadsheet') {
           appendTerminal('ok', 'Returning to spreadsheet view.');
-          setLayout('spreadsheet');
+          setGlobalLayout('spreadsheet');
           return;
         }
 
@@ -1346,7 +1359,7 @@ const homepagePayload = JSON.stringify({
 
       layoutButtons.forEach((button) => {
         button.addEventListener('click', () => {
-          setLayout(button.getAttribute('data-airh-layout-switch') || 'spreadsheet');
+          setGlobalLayout(button.getAttribute('data-airh-layout-switch') || 'spreadsheet');
         });
       });
 
@@ -1367,8 +1380,8 @@ const homepagePayload = JSON.stringify({
       });
 
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && localStorage.getItem(layoutKey) !== 'spreadsheet') {
-          setLayout('spreadsheet');
+        if (event.key === 'Escape' && localStorage.getItem(displayModeKey) !== 'spreadsheet') {
+          setGlobalLayout('spreadsheet');
         }
       });
 
@@ -1391,7 +1404,12 @@ const homepagePayload = JSON.stringify({
       appendTerminal('intro', '<span># welcome back - running since-last-visit</span>');
       runTerminal('since-last-visit', false);
       const requestedLayout = new URLSearchParams(window.location.search).get('layout');
-      setLayout(validLayouts.has(requestedLayout) ? requestedLayout : (localStorage.getItem(layoutKey) || 'spreadsheet'));
+      setLayout(validLayouts.has(requestedLayout) ? requestedLayout : (localStorage.getItem(displayModeKey) || localStorage.getItem(legacyLayoutKey) || 'spreadsheet'));
+
+      window.addEventListener('airh:display-mode-change', (event) => {
+        const mode = event.detail?.mode || 'spreadsheet';
+        setLayout(mode);
+      });
     })();
   </script>
 </BaseLayout>

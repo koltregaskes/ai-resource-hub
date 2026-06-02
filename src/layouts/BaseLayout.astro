@@ -374,6 +374,15 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
           const theme = saved && validThemes.has(saved) ? saved : 'dark';
           document.documentElement.setAttribute('data-theme', theme);
 
+          const validDisplayModes = new Set(['spreadsheet', 'dossier', 'monitor', 'terminal']);
+          const requestedMode = new URLSearchParams(window.location.search).get('layout');
+          const savedMode = localStorage.getItem('airh:display-mode') || localStorage.getItem('airh:home-layout');
+          const displayMode = requestedMode && validDisplayModes.has(requestedMode)
+            ? requestedMode
+            : (savedMode && validDisplayModes.has(savedMode) ? savedMode : 'spreadsheet');
+          document.documentElement.setAttribute('data-airh-display-mode', displayMode);
+          document.documentElement.setAttribute('data-airh-layout', displayMode);
+
           const themeColorMeta = document.querySelector('meta[name="theme-color"]');
           if (themeColorMeta) {
             const lightTheme = theme === 'light' || theme === 'cream' || theme === 'paper';
@@ -381,6 +390,8 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
           }
         } catch (_) {
           document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.setAttribute('data-airh-display-mode', 'spreadsheet');
+          document.documentElement.setAttribute('data-airh-layout', 'spreadsheet');
         }
       })();
     </script>
@@ -446,23 +457,23 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
           <div class="airh-compact-actions">
             <GlobalSearch items={searchIndex} baseUrl={base} variant="compact" />
 
-            <div class="airh-layout-switcher" role="group" aria-label="Homepage layout">
-              <button type="button" class="airh-tool-icon is-active" data-airh-layout-switch="spreadsheet" data-airh-tip="Spreadsheet view. Dense data first.">
+            <div class="airh-layout-switcher" role="group" aria-label="Website display mode">
+              <button type="button" class="airh-tool-icon is-active" data-airh-layout-switch="spreadsheet" data-airh-tip="Spreadsheet mode. Dense data first across the site.">
                 <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"></rect><path d="M4 9h16M4 14h16M9 4v16M14 4v16"></path></svg>
                 <span aria-hidden="true">▦</span>
                 <span class="sr-only">Spreadsheet</span>
               </button>
-              <button type="button" class="airh-tool-icon" data-airh-layout-switch="dossier" data-airh-tip="Dossier view. Index cards for today's leaders, price moves, releases, and news.">
+              <button type="button" class="airh-tool-icon" data-airh-layout-switch="dossier" data-airh-tip="Dossier mode. Index-card summaries across the site.">
                 <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"></rect><path d="M7 9h6M7 12h10M7 15h8"></path></svg>
                 <span aria-hidden="true">▤</span>
                 <span class="sr-only">Dossier</span>
               </button>
-              <button type="button" class="airh-tool-icon" data-airh-layout-switch="monitor" data-airh-tip="Monitor view. Keep the table open with a persistent since-you rail.">
+              <button type="button" class="airh-tool-icon" data-airh-layout-switch="monitor" data-airh-tip="Monitor mode. Utility dashboard styling across the site.">
                 <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5"></rect><path d="M14 5v12M7 9h4M7 13h4M16.5 9h2M16.5 13h2M9 17v2M7 19h4"></path></svg>
                 <span aria-hidden="true">▥</span>
                 <span class="sr-only">Monitor</span>
               </button>
-              <button type="button" class="airh-tool-icon" data-airh-layout-switch="terminal" data-airh-tip="Try Terminal mode. We remember your choice.">
+              <button type="button" class="airh-tool-icon" data-airh-layout-switch="terminal" data-airh-tip="Terminal mode. Keyboard-first styling across the site.">
                 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 7l5 5-5 5M12 17h7"></path></svg>
                 <span aria-hidden="true">›_</span>
                 <span class="sr-only">Terminal</span>
@@ -817,36 +828,58 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
         });
       });
 
-      const layoutKey = 'airh:home-layout';
-      const validLayouts = new Set(['spreadsheet', 'dossier', 'monitor', 'terminal']);
-      const layoutButtons = document.querySelectorAll<HTMLElement>('[data-airh-layout-switch]');
-      const hasHomeLayoutRuntime = Boolean(document.querySelector('[data-airh-home]'));
-      const homeHref = document.querySelector<HTMLAnchorElement>('.airh-compact-brand')?.href || '/';
+      const displayModeKey = 'airh:display-mode';
+      const legacyLayoutKey = 'airh:home-layout';
+      const validDisplayModes = new Set(['spreadsheet', 'dossier', 'monitor', 'terminal']);
+      const displayModeButtons = document.querySelectorAll<HTMLElement>('[data-airh-layout-switch]');
 
-      function syncLayoutButtons(layout: string) {
-        const nextLayout = validLayouts.has(layout) ? layout : 'spreadsheet';
-        layoutButtons.forEach((button) => {
-          button.classList.toggle('is-active', button.getAttribute('data-airh-layout-switch') === nextLayout);
+      function applyDisplayMode(mode: string, options: { persist?: boolean; emit?: boolean } = {}) {
+        const safeMode = validDisplayModes.has(mode) ? mode : 'spreadsheet';
+        const shouldPersist = options.persist !== false;
+        const shouldEmit = options.emit !== false;
+
+        document.documentElement.setAttribute('data-airh-display-mode', safeMode);
+        document.documentElement.setAttribute('data-airh-layout', safeMode);
+        document.body?.setAttribute('data-airh-display-mode', safeMode);
+
+        displayModeButtons.forEach((button) => {
+          const active = button.getAttribute('data-airh-layout-switch') === safeMode;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-pressed', String(active));
         });
+
+        document.querySelectorAll<HTMLElement>('[data-airh-layout-panel]').forEach((panel) => {
+          panel.classList.toggle('is-hidden', panel.getAttribute('data-airh-layout-panel') !== safeMode);
+        });
+
+        if (shouldPersist) {
+          localStorage.setItem(displayModeKey, safeMode);
+          localStorage.setItem(legacyLayoutKey, safeMode);
+        }
+
+        if (shouldEmit) {
+          window.dispatchEvent(new CustomEvent('airh:display-mode-change', { detail: { mode: safeMode } }));
+        }
       }
+
+      (window as Window & { airhSetDisplayMode?: typeof applyDisplayMode }).airhSetDisplayMode = applyDisplayMode;
 
       try {
-        syncLayoutButtons(localStorage.getItem(layoutKey) || 'spreadsheet');
+        const requestedMode = new URLSearchParams(window.location.search).get('layout');
+        const savedMode = localStorage.getItem(displayModeKey) || localStorage.getItem(legacyLayoutKey);
+        const initialMode = requestedMode && validDisplayModes.has(requestedMode)
+          ? requestedMode
+          : (savedMode && validDisplayModes.has(savedMode) ? savedMode : 'spreadsheet');
+        applyDisplayMode(initialMode, { emit: false });
       } catch (_) {
-        syncLayoutButtons('spreadsheet');
+        applyDisplayMode('spreadsheet', { persist: false, emit: false });
       }
 
-      if (!hasHomeLayoutRuntime) {
-        layoutButtons.forEach((button) => {
-          button.addEventListener('click', () => {
-            const layout = button.getAttribute('data-airh-layout-switch') || 'spreadsheet';
-            if (!validLayouts.has(layout)) return;
-            localStorage.setItem(layoutKey, layout);
-            syncLayoutButtons(layout);
-            window.location.href = `${homeHref}?layout=${encodeURIComponent(layout)}`;
-          });
+      displayModeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          applyDisplayMode(button.getAttribute('data-airh-layout-switch') || 'spreadsheet');
         });
-      }
+      });
 
       const groups = document.querySelectorAll('.nav-dropdown-group');
       groups.forEach((group) => {

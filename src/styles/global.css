@@ -4761,7 +4761,7 @@ body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
   font-size: clamp(2rem, 3.2vw, 3.2rem) !important;
   font-weight: 650 !important;
   line-height: 0.98 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: 0 !important;
 }
 
 body.airh-sitewide-system:not(.airh-home-page) main :where(h2, h3) {
@@ -4847,6 +4847,269 @@ body.airh-sitewide-system:not(.airh-home-page) main :where(code, pre) {
 
 body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*="border"]:not(.airh-compact-link):not(.airh-site-ticker-item)) {
   text-decoration: none;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 44%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 36%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 24%, transparent), transparent 16rem),
+    var(--color-bg-primary);
+  background-size: 96px 56px, 96px 56px, auto, auto;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*="border"], [class*="bg-(--color-bg-card)"][class*="border"]) {
+  border-radius: 0.35rem !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-tool-icon[data-airh-layout-switch="spreadsheet"].is-active,
+html[data-airh-display-mode="dossier"] .airh-tool-icon[data-airh-layout-switch="dossier"].is-active,
+html[data-airh-display-mode="monitor"] .airh-tool-icon[data-airh-layout-switch="monitor"].is-active,
+html[data-airh-display-mode="terminal"] .airh-tool-icon[data-airh-layout-switch="terminal"].is-active {
+  border-color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 14%, var(--color-bg-tertiary));
+  color: var(--color-text-primary);
+}
+
+html[data-airh-display-mode="dossier"] {
+  --color-bg-primary: #f7efe0;
+  --color-bg-secondary: #fffaf0;
+  --color-bg-tertiary: #eadcc5;
+  --color-bg-card: rgba(255, 250, 240, 0.9);
+  --color-bg-hover: #efe1ca;
+  --color-accent: #9f2f22;
+  --color-accent-hover: #7f2418;
+  --color-accent-muted: #2f5f77;
+  --color-text-primary: #17120d;
+  --color-text-secondary: #514337;
+  --color-text-muted: #776754;
+  --color-border: rgba(76, 53, 33, 0.16);
+  --color-border-hover: rgba(76, 53, 33, 0.3);
+  --color-border-strong: rgba(49, 34, 22, 0.26);
+  color-scheme: light;
+}
+
+html[data-airh-display-mode="dossier"] body {
+  background-image:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.92), rgba(247, 239, 224, 0.78)),
+    repeating-linear-gradient(0deg, rgba(76, 53, 33, 0.045) 0 1px, transparent 1px 32px);
+}
+
+html[data-airh-display-mode="dossier"] .airh-compact-topbar,
+html[data-airh-display-mode="dossier"] .airh-site-ticker {
+  background: color-mix(in srgb, var(--color-bg-secondary) 92%, #eadcc5);
+  border-color: color-mix(in srgb, var(--color-border-strong) 78%, #9f2f22);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.82), rgba(247, 239, 224, 0.96)),
+    repeating-linear-gradient(0deg, rgba(76, 53, 33, 0.04) 0 1px, transparent 1px 34px);
+  background-size: auto;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  max-width: min(76rem, calc(100vw - 2rem)) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1, h2, h3) {
+  font-family: var(--font-display);
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-bg-card)"][class*="border"], [class*="bg-(--color-bg-secondary)"][class*="border"], a[class*="p-"][class*="border"], article[class*="border"], .activity-row, .activity-summary-card) {
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 72%, transparent) !important;
+  border-radius: 0.42rem !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), transparent 45%),
+    var(--color-bg-card) !important;
+  box-shadow: 0 1px 0 rgba(49, 34, 22, 0.08), 0 12px 24px rgba(49, 34, 22, 0.06) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*="border"], article[class*="border"], .activity-row, .activity-summary-card)::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  width: 2.6rem;
+  height: 0.35rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-accent) 52%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 34%, transparent);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  font-family: var(--font-sans);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, #eadcc5 86%, transparent) !important;
+}
+
+html[data-airh-display-mode="monitor"] {
+  --color-bg-primary: #0e1519;
+  --color-bg-secondary: #141e24;
+  --color-bg-tertiary: #1d2b33;
+  --color-bg-card: rgba(20, 30, 36, 0.9);
+  --color-bg-hover: #21333d;
+  --color-accent: #62c8d6;
+  --color-accent-hover: #8fe6ef;
+  --color-accent-muted: #e5b95b;
+  --color-text-primary: #f1f7f5;
+  --color-text-secondary: #c3d2d0;
+  --color-text-muted: #899b9d;
+  --color-border: rgba(204, 231, 232, 0.12);
+  --color-border-hover: rgba(204, 231, 232, 0.24);
+  --color-border-strong: rgba(204, 231, 232, 0.2);
+  color-scheme: dark;
+}
+
+html[data-airh-display-mode="monitor"] body {
+  background-image:
+    linear-gradient(180deg, rgba(98, 200, 214, 0.08), transparent 260px),
+    linear-gradient(90deg, rgba(229, 185, 91, 0.04), transparent 34%),
+    repeating-linear-gradient(90deg, rgba(204, 231, 232, 0.035) 0 1px, transparent 1px 80px);
+}
+
+html[data-airh-display-mode="monitor"] .airh-compact-topbar,
+html[data-airh-display-mode="monitor"] .airh-site-ticker {
+  background: color-mix(in srgb, var(--color-bg-primary) 82%, var(--color-bg-secondary));
+  border-color: color-mix(in srgb, var(--color-accent) 34%, var(--color-border-strong));
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, rgba(98, 200, 214, 0.09) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(98, 200, 214, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(98, 200, 214, 0.06), transparent 18rem),
+    var(--color-bg-primary);
+  background-size: 84px 84px, 84px 84px, auto, auto;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  max-width: min(90rem, calc(100vw - 2rem)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-bg-card)"][class*="border"], [class*="bg-(--color-bg-secondary)"][class*="border"], a[class*="p-"][class*="border"], article[class*="border"], .activity-row, .activity-summary-card) {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 26%, var(--color-border)) !important;
+  border-radius: 0.28rem !important;
+  background:
+    linear-gradient(180deg, rgba(98, 200, 214, 0.075), transparent 42%),
+    var(--color-bg-card) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--color-bg-tertiary) 88%, black) !important;
+  color: var(--color-accent) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(tbody tr:hover) {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent) !important;
+}
+
+html[data-airh-display-mode="terminal"] {
+  --color-bg-primary: #050806;
+  --color-bg-secondary: #08120d;
+  --color-bg-tertiary: #102018;
+  --color-bg-card: rgba(7, 18, 13, 0.92);
+  --color-bg-hover: #10291c;
+  --color-accent: #68f58c;
+  --color-accent-hover: #a3ffb9;
+  --color-accent-muted: #ffd166;
+  --color-text-primary: #ebfff0;
+  --color-text-secondary: #b8d8c0;
+  --color-text-muted: #78947f;
+  --color-border: rgba(104, 245, 140, 0.16);
+  --color-border-hover: rgba(104, 245, 140, 0.32);
+  --color-border-strong: rgba(104, 245, 140, 0.26);
+  color-scheme: dark;
+}
+
+html[data-airh-display-mode="terminal"] body {
+  background-image:
+    linear-gradient(180deg, rgba(104, 245, 140, 0.05), transparent 260px),
+    repeating-linear-gradient(0deg, rgba(104, 245, 140, 0.035) 0 1px, transparent 1px 4px),
+    radial-gradient(circle at top left, rgba(255, 209, 102, 0.08), transparent 26%);
+}
+
+html[data-airh-display-mode="terminal"] .airh-compact-topbar,
+html[data-airh-display-mode="terminal"] .airh-site-ticker,
+html[data-airh-display-mode="terminal"] .airh-theme-panel,
+html[data-airh-display-mode="terminal"] .airh-compact-menu-panel {
+  background: color-mix(in srgb, var(--color-bg-primary) 88%, #0d1f13);
+  border-color: var(--color-border-strong);
+}
+
+html[data-airh-display-mode="terminal"] .airh-compact-brand,
+html[data-airh-display-mode="terminal"] .airh-compact-link,
+html[data-airh-display-mode="terminal"] .airh-site-ticker-item,
+html[data-airh-display-mode="terminal"] .airh-signin-placeholder,
+html[data-airh-display-mode="terminal"] .airh-tool-icon {
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, rgba(104, 245, 140, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(104, 245, 140, 0.06) 1px, transparent 1px),
+    var(--color-bg-primary);
+  background-size: 64px 64px, 64px 64px, auto;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  max-width: min(88rem, calc(100vw - 2rem)) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"])::before {
+  content: "cwd ";
+  color: var(--color-accent-muted);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1, h2, h3, p, li, a, span, strong, td, th) {
+  font-family: var(--font-mono);
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1)::before {
+  content: "> ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-bg-card)"][class*="border"], [class*="bg-(--color-bg-secondary)"][class*="border"], a[class*="p-"][class*="border"], article[class*="border"], .activity-row, .activity-summary-card) {
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-card) 94%, black) !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: rgba(104, 245, 140, 0.08) !important;
+  color: var(--color-accent) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(td, th) {
+  border-color: rgba(104, 245, 140, 0.14) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(a) {
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea, button) {
+  border-radius: 0 !important;
 }
 
 @media (max-width: 1180px) {
