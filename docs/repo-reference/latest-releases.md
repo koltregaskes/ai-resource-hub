@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 01 Jun 2026, 22:16 UTC
+Generated: 02 Jun 2026, 00:20 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -25,7 +25,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 27 Apr 2026 | Qwen3.6 Max Preview | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 27B | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 24 Apr 2026 | GPT-5.5 Pro | OpenAI | tracking | watch | ready for editor | 0 | 2 | [official](https://platform.openai.com/docs/models) |
-| 24 Apr 2026 | GPT-5.5 | OpenAI | tracking | watch | ready for editor | 0 | 5 | [official](https://platform.openai.com/docs/models) |
+| 24 Apr 2026 | GPT-5.5 | OpenAI | tracking | watch | ready for editor | 0 | 4 | [official](https://platform.openai.com/docs/models) |
 | 24 Apr 2026 | DeepSeek V4 Pro | DeepSeek | tracking | watch | needs research | 0 | 0 | [official](https://api-docs.deepseek.com) |
 | 24 Apr 2026 | DeepSeek V4 Flash | DeepSeek | tracking | watch | needs research | 0 | 0 | [official](https://api-docs.deepseek.com) |
 
