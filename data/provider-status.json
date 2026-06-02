@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T06:25:43.951Z",
+  "generatedAt": "2026-06-02T06:54:32.601Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,27 +12,27 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T06:25:42.687Z",
+      "lastCheckedAt": "2026-06-02T06:54:31.381Z",
       "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
+      "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
+          "status": "partial_outage"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "degraded_performance"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Code",
-          "status": "degraded_performance"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
@@ -46,27 +46,27 @@
       "activeIncidents": [
         {
           "id": "zkr25thltwc9",
-          "title": "Elevated errors for Claude Opus 4.7",
-          "status": "investigating",
-          "impact": "minor",
+          "title": "Elevated errors across Claude Opus 4.7, 4.6 and Sonnet 4.6",
+          "status": "identified",
+          "impact": "major",
           "startedAt": "2026-06-02T06:04:59.243Z",
-          "updatedAt": "2026-06-02T06:04:59.353Z",
+          "updatedAt": "2026-06-02T06:39:05.779Z",
           "resolvedAt": null,
           "url": "https://stspg.io/j1r06qml3bvy",
-          "summary": "We are currently investigating this issue."
+          "summary": "The issue has been identified and a fix is being implemented."
         }
       ],
       "recentIncidents": [
         {
           "id": "zkr25thltwc9",
-          "title": "Elevated errors for Claude Opus 4.7",
-          "status": "investigating",
-          "impact": "minor",
+          "title": "Elevated errors across Claude Opus 4.7, 4.6 and Sonnet 4.6",
+          "status": "identified",
+          "impact": "major",
           "startedAt": "2026-06-02T06:04:59.243Z",
-          "updatedAt": "2026-06-02T06:04:59.353Z",
+          "updatedAt": "2026-06-02T06:39:05.779Z",
           "resolvedAt": null,
           "url": "https://stspg.io/j1r06qml3bvy",
-          "summary": "We are currently investigating this issue."
+          "summary": "The issue has been identified and a fix is being implemented."
         },
         {
           "id": "vxp8fdrckj7q",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T06:25:43.074Z",
+      "lastCheckedAt": "2026-06-02T06:54:31.815Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T06:25:43.378Z",
+      "lastCheckedAt": "2026-06-02T06:54:32.195Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T06:25:43.542Z",
+      "lastCheckedAt": "2026-06-02T06:54:32.544Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T06:25:42.919Z",
+      "lastCheckedAt": "2026-06-02T06:54:31.511Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -273,7 +273,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T06:25:42.528Z",
+      "lastCheckedAt": "2026-06-02T06:54:31.312Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -359,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T06:25:43.685Z",
+      "lastCheckedAt": "2026-06-02T06:54:32.596Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -428,7 +428,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
