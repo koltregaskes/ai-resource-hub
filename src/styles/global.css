@@ -5062,6 +5062,316 @@ html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home
   border-radius: 0 !important;
 }
 
+/* Site-wide display modes must carry the full homepage design language, not only palette tints. */
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article),
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article),
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  position: relative;
+  isolation: isolate;
+  margin: clamp(0.9rem, 2vw, 1.45rem) auto clamp(2rem, 4vw, 4rem) !important;
+  overflow: hidden;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 78%, transparent);
+  border-radius: 0.55rem !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 74%, transparent), transparent 18rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border) 38%, transparent) 0 1px, transparent 1px 31px),
+    var(--color-bg-card);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--color-border-strong) 52%, transparent),
+    0 18px 46px color-mix(in srgb, var(--color-bg-primary) 30%, transparent);
+  padding-top: clamp(4.6rem, 6vw, 5.6rem) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::before {
+  content: "AI/RH DOSSIER  --  FIELD NOTES";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 70%, transparent);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 34%),
+    color-mix(in srgb, var(--color-bg-secondary) 92%, var(--color-bg-card));
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  padding: 1.05rem clamp(1rem, 2vw, 1.5rem);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 1.05rem;
+  right: clamp(1rem, 2vw, 1.5rem);
+  width: 4.6rem;
+  height: 0.45rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-accent) 62%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 42%, transparent);
+  opacity: 0.75;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  display: inline-flex;
+  width: auto;
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 62%, transparent);
+  background: color-mix(in srgb, var(--color-bg-primary) 44%, transparent);
+  padding: 0.34rem 0.55rem;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  max-width: 18ch;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 38%, transparent);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, a[class*="p-"][class*="border"], article[class*="border"], div[class*="p-"][class*="border"]) {
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 70%, transparent) !important;
+  border-radius: 0.38rem !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 42%, transparent), transparent 52%),
+    color-mix(in srgb, var(--color-bg-card) 94%, var(--color-bg-primary)) !important;
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-border-strong) 40%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section) {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div[class*="border"]) {
+  min-height: 100%;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  max-width: min(94rem, calc(100vw - 2rem)) !important;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 34%, var(--color-border-strong));
+  border-radius: 0.18rem !important;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent-muted) 14%, transparent), transparent 38%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 86%, transparent), color-mix(in srgb, var(--color-bg-primary) 94%, transparent)),
+    var(--color-bg-primary);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--color-accent) 20%, transparent),
+    0 22px 54px color-mix(in srgb, var(--color-bg-primary) 36%, transparent);
+  padding-top: clamp(4.35rem, 5vw, 5rem) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::before {
+  content: "AI/RH MONITOR  |  SOURCE CHECK GREEN  |  LIVE REFERENCE SURFACE";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 30%, var(--color-border-strong));
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 18%, var(--color-bg-tertiary)) 0 18rem, color-mix(in srgb, var(--color-bg-secondary) 86%, var(--color-bg-primary)) 18rem),
+    var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 1.05rem clamp(1rem, 2vw, 1.5rem);
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+  padding-bottom: 0.55rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  max-width: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+  padding-bottom: 0.7rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, a[class*="p-"][class*="border"], article[class*="border"], div[class*="p-"][class*="border"]) {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border)) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 48%),
+    color-mix(in srgb, var(--color-bg-card) 90%, var(--color-bg-primary)) !important;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-accent) 16%, transparent) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section) {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div[class*="border"]) {
+  min-height: 100%;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a)::before,
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section)::before,
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(section section)::before {
+  content: "";
+  display: block;
+  width: 2.6rem;
+  height: 0.22rem;
+  margin-bottom: 0.75rem;
+  background: var(--color-accent);
+  opacity: 0.72;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px),
+    var(--color-bg-primary);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  max-width: min(1180px, calc(100vw - 2rem)) !important;
+  min-height: calc(100vh - 130px);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 5%, transparent), transparent 16rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 3%, transparent) 0 1px, transparent 1px 4px),
+    var(--color-bg-primary);
+  box-shadow: none !important;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  padding-top: clamp(4.7rem, 6vw, 5.7rem) !important;
+  padding-bottom: clamp(4.25rem, 6vw, 5.5rem) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::before {
+  content: "AI Resource Hub / terminal";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  min-height: 3.2rem;
+  border-bottom: 1px solid var(--color-border-strong);
+  background: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary));
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 0.95rem clamp(1rem, 2vw, 1.5rem);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::after {
+  content: "airh > ready";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid var(--color-border-strong);
+  background: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary));
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 0.95rem clamp(1rem, 2vw, 1.5rem);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(header, .mb-8, .mb-10) {
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: 0.9rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"])::before {
+  content: "cwd ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  max-width: none;
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.85rem, 4vw, 3.3rem) !important;
+  line-height: 1.02 !important;
+  border: 0;
+  padding: 0;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1)::before {
+  content: "> ";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2)::before {
+  content: "$ ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h3)::before {
+  content: "[ok] ";
+  color: var(--color-success);
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, a[class*="p-"][class*="border"], article[class*="border"], div[class*="p-"][class*="border"], div[class*="bg-(--color-bg-card)"][class*="border"]) {
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-card) 88%, var(--color-bg-primary)) !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section) {
+  padding: clamp(0.95rem, 2vw, 1.25rem);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, .grid > a, .grid > article, .grid > div[class*="border"]) {
+  position: relative;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, .grid > a, .grid > article, .grid > div[class*="border"])::before {
+  content: "run";
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(.flex.flex-wrap.gap-2, [class*="rounded-full"], [class*="rounded-lg"]) {
+  border-radius: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a > .text-3xl.mb-4, .grid > article > .text-3xl.mb-4, .grid > div > .text-3xl.mb-4) {
+  color: transparent;
+  font-family: var(--font-mono);
+  font-size: 0 !important;
+  line-height: 1;
+  min-height: 1rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a > .text-3xl.mb-4, .grid > article > .text-3xl.mb-4, .grid > div > .text-3xl.mb-4)::before {
+  content: "./";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
 @media (max-width: 1180px) {
   .airh-compact-menu {
     display: block;
