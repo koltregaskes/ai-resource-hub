@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T23:07:19.004Z",
+  "generatedAt": "2026-06-03T00:25:49.344Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T23:07:18.075Z",
+      "lastCheckedAt": "2026-06-03T00:25:48.577Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T23:07:17.994Z",
+      "lastCheckedAt": "2026-06-03T00:25:47.946Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T23:07:18.592Z",
+      "lastCheckedAt": "2026-06-03T00:25:48.965Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T23:07:18.855Z",
+      "lastCheckedAt": "2026-06-03T00:25:49.217Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T23:07:17.927Z",
+      "lastCheckedAt": "2026-06-03T00:25:48.382Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T23:07:18.485Z",
+      "lastCheckedAt": "2026-06-03T00:25:48.092Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -295,6 +295,26 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01KT5AMWGKRTMQW2BAHD70PC4X",
+          "title": "Elevated errors for ChatGPT Pro",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-02T23:28:06.000Z",
+          "updatedAt": "2026-06-03T00:14:31.000Z",
+          "resolvedAt": "2026-06-03T00:14:31.000Z",
+          "summary": null
+        },
+        {
+          "id": "01KT5B2V94YX1T1M88BVQHB58J",
+          "title": "codex-gpt-image-2-does-not-exist-errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-02T23:35:44.000Z",
+          "updatedAt": "2026-06-03T00:13:15.000Z",
+          "resolvedAt": "2026-06-03T00:13:15.000Z",
+          "summary": null
+        },
+        {
           "id": "01KT43GBSRNH7HG9YE93GPNG63",
           "title": "Guest users are experiencing elevated error rate when using ChatGPT conversations.",
           "status": "resolved",
@@ -313,26 +333,6 @@
           "updatedAt": "2026-06-01T17:28:52.000Z",
           "resolvedAt": "2026-06-01T17:28:52.000Z",
           "summary": null
-        },
-        {
-          "id": "01KSSY9D28AM92BCDXRTS4CDKZ",
-          "title": "Users May Experience Issues Accessing ChatGPT",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-29T13:20:28.000Z",
-          "updatedAt": "2026-05-29T13:28:52.000Z",
-          "resolvedAt": "2026-05-29T13:28:52.000Z",
-          "summary": null
-        },
-        {
-          "id": "01KSRVTZVW4J7NZ3WXM74DG4KX",
-          "title": "Users may encounter issues with conversations",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-29T03:18:24.000Z",
-          "updatedAt": "2026-05-29T04:58:14.000Z",
-          "resolvedAt": "2026-05-29T04:58:14.000Z",
-          "summary": null
         }
       ]
     },
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-02T23:07:18.997Z",
+      "lastCheckedAt": "2026-06-03T00:25:49.338Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
