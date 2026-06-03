@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T06:25:47.104Z",
+  "generatedAt": "2026-06-03T07:05:13.354Z",
   "providers": [
     {
       "id": "openai",
@@ -12,23 +12,19 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-03T06:25:46.061Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
+      "lastCheckedAt": "2026-06-03T07:05:11.602Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "Conversations",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Login",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Fine-tuning",
@@ -41,16 +37,20 @@
         {
           "name": "Batch",
           "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
         {
           "id": "01KT5XJ5ATD6RMYP908WS69FVD",
-          "title": "Elevated error rates on Codex and ChatGPT",
+          "title": "Elevated error rates on Codex, ChatGPT and Responses API",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-06-03T04:58:40.000Z",
-          "updatedAt": "2026-06-03T06:16:58.000Z",
+          "updatedAt": "2026-06-03T06:50:33.000Z",
           "resolvedAt": null,
           "summary": null
         }
@@ -58,11 +58,11 @@
       "recentIncidents": [
         {
           "id": "01KT5XJ5ATD6RMYP908WS69FVD",
-          "title": "Elevated error rates on Codex and ChatGPT",
+          "title": "Elevated error rates on Codex, ChatGPT and Responses API",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-06-03T04:58:40.000Z",
-          "updatedAt": "2026-06-03T06:16:58.000Z",
+          "updatedAt": "2026-06-03T06:50:33.000Z",
           "resolvedAt": null,
           "summary": null
         },
@@ -99,108 +99,6 @@
       ]
     },
     {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-03T06:25:46.019Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
-      "summary": "1 active incident across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Claude Code",
-          "status": "partial_outage"
-        },
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "0w1blp7cngrr",
-          "title": "Issue affecting some Claude Code services",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-03T04:17:04.989Z",
-          "updatedAt": "2026-06-03T04:17:05.107Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/26bl9ymsst7p",
-          "summary": "We have identified an issue which is resulting in some Claude Code services being degraded. As a result of this issue, users will see issues with Claude Code security reviews, cod..."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "0w1blp7cngrr",
-          "title": "Issue affecting some Claude Code services",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-03T04:17:04.989Z",
-          "updatedAt": "2026-06-03T04:17:05.107Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/26bl9ymsst7p",
-          "summary": "We have identified an issue which is resulting in some Claude Code services being degraded. As a result of this issue, users will see issues with Claude Code security reviews, cod..."
-        },
-        {
-          "id": "zkr25thltwc9",
-          "title": "Elevated errors on multiple models",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-06-02T06:04:59.243Z",
-          "updatedAt": "2026-06-02T14:59:04.875Z",
-          "resolvedAt": "2026-06-02T11:49:06.139Z",
-          "url": "https://stspg.io/j1r06qml3bvy",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "vxp8fdrckj7q",
-          "title": "Degraded performance for Claude Sonnet 4.6",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-01T18:28:42.394Z",
-          "updatedAt": "2026-06-01T19:06:53.669Z",
-          "resolvedAt": "2026-06-01T19:06:53.632Z",
-          "url": "https://stspg.io/yt45tdcb7c50",
-          "summary": "This issue has been resolved."
-        },
-        {
-          "id": "8p6f4r16xxmp",
-          "title": "Elevated errors on Claude Sonnet 4.6",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-01T14:40:22.947Z",
-          "updatedAt": "2026-06-01T15:41:10.765Z",
-          "resolvedAt": "2026-06-01T15:41:10.741Z",
-          "url": "https://stspg.io/nypdcrtdn3t0",
-          "summary": "This incident has been resolved."
-        }
-      ]
-    },
-    {
       "id": "mistral",
       "providerId": "mistral",
       "name": "Mistral",
@@ -211,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-03T06:25:46.240Z",
+      "lastCheckedAt": "2026-06-03T07:05:12.567Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -231,7 +129,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-03T06:25:46.723Z",
+      "lastCheckedAt": "2026-06-03T07:05:12.673Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +149,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-03T06:25:47.097Z",
+      "lastCheckedAt": "2026-06-03T07:05:12.951Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +214,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-03T06:25:46.156Z",
+      "lastCheckedAt": "2026-06-03T07:05:12.053Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -370,7 +268,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-03T06:25:46.970Z",
+      "lastCheckedAt": "2026-06-03T07:05:13.036Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -425,6 +323,26 @@
       ]
     },
     {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "error",
+      "lastCheckedAt": null,
+      "overallStatus": "unknown",
+      "overallLabel": "Status unavailable",
+      "summary": null,
+      "notes": "HTTP 405 for https://status.claude.com/api/v2/incidents.json",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -439,7 +357,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
