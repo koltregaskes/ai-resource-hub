@@ -4742,7 +4742,7 @@ body.airh-sitewide-system:not(.airh-home-page) main * {
   box-sizing: border-box;
 }
 
-body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   width: 100%;
   max-width: min(80rem, calc(100vw - 2rem)) !important;
   padding-top: clamp(1rem, 2vw, 1.8rem) !important;
@@ -4898,7 +4898,7 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
   background-size: auto;
 }
 
-html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   max-width: min(76rem, calc(100vw - 2rem)) !important;
 }
 
@@ -4960,7 +4960,7 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
   background-size: 84px 84px, 84px 84px, auto, auto;
 }
 
-html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   max-width: min(90rem, calc(100vw - 2rem)) !important;
 }
 
@@ -5019,7 +5019,7 @@ html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home
   background-size: 64px 64px, 64px 64px, auto;
 }
 
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   max-width: min(88rem, calc(100vw - 2rem)) !important;
 }
 
@@ -5063,16 +5063,16 @@ html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home
 }
 
 /* Site-wide display modes must carry the full homepage design language, not only palette tints. */
-html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article),
-html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article),
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main),
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main),
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   position: relative;
   isolation: isolate;
   margin: clamp(0.9rem, 2vw, 1.45rem) auto clamp(2rem, 4vw, 4rem) !important;
   overflow: hidden;
 }
 
-html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   border: 1px solid color-mix(in srgb, var(--color-border-strong) 78%, transparent);
   border-radius: 0.55rem !important;
   background:
@@ -5085,7 +5085,7 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
   padding-top: clamp(4.6rem, 6vw, 5.6rem) !important;
 }
 
-html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::before {
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
   content: "AI/RH DOSSIER  --  FIELD NOTES";
   position: absolute;
   z-index: -1;
@@ -5105,7 +5105,7 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
   padding: 1.05rem clamp(1rem, 2vw, 1.5rem);
 }
 
-html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::after {
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -5150,7 +5150,7 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
   min-height: 100%;
 }
 
-html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   max-width: min(94rem, calc(100vw - 2rem)) !important;
   border: 1px solid color-mix(in srgb, var(--color-accent) 34%, var(--color-border-strong));
   border-radius: 0.18rem !important;
@@ -5164,7 +5164,7 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
   padding-top: clamp(4.35rem, 5vw, 5rem) !important;
 }
 
-html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::before {
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
   content: "AI/RH MONITOR  |  SOURCE CHECK GREEN  |  LIVE REFERENCE SURFACE";
   position: absolute;
   z-index: -1;
@@ -5235,7 +5235,7 @@ html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home
     var(--color-bg-primary);
 }
 
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   max-width: min(1180px, calc(100vw - 2rem)) !important;
   min-height: calc(100vh - 130px);
   border: 1px solid var(--color-border-strong);
@@ -5251,7 +5251,7 @@ html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home
   padding-bottom: clamp(4.25rem, 6vw, 5.5rem) !important;
 }
 
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::before {
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
   content: "AI Resource Hub / terminal";
   position: absolute;
   z-index: -1;
@@ -5270,7 +5270,7 @@ html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home
   padding: 0.95rem clamp(1rem, 2vw, 1.5rem);
 }
 
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article)::after {
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::after {
   content: "airh > ready";
   position: absolute;
   z-index: -1;
@@ -5383,7 +5383,7 @@ html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home
     background-size: 160px 160px, 160px 160px, auto, auto;
   }
 
-  body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
     max-width: 100vw !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
