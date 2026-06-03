@@ -481,9 +481,9 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
             </div>
 
             <details class="airh-theme-menu">
-              <summary class="airh-tool-icon" data-airh-tip="Pick a palette. We remember your choice.">
+              <summary class="airh-tool-icon" data-airh-tip="Pick a colour palette for every display mode.">
                 <span aria-hidden="true">◐</span>
-                <span class="sr-only">Theme picker</span>
+                <span class="sr-only">Colour palette</span>
               </summary>
               <div class="airh-theme-panel">
                 <button type="button" data-theme-choice="dark"><span style="background:#12100f"></span>Dark</button>
@@ -802,6 +802,7 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
         document.documentElement.setAttribute('data-theme', nextTheme);
         localStorage.setItem('theme', nextTheme);
         updateThemeIcons();
+        window.dispatchEvent(new CustomEvent('airh:theme-change', { detail: { theme: nextTheme } }));
       }
 
       function updateThemeIcons() {
@@ -825,6 +826,8 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
       document.querySelectorAll<HTMLElement>('[data-theme-choice]').forEach((button) => {
         button.addEventListener('click', () => {
           setTheme(button.getAttribute('data-theme-choice') || 'dark');
+          const menu = button.closest('details');
+          if (menu instanceof HTMLDetailsElement) menu.open = false;
         });
       });
 
