@@ -5372,6 +5372,381 @@ html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home
   font-size: 0.78rem;
 }
 
+/* Strong route-wide skins for the non-terminal templates.
+   These sit after the first shell pass so random content pages visibly inherit the selected template. */
+html[data-airh-display-mode="dossier"] {
+  --airh-dossier-rule: color-mix(in srgb, var(--color-accent) 40%, var(--color-border-strong));
+  --airh-dossier-paper: color-mix(in srgb, var(--color-bg-secondary) 92%, var(--color-bg-primary));
+  --airh-dossier-ink: var(--color-text-primary);
+}
+
+html[data-airh-display-mode="monitor"] {
+  --airh-monitor-signal: #62c7d4;
+  --airh-monitor-good: #35d47d;
+  --airh-monitor-panel: color-mix(in srgb, var(--color-bg-secondary) 84%, var(--color-bg-primary));
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system {
+  background:
+    radial-gradient(circle at 13% 8%, color-mix(in srgb, var(--color-accent) 9%, transparent), transparent 28%),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border-strong) 19%, transparent) 0 1px, transparent 1px 34px),
+    linear-gradient(180deg, var(--color-bg-primary), color-mix(in srgb, var(--color-bg-secondary) 68%, var(--color-bg-primary)));
+}
+
+html[data-airh-display-mode="dossier"] .airh-compact-topbar {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 44%),
+    color-mix(in srgb, var(--color-bg-secondary) 92%, var(--color-bg-primary));
+}
+
+html[data-airh-display-mode="dossier"] .airh-compact-brand {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+html[data-airh-display-mode="dossier"] .airh-compact-link,
+html[data-airh-display-mode="dossier"] .airh-signin-placeholder {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] .airh-site-ticker-stamp {
+  background: color-mix(in srgb, var(--color-accent) 92%, var(--color-bg-primary));
+  color: var(--color-bg-primary);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 9%, transparent) 0 0.32rem, transparent 0.32rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border) 48%, transparent) 0 1px, transparent 1px 31px),
+    var(--color-bg-primary);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  border: 2px solid var(--airh-dossier-rule) !important;
+  border-radius: 0.35rem !important;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 11%, transparent) 0 10.5rem, transparent 10.5rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border) 44%, transparent) 0 1px, transparent 1px 31px),
+    var(--airh-dossier-paper) !important;
+  box-shadow:
+    0 0.16rem 0 color-mix(in srgb, var(--color-accent) 42%, transparent),
+    0 1.5rem 3rem color-mix(in srgb, #000 12%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  border: 1.5px solid var(--airh-dossier-rule) !important;
+  border-radius: 0.18rem !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  box-shadow: 0.18rem 0.18rem 0 color-mix(in srgb, var(--color-accent) 24%, transparent);
+  color: var(--color-accent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  display: inline-block;
+  max-width: min(18ch, 100%);
+  margin-top: 0.2rem !important;
+  border: 0 !important;
+  color: var(--airh-dossier-ink) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(2.45rem, 4.8vw, 4.9rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.92 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1)::after {
+  content: "verified field note";
+  display: block;
+  width: fit-content;
+  margin-top: 0.65rem;
+  border: 1.5px solid var(--airh-dossier-rule);
+  border-radius: 0.22rem;
+  background: color-mix(in srgb, var(--color-bg-secondary) 86%, var(--color-bg-primary));
+  color: var(--color-accent);
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.18rem 0.6rem 0.3rem;
+  transform: rotate(-1.2deg);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2) {
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.55rem, 2.7vw, 2.45rem) !important;
+  border-bottom: 1.5px solid var(--airh-dossier-rule);
+  padding-bottom: 0.35rem;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2)::before {
+  content: "file ";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h3) {
+  font-family: var(--font-display) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(p, li, dd) {
+  color: var(--color-text-secondary) !important;
+  font-family: var(--font-sans);
+  line-height: 1.7;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(a:not(.airh-compact-link):not(.airh-site-ticker-item)) {
+  color: color-mix(in srgb, var(--color-accent) 92%, var(--color-text-primary));
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  border: 1.5px solid color-mix(in srgb, var(--airh-dossier-rule) 82%, transparent) !important;
+  border-radius: 0.28rem !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 74%, transparent), transparent 44%),
+    color-mix(in srgb, var(--color-bg-card) 92%, var(--color-bg-primary)) !important;
+  box-shadow:
+    0.16rem 0.16rem 0 color-mix(in srgb, var(--color-accent) 18%, transparent),
+    0 0.75rem 1.4rem color-mix(in srgb, #000 8%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "↳ dossier card";
+  display: block;
+  width: fit-content;
+  margin-bottom: 0.7rem;
+  color: var(--color-accent);
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  border: 1.5px solid var(--airh-dossier-rule) !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--color-accent) 13%, var(--color-bg-secondary)) !important;
+  color: var(--color-accent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(td) {
+  background: color-mix(in srgb, var(--color-bg-secondary) 40%, transparent);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(.rounded-full, [class*="rounded-full"]) {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 38%, var(--color-border)) !important;
+  border-radius: 0.18rem !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 84%, var(--color-bg-primary)) !important;
+  color: var(--color-accent) !important;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea, button:not(.airh-tool-icon)) {
+  border: 1.5px solid color-mix(in srgb, var(--airh-dossier-rule) 72%, transparent) !important;
+  border-radius: 0.2rem !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 11%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--airh-monitor-signal) 9%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 80% 0%, color-mix(in srgb, var(--airh-monitor-signal) 14%, transparent), transparent 30%),
+    var(--color-bg-primary);
+  background-size: 96px 96px, 96px 96px, auto, auto;
+}
+
+html[data-airh-display-mode="monitor"] .airh-compact-topbar,
+html[data-airh-display-mode="monitor"] .airh-site-ticker {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 16%, transparent), transparent 42%),
+    color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary));
+  border-color: color-mix(in srgb, var(--airh-monitor-signal) 45%, var(--color-border-strong));
+}
+
+html[data-airh-display-mode="monitor"] .airh-compact-brand,
+html[data-airh-display-mode="monitor"] .airh-compact-link,
+html[data-airh-display-mode="monitor"] .airh-signin-placeholder,
+html[data-airh-display-mode="monitor"] .airh-site-ticker-item {
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="monitor"] .airh-site-ticker-stamp {
+  background: color-mix(in srgb, var(--airh-monitor-signal) 80%, var(--color-bg-primary));
+  color: var(--color-bg-primary);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 13%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--airh-monitor-signal) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--airh-monitor-signal) 8%, transparent), transparent 20rem),
+    var(--color-bg-primary);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  border: 2px solid color-mix(in srgb, var(--airh-monitor-signal) 52%, var(--color-border-strong)) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 16%, transparent), transparent 30%),
+    linear-gradient(180deg, var(--airh-monitor-panel), color-mix(in srgb, var(--color-bg-primary) 96%, var(--color-bg-secondary))) !important;
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--airh-monitor-signal) 14%, transparent),
+    0 0 0 0.25rem color-mix(in srgb, var(--airh-monitor-signal) 7%, transparent),
+    0 1.4rem 3rem color-mix(in srgb, #000 15%, transparent) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
+  color: color-mix(in srgb, var(--airh-monitor-signal) 78%, var(--color-text-primary));
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 25%, var(--color-bg-tertiary)) 0 18rem, color-mix(in srgb, var(--color-bg-secondary) 92%, var(--color-bg-primary)) 18rem),
+    var(--color-bg-secondary);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::after {
+  content: "LIVE";
+  position: absolute;
+  z-index: -1;
+  top: 0.86rem;
+  right: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-good) 58%, transparent);
+  background: color-mix(in srgb, var(--airh-monitor-good) 14%, transparent);
+  color: var(--airh-monitor-good);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 38%, var(--color-border));
+  background: color-mix(in srgb, var(--airh-monitor-signal) 8%, transparent) !important;
+  color: color-mix(in srgb, var(--airh-monitor-signal) 74%, var(--color-text-primary)) !important;
+  padding: 0.48rem 0.65rem !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(2rem, 4vw, 4rem) !important;
+  font-weight: 800 !important;
+  line-height: 0.96 !important;
+  text-transform: uppercase;
+  text-shadow: 0.12rem 0 color-mix(in srgb, var(--airh-monitor-signal) 46%, transparent);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2) {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(1.3rem, 2.2vw, 2rem) !important;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2)::before {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--airh-monitor-good);
+  box-shadow: 0 0 0 0.22rem color-mix(in srgb, var(--airh-monitor-good) 16%, transparent);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(p, li, dd) {
+  color: color-mix(in srgb, var(--color-text-secondary) 92%, var(--airh-monitor-signal)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 38%, var(--color-border)) !important;
+  border-left: 0.28rem solid color-mix(in srgb, var(--airh-monitor-signal) 72%, var(--color-accent)) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--airh-monitor-signal) 8%, transparent), transparent 50%),
+    color-mix(in srgb, var(--color-bg-card) 88%, var(--color-bg-primary)) !important;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--airh-monitor-signal) 16%, transparent) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "SOURCE CHECK";
+  display: block;
+  width: fit-content;
+  margin-bottom: 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-good) 50%, transparent);
+  color: var(--airh-monitor-good);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  padding: 0.22rem 0.45rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 35%, var(--color-border)) !important;
+  background: color-mix(in srgb, var(--color-bg-primary) 82%, transparent) !important;
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--airh-monitor-signal) 14%, var(--color-bg-tertiary)) !important;
+  color: color-mix(in srgb, var(--airh-monitor-signal) 82%, var(--color-text-primary)) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 40%, var(--color-border)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(td) {
+  border-bottom-color: color-mix(in srgb, var(--airh-monitor-signal) 18%, var(--color-border)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.rounded-full, [class*="rounded-full"]) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 40%, var(--color-border)) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--airh-monitor-signal) 10%, transparent) !important;
+  color: color-mix(in srgb, var(--airh-monitor-signal) 86%, var(--color-text-primary)) !important;
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea, button:not(.airh-tool-icon)) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 38%, var(--color-border)) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-primary) 84%, var(--color-bg-secondary)) !important;
+  color: var(--color-text-primary) !important;
+}
+
 @media (max-width: 1180px) {
   .airh-compact-menu {
     display: block;
