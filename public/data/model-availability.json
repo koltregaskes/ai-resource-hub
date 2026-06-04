@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-04T02:26:03.134Z",
+  "generatedAt": "2026-06-04T03:25:55.627Z",
   "overview": {
-    "generatedAt": "2026-06-04T02:26:03.145Z",
+    "generatedAt": "2026-06-04T03:25:55.640Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 111,
+    "surfacedModels": 110,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -240,7 +240,7 @@
           "sora-turbo"
         ]
       },
-      "matchingModelCount": 67,
+      "matchingModelCount": 66,
       "matchingModelIds": [
         "gpt-5.2-pro",
         "gpt-4o-transcribe",
@@ -275,7 +275,6 @@
         "gpt-3.5-turbo-16k",
         "gpt-3.5-turbo-instruct",
         "gpt-4",
-        "gpt-4-0314",
         "gpt-4-turbo",
         "gpt-4-1106",
         "gpt-4o-search",
@@ -344,7 +343,6 @@
         "GPT-3.5 Turbo 16k",
         "GPT-3.5 Turbo Instruct",
         "GPT-4",
-        "GPT-4 (older v0314)",
         "GPT-4 Turbo",
         "GPT-4 Turbo (older v1106)",
         "GPT-4o Search Preview",
