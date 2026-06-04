@@ -304,11 +304,18 @@ const monitorPriceRows = [...rows]
   .filter((row) => row.inputPrice > 0 || row.outputPrice > 0)
   .sort((a, b) => a.blendedPrice - b.blendedPrice || b.valueScore - a.valueScore)
   .slice(0, 5);
-const monitorWatchRows = [
-  ...rows.filter((row) => row.tags.includes('new')).slice(0, 2),
-  ...rows.filter((row) => row.tags.includes('open')).slice(0, 2),
-  ...rows.filter((row) => row.tags.includes('reasoning')).slice(0, 2),
-].slice(0, 4);
+const monitorWatchRows = (() => {
+  const seen = new Set<string>();
+  return [
+    ...rows.filter((row) => row.tags.includes('new')).slice(0, 2),
+    ...rows.filter((row) => row.tags.includes('open')).slice(0, 2),
+    ...rows.filter((row) => row.tags.includes('reasoning')).slice(0, 2),
+  ].filter((row) => {
+    if (seen.has(row.id)) return false;
+    seen.add(row.id);
+    return true;
+  }).slice(0, 4);
+})();
 const topValue = [...rows].filter((row) => row.valueScore > 0).sort((a, b) => b.valueScore - a.valueScore)[0] ?? null;
 
 const tableLinks = [
@@ -1252,9 +1259,27 @@ const homepagePayload = JSON.stringify({
       const terminalInput = document.querySelector('[data-airh-terminal-input]');
       const terminalLog = document.querySelector('[data-airh-terminal-log]');
       const terminalForm = document.querySelector('[data-airh-terminal-form]');
+      let currentLayout = 'spreadsheet';
+
+      function storageGet(key) {
+        try {
+          return localStorage.getItem(key);
+        } catch {
+          return null;
+        }
+      }
+
+      function storageSet(key, value) {
+        try {
+          localStorage.setItem(key, value);
+        } catch {
+          // Keep the view usable even when browser storage is unavailable.
+        }
+      }
 
       function setLayout(layout) {
         const safeLayout = validLayouts.has(layout) ? layout : 'spreadsheet';
+        currentLayout = safeLayout;
         panels.forEach((panel) => {
           panel.classList.toggle('is-hidden', panel.getAttribute('data-airh-layout-panel') !== safeLayout);
         });
@@ -1264,8 +1289,8 @@ const homepagePayload = JSON.stringify({
         document.documentElement.setAttribute('data-airh-display-mode', safeLayout);
         document.documentElement.setAttribute('data-airh-layout', safeLayout);
         document.body?.setAttribute('data-airh-display-mode', safeLayout);
-        localStorage.setItem(displayModeKey, safeLayout);
-        localStorage.setItem(legacyLayoutKey, safeLayout);
+        storageSet(displayModeKey, safeLayout);
+        storageSet(legacyLayoutKey, safeLayout);
         if (safeLayout === 'terminal') window.setTimeout(() => terminalInput?.focus(), 50);
       }
 
@@ -1380,13 +1405,13 @@ const homepagePayload = JSON.stringify({
       });
 
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && localStorage.getItem(displayModeKey) !== 'spreadsheet') {
+        if (event.key === 'Escape' && currentLayout !== 'spreadsheet') {
           setGlobalLayout('spreadsheet');
         }
       });
 
       const lastSeenKey = 'airh:last-seen';
-      const previousVisit = localStorage.getItem(lastSeenKey);
+      const previousVisit = storageGet(lastSeenKey);
       const lastSeenLabels = Array.from(document.querySelectorAll('[data-airh-last-seen]'));
       if (lastSeenLabels.length) {
         let label = 'First visit this device';
@@ -1399,12 +1424,19 @@ const homepagePayload = JSON.stringify({
         }
         lastSeenLabels.forEach((element) => { element.textContent = label; });
       }
-      localStorage.setItem(lastSeenKey, new Date().toISOString());
+      storageSet(lastSeenKey, new Date().toISOString());
 
       appendTerminal('intro', '<span># welcome back - running since-last-visit</span>');
       runTerminal('since-last-visit', false);
       const requestedLayout = new URLSearchParams(window.location.search).get('layout');
-      setLayout(validLayouts.has(requestedLayout) ? requestedLayout : (localStorage.getItem(displayModeKey) || localStorage.getItem(legacyLayoutKey) || 'spreadsheet'));
+      if (validLayouts.has(requestedLayout)) {
+        setLayout(requestedLayout);
+        const url = new URL(window.location.href);
+        url.searchParams.delete('layout');
+        window.history.replaceState({}, '', url);
+      } else {
+        setLayout(storageGet(displayModeKey) || storageGet(legacyLayoutKey) || 'spreadsheet');
+      }
 
       window.addEventListener('airh:display-mode-change', (event) => {
         const mode = event.detail?.mode || 'spreadsheet';
