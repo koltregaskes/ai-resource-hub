@@ -5409,6 +5409,7 @@ html[data-airh-display-mode="dossier"] .airh-signin-placeholder {
   font-family: var(--font-mono);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 html[data-airh-display-mode="dossier"] .airh-site-ticker-stamp {
@@ -5590,6 +5591,7 @@ html[data-airh-display-mode="monitor"] .airh-compact-link,
 html[data-airh-display-mode="monitor"] .airh-signin-placeholder,
 html[data-airh-display-mode="monitor"] .airh-site-ticker-item {
   font-family: var(--font-mono);
+  white-space: nowrap;
 }
 
 html[data-airh-display-mode="monitor"] .airh-site-ticker-stamp {
