@@ -5165,7 +5165,7 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
 }
 
 html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
-  content: "AI/RH MONITOR  |  SOURCE CHECK GREEN  |  LIVE REFERENCE SURFACE";
+  content: "AI/RH MONITOR  |  REFERENCE SURFACE  |  LIVE VIEW";
   position: absolute;
   z-index: -1;
   top: 0;
@@ -5457,7 +5457,7 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
 }
 
 html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1)::after {
-  content: "verified field note";
+  content: "dossier view";
   display: block;
   width: fit-content;
   margin-top: 0.65rem;
@@ -5528,15 +5528,25 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
 }
 
 html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div)::before {
-  content: "↳ dossier card";
   display: block;
+  content: "dossier card";
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
   width: fit-content;
+  height: auto !important;
+  min-height: 0 !important;
   margin-bottom: 0.7rem;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
   color: var(--color-accent);
   font-family: 'Caveat', cursive;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
@@ -5554,7 +5564,12 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
   background: color-mix(in srgb, var(--color-bg-secondary) 40%, transparent);
 }
 
-html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(.rounded-full, [class*="rounded-full"]) {
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(
+  .rounded-full[class*="bg-(--color"],
+  [class*="rounded-full"][class*="bg-(--color"],
+  .rounded-full[class*="border-(--color"],
+  [class*="rounded-full"][class*="border-(--color"]
+) {
   border: 1px solid color-mix(in srgb, var(--color-accent) 38%, var(--color-border)) !important;
   border-radius: 0.18rem !important;
   background: color-mix(in srgb, var(--color-bg-secondary) 84%, var(--color-bg-primary)) !important;
@@ -5563,10 +5578,17 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
   text-transform: uppercase;
 }
 
-html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea, button:not(.airh-tool-icon)) {
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea) {
   border: 1.5px solid color-mix(in srgb, var(--airh-dossier-rule) 72%, transparent) !important;
   border-radius: 0.2rem !important;
   background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(button:not(.airh-tool-icon):not([class*="bg-blue"]):not([class*="bg-(--color-accent"])) {
+  border: 1.5px solid color-mix(in srgb, var(--airh-dossier-rule) 72%, transparent) !important;
+  border-radius: 0.2rem !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  color: var(--airh-dossier-ink) !important;
 }
 
 html[data-airh-display-mode="monitor"] body.airh-sitewide-system {
@@ -5704,18 +5726,27 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
 }
 
 html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div)::before {
-  content: "SOURCE CHECK";
+  content: "SOURCE CARD";
   display: block;
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
   width: fit-content;
+  height: auto !important;
+  min-height: 0 !important;
   margin-bottom: 0.7rem;
   border: 1px solid color-mix(in srgb, var(--airh-monitor-good) 50%, transparent);
+  background: transparent !important;
+  box-shadow: none !important;
   color: var(--airh-monitor-good);
   font-family: var(--font-mono);
   font-size: 0.66rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   line-height: 1;
+  opacity: 1 !important;
   padding: 0.22rem 0.45rem;
+  transform: none !important;
 }
 
 html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
@@ -5734,7 +5765,12 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
   border-bottom-color: color-mix(in srgb, var(--airh-monitor-signal) 18%, var(--color-border)) !important;
 }
 
-html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.rounded-full, [class*="rounded-full"]) {
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(
+  .rounded-full[class*="bg-(--color"],
+  [class*="rounded-full"][class*="bg-(--color"],
+  .rounded-full[class*="border-(--color"],
+  [class*="rounded-full"][class*="border-(--color"]
+) {
   border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 40%, var(--color-border)) !important;
   border-radius: 0 !important;
   background: color-mix(in srgb, var(--airh-monitor-signal) 10%, transparent) !important;
