@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-74b95bcee00a23ca53fc",
+    "title": "Apple approves Poke as the first AI agent on its Messages for Business platform",
+    "url": "https://techcrunch.com/2026/06/04/apple-approves-poke-as-the-first-ai-agent-on-its-messages-for-business-platform/",
+    "source": "TechCrunch",
+    "summary": "Poke, the startup that lets people use AI agents through simple text messages, has become the first AI agent approved for Apple’s Messages for Business platform.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-04T19:20:58.000Z",
+    "discovered_at": "2026-06-04 19:25:29"
+  },
+  {
+    "id": "news-9b2993a562b7da8cb7a7",
+    "title": "Kevin O’Leary agrees to downsize massive Utah data center",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/943234/kevin-oleary-agrees-to-downsize-massive-utah-data-center",
+    "source": "The Verge",
+    "summary": "Kevin O'Leary agreed to halve the size of his planned 40,000-acre data center in Utah amid mounting pressure from residents and activists, as reported earlier by local affiliate ABC4. The Shark Tank star sent a letter to Utah Senate President J. Stuart Adams on Thursday, saying that he will remove 19,430 acres from th…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-04T18:38:04.000Z",
+    "discovered_at": "2026-06-04 19:25:29"
+  },
+  {
     "id": "news-0907209d74ade9291821",
     "title": "Meta rolls out a new AI creator assistant on Facebook",
     "url": "https://techcrunch.com/2026/06/04/meta-rolls-out-a-new-ai-creator-assistant-on-facebook/",
@@ -9,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T16:32:48.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-fc5cc02a851610eb6c1c",
@@ -21,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T16:31:12.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-c475957ccba435ffcfea",
@@ -33,7 +57,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T15:05:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
+  },
+  {
+    "id": "news-d83e31aa344765ca2002",
+    "title": "TSMC struggles to keep up with AI demand: &#8216;We can only support so much&#8217;",
+    "url": "https://www.theverge.com/tech/943066/tsmc-ai-demand-struggles",
+    "source": "The Verge",
+    "summary": "Taiwan Semiconductor Manufacturing Co. - the world's biggest semiconductor-maker - is struggling to meet demands from American customers even with its factory buildout in the US, according to reports from Reuters and Bloomberg. \"Customer demand is so high, and we can only support so much,\" TSMC CEO C.C. Wei said after…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-04T14:15:44.000Z",
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-a278406c7c9108b194a5",
@@ -45,7 +81,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T14:05:58.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
+  },
+  {
+    "id": "news-0fdbc9b127da9022161b",
+    "title": "Elon Musk is steamrolling Wall Street to become a trillionaire",
+    "url": "https://www.theverge.com/podcast/942586/elon-musk-spacex-ipo-x-xai-index-funds",
+    "source": "The Verge",
+    "summary": "Today on Decoder, I’m talking to Ryan Mac, a technology reporter at The New York Times and coauthor of the excellent book Character Limit: How Elon Musk Destroyed Twitter, which came out in 2024. I can’t recommend it enough. I wanted to have Ryan on the show because we’re on the cusp of the SpaceX [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-04T14:00:00.000Z",
+    "discovered_at": "2026-06-04 19:25:29"
+  },
+  {
+    "id": "news-bb898284982f44f59472",
+    "title": "Let us filter AI slop, you cowards",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/942909/let-us-filter-ai-slop-google-youtube-meta-instagram-tiktok",
+    "source": "The Verge",
+    "summary": "It's almost impossible to avoid seeing AI-generated content online, but it doesn't have to be this way. YouTube, Instagram, TikTok, and more have ramped up content authentication efforts over the last year, with many now automatically applying labels to distinguish AI-generated images, videos, and music from those mad…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-04T12:30:00.000Z",
+    "discovered_at": "2026-06-04 19:25:29"
+  },
+  {
+    "id": "news-df7443886355cba55416",
+    "title": "AI leaders call for tougher protections against AI-aided bioweapons",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/942956/ai-biological-weapons-open-letter-congress",
+    "source": "The Verge",
+    "summary": "Some of the AI industry's biggest rivals have put their many, many grievances aside for a common cause: making it harder for people to use their technology to develop biological weapons. In an open letter to US lawmakers, tech leaders are pressing Congress to enact rules closing what they say is an alarming biosecurit…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-04T12:12:12.000Z",
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-d0841d29a3627d472a5a",
@@ -57,7 +129,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T12:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
+  },
+  {
+    "id": "news-450c019309898b4828b7",
+    "title": "Amazon develops a warehouse robot that workers can speak to",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/942884/amazon-next-generation-warehouse-robot-proteus",
+    "source": "The Verge",
+    "summary": "Amazon has announced a new version of its fully autonomous warehouse robot, Proteus, that will interact using language instead of code. The expanded capabilities come as part of a growing pivot toward automation as the e-commerce giant replaces its human workers with robots. Amazon says the AI-powered upgrade means it…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-04T09:31:14.000Z",
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-58a72a3a66c9437ce97a",
@@ -69,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T09:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-ed66da0fc4221c958d2c",
@@ -81,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T22:56:51.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-b1148769570a80372684",
@@ -93,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T19:38:32.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-ef62746980cfed7d3c5d",
@@ -105,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T19:07:42.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-e87461663dd2abd4fd1b",
@@ -117,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T17:45:35.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-45a8d8965f628682bd08",
@@ -129,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T16:07:31.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-fb832d0c962429ec0658",
@@ -141,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T15:50:26.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-848bb20e8295b4d04da7",
@@ -153,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T15:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-ce79f8488912436d9619",
@@ -165,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T14:58:33.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-9f26eb42160e6867630b",
@@ -177,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T14:04:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-5283290f158307d3354f",
@@ -189,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:40:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-bfb45dcad644b624d213",
@@ -201,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:15:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-c0e85e43aee4dbe7750d",
@@ -213,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:02:51.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-76912b853c1db4a9d325",
@@ -225,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-8929ed18dbbc30cf39ae",
@@ -237,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T12:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-0a440e310365f4669c71",
@@ -249,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T10:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-fae173f5fba9c3cb268b",
@@ -261,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T10:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-ea6a278e2000d715c4cf",
@@ -273,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T09:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
-  },
-  {
-    "id": "news-a6eee194a2758332a51c",
-    "title": "Google must let publishers opt out of AI Search features, rules UK",
-    "url": "https://www.theverge.com/tech/942302/google-search-ai-overviews-uk-cma-publisher-opt-out",
-    "source": "The Verge",
-    "summary": "Online publishers are getting more control over whether their websites appear in Google's AI Search features, thanks to a UK regulatory ruling. The new conduct rule imposed by the Competition and Markets Authority (CMA) requires Google to let website owners keep their content out of features like AI Overviews and prev…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-03T08:45:48.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-be3fb0c6207fb841e518",
@@ -297,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T22:50:56.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
-  },
-  {
-    "id": "news-1317a58a147d30dd0c03",
-    "title": "Microsoft Build 2026: The 7 biggest announcements",
-    "url": "https://www.theverge.com/tech/941738/microsoft-build-2026-biggest-announcements",
-    "source": "The Verge",
-    "summary": "Microsoft just kicked off Build 2026 with a keynote from CEO Satya Nadella and other company leaders. As expected, it was filled with announcements, ranging from new Surface hardware to an always-on personal assistant and updates across Microsoft's in-house AI models. If you didn't watch the event live, you can catch…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-02T19:23:52.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-7f9fddadd6b68c0e2130",
@@ -321,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T19:11:48.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-908f145551698926c8d9",
@@ -333,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T19:02:21.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
-  },
-  {
-    "id": "news-10e299e4765bda70bf1d",
-    "title": "Trump signs executive order to review AI models before they’re released",
-    "url": "https://www.theverge.com/policy/941775/trump-ai-executive-order",
-    "source": "The Verge",
-    "summary": "President Donald Trump signed an executive order Tuesday creating a \"voluntary framework\" for AI companies to share their frontier models with the federal government before they're released \"to promote secure innovation and strengthen the cybersecurity of critical infrastructure.\" The order says the US AI industry has…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-02T18:33:42.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-075926a9117b5c4a393f",
@@ -357,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T18:16:53.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
-  },
-  {
-    "id": "news-62afec8372110ca7c4f9",
-    "title": "Microsoft’s first advanced reasoning AI is here",
-    "url": "https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026",
-    "source": "The Verge",
-    "summary": "Microsoft announced a bunch of new in-house AI models at Build 2026, including a new \"flagship\" model: MAI-Thinking-1. It's an ambitious step into model development for Microsoft, which introduced its initial in-house models last year - before then, it had relied on OpenAI's models. The two companies recently renegoti…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-02T18:12:44.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-c5e2177ce5311d621e6c",
@@ -381,43 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T18:02:44.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
-  },
-  {
-    "id": "news-76f0d9acd80242c78dc6",
-    "title": "Google’s Phone app will tell you if a scammer is impersonating one of your contacts",
-    "url": "https://www.theverge.com/tech/941517/google-phone-scammer-ai-impersonation",
-    "source": "The Verge",
-    "summary": "Google is launching a new feature for its Phone app that aims to protect you from AI impersonation scams. Now, when you receive a call from a scammer that appears to be coming from the same number as one of your contacts, Phone by Google will flag the call as suspicious so you can hang [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-02T18:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
-  },
-  {
-    "id": "news-035c903e2c7b0063035a",
-    "title": "Microsoft Scout is a new AI personal assistant built on OpenClaw",
-    "url": "https://www.theverge.com/news/939713/microsoft-scout-assistant-openclaw",
-    "source": "The Verge",
-    "summary": "Much like Google, Microsoft is launching its own version of OpenClaw. Microsoft Scout is an always-on assistant that integrates into Microsoft 365 apps like Outlook, OneDrive, and Microsoft Teams, allowing businesses to assign a virtual assistant to employees to help with organizing calendars, expense reporting, email…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-02T18:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
-  },
-  {
-    "id": "news-e42dce6dd0eff3ab38a0",
-    "title": "Google rolls out fake call detection to protect against AI deepfake impersonation scams",
-    "url": "https://techcrunch.com/2026/06/02/google-rolls-out-fake-call-detection-to-protect-against-ai-deepfake-impersonation-scams/",
-    "source": "TechCrunch",
-    "summary": "As people increasingly refuse to answer calls from unknown numbers, scammers are shifting their tactics by spoofing trusted phone numbers and using AI deepfake technology to sound like authority figures, family members, or employers.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-02T18:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-6421a7340260ea9bc215",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T12:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-597005b4447f780c0176",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T09:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-00e733aa1592981948ee",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T07:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-8c810ea5d0c79d2f8080",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T02:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-c8b9a6b007c10efde106",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T17:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-4e4360776d53ebd55e4d",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-dadd123def02abdbcf17",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T12:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-00ed5eb9be7b5a27ef97",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T10:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-944dd86b3cacec948339",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T19:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-bf7abda633b2cc922140",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:30:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-507ec0fdf6297e193b5d",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-e63fa88b5624cf9ab322",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-8337eeb248ea1830c3c0",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T03:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-33e1df4abe4ea5f373c2",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T00:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-06-04 18:25:33"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-c4a9a577612daa8d7698",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T12:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:30"
+    "discovered_at": "2026-06-04 19:25:28"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-06-04 18:25:33"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-519f0d44ef2371172488",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-11T06:00:00.000Z",
-    "discovered_at": "2026-06-04 18:25:32"
+    "discovered_at": "2026-06-04 19:25:29"
   },
   {
     "id": "news-4827140096bfe134bd58",
@@ -813,6 +813,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-07T19:18:16.000Z",
-    "discovered_at": "2026-06-04 18:25:33"
+    "discovered_at": "2026-06-04 19:25:29"
   }
 ]
