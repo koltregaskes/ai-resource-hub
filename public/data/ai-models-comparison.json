@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-04T14:33:25.369Z",
-  "model_count": 319,
+  "generated": "2026-06-04T16:28:50.959Z",
+  "model_count": 320,
   "active_model_count": 111,
-  "tracking_model_count": 207,
+  "tracking_model_count": 208,
   "benchmark_types": [
     "chatbot-arena-elo",
     "mmlu",
@@ -101,14 +101,14 @@
       "api_available": true,
       "released": "2025-12-10",
       "benchmarks": {
-        "chatbot-arena-elo": 1380,
-        "math-500": 98.5,
         "gpqa-diamond": 91,
-        "swe-bench-verified": 80
+        "swe-bench-verified": 80,
+        "math-500": 98.5,
+        "chatbot-arena-elo": 1380
       },
       "value_score": 1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "veo-3",
@@ -243,28 +243,6 @@
       "last_updated": null
     },
     {
-      "id": "gemini-stt",
-      "model": "Gemini Audio (STT)",
-      "provider": "Google",
-      "category": "speech",
-      "status": "active",
-      "quality_score": 90,
-      "input_price": 0.003,
-      "output_price": 0,
-      "context_window": 34200,
-      "max_output": 34200,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "speech-to-text",
-      "api_available": true,
-      "released": "2025-01-01",
-      "benchmarks": null,
-      "value_score": 60000,
-      "pricing_source": "ai.google.dev/pricing",
-      "last_updated": null
-    },
-    {
       "id": "gpt-image-1",
       "model": "GPT Image 1",
       "provider": "OpenAI",
@@ -304,14 +282,14 @@
       "api_available": true,
       "released": "2025-10-06",
       "benchmarks": {
-        "chatbot-arena-elo": 1360,
-        "math-500": 97.5,
         "gpqa-diamond": 88,
-        "swe-bench-verified": 76.5
+        "swe-bench-verified": 76.5,
+        "math-500": 97.5,
+        "chatbot-arena-elo": 1360
       },
       "value_score": 1.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.2",
@@ -332,58 +310,53 @@
       "released": "2025-12-10",
       "benchmarks": {
         "chatbot-arena-elo": 1370,
-        "mgsm": 95,
-        "medqa": 94,
-        "arena-hard": 92,
-        "bfcl": 92,
-        "creative-writing-bench": 90,
         "gpqa-diamond": 89,
+        "swe-bench-verified": 78,
+        "arena-hard": 92,
+        "mt-bench": 9.5,
         "livebench": 88,
+        "bigcodebench": 73,
+        "humanitys-last-exam": 24,
+        "simpleqa": 58,
+        "gaia": 78,
+        "aider-polyglot": 80,
+        "bfcl": 92,
+        "mmmu-pro": 72,
+        "medqa": 94,
+        "mgsm": 95,
         "legalbench": 88,
-        "wildbench-creative": 86,
         "finqa": 85,
         "financebench": 82,
-        "aider-polyglot": 80,
-        "swe-bench-verified": 78,
-        "gaia": 78,
-        "bigcodebench": 73,
-        "mmmu-pro": 72,
-        "tau-bench": 72,
-        "simpleqa": 58,
+        "creative-writing-bench": 90,
+        "wildbench-creative": 86,
         "webarena": 52,
-        "humanitys-last-exam": 24,
-        "mt-bench": 9.5
+        "tau-bench": 72
       },
       "value_score": 11.4,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
-      "id": "o4-mini",
-      "model": "o4 Mini",
-      "provider": "OpenAI",
-      "category": "llm",
+      "id": "gemini-stt",
+      "model": "Gemini Audio (STT)",
+      "provider": "Google",
+      "category": "speech",
       "status": "active",
       "quality_score": 90,
-      "input_price": 1.1,
-      "output_price": 4.4,
-      "context_window": 200000,
-      "max_output": 100000,
-      "speed_tps": 65,
-      "ttft_ms": 550,
+      "input_price": 0.003,
+      "output_price": 0,
+      "context_window": 34200,
+      "max_output": 34200,
+      "speed_tps": null,
+      "ttft_ms": null,
       "open_source": false,
-      "modality": "text,vision",
+      "modality": "speech-to-text",
       "api_available": true,
-      "released": "2025-04-16",
-      "benchmarks": {
-        "math-500": 96.3,
-        "humaneval": 96,
-        "aime-2025": 92.7,
-        "gpqa-diamond": 81.4
-      },
-      "value_score": 32.7,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "released": "2025-01-01",
+      "benchmarks": null,
+      "value_score": 60000,
+      "pricing_source": "ai.google.dev/pricing",
+      "last_updated": null
     },
     {
       "id": "suno-v4",
@@ -430,6 +403,33 @@
       "last_updated": null
     },
     {
+      "id": "o4-mini",
+      "model": "o4 Mini",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "active",
+      "quality_score": 90,
+      "input_price": 1.1,
+      "output_price": 4.4,
+      "context_window": 200000,
+      "max_output": 100000,
+      "speed_tps": 65,
+      "ttft_ms": 550,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-04-16",
+      "benchmarks": {
+        "gpqa-diamond": 81.4,
+        "math-500": 96.3,
+        "aime-2025": 92.7,
+        "humaneval": 96
+      },
+      "value_score": 32.7,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
       "id": "claude-opus-4.6",
       "model": "Claude Opus 4.6",
       "provider": "Anthropic",
@@ -447,26 +447,26 @@
       "api_available": true,
       "released": "2026-02-05",
       "benchmarks": {
+        "swe-bench-verified": 78,
         "chatbot-arena-elo": 1365,
-        "creative-writing-bench": 92,
         "arena-hard": 90,
-        "wildbench-creative": 88,
+        "mt-bench": 9.4,
         "livebench": 86.5,
+        "bigcodebench": 72,
+        "humanitys-last-exam": 22,
+        "gaia": 75,
+        "aider-polyglot": 82,
         "legalbench": 86,
         "finqa": 83,
-        "aider-polyglot": 82,
         "financebench": 80,
-        "swe-bench-verified": 78,
-        "gaia": 75,
-        "bigcodebench": 72,
-        "tau-bench": 70,
+        "creative-writing-bench": 92,
+        "wildbench-creative": 88,
         "webarena": 48,
-        "humanitys-last-exam": 22,
-        "mt-bench": 9.4
+        "tau-bench": 70
       },
       "value_score": 2,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-06-04 12:15:34"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "flux-kontext",
@@ -579,78 +579,6 @@
       "last_updated": null
     },
     {
-      "id": "o3",
-      "model": "o3",
-      "provider": "OpenAI",
-      "category": "llm",
-      "status": "active",
-      "quality_score": 88,
-      "input_price": 2,
-      "output_price": 8,
-      "context_window": 200000,
-      "max_output": 100000,
-      "speed_tps": 15,
-      "ttft_ms": 1200,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-04-16",
-      "benchmarks": {
-        "chatbot-arena-elo": 1337,
-        "humaneval": 97,
-        "math-500": 96.7,
-        "mgsm": 93,
-        "mmlu": 92,
-        "medqa": 92,
-        "aime-2025": 91.6,
-        "arena-hard": 88.5,
-        "livebench": 85,
-        "legalbench": 85,
-        "gpqa-diamond": 83.3,
-        "finqa": 82,
-        "financebench": 79,
-        "aider-polyglot": 76,
-        "bigcodebench": 74,
-        "gaia": 72,
-        "swe-bench-verified": 69.1,
-        "tau-bench": 68,
-        "simpleqa": 49,
-        "webarena": 45,
-        "mt-bench": 9.1
-      },
-      "value_score": 17.6,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "o3-pro",
-      "model": "o3 Pro",
-      "provider": "OpenAI",
-      "category": "llm",
-      "status": "active",
-      "quality_score": 88,
-      "input_price": 20,
-      "output_price": 80,
-      "context_window": 200000,
-      "max_output": 100000,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-06-10",
-      "benchmarks": {
-        "math-500": 98,
-        "aime-2025": 96.7,
-        "gpqa-diamond": 87.5,
-        "swe-bench-verified": 73,
-        "humanitys-last-exam": 26.6
-      },
-      "value_score": 1.8,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
       "id": "sora",
       "model": "Sora",
       "provider": "OpenAI",
@@ -695,6 +623,78 @@
       "last_updated": null
     },
     {
+      "id": "o3",
+      "model": "o3",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "active",
+      "quality_score": 88,
+      "input_price": 2,
+      "output_price": 8,
+      "context_window": 200000,
+      "max_output": 100000,
+      "speed_tps": 15,
+      "ttft_ms": 1200,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-04-16",
+      "benchmarks": {
+        "mmlu": 92,
+        "gpqa-diamond": 83.3,
+        "humaneval": 97,
+        "math-500": 96.7,
+        "aime-2025": 91.6,
+        "swe-bench-verified": 69.1,
+        "chatbot-arena-elo": 1337,
+        "arena-hard": 88.5,
+        "mt-bench": 9.1,
+        "livebench": 85,
+        "bigcodebench": 74,
+        "simpleqa": 49,
+        "gaia": 72,
+        "aider-polyglot": 76,
+        "medqa": 92,
+        "mgsm": 93,
+        "legalbench": 85,
+        "finqa": 82,
+        "financebench": 79,
+        "webarena": 45,
+        "tau-bench": 68
+      },
+      "value_score": 17.6,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "o3-pro",
+      "model": "o3 Pro",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "active",
+      "quality_score": 88,
+      "input_price": 20,
+      "output_price": 80,
+      "context_window": 200000,
+      "max_output": 100000,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-06-10",
+      "benchmarks": {
+        "gpqa-diamond": 87.5,
+        "math-500": 98,
+        "aime-2025": 96.7,
+        "swe-bench-verified": 73,
+        "humanitys-last-exam": 26.6
+      },
+      "value_score": 1.8,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
       "id": "deepgram-nova-2",
       "model": "Deepgram Nova 2",
       "provider": "Deepgram",
@@ -717,6 +717,33 @@
       "last_updated": null
     },
     {
+      "id": "gpt-5",
+      "model": "GPT-5",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "active",
+      "quality_score": 87,
+      "input_price": 1.25,
+      "output_price": 10,
+      "context_window": 400000,
+      "max_output": 128000,
+      "speed_tps": 75,
+      "ttft_ms": 380,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-08-07",
+      "benchmarks": {
+        "gpqa-diamond": 86,
+        "swe-bench-verified": 75,
+        "chatbot-arena-elo": 1355,
+        "simpleqa": 52
+      },
+      "value_score": 15.5,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
       "id": "gen-4",
       "model": "Gen-4",
       "provider": "Runway",
@@ -737,33 +764,6 @@
       "value_score": 1740,
       "pricing_source": "runwayml.com/pricing",
       "last_updated": null
-    },
-    {
-      "id": "gpt-5",
-      "model": "GPT-5",
-      "provider": "OpenAI",
-      "category": "llm",
-      "status": "active",
-      "quality_score": 87,
-      "input_price": 1.25,
-      "output_price": 10,
-      "context_window": 400000,
-      "max_output": 128000,
-      "speed_tps": 75,
-      "ttft_ms": 380,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-08-07",
-      "benchmarks": {
-        "chatbot-arena-elo": 1355,
-        "gpqa-diamond": 86,
-        "swe-bench-verified": 75,
-        "simpleqa": 52
-      },
-      "value_score": 15.5,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
     },
     {
       "id": "imagen-3",
@@ -811,7 +811,7 @@
       },
       "value_score": 76.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "udio-v2",
@@ -853,14 +853,14 @@
       "api_available": true,
       "released": "2025-11-24",
       "benchmarks": {
+        "swe-bench-verified": 75,
         "chatbot-arena-elo": 1355,
-        "humaneval": 95.5,
         "gpqa-diamond": 78,
-        "swe-bench-verified": 75
+        "humaneval": 95.5
       },
       "value_score": 5.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-sonnet-4.6",
@@ -880,15 +880,15 @@
       "api_available": true,
       "released": "2026-02-17",
       "benchmarks": {
+        "swe-bench-verified": 72,
         "chatbot-arena-elo": 1350,
         "arena-hard": 86,
         "livebench": 83,
-        "aider-polyglot": 79,
-        "swe-bench-verified": 72
+        "aider-polyglot": 79
       },
       "value_score": 9.6,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-06-04 12:15:34"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4o-mini-tts",
@@ -1019,13 +1019,13 @@
       "released": "2025-09-01",
       "benchmarks": {
         "chatbot-arena-elo": 1335,
-        "math-500": 93.5,
+        "gpqa-diamond": 72,
         "humaneval": 93,
-        "gpqa-diamond": 72
+        "math-500": 93.5
       },
       "value_score": 36.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-r1",
@@ -1045,29 +1045,29 @@
       "api_available": true,
       "released": "2025-01-20",
       "benchmarks": {
-        "chatbot-arena-elo": 1318,
-        "math-500": 97.3,
-        "humaneval": 92.5,
         "mmlu": 90.8,
-        "arena-hard": 82,
-        "livebench": 80,
+        "gpqa-diamond": 71.5,
+        "math-500": 97.3,
         "aime-2025": 79.8,
+        "humaneval": 92.5,
+        "chatbot-arena-elo": 1318,
+        "arena-hard": 82,
+        "mt-bench": 8.9,
+        "livebench": 80,
+        "bigcodebench": 65,
+        "humanitys-last-exam": 18,
+        "aider-polyglot": 65,
         "legalbench": 76,
         "finqa": 76,
         "financebench": 72,
         "creative-writing-bench": 72,
-        "gpqa-diamond": 71.5,
         "wildbench-creative": 68,
-        "bigcodebench": 65,
-        "aider-polyglot": 65,
-        "tau-bench": 55,
         "webarena": 28,
-        "humanitys-last-exam": 18,
-        "mt-bench": 8.9
+        "tau-bench": 55
       },
       "value_score": 53.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "recraft-v3",
@@ -1131,27 +1131,27 @@
       "api_available": true,
       "released": "2025-05-22",
       "benchmarks": {
-        "chatbot-arena-elo": 1330,
-        "humaneval": 95,
-        "mgsm": 90,
         "mmlu": 89,
-        "medqa": 89,
+        "gpqa-diamond": 72.1,
+        "humaneval": 95,
+        "swe-bench-verified": 72.5,
         "math-500": 88.7,
-        "creative-writing-bench": 88,
-        "wildbench-creative": 84,
+        "chatbot-arena-elo": 1330,
+        "simpleqa": 44,
+        "mmmu-pro": 64,
+        "medqa": 89,
+        "mgsm": 90,
         "legalbench": 82,
         "finqa": 78,
         "financebench": 74,
-        "swe-bench-verified": 72.5,
-        "gpqa-diamond": 72.1,
-        "mmmu-pro": 64,
-        "tau-bench": 62,
-        "simpleqa": 44,
-        "webarena": 38
+        "creative-writing-bench": 88,
+        "wildbench-creative": 84,
+        "webarena": 38,
+        "tau-bench": 62
       },
       "value_score": 1.9,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "flux-1-dev",
@@ -1215,16 +1215,16 @@
       "api_available": true,
       "released": "2024-12-17",
       "benchmarks": {
-        "chatbot-arena-elo": 1335,
-        "math-500": 96.4,
-        "humaneval": 94,
         "mmlu": 91.8,
         "gpqa-diamond": 78,
-        "swe-bench-verified": 48.9
+        "math-500": 96.4,
+        "humaneval": 94,
+        "swe-bench-verified": 48.9,
+        "chatbot-arena-elo": 1335
       },
       "value_score": 2.2,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "o3-mini",
@@ -1244,14 +1244,14 @@
       "api_available": true,
       "released": "2025-01-31",
       "benchmarks": {
-        "chatbot-arena-elo": 1310,
-        "humaneval": 94.5,
+        "gpqa-diamond": 75,
         "math-500": 94,
-        "gpqa-diamond": 75
+        "humaneval": 94.5,
+        "chatbot-arena-elo": 1310
       },
       "value_score": 30.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gemini-2.5-pro",
@@ -1271,35 +1271,35 @@
       "api_available": true,
       "released": "2025-03-25",
       "benchmarks": {
-        "chatbot-arena-elo": 1340,
-        "humaneval": 93.2,
-        "mgsm": 92,
-        "medqa": 91,
         "mmlu": 90.5,
+        "gpqa-diamond": 68.4,
+        "humaneval": 93.2,
         "math-500": 90.2,
-        "bfcl": 87,
+        "swe-bench-verified": 63.8,
         "aime-2025": 86.7,
+        "chatbot-arena-elo": 1340,
         "arena-hard": 85.5,
-        "creative-writing-bench": 85,
-        "legalbench": 84,
+        "mt-bench": 9.2,
         "livebench": 82,
-        "wildbench-creative": 82,
+        "bigcodebench": 68,
+        "simpleqa": 47,
+        "gaia": 68,
+        "aider-polyglot": 72,
+        "bfcl": 87,
+        "mmmu-pro": 68,
+        "medqa": 91,
+        "mgsm": 92,
+        "legalbench": 84,
         "finqa": 80,
         "financebench": 77,
-        "aider-polyglot": 72,
-        "gpqa-diamond": 68.4,
-        "bigcodebench": 68,
-        "gaia": 68,
-        "mmmu-pro": 68,
-        "tau-bench": 64,
-        "swe-bench-verified": 63.8,
-        "simpleqa": 47,
+        "creative-writing-bench": 85,
+        "wildbench-creative": 82,
         "webarena": 42,
-        "mt-bench": 9.2
+        "tau-bench": 64
       },
       "value_score": 14.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gen-4-turbo",
@@ -1385,16 +1385,16 @@
       "api_available": true,
       "released": "2025-05-28",
       "benchmarks": {
-        "chatbot-arena-elo": 1328,
-        "math-500": 97.8,
-        "humaneval": 94,
-        "aime-2025": 87.5,
         "gpqa-diamond": 76,
-        "swe-bench-verified": 57.6
+        "math-500": 97.8,
+        "aime-2025": 87.5,
+        "humaneval": 94,
+        "swe-bench-verified": 57.6,
+        "chatbot-arena-elo": 1328
       },
       "value_score": 62.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "resemble-v3",
@@ -1573,7 +1573,7 @@
       },
       "value_score": 98.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "sora-turbo",
@@ -1660,12 +1660,12 @@
       "released": "2025-03-13",
       "benchmarks": {
         "chatbot-arena-elo": 1280,
-        "humaneval": 85,
-        "mmlu": 83.5
+        "mmlu": 83.5,
+        "humaneval": 85
       },
       "value_score": 12.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "dream-machine",
@@ -1773,23 +1773,23 @@
       "api_available": true,
       "released": "2025-05-22",
       "benchmarks": {
-        "chatbot-arena-elo": 1310,
-        "humaneval": 93,
         "mmlu": 88,
-        "bfcl": 88,
-        "creative-writing-bench": 86,
+        "gpqa-diamond": 67.5,
+        "humaneval": 93,
+        "swe-bench-verified": 53.6,
         "math-500": 85.4,
-        "wildbench-creative": 82,
+        "chatbot-arena-elo": 1310,
+        "mt-bench": 8.8,
+        "simpleqa": 41,
+        "bfcl": 88,
         "legalbench": 79,
         "finqa": 74,
-        "gpqa-diamond": 67.5,
-        "swe-bench-verified": 53.6,
-        "simpleqa": 41,
-        "mt-bench": 8.8
+        "creative-writing-bench": 86,
+        "wildbench-creative": 82
       },
       "value_score": 8.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-sonnet-4.5",
@@ -1809,13 +1809,13 @@
       "api_available": true,
       "released": "2025-09-29",
       "benchmarks": {
+        "swe-bench-verified": 68,
         "chatbot-arena-elo": 1340,
-        "gpqa-diamond": 72,
-        "swe-bench-verified": 68
+        "gpqa-diamond": 72
       },
       "value_score": 8.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "command-r-plus",
@@ -1837,7 +1837,7 @@
       "benchmarks": null,
       "value_score": 12.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "hailuo-i2v-01-live",
@@ -1879,14 +1879,14 @@
       "api_available": true,
       "released": "2025-04-05",
       "benchmarks": {
-        "chatbot-arena-elo": 1275,
-        "humaneval": 85,
         "mmlu": 83,
+        "humaneval": 85,
+        "chatbot-arena-elo": 1275,
         "math-500": 76.8
       },
       "value_score": 415.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "flux-1-schnell",
@@ -1911,34 +1911,6 @@
       "last_updated": null
     },
     {
-      "id": "gemini-2.5-flash",
-      "model": "Gemini 2.5 Flash",
-      "provider": "Google",
-      "category": "llm",
-      "status": "active",
-      "quality_score": 78,
-      "input_price": 0.3,
-      "output_price": 2.5,
-      "context_window": 1048576,
-      "max_output": 65535,
-      "speed_tps": 350,
-      "ttft_ms": 160,
-      "open_source": false,
-      "modality": "text,vision,audio",
-      "api_available": true,
-      "released": "2025-05-01",
-      "benchmarks": {
-        "chatbot-arena-elo": 1300,
-        "humaneval": 88.5,
-        "mmlu": 86.5,
-        "math-500": 82.3,
-        "gpqa-diamond": 59.2
-      },
-      "value_score": 55.7,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
       "id": "gpt-5-nano",
       "model": "GPT-5 Nano",
       "provider": "OpenAI",
@@ -1958,7 +1930,35 @@
       "benchmarks": null,
       "value_score": 346.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "model": "Gemini 2.5 Flash",
+      "provider": "Google",
+      "category": "llm",
+      "status": "active",
+      "quality_score": 78,
+      "input_price": 0.3,
+      "output_price": 2.5,
+      "context_window": 1048576,
+      "max_output": 65535,
+      "speed_tps": 350,
+      "ttft_ms": 160,
+      "open_source": false,
+      "modality": "text,vision,audio",
+      "api_available": true,
+      "released": "2025-05-01",
+      "benchmarks": {
+        "mmlu": 86.5,
+        "gpqa-diamond": 59.2,
+        "math-500": 82.3,
+        "humaneval": 88.5,
+        "chatbot-arena-elo": 1300
+      },
+      "value_score": 55.7,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "nova-pro",
@@ -1980,7 +1980,7 @@
       "benchmarks": null,
       "value_score": 39,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "openai-tts-1",
@@ -2066,16 +2066,16 @@
       "api_available": true,
       "released": "2025-09-29",
       "benchmarks": {
-        "chatbot-arena-elo": 1310,
-        "humaneval": 91,
         "mmlu": 89.5,
-        "math-500": 84,
+        "humaneval": 91,
+        "chatbot-arena-elo": 1310,
         "gpqa-diamond": 62,
+        "math-500": 84,
         "swe-bench-verified": 50
       },
       "value_score": 158.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4.1",
@@ -2095,16 +2095,16 @@
       "api_available": true,
       "released": "2025-04-14",
       "benchmarks": {
-        "chatbot-arena-elo": 1283,
-        "humaneval": 93.4,
         "mmlu": 90.2,
-        "math-500": 83,
         "gpqa-diamond": 66.3,
-        "swe-bench-verified": 54.6
+        "humaneval": 93.4,
+        "swe-bench-verified": 54.6,
+        "math-500": 83,
+        "chatbot-arena-elo": 1283
       },
       "value_score": 15.4,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3.1-70b",
@@ -2126,7 +2126,7 @@
       "benchmarks": null,
       "value_score": 192.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-haiku-3.5",
@@ -2146,14 +2146,14 @@
       "api_available": true,
       "released": "2024-10-22",
       "benchmarks": {
-        "chatbot-arena-elo": 1260,
-        "humaneval": 88.1,
         "mmlu": 83,
+        "humaneval": 88.1,
+        "chatbot-arena-elo": 1260,
         "math-500": 69.3
       },
       "value_score": 31.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-haiku-4.5",
@@ -2174,12 +2174,12 @@
       "released": "2025-10-15",
       "benchmarks": {
         "chatbot-arena-elo": 1295,
-        "humaneval": 90,
-        "swe-bench-verified": 52
+        "swe-bench-verified": 52,
+        "humaneval": 90
       },
       "value_score": 25.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "cogvideox-1.5",
@@ -2221,15 +2221,15 @@
       "api_available": true,
       "released": "2024-12-25",
       "benchmarks": {
-        "chatbot-arena-elo": 1275,
-        "humaneval": 89.5,
         "mmlu": 88.5,
+        "gpqa-diamond": 59.1,
         "math-500": 78.3,
-        "gpqa-diamond": 59.1
+        "humaneval": 89.5,
+        "chatbot-arena-elo": 1275
       },
       "value_score": 152,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-4-maverick",
@@ -2249,20 +2249,20 @@
       "api_available": true,
       "released": "2025-04-05",
       "benchmarks": {
-        "chatbot-arena-elo": 1290,
-        "humaneval": 87.5,
         "mmlu": 85.5,
+        "gpqa-diamond": 56,
+        "humaneval": 87.5,
+        "chatbot-arena-elo": 1290,
+        "mt-bench": 8.5,
         "mgsm": 84,
-        "math-500": 81.5,
-        "creative-writing-bench": 78,
         "legalbench": 72,
         "finqa": 68,
-        "gpqa-diamond": 56,
-        "mt-bench": 8.5
+        "creative-writing-bench": 78,
+        "math-500": 81.5
       },
       "value_score": 202.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4.1-mini",
@@ -2282,14 +2282,14 @@
       "api_available": true,
       "released": "2025-04-14",
       "benchmarks": {
-        "chatbot-arena-elo": 1275,
-        "humaneval": 90.5,
         "mmlu": 87.5,
-        "swe-bench-verified": 42
+        "humaneval": 90.5,
+        "swe-bench-verified": 42,
+        "chatbot-arena-elo": 1275
       },
       "value_score": 75,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4.1-nano",
@@ -2311,7 +2311,7 @@
       "benchmarks": null,
       "value_score": 300,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4o",
@@ -2331,28 +2331,28 @@
       "api_available": true,
       "released": "2024-05-13",
       "benchmarks": {
-        "chatbot-arena-elo": 1285,
-        "humaneval": 90.2,
         "mmlu": 88.7,
-        "mgsm": 86.5,
-        "medqa": 86.1,
-        "bfcl": 85,
-        "creative-writing-bench": 82,
-        "legalbench": 78,
-        "wildbench-creative": 78,
+        "gpqa-diamond": 53.6,
+        "humaneval": 90.2,
         "math-500": 76.6,
+        "chatbot-arena-elo": 1285,
+        "mt-bench": 8.6,
+        "simpleqa": 38.2,
+        "bfcl": 85,
+        "mmmu-pro": 51,
+        "medqa": 86.1,
+        "mgsm": 86.5,
+        "legalbench": 78,
         "finqa": 72,
         "financebench": 68,
-        "gpqa-diamond": 53.6,
-        "tau-bench": 52,
-        "mmmu-pro": 51,
-        "simpleqa": 38.2,
+        "creative-writing-bench": 82,
+        "wildbench-creative": 78,
         "webarena": 30,
-        "mt-bench": 8.6
+        "tau-bench": 52
       },
       "value_score": 12,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "stable-diffusion-xl",
@@ -2399,32 +2399,6 @@
       "last_updated": null
     },
     {
-      "id": "gemini-2.5-flash-lite",
-      "model": "Gemini 2.5 Flash Lite",
-      "provider": "Google",
-      "category": "llm",
-      "status": "active",
-      "quality_score": 74,
-      "input_price": 0.1,
-      "output_price": 0.4,
-      "context_window": 1048576,
-      "max_output": 65535,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision,audio",
-      "api_available": true,
-      "released": "2025-05-01",
-      "benchmarks": {
-        "chatbot-arena-elo": 1240,
-        "humaneval": 82,
-        "mmlu": 80
-      },
-      "value_score": 296,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
       "id": "gpt-4o-mini",
       "model": "GPT-4o-mini",
       "provider": "OpenAI",
@@ -2442,14 +2416,40 @@
       "api_available": true,
       "released": "2024-07-18",
       "benchmarks": {
-        "chatbot-arena-elo": 1240,
-        "humaneval": 87.2,
         "mmlu": 82,
+        "humaneval": 87.2,
+        "chatbot-arena-elo": 1240,
         "math-500": 70.2
       },
       "value_score": 197.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemini-2.5-flash-lite",
+      "model": "Gemini 2.5 Flash Lite",
+      "provider": "Google",
+      "category": "llm",
+      "status": "active",
+      "quality_score": 74,
+      "input_price": 0.1,
+      "output_price": 0.4,
+      "context_window": 1048576,
+      "max_output": 65535,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision,audio",
+      "api_available": true,
+      "released": "2025-05-01",
+      "benchmarks": {
+        "mmlu": 80,
+        "humaneval": 82,
+        "chatbot-arena-elo": 1240
+      },
+      "value_score": 296,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "phi-4",
@@ -2470,13 +2470,13 @@
       "released": "2024-12-12",
       "benchmarks": {
         "mmlu": 84.8,
+        "gpqa-diamond": 56.1,
         "humaneval": 82.6,
-        "math-500": 80.4,
-        "gpqa-diamond": 56.1
+        "math-500": 80.4
       },
       "value_score": 722,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "reka-flash-3",
@@ -2498,7 +2498,7 @@
       "benchmarks": null,
       "value_score": 493.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "sonar",
@@ -2520,7 +2520,7 @@
       "benchmarks": null,
       "value_score": 74,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "command-r",
@@ -2542,7 +2542,7 @@
       "benchmarks": null,
       "value_score": 194.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-large-3",
@@ -2563,15 +2563,15 @@
       "released": "2025-06-01",
       "benchmarks": {
         "chatbot-arena-elo": 1295,
-        "humaneval": 89.5,
         "mmlu": 87,
-        "creative-writing-bench": 80,
         "gpqa-diamond": 58,
-        "swe-bench-verified": 45
+        "humaneval": 89.5,
+        "swe-bench-verified": 45,
+        "creative-writing-bench": 80
       },
       "value_score": 18.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-nemo",
@@ -2593,7 +2593,7 @@
       "benchmarks": null,
       "value_score": 2880,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-small-3.1",
@@ -2613,13 +2613,13 @@
       "api_available": true,
       "released": "2025-03-18",
       "benchmarks": {
-        "chatbot-arena-elo": 1235,
+        "mmlu": 78,
         "humaneval": 80,
-        "mmlu": 78
+        "chatbot-arena-elo": 1235
       },
       "value_score": 158.9,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "musicgen-large",
@@ -2663,7 +2663,7 @@
       "benchmarks": null,
       "value_score": 480,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3.3-70b",
@@ -2683,14 +2683,14 @@
       "api_available": true,
       "released": "2024-12-06",
       "benchmarks": {
-        "chatbot-arena-elo": 1250,
-        "humaneval": 88.4,
         "mmlu": 86,
+        "humaneval": 88.4,
+        "chatbot-arena-elo": 1250,
         "gpqa-diamond": 50.7
       },
       "value_score": 338.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen-2.5-72b",
@@ -2710,15 +2710,15 @@
       "api_available": true,
       "released": "2024-09-19",
       "benchmarks": {
-        "chatbot-arena-elo": 1245,
-        "humaneval": 86.6,
         "mmlu": 86.1,
+        "gpqa-diamond": 49,
+        "humaneval": 86.6,
         "math-500": 80,
-        "gpqa-diamond": 49
+        "chatbot-arena-elo": 1245
       },
       "value_score": 186.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3.1-8b",
@@ -2740,7 +2740,7 @@
       "benchmarks": null,
       "value_score": 1942.9,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "nova-micro",
@@ -2762,7 +2762,7 @@
       "benchmarks": null,
       "value_score": 777.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "command-r7b",
@@ -2784,7 +2784,7 @@
       "benchmarks": null,
       "value_score": 691.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gemini-3.1-pro",
@@ -2809,7 +2809,7 @@
       },
       "value_score": 13.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "grok-4",
@@ -2830,20 +2830,20 @@
       "released": "2025-07-09",
       "benchmarks": {
         "chatbot-arena-elo": 1345,
+        "gpqa-diamond": 82,
         "math-500": 95,
         "arena-hard": 89,
+        "mt-bench": 9.3,
         "livebench": 84,
-        "creative-writing-bench": 84,
+        "humanitys-last-exam": 21,
+        "gaia": 70,
         "legalbench": 83,
-        "gpqa-diamond": 82,
-        "wildbench-creative": 80,
         "finqa": 79,
         "financebench": 76,
-        "gaia": 70,
-        "tau-bench": 66,
+        "creative-writing-bench": 84,
+        "wildbench-creative": 80,
         "webarena": 40,
-        "humanitys-last-exam": 21,
-        "mt-bench": 9.3
+        "tau-bench": 66
       },
       "value_score": 9.8,
       "pricing_source": "docs.x.ai",
@@ -2869,7 +2869,7 @@
       "benchmarks": null,
       "value_score": 87.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "grok-4.1-fast",
@@ -2912,8 +2912,8 @@
       "released": "2025-11-18",
       "benchmarks": {
         "chatbot-arena-elo": 1362,
-        "gpqa-diamond": 80,
-        "swe-bench-verified": 70
+        "swe-bench-verified": 70,
+        "gpqa-diamond": 80
       },
       "value_score": 12.1,
       "pricing_source": "ai.google.dev/pricing",
@@ -2937,13 +2937,13 @@
       "api_available": true,
       "released": "2025-06-10",
       "benchmarks": {
-        "chatbot-arena-elo": 1329,
-        "humaneval": 93.8,
-        "math-500": 91.5,
         "mmlu": 91,
+        "gpqa-diamond": 68.2,
+        "math-500": 91.5,
         "aime-2025": 83.9,
-        "bfcl": 82,
-        "gpqa-diamond": 68.2
+        "humaneval": 93.8,
+        "chatbot-arena-elo": 1329,
+        "bfcl": 82
       },
       "value_score": 9.4,
       "pricing_source": "docs.x.ai",
@@ -3015,8 +3015,8 @@
       "released": "2025-06-10",
       "benchmarks": {
         "chatbot-arena-elo": 1305,
-        "humaneval": 88,
-        "math-500": 85
+        "math-500": 85,
+        "humaneval": 88
       },
       "value_score": 207.5,
       "pricing_source": "docs.x.ai",
@@ -3042,7 +3042,7 @@
       "benchmarks": null,
       "value_score": 461.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-large-2",
@@ -3064,7 +3064,7 @@
       "benchmarks": null,
       "value_score": 20.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-medium-3",
@@ -3086,7 +3086,7 @@
       "benchmarks": null,
       "value_score": 68.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "nova-2-lite",
@@ -3108,7 +3108,7 @@
       "benchmarks": null,
       "value_score": 58.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "pixtral-large",
@@ -3152,7 +3152,7 @@
       "benchmarks": null,
       "value_score": 303.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "codestral",
@@ -3174,7 +3174,7 @@
       "benchmarks": null,
       "value_score": 135,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-v2.5",
@@ -3264,7 +3264,7 @@
       "benchmarks": null,
       "value_score": 123.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "nova-premier",
@@ -3286,7 +3286,7 @@
       "benchmarks": null,
       "value_score": 10.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "phi-4-reasoning",
@@ -3307,9 +3307,9 @@
       "released": "2025-05-01",
       "benchmarks": {
         "math-500": 94.3,
+        "gpqa-diamond": 65.8,
         "humaneval": 89,
-        "aime-2025": 75.3,
-        "gpqa-diamond": 65.8
+        "aime-2025": 75.3
       },
       "value_score": 761.9,
       "pricing_source": "azure.microsoft.com",
@@ -3335,7 +3335,7 @@
       "benchmarks": null,
       "value_score": 8.9,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4.5",
@@ -3355,12 +3355,12 @@
       "api_available": true,
       "released": "2025-02-27",
       "benchmarks": {
-        "chatbot-arena-elo": 1300,
-        "humaneval": 91,
         "mmlu": 90.2,
-        "math-500": 82,
-        "simpleqa": 62.5,
         "gpqa-diamond": 62,
+        "humaneval": 91,
+        "simpleqa": 62.5,
+        "chatbot-arena-elo": 1300,
+        "math-500": 82,
         "mt-bench": 8.8
       },
       "value_score": 0.7,
@@ -3385,8 +3385,8 @@
       "api_available": true,
       "released": "2024-08-13",
       "benchmarks": {
-        "chatbot-arena-elo": 1270,
-        "mmlu": 87.5
+        "mmlu": 87.5,
+        "chatbot-arena-elo": 1270
       },
       "value_score": 13.2,
       "pricing_source": "docs.x.ai",
@@ -3455,12 +3455,12 @@
       "released": "2025-12-17",
       "benchmarks": {
         "chatbot-arena-elo": 1310,
-        "humaneval": 89,
-        "swe-bench-verified": 55
+        "swe-bench-verified": 55,
+        "humaneval": 89
       },
       "value_score": 44.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen-qwq-32b",
@@ -3480,10 +3480,10 @@
       "api_available": true,
       "released": "2025-03-06",
       "benchmarks": {
+        "gpqa-diamond": 63,
         "math-500": 90.6,
-        "humaneval": 88,
         "aime-2025": 79.5,
-        "gpqa-diamond": 63
+        "humaneval": 88
       },
       "value_score": 65,
       "pricing_source": "together.ai/pricing",
@@ -3529,8 +3529,8 @@
       "api_available": true,
       "released": "2024-10-01",
       "benchmarks": {
-        "chatbot-arena-elo": 1265,
-        "mmlu": 85
+        "mmlu": 85,
+        "chatbot-arena-elo": 1265
       },
       "value_score": 256.7,
       "pricing_source": "build.nvidia.com",
@@ -3554,8 +3554,8 @@
       "api_available": true,
       "released": "2024-09-12",
       "benchmarks": {
-        "humaneval": 92.4,
         "math-500": 90,
+        "humaneval": 92.4,
         "gpqa-diamond": 60
       },
       "value_score": 10.3,
@@ -3580,10 +3580,10 @@
       "api_available": true,
       "released": "2025-02-24",
       "benchmarks": {
+        "swe-bench-verified": 62.3,
         "chatbot-arena-elo": 1310,
-        "math-500": 86,
         "gpqa-diamond": 68,
-        "swe-bench-verified": 62.3
+        "math-500": 86
       },
       "value_score": 8.4,
       "pricing_source": "anthropic.com/pricing",
@@ -3607,10 +3607,10 @@
       "api_available": true,
       "released": "2024-02-15",
       "benchmarks": {
-        "chatbot-arena-elo": 1260,
         "mmlu": 85.9,
         "humaneval": 84.1,
-        "math-500": 67.7
+        "math-500": 67.7,
+        "chatbot-arena-elo": 1260
       },
       "value_score": 24.3,
       "pricing_source": "ai.google.dev/pricing",
@@ -3678,12 +3678,12 @@
       "api_available": true,
       "released": "2024-10-22",
       "benchmarks": {
-        "chatbot-arena-elo": 1285,
-        "humaneval": 93.7,
         "mmlu": 88.7,
-        "math-500": 78.3,
         "gpqa-diamond": 65,
+        "humaneval": 93.7,
         "swe-bench-verified": 49,
+        "math-500": 78.3,
+        "chatbot-arena-elo": 1285,
         "mt-bench": 8.7
       },
       "value_score": 8.3,
@@ -3774,10 +3774,10 @@
       "api_available": true,
       "released": "2024-07-23",
       "benchmarks": {
-        "chatbot-arena-elo": 1253,
-        "humaneval": 89,
         "mmlu": 88.6,
-        "gpqa-diamond": 51.1
+        "humaneval": 89,
+        "gpqa-diamond": 51.1,
+        "chatbot-arena-elo": 1253
       },
       "value_score": 23.7,
       "pricing_source": "together.ai/pricing",
@@ -3845,11 +3845,11 @@
       "api_available": true,
       "released": "2024-03-04",
       "benchmarks": {
-        "chatbot-arena-elo": 1253,
         "mmlu": 86.8,
+        "gpqa-diamond": 50.4,
         "humaneval": 84.9,
         "math-500": 60.1,
-        "gpqa-diamond": 50.4
+        "chatbot-arena-elo": 1253
       },
       "value_score": 1.5,
       "pricing_source": "anthropic.com/pricing",
@@ -3897,7 +3897,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-opus-4.1",
@@ -3919,7 +3919,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-opus-4.6-fast",
@@ -3941,7 +3941,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-opus-4.7",
@@ -3963,7 +3963,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-opus-4.7-fast",
@@ -3985,7 +3985,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-opus-4.8",
@@ -4007,7 +4007,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-opus-4.8-fast",
@@ -4029,7 +4029,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-chat-v3.1",
@@ -4051,7 +4051,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-v3.1-terminus",
@@ -4073,7 +4073,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-v3.2-exp",
@@ -4095,7 +4095,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-v4-flash",
@@ -4117,7 +4117,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-v4-pro",
@@ -4139,7 +4139,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "devstral-2512",
@@ -4161,227 +4161,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemini-2.5-flash-lite-preview-09-2025",
-      "model": "Gemini 2.5 Flash Lite Preview 09-2025",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 0.1,
-      "output_price": 0.4,
-      "context_window": 1048576,
-      "max_output": 65535,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision,audio",
-      "api_available": true,
-      "released": "2025-09-25",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemini-2.5-pro-preview-05-06",
-      "model": "Gemini 2.5 Pro Preview 05-06",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 1.25,
-      "output_price": 10,
-      "context_window": 1048576,
-      "max_output": 65535,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision,audio",
-      "api_available": true,
-      "released": "2025-05-07",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemini-3.1-flash-lite",
-      "model": "Gemini 3.1 Flash Lite",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 0.25,
-      "output_price": 1.5,
-      "context_window": 1048576,
-      "max_output": 65536,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision,audio",
-      "api_available": true,
-      "released": null,
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemini-3.5-flash",
-      "model": "Gemini 3.5 Flash",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 1.5,
-      "output_price": 9,
-      "context_window": 1048576,
-      "max_output": 65536,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision,audio",
-      "api_available": true,
-      "released": "2026-05-19",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemma-2-27b-it",
-      "model": "Gemma 2 27B",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 0.65,
-      "output_price": 0.65,
-      "context_window": 8192,
-      "max_output": 2048,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text",
-      "api_available": true,
-      "released": "2024-07-13",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemma-3-12b-it",
-      "model": "Gemma 3 12B",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 0.04,
-      "output_price": 0.13,
-      "context_window": 131072,
-      "max_output": 16384,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-03-13",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemma-3-27b-it",
-      "model": "Gemma 3 27B",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 0.08,
-      "output_price": 0.16,
-      "context_window": 131072,
-      "max_output": 16384,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-03-12",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemma-3-4b-it",
-      "model": "Gemma 3 4B",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 0.04,
-      "output_price": 0.08,
-      "context_window": 131072,
-      "max_output": 16384,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-03-13",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemma-3n-e4b-it",
-      "model": "Gemma 3n 4B",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 0.06,
-      "output_price": 0.12,
-      "context_window": 32768,
-      "max_output": 0,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text",
-      "api_available": true,
-      "released": "2025-05-20",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "gemma-4",
-      "model": "Gemma 4 31B",
-      "provider": "Google",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 0.12,
-      "output_price": 0.37,
-      "context_window": 262144,
-      "max_output": 16384,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": true,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2026-04-02",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-4-32b",
@@ -4403,7 +4183,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-4.5",
@@ -4425,7 +4205,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-4.5-air",
@@ -4447,7 +4227,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-4.5v",
@@ -4469,7 +4249,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-4.6",
@@ -4491,7 +4271,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-4.6v",
@@ -4513,7 +4293,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-4.7",
@@ -4535,7 +4315,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-4.7-flash",
@@ -4557,7 +4337,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-5",
@@ -4579,7 +4359,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-5-turbo",
@@ -4601,7 +4381,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-5.1",
@@ -4623,7 +4403,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "glm-5v-turbo",
@@ -4645,7 +4425,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-audio",
@@ -4667,7 +4447,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-audio-mini",
@@ -4689,7 +4469,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-chat",
@@ -4711,7 +4491,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-3.5-turbo",
@@ -4733,7 +4513,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-3.5-turbo-0613",
@@ -4755,7 +4535,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-3.5-turbo-16k",
@@ -4777,7 +4557,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-3.5-turbo-instruct",
@@ -4799,7 +4579,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4",
@@ -4821,7 +4601,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4-turbo",
@@ -4843,7 +4623,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4-1106",
@@ -4865,7 +4645,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4o-search",
@@ -4887,7 +4667,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-4o-mini-search",
@@ -4909,7 +4689,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5-chat",
@@ -4931,7 +4711,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5-codex",
@@ -4953,7 +4733,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5-image",
@@ -4975,7 +4755,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5-image-mini",
@@ -4997,7 +4777,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5-mini",
@@ -5019,7 +4799,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.1",
@@ -5041,7 +4821,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.1-chat",
@@ -5063,7 +4843,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.1-codex",
@@ -5085,7 +4865,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.1-codex-max",
@@ -5107,7 +4887,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.1-codex-mini",
@@ -5129,7 +4909,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.2-chat",
@@ -5151,7 +4931,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.2-codex",
@@ -5173,7 +4953,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.3-chat",
@@ -5195,7 +4975,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.3-codex",
@@ -5217,7 +4997,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.4",
@@ -5239,7 +5019,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-06-04 12:15:34"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.4-image-2",
@@ -5261,7 +5041,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.4-mini",
@@ -5283,7 +5063,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-06-04 12:15:34"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.4-nano",
@@ -5305,7 +5085,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-06-04 12:15:34"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.4-pro",
@@ -5327,7 +5107,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-06-04 12:15:34"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.5",
@@ -5349,7 +5129,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gpt-5.5-pro",
@@ -5371,73 +5151,227 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
-      "id": "gpt-oss-120b",
-      "model": "gpt-oss-120b",
-      "provider": "OpenAI",
+      "id": "gemini-2.5-flash-lite-preview-09-2025",
+      "model": "Gemini 2.5 Flash Lite Preview 09-2025",
+      "provider": "Google",
       "category": "llm",
       "status": "tracking",
       "quality_score": 0,
-      "input_price": 0.039,
-      "output_price": 0.18,
-      "context_window": 131072,
-      "max_output": 0,
+      "input_price": 0.1,
+      "output_price": 0.4,
+      "context_window": 1048576,
+      "max_output": 65535,
       "speed_tps": null,
       "ttft_ms": null,
       "open_source": false,
-      "modality": "text",
+      "modality": "text,vision,audio",
       "api_available": true,
-      "released": "2025-08-05",
+      "released": "2025-09-25",
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
-      "id": "gpt-oss-20b",
-      "model": "gpt-oss-20b",
-      "provider": "OpenAI",
+      "id": "gemini-2.5-pro-preview-05-06",
+      "model": "Gemini 2.5 Pro Preview 05-06",
+      "provider": "Google",
       "category": "llm",
       "status": "tracking",
       "quality_score": 0,
-      "input_price": 0.029,
-      "output_price": 0.14,
-      "context_window": 131072,
-      "max_output": 0,
+      "input_price": 1.25,
+      "output_price": 10,
+      "context_window": 1048576,
+      "max_output": 65535,
       "speed_tps": null,
       "ttft_ms": null,
       "open_source": false,
-      "modality": "text",
+      "modality": "text,vision,audio",
       "api_available": true,
-      "released": "2025-08-05",
+      "released": "2025-05-07",
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
-      "id": "gpt-oss-safeguard-20b",
-      "model": "gpt-oss-safeguard-20b",
-      "provider": "OpenAI",
+      "id": "gemini-3.1-flash-lite",
+      "model": "Gemini 3.1 Flash Lite",
+      "provider": "Google",
       "category": "llm",
       "status": "tracking",
       "quality_score": 0,
-      "input_price": 0.075,
-      "output_price": 0.3,
-      "context_window": 131072,
+      "input_price": 0.25,
+      "output_price": 1.5,
+      "context_window": 1048576,
       "max_output": 65536,
       "speed_tps": null,
       "ttft_ms": null,
       "open_source": false,
-      "modality": "text",
+      "modality": "text,vision,audio",
       "api_available": true,
-      "released": "2025-10-29",
+      "released": null,
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemini-3.5-flash",
+      "model": "Gemini 3.5 Flash",
+      "provider": "Google",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 1.5,
+      "output_price": 9,
+      "context_window": 1048576,
+      "max_output": 65536,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision,audio",
+      "api_available": true,
+      "released": "2026-05-19",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemma-2-27b-it",
+      "model": "Gemma 2 27B",
+      "provider": "Google",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.65,
+      "output_price": 0.65,
+      "context_window": 8192,
+      "max_output": 2048,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text",
+      "api_available": true,
+      "released": "2024-07-13",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemma-3-12b-it",
+      "model": "Gemma 3 12B",
+      "provider": "Google",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.04,
+      "output_price": 0.13,
+      "context_window": 131072,
+      "max_output": 16384,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-03-13",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemma-3-27b-it",
+      "model": "Gemma 3 27B",
+      "provider": "Google",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.08,
+      "output_price": 0.16,
+      "context_window": 131072,
+      "max_output": 16384,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-03-12",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemma-3-4b-it",
+      "model": "Gemma 3 4B",
+      "provider": "Google",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.04,
+      "output_price": 0.08,
+      "context_window": 131072,
+      "max_output": 16384,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-03-13",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemma-3n-e4b-it",
+      "model": "Gemma 3n 4B",
+      "provider": "Google",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.06,
+      "output_price": 0.12,
+      "context_window": 32768,
+      "max_output": 0,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text",
+      "api_available": true,
+      "released": "2025-05-20",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gemma-4",
+      "model": "Gemma 4 31B",
+      "provider": "Google",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.12,
+      "output_price": 0.37,
+      "context_window": 262144,
+      "max_output": 16384,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": true,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2026-04-02",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "grok-4.20",
@@ -5459,7 +5393,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "grok-4.20-multi-agent",
@@ -5481,7 +5415,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "grok-4.3",
@@ -5503,7 +5437,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "grok-build-0.1",
@@ -5525,7 +5459,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "inflection-3-pi",
@@ -5547,7 +5481,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "inflection-3-productivity",
@@ -5569,7 +5503,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "jamba-large-1.7",
@@ -5591,7 +5525,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "kimi-k2.5",
@@ -5613,7 +5547,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "kimi-k2-0905",
@@ -5635,7 +5569,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "kimi-k2.6",
@@ -5657,7 +5591,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3-70b-instruct",
@@ -5679,7 +5613,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3-8b-instruct",
@@ -5701,7 +5635,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3.2-11b-vision-instruct",
@@ -5723,7 +5657,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3.2-1b-instruct",
@@ -5745,7 +5679,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3.2-3b-instruct",
@@ -5767,7 +5701,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "llama-3.3-nemotron-super-49b-v1.5",
@@ -5789,7 +5723,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "minimax-m1",
@@ -5811,7 +5745,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "minimax-m2",
@@ -5833,7 +5767,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "minimax-m2-her",
@@ -5855,7 +5789,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "minimax-m2.1",
@@ -5877,7 +5811,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "minimax-m2.5",
@@ -5899,7 +5833,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "minimax-m2.7",
@@ -5921,7 +5855,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "minimax-m3",
@@ -5943,7 +5877,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "ministral-14b-2512",
@@ -5965,7 +5899,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "ministral-3b-2512",
@@ -5987,7 +5921,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "ministral-8b-2512",
@@ -6009,7 +5943,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-large-2512",
@@ -6031,7 +5965,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-medium-3.1",
@@ -6053,7 +5987,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-medium-3-5",
@@ -6075,7 +6009,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-small-24b-instruct-2501",
@@ -6097,7 +6031,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-small-3.2-24b-instruct",
@@ -6119,7 +6053,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-small-2603",
@@ -6141,7 +6075,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mixtral-8x22b-instruct",
@@ -6163,7 +6097,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gemini-2.5-flash-image",
@@ -6185,7 +6119,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gemini-3.1-flash-image",
@@ -6207,7 +6141,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "gemini-3-pro-image",
@@ -6229,7 +6163,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "nemotron-3-nano-30b-a3b",
@@ -6251,7 +6185,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "nemotron-3-super-120b-a12b",
@@ -6273,7 +6207,29 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "nemotron-3-ultra-550b-a55b",
+      "model": "Nemotron 3 Ultra",
+      "provider": "NVIDIA",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.5,
+      "output_price": 2.5,
+      "context_window": 1000000,
+      "max_output": 16384,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text",
+      "api_available": true,
+      "released": "2026-06-04",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "nemotron-nano-9b-v2",
@@ -6295,117 +6251,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "o1-pro",
-      "model": "o1-pro",
-      "provider": "OpenAI",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 150,
-      "output_price": 600,
-      "context_window": 200000,
-      "max_output": 100000,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-03-19",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "o3-deep-research",
-      "model": "o3 Deep Research",
-      "provider": "OpenAI",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 10,
-      "output_price": 40,
-      "context_window": 200000,
-      "max_output": 100000,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-10-10",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "o3-mini-high",
-      "model": "o3 Mini High",
-      "provider": "OpenAI",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 1.1,
-      "output_price": 4.4,
-      "context_window": 200000,
-      "max_output": 100000,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text",
-      "api_available": true,
-      "released": "2025-02-12",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "o4-mini-deep-research",
-      "model": "o4 Mini Deep Research",
-      "provider": "OpenAI",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 2,
-      "output_price": 8,
-      "context_window": 200000,
-      "max_output": 100000,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-10-10",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
-    },
-    {
-      "id": "o4-mini-high",
-      "model": "o4 Mini High",
-      "provider": "OpenAI",
-      "category": "llm",
-      "status": "tracking",
-      "quality_score": 0,
-      "input_price": 1.1,
-      "output_price": 4.4,
-      "context_window": 200000,
-      "max_output": 100000,
-      "speed_tps": null,
-      "ttft_ms": null,
-      "open_source": false,
-      "modality": "text,vision",
-      "api_available": true,
-      "released": "2025-04-16",
-      "benchmarks": null,
-      "value_score": null,
-      "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "phi-4-mini-instruct",
@@ -6427,7 +6273,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen-plus",
@@ -6449,7 +6295,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen-2.5-7b-instruct",
@@ -6471,7 +6317,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen2.5-vl-72b-instruct",
@@ -6493,7 +6339,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-14b",
@@ -6515,7 +6361,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-235b-a22b-2507",
@@ -6537,7 +6383,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-235b-a22b-thinking-2507",
@@ -6559,7 +6405,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-30b-a3b-instruct-2507",
@@ -6581,7 +6427,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-30b-a3b-thinking-2507",
@@ -6603,7 +6449,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-8b",
@@ -6625,7 +6471,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-coder-30b-a3b-instruct",
@@ -6647,7 +6493,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-coder-flash",
@@ -6669,7 +6515,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-coder-next",
@@ -6691,7 +6537,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-coder-plus",
@@ -6713,7 +6559,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-next-80b-a3b-instruct",
@@ -6735,7 +6581,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-next-80b-a3b",
@@ -6757,7 +6603,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-vl-235b-a22b-instruct",
@@ -6779,7 +6625,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-vl-235b-a22b",
@@ -6801,7 +6647,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-vl-30b-a3b-instruct",
@@ -6823,7 +6669,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-vl-30b-a3b",
@@ -6845,7 +6691,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-vl-32b-instruct",
@@ -6867,7 +6713,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-vl-8b-instruct",
@@ -6889,7 +6735,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3-vl-8b",
@@ -6911,7 +6757,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.5-397b-a17b",
@@ -6933,7 +6779,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.5-plus-02-15",
@@ -6955,7 +6801,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.5-plus-20260420",
@@ -6977,7 +6823,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.5-122b-a10b",
@@ -6999,7 +6845,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.5-27b",
@@ -7021,7 +6867,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.5-35b-a3b",
@@ -7043,7 +6889,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.5-9b",
@@ -7065,7 +6911,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.5-flash-02-23",
@@ -7087,7 +6933,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.6-27b",
@@ -7109,7 +6955,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.6-35b-a3b",
@@ -7131,7 +6977,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.6-flash",
@@ -7153,7 +6999,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.6-max",
@@ -7175,7 +7021,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.6-plus",
@@ -7197,7 +7043,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.7-max",
@@ -7219,7 +7065,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "qwen3.7-plus",
@@ -7241,7 +7087,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-r1-distill-llama-70b",
@@ -7263,7 +7109,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "deepseek-r1-distill-qwen-32b",
@@ -7285,7 +7131,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "reka-edge",
@@ -7307,7 +7153,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "mistral-saba",
@@ -7329,7 +7175,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "sonar-deep-research",
@@ -7351,7 +7197,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "sonar-pro-search",
@@ -7373,7 +7219,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "sonar-reasoning-pro",
@@ -7395,7 +7241,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "voxtral-small-24b-2507",
@@ -7417,7 +7263,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "wizardlm-2-8x22b",
@@ -7439,7 +7285,183 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-06-04 12:15:33"
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "model": "gpt-oss-120b",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.039,
+      "output_price": 0.18,
+      "context_window": 131072,
+      "max_output": 0,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text",
+      "api_available": true,
+      "released": "2025-08-05",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "model": "gpt-oss-20b",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.029,
+      "output_price": 0.14,
+      "context_window": 131072,
+      "max_output": 0,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text",
+      "api_available": true,
+      "released": "2025-08-05",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "gpt-oss-safeguard-20b",
+      "model": "gpt-oss-safeguard-20b",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 0.075,
+      "output_price": 0.3,
+      "context_window": 131072,
+      "max_output": 65536,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text",
+      "api_available": true,
+      "released": "2025-10-29",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "o1-pro",
+      "model": "o1-pro",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 150,
+      "output_price": 600,
+      "context_window": 200000,
+      "max_output": 100000,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-03-19",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "o3-deep-research",
+      "model": "o3 Deep Research",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 10,
+      "output_price": 40,
+      "context_window": 200000,
+      "max_output": 100000,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-10-10",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "o3-mini-high",
+      "model": "o3 Mini High",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 1.1,
+      "output_price": 4.4,
+      "context_window": 200000,
+      "max_output": 100000,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text",
+      "api_available": true,
+      "released": "2025-02-12",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "o4-mini-deep-research",
+      "model": "o4 Mini Deep Research",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 2,
+      "output_price": 8,
+      "context_window": 200000,
+      "max_output": 100000,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-10-10",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
+    },
+    {
+      "id": "o4-mini-high",
+      "model": "o4 Mini High",
+      "provider": "OpenAI",
+      "category": "llm",
+      "status": "tracking",
+      "quality_score": 0,
+      "input_price": 1.1,
+      "output_price": 4.4,
+      "context_window": 200000,
+      "max_output": 100000,
+      "speed_tps": null,
+      "ttft_ms": null,
+      "open_source": false,
+      "modality": "text,vision",
+      "api_available": true,
+      "released": "2025-04-16",
+      "benchmarks": null,
+      "value_score": null,
+      "pricing_source": "openrouter.ai/api/v1/models",
+      "last_updated": "2026-06-04 16:28:34"
     },
     {
       "id": "claude-mythos-preview",
