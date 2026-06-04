@@ -5089,7 +5089,7 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
 }
 
 html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
-  content: "AI/RH DOSSIER  --  FIELD NOTES";
+  content: "Dossier / live reference cards";
   position: absolute;
   z-index: -1;
   top: 0;
@@ -5168,7 +5168,7 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
 }
 
 html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
-  content: "AI/RH MONITOR  |  REFERENCE SURFACE  |  LIVE VIEW";
+  content: "AI/RH Monitor";
   position: absolute;
   z-index: -1;
   top: 0;
@@ -5460,7 +5460,7 @@ html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-
 }
 
 html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1)::after {
-  content: "dossier view";
+  content: none;
   display: block;
   width: fit-content;
   margin-top: 0.65rem;
@@ -5867,5 +5867,601 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
   .airh-site-ticker-stream,
   .airh-dossier-stream {
     animation: none;
+  }
+}
+
+/* Template parity route shell.
+   Non-home pages use the same Dossier and Monitor layout contracts as the homepage. */
+body.airh-sitewide-system:not(.airh-home-page) .airh-route-template-chrome {
+  display: none;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-template-chrome,
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  position: relative;
+  isolation: auto;
+  max-width: none !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-template-chrome::before,
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-template-chrome::after,
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame::before,
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame > :where(section, article, div, main) {
+  width: 100%;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  display: block;
+  min-height: calc(100vh - 48px);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 34%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 26%, transparent) 1px, transparent 1px),
+    var(--color-bg-primary) !important;
+  background-size: 128px 128px, 128px 128px, auto !important;
+  padding: 0.9rem 1rem 3.5rem;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head,
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-ticker,
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  width: min(100%, 1440px);
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  border-bottom: 2px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.35rem 0 0.75rem !important;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-head p {
+  margin: 0 0 0.2rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head h2 {
+  margin: 0;
+  border: 0 !important;
+  color: var(--color-text-primary);
+  font-family: 'Caveat', cursive !important;
+  font-size: clamp(2rem, 4vw, 3.8rem) !important;
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head h2::before {
+  content: none !important;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-head > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-head span {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-secondary);
+  padding: 0.22rem 0.55rem;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-ticker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.55rem 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-secondary);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  padding: 0.22rem 0.55rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker > div {
+  display: inline-flex;
+  gap: 1.25rem;
+  min-width: max-content;
+  animation: airh-ticker 100s linear infinite;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker a {
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-decoration: none;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker span {
+  margin-right: 0.45rem;
+  color: var(--color-text-muted);
+  font-size: 0.66rem;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker strong {
+  color: var(--color-text-primary);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 1rem 0 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  max-width: none !important;
+  margin: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"]) {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
+  max-width: min(18ch, 100%);
+  border: 0 !important;
+  color: var(--color-text-primary) !important;
+  font-family: 'Caveat', cursive !important;
+  font-size: clamp(2rem, 4vw, 3.4rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.95 !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  text-transform: none !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1)::after {
+  content: none !important;
+  display: none !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2, h3) {
+  border: 0 !important;
+  color: var(--color-text-primary) !important;
+  font-family: 'Caveat', cursive !important;
+  font-weight: 700 !important;
+  line-height: 0.95;
+  padding-bottom: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2)::before {
+  content: none !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  position: relative;
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 7px !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 82%, transparent) !important;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--color-text-primary) 8%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "dossier card";
+  display: block;
+  position: static !important;
+  width: fit-content;
+  height: auto !important;
+  margin-bottom: 0.7rem;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--color-accent);
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  width: min(100%, 1440px);
+  min-height: calc(100vh - 48px);
+  margin: 0 auto;
+  background: var(--color-bg-primary) !important;
+  padding: 0.75rem 1rem 3rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-bar {
+  display: flex;
+  align-items: center;
+  grid-column: 1 / -1;
+  gap: 1rem;
+  margin: 0 !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 8px 8px 0 0 !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  box-shadow: none !important;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  padding: 0.55rem 0.8rem !important;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > div span:first-child {
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > a {
+  flex: 1 1 auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  padding: 0.35rem 0.65rem;
+  text-decoration: none;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > a span {
+  float: right;
+  color: var(--color-text-muted);
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-tabs {
+  display: flex;
+  align-items: center;
+  grid-column: 1;
+  gap: 0;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  background: var(--color-bg-tertiary) !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs span {
+  border-right: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 800;
+  padding: 0.6rem 0.8rem;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs span.is-active {
+  background: color-mix(in srgb, var(--color-accent) 18%, var(--color-bg-card));
+  color: var(--color-text-primary);
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs em {
+  margin-left: auto;
+  padding: 0 0.8rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-style: normal;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  grid-column: 1;
+  margin: 0 !important;
+  min-height: 70vh;
+  overflow: auto !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  background: var(--color-bg-secondary) !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0.85rem !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail {
+  display: flex;
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  flex-direction: column;
+  margin: 0 !important;
+  min-width: 0;
+  border: 1px solid var(--color-border-strong) !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  background: var(--color-bg-primary) !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+  padding: 0.75rem 0.85rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live p,
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live strong {
+  margin: 0;
+  color: inherit;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live p,
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail h2 {
+  font-family: var(--font-mono);
+  font-size: 0.66rem !important;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail section {
+  border-bottom: 1px solid var(--color-border-strong);
+  padding: 0.8rem 0.85rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail h2 {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-muted);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail h2 {
+  display: block !important;
+  gap: 0 !important;
+  margin: 0 0 0.5rem !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.66rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail h2::before {
+  content: none !important;
+  display: none !important;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail li a {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 0.6rem;
+  border-top: 1px dashed var(--color-border);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.42rem 0;
+  text-decoration: none;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail li span {
+  color: var(--color-text-muted);
+  font-size: 0.66rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail p {
+  margin: 0 0 0.65rem;
+  color: var(--color-text-secondary);
+  font-size: 0.86rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail a {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"]) {
+  border-bottom: 0 !important;
+  color: var(--color-text-muted) !important;
+  padding-bottom: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
+  max-width: none;
+  border-bottom: 1px solid var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+  font-size: clamp(1.25rem, 2vw, 1.8rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.05 !important;
+  padding-bottom: 0.55rem !important;
+  text-shadow: none !important;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2) {
+  font-family: var(--font-mono) !important;
+  font-size: clamp(0.95rem, 1.5vw, 1.25rem) !important;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  border: 1px solid var(--color-border) !important;
+  border-left: 0.28rem solid color-mix(in srgb, var(--color-accent) 72%, var(--airh-monitor-signal)) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-card) 88%, var(--color-bg-primary)) !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "SOURCE CARD";
+  display: block;
+  position: static !important;
+  width: fit-content;
+  height: auto !important;
+  margin-bottom: 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-good) 50%, transparent);
+  background: transparent !important;
+  color: var(--airh-monitor-good);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  padding: 0.22rem 0.45rem;
+}
+
+@media (max-width: 980px) {
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+    display: block;
+    padding: 0.75rem 1rem 3rem;
+  }
+
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-tabs,
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame,
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail {
+    border-right: 1px solid var(--color-border-strong) !important;
+    border-left: 1px solid var(--color-border-strong) !important;
+  }
+
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail {
+    border-top: 0 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host,
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head,
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > a span {
+    float: none;
+    margin-left: 0.5rem;
+  }
+
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-tabs {
+    display: flex !important;
+    align-items: stretch;
+    overflow-x: auto !important;
+  }
+
+  html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs span,
+  html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs em {
+    flex: 0 0 auto;
+    min-width: max-content;
+    white-space: nowrap;
   }
 }

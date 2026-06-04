@@ -317,6 +317,16 @@ const globalTickerItems = latestActivities.map((item) => ({
   category: item.category,
 }));
 const latestTickerDate = latestActivities[0]?.date ?? null;
+const routeSegments = currentPath
+  .replace(basePath, '')
+  .split('/')
+  .filter(Boolean);
+const routeLabel = routeSegments.length > 0
+  ? routeSegments.map((segment) => segment.replace(/-/g, ' ')).join(' / ')
+  : 'home';
+const routeTemplateTickerItems = globalTickerItems.length > 0
+  ? globalTickerItems
+  : [{ href: `${base}updates/`, time: 'live', title: 'Source pipeline ready', category: 'data' }];
 ---
 
 <!doctype html>
@@ -698,8 +708,76 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
       </div>
     )}
 
-    <main id="main-content" class="flex-1">
-      <slot />
+    <main id="main-content" class:list={['flex-1', { 'airh-route-template-host': compactChrome && !isHomePage }]}>
+      {compactChrome && !isHomePage ? (
+        <>
+          <header class="airh-route-template-chrome airh-route-dossier-head" aria-hidden="true">
+            <div>
+              <p>Dossier / live reference cards</p>
+              <h2>Every card is a fact.</h2>
+            </div>
+            <div>
+              <span>{latestTickerDate ? `Refreshed ${formatTickerTime(latestTickerDate)}` : 'Refreshed live'}</span>
+              <span>{routeLabel}</span>
+              <span>{routeTemplateTickerItems.length} freshness lanes</span>
+            </div>
+          </header>
+
+          <div class="airh-route-template-chrome airh-route-dossier-ticker" aria-hidden="true">
+            <a href={`${base}updates/`}><span class="airh-pulse-dot"></span> Updated</a>
+            <div>
+              {[...routeTemplateTickerItems, ...routeTemplateTickerItems].map((item) => (
+                <a href={item.href}><span>{item.time}</span><strong>{item.title}</strong></a>
+              ))}
+            </div>
+          </div>
+
+          <header class="airh-route-template-chrome airh-route-monitor-bar" aria-hidden="true">
+            <div>
+              <span>AI/RH</span>
+              <span>Monitor</span>
+            </div>
+            <a href={`${base}models/`}>Search models, benchmarks, news <span>Cmd K</span></a>
+            <p><span class="airh-pulse-dot"></span> Hourly source check is green.</p>
+          </header>
+
+          <div class="airh-route-template-chrome airh-route-monitor-tabs" aria-hidden="true">
+            {['Frontier', 'Cheapest', 'Fastest', 'Open', 'Value'].map((label, index) => (
+              <span class:list={{ 'is-active': index === 0 }}>{label}</span>
+            ))}
+            <em>{routeLabel} - live route</em>
+          </div>
+
+          <div class="airh-route-content-frame">
+            <slot />
+          </div>
+
+          <aside class="airh-route-template-chrome airh-route-monitor-rail" aria-hidden="true">
+            <div class="airh-route-monitor-live">
+              <span class="airh-pulse-dot"></span>
+              <div>
+                <p>Since you were last here</p>
+                <strong>Just now</strong>
+              </div>
+            </div>
+            <section>
+              <h2>Now rail</h2>
+              <ul>
+                {routeTemplateTickerItems.slice(0, 5).map((item) => (
+                  <li><a href={item.href}><span>{item.time}</span>{item.title}</a></li>
+                ))}
+              </ul>
+            </section>
+            <section>
+              <h2>Route feed</h2>
+              <p>{routeLabel}</p>
+              <a href={`${base}updates/`}>Open updates desk -&gt;</a>
+            </section>
+          </aside>
+        </>
+      ) : (
+        <slot />
+      )}
     </main>
 
     <footer class="relative mt-auto border-t border-(--color-border-strong) bg-(--color-bg-secondary)">
