@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T22:11:37.316Z",
+  "generatedAt": "2026-06-04T23:22:22.821Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-04T22:11:36.326Z",
+      "lastCheckedAt": "2026-06-04T23:22:21.983Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,6 +20,96 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-04T23:22:20.903Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "thp2kyjx60qn",
+          "title": "Elevated errors on Opus 4.7",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-03T07:10:01.269Z",
+          "updatedAt": "2026-06-03T07:38:04.953Z",
+          "resolvedAt": "2026-06-03T07:38:04.935Z",
+          "url": "https://stspg.io/g64x0s4kk5bg",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "0w1blp7cngrr",
+          "title": "Issue affecting some Claude Code services",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-06-03T04:17:04.989Z",
+          "updatedAt": "2026-06-03T07:36:48.575Z",
+          "resolvedAt": "2026-06-03T07:36:48.555Z",
+          "url": "https://stspg.io/26bl9ymsst7p",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "zkr25thltwc9",
+          "title": "Elevated errors on multiple models",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-06-02T06:04:59.243Z",
+          "updatedAt": "2026-06-02T14:59:04.875Z",
+          "resolvedAt": "2026-06-02T11:49:06.139Z",
+          "url": "https://stspg.io/j1r06qml3bvy",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "vxp8fdrckj7q",
+          "title": "Degraded performance for Claude Sonnet 4.6",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-01T18:28:42.394Z",
+          "updatedAt": "2026-06-01T19:06:53.669Z",
+          "resolvedAt": "2026-06-01T19:06:53.632Z",
+          "url": "https://stspg.io/yt45tdcb7c50",
+          "summary": "This issue has been resolved."
+        }
+      ]
     },
     {
       "id": "cohere",
@@ -32,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-04T22:11:36.912Z",
+      "lastCheckedAt": "2026-06-04T23:22:22.306Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -52,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-04T22:11:37.273Z",
+      "lastCheckedAt": "2026-06-04T23:22:22.634Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -117,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-04T22:11:36.110Z",
+      "lastCheckedAt": "2026-06-04T23:22:21.800Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -171,7 +261,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-04T22:11:35.700Z",
+      "lastCheckedAt": "2026-06-04T23:22:20.914Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -257,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-04T22:11:37.309Z",
+      "lastCheckedAt": "2026-06-04T23:22:22.499Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -310,26 +400,6 @@
           "summary": "Orpheus TTS went down"
         }
       ]
-    },
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "error",
-      "lastCheckedAt": null,
-      "overallStatus": "unknown",
-      "overallLabel": "Status unavailable",
-      "summary": null,
-      "notes": "HTTP 405 for https://status.claude.com/api/v2/summary.json",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "deepseek",
