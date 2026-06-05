@@ -327,6 +327,10 @@ const routeLabel = routeSegments.length > 0
 const routeTemplateTickerItems = globalTickerItems.length > 0
   ? globalTickerItems
   : [{ href: `${base}updates/`, time: 'live', title: 'Source pipeline ready', category: 'data' }];
+const routeTemplateRefreshLabel = latestTickerDate ? `Refreshed ${formatTickerTime(latestTickerDate)}` : 'Refreshed live';
+const routeTerminalPath = routeSegments.length > 0 ? `/${routeSegments.join('/')}/` : '/';
+const routeTerminalCommand = routeSegments.length > 0 ? `open ${routeTerminalPath}` : 'home';
+const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
 ---
 
 <!doctype html>
@@ -717,7 +721,7 @@ const routeTemplateTickerItems = globalTickerItems.length > 0
               <h2>Every card is a fact.</h2>
             </div>
             <div>
-              <span>{latestTickerDate ? `Refreshed ${formatTickerTime(latestTickerDate)}` : 'Refreshed live'}</span>
+              <span>{routeTemplateRefreshLabel}</span>
               <span>{routeLabel}</span>
               <span>{routeTemplateTickerItems.length} freshness lanes</span>
             </div>
@@ -748,8 +752,47 @@ const routeTemplateTickerItems = globalTickerItems.length > 0
             <em>{routeLabel} - live route</em>
           </div>
 
+          <header class="airh-route-template-chrome airh-route-terminal-head" aria-hidden="true">
+            <div class="airh-route-terminal-titlebar">
+              <span>airh://{routeTerminalPath}</span>
+              <span>[local] [readonly] [live]</span>
+            </div>
+            <div class="airh-route-terminal-masthead">
+              <div>
+                <p>AI Resource Hub</p>
+                <span>v2 / terminal</span>
+              </div>
+              <div>
+                <span>{routeTemplateRefreshLabel}</span>
+                <span>{routeLabel}</span>
+                <span>[?] help - [esc] visual</span>
+              </div>
+            </div>
+          </header>
+
+          <section class="airh-route-template-chrome airh-route-terminal-log" aria-hidden="true">
+            <p><span>#</span> route boot: {routeLabel}</p>
+            <p><span>airh &gt;</span> since-last-visit</p>
+            {routeTerminalStatusItems.map((item) => (
+              <p><span>{item.time}</span> {item.title}</p>
+            ))}
+            <p><span>airh &gt;</span> {routeTerminalCommand}</p>
+          </section>
+
           <div class="airh-route-content-frame">
             <slot />
+          </div>
+
+          <div class="airh-route-template-chrome airh-route-terminal-commandbar" aria-hidden="true">
+            <span>airh &gt;</span>
+            <span>{routeTerminalCommand}</span>
+            <span>Run</span>
+          </div>
+
+          <div class="airh-route-template-chrome airh-route-terminal-hints" aria-hidden="true">
+            {['top 10', 'compare gpt claude', 'news --today', 'price sonnet', 'visual'].map((command) => (
+              <span>{command}</span>
+            ))}
           </div>
 
           <aside class="airh-route-template-chrome airh-route-monitor-rail" aria-hidden="true">

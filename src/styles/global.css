@@ -6416,6 +6416,363 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
   padding: 0.22rem 0.45rem;
 }
 
+html[data-airh-display-mode="terminal"] {
+  --airh-terminal-frame: color-mix(in srgb, var(--color-bg-primary) 92%, #000);
+  --airh-terminal-panel: color-mix(in srgb, var(--color-bg-secondary) 88%, #000);
+  --airh-terminal-line: color-mix(in srgb, var(--color-border-strong) 72%, var(--color-accent));
+  --airh-terminal-glow: color-mix(in srgb, var(--color-accent) 24%, transparent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  display: block;
+  min-height: calc(100vh - 48px);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 28%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 22%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 16% 10%, var(--airh-terminal-glow), transparent 26rem),
+    var(--color-bg-primary) !important;
+  background-size: 92px 92px, 92px 92px, auto, auto !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0.85rem 1rem 3rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-head,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-hints {
+  width: min(100%, 1180px);
+  height: auto !important;
+  min-height: 0 !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-head {
+  display: block;
+  overflow: hidden !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--airh-terminal-line) !important;
+  border-radius: 8px 8px 0 0 !important;
+  background: var(--airh-terminal-panel) !important;
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--color-text-primary) 5%, transparent),
+    0 24px 64px color-mix(in srgb, #000 34%, transparent) !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-card) 78%, #000);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0;
+  padding: 0.5rem 0.75rem;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-titlebar span:last-child {
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead p,
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead span {
+  margin: 0;
+  font-family: var(--font-mono);
+  letter-spacing: 0;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead p {
+  color: var(--color-text-primary);
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  font-weight: 800;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:first-child span,
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:last-child span {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:last-child span {
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-primary) 74%, #000);
+  padding: 0.24rem 0.5rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log {
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--airh-terminal-line) !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 48%),
+    var(--airh-terminal-frame) !important;
+  box-shadow: none !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0.9rem 1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-log p {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  border-top: 1px dashed color-mix(in srgb, var(--color-border) 70%, transparent);
+  color: var(--color-text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  padding: 0.24rem 0;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-log p:first-child {
+  border-top: 0;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-log span {
+  color: var(--color-accent);
+  font-weight: 800;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  display: block;
+  overflow: visible !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--airh-terminal-line) !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  background:
+    repeating-linear-gradient(180deg, transparent 0, transparent 1.9rem, color-mix(in srgb, var(--color-border) 20%, transparent) 1.9rem, color-mix(in srgb, var(--color-border) 20%, transparent) calc(1.9rem + 1px)),
+    var(--airh-terminal-frame) !important;
+  box-shadow: none !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  max-width: none !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 1.1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"]) {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--color-border) !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 78%, #000) !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.76rem !important;
+  padding: 0.34rem 0.5rem !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"])::before {
+  content: "cwd";
+  margin-right: 0.35rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
+  max-width: none;
+  margin-top: 0.85rem !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--color-border-strong) !important;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+  font-size: clamp(1.45rem, 4vw, 3rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.08 !important;
+  padding-bottom: 0.65rem !important;
+  text-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 22%, transparent) !important;
+  text-transform: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1)::before {
+  content: "airh > ";
+  color: var(--color-accent);
+  font-size: 0.65em;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2, h3) {
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2)::before {
+  content: "$ ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h3)::before {
+  content: "[ok] ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(p, li, dd, dt, a, span, strong, td, th, label) {
+  font-family: var(--font-mono) !important;
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(p, li, dd) {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  position: relative;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 5%, transparent), transparent 42%),
+    color-mix(in srgb, var(--color-bg-card) 84%, #000) !important;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-text-primary) 4%, transparent) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "RUN";
+  display: block;
+  position: static !important;
+  width: fit-content;
+  height: auto !important;
+  margin-bottom: 0.7rem;
+  border: 1px solid var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent) !important;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  padding: 0.2rem 0.42rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(table) {
+  border: 1px solid var(--color-border-strong) !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 78%, #000) !important;
+  font-family: var(--font-mono) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(th) {
+  color: var(--color-accent) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(input, select, textarea, button:not(.airh-tool-icon)) {
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: var(--airh-terminal-panel) !important;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(a:not(.airh-compact-link):not(.airh-site-ticker-item)) {
+  color: var(--color-accent) !important;
+  text-decoration: none;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--airh-terminal-line) !important;
+  border-top: 0 !important;
+  border-radius: 0 0 8px 8px !important;
+  background: var(--airh-terminal-panel) !important;
+  box-shadow: none !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0.75rem 1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-commandbar span {
+  min-width: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  letter-spacing: 0;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-commandbar span:first-child,
+html[data-airh-display-mode="terminal"] .airh-route-terminal-commandbar span:last-child {
+  color: var(--color-accent);
+  font-weight: 800;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-commandbar span:nth-child(2) {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--airh-terminal-frame);
+  padding: 0.35rem 0.55rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-hints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.65rem !important;
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-hints span {
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-secondary) 70%, #000);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0;
+  padding: 0.28rem 0.5rem;
+}
+
 @media (max-width: 980px) {
   html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
     display: block;
@@ -6432,17 +6789,24 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
   html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail {
     border-top: 0 !important;
   }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+    padding: 0.75rem 1rem 3rem;
+  }
 }
 
 @media (max-width: 760px) {
   html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host,
-  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host,
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
     padding-right: 0.75rem;
     padding-left: 0.75rem;
   }
 
   html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head,
-  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-bar {
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-bar,
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead,
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-titlebar {
     align-items: stretch;
     flex-direction: column;
   }
@@ -6463,5 +6827,27 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
     flex: 0 0 auto;
     min-width: max-content;
     white-space: nowrap;
+  }
+
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:last-child {
+    justify-content: flex-start;
+  }
+
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-log p {
+    display: block;
+  }
+
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-log span {
+    display: inline-block;
+    min-width: 4.25rem;
+  }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+    padding: 0.85rem !important;
   }
 }
