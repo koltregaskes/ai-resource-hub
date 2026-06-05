@@ -1,123 +1,6 @@
 {
-  "generatedAt": "2026-06-05T15:27:45.516Z",
+  "generatedAt": "2026-06-05T15:39:34.833Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-05T15:27:44.132Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
-      "summary": "3 active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Login",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Conversations",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Login",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Codex API",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KTC44AD7928NC4HHQWW9XE5F",
-          "title": "Users unable to sign in using Microsoft personal accounts",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-06-05T14:48:53.000Z",
-          "updatedAt": "2026-06-05T15:24:35.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01KTBZDS20E3PZ53DH2SCKXN49",
-          "title": "Some users may experience issues accessing OpenAI accounts",
-          "status": "identified",
-          "impact": "none",
-          "startedAt": "2026-06-05T13:26:40.000Z",
-          "updatedAt": "2026-06-05T15:19:09.000Z",
-          "resolvedAt": null,
-          "summary": "An issue caused some user accounts to be incorrectly suspended. We’re restoring account access and working through related subscription and credit impacts for affected users."
-        },
-        {
-          "id": "01KTC1ZHEQGEYJR6W372KNW3WF",
-          "title": "Elevated error rates for Free users in conversations",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-06-05T14:11:19.000Z",
-          "updatedAt": "2026-06-05T14:36:50.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KTC44AD7928NC4HHQWW9XE5F",
-          "title": "Users unable to sign in using Microsoft personal accounts",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-06-05T14:48:53.000Z",
-          "updatedAt": "2026-06-05T15:24:35.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01KTBZDS20E3PZ53DH2SCKXN49",
-          "title": "Some users may experience issues accessing OpenAI accounts",
-          "status": "identified",
-          "impact": "none",
-          "startedAt": "2026-06-05T13:26:40.000Z",
-          "updatedAt": "2026-06-05T15:19:09.000Z",
-          "resolvedAt": null,
-          "summary": "An issue caused some user accounts to be incorrectly suspended. We’re restoring account access and working through related subscription and credit impacts for affected users."
-        },
-        {
-          "id": "01KTC1ZHEQGEYJR6W372KNW3WF",
-          "title": "Elevated error rates for Free users in conversations",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-06-05T14:11:19.000Z",
-          "updatedAt": "2026-06-05T14:36:50.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        },
-        {
-          "id": "01KTA0V0N4KT7VV50DTJZ85XTA",
-          "title": "Image API requests failing with 401s",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-04T19:12:53.000Z",
-          "updatedAt": "2026-06-04T19:52:18.000Z",
-          "resolvedAt": "2026-06-04T19:52:18.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -129,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-05T15:27:44.091Z",
+      "lastCheckedAt": "2026-06-05T15:39:33.735Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -221,6 +104,113 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-05T15:39:33.683Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "2 active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Login",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Login",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex API",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KTC44AD7928NC4HHQWW9XE5F",
+          "title": "Users unable to sign in using Microsoft personal accounts",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-05T14:48:53.000Z",
+          "updatedAt": "2026-06-05T15:24:35.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
+          "id": "01KTBZDS20E3PZ53DH2SCKXN49",
+          "title": "Some users may experience issues accessing OpenAI accounts",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-06-05T13:26:40.000Z",
+          "updatedAt": "2026-06-05T15:19:09.000Z",
+          "resolvedAt": null,
+          "summary": "An issue caused some user accounts to be incorrectly suspended. We’re restoring account access and working through related subscription and credit impacts for affected users."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KTC1ZHEQGEYJR6W372KNW3WF",
+          "title": "Elevated error rates for Free users in conversations",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-05T14:11:19.000Z",
+          "updatedAt": "2026-06-05T15:37:16.000Z",
+          "resolvedAt": "2026-06-05T15:37:16.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KTC44AD7928NC4HHQWW9XE5F",
+          "title": "Users unable to sign in using Microsoft personal accounts",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-05T14:48:53.000Z",
+          "updatedAt": "2026-06-05T15:24:35.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
+          "id": "01KTBZDS20E3PZ53DH2SCKXN49",
+          "title": "Some users may experience issues accessing OpenAI accounts",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-06-05T13:26:40.000Z",
+          "updatedAt": "2026-06-05T15:19:09.000Z",
+          "resolvedAt": null,
+          "summary": "An issue caused some user accounts to be incorrectly suspended. We’re restoring account access and working through related subscription and credit impacts for affected users."
+        },
+        {
+          "id": "01KTA0V0N4KT7VV50DTJZ85XTA",
+          "title": "Image API requests failing with 401s",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-04T19:12:53.000Z",
+          "updatedAt": "2026-06-04T19:52:18.000Z",
+          "resolvedAt": "2026-06-04T19:52:18.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "mistral",
       "providerId": "mistral",
       "name": "Mistral",
@@ -231,7 +221,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-05T15:27:44.892Z",
+      "lastCheckedAt": "2026-06-05T15:39:33.907Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -251,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-05T15:27:45.117Z",
+      "lastCheckedAt": "2026-06-05T15:39:34.472Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -271,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-05T15:27:45.509Z",
+      "lastCheckedAt": "2026-06-05T15:39:34.802Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -336,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-05T15:27:44.697Z",
+      "lastCheckedAt": "2026-06-05T15:39:33.802Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -390,7 +380,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-05T15:27:45.485Z",
+      "lastCheckedAt": "2026-06-05T15:39:34.826Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -459,7 +449,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
