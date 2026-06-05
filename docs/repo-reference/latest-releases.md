@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 05 Jun 2026, 16:09 UTC
+Generated: 05 Jun 2026, 17:25 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,7 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 4 Jun 2026 | Nemotron 3 Ultra | NVIDIA | tracking | high | needs research | 0 | 0 | [official](https://docs.api.nvidia.com) |
+| 4 Jun 2026 | Nemotron 3 Ultra | NVIDIA | tracking | high | ready for editor | 0 | 1 | [official](https://docs.api.nvidia.com) |
 | 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 31 May 2026 | MiniMax M3 | MiniMax | tracking | high | needs research | 0 | 0 | [official](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | 27 May 2026 | Claude Opus 4.8 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
