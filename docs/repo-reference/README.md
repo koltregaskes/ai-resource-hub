@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 06 Jun 2026, 18:19 UTC |
+| Generated | 06 Jun 2026, 19:26 UTC |
 | Providers tracked | 40 |
 | Public models | 319 |
 | Active models | 111 |
 | Tracking models | 207 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 71 |
+| News items in cache | 70 |
 | Release-desk entries | 57 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 06 Jun 2026, 18:19 UTC |
+| Latest visible refresh | 06 Jun 2026, 19:26 UTC |
 | Current evaluated composite leader | Claude Opus 4.6 (65.6) |
 | Latest tracked release | Nemotron 3 Ultra (4 Jun 2026) |
 
