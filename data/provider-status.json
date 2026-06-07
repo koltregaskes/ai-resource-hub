@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T18:56:33.248Z",
+  "generatedAt": "2026-06-07T20:36:40.161Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-07T18:56:32.300Z",
+      "lastCheckedAt": "2026-06-07T20:36:39.436Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,96 +20,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-07T18:56:31.597Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "1h2k3ryt64wl",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-07T14:35:14.290Z",
-          "updatedAt": "2026-06-07T15:41:04.387Z",
-          "resolvedAt": "2026-06-07T15:41:04.372Z",
-          "url": "https://stspg.io/8qky14s62z49",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "s4pq658bt69h",
-          "title": "Degraded performance for multiple models",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-07T03:31:30.653Z",
-          "updatedAt": "2026-06-07T04:28:29.287Z",
-          "resolvedAt": "2026-06-07T04:28:29.254Z",
-          "url": "https://stspg.io/j020f82m0mg8",
-          "summary": "We have resolved an issue resulting in elevated errors on requests to some Claude Models."
-        },
-        {
-          "id": "6ptd5skgmy3v",
-          "title": "Elevated errors on Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-06T18:37:44.139Z",
-          "updatedAt": "2026-06-06T19:05:27.193Z",
-          "resolvedAt": "2026-06-06T19:05:27.178Z",
-          "url": "https://stspg.io/32dgd2bnmh8z",
-          "summary": "From 18:12–18:55, we saw elevated errors on requests to Claude Opus 4.8. This issue has been resolved."
-        },
-        {
-          "id": "b1gzqlnpxxxk",
-          "title": "Opus 4.8 degraded service",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-06T09:27:59.685Z",
-          "updatedAt": "2026-06-06T10:14:41.550Z",
-          "resolvedAt": "2026-06-06T10:14:41.534Z",
-          "url": "https://stspg.io/qczg788px29n",
-          "summary": "This incident has been resolved."
-        }
-      ]
     },
     {
       "id": "cohere",
@@ -122,7 +32,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-07T18:56:32.618Z",
+      "lastCheckedAt": "2026-06-07T20:36:39.779Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +52,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-07T18:56:32.981Z",
+      "lastCheckedAt": "2026-06-07T20:36:40.050Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +117,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-07T18:56:32.175Z",
+      "lastCheckedAt": "2026-06-07T20:36:39.228Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -261,7 +171,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-07T18:56:31.529Z",
+      "lastCheckedAt": "2026-06-07T20:36:38.798Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -295,6 +205,16 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01KTHRCXQCANBBY5JTGEQ1XTPK",
+          "title": "Disruption in service availabilty for Go users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-07T19:19:19.000Z",
+          "updatedAt": "2026-06-07T19:25:47.000Z",
+          "resolvedAt": "2026-06-07T19:25:47.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
           "id": "01KTHA1XMAS77H4GMQBKSNPK71",
           "title": "Disruption in service availabilty for Free and Go users",
           "status": "resolved",
@@ -323,16 +243,6 @@
           "updatedAt": "2026-06-05T19:04:32.000Z",
           "resolvedAt": "2026-06-05T19:04:32.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KTC44AD7928NC4HHQWW9XE5F",
-          "title": "Users unable to sign in using Microsoft personal accounts",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-05T14:48:53.000Z",
-          "updatedAt": "2026-06-05T15:58:28.000Z",
-          "resolvedAt": "2026-06-05T15:58:28.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -347,7 +257,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-07T18:56:33.240Z",
+      "lastCheckedAt": "2026-06-07T20:36:40.154Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -400,6 +310,26 @@
           "summary": "Nemotron 3 Ultra 550B A55B went down"
         }
       ]
+    },
+    {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "error",
+      "lastCheckedAt": null,
+      "overallStatus": "unknown",
+      "overallLabel": "Status unavailable",
+      "summary": null,
+      "notes": "HTTP 405 for https://status.claude.com/api/v2/summary.json",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "deepseek",
