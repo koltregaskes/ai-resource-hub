@@ -1,5 +1,137 @@
 [
   {
+    "id": "news-6cd9f8f60eabeb81ff00",
+    "title": "WWDC 2026: Everything announced on Siri AI, iOS 27, Apple Intelligence and more",
+    "url": "https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/",
+    "source": "TechCrunch",
+    "summary": "Apple&#8217;s WWDC 2026 event kicked off this morning at 10 a.m. PT at Apple Park, starting a week full of expected announcements around Siri, iOS 27, Apple Intelligence and more, along with developer events and demos. This year&#8217;s event is particularly notable for a couple things. It marks CEO Tim Cook&#8217;s l…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T19:14:11.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-9b663882475eb4329d99",
+    "title": "Apple just taught your iPhone to finish your sentences, your photos, and your workflows",
+    "url": "https://techcrunch.com/2026/06/08/apple-just-taught-your-iphone-to-finish-your-sentences-your-photos-and-your-workflows/",
+    "source": "TechCrunch",
+    "summary": "Apple is adding new AI-powered features to Safari, Shortcuts, and Password apps.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T18:48:45.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-36fd20c474f79099886d",
+    "title": "Apple will let you build workflows using AI in its new Shortcuts app",
+    "url": "https://techcrunch.com/2026/06/08/apple-will-let-you-build-workflows-using-ai-in-its-new-shortcuts-app/",
+    "source": "TechCrunch",
+    "summary": "Shortcuts gets an AI upgrade, letting you describe the workflow you want in a prompt.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T18:45:12.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-5e3631eec9d27410fd04",
+    "title": "Apple&#8217;s Image Playground doesn&#8217;t suck anymore",
+    "url": "https://techcrunch.com/2026/06/08/apples-image-playground-doesnt-suck-anymore/",
+    "source": "TechCrunch",
+    "summary": "Apple's AI image generator is getting a makeover that could make it more competitive.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T18:38:07.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-7e9ea5b4db7e2bf82634",
+    "title": "Apple&#8217;s Photos app is getting new AI editing features",
+    "url": "https://techcrunch.com/2026/06/08/apples-photos-app-is-getting-new-ai-editing-features/",
+    "source": "TechCrunch",
+    "summary": "A new spatial \"Reframe\" feature will let users use AI to adjust perspectives.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T18:36:04.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-ced3a6ddb2a2cd3c2f01",
+    "title": "For the 2nd time in weeks, Microsoft packages laced with credential stealer",
+    "url": "https://arstechnica.com/security/2026/06/for-the-2nd-time-in-weeks-microsoft-packages-laced-with-credential-stealer/",
+    "source": "Ars Technica",
+    "summary": "73 packages run self-replicating stealer as soon as they're opened by an AI agent.",
+    "category": "research",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T18:34:23.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-42c7495a912333cb7f61",
+    "title": "Apple gives Siri its own dedicated app",
+    "url": "https://techcrunch.com/2026/06/08/apple-gives-siri-its-own-dedicated-app/",
+    "source": "TechCrunch",
+    "summary": "Siri is finally getting its own app.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T18:33:42.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-7319f31895df258a696b",
+    "title": "Apple is fixing the headache of splitting the bill with its new Siri in Camera feature",
+    "url": "https://techcrunch.com/2026/06/08/apple-is-fixing-the-headache-of-splitting-the-bill-with-its-new-siri-in-camera-feature/",
+    "source": "TechCrunch",
+    "summary": "\"If you're grabbing a bite with friends and point your iPhone at the bill, then [you can] select what you ordered to split the tab with Apple Cash,\" said Apple VP of Software Sebastien Marineau-Mes.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T18:23:04.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-17d6a2014c7fb25f6e3b",
+    "title": "Apple&#8217;s long-awaited AI Siri overhaul is finally here",
+    "url": "https://techcrunch.com/2026/06/08/apples-long-awaited-ai-siri-overhaul-is-finally-here/",
+    "source": "TechCrunch",
+    "summary": "The idea behind the new \"Siri AI\" is to turn the assistant from a voice controlled assistant into an AI companion that can do a lot more.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T17:56:21.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-b4443b1f7a5283fee535",
+    "title": "Amazon is launching AI-generated custom merch",
+    "url": "https://www.theverge.com/news/945905/amazon-alexa-shopping-ai-generated-custom-merch-design-printing",
+    "source": "The Verge",
+    "summary": "Amazon is expanding its print-on-demand features to AI-generated designs created using Alexa for Shopping for products like T-shirts, water bottles, and hoodies. Shoppers can use text prompts to generate images that are then printed on to blanks for sale on Amazon. They can then share the link to the design so other p…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T17:52:51.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-98bd4d609df6d415f61c",
+    "title": "Apple announces Siri AI and its next generation of Apple Intelligence",
+    "url": "https://www.theverge.com/tech/942416/apple-siri-ai-update-wwdc",
+    "source": "The Verge",
+    "summary": "Two years after first revealing its plans for Apple Intelligence and a smarter Siri that never fully materialized, at WWDC, Apple just revealed a new set of AI features and a smarter, more personalized Siri. Apple calls Siri AI an \"entirely new version of Siri\" and says it's both more conversational and more capable t…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T17:34:24.000Z",
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
     "id": "news-c7d8691f045c4fed1999",
     "title": "NotebookLM&#8217;s Gemini 3.5 upgrade adds a cloud computer and help finding sources",
     "url": "https://www.theverge.com/tech/944325/google-notebooklm-ai-gemini-update",
@@ -9,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T16:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-090fc40da0b3f075c43d",
@@ -21,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T15:49:12.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-b9b60c913d862cbbb1dd",
@@ -33,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T15:34:59.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-1524533dc3775a4d1d6d",
@@ -45,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T14:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-fe5bbfa447a3160b837c",
@@ -57,7 +189,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T11:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
+  },
+  {
+    "id": "news-63685f806399b4accaf6",
+    "title": "Introducing the OpenAI Economic Research Exchange",
+    "url": "https://openai.com/index/economic-research-exchange",
+    "source": "OpenAI",
+    "summary": "OpenAI launches the Economic Research Exchange to study AI’s impact on jobs, productivity, and the economy. Applications are now open for selected research projects.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-08T00:00:00.000Z",
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-856f708a26911fd5b586",
@@ -69,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-07T20:26:13.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-1ebd3d10129bb7033309",
@@ -81,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-07T17:56:22.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-30cbd49303d117a657ee",
@@ -93,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-07T16:23:22.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-ab996c1697904df8832a",
@@ -105,19 +249,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-07T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-7140b075820281005de1",
     "title": "OpenAI unveils Lockdown Mode to protect sensitive data from prompt injection attacks",
     "url": "https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/",
     "source": "TechCrunch",
-    "summary": "Even with Lockdown Mode, ChatGPT could be still vulnerable to prompt injections, but the goal is to reduce the likelihood that sensitive data gets shared in the process.",
+    "summary": "Even with Lockdown Mode, ChatGPT could be vulnerable to prompt injections, but the goal is to reduce the likelihood that sensitive data gets shared in the process.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-06T20:32:24.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-a8cf56fd7589f834fd18",
@@ -129,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-06T17:42:15.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-39923ab8405f222fc99b",
@@ -141,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-06T16:17:21.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-28f2c98bc54ac3c59814",
@@ -153,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-06T15:05:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-a661c048b4fe1c53d9a5",
@@ -165,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-06T14:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-efc7f0aa58dfff527f6e",
@@ -177,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-06T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-f95879e8b161dce89465",
@@ -189,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-05T20:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-4e488fc653aef875ec59",
@@ -201,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-05T18:57:20.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-b6b2479bdd01d3a25d64",
-    "title": "The most interesting startups right now want to get you off your phone",
-    "url": "https://techcrunch.com/video/the-most-interesting-startups-right-now-want-to-get-you-off-your-phone/",
-    "source": "TechCrunch",
-    "summary": "While the AI fundraising machine&#160;keeps breaking its own records, some founders are building in the other direction.&#160; Mirror founder Brynn Putnam just raised money for&#160;Board, a startup focused on bringing people together through in-person games and social experiences.&#160;Cyberdeck creators are going vi…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-05T17:17:06.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-e68a6223259edb555c90",
@@ -225,31 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-05T16:39:07.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-93c93b2f734af4a93faf",
-    "title": "New York lawmakers pass one-year ban on new data centers",
-    "url": "https://www.theverge.com/policy/944041/new-york-data-center-moratorium",
-    "source": "The Verge",
-    "summary": "The New York State legislature passed a one-year moratorium on new large data centers, the first statewide ban of its kind if Democratic Governor Kathy Hochul signs it into law. Lawmakers behind the bill say it's meant to give policymakers time to understand the impact of large data centers on the environment and ener…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-05T15:25:10.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-45457fdab25580534832",
-    "title": "The token bill comes due: Inside the industry scramble to manage AI’s runaway costs",
-    "url": "https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/",
-    "source": "TechCrunch",
-    "summary": "\"The whole conversation shifted from tokenmaxxing and 'go fast' to 'we need guardrails, how do we control this?'\"",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-05T14:49:12.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-7707fdb288e4dff5d7bf",
@@ -261,91 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-05T14:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-3a93b2375b03f0a0b730",
-    "title": "The &#8216;together tech&#8217; wave might be the most intriguing startup bet of 2026",
-    "url": "https://techcrunch.com/podcast/the-together-tech-wave-might-be-the-most-intriguing-startup-bet-of-2026/",
-    "source": "TechCrunch",
-    "summary": "While the AI fundraising machine&#160;keeps breaking its own records, some founders are building in the other direction.&#160; Mirror founder Brynn Putnam just raised money for&#160;Board, a startup focused on bringing people together through in-person games and social experiences.&#160;Cyberdeck creators are going vi…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-05T14:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-2f6d8e01e34f4ccce95b",
-    "title": "This AI startup says it can tell if a script will make a hit film",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/943531/ai-script-quilty-simon-horsman-daniel-wood",
-    "source": "The Verge",
-    "summary": "When Quilty hit the industry trades earlier this year, the AI startup promised that its tool could accurately predict a film's success just by reading the script. When people actually got a chance to experiment with Quilty's product, though, they were left skeptical. Even with all the available data in the world, it p…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-05T13:57:31.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-c09ad217df2adb024ac1",
-    "title": "AirTrunk commits $30B to build 5GW of AI data centers in India",
-    "url": "https://techcrunch.com/2026/06/05/airtrunk-commits-30b-to-build-5gw-of-ai-data-centers-in-india/",
-    "source": "TechCrunch",
-    "summary": "The Australian data center operator plans to set up 5GW of capacity in India.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-05T13:03:10.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-77f323f635fceb3bd3c1",
-    "title": "Mira Murati steps back into the spotlight, carefully",
-    "url": "https://techcrunch.com/2026/06/04/mira-murati-steps-back-into-the-spotlight-carefully/",
-    "source": "TechCrunch",
-    "summary": "In the current environment, remaining heads down has diminishing returns; at some point, you have to make some noise just to remind the market you exist.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-05T05:06:37.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-1858a5daeecf71bbaaf7",
-    "title": "Ahead of its IPO, Anthropic&#8217;s Daniela Amodei shrugs off doubts about AI&#8217;s returns",
-    "url": "https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/",
-    "source": "TechCrunch",
-    "summary": "Anthropic has been growing at a breakneck pace. The company announced that annualized revenue crossed $47 billion in May, up dramatically from roughly $9 billion at the end of 2025. That trajectory faces a real test, though.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-04T22:43:26.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-6e07b148513bb923e1c0",
-    "title": "Airbnb&#8217;s Brian Chesky plans to launch a new AI lab",
-    "url": "https://techcrunch.com/2026/06/04/airbnbs-brian-chesky-plans-to-launch-a-new-ai-lab/",
-    "source": "TechCrunch",
-    "summary": "The Airbnb CEO said last year it hasn't struck an LLM partnership because existing products weren't quite ready.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-04T22:29:50.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
-  },
-  {
-    "id": "news-e2bf1cd7a69c040b1e61",
-    "title": "Defense tech, AI, and fundraising take center stage at StrictlyVC Los Angeles on June 18",
-    "url": "https://techcrunch.com/2026/06/04/defense-tech-ai-and-fundraising-take-center-stage-at-strictlyvc-los-angeles-on-june-18/",
-    "source": "TechCrunch",
-    "summary": "On Thursday, June 18, at The Aerospace Corporation Campus, investors, founders, and tech leaders will gather for an evening of conversation exploring some of the most consequential shifts taking place across venture capital, defense technology, artificial intelligence, and advanced industry. Secure your spot today.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-04T21:30:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-d0841d29a3627d472a5a",
@@ -357,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-58a72a3a66c9437ce97a",
@@ -369,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T09:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-dbb39445d06ec7b943ef",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T00:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-bfb45dcad644b624d213",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:15:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-76912b853c1db4a9d325",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-8929ed18dbbc30cf39ae",
@@ -417,19 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
-  },
-  {
-    "id": "news-fae173f5fba9c3cb268b",
-    "title": "A blueprint for democratic governance of frontier AI",
-    "url": "https://openai.com/index/frontier-safety-blueprint",
-    "source": "OpenAI",
-    "summary": "OpenAI outlines a blueprint for U.S. governance of frontier AI, proposing a federal framework for safety, resilience, and national security.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-03T10:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-0a440e310365f4669c71",
@@ -441,7 +453,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T10:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
+  },
+  {
+    "id": "news-fae173f5fba9c3cb268b",
+    "title": "A blueprint for democratic governance of frontier AI",
+    "url": "https://openai.com/index/frontier-safety-blueprint",
+    "source": "OpenAI",
+    "summary": "OpenAI outlines a blueprint for U.S. governance of frontier AI, proposing a federal framework for safety, resilience, and national security.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-03T10:00:00.000Z",
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-6421a7340260ea9bc215",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-597005b4447f780c0176",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T09:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-00e733aa1592981948ee",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T07:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-8c810ea5d0c79d2f8080",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T02:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-67b62c8d9d322bbe6810",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T00:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:42"
   },
   {
     "id": "news-c8b9a6b007c10efde106",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T17:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-4e4360776d53ebd55e4d",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-dadd123def02abdbcf17",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-00ed5eb9be7b5a27ef97",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T10:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-944dd86b3cacec948339",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T19:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-bf7abda633b2cc922140",
@@ -573,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:30:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -585,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-507ec0fdf6297e193b5d",
@@ -597,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-e63fa88b5624cf9ab322",
@@ -609,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-8337eeb248ea1830c3c0",
@@ -621,19 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T03:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
-  },
-  {
-    "id": "news-33e1df4abe4ea5f373c2",
-    "title": "A shared playbook for trustworthy third party evaluations",
-    "url": "https://openai.com/index/trustworthy-third-party-evaluations-foundations",
-    "source": "OpenAI",
-    "summary": "OpenAI shares guidance on third-party AI evaluations, covering how to assess model capabilities, safeguards, and validity for frontier systems.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-05-29T00:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:26"
+    "discovered_at": "2026-06-08 19:34:31"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-aaee48ad131bf7f1daa8",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:42"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -753,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -765,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -777,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -789,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -801,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -813,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -825,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:43"
   },
   {
     "id": "news-6866936031247c14db7e",
@@ -837,6 +849,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T00:00:00.000Z",
-    "discovered_at": "2026-06-08 16:16:30"
+    "discovered_at": "2026-06-08 19:34:42"
   }
 ]
