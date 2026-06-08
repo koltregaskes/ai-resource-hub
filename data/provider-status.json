@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T19:34:45.866Z",
+  "generatedAt": "2026-06-08T21:27:20.319Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-08T19:34:44.351Z",
+      "lastCheckedAt": "2026-06-08T21:27:18.773Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -45,18 +45,40 @@
       ],
       "activeIncidents": [
         {
-          "id": "829kf0y1f7pn",
-          "title": "Elevated errors on Claude Haiku 4.5",
+          "id": "8b7xx9g8rkhm",
+          "title": "Elevated errors on Claude Opus 4.7",
           "status": "investigating",
           "impact": "minor",
-          "startedAt": "2026-06-08T19:10:50.160Z",
-          "updatedAt": "2026-06-08T19:10:50.304Z",
+          "startedAt": "2026-06-08T21:05:25.930Z",
+          "updatedAt": "2026-06-08T21:05:26.070Z",
           "resolvedAt": null,
-          "url": "https://stspg.io/1yggzs0zxvn4",
+          "url": "https://stspg.io/9ph775tb1mgl",
           "summary": "We are currently investigating this issue."
         }
       ],
       "recentIncidents": [
+        {
+          "id": "8b7xx9g8rkhm",
+          "title": "Elevated errors on Claude Opus 4.7",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-08T21:05:25.930Z",
+          "updatedAt": "2026-06-08T21:05:26.070Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/9ph775tb1mgl",
+          "summary": "We are currently investigating this issue."
+        },
+        {
+          "id": "829kf0y1f7pn",
+          "title": "Elevated errors on Claude Haiku 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-08T19:10:50.160Z",
+          "updatedAt": "2026-06-08T19:52:06.432Z",
+          "resolvedAt": "2026-06-08T19:52:06.416Z",
+          "url": "https://stspg.io/1yggzs0zxvn4",
+          "summary": "The incident is now resolved. The impact started at 11:35 PT / 18:35 UTC and ended at 12:30 PT / 19:30 UTC."
+        },
         {
           "id": "3n1flr3mnpgl",
           "title": "Elevated errors on Claude Opus 4.7",
@@ -69,17 +91,6 @@
           "summary": "This issue has been resolved. We saw errors affecting Opus 4.7 from 16:56–17:47 UTC."
         },
         {
-          "id": "829kf0y1f7pn",
-          "title": "Elevated errors on Claude Haiku 4.5",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-08T19:10:50.160Z",
-          "updatedAt": "2026-06-08T19:10:50.304Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/1yggzs0zxvn4",
-          "summary": "We are currently investigating this issue."
-        },
-        {
           "id": "1h2k3ryt64wl",
           "title": "Elevated errors on Claude Opus 4.7",
           "status": "resolved",
@@ -89,17 +100,6 @@
           "resolvedAt": "2026-06-07T15:41:04.372Z",
           "url": "https://stspg.io/8qky14s62z49",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "s4pq658bt69h",
-          "title": "Degraded performance for multiple models",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-07T03:31:30.653Z",
-          "updatedAt": "2026-06-07T04:28:29.287Z",
-          "resolvedAt": "2026-06-07T04:28:29.254Z",
-          "url": "https://stspg.io/j020f82m0mg8",
-          "summary": "We have resolved an issue resulting in elevated errors on requests to some Claude Models."
         }
       ]
     },
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-08T19:34:45.149Z",
+      "lastCheckedAt": "2026-06-08T21:27:19.581Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-08T19:34:45.380Z",
+      "lastCheckedAt": "2026-06-08T21:27:19.910Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-08T19:34:45.777Z",
+      "lastCheckedAt": "2026-06-08T21:27:20.183Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-08T19:34:44.761Z",
+      "lastCheckedAt": "2026-06-08T21:27:19.131Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -273,7 +273,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-08T19:34:44.295Z",
+      "lastCheckedAt": "2026-06-08T21:27:18.717Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -359,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-08T19:34:45.859Z",
+      "lastCheckedAt": "2026-06-08T21:27:20.312Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
