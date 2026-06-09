@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-09T16:12:41.902Z",
+  "generatedAt": "2026-06-09T17:25:40.976Z",
   "overview": {
-    "generatedAt": "2026-06-09T16:12:41.913Z",
+    "generatedAt": "2026-06-09T17:25:40.986Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 109,
+    "surfacedModels": 110,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -81,7 +81,7 @@
           "llm"
         ]
       },
-      "matchingModelCount": 20,
+      "matchingModelCount": 21,
       "matchingModelIds": [
         "claude-opus-4.6",
         "claude-opus-4.5",
@@ -96,6 +96,7 @@
         "claude-3.5-sonnet",
         "claude-3-opus",
         "claude-3-haiku",
+        "claude-fable-5",
         "claude-mythos-preview",
         "claude-opus-4.1",
         "claude-opus-4.6-fast",
@@ -118,6 +119,7 @@
         "Claude 3.5 Sonnet",
         "Claude 3 Opus",
         "Claude 3 Haiku",
+        "Claude Fable 5",
         "Claude Mythos Preview",
         "Claude Opus 4.1",
         "Claude Opus 4.6 (Fast)",

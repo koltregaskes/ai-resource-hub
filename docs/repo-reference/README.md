@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 09 Jun 2026, 16:12 UTC |
+| Generated | 09 Jun 2026, 17:25 UTC |
 | Providers tracked | 40 |
-| Public models | 319 |
+| Public models | 320 |
 | Active models | 111 |
-| Tracking models | 207 |
+| Tracking models | 208 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 71 |
-| Release-desk entries | 57 |
+| News items in cache | 72 |
+| Release-desk entries | 58 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 09 Jun 2026, 16:12 UTC |
-| Current evaluated composite leader | Claude Opus 4.6 (65.6) |
-| Latest tracked release | Nemotron 3 Ultra (4 Jun 2026) |
+| Latest visible refresh | 09 Jun 2026, 17:25 UTC |
+| Current evaluated composite leader | Llama 4 Maverick (57.6) |
+| Latest tracked release | Claude Fable 5 (9 Jun 2026) |
 
 ## Reference Files
 
