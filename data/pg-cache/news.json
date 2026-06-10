@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-69077b34ceca0bc58f63",
+    "title": "Google won’t just admit it’s feeding YouTube creators to its music AI",
+    "url": "https://www.theverge.com/tech/947770/google-lyria-music-ai-lawsuit-youtube",
+    "source": "The Verge",
+    "summary": "If you've uploaded a song to YouTube, Google almost certainly considers your video fair game for training its Lyria music AI, it just won't admit it right now. A group of independent musicians is suing Google, claiming that it illegally used songs they uploaded to YouTube to train its Lyria 3 model. Google has filed […",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-10T17:20:36.000Z",
+    "discovered_at": "2026-06-10 17:25:42"
+  },
+  {
+    "id": "news-3aca1ad94758868aa398",
+    "title": "‘AI-pilled’ firms spend $7,500 per employee each month on AI",
+    "url": "https://techcrunch.com/2026/06/10/ai-pilled-firms-spend-7500-per-employee-each-month-on-ai/",
+    "source": "TechCrunch",
+    "summary": "The most AI-obsessed firms are spending roughly $7,500 monthly per employee on AI, per Ramp AI Index. That's not more than an engineer's salary — yet.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-10T17:07:35.000Z",
+    "discovered_at": "2026-06-10 17:25:41"
+  },
+  {
+    "id": "news-dc6895b72e31ab9099e2",
+    "title": "Microsoft restricts Claude Fable for employees over data retention concerns",
+    "url": "https://www.theverge.com/report/947575/microsoft-claude-fable-5-restricted-internally",
+    "source": "The Verge",
+    "summary": "Anthropic released Claude Fable, its first Mythos-class AI model, yesterday and it's already causing concerns inside Microsoft. Sources tell me that Microsoft is limiting the use of Claude Fable 5 for employees because of Anthropic's new data retention requirements. While Microsoft quickly rolled out Claude Fable 5 to…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-10T16:50:23.000Z",
+    "discovered_at": "2026-06-10 17:25:42"
+  },
+  {
     "id": "news-d9dcba35528ad3bf6a3c",
     "title": "Google will save your Lens photos, Search Live recordings, and Translate audio for AI training",
     "url": "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T16:18:45.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-014369b1cf7d8ea9709b",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T16:11:08.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-c49d3b606968ddaba457",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T15:41:22.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-affdd3743a49137b171c",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T15:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-975b34ee8548df1b198b",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T14:48:01.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-5c40d2e2ae9b565bd253",
@@ -69,19 +105,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T14:31:30.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-67e72808f2b9ccf87575",
     "title": "Jedify raises $24M to help companies arm AI agents with context on their business",
     "url": "https://techcrunch.com/2026/06/10/jedify-raises-24m-to-help-companies-arm-ai-agents-with-context-on-their-business/",
     "source": "TechCrunch",
-    "summary": "The funding round was led by Norwest, with participation S Capital VC, Cerca Partners, and Oceans Ventures. Snowflake Ventures also participated as a strategic investor.",
+    "summary": "The funding round was led by Norwest, with participation from S Capital VC, Cerca Partners, and Oceans Ventures. Snowflake Ventures also participated as a strategic investor.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T13:33:09.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-ece3b0d989e8deed438c",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T13:07:56.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-df3302d3b04a5de8668e",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T07:05:26.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-8e5818f35c39d3c85a2c",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T00:26:10.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-2be94cf799401d49b9ba",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T00:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-f54ffc6fed2efd4df25b",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T23:43:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-59443428d032183c1525",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T23:17:51.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-eb5ed5436e952b223eef",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T21:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-d2f2eda77e668589a995",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T20:50:17.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-9b293761068a350ee0f3",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T20:37:49.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-a49dd2c601e94ef64029",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T20:24:25.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-d1f07b63f2d3fd8b70cb",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T18:56:09.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-c988e11851b710e9d738",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T18:04:24.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-b8a0d5761161953b05dc",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T17:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-7efcaaa23c1c86edd647",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T17:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-3de4c33b218c88edca3d",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T16:13:14.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-a148a093d4fb5eb947b5",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T16:09:14.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-e1e6f3f881788738df3a",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T14:54:51.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-c5ef98f6f4cbbc6c800a",
@@ -297,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T14:18:18.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-1b8b338710f6ebd73b54",
@@ -309,43 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T13:47:25.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
-  },
-  {
-    "id": "news-0d1ce8a78de3413a8fcb",
-    "title": "Apple’s best AI idea looks a lot like vibe coding",
-    "url": "https://www.theverge.com/tech/946733/apple-shortcuts-ai-safari-tabs-vibe-code",
-    "source": "The Verge",
-    "summary": "Most of Apple's current AI ideas are roughly the same as everyone else's AI ideas. A chatbot you can ask questions; quick ways to create or summarize text; bizarre, borderline creepy image-generation tools. The company spent most of its WWDC keynote playing catch-up with the state of the AI art, announcing Siri featur…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-09T13:34:48.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
-  },
-  {
-    "id": "news-f4b3a7cbf676cfbcae96",
-    "title": "Lovable says it has hit $500M in annualized revenue, with 1 million new projects a week",
-    "url": "https://techcrunch.com/2026/06/09/lovable-says-it-has-hit-500m-in-annualized-revenue-with-1-million-new-projects-a-week/",
-    "source": "TechCrunch",
-    "summary": "Lovable says it has now surpassed $500 million in annualized run-rate revenue and its users are building businesses and replacing internal software.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-09T13:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
-  },
-  {
-    "id": "news-7330b6170df40d18d699",
-    "title": "Apple’s AI pitch will live or die by its privacy promise",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/946705/apple-private-cloud-compute-ai-siri-intelligence-wwdc",
-    "source": "The Verge",
-    "summary": "As expected, yesterday's WWDC keynote was mostly about AI. And also as expected, Apple tried to turn its late arrival into its sales pitch: It didn't rush into AI because it was taking its time to do things right. In this case, \"right\" means \"with more privacy than anyone else.\" It's a good pitch - [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-09T12:55:33.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-d484de5576e8df56c06c",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T12:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-e8e11bcb3ae640363b88",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T10:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-31f4bff2af385a2c6ac9",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T00:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-ced3a6ddb2a2cd3c2f01",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T18:34:23.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-41e74c1497e421b7c293",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T14:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-e26a6d525948de9bc3c3",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T01:30:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-63685f806399b4accaf6",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T00:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-7707fdb288e4dff5d7bf",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-05T14:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-d0841d29a3627d472a5a",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T12:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-58a72a3a66c9437ce97a",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T09:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-dbb39445d06ec7b943ef",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T00:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-bfb45dcad644b624d213",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:15:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-76912b853c1db4a9d325",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-8929ed18dbbc30cf39ae",
@@ -513,19 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T12:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
-  },
-  {
-    "id": "news-fae173f5fba9c3cb268b",
-    "title": "A blueprint for democratic governance of frontier AI",
-    "url": "https://openai.com/index/frontier-safety-blueprint",
-    "source": "OpenAI",
-    "summary": "OpenAI outlines a blueprint for U.S. governance of frontier AI, proposing a federal framework for safety, resilience, and national security.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-03T10:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-0a440e310365f4669c71",
@@ -537,7 +525,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T10:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
+  },
+  {
+    "id": "news-fae173f5fba9c3cb268b",
+    "title": "A blueprint for democratic governance of frontier AI",
+    "url": "https://openai.com/index/frontier-safety-blueprint",
+    "source": "OpenAI",
+    "summary": "OpenAI outlines a blueprint for U.S. governance of frontier AI, proposing a federal framework for safety, resilience, and national security.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-03T10:00:00.000Z",
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-6421a7340260ea9bc215",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T12:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-597005b4447f780c0176",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T09:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-00e733aa1592981948ee",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T07:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-8c810ea5d0c79d2f8080",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T02:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:40"
   },
   {
     "id": "news-67b62c8d9d322bbe6810",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T00:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-4e4360776d53ebd55e4d",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-944dd86b3cacec948339",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T19:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-bf7abda633b2cc922140",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:30:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-918121c45d596b702d7d",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-aaee48ad131bf7f1daa8",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:42"
   },
   {
     "id": "news-eeffe9e815ad9a588e80",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-5af6fbd7f1ce709e04b5",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -837,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -849,7 +849,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-10 16:25:45"
+    "discovered_at": "2026-06-10 17:25:41"
   },
   {
     "id": "news-6866936031247c14db7e",
@@ -861,6 +861,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T00:00:00.000Z",
-    "discovered_at": "2026-06-10 16:25:44"
+    "discovered_at": "2026-06-10 17:25:41"
   }
 ]
