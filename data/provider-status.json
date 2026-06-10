@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T23:04:00.190Z",
+  "generatedAt": "2026-06-10T00:25:40.259Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-09T23:03:59.477Z",
+      "lastCheckedAt": "2026-06-10T00:25:39.202Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-09T23:03:59.034Z",
+      "lastCheckedAt": "2026-06-10T00:25:38.912Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-09T23:03:59.759Z",
+      "lastCheckedAt": "2026-06-10T00:25:39.455Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-09T23:03:59.966Z",
+      "lastCheckedAt": "2026-06-10T00:25:39.771Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-09T23:03:59.128Z",
+      "lastCheckedAt": "2026-06-10T00:25:39.009Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -261,20 +261,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-09T23:03:58.979Z",
+      "lastCheckedAt": "2026-06-10T00:25:38.736Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Codex API",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
         {
           "name": "Fine-tuning",
           "status": "operational"
@@ -284,11 +276,19 @@
           "status": "operational"
         },
         {
-          "name": "Moderations",
+          "name": "Files",
           "status": "operational"
         },
         {
-          "name": "Files",
+          "name": "CLI",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "ChatGPT Atlas",
           "status": "operational"
         }
       ],
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-09T23:04:00.183Z",
+      "lastCheckedAt": "2026-06-10T00:25:39.905Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",

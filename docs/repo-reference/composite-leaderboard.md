@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 09 Jun 2026, 22:47 UTC
+Generated: 10 Jun 2026, 00:25 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -25,9 +25,9 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 15 | Claude Opus 4 | Anthropic | 36.6 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
 | 16 | Gemini 3 Pro | Google | 36.2 | 81.2 / 3 | 13% | Chat | $2.00 / $12.00 | 18 Nov 2025 |
 | 17 | Phi-4 Reasoning | Microsoft | 34.5 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
-| 18 | Grok 3 | xAI | 34.3 | 84.7 / 7 | 24% | General use | $3.00 / $15.00 | 10 Jun 2025 |
-| 19 | Claude Sonnet 4 | Anthropic | 34.0 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
-| 20 | Command A | Cohere | 32.9 | 82.4 / 3 | 9% | Coding | $2.50 / $10.00 | 13 Mar 2025 |
+| 18 | Claude Sonnet 4 | Anthropic | 34.0 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
+| 19 | Command A | Cohere | 32.9 | 82.4 / 3 | 9% | Coding | $2.50 / $10.00 | 13 Mar 2025 |
+| 20 | Grok 3 | xAI | 32.6 | 84.7 / 7 | 24% | General use | $3.00 / $15.00 | 10 Jun 2025 |
 
 Notes:
 
