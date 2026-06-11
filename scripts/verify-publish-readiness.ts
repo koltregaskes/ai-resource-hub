@@ -204,16 +204,22 @@ function main() {
     importance_score: item.importance_score,
   })));
 
+  // News-routing health is reported as warnings, not failures. An empty or
+  // low-quality news category must not block publishing the pricing,
+  // benchmark, and model data that the rest of this gate verifies — that
+  // coupling froze the whole site refresh when news routing dried up.
+  const warnings: string[] = [];
+
   if (cacheNews.length > 0 && newsDiagnostics.routedItems.length === 0) {
-    failures.push('News routing produced zero publishable AI Resource Hub items from the current cache.');
+    warnings.push('News routing produced zero publishable AI Resource Hub items from the current cache.');
   }
 
   if (newsDiagnostics.routedItems.length > 0 && newsDiagnostics.highSignalCount === 0) {
-    failures.push('News routing produced no high-signal stories (model releases, benchmarks, research, pricing, hardware).');
+    warnings.push('News routing produced no high-signal stories (model releases, benchmarks, research, pricing, hardware).');
   }
 
   if (newsDiagnostics.routedItems.length > 0 && newsDiagnostics.officialSourceCount === 0) {
-    failures.push('News routing produced no items from mapped official or routed sources.');
+    warnings.push('News routing produced no items from mapped official or routed sources.');
   }
 
   db?.close();
@@ -230,6 +236,13 @@ function main() {
   console.log(`  Public export rows: ${spreadsheet?.model_count ?? 0}`);
   console.log(`  Release desk items: ${releaseDesk?.releases?.length ?? 0}`);
   console.log(`  Provider status snapshot: ${providerStatus?.generatedAt ?? 'missing'}`);
+
+  if (warnings.length > 0) {
+    console.log('\nWARN: news routing needs attention (publish not blocked)');
+    for (const warning of warnings) {
+      console.log(`  - ${warning}`);
+    }
+  }
 
   if (failures.length > 0) {
     console.log('\nBLOCK: publish readiness verification failed');
