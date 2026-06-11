@@ -2870,6 +2870,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
+  white-space: nowrap;
   border-radius: 6px;
   padding: 0.42rem 0.58rem;
   color: var(--color-text-secondary);
@@ -2942,22 +2943,38 @@ a {
 
 .airh-tool-icon,
 .airh-signin-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
   height: 32px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: var(--color-bg-secondary);
   color: var(--color-text-secondary);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .airh-tool-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   min-width: 32px;
   padding: 0 0.42rem;
   font-family: var(--font-mono);
   font-size: 0.76rem;
+}
+
+.airh-tool-icon svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.airh-tool-icon svg + span[aria-hidden="true"] {
+  display: none;
 }
 
 .airh-tool-icon:hover,
@@ -3044,6 +3061,11 @@ a {
   display: none;
 }
 
+.airh-layout-panel[data-airh-layout-panel="dossier"],
+.airh-layout-panel[data-airh-layout-panel="monitor"] {
+  display: none !important;
+}
+
 .airh-ticker {
   border-bottom: 1px solid var(--color-border);
   background: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary));
@@ -3106,6 +3128,7 @@ a {
 
 @media (prefers-reduced-motion: reduce) {
   .airh-ticker-stream,
+  .airh-dossier-stream,
   .airh-pulse-dot {
     animation: none;
   }
@@ -3674,10 +3697,536 @@ a {
   font-size: 0.72rem;
 }
 
+.airh-dossier-panel {
+  min-height: calc(100vh - 48px);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 34%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 26%, transparent) 1px, transparent 1px),
+    var(--color-bg-primary);
+  background-size: 128px 128px, 128px 128px, auto;
+}
+
+.airh-dossier-shell {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 0.9rem 1rem 3.5rem;
+}
+
+.airh-dossier-masthead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid var(--color-border-strong);
+  padding: 0.35rem 0 0.75rem;
+}
+
+.airh-dossier-kicker {
+  margin: 0 0 0.2rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.airh-dossier-masthead h1 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-family: 'Caveat', cursive;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 0.9;
+}
+
+.airh-dossier-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.airh-dossier-meta span,
+.airh-dossier-stamp,
+.airh-stamp-card .corner {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-secondary);
+  padding: 0.22rem 0.55rem;
+}
+
+.airh-dossier-ticker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.55rem 0;
+}
+
+.airh-dossier-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 0 0 auto;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.airh-dossier-stream {
+  display: inline-flex;
+  gap: 1.25rem;
+  min-width: max-content;
+  animation: airh-ticker 100s linear infinite;
+}
+
+.airh-dossier-ticker:hover .airh-dossier-stream {
+  animation-play-state: paused;
+}
+
+.airh-dossier-stream a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-decoration: none;
+}
+
+.airh-dossier-stream span {
+  color: var(--color-text-muted);
+  font-size: 0.66rem;
+}
+
+.airh-dossier-stream strong {
+  color: var(--color-text-primary);
+}
+
+.airh-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  padding-top: 1rem;
+}
+
+.airh-dossier-card {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--color-bg-secondary) 82%, transparent);
+  padding: 0.9rem;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.airh-dossier-card-large,
+.airh-dossier-table-card,
+.airh-dossier-wire {
+  grid-column: span 2;
+}
+
+.airh-dossier-card-large {
+  grid-row: span 2;
+}
+
+.airh-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.65rem;
+}
+
+.airh-card-head h2,
+.airh-stamp-card h2 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.55rem, 2.2vw, 2.25rem);
+  line-height: 0.95;
+}
+
+.airh-card-head a,
+.airh-monitor-digest a {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.airh-dossier-leaders {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.airh-dossier-leaders a {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) auto;
+  gap: 0.7rem;
+  align-items: center;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 0.5rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.airh-dossier-leaders .rank,
+.airh-dossier-leaders b,
+.airh-stamp-card strong,
+.airh-dossier-table-card td,
+.airh-dossier-table-card th {
+  font-family: var(--font-mono);
+}
+
+.airh-dossier-leaders strong,
+.airh-dossier-table-card a {
+  color: var(--color-text-primary);
+}
+
+.airh-dossier-leaders em,
+.airh-stamp-card em {
+  display: block;
+  color: var(--color-text-muted);
+  font-style: normal;
+}
+
+.airh-stamp-card {
+  display: grid;
+  align-content: start;
+  gap: 0.28rem;
+  min-height: 10rem;
+}
+
+.airh-stamp-card .corner {
+  justify-self: start;
+  border-radius: 0.25rem;
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.airh-stamp-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+}
+
+.airh-stamp-card strong {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+}
+
+.airh-stamp-card.is-accent {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+}
+
+.airh-stamp-card.is-accent :where(h2, p, strong, em) {
+  color: var(--color-bg-primary);
+}
+
+.airh-stamp-card.is-accent .corner {
+  background: var(--color-bg-primary);
+  color: var(--color-accent);
+}
+
+.airh-dossier-table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.airh-dossier-table-card th {
+  color: var(--color-text-muted);
+  font-size: 0.64rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.airh-dossier-table-card td,
+.airh-dossier-table-card th {
+  border-top: 1px dashed var(--color-border);
+  padding: 0.42rem 0.35rem;
+}
+
+.airh-dossier-wire ul,
+.airh-monitor-now ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.airh-dossier-wire li a,
+.airh-monitor-now li a {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 0.6rem;
+  border-top: 1px dashed var(--color-border);
+  padding: 0.42rem 0;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.airh-dossier-wire span,
+.airh-monitor-now li span {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+}
+
+.airh-monitor-panel {
+  min-height: calc(100vh - 48px);
+  background: var(--color-bg-primary);
+}
+
+.airh-monitor-shell {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 0.75rem 1rem 3rem;
+}
+
+.airh-monitor-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px 8px 0 0;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary));
+  padding: 0.55rem 0.8rem;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+}
+
+.airh-monitor-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.airh-monitor-mark {
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.airh-monitor-search {
+  flex: 1 1 auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-primary);
+  padding: 0.35rem 0.65rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.airh-monitor-search span {
+  float: right;
+  color: var(--color-text-muted);
+}
+
+.airh-monitor-bar p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.airh-monitor-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  min-height: 70vh;
+  border: 1px solid var(--color-border-strong);
+  border-top: 0;
+  background: var(--color-bg-secondary);
+}
+
+.airh-monitor-table {
+  min-width: 0;
+  border-right: 1px solid var(--color-border-strong);
+}
+
+.airh-monitor-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border-strong);
+  background: var(--color-bg-tertiary);
+}
+
+.airh-monitor-tabs button {
+  border: 0;
+  border-right: 1px solid var(--color-border);
+  background: transparent;
+  padding: 0.6rem 0.8rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.airh-monitor-tabs button.is-active {
+  background: color-mix(in srgb, var(--color-accent) 18%, var(--color-bg-card));
+  color: var(--color-text-primary);
+}
+
+.airh-monitor-tabs span {
+  margin-left: auto;
+  padding: 0 0.8rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+.airh-monitor-table-scroll {
+  overflow-x: auto;
+}
+
+.airh-monitor-table table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+
+.airh-monitor-table th {
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  padding: 0.55rem 0.7rem;
+  color: var(--color-text-muted);
+  font-size: 0.62rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.airh-monitor-table td {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.56rem 0.7rem;
+  color: var(--color-text-secondary);
+}
+
+.airh-monitor-table a {
+  color: var(--color-text-primary);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.airh-monitor-table tbody tr:hover td {
+  background: var(--color-bg-hover);
+}
+
+.airh-monitor-now {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--color-bg-primary);
+}
+
+.airh-monitor-live {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--color-accent);
+  padding: 0.75rem 0.85rem;
+  color: var(--color-bg-primary);
+}
+
+.airh-monitor-live p,
+.airh-monitor-live strong {
+  margin: 0;
+  color: inherit;
+}
+
+.airh-monitor-live p,
+.airh-monitor-now h2 {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.airh-monitor-live strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+.airh-monitor-now section {
+  border-bottom: 1px solid var(--color-border-strong);
+  padding: 0.8rem 0.85rem;
+}
+
+.airh-monitor-now h2 {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.airh-monitor-now li a {
+  grid-template-columns: 4rem minmax(0, 1fr);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.airh-monitor-watchlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.airh-monitor-watchlist a,
+.airh-monitor-watchlist span {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-decoration: none;
+}
+
+.airh-monitor-digest {
+  margin-top: auto;
+}
+
+.airh-monitor-digest p {
+  margin: 0 0 0.65rem;
+  color: var(--color-text-secondary);
+  font-size: 0.86rem;
+}
+
 .airh-terminal-panel {
   min-height: calc(100vh - 48px);
-  background: #0e0a06;
-  color: #e9dfc8;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px),
+    var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 .airh-terminal-shell {
@@ -3692,7 +4241,7 @@ a {
   align-items: end;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px solid rgba(233, 223, 200, 0.18);
+  border-bottom: 1px solid var(--color-border-strong);
   padding-bottom: 0.75rem;
 }
 
@@ -3711,7 +4260,7 @@ a {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.6rem;
-  color: #8f8068;
+  color: var(--color-text-muted);
   font-size: 0.76rem;
 }
 
@@ -3724,20 +4273,20 @@ a {
 
 .airh-terminal-block {
   margin: 0 0 0.8rem;
-  color: #d8ccb4;
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
 .airh-terminal-block.is-command {
-  color: #ef8c53;
+  color: var(--color-accent);
 }
 
 .airh-terminal-block.is-warn {
-  color: #e1a942;
+  color: var(--color-warning);
 }
 
 .airh-terminal-block.is-ok {
-  color: #6ec48a;
+  color: var(--color-success);
 }
 
 .airh-terminal-block ul,
@@ -3747,7 +4296,8 @@ a {
 }
 
 .airh-terminal-block span {
-  color: #8f8068;
+  color: var(--color-text-muted);
+  margin-right: 0.35rem;
 }
 
 .airh-terminal-block dl {
@@ -3757,7 +4307,7 @@ a {
 }
 
 .airh-terminal-block dt {
-  color: #8f8068;
+  color: var(--color-text-muted);
   text-transform: uppercase;
 }
 
@@ -3769,28 +4319,29 @@ a {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  border-top: 1px solid rgba(233, 223, 200, 0.18);
+  border-top: 1px solid var(--color-border-strong);
   padding-top: 0.75rem;
 }
 
 .airh-terminal-form label {
-  color: #ef8c53;
+  color: var(--color-accent);
 }
 
 .airh-terminal-form input {
   flex: 1;
+  min-width: 0;
   border: 0;
   background: transparent;
-  color: #e9dfc8;
+  color: var(--color-text-primary);
   font: inherit;
   outline: 0;
 }
 
 .airh-terminal-form button {
-  border: 1px solid rgba(239, 140, 83, 0.42);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 42%, var(--color-border));
   border-radius: 6px;
-  background: #ef8c53;
-  color: #1c110b;
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0;
@@ -3806,10 +4357,10 @@ a {
 }
 
 .airh-terminal-hints span {
-  border: 1px solid rgba(233, 223, 200, 0.16);
+  border: 1px solid var(--color-border);
   border-radius: 999px;
   padding: 0.2rem 0.5rem;
-  color: #8f8068;
+  color: var(--color-text-muted);
   font-size: 0.72rem;
 }
 
@@ -3950,6 +4501,19 @@ a {
   .airh-filter-group {
     border-right: 1px solid var(--color-border);
   }
+
+  .airh-dossier-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .airh-monitor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .airh-monitor-table {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border-strong);
+  }
 }
 
 @media (max-width: 760px) {
@@ -3997,6 +4561,36 @@ a {
 
   .airh-terminal-log {
     min-height: 50vh;
+  }
+
+  .airh-dossier-masthead,
+  .airh-dossier-ticker,
+  .airh-monitor-bar,
+  .airh-monitor-tabs {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .airh-dossier-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .airh-dossier-card-large,
+  .airh-dossier-table-card,
+  .airh-dossier-wire {
+    grid-column: auto;
+  }
+
+  .airh-dossier-leaders a,
+  .airh-dossier-wire li a,
+  .airh-monitor-now li a {
+    grid-template-columns: 1fr;
+  }
+
+  .airh-monitor-tabs button,
+  .airh-monitor-tabs span,
+  .airh-monitor-search {
+    width: 100%;
   }
 }
 
@@ -4106,7 +4700,7 @@ a {
   display: inline-flex;
   gap: 1.25rem;
   min-width: max-content;
-  animation: airh-marquee 54s linear infinite;
+  animation: airh-ticker 54s linear infinite;
 }
 
 .airh-site-ticker:hover .airh-site-ticker-stream {
@@ -4144,11 +4738,9 @@ body.airh-sitewide-system:not(.airh-home-page) main {
   min-width: 0;
   overflow-x: hidden;
   background:
-    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 36%, transparent) 1px, transparent 1px),
-    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 30%, transparent) 1px, transparent 1px),
-    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 22%, transparent), transparent 18rem),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 30%, transparent), transparent 18rem),
     var(--color-bg-primary);
-  background-size: 160px 160px, 160px 160px, auto, auto;
+  background-size: auto, auto;
 }
 
 body.airh-sitewide-system:not(.airh-home-page) main * {
@@ -4156,7 +4748,7 @@ body.airh-sitewide-system:not(.airh-home-page) main * {
   box-sizing: border-box;
 }
 
-body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
   width: 100%;
   max-width: min(80rem, calc(100vw - 2rem)) !important;
   padding-top: clamp(1rem, 2vw, 1.8rem) !important;
@@ -4179,7 +4771,7 @@ body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
   font-size: clamp(2rem, 3.2vw, 3.2rem) !important;
   font-weight: 650 !important;
   line-height: 0.98 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: 0 !important;
 }
 
 body.airh-sitewide-system:not(.airh-home-page) main :where(h2, h3) {
@@ -4267,6 +4859,986 @@ body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*
   text-decoration: none;
 }
 
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 30%, transparent), transparent 18rem),
+    var(--color-bg-primary);
+  background-size: auto, auto;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  width: min(100%, 1440px);
+  margin-inline: auto !important;
+  padding: 0.78rem 1rem 3.5rem !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  max-width: none !important;
+  margin-inline: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-table-wrap, .table-scroll-container, .airh-table-scroll) {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg-card);
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-table, .table-scroll-container table, .airh-leaderboard-table) {
+  min-width: 980px;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(th) {
+  background: var(--color-bg-secondary) !important;
+  padding: 0.58rem 0.72rem !important;
+  color: var(--color-text-muted) !important;
+  cursor: default;
+  font-family: var(--font-mono);
+  font-size: 0.64rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(td) {
+  padding: 0.64rem 0.72rem !important;
+  color: var(--color-text-secondary);
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(tbody tr:hover td) {
+  background: var(--color-bg-hover) !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*="border"], [class*="bg-(--color-bg-card)"][class*="border"]) {
+  border-radius: 0.35rem !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-tool-icon[data-airh-layout-switch="spreadsheet"].is-active,
+html[data-airh-display-mode="terminal"] .airh-tool-icon[data-airh-layout-switch="terminal"].is-active {
+  border-color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 14%, var(--color-bg-tertiary));
+  color: var(--color-text-primary);
+}
+
+.airh-tool-icon[data-airh-layout-switch="dossier"],
+.airh-tool-icon[data-airh-layout-switch="monitor"] {
+  display: none !important;
+}
+
+html[data-airh-display-mode="dossier"] body {
+  background-image:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 92%, transparent), color-mix(in srgb, var(--color-bg-primary) 78%, transparent)),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border-strong) 26%, transparent) 0 1px, transparent 1px 32px);
+}
+
+html[data-airh-display-mode="dossier"] .airh-compact-topbar,
+html[data-airh-display-mode="dossier"] .airh-site-ticker {
+  background: color-mix(in srgb, var(--color-bg-secondary) 90%, var(--color-bg-tertiary));
+  border-color: color-mix(in srgb, var(--color-border-strong) 76%, var(--color-accent));
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 72%, transparent), color-mix(in srgb, var(--color-bg-primary) 96%, transparent)),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border-strong) 24%, transparent) 0 1px, transparent 1px 34px);
+  background-size: auto;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  max-width: min(76rem, calc(100vw - 2rem)) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1, h2, h3) {
+  font-family: var(--font-display);
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-bg-card)"][class*="border"], [class*="bg-(--color-bg-secondary)"][class*="border"], a[class*="p-"][class*="border"], article[class*="border"], .activity-row, .activity-summary-card) {
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 72%, transparent) !important;
+  border-radius: 0.42rem !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 36%, transparent), transparent 45%),
+    var(--color-bg-card) !important;
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-border-strong) 42%, transparent), 0 12px 24px color-mix(in srgb, var(--color-bg-primary) 18%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*="border"], article[class*="border"], .activity-row, .activity-summary-card)::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  width: 2.6rem;
+  height: 0.35rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-accent) 52%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 34%, transparent);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  font-family: var(--font-sans);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--color-bg-tertiary) 86%, var(--color-bg-secondary)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body {
+  background-image:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 260px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent-muted) 7%, transparent), transparent 34%),
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--color-border-strong) 20%, transparent) 0 1px, transparent 1px 80px);
+}
+
+html[data-airh-display-mode="monitor"] .airh-compact-topbar,
+html[data-airh-display-mode="monitor"] .airh-site-ticker {
+  background: color-mix(in srgb, var(--color-bg-primary) 82%, var(--color-bg-secondary));
+  border-color: color-mix(in srgb, var(--color-accent) 34%, var(--color-border-strong));
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 9%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
+    var(--color-bg-primary);
+  background-size: 84px 84px, 84px 84px, auto, auto;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  max-width: min(90rem, calc(100vw - 2rem)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-bg-card)"][class*="border"], [class*="bg-(--color-bg-secondary)"][class*="border"], a[class*="p-"][class*="border"], article[class*="border"], .activity-row, .activity-summary-card) {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 26%, var(--color-border)) !important;
+  border-radius: 0.28rem !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 42%),
+    var(--color-bg-card) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--color-bg-tertiary) 88%, var(--color-bg-primary)) !important;
+  color: var(--color-accent) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(tbody tr:hover) {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent) !important;
+}
+
+html[data-airh-display-mode="terminal"] body {
+  background-image:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 260px),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px),
+    radial-gradient(circle at top left, color-mix(in srgb, var(--color-accent-muted) 10%, transparent), transparent 26%);
+}
+
+html[data-airh-display-mode="terminal"] .airh-compact-topbar,
+html[data-airh-display-mode="terminal"] .airh-site-ticker,
+html[data-airh-display-mode="terminal"] .airh-theme-panel,
+html[data-airh-display-mode="terminal"] .airh-compact-menu-panel {
+  background: color-mix(in srgb, var(--color-bg-primary) 88%, var(--color-bg-secondary));
+  border-color: var(--color-border-strong);
+}
+
+html[data-airh-display-mode="terminal"] .airh-compact-brand,
+html[data-airh-display-mode="terminal"] .airh-compact-link,
+html[data-airh-display-mode="terminal"] .airh-site-ticker-item,
+html[data-airh-display-mode="terminal"] .airh-signin-placeholder,
+html[data-airh-display-mode="terminal"] .airh-tool-icon {
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent) 1px, transparent 1px),
+    var(--color-bg-primary);
+  background-size: 64px 64px, 64px 64px, auto;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  max-width: min(88rem, calc(100vw - 2rem)) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"])::before {
+  content: "cwd ";
+  color: var(--color-accent-muted);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1, h2, h3, p, li, a, span, strong, td, th) {
+  font-family: var(--font-mono);
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1)::before {
+  content: "> ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where([class*="bg-(--color-bg-card)"][class*="border"], [class*="bg-(--color-bg-secondary)"][class*="border"], a[class*="p-"][class*="border"], article[class*="border"], .activity-row, .activity-summary-card) {
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-card) 94%, var(--color-bg-primary)) !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--color-accent) 8%, transparent) !important;
+  color: var(--color-accent) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(td, th) {
+  border-color: color-mix(in srgb, var(--color-accent) 14%, var(--color-border)) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(a) {
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea, button) {
+  border-radius: 0 !important;
+}
+
+/* Site-wide display modes must carry the full homepage design language, not only palette tints. */
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main),
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main),
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  position: relative;
+  isolation: isolate;
+  margin: clamp(0.9rem, 2vw, 1.45rem) auto clamp(2rem, 4vw, 4rem) !important;
+  overflow: hidden;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 78%, transparent);
+  border-radius: 0.55rem !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 74%, transparent), transparent 18rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border) 38%, transparent) 0 1px, transparent 1px 31px),
+    var(--color-bg-card);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--color-border-strong) 52%, transparent),
+    0 18px 46px color-mix(in srgb, var(--color-bg-primary) 30%, transparent);
+  padding-top: clamp(4.6rem, 6vw, 5.6rem) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
+  content: "Dossier / live reference cards";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-border-strong) 70%, transparent);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 34%),
+    color-mix(in srgb, var(--color-bg-secondary) 92%, var(--color-bg-card));
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  padding: 1.05rem clamp(1rem, 2vw, 1.5rem);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 1.05rem;
+  right: clamp(1rem, 2vw, 1.5rem);
+  width: 4.6rem;
+  height: 0.45rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-accent) 62%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 42%, transparent);
+  opacity: 0.75;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  display: inline-flex;
+  width: auto;
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 62%, transparent);
+  background: color-mix(in srgb, var(--color-bg-primary) 44%, transparent);
+  padding: 0.34rem 0.55rem;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  max-width: 18ch;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 38%, transparent);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, a[class*="p-"][class*="border"], article[class*="border"], div[class*="p-"][class*="border"]) {
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--color-border-strong) 70%, transparent) !important;
+  border-radius: 0.38rem !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 42%, transparent), transparent 52%),
+    color-mix(in srgb, var(--color-bg-card) 94%, var(--color-bg-primary)) !important;
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-border-strong) 40%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section) {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div[class*="border"]) {
+  min-height: 100%;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  max-width: min(94rem, calc(100vw - 2rem)) !important;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 34%, var(--color-border-strong));
+  border-radius: 0.18rem !important;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent-muted) 14%, transparent), transparent 38%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 86%, transparent), color-mix(in srgb, var(--color-bg-primary) 94%, transparent)),
+    var(--color-bg-primary);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--color-accent) 20%, transparent),
+    0 22px 54px color-mix(in srgb, var(--color-bg-primary) 36%, transparent);
+  padding-top: clamp(4.35rem, 5vw, 5rem) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
+  content: "AI/RH Monitor";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 30%, var(--color-border-strong));
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 18%, var(--color-bg-tertiary)) 0 18rem, color-mix(in srgb, var(--color-bg-secondary) 86%, var(--color-bg-primary)) 18rem),
+    var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 1.05rem clamp(1rem, 2vw, 1.5rem);
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+  padding-bottom: 0.55rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  max-width: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+  padding-bottom: 0.7rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, a[class*="p-"][class*="border"], article[class*="border"], div[class*="p-"][class*="border"]) {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border)) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 48%),
+    color-mix(in srgb, var(--color-bg-card) 90%, var(--color-bg-primary)) !important;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-accent) 16%, transparent) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section) {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div[class*="border"]) {
+  min-height: 100%;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a)::before,
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section)::before,
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(section section)::before {
+  content: "";
+  display: block;
+  width: 2.6rem;
+  height: 0.22rem;
+  margin-bottom: 0.75rem;
+  background: var(--color-accent);
+  opacity: 0.72;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px),
+    var(--color-bg-primary);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  max-width: min(1180px, calc(100vw - 2rem)) !important;
+  min-height: calc(100vh - 130px);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 5%, transparent), transparent 16rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 3%, transparent) 0 1px, transparent 1px 4px),
+    var(--color-bg-primary);
+  box-shadow: none !important;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  padding-top: clamp(4.7rem, 6vw, 5.7rem) !important;
+  padding-bottom: clamp(4.25rem, 6vw, 5.5rem) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
+  content: "AI Resource Hub / terminal";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  min-height: 3.2rem;
+  border-bottom: 1px solid var(--color-border-strong);
+  background: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary));
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 0.95rem clamp(1rem, 2vw, 1.5rem);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::after {
+  content: "airh > ready";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid var(--color-border-strong);
+  background: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary));
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 0.95rem clamp(1rem, 2vw, 1.5rem);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(header, .mb-8, .mb-10) {
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: 0.9rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"])::before {
+  content: "cwd ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  max-width: none;
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.85rem, 4vw, 3.3rem) !important;
+  line-height: 1.02 !important;
+  border: 0;
+  padding: 0;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1)::before {
+  content: "> ";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2)::before {
+  content: "$ ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(h3)::before {
+  content: "[ok] ";
+  color: var(--color-success);
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, a[class*="p-"][class*="border"], article[class*="border"], div[class*="p-"][class*="border"], div[class*="bg-(--color-bg-card)"][class*="border"]) {
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-card) 88%, var(--color-bg-primary)) !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section) {
+  padding: clamp(0.95rem, 2vw, 1.25rem);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, .grid > a, .grid > article, .grid > div[class*="border"]) {
+  position: relative;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(article section, section section, .grid > a, .grid > article, .grid > div[class*="border"])::before {
+  content: "run";
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(.flex.flex-wrap.gap-2, [class*="rounded-full"], [class*="rounded-lg"]) {
+  border-radius: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a > .text-3xl.mb-4, .grid > article > .text-3xl.mb-4, .grid > div > .text-3xl.mb-4) {
+  color: transparent;
+  font-family: var(--font-mono);
+  font-size: 0 !important;
+  line-height: 1;
+  min-height: 1rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a > .text-3xl.mb-4, .grid > article > .text-3xl.mb-4, .grid > div > .text-3xl.mb-4)::before {
+  content: "./";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+/* Strong route-wide skins for the non-terminal templates.
+   These sit after the first shell pass so random content pages visibly inherit the selected template. */
+html[data-airh-display-mode="dossier"] {
+  --airh-dossier-rule: color-mix(in srgb, var(--color-accent) 40%, var(--color-border-strong));
+  --airh-dossier-paper: color-mix(in srgb, var(--color-bg-secondary) 92%, var(--color-bg-primary));
+  --airh-dossier-ink: var(--color-text-primary);
+}
+
+html[data-airh-display-mode="monitor"] {
+  --airh-monitor-signal: #62c7d4;
+  --airh-monitor-good: #35d47d;
+  --airh-monitor-panel: color-mix(in srgb, var(--color-bg-secondary) 84%, var(--color-bg-primary));
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system {
+  background:
+    radial-gradient(circle at 13% 8%, color-mix(in srgb, var(--color-accent) 9%, transparent), transparent 28%),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border-strong) 19%, transparent) 0 1px, transparent 1px 34px),
+    linear-gradient(180deg, var(--color-bg-primary), color-mix(in srgb, var(--color-bg-secondary) 68%, var(--color-bg-primary)));
+}
+
+html[data-airh-display-mode="dossier"] .airh-compact-topbar {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 44%),
+    color-mix(in srgb, var(--color-bg-secondary) 92%, var(--color-bg-primary));
+}
+
+html[data-airh-display-mode="dossier"] .airh-compact-brand {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+html[data-airh-display-mode="dossier"] .airh-compact-link,
+html[data-airh-display-mode="dossier"] .airh-signin-placeholder {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+html[data-airh-display-mode="dossier"] .airh-site-ticker-stamp {
+  background: color-mix(in srgb, var(--color-accent) 92%, var(--color-bg-primary));
+  color: var(--color-bg-primary);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 9%, transparent) 0 0.32rem, transparent 0.32rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border) 48%, transparent) 0 1px, transparent 1px 31px),
+    var(--color-bg-primary);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  border: 2px solid var(--airh-dossier-rule) !important;
+  border-radius: 0.35rem !important;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 11%, transparent) 0 10.5rem, transparent 10.5rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-border) 44%, transparent) 0 1px, transparent 1px 31px),
+    var(--airh-dossier-paper) !important;
+  box-shadow:
+    0 0.16rem 0 color-mix(in srgb, var(--color-accent) 42%, transparent),
+    0 1.5rem 3rem color-mix(in srgb, #000 12%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  border: 1.5px solid var(--airh-dossier-rule) !important;
+  border-radius: 0.18rem !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  box-shadow: 0.18rem 0.18rem 0 color-mix(in srgb, var(--color-accent) 24%, transparent);
+  color: var(--color-accent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  display: inline-block;
+  max-width: min(18ch, 100%);
+  margin-top: 0.2rem !important;
+  border: 0 !important;
+  color: var(--airh-dossier-ink) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(2.45rem, 4.8vw, 4.9rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.92 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1)::after {
+  content: none;
+  display: block;
+  width: fit-content;
+  margin-top: 0.65rem;
+  border: 1.5px solid var(--airh-dossier-rule);
+  border-radius: 0.22rem;
+  background: color-mix(in srgb, var(--color-bg-secondary) 86%, var(--color-bg-primary));
+  color: var(--color-accent);
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.18rem 0.6rem 0.3rem;
+  transform: rotate(-1.2deg);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2) {
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.55rem, 2.7vw, 2.45rem) !important;
+  border-bottom: 1.5px solid var(--airh-dossier-rule);
+  padding-bottom: 0.35rem;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2)::before {
+  content: "file ";
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(h3) {
+  font-family: var(--font-display) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(p, li, dd) {
+  color: var(--color-text-secondary) !important;
+  font-family: var(--font-sans);
+  line-height: 1.7;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(a:not(.airh-compact-link):not(.airh-site-ticker-item)) {
+  color: color-mix(in srgb, var(--color-accent) 92%, var(--color-text-primary));
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  border: 1.5px solid color-mix(in srgb, var(--airh-dossier-rule) 82%, transparent) !important;
+  border-radius: 0.28rem !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-secondary) 74%, transparent), transparent 44%),
+    color-mix(in srgb, var(--color-bg-card) 92%, var(--color-bg-primary)) !important;
+  box-shadow:
+    0.16rem 0.16rem 0 color-mix(in srgb, var(--color-accent) 18%, transparent),
+    0 0.75rem 1.4rem color-mix(in srgb, #000 8%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div)::before {
+  display: block;
+  content: "dossier card";
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
+  width: fit-content;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0.7rem;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--color-accent);
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  border: 1.5px solid var(--airh-dossier-rule) !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--color-accent) 13%, var(--color-bg-secondary)) !important;
+  color: var(--color-accent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(td) {
+  background: color-mix(in srgb, var(--color-bg-secondary) 40%, transparent);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(
+  .rounded-full[class*="bg-(--color"],
+  [class*="rounded-full"][class*="bg-(--color"],
+  .rounded-full[class*="border-(--color"],
+  [class*="rounded-full"][class*="border-(--color"]
+) {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 38%, var(--color-border)) !important;
+  border-radius: 0.18rem !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 84%, var(--color-bg-primary)) !important;
+  color: var(--color-accent) !important;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea) {
+  border: 1.5px solid color-mix(in srgb, var(--airh-dossier-rule) 72%, transparent) !important;
+  border-radius: 0.2rem !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main :where(button:not(.airh-tool-icon):not([class*="bg-blue"]):not([class*="bg-(--color-accent"])) {
+  border: 1.5px solid color-mix(in srgb, var(--airh-dossier-rule) 72%, transparent) !important;
+  border-radius: 0.2rem !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  color: var(--airh-dossier-ink) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 11%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--airh-monitor-signal) 9%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 80% 0%, color-mix(in srgb, var(--airh-monitor-signal) 14%, transparent), transparent 30%),
+    var(--color-bg-primary);
+  background-size: 96px 96px, 96px 96px, auto, auto;
+}
+
+html[data-airh-display-mode="monitor"] .airh-compact-topbar,
+html[data-airh-display-mode="monitor"] .airh-site-ticker {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 16%, transparent), transparent 42%),
+    color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary));
+  border-color: color-mix(in srgb, var(--airh-monitor-signal) 45%, var(--color-border-strong));
+}
+
+html[data-airh-display-mode="monitor"] .airh-compact-brand,
+html[data-airh-display-mode="monitor"] .airh-compact-link,
+html[data-airh-display-mode="monitor"] .airh-signin-placeholder,
+html[data-airh-display-mode="monitor"] .airh-site-ticker-item {
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+html[data-airh-display-mode="monitor"] .airh-site-ticker-stamp {
+  background: color-mix(in srgb, var(--airh-monitor-signal) 80%, var(--color-bg-primary));
+  color: var(--color-bg-primary);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 13%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--airh-monitor-signal) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--airh-monitor-signal) 8%, transparent), transparent 20rem),
+    var(--color-bg-primary);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
+  border: 2px solid color-mix(in srgb, var(--airh-monitor-signal) 52%, var(--color-border-strong)) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 16%, transparent), transparent 30%),
+    linear-gradient(180deg, var(--airh-monitor-panel), color-mix(in srgb, var(--color-bg-primary) 96%, var(--color-bg-secondary))) !important;
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--airh-monitor-signal) 14%, transparent),
+    0 0 0 0.25rem color-mix(in srgb, var(--airh-monitor-signal) 7%, transparent),
+    0 1.4rem 3rem color-mix(in srgb, #000 15%, transparent) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::before {
+  color: color-mix(in srgb, var(--airh-monitor-signal) 78%, var(--color-text-primary));
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--airh-monitor-signal) 25%, var(--color-bg-tertiary)) 0 18rem, color-mix(in srgb, var(--color-bg-secondary) 92%, var(--color-bg-primary)) 18rem),
+    var(--color-bg-secondary);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main)::after {
+  content: "LIVE";
+  position: absolute;
+  z-index: -1;
+  top: 0.86rem;
+  right: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-good) 58%, transparent);
+  background: color-mix(in srgb, var(--airh-monitor-good) 14%, transparent);
+  color: var(--airh-monitor-good);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(nav[aria-label="Breadcrumb"]) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 38%, var(--color-border));
+  background: color-mix(in srgb, var(--airh-monitor-signal) 8%, transparent) !important;
+  color: color-mix(in srgb, var(--airh-monitor-signal) 74%, var(--color-text-primary)) !important;
+  padding: 0.48rem 0.65rem !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h1) {
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(2rem, 4vw, 4rem) !important;
+  font-weight: 800 !important;
+  line-height: 0.96 !important;
+  text-transform: uppercase;
+  text-shadow: 0.12rem 0 color-mix(in srgb, var(--airh-monitor-signal) 46%, transparent);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2) {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-sans) !important;
+  font-size: clamp(1.3rem, 2.2vw, 2rem) !important;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(h2)::before {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--airh-monitor-good);
+  box-shadow: 0 0 0 0.22rem color-mix(in srgb, var(--airh-monitor-good) 16%, transparent);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(p, li, dd) {
+  color: color-mix(in srgb, var(--color-text-secondary) 92%, var(--airh-monitor-signal)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 38%, var(--color-border)) !important;
+  border-left: 0.28rem solid color-mix(in srgb, var(--airh-monitor-signal) 72%, var(--color-accent)) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--airh-monitor-signal) 8%, transparent), transparent 50%),
+    color-mix(in srgb, var(--color-bg-card) 88%, var(--color-bg-primary)) !important;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--airh-monitor-signal) 16%, transparent) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "SOURCE CARD";
+  display: block;
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
+  width: fit-content;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-good) 50%, transparent);
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--airh-monitor-good);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  opacity: 1 !important;
+  padding: 0.22rem 0.45rem;
+  transform: none !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 35%, var(--color-border)) !important;
+  background: color-mix(in srgb, var(--color-bg-primary) 82%, transparent) !important;
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(th) {
+  background: color-mix(in srgb, var(--airh-monitor-signal) 14%, var(--color-bg-tertiary)) !important;
+  color: color-mix(in srgb, var(--airh-monitor-signal) 82%, var(--color-text-primary)) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 40%, var(--color-border)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(td) {
+  border-bottom-color: color-mix(in srgb, var(--airh-monitor-signal) 18%, var(--color-border)) !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(
+  .rounded-full[class*="bg-(--color"],
+  [class*="rounded-full"][class*="bg-(--color"],
+  .rounded-full[class*="border-(--color"],
+  [class*="rounded-full"][class*="border-(--color"]
+) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 40%, var(--color-border)) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--airh-monitor-signal) 10%, transparent) !important;
+  color: color-mix(in srgb, var(--airh-monitor-signal) 86%, var(--color-text-primary)) !important;
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main :where(input, select, textarea, button:not(.airh-tool-icon)) {
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-signal) 38%, var(--color-border)) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-primary) 84%, var(--color-bg-secondary)) !important;
+  color: var(--color-text-primary) !important;
+}
+
 @media (max-width: 1180px) {
   .airh-compact-menu {
     display: block;
@@ -4278,7 +5850,7 @@ body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*
     background-size: 160px 160px, 160px 160px, auto, auto;
   }
 
-  body.airh-sitewide-system:not(.airh-home-page) main > :where(section, article) {
+  body.airh-sitewide-system:not(.airh-home-page) main#main-content > :where(section, article, div, main) {
     max-width: 100vw !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
@@ -4343,7 +5915,1420 @@ body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .airh-site-ticker-stream {
+  .airh-site-ticker-stream,
+  .airh-dossier-stream {
     animation: none;
+  }
+}
+
+/* Template parity route shell. Non-home pages keep one shared content frame so
+   spreadsheet and terminal modes do not drift route-by-route. */
+body.airh-sitewide-system:not(.airh-home-page) .airh-route-template-chrome {
+  display: none;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-template-chrome,
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  position: relative;
+  isolation: auto;
+  max-width: none !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-template-chrome::before,
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-template-chrome::after,
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame::before,
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame > :where(section, article, div, main) {
+  width: 100%;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  display: block;
+  min-height: calc(100vh - 48px);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 34%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 26%, transparent) 1px, transparent 1px),
+    var(--color-bg-primary) !important;
+  background-size: 128px 128px, 128px 128px, auto !important;
+  padding: 0.9rem 1rem 3.5rem;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head,
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-ticker,
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  width: min(100%, 1440px);
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  border-bottom: 2px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.35rem 0 0.75rem !important;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-head p {
+  margin: 0 0 0.2rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head h2 {
+  margin: 0;
+  border: 0 !important;
+  color: var(--color-text-primary);
+  font-family: 'Caveat', cursive !important;
+  font-size: clamp(2rem, 4vw, 3.8rem) !important;
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head h2::before {
+  content: none !important;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-head > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-head span {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-secondary);
+  padding: 0.22rem 0.55rem;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-ticker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.55rem 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-secondary);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  padding: 0.22rem 0.55rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker > div {
+  display: inline-flex;
+  gap: 1.25rem;
+  min-width: max-content;
+  animation: airh-ticker 100s linear infinite;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker a {
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-decoration: none;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker span {
+  margin-right: 0.45rem;
+  color: var(--color-text-muted);
+  font-size: 0.66rem;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-dossier-ticker strong {
+  color: var(--color-text-primary);
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 1rem 0 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  max-width: none !important;
+  margin: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"]) {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
+  max-width: min(18ch, 100%);
+  border: 0 !important;
+  color: var(--color-text-primary) !important;
+  font-family: 'Caveat', cursive !important;
+  font-size: clamp(2rem, 4vw, 3.4rem) !important;
+  font-weight: 700 !important;
+  line-height: 0.95 !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  text-transform: none !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1)::after {
+  content: none !important;
+  display: none !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2, h3) {
+  border: 0 !important;
+  color: var(--color-text-primary) !important;
+  font-family: 'Caveat', cursive !important;
+  font-weight: 700 !important;
+  line-height: 0.95;
+  padding-bottom: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2)::before {
+  content: none !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  position: relative;
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 7px !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 82%, transparent) !important;
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--color-text-primary) 8%, transparent) !important;
+}
+
+html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "dossier card";
+  display: block;
+  position: static !important;
+  width: fit-content;
+  height: auto !important;
+  margin-bottom: 0.7rem;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--color-accent);
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  width: min(100%, 1440px);
+  min-height: calc(100vh - 48px);
+  margin: 0 auto;
+  background: var(--color-bg-primary) !important;
+  padding: 0.75rem 1rem 3rem;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-bar {
+  display: flex;
+  align-items: center;
+  grid-column: 1 / -1;
+  gap: 1rem;
+  margin: 0 !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 8px 8px 0 0 !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  box-shadow: none !important;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  padding: 0.55rem 0.8rem !important;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > div span:first-child {
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > a {
+  flex: 1 1 auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  padding: 0.35rem 0.65rem;
+  text-decoration: none;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > a span {
+  float: right;
+  color: var(--color-text-muted);
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-bar p {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-tabs {
+  display: flex;
+  align-items: center;
+  grid-column: 1;
+  gap: 0;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  background: var(--color-bg-tertiary) !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs span {
+  border-right: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 800;
+  padding: 0.6rem 0.8rem;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs span.is-active {
+  background: color-mix(in srgb, var(--color-accent) 18%, var(--color-bg-card));
+  color: var(--color-text-primary);
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs em {
+  margin-left: auto;
+  padding: 0 0.8rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-style: normal;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  grid-column: 1;
+  margin: 0 !important;
+  min-height: 70vh;
+  overflow: auto !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  background: var(--color-bg-secondary) !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0.85rem !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail {
+  display: flex;
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  flex-direction: column;
+  margin: 0 !important;
+  min-width: 0;
+  border: 1px solid var(--color-border-strong) !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  background: var(--color-bg-primary) !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--color-accent);
+  color: var(--color-bg-primary);
+  padding: 0.75rem 0.85rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live p,
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live strong {
+  margin: 0;
+  color: inherit;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live p,
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail h2 {
+  font-family: var(--font-mono);
+  font-size: 0.66rem !important;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-live strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail section {
+  border-bottom: 1px solid var(--color-border-strong);
+  padding: 0.8rem 0.85rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail h2 {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-muted);
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail h2 {
+  display: block !important;
+  gap: 0 !important;
+  margin: 0 0 0.5rem !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.66rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail h2::before {
+  content: none !important;
+  display: none !important;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail li a {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 0.6rem;
+  border-top: 1px dashed var(--color-border);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.42rem 0;
+  text-decoration: none;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail li span {
+  color: var(--color-text-muted);
+  font-size: 0.66rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail p {
+  margin: 0 0 0.65rem;
+  color: var(--color-text-secondary);
+  font-size: 0.86rem;
+}
+
+html[data-airh-display-mode="monitor"] .airh-route-monitor-rail a {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"]) {
+  border-bottom: 0 !important;
+  color: var(--color-text-muted) !important;
+  padding-bottom: 0 !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
+  max-width: none;
+  border-bottom: 1px solid var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+  font-size: clamp(1.25rem, 2vw, 1.8rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.05 !important;
+  padding-bottom: 0.55rem !important;
+  text-shadow: none !important;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2) {
+  font-family: var(--font-mono) !important;
+  font-size: clamp(0.95rem, 1.5vw, 1.25rem) !important;
+  text-transform: uppercase;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  border: 1px solid var(--color-border) !important;
+  border-left: 0.28rem solid color-mix(in srgb, var(--color-accent) 72%, var(--airh-monitor-signal)) !important;
+  border-radius: 0 !important;
+  background: color-mix(in srgb, var(--color-bg-card) 88%, var(--color-bg-primary)) !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "SOURCE CARD";
+  display: block;
+  position: static !important;
+  width: fit-content;
+  height: auto !important;
+  margin-bottom: 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--airh-monitor-good) 50%, transparent);
+  background: transparent !important;
+  color: var(--airh-monitor-good);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  padding: 0.22rem 0.45rem;
+}
+
+html[data-airh-display-mode="terminal"] {
+  --airh-terminal-frame: color-mix(in srgb, var(--color-bg-primary) 92%, #000);
+  --airh-terminal-panel: color-mix(in srgb, var(--color-bg-secondary) 88%, #000);
+  --airh-terminal-line: color-mix(in srgb, var(--color-border-strong) 72%, var(--color-accent));
+  --airh-terminal-glow: color-mix(in srgb, var(--color-accent) 24%, transparent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  display: block;
+  min-height: calc(100vh - 48px);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 28%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 22%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 16% 10%, var(--airh-terminal-glow), transparent 26rem),
+    var(--color-bg-primary) !important;
+  background-size: 92px 92px, 92px 92px, auto, auto !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0.85rem 1rem 3rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-head,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-hints {
+  width: min(100%, 1180px);
+  height: auto !important;
+  min-height: 0 !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-head {
+  display: block;
+  overflow: hidden !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--airh-terminal-line) !important;
+  border-radius: 8px 8px 0 0 !important;
+  background: var(--airh-terminal-panel) !important;
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--color-text-primary) 5%, transparent),
+    0 24px 64px color-mix(in srgb, #000 34%, transparent) !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-card) 78%, #000);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0;
+  padding: 0.5rem 0.75rem;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-titlebar span:last-child {
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead p,
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead span {
+  margin: 0;
+  font-family: var(--font-mono);
+  letter-spacing: 0;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead p {
+  color: var(--color-text-primary);
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  font-weight: 800;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:first-child span,
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:last-child span {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:last-child span {
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-primary) 74%, #000);
+  padding: 0.24rem 0.5rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log {
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--airh-terminal-line) !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 48%),
+    var(--airh-terminal-frame) !important;
+  box-shadow: none !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0.9rem 1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-log p {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  border-top: 1px dashed color-mix(in srgb, var(--color-border) 70%, transparent);
+  color: var(--color-text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  padding: 0.24rem 0;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-log p:first-child {
+  border-top: 0;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-log span {
+  color: var(--color-accent);
+  font-weight: 800;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  display: block;
+  overflow: visible !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--airh-terminal-line) !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  background:
+    repeating-linear-gradient(180deg, transparent 0, transparent 1.9rem, color-mix(in srgb, var(--color-border) 20%, transparent) 1.9rem, color-mix(in srgb, var(--color-border) 20%, transparent) calc(1.9rem + 1px)),
+    var(--airh-terminal-frame) !important;
+  box-shadow: none !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  max-width: none !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 1.1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"]) {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--color-border) !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 78%, #000) !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.76rem !important;
+  padding: 0.34rem 0.5rem !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"])::before {
+  content: "cwd";
+  margin-right: 0.35rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
+  max-width: none;
+  margin-top: 0.85rem !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--color-border-strong) !important;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+  font-size: clamp(1.45rem, 4vw, 3rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.08 !important;
+  padding-bottom: 0.65rem !important;
+  text-shadow: 0 0 20px color-mix(in srgb, var(--color-accent) 22%, transparent) !important;
+  text-transform: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1)::before {
+  content: "airh > ";
+  color: var(--color-accent);
+  font-size: 0.65em;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2, h3) {
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2)::before {
+  content: "$ ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h3)::before {
+  content: "[ok] ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(p, li, dd, dt, a, span, strong, td, th, label) {
+  font-family: var(--font-mono) !important;
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(p, li, dd) {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(
+  article,
+  section section,
+  .grid > a,
+  .grid > article,
+  .grid > div,
+  [class*="bg-(--color-bg-card)"],
+  [class*="bg-(--color-bg-secondary)"],
+  [class*="border"][class*="p-"]
+) {
+  position: relative;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 0 !important;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 5%, transparent), transparent 42%),
+    color-mix(in srgb, var(--color-bg-card) 84%, #000) !important;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-text-primary) 4%, transparent) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.grid > a, .grid > article, .grid > div)::before {
+  content: "RUN";
+  display: block;
+  position: static !important;
+  width: fit-content;
+  height: auto !important;
+  margin-bottom: 0.7rem;
+  border: 1px solid var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent) !important;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  padding: 0.2rem 0.42rem;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(table) {
+  border: 1px solid var(--color-border-strong) !important;
+  background: color-mix(in srgb, var(--color-bg-secondary) 78%, #000) !important;
+  font-family: var(--font-mono) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(th) {
+  color: var(--color-accent) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(input, select, textarea, button:not(.airh-tool-icon)) {
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: var(--airh-terminal-panel) !important;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(a:not(.airh-compact-link):not(.airh-site-ticker-item)) {
+  color: var(--color-accent) !important;
+  text-decoration: none;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--airh-terminal-line) !important;
+  border-top: 0 !important;
+  border-radius: 0 0 8px 8px !important;
+  background: var(--airh-terminal-panel) !important;
+  box-shadow: none !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0.75rem 1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-commandbar span {
+  min-width: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  letter-spacing: 0;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-commandbar span:first-child,
+html[data-airh-display-mode="terminal"] .airh-route-terminal-commandbar span:last-child {
+  color: var(--color-accent);
+  font-weight: 800;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-commandbar span:nth-child(2) {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--airh-terminal-frame);
+  padding: 0.35rem 0.55rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-hints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.65rem !important;
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] .airh-route-terminal-hints span {
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-secondary) 70%, #000);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0;
+  padding: 0.28rem 0.5rem;
+}
+
+@media (max-width: 980px) {
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+    display: block;
+    padding: 0.75rem 1rem 3rem;
+  }
+
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-tabs,
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame,
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail {
+    border-right: 1px solid var(--color-border-strong) !important;
+    border-left: 1px solid var(--color-border-strong) !important;
+  }
+
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-rail {
+    border-top: 0 !important;
+  }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+    padding: 0.75rem 1rem 3rem;
+  }
+}
+
+@media (max-width: 760px) {
+  html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host,
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host,
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+
+  html[data-airh-display-mode="dossier"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-dossier-head,
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-bar,
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead,
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-titlebar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  html[data-airh-display-mode="monitor"] .airh-route-monitor-bar > a span {
+    float: none;
+    margin-left: 0.5rem;
+  }
+
+  html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-monitor-tabs {
+    display: flex !important;
+    align-items: stretch;
+    overflow-x: auto !important;
+  }
+
+  html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs span,
+  html[data-airh-display-mode="monitor"] .airh-route-monitor-tabs em {
+    flex: 0 0 auto;
+    min-width: max-content;
+    white-space: nowrap;
+  }
+
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead > div:last-child {
+    justify-content: flex-start;
+  }
+
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-log p {
+    display: block;
+  }
+
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-log span {
+    display: inline-block;
+    min-width: 4.25rem;
+  }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+    padding: 0.85rem !important;
+  }
+}
+
+/* Final AIRH mode parity layer.
+   Older route skins remain in the file, so the two supported modes need one
+   late source of truth for page background, alignment, tables, and chrome. */
+html[data-airh-display-mode="spreadsheet"] {
+  --airh-spreadsheet-page-bg:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 30%, transparent), transparent 18rem),
+    var(--color-bg-primary);
+  --airh-spreadsheet-band-bg: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary));
+}
+
+html[data-airh-display-mode="terminal"] {
+  --airh-terminal-page-bg:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px),
+    var(--color-bg-primary);
+  --airh-terminal-shell-bg: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary));
+  --airh-terminal-panel-bg: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary));
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system,
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system main#main-content,
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system .airh-home,
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system main.airh-route-template-host {
+  background-color: var(--color-bg-primary) !important;
+  background-image: linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 30%, transparent), transparent 18rem) !important;
+  background-size: auto !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-compact-topbar {
+  border-bottom-color: var(--color-border-strong) !important;
+  background: color-mix(in srgb, var(--color-bg-primary) 96%, var(--color-bg-secondary)) !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-site-ticker,
+html[data-airh-display-mode="spreadsheet"] .airh-ticker {
+  border-bottom-color: var(--color-border) !important;
+  background-color: var(--color-bg-primary) !important;
+  background-image: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary)) !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  width: 100% !important;
+  min-height: calc(100vh - 48px);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.airh-route-sheet-head {
+  display: none;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-template-chrome {
+  display: none !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-sheet-head {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  background-color: var(--color-bg-primary) !important;
+  background-image: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary)) !important;
+  box-shadow: none !important;
+  padding: 0.72rem 1rem !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-route-sheet-tabs {
+  display: flex;
+  width: 100%;
+  max-width: none;
+  overflow-x: auto;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px;
+  background-color: var(--color-bg-card);
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-route-sheet-tabs span {
+  flex: 0 0 auto;
+  border-right: 1px solid var(--color-border);
+  padding: 0.58rem 0.82rem;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-route-sheet-tabs span:last-child {
+  border-right: 0;
+  margin-left: auto;
+  color: var(--color-text-muted);
+  text-transform: none;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-route-sheet-tabs span.is-active {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding: 0.78rem 1rem 3.5rem !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  width: 100% !important;
+  max-width: none !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"]) {
+  margin-bottom: 0.9rem !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 6px !important;
+  background-color: var(--color-bg-card) !important;
+  padding: 0.58rem 0.72rem !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
+  max-width: none !important;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.75rem, 2.5vw, 2.65rem) !important;
+  font-weight: 750 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.04 !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-header, .desk-note, .desk-section, .mb-8, .rounded-\[1\.75rem\]) {
+  border-color: var(--color-border) !important;
+  border-radius: 8px !important;
+  background-color: var(--color-bg-card) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-header, .desk-section-head, .activity-toolbar, .hub-home-brief-head, .hub-home-card-head) {
+  align-items: flex-start;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-table-wrap, .table-scroll-container, .airh-table-scroll) {
+  overflow-x: auto !important;
+  max-width: 100% !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px !important;
+  background-color: var(--color-bg-card) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-table, .table-scroll-container table, .airh-leaderboard-table, table) {
+  width: 100% !important;
+  min-width: 980px;
+  border-collapse: collapse !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono) !important;
+  font-size: 0.82rem !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(th) {
+  border-bottom: 1px solid var(--color-border) !important;
+  background-color: var(--color-bg-secondary) !important;
+  background-image: none !important;
+  padding: 0.58rem 0.72rem !important;
+  color: var(--color-text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.64rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-align: left;
+  text-transform: uppercase !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(td) {
+  border-bottom: 1px solid var(--color-border) !important;
+  padding: 0.64rem 0.72rem !important;
+  color: var(--color-text-secondary);
+  vertical-align: middle;
+}
+
+html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(tbody tr:hover td) {
+  background-color: var(--color-bg-hover) !important;
+  background-image: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system .airh-home,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system .airh-terminal-panel,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system main.airh-route-template-host {
+  background-color: var(--color-bg-primary) !important;
+  background-image:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px) !important;
+  background-size: auto !important;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+}
+
+html[data-airh-display-mode="terminal"] .airh-compact-topbar,
+html[data-airh-display-mode="terminal"] .airh-site-ticker,
+html[data-airh-display-mode="terminal"] .airh-ticker,
+html[data-airh-display-mode="terminal"] .airh-theme-panel,
+html[data-airh-display-mode="terminal"] .airh-compact-menu-panel {
+  border-color: var(--color-border-strong) !important;
+  background-color: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary)) !important;
+  background-image: none !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-site-ticker-stream,
+html[data-airh-display-mode="spreadsheet"] .airh-ticker-stream,
+html[data-airh-display-mode="terminal"] .airh-site-ticker-stream,
+html[data-airh-display-mode="terminal"] .airh-ticker-stream {
+  animation: airh-ticker 54s linear infinite !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-ticker-stream {
+  animation-duration: 110s !important;
+}
+
+html[data-airh-display-mode="spreadsheet"] .airh-site-ticker:hover .airh-site-ticker-stream,
+html[data-airh-display-mode="spreadsheet"] .airh-ticker:hover .airh-ticker-stream,
+html[data-airh-display-mode="terminal"] .airh-site-ticker:hover .airh-site-ticker-stream,
+html[data-airh-display-mode="terminal"] .airh-ticker:hover .airh-ticker-stream {
+  animation-play-state: paused !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+  display: block !important;
+  width: 100% !important;
+  min-height: calc(100vh - 48px);
+  margin: 0 !important;
+  overflow-x: hidden;
+  background-color: var(--color-bg-primary) !important;
+  background-image:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px) !important;
+  background-size: auto !important;
+  padding: 1rem 1rem 3rem !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-head,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-hints {
+  width: min(100%, 1180px) !important;
+  max-width: min(100%, 1180px) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-head {
+  display: block !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 8px 8px 0 0 !important;
+  background-color: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log,
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  background-color: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary)) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log {
+  display: block !important;
+  color: var(--color-text-secondary);
+  padding: 0.9rem 1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+  overflow: visible !important;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding: 1.1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
+  max-width: none;
+  color: var(--color-text-primary) !important;
+  font-family: var(--font-mono) !important;
+  font-size: clamp(1.45rem, 4vw, 3rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.08 !important;
+  text-transform: none !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1)::before {
+  content: "airh > ";
+  color: var(--color-accent);
+  font-size: 0.65em;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2)::before {
+  content: "$ ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h3)::before {
+  content: "[ok] ";
+  color: var(--color-accent);
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(table) {
+  border: 1px solid var(--color-border-strong) !important;
+  background-color: color-mix(in srgb, var(--color-bg-secondary) 78%, #000) !important;
+  background-image: none !important;
+  font-family: var(--font-mono) !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(th) {
+  color: var(--color-accent) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0 !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: 1px solid var(--color-border-strong) !important;
+  border-top: 0 !important;
+  border-radius: 0 0 8px 8px !important;
+  background-color: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding: 0.75rem 1rem !important;
+}
+
+html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-hints {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.65rem !important;
+  margin-bottom: 0 !important;
+  border: 0 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+html[data-airh-display-mode="dossier"],
+html[data-airh-display-mode="monitor"] {
+  --airh-retired-mode-display: spreadsheet;
+}
+
+html[data-airh-display-mode="dossier"] .airh-route-template-chrome,
+html[data-airh-display-mode="monitor"] .airh-route-template-chrome,
+html[data-airh-display-mode="dossier"] .airh-layout-panel,
+html[data-airh-display-mode="monitor"] .airh-layout-panel {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
+    padding-right: 0.75rem !important;
+    padding-left: 0.75rem !important;
+  }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
+    padding-right: 0.75rem !important;
+    padding-left: 0.75rem !important;
+  }
+
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead,
+  html[data-airh-display-mode="terminal"] .airh-route-terminal-titlebar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
+    padding: 0.85rem !important;
   }
 }

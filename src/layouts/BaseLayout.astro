@@ -85,6 +85,7 @@ const primaryNav = [
     children: [
       { href: `${base}benchmarks/`, label: 'Benchmark Library', note: 'Benchmark matrix and external eval sources' },
       { href: `${base}reliability-floor/`, label: 'Reliability Floor', note: 'Factuality, grounding, retrieval, instructions, memory' },
+      { href: `${base}benchmarks/meta/`, label: 'Meta-Benchmark Workbench', note: 'Internal prompt benchmark modes, raw data shape, and pilot queue' },
       { href: `${base}agi/`, label: 'AGI Progress', note: 'Definitions, capabilities, milestones' },
       { href: `${base}coding/`, label: 'Coding', note: 'Coding benchmark views and caveats' },
       { href: `${base}reasoning/`, label: 'Reasoning', note: 'Math, logic, and reasoning benchmark views' },
@@ -161,6 +162,7 @@ const mobileSections = [
     title: 'Benchmarks and prices',
     links: [
       { href: `${base}benchmarks/`, label: 'Benchmark Library' },
+      { href: `${base}benchmarks/meta/`, label: 'Meta-Benchmark Workbench' },
       { href: `${base}calculator/`, label: 'Pricing Calculator' },
       { href: `${base}fastest/`, label: 'Fastest Models' },
       { href: `${base}cheapest/`, label: 'Cheapest Models' },
@@ -317,6 +319,20 @@ const globalTickerItems = latestActivities.map((item) => ({
   category: item.category,
 }));
 const latestTickerDate = latestActivities[0]?.date ?? null;
+const routeSegments = currentPath
+  .replace(basePath, '')
+  .split('/')
+  .filter(Boolean);
+const routeLabel = routeSegments.length > 0
+  ? routeSegments.map((segment) => segment.replace(/-/g, ' ')).join(' / ')
+  : 'home';
+const routeTemplateTickerItems = globalTickerItems.length > 0
+  ? globalTickerItems
+  : [{ href: `${base}updates/`, time: 'live', title: 'Source pipeline ready', category: 'data' }];
+const routeTemplateRefreshLabel = latestTickerDate ? `Source check ${formatTickerTime(latestTickerDate)}` : 'Source check pending';
+const routeTerminalPath = routeSegments.length > 0 ? `/${routeSegments.join('/')}/` : '/';
+const routeTerminalCommand = routeSegments.length > 0 ? `open ${routeTerminalPath}` : 'home';
+const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
 ---
 
 <!doctype html>
@@ -374,6 +390,15 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
           const theme = saved && validThemes.has(saved) ? saved : 'dark';
           document.documentElement.setAttribute('data-theme', theme);
 
+          const validDisplayModes = new Set(['spreadsheet', 'terminal']);
+          const requestedMode = new URLSearchParams(window.location.search).get('layout');
+          const savedMode = localStorage.getItem('airh:display-mode') || localStorage.getItem('airh:home-layout');
+          const displayMode = requestedMode && validDisplayModes.has(requestedMode)
+            ? requestedMode
+            : (savedMode && validDisplayModes.has(savedMode) ? savedMode : 'spreadsheet');
+          document.documentElement.setAttribute('data-airh-display-mode', displayMode);
+          document.documentElement.setAttribute('data-airh-layout', displayMode);
+
           const themeColorMeta = document.querySelector('meta[name="theme-color"]');
           if (themeColorMeta) {
             const lightTheme = theme === 'light' || theme === 'cream' || theme === 'paper';
@@ -381,6 +406,8 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
           }
         } catch (_) {
           document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.setAttribute('data-airh-display-mode', 'spreadsheet');
+          document.documentElement.setAttribute('data-airh-layout', 'spreadsheet');
         }
       })();
     </script>
@@ -446,29 +473,23 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
           <div class="airh-compact-actions">
             <GlobalSearch items={searchIndex} baseUrl={base} variant="compact" />
 
-            <div class="airh-layout-switcher" role="group" aria-label="Homepage layout">
-              <button type="button" class="airh-tool-icon is-active" data-airh-layout-switch="spreadsheet" data-airh-tip="Spreadsheet view. Dense data first.">
+            <div class="airh-layout-switcher" role="group" aria-label="Website display mode">
+              <button type="button" class="airh-tool-icon is-active" data-airh-layout-switch="spreadsheet" data-airh-tip="Spreadsheet mode. Dense data first across the site.">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"></rect><path d="M4 9h16M4 14h16M9 4v16M14 4v16"></path></svg>
                 <span aria-hidden="true">▦</span>
                 <span class="sr-only">Spreadsheet</span>
               </button>
-              <button type="button" class="airh-tool-icon is-disabled" aria-disabled="true" data-airh-layout-switch="dossier" data-airh-tip="Dossier view is parked for the next pass.">
-                <span aria-hidden="true">▤</span>
-                <span class="sr-only">Dossier</span>
-              </button>
-              <button type="button" class="airh-tool-icon is-disabled" aria-disabled="true" data-airh-layout-switch="monitor" data-airh-tip="Monitor view is parked for the next pass.">
-                <span aria-hidden="true">▥</span>
-                <span class="sr-only">Monitor</span>
-              </button>
-              <button type="button" class="airh-tool-icon" data-airh-layout-switch="terminal" data-airh-tip="Try Terminal mode. We remember your choice.">
+              <button type="button" class="airh-tool-icon" data-airh-layout-switch="terminal" data-airh-tip="Terminal mode. Keyboard-first styling across the site.">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 7l5 5-5 5M12 17h7"></path></svg>
                 <span aria-hidden="true">›_</span>
                 <span class="sr-only">Terminal</span>
               </button>
             </div>
 
             <details class="airh-theme-menu">
-              <summary class="airh-tool-icon" data-airh-tip="Pick a palette. We remember your choice.">
+              <summary class="airh-tool-icon" data-airh-tip="Pick a colour palette for every display mode.">
                 <span aria-hidden="true">◐</span>
-                <span class="sr-only">Theme picker</span>
+                <span class="sr-only">Colour palette</span>
               </summary>
               <div class="airh-theme-panel">
                 <button type="button" data-theme-choice="dark"><span style="background:#12100f"></span>Dark</button>
@@ -683,8 +704,64 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
       </div>
     )}
 
-    <main id="main-content" class="flex-1">
-      <slot />
+    <main id="main-content" class:list={['flex-1', { 'airh-route-template-host': compactChrome && !isHomePage }]}>
+      {compactChrome && !isHomePage ? (
+        <>
+          <header class="airh-route-template-chrome airh-route-sheet-head" aria-hidden="true">
+            <div class="airh-route-sheet-tabs">
+              <span class="is-active">{routeLabel}</span>
+              <span>{routeTemplateRefreshLabel}</span>
+              <span>{globalTickerItems.length} hub signals</span>
+              <span>{routeTerminalPath}</span>
+            </div>
+          </header>
+
+          <header class="airh-route-template-chrome airh-route-terminal-head" aria-hidden="true">
+            <div class="airh-route-terminal-titlebar">
+              <span>airh://{routeTerminalPath}</span>
+              <span>[local] [readonly] [live]</span>
+            </div>
+            <div class="airh-route-terminal-masthead">
+              <div>
+                <p>AI Resource Hub</p>
+                <span>v2 / terminal</span>
+              </div>
+              <div>
+                <span>{routeTemplateRefreshLabel}</span>
+                <span>{routeLabel}</span>
+                <span>[?] help - [esc] visual</span>
+              </div>
+            </div>
+          </header>
+
+          <section class="airh-route-template-chrome airh-route-terminal-log" aria-hidden="true">
+            <p><span>#</span> route boot: {routeLabel}</p>
+            <p><span>airh &gt;</span> since-last-visit</p>
+            {routeTerminalStatusItems.map((item) => (
+              <p><span>{item.time}</span> {item.title}</p>
+            ))}
+            <p><span>airh &gt;</span> {routeTerminalCommand}</p>
+          </section>
+
+          <div class="airh-route-content-frame">
+            <slot />
+          </div>
+
+          <div class="airh-route-template-chrome airh-route-terminal-commandbar" aria-hidden="true">
+            <span>airh &gt;</span>
+            <span>{routeTerminalCommand}</span>
+            <span>Run</span>
+          </div>
+
+          <div class="airh-route-template-chrome airh-route-terminal-hints" aria-hidden="true">
+            {['top 10', 'compare gpt claude', 'news --today', 'price sonnet', 'visual'].map((command) => (
+              <span>{command}</span>
+            ))}
+          </div>
+        </>
+      ) : (
+        <slot />
+      )}
     </main>
 
     <footer class="relative mt-auto border-t border-(--color-border-strong) bg-(--color-bg-secondary)">
@@ -759,6 +836,8 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
       </div>
     </footer>
 
+    {!isHomePage && <div class="airh-tip-card" data-airh-global-tip role="tooltip" hidden></div>}
+
     <script>
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
@@ -787,6 +866,7 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
         document.documentElement.setAttribute('data-theme', nextTheme);
         localStorage.setItem('theme', nextTheme);
         updateThemeIcons();
+        window.dispatchEvent(new CustomEvent('airh:theme-change', { detail: { theme: nextTheme } }));
       }
 
       function updateThemeIcons() {
@@ -810,8 +890,123 @@ const latestTickerDate = latestActivities[0]?.date ?? null;
       document.querySelectorAll<HTMLElement>('[data-theme-choice]').forEach((button) => {
         button.addEventListener('click', () => {
           setTheme(button.getAttribute('data-theme-choice') || 'dark');
+          const menu = button.closest('details');
+          if (menu instanceof HTMLDetailsElement) menu.open = false;
         });
       });
+
+      const displayModeKey = 'airh:display-mode';
+      const legacyLayoutKey = 'airh:home-layout';
+      const validDisplayModes = new Set(['spreadsheet', 'terminal']);
+      const displayModeButtons = document.querySelectorAll<HTMLElement>('[data-airh-layout-switch]');
+
+      function applyDisplayMode(mode: string, options: { persist?: boolean; emit?: boolean } = {}) {
+        const safeMode = validDisplayModes.has(mode) ? mode : 'spreadsheet';
+        const shouldPersist = options.persist !== false;
+        const shouldEmit = options.emit !== false;
+
+        document.documentElement.setAttribute('data-airh-display-mode', safeMode);
+        document.documentElement.setAttribute('data-airh-layout', safeMode);
+        document.body?.setAttribute('data-airh-display-mode', safeMode);
+
+        displayModeButtons.forEach((button) => {
+          const active = button.getAttribute('data-airh-layout-switch') === safeMode;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-pressed', String(active));
+        });
+
+        document.querySelectorAll<HTMLElement>('[data-airh-layout-panel]').forEach((panel) => {
+          panel.classList.toggle('is-hidden', panel.getAttribute('data-airh-layout-panel') !== safeMode);
+        });
+
+        if (shouldPersist) {
+          localStorage.setItem(displayModeKey, safeMode);
+          localStorage.setItem(legacyLayoutKey, safeMode);
+        }
+
+        if (shouldEmit) {
+          window.dispatchEvent(new CustomEvent('airh:display-mode-change', { detail: { mode: safeMode } }));
+        }
+      }
+
+      (window as Window & { airhSetDisplayMode?: typeof applyDisplayMode }).airhSetDisplayMode = applyDisplayMode;
+
+      try {
+        const requestedMode = new URLSearchParams(window.location.search).get('layout');
+        const savedMode = localStorage.getItem(displayModeKey) || localStorage.getItem(legacyLayoutKey);
+        const initialMode = requestedMode && validDisplayModes.has(requestedMode)
+          ? requestedMode
+          : (savedMode && validDisplayModes.has(savedMode) ? savedMode : 'spreadsheet');
+        applyDisplayMode(initialMode, { emit: false });
+      } catch (_) {
+        applyDisplayMode('spreadsheet', { persist: false, emit: false });
+      }
+
+      displayModeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          applyDisplayMode(button.getAttribute('data-airh-layout-switch') || 'spreadsheet');
+        });
+      });
+
+      const globalTip = document.querySelector<HTMLElement>('[data-airh-global-tip]');
+      let globalTipTarget: HTMLElement | null = null;
+
+      function hideGlobalTip() {
+        if (!globalTip) return;
+        globalTip.hidden = true;
+        globalTip.classList.remove('is-visible');
+        globalTipTarget = null;
+      }
+
+      function positionGlobalTip(target: HTMLElement) {
+        if (!globalTip) return;
+        const rect = target.getBoundingClientRect();
+        const tipRect = globalTip.getBoundingClientRect();
+        const left = Math.min(
+          window.innerWidth - tipRect.width - 10,
+          Math.max(10, rect.left + rect.width / 2 - tipRect.width / 2),
+        );
+        const below = rect.bottom + 10;
+        const above = rect.top - tipRect.height - 10;
+        const top = below + tipRect.height <= window.innerHeight - 10 ? below : Math.max(10, above);
+        globalTip.style.left = `${left}px`;
+        globalTip.style.top = `${top}px`;
+      }
+
+      function showGlobalTip(target: HTMLElement) {
+        if (!globalTip) return;
+        const text = target.getAttribute('data-airh-tip');
+        if (!text) return;
+        globalTip.innerHTML = '<span></span>';
+        const span = globalTip.querySelector('span');
+        if (span) span.textContent = text;
+        globalTip.hidden = false;
+        globalTipTarget = target;
+        positionGlobalTip(target);
+        globalTip.classList.add('is-visible');
+      }
+
+      if (globalTip) {
+        document.body.addEventListener('mouseover', (event) => {
+          const target = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-airh-tip]') : null;
+          if (target) showGlobalTip(target);
+        });
+        document.body.addEventListener('mousemove', () => {
+          if (globalTipTarget) positionGlobalTip(globalTipTarget);
+        });
+        document.body.addEventListener('focusin', (event) => {
+          const target = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-airh-tip]') : null;
+          if (target) showGlobalTip(target);
+        });
+        document.body.addEventListener('mouseout', (event) => {
+          if (event.target instanceof Element && event.target.closest('[data-airh-tip]')) hideGlobalTip();
+        });
+        document.body.addEventListener('focusout', (event) => {
+          if (event.target instanceof Element && event.target.closest('[data-airh-tip]')) hideGlobalTip();
+        });
+        window.addEventListener('scroll', hideGlobalTip, { passive: true });
+        window.addEventListener('resize', hideGlobalTip);
+      }
 
       const groups = document.querySelectorAll('.nav-dropdown-group');
       groups.forEach((group) => {
