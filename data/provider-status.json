@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-06-11T13:25:55.401Z",
+  "generatedAt": "2026-06-11T14:25:53.751Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-11T13:25:54.009Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Conversations",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Files",
-          "status": "operational"
-        },
-        {
-          "name": "CLI",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KTVCFSN91M935M3MD3Z9W7C9",
-          "title": "Disruption in service availabilty for Free and Go users",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-06-11T13:03:34.000Z",
-          "updatedAt": "2026-06-11T13:03:34.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that some ChatGPT Free and Go users are experiencing elevated errors when using conversations. We are working to implement a mitigation."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KTVCFSN91M935M3MD3Z9W7C9",
-          "title": "Disruption in service availabilty for Free and Go users",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-06-11T13:03:34.000Z",
-          "updatedAt": "2026-06-11T13:03:34.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that some ChatGPT Free and Go users are experiencing elevated errors when using conversations. We are working to implement a mitigation."
-        },
-        {
-          "id": "01KTHRCXQCANBBY5JTGEQ1XTPK",
-          "title": "Disruption in service availabilty for Go users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-07T19:19:19.000Z",
-          "updatedAt": "2026-06-08T07:40:19.000Z",
-          "resolvedAt": "2026-06-07T19:25:47.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KTHA1XMAS77H4GMQBKSNPK71",
-          "title": "Disruption in service availabilty for Free and Go users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-07T15:08:38.000Z",
-          "updatedAt": "2026-06-07T18:06:11.000Z",
-          "resolvedAt": "2026-06-07T18:06:11.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KTBZDS20E3PZ53DH2SCKXN49",
-          "title": "Some users may experience issues accessing OpenAI accounts",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-06-05T13:26:40.000Z",
-          "updatedAt": "2026-06-06T06:16:40.000Z",
-          "resolvedAt": "2026-06-05T16:09:19.000Z",
-          "summary": "Incorrectly suspended users have been restored access and received an email about their account and subscription information, if relevant. Impacted services have recovered."
-        }
-      ]
-    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -109,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-11T13:25:54.440Z",
+      "lastCheckedAt": "2026-06-11T14:25:52.907Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-11T13:25:53.979Z",
+      "lastCheckedAt": "2026-06-11T14:25:51.726Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-11T13:25:55.035Z",
+      "lastCheckedAt": "2026-06-11T14:25:53.241Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-11T13:25:55.230Z",
+      "lastCheckedAt": "2026-06-11T14:25:53.657Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-11T13:25:54.346Z",
+      "lastCheckedAt": "2026-06-11T14:25:52.466Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -348,6 +251,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-11T14:25:51.617Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Files",
+          "status": "operational"
+        },
+        {
+          "name": "CLI",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "ChatGPT Atlas",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KTVCFSN91M935M3MD3Z9W7C9",
+          "title": "Disruption in service availabilty for Free and Go users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-11T13:03:34.000Z",
+          "updatedAt": "2026-06-11T14:04:45.000Z",
+          "resolvedAt": "2026-06-11T14:04:45.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KTHRCXQCANBBY5JTGEQ1XTPK",
+          "title": "Disruption in service availabilty for Go users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-07T19:19:19.000Z",
+          "updatedAt": "2026-06-08T07:40:19.000Z",
+          "resolvedAt": "2026-06-07T19:25:47.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KTHA1XMAS77H4GMQBKSNPK71",
+          "title": "Disruption in service availabilty for Free and Go users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-07T15:08:38.000Z",
+          "updatedAt": "2026-06-07T18:06:11.000Z",
+          "resolvedAt": "2026-06-07T18:06:11.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KTBZDS20E3PZ53DH2SCKXN49",
+          "title": "Some users may experience issues accessing OpenAI accounts",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-06-05T13:26:40.000Z",
+          "updatedAt": "2026-06-06T06:16:40.000Z",
+          "resolvedAt": "2026-06-05T16:09:19.000Z",
+          "summary": "Incorrectly suspended users have been restored access and received an email about their account and subscription information, if relevant. Impacted services have recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -358,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-11T13:25:55.394Z",
+      "lastCheckedAt": "2026-06-11T14:25:53.746Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -427,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
