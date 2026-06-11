@@ -385,7 +385,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     <script is:inline>
       (function () {
         try {
-          const validThemes = new Set(['dark', 'light', 'cream', 'paper', 'slate', 'contrast']);
+          const validThemes = new Set(['dark', 'light', 'cream', 'paper', 'slate', 'contrast', 'terminal']);
           const saved = localStorage.getItem('theme');
           const theme = saved && validThemes.has(saved) ? saved : 'dark';
           document.documentElement.setAttribute('data-theme', theme);
@@ -497,6 +497,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
                 <button type="button" data-theme-choice="paper"><span style="background:#fffaf0"></span>Paper</button>
                 <button type="button" data-theme-choice="slate"><span style="background:#1f2933"></span>Slate</button>
                 <button type="button" data-theme-choice="contrast"><span style="background:#050505"></span>Contrast</button>
+                <button type="button" data-theme-choice="terminal"><span style="background:#080604"></span>Terminal</button>
               </div>
             </details>
 
@@ -855,7 +856,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       const moonIcon = document.getElementById('theme-icon-moon');
       const sunIcon = document.getElementById('theme-icon-sun');
       const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-      const validThemes = new Set(['dark', 'light', 'cream', 'paper', 'slate', 'contrast']);
+      const validThemes = new Set(['dark', 'light', 'cream', 'paper', 'slate', 'contrast', 'terminal']);
 
       function isLightTheme(theme: string) {
         return theme === 'light' || theme === 'cream' || theme === 'paper';

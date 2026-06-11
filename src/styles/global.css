@@ -120,6 +120,29 @@
   color-scheme: dark;
 }
 
+[data-theme="terminal"] {
+  --color-bg-primary: #080604;
+  --color-bg-secondary: #100c08;
+  --color-bg-tertiary: #18110b;
+  --color-bg-card: rgba(16, 12, 8, 0.94);
+  --color-bg-hover: #23170d;
+  --color-accent: #ff9b5c;
+  --color-accent-hover: #ffc08f;
+  --color-accent-muted: #f2c078;
+  --color-accent-glow: rgba(255, 155, 92, 0.18);
+  --color-text-primary: #f7ead7;
+  --color-text-secondary: #d7c3a6;
+  --color-text-muted: #9e8a70;
+  --color-border: rgba(255, 202, 142, 0.12);
+  --color-border-hover: rgba(255, 202, 142, 0.24);
+  --color-border-accent: rgba(255, 155, 92, 0.36);
+  --color-border-strong: rgba(255, 202, 142, 0.2);
+  --font-sans: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-display: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  color-scheme: dark;
+}
+
 .bg-primary { background-color: var(--color-bg-primary); }
 .bg-secondary { background-color: var(--color-bg-secondary); }
 .bg-tertiary { background-color: var(--color-bg-tertiary); }
