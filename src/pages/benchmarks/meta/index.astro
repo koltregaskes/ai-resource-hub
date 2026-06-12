@@ -1,0 +1,940 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import {
+  getMetaBenchmarkOverview,
+  type MetaBenchmarkLeaderboardEntry,
+  type MetaBenchmarkModeId,
+} from '../../../data/internal-meta-benchmarks';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const overview = getMetaBenchmarkOverview();
+
+const modesById = new Map(overview.modes.map((mode) => [mode.id, mode]));
+const familiesById = new Map(overview.families.map((family) => [family.id, family]));
+const rankedLeaderboard = overview.leaderboard.filter((entry) => entry.rankStatus === 'ranked');
+const partialLeaderboard = overview.leaderboard.filter((entry) => entry.rankStatus === 'partial-evidence');
+const operatingLeaderboard = [...rankedLeaderboard].sort((a, b) => b.metaScores.operatingEnvelope - a.metaScores.operatingEnvelope);
+const frontierLeaderboard = [...rankedLeaderboard].sort((a, b) => b.metaScores.frontierReality - a.metaScores.frontierReality);
+const researchLeaderboard = [...rankedLeaderboard].sort((a, b) => b.metaScores.researchTrust - a.metaScores.researchTrust);
+const scoreWeights = '25% accuracy + grounding / 20% instruction discipline / 15% honesty + reliability / 15% reasoning floor / 15% agent-coding / 10% operating envelope';
+const sourceUrls = {
+  deepSWE: 'https://deepswe.datacurve.ai/',
+  artificialAnalysis: 'https://artificialanalysis.ai/leaderboards/models',
+  artificialAnalysisIndex: 'https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index',
+  kilo: 'https://kilo.ai/leaderboard',
+  arena: 'https://arena.ai/',
+  openRouter: 'https://openrouter.ai/rankings',
+  liveBench: 'https://livebench.ai/',
+  hle: 'https://agi.safe.ai/',
+  terminalBench: 'https://www.tbench.ai/',
+  ifBench: 'https://github.com/allenai/IFBench',
+  sciCode: 'https://scicode-bench.github.io/',
+};
+
+function formatWeight(value: number): string {
+  return `${Math.round(value * 100)}%`;
+}
+
+function statusClass(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+}
+
+function modeLabels(modeIds: MetaBenchmarkModeId[]): string {
+  return modeIds.map((id) => modesById.get(id)?.label ?? id).join(', ');
+}
+
+function componentSummary(entry: MetaBenchmarkLeaderboardEntry): string {
+  const scores = entry.scoreComponents;
+  return [
+    `Acc ${scores.accuracyGrounding}`,
+    `IF ${scores.instructionDiscipline}`,
+    `Hon ${scores.honestyReliability}`,
+    `Reason ${scores.reasoningFloor}`,
+    `Agent ${scores.agentCoding}`,
+    `Ops ${scores.operatingEnvelope}`,
+  ].join(' / ');
+}
+
+function detailSummary(entry: MetaBenchmarkLeaderboardEntry): string {
+  return [
+    entry.sourceSummary,
+    `Components: ${componentSummary(entry)}.`,
+    `Evidence: ${entry.evidence.join(', ')}.`,
+    entry.caveat,
+  ].filter(Boolean).join(' ');
+}
+
+function signalSourceKeys(entry: MetaBenchmarkLeaderboardEntry): Array<keyof typeof sourceUrls> {
+  const metric = entry.primaryMetric.toLowerCase();
+  const keys: Array<keyof typeof sourceUrls> = [];
+  if (metric.includes('aa') || metric.includes('index') || metric.includes('open')) keys.push('artificialAnalysis');
+  if (metric.includes('kilo')) keys.push('kilo');
+  if (metric.includes('hle')) keys.push('hle');
+  return keys.length ? keys : ['artificialAnalysis'];
+}
+
+function sourceLabel(key: keyof typeof sourceUrls): string {
+  if (key === 'artificialAnalysis') return 'Artificial Analysis';
+  if (key === 'deepSWE') return 'DeepSWE';
+  if (key === 'openRouter') return 'OpenRouter';
+  if (key === 'liveBench') return 'LiveBench';
+  if (key === 'terminalBench') return 'Terminal-Bench';
+  if (key === 'ifBench') return 'IFBench';
+  if (key === 'sciCode') return 'SciCode';
+  return key.toUpperCase();
+}
+
+function dsweSummary(entry: MetaBenchmarkLeaderboardEntry): string {
+  const metrics = entry.dsweMetrics;
+  if (!metrics) return 'Not reported';
+  const effort = metrics.effortLabel ? ` / ${metrics.effortLabel}` : '';
+  return `${metrics.passAt1Pct}%${effort}`;
+}
+
+function dsweCost(entry: MetaBenchmarkLeaderboardEntry): string {
+  if (!entry.dsweMetrics) return '--';
+  return entry.dsweMetrics ? `$${entry.dsweMetrics.averageCostUsd.toFixed(2)}` : '—';
+}
+
+function dsweTime(entry: MetaBenchmarkLeaderboardEntry): string {
+  if (!entry.dsweMetrics) return '--';
+  return entry.dsweMetrics ? `${entry.dsweMetrics.averageTimeMinutes}m` : '—';
+}
+
+function dsweTokens(entry: MetaBenchmarkLeaderboardEntry): string {
+  if (!entry.dsweMetrics) return '--';
+  return entry.dsweMetrics ? `${entry.dsweMetrics.outputTokensK}k` : '—';
+}
+
+---
+
+<BaseLayout
+  title="Meta Benchmark Hub - AI Resource Hub"
+  description="AI Resource Hub meta benchmark hub for floor capability, operating envelope, frontier reality, and research trust."
+>
+  <section class="desk-page meta-workbench meta-public-page mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <nav class="text-xs text-(--color-text-muted) mb-3" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}benchmarks/`} class="hover:text-(--color-text-secondary) transition-colors">Benchmarks</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Meta Benchmark Hub</span>
+    </nav>
+
+    <header class="meta-public-header">
+      <div>
+        <p class="desk-kicker">AI Resource Hub benchmark draft</p>
+        <h1>Meta Benchmark Hub</h1>
+        <p>Four current views of model reality. <strong>100 = saturated.</strong></p>
+      </div>
+      <div class="meta-public-pills" aria-label="Meta-benchmark status">
+        <span>{rankedLeaderboard.length} models</span>
+        <span>4 leaderboards</span>
+        <span>DSWE metrics</span>
+        <span>Fable pending</span>
+      </div>
+    </header>
+
+    <nav class="meta-tabs" aria-label="Benchmark leaderboards">
+      <button type="button" data-meta-tab="floor" aria-selected="true">Floor Capability</button>
+      <button type="button" data-meta-tab="operating" aria-selected="false">Operating Envelope</button>
+      <button type="button" data-meta-tab="frontier" aria-selected="false">Frontier Reality</button>
+      <button type="button" data-meta-tab="research" aria-selected="false">Research Trust</button>
+    </nav>
+
+    <section class="meta-help-strip" aria-label="Quick guide">
+      <article>
+        <strong>Score <span class="meta-hint" title="All main scores use a 0-100 saturation scale. 100 means that benchmark lane has no meaningful remaining floor failures under this method.">?</span></strong>
+        <p>0-100 saturation. Higher is better; 100 means complete.</p>
+      </article>
+      <article>
+        <strong>Evidence % <span class="meta-hint" title="Evidence percentage is source coverage for the score, not the model's capability score.">?</span></strong>
+        <p>Source coverage, not model quality.</p>
+      </article>
+      <article>
+        <strong>DSWE <span class="meta-hint" title="DeepSWE is a Datacurve benchmark for long-horizon agentic coding. We show its cost, time, and output-token fields where reported.">?</span></strong>
+        <p>Agentic coding plus cost, time, and output tokens.</p>
+      </article>
+      <article>
+        <strong>Confidence <span class="meta-hint" title="Confidence describes how strong the evidence is for this provisional score. It is not another model grade.">?</span></strong>
+        <p>How much trust to put in the provisional score.</p>
+      </article>
+    </section>
+
+    <section id="leaderboard" class="meta-board meta-tab-panel" data-meta-panel="floor">
+      <div class="meta-table-wrap">
+        <table class="meta-leaderboard-table">
+          <thead>
+            <tr>
+              <th title="Rank within the Floor Capability leaderboard.">#</th>
+              <th title="Click a model name for the full source, score, and operating-metric detail page.">Model</th>
+              <th title="0-100 saturation score. 100 means no meaningful floor-capability failures remain under this benchmark.">Score</th>
+              <th title="DeepSWE Pass@1 when DeepSWE reports the model. Blank means no DSWE row yet.">DSWE</th>
+              <th title="DeepSWE average cost per run, where reported.">Cost</th>
+              <th title="DeepSWE average run time, where reported.">Time</th>
+              <th title="DeepSWE average output tokens, where reported.">Tokens</th>
+              <th title="Evidence completeness for the score, not model capability.">Evidence %</th>
+              <th title="Quick retained detail. Full detail is on the model page."></th>
+            </tr>
+          </thead>
+          <tbody>
+            {rankedLeaderboard.map((entry) => (
+              <tr>
+                <td><strong>{entry.rank}</strong></td>
+                <td>
+                  <span class="meta-provider-dot" style={`background-color: ${entry.providerColour}`}></span>
+                  <a class="meta-model-link" href={`${base}benchmarks/meta/${entry.modelId}/`}><strong>{entry.modelName}</strong></a>
+                  <p>{entry.providerName}</p>
+                </td>
+                <td><strong class="meta-score-number">{entry.metaScores.floorCapability}</strong> <span class="meta-hint" title={`Confidence: ${entry.scoreConfidence}. Confidence describes how strong the evidence is for this provisional score. It is not another model grade.`}>?</span></td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweSummary(entry)}</a> : dsweSummary(entry)}</td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweCost(entry)}</a> : dsweCost(entry)}</td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweTime(entry)}</a> : dsweTime(entry)}</td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweTokens(entry)}</a> : dsweTokens(entry)}</td>
+                <td>{entry.coverage}%</td>
+                <td><button class="meta-info-button" title={detailSummary(entry)} aria-label={`Details for ${entry.modelName}`}>i</button></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="meta-foot-row">
+        <span>Floor Capability: 0-100 saturation score. 100 = complete.</span>
+        <span>Click a model for detail.</span>
+      </div>
+    </section>
+
+    <section class="meta-board meta-tab-panel" data-meta-panel="operating" hidden>
+      <div class="meta-table-wrap">
+        <table class="meta-leaderboard-table">
+          <thead>
+            <tr>
+              <th title="Rank within the Operating Envelope leaderboard.">#</th>
+              <th title="Click a model name for detail.">Model</th>
+              <th title="0-100 score for cost, time, output tokens, speed, verbosity, and operational friction.">Ops score</th>
+              <th title="DeepSWE Pass@1 when reported.">DSWE</th>
+              <th title="DeepSWE average cost per run, where reported.">Cost</th>
+              <th title="DeepSWE average run time, where reported.">Time</th>
+              <th title="DeepSWE average output tokens, where reported.">Tokens</th>
+              <th title="Main operating caveat.">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            {operatingLeaderboard.map((entry, index) => (
+              <tr>
+                <td><strong>{index + 1}</strong></td>
+                <td>
+                  <span class="meta-provider-dot" style={`background-color: ${entry.providerColour}`}></span>
+                  <a class="meta-model-link" href={`${base}benchmarks/meta/${entry.modelId}/`}><strong>{entry.modelName}</strong></a>
+                  <p>{entry.providerName}</p>
+                </td>
+                <td><strong class="meta-score-number">{entry.metaScores.operatingEnvelope}</strong></td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweSummary(entry)}</a> : dsweSummary(entry)}</td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweCost(entry)}</a> : dsweCost(entry)}</td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweTime(entry)}</a> : dsweTime(entry)}</td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweTokens(entry)}</a> : dsweTokens(entry)}</td>
+                <td>{entry.operatingNote}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="meta-foot-row">
+        <span>Operating Envelope: DSWE-style cost, average time, output tokens, and run friction.</span>
+        <span>External operating rows are retained separately from capability.</span>
+      </div>
+    </section>
+
+    <section class="meta-board meta-tab-panel" data-meta-panel="frontier" hidden>
+      <div class="meta-table-wrap">
+        <table class="meta-leaderboard-table">
+          <thead>
+            <tr>
+              <th title="Rank within the Frontier Reality leaderboard.">#</th>
+              <th title="Click a model name for detail.">Model</th>
+              <th title="0-100 aggregate of current public benchmark signal.">Reality score</th>
+              <th title="Most useful current external signal.">Primary signal</th>
+              <th title="Floor Capability score for context.">Floor</th>
+              <th title="DeepSWE Pass@1 when reported.">DSWE</th>
+              <th title="Evidence completeness, not model capability.">Evidence %</th>
+              <th title="Quick retained detail. Full detail is on the model page."></th>
+            </tr>
+          </thead>
+          <tbody>
+            {frontierLeaderboard.map((entry, index) => (
+              <tr>
+                <td><strong>{index + 1}</strong></td>
+                <td>
+                  <span class="meta-provider-dot" style={`background-color: ${entry.providerColour}`}></span>
+                  <a class="meta-model-link" href={`${base}benchmarks/meta/${entry.modelId}/`}><strong>{entry.modelName}</strong></a>
+                  <p>{entry.providerName}</p>
+                </td>
+                <td><strong class="meta-score-number">{entry.metaScores.frontierReality}</strong></td>
+                <td>
+                  {entry.primaryMetric}
+                  <p>{signalSourceKeys(entry).map((key) => <a class="meta-source-pill" href={sourceUrls[key]} target="_blank" rel="noopener">{sourceLabel(key)}</a>)}</p>
+                </td>
+                <td>{entry.metaScores.floorCapability}</td>
+                <td>{entry.dsweMetrics ? <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">{dsweSummary(entry)}</a> : dsweSummary(entry)}</td>
+                <td>{entry.coverage}%</td>
+                <td><button class="meta-info-button" title={detailSummary(entry)} aria-label={`Details for ${entry.modelName}`}>i</button></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="meta-foot-row">
+        <span>Frontier Reality: compact aggregate of AA, Arena, DeepSWE, Kilo, and similar current rows.</span>
+        <span>Public signal first, internal prompts later.</span>
+      </div>
+    </section>
+
+    <section class="meta-board meta-tab-panel" data-meta-panel="research" hidden>
+      <div class="meta-table-wrap">
+        <table class="meta-leaderboard-table">
+          <thead>
+            <tr>
+              <th title="Rank within the Research Trust leaderboard.">#</th>
+              <th title="Click a model name for detail.">Model</th>
+              <th title="Draft 0-100 score for source discipline, citation honesty, fact-checking, and bias/fallacy handling.">Trust score</th>
+              <th title="Evidence completeness for this provisional trust score.">Evidence %</th>
+              <th title="Current public signal contributing to the estimate.">Signal</th>
+              <th title="Why this remains provisional.">Caveat</th>
+              <th title="Quick retained detail. Full detail is on the model page."></th>
+            </tr>
+          </thead>
+          <tbody>
+            {researchLeaderboard.map((entry, index) => (
+              <tr>
+                <td><strong>{index + 1}</strong></td>
+                <td>
+                  <span class="meta-provider-dot" style={`background-color: ${entry.providerColour}`}></span>
+                  <a class="meta-model-link" href={`${base}benchmarks/meta/${entry.modelId}/`}><strong>{entry.modelName}</strong></a>
+                  <p>{entry.providerName}</p>
+                </td>
+                <td><strong class="meta-score-number">{entry.metaScores.researchTrust}</strong><p>draft</p></td>
+                <td>{entry.coverage}%</td>
+                <td>
+                  {entry.primaryMetric}
+                  <p>{signalSourceKeys(entry).map((key) => <a class="meta-source-pill" href={sourceUrls[key]} target="_blank" rel="noopener">{sourceLabel(key)}</a>)}</p>
+                </td>
+                <td>{entry.researchNote}</td>
+                <td><button class="meta-info-button" title={detailSummary(entry)} aria-label={`Details for ${entry.modelName}`}>i</button></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div class="meta-foot-row">
+        <span>Research Trust is draft until fact-checking, bias, fallacy, and deep-research prompt packs are run.</span>
+        <span>Designed to resist quick saturation.</span>
+      </div>
+    </section>
+
+    <details class="meta-detail-drawer">
+      <summary>Explainer, method and citations</summary>
+      <div class="meta-detail-grid">
+        <article>
+          <h2>Score</h2>
+          <p>{scoreWeights}. Floor Capability is the finished benchmark shape. A score of 100 means that lane is saturated.</p>
+        </article>
+        <article>
+          <h2>Watchlist</h2>
+          <p>Fable 5 DSWE score is pending. {partialLeaderboard.map((entry) => entry.modelName).join(', ')} remains off the public ranking until comparable evidence exists.</p>
+        </article>
+        <article>
+          <h2>Next benchmark lanes</h2>
+          <p>Frontier Reality aggregate, Operating Envelope index, and Research Trust score were the other benchmark directions from the original brief.</p>
+        </article>
+        <article>
+          <h2>Why 100?</h2>
+          <p>100 means routine failures have effectively disappeared under the benchmark lane. If every model reaches 100, that lane is saturated and should be retired or made harder.</p>
+        </article>
+        <article>
+          <h2>Citations</h2>
+          <p class="meta-citations">
+            <a href={sourceUrls.deepSWE} target="_blank" rel="noopener">DeepSWE</a>
+            <a href={sourceUrls.artificialAnalysis} target="_blank" rel="noopener">Artificial Analysis</a>
+            <a href={sourceUrls.artificialAnalysisIndex} target="_blank" rel="noopener">AA Intelligence Index</a>
+            <a href={sourceUrls.kilo} target="_blank" rel="noopener">Kilo</a>
+            <a href={sourceUrls.arena} target="_blank" rel="noopener">Arena</a>
+            <a href={sourceUrls.openRouter} target="_blank" rel="noopener">OpenRouter</a>
+            <a href={sourceUrls.liveBench} target="_blank" rel="noopener">LiveBench</a>
+            <a href={sourceUrls.hle} target="_blank" rel="noopener">HLE</a>
+            <a href={sourceUrls.terminalBench} target="_blank" rel="noopener">Terminal-Bench</a>
+            <a href={sourceUrls.ifBench} target="_blank" rel="noopener">IFBench</a>
+            <a href={sourceUrls.sciCode} target="_blank" rel="noopener">SciCode</a>
+          </p>
+        </article>
+      </div>
+    </details>
+
+    <details class="meta-detail-drawer">
+      <summary>Benchmark build plan</summary>
+      <section id="modes" class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Comparison gates</p>
+          <h2>Modes are separate score lanes</h2>
+        </div>
+        <p>
+          Plain chat, tool chat, deep research, and agent harnesses can all be useful. They should not be averaged into one brand score.
+        </p>
+      </div>
+
+      <div class="desk-table-wrap">
+        <table class="desk-table meta-mode-table">
+          <thead>
+            <tr>
+              <th>Mode</th>
+              <th>Status</th>
+              <th>Comparison rule</th>
+              <th>Evidence captured</th>
+            </tr>
+          </thead>
+          <tbody>
+            {overview.modes.map((mode) => (
+              <tr>
+                <td><strong>{mode.label}</strong><p>{mode.id}</p></td>
+                <td><span class={`desk-badge meta-status-${statusClass(mode.status)}`}>{mode.status}</span></td>
+                <td>{mode.comparisonRule}</td>
+                <td>{mode.evidenceRule}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      </section>
+
+      <section class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Scoring dimensions</p>
+          <h2>Floor score shape</h2>
+        </div>
+        <p>
+          The score rewards boring correctness, but the caps punish confident unsupported claims, fake tool use, and weak critical dimensions.
+        </p>
+      </div>
+
+      <div class="desk-table-wrap">
+        <table class="desk-table meta-dimension-table">
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Weight</th>
+              <th>Gate</th>
+              <th>Saturation risk</th>
+              <th>Target behaviour</th>
+            </tr>
+          </thead>
+          <tbody>
+            {overview.dimensions.map((dimension) => (
+              <tr>
+                <td><strong>{dimension.label}</strong><p>{dimension.id}</p></td>
+                <td>{formatWeight(dimension.weight)}</td>
+                <td>{dimension.critical ? 'Critical' : 'Supporting'}</td>
+                <td><span class={`desk-badge meta-risk-${dimension.saturationRisk}`}>{dimension.saturationRisk}</span></td>
+                <td>{dimension.target}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      </section>
+
+      <section id="families" class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Benchmark map</p>
+          <h2>Families to build</h2>
+        </div>
+        <p>
+          Each family gets its own prompt pack, answer keys, hard-fail flags, and run records.
+        </p>
+      </div>
+
+      <div class="desk-table-wrap">
+        <table class="desk-table meta-family-table">
+          <thead>
+            <tr>
+              <th>Family</th>
+              <th>Purpose</th>
+              <th>Modes</th>
+              <th>Prompt target</th>
+              <th>State</th>
+            </tr>
+          </thead>
+          <tbody>
+            {overview.families.map((family) => (
+              <tr>
+                <td><strong>{family.label}</strong><p>{family.id}</p></td>
+                <td>{family.purpose}</td>
+                <td>{modeLabels(family.modeIds)}</td>
+                <td>{family.promptTarget}</td>
+                <td><span class={`desk-badge meta-status-${statusClass(family.scoringState)}`}>{family.scoringState}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      </section>
+
+      <section id="raw-data" class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Database-first collection</p>
+          <h2>Raw data tables</h2>
+        </div>
+        <p>
+          The interface is currently fed by a typed workbench module. The table shape below maps to the Postgres-ready schema.
+        </p>
+      </div>
+
+      <div class="desk-table-wrap">
+        <table class="desk-table meta-schema-table">
+          <thead>
+            <tr>
+              <th>Table</th>
+              <th>Purpose</th>
+              <th>Key fields</th>
+            </tr>
+          </thead>
+          <tbody>
+            {overview.rawTables.map((table) => (
+              <tr>
+                <td><strong>{table.name}</strong></td>
+                <td>{table.purpose}</td>
+                <td>{table.keyFields.join(', ')}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      </section>
+
+      <section id="pilot-queue" class="desk-section">
+      <div class="desk-section-head">
+        <div>
+          <p class="desk-kicker">Next data collection</p>
+          <h2>First pilot queue</h2>
+        </div>
+        <p>
+          No model result is shown here until it has prompt version, mode, run number, scorer notes, and hard-fail state.
+        </p>
+      </div>
+
+      <div class="desk-table-wrap">
+        <table class="desk-table meta-pilot-table">
+          <thead>
+            <tr>
+              <th>Pilot</th>
+              <th>Family</th>
+              <th>Mode</th>
+              <th>Next action</th>
+              <th>Data captured</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {overview.pilotQueue.map((item) => (
+              <tr>
+                <td><strong>{item.id}</strong></td>
+                <td>{familiesById.get(item.familyId)?.label ?? item.familyId}</td>
+                <td>{modesById.get(item.modeId)?.label ?? item.modeId}</td>
+                <td>{item.nextAction}</td>
+                <td>{item.dataCaptured}</td>
+                <td><span class={`desk-badge meta-status-${statusClass(item.status)}`}>{item.status}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      </section>
+    </details>
+  </section>
+</BaseLayout>
+
+<script>
+  const tabButtons = document.querySelectorAll('[data-meta-tab]');
+  const tabPanels = document.querySelectorAll('[data-meta-panel]');
+
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const selected = button.getAttribute('data-meta-tab');
+      tabButtons.forEach((candidate) => {
+        candidate.setAttribute('aria-selected', String(candidate === button));
+      });
+      tabPanels.forEach((panel) => {
+        panel.toggleAttribute('hidden', panel.getAttribute('data-meta-panel') !== selected);
+      });
+    });
+  });
+</script>
+
+<style>
+  .meta-public-page {
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+  }
+
+  .meta-public-header {
+    display: grid;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.2rem;
+  }
+
+  .meta-public-header h1 {
+    max-width: 880px;
+    margin: 0.25rem 0 0;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  .meta-public-header p {
+    margin: 0.35rem 0 0;
+    color: var(--color-text-muted);
+  }
+
+  .meta-public-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .meta-public-pills span {
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.42rem 0.68rem;
+    background: var(--color-surface-elevated);
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .meta-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+  }
+
+  .meta-tabs button {
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.48rem 0.72rem;
+    background: var(--color-surface-elevated);
+    color: var(--color-text-primary);
+    font-size: 0.82rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .meta-tabs button[aria-selected="true"] {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-surface);
+  }
+
+  .meta-help-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+  }
+
+  .meta-help-strip article {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface-elevated);
+    padding: 0.68rem 0.75rem;
+  }
+
+  .meta-help-strip strong {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.86rem;
+  }
+
+  .meta-help-strip p {
+    margin: 0.25rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .meta-hint {
+    display: inline-grid;
+    place-items: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-muted);
+    font-size: 0.68rem;
+    font-weight: 900;
+    cursor: help;
+  }
+
+  .meta-source-pill {
+    display: inline-block;
+    margin: 0.2rem 0.4rem 0 0;
+    font-size: 0.74rem;
+    font-weight: 800;
+  }
+
+  .meta-citations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.45rem;
+  }
+
+  .meta-citations a {
+    font-weight: 800;
+  }
+
+  .meta-board {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface-elevated);
+    overflow: hidden;
+  }
+
+  .meta-tab-panel[hidden] {
+    display: none;
+  }
+
+  .meta-table-wrap {
+    overflow-x: auto;
+  }
+
+  .meta-leaderboard-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .meta-leaderboard-table th,
+  .meta-leaderboard-table td {
+    padding: 0.78rem 0.85rem;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .meta-leaderboard-table th {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.06em;
+    background: var(--color-surface);
+  }
+
+  .meta-leaderboard-table td p {
+    margin: 0.18rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+  }
+
+  .meta-leaderboard-table td strong {
+    font-weight: 800;
+  }
+
+  .meta-score-number {
+    font-size: 1.24rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .meta-model-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .meta-model-link:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .meta-info-button {
+    width: 1.55rem;
+    height: 1.55rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-weight: 800;
+    cursor: help;
+  }
+
+  .meta-foot-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.72rem 0.85rem;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+
+  .meta-detail-drawer {
+    margin-top: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface-elevated);
+  }
+
+  .meta-detail-drawer summary {
+    cursor: pointer;
+    padding: 0.85rem 1rem;
+    font-weight: 800;
+  }
+
+  .meta-detail-drawer > :not(summary) {
+    padding-inline: 1rem;
+  }
+
+  .meta-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  @media (min-width: 860px) {
+    .meta-public-header {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+    .meta-public-pills {
+      justify-content: flex-end;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .meta-public-header h1 {
+      font-size: clamp(1.9rem, 8.5vw, 2.6rem);
+      line-height: 1;
+    }
+
+    .meta-public-pills span {
+      padding: 0.36rem 0.52rem;
+      font-size: 0.78rem;
+    }
+
+    .meta-leaderboard-table {
+      min-width: 760px;
+    }
+
+    .meta-leaderboard-table th,
+    .meta-leaderboard-table td {
+      padding: 0.72rem 0.68rem;
+    }
+  }
+
+  .meta-workbench .desk-table td {
+    vertical-align: top;
+  }
+
+  .meta-workbench {
+    overflow-x: hidden;
+  }
+
+  .meta-evidence-note {
+    border-left: 4px solid var(--color-accent);
+  }
+
+  .meta-reality-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .meta-workbench .desk-badge {
+    white-space: nowrap;
+  }
+
+  .meta-workbench .desk-table-wrap {
+    max-width: 100%;
+  }
+
+  .meta-provider-dot {
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 0.45rem;
+    border-radius: 999px;
+    vertical-align: middle;
+  }
+
+  .meta-partial-wrap {
+    margin-top: 0.9rem;
+  }
+
+  .meta-status-ready,
+  .meta-status-ready-to-build,
+  .meta-status-architecture-ready {
+    background: rgba(34, 197, 94, 0.12);
+    color: #15803d;
+  }
+
+  .meta-status-draft,
+  .meta-status-prompt-pack-needed,
+  .meta-status-pilot-needed,
+  .meta-status-needs-source-pack,
+  .meta-status-not-started {
+    background: rgba(245, 158, 11, 0.14);
+    color: #92400e;
+  }
+
+  .meta-status-blocked {
+    background: rgba(220, 38, 38, 0.12);
+    color: #991b1b;
+  }
+
+  .meta-risk-low {
+    background: rgba(14, 165, 233, 0.12);
+    color: #0369a1;
+  }
+
+  .meta-risk-medium {
+    background: rgba(245, 158, 11, 0.14);
+    color: #92400e;
+  }
+
+  .meta-risk-high {
+    background: rgba(220, 38, 38, 0.12);
+    color: #991b1b;
+  }
+
+  [data-theme="dark"] .meta-status-ready,
+  [data-theme="dark"] .meta-status-ready-to-build,
+  [data-theme="dark"] .meta-status-architecture-ready {
+    color: #86efac;
+  }
+
+  [data-theme="dark"] .meta-status-draft,
+  [data-theme="dark"] .meta-status-prompt-pack-needed,
+  [data-theme="dark"] .meta-status-pilot-needed,
+  [data-theme="dark"] .meta-status-needs-source-pack,
+  [data-theme="dark"] .meta-status-not-started {
+    color: #fcd34d;
+  }
+
+  [data-theme="dark"] .meta-status-blocked {
+    color: #fca5a5;
+  }
+
+  [data-theme="dark"] .meta-risk-low {
+    color: #7dd3fc;
+  }
+
+  [data-theme="dark"] .meta-risk-medium {
+    color: #fcd34d;
+  }
+
+  [data-theme="dark"] .meta-risk-high {
+    color: #fca5a5;
+  }
+</style>
