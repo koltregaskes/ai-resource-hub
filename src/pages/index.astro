@@ -8,6 +8,10 @@ import {
   getMetaLeaderboard,
   normaliseDateTime,
 } from '../data/hub-dashboard';
+import {
+  getMetaBenchmarkOverview,
+  type MetaBenchmarkLeaderboardEntry,
+} from '../data/internal-meta-benchmarks';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -52,6 +56,67 @@ type HomeRow = {
 };
 
 const metaLeaderboardAll = getMetaLeaderboard(250);
+
+// Meta Benchmark Hub promotion (KOL-4165): the homepage leaderboard is the
+// internal meta benchmark, not the AIRH composite. The composite still powers
+// the dossier/monitor/terminal panels and the /leaderboard/ page.
+const metaOverview = getMetaBenchmarkOverview();
+const metaRanked = metaOverview.leaderboard.filter((entry) => entry.rankStatus === 'ranked');
+const metaPartialCount = metaOverview.leaderboard.length - metaRanked.length;
+const CONFIDENCE_TIP =
+  'Confidence describes how strong the evidence is for this provisional score. It is not another model grade.';
+const DEEPSWE_URL = 'https://deepswe.datacurve.ai/';
+
+type MetaLane = {
+  id: string;
+  label: string;
+  tip: string;
+  scoreLabel: string;
+  scoreOf: (entry: MetaBenchmarkLeaderboardEntry) => number;
+};
+
+const metaLanes: MetaLane[] = [
+  {
+    id: 'floor',
+    label: 'Floor Capability',
+    tip: 'Dependable everyday capability: accuracy, instruction discipline, honesty, reasoning floor, agent/coding, operating envelope. 0-100 saturation scale; 100 means routine failures have effectively disappeared.',
+    scoreLabel: 'Floor score',
+    scoreOf: (entry) => entry.metaScores.floorCapability,
+  },
+  {
+    id: 'operating',
+    label: 'Operating Envelope',
+    tip: 'Cost, time, output tokens, speed, and operational friction. 0-100 saturation scale.',
+    scoreLabel: 'Ops score',
+    scoreOf: (entry) => entry.metaScores.operatingEnvelope,
+  },
+  {
+    id: 'frontier',
+    label: 'Frontier Reality',
+    tip: 'Peak capability on the hardest current evidence. 0-100 saturation scale.',
+    scoreLabel: 'Frontier score',
+    scoreOf: (entry) => entry.metaScores.frontierReality,
+  },
+  {
+    id: 'research',
+    label: 'Research Trust',
+    tip: 'How far the evidence trail can be trusted for research-grade use. 0-100 saturation scale.',
+    scoreLabel: 'Research score',
+    scoreOf: (entry) => entry.metaScores.researchTrust,
+  },
+];
+
+const metaLaneRows = metaLanes.map((lane) => ({
+  lane,
+  rows: [...metaRanked].sort((a, b) => lane.scoreOf(b) - lane.scoreOf(a)),
+}));
+
+function dsweCompact(entry: MetaBenchmarkLeaderboardEntry): string {
+  const dswe = entry.dsweMetrics;
+  if (!dswe) return 'pending';
+  return `${dswe.passAt1Pct}% · $${dswe.averageCostUsd.toFixed(2)} · ${dswe.averageTimeMinutes}m · ${dswe.outputTokensK}k`;
+}
+
 const dataPulse = getDataPulse(base);
 const activities = getLatestActivities(14, base);
 const latestDigest = getLatestDigest();
@@ -273,13 +338,6 @@ const tickerItems = [
     href: entry.href ?? `${base}changelog/`,
     type: entry.category,
   })),
-  ...headlineNews.slice(0, 4).map((entry) => ({
-    time: formatRelativeTime(entry.headlineDate),
-    label: entry.title,
-    detail: entry.source,
-    href: entry.url,
-    type: 'news',
-  })),
 ].slice(0, 10);
 
 const duplicatedTickerItems = [...tickerItems, ...tickerItems];
@@ -366,22 +424,19 @@ const homepagePayload = JSON.stringify({
 
       <div class="airh-spreadsheet-wrap">
         <div class="airh-view-row">
-          <div class="airh-view-tabs" role="tablist" aria-label="Leaderboard views">
-            <button type="button" class="airh-view-tab is-active" role="tab" aria-selected="true" data-airh-view="frontier" data-airh-tip="Headline AIRH composite, sorted by current evidence-backed score.">
-              Frontier <span>{viewCounts.frontier}</span>
-            </button>
-            <button type="button" class="airh-view-tab" role="tab" aria-selected="false" data-airh-view="cheapest" data-airh-tip="Paid models sorted by blended input/output price.">
-              Cheapest <span>{viewCounts.cheapest}</span>
-            </button>
-            <button type="button" class="airh-view-tab" role="tab" aria-selected="false" data-airh-view="fastest" data-airh-tip="Models with speed data, sorted by tokens per second.">
-              Fastest <span>{viewCounts.fastest}</span>
-            </button>
-            <button type="button" class="airh-view-tab" role="tab" aria-selected="false" data-airh-view="open" data-airh-tip="Open-weight rows only.">
-              Open source <span>{viewCounts.open}</span>
-            </button>
-            <button type="button" class="airh-view-tab" role="tab" aria-selected="false" data-airh-view="value" data-airh-tip="Quality-per-cost view using the existing AIRH value score.">
-              Best value <span>{viewCounts.value}</span>
-            </button>
+          <div class="airh-view-tabs" role="tablist" aria-label="Meta benchmark leaderboards">
+            {metaLanes.map((lane, index) => (
+              <button
+                type="button"
+                class={`airh-view-tab${index === 0 ? ' is-active' : ''}`}
+                role="tab"
+                aria-selected={index === 0 ? 'true' : 'false'}
+                data-airh-meta-lane={lane.id}
+                data-airh-tip={lane.tip}
+              >
+                {lane.label} <span>{metaRanked.length}</span>
+              </button>
+            ))}
           </div>
 
           <span
@@ -394,147 +449,77 @@ const homepagePayload = JSON.stringify({
           </span>
         </div>
 
-        <div class="airh-data-grid">
-          <aside class="airh-filter-rail" aria-label="Filters">
-            <div class="airh-filter-title">
-              <span>Filters</span>
-              <span class="airh-active-filter-count" data-airh-active-filters hidden>0 active</span>
-            </div>
-
-            <div class="airh-filter-group">
-              <h2>Provider</h2>
-              {providerOptions.slice(0, 10).map((option) => (
-                <label class="airh-check">
-                  <input type="checkbox" checked data-filter-provider={option.key} />
-                  <span class="airh-provider-swatch" style={`background:${option.colour}`}></span>
-                  <span>{option.label}</span>
-                  <em>{option.count}</em>
-                </label>
-              ))}
-            </div>
-
-            <div class="airh-filter-group">
-              <h2>Type</h2>
-              {typeOptions.map((option) => (
-                <label class="airh-check">
-                  <input type="checkbox" checked data-filter-type={option.key} />
-                  <span>{option.label}</span>
-                  <em>{option.count}</em>
-                </label>
-              ))}
-            </div>
-
-            <div class="airh-filter-group">
-              <h2>Licence</h2>
-              {licenceOptions.map((option) => (
-                <label class="airh-check">
-                  <input type="checkbox" checked data-filter-licence={option.key} />
-                  <span>{option.label}</span>
-                  <em>{option.count}</em>
-                </label>
-              ))}
-            </div>
-
-            <div class="airh-filter-group">
-              <h2>Released</h2>
-              <div class="airh-pill-row" data-filter-release-group>
-                {releaseOptions.map((option) => (
-                  <button type="button" aria-pressed={option.key === 'all' ? 'true' : 'false'} data-filter-release={option.key}>{option.label}</button>
-                ))}
-              </div>
-            </div>
-
-            <div class="airh-filter-group">
-              <h2>Context window</h2>
-              <div class="airh-pill-row" data-filter-context-group>
-                {contextOptions.map((option) => (
-                  <button type="button" aria-pressed="false" data-filter-context={option.key}>{option.label}</button>
-                ))}
-              </div>
-            </div>
-
-            <button type="button" class="airh-filter-clear" data-airh-reset-filters>Clear all filters</button>
-          </aside>
-
-          <section class="airh-table-card" aria-labelledby="airh-table-title">
+        <div class="airh-data-grid airh-meta-grid">
+          <section class="airh-table-card" aria-labelledby="airh-meta-table-title">
             <div class="airh-table-card-head">
-              <h1 id="airh-table-title">Frontier - composite leaderboard</h1>
-              <span class="airh-table-meta" data-airh-table-count data-airh-tip={`Tracked table rows from ${rows.length} current public LLM entries.`}>{Math.min(12, rows.length)} of {rows.length}</span>
-              <div class="airh-density" role="group" aria-label="Table density">
-                <button type="button" data-density="compact" aria-pressed="false">Compact</button>
-                <button type="button" data-density="comfortable" aria-pressed="true">Comfy</button>
-                <button type="button" data-density="spacious" aria-pressed="false">Spacious</button>
-              </div>
+              <h1 id="airh-meta-table-title" data-airh-meta-title>Floor Capability - meta benchmark leaderboard</h1>
+              <span class="airh-table-meta" data-airh-tip={`Internal meta benchmark: ${metaRanked.length} ranked models. ${metaPartialCount} partial-evidence rows live on the full hub until their sources fill in.`}>{metaRanked.length} ranked</span>
+              <a class="airh-meta-method-link" href={`${base}benchmarks/meta/`} data-airh-tip="Method, lane weightings, full citations, and partial-evidence rows.">How these scores work &rarr;</a>
             </div>
 
-            <div class="airh-table-scroll">
-              <table class="airh-leaderboard-table comfortable" data-airh-table>
-                <thead>
-                  <tr>
-                    <th data-airh-tip="Rank inside the current view after filters and sorting.">#</th>
-                    <th data-airh-tip="Model page, provider, release label, and evidence tags.">Model</th>
-                    <th data-airh-tip="Provider or lab. Hover a provider for a quick provider summary.">Provider</th>
-                    <th class="num sort" data-airh-tip="AIRH Composite: weighted blend of benchmark coverage, quality layer, freshness, and evidence penalties. Methodology page has the detail.">AIRH Composite</th>
-                    <th class="num" data-airh-tip="AIRH Real-World: currently backed by the existing AIRH quality layer until the dedicated real-world harness is published.">AIRH Real-World</th>
-                    <th class="num" data-airh-tip="AIRH Value: quality divided by blended token price when pricing is available.">AIRH Value</th>
-                    <th class="num" data-airh-tip="No historical 7-day score series exists in the current cache, so this cell truthfully marks new, flat, or pending.">Delta 7d / Trend</th>
-                    <th class="num" data-airh-tip="Input / output price per 1M tokens, USD where available.">$ in / out</th>
-                    <th class="num" data-airh-tip="Tracked tokens per second. Blank data stays pending rather than guessed.">Speed</th>
-                    <th class="num" data-airh-tip="Maximum context window in tokens.">Ctx</th>
-                    <th data-airh-tip="Tags are derived from source fields: open weights, modality, speed, release date, and evidence type.">Tags</th>
-                  </tr>
-                </thead>
-                <tbody data-airh-table-body>
-                  {initialRows.map((row, index) => (
-                    <tr data-row-id={row.id}>
-                      <td class="rank">{index + 1}</td>
-                      <td class="model-cell">
-                        <a href={row.href} data-airh-rich="model" data-airh-model-id={row.id}>
-                          {row.name}
-                          <span>{row.id}</span>
-                        </a>
-                      </td>
-                      <td>
-                        <span class="airh-provider-chip" data-airh-rich="provider" data-airh-provider-key={row.providerKey}>
-                          <span style={`background:${row.providerColour}`}></span>
-                          {row.provider}
-                        </span>
-                      </td>
-                      <td class="num score">
-                        <span class="score-bar accent"><span style={`width:${scoreWidth(row.composite)}`}></span></span>
-                        <b>{formatScore(row.composite)}</b>
-                      </td>
-                      <td class="num score">
-                        <span class="score-bar"><span style={`width:${scoreWidth(row.realWorld)}`}></span></span>
-                        <b>{formatScore(row.realWorld)}</b>
-                      </td>
-                      <td class="num">{row.valueScore > 0 ? row.valueScore.toLocaleString('en-GB') : 'pending'}</td>
-                      <td class="num">
-                        <span class={`airh-delta is-${row.trendKind}`}>{row.trendLabel}</span>
-                        <span class="airh-flatline" aria-hidden="true"></span>
-                      </td>
-                      <td class="num">{formatPricePair(row.inputPrice, row.outputPrice, row.openSource)}</td>
-                      <td class="num">{row.speed > 0 ? row.speed : 'pending'}</td>
-                      <td class="num">{formatContextWindow(row.contextWindow)}</td>
-                      <td>
-                        {row.tags.map((tag) => (
-                          <span class={`airh-tag is-${tag}`} data-airh-rich="tag" data-airh-tag={tag}>{tag}</span>
-                        ))}
-                      </td>
+            {metaLaneRows.map(({ lane, rows: laneRows }, laneIndex) => (
+              <div class="airh-table-scroll" data-airh-meta-panel={lane.id} hidden={laneIndex !== 0}>
+                <table class="airh-leaderboard-table compact">
+                  <thead>
+                    <tr>
+                      <th data-airh-tip={`Rank inside the ${lane.label} leaderboard.`}>#</th>
+                      <th data-airh-tip="Model detail page with full sources, score components, and operating metrics.">Model</th>
+                      <th class="num" data-airh-tip="0-100 saturation scale. 100 means this lane is complete for the model: routine failures have effectively disappeared. If every model reaches 100, the lane is retired or made harder.">{lane.scoreLabel}</th>
+                      <th class="num" data-airh-tip="DeepSWE (Datacurve): long-horizon agentic coding. Pass@1, average cost, average time, and output tokens where reported.">DSWE</th>
+                      <th class="num" data-airh-tip="Evidence completeness behind the score - source coverage, not model quality.">Evidence %</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                  </thead>
+                  <tbody>
+                    {laneRows.map((entry, index) => (
+                      <tr>
+                        <td class="rank">{index + 1}</td>
+                        <td class="model-cell">
+                          <a href={`${base}benchmarks/meta/${entry.modelId}/`}>
+                            <span class="airh-provider-swatch" style={`background:${entry.providerColour}`}></span>
+                            {entry.modelName}
+                            <span>{entry.providerName}</span>
+                          </a>
+                        </td>
+                        <td class="num score">
+                          <span class="score-bar accent"><span style={`width:${scoreWidth(lane.scoreOf(entry))}`}></span></span>
+                          <b>{lane.scoreOf(entry)}</b>
+                          <button type="button" class="airh-conf-mark" data-airh-tip={`Confidence: ${entry.scoreConfidence}. ${CONFIDENCE_TIP}`} aria-label={`Score confidence for ${entry.modelName}: ${entry.scoreConfidence}`}>?</button>
+                        </td>
+                        <td class="num">
+                          {entry.dsweMetrics
+                            ? <a href={DEEPSWE_URL} target="_blank" rel="noopener" data-airh-tip="DeepSWE Pass@1, average cost, average time, output tokens. Opens DeepSWE.">{dsweCompact(entry)}</a>
+                            : <span data-airh-tip="No DeepSWE row reported for this model yet.">pending</span>}
+                        </td>
+                        <td class="num">{entry.coverage}%</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ))}
 
-            <div class="airh-empty-state" data-airh-empty-state hidden>
-              <p>No rows match those filters.</p>
-              <button type="button" data-airh-reset-filters>Reset filters</button>
+            <div class="airh-meta-guide" aria-label="How to read the meta benchmark leaderboard">
+              <article>
+                <strong>Score</strong>
+                <p>0-100 saturation. 100 = the lane is complete for that model; a saturated lane gets retired or hardened.</p>
+              </article>
+              <article>
+                <strong>Evidence %</strong>
+                <p>Source coverage behind the score, not model quality.</p>
+              </article>
+              <article>
+                <strong>DSWE</strong>
+                <p>Agentic coding with cost, time, and output tokens, from <a href={DEEPSWE_URL} target="_blank" rel="noopener">DeepSWE</a>.</p>
+              </article>
+              <article>
+                <strong>Confidence</strong>
+                <p>Evidence strength, on the <span class="airh-conf-mark" data-airh-tip={CONFIDENCE_TIP}>?</span> beside each score. Never another model grade.</p>
+              </article>
             </div>
 
             <div class="airh-table-foot">
-              <span data-airh-table-summary>Showing {Math.min(12, rows.length)} of {rows.length} - sorted by AIRH Composite</span>
-              <a href={`${base}leaderboard/`}>Open full leaderboard &rarr;</a>
+              <span data-airh-meta-summary>{metaRanked.length} ranked models - sorted by Floor Capability</span>
+              <a href={`${base}benchmarks/meta/`}>Open the full Meta Benchmark Hub &rarr;</a>
             </div>
           </section>
         </div>
@@ -1444,4 +1429,101 @@ const homepagePayload = JSON.stringify({
       });
     })();
   </script>
+
+  <script is:inline>
+    (() => {
+      const laneButtons = Array.from(document.querySelectorAll('[data-airh-meta-lane]'));
+      if (!laneButtons.length) return;
+      const panels = Array.from(document.querySelectorAll('[data-airh-meta-panel]'));
+      const title = document.querySelector('[data-airh-meta-title]');
+      const summary = document.querySelector('[data-airh-meta-summary]');
+      const rankedCount = panels.length
+        ? panels[0].querySelectorAll('tbody tr').length
+        : 0;
+
+      laneButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const lane = button.getAttribute('data-airh-meta-lane');
+          const label = button.textContent.replace(/\d+\s*$/, '').trim();
+          laneButtons.forEach((other) => {
+            const active = other === button;
+            other.classList.toggle('is-active', active);
+            other.setAttribute('aria-selected', String(active));
+          });
+          panels.forEach((panel) => {
+            panel.hidden = panel.getAttribute('data-airh-meta-panel') !== lane;
+          });
+          if (title) title.textContent = `${label} - meta benchmark leaderboard`;
+          if (summary) summary.textContent = `${rankedCount} ranked models - sorted by ${label}`;
+        });
+      });
+    })();
+  </script>
+
+  <style>
+    /* Meta benchmark leaderboard (KOL-4165): single-column grid now that the
+       composite filter rail is gone, plus the confidence marker + quick guide. */
+    .airh-meta-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .airh-meta-method-link {
+      margin-left: auto;
+      font-size: 0.78rem;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .airh-meta-method-link:hover {
+      text-decoration: underline;
+    }
+
+    .airh-conf-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 15px;
+      height: 15px;
+      margin-left: 6px;
+      padding: 0;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      background: transparent;
+      color: inherit;
+      opacity: 0.55;
+      font-size: 0.62rem;
+      font-weight: 700;
+      line-height: 1;
+      cursor: help;
+      vertical-align: middle;
+    }
+
+    .airh-conf-mark:hover,
+    .airh-conf-mark:focus-visible {
+      opacity: 1;
+    }
+
+    .airh-meta-guide {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      padding: 10px 14px;
+      border-top: 1px solid rgba(132, 115, 96, 0.25);
+    }
+
+    .airh-meta-guide article strong {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.75;
+      margin-bottom: 2px;
+    }
+
+    .airh-meta-guide article p {
+      margin: 0;
+      font-size: 0.76rem;
+      opacity: 0.85;
+    }
+  </style>
 </BaseLayout>

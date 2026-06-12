@@ -1,0 +1,284 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import {
+  getMetaBenchmarkOverview,
+  type MetaBenchmarkLeaderboardEntry,
+} from '../../../data/internal-meta-benchmarks';
+
+export function getStaticPaths() {
+  return getMetaBenchmarkOverview().leaderboard.map((model) => ({
+    params: { modelId: model.modelId },
+    props: { model },
+  }));
+}
+
+const { model } = Astro.props as { model: MetaBenchmarkLeaderboardEntry };
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const components = [
+  ['Accuracy + grounding', model.scoreComponents.accuracyGrounding, 'Correct, grounded answers on ordinary verifiable tasks.'],
+  ['Instruction discipline', model.scoreComponents.instructionDiscipline, 'Follows exact user constraints and output formats.'],
+  ['Honesty + reliability', model.scoreComponents.honestyReliability, 'Avoids unsupported confidence and remains stable across runs.'],
+  ['Reasoning floor', model.scoreComponents.reasoningFloor, 'Handles non-flashy reasoning without brittle failures.'],
+  ['Agent/coding', model.scoreComponents.agentCoding, 'Completes tool, coding, and agent-style tasks when evidence exists.'],
+  ['Operating envelope', model.scoreComponents.operatingEnvelope, 'Cost, speed, token burn, verbosity, and friction.'],
+];
+
+const metaScores = [
+  ['Floor Capability', model.metaScores.floorCapability, 'Finished benchmark shape.'],
+  ['Operating Envelope', model.metaScores.operatingEnvelope, model.operatingNote],
+  ['Frontier Reality', model.metaScores.frontierReality, model.primaryMetric],
+  ['Research Trust', model.metaScores.researchTrust, model.researchNote],
+];
+const sourceUrls: Record<string, string> = {
+  'Artificial Analysis Intelligence Index': 'https://artificialanalysis.ai/leaderboards/models',
+  'AA-Omniscience': 'https://artificialanalysis.ai/leaderboards/models',
+  "Humanity's Last Exam": 'https://agi.safe.ai/',
+  'GDPval-AA': 'https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index',
+  'Terminal-Bench Hard': 'https://www.tbench.ai/',
+  IFBench: 'https://github.com/allenai/IFBench',
+  'Kilo Bench': 'https://kilo.ai/leaderboard',
+  DeepSWE: 'https://deepswe.datacurve.ai/',
+  'Arena Text': 'https://arena.ai/',
+  'Arena Agent': 'https://arena.ai/',
+  SciCode: 'https://scicode-bench.github.io/',
+  'Qwen3.7 release notes': 'https://qwenlm.github.io/',
+  'Google release coverage': 'https://blog.google/products/gemini/',
+  'Kimi release notes': 'https://www.moonshot.ai/',
+  'Artificial Analysis open-weights leaderboard': 'https://artificialanalysis.ai/leaderboards/models',
+};
+const citedEvidence = model.evidence.filter((item) => sourceUrls[item]);
+
+---
+
+<BaseLayout
+  title={`${model.modelName} Meta Benchmark Detail - AI Resource Hub`}
+  description={`Source detail and meta benchmark scores for ${model.modelName}.`}
+>
+  <section class="meta-model-page mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8">
+    <nav class="meta-breadcrumb" aria-label="Breadcrumb">
+      <a href={`${base}benchmarks/meta/`}>Meta Benchmark Hub</a>
+      <span>/</span>
+      <span>{model.modelName}</span>
+    </nav>
+
+    <header class="meta-model-header">
+      <div>
+        <p class="meta-kicker">{model.providerName}</p>
+        <h1>{model.modelName}</h1>
+        <p>{model.sourceSummary}</p>
+      </div>
+      <div class="meta-score-card">
+        <span>{model.floorMetaScore}</span>
+        <strong>Floor score</strong>
+        <p title="Confidence in the evidence behind the provisional score.">confidence: {model.scoreConfidence}</p>
+      </div>
+    </header>
+
+    <section class="meta-score-strip" aria-label="Meta scores">
+      {metaScores.map(([label, value, note]) => (
+        <article>
+          <span>{value}</span>
+          <strong>{label}</strong>
+          <p>{note}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="meta-card-grid">
+      <article class="meta-card">
+        <p class="meta-kicker">Current signal</p>
+        <h2>{model.primaryMetric}</h2>
+      </article>
+      <article class="meta-card">
+        <p class="meta-kicker">Evidence completeness</p>
+        <h2>{model.coverage}%</h2>
+        <p>{model.scoredDimensions} score dimensions represented.</p>
+      </article>
+      <article class="meta-card">
+        <p class="meta-kicker">DSWE</p>
+        {model.dsweMetrics ? (
+          <h2><a href={sourceUrls.DeepSWE} target="_blank" rel="noopener">{model.dsweMetrics.passAt1Pct}% pass@1</a></h2>
+          <p><a href={sourceUrls.DeepSWE} target="_blank" rel="noopener">${model.dsweMetrics.averageCostUsd.toFixed(2)} / {model.dsweMetrics.averageTimeMinutes}m / {model.dsweMetrics.outputTokensK}k output tokens</a></p>
+        ) : (
+          <h2>Not reported</h2>
+          <p>Keep watch for a DeepSWE row.</p>
+        )}
+      </article>
+    </section>
+
+    <section class="meta-model-section">
+      <div>
+        <p class="meta-kicker">Calculation</p>
+        <h2>Score components</h2>
+      </div>
+      <div class="meta-component-grid">
+        {components.map(([label, value, description]) => (
+          <article>
+            <span>{value}</span>
+            <strong>{label}</strong>
+            <p>{description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="meta-model-section meta-two-col">
+      <article>
+        <p class="meta-kicker">Evidence</p>
+        <h2>Sources used</h2>
+        <ul>
+          {model.evidence.map((item) => <li>{sourceUrls[item] ? <a href={sourceUrls[item]} target="_blank" rel="noopener">{item}</a> : item}</li>)}
+        </ul>
+      </article>
+      <article>
+        <p class="meta-kicker">Caveat</p>
+        <h2>What to watch</h2>
+        <p>{model.caveat}</p>
+      </article>
+    </section>
+
+    <section class="meta-model-section">
+      <div>
+        <p class="meta-kicker">Meaning</p>
+        <h2>How to read the score</h2>
+      </div>
+      <p>
+        Each score is a 0-100 saturation scale. A score of 100 means that benchmark lane is complete for this model.
+        Floor Capability is the finished benchmark shape; Operating Envelope, Frontier Reality, and Research Trust are
+        provisional tabs that need prompt-pack backfill. Confidence is evidence quality, not another model grade.
+        Evidence % is source coverage, not capability.
+      </p>
+    </section>
+
+    <section class="meta-model-section">
+      <div>
+        <p class="meta-kicker">Citations</p>
+        <h2>Benchmark sources</h2>
+      </div>
+      <p class="meta-citation-list">
+        {citedEvidence.map((item) => <a href={sourceUrls[item]} target="_blank" rel="noopener">{item}</a>)}
+      </p>
+    </section>
+  </section>
+</BaseLayout>
+
+<style>
+  .meta-model-page {
+    color: var(--color-text-primary);
+  }
+  .meta-breadcrumb {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .meta-breadcrumb a {
+    color: inherit;
+  }
+  .meta-model-header {
+    display: grid;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1rem;
+  }
+  .meta-model-header h1 {
+    margin: 0.2rem 0;
+    letter-spacing: 0;
+  }
+  .meta-kicker {
+    margin: 0;
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .meta-score-card,
+  .meta-card,
+  .meta-model-section {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface-elevated);
+    padding: 1rem;
+  }
+  .meta-score-card span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .meta-score-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .meta-score-strip article {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface-elevated);
+    padding: 0.85rem;
+  }
+  .meta-score-strip span {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 1.75rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .meta-score-strip p {
+    margin: 0.25rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+  .meta-card-grid,
+  .meta-component-grid,
+  .meta-two-col {
+    display: grid;
+    gap: 0.9rem;
+  }
+  .meta-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-bottom: 1rem;
+  }
+  .meta-card h2,
+  .meta-model-section h2 {
+    margin: 0.25rem 0 0;
+    letter-spacing: 0;
+  }
+  .meta-model-section {
+    margin-top: 1rem;
+  }
+  .meta-component-grid {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    margin-top: 0.85rem;
+  }
+  .meta-component-grid article {
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.75rem;
+  }
+  .meta-component-grid span {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 900;
+  }
+  .meta-two-col {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .meta-citation-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.45rem;
+  }
+  .meta-citation-list a {
+    font-weight: 800;
+  }
+  @media (min-width: 820px) {
+    .meta-model-header {
+      grid-template-columns: minmax(0, 1fr) 180px;
+    }
+  }
+</style>
