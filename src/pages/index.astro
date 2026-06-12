@@ -393,7 +393,12 @@ const tableLinks = [
   compactChrome
 >
   <div class="airh-home" data-airh-home>
-    <section class="airh-layout-panel" data-airh-layout-panel="spreadsheet">
+    <!-- Single content tree for every display mode. It must NOT carry
+         data-airh-layout-panel: BaseLayout's applyDisplayMode hides any panel
+         whose attribute != active mode, which blanked the homepage in
+         Dossier/Monitor/Terminal once the alternate panels were removed
+         (KOL-4211 regression fix). Display modes restyle this via CSS. -->
+    <section class="airh-home-content">
       <div class="airh-ticker" aria-label="Latest changes on the hub">
         <div class="airh-ticker-inner">
           <a href={`${base}updates/`} class="airh-ticker-stamp" data-airh-tip="Changes on the hub: releases, model rows, price data, source snapshots, and news. Refreshes hourly.">
