@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 11 Jun 2026, 23:26 UTC
+Generated: 12 Jun 2026, 00:25 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -14,8 +14,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 31 May 2026 | MiniMax M3 | MiniMax | tracking | high | needs research | 0 | 0 | [official](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | 27 May 2026 | Claude Opus 4.8 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
 | 27 May 2026 | Claude Opus 4.8 | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
-| 21 May 2026 | Qwen3.7 Max | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/glasswing) |
+| 21 May 2026 | Qwen3.7 Max | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 20 May 2026 | Grok Build 0.1 | xAI | tracking | watch | ready for editor | 0 | 1 | [official](https://docs.x.ai/developers/models) |
 | 19 May 2026 | Gemini 3.5 Flash | Google | tracking | watch | ready for editor | 0 | 6 | [official](https://ai.google.dev/gemini-api/docs/models) |
 | 12 May 2026 | Claude Opus 4.7 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
