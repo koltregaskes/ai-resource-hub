@@ -388,14 +388,14 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
           const theme = saved && validThemes.has(saved) ? saved : 'dark';
           document.documentElement.setAttribute('data-theme', theme);
 
-          const validDisplayModes = new Set(['spreadsheet', 'dossier', 'monitor', 'terminal']);
-          const requestedMode = new URLSearchParams(window.location.search).get('layout');
-          const savedMode = localStorage.getItem('airh:display-mode') || localStorage.getItem('airh:home-layout');
-          const displayMode = requestedMode && validDisplayModes.has(requestedMode)
-            ? requestedMode
-            : (savedMode && validDisplayModes.has(savedMode) ? savedMode : 'spreadsheet');
-          document.documentElement.setAttribute('data-airh-display-mode', displayMode);
-          document.documentElement.setAttribute('data-airh-layout', displayMode);
+          // Display-mode templates (Dossier/Monitor/Terminal) were withdrawn
+          // (KOL-4211, backlog KOL-4218). The site is single-layout now; only
+          // the colour palette above is user-switchable. Force spreadsheet and
+          // clear any saved template so returning visitors are not stranded.
+          localStorage.removeItem('airh:display-mode');
+          localStorage.removeItem('airh:home-layout');
+          document.documentElement.setAttribute('data-airh-display-mode', 'spreadsheet');
+          document.documentElement.setAttribute('data-airh-layout', 'spreadsheet');
 
           const themeColorMeta = document.querySelector('meta[name="theme-color"]');
           if (themeColorMeta) {
@@ -471,31 +471,8 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
           <div class="airh-compact-actions">
             <GlobalSearch items={searchIndex} baseUrl={base} variant="compact" />
 
-            <div class="airh-layout-switcher" role="group" aria-label="Website display mode">
-              <button type="button" class="airh-tool-icon is-active" data-airh-layout-switch="spreadsheet" data-airh-tip="Spreadsheet mode. Dense data first across the site.">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"></rect><path d="M4 9h16M4 14h16M9 4v16M14 4v16"></path></svg>
-                <span aria-hidden="true">▦</span>
-                <span class="sr-only">Spreadsheet</span>
-              </button>
-              <button type="button" class="airh-tool-icon" data-airh-layout-switch="dossier" data-airh-tip="Dossier mode. Index-card summaries across the site.">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="1.5"></rect><path d="M7 9h6M7 12h10M7 15h8"></path></svg>
-                <span aria-hidden="true">▤</span>
-                <span class="sr-only">Dossier</span>
-              </button>
-              <button type="button" class="airh-tool-icon" data-airh-layout-switch="monitor" data-airh-tip="Monitor mode. Utility dashboard styling across the site.">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5"></rect><path d="M14 5v12M7 9h4M7 13h4M16.5 9h2M16.5 13h2M9 17v2M7 19h4"></path></svg>
-                <span aria-hidden="true">▥</span>
-                <span class="sr-only">Monitor</span>
-              </button>
-              <button type="button" class="airh-tool-icon" data-airh-layout-switch="terminal" data-airh-tip="Terminal mode. Keyboard-first styling across the site.">
-                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 7l5 5-5 5M12 17h7"></path></svg>
-                <span aria-hidden="true">›_</span>
-                <span class="sr-only">Terminal</span>
-              </button>
-            </div>
-
             <details class="airh-theme-menu">
-              <summary class="airh-tool-icon" data-airh-tip="Pick a colour palette for every display mode.">
+              <summary class="airh-tool-icon" data-airh-tip="Pick a colour palette for the site.">
                 <span aria-hidden="true">◐</span>
                 <span class="sr-only">Colour palette</span>
               </summary>
@@ -952,58 +929,9 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
         });
       });
 
-      const displayModeKey = 'airh:display-mode';
-      const legacyLayoutKey = 'airh:home-layout';
-      const validDisplayModes = new Set(['spreadsheet', 'dossier', 'monitor', 'terminal']);
-      const displayModeButtons = document.querySelectorAll<HTMLElement>('[data-airh-layout-switch]');
-
-      function applyDisplayMode(mode: string, options: { persist?: boolean; emit?: boolean } = {}) {
-        const safeMode = validDisplayModes.has(mode) ? mode : 'spreadsheet';
-        const shouldPersist = options.persist !== false;
-        const shouldEmit = options.emit !== false;
-
-        document.documentElement.setAttribute('data-airh-display-mode', safeMode);
-        document.documentElement.setAttribute('data-airh-layout', safeMode);
-        document.body?.setAttribute('data-airh-display-mode', safeMode);
-
-        displayModeButtons.forEach((button) => {
-          const active = button.getAttribute('data-airh-layout-switch') === safeMode;
-          button.classList.toggle('is-active', active);
-          button.setAttribute('aria-pressed', String(active));
-        });
-
-        document.querySelectorAll<HTMLElement>('[data-airh-layout-panel]').forEach((panel) => {
-          panel.classList.toggle('is-hidden', panel.getAttribute('data-airh-layout-panel') !== safeMode);
-        });
-
-        if (shouldPersist) {
-          localStorage.setItem(displayModeKey, safeMode);
-          localStorage.setItem(legacyLayoutKey, safeMode);
-        }
-
-        if (shouldEmit) {
-          window.dispatchEvent(new CustomEvent('airh:display-mode-change', { detail: { mode: safeMode } }));
-        }
-      }
-
-      (window as Window & { airhSetDisplayMode?: typeof applyDisplayMode }).airhSetDisplayMode = applyDisplayMode;
-
-      try {
-        const requestedMode = new URLSearchParams(window.location.search).get('layout');
-        const savedMode = localStorage.getItem(displayModeKey) || localStorage.getItem(legacyLayoutKey);
-        const initialMode = requestedMode && validDisplayModes.has(requestedMode)
-          ? requestedMode
-          : (savedMode && validDisplayModes.has(savedMode) ? savedMode : 'spreadsheet');
-        applyDisplayMode(initialMode, { emit: false });
-      } catch (_) {
-        applyDisplayMode('spreadsheet', { persist: false, emit: false });
-      }
-
-      displayModeButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          applyDisplayMode(button.getAttribute('data-airh-layout-switch') || 'spreadsheet');
-        });
-      });
+      // Display-mode templates withdrawn (KOL-4211, backlog KOL-4218). The site
+      // is single-layout; the head script already forces spreadsheet and clears
+      // any saved template. Nothing to wire here beyond the colour palette above.
 
       const groups = document.querySelectorAll('.nav-dropdown-group');
       groups.forEach((group) => {
