@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 12 Jun 2026, 12:26 UTC |
+| Generated | 12 Jun 2026, 13:26 UTC |
 | Providers tracked | 40 |
-| Public models | 317 |
+| Public models | 318 |
 | Active models | 111 |
-| Tracking models | 205 |
+| Tracking models | 206 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 72 |
-| Release-desk entries | 57 |
+| Release-desk entries | 58 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 12 Jun 2026, 12:26 UTC |
+| Latest visible refresh | 12 Jun 2026, 13:26 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
-| Latest tracked release | Claude Fable 5 (9 Jun 2026) |
+| Latest tracked release | Kimi K2.7 Code (12 Jun 2026) |
 
 ## Reference Files
 
