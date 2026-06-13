@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T14:22:47.676Z",
+  "generatedAt": "2026-06-13T14:53:18.602Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-13T14:22:47.203Z",
+      "lastCheckedAt": "2026-06-13T14:53:18.057Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,6 +20,94 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-13T14:53:18.594Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-06-13T14:20:44.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-13T14:20:44.000Z",
+          "updatedAt": "2026-06-13T14:20:44.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-12T16:25:45.000Z",
+          "title": "DeepSeek V4 Pro went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-12T16:25:45.000Z",
+          "updatedAt": "2026-06-12T16:25:45.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "DeepSeek V4 Pro went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-06-13T14:20:44.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-13T14:20:44.000Z",
+          "updatedAt": "2026-06-13T14:20:44.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-1-2026-06-12T17:29:13.000Z",
+          "title": "DeepSeek V4 Pro recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-12T17:29:13.000Z",
+          "updatedAt": "2026-06-12T17:29:13.000Z",
+          "resolvedAt": "2026-06-12T17:29:13.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "DeepSeek V4 Pro recovered"
+        },
+        {
+          "id": "together-feed-2-2026-06-12T16:25:45.000Z",
+          "title": "DeepSeek V4 Pro went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-12T16:25:45.000Z",
+          "updatedAt": "2026-06-12T16:25:45.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "DeepSeek V4 Pro went down"
+        },
+        {
+          "id": "together-feed-3-2026-06-09T17:10:26.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-09T17:10:26.000Z",
+          "updatedAt": "2026-06-09T17:10:26.000Z",
+          "resolvedAt": "2026-06-09T17:10:26.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        }
+      ]
     },
     {
       "id": "anthropic",
@@ -32,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-13T14:22:46.187Z",
+      "lastCheckedAt": "2026-06-13T14:53:17.009Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -134,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-13T14:22:47.435Z",
+      "lastCheckedAt": "2026-06-13T14:53:18.298Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-13T14:22:47.669Z",
+      "lastCheckedAt": "2026-06-13T14:53:18.517Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-13T14:22:46.902Z",
+      "lastCheckedAt": "2026-06-13T14:53:17.645Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +350,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-13T14:22:46.167Z",
+      "lastCheckedAt": "2026-06-13T14:53:16.991Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -338,71 +426,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-13T14:22:47.596Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-06-12T17:29:13.000Z",
-          "title": "DeepSeek V4 Pro recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-12T17:29:13.000Z",
-          "updatedAt": "2026-06-12T17:29:13.000Z",
-          "resolvedAt": "2026-06-12T17:29:13.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "DeepSeek V4 Pro recovered"
-        },
-        {
-          "id": "together-feed-1-2026-06-12T16:25:45.000Z",
-          "title": "DeepSeek V4 Pro went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-12T16:25:45.000Z",
-          "updatedAt": "2026-06-12T16:25:45.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "DeepSeek V4 Pro went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-09T17:10:26.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-09T17:10:26.000Z",
-          "updatedAt": "2026-06-09T17:10:26.000Z",
-          "resolvedAt": "2026-06-09T17:10:26.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-09T16:44:55.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-09T16:44:55.000Z",
-          "updatedAt": "2026-06-09T16:44:55.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        }
-      ]
-    },
-    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -417,7 +440,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
