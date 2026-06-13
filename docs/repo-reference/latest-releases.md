@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 13 Jun 2026, 11:26 UTC
+Generated: 13 Jun 2026, 12:02 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -9,7 +9,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 12 Jun 2026 | Kimi K2.7 Code | Moonshot AI | tracking | high | needs research | 0 | 0 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
-| 9 Jun 2026 | Claude Fable 5 | Anthropic | tracking | high | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
+| 9 Jun 2026 | Claude Fable 5 | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
 | 4 Jun 2026 | Nemotron 3 Ultra | NVIDIA | tracking | high | needs research | 0 | 0 | [official](https://docs.api.nvidia.com) |
 | 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 31 May 2026 | MiniMax M3 | MiniMax | tracking | high | needs research | 0 | 0 | [official](https://platform.minimaxi.com/docs/api-reference/api-overview) |
