@@ -1,5 +1,17 @@
 [
   {
+    "id": "news-d9ba9c0830bb39b369a7",
+    "title": "All the news about Anthropic&#8217;s new AI fight with the White House",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/950026/anthropic-fable-mythos-ban-ai-shutdown",
+    "source": "The Verge",
+    "summary": "Anthropic was already navigating one dispute with the government in its standoff with the Pentagon, and then came an order on June 12th to block off foreign access to its most recently released AI models, Fable 5 and Mythos 5. When they launched on June 9th, Anthropic said &#8220;Fable 5’s capabilities exceed those of…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-15T19:04:53.000Z",
+    "discovered_at": "2026-06-15 21:19:01"
+  },
+  {
     "id": "news-ac624b319b7ad1b6e8bf",
     "title": "Meta&#8217;s new ‘AI Mode’ on Facebook pulls from public info across its platforms",
     "url": "https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/",
@@ -9,7 +21,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T18:30:58.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-1e133e81de06c180b01a",
@@ -21,19 +33,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T18:30:34.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
+  },
+  {
+    "id": "news-e67cde346270bd745179",
+    "title": "Trump’s Anthropic shutdown just made the case for non-American AI",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/949986/anthropic-fable-mythos-shutdown-sovereign-ai",
+    "source": "The Verge",
+    "summary": "At Washington's request, Anthropic suddenly took its newest and most powerful AI models offline over the weekend. The American company said it had little choice after the White House demanded it block access for all foreign nationals, including its own employees. Abroad, the incident offered a sobering reminder that t…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-15T18:10:27.000Z",
+    "discovered_at": "2026-06-15 21:19:01"
+  },
+  {
+    "id": "news-e730e4384bced7f98efe",
+    "title": "Big Tech’s desperate last push at AI regulation",
+    "url": "https://www.theverge.com/policy/949970/ai-regulation-child-safety-kosa-congress",
+    "source": "The Verge",
+    "summary": "For months, Big Tech's Washington lobbyists have chased after the holy grail of pro-AI legislation: preemption. This would be a comprehensive federal law, passed in Congress and signed by the president, applying one set of AI rules across the entire country and overriding the legally messy state-by-state approach to r…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-15T17:44:10.000Z",
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-2cf22b68fc62e5748539",
     "title": "Cybersecurity vets protest &#8216;dangerous&#8217; US government ban on Anthropic&#8217;s most powerful models",
     "url": "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/",
     "source": "TechCrunch",
-    "summary": "A group made up of dozens of cybersecurity experts urged the White House to remove export control restrictions on Anthropic’s models Fable and Mythos, arguing that the order is going to limit the ability of cybersecurity defenders to secure their software and products.",
+    "summary": "A group made up of dozens of cybersecurity experts urged the White House to remove export-control restrictions on Anthropic’s Fable and Mythos models, arguing that the order is going to limit the ability of cybersecurity defenders to secure their software and products.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:29:51.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -45,11 +81,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-baa795f58d1ea10f5995",
-    "title": "Salesforce acquires AI customer service platform Fin for $3.6 billion",
+    "title": "Salesforce acquires AI customer service platform Fin for $3.6B",
     "url": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
     "source": "TechCrunch",
     "summary": "Salesforce says it wants to use Fin's team and technology to improve Agentforce, its existing enterprise platform that businesses can use to build custom AI agents that automate tasks.",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T14:34:45.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-f3e37047d492b7608964",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T14:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-9a32bff36420dacf2ccf",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T13:46:08.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-bf4c56821442f36c1aa3",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T13:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-3df362228dbff72b034a",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T12:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-dab97fb78859bd43a2b2",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T07:25:41.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-c45283b57769ec861129",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-14T18:27:55.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-888bd1de6f406f7ac40c",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-14T17:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-12db130618d02cbf34a7",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-14T16:38:09.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-9f21cdd032f0382c69c2",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-14T03:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-cb3568a3265c64eb85fc",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-14T00:03:49.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-52f69ed1634e6a12b2a9",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T21:39:26.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-ae8100dd200db95d2b29",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T20:42:31.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-39908d3ea933c37e1a7e",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T19:11:41.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-5b78e7e16d0134494731",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T16:47:18.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-283c8f534b535cc66e61",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T13:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-c368b693a7979a02d7f7",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T12:55:49.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-7db5a9c52aa28040ef13",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T12:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-6edfbdee00a070628726",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T11:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-d5a167a79f01876aa55b",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T04:14:19.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-60b23d1dd928ce398931",
@@ -297,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-13T02:26:30.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-d96369fb0eb35276b66e",
@@ -309,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-12T23:00:54.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-beeabd3f03f0a4f00ddc",
@@ -321,43 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-12T20:38:09.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
-  },
-  {
-    "id": "news-9559f3684b811d9e1b8d",
-    "title": "Siri is good now??",
-    "url": "https://www.theverge.com/podcast/949079/siri-ai-good-vergecast",
-    "source": "The Verge",
-    "summary": "You'd be forgiven for thinking this day would never come. Siri has spent a decade and half somewhere between \"sort of useful at a few things\" and \"utterly disastrous, why did I even try, can it honestly not even set a timer.\" But the wildest thing just happened: Apple put out a new version of [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-12T17:17:04.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
-  },
-  {
-    "id": "news-78d06705c392975dddcf",
-    "title": "Elon Musk is the world&#8217;s first trillionaire",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/948409/elon-musk-trillionaire-spacex-ipo",
-    "source": "The Verge",
-    "summary": "Elon Musk's net worth has passed the trillion-dollar mark after SpaceX's IPO. His net worth, which was hovering around $800 billion before the IPO, includes the value of his 4.8 billion shares in SpaceX, along with his wealth from his other companies, like Tesla. Shares of SPCX opened at $150 and have remained well ab…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-12T16:24:39.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
-  },
-  {
-    "id": "news-7fb0c74fed04ca9984ae",
-    "title": "SpaceX’s massive IPO: all the latest news",
-    "url": "https://www.theverge.com/business/948996/spacex-ipo-elon-musk",
-    "source": "The Verge",
-    "summary": "SpaceX&#8217;s IPO on Friday allows the public to buy shares of the combined rocket, AI, and social media company for the first time, and raised enough money to make Elon Musk the first trillionaire. He has more wealth, on paper at least, than the economies of nations like Ireland, Sweden, or his home country of [&#82…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-12T14:35:48.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-e17db83823d25ce6b2ae",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-12T10:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-dcc2fd07a9e824262e00",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-12T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-03724ebf28de09d36d88",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T20:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-e1ca2354b2dc9935c6ba",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-8875a0080daca5251f35",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-6600f3e4b9646c4be91a",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-436a674e3bf2eef7f208",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-a9f0898c4190e00181d1",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-4600462b11c1a928d9c7",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T20:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-c71f854be1a8bcbe3ffa",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T12:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-359e2bc8272372ba5043",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-2be94cf799401d49b9ba",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-d484de5576e8df56c06c",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T12:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-e8e11bcb3ae640363b88",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T10:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-31f4bff2af385a2c6ac9",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-09T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-ced3a6ddb2a2cd3c2f01",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T18:34:23.000Z",
-    "discovered_at": "2026-06-15 20:25:52"
+    "discovered_at": "2026-06-15 21:19:02"
   },
   {
     "id": "news-41e74c1497e421b7c293",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T14:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-e26a6d525948de9bc3c3",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T01:30:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-63685f806399b4accaf6",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-08T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-7707fdb288e4dff5d7bf",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-05T14:45:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-d0841d29a3627d472a5a",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T12:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-58a72a3a66c9437ce97a",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-04T09:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:48"
+    "discovered_at": "2026-06-15 21:18:54"
   },
   {
     "id": "news-76912b853c1db4a9d325",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-67b62c8d9d322bbe6810",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-02T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-4e4360776d53ebd55e4d",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-01T16:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-944dd86b3cacec948339",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T19:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-bf7abda633b2cc922140",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T17:30:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-daac52c1ca428b8c1223",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-29T12:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-bc3ca44337a2442474e8",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T20:29:53.000Z",
-    "discovered_at": "2026-06-15 20:25:52"
+    "discovered_at": "2026-06-15 21:19:02"
   },
   {
     "id": "news-52646498064ef2761133",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T15:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-918121c45d596b702d7d",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-28T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-3d614cc22e936ab40b7e",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-26T19:50:33.000Z",
-    "discovered_at": "2026-06-15 20:25:52"
+    "discovered_at": "2026-06-15 21:19:02"
   },
   {
     "id": "news-aaee48ad131bf7f1daa8",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-25T00:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-3405d5d5834dae606da3",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-22T18:00:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-ed67995bed7d0b38c02f",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T20:40:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-02632956ebdcc20d0248",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T19:30:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-369fda15542c315a2832",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-20T16:45:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-3d6d30af3414a6740245",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-1f203743494c93f90574",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-e4e059ae9ebc65abc0eb",
@@ -837,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-ab50a6a962f16cada480",
@@ -849,7 +849,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-4a09b699f249cb6fb1ac",
@@ -861,7 +861,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   },
   {
     "id": "news-8fc9597adf555bd4e2dd",
@@ -873,6 +873,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-05-19T17:45:00.000Z",
-    "discovered_at": "2026-06-15 20:25:51"
+    "discovered_at": "2026-06-15 21:19:01"
   }
 ]
