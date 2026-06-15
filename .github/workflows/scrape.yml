@@ -21,6 +21,10 @@ permissions:
   actions: write
   contents: write
 
+concurrency:
+  group: ai-resource-hub-scrape-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
