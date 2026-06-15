@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T02:25:43.247Z",
+  "generatedAt": "2026-06-15T03:25:51.547Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-15T02:25:41.836Z",
+      "lastCheckedAt": "2026-06-15T03:25:50.385Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,108 +20,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-15T02:25:40.670Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "s9w82lp9dcn9",
-          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-06-13T00:50:43.835Z",
-          "updatedAt": "2026-06-13T00:50:44.043Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/kqx0j625mrgv",
-          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "1trjx6gxk1bt",
-          "title": "Elevated errors on Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-13T02:03:03.013Z",
-          "updatedAt": "2026-06-13T02:11:58.230Z",
-          "resolvedAt": "2026-06-13T02:11:58.215Z",
-          "url": "https://stspg.io/wdbhcs86nngm",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "s9w82lp9dcn9",
-          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-06-13T00:50:43.835Z",
-          "updatedAt": "2026-06-13T00:50:44.043Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/kqx0j625mrgv",
-          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
-        },
-        {
-          "id": "j8ghp7dk6lym",
-          "title": "Elevated errors across models",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-06-11T16:54:52.467Z",
-          "updatedAt": "2026-06-11T17:56:08.254Z",
-          "resolvedAt": "2026-06-11T17:56:08.221Z",
-          "url": "https://stspg.io/7pwy7kxz7yzr",
-          "summary": "The issue affecting various models has been resolved. Impact occurred from 09:42am PT / 16:42 UTC to 10:03am PT / 17:03 UTC."
-        },
-        {
-          "id": "sp7cf0cghqsk",
-          "title": "Elevated errors on Claude Opus 4.6",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-11T14:37:07.546Z",
-          "updatedAt": "2026-06-11T15:01:51.464Z",
-          "resolvedAt": "2026-06-11T15:01:51.449Z",
-          "url": "https://stspg.io/r2r8c96brb9n",
-          "summary": "This incident has been resolved."
-        }
-      ]
     },
     {
       "id": "cohere",
@@ -134,7 +32,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-15T02:25:42.329Z",
+      "lastCheckedAt": "2026-06-15T03:25:50.705Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +52,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-15T02:25:42.893Z",
+      "lastCheckedAt": "2026-06-15T03:25:51.024Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +117,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-15T02:25:41.454Z",
+      "lastCheckedAt": "2026-06-15T03:25:50.058Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +160,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-15T02:25:40.705Z",
+      "lastCheckedAt": "2026-06-15T03:25:49.311Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +246,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-15T02:25:43.239Z",
+      "lastCheckedAt": "2026-06-15T03:25:51.540Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -403,6 +301,26 @@
       ]
     },
     {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "error",
+      "lastCheckedAt": null,
+      "overallStatus": "unknown",
+      "overallLabel": "Status unavailable",
+      "summary": null,
+      "notes": "HTTP 405 for https://status.claude.com/api/v2/summary.json",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -417,7 +335,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
