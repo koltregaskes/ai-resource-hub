@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 16 Jun 2026, 08:26 UTC
+Generated: 16 Jun 2026, 09:25 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -11,7 +11,7 @@ This table shows how much of each provider's public model surface is currently r
 | Anthropic | 8 | 12 | 1 | Claude Fable 5 (9 Jun 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 6 | 0 | n/a | n/a | [docs](https://llama.meta.com/docs) |
 | Alibaba | 5 | 41 | 0 | Qwen3.7 Plus (3 Jun 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
-| DeepSeek | 4 | 8 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
+| DeepSeek | 4 | 7 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
