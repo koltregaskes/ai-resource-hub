@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T07:25:47.126Z",
+  "generatedAt": "2026-06-16T08:25:51.842Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T07:25:45.056Z",
+      "lastCheckedAt": "2026-06-16T08:25:49.776Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T07:25:46.315Z",
+      "lastCheckedAt": "2026-06-16T08:25:50.761Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T07:25:45.110Z",
+      "lastCheckedAt": "2026-06-16T08:25:49.789Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T07:25:46.600Z",
+      "lastCheckedAt": "2026-06-16T08:25:51.108Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T07:25:46.937Z",
+      "lastCheckedAt": "2026-06-16T08:25:51.433Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T07:25:46.077Z",
+      "lastCheckedAt": "2026-06-16T08:25:50.583Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T07:25:47.084Z",
+      "lastCheckedAt": "2026-06-16T08:25:51.555Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -368,7 +368,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-06-16T05:01:15.000Z",
+          "id": "together-feed-0-2026-06-16T07:51:20.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-16T07:51:20.000Z",
+          "updatedAt": "2026-06-16T07:51:20.000Z",
+          "resolvedAt": "2026-06-16T07:51:20.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-16T07:36:23.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-16T07:36:23.000Z",
+          "updatedAt": "2026-06-16T07:36:23.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-16T05:01:15.000Z",
           "title": "Pearl-ai Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -379,7 +401,7 @@
           "summary": "Pearl-ai Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-1-2026-06-16T04:46:18.000Z",
+          "id": "together-feed-3-2026-06-16T04:46:18.000Z",
           "title": "Pearl-ai Gemma 4 31B IT went down",
           "status": "investigating",
           "impact": "major",
@@ -388,28 +410,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Pearl-ai Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-16T01:44:50.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-16T01:44:50.000Z",
-          "updatedAt": "2026-06-16T01:44:50.000Z",
-          "resolvedAt": "2026-06-16T01:44:50.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-16T01:30:55.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-16T01:30:55.000Z",
-          "updatedAt": "2026-06-16T01:30:55.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
         }
       ]
     },
@@ -428,7 +428,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
