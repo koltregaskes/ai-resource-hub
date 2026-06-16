@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T00:16:56.650Z",
+  "generatedAt": "2026-06-16T01:25:45.149Z",
   "providers": [
     {
       "id": "openai",
@@ -12,16 +12,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T00:16:46.327Z",
+      "lastCheckedAt": "2026-06-16T01:25:43.265Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Codex Web",
-          "status": "degraded_performance"
-        },
         {
           "name": "Fine-tuning",
           "status": "operational"
@@ -41,19 +37,13 @@
         {
           "name": "ChatGPT Atlas",
           "status": "operational"
+        },
+        {
+          "name": "Realtime",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
-        {
-          "id": "01KV6W1JX2T4T1455777Q1R2W5",
-          "title": "Users may experience issue with Codex Cloud tasks",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-16T00:07:04.000Z",
-          "updatedAt": "2026-06-16T00:07:04.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
-        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -69,12 +59,12 @@
         {
           "id": "01KV6W1JX2T4T1455777Q1R2W5",
           "title": "Users may experience issue with Codex Cloud tasks",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-06-16T00:07:04.000Z",
-          "updatedAt": "2026-06-16T00:07:04.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "updatedAt": "2026-06-16T00:55:57.000Z",
+          "resolvedAt": "2026-06-16T00:55:57.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
@@ -119,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T00:16:47.393Z",
+      "lastCheckedAt": "2026-06-16T01:25:44.508Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T00:16:46.373Z",
+      "lastCheckedAt": "2026-06-16T01:25:43.290Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -241,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T00:16:47.725Z",
+      "lastCheckedAt": "2026-06-16T01:25:44.779Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T00:16:47.979Z",
+      "lastCheckedAt": "2026-06-16T01:25:45.142Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -326,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T00:16:47.231Z",
+      "lastCheckedAt": "2026-06-16T01:25:44.255Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -369,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T00:16:48.147Z",
+      "lastCheckedAt": "2026-06-16T01:25:44.955Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -438,7 +428,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "fetch failed",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
