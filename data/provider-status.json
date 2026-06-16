@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T10:25:50.803Z",
+  "generatedAt": "2026-06-16T11:25:58.975Z",
   "providers": [
     {
       "id": "openai",
@@ -12,38 +12,48 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T10:25:49.054Z",
+      "lastCheckedAt": "2026-06-16T11:25:48.688Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
+          "name": "CLI",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "VS Code extension",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex Web",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "App",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex API",
+          "status": "degraded_performance"
+        },
+        {
           "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Files",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        },
-        {
-          "name": "ChatGPT Atlas",
-          "status": "operational"
-        },
-        {
-          "name": "Realtime",
           "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KV7ZT644J4V94GSXMFPY2ANR",
+          "title": "Codex \"Selected Model is at Capacity\" Error",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-06-16T10:32:11.000Z",
+          "updatedAt": "2026-06-16T10:32:11.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KV7ZT644J4V94GSXMFPY2ANR",
+          "title": "Codex \"Selected Model is at Capacity\" Error",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-06-16T10:32:11.000Z",
+          "updatedAt": "2026-06-16T10:32:11.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01KV6W1JX2T4T1455777Q1R2W5",
           "title": "Users may experience issue with Codex Cloud tasks",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-06-15T20:12:26.000Z",
           "resolvedAt": "2026-06-15T20:12:26.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KTWCER83NNKE698QXNXJG11M",
-          "title": "Elevated 431 Errors",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-11T22:22:14.000Z",
-          "updatedAt": "2026-06-12T00:47:57.000Z",
-          "resolvedAt": "2026-06-12T00:47:57.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T10:25:49.942Z",
+      "lastCheckedAt": "2026-06-16T11:25:49.560Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T10:25:49.044Z",
+      "lastCheckedAt": "2026-06-16T11:25:48.665Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T10:25:50.262Z",
+      "lastCheckedAt": "2026-06-16T11:25:49.924Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T10:25:50.458Z",
+      "lastCheckedAt": "2026-06-16T11:25:50.345Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T10:25:49.782Z",
+      "lastCheckedAt": "2026-06-16T11:25:49.383Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-16T10:25:50.608Z",
+      "lastCheckedAt": "2026-06-16T11:25:50.430Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -428,7 +438,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "fetch failed",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
