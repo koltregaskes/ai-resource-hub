@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 16 Jun 2026, 17:19 UTC
+Generated: 16 Jun 2026, 18:26 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 16 Jun 2026 | GLM 5.2 | Zhipu AI | tracking | high | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | 12 Jun 2026 | Kimi K2.7 Code | Moonshot AI | tracking | high | needs research | 0 | 0 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 9 Jun 2026 | Claude Fable 5 | Anthropic | tracking | high | needs research | 0 | 0 | [official](https://docs.anthropic.com) |
 | 4 Jun 2026 | Nemotron 3 Ultra | NVIDIA | tracking | high | needs research | 0 | 0 | [official](https://docs.api.nvidia.com) |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 27 Apr 2026 | Qwen3.6 Flash | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 35B A3B | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 Max Preview | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
-| 27 Apr 2026 | Qwen3.6 27B | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
