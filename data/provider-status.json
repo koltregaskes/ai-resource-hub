@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-17T16:29:10.530Z",
+  "generatedAt": "2026-06-17T17:25:45.797Z",
   "providers": [
     {
       "id": "openai",
@@ -12,12 +12,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T16:29:08.864Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "lastCheckedAt": "2026-06-17T17:25:44.252Z",
+      "overallStatus": "partial_outage",
+      "overallLabel": "Partial System Outage",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Conversations",
+          "status": "partial_outage"
+        },
         {
           "name": "CLI",
           "status": "operational"
@@ -37,13 +41,19 @@
         {
           "name": "Compliance API",
           "status": "operational"
-        },
-        {
-          "name": "ChatGPT Atlas",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KVB9JAB1PP9GS4A6AZ52TT5Y",
+          "title": "Errors with conversations on Andriod and iOS devices",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-06-17T17:20:22.000Z",
+          "updatedAt": "2026-06-17T17:20:22.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KVB9JAB1PP9GS4A6AZ52TT5Y",
+          "title": "Errors with conversations on Andriod and iOS devices",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-06-17T17:20:22.000Z",
+          "updatedAt": "2026-06-17T17:20:22.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-06-16T00:55:57.000Z",
           "resolvedAt": "2026-06-16T00:55:57.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KV67B3HB2B6JKHAMHCCYS0KZ",
-          "title": "OAuth Account Creation / Login Error",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-15T18:05:16.000Z",
-          "updatedAt": "2026-06-15T20:12:26.000Z",
-          "resolvedAt": "2026-06-15T20:12:26.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T16:29:09.545Z",
+      "lastCheckedAt": "2026-06-17T17:25:45.077Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T16:29:08.844Z",
+      "lastCheckedAt": "2026-06-17T17:25:44.487Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T16:29:10.121Z",
+      "lastCheckedAt": "2026-06-17T17:25:45.457Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T16:29:10.326Z",
+      "lastCheckedAt": "2026-06-17T17:25:45.789Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T16:29:09.401Z",
+      "lastCheckedAt": "2026-06-17T17:25:44.755Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T16:29:10.523Z",
+      "lastCheckedAt": "2026-06-17T17:25:45.738Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
