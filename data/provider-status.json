@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-17T01:25:58.269Z",
+  "generatedAt": "2026-06-17T02:05:39.359Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T01:25:56.768Z",
+      "lastCheckedAt": "2026-06-17T02:05:38.085Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "2 active incidents across 6 tracked components.",
@@ -46,14 +46,14 @@
       "activeIncidents": [
         {
           "id": "8chgzf3fs27n",
-          "title": "Sonnet 4.6 errors",
-          "status": "investigating",
+          "title": "Elevated errors on Claude Sonnet 4.6 and Opus 4.8",
+          "status": "identified",
           "impact": "minor",
           "startedAt": "2026-06-17T00:47:11.160Z",
-          "updatedAt": "2026-06-17T00:47:11.343Z",
+          "updatedAt": "2026-06-17T01:52:15.234Z",
           "resolvedAt": null,
           "url": "https://stspg.io/fx46sjxykmsc",
-          "summary": "We are currently investigating this issue."
+          "summary": "At this time, success rates for Claude Sonnet 4.6 have recovered and we are working to resolve an issue resulting in elevated errors on Opus 4.8. We will provide additional update..."
         },
         {
           "id": "s9w82lp9dcn9",
@@ -70,14 +70,14 @@
       "recentIncidents": [
         {
           "id": "8chgzf3fs27n",
-          "title": "Sonnet 4.6 errors",
-          "status": "investigating",
+          "title": "Elevated errors on Claude Sonnet 4.6 and Opus 4.8",
+          "status": "identified",
           "impact": "minor",
           "startedAt": "2026-06-17T00:47:11.160Z",
-          "updatedAt": "2026-06-17T00:47:11.343Z",
+          "updatedAt": "2026-06-17T01:52:15.234Z",
           "resolvedAt": null,
           "url": "https://stspg.io/fx46sjxykmsc",
-          "summary": "We are currently investigating this issue."
+          "summary": "At this time, success rates for Claude Sonnet 4.6 have recovered and we are working to resolve an issue resulting in elevated errors on Opus 4.8. We will provide additional update..."
         },
         {
           "id": "41395mspl1rf",
@@ -125,7 +125,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T01:25:56.777Z",
+      "lastCheckedAt": "2026-06-17T02:05:38.043Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T01:25:57.481Z",
+      "lastCheckedAt": "2026-06-17T02:05:38.619Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -242,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T01:25:57.868Z",
+      "lastCheckedAt": "2026-06-17T02:05:39.142Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T01:25:58.147Z",
+      "lastCheckedAt": "2026-06-17T02:05:39.352Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T01:25:57.368Z",
+      "lastCheckedAt": "2026-06-17T02:05:38.857Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -370,7 +370,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T01:25:58.262Z",
+      "lastCheckedAt": "2026-06-17T02:05:39.336Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
