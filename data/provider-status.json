@@ -1,6 +1,119 @@
 {
-  "generatedAt": "2026-06-17T08:15:20.806Z",
+  "generatedAt": "2026-06-17T08:25:50.316Z",
   "providers": [
+    {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-17T08:25:48.611Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "2 active incidents across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Code",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "k8563n9wd0r8",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-17T08:24:34.955Z",
+          "updatedAt": "2026-06-17T08:24:35.104Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/rd83d4611qzr",
+          "summary": "We are currently investigating this issue."
+        },
+        {
+          "id": "s9w82lp9dcn9",
+          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
+          "status": "monitoring",
+          "impact": "major",
+          "startedAt": "2026-06-13T00:50:43.835Z",
+          "updatedAt": "2026-06-16T20:50:02.230Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/kqx0j625mrgv",
+          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "k8563n9wd0r8",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-17T08:24:34.955Z",
+          "updatedAt": "2026-06-17T08:24:35.104Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/rd83d4611qzr",
+          "summary": "We are currently investigating this issue."
+        },
+        {
+          "id": "zw75lhl39skc",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-17T05:08:19.998Z",
+          "updatedAt": "2026-06-17T06:37:45.439Z",
+          "resolvedAt": "2026-06-17T06:37:45.424Z",
+          "url": "https://stspg.io/nbnfb446kwm9",
+          "summary": "This incident has been resolved. Requests to Claude Opus 4.8 received elevated errors between 9:59pm PT / 04:59 UTC and 10:41pm PT / 05:41 UTC."
+        },
+        {
+          "id": "8chgzf3fs27n",
+          "title": "Elevated errors on Claude Sonnet 4.6 and Opus 4.8",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-17T00:47:11.160Z",
+          "updatedAt": "2026-06-17T02:50:39.127Z",
+          "resolvedAt": "2026-06-17T02:50:39.111Z",
+          "url": "https://stspg.io/fx46sjxykmsc",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "41395mspl1rf",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-06-16T20:50:01.946Z",
+          "updatedAt": "2026-06-16T22:02:34.892Z",
+          "resolvedAt": "2026-06-16T22:02:34.876Z",
+          "url": "https://stspg.io/tslzsk6f4hlf",
+          "summary": "This issue has been resolved. We saw elevated errors on requests to Claude Opus 4.8 between 1:45pm PT / 20:45 UTC and 1:58pm PT / 20:58 UTC."
+        }
+      ]
+    },
     {
       "id": "openai",
       "providerId": "openai",
@@ -12,7 +125,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T08:15:19.016Z",
+      "lastCheckedAt": "2026-06-17T08:25:48.619Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +222,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T08:15:20.090Z",
+      "lastCheckedAt": "2026-06-17T08:25:49.615Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -117,196 +230,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T08:15:20.706Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "together-feed-1-2026-06-16T07:36:23.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-16T07:36:23.000Z",
-          "updatedAt": "2026-06-16T07:36:23.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-3-2026-06-16T04:46:18.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-16T04:46:18.000Z",
-          "updatedAt": "2026-06-16T04:46:18.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-06-16T07:51:20.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-16T07:51:20.000Z",
-          "updatedAt": "2026-06-16T07:51:20.000Z",
-          "resolvedAt": "2026-06-16T07:51:20.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-1-2026-06-16T07:36:23.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-16T07:36:23.000Z",
-          "updatedAt": "2026-06-16T07:36:23.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-16T05:01:15.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-16T05:01:15.000Z",
-          "updatedAt": "2026-06-16T05:01:15.000Z",
-          "resolvedAt": "2026-06-16T05:01:15.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-16T04:46:18.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-16T04:46:18.000Z",
-          "updatedAt": "2026-06-16T04:46:18.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT went down"
-        }
-      ]
-    },
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T08:15:18.990Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "s9w82lp9dcn9",
-          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-06-13T00:50:43.835Z",
-          "updatedAt": "2026-06-16T20:50:02.230Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/kqx0j625mrgv",
-          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "zw75lhl39skc",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-17T05:08:19.998Z",
-          "updatedAt": "2026-06-17T06:37:45.439Z",
-          "resolvedAt": "2026-06-17T06:37:45.424Z",
-          "url": "https://stspg.io/nbnfb446kwm9",
-          "summary": "This incident has been resolved. Requests to Claude Opus 4.8 received elevated errors between 9:59pm PT / 04:59 UTC and 10:41pm PT / 05:41 UTC."
-        },
-        {
-          "id": "8chgzf3fs27n",
-          "title": "Elevated errors on Claude Sonnet 4.6 and Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-17T00:47:11.160Z",
-          "updatedAt": "2026-06-17T02:50:39.127Z",
-          "resolvedAt": "2026-06-17T02:50:39.111Z",
-          "url": "https://stspg.io/fx46sjxykmsc",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "41395mspl1rf",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-06-16T20:50:01.946Z",
-          "updatedAt": "2026-06-16T22:02:34.892Z",
-          "resolvedAt": "2026-06-16T22:02:34.876Z",
-          "url": "https://stspg.io/tslzsk6f4hlf",
-          "summary": "This issue has been resolved. We saw elevated errors on requests to Claude Opus 4.8 between 1:45pm PT / 20:45 UTC and 1:58pm PT / 20:58 UTC."
-        },
-        {
-          "id": "8q88rrz9rjd0",
-          "title": "Opus 4.8 errors",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-06-16T19:59:26.511Z",
-          "updatedAt": "2026-06-16T20:16:07.214Z",
-          "resolvedAt": "2026-06-16T20:16:07.194Z",
-          "url": "https://stspg.io/0qxpsl8p5gr7",
-          "summary": "This incident has been resolved."
-        }
-      ]
     },
     {
       "id": "cohere",
@@ -319,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T08:15:20.510Z",
+      "lastCheckedAt": "2026-06-17T08:25:49.885Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +262,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T08:15:20.783Z",
+      "lastCheckedAt": "2026-06-17T08:25:50.207Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -404,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-17T08:15:19.825Z",
+      "lastCheckedAt": "2026-06-17T08:25:49.364Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -437,6 +360,71 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-17T08:25:50.309Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-06-16T07:51:20.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-16T07:51:20.000Z",
+          "updatedAt": "2026-06-16T07:51:20.000Z",
+          "resolvedAt": "2026-06-16T07:51:20.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-16T07:36:23.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-16T07:36:23.000Z",
+          "updatedAt": "2026-06-16T07:36:23.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-16T05:01:15.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-16T05:01:15.000Z",
+          "updatedAt": "2026-06-16T05:01:15.000Z",
+          "resolvedAt": "2026-06-16T05:01:15.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-3-2026-06-16T04:46:18.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-16T04:46:18.000Z",
+          "updatedAt": "2026-06-16T04:46:18.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT went down"
+        }
+      ]
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -451,7 +439,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
