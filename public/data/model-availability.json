@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-18T03:25:42.838Z",
+  "generatedAt": "2026-06-18T04:25:48.063Z",
   "overview": {
-    "generatedAt": "2026-06-18T03:25:42.849Z",
+    "generatedAt": "2026-06-18T04:25:48.075Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
@@ -207,8 +207,8 @@
         "Gemini 3.1 Flash Lite",
         "Gemini 3.5 Flash",
         "Nano Banana (Gemini 2.5 Flash Image)",
-        "Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
-        "Nano Banana Pro (Gemini 3 Pro Image Preview)"
+        "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        "Nano Banana Pro (Gemini 3 Pro Image)"
       ],
       "surfaceLabel": "API + Web"
     },
