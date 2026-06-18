@@ -241,4 +241,81 @@ export const BENCHMARK_RESOURCES: BenchmarkResource[] = [
       { label: 'GitHub', url: 'https://github.com/Margin-Lab' },
     ],
   },
+  {
+    id: 'vectara-hhem',
+    name: 'Vectara Hallucination Leaderboard (HHEM)',
+    category: 'Factuality and hallucination',
+    access: 'Open leaderboard + open evaluation model',
+    url: 'https://huggingface.co/spaces/vectara/leaderboard',
+    description:
+      'Ranks models by how often they introduce hallucinations when summarising a source document, scored by the open HHEM evaluation model. Complements SimpleQA by measuring grounded-summarisation faithfulness rather than short-form recall.',
+    notes:
+      'Promoted from the KOL-4013 link backlog. Useful second hallucination signal for the Reliability Floor factuality dimension.',
+    highlights: [
+      'Document-grounded hallucination rate, refreshed as new models land',
+      'Backed by the openly published HHEM scorer',
+      'Reports factual-consistency, answer-rate, and average summary length',
+    ],
+    links: [
+      { label: 'Leaderboard', url: 'https://huggingface.co/spaces/vectara/leaderboard' },
+      { label: 'HHEM model', url: 'https://huggingface.co/vectara/hallucination_evaluation_model' },
+    ],
+  },
+  {
+    id: 'ml-energy-leaderboard',
+    name: 'ML.ENERGY Leaderboard',
+    category: 'Energy and efficiency',
+    access: 'Open leaderboard',
+    url: 'https://ml.energy/leaderboard/',
+    description:
+      'Measures the energy consumption and efficiency of serving open LLMs, not just their quality. Useful for the operating-envelope view where cost, latency, and energy matter alongside capability.',
+    notes:
+      'Promoted from the KOL-4013 link backlog. Fills the efficiency gap the capability-only benchmarks ignore.',
+    highlights: [
+      'Energy per request and tokens-per-joule across open models',
+      'Hardware-aware serving measurements',
+      'Complements operating-envelope cost and latency metrics',
+    ],
+    links: [{ label: 'Leaderboard', url: 'https://ml.energy/leaderboard/' }],
+  },
+  {
+    id: 'misguided-attention',
+    name: 'MisguidedAttention',
+    category: 'Reasoning under misleading prompts',
+    access: 'Open evaluation set (GitHub)',
+    url: 'https://github.com/cpldcpu/MisguidedAttention',
+    description:
+      'A collection of prompts that embed misleading or distracting context to test whether a model reasons from first principles or pattern-matches to a wrong but familiar answer. Probes a failure mode standard reasoning benchmarks miss.',
+    notes:
+      'Promoted from the KOL-4013 link backlog. Good adversarial-reasoning signal for the reasoning-floor dimension.',
+    highlights: [
+      'Targets over-reliance on memorised patterns under misleading framing',
+      'Open prompt set with per-model results',
+      'Complements clean-prompt reasoning benchmarks with an adversarial angle',
+    ],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/cpldcpu/MisguidedAttention' },
+      { label: 'Eval set', url: 'https://github.com/cpldcpu/MisguidedAttention/tree/main/eval' },
+    ],
+  },
+  {
+    id: 'epoch-ai',
+    name: 'Epoch AI',
+    category: 'Trends and forecasting',
+    access: 'Open research and data',
+    url: 'https://epoch.ai/',
+    description:
+      'Research organisation tracking the compute, data, cost, and capability trends behind frontier AI. Not a per-model benchmark, but a primary source for the macro trend context the hub cites around model progress.',
+    notes:
+      'Promoted from the KOL-4013 link backlog as a cited data source rather than a leaderboard.',
+    highlights: [
+      'Longitudinal data on training compute, dataset size, and cost',
+      'Independent analysis of AI progress and timelines',
+      'Citable primary source for trend and forecasting context',
+    ],
+    links: [
+      { label: 'Homepage', url: 'https://epoch.ai/' },
+      { label: 'Multi-decade AI timelines', url: 'https://epoch.ai/gradient-updates/the-case-for-multi-decade-ai-timelines' },
+    ],
+  },
 ];
