@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { AI_FINDS, AI_FIND_CATEGORIES } from '../../data/research-finds';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const groups = AI_FIND_CATEGORIES
+  .map((category) => ({ category, items: AI_FINDS.filter((f) => f.category === category) }))
+  .filter((g) => g.items.length > 0);
+---
+
+<BaseLayout
+  title="AI Finds — The AI Resource Hub"
+  description="Curated AI models, tools, benchmarks, and techniques mined from our research link backlog. Each find links to its source."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">AI Finds</span>
+    </nav>
+
+    <div class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">AI Finds</h1>
+      <p class="text-(--color-text-secondary) max-w-2xl">
+        Credible AI models, tools, benchmarks, and techniques surfaced from our research link backlog and curated into a single list. {AI_FINDS.length} finds across {groups.length} categories. Each links to its original source.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      {groups.map((g) => (
+        <a href={`#${g.category.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`} class="text-xs px-3 py-1.5 rounded-full bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-accent) transition-colors">
+          {g.category} <span class="opacity-60">{g.items.length}</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="space-y-8">
+      {groups.map((g) => (
+        <div id={g.category.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}>
+          <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">{g.category}</h2>
+          <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden divide-y divide-(--color-border)/50">
+            {g.items.map((f) => (
+              <div class="px-4 py-3">
+                <div class="flex items-baseline justify-between gap-3">
+                  <a href={f.url} target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                    {f.name}
+                  </a>
+                  <span class="text-xs text-(--color-text-muted) shrink-0">{f.source}</span>
+                </div>
+                <p class="text-xs text-(--color-text-muted) mt-1">{f.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
