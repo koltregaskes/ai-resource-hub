@@ -87,6 +87,9 @@ export const AI_FINDS: AiFind[] = [
   { name: "Timezone and current-date system-prompt snippet", source: "@_philschmid (Philipp Schmid)", url: "https://x.com/_philschmid/status/1969058007473365178", category: "Guides & techniques", description: "A system-instruction snippet that injects the user's timezone and current date so the model treats relative time references correctly and avoids relying on stale knowledge." },
   { name: "RenderNet AI music video generator", source: "@rendernet_ai (Affogato AI)", url: "https://x.com/rendernet_ai/status/1884730452583538892", category: "Creative", description: "An AI music video generator that lets users edit and refine individual scenes before the final video is rendered." },
   { name: "LemonSlice", source: "Magnific (Freepik)", url: "https://x.com/freepik/status/1887826699574018496", category: "News & signals", description: "Upscale Conf, a two-day AI and creative-community conference powered by Freepik, was scheduled for San Francisco on May 20-21, 2025." },
+  { name: "Dehancer", source: "dehancer.com", url: "https://www.dehancer.com/", category: "Creative", description: "A film-emulation and colour-grading toolset that reproduces analogue film stocks, grain, and halation for video and photo workflows." },
+  { name: "LTX-2 prompting guide", source: "ltx.io", url: "https://ltx.io/blog/prompting-guide-for-ltx-2", category: "Guides & techniques", description: "Lightricks' official prompting guide for the LTX-2 video model, covering shot structure, motion, and style control." },
+  { name: "AI Safety for Fleshy Humans", source: "aisafety.dance", url: "https://aisafety.dance/", category: "Guides & techniques", description: "An accessible, plain-language primer on AI safety and alignment for non-experts." },
 ];
 
 export const AI_FIND_CATEGORIES = ["Models","Tools","Benchmarks","Guides & techniques","News & signals","Creative"] as const;

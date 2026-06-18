@@ -318,4 +318,24 @@ export const BENCHMARK_RESOURCES: BenchmarkResource[] = [
       { label: 'Multi-decade AI timelines', url: 'https://epoch.ai/gradient-updates/the-case-for-multi-decade-ai-timelines' },
     ],
   },
+  {
+    id: 'aa-omniscience',
+    name: 'AA-Omniscience',
+    category: 'Knowledge and hallucination',
+    access: 'Artificial Analysis benchmark + article',
+    url: 'https://artificialanalysis.ai/evaluations/omniscience',
+    description:
+      'Artificial Analysis benchmark measuring both how much factual knowledge a model holds and how often it hallucinates when it does not know. Pairs a knowledge-accuracy score with an explicit hallucination rate, so a confident-but-wrong model scores worse than one that abstains.',
+    notes:
+      'Promoted from the KOL-4013 top-priority link batch. Strong complement to SimpleQA and the Vectara leaderboard for the reliability/factuality view.',
+    highlights: [
+      'Separates knowledge breadth from hallucination tendency',
+      'Rewards calibrated abstention over confident guessing',
+      'Refreshed by Artificial Analysis alongside their model coverage',
+    ],
+    links: [
+      { label: 'Leaderboard', url: 'https://artificialanalysis.ai/evaluations/omniscience' },
+      { label: 'Methodology article', url: 'https://artificialanalysis.ai/articles/aa-omniscience-knowledge-hallucination-benchmark' },
+    ],
+  },
 ];
