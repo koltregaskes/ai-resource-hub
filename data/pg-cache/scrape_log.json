@@ -3,37 +3,19 @@
     "id": 11,
     "scraper": "jobs",
     "status": "success",
-    "models_updated": 1025,
+    "models_updated": 1026,
     "error_message": null,
-    "started_at": "2026-06-18 20:25:48",
-    "finished_at": "2026-06-18 20:25:48"
+    "started_at": "2026-06-18 20:37:51",
+    "finished_at": "2026-06-18 20:37:51"
   },
   {
     "id": 10,
     "scraper": "news:rss",
-    "status": "success",
-    "models_updated": 80,
-    "error_message": null,
-    "started_at": "2026-06-18 20:25:41",
-    "finished_at": "2026-06-18 20:25:41"
-  },
-  {
-    "id": 9,
-    "scraper": "registry:normalise-status",
-    "status": "success",
-    "models_updated": 108,
-    "error_message": null,
-    "started_at": "2026-06-18 20:25:37",
-    "finished_at": "2026-06-18 20:25:37"
-  },
-  {
-    "id": 7,
-    "scraper": "creative-benchmarks",
-    "status": "fallback",
-    "models_updated": 16,
-    "error_message": null,
-    "started_at": "2026-06-18 20:25:36",
-    "finished_at": "2026-06-18 20:25:36"
+    "status": "error",
+    "models_updated": 70,
+    "error_message": "The Verge: HTTP 404: Not Found",
+    "started_at": "2026-06-18 20:37:47",
+    "finished_at": "2026-06-18 20:37:47"
   },
   {
     "id": 8,
@@ -41,26 +23,26 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-06-18 20:25:36",
-    "finished_at": "2026-06-18 20:25:36"
+    "started_at": "2026-06-18 20:37:43",
+    "finished_at": "2026-06-18 20:37:43"
   },
   {
-    "id": 6,
-    "scraper": "speed",
+    "id": 9,
+    "scraper": "registry:normalise-status",
     "status": "success",
-    "models_updated": 31,
+    "models_updated": 108,
     "error_message": null,
-    "started_at": "2026-06-18 20:25:35",
-    "finished_at": "2026-06-18 20:25:35"
+    "started_at": "2026-06-18 20:37:43",
+    "finished_at": "2026-06-18 20:37:43"
   },
   {
-    "id": 4,
-    "scraper": "pricing:validator",
-    "status": "success",
-    "models_updated": 0,
+    "id": 7,
+    "scraper": "creative-benchmarks",
+    "status": "fallback",
+    "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-06-18 20:25:34",
-    "finished_at": "2026-06-18 20:25:34"
+    "started_at": "2026-06-18 20:37:42",
+    "finished_at": "2026-06-18 20:37:42"
   },
   {
     "id": 5,
@@ -68,26 +50,26 @@
     "status": "success",
     "models_updated": 27,
     "error_message": null,
-    "started_at": "2026-06-18 20:25:34",
-    "finished_at": "2026-06-18 20:25:34"
+    "started_at": "2026-06-18 20:37:41",
+    "finished_at": "2026-06-18 20:37:41"
   },
   {
-    "id": 3,
-    "scraper": "official-pricing",
+    "id": 6,
+    "scraper": "speed",
     "status": "success",
-    "models_updated": 6,
+    "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-06-18 20:25:33",
-    "finished_at": "2026-06-18 20:25:33"
+    "started_at": "2026-06-18 20:37:41",
+    "finished_at": "2026-06-18 20:37:41"
   },
   {
-    "id": 1,
-    "scraper": "catalog:sync",
+    "id": 4,
+    "scraper": "pricing:validator",
     "status": "success",
-    "models_updated": 37,
+    "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-06-18 20:25:32",
-    "finished_at": "2026-06-18 20:25:32"
+    "started_at": "2026-06-18 20:37:40",
+    "finished_at": "2026-06-18 20:37:40"
   },
   {
     "id": 2,
@@ -95,7 +77,25 @@
     "status": "success",
     "models_updated": 242,
     "error_message": null,
-    "started_at": "2026-06-18 20:25:32",
-    "finished_at": "2026-06-18 20:25:32"
+    "started_at": "2026-06-18 20:37:39",
+    "finished_at": "2026-06-18 20:37:39"
+  },
+  {
+    "id": 3,
+    "scraper": "official-pricing",
+    "status": "success",
+    "models_updated": 6,
+    "error_message": null,
+    "started_at": "2026-06-18 20:37:39",
+    "finished_at": "2026-06-18 20:37:39"
+  },
+  {
+    "id": 1,
+    "scraper": "catalog:sync",
+    "status": "success",
+    "models_updated": 37,
+    "error_message": null,
+    "started_at": "2026-06-18 20:37:38",
+    "finished_at": "2026-06-18 20:37:38"
   }
 ]
