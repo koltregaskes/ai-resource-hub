@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T09:43:24.947Z",
+  "generatedAt": "2026-06-18T11:25:41.723Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-18T09:43:23.158Z",
+      "lastCheckedAt": "2026-06-18T11:25:39.830Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-18T09:43:23.073Z",
+      "lastCheckedAt": "2026-06-18T11:25:39.760Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "2 active incidents across 25 tracked components.",
@@ -149,12 +149,12 @@
         {
           "id": "01KVCZ38K0RJZTSX7Y70RQMV2D",
           "title": "SSO login errors for some ChatGPT Enterprise workspaces",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-06-18T08:55:52.000Z",
-          "updatedAt": "2026-06-18T08:55:52.000Z",
+          "updatedAt": "2026-06-18T09:59:44.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
@@ -171,12 +171,12 @@
         {
           "id": "01KVCZ38K0RJZTSX7Y70RQMV2D",
           "title": "SSO login errors for some ChatGPT Enterprise workspaces",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-06-18T08:55:52.000Z",
-          "updatedAt": "2026-06-18T08:55:52.000Z",
+          "updatedAt": "2026-06-18T09:59:44.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KVCC8P5XTCA7H7W7E6A2MYJS",
@@ -221,7 +221,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-18T09:43:24.164Z",
+      "lastCheckedAt": "2026-06-18T11:25:40.846Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -241,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-18T09:43:24.480Z",
+      "lastCheckedAt": "2026-06-18T11:25:41.412Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-18T09:43:24.719Z",
+      "lastCheckedAt": "2026-06-18T11:25:41.632Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -326,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-18T09:43:23.930Z",
+      "lastCheckedAt": "2026-06-18T11:25:40.609Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -369,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-18T09:43:24.850Z",
+      "lastCheckedAt": "2026-06-18T11:25:41.716Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -378,7 +378,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-06-18T07:20:30.000Z",
+          "id": "together-feed-0-2026-06-18T10:59:54.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-18T10:59:54.000Z",
+          "updatedAt": "2026-06-18T10:59:54.000Z",
+          "resolvedAt": "2026-06-18T10:59:54.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-18T10:46:47.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-18T10:46:47.000Z",
+          "updatedAt": "2026-06-18T10:46:47.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-18T07:20:30.000Z",
           "title": "Google Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -389,7 +411,7 @@
           "summary": "Google Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-1-2026-06-18T06:51:02.000Z",
+          "id": "together-feed-3-2026-06-18T06:51:02.000Z",
           "title": "Google Gemma 4 31B IT went down",
           "status": "investigating",
           "impact": "major",
@@ -398,28 +420,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-18T06:47:53.000Z",
-          "title": "Qwen3.5 9B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-18T06:47:53.000Z",
-          "updatedAt": "2026-06-18T06:47:53.000Z",
-          "resolvedAt": "2026-06-18T06:47:53.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-18T06:29:54.000Z",
-          "title": "Qwen3.5 9B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-18T06:29:54.000Z",
-          "updatedAt": "2026-06-18T06:29:54.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B went down"
         }
       ]
     },
