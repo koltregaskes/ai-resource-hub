@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 19 Jun 2026, 22:12 UTC
+Generated: 19 Jun 2026, 23:15 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 19 Jun 2026, 22:12 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 19 Jun 2026, 23:15 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 19 Jun 2026, 22:12 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 19 Jun 2026, 22:12 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 19 Jun 2026, 22:12 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 19 Jun 2026, 22:12 UTC |
-| Provider status | Hourly automated refresh | Automated | 19 Jun 2026, 22:12 UTC |
-| Guides and learning | Manual editorial review | Manual | 19 Jun 2026, 22:12 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 19 Jun 2026, 23:15 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 19 Jun 2026, 23:15 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 19 Jun 2026, 23:15 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 19 Jun 2026, 23:15 UTC |
+| Provider status | Hourly automated refresh | Automated | 19 Jun 2026, 23:15 UTC |
+| Guides and learning | Manual editorial review | Manual | 19 Jun 2026, 23:15 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 19 Jun 2026, 22:12 UTC
+- Last refreshed: 19 Jun 2026, 23:15 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -33,8 +33,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 20 Jun 2026, 12:00 UTC: Claude 3.5 Sonnet launched - Next exact anniversary in 1 day. (`/milestones/`)
-- 19 Jun 2026, 22:12 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 20 Jun 2026, 12:00 UTC: Claude 3.5 Sonnet launched - 2 year anniversary landing on today's date. (`/milestones/`)
+- 11 Jul 2026, 12:00 UTC: Claude 2 launched - Next exact anniversary in 21 days. (`/milestones/`)
+- 19 Jun 2026, 23:15 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +61,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 19 Jun 2026, 22:12 UTC
+- Last refreshed: 19 Jun 2026, 23:15 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -80,7 +81,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 19 Jun 2026, 22:12 UTC
+- Last refreshed: 19 Jun 2026, 23:15 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +93,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 19 Jun 2026, 22:12 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 19 Jun 2026, 22:12 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 19 Jun 2026, 23:15 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 19 Jun 2026, 23:15 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 19 Jun 2026, 22:12 UTC
+- Last refreshed: 19 Jun 2026, 23:15 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,15 +112,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 19 Jun 2026, 22:12 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 19 Jun 2026, 22:12 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 19 Jun 2026, 22:12 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 19 Jun 2026, 23:15 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 19 Jun 2026, 23:15 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 19 Jun 2026, 23:15 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 19 Jun 2026, 22:12 UTC
+- Last refreshed: 19 Jun 2026, 23:15 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -131,15 +132,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
+- 19 Jun 2026, 22:40 UTC: Encryption, spyware, and now Mythos: History shows why cyber export control doesn&#8217;t work - TechCrunch (industry) ([source](https://techcrunch.com/2026/06/19/encryption-spyware-and-now-mythos-history-shows-why-cyber-export-control-doesnt-work/))
 - 19 Jun 2026, 16:08 UTC: Is the US government&#8217;s Anthropic ban accidentally helping the brand? - TechCrunch (industry) ([source](https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/))
 - 19 Jun 2026, 16:01 UTC: The US banned Anthropic&#8217;s Fable 5 release, but the numbers don&#8217;t seem to care - TechCrunch (industry) ([source](https://techcrunch.com/podcast/the-us-banned-anthropics-fable-5-release-but-the-numbers-dont-seem-to-care/))
-- 19 Jun 2026, 15:23 UTC: Billionaire Ambani wants AI in every call, app, and home - TechCrunch (industry) ([source](https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 19 Jun 2026, 22:12 UTC
+- Last refreshed: 19 Jun 2026, 23:15 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +151,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 19 Jun 2026, 22:12 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
-- 19 Jun 2026, 22:12 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
-- 19 Jun 2026, 22:12 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 19 Jun 2026, 23:15 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
+- 19 Jun 2026, 23:15 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
+- 19 Jun 2026, 23:15 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 19 Jun 2026, 22:12 UTC
+- Last refreshed: 19 Jun 2026, 23:15 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +171,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 19 Jun 2026, 22:12 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 19 Jun 2026, 22:12 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
-- 19 Jun 2026, 22:12 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)
+- 19 Jun 2026, 23:15 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 19 Jun 2026, 23:15 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 19 Jun 2026, 23:15 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)

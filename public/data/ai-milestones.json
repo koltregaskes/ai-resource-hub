@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-19T22:12:29.976Z",
+  "generatedAt": "2026-06-19T23:15:55.039Z",
   "overview": {
-    "generatedForLabel": "Friday, 19 June 2026",
+    "generatedForLabel": "Saturday, 20 June 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -9,14 +9,13 @@
     "exactDateMilestones": 27,
     "homepageEligibleMilestones": 34,
     "nextMilestone": {
-      "id": "claude-3-5-sonnet-launch",
-      "title": "Claude 3.5 Sonnet launched",
-      "nextOccurrenceLabel": "20 Jun 2026",
-      "daysUntil": 1
+      "id": "claude-2-launch",
+      "title": "Claude 2 launched",
+      "nextOccurrenceLabel": "11 Jul 2026",
+      "daysUntil": 21
     }
   },
-  "todayMilestones": [],
-  "upcomingMilestones": [
+  "todayMilestones": [
     {
       "id": "claude-3-5-sonnet-launch",
       "slug": "claude-3-5-sonnet-launch",
@@ -63,11 +62,13 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1718884800000,
-      "daysUntil": 1,
+      "daysUntil": 0,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-06-20T12:00:00.000Z",
       "nextOccurrenceLabel": "20 Jun 2026"
-    },
+    }
+  ],
+  "upcomingMilestones": [
     {
       "id": "claude-2-launch",
       "slug": "claude-2-launch",
@@ -114,7 +115,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689076800000,
-      "daysUntil": 22,
+      "daysUntil": 21,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Jul 2026"
@@ -165,7 +166,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689681600000,
-      "daysUntil": 29,
+      "daysUntil": 28,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
       "nextOccurrenceLabel": "18 Jul 2026"
@@ -214,7 +215,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1661169600000,
-      "daysUntil": 64,
+      "daysUntil": 63,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
       "nextOccurrenceLabel": "22 Aug 2026"
@@ -265,7 +266,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1726142400000,
-      "daysUntil": 85,
+      "daysUntil": 84,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-09-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Sept 2026"
@@ -318,7 +319,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1695816000000,
-      "daysUntil": 100,
+      "daysUntil": 99,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
       "nextOccurrenceLabel": "27 Sept 2026"
@@ -367,7 +368,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 116,
+      "daysUntil": 115,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -418,10 +419,60 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 137,
+      "daysUntil": 136,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
+    },
+    {
+      "id": "alphafold-breakthrough",
+      "slug": "alphafold-breakthrough",
+      "title": "AlphaFold breakthrough at CASP14",
+      "summary": "AlphaFold’s CASP14 performance reshaped expectations for AI-assisted protein structure prediction.",
+      "year": 2020,
+      "month": 11,
+      "day": 30,
+      "datePrecision": "day",
+      "category": "research_breakthrough",
+      "kind": "milestone",
+      "significance": "major",
+      "providerId": "deepmind",
+      "tags": [
+        "biology",
+        "protein-folding",
+        "deepmind"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google DeepMind",
+          "url": "https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/",
+          "sourceType": "official_research",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google DeepMind",
+        "url": "https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/",
+        "sourceType": "official_research",
+        "role": "canonical"
+      },
+      "categoryLabel": "Research breakthrough",
+      "kindLabel": "Milestone",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "30 Nov 2020",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1606737600000,
+      "daysUntil": 163,
+      "anniversaryYears": 6,
+      "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
+      "nextOccurrenceLabel": "30 Nov 2026"
     }
   ],
   "latestLaunches": [

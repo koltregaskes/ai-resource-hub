@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 19 Jun 2026, 22:12 UTC
+Generated: 19 Jun 2026, 23:15 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,31 +8,33 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 19 Jun 2026, 22:12 UTC |
-| Reference date | Friday, 19 June 2026 |
+| Generated | 19 Jun 2026, 23:15 UTC |
+| Reference date | Saturday, 20 June 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
 | Tracking milestones | 2 |
 | Exact-date anniversaries | 27 |
-| Anniversaries today | 0 |
-| Next exact milestone | Claude 3.5 Sonnet launched (20 Jun 2026) |
+| Anniversaries today | 1 |
+| Next exact milestone | Claude 2 launched (11 Jul 2026) |
 
 ## Today in AI
 
-No exact anniversary lands on the current Europe/London date snapshot.
+| Title | Category | Years | Source |
+| --- | --- | --- | --- |
+| Claude 3.5 Sonnet launched | Model release | 2 | [Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) |
 
 ## Coming Up Next
 
 | In | Date | Title | Source |
 | --- | --- | --- | --- |
-| 1d | 20 Jun 2026 | Claude 3.5 Sonnet launched | [Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet) |
-| 22d | 11 Jul 2026 | Claude 2 launched | [Anthropic](https://www.anthropic.com/news/claude-2) |
-| 29d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
-| 64d | 22 Aug 2026 | Stable Diffusion public release | [Stability AI](https://stability.ai/news/stable-diffusion-public-release) |
-| 85d | 12 Sept 2026 | OpenAI o1-preview launched | [OpenAI](https://openai.com/index/introducing-openai-o1-preview/) |
-| 100d | 27 Sept 2026 | Mistral 7B released | [Mistral AI](https://mistral.ai/news/about-mistral-ai) |
-| 116d | 13 Oct 2026 | AlexNet wins ILSVRC 2012 | [ImageNet ILSVRC 2012](https://image-net.org/challenges/LSVRC/2012/index) |
-| 137d | 3 Nov 2026 | Grok announced | [xAI](https://x.ai/news/grok) |
+| 21d | 11 Jul 2026 | Claude 2 launched | [Anthropic](https://www.anthropic.com/news/claude-2) |
+| 28d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
+| 63d | 22 Aug 2026 | Stable Diffusion public release | [Stability AI](https://stability.ai/news/stable-diffusion-public-release) |
+| 84d | 12 Sept 2026 | OpenAI o1-preview launched | [OpenAI](https://openai.com/index/introducing-openai-o1-preview/) |
+| 99d | 27 Sept 2026 | Mistral 7B released | [Mistral AI](https://mistral.ai/news/about-mistral-ai) |
+| 115d | 13 Oct 2026 | AlexNet wins ILSVRC 2012 | [ImageNet ILSVRC 2012](https://image-net.org/challenges/LSVRC/2012/index) |
+| 136d | 3 Nov 2026 | Grok announced | [xAI](https://x.ai/news/grok) |
+| 163d | 30 Nov 2026 | AlphaFold breakthrough at CASP14 | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
 
 ## Recent Flagship Launches
 
