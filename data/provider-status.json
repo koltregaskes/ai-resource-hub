@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T03:25:36.456Z",
+  "generatedAt": "2026-06-19T04:25:39.667Z",
   "providers": [
     {
       "id": "openai",
@@ -12,12 +12,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-19T03:25:34.149Z",
+      "lastCheckedAt": "2026-06-19T04:25:37.859Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Login",
+          "status": "degraded_performance"
+        },
         {
           "name": "CLI",
           "status": "operational"
@@ -37,13 +41,19 @@
         {
           "name": "GPTs",
           "status": "operational"
-        },
-        {
-          "name": "Connectors/Apps",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KVEZD06ZFM2CMDZQMQYDV9RK",
+          "title": "chatgpt.com access issues",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-19T03:39:40.000Z",
+          "updatedAt": "2026-06-19T03:39:40.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified an issue causing some users to be unable to access ChatGPT on [chatgpt.com](http://chatgpt.com \"chatgpt.com\"). We are working on implementing a mitigation. In t..."
+        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KVEZD06ZFM2CMDZQMQYDV9RK",
+          "title": "chatgpt.com access issues",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-19T03:39:40.000Z",
+          "updatedAt": "2026-06-19T03:39:40.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified an issue causing some users to be unable to access ChatGPT on [chatgpt.com](http://chatgpt.com \"chatgpt.com\"). We are working on implementing a mitigation. In t..."
+        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-06-18T03:55:02.000Z",
           "resolvedAt": "2026-06-18T03:55:02.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KVB9JAB1PP9GS4A6AZ52TT5Y",
-          "title": "Errors with conversations on Android and iOS devices",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-06-17T17:20:22.000Z",
-          "updatedAt": "2026-06-17T18:23:18.000Z",
-          "resolvedAt": "2026-06-17T18:23:18.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-19T03:25:35.754Z",
+      "lastCheckedAt": "2026-06-19T04:25:38.780Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-19T03:25:34.181Z",
+      "lastCheckedAt": "2026-06-19T04:25:37.873Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-19T03:25:36.049Z",
+      "lastCheckedAt": "2026-06-19T04:25:39.113Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-19T03:25:36.186Z",
+      "lastCheckedAt": "2026-06-19T04:25:39.185Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-19T03:25:35.437Z",
+      "lastCheckedAt": "2026-06-19T04:25:38.657Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-19T03:25:36.394Z",
+      "lastCheckedAt": "2026-06-19T04:25:39.223Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
