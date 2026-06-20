@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T14:25:42.399Z",
+  "generatedAt": "2026-06-20T14:28:00.835Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-20T14:25:40.624Z",
+      "lastCheckedAt": "2026-06-20T14:27:59.243Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -99,6 +99,134 @@
       ]
     },
     {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-20T14:27:59.880Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-20T14:28:00.828Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-06-20T14:10:47.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-20T14:10:47.000Z",
+          "updatedAt": "2026-06-20T14:10:47.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-20T12:45:43.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-20T12:45:43.000Z",
+          "updatedAt": "2026-06-20T12:45:43.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-06-20T14:10:47.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-20T14:10:47.000Z",
+          "updatedAt": "2026-06-20T14:10:47.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-1-2026-06-20T13:04:54.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-20T13:04:54.000Z",
+          "updatedAt": "2026-06-20T13:04:54.000Z",
+          "resolvedAt": "2026-06-20T13:04:54.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-2-2026-06-20T12:45:43.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-20T12:45:43.000Z",
+          "updatedAt": "2026-06-20T12:45:43.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-3-2026-06-20T12:05:00.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-20T12:05:00.000Z",
+          "updatedAt": "2026-06-20T12:05:00.000Z",
+          "resolvedAt": "2026-06-20T12:05:00.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        }
+      ]
+    },
+    {
+      "id": "cohere",
+      "providerId": "cohere",
+      "name": "Cohere",
+      "colour": "#6366f1",
+      "websiteUrl": "https://cohere.com",
+      "statusPageUrl": "https://status.cohere.io",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-20T14:28:00.418Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "fireworks",
       "providerId": null,
       "name": "Fireworks AI",
@@ -109,36 +237,13 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-20T14:25:41.999Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
+      "lastCheckedAt": "2026-06-20T14:28:00.704Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
       "notes": null,
       "components": [],
-      "activeIncidents": [
-        {
-          "id": "fireworks-feed-1-2026-06-20T08:38:48.000Z",
-          "title": "Qwen3 Embedding 8B embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-20T08:38:48.000Z",
-          "updatedAt": "2026-06-20T08:38:48.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Qwen3 Embedding 8B embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-3-2026-06-20T05:02:25.000Z",
-          "title": "Qwen3 Embedding 8B embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-20T05:02:25.000Z",
-          "updatedAt": "2026-06-20T05:02:25.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Qwen3 Embedding 8B embeddings API went down"
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "fireworks-feed-0-2026-06-20T08:41:02.000Z",
@@ -187,148 +292,6 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-20T14:25:41.611Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-20T14:25:40.495Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "s9w82lp9dcn9",
-          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-06-13T00:50:43.835Z",
-          "updatedAt": "2026-06-16T20:50:02.230Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/kqx0j625mrgv",
-          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "1p98mj17s1z2",
-          "title": "Elevated error rates on the Claude API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-19T08:17:59.775Z",
-          "updatedAt": "2026-06-19T08:45:48.014Z",
-          "resolvedAt": "2026-06-19T08:45:47.997Z",
-          "url": "https://stspg.io/05r0qhzdjrx5",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "46z2bnxchg61",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-19T06:07:26.676Z",
-          "updatedAt": "2026-06-19T07:17:19.968Z",
-          "resolvedAt": "2026-06-19T07:17:19.953Z",
-          "url": "https://stspg.io/wy80wxj6y429",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "jlbvcpfwwq8z",
-          "title": "Service disruption on Claude services",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-06-18T07:41:30.336Z",
-          "updatedAt": "2026-06-18T08:19:22.148Z",
-          "resolvedAt": "2026-06-18T08:19:22.116Z",
-          "url": "https://stspg.io/0hjwxjxbpdfz",
-          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 06:55 to 07:40 UTC."
-        },
-        {
-          "id": "s107yx224p9r",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-17T15:34:18.385Z",
-          "updatedAt": "2026-06-17T16:28:10.310Z",
-          "resolvedAt": "2026-06-17T16:28:10.294Z",
-          "url": "https://stspg.io/jhq0vtzfn0yv",
-          "summary": "This incident has been resolved."
-        }
-      ]
-    },
-    {
-      "id": "cohere",
-      "providerId": "cohere",
-      "name": "Cohere",
-      "colour": "#6366f1",
-      "websiteUrl": "https://cohere.com",
-      "statusPageUrl": "https://status.cohere.io",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-20T14:25:41.903Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "google",
       "providerId": "google",
       "name": "Google",
@@ -339,7 +302,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-20T14:25:41.390Z",
+      "lastCheckedAt": "2026-06-20T14:27:59.778Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -372,69 +335,24 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
       "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-20T14:25:42.084Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
+      "fetchState": "error",
+      "lastCheckedAt": null,
+      "overallStatus": "unknown",
+      "overallLabel": "Status unavailable",
+      "summary": null,
+      "notes": "HTTP 405 for https://status.claude.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-06-20T13:04:54.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-20T13:04:54.000Z",
-          "updatedAt": "2026-06-20T13:04:54.000Z",
-          "resolvedAt": "2026-06-20T13:04:54.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-1-2026-06-20T12:45:43.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-20T12:45:43.000Z",
-          "updatedAt": "2026-06-20T12:45:43.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-20T12:05:00.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-20T12:05:00.000Z",
-          "updatedAt": "2026-06-20T12:05:00.000Z",
-          "resolvedAt": "2026-06-20T12:05:00.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-20T11:32:30.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-20T11:32:30.000Z",
-          "updatedAt": "2026-06-20T11:32:30.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        }
-      ]
+      "recentIncidents": []
     },
     {
       "id": "deepseek",
