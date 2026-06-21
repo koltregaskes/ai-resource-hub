@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T15:30:00.906Z",
+  "generatedAt": "2026-06-21T16:07:53.875Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-21T15:29:58.936Z",
+      "lastCheckedAt": "2026-06-21T16:07:52.020Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-21T15:30:00.501Z",
+      "lastCheckedAt": "2026-06-21T16:07:53.059Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -117,6 +117,94 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-21T16:07:53.868Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-06-21T15:21:18.000Z",
+          "title": "GLM 5.2 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-21T15:21:18.000Z",
+          "updatedAt": "2026-06-21T15:21:18.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-21T13:54:18.000Z",
+          "title": "GLM 5.2 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-21T13:54:18.000Z",
+          "updatedAt": "2026-06-21T13:54:18.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-06-21T15:21:18.000Z",
+          "title": "GLM 5.2 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-21T15:21:18.000Z",
+          "updatedAt": "2026-06-21T15:21:18.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 went down"
+        },
+        {
+          "id": "together-feed-1-2026-06-21T14:15:34.000Z",
+          "title": "GLM 5.2 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-21T14:15:34.000Z",
+          "updatedAt": "2026-06-21T14:15:34.000Z",
+          "resolvedAt": "2026-06-21T14:15:34.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 recovered"
+        },
+        {
+          "id": "together-feed-2-2026-06-21T13:54:18.000Z",
+          "title": "GLM 5.2 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-21T13:54:18.000Z",
+          "updatedAt": "2026-06-21T13:54:18.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 went down"
+        },
+        {
+          "id": "together-feed-3-2026-06-21T12:18:32.000Z",
+          "title": "GLM 5.2 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-21T12:18:32.000Z",
+          "updatedAt": "2026-06-21T12:18:32.000Z",
+          "resolvedAt": "2026-06-21T12:18:32.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 recovered"
+        }
+      ]
     },
     {
       "id": "anthropic",
@@ -129,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-21T15:29:59.085Z",
+      "lastCheckedAt": "2026-06-21T16:07:52.079Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +319,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-21T15:30:00.623Z",
+      "lastCheckedAt": "2026-06-21T16:07:53.430Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-21T15:30:00.899Z",
+      "lastCheckedAt": "2026-06-21T16:07:53.783Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +404,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-21T15:30:00.000Z",
+      "lastCheckedAt": "2026-06-21T16:07:52.668Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -345,71 +433,6 @@
           "resolvedAt": "2025-07-18T16:47:00.000Z",
           "url": "https://status.cloud.google.com",
           "summary": "## \\# Incident Report\n## \\#\\# Summary\nOn Friday, 18 July 2025 07:50 US/Pacific, several Google Cloud Platform (GCP) and Google Workspace (GWS) products experienced elevated latenc..."
-        }
-      ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-21T15:30:00.843Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-06-21T14:15:34.000Z",
-          "title": "GLM 5.2 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-21T14:15:34.000Z",
-          "updatedAt": "2026-06-21T14:15:34.000Z",
-          "resolvedAt": "2026-06-21T14:15:34.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 recovered"
-        },
-        {
-          "id": "together-feed-1-2026-06-21T13:54:18.000Z",
-          "title": "GLM 5.2 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-21T13:54:18.000Z",
-          "updatedAt": "2026-06-21T13:54:18.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-21T12:18:32.000Z",
-          "title": "GLM 5.2 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-21T12:18:32.000Z",
-          "updatedAt": "2026-06-21T12:18:32.000Z",
-          "resolvedAt": "2026-06-21T12:18:32.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-21T12:03:24.000Z",
-          "title": "GLM 5.2 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-21T12:03:24.000Z",
-          "updatedAt": "2026-06-21T12:03:24.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 went down"
         }
       ]
     },
