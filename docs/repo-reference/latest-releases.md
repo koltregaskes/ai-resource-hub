@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 21 Jun 2026, 23:43 UTC
+Generated: 22 Jun 2026, 01:25 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -13,8 +13,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Jun 2026 | Claude Fable 5 | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
 | 4 Jun 2026 | Nemotron 3 Ultra | NVIDIA | tracking | high | needs research | 0 | 0 | [official](https://docs.api.nvidia.com) |
 | 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | high | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
-| 31 May 2026 | MiniMax M3 | MiniMax | tracking | high | needs research | 0 | 0 | [official](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/glasswing) |
+| 31 May 2026 | MiniMax M3 | MiniMax | tracking | watch | needs research | 0 | 0 | [official](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | 27 May 2026 | Claude Opus 4.8 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
 | 27 May 2026 | Claude Opus 4.8 | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
 | 21 May 2026 | Qwen3.7 Max | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |

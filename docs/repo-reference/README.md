@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 21 Jun 2026, 23:43 UTC |
+| Generated | 22 Jun 2026, 01:25 UTC |
 | Providers tracked | 40 |
 | Public models | 317 |
-| Active models | 111 |
-| Tracking models | 205 |
+| Active models | 110 |
+| Tracking models | 206 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 65 |
 | Release-desk entries | 55 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 21 Jun 2026, 23:43 UTC |
+| Latest visible refresh | 22 Jun 2026, 01:25 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | GLM 5.2 (16 Jun 2026) |
 
