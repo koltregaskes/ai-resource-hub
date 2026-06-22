@@ -45,7 +45,7 @@
     "@types/pg": "^8.20.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.3.7",
+    "astro": "^6.4.6",
     "better-sqlite3": "^12.8.0",
     "chart.js": "^4.5.1",
     "pg": "^8.20.0",
@@ -63,7 +63,7 @@
   },
   "overrides": {
     "esbuild": "^0.28.1",
-    "vite": "^7.3.2",
+    "vite": "^7.3.5",
     "rollup": "^4.59.0",
     "devalue": "^5.8.1",
     "fast-uri": "^3.1.2",
