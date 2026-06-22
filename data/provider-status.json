@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T18:58:54.651Z",
+  "generatedAt": "2026-06-22T19:25:46.022Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-22T18:58:52.461Z",
+      "lastCheckedAt": "2026-06-22T19:25:36.181Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-22T18:58:54.002Z",
+      "lastCheckedAt": "2026-06-22T19:25:36.763Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,10 +129,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-22T18:58:52.573Z",
+      "lastCheckedAt": "2026-06-22T19:25:46.015Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "2 active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -162,6 +162,17 @@
       ],
       "activeIncidents": [
         {
+          "id": "bbcpk0t2cj4p",
+          "title": "Elevated errors across many models",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-22T19:14:18.940Z",
+          "updatedAt": "2026-06-22T19:20:27.106Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/2lhl1q3958qt",
+          "summary": "A fix has been implemented and we are monitoring the results."
+        },
+        {
           "id": "s9w82lp9dcn9",
           "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
           "status": "monitoring",
@@ -174,6 +185,17 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "bbcpk0t2cj4p",
+          "title": "Elevated errors across many models",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-22T19:14:18.940Z",
+          "updatedAt": "2026-06-22T19:20:27.106Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/2lhl1q3958qt",
+          "summary": "A fix has been implemented and we are monitoring the results."
+        },
         {
           "id": "dymmnf6xk0mg",
           "title": "Elevated errors for Claude Opus 4.8",
@@ -206,17 +228,6 @@
           "resolvedAt": "2026-06-20T18:02:23.277Z",
           "url": "https://stspg.io/61p6brhqlxks",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "1p98mj17s1z2",
-          "title": "Elevated error rates on the Claude API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-19T08:17:59.775Z",
-          "updatedAt": "2026-06-19T08:45:48.014Z",
-          "resolvedAt": "2026-06-19T08:45:47.997Z",
-          "url": "https://stspg.io/05r0qhzdjrx5",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -231,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-22T18:58:54.244Z",
+      "lastCheckedAt": "2026-06-22T19:25:37.306Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +262,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-22T18:58:54.493Z",
+      "lastCheckedAt": "2026-06-22T19:25:37.463Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-22T18:58:53.604Z",
+      "lastCheckedAt": "2026-06-22T19:25:36.601Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +370,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-22T18:58:54.644Z",
+      "lastCheckedAt": "2026-06-22T19:25:37.417Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -428,7 +439,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
