@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T16:06:20.115Z",
+  "generatedAt": "2026-06-23T17:25:42.249Z",
   "providers": [
     {
       "id": "openai",
@@ -12,16 +12,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T16:06:07.166Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
-      "summary": "2 active incidents across 25 tracked components.",
+      "lastCheckedAt": "2026-06-23T17:25:40.350Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "File uploads",
-          "status": "partial_outage"
-        },
         {
           "name": "FedRAMP",
           "status": "degraded_performance"
@@ -41,19 +37,13 @@
         {
           "name": "Sora",
           "status": "operational"
+        },
+        {
+          "name": "Conversations",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
-        {
-          "id": "01KVTDW6E1PXBTY2A9XEBT4MY4",
-          "title": "Users may experience elevated errors in ChatGPT uploading and downloading files ",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-06-23T14:24:16.000Z",
-          "updatedAt": "2026-06-23T15:47:40.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -69,12 +59,12 @@
         {
           "id": "01KVTDW6E1PXBTY2A9XEBT4MY4",
           "title": "Users may experience elevated errors in ChatGPT uploading and downloading files ",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-06-23T14:24:16.000Z",
-          "updatedAt": "2026-06-23T15:47:40.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "updatedAt": "2026-06-23T16:38:20.000Z",
+          "resolvedAt": "2026-06-23T16:38:19.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01KVEZD06ZFM2CMDZQMQYDV9RK",
@@ -119,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T16:06:07.851Z",
+      "lastCheckedAt": "2026-06-23T17:25:41.712Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,10 +129,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T16:06:20.107Z",
+      "lastCheckedAt": "2026-06-23T17:25:40.549Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "2 active incidents across 6 tracked components.",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -172,17 +162,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "jbhf20wjmzrf",
-          "title": "Elevated error rate across multiple models",
-          "status": "monitoring",
-          "impact": "critical",
-          "startedAt": "2026-06-23T14:19:06.033Z",
-          "updatedAt": "2026-06-23T16:05:37.185Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/kx1ygc7qfvx1",
-          "summary": "We have seen error rates broadly return to normal success levels across all models. We saw elevated error rates on requests to multiple models from 7:08am PT / 14:08 UTC through 8..."
-        },
-        {
           "id": "s9w82lp9dcn9",
           "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
           "status": "monitoring",
@@ -198,13 +177,13 @@
         {
           "id": "jbhf20wjmzrf",
           "title": "Elevated error rate across multiple models",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "critical",
           "startedAt": "2026-06-23T14:19:06.033Z",
-          "updatedAt": "2026-06-23T16:05:37.185Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-06-23T16:44:28.040Z",
+          "resolvedAt": "2026-06-23T16:44:28.022Z",
           "url": "https://stspg.io/kx1ygc7qfvx1",
-          "summary": "We have seen error rates broadly return to normal success levels across all models. We saw elevated error rates on requests to multiple models from 7:08am PT / 14:08 UTC through 8..."
+          "summary": "This incident has been resolved."
         },
         {
           "id": "2stpj60m2fr9",
@@ -252,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T16:06:08.371Z",
+      "lastCheckedAt": "2026-06-23T17:25:41.806Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -272,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T16:06:08.694Z",
+      "lastCheckedAt": "2026-06-23T17:25:41.944Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -337,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T16:06:07.622Z",
+      "lastCheckedAt": "2026-06-23T17:25:41.248Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -380,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T16:06:08.682Z",
+      "lastCheckedAt": "2026-06-23T17:25:42.139Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -389,7 +368,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-06-21T18:03:21.000Z",
+          "id": "together-feed-0-2026-06-23T16:17:34.000Z",
+          "title": "OpenAI GPT OSS 120B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-23T16:17:34.000Z",
+          "updatedAt": "2026-06-23T16:17:34.000Z",
+          "resolvedAt": "2026-06-23T16:17:34.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-23T15:59:49.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-23T15:59:49.000Z",
+          "updatedAt": "2026-06-23T15:59:49.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-21T18:03:21.000Z",
           "title": "GLM 5.2 recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -400,34 +401,12 @@
           "summary": "GLM 5.2 recovered"
         },
         {
-          "id": "together-feed-1-2026-06-21T17:48:35.000Z",
+          "id": "together-feed-3-2026-06-21T17:48:35.000Z",
           "title": "GLM 5.2 went down",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-06-21T17:48:35.000Z",
           "updatedAt": "2026-06-21T17:48:35.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-21T16:19:27.000Z",
-          "title": "GLM 5.2 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-21T16:19:27.000Z",
-          "updatedAt": "2026-06-21T16:19:27.000Z",
-          "resolvedAt": "2026-06-21T16:19:27.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-21T15:21:18.000Z",
-          "title": "GLM 5.2 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-21T15:21:18.000Z",
-          "updatedAt": "2026-06-21T15:21:18.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "GLM 5.2 went down"
@@ -449,7 +428,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
