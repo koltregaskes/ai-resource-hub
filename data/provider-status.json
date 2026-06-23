@@ -1,119 +1,6 @@
 {
-  "generatedAt": "2026-06-23T07:25:41.777Z",
+  "generatedAt": "2026-06-23T08:25:37.359Z",
   "providers": [
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T07:25:39.930Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "2 active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Code",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "2stpj60m2fr9",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-23T06:28:56.197Z",
-          "updatedAt": "2026-06-23T06:28:56.334Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/7tlhvndrdpm9",
-          "summary": "We are currently investigating this issue."
-        },
-        {
-          "id": "s9w82lp9dcn9",
-          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-06-13T00:50:43.835Z",
-          "updatedAt": "2026-06-16T20:50:02.230Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/kqx0j625mrgv",
-          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "2stpj60m2fr9",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-23T06:28:56.197Z",
-          "updatedAt": "2026-06-23T06:28:56.334Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/7tlhvndrdpm9",
-          "summary": "We are currently investigating this issue."
-        },
-        {
-          "id": "bbcpk0t2cj4p",
-          "title": "Elevated errors across many models",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-22T19:14:18.940Z",
-          "updatedAt": "2026-06-22T19:45:45.463Z",
-          "resolvedAt": "2026-06-22T19:45:45.449Z",
-          "url": "https://stspg.io/2lhl1q3958qt",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "dymmnf6xk0mg",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-22T08:11:50.416Z",
-          "updatedAt": "2026-06-22T14:44:16.757Z",
-          "resolvedAt": "2026-06-22T14:44:16.735Z",
-          "url": "https://stspg.io/jjzw7yp300my",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "lv35v0q9nsj2",
-          "title": "Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 4.6, and Haiku 4.5",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-06-22T00:37:06.363Z",
-          "updatedAt": "2026-06-22T02:06:43.563Z",
-          "resolvedAt": "2026-06-22T02:06:43.543Z",
-          "url": "https://stspg.io/n57njqf1mk5l",
-          "summary": "This incident has been resolved."
-        }
-      ]
-    },
     {
       "id": "openai",
       "providerId": "openai",
@@ -125,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T07:25:39.769Z",
+      "lastCheckedAt": "2026-06-23T08:25:35.631Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -222,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T07:25:41.256Z",
+      "lastCheckedAt": "2026-06-23T08:25:36.719Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -232,90 +119,115 @@
       "recentIncidents": []
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T07:25:41.502Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
+      "lastCheckedAt": "2026-06-23T08:25:36.373Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "2 active incidents across 6 tracked components.",
       "notes": null,
-      "components": [],
-      "activeIncidents": [
+      "components": [
         {
-          "id": "together-feed-1-2026-06-21T17:48:35.000Z",
-          "title": "GLM 5.2 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-21T17:48:35.000Z",
-          "updatedAt": "2026-06-21T17:48:35.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 went down"
+          "name": "claude.ai",
+          "status": "operational"
         },
         {
-          "id": "together-feed-3-2026-06-21T15:21:18.000Z",
-          "title": "GLM 5.2 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-21T15:21:18.000Z",
-          "updatedAt": "2026-06-21T15:21:18.000Z",
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "2stpj60m2fr9",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-23T06:28:56.197Z",
+          "updatedAt": "2026-06-23T07:47:48.469Z",
           "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 went down"
+          "url": "https://stspg.io/7tlhvndrdpm9",
+          "summary": "A fix has been implemented and we are monitoring the results."
+        },
+        {
+          "id": "s9w82lp9dcn9",
+          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
+          "status": "monitoring",
+          "impact": "major",
+          "startedAt": "2026-06-13T00:50:43.835Z",
+          "updatedAt": "2026-06-16T20:50:02.230Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/kqx0j625mrgv",
+          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
         }
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-06-21T18:03:21.000Z",
-          "title": "GLM 5.2 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-21T18:03:21.000Z",
-          "updatedAt": "2026-06-21T18:03:21.000Z",
-          "resolvedAt": "2026-06-21T18:03:21.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 recovered"
-        },
-        {
-          "id": "together-feed-1-2026-06-21T17:48:35.000Z",
-          "title": "GLM 5.2 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-21T17:48:35.000Z",
-          "updatedAt": "2026-06-21T17:48:35.000Z",
+          "id": "2stpj60m2fr9",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-23T06:28:56.197Z",
+          "updatedAt": "2026-06-23T07:47:48.469Z",
           "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 went down"
+          "url": "https://stspg.io/7tlhvndrdpm9",
+          "summary": "A fix has been implemented and we are monitoring the results."
         },
         {
-          "id": "together-feed-2-2026-06-21T16:19:27.000Z",
-          "title": "GLM 5.2 recovered",
+          "id": "bbcpk0t2cj4p",
+          "title": "Elevated errors across many models",
           "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-21T16:19:27.000Z",
-          "updatedAt": "2026-06-21T16:19:27.000Z",
-          "resolvedAt": "2026-06-21T16:19:27.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 recovered"
+          "impact": "minor",
+          "startedAt": "2026-06-22T19:14:18.940Z",
+          "updatedAt": "2026-06-22T19:45:45.463Z",
+          "resolvedAt": "2026-06-22T19:45:45.449Z",
+          "url": "https://stspg.io/2lhl1q3958qt",
+          "summary": "This incident has been resolved."
         },
         {
-          "id": "together-feed-3-2026-06-21T15:21:18.000Z",
-          "title": "GLM 5.2 went down",
-          "status": "investigating",
+          "id": "dymmnf6xk0mg",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-22T08:11:50.416Z",
+          "updatedAt": "2026-06-22T14:44:16.757Z",
+          "resolvedAt": "2026-06-22T14:44:16.735Z",
+          "url": "https://stspg.io/jjzw7yp300my",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "lv35v0q9nsj2",
+          "title": "Elevated Error Rates for Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 4.6, and Haiku 4.5",
+          "status": "resolved",
           "impact": "major",
-          "startedAt": "2026-06-21T15:21:18.000Z",
-          "updatedAt": "2026-06-21T15:21:18.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "GLM 5.2 went down"
+          "startedAt": "2026-06-22T00:37:06.363Z",
+          "updatedAt": "2026-06-22T02:06:43.563Z",
+          "resolvedAt": "2026-06-22T02:06:43.543Z",
+          "url": "https://stspg.io/n57njqf1mk5l",
+          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -330,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T07:25:41.402Z",
+      "lastCheckedAt": "2026-06-23T08:25:37.134Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -350,7 +262,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T07:25:41.714Z",
+      "lastCheckedAt": "2026-06-23T08:25:37.354Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -415,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T07:25:40.780Z",
+      "lastCheckedAt": "2026-06-23T08:25:36.441Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -448,6 +360,71 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-23T08:25:37.336Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-06-21T18:03:21.000Z",
+          "title": "GLM 5.2 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-21T18:03:21.000Z",
+          "updatedAt": "2026-06-21T18:03:21.000Z",
+          "resolvedAt": "2026-06-21T18:03:21.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-21T17:48:35.000Z",
+          "title": "GLM 5.2 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-21T17:48:35.000Z",
+          "updatedAt": "2026-06-21T17:48:35.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-21T16:19:27.000Z",
+          "title": "GLM 5.2 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-21T16:19:27.000Z",
+          "updatedAt": "2026-06-21T16:19:27.000Z",
+          "resolvedAt": "2026-06-21T16:19:27.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 recovered"
+        },
+        {
+          "id": "together-feed-3-2026-06-21T15:21:18.000Z",
+          "title": "GLM 5.2 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-21T15:21:18.000Z",
+          "updatedAt": "2026-06-21T15:21:18.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "GLM 5.2 went down"
+        }
+      ]
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -462,7 +439,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
