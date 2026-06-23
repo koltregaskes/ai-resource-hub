@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T18:12:05.783Z",
+  "generatedAt": "2026-06-23T19:25:42.167Z",
   "providers": [
     {
       "id": "openai",
@@ -12,16 +12,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T18:12:04.187Z",
+      "lastCheckedAt": "2026-06-23T19:25:40.402Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "FedRAMP",
-          "status": "degraded_performance"
-        },
         {
           "name": "Fine-tuning",
           "status": "operational"
@@ -31,15 +27,19 @@
           "status": "operational"
         },
         {
-          "name": "Realtime",
+          "name": "Responses",
           "status": "operational"
         },
         {
-          "name": "Sora",
+          "name": "Audio",
           "status": "operational"
         },
         {
-          "name": "Conversations",
+          "name": "Files",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
           "status": "operational"
         }
       ],
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T18:12:04.742Z",
+      "lastCheckedAt": "2026-06-23T19:25:41.298Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T18:12:04.255Z",
+      "lastCheckedAt": "2026-06-23T19:25:40.467Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -175,6 +175,17 @@
       ],
       "recentIncidents": [
         {
+          "id": "18bq2kw867g5",
+          "title": "Claude.ai is experiencing elevated error rates",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-23T18:24:12.291Z",
+          "updatedAt": "2026-06-23T18:32:57.396Z",
+          "resolvedAt": "2026-06-23T18:32:57.379Z",
+          "url": "https://stspg.io/hl3355csbyxv",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "jbhf20wjmzrf",
           "title": "Elevated error rate across multiple models",
           "status": "resolved",
@@ -206,17 +217,6 @@
           "resolvedAt": "2026-06-22T19:45:45.449Z",
           "url": "https://stspg.io/2lhl1q3958qt",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "dymmnf6xk0mg",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-22T08:11:50.416Z",
-          "updatedAt": "2026-06-22T14:44:16.757Z",
-          "resolvedAt": "2026-06-22T14:44:16.735Z",
-          "url": "https://stspg.io/jjzw7yp300my",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -231,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T18:12:05.286Z",
+      "lastCheckedAt": "2026-06-23T19:25:41.843Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T18:12:05.674Z",
+      "lastCheckedAt": "2026-06-23T19:25:42.135Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T18:12:04.625Z",
+      "lastCheckedAt": "2026-06-23T19:25:41.148Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T18:12:05.776Z",
+      "lastCheckedAt": "2026-06-23T19:25:42.160Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
