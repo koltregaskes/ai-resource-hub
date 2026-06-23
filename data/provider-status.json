@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T14:26:27.078Z",
+  "generatedAt": "2026-06-23T15:25:46.427Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T14:26:27.071Z",
+      "lastCheckedAt": "2026-06-23T15:25:44.970Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
       "summary": "2 active incidents across 6 tracked components.",
@@ -47,13 +47,13 @@
         {
           "id": "jbhf20wjmzrf",
           "title": "Elevated error rate across multiple models",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "critical",
           "startedAt": "2026-06-23T14:19:06.033Z",
-          "updatedAt": "2026-06-23T14:25:01.495Z",
+          "updatedAt": "2026-06-23T14:53:46.751Z",
           "resolvedAt": null,
           "url": "https://stspg.io/kx1ygc7qfvx1",
-          "summary": "The issue has been identified and a fix is being implemented."
+          "summary": "A fix has been implemented and we are monitoring the results."
         },
         {
           "id": "s9w82lp9dcn9",
@@ -71,13 +71,13 @@
         {
           "id": "jbhf20wjmzrf",
           "title": "Elevated error rate across multiple models",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "critical",
           "startedAt": "2026-06-23T14:19:06.033Z",
-          "updatedAt": "2026-06-23T14:25:01.495Z",
+          "updatedAt": "2026-06-23T14:53:46.751Z",
           "resolvedAt": null,
           "url": "https://stspg.io/kx1ygc7qfvx1",
-          "summary": "The issue has been identified and a fix is being implemented."
+          "summary": "A fix has been implemented and we are monitoring the results."
         },
         {
           "id": "2stpj60m2fr9",
@@ -125,7 +125,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T14:25:41.073Z",
+      "lastCheckedAt": "2026-06-23T15:25:44.907Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
       "summary": "2 active incidents across 25 tracked components.",
@@ -163,7 +163,7 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-06-23T14:24:16.000Z",
-          "updatedAt": "2026-06-23T14:24:16.000Z",
+          "updatedAt": "2026-06-23T15:11:39.000Z",
           "resolvedAt": null,
           "summary": "We are investigating the issue for the listed services."
         },
@@ -185,7 +185,7 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-06-23T14:24:16.000Z",
-          "updatedAt": "2026-06-23T14:24:16.000Z",
+          "updatedAt": "2026-06-23T15:11:39.000Z",
           "resolvedAt": null,
           "summary": "We are investigating the issue for the listed services."
         },
@@ -232,7 +232,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T14:25:42.367Z",
+      "lastCheckedAt": "2026-06-23T15:25:45.839Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -252,7 +252,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T14:25:42.715Z",
+      "lastCheckedAt": "2026-06-23T15:25:46.145Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -272,7 +272,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T14:25:42.964Z",
+      "lastCheckedAt": "2026-06-23T15:25:46.374Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -337,7 +337,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T14:25:41.979Z",
+      "lastCheckedAt": "2026-06-23T15:25:45.559Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -380,7 +380,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T14:25:43.024Z",
+      "lastCheckedAt": "2026-06-23T15:25:46.420Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
