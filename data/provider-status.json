@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T08:25:37.359Z",
+  "generatedAt": "2026-06-23T08:46:20.377Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T08:25:35.631Z",
+      "lastCheckedAt": "2026-06-23T08:46:18.503Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T08:25:36.719Z",
+      "lastCheckedAt": "2026-06-23T08:46:19.512Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,10 +129,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T08:25:36.373Z",
+      "lastCheckedAt": "2026-06-23T08:46:18.656Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "2 active incidents across 6 tracked components.",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -162,17 +162,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "2stpj60m2fr9",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-06-23T06:28:56.197Z",
-          "updatedAt": "2026-06-23T07:47:48.469Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/7tlhvndrdpm9",
-          "summary": "A fix has been implemented and we are monitoring the results."
-        },
-        {
           "id": "s9w82lp9dcn9",
           "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
           "status": "monitoring",
@@ -188,13 +177,13 @@
         {
           "id": "2stpj60m2fr9",
           "title": "Elevated errors for Claude Opus 4.8",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-06-23T06:28:56.197Z",
-          "updatedAt": "2026-06-23T07:47:48.469Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-06-23T08:45:58.035Z",
+          "resolvedAt": "2026-06-23T08:45:58.019Z",
           "url": "https://stspg.io/7tlhvndrdpm9",
-          "summary": "A fix has been implemented and we are monitoring the results."
+          "summary": "This incident has been resolved."
         },
         {
           "id": "bbcpk0t2cj4p",
@@ -242,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T08:25:37.134Z",
+      "lastCheckedAt": "2026-06-23T08:46:19.938Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -262,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T08:25:37.354Z",
+      "lastCheckedAt": "2026-06-23T08:46:20.267Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T08:25:36.441Z",
+      "lastCheckedAt": "2026-06-23T08:46:19.390Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -370,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-23T08:25:37.336Z",
+      "lastCheckedAt": "2026-06-23T08:46:20.370Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
