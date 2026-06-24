@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T05:49:20.205Z",
+  "generatedAt": "2026-06-24T06:25:38.824Z",
   "providers": [
     {
       "id": "openai",
@@ -12,22 +12,14 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T05:49:18.693Z",
+      "lastCheckedAt": "2026-06-24T06:25:36.832Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
           "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
           "status": "operational"
         },
         {
@@ -35,11 +27,19 @@
           "status": "operational"
         },
         {
-          "name": "Files",
+          "name": "Login",
           "status": "operational"
         },
         {
-          "name": "Login",
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "Search",
+          "status": "operational"
+        },
+        {
+          "name": "Voice mode",
           "status": "operational"
         }
       ],
@@ -56,6 +56,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KVW3CQQ51SWCV4A1SWA6ATVM",
+          "title": "gpt-4o-mini high error rate",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-24T05:59:33.000Z",
+          "updatedAt": "2026-06-24T06:07:32.000Z",
+          "resolvedAt": "2026-06-24T06:07:32.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
         {
           "id": "01KVTDW6E1PXBTY2A9XEBT4MY4",
           "title": "Users may experience elevated errors in ChatGPT uploading and downloading files ",
@@ -85,16 +95,6 @@
           "updatedAt": "2026-06-18T19:41:22.000Z",
           "resolvedAt": null,
           "summary": "We are still investigating the issue for the listed services."
-        },
-        {
-          "id": "01KVCZ38K0RJZTSX7Y70RQMV2D",
-          "title": "SSO login errors for some ChatGPT Enterprise workspaces",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-18T08:55:52.000Z",
-          "updatedAt": "2026-06-18T11:55:12.000Z",
-          "resolvedAt": "2026-06-18T11:55:12.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T05:49:19.773Z",
+      "lastCheckedAt": "2026-06-24T06:25:38.021Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T05:49:18.762Z",
+      "lastCheckedAt": "2026-06-24T06:25:36.899Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T05:49:20.115Z",
+      "lastCheckedAt": "2026-06-24T06:25:38.392Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T05:49:20.176Z",
+      "lastCheckedAt": "2026-06-24T06:25:38.437Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T05:49:19.472Z",
+      "lastCheckedAt": "2026-06-24T06:25:37.801Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T05:49:20.198Z",
+      "lastCheckedAt": "2026-06-24T06:25:38.429Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
