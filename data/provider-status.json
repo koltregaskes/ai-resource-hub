@@ -1,119 +1,6 @@
 {
-  "generatedAt": "2026-06-24T14:52:18.341Z",
+  "generatedAt": "2026-06-24T16:01:47.141Z",
   "providers": [
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T14:52:16.495Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "2 active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Code",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "8b0rggdfh1hv",
-          "title": "Elevated error rate on Claude Opus 4.8",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-24T13:16:17.545Z",
-          "updatedAt": "2026-06-24T13:16:17.720Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/wnw8wdn9sfwm",
-          "summary": "We are currently investigating this issue."
-        },
-        {
-          "id": "s9w82lp9dcn9",
-          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
-          "status": "monitoring",
-          "impact": "critical",
-          "startedAt": "2026-06-13T00:50:43.835Z",
-          "updatedAt": "2026-06-23T14:19:06.164Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/kqx0j625mrgv",
-          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "8b0rggdfh1hv",
-          "title": "Elevated error rate on Claude Opus 4.8",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-24T13:16:17.545Z",
-          "updatedAt": "2026-06-24T13:16:17.720Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/wnw8wdn9sfwm",
-          "summary": "We are currently investigating this issue."
-        },
-        {
-          "id": "18bq2kw867g5",
-          "title": "Claude.ai is experiencing elevated error rates",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-23T18:24:12.291Z",
-          "updatedAt": "2026-06-23T18:32:57.396Z",
-          "resolvedAt": "2026-06-23T18:32:57.379Z",
-          "url": "https://stspg.io/hl3355csbyxv",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "jbhf20wjmzrf",
-          "title": "Elevated error rate across multiple models",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-06-23T14:19:06.033Z",
-          "updatedAt": "2026-06-23T16:44:28.040Z",
-          "resolvedAt": "2026-06-23T16:44:28.022Z",
-          "url": "https://stspg.io/kx1ygc7qfvx1",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "2stpj60m2fr9",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-23T06:28:56.197Z",
-          "updatedAt": "2026-06-23T08:45:58.035Z",
-          "resolvedAt": "2026-06-23T08:45:58.019Z",
-          "url": "https://stspg.io/7tlhvndrdpm9",
-          "summary": "This incident has been resolved."
-        }
-      ]
-    },
     {
       "id": "openai",
       "providerId": "openai",
@@ -125,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T14:52:16.374Z",
+      "lastCheckedAt": "2026-06-24T16:01:45.765Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -222,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T14:52:17.326Z",
+      "lastCheckedAt": "2026-06-24T16:01:46.383Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -230,6 +117,108 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-24T16:01:45.814Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "1 active incident across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "s9w82lp9dcn9",
+          "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
+          "status": "monitoring",
+          "impact": "critical",
+          "startedAt": "2026-06-13T00:50:43.835Z",
+          "updatedAt": "2026-06-23T14:19:06.164Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/kqx0j625mrgv",
+          "summary": "Learn more here: https://anthropic.com/news/fable-mythos-access"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "8b0rggdfh1hv",
+          "title": "Elevated error rate on Claude Opus 4.8",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-24T13:16:17.545Z",
+          "updatedAt": "2026-06-24T14:56:21.865Z",
+          "resolvedAt": "2026-06-24T14:56:21.835Z",
+          "url": "https://stspg.io/wnw8wdn9sfwm",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "18bq2kw867g5",
+          "title": "Claude.ai is experiencing elevated error rates",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-23T18:24:12.291Z",
+          "updatedAt": "2026-06-23T18:32:57.396Z",
+          "resolvedAt": "2026-06-23T18:32:57.379Z",
+          "url": "https://stspg.io/hl3355csbyxv",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "jbhf20wjmzrf",
+          "title": "Elevated error rate across multiple models",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-06-23T14:19:06.033Z",
+          "updatedAt": "2026-06-23T16:44:28.040Z",
+          "resolvedAt": "2026-06-23T16:44:28.022Z",
+          "url": "https://stspg.io/kx1ygc7qfvx1",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "2stpj60m2fr9",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-23T06:28:56.197Z",
+          "updatedAt": "2026-06-23T08:45:58.035Z",
+          "resolvedAt": "2026-06-23T08:45:58.019Z",
+          "url": "https://stspg.io/7tlhvndrdpm9",
+          "summary": "This incident has been resolved."
+        }
+      ]
     },
     {
       "id": "cohere",
@@ -242,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T14:52:17.618Z",
+      "lastCheckedAt": "2026-06-24T16:01:46.773Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -262,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T14:52:18.334Z",
+      "lastCheckedAt": "2026-06-24T16:01:47.134Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T14:52:17.201Z",
+      "lastCheckedAt": "2026-06-24T16:01:46.141Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -370,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-24T14:52:17.805Z",
+      "lastCheckedAt": "2026-06-24T16:01:46.973Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -439,7 +428,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
