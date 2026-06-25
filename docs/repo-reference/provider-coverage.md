@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 25 Jun 2026, 13:25 UTC
+Generated: 25 Jun 2026, 14:25 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -10,7 +10,8 @@ This table shows how much of each provider's public model surface is currently r
 | Google | 8 | 20 | 0 | Gemini 3.5 Flash (19 May 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 7 | 13 | 1 | Claude Fable 5 (9 Jun 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 5 | 0 | n/a | n/a | [docs](https://llama.meta.com/docs) |
-| Alibaba | 5 | 38 | 0 | Qwen3.7 Plus (3 Jun 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| Alibaba | 5 | 41 | 0 | Qwen3.7 Plus (3 Jun 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| DeepSeek | 4 | 7 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
@@ -19,7 +20,6 @@ This table shows how much of each provider's public model surface is currently r
 | Deepgram | 3 | 0 | 0 | n/a | [status](https://status.deepgram.com) | [docs](https://developers.deepgram.com) |
 | ElevenLabs | 3 | 0 | 0 | n/a | [status](https://status.elevenlabs.io) | [docs](https://elevenlabs.io/docs) |
 | Runway | 3 | 0 | 0 | n/a | n/a | [docs](https://docs.runwayml.com) |
-| DeepSeek | 2 | 6 | 0 | n/a | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Reka | 2 | 2 | 0 | Reka Edge (20 Mar 2026) | n/a | n/a |
 | AssemblyAI | 2 | 0 | 0 | n/a | n/a | [docs](https://www.assemblyai.com/docs) |
 | Cartesia | 2 | 0 | 0 | n/a | n/a | [docs](https://docs.cartesia.ai) |
@@ -30,7 +30,7 @@ This table shows how much of each provider's public model surface is currently r
 | Pika | 2 | 0 | 0 | n/a | n/a | n/a |
 | Suno | 2 | 0 | 0 | n/a | n/a | n/a |
 | Udio | 2 | 0 | 0 | n/a | n/a | n/a |
-| Zhipu AI | 1 | 9 | 0 | GLM 5V Turbo (1 Apr 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
+| Zhipu AI | 1 | 12 | 0 | GLM 5.2 (16 Jun 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | Microsoft | 1 | 4 | 0 | n/a | n/a | [docs](https://learn.microsoft.com/azure/ai-foundry/model-inference/concepts/models) |
 | Perplexity | 1 | 4 | 0 | n/a | n/a | [docs](https://docs.perplexity.ai) |
 | Hailuo AI | 1 | 0 | 0 | n/a | n/a | n/a |
@@ -38,9 +38,9 @@ This table shows how much of each provider's public model surface is currently r
 | PlayHT | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.play.ht) |
 | Resemble AI | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.resemble.ai) |
 | xAI | 0 | 10 | 0 | Grok Build 0.1 (20 May 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
-| MiniMax | 0 | 7 | 0 | MiniMax M3 (31 May 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
+| MiniMax | 0 | 8 | 0 | MiniMax M3 (31 May 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | NVIDIA | 0 | 6 | 0 | Nemotron 3 Ultra (4 Jun 2026) | n/a | [docs](https://docs.api.nvidia.com) |
+| Moonshot AI | 0 | 4 | 0 | Kimi K2.7 Code (12 Jun 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
 | AI21 Labs | 0 | 3 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |
-| Moonshot AI | 0 | 3 | 0 | Kimi K2.7 Code (12 Jun 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | Inflection | 0 | 2 | 0 | n/a | n/a | [docs](https://docs.inflection.ai) |

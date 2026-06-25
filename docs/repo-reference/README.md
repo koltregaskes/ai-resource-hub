@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 25 Jun 2026, 13:25 UTC |
+| Generated | 25 Jun 2026, 14:25 UTC |
 | Providers tracked | 40 |
-| Public models | 307 |
-| Active models | 108 |
-| Tracking models | 198 |
+| Public models | 318 |
+| Active models | 110 |
+| Tracking models | 207 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 65 |
-| Release-desk entries | 50 |
+| Release-desk entries | 55 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 25 Jun 2026, 13:25 UTC |
-| Current evaluated composite leader | DeepSeek V3.2 (58.9) |
-| Latest tracked release | Kimi K2.7 Code (12 Jun 2026) |
+| Latest visible refresh | 25 Jun 2026, 14:25 UTC |
+| Current evaluated composite leader | Llama 4 Maverick (57.6) |
+| Latest tracked release | GLM 5.2 (16 Jun 2026) |
 
 ## Reference Files
 
