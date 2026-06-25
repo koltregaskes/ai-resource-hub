@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T04:50:45.143Z",
+  "generatedAt": "2026-06-25T07:34:11.368Z",
   "providers": [
     {
       "id": "openai",
@@ -12,12 +12,28 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T04:50:43.548Z",
+      "lastCheckedAt": "2026-06-25T07:34:09.915Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "CLI",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "VS Code extension",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex Web",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "App",
+          "status": "degraded_performance"
+        },
         {
           "name": "Batch",
           "status": "operational"
@@ -25,25 +41,19 @@
         {
           "name": "Audio",
           "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        },
-        {
-          "name": "Search",
-          "status": "operational"
-        },
-        {
-          "name": "Voice mode",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KVYNAMMJ7AMF94YBECG6JG6Q",
+          "title": "Users may encounter issues using access token with Codex",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-25T05:51:27.000Z",
+          "updatedAt": "2026-06-25T05:51:27.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KVYNAMMJ7AMF94YBECG6JG6Q",
+          "title": "Users may encounter issues using access token with Codex",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-25T05:51:27.000Z",
+          "updatedAt": "2026-06-25T05:51:27.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
         {
           "id": "01KVW3CQQ51SWCV4A1SWA6ATVM",
           "title": "gpt-4o-mini high error rate",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-06-19T05:23:27.000Z",
           "resolvedAt": "2026-06-19T05:23:27.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
-          "title": "FedRAMP workspaces and API orgs have degraded performance",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-15T22:12:49.000Z",
-          "updatedAt": "2026-06-18T19:41:22.000Z",
-          "resolvedAt": null,
-          "summary": "We are still investigating the issue for the listed services."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T04:50:44.229Z",
+      "lastCheckedAt": "2026-06-25T07:34:10.676Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T04:50:43.533Z",
+      "lastCheckedAt": "2026-06-25T07:34:09.853Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T04:50:44.718Z",
+      "lastCheckedAt": "2026-06-25T07:34:11.009Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T04:50:45.079Z",
+      "lastCheckedAt": "2026-06-25T07:34:11.316Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T04:50:44.058Z",
+      "lastCheckedAt": "2026-06-25T07:34:10.355Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T04:50:45.136Z",
+      "lastCheckedAt": "2026-06-25T07:34:11.360Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -428,7 +438,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
