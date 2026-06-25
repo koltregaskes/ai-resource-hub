@@ -179,6 +179,35 @@ function mergeHistoricalRows(name, newRows, keyForRow, sortRows) {
   return writeRows(name, Array.from(merged.values()).sort(sortRows));
 }
 
+function writeDailyPriceHistory(rows) {
+  const orderedRows = [...rows].sort((a, b) => {
+    const modelOrder = String(a.model_id).localeCompare(String(b.model_id));
+    if (modelOrder !== 0) return modelOrder;
+    const dateOrder = String(a.recorded_at).localeCompare(String(b.recorded_at));
+    if (dateOrder !== 0) return dateOrder;
+    return Number(a.id ?? 0) - Number(b.id ?? 0);
+  });
+
+  const dailyRows = [];
+  let currentKey = null;
+  let latestRowForDay = null;
+
+  for (const row of orderedRows) {
+    const dayKey = `${row.model_id}|${String(row.recorded_at).slice(0, 10)}`;
+
+    if (dayKey !== currentKey) {
+      if (latestRowForDay) dailyRows.push(latestRowForDay);
+      currentKey = dayKey;
+    }
+
+    latestRowForDay = row;
+  }
+
+  if (latestRowForDay) dailyRows.push(latestRowForDay);
+
+  return writeRows('price_history', dailyRows);
+}
+
 function dumpSqlite(name, query, params = []) {
   try {
     const rows = sqlite.prepare(query).all(...params);
@@ -333,24 +362,26 @@ const currentPriceHistoryRows = sqlite.prepare(`
   JOIN providers p ON m.provider_id = p.id
   ORDER BY ph.model_id, ph.recorded_at ASC
 `).all();
-mergeHistoricalRows(
-  'price_history',
-  currentPriceHistoryRows,
-  (row) => [
+const mergedPriceHistoryRows = new Map();
+for (const row of loadExistingCacheRows('price_history')) {
+  mergedPriceHistoryRows.set([
     row.model_id,
     row.input_price,
     row.output_price,
     row.recorded_at,
     row.source,
-  ].join('|'),
-  (a, b) => {
-    const modelOrder = String(a.model_id).localeCompare(String(b.model_id));
-    if (modelOrder !== 0) return modelOrder;
-    const dateOrder = String(a.recorded_at).localeCompare(String(b.recorded_at));
-    if (dateOrder !== 0) return dateOrder;
-    return Number(a.id ?? 0) - Number(b.id ?? 0);
-  },
-);
+  ].join('|'), row);
+}
+for (const row of currentPriceHistoryRows) {
+  mergedPriceHistoryRows.set([
+    row.model_id,
+    row.input_price,
+    row.output_price,
+    row.recorded_at,
+    row.source,
+  ].join('|'), row);
+}
+writeDailyPriceHistory(Array.from(mergedPriceHistoryRows.values()));
 
 const currentSpeedHistoryRows = sqlite.prepare(`
   SELECT sh.*, m.name AS model_name
