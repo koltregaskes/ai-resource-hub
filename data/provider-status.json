@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T10:25:43.692Z",
+  "generatedAt": "2026-06-25T11:24:10.276Z",
   "providers": [
     {
       "id": "openai",
@@ -12,28 +12,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T10:25:42.123Z",
+      "lastCheckedAt": "2026-06-25T11:24:08.664Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "CLI",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "VS Code extension",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Codex Web",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "App",
-          "status": "degraded_performance"
-        },
         {
           "name": "Batch",
           "status": "operational"
@@ -41,19 +25,25 @@
         {
           "name": "Audio",
           "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "Search",
+          "status": "operational"
+        },
+        {
+          "name": "Voice mode",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
-        {
-          "id": "01KVYNAMMJ7AMF94YBECG6JG6Q",
-          "title": "Users may encounter issues using access token with Codex",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-06-25T05:51:27.000Z",
-          "updatedAt": "2026-06-25T08:02:39.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -69,12 +59,12 @@
         {
           "id": "01KVYNAMMJ7AMF94YBECG6JG6Q",
           "title": "Users may encounter issues using access token with Codex",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-06-25T05:51:27.000Z",
-          "updatedAt": "2026-06-25T08:02:39.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "updatedAt": "2026-06-25T11:03:57.000Z",
+          "resolvedAt": "2026-06-25T11:03:38.000Z",
+          "summary": "This is now resolved"
         },
         {
           "id": "01KVW3CQQ51SWCV4A1SWA6ATVM",
@@ -119,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T10:25:43.001Z",
+      "lastCheckedAt": "2026-06-25T11:24:09.415Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T10:25:42.102Z",
+      "lastCheckedAt": "2026-06-25T11:24:08.608Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -241,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T10:25:43.313Z",
+      "lastCheckedAt": "2026-06-25T11:24:09.845Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T10:25:43.601Z",
+      "lastCheckedAt": "2026-06-25T11:24:10.232Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -326,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T10:25:42.705Z",
+      "lastCheckedAt": "2026-06-25T11:24:09.216Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -369,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-25T10:25:43.685Z",
+      "lastCheckedAt": "2026-06-25T11:24:10.268Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
