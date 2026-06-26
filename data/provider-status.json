@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T16:25:39.404Z",
+  "generatedAt": "2026-06-26T17:23:20.346Z",
   "providers": [
     {
       "id": "openai",
@@ -12,12 +12,28 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T16:25:37.910Z",
+      "lastCheckedAt": "2026-06-26T17:23:18.482Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Codex Web",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "App",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex API",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "FedRAMP",
+          "status": "degraded_performance"
+        },
         {
           "name": "Batch",
           "status": "operational"
@@ -25,25 +41,19 @@
         {
           "name": "Audio",
           "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        },
-        {
-          "name": "Search",
-          "status": "operational"
-        },
-        {
-          "name": "GPTs",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
+          "title": "Codex Usage Limits Depleting Faster Than Expected",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-26T17:04:02.000Z",
+          "updatedAt": "2026-06-26T17:04:02.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating reports that Codex usage limits are being consumed faster than expected."
+        },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
           "title": "FedRAMP workspaces and API orgs have degraded performance",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
+          "title": "Codex Usage Limits Depleting Faster Than Expected",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-26T17:04:02.000Z",
+          "updatedAt": "2026-06-26T17:04:02.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating reports that Codex usage limits are being consumed faster than expected."
+        },
         {
           "id": "01KVZRA3Z551H993JHJ9P2TW9E",
           "title": "Small Number of Users Have Incorrectly Cancelled Subscription",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-06-24T06:07:32.000Z",
           "resolvedAt": "2026-06-24T06:07:32.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KVTDW6E1PXBTY2A9XEBT4MY4",
-          "title": "Users may experience elevated errors in ChatGPT uploading and downloading files ",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-06-23T14:24:16.000Z",
-          "updatedAt": "2026-06-23T16:38:20.000Z",
-          "resolvedAt": "2026-06-23T16:38:19.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T16:25:38.593Z",
+      "lastCheckedAt": "2026-06-26T17:23:19.692Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T16:25:37.835Z",
+      "lastCheckedAt": "2026-06-26T17:23:18.794Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T16:25:39.159Z",
+      "lastCheckedAt": "2026-06-26T17:23:19.990Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T16:25:39.379Z",
+      "lastCheckedAt": "2026-06-26T17:23:20.181Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T16:25:38.660Z",
+      "lastCheckedAt": "2026-06-26T17:23:19.520Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T16:25:39.397Z",
+      "lastCheckedAt": "2026-06-26T17:23:20.338Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -368,7 +378,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-06-26T08:58:12.000Z",
+          "id": "together-feed-0-2026-06-26T17:17:05.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-26T17:17:05.000Z",
+          "updatedAt": "2026-06-26T17:17:05.000Z",
+          "resolvedAt": "2026-06-26T17:17:05.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-26T16:27:14.000Z",
+          "title": "Qwen3.5 397B A17B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-26T16:27:14.000Z",
+          "updatedAt": "2026-06-26T16:27:14.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-26T08:58:12.000Z",
           "title": "Kimi K2.7 Code recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -379,7 +411,7 @@
           "summary": "Kimi K2.7 Code recovered"
         },
         {
-          "id": "together-feed-1-2026-06-26T08:46:10.000Z",
+          "id": "together-feed-3-2026-06-26T08:46:10.000Z",
           "title": "Kimi K2.7 Code went down",
           "status": "investigating",
           "impact": "major",
@@ -388,28 +420,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Kimi K2.7 Code went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-25T23:45:56.000Z",
-          "title": "Nemotron 3 Ultra 550B A55B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-25T23:45:56.000Z",
-          "updatedAt": "2026-06-25T23:45:56.000Z",
-          "resolvedAt": "2026-06-25T23:45:56.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Nemotron 3 Ultra 550B A55B recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-25T22:18:51.000Z",
-          "title": "Nemotron 3 Ultra 550B A55B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-25T22:18:51.000Z",
-          "updatedAt": "2026-06-25T22:18:51.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Nemotron 3 Ultra 550B A55B went down"
         }
       ]
     },
@@ -428,7 +438,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
