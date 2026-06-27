@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-06-26T23:21:41.583Z",
+  "generatedAt": "2026-06-27T00:25:35.717Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T23:21:39.933Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Codex Web",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "App",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Codex API",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
-          "title": "Codex Usage Limits Depleting Faster Than Expected",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-26T17:04:02.000Z",
-          "updatedAt": "2026-06-26T17:04:02.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating reports that Codex usage limits are being consumed faster than expected."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
-          "title": "FedRAMP workspaces and API orgs have degraded performance",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-15T22:12:49.000Z",
-          "updatedAt": "2026-06-26T23:07:55.000Z",
-          "resolvedAt": "2026-06-26T23:07:55.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
-          "title": "Codex Usage Limits Depleting Faster Than Expected",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-06-26T17:04:02.000Z",
-          "updatedAt": "2026-06-26T17:04:02.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating reports that Codex usage limits are being consumed faster than expected."
-        },
-        {
-          "id": "01KVZRA3Z551H993JHJ9P2TW9E",
-          "title": "Small Number of Users Have Incorrectly Cancelled Subscription",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-25T16:02:50.000Z",
-          "updatedAt": "2026-06-26T02:18:06.000Z",
-          "resolvedAt": "2026-06-26T02:18:06.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KVYNAMMJ7AMF94YBECG6JG6Q",
-          "title": "Users may encounter issues using access token with Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-25T05:51:27.000Z",
-          "updatedAt": "2026-06-25T11:03:57.000Z",
-          "resolvedAt": "2026-06-25T11:03:38.000Z",
-          "summary": "This is now resolved"
-        }
-      ]
-    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -109,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T23:21:40.499Z",
+      "lastCheckedAt": "2026-06-27T00:25:34.830Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -117,94 +20,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T23:21:41.576Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "together-feed-0-2026-06-26T22:50:58.000Z",
-          "title": "Qwen3.5 397B A17B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-26T22:50:58.000Z",
-          "updatedAt": "2026-06-26T22:50:58.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-26T19:21:04.000Z",
-          "title": "Qwen3.5 397B A17B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-26T19:21:04.000Z",
-          "updatedAt": "2026-06-26T19:21:04.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-06-26T22:50:58.000Z",
-          "title": "Qwen3.5 397B A17B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-26T22:50:58.000Z",
-          "updatedAt": "2026-06-26T22:50:58.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
-        },
-        {
-          "id": "together-feed-1-2026-06-26T21:05:19.000Z",
-          "title": "Qwen3.5 397B A17B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-26T21:05:19.000Z",
-          "updatedAt": "2026-06-26T21:05:19.000Z",
-          "resolvedAt": "2026-06-26T21:05:19.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B recovered"
-        },
-        {
-          "id": "together-feed-2-2026-06-26T19:21:04.000Z",
-          "title": "Qwen3.5 397B A17B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-26T19:21:04.000Z",
-          "updatedAt": "2026-06-26T19:21:04.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B went down"
-        },
-        {
-          "id": "together-feed-3-2026-06-26T17:17:05.000Z",
-          "title": "Qwen3.5 397B A17B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-26T17:17:05.000Z",
-          "updatedAt": "2026-06-26T17:17:05.000Z",
-          "resolvedAt": "2026-06-26T17:17:05.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 397B A17B recovered"
-        }
-      ]
     },
     {
       "id": "anthropic",
@@ -217,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T23:21:39.886Z",
+      "lastCheckedAt": "2026-06-27T00:25:34.095Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -319,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T23:21:41.106Z",
+      "lastCheckedAt": "2026-06-27T00:25:35.180Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T23:21:41.349Z",
+      "lastCheckedAt": "2026-06-27T00:25:35.604Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -404,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-26T23:21:40.370Z",
+      "lastCheckedAt": "2026-06-27T00:25:34.549Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -437,6 +252,168 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-27T00:25:33.986Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "Search",
+          "status": "operational"
+        },
+        {
+          "name": "GPTs",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
+          "title": "Codex Usage Limits Depleting Faster Than Expected",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-26T17:04:02.000Z",
+          "updatedAt": "2026-06-26T23:24:31.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that some reports of Codex usage limits depleting faster than expected are related to our abuse and fraud prevention systems incorrectly rate limiting certain a..."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
+          "title": "Codex Usage Limits Depleting Faster Than Expected",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-26T17:04:02.000Z",
+          "updatedAt": "2026-06-26T23:24:31.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that some reports of Codex usage limits depleting faster than expected are related to our abuse and fraud prevention systems incorrectly rate limiting certain a..."
+        },
+        {
+          "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
+          "title": "FedRAMP workspaces and API orgs have degraded performance",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-15T22:12:49.000Z",
+          "updatedAt": "2026-06-26T23:07:55.000Z",
+          "resolvedAt": "2026-06-26T23:07:55.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KVZRA3Z551H993JHJ9P2TW9E",
+          "title": "Small Number of Users Have Incorrectly Cancelled Subscription",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-25T16:02:50.000Z",
+          "updatedAt": "2026-06-26T02:18:06.000Z",
+          "resolvedAt": "2026-06-26T02:18:06.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KVYNAMMJ7AMF94YBECG6JG6Q",
+          "title": "Users may encounter issues using access token with Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-25T05:51:27.000Z",
+          "updatedAt": "2026-06-25T11:03:57.000Z",
+          "resolvedAt": "2026-06-25T11:03:38.000Z",
+          "summary": "This is now resolved"
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-27T00:25:35.710Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-06-27T00:08:04.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-27T00:08:04.000Z",
+          "updatedAt": "2026-06-27T00:08:04.000Z",
+          "resolvedAt": "2026-06-27T00:08:04.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-26T23:43:09.000Z",
+          "title": "Qwen3.5 397B A17B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-26T23:43:09.000Z",
+          "updatedAt": "2026-06-26T23:43:09.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-26T23:38:31.000Z",
+          "title": "Qwen3.5 397B A17B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-26T23:38:31.000Z",
+          "updatedAt": "2026-06-26T23:38:31.000Z",
+          "resolvedAt": "2026-06-26T23:38:31.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B recovered"
+        },
+        {
+          "id": "together-feed-3-2026-06-26T22:50:58.000Z",
+          "title": "Qwen3.5 397B A17B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-26T22:50:58.000Z",
+          "updatedAt": "2026-06-26T22:50:58.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 397B A17B went down"
+        }
+      ]
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -451,7 +428,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
