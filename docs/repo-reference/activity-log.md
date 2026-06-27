@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 27 Jun 2026, 14:54 UTC
+Generated: 27 Jun 2026, 16:18 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 27 Jun 2026, 14:54 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 27 Jun 2026, 14:54 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 27 Jun 2026, 14:53 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 27 Jun 2026, 14:53 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 27 Jun 2026, 14:53 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 27 Jun 2026, 16:18 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 27 Jun 2026, 16:18 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 27 Jun 2026, 16:18 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 27 Jun 2026, 16:18 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 27 Jun 2026, 16:18 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 27 Jun 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,061 open roles across 10 tracked companies. | `/jobs/` |
 | 25 May 2026, 12:00 UTC | digest | OpenGuardrails: An Open-Source Context-Aware AI Guardrails Platform | Papers With Code featured in the latest daily brief. | [open](https://paperswithcode.com/papers/2510.19169) |
 | 25 May 2026, 12:00 UTC | digest | Published the 2026-05-25 daily digest | 7 stories captured from tracked sources. | `/news/` |
