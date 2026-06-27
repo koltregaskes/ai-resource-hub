@@ -1,6 +1,113 @@
 {
-  "generatedAt": "2026-06-27T21:43:35.900Z",
+  "generatedAt": "2026-06-27T22:14:48.730Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-06-27T22:14:46.730Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "2 active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Conversations",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "Search",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KW5HJAH5X1A2V62HP4ZST1V7",
+          "title": "Issues with ChatGPT Windows desktop app",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-27T22:00:26.000Z",
+          "updatedAt": "2026-06-27T22:00:26.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue affecting some users of the ChatGPT Windows desktop app on Windows. Affected users may see chat history or conversations fail to load, missing sideba..."
+        },
+        {
+          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
+          "title": "Codex Usage Limits Depleting Faster Than Expected",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-26T17:04:02.000Z",
+          "updatedAt": "2026-06-26T23:24:31.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that some reports of Codex usage limits depleting faster than expected are related to our abuse and fraud prevention systems incorrectly rate limiting certain a..."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KW5HJAH5X1A2V62HP4ZST1V7",
+          "title": "Issues with ChatGPT Windows desktop app",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-06-27T22:00:26.000Z",
+          "updatedAt": "2026-06-27T22:00:26.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue affecting some users of the ChatGPT Windows desktop app on Windows. Affected users may see chat history or conversations fail to load, missing sideba..."
+        },
+        {
+          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
+          "title": "Codex Usage Limits Depleting Faster Than Expected",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-06-26T17:04:02.000Z",
+          "updatedAt": "2026-06-26T23:24:31.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that some reports of Codex usage limits depleting faster than expected are related to our abuse and fraud prevention systems incorrectly rate limiting certain a..."
+        },
+        {
+          "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
+          "title": "FedRAMP workspaces and API orgs have degraded performance",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-15T22:12:49.000Z",
+          "updatedAt": "2026-06-26T23:07:55.000Z",
+          "resolvedAt": "2026-06-26T23:07:55.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KVZRA3Z551H993JHJ9P2TW9E",
+          "title": "Small Number of Users Have Incorrectly Cancelled Subscription",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-06-25T16:02:50.000Z",
+          "updatedAt": "2026-06-26T02:18:06.000Z",
+          "resolvedAt": "2026-06-26T02:18:06.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-27T21:43:35.299Z",
+      "lastCheckedAt": "2026-06-27T22:14:48.039Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-27T21:43:34.210Z",
+      "lastCheckedAt": "2026-06-27T22:14:46.757Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -134,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-27T21:43:35.525Z",
+      "lastCheckedAt": "2026-06-27T22:14:48.352Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-27T21:43:35.799Z",
+      "lastCheckedAt": "2026-06-27T22:14:48.545Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-27T21:43:34.952Z",
+      "lastCheckedAt": "2026-06-27T22:14:47.727Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -252,103 +359,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-27T21:43:34.167Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        },
-        {
-          "name": "Search",
-          "status": "operational"
-        },
-        {
-          "name": "GPTs",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
-          "title": "Codex Usage Limits Depleting Faster Than Expected",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-06-26T17:04:02.000Z",
-          "updatedAt": "2026-06-26T23:24:31.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that some reports of Codex usage limits depleting faster than expected are related to our abuse and fraud prevention systems incorrectly rate limiting certain a..."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
-          "title": "Codex Usage Limits Depleting Faster Than Expected",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-06-26T17:04:02.000Z",
-          "updatedAt": "2026-06-26T23:24:31.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that some reports of Codex usage limits depleting faster than expected are related to our abuse and fraud prevention systems incorrectly rate limiting certain a..."
-        },
-        {
-          "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
-          "title": "FedRAMP workspaces and API orgs have degraded performance",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-15T22:12:49.000Z",
-          "updatedAt": "2026-06-26T23:07:55.000Z",
-          "resolvedAt": "2026-06-26T23:07:55.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KVZRA3Z551H993JHJ9P2TW9E",
-          "title": "Small Number of Users Have Incorrectly Cancelled Subscription",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-25T16:02:50.000Z",
-          "updatedAt": "2026-06-26T02:18:06.000Z",
-          "resolvedAt": "2026-06-26T02:18:06.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KVYNAMMJ7AMF94YBECG6JG6Q",
-          "title": "Users may encounter issues using access token with Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-06-25T05:51:27.000Z",
-          "updatedAt": "2026-06-25T11:03:57.000Z",
-          "resolvedAt": "2026-06-25T11:03:38.000Z",
-          "summary": "This is now resolved"
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -359,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-27T21:43:35.892Z",
+      "lastCheckedAt": "2026-06-27T22:14:48.619Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
