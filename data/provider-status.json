@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T16:07:53.135Z",
+  "generatedAt": "2026-06-29T17:20:02.443Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-29T16:07:52.290Z",
+      "lastCheckedAt": "2026-06-29T17:20:01.656Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-29T16:07:51.441Z",
+      "lastCheckedAt": "2026-06-29T17:20:00.722Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-29T16:07:52.728Z",
+      "lastCheckedAt": "2026-06-29T17:20:02.040Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-29T16:07:53.128Z",
+      "lastCheckedAt": "2026-06-29T17:20:02.285Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-29T16:07:51.969Z",
+      "lastCheckedAt": "2026-06-29T17:20:01.529Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,10 +262,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-29T16:07:51.380Z",
+      "lastCheckedAt": "2026-06-29T17:20:00.797Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -293,19 +293,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
+      "activeIncidents": [],
+      "recentIncidents": [
         {
           "id": "01KW2E6W0503W4NXJNCVAG8V6T",
           "title": "Codex Usage Limits Depleting Faster Than Expected",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-06-26T17:04:02.000Z",
-          "updatedAt": "2026-06-26T23:24:31.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that some reports of Codex usage limits depleting faster than expected are related to our abuse and fraud prevention systems incorrectly rate limiting certain a..."
-        }
-      ],
-      "recentIncidents": [
+          "updatedAt": "2026-06-29T17:06:33.000Z",
+          "resolvedAt": "2026-06-29T17:06:33.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
         {
           "id": "01KW5HJAH5X1A2V62HP4ZST1V7",
           "title": "Issues with ChatGPT Windows desktop app",
@@ -315,16 +314,6 @@
           "updatedAt": "2026-06-28T03:29:18.000Z",
           "resolvedAt": "2026-06-28T03:29:18.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KW2E6W0503W4NXJNCVAG8V6T",
-          "title": "Codex Usage Limits Depleting Faster Than Expected",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-06-26T17:04:02.000Z",
-          "updatedAt": "2026-06-26T23:24:31.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that some reports of Codex usage limits depleting faster than expected are related to our abuse and fraud prevention systems incorrectly rate limiting certain a..."
         },
         {
           "id": "01KV6NGBYE50GK3TRXHD2EMTXA",
@@ -359,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-29T16:07:53.101Z",
+      "lastCheckedAt": "2026-06-29T17:20:02.435Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -428,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
