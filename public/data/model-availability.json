@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-29T12:25:45.521Z",
+  "generatedAt": "2026-06-29T13:25:54.221Z",
   "overview": {
-    "generatedAt": "2026-06-29T12:25:45.533Z",
+    "generatedAt": "2026-06-29T13:25:54.233Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 110,
+    "surfacedModels": 109,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -81,7 +81,7 @@
           "llm"
         ]
       },
-      "matchingModelCount": 21,
+      "matchingModelCount": 20,
       "matchingModelIds": [
         "claude-opus-4.6",
         "claude-opus-4.5",
@@ -99,7 +99,6 @@
         "claude-fable-5",
         "claude-mythos-preview",
         "claude-opus-4.1",
-        "claude-opus-4.6-fast",
         "claude-opus-4.7",
         "claude-opus-4.7-fast",
         "claude-opus-4.8",
@@ -122,7 +121,6 @@
         "Claude Fable 5",
         "Claude Mythos Preview",
         "Claude Opus 4.1",
-        "Claude Opus 4.6 (Fast)",
         "Claude Opus 4.7",
         "Claude Opus 4.7 (Fast)",
         "Claude Opus 4.8",
