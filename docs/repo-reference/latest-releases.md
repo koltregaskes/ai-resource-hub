@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 29 Jun 2026, 23:25 UTC
+Generated: 30 Jun 2026, 00:17 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -22,8 +22,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 19 May 2026 | Gemini 3.5 Flash | Google | tracking | watch | ready for editor | 0 | 2 | [official](https://ai.google.dev/gemini-api/docs/models) |
 | 12 May 2026 | Claude Opus 4.7 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://docs.anthropic.com) |
 | 5 May 2026 | GPT Chat Latest | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://platform.openai.com/docs/models) |
-| 30 Apr 2026 | Grok 4.3 | xAI | tracking | watch | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
-| 30 Apr 2026 | Mistral Medium 3.5 | Mistral | tracking | watch | needs research | 0 | 0 | [official](https://docs.mistral.ai) |
+| 30 Apr 2026 | Grok 4.3 | xAI | tracking | backfill | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
+| 30 Apr 2026 | Mistral Medium 3.5 | Mistral | tracking | backfill | needs research | 0 | 0 | [official](https://docs.mistral.ai) |
 | 27 Apr 2026 | Qwen3.5 Plus 2026-04-20 | Alibaba | tracking | backfill | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 Flash | Alibaba | tracking | backfill | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 27 Apr 2026 | Qwen3.6 35B A3B | Alibaba | tracking | backfill | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
