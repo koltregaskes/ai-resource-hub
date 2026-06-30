@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 30 Jun 2026, 21:25 UTC
+Generated: 30 Jun 2026, 22:37 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 30 Jun 2026, 21:25 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 30 Jun 2026, 22:37 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 30 Jun 2026, 21:25 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 30 Jun 2026, 21:25 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 30 Jun 2026, 21:25 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 30 Jun 2026, 21:25 UTC |
-| Provider status | Hourly automated refresh | Automated | 30 Jun 2026, 21:25 UTC |
-| Guides and learning | Manual editorial review | Manual | 30 Jun 2026, 21:25 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 30 Jun 2026, 22:37 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 30 Jun 2026, 22:37 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 30 Jun 2026, 22:37 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 30 Jun 2026, 22:37 UTC |
+| Provider status | Hourly automated refresh | Automated | 30 Jun 2026, 22:37 UTC |
+| Guides and learning | Manual editorial review | Manual | 30 Jun 2026, 22:36 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 30 Jun 2026, 21:25 UTC
+- Last refreshed: 30 Jun 2026, 22:37 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 11 Jul 2026, 12:00 UTC: Claude 2 launched - Next exact anniversary in 11 days. (`/milestones/`)
-- 30 Jun 2026, 21:25 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 30 Jun 2026, 22:37 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 30 Jun 2026, 21:25 UTC
+- Last refreshed: 30 Jun 2026, 22:37 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -80,7 +80,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 30 Jun 2026, 21:25 UTC
+- Last refreshed: 30 Jun 2026, 22:37 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Jun 2026, 21:25 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 30 Jun 2026, 21:25 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 30 Jun 2026, 22:37 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 30 Jun 2026, 22:37 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 30 Jun 2026, 21:25 UTC
+- Last refreshed: 30 Jun 2026, 22:37 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,15 +111,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Jun 2026, 21:25 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 30 Jun 2026, 21:25 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 30 Jun 2026, 21:25 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 30 Jun 2026, 22:37 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 30 Jun 2026, 22:37 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 30 Jun 2026, 22:37 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 30 Jun 2026, 21:25 UTC
+- Last refreshed: 30 Jun 2026, 22:37 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -131,15 +131,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
+- 30 Jun 2026, 21:53 UTC: OpenClaw is finally available on Android and iOS - TechCrunch (industry) ([source](https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/))
 - 30 Jun 2026, 20:33 UTC: The DeepMind trio who built a poker AI are now making money for quant hedge funds - TechCrunch (industry) ([source](https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/))
 - 30 Jun 2026, 20:03 UTC: New attack provides one more reason why AI browsers are a bad idea - Ars Technica (research) ([source](https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/))
-- 30 Jun 2026, 19:24 UTC: Google’s NotebookLM can sum up your research in a TikTok-style clip - The Verge (industry) ([source](https://www.theverge.com/tech/959778/google-notebooklm-ai-clips))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 30 Jun 2026, 21:25 UTC
+- Last refreshed: 30 Jun 2026, 22:37 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Jun 2026, 21:25 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
-- 30 Jun 2026, 21:25 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
-- 30 Jun 2026, 21:25 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 30 Jun 2026, 22:37 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
+- 30 Jun 2026, 22:37 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 30 Jun 2026, 22:37 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 30 Jun 2026, 21:25 UTC
+- Last refreshed: 30 Jun 2026, 22:36 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Jun 2026, 21:25 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 30 Jun 2026, 21:25 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 30 Jun 2026, 21:25 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 30 Jun 2026, 22:36 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 30 Jun 2026, 22:36 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 30 Jun 2026, 22:36 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)

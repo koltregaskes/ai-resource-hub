@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T21:25:42.420Z",
+  "generatedAt": "2026-06-30T22:37:16.652Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T21:25:41.647Z",
+      "lastCheckedAt": "2026-06-30T22:37:15.926Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T21:25:40.619Z",
+      "lastCheckedAt": "2026-06-30T22:37:14.921Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T21:25:42.043Z",
+      "lastCheckedAt": "2026-06-30T22:37:16.238Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T21:25:42.386Z",
+      "lastCheckedAt": "2026-06-30T22:37:16.481Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T21:25:41.425Z",
+      "lastCheckedAt": "2026-06-30T22:37:15.641Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T21:25:40.545Z",
+      "lastCheckedAt": "2026-06-30T22:37:14.831Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T21:25:42.414Z",
+      "lastCheckedAt": "2026-06-30T22:37:16.604Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -357,7 +357,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-06-30T16:37:24.000Z",
+          "id": "together-feed-0-2026-06-30T22:07:27.000Z",
+          "title": "Orpheus TTS recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-30T22:07:27.000Z",
+          "updatedAt": "2026-06-30T22:07:27.000Z",
+          "resolvedAt": "2026-06-30T22:07:27.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS recovered"
+        },
+        {
+          "id": "together-feed-1-2026-06-30T21:43:21.000Z",
+          "title": "Orpheus TTS went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-30T21:43:21.000Z",
+          "updatedAt": "2026-06-30T21:43:21.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-30T16:37:24.000Z",
           "title": "Orpheus TTS recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -368,7 +390,7 @@
           "summary": "Orpheus TTS recovered"
         },
         {
-          "id": "together-feed-1-2026-06-30T15:56:54.000Z",
+          "id": "together-feed-3-2026-06-30T15:56:54.000Z",
           "title": "Orpheus TTS went down",
           "status": "investigating",
           "impact": "major",
@@ -377,28 +399,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Orpheus TTS went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-28T14:14:45.000Z",
-          "title": "OpenAI GPT OSS 120B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-28T14:14:45.000Z",
-          "updatedAt": "2026-06-28T14:14:45.000Z",
-          "resolvedAt": "2026-06-28T14:14:45.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 120B recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-28T13:11:35.000Z",
-          "title": "OpenAI GPT OSS 120B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-28T13:11:35.000Z",
-          "updatedAt": "2026-06-28T13:11:35.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 120B went down"
         }
       ]
     },
