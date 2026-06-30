@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 30 Jun 2026, 18:11 UTC |
+| Generated | 30 Jun 2026, 19:25 UTC |
 | Providers tracked | 40 |
 | Public models | 319 |
 | Active models | 110 |
@@ -19,9 +19,9 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 52 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 30 Jun 2026, 18:11 UTC |
+| Latest visible refresh | 30 Jun 2026, 19:25 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
-| Latest tracked release | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) (30 Jun 2026) |
+| Latest tracked release | Claude Sonnet 5 (30 Jun 2026) |
 
 ## Reference Files
 
