@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 30 Jun 2026, 20:19 UTC
+Generated: 30 Jun 2026, 21:25 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
