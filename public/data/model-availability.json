@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-30T17:25:53.623Z",
+  "generatedAt": "2026-06-30T18:11:45.654Z",
   "overview": {
-    "generatedAt": "2026-06-30T17:25:53.634Z",
+    "generatedAt": "2026-06-30T18:11:45.663Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 110,
+    "surfacedModels": 111,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -81,7 +81,7 @@
           "llm"
         ]
       },
-      "matchingModelCount": 20,
+      "matchingModelCount": 21,
       "matchingModelIds": [
         "claude-opus-4.6",
         "claude-opus-4.5",
@@ -102,7 +102,8 @@
         "claude-opus-4.7",
         "claude-opus-4.7-fast",
         "claude-opus-4.8",
-        "claude-opus-4.8-fast"
+        "claude-opus-4.8-fast",
+        "claude-sonnet-5"
       ],
       "matchingModelNames": [
         "Claude Opus 4.6",
@@ -124,7 +125,8 @@
         "Claude Opus 4.7",
         "Claude Opus 4.7 (Fast)",
         "Claude Opus 4.8",
-        "Claude Opus 4.8 (Fast)"
+        "Claude Opus 4.8 (Fast)",
+        "Claude Sonnet 5"
       ],
       "surfaceLabel": "Web + App"
     },
@@ -335,7 +337,7 @@
         "GPT-4.1 Mini",
         "GPT-4.1 Nano",
         "GPT-4o",
-        "GPT-4o-mini (2024-07-18)",
+        "GPT-4o-mini",
         "GPT Audio",
         "GPT Audio Mini",
         "GPT Chat Latest",
