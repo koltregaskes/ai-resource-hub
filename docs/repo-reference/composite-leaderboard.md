@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 30 Jun 2026, 15:40 UTC
+Generated: 30 Jun 2026, 17:25 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -19,15 +19,15 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 9 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $2.00 / $8.00 | 16 Apr 2025 |
 | 10 | DeepSeek V3.2 | DeepSeek | 39.4 | 74.6 / 6 | 21% | General use | $0.20 / $0.77 | 29 Sept 2025 |
 | 11 | Gemini 2.5 Pro | Google | 38.1 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
-| 12 | Gemini 3.1 Pro | Google | 37.2 | 60.4 / 2 | 9% | Chat | $2.00 / $12.00 | 19 Feb 2026 |
-| 13 | Grok 4 | xAI | 37.1 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
-| 14 | DeepSeek R1 | DeepSeek | 36.7 | 70.9 / 19 | 58% | General use | $0.70 / $2.50 | 20 Jan 2025 |
-| 15 | Claude Opus 4 | Anthropic | 36.6 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
-| 16 | Gemini 3 Pro | Google | 36.2 | 81.2 / 3 | 13% | Chat | $2.00 / $12.00 | 18 Nov 2025 |
-| 17 | Phi-4 Reasoning | Microsoft | 34.5 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
-| 18 | Claude Sonnet 4 | Anthropic | 34.0 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
-| 19 | Command A | Cohere | 32.9 | 82.4 / 3 | 9% | Coding | $2.50 / $10.00 | 13 Mar 2025 |
-| 20 | Grok 3 | xAI | 32.6 | 84.7 / 7 | 24% | General use | $3.00 / $15.00 | 10 Jun 2025 |
+| 12 | Grok 4 | xAI | 37.1 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
+| 13 | DeepSeek R1 | DeepSeek | 36.7 | 70.9 / 19 | 58% | General use | $0.70 / $2.50 | 20 Jan 2025 |
+| 14 | Claude Opus 4 | Anthropic | 36.6 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
+| 15 | Gemini 3 Pro | Google | 36.2 | 81.2 / 3 | 13% | Chat | $2.00 / $12.00 | 18 Nov 2025 |
+| 16 | Phi-4 Reasoning | Microsoft | 34.5 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
+| 17 | Claude Sonnet 4 | Anthropic | 34.0 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
+| 18 | Command A | Cohere | 32.9 | 82.4 / 3 | 9% | Coding | $2.50 / $10.00 | 13 Mar 2025 |
+| 19 | Grok 3 | xAI | 32.6 | 84.7 / 7 | 24% | General use | $3.00 / $15.00 | 10 Jun 2025 |
+| 20 | R1 0528 | DeepSeek | 32.0 | 82.4 / 6 | 23% | Chat | $0.50 / $2.15 | 28 May 2025 |
 
 Notes:
 

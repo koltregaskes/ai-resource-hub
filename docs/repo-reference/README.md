@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 30 Jun 2026, 15:40 UTC |
+| Generated | 30 Jun 2026, 17:25 UTC |
 | Providers tracked | 40 |
-| Public models | 317 |
+| Public models | 318 |
 | Active models | 110 |
-| Tracking models | 206 |
+| Tracking models | 207 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 64 |
-| Release-desk entries | 50 |
+| Release-desk entries | 51 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 30 Jun 2026, 15:40 UTC |
+| Latest visible refresh | 30 Jun 2026, 17:25 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
-| Latest tracked release | GLM 5.2 (16 Jun 2026) |
+| Latest tracked release | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) (30 Jun 2026) |
 
 ## Reference Files
 

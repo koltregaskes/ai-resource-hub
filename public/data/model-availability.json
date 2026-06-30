@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-30T15:40:35.085Z",
+  "generatedAt": "2026-06-30T17:25:53.623Z",
   "overview": {
-    "generatedAt": "2026-06-30T15:40:35.097Z",
+    "generatedAt": "2026-06-30T17:25:53.634Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 109,
+    "surfacedModels": 110,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -159,7 +159,7 @@
           "gemma-"
         ]
       },
-      "matchingModelCount": 22,
+      "matchingModelCount": 23,
       "matchingModelIds": [
         "gemini-3.1-pro",
         "veo-3",
@@ -182,6 +182,7 @@
         "gemini-3.5-flash",
         "gemini-2.5-flash-image",
         "gemini-3.1-flash-image",
+        "gemini-3.1-flash-lite-image",
         "gemini-3-pro-image"
       ],
       "matchingModelNames": [
@@ -206,6 +207,7 @@
         "Gemini 3.5 Flash",
         "Nano Banana (Gemini 2.5 Flash Image)",
         "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
         "Nano Banana Pro (Gemini 3 Pro Image)"
       ],
       "surfaceLabel": "API + Web"
@@ -333,7 +335,7 @@
         "GPT-4.1 Mini",
         "GPT-4.1 Nano",
         "GPT-4o",
-        "GPT-4o-mini",
+        "GPT-4o-mini (2024-07-18)",
         "GPT Audio",
         "GPT Audio Mini",
         "GPT Chat Latest",
