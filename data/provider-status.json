@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T22:56:11.984Z",
+  "generatedAt": "2026-07-01T00:19:51.309Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T22:56:10.945Z",
+      "lastCheckedAt": "2026-07-01T00:19:50.555Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,6 +20,94 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-01T00:19:51.207Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-06-30T23:18:16.000Z",
+          "title": "FLUX.1 [schnell] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-30T23:18:16.000Z",
+          "updatedAt": "2026-06-30T23:18:16.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 [schnell] went down"
+        },
+        {
+          "id": "together-feed-2-2026-06-30T21:43:21.000Z",
+          "title": "Orpheus TTS went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-30T21:43:21.000Z",
+          "updatedAt": "2026-06-30T21:43:21.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-06-30T23:18:16.000Z",
+          "title": "FLUX.1 [schnell] went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-30T23:18:16.000Z",
+          "updatedAt": "2026-06-30T23:18:16.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "FLUX.1 [schnell] went down"
+        },
+        {
+          "id": "together-feed-1-2026-06-30T22:07:27.000Z",
+          "title": "Orpheus TTS recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-30T22:07:27.000Z",
+          "updatedAt": "2026-06-30T22:07:27.000Z",
+          "resolvedAt": "2026-06-30T22:07:27.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS recovered"
+        },
+        {
+          "id": "together-feed-2-2026-06-30T21:43:21.000Z",
+          "title": "Orpheus TTS went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-06-30T21:43:21.000Z",
+          "updatedAt": "2026-06-30T21:43:21.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS went down"
+        },
+        {
+          "id": "together-feed-3-2026-06-30T16:37:24.000Z",
+          "title": "Orpheus TTS recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-06-30T16:37:24.000Z",
+          "updatedAt": "2026-06-30T16:37:24.000Z",
+          "resolvedAt": "2026-06-30T16:37:24.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS recovered"
+        }
+      ]
     },
     {
       "id": "anthropic",
@@ -32,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T22:56:10.352Z",
+      "lastCheckedAt": "2026-07-01T00:19:49.338Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -134,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T22:56:11.526Z",
+      "lastCheckedAt": "2026-07-01T00:19:50.899Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T22:56:11.977Z",
+      "lastCheckedAt": "2026-07-01T00:19:51.302Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T22:56:10.697Z",
+      "lastCheckedAt": "2026-07-01T00:19:50.107Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +350,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T22:56:10.377Z",
+      "lastCheckedAt": "2026-07-01T00:19:49.357Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -338,71 +426,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-06-30T22:56:11.899Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-06-30T22:07:27.000Z",
-          "title": "Orpheus TTS recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-30T22:07:27.000Z",
-          "updatedAt": "2026-06-30T22:07:27.000Z",
-          "resolvedAt": "2026-06-30T22:07:27.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Orpheus TTS recovered"
-        },
-        {
-          "id": "together-feed-1-2026-06-30T21:43:21.000Z",
-          "title": "Orpheus TTS went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-30T21:43:21.000Z",
-          "updatedAt": "2026-06-30T21:43:21.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Orpheus TTS went down"
-        },
-        {
-          "id": "together-feed-2-2026-06-30T16:37:24.000Z",
-          "title": "Orpheus TTS recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-06-30T16:37:24.000Z",
-          "updatedAt": "2026-06-30T16:37:24.000Z",
-          "resolvedAt": "2026-06-30T16:37:24.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Orpheus TTS recovered"
-        },
-        {
-          "id": "together-feed-3-2026-06-30T15:56:54.000Z",
-          "title": "Orpheus TTS went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-06-30T15:56:54.000Z",
-          "updatedAt": "2026-06-30T15:56:54.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Orpheus TTS went down"
-        }
-      ]
-    },
-    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -417,7 +440,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
