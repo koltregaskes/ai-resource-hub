@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T19:01:51.618Z",
+  "generatedAt": "2026-07-02T20:36:24.217Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T19:01:50.401Z",
+      "lastCheckedAt": "2026-07-02T20:36:23.170Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T19:01:50.750Z",
+      "lastCheckedAt": "2026-07-02T20:36:23.424Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +129,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T19:01:51.425Z",
+      "lastCheckedAt": "2026-07-02T20:36:24.010Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -148,15 +148,15 @@
           "summary": "We will be performing scheduled network maintenance on July 2nd, 9 PM – midnight. During this window, some serverless models may experience degraded performance or be temporary un..."
         },
         {
-          "id": "together-feed-1-2026-07-02T18:44:47.000Z",
-          "title": "Google Gemma 4 31B IT went down",
+          "id": "together-feed-1-2026-07-02T19:54:55.000Z",
+          "title": "Nemotron 3 Ultra 550B A55B went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-07-02T18:44:47.000Z",
-          "updatedAt": "2026-07-02T18:44:47.000Z",
+          "startedAt": "2026-07-02T19:54:55.000Z",
+          "updatedAt": "2026-07-02T19:54:55.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
+          "summary": "Nemotron 3 Ultra 550B A55B went down"
         }
       ],
       "recentIncidents": [
@@ -172,34 +172,34 @@
           "summary": "We will be performing scheduled network maintenance on July 2nd, 9 PM – midnight. During this window, some serverless models may experience degraded performance or be temporary un..."
         },
         {
-          "id": "together-feed-1-2026-07-02T18:44:47.000Z",
+          "id": "together-feed-1-2026-07-02T19:54:55.000Z",
+          "title": "Nemotron 3 Ultra 550B A55B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-02T19:54:55.000Z",
+          "updatedAt": "2026-07-02T19:54:55.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Nemotron 3 Ultra 550B A55B went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-02T19:04:51.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-02T19:04:51.000Z",
+          "updatedAt": "2026-07-02T19:04:51.000Z",
+          "resolvedAt": "2026-07-02T19:04:51.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-3-2026-07-02T18:44:47.000Z",
           "title": "Google Gemma 4 31B IT went down",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-07-02T18:44:47.000Z",
           "updatedAt": "2026-07-02T18:44:47.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-02T18:25:00.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-02T18:25:00.000Z",
-          "updatedAt": "2026-07-02T18:25:00.000Z",
-          "resolvedAt": "2026-07-02T18:25:00.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-07-02T17:59:48.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-02T17:59:48.000Z",
-          "updatedAt": "2026-07-02T17:59:48.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Google Gemma 4 31B IT went down"
@@ -217,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T19:01:50.351Z",
+      "lastCheckedAt": "2026-07-02T20:36:23.158Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T19:01:51.046Z",
+      "lastCheckedAt": "2026-07-02T20:36:23.709Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +327,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T19:01:51.132Z",
+      "lastCheckedAt": "2026-07-02T20:36:23.937Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -392,7 +392,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T19:01:50.578Z",
+      "lastCheckedAt": "2026-07-02T20:36:23.186Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -439,7 +439,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
