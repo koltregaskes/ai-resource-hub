@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T00:19:23.904Z",
+  "generatedAt": "2026-07-02T01:49:51.244Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T00:19:22.497Z",
+      "lastCheckedAt": "2026-07-02T01:49:49.681Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T00:19:23.097Z",
+      "lastCheckedAt": "2026-07-02T01:49:50.457Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T00:19:22.450Z",
+      "lastCheckedAt": "2026-07-02T01:49:49.658Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -163,6 +163,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "lcccgkzvj2yx",
+          "title": "Elevated errors on Claude Opus 4.8",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-02T00:38:30.698Z",
+          "updatedAt": "2026-07-02T01:19:36.037Z",
+          "resolvedAt": "2026-07-02T01:19:36.020Z",
+          "url": "https://stspg.io/lv9trc80pvyx",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "s9w82lp9dcn9",
           "title": "We’ve suspended access to Claude Mythos 5 and Claude Fable 5",
           "status": "resolved",
@@ -194,17 +205,6 @@
           "resolvedAt": "2026-06-29T14:27:35.715Z",
           "url": "https://stspg.io/t354swgk93v0",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "9284yk6xxd0h",
-          "title": "elevated errors on Opus 48",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-06-27T18:00:00.000Z",
-          "updatedAt": "2026-06-27T18:23:19.706Z",
-          "resolvedAt": "2026-06-27T18:00:00.000Z",
-          "url": "https://stspg.io/86p1g659mdnm",
-          "summary": "Elevated errors on Opus-48. It has been mitigated. We are actively monitoring the system."
         }
       ]
     },
@@ -219,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T00:19:23.402Z",
+      "lastCheckedAt": "2026-07-02T01:49:50.736Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T00:19:23.897Z",
+      "lastCheckedAt": "2026-07-02T01:49:51.237Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T00:19:22.730Z",
+      "lastCheckedAt": "2026-07-02T01:49:50.040Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-02T00:19:23.889Z",
+      "lastCheckedAt": "2026-07-02T01:49:51.130Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
