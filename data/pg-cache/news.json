@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-2eb7b659b89296727fcb",
+    "title": "Microsoft launches its own AI deployment company with $2.5 billion commitment",
+    "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
+    "source": "TechCrunch",
+    "summary": "Microsoft follows Amazon, OpenAI and Anthropic with its new AI deployment group.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-02T13:53:00.000Z",
+    "discovered_at": "2026-07-02 14:26:51"
+  },
+  {
+    "id": "news-369bc071c6a5c1f01dfa",
+    "title": "Yep, we&#8217;re using OpenClaw to date now",
+    "url": "https://techcrunch.com/2026/07/02/yep-were-using-openclaw-to-date-now/",
+    "source": "TechCrunch",
+    "summary": "Ben Guez has \"a bunch of potential international wives in [his] DMs,\" thanks to an automated script he set up using OpenClaw, Claude code, and Instagram trials.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-02T12:00:00.000Z",
+    "discovered_at": "2026-07-02 14:26:51"
+  },
+  {
     "id": "news-633b279530ad9a435af7",
     "title": "OpenAI floats giving Trump administration 5 percent cut of AI boom",
     "url": "https://www.theverge.com/ai-artificial-intelligence/960588/openai-government-5-percent-stake-trump",
@@ -9,19 +33,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T10:23:27.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-f498d9314d67c26a1f50",
     "title": "Indian tech tycoon bets $30M of his own money to build AI alternative to Microsoft Office",
     "url": "https://techcrunch.com/2026/07/01/indian-tech-tycoon-bets-30m-to-build-an-ai-alternative-to-microsoft-office/",
     "source": "TechCrunch",
-    "summary": "Neo is Bhavin Turakhia’s fifth venture and his latest involving enterprise software. This time he's taking on Microsoft Office, Google Apps with AI.",
+    "summary": "Neo is Bhavin Turakhia’s fifth venture and his latest involving enterprise software. This time he's taking on Microsoft Office and Google Apps with AI.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T05:30:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-424455fcce6e3cf8ce14",
@@ -33,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:54:18.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-370c46e56be94832f250",
@@ -45,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:47:22.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -57,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-920ebcbadff5dd5a94d6",
@@ -69,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T17:48:37.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -81,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-144f7a9d3271e4c2e081",
@@ -93,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T14:25:23.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-d994e827688c38329c0b",
@@ -105,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T14:20:19.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-78faf445905b5a9fd523",
@@ -117,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T14:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-dce1a9764b03e2d4222b",
@@ -129,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T13:43:07.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-4dd862da9aba3a5356aa",
@@ -141,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T12:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-e2256bc7303d43348a6a",
@@ -153,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T03:15:37.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-466d3082150a591695b4",
@@ -165,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T02:16:06.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-59d48f179766a3c76562",
@@ -177,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T02:04:40.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-c5e612bf83f7d2e2e47b",
@@ -189,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T00:03:55.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-9a596b657038dc331386",
@@ -201,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T21:53:28.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-cb5bd9cc1bfa048fc1c0",
@@ -213,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:33:48.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -225,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-31d023a3663dfe5c0cf8",
@@ -237,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T19:24:51.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-68c5b27d665c4a5ef9d6",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T19:02:38.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-dc11ecaf49b3de7bdb99",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T18:13:02.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-a258af33ca857343fbd5",
@@ -273,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T18:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
-  },
-  {
-    "id": "news-5bca6dbf9ba73efc1d54",
-    "title": "Acti puts AI agents directly into your smartphone keyboard",
-    "url": "https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/",
-    "source": "TechCrunch",
-    "summary": "Acti is betting the smartphone keyboard is the next home for AI assistants. The startup's new keyboard for iOS and Android works across apps and lets users create custom AI-powered shortcuts using natural language.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T17:52:46.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-af3d78ee10eec1d6df28",
@@ -297,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T17:19:15.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
-  },
-  {
-    "id": "news-7c78ac2b49966343c9fb",
-    "title": "Anthropic’s Claude Science bets on workflow, not a new model, to win over scientists",
-    "url": "https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/",
-    "source": "TechCrunch",
-    "summary": "Anthropic's Claude Science is a workbench that gives scientists one environment to do computational research, saving them from the need to bounce between databases, pipelines, and tools.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T17:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-aaf22e2b3879ad309b39",
@@ -321,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T15:30:00.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-3d35f2b1b965d81ffbf8",
@@ -333,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T12:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -345,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-4c4d91d3ce63907b68d1",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-3c923494434c3145e365",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-200e6c5f82a034d1e586",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-fe7194ed402b1927f408",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T19:47:35.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-811accb0367acfcabacf",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T18:52:03.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-97835e796bb34f940e74",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-5b79476b114204dfe57e",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T07:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-1ae317c00ced77b0a264",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-28T17:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-adbd50c1b1db1eb73a92",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-26T10:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-2b6976f96bb5f02f3637",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T02:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-1a015f5dfa42958d5d31",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-24T06:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-7c36fb32c6285fc2a72a",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T17:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-6507bbb3977767d18fbd",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T13:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-2a799425b04b9199e7d6",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-0c794cbb255ff7717b1b",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-f7e9d38ae7326e724cd3",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-22T10:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-f0ab1740b8b7f5b3f743",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-22T10:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-6fdda2fdc1d813dab1b0",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-22T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-eebdb7f63bb5dd4fde85",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-21T23:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-217d8a1a56f1c727215c",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-18T17:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-33383567514a4fc87838",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-18T11:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:18"
+    "discovered_at": "2026-07-02 14:26:45"
   },
   {
     "id": "news-6ef30462856f7f526d91",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T17:50:46.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-4dabfdd6b9efc9178b58",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-16T11:15:46.000Z",
-    "discovered_at": "2026-07-02 11:42:24"
+    "discovered_at": "2026-07-02 14:26:52"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-03724ebf28de09d36d88",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T20:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-359e2bc8272372ba5043",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T00:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-7707fdb288e4dff5d7bf",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-05T14:45:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   },
   {
     "id": "news-76912b853c1db4a9d325",
@@ -777,6 +777,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-03T13:00:00.000Z",
-    "discovered_at": "2026-07-02 11:42:23"
+    "discovered_at": "2026-07-02 14:26:51"
   }
 ]
