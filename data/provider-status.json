@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T01:16:45.878Z",
+  "generatedAt": "2026-07-03T04:54:42.563Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T01:16:45.037Z",
+      "lastCheckedAt": "2026-07-03T04:54:41.242Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T01:16:45.333Z",
+      "lastCheckedAt": "2026-07-03T04:54:41.466Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -117,6 +117,94 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-03T04:54:42.557Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-07-03T04:00:59.000Z",
+          "title": "Scheduled network maintenance",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-07-03T04:00:59.000Z",
+          "updatedAt": "2026-07-03T04:00:59.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/incident/941865",
+          "summary": "We will be performing scheduled network maintenance on July 2nd, 9 PM – midnight. During this window, some serverless models may experience degraded performance or be temporary un..."
+        },
+        {
+          "id": "together-feed-2-2026-07-02T19:54:55.000Z",
+          "title": "Nemotron 3 Ultra 550B A55B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-02T19:54:55.000Z",
+          "updatedAt": "2026-07-02T19:54:55.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Nemotron 3 Ultra 550B A55B went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-07-03T04:00:59.000Z",
+          "title": "Scheduled network maintenance",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-07-03T04:00:59.000Z",
+          "updatedAt": "2026-07-03T04:00:59.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/incident/941865",
+          "summary": "We will be performing scheduled network maintenance on July 2nd, 9 PM – midnight. During this window, some serverless models may experience degraded performance or be temporary un..."
+        },
+        {
+          "id": "together-feed-1-2026-07-02T20:49:56.000Z",
+          "title": "Nemotron 3 Ultra 550B A55B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-02T20:49:56.000Z",
+          "updatedAt": "2026-07-02T20:49:56.000Z",
+          "resolvedAt": "2026-07-02T20:49:56.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Nemotron 3 Ultra 550B A55B recovered"
+        },
+        {
+          "id": "together-feed-2-2026-07-02T19:54:55.000Z",
+          "title": "Nemotron 3 Ultra 550B A55B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-02T19:54:55.000Z",
+          "updatedAt": "2026-07-02T19:54:55.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Nemotron 3 Ultra 550B A55B went down"
+        },
+        {
+          "id": "together-feed-3-2026-07-02T19:04:51.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-02T19:04:51.000Z",
+          "updatedAt": "2026-07-02T19:04:51.000Z",
+          "resolvedAt": "2026-07-02T19:04:51.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        }
+      ]
     },
     {
       "id": "anthropic",
@@ -129,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T01:16:44.990Z",
+      "lastCheckedAt": "2026-07-03T04:54:41.266Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +307,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T01:16:45.576Z",
+      "lastCheckedAt": "2026-07-03T04:54:42.049Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +327,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T01:16:45.835Z",
+      "lastCheckedAt": "2026-07-03T04:54:42.431Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +392,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T01:16:44.994Z",
+      "lastCheckedAt": "2026-07-03T04:54:41.362Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -337,71 +425,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T01:16:45.871Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-07-03T04:00:59.000Z",
-          "title": "Scheduled network maintenance",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-07-03T04:00:59.000Z",
-          "updatedAt": "2026-07-03T04:00:59.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/incident/941865",
-          "summary": "We will be performing scheduled network maintenance on July 2nd, 9 PM – midnight. During this window, some serverless models may experience degraded performance or be temporary un..."
-        },
-        {
-          "id": "together-feed-1-2026-07-02T20:49:56.000Z",
-          "title": "Nemotron 3 Ultra 550B A55B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-02T20:49:56.000Z",
-          "updatedAt": "2026-07-02T20:49:56.000Z",
-          "resolvedAt": "2026-07-02T20:49:56.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Nemotron 3 Ultra 550B A55B recovered"
-        },
-        {
-          "id": "together-feed-2-2026-07-02T19:54:55.000Z",
-          "title": "Nemotron 3 Ultra 550B A55B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-02T19:54:55.000Z",
-          "updatedAt": "2026-07-02T19:54:55.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Nemotron 3 Ultra 550B A55B went down"
-        },
-        {
-          "id": "together-feed-3-2026-07-02T19:04:51.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-02T19:04:51.000Z",
-          "updatedAt": "2026-07-02T19:04:51.000Z",
-          "resolvedAt": "2026-07-02T19:04:51.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        }
-      ]
-    },
-    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -416,7 +439,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
