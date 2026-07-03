@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T22:14:45.567Z",
+  "generatedAt": "2026-07-03T23:42:15.592Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T22:14:44.088Z",
+      "lastCheckedAt": "2026-07-03T23:42:14.490Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T22:14:44.947Z",
+      "lastCheckedAt": "2026-07-03T23:42:14.812Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -117,94 +117,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T22:14:45.560Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "together-feed-0-2026-07-03T21:54:44.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-03T21:54:44.000Z",
-          "updatedAt": "2026-07-03T21:54:44.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-03T20:37:42.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-03T20:37:42.000Z",
-          "updatedAt": "2026-07-03T20:37:42.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-07-03T21:54:44.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-03T21:54:44.000Z",
-          "updatedAt": "2026-07-03T21:54:44.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        },
-        {
-          "id": "together-feed-1-2026-07-03T21:20:41.000Z",
-          "title": "OpenAI GPT OSS 20B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-03T21:20:41.000Z",
-          "updatedAt": "2026-07-03T21:20:41.000Z",
-          "resolvedAt": "2026-07-03T21:20:41.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B recovered"
-        },
-        {
-          "id": "together-feed-2-2026-07-03T20:37:42.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-03T20:37:42.000Z",
-          "updatedAt": "2026-07-03T20:37:42.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        },
-        {
-          "id": "together-feed-3-2026-07-03T11:08:50.000Z",
-          "title": "OpenAI GPT OSS 120B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-03T11:08:50.000Z",
-          "updatedAt": "2026-07-03T11:08:50.000Z",
-          "resolvedAt": "2026-07-03T11:08:50.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 120B recovered"
-        }
-      ]
     },
     {
       "id": "anthropic",
@@ -217,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T22:14:44.066Z",
+      "lastCheckedAt": "2026-07-03T23:42:14.377Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T22:14:45.135Z",
+      "lastCheckedAt": "2026-07-03T23:42:15.197Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T22:14:45.452Z",
+      "lastCheckedAt": "2026-07-03T23:42:15.415Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -392,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-03T22:14:44.657Z",
+      "lastCheckedAt": "2026-07-03T23:42:14.625Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -421,6 +333,71 @@
           "resolvedAt": "2025-07-18T16:47:00.000Z",
           "url": "https://status.cloud.google.com",
           "summary": "## \\# Incident Report\n## \\#\\# Summary\nOn Friday, 18 July 2025 07:50 US/Pacific, several Google Cloud Platform (GCP) and Google Workspace (GWS) products experienced elevated latenc..."
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-03T23:42:15.585Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-07-03T22:29:48.000Z",
+          "title": "OpenAI GPT OSS 20B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-03T22:29:48.000Z",
+          "updatedAt": "2026-07-03T22:29:48.000Z",
+          "resolvedAt": "2026-07-03T22:29:48.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-03T21:54:44.000Z",
+          "title": "OpenAI GPT OSS 20B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-03T21:54:44.000Z",
+          "updatedAt": "2026-07-03T21:54:44.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-03T21:20:41.000Z",
+          "title": "OpenAI GPT OSS 20B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-03T21:20:41.000Z",
+          "updatedAt": "2026-07-03T21:20:41.000Z",
+          "resolvedAt": "2026-07-03T21:20:41.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B recovered"
+        },
+        {
+          "id": "together-feed-3-2026-07-03T20:37:42.000Z",
+          "title": "OpenAI GPT OSS 20B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-03T20:37:42.000Z",
+          "updatedAt": "2026-07-03T20:37:42.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B went down"
         }
       ]
     },
