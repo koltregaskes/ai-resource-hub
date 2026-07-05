@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 05 Jul 2026, 16:17 UTC |
+| Generated | 05 Jul 2026, 18:14 UTC |
 | Providers tracked | 40 |
 | Public models | 318 |
 | Active models | 110 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 50 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 05 Jul 2026, 16:17 UTC |
+| Latest visible refresh | 05 Jul 2026, 18:14 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | Claude Sonnet 5 (30 Jun 2026) |
 
