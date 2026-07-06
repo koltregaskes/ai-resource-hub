@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-6b7e3847e7a74e659e2f",
+    "title": "I spy",
+    "url": "https://www.theverge.com/column/961707/smart-glasses-ai-wearables-meta-surveillance-privacy",
+    "source": "The Verge",
+    "summary": "I've long argued that Hollywood has simultaneously set and ruined our expectations for smart glasses. But after binge-watching two seasons of Netflix's A Man on the Inside, this is perhaps the first time I've seen Hollywood, perhaps inadvertently, illustrate the biggest cultural problem with smart glasses as they stan…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-06T16:00:00.000Z",
+    "discovered_at": "2026-07-06 16:29:14"
+  },
+  {
+    "id": "news-a087d85e01873cd80a9b",
+    "title": "Microsoft lays off nearly 5,000 employees across Xbox, commercial sales",
+    "url": "https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/",
+    "source": "TechCrunch",
+    "summary": "Microsoft cut around 4,800 roles, or 2.1% of its global workforce, on Monday — the latest in a series of layoffs that’s stoking fears of AI replacing jobs. The layoffs will hit Xbox and commercial sales the hardest.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-06T15:32:43.000Z",
+    "discovered_at": "2026-07-06 16:29:14"
+  },
+  {
+    "id": "news-6f442d4e59ecf2ba730d",
+    "title": "Microsoft is laying off 4,800 employees",
+    "url": "https://www.theverge.com/news/961528/microsoft-layoffs-july-2026-sales-xbox",
+    "source": "The Verge",
+    "summary": "A year after cutting around 9,100 employees, Microsoft is making further layoffs today as it begins its new financial year. The software maker is laying off around 4,800 employees today, approximately 2.1 percent of its workforce. Most of the employees affected by today's cuts are in Microsoft's commercial sales busin…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-06T13:30:00.000Z",
+    "discovered_at": "2026-07-06 16:29:14"
+  },
+  {
+    "id": "news-6b1c430dfa8c479bda5b",
+    "title": "Station F ramps up as a launchpad for Europe’s hottest AI startups",
+    "url": "https://techcrunch.com/2026/07/06/station-f-ramps-up-as-a-launchpad-for-europes-hottest-ai-startups/",
+    "source": "TechCrunch",
+    "summary": "Station F, a Paris-based startup hub founded by French billionaire Xavier Niel, is gearing up for a new edition of its F/ai accelerator program in a bid to strengthen its positioning as a stepping stone for promising AI startups.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-06T13:00:00.000Z",
+    "discovered_at": "2026-07-06 16:29:14"
+  },
+  {
     "id": "news-63ccfa75fe8c55a36894",
     "title": "Some of the nation’s rich are letting AI teach their kids",
     "url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-05T22:30:54.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-c8e3bde25fd33c981b57",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-05T17:43:36.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-27710906dff6aade7ada",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-05T14:23:11.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-8573d500219a4ac532ed",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-04T20:55:25.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-ad2c7ff5662989c64092",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-04T18:00:05.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-7a350947a79882828584",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-04T16:32:08.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-2f6fc0b6a29caa9b2324",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-04T15:51:32.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-0d56e0d25e0dda1745ae",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-04T12:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-0b0f10d07a908b9f1cff",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-03T21:20:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-97e0788f24226c20c09c",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-03T18:43:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-b4fd6ded1793a8f4eb43",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-03T13:56:52.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-866492a7d30da819404a",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-03T11:49:10.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-43eacf5122ae61330e4d",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T23:38:10.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-fe70f7251678c8f48f64",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T20:11:59.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-0e1005d620b6bd1d35d6",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T18:44:02.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-287d978300723b239b88",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T18:31:09.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-dc4677f5bbe52f487dc7",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T15:20:51.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-2eb7b659b89296727fcb",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T13:53:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-369bc071c6a5c1f01dfa",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T12:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-633b279530ad9a435af7",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T10:23:27.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-f498d9314d67c26a1f50",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T05:30:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-424455fcce6e3cf8ce14",
@@ -261,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:54:18.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
-  },
-  {
-    "id": "news-370c46e56be94832f250",
-    "title": "Ashton Kutcher leaving Sound Ventures to launch new VC firm with Morgan Beller",
-    "url": "https://techcrunch.com/2026/07/01/ashton-kutcher-leaving-sound-ventures-to-launch-new-vc-firm-with-morgan-beller/",
-    "source": "TechCrunch",
-    "summary": "Sound built its reputation on concentrated, high-conviction bets in category-leading AI labs, while Kutcher's new fund appears to be chasing the layer underneath those companies — the infrastructure and energy that power them.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-01T18:47:22.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -285,19 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
-  },
-  {
-    "id": "news-920ebcbadff5dd5a94d6",
-    "title": "Cloudflare&#8217;s new policy pushes AI companies to pay for publishers&#8217; content",
-    "url": "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/",
-    "source": "TechCrunch",
-    "summary": "Cloudflare is giving AI companies until September 15 to separate web crawlers used for search from those used for AI training and agents, or risk being blocked by default on many publisher sites.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-01T17:48:37.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-4dd862da9aba3a5356aa",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T12:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-c5e612bf83f7d2e2e47b",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T00:03:55.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -345,31 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
-  },
-  {
-    "id": "news-31d023a3663dfe5c0cf8",
-    "title": "Google’s NotebookLM can sum up your research in a TikTok-style clip",
-    "url": "https://www.theverge.com/tech/959778/google-notebooklm-ai-clips",
-    "source": "The Verge",
-    "summary": "Google's NotebookLM is adding a new way to catch up on your notes: TikTok-style AI videos. The new feature is rolling out to Google AI Ultra and Pro subscribers, allowing NotebookLM to generate 60-second vertical AI clips based on the sources you upload to the app. The example shared by Google details Australia's unsu…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T19:24:51.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
-  },
-  {
-    "id": "news-af3d78ee10eec1d6df28",
-    "title": "Netflix is using an AI-generated Gene Wilder voice in its Willy Wonka reality show",
-    "url": "https://www.theverge.com/streaming/959684/netflix-wonka-golden-ticket-gene-wilder",
-    "source": "The Verge",
-    "summary": "A new teaser trailer confirmed that Wonka's The Golden Ticket will premiere on Netflix on September 23rd, following its Squid Game reality show in the trend of creating real competitions based on fictional torture scenarios. While the sets seen in the trailer are real and not some Glasgow-style AI fakes, the voiceover…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T17:19:15.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-4c4d91d3ce63907b68d1",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-3c923494434c3145e365",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-200e6c5f82a034d1e586",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-5b79476b114204dfe57e",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T07:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-1ae317c00ced77b0a264",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-28T17:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-adbd50c1b1db1eb73a92",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-26T10:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-2b6976f96bb5f02f3637",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T02:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-1a015f5dfa42958d5d31",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-24T06:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-7c36fb32c6285fc2a72a",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T17:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-6507bbb3977767d18fbd",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T13:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-2a799425b04b9199e7d6",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-0c794cbb255ff7717b1b",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-f7e9d38ae7326e724cd3",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-22T10:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-f0ab1740b8b7f5b3f743",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-22T10:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-6fdda2fdc1d813dab1b0",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-22T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-eebdb7f63bb5dd4fde85",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-21T23:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-217d8a1a56f1c727215c",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-18T17:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-33383567514a4fc87838",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-18T11:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:47"
+    "discovered_at": "2026-07-06 16:29:07"
   },
   {
     "id": "news-6ef30462856f7f526d91",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T17:50:46.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-4dabfdd6b9efc9178b58",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-16T11:15:46.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-03724ebf28de09d36d88",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T20:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   },
   {
     "id": "news-359e2bc8272372ba5043",
@@ -753,6 +753,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-10T00:00:00.000Z",
-    "discovered_at": "2026-07-06 12:57:49"
+    "discovered_at": "2026-07-06 16:29:14"
   }
 ]
