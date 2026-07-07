@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-a6e0b9e580f8a1ff72aa",
+    "title": "Why the rise of open source AI isn&#8217;t hurting Anthropic &#8230; yet",
+    "url": "https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/",
+    "source": "TechCrunch",
+    "summary": "Open-source models’ success isn’t coming at the expense of frontier labs. Instead, they each seem to capture two phases of the same life-cycle.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-07T20:04:32.000Z",
+    "discovered_at": "2026-07-07 20:11:18"
+  },
+  {
+    "id": "news-8c3435380ebc108ab6e0",
+    "title": "Microsoft joins AI cost-cutting trend by relying more on its own models",
+    "url": "https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/",
+    "source": "TechCrunch",
+    "summary": "Microsoft is the latest Silicon Valley giant to cut back on its AI spending.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-07T19:58:20.000Z",
+    "discovered_at": "2026-07-07 20:11:18"
+  },
+  {
+    "id": "news-d4bb1346f4acfc1776e9",
+    "title": "Discord admits AI moderation bug wrongfully banned users over harmless images",
+    "url": "https://techcrunch.com/2026/07/07/discord-admits-ai-moderation-bug-wrongfully-banned-users-over-harmless-images/",
+    "source": "TechCrunch",
+    "summary": "The company confirmed that the issue had been affecting accounts since May, with an additional 200 users banned over the weekend before its team identified and fixed the problem.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-07T19:28:38.000Z",
+    "discovered_at": "2026-07-07 20:11:18"
+  },
+  {
+    "id": "news-6430cc7f42fab53c38c1",
+    "title": "Anthropic is launching Claude Cowork on mobile and web",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web",
+    "source": "The Verge",
+    "summary": "Starting Tuesday, Anthropic's Claude Cowork AI platform will be available on mobile and web for the first time. The expanded access is rolling out first to Max subscribers and coming to Claude users on other plans \"in the coming weeks.\" Claude Cowork was previously only accessible through the Claude desktop app for ma…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-07T17:46:59.000Z",
+    "discovered_at": "2026-07-07 20:11:18"
+  },
+  {
     "id": "news-3ab271c5ba48e5d963d0",
     "title": "Claude Cowork expands to mobile and web",
     "url": "https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T16:27:18.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-290217328a868a081a6d",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T13:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-16589613c66e16fbf138",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T12:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-7e1c285b513892b1fc83",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T09:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -57,7 +105,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
+  },
+  {
+    "id": "news-60d1b56766e3b67711e2",
+    "title": "Australian Payments Plus moves faster with ChatGPT and Codex",
+    "url": "https://openai.com/index/australian-payments-plus",
+    "source": "OpenAI",
+    "summary": "See how Australian Payments Plus uses ChatGPT Enterprise and Codex to move faster through payments complexity. AP+ saves time, improves quality, and keeps human judgment central.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-07T00:00:00.000Z",
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-d8baa3bf5199d8be32f8",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T23:56:14.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-4598f557b5bb0fec8f2f",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T23:21:03.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-6c7915978b233dc2f3e6",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T19:49:10.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-a0013c5259ee335afc79",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T19:01:59.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-085590ef9c6507824d90",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T18:35:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-acb8688dfa73693db5f2",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T17:04:58.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-6b7e3847e7a74e659e2f",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T16:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-a087d85e01873cd80a9b",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T15:32:43.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-677b5a3386b057133b70",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T15:22:08.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-6f442d4e59ecf2ba730d",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T13:30:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-6b1c430dfa8c479bda5b",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T13:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:17"
   },
   {
     "id": "news-63ccfa75fe8c55a36894",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-05T22:30:54.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-c8e3bde25fd33c981b57",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-05T17:43:36.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-27710906dff6aade7ada",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-05T14:23:11.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-8573d500219a4ac532ed",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-04T20:55:25.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-ad2c7ff5662989c64092",
@@ -261,31 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-04T18:00:05.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
-  },
-  {
-    "id": "news-7a350947a79882828584",
-    "title": "Alibaba reportedly bans employees from using Claude Code",
-    "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
-    "source": "TechCrunch",
-    "summary": "Alibaba has reportedly classified Claude Code as high-risk software.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-04T16:32:08.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
-  },
-  {
-    "id": "news-2f6fc0b6a29caa9b2324",
-    "title": "What is Mistral AI? Everything to know about the OpenAI competitor",
-    "url": "https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/",
-    "source": "TechCrunch",
-    "summary": "Mistral AI, which offers some open source AI models, has raised significant funding since its creation in 2023, with the ambition to “put frontier AI in the hands of everyone.”",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-04T15:51:32.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-0d56e0d25e0dda1745ae",
@@ -297,19 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-04T12:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
-  },
-  {
-    "id": "news-0b0f10d07a908b9f1cff",
-    "title": "The only AI glossary you&#8217;ll need this year",
-    "url": "https://techcrunch.com/2026/07/03/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
-    "source": "TechCrunch",
-    "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-03T21:20:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-b4fd6ded1793a8f4eb43",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-03T13:56:52.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-866492a7d30da819404a",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-03T11:49:10.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-633b279530ad9a435af7",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-02T10:23:27.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -357,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -369,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
-  },
-  {
-    "id": "news-4dd862da9aba3a5356aa",
-    "title": "Google built a great smart speaker, but Gemini isn’t ready for it",
-    "url": "https://www.theverge.com/tech/959503/google-home-speaker-review-gemini-for-home",
-    "source": "The Verge",
-    "summary": "Smart speakers have spent the past few years searching for a compelling second act. Beyond music, timers, and controlling your lights, they've struggled to justify taking up space on the kitchen counter. AI promised to change that. Amazon debuted its new hardware powered by a revamped Alexa last fall, and now it's fin…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-01T12:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:17"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -441,19 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
-  },
-  {
-    "id": "news-200e6c5f82a034d1e586",
-    "title": "Inside Genebench-Pro",
-    "url": "https://openai.com/index/genebench-pro/case-studies",
-    "source": "OpenAI",
-    "summary": null,
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:17"
   },
   {
     "id": "news-3c923494434c3145e365",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-4c4d91d3ce63907b68d1",
@@ -477,7 +477,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
+  },
+  {
+    "id": "news-200e6c5f82a034d1e586",
+    "title": "Inside Genebench-Pro",
+    "url": "https://openai.com/index/genebench-pro/case-studies",
+    "source": "OpenAI",
+    "summary": null,
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-30T00:00:00.000Z",
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-5b79476b114204dfe57e",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T07:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-1ae317c00ced77b0a264",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-28T17:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-adbd50c1b1db1eb73a92",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-26T10:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-2b6976f96bb5f02f3637",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T02:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-1a015f5dfa42958d5d31",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-24T06:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-7c36fb32c6285fc2a72a",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T17:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-6507bbb3977767d18fbd",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T13:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-2a799425b04b9199e7d6",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:17"
   },
   {
     "id": "news-0c794cbb255ff7717b1b",
@@ -633,19 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
-  },
-  {
-    "id": "news-f7e9d38ae7326e724cd3",
-    "title": "Daybreak: Tools for securing every organization in the world",
-    "url": "https://openai.com/index/daybreak-securing-the-world",
-    "source": "OpenAI",
-    "summary": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-22T10:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-f0ab1740b8b7f5b3f743",
@@ -657,7 +657,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-22T10:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
+  },
+  {
+    "id": "news-f7e9d38ae7326e724cd3",
+    "title": "Daybreak: Tools for securing every organization in the world",
+    "url": "https://openai.com/index/daybreak-securing-the-world",
+    "source": "OpenAI",
+    "summary": "OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-22T10:00:00.000Z",
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-6fdda2fdc1d813dab1b0",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-22T00:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-eebdb7f63bb5dd4fde85",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-21T23:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-217d8a1a56f1c727215c",
@@ -693,19 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-18T17:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
-  },
-  {
-    "id": "news-33383567514a4fc87838",
-    "title": "Improving health intelligence in ChatGPT",
-    "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
-    "source": "OpenAI",
-    "summary": "Learn how GPT-5.5 Instant improves ChatGPT’s health and wellness responses with stronger reasoning, better context, clearer communication, and physician-informed evaluations.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-18T11:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:01"
+    "discovered_at": "2026-07-07 20:11:11"
   },
   {
     "id": "news-6ef30462856f7f526d91",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T17:50:46.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-4dabfdd6b9efc9178b58",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-16T11:15:46.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   },
   {
     "id": "news-03724ebf28de09d36d88",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T20:00:00.000Z",
-    "discovered_at": "2026-07-07 17:26:05"
+    "discovered_at": "2026-07-07 20:11:18"
   }
 ]
