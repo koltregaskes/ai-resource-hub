@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T20:11:21.467Z",
+  "generatedAt": "2026-07-07T20:30:53.165Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,27 +12,27 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-07T20:11:19.476Z",
+      "lastCheckedAt": "2026-07-07T20:30:51.763Z",
       "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
+      "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Code",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -47,26 +47,26 @@
         {
           "id": "l9zyw879cyd6",
           "title": "Elevated errors for some models",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-07-07T20:02:33.258Z",
-          "updatedAt": "2026-07-07T20:02:33.499Z",
+          "updatedAt": "2026-07-07T20:28:40.509Z",
           "resolvedAt": null,
           "url": "https://stspg.io/g0yp6phqpdrn",
-          "summary": "We are investigating elevated errors on requests to some models. We will provide an update as soon as possible."
+          "summary": "We have seen success rates return to normal, but we are continuing to work to fully resolve this issue and ensure no further recurrences."
         }
       ],
       "recentIncidents": [
         {
           "id": "l9zyw879cyd6",
           "title": "Elevated errors for some models",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-07-07T20:02:33.258Z",
-          "updatedAt": "2026-07-07T20:02:33.499Z",
+          "updatedAt": "2026-07-07T20:28:40.509Z",
           "resolvedAt": null,
           "url": "https://stspg.io/g0yp6phqpdrn",
-          "summary": "We are investigating elevated errors on requests to some models. We will provide an update as soon as possible."
+          "summary": "We have seen success rates return to normal, but we are continuing to work to fully resolve this issue and ensure no further recurrences."
         },
         {
           "id": "d23j8s7t8rx2",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-07T20:11:19.564Z",
+      "lastCheckedAt": "2026-07-07T20:30:51.905Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -211,7 +211,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-07T20:11:20.400Z",
+      "lastCheckedAt": "2026-07-07T20:30:52.239Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -231,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-07T20:11:20.744Z",
+      "lastCheckedAt": "2026-07-07T20:30:52.683Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-07T20:11:21.005Z",
+      "lastCheckedAt": "2026-07-07T20:30:52.934Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-07T20:11:20.206Z",
+      "lastCheckedAt": "2026-07-07T20:30:51.920Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-07T20:11:21.019Z",
+      "lastCheckedAt": "2026-07-07T20:30:53.158Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -428,7 +428,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
