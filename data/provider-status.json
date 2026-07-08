@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T18:41:57.511Z",
+  "generatedAt": "2026-07-08T20:08:49.494Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,10 +12,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-08T18:41:55.997Z",
+      "lastCheckedAt": "2026-07-08T20:08:48.093Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "2 active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -45,28 +45,61 @@
       ],
       "activeIncidents": [
         {
-          "id": "dcxc66flmxbd",
-          "title": "Elevated errors on multiple models",
-          "status": "identified",
+          "id": "rvb96c56gn6k",
+          "title": "Degraded performance for Claude Code on the web, Cowork Remote, Claude Tag, and Claude Code Review sessions",
+          "status": "monitoring",
           "impact": "minor",
-          "startedAt": "2026-07-08T18:00:18.078Z",
-          "updatedAt": "2026-07-08T18:28:14.639Z",
+          "startedAt": "2026-07-08T19:07:26.000Z",
+          "updatedAt": "2026-07-08T19:41:28.109Z",
           "resolvedAt": null,
-          "url": "https://stspg.io/kt72q7m6rz9c",
-          "summary": "We have identified an issue causing elevated errors on requests to some models, and our team is working to resolve this issue as quickly as possible. We will provide an additional..."
-        }
-      ],
-      "recentIncidents": [
+          "url": "https://stspg.io/th3djdzw5lsy",
+          "summary": "A fix has been implemented and we are monitoring the results."
+        },
         {
           "id": "dcxc66flmxbd",
           "title": "Elevated errors on multiple models",
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-07-08T18:00:18.078Z",
-          "updatedAt": "2026-07-08T18:28:14.639Z",
+          "updatedAt": "2026-07-08T19:29:46.314Z",
           "resolvedAt": null,
           "url": "https://stspg.io/kt72q7m6rz9c",
-          "summary": "We have identified an issue causing elevated errors on requests to some models, and our team is working to resolve this issue as quickly as possible. We will provide an additional..."
+          "summary": "We are continuing to work to fully resolve errors impacting some requests, and will provide an additional update as soon as possible."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "rvb96c56gn6k",
+          "title": "Degraded performance for Claude Code on the web, Cowork Remote, Claude Tag, and Claude Code Review sessions",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-07-08T19:07:26.000Z",
+          "updatedAt": "2026-07-08T19:41:28.109Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/th3djdzw5lsy",
+          "summary": "A fix has been implemented and we are monitoring the results."
+        },
+        {
+          "id": "4y9nybhbljfc",
+          "title": "Issues authorizing to MCP Servers",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-08T12:00:00.000Z",
+          "updatedAt": "2026-07-08T19:20:41.192Z",
+          "resolvedAt": "2026-07-08T19:00:00.000Z",
+          "url": "https://stspg.io/scs5bf95ysv0",
+          "summary": "Users are unable to send authorized requests to MCP servers."
+        },
+        {
+          "id": "dcxc66flmxbd",
+          "title": "Elevated errors on multiple models",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-08T18:00:18.078Z",
+          "updatedAt": "2026-07-08T19:29:46.314Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/kt72q7m6rz9c",
+          "summary": "We are continuing to work to fully resolve errors impacting some requests, and will provide an additional update as soon as possible."
         },
         {
           "id": "n3v83qmtlbqm",
@@ -78,28 +111,6 @@
           "resolvedAt": "2026-07-08T06:40:31.473Z",
           "url": "https://stspg.io/vsdzgydjjt1j",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "l9zyw879cyd6",
-          "title": "Elevated errors for some models",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-07T20:02:33.258Z",
-          "updatedAt": "2026-07-07T23:46:13.372Z",
-          "resolvedAt": "2026-07-07T23:46:13.329Z",
-          "url": "https://stspg.io/g0yp6phqpdrn",
-          "summary": "This issue has been resolved."
-        },
-        {
-          "id": "d23j8s7t8rx2",
-          "title": "Claude Tag seeing elevated GitHub operation failures",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-06T21:49:14.397Z",
-          "updatedAt": "2026-07-07T15:52:01.240Z",
-          "resolvedAt": "2026-07-07T15:52:01.226Z",
-          "url": "https://stspg.io/0l8p9n8ky411",
-          "summary": "Our team is observing a lower error rate after these changes. We will continue investigating in-case we observe any spikes."
         }
       ]
     },
@@ -114,7 +125,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-08T18:41:56.040Z",
+      "lastCheckedAt": "2026-07-08T20:08:48.046Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -211,7 +222,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-08T18:41:56.684Z",
+      "lastCheckedAt": "2026-07-08T20:08:48.545Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -231,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-08T18:41:56.984Z",
+      "lastCheckedAt": "2026-07-08T20:08:49.094Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +262,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-08T18:41:57.504Z",
+      "lastCheckedAt": "2026-07-08T20:08:49.412Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-08T18:41:56.315Z",
+      "lastCheckedAt": "2026-07-08T20:08:48.435Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +370,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-08T18:41:57.438Z",
+      "lastCheckedAt": "2026-07-08T20:08:49.487Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
