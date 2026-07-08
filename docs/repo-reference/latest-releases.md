@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 08 Jul 2026, 16:48 UTC
+Generated: 08 Jul 2026, 18:42 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 8 Jul 2026 | Grok 4.5 | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
 | 30 Jun 2026 | Claude Sonnet 5 | Anthropic | tracking | high | ready for editor | 0 | 4 | [official](https://docs.anthropic.com) |
 | 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | high | ready for editor | 0 | 2 | [official](https://ai.google.dev/gemini-api/docs/models) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/glasswing) |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 30 Apr 2026 | Grok 4.3 | xAI | tracking | backfill | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
 | 30 Apr 2026 | Mistral Medium 3.5 | Mistral | tracking | backfill | needs research | 0 | 0 | [official](https://docs.mistral.ai) |
 | 27 Apr 2026 | Qwen3.5 Plus 2026-04-20 | Alibaba | tracking | backfill | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
-| 27 Apr 2026 | Qwen3.6 Flash | Alibaba | tracking | backfill | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
