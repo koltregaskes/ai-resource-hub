@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T20:02:01.281Z",
+  "generatedAt": "2026-07-09T21:06:31.238Z",
   "providers": [
     {
       "id": "openai",
@@ -12,10 +12,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-09T20:01:59.850Z",
+      "lastCheckedAt": "2026-07-09T21:06:29.442Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -45,16 +45,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "01KX46HHYJ0YB8VPBZTB0KZ03V",
-          "title": "Users are experiencing elevated errors when selecting models",
-          "status": "investigating",
-          "impact": "none",
-          "startedAt": "2026-07-09T19:44:14.000Z",
-          "updatedAt": "2026-07-09T19:44:14.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating an issue causing users to receive “Selected model is at capacity. Please try a different model.” errors across multiple models. We are working to identify the..."
-        },
-        {
           "id": "01KWDW344V7XWEQERJSEW62W57",
           "title": "Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces",
           "status": "investigating",
@@ -69,12 +59,12 @@
         {
           "id": "01KX46HHYJ0YB8VPBZTB0KZ03V",
           "title": "Users are experiencing elevated errors when selecting models",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-07-09T19:44:14.000Z",
-          "updatedAt": "2026-07-09T19:44:14.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating an issue causing users to receive “Selected model is at capacity. Please try a different model.” errors across multiple models. We are working to identify the..."
+          "updatedAt": "2026-07-09T20:42:57.000Z",
+          "resolvedAt": "2026-07-09T20:42:57.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01KWY5DQZ0KC8PTT3Y3T26H30D",
@@ -119,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-09T20:02:00.258Z",
+      "lastCheckedAt": "2026-07-09T21:06:30.226Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-09T20:01:59.742Z",
+      "lastCheckedAt": "2026-07-09T21:06:29.461Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -229,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-09T20:02:00.581Z",
+      "lastCheckedAt": "2026-07-09T21:06:30.711Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -249,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-09T20:02:00.796Z",
+      "lastCheckedAt": "2026-07-09T21:06:31.061Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -314,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-09T20:02:00.003Z",
+      "lastCheckedAt": "2026-07-09T21:06:29.878Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -357,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-09T20:02:01.062Z",
+      "lastCheckedAt": "2026-07-09T21:06:31.232Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -426,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
