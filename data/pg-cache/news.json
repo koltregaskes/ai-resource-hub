@@ -1,5 +1,113 @@
 [
   {
+    "id": "news-4973ae88e0affc1e1f37",
+    "title": "Anthropic’s new Claude feature is quietly selling you on AI",
+    "url": "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/",
+    "source": "TechCrunch",
+    "summary": "Claude’s new Reflect dashboard doesn’t just visualize how you use AI. It also subtly reinforces how much of your daily work now depends on Anthropic’s chatbot.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T14:53:09.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
+    "id": "news-486df337554b151f46f1",
+    "title": "Anthropic, OpenAI, and SpaceX are bigger than the last 25 years of tech exits",
+    "url": "https://techcrunch.com/2026/07/09/anthropic-openai-and-spacex-are-bigger-than-the-last-25-years-of-tech-exits/",
+    "source": "TechCrunch",
+    "summary": "Three big AI IPOs are set to generate more value than all the U.S. VC-backed exits since 2000.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T14:51:00.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
+    "id": "news-7882027942b512ce0667",
+    "title": "Meta says its new AI model is ready to compete on coding",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api",
+    "source": "The Verge",
+    "summary": "After reentering the AI race with its first in-house Muse Spark model in April, Meta is now opening up the doors to developers with a new model that can plug into AI coding software with the new Meta Model API. Meta says that Muse Spark 1.1 is a \"step-change\" from the first generation, with improvements [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T14:00:00.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
+    "id": "news-b722bb74de4f5338dba0",
+    "title": "Say hello to Claude Wrapped",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage",
+    "source": "The Verge",
+    "summary": "The popularity of Spotify Wrapped has kicked off a wide range of year-in-review features, on apps from YouTube to Uber - and now, the lookback trend has come to AI. Anthropic on Thursday announced a \"reflect\" feature for its Claude chatbot, allowing users to see an analysis of their usage data over the past month, [&#…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T13:30:00.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
+    "id": "news-d2d0db5054530f5789df",
+    "title": "Character.AI wants a piece of the microdrama pie",
+    "url": "https://www.theverge.com/entertainment/962897/character-ai-series-microdrama-vertical-video",
+    "source": "The Verge",
+    "summary": "Character.AI's plan to become more than just an LLM-powered chatbot platform is going beyond interactive books, comics, and audio dramas. Today, the company announced the debut of c.ai Series - short-form, episodic videos designed to be watched and interacted with - on your phone. Unlike traditional microdrama service…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T13:11:53.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
+    "id": "news-6b0fd45dbfe0af31ee1d",
+    "title": "FL Studio 2026 turns its AI chatbot into your assistant engineer",
+    "url": "https://www.theverge.com/tech/963052/fl-studio-2026-music-daw-ai-chatbot",
+    "source": "The Verge",
+    "summary": "Last year, Image Line introduced Gopher for FL Studio, an AI chatbot that was basically a glorified instruction manual. You asked it how to do something, and it would serve up the relevant instructions. It's the kind of thing I actually use AI for on a semi-regular basis. But in the new release, Gopher can [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T13:00:00.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
+    "id": "news-c13cbbb8e218f52ad7fe",
+    "title": "Character.AI enters the microdrama arena with its own productions, but there&#8217;s a twist",
+    "url": "https://techcrunch.com/2026/07/09/character-ai-enters-the-microdrama-arena-with-its-own-productions-but-with-a-twist/",
+    "source": "TechCrunch",
+    "summary": "In an interesting twist that takes advantage of the company's core product, users can chat with these shows' characters, ask them questions, and even roleplay different storylines.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T13:00:00.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
+    "id": "news-925e9a59def11ced22a1",
+    "title": "Popular open source AI developer tool Ollama raises $65M, grows to nearly 9M users",
+    "url": "https://techcrunch.com/2026/07/09/popular-open-source-ai-developer-tool-ollama-raises-65m-grows-to-nearly-9m-users/",
+    "source": "TechCrunch",
+    "summary": "Benchmark-backed Ollama has amassed 176,000 stars, and nearly 17,000 forks on GitHub by helping developers easily run AI on their PCs.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T13:00:00.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
+    "id": "news-55f260f226bdff6b1576",
+    "title": "Nandan Nilekani leaves GP role at Fundamentum as it launches $200M third fund",
+    "url": "https://techcrunch.com/2026/07/09/nandan-nilekani-leaves-gp-role-at-his-vc-firm-as-it-launches-third-200m-fund/",
+    "source": "TechCrunch",
+    "summary": "Nilekani remains Fundamentum's anchor investor as the firm expands its leadership team and targets AI and fintech startups in India.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T12:00:00.000Z",
+    "discovered_at": "2026-07-09 16:08:24"
+  },
+  {
     "id": "news-18842840ea24b22ef712",
     "title": "Lovable reportedly in talks to double its valuation to $13.2B",
     "url": "https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/",
@@ -9,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T22:41:33.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-b1454f7c94dc7f647528",
@@ -21,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T20:37:03.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-a32c363a58d03e85b4b4",
@@ -33,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T19:30:16.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-ddd0e329481881ac51cb",
@@ -45,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T19:19:15.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-01f530364434f4db5edd",
@@ -57,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T18:30:08.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-bcdfbc462e4556787689",
@@ -69,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:47:55.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-2454bc7517c327034ad8",
@@ -81,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:11:18.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-963a6870c5aab5cae64d",
@@ -93,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-0b3c247c7122ca2f2e34",
@@ -105,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-9e797c1f596159e3e776",
@@ -117,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T16:22:38.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-cc864c8488d2384c7d84",
@@ -129,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T15:41:06.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-41b85c9cdb7a0122f22d",
@@ -141,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:30:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-e508ea6f17330ff1ad45",
@@ -153,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-eaad4cbcfa7f5327a2cc",
@@ -165,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-44e3969a30344de017cf",
@@ -177,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T12:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-de92863115274012478e",
@@ -189,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T10:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-57f72514722c75abf101",
@@ -201,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T08:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
-  },
-  {
-    "id": "news-0e0010f02d143df8f613",
-    "title": "AI chip maker SambaNova raises $1B at $11B valuation, 5 months after last mega round",
-    "url": "https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/",
-    "source": "TechCrunch",
-    "summary": "AI chip maker SambaNova has raised at an $11 billion valuation months after Intel was rumored to be trying to buy it for about $1.6 billion.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T07:16:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -225,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-d7499a6963c6e5c4d93b",
@@ -237,19 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
-  },
-  {
-    "id": "news-a55cda87a79b3783bcf2",
-    "title": "Meta just launched a new AI generator, Muse Image, and users are already pushing back over use of their photos",
-    "url": "https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/",
-    "source": "TechCrunch",
-    "summary": "The new image-generating model has numerous use cases, including advertising and decorating, and creator-based opportunities.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-07T22:18:10.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-b8ee25d2f931dc065b06",
@@ -261,43 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T20:31:58.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
-  },
-  {
-    "id": "news-a6e0b9e580f8a1ff72aa",
-    "title": "Why the rise of open source AI isn&#8217;t hurting Anthropic &#8230; yet",
-    "url": "https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/",
-    "source": "TechCrunch",
-    "summary": "Open source models’ success isn’t coming at the expense of frontier labs. Instead, they each seem to capture two phases of the same life cycle.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-07T20:04:32.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
-  },
-  {
-    "id": "news-8c3435380ebc108ab6e0",
-    "title": "Microsoft joins AI cost-cutting trend by relying more on its own models",
-    "url": "https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/",
-    "source": "TechCrunch",
-    "summary": "Microsoft is the latest Silicon Valley giant to cut back on its AI spending.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-07T19:58:20.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
-  },
-  {
-    "id": "news-d4bb1346f4acfc1776e9",
-    "title": "Discord admits AI moderation bug wrongfully banned users over harmless images",
-    "url": "https://techcrunch.com/2026/07/07/discord-admits-ai-moderation-bug-wrongfully-banned-users-over-harmless-images/",
-    "source": "TechCrunch",
-    "summary": "The company confirmed that the issue had been affecting accounts since May, with an additional 200 users banned over the weekend before its team identified and fixed the problem.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-07T19:28:38.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-6430cc7f42fab53c38c1",
@@ -309,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T17:46:59.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-290217328a868a081a6d",
@@ -321,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T13:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -333,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-cb031b5cf3e3be67bd75",
@@ -345,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-60d1b56766e3b67711e2",
@@ -357,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-6b7e3847e7a74e659e2f",
@@ -369,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T16:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-6f442d4e59ecf2ba730d",
@@ -381,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T13:30:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -393,55 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
-  },
-  {
-    "id": "news-63ccfa75fe8c55a36894",
-    "title": "Some of the nation’s rich are letting AI teach their kids",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep",
-    "source": "The Verge",
-    "summary": "Most Americans don't trust AI. It's proven that it doesn't know what safe toppings for pizza are. People don't even want to listen to AI music. But none of that matters for some of America's wealthy, who are turning to AI to teach their kids instead of traditional schools. Companies like Forge Prep and Alpha [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-05T22:30:54.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
-  },
-  {
-    "id": "news-27710906dff6aade7ada",
-    "title": "Infuriating Google commercial imagines the founding fathers embracing AI",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/961468/google-ai-commercial-founding-fathers-declaration-of-independence",
-    "source": "The Verge",
-    "summary": "\"Group project, but make it 1776.\" That's how a new commercial for Google Workspace opens. And things only get cringier from there. The clip imagines what it would be like if the founding fathers turned to Google's collaboration tools and Gemini to help them draft the Declaration of Independence. Ben Franklin texts Th…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-05T14:23:11.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
-  },
-  {
-    "id": "news-0d56e0d25e0dda1745ae",
-    "title": "The fanfiction community is at war with AI — and itself",
-    "url": "https://www.theverge.com/tech/960854/ai-fanfiction-ao3-claude-detector",
-    "source": "The Verge",
-    "summary": "Over the past week, a new fanworks movement has kicked off, with the aim to root out authors using generative AI. But the detection methods being implemented are questionable, and any fanfic writer could be caught in the crossfire. Broad distaste around the use of Claude, ChatGPT, and other AI tools has long been a [&…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-04T12:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
-  },
-  {
-    "id": "news-b4fd6ded1793a8f4eb43",
-    "title": "Anthropic wants to develop its own drugs",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/961311/anthropic-claude-science-ai-drug-development",
-    "source": "The Verge",
-    "summary": "At the event \"The Briefing: AI for Science\" earlier this week, Anthropic announced Claude Science, a new \"AI workbench for scientists\" that pulls fragmented tools and datasets into one environment, and generates figures and visuals. Anthropic, already dominating the industry with its popular coding tools and powerful…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-03T13:56:52.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:23"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:23"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:23"
   },
   {
     "id": "news-3c923494434c3145e365",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-200e6c5f82a034d1e586",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-4c4d91d3ce63907b68d1",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-5b79476b114204dfe57e",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T07:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-1ae317c00ced77b0a264",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-28T17:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-adbd50c1b1db1eb73a92",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-26T10:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-2b6976f96bb5f02f3637",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T02:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-1a015f5dfa42958d5d31",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-24T06:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-7c36fb32c6285fc2a72a",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T17:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-6507bbb3977767d18fbd",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T13:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-2a799425b04b9199e7d6",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:23"
   },
   {
     "id": "news-0c794cbb255ff7717b1b",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:34"
+    "discovered_at": "2026-07-09 16:08:21"
   },
   {
     "id": "news-6ef30462856f7f526d91",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T17:50:46.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   },
   {
     "id": "news-03724ebf28de09d36d88",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T20:00:00.000Z",
-    "discovered_at": "2026-07-09 12:19:38"
+    "discovered_at": "2026-07-09 16:08:24"
   }
 ]
