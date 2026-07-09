@@ -1,15 +1,75 @@
 [
   {
+    "id": "news-6e69191c30c6a409349f",
+    "title": "Meta enters the crowded AI coding battle with Muse Spark 1.1",
+    "url": "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/",
+    "source": "TechCrunch",
+    "summary": "Meta's pitch to users is Spark's ability to handle large agentic workloads, fix bugs, and help with large code migrations — the kind of automation that enterprises are increasingly turning to AI companies to provide.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T19:40:45.000Z",
+    "discovered_at": "2026-07-09 20:01:58"
+  },
+  {
+    "id": "news-9ffafa51e70c0ef35a0b",
+    "title": "New York Times says OpenAI hid evidence in ChatGPT copyright trial",
+    "url": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
+    "source": "TechCrunch",
+    "summary": "News publishers say OpenAI hid tools and datasets that could identify copyrighted journalism in ChatGPT outputs, escalating their lawsuit with a new motion for sanctions.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T19:05:58.000Z",
+    "discovered_at": "2026-07-09 20:01:58"
+  },
+  {
+    "id": "news-5de0e4ce091694901d60",
+    "title": "Google will now disclose which ads are made with AI",
+    "url": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/",
+    "source": "TechCrunch",
+    "summary": "While Google prohibits misleading and deceptive ads, an ad can still leverage AI to create some type of synthetic or digitally altered content. Until now, that's something Google only required election ads to disclose.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T18:40:51.000Z",
+    "discovered_at": "2026-07-09 20:01:58"
+  },
+  {
+    "id": "news-319e1890fcfabc5a6deb",
+    "title": "Paris-based AI voice startup Gradium raises $100M seed, backed by Nvidia",
+    "url": "https://techcrunch.com/2026/07/09/paris-based-ai-voice-startup-gradium-raises-100m-seed-backed-by-nvidia/",
+    "source": "TechCrunch",
+    "summary": "The company is using the cash to open an office in the Bay Area and compete for talent there, \"strengthening its position at the heart of the world's leading AI ecosystem.\"",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T18:34:35.000Z",
+    "discovered_at": "2026-07-09 20:01:58"
+  },
+  {
+    "id": "news-a36412eeb0d5785911cf",
+    "title": "How did the government decide OpenAI&#8217;s frontier model was safe to release?",
+    "url": "https://techcrunch.com/2026/07/09/how-did-the-government-decide-openais-frontier-model-was-safe-to-release/",
+    "source": "TechCrunch",
+    "summary": "\"Exactly what that dialog looked like between the government and Anthropic and OpenAI is unclear.\"",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T18:22:39.000Z",
+    "discovered_at": "2026-07-09 20:01:58"
+  },
+  {
     "id": "news-a94643fcf81efd2260b1",
-    "title": "How to stop Meta’s AI image generator from using your Instagram photos",
+    "title": "Instagram users: Here’s how to stop Meta’s AI from using your photos",
     "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/",
     "source": "TechCrunch",
-    "summary": "Meta's new AI image generator is using your public Instagram photos unless you opt out. Here's how to do that.",
+    "summary": "Muse Image allows users to generate AI images using photos from public Instagram accounts. As long as a person's profile is public, another user can tag that account and use their images as part of an AI-generated creation.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T17:56:47.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-b0c29af09ae4662af9db",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T17:17:37.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-f0eeef35bb2b40d695d7",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T17:06:11.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-ad27224f77dabb8d187e",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T17:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-8923484c1444cf068b30",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T17:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-4973ae88e0affc1e1f37",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T14:53:09.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-486df337554b151f46f1",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T14:51:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-7882027942b512ce0667",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T14:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-b722bb74de4f5338dba0",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:30:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-d2d0db5054530f5789df",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:11:53.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-6b0fd45dbfe0af31ee1d",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-c13cbbb8e218f52ad7fe",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-925e9a59def11ced22a1",
@@ -153,7 +213,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
+  },
+  {
+    "id": "news-e799563c0958e055c8a2",
+    "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+    "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+    "source": "OpenAI",
+    "summary": "Learn how GPT-5.6 powers Microsoft 365 Copilot with stronger AI capabilities across Word, Excel, PowerPoint, Chat, and Cowork for faster, higher-quality work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T13:00:00.000Z",
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-55f260f226bdff6b1576",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T12:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-54ee76ae9206d639c080",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-8fd74bd3f51991b52530",
@@ -189,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-5941cef110c0f46967cf",
@@ -201,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-18842840ea24b22ef712",
@@ -213,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T22:41:33.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-b1454f7c94dc7f647528",
@@ -225,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T20:37:03.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-a32c363a58d03e85b4b4",
@@ -237,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T19:30:16.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-ddd0e329481881ac51cb",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T19:19:15.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-01f530364434f4db5edd",
@@ -261,31 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T18:30:08.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
-  },
-  {
-    "id": "news-bcdfbc462e4556787689",
-    "title": "Why this CEO thinks video games make better training data than the internet",
-    "url": "https://techcrunch.com/video/why-this-ceo-thinks-video-games-make-better-training-data-than-the-internet/",
-    "source": "TechCrunch",
-    "summary": "When it comes to achieving artificial general intelligence (AGI), large language models just&#160;don’t&#160;have what it takes. Models like ChatGPT and Claude&#160;are great at text, but&#160;they&#8217;re&#160;less skilled at understanding how things&#160;actually move&#160;through space and time&#160;—&#160;an esse…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T17:47:55.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
-  },
-  {
-    "id": "news-2454bc7517c327034ad8",
-    "title": "Meta wants its AI glasses to seem less creepy. Its AI strategy says otherwise.",
-    "url": "https://techcrunch.com/2026/07/08/meta-wants-its-ai-glasses-to-seem-less-creepy-its-ai-strategy-says-otherwise/",
-    "source": "TechCrunch",
-    "summary": "Meta is adding a new safeguard to stop people from secretly recording others with its AI glasses. But the update comes as the company continues to expand how much personal data its AI products collect and use.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T17:11:18.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-963a6870c5aab5cae64d",
@@ -297,43 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
-  },
-  {
-    "id": "news-0b3c247c7122ca2f2e34",
-    "title": "OpenAI releases new voice models for more natural live conversations",
-    "url": "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/",
-    "source": "TechCrunch",
-    "summary": "OpenAI says its new voice mode can speak and listen at the same time, a key ability for live translation.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T17:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
-  },
-  {
-    "id": "news-9e797c1f596159e3e776",
-    "title": "Prime Intellect raises $130M Series A to help enterprises build their own AI agents",
-    "url": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/",
-    "source": "TechCrunch",
-    "summary": "Founded in 2024, Prime Intellect’s goal is to give organizations capabilities to train their own agentic systems without relying on frontier AI labs.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T16:22:38.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
-  },
-  {
-    "id": "news-cc864c8488d2384c7d84",
-    "title": "These AI startups are growing revenue at faster and faster rates",
-    "url": "https://techcrunch.com/2026/07/08/these-ai-startups-are-growing-revenue-at-faster-and-faster-rates/",
-    "source": "TechCrunch",
-    "summary": "There are a lot of fast-growing AI startups, but some are growing even faster, they say.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T15:41:06.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-41b85c9cdb7a0122f22d",
@@ -345,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:30:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-eaad4cbcfa7f5327a2cc",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-de92863115274012478e",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T10:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:59"
   },
   {
     "id": "news-d7499a6963c6e5c4d93b",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-b8ee25d2f931dc065b06",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T20:31:58.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-6430cc7f42fab53c38c1",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T17:46:59.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-290217328a868a081a6d",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T13:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-60d1b56766e3b67711e2",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-cb031b5cf3e3be67bd75",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:59"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -573,31 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
-  },
-  {
-    "id": "news-3c923494434c3145e365",
-    "title": "Introducing GeneBench-Pro",
-    "url": "https://openai.com/index/introducing-genebench-pro",
-    "source": "OpenAI",
-    "summary": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
-  },
-  {
-    "id": "news-4c4d91d3ce63907b68d1",
-    "title": "Core dump epidemiology: fixing an 18-year-old bug",
-    "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
-    "source": "OpenAI",
-    "summary": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-200e6c5f82a034d1e586",
@@ -609,7 +597,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
+  },
+  {
+    "id": "news-4c4d91d3ce63907b68d1",
+    "title": "Core dump epidemiology: fixing an 18-year-old bug",
+    "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
+    "source": "OpenAI",
+    "summary": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-30T00:00:00.000Z",
+    "discovered_at": "2026-07-09 20:01:55"
+  },
+  {
+    "id": "news-3c923494434c3145e365",
+    "title": "Introducing GeneBench-Pro",
+    "url": "https://openai.com/index/introducing-genebench-pro",
+    "source": "OpenAI",
+    "summary": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-30T00:00:00.000Z",
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-5b79476b114204dfe57e",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T07:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-1ae317c00ced77b0a264",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-28T17:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-adbd50c1b1db1eb73a92",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-26T10:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:59"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-2b6976f96bb5f02f3637",
@@ -693,19 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T02:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
-  },
-  {
-    "id": "news-1a015f5dfa42958d5d31",
-    "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
-    "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-    "source": "OpenAI",
-    "summary": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-24T06:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:07"
+    "discovered_at": "2026-07-09 20:01:55"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:59"
   },
   {
     "id": "news-6ef30462856f7f526d91",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T17:50:46.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:59"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   },
   {
     "id": "news-03724ebf28de09d36d88",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T20:00:00.000Z",
-    "discovered_at": "2026-07-09 18:07:08"
+    "discovered_at": "2026-07-09 20:01:58"
   }
 ]
