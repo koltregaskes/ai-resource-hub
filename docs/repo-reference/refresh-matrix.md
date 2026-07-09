@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 09 Jul 2026, 16:08 UTC
+Generated: 09 Jul 2026, 18:07 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 09 Jul 2026, 16:08 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 09 Jul 2026, 18:07 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 09 Jul 2026, 16:08 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 09 Jul 2026, 16:08 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 09 Jul 2026, 16:08 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 09 Jul 2026, 16:08 UTC |
-| Provider status | Hourly automated refresh | Automated | 09 Jul 2026, 16:08 UTC |
-| Guides and learning | Manual editorial review | Manual | 09 Jul 2026, 16:08 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 09 Jul 2026, 18:07 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 09 Jul 2026, 18:07 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 09 Jul 2026, 18:07 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 09 Jul 2026, 18:07 UTC |
+| Provider status | Hourly automated refresh | Automated | 09 Jul 2026, 18:07 UTC |
+| Guides and learning | Manual editorial review | Manual | 09 Jul 2026, 18:06 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 09 Jul 2026, 16:08 UTC
+- Last refreshed: 09 Jul 2026, 18:07 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 11 Jul 2026, 12:00 UTC: Claude 2 launched - Next exact anniversary in 2 days. (`/milestones/`)
-- 09 Jul 2026, 16:08 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 09 Jul 2026, 18:07 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 09 Jul 2026, 16:08 UTC
+- Last refreshed: 09 Jul 2026, 18:07 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -72,15 +72,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 08 Jul 2026, 12:00 UTC: Grok 4.5 - xAI release desk entry is ready for editor with 1 related story and 0 benchmark signals attached. (`/new/`)
-- 30 Jun 2026, 12:00 UTC: Claude Sonnet 5 - Anthropic release desk entry is ready for editor with 4 related stories and 0 benchmark signals attached. (`/new/`)
-- 30 Jun 2026, 12:00 UTC: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) - Google release desk entry is ready for editor with 1 related story and 0 benchmark signals attached. (`/new/`)
+- 09 Jul 2026, 12:00 UTC: GPT-5.6 Luna Pro - OpenAI release desk entry is ready for editor with 1 related story and 0 benchmark signals attached. (`/new/`)
+- 09 Jul 2026, 12:00 UTC: GPT-5.6 Luna - OpenAI release desk entry is ready for editor with 1 related story and 0 benchmark signals attached. (`/new/`)
+- 09 Jul 2026, 12:00 UTC: GPT-5.6 Terra Pro - OpenAI release desk entry is ready for editor with 1 related story and 0 benchmark signals attached. (`/new/`)
 
 ## Benchmarks and evals
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 09 Jul 2026, 16:08 UTC
+- Last refreshed: 09 Jul 2026, 18:07 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Jul 2026, 16:08 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 09 Jul 2026, 16:08 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 09 Jul 2026, 18:07 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 09 Jul 2026, 18:07 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 09 Jul 2026, 16:08 UTC
+- Last refreshed: 09 Jul 2026, 18:07 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,15 +111,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Jul 2026, 16:08 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 09 Jul 2026, 16:08 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 09 Jul 2026, 16:08 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 09 Jul 2026, 18:07 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 09 Jul 2026, 18:07 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 09 Jul 2026, 18:07 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 09 Jul 2026, 16:08 UTC
+- Last refreshed: 09 Jul 2026, 18:07 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -131,15 +131,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Jul 2026, 14:53 UTC: Anthropic’s new Claude feature is quietly selling you on AI - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/))
-- 09 Jul 2026, 14:51 UTC: Anthropic, OpenAI, and SpaceX are bigger than the last 25 years of tech exits - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/09/anthropic-openai-and-spacex-are-bigger-than-the-last-25-years-of-tech-exits/))
-- 09 Jul 2026, 14:00 UTC: Meta says its new AI model is ready to compete on coding - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api))
+- 09 Jul 2026, 17:56 UTC: How to stop Meta’s AI image generator from using your Instagram photos - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/))
+- 09 Jul 2026, 17:17 UTC: Meta&#8217;s new AI chips will begin production in September - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/))
+- 09 Jul 2026, 17:06 UTC: Nvidia is a victim of the compute marketplace it created - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 09 Jul 2026, 16:08 UTC
+- Last refreshed: 09 Jul 2026, 18:07 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Jul 2026, 16:08 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
-- 09 Jul 2026, 16:08 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
-- 09 Jul 2026, 16:08 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 09 Jul 2026, 18:07 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
+- 09 Jul 2026, 18:07 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
+- 09 Jul 2026, 18:07 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 09 Jul 2026, 16:08 UTC
+- Last refreshed: 09 Jul 2026, 18:06 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 09 Jul 2026, 16:08 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 09 Jul 2026, 16:08 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 09 Jul 2026, 16:08 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 09 Jul 2026, 18:06 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 09 Jul 2026, 18:06 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 09 Jul 2026, 18:06 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)

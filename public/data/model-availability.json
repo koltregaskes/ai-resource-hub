@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-09T16:08:34.471Z",
+  "generatedAt": "2026-07-09T18:07:18.036Z",
   "overview": {
-    "generatedAt": "2026-07-09T16:08:34.484Z",
+    "generatedAt": "2026-07-09T18:07:18.049Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 110,
+    "surfacedModels": 116,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -242,7 +242,7 @@
           "sora-turbo"
         ]
       },
-      "matchingModelCount": 65,
+      "matchingModelCount": 71,
       "matchingModelIds": [
         "gpt-5.2-pro",
         "gpt-4o-transcribe",
@@ -301,6 +301,12 @@
         "gpt-5.4-pro",
         "gpt-5.5",
         "gpt-5.5-pro",
+        "gpt-5.6-luna",
+        "gpt-5.6-luna-pro",
+        "gpt-5.6-sol",
+        "gpt-5.6-sol-pro",
+        "gpt-5.6-terra",
+        "gpt-5.6-terra-pro",
         "gpt-oss-120b",
         "gpt-oss-20b",
         "gpt-oss-safeguard-20b",
@@ -368,6 +374,12 @@
         "GPT-5.4 Pro",
         "GPT-5.5",
         "GPT-5.5 Pro",
+        "GPT-5.6 Luna",
+        "GPT-5.6 Luna Pro",
+        "GPT-5.6 Sol",
+        "GPT-5.6 Sol Pro",
+        "GPT-5.6 Terra",
+        "GPT-5.6 Terra Pro",
         "gpt-oss-120b",
         "gpt-oss-20b",
         "gpt-oss-safeguard-20b",

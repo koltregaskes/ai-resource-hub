@@ -1,12 +1,12 @@
 # Provider Coverage Snapshot
 
-Generated: 09 Jul 2026, 16:08 UTC
+Generated: 09 Jul 2026, 18:07 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
 | Provider | Active | Tracking | Preview | Latest release | Status page | Docs |
 | --- | --- | --- | --- | --- | --- | --- |
-| OpenAI | 25 | 42 | 0 | GPT Chat Latest (5 May 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
+| OpenAI | 25 | 48 | 0 | GPT-5.6 Luna Pro (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 8 | 20 | 0 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) (30 Jun 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 7 | 13 | 1 | Claude Sonnet 5 (30 Jun 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 5 | 0 | n/a | n/a | [docs](https://llama.meta.com/docs) |

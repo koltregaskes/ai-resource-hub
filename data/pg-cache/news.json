@@ -1,5 +1,65 @@
 [
   {
+    "id": "news-a94643fcf81efd2260b1",
+    "title": "How to stop Meta’s AI image generator from using your Instagram photos",
+    "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/",
+    "source": "TechCrunch",
+    "summary": "Meta's new AI image generator is using your public Instagram photos unless you opt out. Here's how to do that.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T17:56:47.000Z",
+    "discovered_at": "2026-07-09 18:07:08"
+  },
+  {
+    "id": "news-b0c29af09ae4662af9db",
+    "title": "Meta&#8217;s new AI chips will begin production in September",
+    "url": "https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/",
+    "source": "TechCrunch",
+    "summary": "The company is taking a modular approach to designing these chips, anticipating that their needs will change as AI evolves rapidly by the time the chips are in production.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T17:17:37.000Z",
+    "discovered_at": "2026-07-09 18:07:08"
+  },
+  {
+    "id": "news-f0eeef35bb2b40d695d7",
+    "title": "Nvidia is a victim of the compute marketplace it created",
+    "url": "https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/",
+    "source": "TechCrunch",
+    "summary": "Having proven how valuable compute can be, the company finds itself at the center of a market everyone wants to be in — while simpler technologies and less interesting companies get rich on the sidelines.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T17:06:11.000Z",
+    "discovered_at": "2026-07-09 18:07:08"
+  },
+  {
+    "id": "news-ad27224f77dabb8d187e",
+    "title": "OpenAI rolls out GPT-5.6 after government greenlight — and announces ‘ChatGPT Work’",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/963464/openai-gpt-5-6-codex-chatgpt-work",
+    "source": "The Verge",
+    "summary": "About two weeks after OpenAI's GPT-5.6 was caught up in regulatory drama - rolled out only to government-approved organizations during a \"limited preview\" period - the company has received the Trump administration's greenlight for a public rollout of the model. OpenAI CEO Sam Altman called it \"the best model we have e…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T17:00:00.000Z",
+    "discovered_at": "2026-07-09 18:07:08"
+  },
+  {
+    "id": "news-8923484c1444cf068b30",
+    "title": "Microsoft’s patch Tuesdays are about to get bigger",
+    "url": "https://www.theverge.com/tech/963307/microsoft-patch-tuesday-ai-security-updates",
+    "source": "The Verge",
+    "summary": "Windows 11 updates could soon include fixes for more security issues at once. Microsoft said in a blog post on Thursday that it's now using AI to \"identify potential issues earlier,\" which means \"customers will see a higher volume of security updates included in each security release.\" Hackers, even amateurs, have inc…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T17:00:00.000Z",
+    "discovered_at": "2026-07-09 18:07:08"
+  },
+  {
     "id": "news-4973ae88e0affc1e1f37",
     "title": "Anthropic’s new Claude feature is quietly selling you on AI",
     "url": "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/",
@@ -9,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T14:53:09.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-486df337554b151f46f1",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T14:51:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-7882027942b512ce0667",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T14:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-b722bb74de4f5338dba0",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:30:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-d2d0db5054530f5789df",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:11:53.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-6b0fd45dbfe0af31ee1d",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-c13cbbb8e218f52ad7fe",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-925e9a59def11ced22a1",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-55f260f226bdff6b1576",
@@ -105,7 +165,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T12:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
+  },
+  {
+    "id": "news-54ee76ae9206d639c080",
+    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+    "url": "https://openai.com/index/gpt-5-6",
+    "source": "OpenAI",
+    "summary": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-09 18:07:07"
+  },
+  {
+    "id": "news-8fd74bd3f51991b52530",
+    "title": "GPT-5.5 Bio Bug Bounty",
+    "url": "https://openai.com/index/bio-bug-bounty",
+    "source": "OpenAI",
+    "summary": "Details about the OpenAI Bio Bounty program",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-09 18:07:07"
+  },
+  {
+    "id": "news-5941cef110c0f46967cf",
+    "title": "ChatGPT is now a partner for your most ambitious work",
+    "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+    "source": "OpenAI",
+    "summary": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-18842840ea24b22ef712",
@@ -117,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T22:41:33.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-b1454f7c94dc7f647528",
@@ -129,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T20:37:03.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-a32c363a58d03e85b4b4",
@@ -141,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T19:30:16.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-ddd0e329481881ac51cb",
@@ -153,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T19:19:15.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-01f530364434f4db5edd",
@@ -165,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T18:30:08.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-bcdfbc462e4556787689",
@@ -177,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:47:55.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-2454bc7517c327034ad8",
@@ -189,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:11:18.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-963a6870c5aab5cae64d",
@@ -201,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-0b3c247c7122ca2f2e34",
@@ -213,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T17:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-9e797c1f596159e3e776",
@@ -225,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T16:22:38.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-cc864c8488d2384c7d84",
@@ -237,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T15:41:06.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-41b85c9cdb7a0122f22d",
@@ -249,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:30:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
-  },
-  {
-    "id": "news-e508ea6f17330ff1ad45",
-    "title": "Your gaming data could be the secret to AGI, according to this Bezos-backed startup",
-    "url": "https://techcrunch.com/podcast/your-gaming-data-could-be-the-secret-to-agi-according-to-this-bezos-backed-startup/",
-    "source": "TechCrunch",
-    "summary": "When it comes to achieving artificial general intelligence (AGI), large language models just&#160;don’t&#160;have what it takes. Models like ChatGPT and Claude&#160;are great at text, but&#160;they&#8217;re&#160;less skilled at understanding how things&#160;actually move&#160;through space and time&#160;—&#160;an esse…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-eaad4cbcfa7f5327a2cc",
@@ -273,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
-  },
-  {
-    "id": "news-44e3969a30344de017cf",
-    "title": "Former OpenAI exec Kevin Weil is now on the board of Stoke Space",
-    "url": "https://techcrunch.com/2026/07/08/former-openai-exec-kevin-weil-is-now-on-the-board-of-stoke-space/",
-    "source": "TechCrunch",
-    "summary": "Kevin Weil's new role at Stoke Space suggests reusable rockets are the next hot thing in Silicon Valley.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T12:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-de92863115274012478e",
@@ -297,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T10:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
-  },
-  {
-    "id": "news-57f72514722c75abf101",
-    "title": "Hot French startup ZML releases free product to speed inference across lots of AI chips",
-    "url": "https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/",
-    "source": "TechCrunch",
-    "summary": "ZML, a hot French AI startup endorsed by Turing Award winner Yann LeCun, has now released ZML/LLMD, software that could make running AI less costly.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-08T08:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -321,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-d7499a6963c6e5c4d93b",
@@ -333,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-b8ee25d2f931dc065b06",
@@ -345,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T20:31:58.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-6430cc7f42fab53c38c1",
@@ -357,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T17:46:59.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-290217328a868a081a6d",
@@ -369,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T13:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -381,19 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
-  },
-  {
-    "id": "news-cb031b5cf3e3be67bd75",
-    "title": "MUFG aims to become AI-native with OpenAI",
-    "url": "https://openai.com/index/mufg",
-    "source": "OpenAI",
-    "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-60d1b56766e3b67711e2",
@@ -405,43 +453,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
-    "id": "news-6b7e3847e7a74e659e2f",
-    "title": "I spy",
-    "url": "https://www.theverge.com/column/961707/smart-glasses-ai-wearables-meta-surveillance-privacy",
-    "source": "The Verge",
-    "summary": "I've long argued that Hollywood has simultaneously set and ruined our expectations for smart glasses. But after binge-watching two seasons of Netflix's A Man on the Inside, this is perhaps the first time I've seen Hollywood, perhaps inadvertently, illustrate the biggest cultural problem with smart glasses as they stan…",
-    "category": "industry",
+    "id": "news-cb031b5cf3e3be67bd75",
+    "title": "MUFG aims to become AI-native with OpenAI",
+    "url": "https://openai.com/index/mufg",
+    "source": "OpenAI",
+    "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-06T16:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
-  },
-  {
-    "id": "news-6f442d4e59ecf2ba730d",
-    "title": "Microsoft is laying off 4,800 employees",
-    "url": "https://www.theverge.com/news/961528/microsoft-layoffs-july-2026-sales-xbox",
-    "source": "The Verge",
-    "summary": "A year after cutting around 9,100 employees, Microsoft is making further layoffs today as it begins its new financial year. The software maker is laying off around 4,800 employees today, approximately 2.1 percent of its workforce. Most of the employees affected by today's cuts are in Microsoft's commercial sales busin…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-06T13:30:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "published_at": "2026-07-07T00:00:00.000Z",
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
-    "title": "Redeploying Fable 5",
+    "title": "The Making of Claude Code",
     "url": "https://www.anthropic.com/features/making-of-claude-code",
     "source": "Anthropic",
-    "summary": "Fable 5 returns globally July 1. We&#x27;re also proposing an industry-wide framework for scoring jailbreak severity, together with Amazon, Microsoft, Google, and other Glasswing partners.",
+    "summary": "The inside story of how Claude Code went from an internal CLI to Anthropic&#x27;s coding agent, told by researchers, engineers and early users who built it.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:23"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -453,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -465,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -477,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -489,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -501,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -513,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:23"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -525,7 +561,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:23"
+    "discovered_at": "2026-07-09 18:07:08"
+  },
+  {
+    "id": "news-ff1300aa6ccec48d7d7f",
+    "title": "Redeploying Fable 5",
+    "url": "https://www.anthropic.com/news/redeploying-fable-5",
+    "source": "Anthropic",
+    "summary": "Fable 5 returns globally July 1. We&#x27;re also proposing an industry-wide framework for scoring jailbreak severity, together with Amazon, Microsoft, Google, and other Glasswing partners.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-30T00:00:00.000Z",
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-3c923494434c3145e365",
@@ -537,19 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
-  },
-  {
-    "id": "news-200e6c5f82a034d1e586",
-    "title": "Inside Genebench-Pro",
-    "url": "https://openai.com/index/genebench-pro/case-studies",
-    "source": "OpenAI",
-    "summary": null,
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-4c4d91d3ce63907b68d1",
@@ -561,7 +597,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
+  },
+  {
+    "id": "news-200e6c5f82a034d1e586",
+    "title": "Inside Genebench-Pro",
+    "url": "https://openai.com/index/genebench-pro/case-studies",
+    "source": "OpenAI",
+    "summary": null,
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-30T00:00:00.000Z",
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -573,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-5b79476b114204dfe57e",
@@ -585,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T07:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-1ae317c00ced77b0a264",
@@ -597,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-28T17:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-adbd50c1b1db1eb73a92",
@@ -609,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-26T10:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -621,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -633,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-2b6976f96bb5f02f3637",
@@ -645,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T02:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-1a015f5dfa42958d5d31",
@@ -657,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-24T06:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:07"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -669,55 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
-  },
-  {
-    "id": "news-7c36fb32c6285fc2a72a",
-    "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
-    "url": "https://openai.com/index/gpt-5-immunology-mystery",
-    "source": "OpenAI",
-    "summary": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-23T17:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
-  },
-  {
-    "id": "news-6507bbb3977767d18fbd",
-    "title": "Helping build shared standards for advanced AI",
-    "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
-    "source": "OpenAI",
-    "summary": "OpenAI helps build shared standards for advanced AI, supporting evaluation frameworks, safety practices, and global cooperation through the Appia Foundation.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-23T13:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
-  },
-  {
-    "id": "news-2a799425b04b9199e7d6",
-    "title": "Introducing Claude Tag",
-    "url": "https://www.anthropic.com/news/introducing-claude-tag",
-    "source": "Anthropic",
-    "summary": "Claude Tag is a new way for teams to work with Claude.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:23"
-  },
-  {
-    "id": "news-0c794cbb255ff7717b1b",
-    "title": "How Omio is building the future of conversational travel",
-    "url": "https://openai.com/index/omio",
-    "source": "OpenAI",
-    "summary": "Discover how Omio uses OpenAI to power conversational travel experiences, accelerate product development, and transform into an AI-native company.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-23T00:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:21"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-6ef30462856f7f526d91",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T17:50:46.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   },
   {
     "id": "news-03724ebf28de09d36d88",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-11T20:00:00.000Z",
-    "discovered_at": "2026-07-09 16:08:24"
+    "discovered_at": "2026-07-09 18:07:08"
   }
 ]
