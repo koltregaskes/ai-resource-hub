@@ -1,108 +1,6 @@
 {
-  "generatedAt": "2026-07-10T14:49:26.102Z",
+  "generatedAt": "2026-07-10T16:05:57.198Z",
   "providers": [
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T14:49:25.074Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Code",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "mpn4d4xt44dm",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-07-10T14:36:37.668Z",
-          "updatedAt": "2026-07-10T14:36:37.829Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/brlg5wqc1jjr",
-          "summary": "We are currently investigating this issue."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "mpn4d4xt44dm",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-07-10T14:36:37.668Z",
-          "updatedAt": "2026-07-10T14:36:37.829Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/brlg5wqc1jjr",
-          "summary": "We are currently investigating this issue."
-        },
-        {
-          "id": "t5kjpnysf4vp",
-          "title": "Elevated errors for Claude Opus 4.8",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-09T03:28:18.219Z",
-          "updatedAt": "2026-07-09T03:50:34.096Z",
-          "resolvedAt": "2026-07-09T03:50:34.059Z",
-          "url": "https://stspg.io/sddyj2h6b61s",
-          "summary": "This issue has been resolved"
-        },
-        {
-          "id": "rvb96c56gn6k",
-          "title": "Degraded performance for Claude Code on the web, Cowork Remote, Claude Tag, and Claude Code Review sessions",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-08T19:07:26.000Z",
-          "updatedAt": "2026-07-08T21:04:34.871Z",
-          "resolvedAt": "2026-07-08T21:04:34.858Z",
-          "url": "https://stspg.io/th3djdzw5lsy",
-          "summary": "This issue has been resolved."
-        },
-        {
-          "id": "dcxc66flmxbd",
-          "title": "Elevated errors on multiple models",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-08T18:00:18.078Z",
-          "updatedAt": "2026-07-08T21:04:18.650Z",
-          "resolvedAt": "2026-07-08T21:04:18.634Z",
-          "url": "https://stspg.io/kt72q7m6rz9c",
-          "summary": "This issue has been resolved. Users saw elevated errors on requests to some models between 10:45am PT / 17:45 UTC and 12:40pm PT / 19:40 UTC."
-        }
-      ]
-    },
     {
       "id": "openai",
       "providerId": "openai",
@@ -114,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T14:49:24.972Z",
+      "lastCheckedAt": "2026-07-10T16:05:56.057Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -211,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T14:49:25.118Z",
+      "lastCheckedAt": "2026-07-10T16:05:56.533Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -221,90 +119,92 @@
       "recentIncidents": []
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T14:49:25.962Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
+      "lastCheckedAt": "2026-07-10T16:05:55.998Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
-      "components": [],
-      "activeIncidents": [
+      "components": [
         {
-          "id": "together-feed-0-2026-07-10T14:26:20.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-10T14:26:20.000Z",
-          "updatedAt": "2026-07-10T14:26:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT went down"
+          "name": "claude.ai",
+          "status": "operational"
         },
         {
-          "id": "together-feed-3-2026-07-10T05:43:09.000Z",
-          "title": "Kimi K2.6 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-10T05:43:09.000Z",
-          "updatedAt": "2026-07-10T05:43:09.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 went down"
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
         }
       ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-07-10T14:26:20.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-10T14:26:20.000Z",
-          "updatedAt": "2026-07-10T14:26:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-1-2026-07-10T06:04:28.000Z",
-          "title": "Kimi K2.6 recovered",
+          "id": "mpn4d4xt44dm",
+          "title": "Elevated errors for Claude Opus 4.8",
           "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-10T06:04:28.000Z",
-          "updatedAt": "2026-07-10T06:04:28.000Z",
-          "resolvedAt": "2026-07-10T06:04:28.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
+          "impact": "minor",
+          "startedAt": "2026-07-10T14:36:37.668Z",
+          "updatedAt": "2026-07-10T15:02:32.845Z",
+          "resolvedAt": "2026-07-10T15:02:32.828Z",
+          "url": "https://stspg.io/brlg5wqc1jjr",
+          "summary": "This incident has been resolved."
         },
         {
-          "id": "together-feed-2-2026-07-10T06:04:09.000Z",
-          "title": "Kimi K2.6 recovered",
+          "id": "t5kjpnysf4vp",
+          "title": "Elevated errors for Claude Opus 4.8",
           "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-10T06:04:09.000Z",
-          "updatedAt": "2026-07-10T06:04:09.000Z",
-          "resolvedAt": "2026-07-10T06:04:09.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 recovered"
+          "impact": "major",
+          "startedAt": "2026-07-09T03:28:18.219Z",
+          "updatedAt": "2026-07-09T03:50:34.096Z",
+          "resolvedAt": "2026-07-09T03:50:34.059Z",
+          "url": "https://stspg.io/sddyj2h6b61s",
+          "summary": "This issue has been resolved"
         },
         {
-          "id": "together-feed-3-2026-07-10T05:43:09.000Z",
-          "title": "Kimi K2.6 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-10T05:43:09.000Z",
-          "updatedAt": "2026-07-10T05:43:09.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.6 went down"
+          "id": "rvb96c56gn6k",
+          "title": "Degraded performance for Claude Code on the web, Cowork Remote, Claude Tag, and Claude Code Review sessions",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-08T19:07:26.000Z",
+          "updatedAt": "2026-07-08T21:04:34.871Z",
+          "resolvedAt": "2026-07-08T21:04:34.858Z",
+          "url": "https://stspg.io/th3djdzw5lsy",
+          "summary": "This issue has been resolved."
+        },
+        {
+          "id": "dcxc66flmxbd",
+          "title": "Elevated errors on multiple models",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-08T18:00:18.078Z",
+          "updatedAt": "2026-07-08T21:04:18.650Z",
+          "resolvedAt": "2026-07-08T21:04:18.634Z",
+          "url": "https://stspg.io/kt72q7m6rz9c",
+          "summary": "This issue has been resolved. Users saw elevated errors on requests to some models between 10:45am PT / 17:45 UTC and 12:40pm PT / 19:40 UTC."
         }
       ]
     },
@@ -319,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T14:49:25.673Z",
+      "lastCheckedAt": "2026-07-10T16:05:56.857Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T14:49:26.095Z",
+      "lastCheckedAt": "2026-07-10T16:05:57.144Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -404,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T14:49:24.978Z",
+      "lastCheckedAt": "2026-07-10T16:05:56.146Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -437,6 +337,71 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-10T16:05:57.191Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-07-10T14:46:28.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-10T14:46:28.000Z",
+          "updatedAt": "2026-07-10T14:46:28.000Z",
+          "resolvedAt": "2026-07-10T14:46:28.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-10T14:26:20.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-10T14:26:20.000Z",
+          "updatedAt": "2026-07-10T14:26:20.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-10T06:04:28.000Z",
+          "title": "Kimi K2.6 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-10T06:04:28.000Z",
+          "updatedAt": "2026-07-10T06:04:28.000Z",
+          "resolvedAt": "2026-07-10T06:04:28.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 recovered"
+        },
+        {
+          "id": "together-feed-3-2026-07-10T06:04:09.000Z",
+          "title": "Kimi K2.6 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-10T06:04:09.000Z",
+          "updatedAt": "2026-07-10T06:04:09.000Z",
+          "resolvedAt": "2026-07-10T06:04:09.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 recovered"
+        }
+      ]
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -451,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
