@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-10T22:14:05.256Z",
+  "generatedAt": "2026-07-11T00:07:51.015Z",
   "overview": {
-    "generatedForLabel": "Friday, 10 July 2026",
+    "generatedForLabel": "Saturday, 11 July 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -9,14 +9,13 @@
     "exactDateMilestones": 27,
     "homepageEligibleMilestones": 34,
     "nextMilestone": {
-      "id": "claude-2-launch",
-      "title": "Claude 2 launched",
-      "nextOccurrenceLabel": "11 Jul 2026",
-      "daysUntil": 1
+      "id": "llama-2-launch",
+      "title": "Llama 2 released",
+      "nextOccurrenceLabel": "18 Jul 2026",
+      "daysUntil": 7
     }
   },
-  "todayMilestones": [],
-  "upcomingMilestones": [
+  "todayMilestones": [
     {
       "id": "claude-2-launch",
       "slug": "claude-2-launch",
@@ -63,11 +62,13 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689076800000,
-      "daysUntil": 1,
+      "daysUntil": 0,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Jul 2026"
-    },
+    }
+  ],
+  "upcomingMilestones": [
     {
       "id": "llama-2-launch",
       "slug": "llama-2-launch",
@@ -114,7 +115,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689681600000,
-      "daysUntil": 8,
+      "daysUntil": 7,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
       "nextOccurrenceLabel": "18 Jul 2026"
@@ -163,7 +164,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1661169600000,
-      "daysUntil": 43,
+      "daysUntil": 42,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
       "nextOccurrenceLabel": "22 Aug 2026"
@@ -214,7 +215,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1726142400000,
-      "daysUntil": 64,
+      "daysUntil": 63,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-09-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Sept 2026"
@@ -267,7 +268,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1695816000000,
-      "daysUntil": 79,
+      "daysUntil": 78,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
       "nextOccurrenceLabel": "27 Sept 2026"
@@ -316,7 +317,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 95,
+      "daysUntil": 94,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -367,7 +368,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 116,
+      "daysUntil": 115,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -417,8 +418,59 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 143,
+      "daysUntil": 142,
       "anniversaryYears": 6,
+      "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
+      "nextOccurrenceLabel": "30 Nov 2026"
+    },
+    {
+      "id": "chatgpt-launch",
+      "slug": "chatgpt-launch",
+      "title": "ChatGPT launched",
+      "summary": "ChatGPT turned language models into a mass-market product and reset the pace of AI product adoption.",
+      "year": 2022,
+      "month": 11,
+      "day": 30,
+      "datePrecision": "day",
+      "category": "product_launch",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "openai",
+      "modelId": "chatgpt",
+      "tags": [
+        "chatgpt",
+        "consumer-ai",
+        "openai"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "OpenAI",
+          "url": "https://openai.com/blog/chatgpt/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "OpenAI",
+        "url": "https://openai.com/blog/chatgpt/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Product launch",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "30 Nov 2022",
+      "trackingDateLabel": null,
+      "href": "/timeline/",
+      "sortKey": 1669809600000,
+      "daysUntil": 142,
+      "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
     }

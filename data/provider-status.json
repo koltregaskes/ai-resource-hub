@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T22:42:46.505Z",
+  "generatedAt": "2026-07-11T00:07:46.964Z",
   "providers": [
     {
       "id": "openai",
@@ -12,10 +12,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T22:42:45.151Z",
+      "lastCheckedAt": "2026-07-11T00:07:45.447Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -45,16 +45,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "01KX6Y1QMFX4NASV5DD591AD50",
-          "title": "OpenAI website and Help Center content may be unavailable",
-          "status": "identified",
-          "impact": "none",
-          "startedAt": "2026-07-10T21:13:30.000Z",
-          "updatedAt": "2026-07-10T22:38:27.000Z",
-          "resolvedAt": null,
-          "summary": "Some OpenAI website content pages, including Help Center articles, are currently unavailable. Help Center search functionality is also unavailable, and the chatbot experience may..."
-        },
-        {
           "id": "01KWDW344V7XWEQERJSEW62W57",
           "title": "Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces",
           "status": "investigating",
@@ -69,12 +59,12 @@
         {
           "id": "01KX6Y1QMFX4NASV5DD591AD50",
           "title": "OpenAI website and Help Center content may be unavailable",
-          "status": "identified",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-07-10T21:13:30.000Z",
-          "updatedAt": "2026-07-10T22:38:27.000Z",
-          "resolvedAt": null,
-          "summary": "Some OpenAI website content pages, including Help Center articles, are currently unavailable. Help Center search functionality is also unavailable, and the chatbot experience may..."
+          "updatedAt": "2026-07-10T23:07:39.000Z",
+          "resolvedAt": "2026-07-10T23:07:39.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01KX46HHYJ0YB8VPBZTB0KZ03V",
@@ -119,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T22:42:45.572Z",
+      "lastCheckedAt": "2026-07-11T00:07:46.010Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T22:42:45.155Z",
+      "lastCheckedAt": "2026-07-11T00:07:45.378Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -229,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T22:42:46.074Z",
+      "lastCheckedAt": "2026-07-11T00:07:46.457Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -249,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T22:42:46.380Z",
+      "lastCheckedAt": "2026-07-11T00:07:46.793Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -314,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T22:42:45.317Z",
+      "lastCheckedAt": "2026-07-11T00:07:45.811Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -357,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-10T22:42:46.498Z",
+      "lastCheckedAt": "2026-07-11T00:07:46.957Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
