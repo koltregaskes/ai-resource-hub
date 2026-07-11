@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-11T22:04:50.244Z",
+  "generatedAt": "2026-07-11T23:07:50.665Z",
   "overview": {
-    "generatedForLabel": "Saturday, 11 July 2026",
+    "generatedForLabel": "Sunday, 12 July 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -12,62 +12,10 @@
       "id": "llama-2-launch",
       "title": "Llama 2 released",
       "nextOccurrenceLabel": "18 Jul 2026",
-      "daysUntil": 7
+      "daysUntil": 6
     }
   },
-  "todayMilestones": [
-    {
-      "id": "claude-2-launch",
-      "slug": "claude-2-launch",
-      "title": "Claude 2 launched",
-      "summary": "Claude 2 made Anthropic’s assistant more broadly available and pushed the long-context commercial race forward.",
-      "year": 2023,
-      "month": 7,
-      "day": 11,
-      "datePrecision": "day",
-      "category": "model_release",
-      "kind": "launch",
-      "significance": "major",
-      "providerId": "anthropic",
-      "modelId": "claude-2",
-      "tags": [
-        "claude",
-        "anthropic",
-        "long-context"
-      ],
-      "status": "verified",
-      "confidence": "high",
-      "homepageEligible": true,
-      "calendarEligible": true,
-      "exactAnniversaryEligible": true,
-      "sources": [
-        {
-          "label": "Anthropic",
-          "url": "https://www.anthropic.com/news/claude-2",
-          "sourceType": "official_news",
-          "role": "canonical"
-        }
-      ],
-      "canonicalSource": {
-        "label": "Anthropic",
-        "url": "https://www.anthropic.com/news/claude-2",
-        "sourceType": "official_news",
-        "role": "canonical"
-      },
-      "categoryLabel": "Model release",
-      "kindLabel": "Launch",
-      "significanceLabel": "Major",
-      "statusLabel": "Verified",
-      "dateLabel": "11 Jul 2023",
-      "trackingDateLabel": null,
-      "href": "/new/",
-      "sortKey": 1689076800000,
-      "daysUntil": 0,
-      "anniversaryYears": 3,
-      "nextOccurrenceIso": "2026-07-11T12:00:00.000Z",
-      "nextOccurrenceLabel": "11 Jul 2026"
-    }
-  ],
+  "todayMilestones": [],
   "upcomingMilestones": [
     {
       "id": "llama-2-launch",
@@ -115,7 +63,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689681600000,
-      "daysUntil": 7,
+      "daysUntil": 6,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
       "nextOccurrenceLabel": "18 Jul 2026"
@@ -164,7 +112,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1661169600000,
-      "daysUntil": 42,
+      "daysUntil": 41,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
       "nextOccurrenceLabel": "22 Aug 2026"
@@ -215,7 +163,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1726142400000,
-      "daysUntil": 63,
+      "daysUntil": 62,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-09-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Sept 2026"
@@ -268,7 +216,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1695816000000,
-      "daysUntil": 78,
+      "daysUntil": 77,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
       "nextOccurrenceLabel": "27 Sept 2026"
@@ -317,7 +265,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 94,
+      "daysUntil": 93,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -368,7 +316,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 115,
+      "daysUntil": 114,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -418,7 +366,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 142,
+      "daysUntil": 141,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -469,7 +417,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1669809600000,
-      "daysUntil": 142,
+      "daysUntil": 141,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
