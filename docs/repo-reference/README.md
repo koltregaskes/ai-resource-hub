@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 11 Jul 2026, 23:07 UTC |
+| Generated | 12 Jul 2026, 00:08 UTC |
 | Providers tracked | 40 |
 | Public models | 323 |
 | Active models | 110 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 55 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 11 Jul 2026, 23:07 UTC |
+| Latest visible refresh | 12 Jul 2026, 00:08 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | GPT-5.6 Luna Pro (9 Jul 2026) |
 
