@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T12:25:37.912Z",
+  "generatedAt": "2026-07-12T13:25:47.638Z",
   "providers": [
     {
       "id": "openai",
@@ -12,19 +12,19 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-12T12:25:36.326Z",
+      "lastCheckedAt": "2026-07-12T13:25:46.595Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "Conversations",
+          "name": "Login",
           "status": "degraded_performance"
         },
         {
-          "name": "Login",
-          "status": "degraded_performance"
+          "name": "Conversations",
+          "status": "operational"
         },
         {
           "name": "Batch",
@@ -50,9 +50,9 @@
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-07-12T09:49:34.000Z",
-          "updatedAt": "2026-07-12T12:02:04.000Z",
+          "updatedAt": "2026-07-12T13:09:46.000Z",
           "resolvedAt": null,
-          "summary": "We have identified the issue causing elevated conversation, sign-up, and sign-in errors for some users on iOS and macOS. We are working to implement a mitigation."
+          "summary": "We have restored sign-in access for affected users. We are continuing to work on mitigating account creation and password update errors on iOS and macOS."
         }
       ],
       "recentIncidents": [
@@ -62,9 +62,9 @@
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-07-12T09:49:34.000Z",
-          "updatedAt": "2026-07-12T12:02:04.000Z",
+          "updatedAt": "2026-07-12T13:09:46.000Z",
           "resolvedAt": null,
-          "summary": "We have identified the issue causing elevated conversation, sign-up, and sign-in errors for some users on iOS and macOS. We are working to implement a mitigation."
+          "summary": "We have restored sign-in access for affected users. We are continuing to work on mitigating account creation and password update errors on iOS and macOS."
         },
         {
           "id": "01KX7Y6ETMKP3ATQ85Z33J0EHN",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-12T12:25:36.894Z",
+      "lastCheckedAt": "2026-07-12T13:25:46.789Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-12T12:25:36.306Z",
+      "lastCheckedAt": "2026-07-12T13:25:46.585Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-12T12:25:37.243Z",
+      "lastCheckedAt": "2026-07-12T13:25:47.395Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-12T12:25:37.371Z",
+      "lastCheckedAt": "2026-07-12T13:25:47.631Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-12T12:25:36.626Z",
+      "lastCheckedAt": "2026-07-12T13:25:46.605Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -347,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-12T12:25:37.383Z",
+      "lastCheckedAt": "2026-07-12T13:25:47.506Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -416,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
