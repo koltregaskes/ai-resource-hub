@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T11:26:55.548Z",
+  "generatedAt": "2026-07-13T11:43:17.407Z",
   "providers": [
     {
       "id": "openai",
@@ -12,12 +12,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T11:26:53.605Z",
+      "lastCheckedAt": "2026-07-13T11:43:16.018Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Sites",
+          "status": "degraded_performance"
+        },
         {
           "name": "Conversations",
           "status": "operational"
@@ -37,13 +41,19 @@
         {
           "name": "Compliance API",
           "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KXDMD4T8TM58CSKBN7YFD2CK",
+          "title": "Elevated errors when creating sites in ChatGPT",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-07-13T11:39:39.000Z",
+          "updatedAt": "2026-07-13T11:39:39.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
         {
           "id": "01KXDBYJ7BWBE2NRDAQTKPM5WK",
           "title": "Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KXDMD4T8TM58CSKBN7YFD2CK",
+          "title": "Elevated errors when creating sites in ChatGPT",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-07-13T11:39:39.000Z",
+          "updatedAt": "2026-07-13T11:39:39.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
         {
           "id": "01KXDBYJ7BWBE2NRDAQTKPM5WK",
           "title": "Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-07-11T07:03:51.000Z",
           "resolvedAt": "2026-07-11T07:03:51.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KWDW344V7XWEQERJSEW62W57",
-          "title": "Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-01T03:38:18.000Z",
-          "updatedAt": "2026-07-11T02:11:01.000Z",
-          "resolvedAt": "2026-07-11T02:11:01.000Z",
-          "summary": "Core functionality in FedRAMP workspaces has been restored, and the broader incident is resolved."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T11:26:54.413Z",
+      "lastCheckedAt": "2026-07-13T11:43:16.727Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T11:26:53.586Z",
+      "lastCheckedAt": "2026-07-13T11:43:16.113Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +229,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T11:26:54.775Z",
+      "lastCheckedAt": "2026-07-13T11:43:17.092Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +249,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T11:26:55.542Z",
+      "lastCheckedAt": "2026-07-13T11:43:17.342Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +314,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T11:26:54.107Z",
+      "lastCheckedAt": "2026-07-13T11:43:16.465Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -347,7 +357,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T11:26:55.425Z",
+      "lastCheckedAt": "2026-07-13T11:43:17.396Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -416,7 +426,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
