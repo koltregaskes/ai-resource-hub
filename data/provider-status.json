@@ -1,6 +1,103 @@
 {
-  "generatedAt": "2026-07-13T08:35:44.492Z",
+  "generatedAt": "2026-07-13T11:26:55.548Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-13T11:26:53.605Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Conversations",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KXDBYJ7BWBE2NRDAQTKPM5WK",
+          "title": "Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-07-13T09:11:53.000Z",
+          "updatedAt": "2026-07-13T11:11:41.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KXDBYJ7BWBE2NRDAQTKPM5WK",
+          "title": "Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-07-13T09:11:53.000Z",
+          "updatedAt": "2026-07-13T11:11:41.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
+          "id": "01KXAVPTZ85KG478DP1YC0SV2V",
+          "title": "Elevated conversation and login errors on ChatGPT for iOS and macOS",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-12T09:49:34.000Z",
+          "updatedAt": "2026-07-12T15:28:24.000Z",
+          "resolvedAt": "2026-07-12T15:28:24.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KX7Y6ETMKP3ATQ85Z33J0EHN",
+          "title": "Elevated Errors for Sora API",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-07-11T06:35:19.000Z",
+          "updatedAt": "2026-07-11T07:03:51.000Z",
+          "resolvedAt": "2026-07-11T07:03:51.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KWDW344V7XWEQERJSEW62W57",
+          "title": "Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-01T03:38:18.000Z",
+          "updatedAt": "2026-07-11T02:11:01.000Z",
+          "resolvedAt": "2026-07-11T02:11:01.000Z",
+          "summary": "Core functionality in FedRAMP workspaces has been restored, and the broader incident is resolved."
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T08:35:43.611Z",
+      "lastCheckedAt": "2026-07-13T11:26:54.413Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T08:35:43.153Z",
+      "lastCheckedAt": "2026-07-13T11:26:53.586Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T08:35:43.979Z",
+      "lastCheckedAt": "2026-07-13T11:26:54.775Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T08:35:44.485Z",
+      "lastCheckedAt": "2026-07-13T11:26:55.542Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T08:35:43.354Z",
+      "lastCheckedAt": "2026-07-13T11:26:54.107Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -240,92 +337,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T08:35:43.088Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Conversations",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KXAVPTZ85KG478DP1YC0SV2V",
-          "title": "Elevated conversation and login errors on ChatGPT for iOS and macOS",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-12T09:49:34.000Z",
-          "updatedAt": "2026-07-12T15:28:24.000Z",
-          "resolvedAt": "2026-07-12T15:28:24.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KX7Y6ETMKP3ATQ85Z33J0EHN",
-          "title": "Elevated Errors for Sora API",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-07-11T06:35:19.000Z",
-          "updatedAt": "2026-07-11T07:03:51.000Z",
-          "resolvedAt": "2026-07-11T07:03:51.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KWDW344V7XWEQERJSEW62W57",
-          "title": "Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-01T03:38:18.000Z",
-          "updatedAt": "2026-07-11T02:11:01.000Z",
-          "resolvedAt": "2026-07-11T02:11:01.000Z",
-          "summary": "Core functionality in FedRAMP workspaces has been restored, and the broader incident is resolved."
-        },
-        {
-          "id": "01KX6Y1QMFX4NASV5DD591AD50",
-          "title": "OpenAI website and Help Center content may be unavailable",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-07-10T21:13:30.000Z",
-          "updatedAt": "2026-07-10T23:07:39.000Z",
-          "resolvedAt": "2026-07-10T23:07:39.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -336,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-13T08:35:44.224Z",
+      "lastCheckedAt": "2026-07-13T11:26:55.425Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
