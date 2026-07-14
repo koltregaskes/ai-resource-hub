@@ -1,6 +1,103 @@
 {
-  "generatedAt": "2026-07-14T14:10:07.733Z",
+  "generatedAt": "2026-07-14T15:10:30.605Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-14T15:10:29.086Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Conversations",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KXGJPKV743DPQZDZQ57VR0JQ",
+          "title": "Some ChatGPT Go users may experience conversation failures when using GPT-5.5.",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-14T15:07:36.000Z",
+          "updatedAt": "2026-07-14T15:07:36.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KXGJPKV743DPQZDZQ57VR0JQ",
+          "title": "Some ChatGPT Go users may experience conversation failures when using GPT-5.5.",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-14T15:07:36.000Z",
+          "updatedAt": "2026-07-14T15:07:36.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
+          "id": "01KXDBYJ7BWBE2NRDAQTKPM5WK",
+          "title": "Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-13T09:11:53.000Z",
+          "updatedAt": "2026-07-13T14:35:47.000Z",
+          "resolvedAt": "2026-07-13T14:35:47.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXDMD4T8TM58CSKBN7YFD2CK",
+          "title": "Elevated errors when creating sites in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-13T11:39:39.000Z",
+          "updatedAt": "2026-07-13T12:59:55.000Z",
+          "resolvedAt": "2026-07-13T12:59:55.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXAVPTZ85KG478DP1YC0SV2V",
+          "title": "Elevated conversation and login errors on ChatGPT for iOS and macOS",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-12T09:49:34.000Z",
+          "updatedAt": "2026-07-12T15:28:24.000Z",
+          "resolvedAt": "2026-07-12T15:28:24.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T14:10:06.929Z",
+      "lastCheckedAt": "2026-07-14T15:10:29.566Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T14:10:06.855Z",
+      "lastCheckedAt": "2026-07-14T15:10:29.056Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T14:10:07.514Z",
+      "lastCheckedAt": "2026-07-14T15:10:30.026Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T14:10:07.726Z",
+      "lastCheckedAt": "2026-07-14T15:10:30.499Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T14:10:06.714Z",
+      "lastCheckedAt": "2026-07-14T15:10:29.177Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -240,92 +337,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T14:10:06.743Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Conversations",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KXDBYJ7BWBE2NRDAQTKPM5WK",
-          "title": "Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-13T09:11:53.000Z",
-          "updatedAt": "2026-07-13T14:35:47.000Z",
-          "resolvedAt": "2026-07-13T14:35:47.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXDMD4T8TM58CSKBN7YFD2CK",
-          "title": "Elevated errors when creating sites in ChatGPT",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-13T11:39:39.000Z",
-          "updatedAt": "2026-07-13T12:59:55.000Z",
-          "resolvedAt": "2026-07-13T12:59:55.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXAVPTZ85KG478DP1YC0SV2V",
-          "title": "Elevated conversation and login errors on ChatGPT for iOS and macOS",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-12T09:49:34.000Z",
-          "updatedAt": "2026-07-12T15:28:24.000Z",
-          "resolvedAt": "2026-07-12T15:28:24.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KX7Y6ETMKP3ATQ85Z33J0EHN",
-          "title": "Elevated Errors for Sora API",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-07-11T06:35:19.000Z",
-          "updatedAt": "2026-07-11T07:03:51.000Z",
-          "resolvedAt": "2026-07-11T07:03:51.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -336,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T14:10:07.660Z",
+      "lastCheckedAt": "2026-07-14T15:10:30.598Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -405,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
