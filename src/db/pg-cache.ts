@@ -130,6 +130,19 @@ interface CachedNews {
   discovered_at: string | null;
 }
 
+export interface CachedEvent {
+  id: string;
+  name: string;
+  url: string;
+  date_start: string | null;
+  date_end: string | null;
+  location: string | null;
+  category: string;
+  recurring: boolean;
+  description: string | null;
+  updated_at: string | null;
+}
+
 interface CachedPriceHistory {
   model_id: string;
   model_name: string;
@@ -462,6 +475,10 @@ export function getNewsCategories(): Array<{ category: string; count: number }> 
   return Array.from(counts.entries())
     .map(([category, count]) => ({ category, count }))
     .sort((a, b) => b.count - a.count);
+}
+
+export function getEvents(): CachedEvent[] {
+  return loadCache<CachedEvent>('events');
 }
 
 export function getPriceHistory(): CachedPriceHistory[] {
