@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-bec37c4a60606a701f01",
+    "title": "OpenAI&#8217;s first hardware device is reportedly a screenless speaker that can move",
+    "url": "https://techcrunch.com/2026/07/14/openais-first-hardware-device-is-reportedly-a-screenless-speaker-that-can-move/",
+    "source": "TechCrunch",
+    "summary": "The device is weirdly described as involving \"mechanical elements that can move on their own\" and the Bloomberg report includes the detail that the device is designed to \"feel like a companion and become a physical manifestation of OpenAI’s ChatGPT.\"",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-14T22:22:24.000Z",
+    "discovered_at": "2026-07-14 23:09:07"
+  },
+  {
+    "id": "news-5fd63a079c24234df171",
+    "title": "OpenAI pushes back on Apple trade secret lawsuit",
+    "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/",
+    "source": "TechCrunch",
+    "summary": "OpenAI has issued another statement on the lawsuit, this time suggesting it lacks merit.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-14T22:07:42.000Z",
+    "discovered_at": "2026-07-14 23:09:07"
+  },
+  {
+    "id": "news-741e19cfb5c38e2d3cd3",
+    "title": "OpenAI&#8217;s new flagship model deletes files on its own, people keep warning",
+    "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
+    "source": "TechCrunch",
+    "summary": "A number of social media posts claim that GPT-5.6 Sol deleted files and data without warning. OpenAI had basically disclosed the problem in June.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-14T21:50:11.000Z",
+    "discovered_at": "2026-07-14 23:09:07"
+  },
+  {
+    "id": "news-dc52ec30e5cc85731c6b",
+    "title": "OpenAI may announce a ChatGPT smart speaker this year",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/965670/openai-chatgpt-ai-smart-speaker-hardware-device",
+    "source": "The Verge",
+    "summary": "OpenAI's first device is set to be a smart speaker that lets you talk with ChatGPT, according to a report from Bloomberg. The device apparently won't have a screen, but will use a camera and additional sensors to \"understand\" your environment. The report comes just days after Apple filed a lawsuit against OpenAI that…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-14T21:26:32.000Z",
+    "discovered_at": "2026-07-14 23:09:08"
+  },
+  {
     "id": "news-dfb756fb6771d80d17bd",
     "title": "Apple opens its new Siri AI to everyone with the iOS 27 public beta",
     "url": "https://techcrunch.com/2026/07/14/apple-opens-its-new-siri-ai-to-everyone-with-the-ios-27-public-beta/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:42:27.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-dca1b117b4e4d6e723d2",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:41:27.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-857d5aa6b104b6f6c0f4",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:39:39.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-2cc0275fcceef65262e6",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:25:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-6aa6a348b8e2800be93a",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T18:33:31.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-3ebcd8a805f34a6adb29",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T17:45:55.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-a9b65061bfa7a7eb5768",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T17:18:11.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-cfcf2428a8463c2a512e",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:22:15.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-ec43065966072242fc7a",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-24b6eb89f4163ff2d9c4",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-274fe08b7f274f10580a",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T15:47:36.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-ef09d5bafff41ffd4078",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T15:17:59.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-bf9c8ae541abb778a204",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T14:37:48.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-fd86030a8677bbd33fb5",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T14:24:53.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-b7254e7e97e934602ee6",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T14:06:47.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-8ad960bf1ba388e8a78d",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T14:01:07.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-234e189f6673a76de2ab",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T14:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-cb9db543cbd413069754",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T11:43:29.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-92ab1f77dd8ccf54b1a2",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-e74d29ba97202e0c5832",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T09:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-f1a3905ea961908fb106",
@@ -261,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T02:46:42.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-ec0c60c1ed9679876ffd",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:45:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-a3fd26bed813e7318f03",
@@ -285,19 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
-  },
-  {
-    "id": "news-cca00ce687818d9ad6ab",
-    "title": "How data science teams use ChatGPT Work",
-    "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
-    "source": "OpenAI",
-    "summary": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-248b5ff0699922b23d03",
@@ -309,31 +345,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
-    "id": "news-49dbfe7fe12df344fc43",
-    "title": "Hermes agent maker Nous Research in talks for new funding at $1.5B valuation",
-    "url": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
-    "source": "TechCrunch",
-    "summary": "The company is raising at least $75 million, led by Robot Ventures, with significant participation from USV and other prominent investors.",
-    "category": "industry",
+    "id": "news-cca00ce687818d9ad6ab",
+    "title": "How data science teams use ChatGPT Work",
+    "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+    "source": "OpenAI",
+    "summary": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-13T23:31:18.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
-  },
-  {
-    "id": "news-2eaf2286673ab539fc8b",
-    "title": "Satya Nadella has issued a shocking warning to companies using AI",
-    "url": "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/",
-    "source": "TechCrunch",
-    "summary": "Of all the debates raging about the potential downsides of AI, there is one worry causing the most hand-wringing among AI enthusiasts in Silicon Valley — that the giant AI labs that sell proprietary models are somehow acting like Trojan horses.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-13T20:59:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "published_at": "2026-07-14T00:00:00.000Z",
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-c5494d04de44894fefcf",
@@ -345,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T20:43:20.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
-  },
-  {
-    "id": "news-795d17f139aa93495c0c",
-    "title": "The wildest allegations in Apple’s trade secrets lawsuit against OpenAI",
-    "url": "https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai/",
-    "source": "TechCrunch",
-    "summary": "Apple’s trade secrets lawsuit against OpenAI contains allegations that range from employees joking about unauthorized access to Apple’s systems to claims that job candidates were asked to bring Apple hardware to interviews. Here are the complaint’s most eye-catching claims.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-13T18:22:10.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-6358ddebecad305509ec",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T17:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -381,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
-  },
-  {
-    "id": "news-d579803380058aabb318",
-    "title": "Waze is getting a bunch of new AI-powered features",
-    "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
-    "source": "The Verge",
-    "summary": "Waze is getting an AI makeover. Google is integrating its flagship AI assistant, Gemini, into the driving app with the goal of letting users personalize their trips a little more. Of the four new updates, only two are being described as involving Gemini. Waze says its updating its conversation reporting feature, first…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-13T09:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-027b05f9d0faae1802b4",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T07:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-2c539797fe263ec51334",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-e799563c0958e055c8a2",
@@ -429,31 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
-  },
-  {
-    "id": "news-5941cef110c0f46967cf",
-    "title": "ChatGPT is now a partner for your most ambitious work",
-    "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-    "source": "OpenAI",
-    "summary": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
-  },
-  {
-    "id": "news-54ee76ae9206d639c080",
-    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
-    "url": "https://openai.com/index/gpt-5-6",
-    "source": "OpenAI",
-    "summary": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-8fd74bd3f51991b52530",
@@ -465,7 +441,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
+  },
+  {
+    "id": "news-5941cef110c0f46967cf",
+    "title": "ChatGPT is now a partner for your most ambitious work",
+    "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+    "source": "OpenAI",
+    "summary": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-14 23:09:02"
+  },
+  {
+    "id": "news-54ee76ae9206d639c080",
+    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+    "url": "https://openai.com/index/gpt-5-6",
+    "source": "OpenAI",
+    "summary": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-41b85c9cdb7a0122f22d",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:30:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-eaad4cbcfa7f5327a2cc",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-de92863115274012478e",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T10:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-d7499a6963c6e5c4d93b",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -537,19 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
-  },
-  {
-    "id": "news-cb031b5cf3e3be67bd75",
-    "title": "MUFG aims to become AI-native with OpenAI",
-    "url": "https://openai.com/index/mufg",
-    "source": "OpenAI",
-    "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-60d1b56766e3b67711e2",
@@ -561,7 +549,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
+  },
+  {
+    "id": "news-cb031b5cf3e3be67bd75",
+    "title": "MUFG aims to become AI-native with OpenAI",
+    "url": "https://openai.com/index/mufg",
+    "source": "OpenAI",
+    "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-07T00:00:00.000Z",
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:40"
+    "discovered_at": "2026-07-14 23:09:06"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:40"
+    "discovered_at": "2026-07-14 23:09:06"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:40"
+    "discovered_at": "2026-07-14 23:09:06"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:40"
+    "discovered_at": "2026-07-14 23:09:06"
   },
   {
     "id": "news-4c4d91d3ce63907b68d1",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-200e6c5f82a034d1e586",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:39"
+    "discovered_at": "2026-07-14 23:09:02"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:08"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-07-14 21:12:41"
+    "discovered_at": "2026-07-14 23:09:07"
   }
 ]
