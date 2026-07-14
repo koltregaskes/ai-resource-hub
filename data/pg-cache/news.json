@@ -1,39 +1,63 @@
 [
   {
+    "id": "news-ef09d5bafff41ffd4078",
+    "title": "New York State halts construction of all new data centers",
+    "url": "https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/",
+    "source": "TechCrunch",
+    "summary": "New York has become the first state to temporarily halt approval of large data centers, as Gov. Kathy Hochul argues the AI-driven building boom shouldn’t come at the expense of higher electricity costs, water supplies, or local control.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-14T15:17:59.000Z",
+    "discovered_at": "2026-07-14 15:44:30"
+  },
+  {
+    "id": "news-bf9c8ae541abb778a204",
+    "title": "Reflection inks $1B compute deal with Nebius",
+    "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+    "source": "TechCrunch",
+    "summary": "Reflection AI has signed a $1 billion deal to access Nebius' compute. Reflection was founded in 2024 and is developing open source AI technology.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-14T14:37:48.000Z",
+    "discovered_at": "2026-07-14 15:44:30"
+  },
+  {
+    "id": "news-fd86030a8677bbd33fb5",
+    "title": "The real AI race may no longer be at the frontier",
+    "url": "https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/",
+    "source": "TechCrunch",
+    "summary": "Hugging Face CEO Clem Delangue says enterprises increasingly want open models, due to cost, accessibility, and ownership. Do frontier models still matter if most production AI ends up running on open models?",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-14T14:24:53.000Z",
+    "discovered_at": "2026-07-14 15:44:30"
+  },
+  {
     "id": "news-b7254e7e97e934602ee6",
     "title": "Spotify expands its AI push with a ChatGPT-like music assistant",
     "url": "https://techcrunch.com/2026/07/14/spotify-expands-its-ai-push-with-a-chatgpt-like-music-assistant/",
     "source": "TechCrunch",
-    "summary": "Spotify is rolling out a new AI-powered conversational feature that lets Premium subscribers chat with the app to discover music, podcasts, and audiobooks, and more.",
+    "summary": "Spotify is rolling out a new AI-powered conversational feature that lets Premium subscribers chat with the app to discover music, podcasts, audiobooks, and more.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T14:06:47.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
-    "id": "news-8ad960bf1ba388e8a78d",
-    "title": "Sam Altman didn’t need another lawsuit",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/965294/openai-apple-trade-secrets-lawsuit-sam-altman-ipo",
-    "source": "The Verge",
-    "summary": "OpenAI has spent the better part of the year involved in lawsuit after lawsuit, including one from the world's richest man. But last Friday, the company was hit with one of the highest-profile legal actions yet - from Apple. OpenAI's expensive hardware bet is what's on the line. Apple's lawsuit against OpenAI, filed i…",
+    "id": "news-234e189f6673a76de2ab",
+    "title": "Superhuman&#8217;s new auto-draft feature almost makes me like AI replies",
+    "url": "https://techcrunch.com/2026/07/14/superhumans-new-auto-draft-feature-almost-makes-me-like-ai-replies/",
+    "source": "TechCrunch",
+    "summary": "Superhuman’s latest AI email drafting feature is its most convincing yet, generating replies that often required little to no editing in our testing.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-14T14:01:07.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
-  },
-  {
-    "id": "news-cb9db543cbd413069754",
-    "title": "Google’s Demis Hassabis says it’s time for a global AI watchdog — led by the US",
-    "url": "https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog",
-    "source": "The Verge",
-    "summary": "Demis Hassabis thinks the world needs an AI watchdog with the power to hit the brakes if frontier models become too dangerous. Writing in a blog post, the Google DeepMind CEO and cofounder said the US should lead the initiative, arguing that the country is the best place to set global standards \"given its economic [&#…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T11:43:29.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "published_at": "2026-07-14T14:00:00.000Z",
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-e74d29ba97202e0c5832",
@@ -45,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T09:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-f1a3905ea961908fb106",
@@ -57,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T02:46:42.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-ec0c60c1ed9679876ffd",
@@ -69,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:45:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-a3fd26bed813e7318f03",
@@ -81,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-cca00ce687818d9ad6ab",
@@ -93,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-248b5ff0699922b23d03",
@@ -105,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-49dbfe7fe12df344fc43",
@@ -117,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T23:31:18.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-2eaf2286673ab539fc8b",
@@ -129,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T20:59:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-c5494d04de44894fefcf",
@@ -141,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T20:43:20.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-795d17f139aa93495c0c",
@@ -153,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T18:22:10.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-344b4b60dc478e344948",
@@ -165,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T17:28:37.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-6358ddebecad305509ec",
@@ -177,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T17:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-ede4b9814854e8cc0cb1",
@@ -189,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T16:31:23.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-8bd4af67411bd693bdd3",
@@ -201,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:34:59.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -213,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-f35fdbbfe824fe2146f9",
@@ -225,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T14:18:16.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-d579803380058aabb318",
@@ -237,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T09:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-795fd22cc6f50ca9c966",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-12T20:10:19.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-5bbc3a5ef63f4579d233",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-12T16:27:06.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-36d5f814be20fea40825",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-12T12:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-e7fba57de10c4cc9587a",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-11T14:13:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-d325e170b88005a03117",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T23:55:07.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-6c4a6e1919dc30422646",
@@ -309,7 +333,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T23:49:50.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
+  },
+  {
+    "id": "news-4f68ab059f6d17c7c3c2",
+    "title": "Apple sues OpenAI for allegedly stealing hardware secrets",
+    "url": "https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets",
+    "source": "The Verge",
+    "summary": "Apple has sued OpenAI, alleging that engineers stole Apple secrets to advance the AI startup's hardware plans. In its complaint, Apple says it uncovered \"a pattern of theft of Apple's trade secrets by OpenAI employees who were formerly at Apple.\" In addition to OpenAI, the lawsuit also names IO Products - Jony Ive's h…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-10T21:36:51.000Z",
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-9970ed3bedc63c5d9e8e",
@@ -321,43 +357,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T21:00:29.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
-    "id": "news-c6175885a6472482a243",
-    "title": "Open source AI matters more than ever, according to Hugging Face&#8217;s Clem Delangue",
-    "url": "https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/",
-    "source": "TechCrunch",
-    "summary": "Open source AI is booming, according to&#160;Hugging Face&#160;CEO&#160;Clem Delangue. The company has grown into something like a GitHub for AI in recent years, where AI builders can share and download open models and datasets, now used by roughly half the Fortune 500. Delangue has seen the same story play out again…",
+    "id": "news-3fd5be624e9b45ce73e8",
+    "title": "Instagram’s Adam Mosseri: If you don&#8217;t like AI, &#8216;then you shouldn&#8217;t have it in your feed&#8217;",
+    "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
+    "source": "The Verge",
+    "summary": "Though Instagram head Adam Mosseri doesn't want to filter out AI content on the platform, he argues that you \"shouldn't have it in your feed\" if you don't like it. \"I don't think we should filter out AI content,\" Mosseri said during an interview on Lenny Rachitsky's podcast. \"I think we should let you know [&#8230;]",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-10T19:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
-  },
-  {
-    "id": "news-18141515c38cf587a2d0",
-    "title": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to build new US fabs",
-    "url": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
-    "source": "TechCrunch",
-    "summary": "The AI chip boom just produced its biggest Wall Street moment yet. Now SK Hynix and Samsung are being asked to build U.S. factories.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-10T17:17:12.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
-  },
-  {
-    "id": "news-33cb29d0b7daaef77869",
-    "title": "Hugging Face&#8217;s CEO on why companies are done renting their AI",
-    "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/",
-    "source": "TechCrunch",
-    "summary": "Open source AI is booming, according to&#160;Hugging Face&#160;CEO&#160;Clem Delangue. The company has grown into something like a GitHub for AI in recent years, where AI builders can share and download open models and datasets, now used by roughly half the Fortune 500. Delangue has seen the same story play out again…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-10T14:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "published_at": "2026-07-10T13:45:02.000Z",
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-027b05f9d0faae1802b4",
@@ -369,19 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T07:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
-  },
-  {
-    "id": "news-bf8a0a3516a92df910d1",
-    "title": "OpenAI says GPT 5.6 is the &#8216;preferred model&#8217; for Microsoft Copilot 365 amid breakup chatter",
-    "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/",
-    "source": "TechCrunch",
-    "summary": "OpenAI's new family of models will continue to power Microsoft's suite of workplace and productivity apps.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-10T00:16:54.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-2c539797fe263ec51334",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-e799563c0958e055c8a2",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-5941cef110c0f46967cf",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-54ee76ae9206d639c080",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-8fd74bd3f51991b52530",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-41b85c9cdb7a0122f22d",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:30:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-eaad4cbcfa7f5327a2cc",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-de92863115274012478e",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T10:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-d7499a6963c6e5c4d93b",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-60d1b56766e3b67711e2",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-cb031b5cf3e3be67bd75",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-4c4d91d3ce63907b68d1",
@@ -657,19 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
-  },
-  {
-    "id": "news-3c923494434c3145e365",
-    "title": "Introducing GeneBench-Pro",
-    "url": "https://openai.com/index/introducing-genebench-pro",
-    "source": "OpenAI",
-    "summary": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-200e6c5f82a034d1e586",
@@ -681,7 +669,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:03"
+    "discovered_at": "2026-07-14 15:44:29"
+  },
+  {
+    "id": "news-3c923494434c3145e365",
+    "title": "Introducing GeneBench-Pro",
+    "url": "https://openai.com/index/introducing-genebench-pro",
+    "source": "OpenAI",
+    "summary": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-06-30T00:00:00.000Z",
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:30"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   },
   {
     "id": "news-f06c5186a486b055f2c1",
@@ -753,6 +753,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-15T15:00:00.000Z",
-    "discovered_at": "2026-07-14 14:10:05"
+    "discovered_at": "2026-07-14 15:44:29"
   }
 ]
