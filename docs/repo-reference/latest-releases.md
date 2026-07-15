@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 15 Jul 2026, 14:06 UTC
+Generated: 15 Jul 2026, 15:47 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -22,11 +22,11 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 12 Jun 2026 | Kimi K2.7 Code | Moonshot AI | tracking | watch | needs research | 0 | 0 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 9 Jun 2026 | Claude Fable 5 | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
 | 4 Jun 2026 | Nemotron 3 Ultra | NVIDIA | tracking | watch | needs research | 0 | 0 | [official](https://docs.api.nvidia.com) |
-| 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | watch | ready for editor | 0 | 1 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 31 May 2026 | MiniMax M3 | MiniMax | tracking | watch | needs research | 0 | 0 | [official](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | 27 May 2026 | Claude Opus 4.8 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
 | 27 May 2026 | Claude Opus 4.8 | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://docs.anthropic.com) |
-| 21 May 2026 | Qwen3.7 Max | Alibaba | tracking | watch | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| 21 May 2026 | Qwen3.7 Max | Alibaba | tracking | watch | ready for editor | 0 | 1 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 20 May 2026 | Grok Build 0.1 | xAI | tracking | watch | ready for editor | 0 | 1 | [official](https://docs.x.ai/developers/models) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
