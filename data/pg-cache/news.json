@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-48dc9974a94f71229658",
+    "title": "Hack suggests AI music generator Suno scraped YouTube for training data",
+    "url": "https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/",
+    "source": "TechCrunch",
+    "summary": "The hacker used an employee's credentials to access source code, which revealed how Suno scraped decades of audio.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-15T17:00:34.000Z",
+    "discovered_at": "2026-07-15 17:36:04"
+  },
+  {
+    "id": "news-cf3f9c68a1e3aee2096a",
+    "title": "Whatnot acquires Shaped to power real-time live shopping recommendations",
+    "url": "https://techcrunch.com/2026/07/15/whatnot-acquires-shaped-to-power-real-time-live-shopping-recommendations/",
+    "source": "TechCrunch",
+    "summary": "Livestream shopping platform Whatnot has acquired AI startup Shaped, a machine learning company focused on real-time recommendations and search. The deal will bolster Whatnot’s personalization and discovery features as it expands into new product categories.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-15T17:00:00.000Z",
+    "discovered_at": "2026-07-15 17:36:04"
+  },
+  {
+    "id": "news-c48ba7fef75b6fab860e",
+    "title": "Microsoft patches record number of security vulnerabilities, citing its use of AI",
+    "url": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/",
+    "source": "TechCrunch",
+    "summary": "Microsoft's monthly release of security fixes, dubbed Patch Tuesday, resolved a record 570 security vulnerabilities across the company's product line, thanks to discoveries with AI.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-15T16:20:18.000Z",
+    "discovered_at": "2026-07-15 17:36:04"
+  },
+  {
+    "id": "news-84777b05d9b259377bc3",
+    "title": "OpenAI finally launches hardware… for Codex",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/965901/openai-hardware-codex-micro-launch",
+    "source": "The Verge",
+    "summary": "OpenAI is finally releasing some hardware. No, it isn't the mysterious AI-powered device the company is developing with former Apple designer Jony Ive, a project already tangled up in a messy lawsuit. Instead, it's a product designed to be used with its coding platform, Codex. The device, a square-shaped block of butt…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-15T16:00:00.000Z",
+    "discovered_at": "2026-07-15 17:36:04"
+  },
+  {
     "id": "news-728c264966d1b7db1be1",
     "title": "Apple Intelligence approved for launch in China with Alibaba’s Qwen AI",
     "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T15:29:33.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-c90a394799e18cd67870",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T13:10:47.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-f072cd3534ee1291d024",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T13:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-5b81db5acf681acdfb95",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T13:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-668f2fe4792b1cab0a45",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-eabc9416b4b3be7f9d94",
@@ -69,7 +117,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
+  },
+  {
+    "id": "news-1e97faa490facd0c8077",
+    "title": "The US is advancing AI safety through state and federal action",
+    "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+    "source": "OpenAI",
+    "summary": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-15T12:00:00.000Z",
+    "discovered_at": "2026-07-15 17:35:59"
+  },
+  {
+    "id": "news-ee230258f27f8a0de489",
+    "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
+    "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+    "source": "OpenAI",
+    "summary": "Explore GPT-Red, OpenAI’s automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-15T10:00:00.000Z",
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-b47abe9a83227878f641",
@@ -81,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T00:27:04.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-6a11f4b9ce3d470768e7",
@@ -93,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T23:10:02.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-bec37c4a60606a701f01",
@@ -105,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T22:22:24.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-5fd63a079c24234df171",
@@ -117,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T22:07:42.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-741e19cfb5c38e2d3cd3",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T21:50:11.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-dc52ec30e5cc85731c6b",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T21:26:32.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-dfb756fb6771d80d17bd",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:42:27.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-dca1b117b4e4d6e723d2",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:41:27.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-857d5aa6b104b6f6c0f4",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:39:39.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-2cc0275fcceef65262e6",
@@ -189,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:25:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-6aa6a348b8e2800be93a",
@@ -201,19 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T18:33:31.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
-  },
-  {
-    "id": "news-3ebcd8a805f34a6adb29",
-    "title": "DeepMind CEO calls for an independent standards body to regulate frontier AI",
-    "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
-    "source": "TechCrunch",
-    "summary": "DeepMind CEO Demis Hassabis is proposing an AI \"standards body\" modeled after FINRA, to test frontier models and develop best practices for their release.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T17:45:55.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-a9b65061bfa7a7eb5768",
@@ -225,19 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T17:18:11.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
-  },
-  {
-    "id": "news-cfcf2428a8463c2a512e",
-    "title": "Meta’s Adam Mosseri says AI token budgets could soon be capped per engineer",
-    "url": "https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/",
-    "source": "TechCrunch",
-    "summary": "Instagram head Adam Mosseri believes companies will eventually need to manage AI token spending the same way they manage payroll or other operating expenses, predicting that engineers could soon face limits on how much they spend using AI tools.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T16:22:15.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-ec43065966072242fc7a",
@@ -249,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
-  },
-  {
-    "id": "news-24b6eb89f4163ff2d9c4",
-    "title": "Google Images gets a Pinterest-like redesign focused on discovery",
-    "url": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/",
-    "source": "TechCrunch",
-    "summary": "Now, when users navigate to Google Images, they'll see a \"For You\" gallery of images tailored to their interests and browsing history.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-274fe08b7f274f10580a",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T15:47:36.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-8ad960bf1ba388e8a78d",
@@ -297,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T14:01:07.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-cb9db543cbd413069754",
@@ -309,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T11:43:29.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-92ab1f77dd8ccf54b1a2",
@@ -321,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-e74d29ba97202e0c5832",
@@ -333,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T09:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-248b5ff0699922b23d03",
@@ -345,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-cca00ce687818d9ad6ab",
@@ -357,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-c5494d04de44894fefcf",
@@ -369,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T20:43:20.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
-  },
-  {
-    "id": "news-6358ddebecad305509ec",
-    "title": "The 6 wildest claims in Apple&#8217;s lawsuit against OpenAI",
-    "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
-    "source": "The Verge",
-    "summary": "When Apple employees interviewed for jobs at OpenAI, the AI startup's hardware head allegedly asked them to show up with something unusual: components they were working on and unreleased product samples. That's according to a blockbuster lawsuit filed by Apple, which accuses OpenAI of stealing confidential documents,…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-13T17:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-027b05f9d0faae1802b4",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T07:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-2c539797fe263ec51334",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-e799563c0958e055c8a2",
@@ -429,31 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
-  },
-  {
-    "id": "news-54ee76ae9206d639c080",
-    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
-    "url": "https://openai.com/index/gpt-5-6",
-    "source": "OpenAI",
-    "summary": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
-  },
-  {
-    "id": "news-5941cef110c0f46967cf",
-    "title": "ChatGPT is now a partner for your most ambitious work",
-    "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-    "source": "OpenAI",
-    "summary": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-8fd74bd3f51991b52530",
@@ -465,7 +465,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
+  },
+  {
+    "id": "news-54ee76ae9206d639c080",
+    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+    "url": "https://openai.com/index/gpt-5-6",
+    "source": "OpenAI",
+    "summary": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-15 17:35:59"
+  },
+  {
+    "id": "news-5941cef110c0f46967cf",
+    "title": "ChatGPT is now a partner for your most ambitious work",
+    "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+    "source": "OpenAI",
+    "summary": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-41b85c9cdb7a0122f22d",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:30:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-eaad4cbcfa7f5327a2cc",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-de92863115274012478e",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T10:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-d7499a6963c6e5c4d93b",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-60d1b56766e3b67711e2",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-cb031b5cf3e3be67bd75",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -573,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:09"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -585,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -597,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -609,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-fb435a036a32d4b88783",
@@ -621,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:35:59"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -633,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -645,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:09"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -657,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:09"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -669,31 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:09"
-  },
-  {
-    "id": "news-3c923494434c3145e365",
-    "title": "Introducing GeneBench-Pro",
-    "url": "https://openai.com/index/introducing-genebench-pro",
-    "source": "OpenAI",
-    "summary": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
-  },
-  {
-    "id": "news-4c4d91d3ce63907b68d1",
-    "title": "Core dump epidemiology: fixing an 18-year-old bug",
-    "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
-    "source": "OpenAI",
-    "summary": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:05"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -753,6 +753,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-15 15:47:10"
+    "discovered_at": "2026-07-15 17:36:04"
   }
 ]
