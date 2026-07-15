@@ -1,6 +1,103 @@
 {
-  "generatedAt": "2026-07-14T23:35:19.509Z",
+  "generatedAt": "2026-07-15T00:03:49.759Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-15T00:03:48.334Z",
+      "overallStatus": "partial_outage",
+      "overallLabel": "Partial System Outage",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Login",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Conversations",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Compliance API",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Search",
+          "status": "partial_outage"
+        },
+        {
+          "name": "GPTs",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Image Generation",
+          "status": "partial_outage"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KXHH1BJ9BS0FVE2MGEJ9FZ5M",
+          "title": "Elevated errors affecting ChatGPT",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-14T23:57:45.000Z",
+          "updatedAt": "2026-07-14T23:57:45.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating login issues and intermittent errors affecting ChatGPT."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KXHH1BJ9BS0FVE2MGEJ9FZ5M",
+          "title": "Elevated errors affecting ChatGPT",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-14T23:57:45.000Z",
+          "updatedAt": "2026-07-14T23:57:45.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating login issues and intermittent errors affecting ChatGPT."
+        },
+        {
+          "id": "01KXGJPKV743DPQZDZQ57VR0JQ",
+          "title": "Some ChatGPT Go users may experience conversation failures when using GPT-5.5.",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-14T15:07:36.000Z",
+          "updatedAt": "2026-07-14T16:02:46.000Z",
+          "resolvedAt": "2026-07-14T16:02:46.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXDBYJ7BWBE2NRDAQTKPM5WK",
+          "title": "Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-13T09:11:53.000Z",
+          "updatedAt": "2026-07-13T14:35:47.000Z",
+          "resolvedAt": "2026-07-13T14:35:47.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXDMD4T8TM58CSKBN7YFD2CK",
+          "title": "Elevated errors when creating sites in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-13T11:39:39.000Z",
+          "updatedAt": "2026-07-13T12:59:55.000Z",
+          "resolvedAt": "2026-07-13T12:59:55.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T23:35:18.740Z",
+      "lastCheckedAt": "2026-07-15T00:03:49.051Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T23:35:18.229Z",
+      "lastCheckedAt": "2026-07-15T00:03:48.386Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T23:35:19.060Z",
+      "lastCheckedAt": "2026-07-15T00:03:49.297Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T23:35:19.332Z",
+      "lastCheckedAt": "2026-07-15T00:03:49.487Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T23:35:18.507Z",
+      "lastCheckedAt": "2026-07-15T00:03:48.751Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -240,92 +337,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T23:35:18.249Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Conversations",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KXGJPKV743DPQZDZQ57VR0JQ",
-          "title": "Some ChatGPT Go users may experience conversation failures when using GPT-5.5.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-14T15:07:36.000Z",
-          "updatedAt": "2026-07-14T16:02:46.000Z",
-          "resolvedAt": "2026-07-14T16:02:46.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXDBYJ7BWBE2NRDAQTKPM5WK",
-          "title": "Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-13T09:11:53.000Z",
-          "updatedAt": "2026-07-13T14:35:47.000Z",
-          "resolvedAt": "2026-07-13T14:35:47.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXDMD4T8TM58CSKBN7YFD2CK",
-          "title": "Elevated errors when creating sites in ChatGPT",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-13T11:39:39.000Z",
-          "updatedAt": "2026-07-13T12:59:55.000Z",
-          "resolvedAt": "2026-07-13T12:59:55.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXAVPTZ85KG478DP1YC0SV2V",
-          "title": "Elevated conversation and login errors on ChatGPT for iOS and macOS",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-12T09:49:34.000Z",
-          "updatedAt": "2026-07-12T15:28:24.000Z",
-          "resolvedAt": "2026-07-12T15:28:24.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -336,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-14T23:35:19.420Z",
+      "lastCheckedAt": "2026-07-15T00:03:49.533Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -345,7 +356,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-07-13T05:38:52.000Z",
+          "id": "together-feed-0-2026-07-14T23:49:07.000Z",
+          "title": "Kimi K2.6 recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-14T23:49:07.000Z",
+          "updatedAt": "2026-07-14T23:49:07.000Z",
+          "resolvedAt": "2026-07-14T23:49:07.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-14T23:36:59.000Z",
+          "title": "Kimi K2.6 went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-14T23:36:59.000Z",
+          "updatedAt": "2026-07-14T23:36:59.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Kimi K2.6 went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-13T05:38:52.000Z",
           "title": "Qwen3.5 9B recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -356,7 +389,7 @@
           "summary": "Qwen3.5 9B recovered"
         },
         {
-          "id": "together-feed-1-2026-07-13T05:23:57.000Z",
+          "id": "together-feed-3-2026-07-13T05:23:57.000Z",
           "title": "Qwen3.5 9B went down",
           "status": "investigating",
           "impact": "major",
@@ -365,28 +398,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Qwen3.5 9B went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-12T19:04:18.000Z",
-          "title": "Kimi K2.7 Code recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-12T19:04:18.000Z",
-          "updatedAt": "2026-07-12T19:04:18.000Z",
-          "resolvedAt": "2026-07-12T19:04:18.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.7 Code recovered"
-        },
-        {
-          "id": "together-feed-3-2026-07-12T18:49:09.000Z",
-          "title": "Kimi K2.7 Code went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-12T18:49:09.000Z",
-          "updatedAt": "2026-07-12T18:49:09.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K2.7 Code went down"
         }
       ]
     },
@@ -405,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
