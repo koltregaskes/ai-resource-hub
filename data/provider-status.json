@@ -1,6 +1,123 @@
 {
-  "generatedAt": "2026-07-16T21:45:27.511Z",
+  "generatedAt": "2026-07-16T23:09:22.078Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-16T23:09:20.482Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Connectors/Apps",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        },
+        {
+          "name": "ChatGPT Work",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KXPJ62Z704GE0SRNKQA64X4X",
+          "title": "Elevated errors for Github connector",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-16T22:54:01.000Z",
+          "updatedAt": "2026-07-16T22:54:01.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors when using the Github connector.\n\nWe are working on implementing a mitigation."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KXPJ62Z704GE0SRNKQA64X4X",
+          "title": "Elevated errors for Github connector",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-16T22:54:01.000Z",
+          "updatedAt": "2026-07-16T22:54:01.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors when using the Github connector.\n\nWe are working on implementing a mitigation."
+        },
+        {
+          "id": "01KXN14DD3EYYJ6PJ9M736WDSV",
+          "title": "Elevated Error Rates For SSO Login",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-16T08:36:46.000Z",
+          "updatedAt": "2026-07-16T15:23:13.000Z",
+          "resolvedAt": "2026-07-16T15:23:13.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXHH1BJ9BS0FVE2MGEJ9FZ5M",
+          "title": "Elevated errors affecting ChatGPT",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-14T23:57:45.000Z",
+          "updatedAt": "2026-07-16T21:24:21.000Z",
+          "resolvedAt": "2026-07-15T00:39:32.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXHK8YFSP8B9WP110W4XEM45",
+          "title": "Issue affecting voice mode in ChatGPT",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-07-15T00:36:51.000Z",
+          "updatedAt": "2026-07-15T00:38:18.000Z",
+          "resolvedAt": "2026-07-15T00:38:18.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-16T23:09:21.372Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -12,30 +129,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T21:45:26.216Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-07-16T23:09:20.585Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Code",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
           "status": "operational"
         },
         {
@@ -43,30 +160,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "kqbd7wm6hnnr",
-          "title": "Elevated errors for multiple models",
-          "status": "identified",
-          "impact": "major",
-          "startedAt": "2026-07-16T18:36:58.760Z",
-          "updatedAt": "2026-07-16T20:58:44.873Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/zhv1t1h0dbby",
-          "summary": "At this time, we are seeing recovery on requests to most models. We are continuing to see elevated errors on requests to Claude Fable 5 and Mythos 5, and are working to resolve th..."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "kqbd7wm6hnnr",
           "title": "Elevated errors for multiple models",
-          "status": "identified",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-07-16T18:36:58.760Z",
-          "updatedAt": "2026-07-16T20:58:44.873Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-07-16T22:53:12.391Z",
+          "resolvedAt": "2026-07-16T22:53:12.373Z",
           "url": "https://stspg.io/zhv1t1h0dbby",
-          "summary": "At this time, we are seeing recovery on requests to most models. We are continuing to see elevated errors on requests to Claude Fable 5 and Mythos 5, and are working to resolve th..."
+          "summary": "This issue has been resolved. From 11:30am PT / 18:30 UTC through to 3:15pm PT / 22:15 UTC some users experienced elevated errors on requests to Claude Models. Most errors were ex..."
         },
         {
           "id": "vjfp60ngq2zj",
@@ -104,26 +209,6 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T21:45:26.665Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -134,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T21:45:27.264Z",
+      "lastCheckedAt": "2026-07-16T23:09:21.563Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T21:45:27.504Z",
+      "lastCheckedAt": "2026-07-16T23:09:22.071Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T21:45:26.520Z",
+      "lastCheckedAt": "2026-07-16T23:09:21.002Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -252,92 +337,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T21:45:26.213Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
-        },
-        {
-          "name": "ChatGPT Work",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KXN14DD3EYYJ6PJ9M736WDSV",
-          "title": "Elevated Error Rates For SSO Login",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-16T08:36:46.000Z",
-          "updatedAt": "2026-07-16T15:23:13.000Z",
-          "resolvedAt": "2026-07-16T15:23:13.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXHH1BJ9BS0FVE2MGEJ9FZ5M",
-          "title": "Elevated errors affecting ChatGPT",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-14T23:57:45.000Z",
-          "updatedAt": "2026-07-16T21:24:21.000Z",
-          "resolvedAt": "2026-07-15T00:39:32.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXHK8YFSP8B9WP110W4XEM45",
-          "title": "Issue affecting voice mode in ChatGPT",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-07-15T00:36:51.000Z",
-          "updatedAt": "2026-07-15T00:38:18.000Z",
-          "resolvedAt": "2026-07-15T00:38:18.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXGJPKV743DPQZDZQ57VR0JQ",
-          "title": "Some ChatGPT Go users may experience conversation failures when using GPT-5.5.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-14T15:07:36.000Z",
-          "updatedAt": "2026-07-14T16:02:46.000Z",
-          "resolvedAt": "2026-07-14T16:02:46.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -348,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T21:45:27.386Z",
+      "lastCheckedAt": "2026-07-16T23:09:22.049Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -357,7 +356,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-07-16T20:41:27.000Z",
+          "id": "together-feed-0-2026-07-16T23:02:53.000Z",
+          "title": "Qwen3.5 9B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-16T23:02:53.000Z",
+          "updatedAt": "2026-07-16T23:02:53.000Z",
+          "resolvedAt": "2026-07-16T23:02:53.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-16T22:15:59.000Z",
+          "title": "Qwen3.5 9B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-16T22:15:59.000Z",
+          "updatedAt": "2026-07-16T22:15:59.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-16T20:41:27.000Z",
           "title": "Pearl-ai Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -368,7 +389,7 @@
           "summary": "Pearl-ai Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-1-2026-07-16T20:20:43.000Z",
+          "id": "together-feed-3-2026-07-16T20:20:43.000Z",
           "title": "OpenAI GPT OSS 20B recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -377,28 +398,6 @@
           "resolvedAt": "2026-07-16T20:20:43.000Z",
           "url": "https://status.together.ai/",
           "summary": "OpenAI GPT OSS 20B recovered"
-        },
-        {
-          "id": "together-feed-2-2026-07-16T20:12:06.000Z",
-          "title": "Pearl-ai Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-16T20:12:06.000Z",
-          "updatedAt": "2026-07-16T20:12:06.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Pearl-ai Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-3-2026-07-16T19:34:25.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-16T19:34:25.000Z",
-          "updatedAt": "2026-07-16T19:34:25.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
         }
       ]
     },
@@ -417,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
