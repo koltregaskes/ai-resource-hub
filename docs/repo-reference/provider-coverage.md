@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 16 Jul 2026, 14:18 UTC
+Generated: 16 Jul 2026, 16:39 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -9,7 +9,7 @@ This table shows how much of each provider's public model surface is currently r
 | OpenAI | 25 | 48 | 0 | GPT-5.6 Luna Pro (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 8 | 20 | 0 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) (30 Jun 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 7 | 13 | 1 | Claude Sonnet 5 (30 Jun 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
-| Meta | 6 | 4 | 0 | n/a | n/a | [docs](https://llama.meta.com/docs) |
+| Meta | 6 | 5 | 0 | Muse Spark 1.1 (16 Jul 2026) | n/a | [docs](https://llama.meta.com/docs) |
 | Alibaba | 5 | 41 | 0 | Qwen3.7 Plus (3 Jun 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | DeepSeek | 4 | 7 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
@@ -40,7 +40,7 @@ This table shows how much of each provider's public model surface is currently r
 | xAI | 0 | 11 | 0 | Grok 4.5 (8 Jul 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
 | MiniMax | 0 | 8 | 0 | MiniMax M3 (31 May 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | NVIDIA | 0 | 6 | 0 | Nemotron 3 Ultra (4 Jun 2026) | n/a | [docs](https://docs.api.nvidia.com) |
-| Moonshot AI | 0 | 4 | 0 | Kimi K2.7 Code (12 Jun 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
+| Moonshot AI | 0 | 5 | 0 | Kimi K3 (16 Jul 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
 | AI21 Labs | 0 | 3 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |
 | Inflection | 0 | 2 | 0 | n/a | n/a | [docs](https://docs.inflection.ai) |

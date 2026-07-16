@@ -1,5 +1,137 @@
 [
   {
+    "id": "news-79ed56faeda923460c76",
+    "title": "Google is renaming NotebookLM to Gemini Notebook",
+    "url": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm",
+    "source": "The Verge",
+    "summary": "Google is giving its AI note-taking app a new name. The company announced on Thursday that NotebookLM is becoming Gemini Notebook, but will remain a standalone app even as it integrates more deeply across Gemini and Google Search. Google first revealed Gemini Notebook - then called Project Tailwind - in May 2023 befor…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T16:00:00.000Z",
+    "discovered_at": "2026-07-16 16:39:14"
+  },
+  {
+    "id": "news-a15138565feb7197c6b1",
+    "title": "Google&#8217;s AI Mode now lets you link and interact with select apps",
+    "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/",
+    "source": "TechCrunch",
+    "summary": "With this new update, Google is expanding AI Mode beyond answering questions and into completing tasks across the apps they use regularly.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T16:00:00.000Z",
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
+    "id": "news-0199c9587e0b825a89fe",
+    "title": "Create, edit and star in videos with two Google Vids updates",
+    "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+    "source": "Google",
+    "summary": "Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T16:00:00.000Z",
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
+    "id": "news-a564401bb829d4c0b46b",
+    "title": "Connect more of your apps to Search",
+    "url": "https://blog.google/products-and-platforms/products/search/connected-apps/",
+    "source": "Google",
+    "summary": "You’ll be able to securely link and interact with your go-to services directly in AI Mode.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T16:00:00.000Z",
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
+    "id": "news-8fe39edff791751de0c2",
+    "title": "Why teens deserve access to safe AI",
+    "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
+    "source": "OpenAI",
+    "summary": "Learn how OpenAI is making ChatGPT safer for teens with age-appropriate protections, learning tools, parental controls, and expert partnerships.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T16:00:00.000Z",
+    "discovered_at": "2026-07-16 16:39:12"
+  },
+  {
+    "id": "news-eb3c4a36b14daaebb7f1",
+    "title": "Energy IPOs surge as investors hunt for ways to play AI boom",
+    "url": "https://arstechnica.com/information-technology/2026/07/energy-ipos-surge-as-investors-hunt-for-ways-to-play-ai-boom/",
+    "source": "Ars Technica",
+    "summary": "Companies coming to market are raising money at fastest pace this century.",
+    "category": "research",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T15:48:21.000Z",
+    "discovered_at": "2026-07-16 16:39:14"
+  },
+  {
+    "id": "news-8e1ba79a18969c304ebc",
+    "title": "Yes, you can now order DoorDash from the command line",
+    "url": "https://techcrunch.com/2026/07/16/yes-you-can-now-order-doordash-from-the-command-line/",
+    "source": "TechCrunch",
+    "summary": "DoorDash is opening a limited beta of dd-cli, a command-line tool that lets developers and AI agents search stores, build carts, and place orders from the terminal, marking another step toward software designed for AI agents instead of just humans.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T15:38:55.000Z",
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
+    "id": "news-e4aa83d83a757a27e60d",
+    "title": "Why is OpenAI selling a ChatGPT basketball?",
+    "url": "https://techcrunch.com/2026/07/16/why-is-openai-selling-a-chatgpt-basketball/",
+    "source": "TechCrunch",
+    "summary": "You may have heard that OpenAI released its first piece of hardware this week. You may not have heard about the ChatGPT basketball.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T15:31:09.000Z",
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
+    "id": "news-728270827619beacf9e8",
+    "title": "How a former DeepMind researcher raised at a $300M pre-seed valuation before launching a product",
+    "url": "https://techcrunch.com/2026/07/16/how-a-former-deepmind-researcher-raised-at-a-300m-pre-seed-valuation-before-launching-a-product/",
+    "source": "TechCrunch",
+    "summary": "Drawing on more than a decade spent helping build some of the world's most influential AI systems, including research that later informed the development of ChatGPT, Andrew Dai explains why he believes visual AI is one of the next major frontiers in artificial intelligence.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T15:02:00.000Z",
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
+    "id": "news-68ca93a0fb2be0c27e6b",
+    "title": "Why AMI Labs’ Alexandre LeBrun won&#8217;t call his AI &#8216;AGI&#8217; or &#8216;superintelligence&#8217;",
+    "url": "https://techcrunch.com/2026/07/16/why-ami-labs-alexandre-lebrun-wont-call-his-ai-agi-or-superintelligence/",
+    "source": "TechCrunch",
+    "summary": "While everyone in AI is chasing \"superintelligence,\" Alexandre LeBrun, CEO of Yann LeCun’s world model startup, AMI Labs, dismisses the word.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T14:40:00.000Z",
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
+    "id": "news-a571a566f6c633fec1fa",
+    "title": "Moonshot&#8217;s upcoming Kimi 3 is expected to close the gap with Anthropic&#8217;s Opus 4.8",
+    "url": "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/",
+    "source": "TechCrunch",
+    "summary": "The FT reports Kimi K3 will be the largest open AI model from China, with a parameter count between 2 trillion and 3 trillion.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T14:26:29.000Z",
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
     "id": "news-3a9d056af9a3ec9094f5",
     "title": "Apple Intelligence approved for launch in China with Alibaba and Baidu",
     "url": "https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
@@ -9,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T13:17:59.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-e9a82b74f6f50ff210a9",
@@ -21,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T13:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-f2d4f0d12d3b252fd733",
@@ -33,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T12:06:51.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-3090d72b6869197ea6b4",
@@ -45,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T11:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-2d626a13a678ef4db10d",
@@ -57,7 +189,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T04:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
+  },
+  {
+    "id": "news-6f16a999c8ddd889e881",
+    "title": "How Cars24 scales conversations and builds faster with OpenAI",
+    "url": "https://openai.com/index/cars24",
+    "source": "OpenAI",
+    "summary": "Cars24 uses OpenAI-powered voice and chat agents to handle 1M+ monthly conversation minutes, recover 12% of lost leads, and bring agentic workflows to teams across the company.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-16T00:00:00.000Z",
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-3f3b62ad2c947166e08e",
@@ -69,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T23:59:44.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-89c9f7f3ade42756ea06",
@@ -81,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T22:24:17.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-36b2bbf599ed87e044a2",
@@ -93,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T21:33:20.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-aa32e1edecf76be37131",
@@ -105,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T20:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-5d19712b4f7c3db5150c",
@@ -117,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T19:41:38.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-bacbba8fee1490b451d9",
@@ -129,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T18:06:05.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-275141522901bc82d007",
@@ -141,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T18:04:06.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-f8bec47bee6c00a07e2f",
@@ -153,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T17:48:01.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-48dc9974a94f71229658",
@@ -165,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T17:00:34.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-cf3f9c68a1e3aee2096a",
@@ -177,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T17:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-c48ba7fef75b6fab860e",
@@ -189,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T16:20:18.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-84777b05d9b259377bc3",
@@ -201,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T16:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-54da9f0dc1ee3194fd32",
@@ -213,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T15:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-c90a394799e18cd67870",
@@ -225,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T13:10:47.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
-  },
-  {
-    "id": "news-f072cd3534ee1291d024",
-    "title": "Rime picks up $24M Series A to help enterprises field customer calls",
-    "url": "https://techcrunch.com/2026/07/15/rime-picks-up-24m-series-a-to-help-enterprises-field-customer-calls/",
-    "source": "TechCrunch",
-    "summary": "Rime is handling over 100 million calls each month across multiple companies.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-15T13:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-5b81db5acf681acdfb95",
@@ -249,31 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T13:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
-  },
-  {
-    "id": "news-668f2fe4792b1cab0a45",
-    "title": "Vint Cerf is working on a plan to unleash AI agents on the open internet",
-    "url": "https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/",
-    "source": "TechCrunch",
-    "summary": "The guy behind TCP/IP is working on a standard for identifying AI agents in the wild.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
-  },
-  {
-    "id": "news-eabc9416b4b3be7f9d94",
-    "title": "Indian AI coding startup Emergent becomes a unicorn with $130M Series C",
-    "url": "https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/",
-    "source": "TechCrunch",
-    "summary": "The startup has reached a $120 million annualized revenue run rate and more than 200,000 paying customers.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-1e97faa490facd0c8077",
@@ -285,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-ee230258f27f8a0de489",
@@ -297,43 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T10:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
-  },
-  {
-    "id": "news-b47abe9a83227878f641",
-    "title": "OpenAI researcher Miles Wang in talks to launch AI drug discovery startup valued at $2B",
-    "url": "https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/",
-    "source": "TechCrunch",
-    "summary": "The funding discussions point to investor interest in applying AI to make breakthroughs in life sciences.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-15T00:27:04.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
-  },
-  {
-    "id": "news-6a11f4b9ce3d470768e7",
-    "title": "Lorde says AI glasses are &#8216;not sexy&#8217;",
-    "url": "https://techcrunch.com/2026/07/14/lorde-says-ai-glasses-are-not-sexy/",
-    "source": "TechCrunch",
-    "summary": "\"Increasingly in our world, it gets harder and harder to know what is real,\" Lorde said onstage.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T23:10:02.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
-  },
-  {
-    "id": "news-bec37c4a60606a701f01",
-    "title": "OpenAI&#8217;s first hardware device is reportedly a screenless speaker that can move",
-    "url": "https://techcrunch.com/2026/07/14/openais-first-hardware-device-is-reportedly-a-screenless-speaker-that-can-move/",
-    "source": "TechCrunch",
-    "summary": "The device is weirdly described as involving \"mechanical elements that can move on their own\" and the Bloomberg report includes the detail that the device is designed to \"feel like a companion and become a physical manifestation of OpenAI’s ChatGPT.\"",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T22:22:24.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-dc52ec30e5cc85731c6b",
@@ -345,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T21:26:32.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-2cc0275fcceef65262e6",
@@ -357,19 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T19:25:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
-  },
-  {
-    "id": "news-a9b65061bfa7a7eb5768",
-    "title": "Meta accused of using biased AI targeting for mass layoffs",
-    "url": "https://www.theverge.com/tech/965486/meta-lawsuit-former-employees-ai-layoffs",
-    "source": "The Verge",
-    "summary": "A group of 26 former Meta employees is suing the company over claims that it used AI tools to unfairly target workers on leave with layoffs, as reported earlier by Reuters. In the lawsuit, the employees allege Meta determined which workers to dismiss based on performance data collected by a \"constellation\" of internal…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T17:18:11.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -381,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-92ab1f77dd8ccf54b1a2",
@@ -393,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-cca00ce687818d9ad6ab",
@@ -405,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-248b5ff0699922b23d03",
@@ -417,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -429,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-027b05f9d0faae1802b4",
@@ -441,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T07:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-2c539797fe263ec51334",
@@ -453,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-e799563c0958e055c8a2",
@@ -465,19 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
-  },
-  {
-    "id": "news-8fd74bd3f51991b52530",
-    "title": "GPT-5.5 Bio Bug Bounty",
-    "url": "https://openai.com/index/bio-bug-bounty",
-    "source": "OpenAI",
-    "summary": "Details about the OpenAI Bio Bounty program",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-54ee76ae9206d639c080",
@@ -489,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-5941cef110c0f46967cf",
@@ -501,7 +549,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
+  },
+  {
+    "id": "news-8fd74bd3f51991b52530",
+    "title": "GPT-5.5 Bio Bug Bounty",
+    "url": "https://openai.com/index/bio-bug-bounty",
+    "source": "OpenAI",
+    "summary": "Details about the OpenAI Bio Bounty program",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-41b85c9cdb7a0122f22d",
@@ -513,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:30:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-eaad4cbcfa7f5327a2cc",
@@ -525,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-de92863115274012478e",
@@ -537,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T10:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -549,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-d7499a6963c6e5c4d93b",
@@ -561,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -573,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-60d1b56766e3b67711e2",
@@ -585,19 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
-  },
-  {
-    "id": "news-cb031b5cf3e3be67bd75",
-    "title": "MUFG aims to become AI-native with OpenAI",
-    "url": "https://openai.com/index/mufg",
-    "source": "OpenAI",
-    "summary": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-07T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:12"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -609,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:06"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -621,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -633,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -645,19 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
-  },
-  {
-    "id": "news-fb435a036a32d4b88783",
-    "title": "How ChatGPT adoption has expanded",
-    "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
-    "source": "OpenAI",
-    "summary": "New OpenAI Signals data shows how ChatGPT adoption is growing globally, with users increasing usage, exploring more capabilities, and driving growth across regions and languages.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T09:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:01"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -669,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -681,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:06"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -693,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:06"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -705,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:06"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -717,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -729,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -741,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   },
   {
     "id": "news-dc21cf10e0cd619fdf0d",
@@ -753,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-23T20:17:38.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:14"
   },
   {
     "id": "news-625ae98145abfa064f71",
@@ -765,6 +801,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-17T15:00:00.000Z",
-    "discovered_at": "2026-07-16 14:18:07"
+    "discovered_at": "2026-07-16 16:39:13"
   }
 ]

@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 16 Jul 2026, 14:18 UTC |
+| Generated | 16 Jul 2026, 16:39 UTC |
 | Providers tracked | 40 |
-| Public models | 323 |
+| Public models | 325 |
 | Active models | 110 |
-| Tracking models | 212 |
+| Tracking models | 214 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 64 |
-| Release-desk entries | 52 |
+| News items in cache | 67 |
+| Release-desk entries | 54 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 16 Jul 2026, 14:18 UTC |
-| Current evaluated composite leader | Llama 4 Maverick (57.6) |
-| Latest tracked release | GPT-5.6 Luna Pro (9 Jul 2026) |
+| Latest visible refresh | 16 Jul 2026, 16:39 UTC |
+| Current evaluated composite leader | GPT-5.2 (55.1) |
+| Latest tracked release | Kimi K3 (16 Jul 2026) |
 
 ## Reference Files
 
