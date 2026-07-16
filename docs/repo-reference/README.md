@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 16 Jul 2026, 20:10 UTC |
+| Generated | 16 Jul 2026, 21:15 UTC |
 | Providers tracked | 40 |
 | Public models | 325 |
 | Active models | 110 |
 | Tracking models | 214 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 71 |
+| News items in cache | 70 |
 | Release-desk entries | 54 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 16 Jul 2026, 20:09 UTC |
+| Latest visible refresh | 16 Jul 2026, 21:15 UTC |
 | Current evaluated composite leader | GPT-5.2 (55.1) |
 | Latest tracked release | Kimi K3 (16 Jul 2026) |
 
