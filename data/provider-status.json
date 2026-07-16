@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T10:35:00.703Z",
+  "generatedAt": "2026-07-16T11:52:18.192Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T10:34:58.820Z",
+      "lastCheckedAt": "2026-07-16T11:52:16.820Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T10:34:58.916Z",
+      "lastCheckedAt": "2026-07-16T11:52:16.921Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -149,24 +149,24 @@
         {
           "id": "01KXN14DD3EYYJ6PJ9M736WDSV",
           "title": "Elevated Error Rates For SSO Login",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-07-16T08:36:46.000Z",
-          "updatedAt": "2026-07-16T09:59:46.000Z",
+          "updatedAt": "2026-07-16T10:57:24.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services and seeing gradual recovery."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01KXN14DD3EYYJ6PJ9M736WDSV",
           "title": "Elevated Error Rates For SSO Login",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-07-16T08:36:46.000Z",
-          "updatedAt": "2026-07-16T09:59:46.000Z",
+          "updatedAt": "2026-07-16T10:57:24.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services and seeing gradual recovery."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KXHH1BJ9BS0FVE2MGEJ9FZ5M",
@@ -211,7 +211,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T10:34:59.677Z",
+      "lastCheckedAt": "2026-07-16T11:52:17.346Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -231,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T10:35:00.046Z",
+      "lastCheckedAt": "2026-07-16T11:52:17.871Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T10:35:00.695Z",
+      "lastCheckedAt": "2026-07-16T11:52:18.130Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T10:34:59.407Z",
+      "lastCheckedAt": "2026-07-16T11:52:16.919Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T10:35:00.588Z",
+      "lastCheckedAt": "2026-07-16T11:52:18.185Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
