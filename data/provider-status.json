@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T20:09:54.263Z",
+  "generatedAt": "2026-07-16T20:34:41.067Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T20:09:52.578Z",
+      "lastCheckedAt": "2026-07-16T20:34:39.470Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T20:09:53.420Z",
+      "lastCheckedAt": "2026-07-16T20:34:40.190Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T20:09:54.256Z",
+      "lastCheckedAt": "2026-07-16T20:34:41.060Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -142,23 +142,23 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-0-2026-07-16T19:34:25.000Z",
+          "id": "together-feed-1-2026-07-16T20:12:06.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-16T20:12:06.000Z",
+          "updatedAt": "2026-07-16T20:12:06.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-16T19:34:25.000Z",
           "title": "OpenAI GPT OSS 20B went down",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-07-16T19:34:25.000Z",
           "updatedAt": "2026-07-16T19:34:25.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-16T12:39:39.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-16T12:39:39.000Z",
-          "updatedAt": "2026-07-16T12:39:39.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "OpenAI GPT OSS 20B went down"
@@ -166,7 +166,29 @@
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-07-16T19:34:25.000Z",
+          "id": "together-feed-0-2026-07-16T20:20:43.000Z",
+          "title": "OpenAI GPT OSS 20B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-16T20:20:43.000Z",
+          "updatedAt": "2026-07-16T20:20:43.000Z",
+          "resolvedAt": "2026-07-16T20:20:43.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 20B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-16T20:12:06.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-16T20:12:06.000Z",
+          "updatedAt": "2026-07-16T20:12:06.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-16T19:34:25.000Z",
           "title": "OpenAI GPT OSS 20B went down",
           "status": "investigating",
           "impact": "major",
@@ -177,7 +199,7 @@
           "summary": "OpenAI GPT OSS 20B went down"
         },
         {
-          "id": "together-feed-1-2026-07-16T13:20:13.000Z",
+          "id": "together-feed-3-2026-07-16T13:20:13.000Z",
           "title": "OpenAI GPT OSS 20B recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -186,28 +208,6 @@
           "resolvedAt": "2026-07-16T13:20:13.000Z",
           "url": "https://status.together.ai/",
           "summary": "OpenAI GPT OSS 20B recovered"
-        },
-        {
-          "id": "together-feed-2-2026-07-16T12:39:39.000Z",
-          "title": "OpenAI GPT OSS 20B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-16T12:39:39.000Z",
-          "updatedAt": "2026-07-16T12:39:39.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 20B went down"
-        },
-        {
-          "id": "together-feed-3-2026-07-15T07:05:12.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-15T07:05:12.000Z",
-          "updatedAt": "2026-07-15T07:05:12.000Z",
-          "resolvedAt": "2026-07-15T07:05:12.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
         }
       ]
     },
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T20:09:53.844Z",
+      "lastCheckedAt": "2026-07-16T20:34:40.688Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -242,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T20:09:54.196Z",
+      "lastCheckedAt": "2026-07-16T20:34:40.936Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T20:09:52.963Z",
+      "lastCheckedAt": "2026-07-16T20:34:39.829Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -350,7 +350,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T20:09:52.511Z",
+      "lastCheckedAt": "2026-07-16T20:34:39.364Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
