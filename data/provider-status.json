@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T09:26:06.124Z",
+  "generatedAt": "2026-07-16T10:35:00.703Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,20 +12,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T09:26:04.580Z",
+      "lastCheckedAt": "2026-07-16T10:34:58.820Z",
       "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
-      "summary": "2 active incidents across 6 tracked components.",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "claude.ai",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "partial_outage"
-        },
         {
           "name": "Claude API (api.anthropic.com)",
           "status": "degraded_performance"
@@ -39,22 +31,19 @@
           "status": "degraded_performance"
         },
         {
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
       "activeIncidents": [
-        {
-          "id": "0hzwq1ylg80g",
-          "title": "Enterprise SSO sign-in failures",
-          "status": "identified",
-          "impact": "major",
-          "startedAt": "2026-07-16T09:23:54.462Z",
-          "updatedAt": "2026-07-16T09:23:54.599Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/s3dpk67ywshw",
-          "summary": "The issue has been identified and a fix is being implemented."
-        },
         {
           "id": "vjfp60ngq2zj",
           "title": "Elevated errors for Claude Opus 4.7",
@@ -71,13 +60,13 @@
         {
           "id": "0hzwq1ylg80g",
           "title": "Enterprise SSO sign-in failures",
-          "status": "identified",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-07-16T09:23:54.462Z",
-          "updatedAt": "2026-07-16T09:23:54.599Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-07-16T10:27:48.542Z",
+          "resolvedAt": "2026-07-16T10:27:48.529Z",
           "url": "https://stspg.io/s3dpk67ywshw",
-          "summary": "The issue has been identified and a fix is being implemented."
+          "summary": "This incident has been resolved."
         },
         {
           "id": "vjfp60ngq2zj",
@@ -125,7 +114,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T09:26:04.570Z",
+      "lastCheckedAt": "2026-07-16T10:34:58.916Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -160,24 +149,24 @@
         {
           "id": "01KXN14DD3EYYJ6PJ9M736WDSV",
           "title": "Elevated Error Rates For SSO Login",
-          "status": "identified",
+          "status": "investigating",
           "impact": "minor",
           "startedAt": "2026-07-16T08:36:46.000Z",
-          "updatedAt": "2026-07-16T08:36:46.000Z",
+          "updatedAt": "2026-07-16T09:59:46.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+          "summary": "We are investigating the issue for the listed services and seeing gradual recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01KXN14DD3EYYJ6PJ9M736WDSV",
           "title": "Elevated Error Rates For SSO Login",
-          "status": "identified",
+          "status": "investigating",
           "impact": "minor",
           "startedAt": "2026-07-16T08:36:46.000Z",
-          "updatedAt": "2026-07-16T08:36:46.000Z",
+          "updatedAt": "2026-07-16T09:59:46.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+          "summary": "We are investigating the issue for the listed services and seeing gradual recovery."
         },
         {
           "id": "01KXHH1BJ9BS0FVE2MGEJ9FZ5M",
@@ -222,7 +211,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T09:26:05.251Z",
+      "lastCheckedAt": "2026-07-16T10:34:59.677Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -242,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T09:26:05.603Z",
+      "lastCheckedAt": "2026-07-16T10:35:00.046Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -262,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T09:26:06.099Z",
+      "lastCheckedAt": "2026-07-16T10:35:00.695Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T09:26:05.051Z",
+      "lastCheckedAt": "2026-07-16T10:34:59.407Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -370,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-16T09:26:06.117Z",
+      "lastCheckedAt": "2026-07-16T10:35:00.588Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
