@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 17 Jul 2026, 22:05 UTC
+Generated: 17 Jul 2026, 23:05 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,31 +8,33 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 17 Jul 2026, 22:05 UTC |
-| Reference date | Friday, 17 July 2026 |
+| Generated | 17 Jul 2026, 23:05 UTC |
+| Reference date | Saturday, 18 July 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
 | Tracking milestones | 2 |
 | Exact-date anniversaries | 27 |
-| Anniversaries today | 0 |
-| Next exact milestone | Llama 2 released (18 Jul 2026) |
+| Anniversaries today | 1 |
+| Next exact milestone | Stable Diffusion public release (22 Aug 2026) |
 
 ## Today in AI
 
-No exact anniversary lands on the current Europe/London date snapshot.
+| Title | Category | Years | Source |
+| --- | --- | --- | --- |
+| Llama 2 released | Model release | 3 | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
 
 ## Coming Up Next
 
 | In | Date | Title | Source |
 | --- | --- | --- | --- |
-| 1d | 18 Jul 2026 | Llama 2 released | [Meta](https://about.fb.com/news/2023/07/llama-2/) |
-| 36d | 22 Aug 2026 | Stable Diffusion public release | [Stability AI](https://stability.ai/news/stable-diffusion-public-release) |
-| 57d | 12 Sept 2026 | OpenAI o1-preview launched | [OpenAI](https://openai.com/index/introducing-openai-o1-preview/) |
-| 72d | 27 Sept 2026 | Mistral 7B released | [Mistral AI](https://mistral.ai/news/about-mistral-ai) |
-| 88d | 13 Oct 2026 | AlexNet wins ILSVRC 2012 | [ImageNet ILSVRC 2012](https://image-net.org/challenges/LSVRC/2012/index) |
-| 109d | 3 Nov 2026 | Grok announced | [xAI](https://x.ai/news/grok) |
-| 136d | 30 Nov 2026 | AlphaFold breakthrough at CASP14 | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
-| 136d | 30 Nov 2026 | ChatGPT launched | [OpenAI](https://openai.com/blog/chatgpt/) |
+| 35d | 22 Aug 2026 | Stable Diffusion public release | [Stability AI](https://stability.ai/news/stable-diffusion-public-release) |
+| 56d | 12 Sept 2026 | OpenAI o1-preview launched | [OpenAI](https://openai.com/index/introducing-openai-o1-preview/) |
+| 71d | 27 Sept 2026 | Mistral 7B released | [Mistral AI](https://mistral.ai/news/about-mistral-ai) |
+| 87d | 13 Oct 2026 | AlexNet wins ILSVRC 2012 | [ImageNet ILSVRC 2012](https://image-net.org/challenges/LSVRC/2012/index) |
+| 108d | 3 Nov 2026 | Grok announced | [xAI](https://x.ai/news/grok) |
+| 135d | 30 Nov 2026 | AlphaFold breakthrough at CASP14 | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
+| 135d | 30 Nov 2026 | ChatGPT launched | [OpenAI](https://openai.com/blog/chatgpt/) |
+| 141d | 6 Dec 2026 | Gemini 1 introduced | [Google](https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/) |
 
 ## Recent Flagship Launches
 

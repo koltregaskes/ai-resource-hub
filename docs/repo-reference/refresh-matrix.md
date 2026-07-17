@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 17 Jul 2026, 22:05 UTC
+Generated: 17 Jul 2026, 23:05 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 17 Jul 2026, 22:05 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 17 Jul 2026, 23:05 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 17 Jul 2026, 22:05 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 17 Jul 2026, 22:04 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 17 Jul 2026, 22:04 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 17 Jul 2026, 22:05 UTC |
-| Provider status | Hourly automated refresh | Automated | 17 Jul 2026, 22:05 UTC |
-| Guides and learning | Manual editorial review | Manual | 17 Jul 2026, 22:04 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 17 Jul 2026, 23:05 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 17 Jul 2026, 23:05 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 17 Jul 2026, 23:05 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 17 Jul 2026, 23:05 UTC |
+| Provider status | Hourly automated refresh | Automated | 17 Jul 2026, 23:05 UTC |
+| Guides and learning | Manual editorial review | Manual | 17 Jul 2026, 23:05 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 17 Jul 2026, 22:05 UTC
+- Last refreshed: 17 Jul 2026, 23:05 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -33,8 +33,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 18 Jul 2026, 12:00 UTC: Llama 2 released - Next exact anniversary in 1 day. (`/milestones/`)
-- 17 Jul 2026, 22:05 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 18 Jul 2026, 12:00 UTC: Llama 2 released - 3 year anniversary landing on today's date. (`/milestones/`)
+- 22 Aug 2026, 12:00 UTC: Stable Diffusion public release - Next exact anniversary in 35 days. (`/milestones/`)
+- 17 Jul 2026, 23:05 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +61,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 17 Jul 2026, 22:05 UTC
+- Last refreshed: 17 Jul 2026, 23:05 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -80,7 +81,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 17 Jul 2026, 22:04 UTC
+- Last refreshed: 17 Jul 2026, 23:05 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +93,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 17 Jul 2026, 22:04 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 17 Jul 2026, 22:04 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 17 Jul 2026, 23:05 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 17 Jul 2026, 23:05 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 17 Jul 2026, 22:04 UTC
+- Last refreshed: 17 Jul 2026, 23:05 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,15 +112,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 17 Jul 2026, 22:04 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 17 Jul 2026, 22:04 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 17 Jul 2026, 22:04 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 17 Jul 2026, 23:05 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 17 Jul 2026, 23:05 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 17 Jul 2026, 23:05 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 17 Jul 2026, 22:05 UTC
+- Last refreshed: 17 Jul 2026, 23:05 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -131,15 +132,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
+- 17 Jul 2026, 22:55 UTC: Vertu wants executives to pay $6,880 for an AI agent — here&#8217;s how it actually performs - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/))
+- 17 Jul 2026, 22:12 UTC: Databricks hits $188B valuation, extending its run as AI&#8217;s favorite second act - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/))
 - 17 Jul 2026, 21:20 UTC: The Zoom hack that says, &#8216;Don&#8217;t record me&#8217; - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/17/the-zoom-hack-that-says-dont-record-me/))
-- 17 Jul 2026, 20:19 UTC: Agility Robotics plants its flag in Tesla&#8217;s backyard - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/))
-- 17 Jul 2026, 20:09 UTC: AI-driven memory crunch jolts India&#8217;s smartphone market - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 17 Jul 2026, 22:05 UTC
+- Last refreshed: 17 Jul 2026, 23:05 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +151,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 17 Jul 2026, 22:05 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
-- 17 Jul 2026, 22:05 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
-- 17 Jul 2026, 22:05 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 17 Jul 2026, 23:05 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
+- 17 Jul 2026, 23:05 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 17 Jul 2026, 23:05 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 17 Jul 2026, 22:04 UTC
+- Last refreshed: 17 Jul 2026, 23:05 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +171,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 17 Jul 2026, 22:04 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 17 Jul 2026, 22:04 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
-- 17 Jul 2026, 22:04 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)
+- 17 Jul 2026, 23:05 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 17 Jul 2026, 23:05 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 17 Jul 2026, 23:05 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)

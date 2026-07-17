@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-17T22:05:07.456Z",
+  "generatedAt": "2026-07-17T23:05:36.622Z",
   "overview": {
-    "generatedForLabel": "Friday, 17 July 2026",
+    "generatedForLabel": "Saturday, 18 July 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -9,14 +9,13 @@
     "exactDateMilestones": 27,
     "homepageEligibleMilestones": 34,
     "nextMilestone": {
-      "id": "llama-2-launch",
-      "title": "Llama 2 released",
-      "nextOccurrenceLabel": "18 Jul 2026",
-      "daysUntil": 1
+      "id": "stable-diffusion-public-release",
+      "title": "Stable Diffusion public release",
+      "nextOccurrenceLabel": "22 Aug 2026",
+      "daysUntil": 35
     }
   },
-  "todayMilestones": [],
-  "upcomingMilestones": [
+  "todayMilestones": [
     {
       "id": "llama-2-launch",
       "slug": "llama-2-launch",
@@ -63,11 +62,13 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1689681600000,
-      "daysUntil": 1,
+      "daysUntil": 0,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
       "nextOccurrenceLabel": "18 Jul 2026"
-    },
+    }
+  ],
+  "upcomingMilestones": [
     {
       "id": "stable-diffusion-public-release",
       "slug": "stable-diffusion-public-release",
@@ -112,7 +113,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1661169600000,
-      "daysUntil": 36,
+      "daysUntil": 35,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
       "nextOccurrenceLabel": "22 Aug 2026"
@@ -163,7 +164,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1726142400000,
-      "daysUntil": 57,
+      "daysUntil": 56,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-09-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Sept 2026"
@@ -216,7 +217,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1695816000000,
-      "daysUntil": 72,
+      "daysUntil": 71,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
       "nextOccurrenceLabel": "27 Sept 2026"
@@ -265,7 +266,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 88,
+      "daysUntil": 87,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -316,7 +317,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 109,
+      "daysUntil": 108,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -366,7 +367,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 136,
+      "daysUntil": 135,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -417,10 +418,61 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1669809600000,
-      "daysUntil": 136,
+      "daysUntil": 135,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
+    },
+    {
+      "id": "gemini-1-launch",
+      "slug": "gemini-1-launch",
+      "title": "Gemini 1 introduced",
+      "summary": "Google introduced Gemini as its flagship multimodal model family and reset its frontier model branding around a single line.",
+      "year": 2023,
+      "month": 12,
+      "day": 6,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "google-deepmind",
+      "modelId": "gemini-1",
+      "tags": [
+        "gemini",
+        "google",
+        "multimodal"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Google",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "6 Dec 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1701864000000,
+      "daysUntil": 141,
+      "anniversaryYears": 3,
+      "nextOccurrenceIso": "2026-12-06T12:00:00.000Z",
+      "nextOccurrenceLabel": "6 Dec 2026"
     }
   ],
   "latestLaunches": [
