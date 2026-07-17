@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T16:02:02.915Z",
+  "generatedAt": "2026-07-17T17:21:44.601Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T16:02:02.298Z",
+      "lastCheckedAt": "2026-07-17T17:21:43.512Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T16:02:01.373Z",
+      "lastCheckedAt": "2026-07-17T17:21:43.152Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T16:02:02.481Z",
+      "lastCheckedAt": "2026-07-17T17:21:44.122Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T16:02:02.795Z",
+      "lastCheckedAt": "2026-07-17T17:21:44.594Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T16:02:01.816Z",
+      "lastCheckedAt": "2026-07-17T17:21:43.249Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -250,10 +250,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T16:02:01.338Z",
+      "lastCheckedAt": "2026-07-17T17:21:43.044Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -283,24 +283,44 @@
       ],
       "activeIncidents": [
         {
+          "id": "01KXRHE25717D2WQ1WFMT2B7WZ",
+          "title": "Codex 5.6-sol Experiencing Increased Server-Overload Errors",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-07-17T17:19:22.000Z",
+          "updatedAt": "2026-07-17T17:19:22.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
           "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
-          "title": "New ChatGPT App Not Available For Users Without Codex Permissions",
+          "title": "New ChatGPT App Not Available For Enterprise Users Without Codex Permissions",
           "status": "identified",
           "impact": "none",
           "startedAt": "2026-07-17T15:32:26.000Z",
-          "updatedAt": "2026-07-17T15:32:26.000Z",
+          "updatedAt": "2026-07-17T16:24:46.000Z",
           "resolvedAt": null,
           "summary": "Users who do not have Codex RBAC enabled, are getting the \"codex_cli_workspace_disabled\" error when trying to log into the new ChatGPT app post-install.\n\nWe are working on impleme..."
         }
       ],
       "recentIncidents": [
         {
+          "id": "01KXRHE25717D2WQ1WFMT2B7WZ",
+          "title": "Codex 5.6-sol Experiencing Increased Server-Overload Errors",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-07-17T17:19:22.000Z",
+          "updatedAt": "2026-07-17T17:19:22.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
           "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
-          "title": "New ChatGPT App Not Available For Users Without Codex Permissions",
+          "title": "New ChatGPT App Not Available For Enterprise Users Without Codex Permissions",
           "status": "identified",
           "impact": "none",
           "startedAt": "2026-07-17T15:32:26.000Z",
-          "updatedAt": "2026-07-17T15:32:26.000Z",
+          "updatedAt": "2026-07-17T16:24:46.000Z",
           "resolvedAt": null,
           "summary": "Users who do not have Codex RBAC enabled, are getting the \"codex_cli_workspace_disabled\" error when trying to log into the new ChatGPT app post-install.\n\nWe are working on impleme..."
         },
@@ -323,16 +343,6 @@
           "updatedAt": "2026-07-16T15:23:13.000Z",
           "resolvedAt": "2026-07-16T15:23:13.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXHH1BJ9BS0FVE2MGEJ9FZ5M",
-          "title": "Elevated errors affecting ChatGPT",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-14T23:57:45.000Z",
-          "updatedAt": "2026-07-16T21:24:21.000Z",
-          "resolvedAt": "2026-07-15T00:39:32.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -347,7 +357,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T16:02:02.910Z",
+      "lastCheckedAt": "2026-07-17T17:21:44.355Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -416,7 +426,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
