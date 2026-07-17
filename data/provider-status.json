@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T14:15:44.004Z",
+  "generatedAt": "2026-07-17T15:36:33.708Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T14:15:43.199Z",
+      "lastCheckedAt": "2026-07-17T15:36:32.661Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T14:15:42.592Z",
+      "lastCheckedAt": "2026-07-17T15:36:32.030Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -66,6 +66,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "bwz7ld34gcxt",
+          "title": "Elevated errors for Claude Opus 4.8",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-17T14:57:42.454Z",
+          "updatedAt": "2026-07-17T15:33:15.621Z",
+          "resolvedAt": "2026-07-17T15:33:15.604Z",
+          "url": "https://stspg.io/7sn47qvhg7b5",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "7gpjd8n56rlq",
           "title": "Elevated errors on Sonnet 5 and Haiku 4.5",
           "status": "resolved",
@@ -97,17 +108,6 @@
           "resolvedAt": "2026-07-16T13:30:55.394Z",
           "url": "https://stspg.io/3vvl4w8559r5",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "0hzwq1ylg80g",
-          "title": "Enterprise SSO sign-in failures",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-16T09:23:54.462Z",
-          "updatedAt": "2026-07-16T10:27:48.542Z",
-          "resolvedAt": "2026-07-16T10:27:48.529Z",
-          "url": "https://stspg.io/s3dpk67ywshw",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T14:15:43.594Z",
+      "lastCheckedAt": "2026-07-17T15:36:33.157Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T14:15:43.997Z",
+      "lastCheckedAt": "2026-07-17T15:36:33.614Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T14:15:42.869Z",
+      "lastCheckedAt": "2026-07-17T15:36:32.234Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -250,10 +250,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T14:15:42.566Z",
+      "lastCheckedAt": "2026-07-17T15:36:32.027Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -281,8 +281,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
+          "title": "New ChatGPT App Not Available For Users Without Codex Permissions",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-07-17T15:32:26.000Z",
+          "updatedAt": "2026-07-17T15:32:26.000Z",
+          "resolvedAt": null,
+          "summary": "Users who do not have Codex RBAC enabled, are getting the \"codex_cli_workspace_disabled\" error when trying to log into the new ChatGPT app post-install.\n\nWe are working on impleme..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
+          "title": "New ChatGPT App Not Available For Users Without Codex Permissions",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-07-17T15:32:26.000Z",
+          "updatedAt": "2026-07-17T15:32:26.000Z",
+          "resolvedAt": null,
+          "summary": "Users who do not have Codex RBAC enabled, are getting the \"codex_cli_workspace_disabled\" error when trying to log into the new ChatGPT app post-install.\n\nWe are working on impleme..."
+        },
         {
           "id": "01KXPJ62Z704GE0SRNKQA64X4X",
           "title": "Elevated errors for Github connector",
@@ -312,16 +333,6 @@
           "updatedAt": "2026-07-16T21:24:21.000Z",
           "resolvedAt": "2026-07-15T00:39:32.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXHK8YFSP8B9WP110W4XEM45",
-          "title": "Issue affecting voice mode in ChatGPT",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-07-15T00:36:51.000Z",
-          "updatedAt": "2026-07-15T00:38:18.000Z",
-          "resolvedAt": "2026-07-15T00:38:18.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -336,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T14:15:43.948Z",
+      "lastCheckedAt": "2026-07-17T15:36:33.701Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -405,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
