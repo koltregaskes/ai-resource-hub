@@ -1,26 +1,6 @@
 {
-  "generatedAt": "2026-07-17T17:44:58.597Z",
+  "generatedAt": "2026-07-17T19:30:32.734Z",
   "providers": [
-    {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T17:44:57.747Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -32,30 +12,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T17:44:57.349Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-07-17T19:30:31.379Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Cowork",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
@@ -63,8 +43,42 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "g613ntyj2pwf",
+          "title": "Elevated errors across Fable 5",
+          "status": "monitoring",
+          "impact": "major",
+          "startedAt": "2026-07-17T18:32:32.629Z",
+          "updatedAt": "2026-07-17T18:48:23.164Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/rxyp2wg9jxcw",
+          "summary": "We have applied a fix to resolve the erroneous requirement for usage credits on Fable 5, and are monitoring to ensure no further issues. You may need to relaunch Claude.ai or Clau..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "g613ntyj2pwf",
+          "title": "Elevated errors across Fable 5",
+          "status": "monitoring",
+          "impact": "major",
+          "startedAt": "2026-07-17T18:32:32.629Z",
+          "updatedAt": "2026-07-17T18:48:23.164Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/rxyp2wg9jxcw",
+          "summary": "We have applied a fix to resolve the erroneous requirement for usage credits on Fable 5, and are monitoring to ensure no further issues. You may need to relaunch Claude.ai or Clau..."
+        },
+        {
+          "id": "lj0khk5vd7v7",
+          "title": "Elevated error rates for Sonnet 5",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-17T18:12:57.891Z",
+          "updatedAt": "2026-07-17T18:27:33.505Z",
+          "resolvedAt": "2026-07-17T18:27:33.486Z",
+          "url": "https://stspg.io/jrrvwd0jbtmz",
+          "summary": "This incident has been resolved."
+        },
         {
           "id": "bwz7ld34gcxt",
           "title": "Elevated errors for Claude Opus 4.8",
@@ -86,50 +100,8 @@
           "resolvedAt": "2026-07-17T12:21:30.321Z",
           "url": "https://stspg.io/p0rgrvqnx02s",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "kqbd7wm6hnnr",
-          "title": "Elevated errors for multiple models",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-16T18:36:58.760Z",
-          "updatedAt": "2026-07-16T22:53:12.391Z",
-          "resolvedAt": "2026-07-16T22:53:12.373Z",
-          "url": "https://stspg.io/zhv1t1h0dbby",
-          "summary": "This issue has been resolved. From 11:30am PT / 18:30 UTC through to 3:15pm PT / 22:15 UTC some users experienced elevated errors on requests to Claude Models. Most errors were ex..."
-        },
-        {
-          "id": "vjfp60ngq2zj",
-          "title": "Elevated errors for Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-16T08:58:05.865Z",
-          "updatedAt": "2026-07-16T13:30:55.414Z",
-          "resolvedAt": "2026-07-16T13:30:55.394Z",
-          "url": "https://stspg.io/3vvl4w8559r5",
-          "summary": "This incident has been resolved."
         }
       ]
-    },
-    {
-      "id": "cohere",
-      "providerId": "cohere",
-      "name": "Cohere",
-      "colour": "#6366f1",
-      "websiteUrl": "https://cohere.com",
-      "statusPageUrl": "https://status.cohere.io",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T17:44:58.102Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "fireworks",
@@ -142,16 +114,50 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T17:44:58.478Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
+      "lastCheckedAt": "2026-07-17T19:30:32.390Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
       "notes": null,
       "components": [],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-07-17T19:29:11.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-17T19:29:11.000Z",
+          "updatedAt": "2026-07-17T19:29:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-2-2026-07-14T05:04:09.000Z",
+          "title": "OpenAI GPT OSS 20B chat completion API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-14T05:04:09.000Z",
+          "updatedAt": "2026-07-14T05:04:09.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "OpenAI GPT OSS 20B chat completion API went down"
+        }
+      ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-07-14T05:10:00.000Z",
+          "id": "fireworks-feed-0-2026-07-17T19:29:11.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-17T19:29:11.000Z",
+          "updatedAt": "2026-07-17T19:29:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-1-2026-07-14T05:10:00.000Z",
           "title": "OpenAI GPT OSS 20B chat completion API recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -162,7 +168,7 @@
           "summary": "OpenAI GPT OSS 20B chat completion API recovered"
         },
         {
-          "id": "fireworks-feed-1-2026-07-14T05:04:09.000Z",
+          "id": "fireworks-feed-2-2026-07-14T05:04:09.000Z",
           "title": "OpenAI GPT OSS 20B chat completion API went down",
           "status": "investigating",
           "impact": "major",
@@ -173,7 +179,7 @@
           "summary": "OpenAI GPT OSS 20B chat completion API went down"
         },
         {
-          "id": "fireworks-feed-2-2026-07-14T02:54:05.000Z",
+          "id": "fireworks-feed-3-2026-07-14T02:54:05.000Z",
           "title": "OpenAI GPT OSS 20B chat completion API recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -182,19 +188,48 @@
           "resolvedAt": "2026-07-14T02:54:05.000Z",
           "url": "https://status.fireworks.ai/",
           "summary": "OpenAI GPT OSS 20B chat completion API recovered"
-        },
-        {
-          "id": "fireworks-feed-3-2026-07-14T02:50:46.000Z",
-          "title": "OpenAI GPT OSS 20B chat completion API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-14T02:50:46.000Z",
-          "updatedAt": "2026-07-14T02:50:46.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "OpenAI GPT OSS 20B chat completion API went down"
         }
       ]
+    },
+    {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-17T19:30:32.075Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "cohere",
+      "providerId": "cohere",
+      "name": "Cohere",
+      "colour": "#6366f1",
+      "websiteUrl": "https://cohere.com",
+      "statusPageUrl": "https://status.cohere.io",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-17T19:30:32.422Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "google",
@@ -207,7 +242,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T17:44:57.578Z",
+      "lastCheckedAt": "2026-07-17T19:30:31.740Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -250,7 +285,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T17:44:57.469Z",
+      "lastCheckedAt": "2026-07-17T19:30:31.268Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "2 active incidents across 25 tracked components.",
@@ -285,12 +320,12 @@
         {
           "id": "01KXRHE25717D2WQ1WFMT2B7WZ",
           "title": "Codex 5.6-sol Experiencing Increased Server-Overload Errors",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "none",
           "startedAt": "2026-07-17T17:19:22.000Z",
-          "updatedAt": "2026-07-17T17:19:22.000Z",
+          "updatedAt": "2026-07-17T19:07:51.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
@@ -307,12 +342,12 @@
         {
           "id": "01KXRHE25717D2WQ1WFMT2B7WZ",
           "title": "Codex 5.6-sol Experiencing Increased Server-Overload Errors",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "none",
           "startedAt": "2026-07-17T17:19:22.000Z",
-          "updatedAt": "2026-07-17T17:19:22.000Z",
+          "updatedAt": "2026-07-17T19:07:51.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
@@ -357,7 +392,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T17:44:58.529Z",
+      "lastCheckedAt": "2026-07-17T19:30:32.384Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
