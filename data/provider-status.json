@@ -1,94 +1,6 @@
 {
-  "generatedAt": "2026-07-17T19:46:45.779Z",
+  "generatedAt": "2026-07-17T21:06:25.296Z",
   "providers": [
-    {
-      "id": "fireworks",
-      "providerId": null,
-      "name": "Fireworks AI",
-      "colour": "#ef4444",
-      "websiteUrl": "https://fireworks.ai",
-      "statusPageUrl": "https://status.fireworks.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T19:46:45.691Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-07-17T19:41:19.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:41:19.000Z",
-          "updatedAt": "2026-07-17T19:41:19.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-07-17T19:29:11.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:29:11.000Z",
-          "updatedAt": "2026-07-17T19:29:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-07-17T19:41:19.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:41:19.000Z",
-          "updatedAt": "2026-07-17T19:41:19.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-1-2026-07-17T19:32:05.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-17T19:32:05.000Z",
-          "updatedAt": "2026-07-17T19:32:05.000Z",
-          "resolvedAt": "2026-07-17T19:32:05.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-2-2026-07-17T19:29:11.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:29:11.000Z",
-          "updatedAt": "2026-07-17T19:29:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-3-2026-07-14T05:10:00.000Z",
-          "title": "OpenAI GPT OSS 20B chat completion API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-14T05:10:00.000Z",
-          "updatedAt": "2026-07-14T05:10:00.000Z",
-          "resolvedAt": "2026-07-14T05:10:00.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "OpenAI GPT OSS 20B chat completion API recovered"
-        }
-      ]
-    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -100,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T19:46:44.870Z",
+      "lastCheckedAt": "2026-07-17T21:06:24.531Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T19:46:44.406Z",
+      "lastCheckedAt": "2026-07-17T21:06:24.020Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T19:46:45.316Z",
+      "lastCheckedAt": "2026-07-17T21:06:24.879Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -218,6 +130,71 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "fireworks",
+      "providerId": null,
+      "name": "Fireworks AI",
+      "colour": "#ef4444",
+      "websiteUrl": "https://fireworks.ai",
+      "statusPageUrl": "https://status.fireworks.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-17T21:06:25.184Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-07-17T19:47:13.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-17T19:47:13.000Z",
+          "updatedAt": "2026-07-17T19:47:13.000Z",
+          "resolvedAt": "2026-07-17T19:47:13.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-1-2026-07-17T19:41:19.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-17T19:41:19.000Z",
+          "updatedAt": "2026-07-17T19:41:19.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-2-2026-07-17T19:32:05.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-17T19:32:05.000Z",
+          "updatedAt": "2026-07-17T19:32:05.000Z",
+          "resolvedAt": "2026-07-17T19:32:05.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-3-2026-07-17T19:29:11.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-17T19:29:11.000Z",
+          "updatedAt": "2026-07-17T19:29:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        }
+      ]
     },
     {
       "id": "google",
@@ -230,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T19:46:44.669Z",
+      "lastCheckedAt": "2026-07-17T21:06:24.292Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -273,10 +250,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T19:46:44.452Z",
+      "lastCheckedAt": "2026-07-17T21:06:24.200Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -306,16 +283,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "01KXRHE25717D2WQ1WFMT2B7WZ",
-          "title": "Codex 5.6-sol Experiencing Increased Server-Overload Errors",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-07-17T17:19:22.000Z",
-          "updatedAt": "2026-07-17T19:07:51.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
           "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
           "title": "New ChatGPT App Not Available For Enterprise Users Without Codex Permissions",
           "status": "identified",
@@ -330,12 +297,12 @@
         {
           "id": "01KXRHE25717D2WQ1WFMT2B7WZ",
           "title": "Codex 5.6-sol Experiencing Increased Server-Overload Errors",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-07-17T17:19:22.000Z",
-          "updatedAt": "2026-07-17T19:07:51.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "updatedAt": "2026-07-17T20:42:53.000Z",
+          "resolvedAt": "2026-07-17T20:42:53.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
@@ -380,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-17T19:46:45.772Z",
+      "lastCheckedAt": "2026-07-17T21:06:25.289Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
