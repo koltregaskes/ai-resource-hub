@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-18T22:04:51.506Z",
+  "generatedAt": "2026-07-18T23:06:47.448Z",
   "overview": {
-    "generatedForLabel": "Saturday, 18 July 2026",
+    "generatedForLabel": "Sunday, 19 July 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -12,62 +12,10 @@
       "id": "stable-diffusion-public-release",
       "title": "Stable Diffusion public release",
       "nextOccurrenceLabel": "22 Aug 2026",
-      "daysUntil": 35
+      "daysUntil": 34
     }
   },
-  "todayMilestones": [
-    {
-      "id": "llama-2-launch",
-      "slug": "llama-2-launch",
-      "title": "Llama 2 released",
-      "summary": "Llama 2 became the most important open-weight launch of 2023 and broadened serious industry use of open models.",
-      "year": 2023,
-      "month": 7,
-      "day": 18,
-      "datePrecision": "day",
-      "category": "model_release",
-      "kind": "launch",
-      "significance": "major",
-      "providerId": "meta",
-      "modelId": "llama-2",
-      "tags": [
-        "llama",
-        "meta",
-        "open-weights"
-      ],
-      "status": "verified",
-      "confidence": "high",
-      "homepageEligible": true,
-      "calendarEligible": true,
-      "exactAnniversaryEligible": true,
-      "sources": [
-        {
-          "label": "Meta",
-          "url": "https://about.fb.com/news/2023/07/llama-2/",
-          "sourceType": "official_news",
-          "role": "canonical"
-        }
-      ],
-      "canonicalSource": {
-        "label": "Meta",
-        "url": "https://about.fb.com/news/2023/07/llama-2/",
-        "sourceType": "official_news",
-        "role": "canonical"
-      },
-      "categoryLabel": "Model release",
-      "kindLabel": "Launch",
-      "significanceLabel": "Major",
-      "statusLabel": "Verified",
-      "dateLabel": "18 Jul 2023",
-      "trackingDateLabel": null,
-      "href": "/new/",
-      "sortKey": 1689681600000,
-      "daysUntil": 0,
-      "anniversaryYears": 3,
-      "nextOccurrenceIso": "2026-07-18T12:00:00.000Z",
-      "nextOccurrenceLabel": "18 Jul 2026"
-    }
-  ],
+  "todayMilestones": [],
   "upcomingMilestones": [
     {
       "id": "stable-diffusion-public-release",
@@ -113,7 +61,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1661169600000,
-      "daysUntil": 35,
+      "daysUntil": 34,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
       "nextOccurrenceLabel": "22 Aug 2026"
@@ -164,7 +112,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1726142400000,
-      "daysUntil": 56,
+      "daysUntil": 55,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-09-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Sept 2026"
@@ -217,7 +165,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1695816000000,
-      "daysUntil": 71,
+      "daysUntil": 70,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
       "nextOccurrenceLabel": "27 Sept 2026"
@@ -266,7 +214,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 87,
+      "daysUntil": 86,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -317,7 +265,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 108,
+      "daysUntil": 107,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -367,7 +315,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 135,
+      "daysUntil": 134,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -418,7 +366,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1669809600000,
-      "daysUntil": 135,
+      "daysUntil": 134,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -469,7 +417,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1701864000000,
-      "daysUntil": 141,
+      "daysUntil": 140,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-06T12:00:00.000Z",
       "nextOccurrenceLabel": "6 Dec 2026"
