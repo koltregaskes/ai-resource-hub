@@ -1,6 +1,103 @@
 {
-  "generatedAt": "2026-07-18T06:32:54.610Z",
+  "generatedAt": "2026-07-18T08:26:35.976Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-18T08:26:34.310Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "ChatGPT Work",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KXT44TAQQ2R0AZDDVSJGAC4H",
+          "title": "Some users are unable to access Codex",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-18T08:05:37.000Z",
+          "updatedAt": "2026-07-18T08:05:37.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified an issue causing some users to receive access-denied errors when using the Codex desktop app and CLI."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
+          "title": "New ChatGPT App Not Available For Enterprise Users Without Codex Permissions",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-17T15:32:26.000Z",
+          "updatedAt": "2026-07-18T08:24:02.000Z",
+          "resolvedAt": "2026-07-18T05:45:25.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXT44TAQQ2R0AZDDVSJGAC4H",
+          "title": "Some users are unable to access Codex",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-18T08:05:37.000Z",
+          "updatedAt": "2026-07-18T08:05:37.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified an issue causing some users to receive access-denied errors when using the Codex desktop app and CLI."
+        },
+        {
+          "id": "01KXRHE25717D2WQ1WFMT2B7WZ",
+          "title": "Codex 5.6-sol Experiencing Increased Server-Overload Errors",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-07-17T17:19:22.000Z",
+          "updatedAt": "2026-07-17T20:42:53.000Z",
+          "resolvedAt": "2026-07-17T20:42:53.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXPJ62Z704GE0SRNKQA64X4X",
+          "title": "Elevated errors for Github connector",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-16T22:54:01.000Z",
+          "updatedAt": "2026-07-17T00:17:49.000Z",
+          "resolvedAt": "2026-07-17T00:17:49.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-18T06:32:53.699Z",
+      "lastCheckedAt": "2026-07-18T08:26:35.106Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-18T06:32:53.150Z",
+      "lastCheckedAt": "2026-07-18T08:26:34.352Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-18T06:32:54.190Z",
+      "lastCheckedAt": "2026-07-18T08:26:35.445Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-18T06:32:54.553Z",
+      "lastCheckedAt": "2026-07-18T08:26:35.863Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-18T06:32:53.491Z",
+      "lastCheckedAt": "2026-07-18T08:26:34.744Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -240,92 +337,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-18T06:32:53.176Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
-        },
-        {
-          "name": "ChatGPT Work",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
-          "title": "New ChatGPT App Not Available For Enterprise Users Without Codex Permissions",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-07-17T15:32:26.000Z",
-          "updatedAt": "2026-07-18T05:45:25.000Z",
-          "resolvedAt": "2026-07-18T05:45:25.000Z",
-          "summary": "A fix has been released. Please update to the latest version of the ChatGPT app to receive the fix."
-        },
-        {
-          "id": "01KXRHE25717D2WQ1WFMT2B7WZ",
-          "title": "Codex 5.6-sol Experiencing Increased Server-Overload Errors",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-07-17T17:19:22.000Z",
-          "updatedAt": "2026-07-17T20:42:53.000Z",
-          "resolvedAt": "2026-07-17T20:42:53.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXPJ62Z704GE0SRNKQA64X4X",
-          "title": "Elevated errors for Github connector",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-16T22:54:01.000Z",
-          "updatedAt": "2026-07-17T00:17:49.000Z",
-          "resolvedAt": "2026-07-17T00:17:49.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXN14DD3EYYJ6PJ9M736WDSV",
-          "title": "Elevated Error Rates For SSO Login",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-16T08:36:46.000Z",
-          "updatedAt": "2026-07-16T15:23:13.000Z",
-          "resolvedAt": "2026-07-16T15:23:13.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -336,7 +347,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-18T06:32:54.603Z",
+      "lastCheckedAt": "2026-07-18T08:26:35.969Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -405,7 +416,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
