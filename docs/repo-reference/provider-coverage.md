@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 18 Jul 2026, 23:06 UTC
+Generated: 19 Jul 2026, 00:06 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -20,7 +20,7 @@ This table shows how much of each provider's public model surface is currently r
 | Deepgram | 3 | 0 | 0 | n/a | [status](https://status.deepgram.com) | [docs](https://developers.deepgram.com) |
 | ElevenLabs | 3 | 0 | 0 | n/a | [status](https://status.elevenlabs.io) | [docs](https://elevenlabs.io/docs) |
 | Runway | 3 | 0 | 0 | n/a | n/a | [docs](https://docs.runwayml.com) |
-| Reka | 2 | 2 | 0 | Reka Edge (20 Mar 2026) | n/a | n/a |
+| Reka | 2 | 2 | 0 | n/a | n/a | n/a |
 | AssemblyAI | 2 | 0 | 0 | n/a | n/a | [docs](https://www.assemblyai.com/docs) |
 | Cartesia | 2 | 0 | 0 | n/a | n/a | [docs](https://docs.cartesia.ai) |
 | Ideogram | 2 | 0 | 0 | n/a | n/a | [docs](https://developer.ideogram.ai/docs) |
