@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 19 Jul 2026, 17:15 UTC
+Generated: 19 Jul 2026, 18:26 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -16,7 +16,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Jul 2026 | GPT-5.6 Terra | OpenAI | tracking | high | ready for editor | 0 | 3 | [official](https://platform.openai.com/docs/models) |
 | 9 Jul 2026 | GPT-5.6 Sol Pro | OpenAI | tracking | high | ready for editor | 0 | 3 | [official](https://platform.openai.com/docs/models) |
 | 9 Jul 2026 | GPT-5.6 Sol | OpenAI | tracking | high | ready for editor | 0 | 3 | [official](https://platform.openai.com/docs/models) |
-| 8 Jul 2026 | Grok 4.5 | xAI | tracking | high | ready for editor | 0 | 1 | [official](https://docs.x.ai/developers/models) |
+| 8 Jul 2026 | Grok 4.5 | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
 | 30 Jun 2026 | Claude Sonnet 5 | Anthropic | tracking | high | ready for editor | 0 | 4 | [official](https://docs.anthropic.com) |
 | 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | high | ready for editor | 0 | 4 | [official](https://ai.google.dev/gemini-api/docs/models) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/glasswing) |
