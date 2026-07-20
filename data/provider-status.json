@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-07-20T03:25:36.706Z",
+  "generatedAt": "2026-07-20T04:02:31.519Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T03:25:34.577Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Connectors/Apps",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "ChatGPT Work",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KXYF4BTCV9DTZ5NDSFN716FH",
-          "title": "Elevated errors for GitHub-dependent ChatGPT and Codex workflows",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-07-20T00:34:34.000Z",
-          "updatedAt": "2026-07-20T02:52:24.000Z",
-          "resolvedAt": null,
-          "summary": "Users may experience failures or delays in ChatGPT and Codex workflows that depend on GitHub. This mostly should impact Codex web and code review for PRs on Github. This is relate..."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KXYF4BTCV9DTZ5NDSFN716FH",
-          "title": "Elevated errors for GitHub-dependent ChatGPT and Codex workflows",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-07-20T00:34:34.000Z",
-          "updatedAt": "2026-07-20T02:52:24.000Z",
-          "resolvedAt": null,
-          "summary": "Users may experience failures or delays in ChatGPT and Codex workflows that depend on GitHub. This mostly should impact Codex web and code review for PRs on Github. This is relate..."
-        },
-        {
-          "id": "01KXXDNEAKEPRGFM661SBJJAM6",
-          "title": "Elevated errors affecting ChatGPT",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-19T14:49:42.000Z",
-          "updatedAt": "2026-07-19T17:05:02.000Z",
-          "resolvedAt": "2026-07-19T17:05:02.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXT44TAQQ2R0AZDDVSJGAC4H",
-          "title": "Some users are unable to access Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-18T08:05:37.000Z",
-          "updatedAt": "2026-07-18T12:58:14.000Z",
-          "resolvedAt": "2026-07-18T12:58:14.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
-          "title": "New ChatGPT App Not Available For Enterprise Users Without Codex Permissions",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-17T15:32:26.000Z",
-          "updatedAt": "2026-07-18T08:24:02.000Z",
-          "resolvedAt": "2026-07-18T05:45:25.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -109,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T03:25:35.144Z",
+      "lastCheckedAt": "2026-07-20T04:02:30.661Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T03:25:34.569Z",
+      "lastCheckedAt": "2026-07-20T04:02:30.223Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T03:25:36.183Z",
+      "lastCheckedAt": "2026-07-20T04:02:31.122Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T03:25:36.365Z",
+      "lastCheckedAt": "2026-07-20T04:02:31.140Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T03:25:34.997Z",
+      "lastCheckedAt": "2026-07-20T04:02:30.494Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -326,6 +229,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-20T04:02:30.231Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "ChatGPT Work",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KXYF4BTCV9DTZ5NDSFN716FH",
+          "title": "Elevated errors for GitHub-dependent ChatGPT and Codex workflows",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-20T00:34:34.000Z",
+          "updatedAt": "2026-07-20T03:34:06.000Z",
+          "resolvedAt": "2026-07-20T03:34:06.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXXDNEAKEPRGFM661SBJJAM6",
+          "title": "Elevated errors affecting ChatGPT",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-19T14:49:42.000Z",
+          "updatedAt": "2026-07-19T17:05:02.000Z",
+          "resolvedAt": "2026-07-19T17:05:02.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXT44TAQQ2R0AZDDVSJGAC4H",
+          "title": "Some users are unable to access Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-18T08:05:37.000Z",
+          "updatedAt": "2026-07-18T12:58:14.000Z",
+          "resolvedAt": "2026-07-18T12:58:14.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KXRBA8B98QHMMVP3M86NHFZ1",
+          "title": "New ChatGPT App Not Available For Enterprise Users Without Codex Permissions",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-17T15:32:26.000Z",
+          "updatedAt": "2026-07-18T08:24:02.000Z",
+          "resolvedAt": "2026-07-18T05:45:25.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -336,7 +325,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T03:25:36.699Z",
+      "lastCheckedAt": "2026-07-20T04:02:31.428Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -405,7 +394,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
