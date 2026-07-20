@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T12:25:38.316Z",
+  "generatedAt": "2026-07-20T13:17:02.723Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T12:25:37.648Z",
+      "lastCheckedAt": "2026-07-20T13:17:01.846Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,10 +32,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T12:25:36.827Z",
+      "lastCheckedAt": "2026-07-20T13:17:01.503Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "2 active incidents across 6 tracked components.",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -65,17 +65,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "hlt0yqp4lkww",
-          "title": "Elevated error rates for Opus 4.5",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-07-20T07:03:46.113Z",
-          "updatedAt": "2026-07-20T10:57:20.082Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/lzrpkz4y2ry9",
-          "summary": "A fix has been implemented and we are monitoring the results."
-        },
-        {
           "id": "tnypgb2jbqnq",
           "title": "Fable 5 requiring usage credits on Max plans",
           "status": "monitoring",
@@ -89,6 +78,17 @@
       ],
       "recentIncidents": [
         {
+          "id": "hlt0yqp4lkww",
+          "title": "Elevated error rates for Opus 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-20T07:03:46.113Z",
+          "updatedAt": "2026-07-20T12:48:06.810Z",
+          "resolvedAt": "2026-07-20T12:48:06.788Z",
+          "url": "https://stspg.io/lzrpkz4y2ry9",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "tnypgb2jbqnq",
           "title": "Fable 5 requiring usage credits on Max plans",
           "status": "monitoring",
@@ -98,17 +98,6 @@
           "resolvedAt": null,
           "url": "https://stspg.io/rgq3dljydbcm",
           "summary": "Some Claude Code Max plan users were incorrectly prompted to use usage credits to access Fable 5, which is included in their plan. If you were affected, please restart Claude Code."
-        },
-        {
-          "id": "hlt0yqp4lkww",
-          "title": "Elevated error rates for Opus 4.5",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-07-20T07:03:46.113Z",
-          "updatedAt": "2026-07-20T10:57:20.082Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/lzrpkz4y2ry9",
-          "summary": "A fix has been implemented and we are monitoring the results."
         },
         {
           "id": "g613ntyj2pwf",
@@ -145,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T12:25:37.905Z",
+      "lastCheckedAt": "2026-07-20T13:17:02.300Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -165,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T12:25:38.309Z",
+      "lastCheckedAt": "2026-07-20T13:17:02.664Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T12:25:37.313Z",
+      "lastCheckedAt": "2026-07-20T13:17:01.522Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +251,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T12:25:36.835Z",
+      "lastCheckedAt": "2026-07-20T13:17:01.457Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +337,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T12:25:38.271Z",
+      "lastCheckedAt": "2026-07-20T13:17:02.716Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
