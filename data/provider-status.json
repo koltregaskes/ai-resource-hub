@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T15:32:18.216Z",
+  "generatedAt": "2026-07-20T16:00:18.712Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,10 +12,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T15:32:16.905Z",
+      "lastCheckedAt": "2026-07-20T16:00:17.388Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
-      "summary": "3 active incidents across 6 tracked components.",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -45,17 +45,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "s39rkbp2xhpd",
-          "title": "Elevated errors on Haiku 4.5",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-07-20T13:20:48.492Z",
-          "updatedAt": "2026-07-20T15:09:25.761Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/ths0tjh6ntg6",
-          "summary": "The issue has been identified and a fix is being implemented."
-        },
-        {
           "id": "4n0mmv2v41rf",
           "title": "Elevated errors for Claude Opus 4.8",
           "status": "identified",
@@ -65,21 +54,32 @@
           "resolvedAt": null,
           "url": "https://stspg.io/b4rjxhq1j4nb",
           "summary": "The issue has been identified and a fix is being implemented."
-        },
-        {
-          "id": "tnypgb2jbqnq",
-          "title": "Fable 5 requiring usage credits on Max plans",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-07-20T07:35:29.166Z",
-          "updatedAt": "2026-07-20T07:35:29.254Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/rgq3dljydbcm",
-          "summary": "Some Claude Code Max plan users were incorrectly prompted to use usage credits to access Fable 5, which is included in their plan. If you were affected, please restart Claude Code."
         }
       ],
       "recentIncidents": [
         {
+          "id": "s39rkbp2xhpd",
+          "title": "Elevated errors on Haiku 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-20T13:20:48.492Z",
+          "updatedAt": "2026-07-20T15:41:03.627Z",
+          "resolvedAt": "2026-07-20T15:41:03.604Z",
+          "url": "https://stspg.io/ths0tjh6ntg6",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "tnypgb2jbqnq",
+          "title": "Fable 5 requiring usage credits on Max plans",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-20T07:35:29.166Z",
+          "updatedAt": "2026-07-20T15:35:33.041Z",
+          "resolvedAt": "2026-07-20T15:35:33.021Z",
+          "url": "https://stspg.io/rgq3dljydbcm",
+          "summary": "This incident has been resolved."
+        },
+        {
           "id": "4n0mmv2v41rf",
           "title": "Elevated errors for Claude Opus 4.8",
           "status": "identified",
@@ -88,17 +88,6 @@
           "updatedAt": "2026-07-20T15:09:03.142Z",
           "resolvedAt": null,
           "url": "https://stspg.io/b4rjxhq1j4nb",
-          "summary": "The issue has been identified and a fix is being implemented."
-        },
-        {
-          "id": "s39rkbp2xhpd",
-          "title": "Elevated errors on Haiku 4.5",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-07-20T13:20:48.492Z",
-          "updatedAt": "2026-07-20T15:09:25.761Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/ths0tjh6ntg6",
           "summary": "The issue has been identified and a fix is being implemented."
         },
         {
@@ -111,17 +100,6 @@
           "resolvedAt": "2026-07-20T12:48:06.788Z",
           "url": "https://stspg.io/lzrpkz4y2ry9",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "tnypgb2jbqnq",
-          "title": "Fable 5 requiring usage credits on Max plans",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-07-20T07:35:29.166Z",
-          "updatedAt": "2026-07-20T07:35:29.254Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/rgq3dljydbcm",
-          "summary": "Some Claude Code Max plan users were incorrectly prompted to use usage credits to access Fable 5, which is included in their plan. If you were affected, please restart Claude Code."
         }
       ]
     },
@@ -136,7 +114,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T15:32:17.240Z",
+      "lastCheckedAt": "2026-07-20T16:00:17.657Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -156,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T15:32:17.907Z",
+      "lastCheckedAt": "2026-07-20T16:00:18.123Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -176,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T15:32:18.089Z",
+      "lastCheckedAt": "2026-07-20T16:00:18.705Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -241,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T15:32:16.974Z",
+      "lastCheckedAt": "2026-07-20T16:00:17.417Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -273,7 +251,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T15:32:16.957Z",
+      "lastCheckedAt": "2026-07-20T16:00:17.471Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -359,7 +337,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T15:32:18.209Z",
+      "lastCheckedAt": "2026-07-20T16:00:18.696Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
