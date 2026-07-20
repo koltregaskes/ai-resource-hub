@@ -1,26 +1,6 @@
 {
-  "generatedAt": "2026-07-20T13:17:02.723Z",
+  "generatedAt": "2026-07-20T13:29:25.425Z",
   "providers": [
-    {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T13:17:01.846Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
     {
       "id": "anthropic",
       "providerId": "anthropic",
@@ -32,31 +12,31 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T13:17:01.503Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-07-20T13:29:15.109Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "2 active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Cowork",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude for Government",
@@ -64,6 +44,17 @@
         }
       ],
       "activeIncidents": [
+        {
+          "id": "s39rkbp2xhpd",
+          "title": "Elevated errors on Haiku 4.5",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-07-20T13:20:48.492Z",
+          "updatedAt": "2026-07-20T13:20:48.719Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/ths0tjh6ntg6",
+          "summary": "We are currently investigating this issue."
+        },
         {
           "id": "tnypgb2jbqnq",
           "title": "Fable 5 requiring usage credits on Max plans",
@@ -77,6 +68,17 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "s39rkbp2xhpd",
+          "title": "Elevated errors on Haiku 4.5",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-07-20T13:20:48.492Z",
+          "updatedAt": "2026-07-20T13:20:48.719Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/ths0tjh6ntg6",
+          "summary": "We are currently investigating this issue."
+        },
         {
           "id": "hlt0yqp4lkww",
           "title": "Elevated error rates for Opus 4.5",
@@ -109,104 +111,28 @@
           "resolvedAt": "2026-07-17T19:43:35.467Z",
           "url": "https://stspg.io/rxyp2wg9jxcw",
           "summary": "This issue has been resolved, and Claude Fable 5 is available once again without usage credits, as expected."
-        },
-        {
-          "id": "lj0khk5vd7v7",
-          "title": "Elevated error rates for Sonnet 5",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-17T18:12:57.891Z",
-          "updatedAt": "2026-07-17T18:27:33.505Z",
-          "resolvedAt": "2026-07-17T18:27:33.486Z",
-          "url": "https://stspg.io/jrrvwd0jbtmz",
-          "summary": "This incident has been resolved."
         }
       ]
     },
     {
-      "id": "cohere",
-      "providerId": "cohere",
-      "name": "Cohere",
-      "colour": "#6366f1",
-      "websiteUrl": "https://cohere.com",
-      "statusPageUrl": "https://status.cohere.io",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T13:17:02.300Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
+      "lastCheckedAt": "2026-07-20T13:29:15.918Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "fireworks",
-      "providerId": null,
-      "name": "Fireworks AI",
-      "colour": "#ef4444",
-      "websiteUrl": "https://fireworks.ai",
-      "statusPageUrl": "https://status.fireworks.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T13:17:02.664Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-07-17T19:47:13.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-17T19:47:13.000Z",
-          "updatedAt": "2026-07-17T19:47:13.000Z",
-          "resolvedAt": "2026-07-17T19:47:13.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-1-2026-07-17T19:41:19.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:41:19.000Z",
-          "updatedAt": "2026-07-17T19:41:19.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-07-17T19:32:05.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-17T19:32:05.000Z",
-          "updatedAt": "2026-07-17T19:32:05.000Z",
-          "resolvedAt": "2026-07-17T19:32:05.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-3-2026-07-17T19:29:11.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:29:11.000Z",
-          "updatedAt": "2026-07-17T19:29:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        }
-      ]
     },
     {
       "id": "google",
@@ -219,7 +145,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T13:17:01.522Z",
+      "lastCheckedAt": "2026-07-20T13:29:15.836Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -251,7 +177,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T13:17:01.457Z",
+      "lastCheckedAt": "2026-07-20T13:29:15.193Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -327,69 +253,24 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
+      "id": "cohere",
+      "providerId": "cohere",
+      "name": "Cohere",
+      "colour": "#6366f1",
+      "websiteUrl": "https://cohere.com",
+      "statusPageUrl": "https://status.cohere.io",
       "sourceKind": "betterstack_page_rss",
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-20T13:17:02.716Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
+      "fetchState": "error",
+      "lastCheckedAt": null,
+      "overallStatus": "unknown",
+      "overallLabel": "Status unavailable",
+      "summary": null,
+      "notes": "fetch failed",
       "components": [],
       "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-07-18T13:31:36.000Z",
-          "title": "Inkling recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-18T13:31:36.000Z",
-          "updatedAt": "2026-07-18T13:31:36.000Z",
-          "resolvedAt": "2026-07-18T13:31:36.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Inkling recovered"
-        },
-        {
-          "id": "together-feed-1-2026-07-18T13:13:33.000Z",
-          "title": "Inkling went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-18T13:13:33.000Z",
-          "updatedAt": "2026-07-18T13:13:33.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Inkling went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-18T13:01:32.000Z",
-          "title": "Inkling recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-18T13:01:32.000Z",
-          "updatedAt": "2026-07-18T13:01:32.000Z",
-          "resolvedAt": "2026-07-18T13:01:32.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Inkling recovered"
-        },
-        {
-          "id": "together-feed-3-2026-07-18T12:46:33.000Z",
-          "title": "Inkling went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-18T12:46:33.000Z",
-          "updatedAt": "2026-07-18T12:46:33.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Inkling went down"
-        }
-      ]
+      "recentIncidents": []
     },
     {
       "id": "deepseek",
@@ -407,6 +288,46 @@
       "overallLabel": "Status unavailable",
       "summary": null,
       "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "fireworks",
+      "providerId": null,
+      "name": "Fireworks AI",
+      "colour": "#ef4444",
+      "websiteUrl": "https://fireworks.ai",
+      "statusPageUrl": "https://status.fireworks.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "error",
+      "lastCheckedAt": null,
+      "overallStatus": "unknown",
+      "overallLabel": "Status unavailable",
+      "summary": null,
+      "notes": "fetch failed",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "error",
+      "lastCheckedAt": null,
+      "overallStatus": "unknown",
+      "overallLabel": "Status unavailable",
+      "summary": null,
+      "notes": "fetch failed",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
