@@ -1,9 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { recurringEvents } from '../../data/research-intel';
+import { getRecurringEvents } from '../../data/research-intel';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const recurringEvents = getRecurringEvents();
+const latestEventUpdate = recurringEvents
+  .map((event) => event.updatedAt)
+  .filter((value): value is string => Boolean(value))
+  .sort((a, b) => b.localeCompare(a))[0];
 
 const allTags = Array.from(new Set(recurringEvents.flatMap((event) => event.tags))).sort();
 const confirmedEvents = recurringEvents
@@ -33,6 +38,11 @@ function formatDateRange(startDate?: string, endDate?: string): string {
   }
   const end = new Date(`${endDate}T00:00:00`);
   return `${start.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} - ${end.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+}
+
+function formatUpdateDate(value?: string): string {
+  if (!value) return 'Unknown';
+  return new Date(value).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 ---
 
@@ -72,8 +82,8 @@ function formatDateRange(startDate?: string, endDate?: string): string {
         <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">TBC or series</p>
       </div>
       <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-5">
-        <p class="text-3xl font-semibold text-(--color-text-primary)">Daily</p>
-        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Target verification cadence</p>
+        <p class="text-3xl font-semibold text-(--color-text-primary)">{formatUpdateDate(latestEventUpdate)}</p>
+        <p class="mt-2 text-xs uppercase tracking-[0.18em] text-(--color-text-muted)">Latest data update</p>
       </div>
     </div>
   </section>
@@ -251,13 +261,13 @@ function formatDateRange(startDate?: string, endDate?: string): string {
 
   <section class="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
     <div class="rounded-3xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
-      <p class="section-kicker">Implementation notes</p>
-      <h2 class="section-heading section-heading-compact">What this should become</h2>
+      <p class="section-kicker">Data path</p>
+      <h2 class="section-heading section-heading-compact">How this event layer works</h2>
       <div class="mt-5 grid gap-4 md:grid-cols-3">
         <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
           <p class="text-sm font-semibold text-(--color-text-primary)">Postgres as the source of truth</p>
           <p class="mt-2 text-sm leading-6 text-(--color-text-secondary)">
-            The final version should store events in Postgres with daily verification, source URLs, and last-checked timestamps.
+            This page renders the exported Postgres event cache. Refresh jobs should verify dates and source URLs before rebuilding it.
           </p>
         </div>
         <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-primary) p-4">
