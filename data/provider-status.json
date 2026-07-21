@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T16:25:46.472Z",
+  "generatedAt": "2026-07-21T16:40:19.264Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T16:25:45.627Z",
+      "lastCheckedAt": "2026-07-21T16:40:17.705Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,19 +109,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T16:25:45.565Z",
+      "lastCheckedAt": "2026-07-21T16:40:17.773Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
-      "summary": "2 active incidents across 6 tracked components.",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
           "status": "partial_outage"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
         },
         {
           "name": "Claude API (api.anthropic.com)",
@@ -134,6 +130,10 @@
         {
           "name": "Claude Cowork",
           "status": "partial_outage"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
         },
         {
           "name": "Claude for Government",
@@ -151,20 +151,20 @@
           "resolvedAt": null,
           "url": "https://stspg.io/74sqh6d7f9vq",
           "summary": "The issue has been identified and a fix is being implemented."
-        },
-        {
-          "id": "j0y67nj6w93z",
-          "title": "Elevated errors on Haiku 4.5",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-07-21T13:04:35.885Z",
-          "updatedAt": "2026-07-21T15:35:04.129Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/zbk8jlprqymy",
-          "summary": "A fix has been implemented and we are monitoring the results."
         }
       ],
       "recentIncidents": [
+        {
+          "id": "j0y67nj6w93z",
+          "title": "Elevated errors on Haiku 4.5",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-21T13:04:35.885Z",
+          "updatedAt": "2026-07-21T16:38:26.719Z",
+          "resolvedAt": "2026-07-21T16:38:26.703Z",
+          "url": "https://stspg.io/zbk8jlprqymy",
+          "summary": "This incident has been resolved."
+        },
         {
           "id": "vcynh9cf33xp",
           "title": "Elevated errors on several models",
@@ -175,17 +175,6 @@
           "resolvedAt": null,
           "url": "https://stspg.io/74sqh6d7f9vq",
           "summary": "The issue has been identified and a fix is being implemented."
-        },
-        {
-          "id": "j0y67nj6w93z",
-          "title": "Elevated errors on Haiku 4.5",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-07-21T13:04:35.885Z",
-          "updatedAt": "2026-07-21T15:35:04.129Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/zbk8jlprqymy",
-          "summary": "A fix has been implemented and we are monitoring the results."
         },
         {
           "id": "lw0sb1srtznh",
@@ -222,7 +211,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T16:25:45.695Z",
+      "lastCheckedAt": "2026-07-21T16:40:18.492Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -242,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T16:25:46.176Z",
+      "lastCheckedAt": "2026-07-21T16:40:18.802Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -262,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T16:25:46.465Z",
+      "lastCheckedAt": "2026-07-21T16:40:19.029Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T16:25:45.404Z",
+      "lastCheckedAt": "2026-07-21T16:40:18.249Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T16:25:46.400Z",
+      "lastCheckedAt": "2026-07-21T16:40:19.025Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -368,7 +357,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-07-21T13:41:38.000Z",
+          "id": "together-feed-0-2026-07-21T16:36:36.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-21T16:36:36.000Z",
+          "updatedAt": "2026-07-21T16:36:36.000Z",
+          "resolvedAt": "2026-07-21T16:36:36.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-21T16:11:34.000Z",
+          "title": "Pearl-ai Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-21T16:11:34.000Z",
+          "updatedAt": "2026-07-21T16:11:34.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Pearl-ai Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-21T13:41:38.000Z",
           "title": "Pearl-ai Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -379,7 +390,7 @@
           "summary": "Pearl-ai Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-1-2026-07-21T13:01:40.000Z",
+          "id": "together-feed-3-2026-07-21T13:01:40.000Z",
           "title": "Pearl-ai Gemma 4 31B IT went down",
           "status": "investigating",
           "impact": "major",
@@ -388,28 +399,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Pearl-ai Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-18T13:31:36.000Z",
-          "title": "Inkling recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-18T13:31:36.000Z",
-          "updatedAt": "2026-07-18T13:31:36.000Z",
-          "resolvedAt": "2026-07-18T13:31:36.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Inkling recovered"
-        },
-        {
-          "id": "together-feed-3-2026-07-18T13:13:33.000Z",
-          "title": "Inkling went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-18T13:13:33.000Z",
-          "updatedAt": "2026-07-18T13:13:33.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Inkling went down"
         }
       ]
     },
@@ -428,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
