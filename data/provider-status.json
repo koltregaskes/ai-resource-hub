@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T10:48:42.968Z",
+  "generatedAt": "2026-07-21T11:25:46.261Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T10:48:41.840Z",
+      "lastCheckedAt": "2026-07-21T11:25:44.822Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -20,6 +20,10 @@
       "components": [
         {
           "name": "claude.ai",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
           "status": "degraded_performance"
         },
         {
@@ -35,38 +39,45 @@
           "status": "degraded_performance"
         },
         {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
       "activeIncidents": [
         {
-          "id": "y65gwqbztbsp",
-          "title": "Elevated errors across models",
+          "id": "lw0sb1srtznh",
+          "title": "Elevated errors across Fable 5",
           "status": "investigating",
           "impact": "minor",
-          "startedAt": "2026-07-21T10:11:10.777Z",
-          "updatedAt": "2026-07-21T10:11:10.930Z",
+          "startedAt": "2026-07-21T11:19:33.003Z",
+          "updatedAt": "2026-07-21T11:24:20.421Z",
           "resolvedAt": null,
-          "url": "https://stspg.io/lmgkc6zqpgsz",
-          "summary": "We are currently investigating issues with Claude Haiku 4.5 and Opus 4.8."
+          "url": "https://stspg.io/cqjf2860m4yy",
+          "summary": "We are continuing to investigate this issue."
         }
       ],
       "recentIncidents": [
         {
-          "id": "y65gwqbztbsp",
-          "title": "Elevated errors across models",
+          "id": "lw0sb1srtznh",
+          "title": "Elevated errors across Fable 5",
           "status": "investigating",
           "impact": "minor",
-          "startedAt": "2026-07-21T10:11:10.777Z",
-          "updatedAt": "2026-07-21T10:11:10.930Z",
+          "startedAt": "2026-07-21T11:19:33.003Z",
+          "updatedAt": "2026-07-21T11:24:20.421Z",
           "resolvedAt": null,
+          "url": "https://stspg.io/cqjf2860m4yy",
+          "summary": "We are continuing to investigate this issue."
+        },
+        {
+          "id": "y65gwqbztbsp",
+          "title": "Elevated errors across models",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-21T10:11:10.777Z",
+          "updatedAt": "2026-07-21T11:18:50.500Z",
+          "resolvedAt": "2026-07-21T11:18:50.485Z",
           "url": "https://stspg.io/lmgkc6zqpgsz",
-          "summary": "We are currently investigating issues with Claude Haiku 4.5 and Opus 4.8."
+          "summary": "This incident has been resolved."
         },
         {
           "id": "v35b71rthzhp",
@@ -89,17 +100,6 @@
           "resolvedAt": "2026-07-20T16:16:00.095Z",
           "url": "https://stspg.io/b4rjxhq1j4nb",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "s39rkbp2xhpd",
-          "title": "Elevated errors on Haiku 4.5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-20T13:20:48.492Z",
-          "updatedAt": "2026-07-20T15:41:03.627Z",
-          "resolvedAt": "2026-07-20T15:41:03.604Z",
-          "url": "https://stspg.io/ths0tjh6ntg6",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T10:48:41.794Z",
+      "lastCheckedAt": "2026-07-21T11:25:44.703Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -211,7 +211,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T10:48:42.232Z",
+      "lastCheckedAt": "2026-07-21T11:25:45.381Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -231,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T10:48:42.568Z",
+      "lastCheckedAt": "2026-07-21T11:25:45.812Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T10:48:42.911Z",
+      "lastCheckedAt": "2026-07-21T11:25:46.254Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T10:48:41.994Z",
+      "lastCheckedAt": "2026-07-21T11:25:45.163Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T10:48:42.960Z",
+      "lastCheckedAt": "2026-07-21T11:25:46.099Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -417,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
