@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T07:57:44.124Z",
+  "generatedAt": "2026-07-21T08:25:41.904Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T07:57:42.411Z",
+      "lastCheckedAt": "2026-07-21T08:25:40.583Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -50,10 +50,10 @@
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-07-21T07:11:52.679Z",
-          "updatedAt": "2026-07-21T07:11:52.881Z",
+          "updatedAt": "2026-07-21T08:19:38.745Z",
           "resolvedAt": null,
           "url": "https://stspg.io/ng8pvt69fcnf",
-          "summary": "The issue has been identified and a fix is being implemented."
+          "summary": "We are continuing to work on a fix for this issue."
         }
       ],
       "recentIncidents": [
@@ -63,10 +63,10 @@
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-07-21T07:11:52.679Z",
-          "updatedAt": "2026-07-21T07:11:52.881Z",
+          "updatedAt": "2026-07-21T08:19:38.745Z",
           "resolvedAt": null,
           "url": "https://stspg.io/ng8pvt69fcnf",
-          "summary": "The issue has been identified and a fix is being implemented."
+          "summary": "We are continuing to work on a fix for this issue."
         },
         {
           "id": "4n0mmv2v41rf",
@@ -104,6 +104,46 @@
       ]
     },
     {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-21T08:25:41.164Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "cohere",
+      "providerId": "cohere",
+      "name": "Cohere",
+      "colour": "#6366f1",
+      "websiteUrl": "https://cohere.com",
+      "statusPageUrl": "https://status.cohere.io",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-21T08:25:41.515Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "fireworks",
       "providerId": null,
       "name": "Fireworks AI",
@@ -114,36 +154,13 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T07:57:43.778Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
+      "lastCheckedAt": "2026-07-21T08:25:41.665Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
       "notes": null,
       "components": [],
-      "activeIncidents": [
-        {
-          "id": "fireworks-feed-1-2026-07-17T19:41:19.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:41:19.000Z",
-          "updatedAt": "2026-07-17T19:41:19.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-3-2026-07-17T19:29:11.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:29:11.000Z",
-          "updatedAt": "2026-07-17T19:29:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "fireworks-feed-0-2026-07-17T19:47:13.000Z",
@@ -192,46 +209,6 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T07:57:43.354Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
-      "id": "cohere",
-      "providerId": "cohere",
-      "name": "Cohere",
-      "colour": "#6366f1",
-      "websiteUrl": "https://cohere.com",
-      "statusPageUrl": "https://status.cohere.io",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T07:57:43.727Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "google",
       "providerId": "google",
       "name": "Google",
@@ -242,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T07:57:43.075Z",
+      "lastCheckedAt": "2026-07-21T08:25:40.883Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -274,7 +251,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T07:57:42.392Z",
+      "lastCheckedAt": "2026-07-21T08:25:40.445Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -360,7 +337,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T07:57:44.117Z",
+      "lastCheckedAt": "2026-07-21T08:25:41.762Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -429,7 +406,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
