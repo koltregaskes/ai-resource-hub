@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-7fe22c4a2154262e7aa0",
+    "title": "Jack Dorsey is taking on Slack with Buzz, a group chat platform for teams and their AI agents",
+    "url": "https://techcrunch.com/2026/07/21/jack-dorsey-is-taking-on-slack-with-buzz-a-group-chat-platform-for-teams-and-their-ai-agents/",
+    "source": "TechCrunch",
+    "summary": "Buzz is a group chat platform for the workplace that puts humans and their AI agents in the same conversation.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-21T19:43:41.000Z",
+    "discovered_at": "2026-07-21 20:25:42"
+  },
+  {
+    "id": "news-16d2a505a31f6df83f61",
+    "title": "AI and the rise of the universal entertainment app",
+    "url": "https://techcrunch.com/2026/07/21/ai-and-the-rise-of-the-universal-entertainment-app/",
+    "source": "TechCrunch",
+    "summary": "Over the past decade, streaming platforms competed by dominating individual formats like music, video, podcasts, or audiobooks. Now, as AI makes it easier to create, organize, and recommend content, those distinctions are fading, pushing companies like Spotify, Netflix, YouTube, and TikTok to become all-purpose entert…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-21T19:39:30.000Z",
+    "discovered_at": "2026-07-21 20:25:42"
+  },
+  {
+    "id": "news-3a68379c08593a504222",
+    "title": "Substack adds an AI detector to help spot blogs written by no one",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/968855/substack-pangram-ai-detecting-tool",
+    "source": "The Verge",
+    "summary": "Substack will now help users determine whether what they're reading may have been written by AI. A new tool coming to the platform can scan posts, notes, replies, and comments to provide an estimate of how much text could be AI-generated or written with AI assistance, according to a blog post published on Tuesday. The…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-21T19:22:28.000Z",
+    "discovered_at": "2026-07-21 20:25:43"
+  },
+  {
     "id": "news-46f6c2801f0dd1aaea33",
     "title": "Data centers expected to use 4x more electricity by 2035",
     "url": "https://techcrunch.com/2026/07/21/data-centers-expected-to-use-4x-more-electricity-by-2035/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T18:06:38.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-ec57ba11b1c3ef4ee4a6",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:11:50.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-0bd50127700baaab5665",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T16:53:37.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-a8374634340898461ced",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:37:05.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-7d7edea89fcf1f3756a4",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-0a6ee92cfb0982ad5a6d",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T13:27:42.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-4191c27a8a3a4b213402",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T13:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-ed3452d70ad2061d1b5c",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T11:08:56.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-bf2c920d8432572644fc",
@@ -129,7 +165,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T10:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
+  },
+  {
+    "id": "news-20b0eb2d5c1499740c7e",
+    "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+    "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+    "source": "OpenAI",
+    "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-21T07:00:00.000Z",
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-758b6cd17183575fd36d",
@@ -141,7 +189,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T00:12:24.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
+  },
+  {
+    "id": "news-40359dbf5a246645eb9b",
+    "title": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC",
+    "url": "https://openai.com/index/david-velez-robin-vince-join-openai-boards",
+    "source": "OpenAI",
+    "summary": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC, bringing global leadership in finance, technology, and governance.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-21T00:00:00.000Z",
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-764b04b08ab9c3b6d0fb",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T22:21:04.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-f09cbf6a0ec2257f6654",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T22:19:12.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-a76ea83eb26d1f86009c",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T21:21:15.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-98f0a6b315f2193b0782",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T21:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-72b5d5f105cbfc14fd47",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T20:50:40.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-dc09e7342f9446909b71",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T19:37:39.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-84b84aa15243194ad4e6",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T19:33:25.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-a549b2f2489b487f2f66",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T16:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-45a58f05624dde01bcb0",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T15:45:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-c64e9f2673fe0c1eeb68",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T15:23:06.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-90cef26b7e07e68a5a03",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:16:33.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-d4ff9ec891b78868c06a",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-18b4e5bf120fe99f0df1",
@@ -297,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-19T21:16:07.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-94f3c8d7162432678906",
@@ -309,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-19T19:24:45.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-c0ef7a87d4b35aa6e41d",
@@ -321,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-19T17:35:54.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-66f92f75ad32b91d8450",
@@ -333,43 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-19T14:52:08.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
-  },
-  {
-    "id": "news-c4619a8d04328df70461",
-    "title": "Nonprofit Current AI is racing to build the World Wide Web of AI, free for all",
-    "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/",
-    "source": "TechCrunch",
-    "summary": "Current AI, a nonprofit building AI that leaves no one culture behind, has made remarkable progress across devices, AI chat, and more.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-19T14:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
-  },
-  {
-    "id": "news-3d89d3a43d6e93b9235c",
-    "title": "Dave Eggers told OpenAI staff that ChatGPT was ‘silencing an entire generation’",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation",
-    "source": "The Verge",
-    "summary": "Last year, Sam Altman invited author Dave Eggers to give a talk to around 200 OpenAI staffers. The man has written countless novels, screenplays, pieces of journalism, started McSweeney's, and founded multiple schools and nonprofits that support writers and the arts more broadly. So one might expect he'd roll into the…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-18T20:54:42.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
-  },
-  {
-    "id": "news-80ddfeeeb7a4a3e97826",
-    "title": "Kimi: Threat or menace?",
-    "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
-    "source": "TechCrunch",
-    "summary": "Chinese company Moonshot AI released a new version of its Kimi model this week, prompting concern about \"full AI communism.\"",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-18T18:51:07.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-3ebda52fc80ebe33165f",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-cec1ebe5d23f0658e4ae",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T19:16:48.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-09e86f1db1bc975bb4d7",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T19:02:38.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-e9ea1363a186c8a2e72e",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T17:06:08.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-9a3bfba7061ea5562dbd",
@@ -429,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:40:48.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -441,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-8fe39edff791751de0c2",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-6f16a999c8ddd889e881",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T00:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-89c9f7f3ade42756ea06",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T22:24:17.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-1e97faa490facd0c8077",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-ee230258f27f8a0de489",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T10:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-92ab1f77dd8ccf54b1a2",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-cca00ce687818d9ad6ab",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-248b5ff0699922b23d03",
@@ -573,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -585,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-027b05f9d0faae1802b4",
@@ -597,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T07:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-2c539797fe263ec51334",
@@ -609,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T00:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-e799563c0958e055c8a2",
@@ -621,31 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
-  },
-  {
-    "id": "news-8fd74bd3f51991b52530",
-    "title": "GPT-5.5 Bio Bug Bounty",
-    "url": "https://openai.com/index/bio-bug-bounty",
-    "source": "OpenAI",
-    "summary": "Details about the OpenAI Bio Bounty program",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
-  },
-  {
-    "id": "news-54ee76ae9206d639c080",
-    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
-    "url": "https://openai.com/index/gpt-5-6",
-    "source": "OpenAI",
-    "summary": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-5941cef110c0f46967cf",
@@ -657,31 +657,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T10:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
-    "id": "news-41b85c9cdb7a0122f22d",
-    "title": "Our approach to government and national security partnerships",
-    "url": "https://openai.com/index/government-national-security-partnerships",
+    "id": "news-8fd74bd3f51991b52530",
+    "title": "GPT-5.5 Bio Bug Bounty",
+    "url": "https://openai.com/index/bio-bug-bounty",
     "source": "OpenAI",
-    "summary": "Learn how OpenAI approaches government and national security partnerships, with principles for responsible AI use, democratic accountability, and public safety.",
+    "summary": "Details about the OpenAI Bio Bounty program",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-08T13:30:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
-    "id": "news-eaad4cbcfa7f5327a2cc",
-    "title": "Separating signal from noise in coding evaluations",
-    "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+    "id": "news-54ee76ae9206d639c080",
+    "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+    "url": "https://openai.com/index/gpt-5-6",
     "source": "OpenAI",
-    "summary": "A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.",
+    "summary": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-08T13:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:26"
+    "published_at": "2026-07-09T10:00:00.000Z",
+    "discovered_at": "2026-07-21 20:25:41"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:29"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:29"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:29"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:29"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:43"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -837,6 +837,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-21 18:38:30"
+    "discovered_at": "2026-07-21 20:25:42"
   }
 ]
