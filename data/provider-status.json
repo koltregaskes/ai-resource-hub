@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T18:25:41.531Z",
+  "generatedAt": "2026-07-21T18:38:32.008Z",
   "providers": [
     {
       "id": "openai",
@@ -12,12 +12,20 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T18:25:40.128Z",
+      "lastCheckedAt": "2026-07-21T18:38:31.027Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Login",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Login",
+          "status": "partial_outage"
+        },
         {
           "name": "Image Generation",
           "status": "partial_outage"
@@ -33,17 +41,19 @@
         {
           "name": "ChatGPT Work",
           "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01KY2ZF047ZNVDX0Z6F3QFXB1K",
+          "title": "Initial investigating update",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-21T18:36:57.000Z",
+          "updatedAt": "2026-07-21T18:36:57.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating issues affecting logins and account creation for ChatGPT and the API Platform. Users who are already signed in may still be able to use ChatGPT."
+        },
         {
           "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
           "title": "Image generation unavailable in ChatGPT",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KY2ZF047ZNVDX0Z6F3QFXB1K",
+          "title": "Initial investigating update",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-21T18:36:57.000Z",
+          "updatedAt": "2026-07-21T18:36:57.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating issues affecting logins and account creation for ChatGPT and the API Platform. Users who are already signed in may still be able to use ChatGPT."
+        },
         {
           "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
           "title": "Image generation unavailable in ChatGPT",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-07-19T17:05:02.000Z",
           "resolvedAt": "2026-07-19T17:05:02.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KXT44TAQQ2R0AZDDVSJGAC4H",
-          "title": "Some users are unable to access Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-18T08:05:37.000Z",
-          "updatedAt": "2026-07-18T12:58:14.000Z",
-          "resolvedAt": "2026-07-18T12:58:14.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T18:25:40.804Z",
+      "lastCheckedAt": "2026-07-21T18:38:31.079Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T18:25:40.276Z",
+      "lastCheckedAt": "2026-07-21T18:38:31.065Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +229,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T18:25:41.207Z",
+      "lastCheckedAt": "2026-07-21T18:38:31.612Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +249,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T18:25:41.387Z",
+      "lastCheckedAt": "2026-07-21T18:38:31.725Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +314,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T18:25:40.509Z",
+      "lastCheckedAt": "2026-07-21T18:38:30.986Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -336,7 +346,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T18:25:41.490Z",
+      "lastCheckedAt": "2026-07-21T18:38:32.002Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
