@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T15:25:41.624Z",
+  "generatedAt": "2026-07-21T16:25:46.472Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T15:25:40.411Z",
+      "lastCheckedAt": "2026-07-21T16:25:45.627Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,15 +109,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T15:25:40.240Z",
+      "lastCheckedAt": "2026-07-21T16:25:45.565Z",
       "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "overallLabel": "Minor Service Outage",
+      "summary": "2 active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -125,15 +125,15 @@
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "degraded_performance"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Code",
-          "status": "degraded_performance"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
-          "status": "degraded_performance"
+          "status": "partial_outage"
         },
         {
           "name": "Claude for Government",
@@ -142,28 +142,50 @@
       ],
       "activeIncidents": [
         {
+          "id": "vcynh9cf33xp",
+          "title": "Elevated errors on several models",
+          "status": "identified",
+          "impact": "critical",
+          "startedAt": "2026-07-21T15:35:03.996Z",
+          "updatedAt": "2026-07-21T15:51:57.807Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/74sqh6d7f9vq",
+          "summary": "The issue has been identified and a fix is being implemented."
+        },
+        {
           "id": "j0y67nj6w93z",
           "title": "Elevated errors on Haiku 4.5",
-          "status": "identified",
-          "impact": "minor",
+          "status": "monitoring",
+          "impact": "major",
           "startedAt": "2026-07-21T13:04:35.885Z",
-          "updatedAt": "2026-07-21T14:44:53.852Z",
+          "updatedAt": "2026-07-21T15:35:04.129Z",
           "resolvedAt": null,
           "url": "https://stspg.io/zbk8jlprqymy",
-          "summary": "The issue has been identified and a fix is being implemented."
+          "summary": "A fix has been implemented and we are monitoring the results."
         }
       ],
       "recentIncidents": [
         {
+          "id": "vcynh9cf33xp",
+          "title": "Elevated errors on several models",
+          "status": "identified",
+          "impact": "critical",
+          "startedAt": "2026-07-21T15:35:03.996Z",
+          "updatedAt": "2026-07-21T15:51:57.807Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/74sqh6d7f9vq",
+          "summary": "The issue has been identified and a fix is being implemented."
+        },
+        {
           "id": "j0y67nj6w93z",
           "title": "Elevated errors on Haiku 4.5",
-          "status": "identified",
-          "impact": "minor",
+          "status": "monitoring",
+          "impact": "major",
           "startedAt": "2026-07-21T13:04:35.885Z",
-          "updatedAt": "2026-07-21T14:44:53.852Z",
+          "updatedAt": "2026-07-21T15:35:04.129Z",
           "resolvedAt": null,
           "url": "https://stspg.io/zbk8jlprqymy",
-          "summary": "The issue has been identified and a fix is being implemented."
+          "summary": "A fix has been implemented and we are monitoring the results."
         },
         {
           "id": "lw0sb1srtznh",
@@ -186,17 +208,6 @@
           "resolvedAt": "2026-07-21T11:18:50.485Z",
           "url": "https://stspg.io/lmgkc6zqpgsz",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "v35b71rthzhp",
-          "title": "Elevated errors on Haiku 4.5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-21T07:11:52.679Z",
-          "updatedAt": "2026-07-21T08:53:13.701Z",
-          "resolvedAt": "2026-07-21T08:53:13.684Z",
-          "url": "https://stspg.io/ng8pvt69fcnf",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -211,7 +222,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T15:25:40.732Z",
+      "lastCheckedAt": "2026-07-21T16:25:45.695Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -231,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T15:25:41.246Z",
+      "lastCheckedAt": "2026-07-21T16:25:46.176Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +262,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T15:25:41.617Z",
+      "lastCheckedAt": "2026-07-21T16:25:46.465Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T15:25:40.425Z",
+      "lastCheckedAt": "2026-07-21T16:25:45.404Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -348,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-21T15:25:41.573Z",
+      "lastCheckedAt": "2026-07-21T16:25:46.400Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",

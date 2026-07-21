@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 21 Jul 2026, 15:25 UTC
+Generated: 21 Jul 2026, 16:25 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 21 Jul 2026, 15:25 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 21 Jul 2026, 16:25 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 21 Jul 2026, 15:25 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 21 Jul 2026, 15:25 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 21 Jul 2026, 15:25 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 21 Jul 2026, 15:25 UTC |
-| Provider status | Hourly automated refresh | Automated | 21 Jul 2026, 15:25 UTC |
-| Guides and learning | Manual editorial review | Manual | 21 Jul 2026, 15:25 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 21 Jul 2026, 16:25 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 21 Jul 2026, 16:25 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 21 Jul 2026, 16:25 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 21 Jul 2026, 16:25 UTC |
+| Provider status | Hourly automated refresh | Automated | 21 Jul 2026, 16:25 UTC |
+| Guides and learning | Manual editorial review | Manual | 21 Jul 2026, 16:25 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 21 Jul 2026, 15:25 UTC
+- Last refreshed: 21 Jul 2026, 16:25 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 22 Aug 2026, 12:00 UTC: Stable Diffusion public release - Next exact anniversary in 32 days. (`/milestones/`)
-- 21 Jul 2026, 15:25 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 21 Jul 2026, 16:25 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -54,13 +54,13 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - 09 Apr 2026, 20:49 UTC: Sora app and Sora 2 - Model-specific rule for 2 tracked models on Web + App. (`/availability/`)
 - 09 Apr 2026, 20:47 UTC: Claude supported locations - Provider baseline rule for 21 tracked models on Web + App. (`/availability/`)
-- 09 Apr 2026, 20:41 UTC: Google AI Studio and Gemini API - Provider baseline rule for 22 tracked models on API + Web. (`/availability/`)
+- 09 Apr 2026, 20:41 UTC: Google AI Studio and Gemini API - Provider baseline rule for 24 tracked models on API + Web. (`/availability/`)
 
 ## Models and releases
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 21 Jul 2026, 15:25 UTC
+- Last refreshed: 21 Jul 2026, 16:25 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -72,15 +72,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
+- 21 Jul 2026, 12:00 UTC: Gemini 3.6 Flash - Google release desk entry is needs research with 0 related stories and 0 benchmark signals attached. (`/new/`)
+- 21 Jul 2026, 12:00 UTC: Gemini 3.5 Flash-Lite - Google release desk entry is needs research with 0 related stories and 0 benchmark signals attached. (`/new/`)
 - 16 Jul 2026, 12:00 UTC: Kimi K3 - Moonshot AI release desk entry is ready for editor with 1 related story and 0 benchmark signals attached. (`/new/`)
-- 16 Jul 2026, 12:00 UTC: Muse Spark 1.1 - Meta release desk entry is needs research with 0 related stories and 0 benchmark signals attached. (`/new/`)
-- 09 Jul 2026, 12:00 UTC: GPT-5.6 Luna Pro - OpenAI release desk entry is ready for editor with 4 related stories and 0 benchmark signals attached. (`/new/`)
 
 ## Benchmarks and evals
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 21 Jul 2026, 15:25 UTC
+- Last refreshed: 21 Jul 2026, 16:25 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 21 Jul 2026, 15:25 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 21 Jul 2026, 15:25 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 21 Jul 2026, 16:25 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 21 Jul 2026, 16:25 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 21 Jul 2026, 15:25 UTC
+- Last refreshed: 21 Jul 2026, 16:25 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,15 +111,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 21 Jul 2026, 15:25 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 21 Jul 2026, 15:25 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 21 Jul 2026, 15:25 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 21 Jul 2026, 16:25 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 21 Jul 2026, 16:25 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 21 Jul 2026, 16:25 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 21 Jul 2026, 15:25 UTC
+- Last refreshed: 21 Jul 2026, 16:25 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -131,15 +131,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
+- 21 Jul 2026, 15:37 UTC: US threatens sanctions against Chinese AI models over IP theft - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/))
+- 21 Jul 2026, 15:18 UTC: TreeSize won&#039;t renew perpetual-license support unless users subscribe - Ars Technica (research) ([source](https://arstechnica.com/gadgets/2026/07/treesize-wont-renew-perpetual-license-support-unless-users-subscribe/))
 - 21 Jul 2026, 15:00 UTC: Google launches a cheaper alternative to large AI security models like Mythos - The Verge (industry) ([source](https://www.theverge.com/tech/968572/google-gemini-flash-cyber-ai-security-model))
-- 21 Jul 2026, 13:27 UTC: Music streamer Deezer says more than 50% of daily uploads are AI-generated - TechCrunch (industry) ([source](https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/))
-- 21 Jul 2026, 13:00 UTC: Halliday’s latest smart glasses feature a much-improved display - The Verge (industry) ([source](https://www.theverge.com/tech/968255/halliday-gen-2-smart-glasses-hands-on-ai-wearables))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 21 Jul 2026, 15:25 UTC
+- Last refreshed: 21 Jul 2026, 16:25 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 21 Jul 2026, 15:25 UTC: OpenAI - Partial System Outage ([source](https://status.openai.com))
-- 21 Jul 2026, 15:25 UTC: Anthropic - Partially Degraded Service ([source](https://status.claude.com))
-- 21 Jul 2026, 15:25 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
+- 21 Jul 2026, 16:25 UTC: OpenAI - Partial System Outage ([source](https://status.openai.com))
+- 21 Jul 2026, 16:25 UTC: Anthropic - Minor Service Outage ([source](https://status.claude.com))
+- 21 Jul 2026, 16:25 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 21 Jul 2026, 15:25 UTC
+- Last refreshed: 21 Jul 2026, 16:25 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 21 Jul 2026, 15:25 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 21 Jul 2026, 15:25 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
-- 21 Jul 2026, 15:25 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)
+- 21 Jul 2026, 16:25 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 21 Jul 2026, 16:25 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 21 Jul 2026, 16:25 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)

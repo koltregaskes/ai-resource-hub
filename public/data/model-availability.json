@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-21T15:25:47.466Z",
+  "generatedAt": "2026-07-21T16:25:58.783Z",
   "overview": {
-    "generatedAt": "2026-07-21T15:25:47.479Z",
+    "generatedAt": "2026-07-21T16:25:58.799Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 116,
+    "surfacedModels": 118,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -161,7 +161,7 @@
           "gemma-"
         ]
       },
-      "matchingModelCount": 22,
+      "matchingModelCount": 24,
       "matchingModelIds": [
         "gemini-3.1-pro",
         "veo-3",
@@ -181,6 +181,8 @@
         "gemini-2.5-pro-preview-05-06",
         "gemini-3.1-flash-lite",
         "gemini-3.5-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-3.6-flash",
         "gemini-2.5-flash-image",
         "gemini-3.1-flash-image",
         "gemini-3.1-flash-lite-image",
@@ -205,6 +207,8 @@
         "Gemini 2.5 Pro Preview 05-06",
         "Gemini 3.1 Flash Lite",
         "Gemini 3.5 Flash",
+        "Gemini 3.5 Flash-Lite",
+        "Gemini 3.6 Flash",
         "Nano Banana (Gemini 2.5 Flash Image)",
         "Nano Banana 2 (Gemini 3.1 Flash Image)",
         "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",

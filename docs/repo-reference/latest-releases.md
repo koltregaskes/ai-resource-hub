@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 21 Jul 2026, 15:25 UTC
+Generated: 21 Jul 2026, 16:25 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 21 Jul 2026 | Gemini 3.6 Flash | Google | tracking | high | needs research | 0 | 0 | [official](https://ai.google.dev/gemini-api/docs/models) |
+| 21 Jul 2026 | Gemini 3.5 Flash-Lite | Google | tracking | high | needs research | 0 | 0 | [official](https://ai.google.dev/gemini-api/docs/models) |
 | 16 Jul 2026 | Kimi K3 | Moonshot AI | tracking | high | ready for editor | 0 | 1 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | high | needs research | 0 | 0 | [official](https://llama.meta.com/docs) |
 | 9 Jul 2026 | GPT-5.6 Luna Pro | OpenAI | tracking | high | ready for editor | 0 | 4 | [official](https://platform.openai.com/docs/models) |
@@ -26,7 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 4 Jun 2026 | Nemotron 3 Ultra | NVIDIA | tracking | watch | needs research | 0 | 0 | [official](https://docs.api.nvidia.com) |
 | 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | watch | ready for editor | 0 | 1 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 31 May 2026 | MiniMax M3 | MiniMax | tracking | watch | needs research | 0 | 0 | [official](https://platform.minimaxi.com/docs/api-reference/api-overview) |
-| 27 May 2026 | Claude Opus 4.8 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 4 | [official](https://docs.anthropic.com) |
-| 27 May 2026 | Claude Opus 4.8 | Anthropic | tracking | watch | ready for editor | 0 | 4 | [official](https://docs.anthropic.com) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
