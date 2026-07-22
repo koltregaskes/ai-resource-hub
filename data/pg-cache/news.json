@@ -1,15 +1,51 @@
 [
   {
+    "id": "news-6a49c5af54424b33cfe4",
+    "title": "Yope raises $12.3M to build a private social network without algorithms or ads",
+    "url": "https://techcrunch.com/2026/07/22/yope-raises-12-3m-to-build-a-private-social-network-without-algorithms-or-ads/",
+    "source": "TechCrunch",
+    "summary": "Yope, a fast-growing social app focused on private groups of friends and family, has raised $12.3 million in seed funding. Instead of chasing creators and algorithmic feeds, the startup is betting that the future of social networking lies in small, private communities powered by messaging, photo sharing, and AI featur…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-22T18:13:58.000Z",
+    "discovered_at": "2026-07-22 18:20:12"
+  },
+  {
+    "id": "news-9cb43306bf89e47c66c7",
+    "title": "Monday.com lays off hundreds to focus on AI",
+    "url": "https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/",
+    "source": "TechCrunch",
+    "summary": "The company said it is reducing its headcount by 20%, or about 630 staff, to \"support a leaner, more focused operating model\" as it focuses on its AI Work Platform.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-22T17:54:14.000Z",
+    "discovered_at": "2026-07-22 18:20:12"
+  },
+  {
+    "id": "news-bdbd14d002e33dcbbb7a",
+    "title": "Here&#8217;s what Samsung&#8217;s smart glasses actually look like",
+    "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
+    "source": "The Verge",
+    "summary": "Samsung has given us our first chance to check out its upcoming smart glasses in person, revealing two new designs and the first specs in the process, including an impressive 9-hour battery life. The glasses, developed in collaboration with Google and the eyewear brands Gentle Monster and Warby Parker, are due to laun…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-22T16:35:34.000Z",
+    "discovered_at": "2026-07-22 18:20:12"
+  },
+  {
     "id": "news-8458437ee995a833de89",
     "title": "Arcee, a US open source AI lab, says Chinese models are not inherently dangerous",
     "url": "https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/",
     "source": "TechCrunch",
-    "summary": "As Chinese AI models grow in capability and popularity among US companies, the arguing over what should be done about them has reached a fever pitch.",
+    "summary": "As Chinese AI models grow in capability and popularity among U.S. companies, the arguing over what should be done about them has reached a fever pitch.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:24:08.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-076fd769c4ab7ed610ab",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:23:09.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-957346eceef6a9df3f2c",
@@ -33,7 +69,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:13:30.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
+  },
+  {
+    "id": "news-ad3e75f937d65ca66912",
+    "title": "AMD commits up to $5 billion to Anthropic",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal",
+    "source": "The Verge",
+    "summary": "AMD says it's going to invest up to $5 billion in Anthropic, while helping to expand the AI company's computing power, according to an announcement on Wednesday. As part of the new partnership, Anthropic will deploy up to 2 gigawatts of AMD's Instinct MI450 AI GPUs using the chipmaker's new Helios rack-scale system, a…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-22T14:44:27.000Z",
+    "discovered_at": "2026-07-22 18:20:12"
+  },
+  {
+    "id": "news-d4f086f237a09222fe44",
+    "title": "Menlo Ventures’ Matt Murphy explains what AI startups founders must do differently",
+    "url": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/",
+    "source": "TechCrunch",
+    "summary": "Anthropic&#160;leaped to&#160;a&#160;$47 billion&#160;revenue run rate&#160;by May,&#160;compared to&#160;$9 billion&#160;in 2025.&#160;It’s&#160;the kind of growth that&#160;Menlo Ventures&#8217;&#160;Matt Murphy&#160;says&#160;he&#8217;s&#160;never seen in 25 years of investing, not in the internet wave, not in mobi…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-22T14:00:00.000Z",
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-4022c61989ed570d039b",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:20:35.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-858b2ce5d7c2ee2ed7f3",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-cd499e47d059c505c5ed",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T11:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-cd41dfa17233755ce328",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T10:12:13.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-b7e6966e47e030a3475b",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T10:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-fcb688611841f429299a",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T08:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-fedcdccad6a611588a18",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T03:20:57.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-a74966828836169fe622",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T23:55:10.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-45095198141eb13eda50",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T22:06:43.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-3e18d6f571fa44327fc4",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T21:48:54.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-8eac58381968960c4c91",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T20:56:55.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-7fe22c4a2154262e7aa0",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T19:43:41.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-16d2a505a31f6df83f61",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T19:39:30.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-3a68379c08593a504222",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T19:22:28.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-46f6c2801f0dd1aaea33",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T18:06:38.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-ec57ba11b1c3ef4ee4a6",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:11:50.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-0bd50127700baaab5665",
@@ -297,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T16:53:37.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-a8374634340898461ced",
@@ -309,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:37:05.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -321,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-22 16:42:12"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-7d7edea89fcf1f3756a4",
@@ -333,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
-  },
-  {
-    "id": "news-0a6ee92cfb0982ad5a6d",
-    "title": "Music streamer Deezer says more than 50% of daily uploads are AI-generated",
-    "url": "https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/",
-    "source": "TechCrunch",
-    "summary": "Deezer said more than 90,000 AI-generated tracks were uploaded daily on the platform in June.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T13:27:42.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-4191c27a8a3a4b213402",
@@ -357,31 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T13:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
-  },
-  {
-    "id": "news-ed3452d70ad2061d1b5c",
-    "title": "America needs to stop getting shocked by Chinese AI",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
-    "source": "The Verge",
-    "summary": "Last week, two Chinese AI companies unveiled models they say can credibly compete with the best systems from OpenAI and Anthropic. The response was swift and predictable. Markets wobbled, commentators declared Silicon Valley shooketh, and policymakers reached for the familiar language of arms races and wake-up calls.…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T11:08:56.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
-  },
-  {
-    "id": "news-bf2c920d8432572644fc",
-    "title": "Gritt exits stealth with $32 million for robots to build solar plants — then, everything else",
-    "url": "https://techcrunch.com/2026/07/21/gritt-exits-stealth-with-34-million-for-robots-to-build-solar-plants-then-everything-else/",
-    "source": "TechCrunch",
-    "summary": "Gritt is coming out of stealth with $34 million and plans to automate the hardest tasks on construction sites.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T10:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-20b0eb2d5c1499740c7e",
@@ -393,19 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
-  },
-  {
-    "id": "news-758b6cd17183575fd36d",
-    "title": "Anthropic&#8217;s landmark $1.5B copyright settlement is approved",
-    "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/",
-    "source": "TechCrunch",
-    "summary": "The final approval settles one case, but it doesn't resolve the broader issue of using copyrighted works to train AI models.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T00:12:24.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-40359dbf5a246645eb9b",
@@ -417,19 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
-  },
-  {
-    "id": "news-f09cbf6a0ec2257f6654",
-    "title": "Here are the 30,000 songs Sony is suing Udio&#8217;s AI music generator over",
-    "url": "https://www.theverge.com/tech/968375/sony-udio-lawsuit-songs-ai-copyright",
-    "source": "The Verge",
-    "summary": "Sony Music Entertainment has filed another lawsuit against Udio, accusing the AI music generator of infringing the copyright of more than 30,000 of its songs, ranging from Elvis Presley's Hound Dog to Beyonc&#233;'s Say My Name, and Harry Styles' As It Was. The lawsuit, filed in a New York court on Monday, claims that…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-20T22:19:12.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-d4ff9ec891b78868c06a",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-3ebda52fc80ebe33165f",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-cec1ebe5d23f0658e4ae",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T19:16:48.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-09e86f1db1bc975bb4d7",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T19:02:38.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-e9ea1363a186c8a2e72e",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T17:06:08.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-9a3bfba7061ea5562dbd",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:40:48.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-8fe39edff791751de0c2",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-22 16:42:12"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-6f16a999c8ddd889e881",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-89c9f7f3ade42756ea06",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T22:24:17.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-1e97faa490facd0c8077",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-ee230258f27f8a0de489",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T10:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-92ab1f77dd8ccf54b1a2",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-cca00ce687818d9ad6ab",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-248b5ff0699922b23d03",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-22 16:42:12"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-027b05f9d0faae1802b4",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T07:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-2c539797fe263ec51334",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-10T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-e799563c0958e055c8a2",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T13:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:09"
+    "discovered_at": "2026-07-22 18:20:05"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-22 16:42:12"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:10"
+    "discovered_at": "2026-07-22 18:20:11"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-22 16:42:12"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:10"
+    "discovered_at": "2026-07-22 18:20:11"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:10"
+    "discovered_at": "2026-07-22 18:20:11"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:10"
+    "discovered_at": "2026-07-22 18:20:11"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -837,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-22 16:42:12"
+    "discovered_at": "2026-07-22 18:20:12"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -849,6 +849,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-22 16:42:11"
+    "discovered_at": "2026-07-22 18:20:12"
   }
 ]
