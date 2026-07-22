@@ -1,6 +1,94 @@
 {
-  "generatedAt": "2026-07-22T16:42:13.974Z",
+  "generatedAt": "2026-07-22T17:01:05.849Z",
   "providers": [
+    {
+      "id": "fireworks",
+      "providerId": null,
+      "name": "Fireworks AI",
+      "colour": "#ef4444",
+      "websiteUrl": "https://fireworks.ai",
+      "statusPageUrl": "https://status.fireworks.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-22T17:01:05.815Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "fireworks-feed-1-2026-07-17T19:41:19.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-17T19:41:19.000Z",
+          "updatedAt": "2026-07-17T19:41:19.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-3-2026-07-17T19:29:11.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-17T19:29:11.000Z",
+          "updatedAt": "2026-07-17T19:29:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "fireworks-feed-0-2026-07-17T19:47:13.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-17T19:47:13.000Z",
+          "updatedAt": "2026-07-17T19:47:13.000Z",
+          "resolvedAt": "2026-07-17T19:47:13.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-1-2026-07-17T19:41:19.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-17T19:41:19.000Z",
+          "updatedAt": "2026-07-17T19:41:19.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        },
+        {
+          "id": "fireworks-feed-2-2026-07-17T19:32:05.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-17T19:32:05.000Z",
+          "updatedAt": "2026-07-17T19:32:05.000Z",
+          "resolvedAt": "2026-07-17T19:32:05.000Z",
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+        },
+        {
+          "id": "fireworks-feed-3-2026-07-17T19:29:11.000Z",
+          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-17T19:29:11.000Z",
+          "updatedAt": "2026-07-17T19:29:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai/",
+          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T16:42:13.492Z",
+      "lastCheckedAt": "2026-07-22T17:01:05.080Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -20,6 +108,94 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-22T17:01:05.842Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-1-2026-07-22T15:44:48.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-22T15:44:48.000Z",
+          "updatedAt": "2026-07-22T15:44:48.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
+        },
+        {
+          "id": "together-feed-3-2026-07-22T14:28:53.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-22T14:28:53.000Z",
+          "updatedAt": "2026-07-22T14:28:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-07-22T16:26:29.000Z",
+          "title": "OpenAI GPT OSS 120B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-22T16:26:29.000Z",
+          "updatedAt": "2026-07-22T16:26:29.000Z",
+          "resolvedAt": "2026-07-22T16:26:29.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-22T15:44:48.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-22T15:44:48.000Z",
+          "updatedAt": "2026-07-22T15:44:48.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-22T15:00:57.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-22T15:00:57.000Z",
+          "updatedAt": "2026-07-22T15:00:57.000Z",
+          "resolvedAt": "2026-07-22T15:00:57.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-3-2026-07-22T14:28:53.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-22T14:28:53.000Z",
+          "updatedAt": "2026-07-22T14:28:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        }
+      ]
     },
     {
       "id": "anthropic",
@@ -32,7 +208,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T16:42:12.958Z",
+      "lastCheckedAt": "2026-07-22T17:01:05.036Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +298,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T16:42:13.822Z",
+      "lastCheckedAt": "2026-07-22T17:01:05.686Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -130,71 +306,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "fireworks",
-      "providerId": null,
-      "name": "Fireworks AI",
-      "colour": "#ef4444",
-      "websiteUrl": "https://fireworks.ai",
-      "statusPageUrl": "https://status.fireworks.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T16:42:13.967Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "fireworks-feed-0-2026-07-17T19:47:13.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-17T19:47:13.000Z",
-          "updatedAt": "2026-07-17T19:47:13.000Z",
-          "resolvedAt": "2026-07-17T19:47:13.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-1-2026-07-17T19:41:19.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:41:19.000Z",
-          "updatedAt": "2026-07-17T19:41:19.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        },
-        {
-          "id": "fireworks-feed-2-2026-07-17T19:32:05.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-17T19:32:05.000Z",
-          "updatedAt": "2026-07-17T19:32:05.000Z",
-          "resolvedAt": "2026-07-17T19:32:05.000Z",
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
-        },
-        {
-          "id": "fireworks-feed-3-2026-07-17T19:29:11.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-17T19:29:11.000Z",
-          "updatedAt": "2026-07-17T19:29:11.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
-        }
-      ]
     },
     {
       "id": "google",
@@ -207,7 +318,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T16:42:13.248Z",
+      "lastCheckedAt": "2026-07-22T17:01:04.960Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -239,7 +350,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T16:42:12.854Z",
+      "lastCheckedAt": "2026-07-22T17:01:05.119Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -311,71 +422,6 @@
           "updatedAt": "2026-07-21T22:19:31.000Z",
           "resolvedAt": "2026-07-21T22:19:31.000Z",
           "summary": "Image generation functionality has fully recovered, and error rates have returned to normal levels."
-        }
-      ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T16:42:13.964Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-07-22T16:26:29.000Z",
-          "title": "OpenAI GPT OSS 120B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-22T16:26:29.000Z",
-          "updatedAt": "2026-07-22T16:26:29.000Z",
-          "resolvedAt": "2026-07-22T16:26:29.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 120B recovered"
-        },
-        {
-          "id": "together-feed-1-2026-07-22T15:44:48.000Z",
-          "title": "OpenAI GPT OSS 120B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-22T15:44:48.000Z",
-          "updatedAt": "2026-07-22T15:44:48.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 120B went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-22T15:00:57.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-22T15:00:57.000Z",
-          "updatedAt": "2026-07-22T15:00:57.000Z",
-          "resolvedAt": "2026-07-22T15:00:57.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-07-22T14:28:53.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-22T14:28:53.000Z",
-          "updatedAt": "2026-07-22T14:28:53.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
         }
       ]
     },
