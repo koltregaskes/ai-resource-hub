@@ -1,103 +1,6 @@
 {
-  "generatedAt": "2026-07-22T02:25:45.966Z",
+  "generatedAt": "2026-07-22T03:25:38.567Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T02:25:44.734Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Image Generation",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "ChatGPT Work",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
-          "title": "Image generation unavailable in ChatGPT",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-07-21T10:36:02.000Z",
-          "updatedAt": "2026-07-21T15:15:27.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KY32PEQHPV5F2W4HCNFJ60RD",
-          "title": "Elevated errors for API image generation",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-21T19:33:27.000Z",
-          "updatedAt": "2026-07-21T22:19:31.000Z",
-          "resolvedAt": "2026-07-21T22:19:31.000Z",
-          "summary": "Image generation functionality has fully recovered, and error rates have returned to normal levels."
-        },
-        {
-          "id": "01KY2ZF047ZNVDX0Z6F3QFXB1K",
-          "title": "Issues with logins and signups",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-21T18:36:57.000Z",
-          "updatedAt": "2026-07-21T19:00:27.000Z",
-          "resolvedAt": "2026-07-21T19:00:27.000Z",
-          "summary": "All affected API Platform functionality has now fully recovered."
-        },
-        {
-          "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
-          "title": "Image generation unavailable in ChatGPT",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-07-21T10:36:02.000Z",
-          "updatedAt": "2026-07-21T15:15:27.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01KXYF4BTCV9DTZ5NDSFN716FH",
-          "title": "Elevated errors for GitHub-dependent ChatGPT and Codex workflows",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-20T00:34:34.000Z",
-          "updatedAt": "2026-07-20T03:34:06.000Z",
-          "resolvedAt": "2026-07-20T03:34:06.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -109,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T02:25:45.176Z",
+      "lastCheckedAt": "2026-07-22T03:25:38.017Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T02:25:44.662Z",
+      "lastCheckedAt": "2026-07-22T03:25:37.258Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T02:25:45.428Z",
+      "lastCheckedAt": "2026-07-22T03:25:38.214Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T02:25:45.825Z",
+      "lastCheckedAt": "2026-07-22T03:25:38.511Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T02:25:44.914Z",
+      "lastCheckedAt": "2026-07-22T03:25:37.320Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -326,6 +229,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-22T03:25:37.386Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "ChatGPT Work",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
+          "title": "Image generation unavailable in ChatGPT",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-21T10:36:02.000Z",
+          "updatedAt": "2026-07-22T02:50:19.000Z",
+          "resolvedAt": "2026-07-22T02:50:19.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KY32PEQHPV5F2W4HCNFJ60RD",
+          "title": "Elevated errors for API image generation",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-21T19:33:27.000Z",
+          "updatedAt": "2026-07-21T22:19:31.000Z",
+          "resolvedAt": "2026-07-21T22:19:31.000Z",
+          "summary": "Image generation functionality has fully recovered, and error rates have returned to normal levels."
+        },
+        {
+          "id": "01KY2ZF047ZNVDX0Z6F3QFXB1K",
+          "title": "Issues with logins and signups",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-21T18:36:57.000Z",
+          "updatedAt": "2026-07-21T19:00:27.000Z",
+          "resolvedAt": "2026-07-21T19:00:27.000Z",
+          "summary": "All affected API Platform functionality has now fully recovered."
+        },
+        {
+          "id": "01KXYF4BTCV9DTZ5NDSFN716FH",
+          "title": "Elevated errors for GitHub-dependent ChatGPT and Codex workflows",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-20T00:34:34.000Z",
+          "updatedAt": "2026-07-20T03:34:06.000Z",
+          "resolvedAt": "2026-07-20T03:34:06.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -336,7 +325,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-22T02:25:45.959Z",
+      "lastCheckedAt": "2026-07-22T03:25:38.563Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -345,7 +334,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-07-21T17:55:36.000Z",
+          "id": "together-feed-0-2026-07-22T03:15:37.000Z",
+          "title": "Qwen2.5 7B Instruct Turbo recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-22T03:15:37.000Z",
+          "updatedAt": "2026-07-22T03:15:37.000Z",
+          "resolvedAt": "2026-07-22T03:15:37.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen2.5 7B Instruct Turbo recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-22T02:41:37.000Z",
+          "title": "Qwen2.5 7B Instruct Turbo went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-22T02:41:37.000Z",
+          "updatedAt": "2026-07-22T02:41:37.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen2.5 7B Instruct Turbo went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-21T17:55:36.000Z",
           "title": "Inkling recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -356,7 +367,7 @@
           "summary": "Inkling recovered"
         },
         {
-          "id": "together-feed-1-2026-07-21T17:40:30.000Z",
+          "id": "together-feed-3-2026-07-21T17:40:30.000Z",
           "title": "Qwen2.5 7B Instruct Turbo recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -365,28 +376,6 @@
           "resolvedAt": "2026-07-21T17:40:30.000Z",
           "url": "https://status.together.ai/",
           "summary": "Qwen2.5 7B Instruct Turbo recovered"
-        },
-        {
-          "id": "together-feed-2-2026-07-21T17:31:43.000Z",
-          "title": "Inkling went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-21T17:31:43.000Z",
-          "updatedAt": "2026-07-21T17:31:43.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Inkling went down"
-        },
-        {
-          "id": "together-feed-3-2026-07-21T17:27:57.000Z",
-          "title": "Qwen2.5 7B Instruct Turbo went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-21T17:27:57.000Z",
-          "updatedAt": "2026-07-21T17:27:57.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen2.5 7B Instruct Turbo went down"
         }
       ]
     },
