@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 23 Jul 2026, 14:25 UTC
+Generated: 23 Jul 2026, 14:27 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,7 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 21 Jul 2026 | Gemini 3.6 Flash | Google | tracking | high | ready for editor | 0 | 1 | [official](https://ai.google.dev/gemini-api/docs/models) |
+| 21 Jul 2026 | Gemini 3.6 Flash | Google | tracking | high | ready for editor | 0 | 2 | [official](https://ai.google.dev/gemini-api/docs/models) |
 | 21 Jul 2026 | Gemini 3.5 Flash Lite | Google | tracking | high | ready for editor | 0 | 1 | [official](https://ai.google.dev/gemini-api/docs/models) |
 | 16 Jul 2026 | Kimi K3 | Moonshot AI | tracking | high | ready for editor | 0 | 1 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | high | ready for editor | 0 | 1 | [official](https://llama.meta.com/docs) |
@@ -19,7 +19,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Jul 2026 | GPT-5.6 Sol Pro | OpenAI | tracking | high | ready for editor | 0 | 6 | [official](https://platform.openai.com/docs/models) |
 | 9 Jul 2026 | GPT-5.6 Sol | OpenAI | tracking | high | ready for editor | 0 | 6 | [official](https://platform.openai.com/docs/models) |
 | 8 Jul 2026 | Grok 4.5 | xAI | tracking | high | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
-| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/glasswing) |
+| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 4 | [official](https://www.anthropic.com/glasswing) |
 | 30 Jun 2026 | Claude Sonnet 5 | Anthropic | tracking | watch | ready for editor | 0 | 4 | [official](https://docs.anthropic.com) |
 | 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | ready for editor | 0 | 3 | [official](https://ai.google.dev/gemini-api/docs/models) |
 | 16 Jun 2026 | GLM 5.2 | Zhipu AI | tracking | watch | needs research | 0 | 0 | [official](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
