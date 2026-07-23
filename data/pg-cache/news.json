@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-9954135b2125f34a8212",
+    "title": "Runway launches AI model router as generative media gets crowded",
+    "url": "https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/",
+    "source": "TechCrunch",
+    "summary": "The Media Router is a tool that automatically selects the best image, video, or audio generation model for a request based on whether a developer prioritizes quality, speed or cost.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T17:07:35.000Z",
+    "discovered_at": "2026-07-23 18:21:50"
+  },
+  {
+    "id": "news-fba0078191b23c363b59",
+    "title": "OpenAI makes ChatGPT Health available to all US users",
+    "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
+    "source": "TechCrunch",
+    "summary": "Users can also integrate their personal data from services like Apple Health, Function, and MyFitnessPal.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T17:00:00.000Z",
+    "discovered_at": "2026-07-23 18:21:50"
+  },
+  {
     "id": "news-14cf993c0c0f395ad932",
     "title": "Meta launched a new AI optimism ad set to a song about human extinction",
     "url": "https://techcrunch.com/2026/07/23/meta-launched-a-new-ai-optimism-ad-set-to-a-song-about-human-extinction/",
@@ -9,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T16:28:50.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-8d1cdf633c04f5bac66a",
@@ -21,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T15:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-1d8fd6e6598eea4d216b",
@@ -33,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T15:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-81587b96e599718eefca",
@@ -45,43 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T14:52:44.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-01d83a6818a939093426",
-    "title": "Lawmakers prepare bill requiring AI ‘kill switch’",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal",
-    "source": "The Verge",
-    "summary": "Lawmakers are preparing to introduce an \"AI Kill Switch Act\" that would require AI companies to shut down or throttle their systems on orders from the Department of Homeland Security, according to a report from Politico. Reps. Ted Lieu (D-CA) and Nathaniel Moran (R-TX) are expected to introduce the legislation on Thur…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-23T14:13:35.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-9ae095cbc6ee06177baf",
-    "title": "Apple’s OpenAI lawsuit is about who gets to define the post-smartphone era",
-    "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
-    "source": "The Verge",
-    "summary": "Today on Decoder, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the major trade secrets lawsuit between Apple and OpenAI and what this tells us about OpenAI’s future. By now I’m sure most Decoder listeners are familiar with Apple’s allegations in this case. The company says a number of ex-Apple…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-23T14:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-5becd4f5ac8e00f8b328",
-    "title": "The right-wing boomers protesting data centers have a lot in common with the left",
-    "url": "https://www.theverge.com/policy/969667/humans-first-data-center-protest-hernando-county-florida-republicans",
-    "source": "The Verge",
-    "summary": "On a gray, humid Saturday morning in central Florida, a little under a dozen people gathered outside the Spring Hill Branch Library to protest the construction of a hyperscale data center in their community. There was no immediate threat - the Hernando County commission had unanimously approved a one-year moratorium o…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-23T12:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-47cc8085e93d02d715c9",
@@ -93,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T11:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-8bdbd9a84622bbb0fc1d",
@@ -105,7 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T06:09:13.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
+  },
+  {
+    "id": "news-7569338ee0d35289de5f",
+    "title": "Launching Health in ChatGPT",
+    "url": "https://openai.com/index/health-in-chatgpt",
+    "source": "OpenAI",
+    "summary": "Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T00:00:00.000Z",
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-ac40ec794b96ec3fcd3d",
@@ -117,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T23:47:54.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-e99bcac5847abc12d638",
@@ -129,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T22:01:52.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-d341226a8b131bf07e7a",
@@ -141,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T20:49:03.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-501813e47094f10dd614",
@@ -153,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T19:11:46.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-9002430dc555ad641d4d",
@@ -165,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T18:50:44.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-6a49c5af54424b33cfe4",
@@ -177,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T18:13:58.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-9cb43306bf89e47c66c7",
@@ -189,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T17:54:14.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-bdbd14d002e33dcbbb7a",
@@ -201,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:35:34.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-8458437ee995a833de89",
@@ -213,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:24:08.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-076fd769c4ab7ed610ab",
@@ -225,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:23:09.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-957346eceef6a9df3f2c",
@@ -237,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:13:30.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-ad3e75f937d65ca66912",
@@ -249,31 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T14:44:27.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-d4f086f237a09222fe44",
-    "title": "Menlo Ventures’ Matt Murphy explains what AI startups founders must do differently",
-    "url": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/",
-    "source": "TechCrunch",
-    "summary": "Anthropic&#160;leaped to&#160;a&#160;$47 billion&#160;revenue run rate&#160;by May,&#160;compared to&#160;$9 billion&#160;in 2025.&#160;It’s&#160;the kind of growth that&#160;Menlo Ventures&#8217;&#160;Matt Murphy&#160;says&#160;he&#8217;s&#160;never seen in 25 years of investing, not in the internet wave, not in mobi…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-22T14:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-4022c61989ed570d039b",
-    "title": "The browser wars aren&#8217;t about search anymore — here are the best alternatives to Chrome and Safari",
-    "url": "https://techcrunch.com/2026/07/22/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/",
-    "source": "TechCrunch",
-    "summary": "We’ve compiled an overview of some of the top alternative browsers available today aiming to challenge Chrome and Safari.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-22T13:20:35.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -285,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-130e23c4bd2f87cbb00e",
@@ -297,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -309,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -321,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-cd499e47d059c505c5ed",
@@ -333,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T11:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-cd41dfa17233755ce328",
@@ -345,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T10:12:13.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -357,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-ce627deb992812dab288",
@@ -369,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-45095198141eb13eda50",
@@ -381,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T22:06:43.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-3e18d6f571fa44327fc4",
@@ -393,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T21:48:54.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-3a68379c08593a504222",
@@ -405,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T19:22:28.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -417,7 +393,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
+  },
+  {
+    "id": "news-0bd50127700baaab5665",
+    "title": "Anthropic’s $1.5 billion book piracy settlement approved by judge",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved",
+    "source": "The Verge",
+    "summary": "A federal judge has signed off on Anthropic's $1.5 billion class action settlement with authors who accused the company of training its AI models on copyrighted books, as reported earlier by Reuters. In an order on Monday, Judge Araceli Mart&#237;nez-Olgu&#237;n writes that the settlement will provide \"meaningful reli…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-21T16:53:37.000Z",
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -429,7 +417,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
+  },
+  {
+    "id": "news-7d7edea89fcf1f3756a4",
+    "title": "Google launches a cheaper alternative to large AI security models like Mythos",
+    "url": "https://www.theverge.com/tech/968572/google-gemini-flash-cyber-ai-security-model",
+    "source": "The Verge",
+    "summary": "Google is launching Gemini 3.6 Flash alongside a new security model dedicated to quickly finding and patching security vulnerabilities. In a blog post on Tuesday, Google describes Gemini 3.5 Flash Cyber as a \"cost-efficient and highly capable alternative\" to larger, more expensive AI systems, such as the one offered b…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-21T15:00:00.000Z",
+    "discovered_at": "2026-07-23 18:21:50"
+  },
+  {
+    "id": "news-4191c27a8a3a4b213402",
+    "title": "Halliday’s latest smart glasses feature a much-improved display",
+    "url": "https://www.theverge.com/tech/968255/halliday-gen-2-smart-glasses-hands-on-ai-wearables",
+    "source": "The Verge",
+    "summary": "I first slipped on Halliday's original smart glasses at CES 2025. I was not a fan. The glasses had a tiny, movable display window embedded into the frame that was incredibly finicky to see, and my 30-minute demo left me with achy eyeballs. It was an interesting concept with terrible execution, especially compared to t…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-21T13:00:00.000Z",
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-20b0eb2d5c1499740c7e",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-40359dbf5a246645eb9b",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-d4ff9ec891b78868c06a",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-3ebda52fc80ebe33165f",
@@ -477,55 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
-  },
-  {
-    "id": "news-cec1ebe5d23f0658e4ae",
-    "title": "The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs",
-    "url": "https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs",
-    "source": "VentureBeat",
-    "summary": "Across 107 enterprises, AI infrastructure spending is accelerating well ahead of the ability to see or steer its economics. Most organizations run their AI on a familiar base of hyperscalers and model-provider APIs, yet the next dollar is aimed at specialized compute almost none of them use today; a majority intend to…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-16T19:16:48.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-09e86f1db1bc975bb4d7",
-    "title": "The agent security gap: 54% of enterprises have already had an AI agent incident, and most still let agents share credentials",
-    "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
-    "source": "VentureBeat",
-    "summary": "Across 107 enterprises, AI agents are being given real access to systems and data while the controls meant to contain them lag behind. More than half have already had a confirmed agent security incident or a near-miss; only about a third give every agent its own scoped identity, and most agents still share credentials…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-16T19:02:38.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-e9ea1363a186c8a2e72e",
-    "title": "The AI context gap: Enterprise AI organizations have a trust problem, not a retrieval problem — and most are still building the fix",
-    "url": "https://venturebeat.com/ai/the-ai-context-gap-enterprise-ai-organizations-have-a-trust-problem-not-a-retrieval-problem-and-most-are-still-building-the-fix",
-    "source": "VentureBeat",
-    "summary": "Across 101 enterprises, the infrastructure that feeds AI agents their business context is being built faster than it can be trusted. Retrieval-augmented generation is already the default context source, and provider-native retrieval has quietly overtaken the dedicated vector databases that define the category — yet a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-16T17:06:08.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-9a3bfba7061ea5562dbd",
-    "title": "The agent evaluation gap: Enterprise AI organizations have a reality-alignment problem, not a coverage problem — and most are shipping to production anyway",
-    "url": "https://venturebeat.com/ai/the-agent-evaluation-gap-enterprise-ai-organizations-have-a-reality-alignment-problem-not-a-coverage-problem-and-most-are-shipping-to-production-anyway",
-    "source": "VentureBeat",
-    "summary": "Across 157 enterprises, organizations are granting AI agents more autonomy while trusting the evaluations meant to gate that autonomy less. Half have already shipped an agent that passed their internal evaluations and then failed a customer in production; only one in twenty fully trusts automated evaluation today; and…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-16T16:40:48.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -537,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -549,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-8fe39edff791751de0c2",
@@ -561,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -573,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-6f16a999c8ddd889e881",
@@ -585,19 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
-  },
-  {
-    "id": "news-89c9f7f3ade42756ea06",
-    "title": "Agentic orchestration: Enterprise AI organizations have a deployment problem, not a platform problem — and most are calling chatbots agents",
-    "url": "https://venturebeat.com/ai/agentic-orchestration-enterprise-ai-organizations-have-a-deployment-problem-not-a-platform-problem-and-most-are-calling-chatbots-agents",
-    "source": "VentureBeat",
-    "summary": "Across 101 enterprises, agent orchestration is consolidating onto model-provider platforms — Anthropic’s Claude leads by a wide margin — chosen for the gravity of the underlying model and judged on reliable multi-step execution. But the ambition runs well ahead of the reality: most deployed “agents” are still chatbot…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-15T22:24:17.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-1e97faa490facd0c8077",
@@ -609,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-ee230258f27f8a0de489",
@@ -621,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T10:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -633,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-92ab1f77dd8ccf54b1a2",
@@ -645,19 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
-  },
-  {
-    "id": "news-248b5ff0699922b23d03",
-    "title": "How sales teams use ChatGPT Work",
-    "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-    "source": "OpenAI",
-    "summary": "See how sales teams can use ChatGPT Work to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-cca00ce687818d9ad6ab",
@@ -669,7 +609,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:49"
+  },
+  {
+    "id": "news-248b5ff0699922b23d03",
+    "title": "How sales teams use ChatGPT Work",
+    "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+    "source": "OpenAI",
+    "summary": "See how sales teams can use ChatGPT Work to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-14T00:00:00.000Z",
+    "discovered_at": "2026-07-23 18:21:49"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -681,19 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
-  },
-  {
-    "id": "news-027b05f9d0faae1802b4",
-    "title": "How Deutsche Telekom is rewiring telecommunications with AI",
-    "url": "https://openai.com/index/deutsche-telekom",
-    "source": "OpenAI",
-    "summary": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-10T07:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:36"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -705,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -717,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -729,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -741,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -753,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -765,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -777,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -789,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -801,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -813,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -825,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -837,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -849,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-23 16:43:45"
+    "discovered_at": "2026-07-23 18:21:50"
   }
 ]

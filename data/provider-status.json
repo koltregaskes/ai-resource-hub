@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T17:03:45.662Z",
+  "generatedAt": "2026-07-23T18:21:53.342Z",
   "providers": [
     {
       "id": "openai",
@@ -12,59 +12,79 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T17:03:43.846Z",
+      "lastCheckedAt": "2026-07-23T18:21:51.510Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Sites",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Login",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Compliance API",
+          "status": "degraded_performance"
+        },
         {
           "name": "Files",
           "status": "degraded_performance"
         },
         {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
+          "name": "Conversations",
+          "status": "degraded_performance"
         },
         {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
+          "name": "Search",
+          "status": "degraded_performance"
         }
       ],
       "activeIncidents": [
         {
           "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
-          "title": "Elevated error rates",
+          "title": "Elevated Error Rates",
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-07-23T15:36:02.000Z",
-          "updatedAt": "2026-07-23T16:48:54.000Z",
+          "updatedAt": "2026-07-23T17:58:26.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation with the downstream infrastructure provider."
+          "summary": "We are continuing to work on implementing a mitigation."
+        },
+        {
+          "id": "01KY81XMFAV8KXNJGVNEMKAK15",
+          "title": "Some users may experience elevated error rates in ChatGPT",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-23T17:56:06.000Z",
+          "updatedAt": "2026-07-23T17:56:06.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
         }
       ],
       "recentIncidents": [
         {
           "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
-          "title": "Elevated error rates",
+          "title": "Elevated Error Rates",
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-07-23T15:36:02.000Z",
-          "updatedAt": "2026-07-23T16:48:54.000Z",
+          "updatedAt": "2026-07-23T17:58:26.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation with the downstream infrastructure provider."
+          "summary": "We are continuing to work on implementing a mitigation."
+        },
+        {
+          "id": "01KY81XMFAV8KXNJGVNEMKAK15",
+          "title": "Some users may experience elevated error rates in ChatGPT",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-23T17:56:06.000Z",
+          "updatedAt": "2026-07-23T17:56:06.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
         },
         {
           "id": "01KY54SWGRK806N6TJ495MYPDD",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-07-22T14:39:42.000Z",
           "resolvedAt": "2026-07-22T14:39:42.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
-          "title": "Image generation unavailable in ChatGPT",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-21T10:36:02.000Z",
-          "updatedAt": "2026-07-22T02:50:19.000Z",
-          "resolvedAt": "2026-07-22T02:50:19.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T17:03:44.647Z",
+      "lastCheckedAt": "2026-07-23T18:21:52.535Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T17:03:43.778Z",
+      "lastCheckedAt": "2026-07-23T18:21:51.615Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T17:03:44.922Z",
+      "lastCheckedAt": "2026-07-23T18:21:52.798Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T17:03:45.290Z",
+      "lastCheckedAt": "2026-07-23T18:21:53.335Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T17:03:44.410Z",
+      "lastCheckedAt": "2026-07-23T18:21:52.073Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -348,7 +358,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T17:03:45.384Z",
+      "lastCheckedAt": "2026-07-23T18:21:53.306Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -417,7 +427,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
