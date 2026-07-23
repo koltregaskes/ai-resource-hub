@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T18:49:05.567Z",
+  "generatedAt": "2026-07-23T19:25:39.118Z",
   "providers": [
     {
       "id": "openai",
@@ -12,39 +12,59 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T18:49:04.615Z",
+      "lastCheckedAt": "2026-07-23T19:25:37.617Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "3 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "Files",
+          "name": "Sites",
           "status": "degraded_performance"
         },
         {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
           "name": "Login",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
-          "name": "Audio",
-          "status": "operational"
+          "name": "Compliance API",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Conversations",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Search",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "GPTs",
+          "status": "degraded_performance"
         }
       ],
       "activeIncidents": [
         {
+          "id": "01KY86GP2Z5YHMHCZEKT3D3V2G",
+          "title": "Some users are experiencing increased latency and error rates in ChatGPT",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-23T19:16:25.000Z",
+          "updatedAt": "2026-07-23T19:16:25.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
+          "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
+          "title": "Elevated Error Rates",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-07-23T15:36:02.000Z",
+          "updatedAt": "2026-07-23T18:50:34.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
           "id": "01KY81XMFAV8KXNJGVNEMKAK15",
           "title": "Some users may experience elevated error rates in ChatGPT",
           "status": "monitoring",
@@ -53,20 +73,30 @@
           "updatedAt": "2026-07-23T18:22:47.000Z",
           "resolvedAt": null,
           "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
-          "title": "Elevated Error Rates",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-07-23T15:36:02.000Z",
-          "updatedAt": "2026-07-23T17:58:26.000Z",
-          "resolvedAt": null,
-          "summary": "We are continuing to work on implementing a mitigation."
         }
       ],
       "recentIncidents": [
         {
+          "id": "01KY86GP2Z5YHMHCZEKT3D3V2G",
+          "title": "Some users are experiencing increased latency and error rates in ChatGPT",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-07-23T19:16:25.000Z",
+          "updatedAt": "2026-07-23T19:16:25.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
+          "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
+          "title": "Elevated Error Rates",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-07-23T15:36:02.000Z",
+          "updatedAt": "2026-07-23T18:50:34.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
           "id": "01KY81XMFAV8KXNJGVNEMKAK15",
           "title": "Some users may experience elevated error rates in ChatGPT",
           "status": "monitoring",
@@ -75,16 +105,6 @@
           "updatedAt": "2026-07-23T18:22:47.000Z",
           "resolvedAt": null,
           "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
-          "title": "Elevated Error Rates",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-07-23T15:36:02.000Z",
-          "updatedAt": "2026-07-23T17:58:26.000Z",
-          "resolvedAt": null,
-          "summary": "We are continuing to work on implementing a mitigation."
         },
         {
           "id": "01KY54SWGRK806N6TJ495MYPDD",
@@ -94,16 +114,6 @@
           "startedAt": "2026-07-22T14:48:46.000Z",
           "updatedAt": "2026-07-22T16:09:35.000Z",
           "resolvedAt": "2026-07-22T16:09:35.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KY4BT971GFN59WBT0CKSGCPJ",
-          "title": "Elevated Errors Affecting File Uploads and Image Generation",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-22T07:32:04.000Z",
-          "updatedAt": "2026-07-22T14:39:42.000Z",
-          "resolvedAt": "2026-07-22T14:39:42.000Z",
           "summary": "All impacted services have now fully recovered."
         }
       ]
@@ -119,7 +129,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T18:49:05.073Z",
+      "lastCheckedAt": "2026-07-23T19:25:38.436Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,7 +149,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T18:49:04.596Z",
+      "lastCheckedAt": "2026-07-23T19:25:37.547Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -241,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T18:49:05.389Z",
+      "lastCheckedAt": "2026-07-23T19:25:38.715Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -261,7 +271,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T18:49:05.560Z",
+      "lastCheckedAt": "2026-07-23T19:25:38.943Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -326,7 +336,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T18:49:04.923Z",
+      "lastCheckedAt": "2026-07-23T19:25:38.026Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -358,7 +368,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-23T18:49:05.510Z",
+      "lastCheckedAt": "2026-07-23T19:25:39.111Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -427,7 +437,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

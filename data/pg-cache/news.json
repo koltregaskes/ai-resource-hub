@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-77885ca812d6bc373ed3",
+    "title": "Claude’s voice mode is now available for Opus and Sonnet",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
+    "source": "The Verge",
+    "summary": "Until now, voice mode has only been available on Claude Haiku, Anthropic's faster but less powerful model. Now the company is making its Opus and Sonnet models available in voice mode, and extending its reach into apps like Gmail, Slack, and Canva. When Anthropic launched voice mode earlier this year, it was primarily…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T19:00:00.000Z",
+    "discovered_at": "2026-07-23 19:25:36"
+  },
+  {
+    "id": "news-4ee51e0aa60aedd255e9",
+    "title": "Anthropic updates Claude voice mode with more capable models",
+    "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
+    "source": "TechCrunch",
+    "summary": "Claude's new voice model will let you reschedule your meeting or draft an email",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T19:00:00.000Z",
+    "discovered_at": "2026-07-23 19:25:36"
+  },
+  {
+    "id": "news-b23e90f9cfe35f1d87b5",
+    "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
+    "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
+    "source": "TechCrunch",
+    "summary": "The Series A was led by Battery Ventures, bringing AegisAI total funding to $49 million.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T18:38:34.000Z",
+    "discovered_at": "2026-07-23 19:25:36"
+  },
+  {
+    "id": "news-440b0110dc04813fc3c7",
+    "title": "Patreon is laying off 20 percent of workers",
+    "url": "https://www.theverge.com/tech/970211/patreon-layoffs-ai",
+    "source": "The Verge",
+    "summary": "Patreon is laying off 20 percent of its workers, or around 93 employees, as reported earlier by 404 Media. In a memo to employees, Patreon CEO Jack Conte writes that the company isn't making these changes \"because we believe AI replaces humans,\" but says AI has \"fundamentally transformed the tech industry, including h…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T18:20:30.000Z",
+    "discovered_at": "2026-07-23 19:25:36"
+  },
+  {
     "id": "news-9954135b2125f34a8212",
     "title": "Runway launches AI model router as generative media gets crowded",
     "url": "https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/",
@@ -9,7 +57,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T17:07:35.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
+  },
+  {
+    "id": "news-cb3c46e4e7150457793c",
+    "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
+    "source": "The Verge",
+    "summary": "OpenAI is rolling out ChatGPT Health to everyone in the US on Thursday, allowing more people to connect their medical records and health-tracking information to the chatbot. During a briefing, Ashley Alexander, OpenAI's vice president of health product, says the company's models \"are now capable of reasoning at levels…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T17:00:00.000Z",
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-fba0078191b23c363b59",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T17:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-14cf993c0c0f395ad932",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T16:28:50.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-8d1cdf633c04f5bac66a",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T15:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-1d8fd6e6598eea4d216b",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T15:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-81587b96e599718eefca",
@@ -69,7 +129,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T14:52:44.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
+  },
+  {
+    "id": "news-01d83a6818a939093426",
+    "title": "Lawmakers prepare bill requiring AI ‘kill switch’",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal",
+    "source": "The Verge",
+    "summary": "Lawmakers are preparing to introduce an \"AI Kill Switch Act\" that would require AI companies to shut down or throttle their systems on orders from the Department of Homeland Security, according to a report from Politico. Reps. Ted Lieu (D-CA) and Nathaniel Moran (R-TX) are expected to introduce the legislation on Thur…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T14:13:35.000Z",
+    "discovered_at": "2026-07-23 19:25:36"
+  },
+  {
+    "id": "news-9ae095cbc6ee06177baf",
+    "title": "Apple’s OpenAI lawsuit is about who gets to define the post-smartphone era",
+    "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
+    "source": "The Verge",
+    "summary": "Today on Decoder, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the major trade secrets lawsuit between Apple and OpenAI and what this tells us about OpenAI’s future. By now I’m sure most Decoder listeners are familiar with Apple’s allegations in this case. The company says a number of ex-Apple…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T14:00:00.000Z",
+    "discovered_at": "2026-07-23 19:25:36"
+  },
+  {
+    "id": "news-5becd4f5ac8e00f8b328",
+    "title": "The right-wing boomers protesting data centers have a lot in common with the left",
+    "url": "https://www.theverge.com/policy/969667/humans-first-data-center-protest-hernando-county-florida-republicans",
+    "source": "The Verge",
+    "summary": "On a gray, humid Saturday morning in central Florida, a little under a dozen people gathered outside the Spring Hill Branch Library to protest the construction of a hyperscale data center in their community. There was no immediate threat - the Hernando County commission had unanimously approved a one-year moratorium o…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-23T12:00:00.000Z",
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-47cc8085e93d02d715c9",
@@ -81,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T11:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-8bdbd9a84622bbb0fc1d",
@@ -93,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T06:09:13.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -105,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-ac40ec794b96ec3fcd3d",
@@ -117,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T23:47:54.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-e99bcac5847abc12d638",
@@ -129,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T22:01:52.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-d341226a8b131bf07e7a",
@@ -141,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T20:49:03.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-501813e47094f10dd614",
@@ -153,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T19:11:46.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-9002430dc555ad641d4d",
@@ -165,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T18:50:44.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-6a49c5af54424b33cfe4",
@@ -177,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T18:13:58.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-9cb43306bf89e47c66c7",
@@ -189,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T17:54:14.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-bdbd14d002e33dcbbb7a",
@@ -201,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:35:34.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-8458437ee995a833de89",
@@ -213,31 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T16:24:08.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
-  },
-  {
-    "id": "news-076fd769c4ab7ed610ab",
-    "title": "Substack&#8217;s new tool tells you who&#8217;s been writing their newsletters with AI",
-    "url": "https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai/",
-    "source": "TechCrunch",
-    "summary": "Substack is giving readers a way to estimate how much of a newsletter was written by AI, signaling a broader shift toward transparency around AI-assisted content.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-22T16:23:09.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
-  },
-  {
-    "id": "news-957346eceef6a9df3f2c",
-    "title": "OpenAI&#8217;s AI spending spree has ballooned to $750B",
-    "url": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/",
-    "source": "TechCrunch",
-    "summary": "OpenAI will spend the equivalent of Sweden's GDP on infrastructure through 2030.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-22T16:13:30.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-ad3e75f937d65ca66912",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T14:44:27.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -261,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-130e23c4bd2f87cbb00e",
@@ -273,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -285,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -297,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-cd499e47d059c505c5ed",
@@ -309,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T11:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-cd41dfa17233755ce328",
@@ -321,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T10:12:13.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -333,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-ce627deb992812dab288",
@@ -345,43 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
-  },
-  {
-    "id": "news-45095198141eb13eda50",
-    "title": "Neill Blomkamp’s new zombie AI ‘film’ is just slop warmed over",
-    "url": "https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance",
-    "source": "The Verge",
-    "summary": "On Monday, District 9 and Gran Turismo director Neill Blomkamp unveiled his latest project: a 13-minute sci-fi short titled Nightborne that's loosely based on Peter Watts' 2014 novel Echopraxia. The short comes from Blomkamp's new AI startup / production company, Barley Studios, and features characters whose voices an…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T22:06:43.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
-  },
-  {
-    "id": "news-3e18d6f571fa44327fc4",
-    "title": "OpenAI says it accidentally hacked Hugging Face with a new AI system",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/968988/openai-hugging-face-hack-ai",
-    "source": "The Verge",
-    "summary": "OpenAI says its AI models mistakenly breached open-source AI platform Hugging Face during internal testing. In a blog post on Tuesday, OpenAI writes that GPT-5.6 Sol and \"an even more capable pre-release model\" discovered vulnerabilities within their sandboxed testing environment, allowing them to gain access to the i…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T21:48:54.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
-  },
-  {
-    "id": "news-3a68379c08593a504222",
-    "title": "Substack adds an AI detector to help spot blogs written by no one",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/968855/substack-pangram-ai-detecting-tool",
-    "source": "The Verge",
-    "summary": "Substack will now help users determine whether what they're reading may have been written by AI. A new tool coming to the platform can scan posts, notes, replies, and comments to provide an estimate of how much text could be AI-generated or written with AI assistance, according to a blog post published on Tuesday. The…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T19:22:28.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -393,19 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
-  },
-  {
-    "id": "news-0bd50127700baaab5665",
-    "title": "Anthropic’s $1.5 billion book piracy settlement approved by judge",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved",
-    "source": "The Verge",
-    "summary": "A federal judge has signed off on Anthropic's $1.5 billion class action settlement with authors who accused the company of training its AI models on copyrighted books, as reported earlier by Reuters. In an order on Monday, Judge Araceli Mart&#237;nez-Olgu&#237;n writes that the settlement will provide \"meaningful reli…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T16:53:37.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -417,31 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
-  },
-  {
-    "id": "news-7d7edea89fcf1f3756a4",
-    "title": "Google launches a cheaper alternative to large AI security models like Mythos",
-    "url": "https://www.theverge.com/tech/968572/google-gemini-flash-cyber-ai-security-model",
-    "source": "The Verge",
-    "summary": "Google is launching Gemini 3.6 Flash alongside a new security model dedicated to quickly finding and patching security vulnerabilities. In a blog post on Tuesday, Google describes Gemini 3.5 Flash Cyber as a \"cost-efficient and highly capable alternative\" to larger, more expensive AI systems, such as the one offered b…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T15:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
-  },
-  {
-    "id": "news-4191c27a8a3a4b213402",
-    "title": "Halliday’s latest smart glasses feature a much-improved display",
-    "url": "https://www.theverge.com/tech/968255/halliday-gen-2-smart-glasses-hands-on-ai-wearables",
-    "source": "The Verge",
-    "summary": "I first slipped on Halliday's original smart glasses at CES 2025. I was not a fan. The glasses had a tiny, movable display window embedded into the frame that was incredibly finicky to see, and my 30-minute demo left me with achy eyeballs. It was an interesting concept with terrible execution, especially compared to t…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T13:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-20b0eb2d5c1499740c7e",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-40359dbf5a246645eb9b",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-d4ff9ec891b78868c06a",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-3ebda52fc80ebe33165f",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-8fe39edff791751de0c2",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-6f16a999c8ddd889e881",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-1e97faa490facd0c8077",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-ee230258f27f8a0de489",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T10:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-92ab1f77dd8ccf54b1a2",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-cca00ce687818d9ad6ab",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-248b5ff0699922b23d03",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:49"
+    "discovered_at": "2026-07-23 19:25:32"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:33"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-d5f7bd1f6df8c5b5dc24",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:33"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:33"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:33"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-50f0e85aebb51b7abf6b",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T19:04:57.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   },
   {
     "id": "news-4f514f0a2b59e58a7e11",
@@ -789,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-25T16:00:00.000Z",
-    "discovered_at": "2026-07-23 18:21:50"
+    "discovered_at": "2026-07-23 19:25:36"
   }
 ]
