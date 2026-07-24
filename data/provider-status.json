@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T10:47:33.404Z",
+  "generatedAt": "2026-07-24T11:25:32.205Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T10:47:32.650Z",
+      "lastCheckedAt": "2026-07-24T11:25:30.587Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T10:47:32.462Z",
+      "lastCheckedAt": "2026-07-24T11:25:31.346Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T10:47:32.601Z",
+      "lastCheckedAt": "2026-07-24T11:25:30.538Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -231,7 +231,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T10:47:33.077Z",
+      "lastCheckedAt": "2026-07-24T11:25:31.762Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T10:47:33.397Z",
+      "lastCheckedAt": "2026-07-24T11:25:32.054Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -316,7 +316,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T10:47:32.398Z",
+      "lastCheckedAt": "2026-07-24T11:25:30.839Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T10:47:33.230Z",
+      "lastCheckedAt": "2026-07-24T11:25:32.201Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -357,7 +357,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-07-23T16:17:34.000Z",
+          "id": "together-feed-0-2026-07-24T11:15:07.000Z",
+          "title": "Qwen3.5 9B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-24T11:15:07.000Z",
+          "updatedAt": "2026-07-24T11:15:07.000Z",
+          "resolvedAt": "2026-07-24T11:15:07.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B recovered"
+        },
+        {
+          "id": "together-feed-1-2026-07-24T10:57:29.000Z",
+          "title": "Qwen3.5 9B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-07-24T10:57:29.000Z",
+          "updatedAt": "2026-07-24T10:57:29.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Qwen3.5 9B went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-23T16:17:34.000Z",
           "title": "OpenAI GPT OSS 120B recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -368,7 +390,7 @@
           "summary": "OpenAI GPT OSS 120B recovered"
         },
         {
-          "id": "together-feed-1-2026-07-23T16:05:31.000Z",
+          "id": "together-feed-3-2026-07-23T16:05:31.000Z",
           "title": "OpenAI GPT OSS 120B went down",
           "status": "investigating",
           "impact": "major",
@@ -377,28 +399,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "OpenAI GPT OSS 120B went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-23T06:15:49.000Z",
-          "title": "Qwen2.5 7B Instruct Turbo recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-23T06:15:49.000Z",
-          "updatedAt": "2026-07-23T06:15:49.000Z",
-          "resolvedAt": "2026-07-23T06:15:49.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen2.5 7B Instruct Turbo recovered"
-        },
-        {
-          "id": "together-feed-3-2026-07-23T05:51:26.000Z",
-          "title": "Qwen2.5 7B Instruct Turbo went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-23T05:51:26.000Z",
-          "updatedAt": "2026-07-23T05:51:26.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen2.5 7B Instruct Turbo went down"
         }
       ]
     },
