@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T15:25:50.624Z",
+  "generatedAt": "2026-07-24T15:42:23.236Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T15:25:49.489Z",
+      "lastCheckedAt": "2026-07-24T15:42:22.367Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,10 +32,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T15:25:49.651Z",
+      "lastCheckedAt": "2026-07-24T15:42:21.776Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -63,20 +63,19 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
+      "activeIncidents": [],
+      "recentIncidents": [
         {
           "id": "yc7mr2gvl914",
           "title": "Microsoft Office add-in availability",
-          "status": "identified",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-07-22T17:56:10.087Z",
-          "updatedAt": "2026-07-22T21:12:51.317Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-07-24T15:36:54.698Z",
+          "resolvedAt": "2026-07-24T15:36:54.682Z",
           "url": "https://stspg.io/62bq6fn8w887",
-          "summary": "Users who installed the following add-ins may experience issues accessing the add-in functionality: Claude by Anthropic for PowerPoint, Claude by Anthropic for Word, and Claude by..."
-        }
-      ],
-      "recentIncidents": [
+          "summary": "This issue has been resolved."
+        },
         {
           "id": "0lbk5m7mbqk5",
           "title": "Elevated error rate on Opus 4.8",
@@ -98,17 +97,6 @@
           "resolvedAt": "2026-07-23T00:10:17.291Z",
           "url": "https://stspg.io/zzlysdsgthl6",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "yc7mr2gvl914",
-          "title": "Microsoft Office add-in availability",
-          "status": "identified",
-          "impact": "none",
-          "startedAt": "2026-07-22T17:56:10.087Z",
-          "updatedAt": "2026-07-22T21:12:51.317Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/62bq6fn8w887",
-          "summary": "Users who installed the following add-ins may experience issues accessing the add-in functionality: Claude by Anthropic for PowerPoint, Claude by Anthropic for Word, and Claude by..."
         },
         {
           "id": "ng5shnqxj1r7",
@@ -134,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T15:25:50.041Z",
+      "lastCheckedAt": "2026-07-24T15:42:22.689Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T15:25:50.616Z",
+      "lastCheckedAt": "2026-07-24T15:42:23.092Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T15:25:49.386Z",
+      "lastCheckedAt": "2026-07-24T15:42:22.030Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -251,7 +239,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T15:25:49.298Z",
+      "lastCheckedAt": "2026-07-24T15:42:21.723Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 25 tracked components.",
@@ -348,7 +336,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T15:25:50.440Z",
+      "lastCheckedAt": "2026-07-24T15:42:23.229Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -417,7 +405,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
