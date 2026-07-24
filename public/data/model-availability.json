@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-24T15:42:29.172Z",
+  "generatedAt": "2026-07-24T17:25:43.345Z",
   "overview": {
-    "generatedAt": "2026-07-24T15:42:29.187Z",
+    "generatedAt": "2026-07-24T17:25:43.359Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 118,
+    "surfacedModels": 120,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -81,7 +81,7 @@
           "llm"
         ]
       },
-      "matchingModelCount": 21,
+      "matchingModelCount": 23,
       "matchingModelIds": [
         "claude-opus-4.6",
         "claude-opus-4.5",
@@ -103,6 +103,8 @@
         "claude-opus-4.7-fast",
         "claude-opus-4.8",
         "claude-opus-4.8-fast",
+        "claude-opus-5",
+        "claude-opus-5-fast",
         "claude-sonnet-5"
       ],
       "matchingModelNames": [
@@ -126,6 +128,8 @@
         "Claude Opus 4.7 (Fast)",
         "Claude Opus 4.8",
         "Claude Opus 4.8 (Fast)",
+        "Claude Opus 5",
+        "Claude Opus 5 (Fast)",
         "Claude Sonnet 5"
       ],
       "surfaceLabel": "Web + App"

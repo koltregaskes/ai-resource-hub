@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 24 Jul 2026, 15:42 UTC |
+| Generated | 24 Jul 2026, 17:25 UTC |
 | Providers tracked | 40 |
-| Public models | 325 |
+| Public models | 327 |
 | Active models | 110 |
-| Tracking models | 214 |
+| Tracking models | 216 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 66 |
-| Release-desk entries | 55 |
+| Release-desk entries | 57 |
 | Configured news sources | 13 |
 | Availability rules | 4 |
-| Latest visible refresh | 24 Jul 2026, 15:42 UTC |
+| Latest visible refresh | 24 Jul 2026, 17:25 UTC |
 | Current evaluated composite leader | GPT-5.2 (55.1) |
-| Latest tracked release | Gemini 3.6 Flash (21 Jul 2026) |
+| Latest tracked release | Claude Opus 5 (Fast) (24 Jul 2026) |
 
 ## Reference Files
 

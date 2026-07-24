@@ -1,14 +1,166 @@
 {
-  "generatedAt": "2026-07-24T15:42:28.482Z",
+  "generatedAt": "2026-07-24T17:25:42.689Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
-    "totalReleases": 55,
-    "highPriority": 12,
-    "readyForEditor": 28,
+    "totalReleases": 57,
+    "highPriority": 14,
+    "readyForEditor": 30,
     "openSource": 1
   },
   "releases": [
+    {
+      "id": "claude-opus-5-fast",
+      "fileSlug": "2026-07-24-claude-opus-5-fast-release-brief",
+      "modelName": "Claude Opus 5 (Fast)",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
+      "releaseDate": "2026-07-24",
+      "releaseDateLabel": "24 Jul 2026",
+      "ageDays": 0,
+      "status": "tracking",
+      "priority": "high",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://docs.anthropic.com",
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
+      "openSource": false,
+      "apiAvailable": true,
+      "modality": "text,vision",
+      "contextWindow": 1000000,
+      "maxOutput": 128000,
+      "qualityScore": 0,
+      "inputPrice": 10,
+      "outputPrice": 50,
+      "pricingSource": "openrouter.ai/api/v1/models",
+      "pricingUpdated": "2026-07-24 17:25:29",
+      "summary": "Claude Opus 5 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-5-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Anthropic's Claude Opus 5 (Fast) is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Opus 5 (Fast), and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 24 Jul 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-07-24-claude-opus-5-fast-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 2
+    },
+    {
+      "id": "claude-opus-5",
+      "fileSlug": "2026-07-24-claude-opus-5-release-brief",
+      "modelName": "Claude Opus 5",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
+      "releaseDate": "2026-07-24",
+      "releaseDateLabel": "24 Jul 2026",
+      "ageDays": 0,
+      "status": "tracking",
+      "priority": "high",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://docs.anthropic.com",
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
+      "openSource": false,
+      "apiAvailable": true,
+      "modality": "text,vision",
+      "contextWindow": 1000000,
+      "maxOutput": 128000,
+      "qualityScore": 0,
+      "inputPrice": 5,
+      "outputPrice": 25,
+      "pricingSource": "openrouter.ai/api/v1/models",
+      "pricingUpdated": "2026-07-24 17:25:29",
+      "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "dek": "Anthropic's Claude Opus 5 is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Opus 5, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 24 Jul 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-07-24-claude-opus-5-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 3
+    },
     {
       "id": "gemini-3.6-flash",
       "fileSlug": "2026-07-21-gemini-3-6-flash-release-brief",
@@ -34,9 +186,9 @@
       "inputPrice": 1.5,
       "outputPrice": 7.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.6-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.6 Flash is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.6 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -70,26 +222,12 @@
             "industry_move",
             "model_release"
           ]
-        },
-        {
-          "title": "Meta made its own AI detection system. It should have just used Google’s",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-          "source": "The Verge",
-          "date": "2026-07-22",
-          "summary": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the co…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "gemini-3.5-flash-lite",
@@ -116,9 +254,9 @@
       "inputPrice": 0.3,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Gemini 3.5 Flash Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.5-flash-lite); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.5 Flash Lite is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.5 Flash Lite is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -152,26 +290,12 @@
             "industry_move",
             "model_release"
           ]
-        },
-        {
-          "title": "Meta made its own AI detection system. It should have just used Google’s",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-          "source": "The Verge",
-          "date": "2026-07-22",
-          "summary": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the co…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-5-flash-lite-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "kimi-k3",
@@ -198,9 +322,9 @@
       "inputPrice": 3,
       "outputPrice": 15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Kimi K3 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k3); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Moonshot AI's Kimi K3 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Moonshot AI's Kimi K3 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -221,6 +345,21 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "Experts say exploiting Anthropic&#8217;s Fable isn&#8217;t how Kimi K3 got so good",
           "url": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/",
           "source": "TechCrunch",
@@ -238,8 +377,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-07-16-kimi-k3-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 2,
+      "sourceCount": 3
     },
     {
       "id": "muse-spark-1.1",
@@ -266,7 +405,7 @@
       "inputPrice": 1.25,
       "outputPrice": 4.25,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Muse Spark 1.1 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.25 in / $4.25 out per million tokens. Auto-tracked from OpenRouter discovery (meta/muse-spark-1.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Meta's Muse Spark 1.1 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -289,6 +428,20 @@
       "benchmarkHighlights": [],
       "relatedStories": [
         {
+          "title": "Meta is making its AI chatbot more like an assistant",
+          "url": "https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Meta is upgrading its AI chatbot with new productivity features in a bid to compete with rivals like Gemini, ChatGPT, and Claude. The update will allow Meta AI to tap into your calendar to help you plan events and generate daily briefings, as well as perform in-depth research that you can steer as it progresses. [&#82…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "Meta launched a new AI optimism ad set to a song about human extinction",
           "url": "https://techcrunch.com/2026/07/23/meta-launched-a-new-ai-optimism-ad-set-to-a-song-about-human-extinction/",
           "source": "TechCrunch",
@@ -299,20 +452,6 @@
             "product_launch",
             "funding",
             "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Meta made its own AI detection system. It should have just used Google’s",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-          "source": "The Verge",
-          "date": "2026-07-22",
-          "summary": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the co…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
             "industry_move",
             "model_release"
           ]
@@ -348,7 +487,7 @@
       "inputPrice": 1,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.6 Luna Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $1.00 in / $6.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.6-luna-pro); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.6 Luna Pro is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -370,6 +509,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -414,29 +582,6 @@
           "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
           "routingTags": [
             "model_release"
-          ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
           ]
         }
       ],
@@ -470,7 +615,7 @@
       "inputPrice": 1,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.6 Luna is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $1.00 in / $6.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.6-luna); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.6 Luna is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -492,6 +637,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -536,29 +710,6 @@
           "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
           "routingTags": [
             "model_release"
-          ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
           ]
         }
       ],
@@ -592,7 +743,7 @@
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.6 Terra Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.6-terra-pro); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.6 Terra Pro is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -614,6 +765,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -658,29 +838,6 @@
           "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
           "routingTags": [
             "model_release"
-          ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
           ]
         }
       ],
@@ -714,7 +871,7 @@
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.6 Terra is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.6-terra); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.6 Terra is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -736,6 +893,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -780,29 +966,6 @@
           "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
           "routingTags": [
             "model_release"
-          ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
           ]
         }
       ],
@@ -836,7 +999,7 @@
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.6 Sol Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.6-sol-pro); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.6 Sol Pro is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -858,6 +1021,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -902,29 +1094,6 @@
           "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
           "routingTags": [
             "model_release"
-          ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
           ]
         }
       ],
@@ -958,7 +1127,7 @@
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.6-sol); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -980,6 +1149,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -1025,29 +1223,6 @@
           "routingTags": [
             "model_release"
           ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-sol-release-brief.md",
@@ -1080,7 +1255,7 @@
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Grok 4.5 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 500K tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. Auto-tracked from OpenRouter discovery (x-ai/grok-4.5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok 4.5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1134,7 +1309,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access Anthropic frontier preview launched with Project Glasswing for defensive cybersecurity work. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1156,6 +1331,22 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        },
         {
           "title": "The Making of Claude Code",
           "url": "https://www.anthropic.com/features/making-of-claude-code",
@@ -1216,8 +1407,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-04-07-claude-mythos-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "claude-sonnet-5",
@@ -1244,9 +1435,9 @@
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-sonnet-5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1278,6 +1469,22 @@
             "ai_agents",
             "ai_safety",
             "evaluation"
+          ]
+        },
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
           ]
         },
         {
@@ -1340,8 +1547,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-06-30-claude-sonnet-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gemini-3.1-flash-lite-image",
@@ -1368,9 +1575,9 @@
       "inputPrice": 0.25,
       "outputPrice": 1.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 65.5K tokens. Current tracked pricing: $0.25 in / $1.50 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.1-flash-lite-image); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1420,20 +1627,6 @@
           ]
         },
         {
-          "title": "Meta made its own AI detection system. It should have just used Google’s",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-          "source": "The Verge",
-          "date": "2026-07-22",
-          "summary": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the co…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
           "title": "Create, edit and star in videos with two Google Vids updates",
           "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
           "source": "Google",
@@ -1446,8 +1639,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-06-30-nano-banana-2-lite-gemini-3-1-flash-lite-image-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "glm-5.2",
@@ -1471,11 +1664,11 @@
       "contextWindow": 1048576,
       "maxOutput": 131072,
       "qualityScore": 0,
-      "inputPrice": 0.801,
-      "outputPrice": 2.517,
+      "inputPrice": 0.791,
+      "outputPrice": 2.486,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
-      "summary": "GLM 5.2 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.80 in / $2.52 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.2); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
+      "pricingUpdated": "2026-07-24 17:25:29",
+      "summary": "GLM 5.2 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.79 in / $2.49 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.2); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5.2 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1526,7 +1719,7 @@
       "inputPrice": 0.82,
       "outputPrice": 3.75,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Kimi K2.7 Code is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.82 in / $3.75 out per million tokens. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k2.7-code); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Moonshot AI's Kimi K2.7 Code is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1578,9 +1771,9 @@
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-fable-5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Fable 5 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Fable 5 is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1600,6 +1793,36 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        },
         {
           "title": "The Making of Claude Code",
           "url": "https://www.anthropic.com/features/making-of-claude-code",
@@ -1660,8 +1883,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-06-09-claude-fable-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "nemotron-3-ultra-550b-a55b",
@@ -1688,7 +1911,7 @@
       "inputPrice": 0.5,
       "outputPrice": 2.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Nemotron 3 Ultra is a currently tracked release from NVIDIA. It is positioned as an API-available model rather than a local-only release. Tracked context window: 512.3K tokens. Current tracked pricing: $0.50 in / $2.20 out per million tokens. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3-ultra-550b-a55b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "NVIDIA's Nemotron 3 Ultra is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1740,7 +1963,7 @@
       "inputPrice": 0.32,
       "outputPrice": 1.28,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Qwen3.7 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.32 in / $1.28 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.7-plus); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.7 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1792,7 +2015,7 @@
       "inputPrice": 0.3,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "MiniMax M3 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Auto-tracked from OpenRouter discovery (minimax/minimax-m3); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "MiniMax's MiniMax M3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1844,9 +2067,9 @@
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Claude Opus 4.8 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.8-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.8 (Fast) is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.8 (Fast) is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1866,6 +2089,22 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        },
         {
           "title": "The Making of Claude Code",
           "url": "https://www.anthropic.com/features/making-of-claude-code",
@@ -1926,8 +2165,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-05-27-claude-opus-4-8-fast-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "claude-opus-4.8",
@@ -1954,9 +2193,9 @@
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Claude Opus 4.8 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.8); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.8 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.8 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1976,6 +2215,22 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        },
         {
           "title": "The Making of Claude Code",
           "url": "https://www.anthropic.com/features/making-of-claude-code",
@@ -2036,8 +2291,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-05-27-claude-opus-4-8-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "qwen3.7-max",
@@ -2064,7 +2319,7 @@
       "inputPrice": 1.475,
       "outputPrice": 4.425,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Qwen3.7 Max is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $1.48 in / $4.42 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.7-max); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.7 Max is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2116,7 +2371,7 @@
       "inputPrice": 1,
       "outputPrice": 2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Grok Build 0.1 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 256K tokens. Current tracked pricing: $1.00 in / $2.00 out per million tokens. Auto-tracked from OpenRouter discovery (x-ai/grok-build-0.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok Build 0.1 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2168,9 +2423,9 @@
       "inputPrice": 1.5,
       "outputPrice": 9,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Gemini 3.5 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $9.00 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.5-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.5 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.5 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2220,20 +2475,6 @@
           ]
         },
         {
-          "title": "Meta made its own AI detection system. It should have just used Google’s",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-          "source": "The Verge",
-          "date": "2026-07-22",
-          "summary": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the co…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
           "title": "Create, edit and star in videos with two Google Vids updates",
           "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
           "source": "Google",
@@ -2246,8 +2487,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-05-19-gemini-3-5-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "claude-opus-4.7-fast",
@@ -2274,9 +2515,9 @@
       "inputPrice": 30,
       "outputPrice": 150,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Claude Opus 4.7 (Fast) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $30.00 in / $150.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.7-fast); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.7 (Fast) is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.7 (Fast) is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2296,6 +2537,22 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        },
         {
           "title": "The Making of Claude Code",
           "url": "https://www.anthropic.com/features/making-of-claude-code",
@@ -2356,8 +2613,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-05-12-claude-opus-4-7-fast-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "gpt-chat",
@@ -2384,7 +2641,7 @@
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT Chat Latest is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 400K tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-chat-latest); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT Chat Latest is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2406,6 +2663,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -2451,29 +2737,6 @@
           "routingTags": [
             "model_release"
           ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-05-05-gpt-chat-latest-release-brief.md",
@@ -2506,7 +2769,7 @@
       "inputPrice": 1.25,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Grok 4.3 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $1.25 in / $2.50 out per million tokens. Auto-tracked from OpenRouter discovery (x-ai/grok-4.3); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok 4.3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2558,7 +2821,7 @@
       "inputPrice": 1.5,
       "outputPrice": 7.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Mistral Medium 3.5 is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-medium-3-5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Mistral's Mistral Medium 3.5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2610,7 +2873,7 @@
       "inputPrice": 0.3,
       "outputPrice": 1.8,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Qwen3.5 Plus 2026-04-20 is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.30 in / $1.80 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.5-plus-20260420); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.5 Plus 2026-04-20 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2662,7 +2925,7 @@
       "inputPrice": 0.188,
       "outputPrice": 1.125,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Qwen3.6 Flash is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.19 in / $1.13 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2714,7 +2977,7 @@
       "inputPrice": 0.14,
       "outputPrice": 1,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Qwen3.6 35B A3B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $1.00 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-35b-a3b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 35B A3B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2766,7 +3029,7 @@
       "inputPrice": 1.04,
       "outputPrice": 6.24,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Qwen3.6 Max Preview is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $1.04 in / $6.24 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-max-preview); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 Max Preview is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2818,7 +3081,7 @@
       "inputPrice": 0.288,
       "outputPrice": 2.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Qwen3.6 27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.29 in / $2.40 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.6-27b); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 27B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2870,7 +3133,7 @@
       "inputPrice": 30,
       "outputPrice": 180,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.5 Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $30.00 in / $180.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.5-pro); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.5 Pro is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2892,6 +3155,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -2936,29 +3228,6 @@
           "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
           "routingTags": [
             "model_release"
-          ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
           ]
         }
       ],
@@ -2992,7 +3261,7 @@
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.5 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.5); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.5 is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3014,6 +3283,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -3059,29 +3357,6 @@
           "routingTags": [
             "model_release"
           ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-04-24-gpt-5-5-release-brief.md",
@@ -3114,7 +3389,7 @@
       "inputPrice": 0.435,
       "outputPrice": 0.87,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "DeepSeek V4 Pro is a currently tracked release from DeepSeek. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.43 in / $0.87 out per million tokens. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4-pro); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "DeepSeek's DeepSeek V4 Pro is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3166,7 +3441,7 @@
       "inputPrice": 0.098,
       "outputPrice": 0.196,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "DeepSeek V4 Flash is a currently tracked release from DeepSeek. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.10 in / $0.20 out per million tokens. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4-flash); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "DeepSeek's DeepSeek V4 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3218,7 +3493,7 @@
       "inputPrice": 8,
       "outputPrice": 15,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.4 Image 2 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 272K tokens. Current tracked pricing: $8.00 in / $15.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-5.4-image-2); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.4 Image 2 is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3240,6 +3515,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -3285,29 +3589,6 @@
           "routingTags": [
             "model_release"
           ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-04-21-gpt-5-4-image-2-release-brief.md",
@@ -3340,7 +3621,7 @@
       "inputPrice": 0.684,
       "outputPrice": 3.42,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Kimi K2.6 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 262.1K tokens. Current tracked pricing: $0.68 in / $3.42 out per million tokens. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k2.6); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Moonshot AI's Kimi K2.6 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3392,9 +3673,9 @@
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Claude Opus 4.7 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-4.7); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.7 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.7 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3414,6 +3695,22 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        },
         {
           "title": "The Making of Claude Code",
           "url": "https://www.anthropic.com/features/making-of-claude-code",
@@ -3474,8 +3771,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-04-16-claude-opus-4-7-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "glm-5.1",
@@ -3502,7 +3799,7 @@
       "inputPrice": 0.966,
       "outputPrice": 3.036,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GLM 5.1 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.97 in / $3.04 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.1); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5.1 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3554,9 +3851,9 @@
       "inputPrice": 0.14,
       "outputPrice": 0.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.14 in / $0.40 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemma 4 31B is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemma 4 31B is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -3609,20 +3906,6 @@
           ]
         },
         {
-          "title": "Meta made its own AI detection system. It should have just used Google’s",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-          "source": "The Verge",
-          "date": "2026-07-22",
-          "summary": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the co…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
           "title": "Create, edit and star in videos with two Google Vids updates",
           "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
           "source": "Google",
@@ -3635,8 +3918,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-31b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "qwen3.6-plus",
@@ -3663,7 +3946,7 @@
       "inputPrice": 0.325,
       "outputPrice": 1.95,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Alibaba's Qwen3.6 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3715,7 +3998,7 @@
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GLM 5V Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5v-turbo); awaiting official verification. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5V Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3767,7 +4050,7 @@
       "inputPrice": 1.25,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $1.25 in / $2.50 out per million tokens. xAI flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok 4.20 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3819,7 +4102,7 @@
       "inputPrice": 1.25,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Grok 4.20 Multi-Agent is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $1.25 in / $2.50 out per million tokens. xAI multi-agent Grok variant. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "xAI's Grok 4.20 Multi-Agent is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3871,7 +4154,7 @@
       "inputPrice": 0.57,
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Moonshot AI's Kimi K2 0711 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3923,7 +4206,7 @@
       "inputPrice": 0.25,
       "outputPrice": 1,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.25 in / $1.00 out per million tokens. Current MiniMax flagship family line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "MiniMax's MiniMax M2.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3975,7 +4258,7 @@
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5 Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -4027,7 +4310,7 @@
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-07-24 15:42:14",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Current flagship GPT family model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "OpenAI's GPT-5.4 is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -4049,6 +4332,35 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "source": "The Verge",
+          "date": "2026-07-24",
+          "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
+          "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
           "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
@@ -4094,29 +4406,6 @@
           "routingTags": [
             "model_release"
           ]
-        },
-        {
-          "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-          "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-          "source": "OpenAI",
-          "date": "2026-07-15",
-          "summary": "Explore GPT-Red, OpenAI's automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-          "routingTags": [
-            "model_release",
-            "ai_safety"
-          ]
-        },
-        {
-          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-          "source": "OpenAI",
-          "date": "2026-07-21",
-          "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-          "routingTags": [
-            "evaluation",
-            "research_paper",
-            "open_source"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
@@ -4149,9 +4438,9 @@
       "inputPrice": 2,
       "outputPrice": 12,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Gemini 3.1 Pro Preview is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 4 related stories and 2 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Pro Preview is on the release desk with 3 related stories and 2 benchmark signals to review.",
       "whyItMatters": [
         "There are already 2 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4218,20 +4507,6 @@
           ]
         },
         {
-          "title": "Meta made its own AI detection system. It should have just used Google’s",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-          "source": "The Verge",
-          "date": "2026-07-22",
-          "summary": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the co…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
           "title": "Create, edit and star in videos with two Google Vids updates",
           "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
           "source": "Google",
@@ -4244,8 +4519,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-preview-release-brief.md",
       "benchmarkCount": 2,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "claude-sonnet-4.6",
@@ -4272,9 +4547,9 @@
       "inputPrice": 3,
       "outputPrice": 15,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-07-24 15:42:14",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 4 related stories and 5 benchmark signals to review.",
+      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 5 related stories and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4336,6 +4611,22 @@
       ],
       "relatedStories": [
         {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        },
+        {
           "title": "The Making of Claude Code",
           "url": "https://www.anthropic.com/features/making-of-claude-code",
           "source": "Anthropic",
@@ -4395,8 +4686,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-02-17-claude-sonnet-4-6-release-brief.md",
       "benchmarkCount": 5,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "glm-5",
@@ -4423,7 +4714,7 @@
       "inputPrice": 0.95,
       "outputPrice": 2.55,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-07-24 15:42:13",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "GLM 5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $0.95 in / $2.55 out per million tokens. Zhipu flagship GLM 5 line. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
       "dek": "Zhipu AI's GLM 5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -4475,9 +4766,9 @@
       "inputPrice": 15,
       "outputPrice": 75,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-07-24 15:42:14",
+      "pricingUpdated": "2026-07-24 17:25:29",
       "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $15.00 in / $75.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Anthropic flagship model. There is an official launch or documentation URL attached, so this is ready for source-first editorial work.",
-      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 4 related stories and 5 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 5 related stories and 5 benchmark signals to review.",
       "whyItMatters": [
         "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4539,6 +4830,22 @@
       ],
       "relatedStories": [
         {
+          "title": "Anthropic launches Opus 5",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "source": "TechCrunch",
+          "date": "2026-07-24",
+          "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "pricing_change"
+          ]
+        },
+        {
           "title": "The Making of Claude Code",
           "url": "https://www.anthropic.com/features/making-of-claude-code",
           "source": "Anthropic",
@@ -4598,8 +4905,8 @@
       ],
       "draftPath": "editorial/release-drafts/2026-02-05-claude-opus-4-6-release-brief.md",
       "benchmarkCount": 5,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     }
   ]
 }
