@@ -1,6 +1,113 @@
 {
-  "generatedAt": "2026-07-24T06:37:44.445Z",
+  "generatedAt": "2026-07-24T07:57:41.305Z",
   "providers": [
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-24T07:57:39.792Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "2 active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "VS Code extension",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Codex API",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01KY9HYHCMK8AND23B4X17XQEK",
+          "title": "Elevated Errors in Codex Review",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-07-24T07:55:28.000Z",
+          "updatedAt": "2026-07-24T07:55:28.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
+        {
+          "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
+          "title": "Elevated Error Rates",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-07-23T15:36:02.000Z",
+          "updatedAt": "2026-07-23T20:22:48.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01KY9HYHCMK8AND23B4X17XQEK",
+          "title": "Elevated Errors in Codex Review",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-07-24T07:55:28.000Z",
+          "updatedAt": "2026-07-24T07:55:28.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
+        {
+          "id": "01KY8PGR54KXGBSFXHEJ3FM83F",
+          "title": "Elevated API error rates and latency on gpt-image-2 model",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-23T23:56:04.000Z",
+          "updatedAt": "2026-07-24T00:09:22.000Z",
+          "resolvedAt": "2026-07-24T00:09:22.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KY81XMFAV8KXNJGVNEMKAK15",
+          "title": "Some users may experience elevated error rates in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-23T17:56:06.000Z",
+          "updatedAt": "2026-07-23T20:41:01.000Z",
+          "resolvedAt": "2026-07-23T20:41:01.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
+          "title": "Elevated Error Rates",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-07-23T15:36:02.000Z",
+          "updatedAt": "2026-07-23T20:22:48.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        }
+      ]
+    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -12,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T06:37:43.495Z",
+      "lastCheckedAt": "2026-07-24T07:57:40.540Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T06:37:43.447Z",
+      "lastCheckedAt": "2026-07-24T07:57:39.798Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
@@ -134,7 +241,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T06:37:44.074Z",
+      "lastCheckedAt": "2026-07-24T07:57:40.862Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +261,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T06:37:44.225Z",
+      "lastCheckedAt": "2026-07-24T07:57:41.057Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +326,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T06:37:43.400Z",
+      "lastCheckedAt": "2026-07-24T07:57:40.251Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -241,103 +348,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T06:37:43.405Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
-          "title": "Elevated Error Rates",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-07-23T15:36:02.000Z",
-          "updatedAt": "2026-07-23T20:22:48.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KY8PGR54KXGBSFXHEJ3FM83F",
-          "title": "Elevated API error rates and latency on gpt-image-2 model",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-23T23:56:04.000Z",
-          "updatedAt": "2026-07-24T00:09:22.000Z",
-          "resolvedAt": "2026-07-24T00:09:22.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KY81XMFAV8KXNJGVNEMKAK15",
-          "title": "Some users may experience elevated error rates in ChatGPT",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-23T17:56:06.000Z",
-          "updatedAt": "2026-07-23T20:41:01.000Z",
-          "resolvedAt": "2026-07-23T20:41:01.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
-          "title": "Elevated Error Rates",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-07-23T15:36:02.000Z",
-          "updatedAt": "2026-07-23T20:22:48.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01KY54SWGRK806N6TJ495MYPDD",
-          "title": "Elevated errors for Workspace Agent",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-22T14:48:46.000Z",
-          "updatedAt": "2026-07-22T16:09:35.000Z",
-          "resolvedAt": "2026-07-22T16:09:35.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -348,7 +358,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-24T06:37:44.438Z",
+      "lastCheckedAt": "2026-07-24T07:57:41.139Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -417,7 +427,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
