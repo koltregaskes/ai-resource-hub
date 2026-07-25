@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-05-26T16:14:37.135Z",
+  "generatedAt": "2026-07-25T15:11:54.247Z",
   "sourceOfTruth": {
     "estateManifestPath": "estate.yml",
     "siteFiltersPath": "shared/website-tools/pipelines/news/site-filters.json",
     "sourcesPath": "shared/website-tools/pipelines/news/config/sources.json"
   },
   "summary": {
-    "estateSiteCount": 7,
-    "activeNewsSiteCount": 5,
-    "configuredSourceCount": 13,
-    "automatedSourceCount": 13,
+    "estateSiteCount": 10,
+    "activeNewsSiteCount": 8,
+    "configuredSourceCount": 14,
+    "automatedSourceCount": 14,
     "manualReviewSourceCount": 0,
     "officialFirstSourceCount": 4,
-    "crossCheckSourceCount": 9,
-    "routingTagCount": 52,
+    "crossCheckSourceCount": 10,
+    "routingTagCount": 67,
     "lookbackHours": 24,
     "sectionCount": 4
   },
@@ -24,7 +24,10 @@
     "ghost-in-the-models",
     "kol-tregaskes-photography",
     "elusion-works",
-    "sun-window"
+    "sun-window",
+    "gametrackdaily",
+    "repo-foundry",
+    "stackscout"
   ],
   "sections": [
     "Top Stories",
@@ -111,6 +114,11 @@
       "keywordCount": 4
     },
     {
+      "id": "agent_tool",
+      "label": "Agent Tool",
+      "keywordCount": 6
+    },
+    {
       "id": "agentic_framework",
       "label": "Agentic Framework",
       "keywordCount": 7
@@ -171,6 +179,11 @@
       "keywordCount": 2
     },
     {
+      "id": "cli_tool",
+      "label": "Cli Tool",
+      "keywordCount": 8
+    },
+    {
       "id": "creative_tool",
       "label": "Creative Tool",
       "keywordCount": 7
@@ -206,14 +219,59 @@
       "keywordCount": 6
     },
     {
+      "id": "developer_tool",
+      "label": "Developer Tool",
+      "keywordCount": 9
+    },
+    {
+      "id": "entertainment",
+      "label": "Entertainment",
+      "keywordCount": 8
+    },
+    {
       "id": "evaluation",
       "label": "Evaluation",
+      "keywordCount": 7
+    },
+    {
+      "id": "event",
+      "label": "Event",
       "keywordCount": 7
     },
     {
       "id": "funding",
       "label": "Funding",
       "keywordCount": 7
+    },
+    {
+      "id": "game_event",
+      "label": "Game Event",
+      "keywordCount": 10
+    },
+    {
+      "id": "game_preview",
+      "label": "Game Preview",
+      "keywordCount": 5
+    },
+    {
+      "id": "game_release",
+      "label": "Game Release",
+      "keywordCount": 11
+    },
+    {
+      "id": "game_review",
+      "label": "Game Review",
+      "keywordCount": 5
+    },
+    {
+      "id": "gaming_platform",
+      "label": "Gaming Platform",
+      "keywordCount": 8
+    },
+    {
+      "id": "github_release",
+      "label": "Github Release",
+      "keywordCount": 6
     },
     {
       "id": "hardware",
@@ -331,9 +389,29 @@
       "keywordCount": 7
     },
     {
+      "id": "release_date",
+      "label": "Release Date",
+      "keywordCount": 6
+    },
+    {
+      "id": "repo_update",
+      "label": "Repo Update",
+      "keywordCount": 10
+    },
+    {
       "id": "research_paper",
       "label": "Research Paper",
       "keywordCount": 10
+    },
+    {
+      "id": "showcase",
+      "label": "Showcase",
+      "keywordCount": 5
+    },
+    {
+      "id": "tool_update",
+      "label": "Tool Update",
+      "keywordCount": 8
     },
     {
       "id": "tool_use",
@@ -379,13 +457,13 @@
         "ai_agents",
         "ai_safety",
         "reasoning",
-        "hardware",
+        "hardware"
+      ],
+      "excludeTags": [
         "crypto",
         "crypto_trading",
         "crypto_defi",
-        "crypto_regulation"
-      ],
-      "excludeTags": [
+        "crypto_regulation",
         "photography",
         "camera",
         "camera_release",
@@ -396,7 +474,12 @@
         "capture_one",
         "photography_ai",
         "photography_technique",
-        "photography_business"
+        "photography_business",
+        "game_release",
+        "game_event",
+        "game_review",
+        "game_preview",
+        "gaming_platform"
       ],
       "includeLabels": [
         {
@@ -454,7 +537,9 @@
         {
           "id": "hardware",
           "label": "Hardware"
-        },
+        }
+      ],
+      "excludeLabels": [
         {
           "id": "crypto",
           "label": "Crypto"
@@ -470,9 +555,7 @@
         {
           "id": "crypto_regulation",
           "label": "Crypto Regulation"
-        }
-      ],
-      "excludeLabels": [
+        },
         {
           "id": "photography",
           "label": "Photography"
@@ -516,14 +599,34 @@
         {
           "id": "photography_business",
           "label": "Photography Business"
+        },
+        {
+          "id": "game_release",
+          "label": "Game Release"
+        },
+        {
+          "id": "game_event",
+          "label": "Game Event"
+        },
+        {
+          "id": "game_review",
+          "label": "Game Review"
+        },
+        {
+          "id": "game_preview",
+          "label": "Game Preview"
+        },
+        {
+          "id": "gaming_platform",
+          "label": "Gaming Platform"
         }
       ],
       "minImportanceScore": 0.45,
       "outputFormat": "markdown_digest",
       "outputPath": "sites/kols-korner/news-digests",
       "maxArticlesPerRun": 15,
-      "sourceCoverageCount": 13,
-      "explicitSourceCoverageCount": 13
+      "sourceCoverageCount": 14,
+      "explicitSourceCoverageCount": 14
     },
     {
       "slug": "axylusion",
@@ -581,7 +684,12 @@
         "funding",
         "acquisition",
         "industry_move",
-        "opinion"
+        "opinion",
+        "game_release",
+        "game_event",
+        "game_review",
+        "game_preview",
+        "gaming_platform"
       ],
       "includeLabels": [
         {
@@ -769,14 +877,34 @@
         {
           "id": "opinion",
           "label": "Opinion"
+        },
+        {
+          "id": "game_release",
+          "label": "Game Release"
+        },
+        {
+          "id": "game_event",
+          "label": "Game Event"
+        },
+        {
+          "id": "game_review",
+          "label": "Game Review"
+        },
+        {
+          "id": "game_preview",
+          "label": "Game Preview"
+        },
+        {
+          "id": "gaming_platform",
+          "label": "Gaming Platform"
         }
       ],
       "minImportanceScore": 0.4,
       "outputFormat": "markdown_digest",
       "outputPath": "sites/axylusion/news-digests",
       "maxArticlesPerRun": 10,
-      "sourceCoverageCount": 12,
-      "explicitSourceCoverageCount": 12
+      "sourceCoverageCount": 13,
+      "explicitSourceCoverageCount": 13
     },
     {
       "slug": "ai-resource-hub",
@@ -822,7 +950,12 @@
         "crypto",
         "crypto_trading",
         "crypto_defi",
-        "crypto_regulation"
+        "crypto_regulation",
+        "game_release",
+        "game_event",
+        "game_review",
+        "game_preview",
+        "gaming_platform"
       ],
       "includeLabels": [
         {
@@ -962,14 +1095,34 @@
         {
           "id": "crypto_regulation",
           "label": "Crypto Regulation"
+        },
+        {
+          "id": "game_release",
+          "label": "Game Release"
+        },
+        {
+          "id": "game_event",
+          "label": "Game Event"
+        },
+        {
+          "id": "game_review",
+          "label": "Game Review"
+        },
+        {
+          "id": "game_preview",
+          "label": "Game Preview"
+        },
+        {
+          "id": "gaming_platform",
+          "label": "Gaming Platform"
         }
       ],
       "minImportanceScore": 0.5,
       "outputFormat": "json_and_markdown",
       "outputPath": "sites/ai-resource-hub/src/data",
       "maxArticlesPerRun": 20,
-      "sourceCoverageCount": 13,
-      "explicitSourceCoverageCount": 13
+      "sourceCoverageCount": 14,
+      "explicitSourceCoverageCount": 14
     },
     {
       "slug": "ghost-in-the-models",
@@ -1001,7 +1154,12 @@
         "capture_one",
         "photography_ai",
         "photography_technique",
-        "photography_business"
+        "photography_business",
+        "game_release",
+        "game_event",
+        "game_review",
+        "game_preview",
+        "gaming_platform"
       ],
       "includeLabels": [
         {
@@ -1085,14 +1243,34 @@
         {
           "id": "photography_business",
           "label": "Photography Business"
+        },
+        {
+          "id": "game_release",
+          "label": "Game Release"
+        },
+        {
+          "id": "game_event",
+          "label": "Game Event"
+        },
+        {
+          "id": "game_review",
+          "label": "Game Review"
+        },
+        {
+          "id": "game_preview",
+          "label": "Game Preview"
+        },
+        {
+          "id": "gaming_platform",
+          "label": "Gaming Platform"
         }
       ],
       "minImportanceScore": 0.4,
       "outputFormat": "markdown_digest",
       "outputPath": "sites/ghost-in-the-models/news-digests",
       "maxArticlesPerRun": 10,
-      "sourceCoverageCount": 13,
-      "explicitSourceCoverageCount": 13
+      "sourceCoverageCount": 14,
+      "explicitSourceCoverageCount": 14
     },
     {
       "slug": "kol-tregaskes-photography",
@@ -1119,7 +1297,12 @@
         "crypto",
         "crypto_trading",
         "crypto_defi",
-        "crypto_regulation"
+        "crypto_regulation",
+        "game_release",
+        "game_event",
+        "game_review",
+        "game_preview",
+        "gaming_platform"
       ],
       "includeLabels": [
         {
@@ -1183,6 +1366,26 @@
         {
           "id": "crypto_regulation",
           "label": "Crypto Regulation"
+        },
+        {
+          "id": "game_release",
+          "label": "Game Release"
+        },
+        {
+          "id": "game_event",
+          "label": "Game Event"
+        },
+        {
+          "id": "game_review",
+          "label": "Game Review"
+        },
+        {
+          "id": "game_preview",
+          "label": "Game Preview"
+        },
+        {
+          "id": "gaming_platform",
+          "label": "Gaming Platform"
         }
       ],
       "minImportanceScore": 0.4,
@@ -1227,6 +1430,360 @@
       "outputFormat": null,
       "outputPath": null,
       "maxArticlesPerRun": null,
+      "sourceCoverageCount": 0,
+      "explicitSourceCoverageCount": 0
+    },
+    {
+      "slug": "gametrackdaily",
+      "name": "GameTrackDaily",
+      "shortName": "GameTrackDaily",
+      "role": "news-destination",
+      "description": "Public game release, event, platform, review, and preview routing for the GameTrackDaily watch desk.",
+      "note": null,
+      "newsEnabled": true,
+      "includeTags": [
+        "game_release",
+        "game_event",
+        "game_review",
+        "game_preview",
+        "gaming_platform",
+        "release_date"
+      ],
+      "excludeTags": [
+        "crypto",
+        "crypto_trading",
+        "crypto_defi",
+        "crypto_regulation",
+        "ai_safety",
+        "policy",
+        "regulation",
+        "photography",
+        "camera",
+        "lens"
+      ],
+      "includeLabels": [
+        {
+          "id": "game_release",
+          "label": "Game Release"
+        },
+        {
+          "id": "game_event",
+          "label": "Game Event"
+        },
+        {
+          "id": "game_review",
+          "label": "Game Review"
+        },
+        {
+          "id": "game_preview",
+          "label": "Game Preview"
+        },
+        {
+          "id": "gaming_platform",
+          "label": "Gaming Platform"
+        },
+        {
+          "id": "release_date",
+          "label": "Release Date"
+        }
+      ],
+      "excludeLabels": [
+        {
+          "id": "crypto",
+          "label": "Crypto"
+        },
+        {
+          "id": "crypto_trading",
+          "label": "Crypto Trading"
+        },
+        {
+          "id": "crypto_defi",
+          "label": "Crypto Defi"
+        },
+        {
+          "id": "crypto_regulation",
+          "label": "Crypto Regulation"
+        },
+        {
+          "id": "ai_safety",
+          "label": "AI Safety"
+        },
+        {
+          "id": "policy",
+          "label": "Policy"
+        },
+        {
+          "id": "regulation",
+          "label": "Regulation"
+        },
+        {
+          "id": "photography",
+          "label": "Photography"
+        },
+        {
+          "id": "camera",
+          "label": "Camera"
+        },
+        {
+          "id": "lens",
+          "label": "Lens"
+        }
+      ],
+      "minImportanceScore": 0.35,
+      "outputFormat": "json_and_markdown",
+      "outputPath": "sites/gametrackdaily/data",
+      "maxArticlesPerRun": 20,
+      "sourceCoverageCount": 0,
+      "explicitSourceCoverageCount": 0
+    },
+    {
+      "slug": "repo-foundry",
+      "name": "Repo Foundry",
+      "shortName": "Repo Foundry",
+      "role": "news-destination",
+      "description": "Public repo release and open-source ecosystem routing for Repo Foundry.",
+      "note": null,
+      "newsEnabled": true,
+      "includeTags": [
+        "repo_update",
+        "github_release",
+        "open_source",
+        "developer_tool",
+        "cli_tool",
+        "agentic_framework",
+        "mcp",
+        "tool_update"
+      ],
+      "excludeTags": [
+        "crypto",
+        "crypto_trading",
+        "crypto_defi",
+        "crypto_regulation",
+        "photography",
+        "camera",
+        "lens",
+        "game_review",
+        "game_preview",
+        "game_release",
+        "game_event",
+        "gaming_platform"
+      ],
+      "includeLabels": [
+        {
+          "id": "repo_update",
+          "label": "Repo Update"
+        },
+        {
+          "id": "github_release",
+          "label": "Github Release"
+        },
+        {
+          "id": "open_source",
+          "label": "Open Source"
+        },
+        {
+          "id": "developer_tool",
+          "label": "Developer Tool"
+        },
+        {
+          "id": "cli_tool",
+          "label": "Cli Tool"
+        },
+        {
+          "id": "agentic_framework",
+          "label": "Agentic Framework"
+        },
+        {
+          "id": "mcp",
+          "label": "MCP"
+        },
+        {
+          "id": "tool_update",
+          "label": "Tool Update"
+        }
+      ],
+      "excludeLabels": [
+        {
+          "id": "crypto",
+          "label": "Crypto"
+        },
+        {
+          "id": "crypto_trading",
+          "label": "Crypto Trading"
+        },
+        {
+          "id": "crypto_defi",
+          "label": "Crypto Defi"
+        },
+        {
+          "id": "crypto_regulation",
+          "label": "Crypto Regulation"
+        },
+        {
+          "id": "photography",
+          "label": "Photography"
+        },
+        {
+          "id": "camera",
+          "label": "Camera"
+        },
+        {
+          "id": "lens",
+          "label": "Lens"
+        },
+        {
+          "id": "game_review",
+          "label": "Game Review"
+        },
+        {
+          "id": "game_preview",
+          "label": "Game Preview"
+        },
+        {
+          "id": "game_release",
+          "label": "Game Release"
+        },
+        {
+          "id": "game_event",
+          "label": "Game Event"
+        },
+        {
+          "id": "gaming_platform",
+          "label": "Gaming Platform"
+        }
+      ],
+      "minImportanceScore": 0.35,
+      "outputFormat": "json_and_markdown",
+      "outputPath": "sites/repo-foundry/content/public/generated",
+      "maxArticlesPerRun": 15,
+      "sourceCoverageCount": 0,
+      "explicitSourceCoverageCount": 0
+    },
+    {
+      "slug": "stackscout",
+      "name": "Stack Scout",
+      "shortName": "Stack Scout",
+      "role": "news-destination",
+      "description": "Public tool, service, API, CLI, MCP, and release-note routing for Stack Scout.",
+      "note": null,
+      "newsEnabled": true,
+      "includeTags": [
+        "tool_update",
+        "developer_tool",
+        "cli_tool",
+        "mcp",
+        "api_update",
+        "product_launch",
+        "open_source",
+        "agent_tool",
+        "github_release"
+      ],
+      "excludeTags": [
+        "crypto",
+        "crypto_trading",
+        "crypto_defi",
+        "crypto_regulation",
+        "photography",
+        "camera",
+        "lens",
+        "game_review",
+        "game_preview",
+        "game_release",
+        "game_event",
+        "gaming_platform"
+      ],
+      "includeLabels": [
+        {
+          "id": "tool_update",
+          "label": "Tool Update"
+        },
+        {
+          "id": "developer_tool",
+          "label": "Developer Tool"
+        },
+        {
+          "id": "cli_tool",
+          "label": "Cli Tool"
+        },
+        {
+          "id": "mcp",
+          "label": "MCP"
+        },
+        {
+          "id": "api_update",
+          "label": "Api Update"
+        },
+        {
+          "id": "product_launch",
+          "label": "Product Launch"
+        },
+        {
+          "id": "open_source",
+          "label": "Open Source"
+        },
+        {
+          "id": "agent_tool",
+          "label": "Agent Tool"
+        },
+        {
+          "id": "github_release",
+          "label": "Github Release"
+        }
+      ],
+      "excludeLabels": [
+        {
+          "id": "crypto",
+          "label": "Crypto"
+        },
+        {
+          "id": "crypto_trading",
+          "label": "Crypto Trading"
+        },
+        {
+          "id": "crypto_defi",
+          "label": "Crypto Defi"
+        },
+        {
+          "id": "crypto_regulation",
+          "label": "Crypto Regulation"
+        },
+        {
+          "id": "photography",
+          "label": "Photography"
+        },
+        {
+          "id": "camera",
+          "label": "Camera"
+        },
+        {
+          "id": "lens",
+          "label": "Lens"
+        },
+        {
+          "id": "game_review",
+          "label": "Game Review"
+        },
+        {
+          "id": "game_preview",
+          "label": "Game Preview"
+        },
+        {
+          "id": "game_release",
+          "label": "Game Release"
+        },
+        {
+          "id": "game_event",
+          "label": "Game Event"
+        },
+        {
+          "id": "gaming_platform",
+          "label": "Gaming Platform"
+        }
+      ],
+      "minImportanceScore": 0.35,
+      "outputFormat": "json_and_markdown",
+      "outputPath": "sites/stackscout/data",
+      "maxArticlesPerRun": 15,
       "sourceCoverageCount": 0,
       "explicitSourceCoverageCount": 0
     }
@@ -1782,6 +2339,62 @@
       "policyRisk": "low",
       "policyRiskLabel": "Low risk",
       "policyNote": "Official provider or lab publication. This is suitable for automated intake and primary verification."
+    },
+    {
+      "id": "huggingnews",
+      "name": "HuggingNews",
+      "adapter": "huggingnews",
+      "url": "https://api.huggingnews.com/api/stories",
+      "host": "api.huggingnews.com",
+      "listingUrl": "https://huggingnews.com/",
+      "section": "Top Stories",
+      "status": "active",
+      "maxItems": 8,
+      "categories": [
+        "curated-digest",
+        "ai-newsroom"
+      ],
+      "categoryLabels": [
+        {
+          "id": "curated-digest",
+          "label": "Curated Digest"
+        },
+        {
+          "id": "ai-newsroom",
+          "label": "AI Newsroom"
+        }
+      ],
+      "tags": [],
+      "tagLabels": [],
+      "siteScope": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "routeSiteSlugs": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "routeSiteNames": [
+        "Kol's Korner",
+        "AI Resource Hub",
+        "Axy Lusion",
+        "Ghost in the Model"
+      ],
+      "routeMode": "explicit",
+      "articleLinkPattern": "^https://huggingnews\\.com/ai/[^/?#]+/?$",
+      "sourceType": "digest",
+      "sourceTypeLabel": "Digest / newsletter",
+      "collectionMode": "automated",
+      "collectionLabel": "Automated public source",
+      "verificationMode": "cross_check",
+      "verificationLabel": "Cross-check before promotion",
+      "policyRisk": "review",
+      "policyRiskLabel": "Review",
+      "policyNote": "Useful for fast awareness, but naming, dates, prices, and capability claims should be verified against primary sources before public promotion."
     },
     {
       "id": "mit-technology-review-ai",

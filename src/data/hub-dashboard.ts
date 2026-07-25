@@ -173,18 +173,18 @@ const BEST_FOR_LABELS: Record<string, string> = {
 };
 
 const FRONTIER_NOW_PRIORITY_IDS = [
+  'claude-opus-5',
+  'gpt-5.6-sol',
+  'claude-fable-5',
+  'gemini-3.6-flash',
+  'claude-sonnet-5',
+  'gpt-5.6-terra',
+  'gpt-5.5',
+  'claude-opus-4.8',
+  'gemini-3.5-flash',
   'gpt-5.4',
-  'claude-opus-4.6',
-  'gemini-3.1-pro',
-  'claude-sonnet-4.6',
   'grok-4.20',
   'qwen3.6-plus',
-  'minimax-m2.7',
-  'glm-5',
-  'kimi-k2.5',
-  'gemma-4',
-  'deepseek-r1',
-  'deepseek-v3.2',
 ] as const;
 
 const SCRAPER_ACTIVITY_LABELS: Record<string, { title: string; detail: string; href: string }> = {

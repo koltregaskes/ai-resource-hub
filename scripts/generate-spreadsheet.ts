@@ -13,8 +13,7 @@ import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
-
-const publicModelStatuses = new Set(['active', 'tracking', 'preview']);
+import { isPubliclyVerifiedModel } from '../src/data/model-verification';
 
 interface ModelRow {
   id: string;
@@ -71,8 +70,8 @@ function publicStatus(status: unknown): string {
   return String(status ?? 'active').toLowerCase();
 }
 
-function isPublicModel(model: Pick<ModelRow, 'status'>): boolean {
-  return publicModelStatuses.has(publicStatus(model.status));
+function isPublicModel(model: Pick<ModelRow, 'status' | 'notes'>): boolean {
+  return isPubliclyVerifiedModel(model);
 }
 
 function readCacheArray<T>(name: string): T[] {
@@ -131,7 +130,7 @@ function readSqliteSource(): SpreadsheetSource | null {
 
     return {
       label: `SQLite (${dbPath})`,
-      models,
+      models: models.filter(isPublicModel),
       benchmarkScores,
       speedData,
       close: () => db.close(),

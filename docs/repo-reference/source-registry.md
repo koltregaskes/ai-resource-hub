@@ -1,6 +1,6 @@
 # Source Registry Snapshot
 
-Generated: 25 Jul 2026, 15:17 UTC
+Generated: 25 Jul 2026, 15:11 UTC
 
 This is the repo-readable mirror of the shared source registry. It shows where source definitions currently live, how they route into the website estate, and which collection / verification lane each source should use.
 
@@ -13,13 +13,13 @@ Canonical config:
 
 | Metric | Value |
 | --- | --- |
-| Generated | 25 Jul 2026, 15:17 UTC |
-| Configured sources | 13 |
-| AI Resource Hub routed sources | 13 |
-| Automated sources | 13 |
+| Generated | 25 Jul 2026, 15:11 UTC |
+| Configured sources | 14 |
+| AI Resource Hub routed sources | 14 |
+| Automated sources | 14 |
 | Manual-review-only sources | 0 |
 | Official-first verification lanes | 4 |
-| Cross-check verification lanes | 9 |
+| Cross-check verification lanes | 10 |
 
 ## Tracked Sources
 
@@ -33,6 +33,7 @@ Canonical config:
 | [Digg AI](https://www.digg.com/ai) | digg.com | Research / open source | Automated public source | Cross-check before promotion | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Industry Media, Curated Digest, Open Source | Active |
 | [Google DeepMind Blog](https://deepmind.google/blog/) | deepmind.google | Official lab / provider | Automated public source | Official-first | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Provider Blog, Research Lab | Active |
 | [Hugging Face Blog](https://huggingface.co/blog/feed.xml) | huggingface.co | Official lab / provider | Automated public source | Official-first | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Platform Blog, Open Source | Active |
+| [HuggingNews](https://api.huggingnews.com/api/stories) | api.huggingnews.com | Digest / newsletter | Automated public source | Cross-check before promotion | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Curated Digest, AI Newsroom | Active |
 | [Meta AI Blog](https://ai.meta.com/blog/) | ai.meta.com | Official lab / provider | Automated public source | Official-first | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Provider Blog, Research Lab | Active |
 | [MIT Technology Review AI](https://www.technologyreview.com/topic/artificial-intelligence/feed/) | technologyreview.com | Media / analysis | Automated public source | Cross-check before promotion | Kol's Korner, AI Resource Hub, Ghost in the Model | Industry Media, Analysis | Active |
 | [TechCrunch AI](https://techcrunch.com/category/artificial-intelligence/feed/) | techcrunch.com | Media / analysis | Automated public source | Cross-check before promotion | Kol's Korner, AI Resource Hub, Axy Lusion, Ghost in the Model | Industry Media, AI Newsroom | Active |

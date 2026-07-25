@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry';
 import { getAiResourceHubNewsRoutingDiagnostics } from '../src/data/news-routing';
+import { isPubliclyVerifiedModel } from '../src/data/model-verification';
+import { getRecurringEvents } from '../src/data/research-intel';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
 
 const repoRoot = process.cwd();
@@ -11,14 +13,14 @@ const dbPath = getAiResourceHubSqlitePath();
 const cacheDir = path.join(repoRoot, 'data', 'pg-cache');
 const publicDataDir = path.join(repoRoot, 'public', 'data');
 const providerStatusPath = path.join(repoRoot, 'data', 'provider-status.json');
+const eventSourceStatusPath = path.join(repoRoot, 'data', 'events-source-status.json');
 const releaseDeskPath = path.join(publicDataDir, 'model-release-desk.json');
-const publicModelStatuses = ['active', 'tracking', 'preview'];
-
 interface CacheModel {
   id: string;
   name?: string | null;
   provider_name?: string | null;
   status?: string | null;
+  notes?: string | null;
 }
 
 interface CacheNews {
@@ -31,6 +33,21 @@ interface CacheNews {
   importance_score?: number | string | null;
   published_at?: string | null;
   discovered_at?: string | null;
+}
+
+interface CacheEvent {
+  id: string;
+  name: string;
+  url: string;
+  date_start?: string | null;
+  date_end?: string | null;
+  updated_at?: string | null;
+}
+
+interface EventSourceStatus {
+  generatedAt?: string;
+  live?: number;
+  errors?: number;
 }
 
 interface SpreadsheetExport {
@@ -53,7 +70,12 @@ interface ReleaseDeskSnapshot {
     highPriority?: number;
     readyForEditor?: number;
   };
-  releases?: Array<{ id?: string; draftStatus?: string | null }>;
+  releases?: Array<{
+    id?: string;
+    draftStatus?: string | null;
+    verificationState?: 'official' | 'discovery_only' | 'unverified' | null;
+    officialUrl?: string | null;
+  }>;
 }
 
 function loadJson<T>(name: string): T[] {
@@ -88,14 +110,18 @@ function matchesRequirement(model: CacheModel, requirement: FrontierModelRequire
 function main() {
   const failures: string[] = [];
 
-  const cacheModels = loadJson<CacheModel>('models').filter((model) => publicModelStatuses.includes((model.status ?? 'active').toLowerCase()));
+  const cacheModels = loadJson<CacheModel>('models').filter(isPubliclyVerifiedModel);
   const cacheProviders = loadJson<Record<string, unknown>>('providers');
   const cacheBenchmarks = loadJson<Record<string, unknown>>('benchmark_scores');
   const cacheNews = loadJson<CacheNews>('news');
+  const cacheGlossary = loadJson<Record<string, unknown>>('glossary');
+  const cacheEvents = loadJson<CacheEvent>('events');
+  const renderedEvents = getRecurringEvents();
   const spreadsheet = loadJsonFile<SpreadsheetExport>(path.join(publicDataDir, 'ai-models-comparison.json'));
   const latestSpreadsheet = loadJsonFile<SpreadsheetExport>(path.join(publicDataDir, 'models-latest.json'));
   const providerStatus = loadJsonFile<ProviderStatusSnapshot>(providerStatusPath);
   const releaseDesk = loadJsonFile<ReleaseDeskSnapshot>(releaseDeskPath);
+  const eventSourceStatus = loadJsonFile<EventSourceStatus>(eventSourceStatusPath);
   const dbAvailable = fs.existsSync(dbPath);
   const db = dbAvailable ? new Database(dbPath, { readonly: true }) : null;
 
@@ -106,6 +132,7 @@ function main() {
           SELECT COUNT(*) AS count
           FROM models
           WHERE LOWER(COALESCE(status, 'active')) IN ('active', 'tracking', 'preview')
+            AND LOWER(COALESCE(notes, '')) NOT LIKE '%awaiting official verification%'
         `).get() as { count: number }).count),
         benchmarkScores: Number((db.prepare('SELECT COUNT(*) AS count FROM benchmark_scores').get() as { count: number }).count),
       }
@@ -125,6 +152,43 @@ function main() {
 
   if (cacheBenchmarks.length < dbCounts.benchmarkScores) {
     failures.push(`Benchmark score cache lagging local DB: cache=${cacheBenchmarks.length}, db=${dbCounts.benchmarkScores}`);
+  }
+
+  if (cacheGlossary.length === 0) {
+    failures.push('Glossary cache contains zero records.');
+  }
+
+  if (cacheEvents.length === 0) {
+    failures.push('Events cache contains zero records.');
+  }
+
+  const invalidEvents = cacheEvents.filter((event) => (
+    !event.id || !event.name || !/^https?:\/\//.test(event.url)
+    || (event.date_start != null && !Number.isFinite(Date.parse(event.date_start)))
+    || (event.date_end != null && !Number.isFinite(Date.parse(event.date_end)))
+  ));
+  if (invalidEvents.length > 0) {
+    failures.push(`Events cache contains ${invalidEvents.length} invalid record(s).`);
+  }
+
+  const cacheEventIds = new Set(cacheEvents.map((event) => event.id));
+  const missingRenderedEvents = renderedEvents.filter((event) => !cacheEventIds.has(event.id));
+  if (renderedEvents.length !== cacheEvents.length || missingRenderedEvents.length > 0) {
+    failures.push(`Events page loader is out of sync with the cache: rendered=${renderedEvents.length}, cache=${cacheEvents.length}`);
+  }
+
+  const currentDate = new Date().toISOString().slice(0, 10);
+  const upcomingEvents = cacheEvents.filter((event) => (
+    event.date_start && (event.date_end ?? event.date_start).slice(0, 10) >= currentDate
+  ));
+  if (upcomingEvents.length < 4) {
+    failures.push(`Events cache has too few upcoming confirmed events: ${upcomingEvents.length}`);
+  }
+
+  if (!eventSourceStatus) {
+    failures.push('Missing event source-check snapshot: data/events-source-status.json');
+  } else if (!eventSourceStatus.live) {
+    failures.push('Event source-check snapshot has no live official sources.');
   }
 
   if (!spreadsheet) {
@@ -180,6 +244,16 @@ function main() {
     if (releaseCount > 0 && readyForEditor === 0) {
       failures.push('Release desk snapshot contains no editor-ready release briefs.');
     }
+
+    for (const release of releaseDesk.releases ?? []) {
+      if (release.verificationState !== 'official' && release.draftStatus !== 'watch_only') {
+        failures.push(`Unverified release promoted beyond watch-only: ${release.id ?? 'unknown'} (${release.draftStatus ?? 'missing status'})`);
+      }
+
+      if (release.verificationState === 'official' && !release.officialUrl) {
+        failures.push(`Official release is missing a model-level source URL: ${release.id ?? 'unknown'}`);
+      }
+    }
   }
 
   const missingFrontier = REQUIRED_FRONTIER_MODELS.filter((requirement) => (
@@ -210,6 +284,16 @@ function main() {
   // coupling froze the whole site refresh when news routing dried up.
   const warnings: string[] = [];
 
+  const latestEventUpdate = cacheEvents
+    .map((event) => event.updated_at ? Date.parse(event.updated_at) : NaN)
+    .filter(Number.isFinite)
+    .sort((a, b) => b - a)[0];
+  if (!Number.isFinite(latestEventUpdate)) {
+    warnings.push('Events cache has no valid update timestamp.');
+  } else if (Date.now() - latestEventUpdate > 1000 * 60 * 60 * 24 * 7) {
+    warnings.push(`Events cache is stale: latest update=${new Date(latestEventUpdate).toISOString()}`);
+  }
+
   if (cacheNews.length > 0 && newsDiagnostics.routedItems.length === 0) {
     warnings.push('News routing produced zero publishable AI Resource Hub items from the current cache.');
   }
@@ -230,6 +314,9 @@ function main() {
   console.log(`  Models: ${cacheModels.length}/${dbCounts.models}`);
   console.log(`  Benchmark scores: ${cacheBenchmarks.length}/${dbCounts.benchmarkScores}`);
   console.log(`  News items: ${cacheNews.length}`);
+  console.log(`  Glossary terms: ${cacheGlossary.length}`);
+  console.log(`  Events: ${renderedEvents.length}/${cacheEvents.length} (${upcomingEvents.length} upcoming)`);
+  console.log(`  Official event sources live: ${eventSourceStatus?.live ?? 0}`);
   console.log(`  Routed AI news items: ${newsDiagnostics.routedItems.length}`);
   console.log(`  High-signal AI news items: ${newsDiagnostics.highSignalCount}`);
   console.log(`  Official/routed source items: ${newsDiagnostics.officialSourceCount}`);
@@ -238,7 +325,7 @@ function main() {
   console.log(`  Provider status snapshot: ${providerStatus?.generatedAt ?? 'missing'}`);
 
   if (warnings.length > 0) {
-    console.log('\nWARN: news routing needs attention (publish not blocked)');
+    console.log('\nWARN: publish data needs attention (publish not blocked)');
     for (const warning of warnings) {
       console.log(`  - ${warning}`);
     }

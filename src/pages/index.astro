@@ -57,9 +57,8 @@ type HomeRow = {
 
 const metaLeaderboardAll = getMetaLeaderboard(250);
 
-// Meta Benchmark Hub promotion (KOL-4165): the homepage leaderboard is the
-// internal meta benchmark, not the AIRH composite. The composite still powers
-// the dossier/monitor/terminal panels and the /leaderboard/ page.
+// The internal Kol benchmark is retained as a historical snapshot until the
+// versioned runner produces fresh, reproducible evidence.
 const metaOverview = getMetaBenchmarkOverview();
 const metaRanked = metaOverview.leaderboard.filter((entry) => entry.rankStatus === 'ranked');
 const metaPartialCount = metaOverview.leaderboard.length - metaRanked.length;
@@ -320,16 +319,6 @@ const latestTimestamp = [
   .filter((value): value is string => Boolean(value))
   .sort((a, b) => Date.parse(b) - Date.parse(a))[0] ?? null;
 
-const nextRefreshLabel = latestTimestamp
-  ? new Date(Date.parse(latestTimestamp) + 60 * 60 * 1000).toLocaleString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    hour: '2-digit',
-    minute: '2-digit',
-    timeZoneName: 'short',
-  })
-  : 'next scheduled hourly run';
-
 const tickerItems = [
   ...activities.slice(0, 8).map((entry) => ({
     time: formatRelativeTime(entry.date),
@@ -439,20 +428,24 @@ const tableLinks = [
           <span
             class="airh-refresh-stamp"
             id="airh-refresh-stamp"
-            data-airh-tip={`Latest source snapshot: ${latestTimestamp ? formatDateLabel(latestTimestamp) : 'awaiting refresh'}. Next expected refresh: ${nextRefreshLabel}.`}
+            data-airh-tip="The internal meta benchmark snapshot was captured on 12 June 2026 and is not a current ranking."
           >
             <span></span>
-            Refreshed {formatRelativeTime(latestTimestamp)}
+            Snapshot 12 Jun 2026
           </span>
         </div>
 
         <div class="airh-data-grid airh-meta-grid">
           <section class="airh-table-card" aria-labelledby="airh-meta-table-title">
             <div class="airh-table-card-head">
-              <h1 id="airh-meta-table-title" data-airh-meta-title>Floor Capability - meta benchmark leaderboard</h1>
-              <span class="airh-table-meta" data-airh-tip={`Internal meta benchmark: ${metaRanked.length} ranked models. ${metaPartialCount} partial-evidence rows live on the full hub until their sources fill in.`}>{metaRanked.length} ranked</span>
+              <h1 id="airh-meta-table-title" data-airh-meta-title>Floor Capability - historical benchmark snapshot</h1>
+              <span class="airh-table-meta" data-airh-tip={`Historical internal benchmark: ${metaRanked.length} provisional rows captured on 12 June 2026. ${metaPartialCount} rows had partial evidence.`}>{metaRanked.length} snapshot rows</span>
               <a class="airh-meta-method-link" href={`${base}benchmarks/meta/`} data-airh-tip="Method, lane weightings, full citations, and partial-evidence rows.">How these scores work &rarr;</a>
             </div>
+
+            <p class="airh-meta-stale-note">
+              Historical evidence only. These provisional scores were captured on 12 June 2026 and must not be read as a current model ranking.
+            </p>
 
             {metaLaneRows.map(({ lane, rows: laneRows }, laneIndex) => (
               <div class="airh-table-scroll" data-airh-meta-panel={lane.id} hidden={laneIndex !== 0}>
@@ -515,7 +508,7 @@ const tableLinks = [
             </div>
 
             <div class="airh-table-foot">
-              <span data-airh-meta-summary>{metaRanked.length} ranked models - sorted by Floor Capability</span>
+              <span data-airh-meta-summary>{metaRanked.length} historical rows - snapshot from 12 June 2026</span>
               <a href={`${base}benchmarks/meta/`}>Open the full Meta Benchmark Hub &rarr;</a>
             </div>
           </section>
@@ -648,16 +641,16 @@ const tableLinks = [
           panels.forEach((panel) => {
             panel.hidden = panel.getAttribute('data-airh-meta-panel') !== lane;
           });
-          if (title) title.textContent = `${label} - meta benchmark leaderboard`;
-          if (summary) summary.textContent = `${rankedCount} ranked models - sorted by ${label}`;
+          if (title) title.textContent = `${label} - historical benchmark snapshot`;
+          if (summary) summary.textContent = `${rankedCount} historical rows - snapshot from 12 June 2026`;
         });
       });
     })();
   </script>
 
   <style>
-    /* Meta benchmark leaderboard (KOL-4165): single-column grid now that the
-       composite filter rail is gone, plus the confidence marker + quick guide. */
+    /* Historical meta benchmark snapshot: single-column grid, provenance
+       warning, confidence marker, and quick guide. */
     .airh-meta-grid {
       grid-template-columns: 1fr;
     }
@@ -696,6 +689,17 @@ const tableLinks = [
     .airh-conf-mark:hover,
     .airh-conf-mark:focus-visible {
       opacity: 1;
+    }
+
+    .airh-meta-stale-note {
+      margin: 0;
+      padding: 10px 14px;
+      border-top: 1px solid rgba(245, 158, 11, 0.35);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.35);
+      background: rgba(245, 158, 11, 0.08);
+      color: var(--color-text-secondary);
+      font-size: 0.78rem;
+      line-height: 1.45;
     }
 
     .airh-meta-guide {

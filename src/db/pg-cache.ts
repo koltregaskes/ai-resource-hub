@@ -10,6 +10,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { getRenderableCliTools } from '../data/cli-tools';
+import { isPubliclyVerifiedModel } from '../data/model-verification';
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'pg-cache');
 
@@ -128,6 +129,19 @@ interface CachedNews {
   importance_score: number | string | null;
   published_at: string | null;
   discovered_at: string | null;
+}
+
+export interface CachedEvent {
+  id: string;
+  name: string;
+  url: string;
+  date_start: string | null;
+  date_end: string | null;
+  location: string | null;
+  category: string;
+  recurring: boolean;
+  description: string | null;
+  updated_at: string | null;
 }
 
 interface CachedPriceHistory {
@@ -317,19 +331,15 @@ export function getModelsByCategory(category: string): CachedModel[] {
 }
 
 export function getPublicModelsByCategory(category: string): CachedModel[] {
-  return getModels().filter((model) => model.category === category && isPublicModelStatus(model.status));
+  return getModels().filter((model) => model.category === category && isPubliclyVerifiedModel(model));
 }
 
 export function getModelById(id: string): CachedModel | null {
   return getModels().find(m => m.id === id) ?? null;
 }
 
-function isPublicModelStatus(status: string | null | undefined): boolean {
-  return ['active', 'tracking', 'preview'].includes((status ?? '').toLowerCase());
-}
-
 export function getAllModelIds(): string[] {
-  return getModels().filter(m => isPublicModelStatus(m.status)).map(m => m.id);
+  return getModels().filter(isPubliclyVerifiedModel).map(m => m.id);
 }
 
 export function getRecentModels(limit = 12): CachedModel[] {
@@ -462,6 +472,10 @@ export function getNewsCategories(): Array<{ category: string; count: number }> 
   return Array.from(counts.entries())
     .map(([category, count]) => ({ category, count }))
     .sort((a, b) => b.count - a.count);
+}
+
+export function getEvents(): CachedEvent[] {
+  return loadCache<CachedEvent>('events');
 }
 
 export function getPriceHistory(): CachedPriceHistory[] {

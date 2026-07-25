@@ -6,6 +6,7 @@ import {
   type CatalogModelEntry,
   type ProviderCatalogEntry,
 } from './model-catalog';
+import { stripDiscoveryOnlyNote } from '../src/data/model-verification';
 
 type ExistingProvider = {
   id: string;
@@ -46,7 +47,7 @@ type ExistingModel = {
 };
 
 function mergeNotes(existing: string | null, next: string | null | undefined): string | null {
-  const parts = [existing, next]
+  const parts = [stripDiscoveryOnlyNote(existing), next]
     .map((value) => value?.trim())
     .filter((value): value is string => Boolean(value));
   if (parts.length === 0) return null;

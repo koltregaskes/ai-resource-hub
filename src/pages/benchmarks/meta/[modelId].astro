@@ -62,6 +62,11 @@ const citedEvidence = model.evidence.filter((item) => sourceUrls[item]);
       <span>{model.modelName}</span>
     </nav>
 
+    <section class="meta-snapshot-warning" aria-label="Benchmark freshness warning">
+      <strong>Historical snapshot</strong>
+      <p>This evidence was captured on 12 June 2026. It is provisional and is not a current ranking.</p>
+    </section>
+
     <header class="meta-model-header">
       <div>
         <p class="meta-kicker">{model.providerName}</p>
@@ -164,6 +169,16 @@ const citedEvidence = model.evidence.filter((item) => sourceUrls[item]);
 </BaseLayout>
 
 <style>
+  .meta-snapshot-warning {
+    margin: 1rem 0;
+    border: 1px solid color-mix(in srgb, var(--color-warning, #f59e0b) 55%, transparent);
+    background: color-mix(in srgb, var(--color-warning, #f59e0b) 11%, var(--color-bg-secondary));
+    padding: 0.9rem 1rem;
+  }
+  .meta-snapshot-warning p {
+    margin: 0.25rem 0 0;
+    color: var(--color-text-secondary);
+  }
   .meta-model-page {
     color: var(--color-text-primary);
   }

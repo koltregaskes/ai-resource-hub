@@ -26,6 +26,7 @@ export interface EventEntry {
   focus: string;
   whyWatch: string;
   url: string;
+  updatedAt?: string;
 }
 
 export const recurringReports: ReportEntry[] = [
@@ -263,3 +264,87 @@ export const recurringEvents: EventEntry[] = [
     url: 'https://worldsummit.ai/',
   },
 ];
+
+const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function toDateOnly(value: string | null): string | undefined {
+  if (!value) return undefined;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+
+  const parsed = new Date(value);
+  if (!Number.isFinite(parsed.getTime())) return undefined;
+  return parsed.toISOString().slice(0, 10);
+}
+
+function formatTiming(startDate?: string, endDate?: string): string {
+  if (!startDate) return 'Date TBC';
+  const [startYear, startMonth, startDay] = startDate.split('-').map(Number);
+  if (!endDate || startDate === endDate) {
+    return `${startDay} ${MONTH_NAMES[startMonth - 1]} ${startYear}`;
+  }
+
+  const [endYear, endMonth, endDay] = endDate.split('-').map(Number);
+  if (startYear === endYear && startMonth === endMonth) {
+    return `${startDay}-${endDay} ${MONTH_NAMES[startMonth - 1]} ${startYear}`;
+  }
+  return `${startDay} ${MONTH_NAMES[startMonth - 1]}-${endDay} ${MONTH_NAMES[endMonth - 1]} ${endYear}`;
+}
+
+function eventLocation(location: string | null, seed?: EventEntry): Pick<EventEntry, 'city' | 'country'> {
+  if (!location) return { city: seed?.city, country: seed?.country };
+  const separator = location.lastIndexOf(',');
+  if (separator === -1) return { city: location, country: seed?.country };
+  return {
+    city: location.slice(0, separator).trim(),
+    country: location.slice(separator + 1).trim(),
+  };
+}
+
+function humaniseCategory(category: string): string {
+  return category
+    .split(/[_-]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
+export function getRecurringEvents(): EventEntry[] {
+  const cachedEvents = getEvents();
+  if (cachedEvents.length === 0) return recurringEvents;
+
+  const staticById = new Map(recurringEvents.map((event) => [event.id, event]));
+  return cachedEvents.map((cached) => {
+    const seed = staticById.get(cached.id);
+    const startDate = toDateOnly(cached.date_start);
+    const endDate = toDateOnly(cached.date_end);
+    const location = eventLocation(cached.location, seed);
+    const category = seed?.category ?? humaniseCategory(cached.category);
+    const description = cached.description?.trim();
+    const status: EventEntry['status'] = startDate
+      ? 'confirmed'
+      : cached.recurring || seed?.status === 'series'
+        ? 'series'
+        : 'tbc';
+
+    return {
+      id: cached.id,
+      name: cached.name,
+      organiser: seed?.organiser ?? cached.name,
+      timing: startDate ? formatTiming(startDate, endDate) : seed?.timing ?? 'Date TBC',
+      startDate,
+      endDate,
+      timezone: seed?.timezone,
+      city: location.city,
+      country: location.country,
+      venue: seed?.venue,
+      status,
+      category,
+      tags: seed?.tags ?? [cached.category.replace(/_/g, '-'), status === 'series' ? 'series' : 'conference'],
+      focus: description ?? seed?.focus ?? `Official updates and schedule changes for ${cached.name}`,
+      whyWatch: seed?.whyWatch ?? description ?? `${cached.name} is tracked in the AI Resource Hub event database.`,
+      url: cached.url,
+      updatedAt: cached.updated_at ?? undefined,
+    };
+  });
+}
+import { getEvents } from '../db/pg-cache';
