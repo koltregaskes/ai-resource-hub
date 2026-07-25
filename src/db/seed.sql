@@ -41,9 +41,16 @@ VALUES
   ('claude-3.7-sonnet', 'Claude 3.7 Sonnet', 'anthropic', 3.00, 15.00, 200000, 64000, 70, 90, '2025-02-24', 0, 'text,vision', 1, 'First hybrid reasoning model; extended thinking', 'llm', 'active', 'anthropic.com/pricing');
 
 -- Google (missing models)
+INSERT INTO models (id, name, provider_id, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, category, status, pricing_source)
+VALUES
+  ('gemini-2.0-flash-lite', 'Gemini 2.0 Flash Lite', 'google', 0.075, 0.30, 1048576, 8192, 250, 75, '2025-02-25', 0, 'text,vision', 0, 'Shut down on 1 June 2026; migrate to a current Gemini Flash-Lite model.', 'llm', 'retired', 'ai.google.dev/pricing')
+ON CONFLICT(id) DO UPDATE SET
+  api_available = excluded.api_available,
+  notes = excluded.notes,
+  status = excluded.status;
+
 INSERT OR IGNORE INTO models (id, name, provider_id, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, category, status, pricing_source)
 VALUES
-  ('gemini-2.0-flash-lite', 'Gemini 2.0 Flash Lite', 'google', 0.075, 0.30, 1048576, 8192, 250, 75, '2025-02-25', 0, 'text,vision', 0, 'Shut down on 1 June 2026; migrate to a current Gemini Flash-Lite model.', 'llm', 'retired', 'ai.google.dev/pricing'),
   ('gemini-1.5-pro', 'Gemini 1.5 Pro', 'google', 1.25, 5.00, 2097152, 8192, 60, 83, '2024-02-15', 0, 'text,vision,audio,video', 1, '2M context window; strong multimodal', 'llm', 'active', 'ai.google.dev/pricing'),
   ('gemini-1.5-flash', 'Gemini 1.5 Flash', 'google', 0.075, 0.30, 1048576, 8192, 150, 78, '2024-05-24', 0, 'text,vision,audio', 1, 'Previous gen fast model; widely adopted', 'llm', 'active', 'ai.google.dev/pricing');
 

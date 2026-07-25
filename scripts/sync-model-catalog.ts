@@ -206,6 +206,7 @@ async function main() {
         OR notes IS NOT @notes
       )
   `);
+  const modelExists = db.prepare('SELECT 1 FROM models WHERE id = ?');
 
   let providerUpdates = 0;
   let modelUpdates = 0;
@@ -234,6 +235,10 @@ async function main() {
     }
 
     for (const override of MODEL_LIFECYCLE_OVERRIDES) {
+      if (!modelExists.get(override.canonicalId)) {
+        throw new Error(`Required catalog model was not found: ${override.canonicalId}`);
+      }
+
       for (const id of [override.canonicalId, ...override.aliases]) {
         const result = applyLifecycleOverride.run({
           id,
