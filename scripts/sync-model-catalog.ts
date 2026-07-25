@@ -1,6 +1,7 @@
 #!/usr/bin/env npx tsx
 import { getDB, logScrapeRun } from './scrapers/base';
 import {
+  MODEL_LIFECYCLE_OVERRIDES,
   PROVIDER_CATALOG,
   VERIFIED_MODEL_CATALOG,
   type CatalogModelEntry,
@@ -76,9 +77,22 @@ function mergeProvider(existing: ExistingProvider | undefined, provider: Provide
   };
 }
 
+function hasPricingChanged(existing: ExistingModel | undefined, model: CatalogModelEntry): boolean {
+  const pricing = model.officialPricing;
+  if (!pricing) return false;
+  if (!existing) return true;
+
+  return (
+    existing.input_price !== pricing.inputPrice
+    || existing.output_price !== pricing.outputPrice
+    || existing.pricing_source !== pricing.source
+  );
+}
+
 function mergeModel(existing: ExistingModel | undefined, model: CatalogModelEntry) {
   const nowIso = new Date().toISOString();
   const pricing = model.officialPricing;
+  const pricingChanged = hasPricingChanged(existing, model);
 
   return {
     id: model.id,
@@ -101,7 +115,9 @@ function mergeModel(existing: ExistingModel | undefined, model: CatalogModelEntr
     category: model.category ?? existing?.category ?? 'llm',
     status: model.status ?? existing?.status ?? 'active',
     pricing_source: pricing?.source ?? existing?.pricing_source ?? null,
-    pricing_updated: pricing ? nowIso : existing?.pricing_updated ?? null,
+    pricing_updated: pricing && pricingChanged
+      ? nowIso
+      : existing?.pricing_updated ?? null,
   };
 }
 
@@ -177,8 +193,23 @@ async function main() {
     VALUES (?, ?, ?, ?)
   `);
 
+  const applyLifecycleOverride = db.prepare(`
+    UPDATE models
+    SET status = @status,
+        api_available = @apiAvailable,
+        notes = @notes,
+        updated_at = datetime('now')
+    WHERE id = @id
+      AND (
+        status IS NOT @status
+        OR api_available IS NOT @apiAvailable
+        OR notes IS NOT @notes
+      )
+  `);
+
   let providerUpdates = 0;
   let modelUpdates = 0;
+  let lifecycleUpdates = 0;
 
   const sync = db.transaction(() => {
     for (const provider of PROVIDER_CATALOG) {
@@ -199,13 +230,26 @@ async function main() {
       }
       modelUpdates++;
     }
+
+    for (const override of MODEL_LIFECYCLE_OVERRIDES) {
+      for (const id of [override.canonicalId, ...override.aliases]) {
+        const result = applyLifecycleOverride.run({
+          id,
+          status: override.status,
+          apiAvailable: override.apiAvailable ? 1 : 0,
+          notes: override.notes,
+        });
+        lifecycleUpdates += result.changes;
+      }
+    }
   });
 
   try {
     sync();
-    logScrapeRun(db, 'catalog:sync', 'success', providerUpdates + modelUpdates);
+    logScrapeRun(db, 'catalog:sync', 'success', providerUpdates + modelUpdates + lifecycleUpdates);
     console.log(`  Providers synced: ${providerUpdates}`);
     console.log(`  Models synced: ${modelUpdates}`);
+    console.log(`  Lifecycle corrections applied: ${lifecycleUpdates}`);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     logScrapeRun(db, 'catalog:sync', 'error', 0, message);

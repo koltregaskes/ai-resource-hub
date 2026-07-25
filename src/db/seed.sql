@@ -43,7 +43,7 @@ VALUES
 -- Google (missing models)
 INSERT OR IGNORE INTO models (id, name, provider_id, input_price, output_price, context_window, max_output, speed, quality_score, released, open_source, modality, api_available, notes, category, status, pricing_source)
 VALUES
-  ('gemini-2.0-flash-lite', 'Gemini 2.0 Flash Lite', 'google', 0.075, 0.30, 1048576, 8192, 250, 75, '2025-02-25', 0, 'text,vision', 1, 'Ultra-fast and cheap; Gemini 2.0 tier', 'llm', 'active', 'ai.google.dev/pricing'),
+  ('gemini-2.0-flash-lite', 'Gemini 2.0 Flash Lite', 'google', 0.075, 0.30, 1048576, 8192, 250, 75, '2025-02-25', 0, 'text,vision', 0, 'Shut down on 1 June 2026; migrate to a current Gemini Flash-Lite model.', 'llm', 'retired', 'ai.google.dev/pricing'),
   ('gemini-1.5-pro', 'Gemini 1.5 Pro', 'google', 1.25, 5.00, 2097152, 8192, 60, 83, '2024-02-15', 0, 'text,vision,audio,video', 1, '2M context window; strong multimodal', 'llm', 'active', 'ai.google.dev/pricing'),
   ('gemini-1.5-flash', 'Gemini 1.5 Flash', 'google', 0.075, 0.30, 1048576, 8192, 150, 78, '2024-05-24', 0, 'text,vision,audio', 1, 'Previous gen fast model; widely adopted', 'llm', 'active', 'ai.google.dev/pricing');
 

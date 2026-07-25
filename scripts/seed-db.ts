@@ -10,6 +10,7 @@
 import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
+import { MODEL_LIFECYCLE_OVERRIDES } from './model-catalog';
 import { getAiResourceHubLegacySqlitePath, getAiResourceHubSqlitePath } from './sqlite-path';
 
 const DB_PATH = getAiResourceHubSqlitePath();
@@ -540,27 +541,29 @@ const insertModels = db.transaction(() => {
 });
 insertModels();
 
-// Official lifecycle source:
-// https://ai.google.dev/gemini-api/docs/deprecations
-// Gemini 2.0 Flash and Flash-Lite were shut down on 1 June 2026. Keep the
-// baseline honest so clean CI databases cannot publish them as available.
 const retireModel = db.prepare(`
   UPDATE models
-  SET status = 'retired',
-      api_available = 0,
-      notes = ?
-  WHERE id = ?
+  SET status = @status,
+      api_available = @apiAvailable,
+      notes = @notes
+  WHERE id = @id
 `);
 
 const retireModels = db.transaction(() => {
-  retireModel.run(
-    'Shut down on 1 June 2026; migrate to a current Gemini Flash model.',
-    'gemini-2.0-flash',
-  );
-  retireModel.run(
-    'Shut down on 1 June 2026; migrate to a current Gemini Flash-Lite model.',
-    'gemini-2.0-flash-lite',
-  );
+  for (const override of MODEL_LIFECYCLE_OVERRIDES) {
+    for (const id of [override.canonicalId, ...override.aliases]) {
+      const result = retireModel.run({
+        id,
+        status: override.status,
+        apiAvailable: override.apiAvailable ? 1 : 0,
+        notes: override.notes,
+      });
+
+      if (id === override.canonicalId && result.changes !== 1) {
+        throw new Error(`Required seed model was not retired: ${id}`);
+      }
+    }
+  }
 });
 retireModels();
 

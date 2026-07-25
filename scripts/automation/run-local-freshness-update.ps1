@@ -8,6 +8,7 @@ $nodeModulesMarker = Join-Path $repoRoot 'node_modules\astro\package.json'
 $restoreAfterVerify = $env:AIRH_LOCAL_REFRESH_RESTORE -eq '1'
 $configuredEnvFile = $env:AIRH_ENV_FILE
 $scriptExitCode = 0
+$generationStarted = $false
 $publishPaths = @(
   'data/pg-cache',
   'data/provider-status.json',
@@ -39,14 +40,36 @@ function Invoke-Logged {
   $argumentText = if ($Arguments) { $Arguments -join ' ' } else { '' }
   Write-Log "Running: $Command $argumentText" 'STEP'
 
+  try {
+    $resolvedCommand = Get-Command -Name $Command -CommandType Application -ErrorAction Stop |
+      Select-Object -First 1
+  } catch {
+    throw "Command could not be resolved: $Command. $($_.Exception.Message)"
+  }
+
   $previousErrorActionPreference = $ErrorActionPreference
-  $ErrorActionPreference = 'Continue'
-  $output = & $Command @Arguments 2>&1
-  $ErrorActionPreference = $previousErrorActionPreference
-  $exitCode = $LASTEXITCODE
+  $output = $null
+  $exitCode = $null
+  $invocationSucceeded = $false
+
+  try {
+    $ErrorActionPreference = 'Continue'
+    $global:LASTEXITCODE = $null
+    $output = & $resolvedCommand.Path @Arguments 2>&1
+    $invocationSucceeded = $?
+    $exitCode = $LASTEXITCODE
+  } catch {
+    throw "Command failed to launch: $Command $argumentText. $($_.Exception.Message)"
+  } finally {
+    $ErrorActionPreference = $previousErrorActionPreference
+  }
 
   @($output | ForEach-Object { "$_" }) | ForEach-Object {
     Write-Log "$_"
+  }
+
+  if (-not $invocationSucceeded -and $null -eq $exitCode) {
+    throw "Command failed before returning an exit code: $Command $argumentText"
   }
 
   if ($exitCode -ne 0) {
@@ -126,6 +149,7 @@ try {
 
   Invoke-Logged 'npm.cmd' @('run', 'sync:catalog')
   Invoke-Logged (Join-Path $repoRoot 'node_modules\.bin\tsx.cmd') @('scripts/seed-glossary.ts')
+  $generationStarted = $true
   Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
   Invoke-Logged 'npm.cmd' @('run', 'generate:release-desk')
   Invoke-Logged 'node' @('scripts/sync-news-pipeline-data.mjs')
@@ -141,13 +165,15 @@ try {
   Write-Log $_.Exception.Message 'ERROR'
   $scriptExitCode = 1
 } finally {
-  if ($restoreAfterVerify) {
+  if ($restoreAfterVerify -and $generationStarted) {
     try {
       Restore-GeneratedPublishArtifacts
     } catch {
       Write-Log "Generated artifact restore failed: $($_.Exception.Message)" 'ERROR'
       $scriptExitCode = 1
     }
+  } elseif ($restoreAfterVerify) {
+    Write-Log 'Generation did not start, so existing publish artifacts were left untouched.'
   }
   Pop-Location
 }
