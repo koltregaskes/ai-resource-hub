@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T09:21:04.021Z",
+  "generatedAt": "2026-07-25T10:25:37.210Z",
   "providers": [
     {
       "id": "openai",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T09:21:02.689Z",
+      "lastCheckedAt": "2026-07-25T10:25:35.718Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -47,24 +47,24 @@
         {
           "id": "01KYC921K145JTR1JK7DYKGWH1",
           "title": "Elevated error rates",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-07-25T09:17:49.000Z",
-          "updatedAt": "2026-07-25T09:17:49.000Z",
+          "updatedAt": "2026-07-25T10:02:52.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01KYC921K145JTR1JK7DYKGWH1",
           "title": "Elevated error rates",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-07-25T09:17:49.000Z",
-          "updatedAt": "2026-07-25T09:17:49.000Z",
+          "updatedAt": "2026-07-25T10:02:52.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KY7SX5MYJ2BP51X5MXAPYX71",
@@ -109,7 +109,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T09:21:02.993Z",
+      "lastCheckedAt": "2026-07-25T10:25:36.521Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +129,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T09:21:02.767Z",
+      "lastCheckedAt": "2026-07-25T10:25:35.720Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T09:21:03.640Z",
+      "lastCheckedAt": "2026-07-25T10:25:36.772Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +239,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T09:21:03.962Z",
+      "lastCheckedAt": "2026-07-25T10:25:37.203Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +304,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T09:21:02.798Z",
+      "lastCheckedAt": "2026-07-25T10:25:35.989Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -336,7 +336,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T09:21:04.014Z",
+      "lastCheckedAt": "2026-07-25T10:25:36.919Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
