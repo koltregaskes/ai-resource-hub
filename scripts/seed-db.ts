@@ -540,6 +540,30 @@ const insertModels = db.transaction(() => {
 });
 insertModels();
 
+// Official lifecycle source:
+// https://ai.google.dev/gemini-api/docs/deprecations
+// Gemini 2.0 Flash and Flash-Lite were shut down on 1 June 2026. Keep the
+// baseline honest so clean CI databases cannot publish them as available.
+const retireModel = db.prepare(`
+  UPDATE models
+  SET status = 'retired',
+      api_available = 0,
+      notes = ?
+  WHERE id = ?
+`);
+
+const retireModels = db.transaction(() => {
+  retireModel.run(
+    'Shut down on 1 June 2026; migrate to a current Gemini Flash model.',
+    'gemini-2.0-flash',
+  );
+  retireModel.run(
+    'Shut down on 1 June 2026; migrate to a current Gemini Flash-Lite model.',
+    'gemini-2.0-flash-lite',
+  );
+});
+retireModels();
+
 // ─── Image Generation Models ─────────────────────────────────
 // Pricing: per image or per API call, stored as cost per 1 image (input_price = cost/image, output_price = 0)
 // quality_score: subjective composite of aesthetics, coherence, text rendering, prompt adherence
