@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 25 Jul 2026, 15:11 UTC
+Generated: 25 Jul 2026, 15:31 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -22,8 +22,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Jul 2026 | GPT-5.6 Sol Pro | OpenAI | tracking | high | watch only | 0 | 6 | n/a |
 | 8 Jul 2026 | Grok 4.5 | xAI | tracking | high | watch only | 0 | 0 | n/a |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/glasswing) |
-| 30 Jun 2026 | Claude Sonnet 5 | Anthropic | tracking | watch | ready for editor | 0 | 3 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
-| 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | watch only | 0 | 1 | n/a |
+| 30 Jun 2026 | Claude Sonnet 5 | Anthropic | tracking | watch | ready for editor | 0 | 4 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
+| 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | watch only | 0 | 2 | n/a |
 | 16 Jun 2026 | GLM 5.2 | Zhipu AI | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Jun 2026 | Kimi K2.7 Code | Moonshot AI | tracking | watch | watch only | 0 | 0 | n/a |
 | 9 Jun 2026 | Claude Fable 5 | Anthropic | tracking | watch | ready for editor | 0 | 5 | [official](https://www.anthropic.com/news/claude-fable-5-mythos-5) |
