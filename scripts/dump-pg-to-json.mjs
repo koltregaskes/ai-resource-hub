@@ -534,7 +534,11 @@ await dumpPostgres(pgClient, 'creative_benchmarks', `
   SELECT * FROM creative_benchmarks
   ORDER BY category, meta_rank ASC NULLS LAST
 `);
-await dumpPostgres(pgClient, 'events', 'SELECT * FROM hub_events ORDER BY date_start DESC NULLS LAST');
+await dumpPostgres(
+  pgClient,
+  'events',
+  "SELECT * FROM hub_events WHERE id <> 'nvidia-gtc' ORDER BY date_start DESC NULLS LAST",
+);
 await dumpPostgres(pgClient, 'reports', 'SELECT * FROM hub_reports ORDER BY last_published DESC NULLS LAST');
 await dumpPostgres(pgClient, 'agi_definitions', 'SELECT * FROM agi_definitions ORDER BY source_type, source_name');
 await dumpPostgres(pgClient, 'agi_milestones', 'SELECT * FROM agi_milestones ORDER BY date DESC');

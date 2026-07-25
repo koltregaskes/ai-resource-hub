@@ -74,7 +74,7 @@ const CURATED_EVENTS: CuratedEvent[] = [
     description: 'World Summit AI anniversary edition at Taets Art and Event Park.',
   },
   {
-    id: 'nvidia-gtc',
+    id: 'nvidia-gtc-berlin-2026',
     name: 'NVIDIA GTC Berlin 2026',
     url: 'https://www.nvidia.com/en-eu/gtc/',
     date_start: '2026-10-20',
@@ -208,7 +208,7 @@ async function main() {
 
   const checks = await Promise.all(CURATED_EVENTS.map(checkSource));
   const now = new Date().toISOString();
-  const replacedIds = new Set(['world-summit-ai-2026', 'nvidia-gtc-berlin-2026']);
+  const replacedIds = new Set(['world-summit-ai-2026', 'nvidia-gtc']);
   const existing = readExistingEvents().filter((event) => !replacedIds.has(event.id));
   const merged = new Map(existing.map((event) => [event.id, event]));
 

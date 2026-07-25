@@ -314,7 +314,8 @@ export function getRecurringEvents(): EventEntry[] {
 
   const staticById = new Map(recurringEvents.map((event) => [event.id, event]));
   return cachedEvents.map((cached) => {
-    const seed = staticById.get(cached.id);
+    const seedId = cached.id === 'nvidia-gtc-berlin-2026' ? 'nvidia-gtc' : cached.id;
+    const seed = staticById.get(seedId);
     const startDate = toDateOnly(cached.date_start);
     const endDate = toDateOnly(cached.date_end);
     const location = eventLocation(cached.location, seed);
