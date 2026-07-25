@@ -218,9 +218,11 @@ async function main() {
     }
 
     for (const model of VERIFIED_MODEL_CATALOG) {
-      const merged = mergeModel(modelsById.get(model.id), model);
+      const existingModel = modelsById.get(model.id);
+      const pricingChanged = hasPricingChanged(existingModel, model);
+      const merged = mergeModel(existingModel, model);
       upsertModel.run(merged);
-      if (model.officialPricing) {
+      if (model.officialPricing && pricingChanged) {
         insertPriceHistory.run(
           model.id,
           model.officialPricing.inputPrice,
