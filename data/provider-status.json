@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T17:42:04.115Z",
+  "generatedAt": "2026-07-25T18:26:00.181Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T17:42:03.103Z",
+      "lastCheckedAt": "2026-07-25T18:25:59.455Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T17:42:02.930Z",
+      "lastCheckedAt": "2026-07-25T18:25:58.509Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -66,6 +66,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "1019wwb67615",
+          "title": "Sonnet 4.6 and Sonnet 5 errors elevated",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-07-25T18:13:01.000Z",
+          "updatedAt": "2026-07-25T18:14:56.488Z",
+          "resolvedAt": "2026-07-25T18:13:01.000Z",
+          "url": "https://stspg.io/ty4xl4702q4r",
+          "summary": "For approximately 10 minutes, error rates on Sonnet 4.6 and 5 were elevated. Service returned to normal at approximately 11:07a PDT."
+        },
+        {
           "id": "yc7mr2gvl914",
           "title": "Microsoft Office add-in availability",
           "status": "resolved",
@@ -97,17 +108,6 @@
           "resolvedAt": "2026-07-23T00:10:17.291Z",
           "url": "https://stspg.io/zzlysdsgthl6",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "ng5shnqxj1r7",
-          "title": "Service disruption on Claude Services",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-22T17:27:36.523Z",
-          "updatedAt": "2026-07-22T17:45:37.497Z",
-          "resolvedAt": "2026-07-22T17:45:37.482Z",
-          "url": "https://stspg.io/3c161l5nt3kz",
-          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T17:42:03.754Z",
+      "lastCheckedAt": "2026-07-25T18:25:59.777Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T17:42:04.000Z",
+      "lastCheckedAt": "2026-07-25T18:26:00.097Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T17:42:02.935Z",
+      "lastCheckedAt": "2026-07-25T18:25:59.177Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -239,7 +239,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T17:42:03.089Z",
+      "lastCheckedAt": "2026-07-25T18:25:58.590Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -325,7 +325,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-25T17:42:04.108Z",
+      "lastCheckedAt": "2026-07-25T18:25:59.990Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -394,7 +394,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
