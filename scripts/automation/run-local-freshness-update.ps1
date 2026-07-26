@@ -6,6 +6,16 @@ $logDir = Join-Path $repoRoot 'logs'
 $logFile = Join-Path $logDir 'local-freshness-update.log'
 $nodeModulesMarker = Join-Path $repoRoot 'node_modules\astro\package.json'
 $restoreAfterVerify = $env:AIRH_LOCAL_REFRESH_RESTORE -eq '1'
+$configuredEnvFile = $env:AIRH_ENV_FILE
+$scriptExitCode = 0
+$generationStarted = $false
+$publishPaths = @(
+  'data/pg-cache',
+  'data/provider-status.json',
+  'public/data',
+  'src/data/news-pipeline.generated.ts',
+  'src/data/model-release-desk.generated.ts'
+)
 
 New-Item -ItemType Directory -Path $logDir -Force | Out-Null
 
@@ -30,19 +40,94 @@ function Invoke-Logged {
   $argumentText = if ($Arguments) { $Arguments -join ' ' } else { '' }
   Write-Log "Running: $Command $argumentText" 'STEP'
 
+  try {
+    $resolvedCommand = Get-Command -Name $Command -CommandType Application -ErrorAction Stop |
+      Select-Object -First 1
+  } catch {
+    throw "Command could not be resolved: $Command. $($_.Exception.Message)"
+  }
+
   $previousErrorActionPreference = $ErrorActionPreference
-  $ErrorActionPreference = 'Continue'
-  $output = & $Command @Arguments 2>&1
-  $ErrorActionPreference = $previousErrorActionPreference
-  $exitCode = $LASTEXITCODE
+  $output = $null
+  $exitCode = $null
+  $invocationSucceeded = $false
+
+  try {
+    $ErrorActionPreference = 'Continue'
+    $global:LASTEXITCODE = $null
+    $output = & $resolvedCommand.Path @Arguments 2>&1
+    $invocationSucceeded = $?
+    $exitCode = $LASTEXITCODE
+  } catch {
+    throw "Command failed to launch: $Command $argumentText. $($_.Exception.Message)"
+  } finally {
+    $ErrorActionPreference = $previousErrorActionPreference
+  }
 
   @($output | ForEach-Object { "$_" }) | ForEach-Object {
     Write-Log "$_"
   }
 
+  if (-not $invocationSucceeded -and $null -eq $exitCode) {
+    throw "Command failed before returning an exit code: $Command $argumentText"
+  }
+
   if ($exitCode -ne 0) {
     throw "Command failed with exit code ${exitCode}: $Command $argumentText"
   }
+}
+
+function Import-ConfiguredEnvironment {
+  param([string]$Path)
+
+  if (-not $Path) {
+    return
+  }
+  if (-not (Test-Path -LiteralPath $Path)) {
+    throw "Configured environment file not found: $Path"
+  }
+
+  foreach ($line in Get-Content -LiteralPath $Path) {
+    $trimmed = $line.Trim()
+    if (-not $trimmed -or $trimmed.StartsWith('#')) {
+      continue
+    }
+
+    $equalsIndex = $trimmed.IndexOf('=')
+    if ($equalsIndex -lt 1) {
+      continue
+    }
+
+    $key = $trimmed.Substring(0, $equalsIndex).Trim()
+    if ($key -notmatch '^[A-Za-z_][A-Za-z0-9_]*$') {
+      continue
+    }
+    if ($key -ne 'DATABASE_URL') {
+      continue
+    }
+    if ([Environment]::GetEnvironmentVariable($key, 'Process')) {
+      continue
+    }
+
+    $value = $trimmed.Substring($equalsIndex + 1).Trim()
+    if (
+      ($value.StartsWith('"') -and $value.EndsWith('"')) -or
+      ($value.StartsWith("'") -and $value.EndsWith("'"))
+    ) {
+      $value = $value.Substring(1, $value.Length - 2)
+    }
+
+    [Environment]::SetEnvironmentVariable($key, $value, 'Process')
+  }
+
+  Write-Log "Loaded the configured database environment key from $Path without logging its value."
+}
+
+function Restore-GeneratedPublishArtifacts {
+  Write-Log 'Restoring generated publish artifacts because AIRH_LOCAL_REFRESH_RESTORE=1.'
+  Invoke-Logged 'git' (@('restore', '--source', 'HEAD', '--worktree', '--') + $publishPaths)
+  Invoke-Logged 'git' (@('add', '--renormalize', '--') + $publishPaths)
+  Invoke-Logged 'git' (@('restore', '--staged', '--') + $publishPaths)
 }
 
 Push-Location $repoRoot
@@ -56,11 +141,15 @@ try {
     Write-Log 'Refresh mode: generated publish artifacts will be left in place for the local preview and fallback cache.'
   }
 
+  Import-ConfiguredEnvironment $configuredEnvFile
+
   if (-not (Test-Path $nodeModulesMarker)) {
-    Write-Log "node_modules marker not found. Skipping local freshness; daily update can reinstall dependencies." 'WARN'
-    exit 0
+    throw "node_modules marker not found: $nodeModulesMarker"
   }
 
+  Invoke-Logged 'npm.cmd' @('run', 'sync:catalog')
+  Invoke-Logged (Join-Path $repoRoot 'node_modules\.bin\tsx.cmd') @('scripts/seed-glossary.ts')
+  $generationStarted = $true
   Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
   Invoke-Logged 'npm.cmd' @('run', 'generate:release-desk')
   Invoke-Logged 'node' @('scripts/sync-news-pipeline-data.mjs')
@@ -68,28 +157,28 @@ try {
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
   Invoke-Logged 'npm.cmd' @('run', 'verify:publish')
 
-  if ($restoreAfterVerify) {
-    $publishPaths = @(
-      'data/pg-cache',
-      'data/provider-status.json',
-      'public/data',
-      'src/data/news-pipeline.generated.ts',
-      'src/data/model-release-desk.generated.ts'
-    )
-    Write-Log 'Restoring generated publish artifacts after local-only verification because AIRH_LOCAL_REFRESH_RESTORE=1.'
-    Invoke-Logged 'git' (@('restore', '--source', 'HEAD', '--worktree', '--') + $publishPaths)
-    Invoke-Logged 'git' (@('add', '--renormalize', '--') + $publishPaths)
-    Invoke-Logged 'git' (@('restore', '--staged', '--') + $publishPaths)
-  } else {
+  if (-not $restoreAfterVerify) {
     Write-Log 'Generated publish artifacts remain refreshed locally; use AIRH_LOCAL_REFRESH_RESTORE=1 for dry-run restore mode.'
   }
   Write-Log 'Leaving news feed and digest artifacts in place; the shared site filter owns local news freshness.'
-
-  Write-Log 'Local-only freshness update completed successfully.'
-  exit 0
 } catch {
   Write-Log $_.Exception.Message 'ERROR'
-  exit 1
+  $scriptExitCode = 1
 } finally {
+  if ($restoreAfterVerify -and $generationStarted) {
+    try {
+      Restore-GeneratedPublishArtifacts
+    } catch {
+      Write-Log "Generated artifact restore failed: $($_.Exception.Message)" 'ERROR'
+      $scriptExitCode = 1
+    }
+  } elseif ($restoreAfterVerify) {
+    Write-Log 'Generation did not start, so existing publish artifacts were left untouched.'
+  }
   Pop-Location
 }
+
+if ($scriptExitCode -eq 0) {
+  Write-Log 'Local-only freshness update completed successfully.'
+}
+exit $scriptExitCode

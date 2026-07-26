@@ -10,6 +10,7 @@
 import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
+import { MODEL_LIFECYCLE_OVERRIDES } from './model-catalog';
 import { getAiResourceHubLegacySqlitePath, getAiResourceHubSqlitePath } from './sqlite-path';
 
 const DB_PATH = getAiResourceHubSqlitePath();
@@ -539,6 +540,32 @@ const insertModels = db.transaction(() => {
   }
 });
 insertModels();
+
+const retireModel = db.prepare(`
+  UPDATE models
+  SET status = @status,
+      api_available = @apiAvailable,
+      notes = @notes
+  WHERE id = @id
+`);
+
+const retireModels = db.transaction(() => {
+  for (const override of MODEL_LIFECYCLE_OVERRIDES) {
+    for (const id of [override.canonicalId, ...override.aliases]) {
+      const result = retireModel.run({
+        id,
+        status: override.status,
+        apiAvailable: override.apiAvailable ? 1 : 0,
+        notes: override.notes,
+      });
+
+      if (id === override.canonicalId && result.changes !== 1) {
+        throw new Error(`Required seed model was not retired: ${id}`);
+      }
+    }
+  }
+});
+retireModels();
 
 // ─── Image Generation Models ─────────────────────────────────
 // Pricing: per image or per API call, stored as cost per 1 image (input_price = cost/image, output_price = 0)

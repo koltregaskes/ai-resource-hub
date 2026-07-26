@@ -53,6 +53,34 @@ export interface FrontierModelRequirement {
   requiredAsOf: string;
 }
 
+export interface ModelLifecycleOverride {
+  canonicalId: string;
+  aliases: readonly string[];
+  status: 'retired';
+  apiAvailable: false;
+  notes: string;
+  sourceUrl: string;
+}
+
+export const MODEL_LIFECYCLE_OVERRIDES = [
+  {
+    canonicalId: 'gemini-2.0-flash',
+    aliases: ['gemini-2.0-flash-001'],
+    status: 'retired',
+    apiAvailable: false,
+    notes: 'Shut down on 1 June 2026; migrate to a current Gemini Flash model.',
+    sourceUrl: 'https://ai.google.dev/gemini-api/docs/deprecations',
+  },
+  {
+    canonicalId: 'gemini-2.0-flash-lite',
+    aliases: ['gemini-2.0-flash-lite-001'],
+    status: 'retired',
+    apiAvailable: false,
+    notes: 'Shut down on 1 June 2026; migrate to a current Gemini Flash-Lite model.',
+    sourceUrl: 'https://ai.google.dev/gemini-api/docs/deprecations',
+  },
+] as const satisfies readonly ModelLifecycleOverride[];
+
 export const PROVIDER_CATALOG: ProviderCatalogEntry[] = [
   {
     id: 'openai',
