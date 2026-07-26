@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 26 Jul 2026, 16:25 UTC
+Generated: 26 Jul 2026, 17:13 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -43,4 +43,3 @@ This table shows how much of each provider's public model surface is currently r
 | NVIDIA | 0 | 5 | 0 | Nemotron 3 Ultra (4 Jun 2026) | n/a | [docs](https://docs.api.nvidia.com) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
 | AI21 Labs | 0 | 3 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |
-| Inflection | 0 | 2 | 0 | n/a | n/a | [docs](https://docs.inflection.ai) |
