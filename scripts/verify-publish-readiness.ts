@@ -7,6 +7,12 @@ import { getAiResourceHubNewsRoutingDiagnostics } from '../src/data/news-routing
 import { isPubliclyVerifiedModel } from '../src/data/model-verification';
 import { getRecurringEvents } from '../src/data/research-intel';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
+import {
+  getBenchmarkProvenanceGateFailures,
+  summariseBenchmarkProvenance,
+  type BenchmarkDefinitionProvenanceInput,
+  type BenchmarkScoreProvenanceInput,
+} from './benchmark-provenance';
 
 const repoRoot = process.cwd();
 const dbPath = getAiResourceHubSqlitePath();
@@ -42,6 +48,14 @@ interface CacheEvent {
   date_start?: string | null;
   date_end?: string | null;
   updated_at?: string | null;
+}
+
+interface CacheBenchmarkScore extends BenchmarkScoreProvenanceInput {
+  score?: number | string | null;
+}
+
+interface CacheBenchmarkDefinition extends BenchmarkDefinitionProvenanceInput {
+  name?: string | null;
 }
 
 interface EventSourceStatus {
@@ -112,7 +126,8 @@ function main() {
 
   const cacheModels = loadJson<CacheModel>('models').filter(isPubliclyVerifiedModel);
   const cacheProviders = loadJson<Record<string, unknown>>('providers');
-  const cacheBenchmarks = loadJson<Record<string, unknown>>('benchmark_scores');
+  const cacheBenchmarkScores = loadJson<CacheBenchmarkScore>('benchmark_scores');
+  const cacheBenchmarkDefinitions = loadJson<CacheBenchmarkDefinition>('benchmarks');
   const cacheNews = loadJson<CacheNews>('news');
   const cacheGlossary = loadJson<Record<string, unknown>>('glossary');
   const cacheEvents = loadJson<CacheEvent>('events');
@@ -139,7 +154,7 @@ function main() {
     : {
         providers: cacheProviders.length,
         models: cacheModels.length,
-        benchmarkScores: cacheBenchmarks.length,
+        benchmarkScores: cacheBenchmarkScores.length,
       };
 
   if (cacheProviders.length < dbCounts.providers) {
@@ -150,9 +165,15 @@ function main() {
     failures.push(`Model cache lagging local DB: cache=${cacheModels.length}, db=${dbCounts.models}`);
   }
 
-  if (cacheBenchmarks.length < dbCounts.benchmarkScores) {
-    failures.push(`Benchmark score cache lagging local DB: cache=${cacheBenchmarks.length}, db=${dbCounts.benchmarkScores}`);
+  if (cacheBenchmarkScores.length < dbCounts.benchmarkScores) {
+    failures.push(`Benchmark score cache lagging local DB: cache=${cacheBenchmarkScores.length}, db=${dbCounts.benchmarkScores}`);
   }
+
+  const benchmarkProvenance = summariseBenchmarkProvenance(
+    cacheBenchmarkScores,
+    cacheBenchmarkDefinitions,
+  );
+  failures.push(...getBenchmarkProvenanceGateFailures(benchmarkProvenance));
 
   if (cacheGlossary.length === 0) {
     failures.push('Glossary cache contains zero records.');
@@ -312,7 +333,10 @@ function main() {
   console.log(`  SQLite source: ${dbAvailable ? dbPath : 'not present; pg-cache is source of truth'}`);
   console.log(`  Providers: ${cacheProviders.length}/${dbCounts.providers}`);
   console.log(`  Models: ${cacheModels.length}/${dbCounts.models}`);
-  console.log(`  Benchmark scores: ${cacheBenchmarks.length}/${dbCounts.benchmarkScores}`);
+  console.log(`  Benchmark scores: ${cacheBenchmarkScores.length}/${dbCounts.benchmarkScores}`);
+  console.log(`  Benchmark provenance: ${benchmarkProvenance.rankable}/${benchmarkProvenance.total} rankable`);
+  console.log(`    URL-backed / inherited / label-only / missing: ${benchmarkProvenance.urlBacked} / ${benchmarkProvenance.inheritedTraceable} / ${benchmarkProvenance.labelOnly} / ${benchmarkProvenance.missing}`);
+  console.log(`    Current / stale / undated / invalid / future: ${benchmarkProvenance.current} / ${benchmarkProvenance.stale} / ${benchmarkProvenance.undated} / ${benchmarkProvenance.invalidDate} / ${benchmarkProvenance.futureDated}`);
   console.log(`  News items: ${cacheNews.length}`);
   console.log(`  Glossary terms: ${cacheGlossary.length}`);
   console.log(`  Events: ${renderedEvents.length}/${cacheEvents.length} (${upcomingEvents.length} upcoming)`);
@@ -340,7 +364,7 @@ function main() {
     return;
   }
 
-  console.log('\nOK publish cache, public exports, and status snapshot match local data and pass routing checks');
+  console.log('\nOK publish cache, public exports, benchmark provenance, status snapshot, and routing checks passed');
 }
 
 main();

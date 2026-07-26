@@ -35,7 +35,9 @@
     "scrape:quality": "tsx scripts/scrapers/quality-scores.ts",
     "scrape:creative": "tsx scripts/scrapers/creative-benchmarks.ts",
     "dump:pg": "node scripts/dump-pg-to-json.mjs",
+    "verify:benchmark-provenance": "tsx scripts/verify-benchmark-provenance.ts",
     "verify:publish": "tsx scripts/verify-publish-readiness.ts",
+    "test:benchmark-provenance": "tsx --test scripts/benchmark-provenance.test.ts",
     "verify:routes": "tsx scripts/verify-route-smoke.ts"
   },
   "dependencies": {

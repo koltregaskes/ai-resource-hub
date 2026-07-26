@@ -57,6 +57,11 @@ Primary sources:
 Important rule:
 
 - if we want to make degradation claims, benchmark scores must be versioned or snapshotted over time rather than overwritten in place
+- a score is traceable only when it has its own public source URL or can explicitly inherit the owning benchmark's public URL
+- only a current row-level source URL makes a score rankable; inherited benchmark URLs are traceable context for provisional display, not evidence of the exact result
+- a source label by itself is not traceable evidence and must not make a score rankable
+- `measured_at` controls evidence age; a cache refresh must not make an old measurement appear current by rewriting `updated_at`
+- benchmark measurements older than 365 days, missing a measurement date, carrying an invalid date, or implausibly future-dated are not rankable until reviewed or refreshed
 
 ## 3. Speed And Runtime
 
