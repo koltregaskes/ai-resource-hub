@@ -7,7 +7,7 @@
     "category": "concepts",
     "related_terms": "tool-use,function-calling,autonomy",
     "see_also": "chain-of-thought,planning",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "alignment",
@@ -17,7 +17,7 @@
     "category": "concepts",
     "related_terms": "rlhf,constitutional-ai,safety",
     "see_also": "guardrails,red-teaming",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "api",
@@ -27,7 +27,7 @@
     "category": "core",
     "related_terms": "endpoint,sdk,rate-limit",
     "see_also": "token,pricing",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "attention",
@@ -37,7 +37,7 @@
     "category": "technical",
     "related_terms": "transformer,self-attention,multi-head-attention",
     "see_also": "context-window,neural-network",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "benchmark",
@@ -47,7 +47,7 @@
     "category": "concepts",
     "related_terms": "mmlu,gpqa,humaneval,swe-bench",
     "see_also": "quality-score,leaderboard",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "chain-of-thought",
@@ -57,7 +57,7 @@
     "category": "techniques",
     "related_terms": "prompt-engineering,reasoning,few-shot",
     "see_also": "prompt,zero-shot",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "chatgpt",
@@ -67,7 +67,7 @@
     "category": "products",
     "related_terms": "openai,gpt,gpt-4o",
     "see_also": "claude,gemini",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "claude",
@@ -77,7 +77,7 @@
     "category": "products",
     "related_terms": "anthropic,opus,sonnet,haiku",
     "see_also": "chatgpt,gemini",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "context-window",
@@ -87,7 +87,7 @@
     "category": "core",
     "related_terms": "token,input-tokens,output-tokens",
     "see_also": "rag",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "diffusion-model",
@@ -97,7 +97,7 @@
     "category": "technical",
     "related_terms": "text-to-image,stable-diffusion,midjourney",
     "see_also": "generative-ai,dall-e",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "embedding",
@@ -107,7 +107,7 @@
     "category": "technical",
     "related_terms": "vector-database,similarity-search",
     "see_also": "rag,semantic-search",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "few-shot",
@@ -117,7 +117,7 @@
     "category": "techniques",
     "related_terms": "zero-shot,one-shot,in-context-learning",
     "see_also": "prompt-engineering,prompt",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "fine-tuning",
@@ -127,7 +127,7 @@
     "category": "technical",
     "related_terms": "pre-training,transfer-learning,lora",
     "see_also": "rlhf,training-data",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "foundation-model",
@@ -137,7 +137,7 @@
     "category": "core",
     "related_terms": "pre-training,fine-tuning,transfer-learning",
     "see_also": "llm,transformer",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "function-calling",
@@ -147,7 +147,7 @@
     "category": "technical",
     "related_terms": "agent,tool-use,api",
     "see_also": "json,structured-output",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "gpt",
@@ -157,7 +157,7 @@
     "category": "models",
     "related_terms": "llm,openai,chatgpt",
     "see_also": "claude,gemini",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "gpu",
@@ -167,7 +167,7 @@
     "category": "infrastructure",
     "related_terms": "nvidia,tpu,compute",
     "see_also": "inference,training",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "gemini",
@@ -177,7 +177,7 @@
     "category": "products",
     "related_terms": "google,deepmind,bard",
     "see_also": "chatgpt,claude",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "generative-ai",
@@ -187,7 +187,7 @@
     "category": "core",
     "related_terms": "llm,diffusion-model,text-to-image",
     "see_also": "chatgpt,foundation-model",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "grounding",
@@ -197,7 +197,7 @@
     "category": "techniques",
     "related_terms": "rag,hallucination,citations",
     "see_also": "vector-database,search",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "guardrails",
@@ -207,7 +207,7 @@
     "category": "concepts",
     "related_terms": "alignment,safety,content-filter",
     "see_also": "rlhf,system-prompt",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "hallucination",
@@ -217,7 +217,7 @@
     "category": "concepts",
     "related_terms": "grounding,rag",
     "see_also": "temperature,guardrails",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "inference",
@@ -227,7 +227,7 @@
     "category": "technical",
     "related_terms": "latency,throughput,gpu",
     "see_also": "token,speed,api",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "input-tokens",
@@ -237,7 +237,7 @@
     "category": "core",
     "related_terms": "output-tokens,token,pricing",
     "see_also": "context-window,api",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "llm",
@@ -247,7 +247,7 @@
     "category": "core",
     "related_terms": "transformer,neural-network,foundation-model",
     "see_also": "gpt,token,fine-tuning",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "latency",
@@ -257,7 +257,7 @@
     "category": "parameters",
     "related_terms": "speed,throughput,ttft",
     "see_also": "inference,api",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "lora",
@@ -267,7 +267,7 @@
     "category": "technical",
     "related_terms": "fine-tuning,adapter,qlora",
     "see_also": "open-source,training",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "model-collapse",
@@ -277,7 +277,7 @@
     "category": "concepts",
     "related_terms": "training-data,synthetic-data",
     "see_also": "pre-training,data-quality",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "multimodal",
@@ -287,7 +287,7 @@
     "category": "concepts",
     "related_terms": "vision,audio,text-to-image",
     "see_also": "modality,llm",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "neural-network",
@@ -297,7 +297,7 @@
     "category": "technical",
     "related_terms": "deep-learning,layer,weights",
     "see_also": "transformer,training-data",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "open-source",
@@ -307,7 +307,7 @@
     "category": "concepts",
     "related_terms": "open-weights,llama,mistral",
     "see_also": "self-hosting,inference",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "output-tokens",
@@ -317,7 +317,7 @@
     "category": "core",
     "related_terms": "input-tokens,token,pricing",
     "see_also": "max-output,speed",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "prompt",
@@ -327,7 +327,7 @@
     "category": "core",
     "related_terms": "prompt-engineering,system-prompt,few-shot",
     "see_also": "chain-of-thought,zero-shot",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "prompt-engineering",
@@ -337,7 +337,7 @@
     "category": "techniques",
     "related_terms": "prompt,few-shot,chain-of-thought,system-prompt",
     "see_also": "zero-shot,role-prompting",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "rag",
@@ -347,7 +347,7 @@
     "category": "techniques",
     "related_terms": "embedding,vector-database,grounding",
     "see_also": "context-window,hallucination",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "rlhf",
@@ -357,7 +357,7 @@
     "category": "technical",
     "related_terms": "reinforcement-learning,reward-model,constitutional-ai",
     "see_also": "fine-tuning,alignment",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "reasoning-model",
@@ -367,7 +367,7 @@
     "category": "concepts",
     "related_terms": "chain-of-thought,o3,deepseek-r1",
     "see_also": "llm,benchmark",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "self-hosting",
@@ -377,7 +377,7 @@
     "category": "infrastructure",
     "related_terms": "open-source,gpu,ollama",
     "see_also": "inference,api",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "system-prompt",
@@ -387,7 +387,7 @@
     "category": "core",
     "related_terms": "prompt,role-prompting,guardrails",
     "see_also": "prompt-engineering,temperature",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "temperature",
@@ -397,7 +397,7 @@
     "category": "parameters",
     "related_terms": "top-p,sampling",
     "see_also": "inference,api",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "token",
@@ -407,7 +407,7 @@
     "category": "core",
     "related_terms": "context-window,tokenisation",
     "see_also": "input-tokens,output-tokens",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "tokenisation",
@@ -417,7 +417,7 @@
     "category": "technical",
     "related_terms": "token,bpe,vocabulary",
     "see_also": "context-window,input-tokens",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "top-p",
@@ -427,7 +427,7 @@
     "category": "parameters",
     "related_terms": "temperature,sampling,top-k",
     "see_also": "inference,api",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "transformer",
@@ -437,7 +437,7 @@
     "category": "technical",
     "related_terms": "attention,neural-network,self-attention",
     "see_also": "llm,foundation-model",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "vector-database",
@@ -447,7 +447,7 @@
     "category": "infrastructure",
     "related_terms": "embedding,similarity-search,semantic-search",
     "see_also": "rag,pinecone",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   },
   {
     "id": "zero-shot",
@@ -457,6 +457,6 @@
     "category": "techniques",
     "related_terms": "few-shot,in-context-learning",
     "see_also": "prompt-engineering,prompt",
-    "updated_at": "2026-07-26 06:47:06"
+    "updated_at": "2026-07-26 08:25:31"
   }
 ]
