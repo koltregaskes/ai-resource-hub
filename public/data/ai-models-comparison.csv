@@ -126,7 +126,6 @@ Pixtral Large,Mistral,llm,tracking,82,2,6,131072,32768,,,No,"text,vision",Yes,20
 Qwen3 30B A3B,Alibaba,llm,tracking,82,0.13,0.52,131072,8192,,,Yes,text,Yes,2025-04-29,,,,,,,,,,,,252.3,openrouter.ai/api/v1/models,2026-07-26 00:11:32
 Codestral 2508,Mistral,llm,tracking,81,0.3,0.9,256000,32768,,,No,text,Yes,2025-01-14,,,,,,,,,,,,135,openrouter.ai/api/v1/models,2026-07-26 00:11:32
 DeepSeek V2.5,DeepSeek,llm,tracking,81,0.14,0.28,128000,8192,,,Yes,text,Yes,2024-09-05,,,,,,,,,,,,385.7,deepseek.com/pricing,
-Gemini 2.0 Flash,Google,llm,tracking,81,0.1,0.4,1048576,8192,400,140,No,"text,vision,audio",Yes,2024-12-01,1270,,,,,,,,,,,324,ai.google.dev/pricing,
 Claude Haiku 4,Anthropic,llm,tracking,80,0.8,4,200000,8192,,,No,"text,image",Yes,2025-10-01,,,,,,,,,,,,33.3,,
 MiniMax-01,MiniMax,llm,tracking,80,0.2,1.1,1000192,1000192,,,No,"text,vision",Yes,2025-01-15,,,,,,,,,,,,123.1,openrouter.ai/api/v1/models,2026-07-26 00:11:32
 Nova Premier 1.0,Amazon,llm,tracking,80,2.5,12.5,1000000,32000,,,No,"text,vision",Yes,2025-03-01,,,,,,,,,,,,10.7,openrouter.ai/api/v1/models,2026-07-26 00:11:32
@@ -147,7 +146,6 @@ Gemini 1.5 Pro,Google,llm,tracking,76,1.25,5,2097152,8192,,,No,"text,vision,audi
 Jamba 1.5 Large,AI21 Labs,llm,tracking,76,2,8,256000,4096,,,No,text,Yes,2024-08-22,,,,,,,,,,,,15.2,ai21.com/pricing,
 Phi-4 Multimodal,Microsoft,llm,tracking,76,0.1,0.2,128000,16384,,,Yes,"text,vision,audio",Yes,2025-02-26,,,,,,,,,,,,506.7,azure.microsoft.com,
 Claude 3.5 Sonnet,Anthropic,llm,tracking,75,3,15,200000,8192,,,No,"text,vision",Yes,2024-10-22,1285,88.7,65,78.3,93.7,49,8.7,,,,,8.3,anthropic.com/pricing,
-Gemini 2.0 Flash Lite,Google,llm,tracking,75,0.075,0.3,1048576,8192,450,120,No,"text,vision",Yes,2025-02-25,,,,,,,,,,,,400,ai.google.dev/pricing,
 Nemotron Ultra,NVIDIA,llm,tracking,75,0,0,131072,32768,,,Yes,text,Yes,2025-03-01,,,,,,,,,,,,,,
 Yi Large,01.AI,llm,tracking,73,3,3,32768,4096,,,Yes,text,Yes,2024-05-01,,,,,,,,,,,,24.3,,
 Llama 3.1 405B,Meta,llm,tracking,71,3,3,131072,32768,,,Yes,text,Yes,2024-07-23,1253,88.6,51.1,,89,,,,,,,23.7,together.ai/pricing,
