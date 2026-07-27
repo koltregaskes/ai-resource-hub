@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T17:53:31.797Z",
+  "generatedAt": "2026-07-27T19:00:49.353Z",
   "providers": [
     {
       "id": "openai",
@@ -12,10 +12,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T17:53:30.131Z",
+      "lastCheckedAt": "2026-07-27T19:00:47.802Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -45,6 +45,16 @@
       ],
       "activeIncidents": [
         {
+          "id": "01KYJC3TDHZVSQFFPTC8X9RAHC",
+          "title": "We’re seeing elevated latency, timeouts, and interrupted streaming across gpt 5.1 mini model and gpt 4.1 mini",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-07-27T18:06:39.000Z",
+          "updatedAt": "2026-07-27T18:06:39.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
+        {
           "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
           "title": "Image generation unavailable in ChatGPT",
           "status": "investigating",
@@ -56,6 +66,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01KYJC3TDHZVSQFFPTC8X9RAHC",
+          "title": "We’re seeing elevated latency, timeouts, and interrupted streaming across gpt 5.1 mini model and gpt 4.1 mini",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-07-27T18:06:39.000Z",
+          "updatedAt": "2026-07-27T18:06:39.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
         {
           "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
           "title": "Image generation unavailable in ChatGPT",
@@ -85,16 +105,6 @@
           "updatedAt": "2026-07-25T11:57:02.000Z",
           "resolvedAt": "2026-07-25T11:57:02.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KYC921K145JTR1JK7DYKGWH1",
-          "title": "Elevated error rates",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-25T09:17:49.000Z",
-          "updatedAt": "2026-07-25T11:08:36.000Z",
-          "resolvedAt": "2026-07-25T11:08:36.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -109,7 +119,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T17:53:31.053Z",
+      "lastCheckedAt": "2026-07-27T19:00:48.593Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -129,7 +139,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T17:53:30.200Z",
+      "lastCheckedAt": "2026-07-27T19:00:47.765Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -219,7 +229,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T17:53:31.748Z",
+      "lastCheckedAt": "2026-07-27T19:00:48.945Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +249,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T17:53:31.790Z",
+      "lastCheckedAt": "2026-07-27T19:00:49.262Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -304,7 +314,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T17:53:30.657Z",
+      "lastCheckedAt": "2026-07-27T19:00:48.240Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -336,7 +346,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T17:53:31.780Z",
+      "lastCheckedAt": "2026-07-27T19:00:49.345Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
