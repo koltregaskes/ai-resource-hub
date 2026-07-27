@@ -1,113 +1,6 @@
 {
-  "generatedAt": "2026-07-27T19:51:37.538Z",
+  "generatedAt": "2026-07-27T20:53:23.541Z",
   "providers": [
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T19:51:36.244Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Moderations",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KYJC3TDHZVSQFFPTC8X9RAHC",
-          "title": "We’re seeing elevated latency, timeouts, and interrupted streaming across gpt 5.1 mini model and gpt 4.1 mini",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-07-27T18:06:39.000Z",
-          "updatedAt": "2026-07-27T18:06:39.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
-        },
-        {
-          "id": "01KYJFG4S86K8FMTB4N6BDZS7F",
-          "title": "Image generation unavailable in ChatGPT",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-07-27T19:05:49.000Z",
-          "updatedAt": "2026-07-27T19:05:49.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
-          "title": "Image generation unavailable in ChatGPT",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-07-21T10:36:02.000Z",
-          "updatedAt": "2026-07-27T19:04:42.000Z",
-          "resolvedAt": "2026-07-22T02:50:19.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KYJC3TDHZVSQFFPTC8X9RAHC",
-          "title": "We’re seeing elevated latency, timeouts, and interrupted streaming across gpt 5.1 mini model and gpt 4.1 mini",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-07-27T18:06:39.000Z",
-          "updatedAt": "2026-07-27T18:06:39.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
-        },
-        {
-          "id": "01KYDN6YPS6ARY1EC9089N089G",
-          "title": "Elevated errors affecting ChatGPT conversations",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-25T22:09:27.000Z",
-          "updatedAt": "2026-07-27T16:32:09.000Z",
-          "resolvedAt": "2026-07-27T16:32:09.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KYJFG4S86K8FMTB4N6BDZS7F",
-          "title": "Image generation unavailable in ChatGPT",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-07-27T19:05:49.000Z",
-          "updatedAt": "2026-07-27T19:05:49.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        }
-      ]
-    },
     {
       "id": "mistral",
       "providerId": "mistral",
@@ -119,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T19:51:36.673Z",
+      "lastCheckedAt": "2026-07-27T20:53:22.699Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -139,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T19:51:36.258Z",
+      "lastCheckedAt": "2026-07-27T20:53:22.041Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -229,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T19:51:37.247Z",
+      "lastCheckedAt": "2026-07-27T20:53:22.948Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -249,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T19:51:37.531Z",
+      "lastCheckedAt": "2026-07-27T20:53:23.432Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -314,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T19:51:36.546Z",
+      "lastCheckedAt": "2026-07-27T20:53:22.132Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -336,6 +229,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-27T20:53:22.167Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KYJC3TDHZVSQFFPTC8X9RAHC",
+          "title": "We’re seeing elevated latency, timeouts, and interrupted streaming across gpt 5.1 mini model and gpt 4.1 mini",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-27T18:06:39.000Z",
+          "updatedAt": "2026-07-27T20:52:18.000Z",
+          "resolvedAt": "2026-07-27T20:52:18.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KYJFG4S86K8FMTB4N6BDZS7F",
+          "title": "Image generation unavailable in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-27T19:05:49.000Z",
+          "updatedAt": "2026-07-27T20:24:51.000Z",
+          "resolvedAt": "2026-07-27T20:24:51.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
+          "title": "Image generation unavailable in ChatGPT",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-21T10:36:02.000Z",
+          "updatedAt": "2026-07-27T19:04:42.000Z",
+          "resolvedAt": "2026-07-22T02:50:19.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KYDN6YPS6ARY1EC9089N089G",
+          "title": "Elevated errors affecting ChatGPT conversations",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-25T22:09:27.000Z",
+          "updatedAt": "2026-07-27T16:32:09.000Z",
+          "resolvedAt": "2026-07-27T16:32:09.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -346,7 +325,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T19:51:37.405Z",
+      "lastCheckedAt": "2026-07-27T20:53:23.534Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
