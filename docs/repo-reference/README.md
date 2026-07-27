@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 27 Jul 2026, 19:51 UTC |
+| Generated | 27 Jul 2026, 21:21 UTC |
 | Providers tracked | 40 |
-| Public models | 321 |
+| Public models | 320 |
 | Active models | 110 |
-| Tracking models | 210 |
+| Tracking models | 209 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 64 |
 | Release-desk entries | 57 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 27 Jul 2026, 19:51 UTC |
+| Latest visible refresh | 27 Jul 2026, 21:21 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | Claude Opus 5 (24 Jul 2026) |
 

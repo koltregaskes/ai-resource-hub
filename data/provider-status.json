@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T20:53:23.541Z",
+  "generatedAt": "2026-07-27T21:21:33.792Z",
   "providers": [
     {
       "id": "mistral",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T20:53:22.699Z",
+      "lastCheckedAt": "2026-07-27T21:21:32.858Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -32,7 +32,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T20:53:22.041Z",
+      "lastCheckedAt": "2026-07-27T21:21:32.882Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -122,7 +122,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T20:53:22.948Z",
+      "lastCheckedAt": "2026-07-27T21:21:33.571Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -142,7 +142,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T20:53:23.432Z",
+      "lastCheckedAt": "2026-07-27T21:21:33.783Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T20:53:22.132Z",
+      "lastCheckedAt": "2026-07-27T21:21:32.721Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -239,7 +239,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T20:53:22.167Z",
+      "lastCheckedAt": "2026-07-27T21:21:32.803Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -273,16 +273,6 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "01KYJC3TDHZVSQFFPTC8X9RAHC",
-          "title": "We’re seeing elevated latency, timeouts, and interrupted streaming across gpt 5.1 mini model and gpt 4.1 mini",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-27T18:06:39.000Z",
-          "updatedAt": "2026-07-27T20:52:18.000Z",
-          "resolvedAt": "2026-07-27T20:52:18.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
           "id": "01KYJFG4S86K8FMTB4N6BDZS7F",
           "title": "Image generation unavailable in ChatGPT",
           "status": "resolved",
@@ -300,6 +290,16 @@
           "startedAt": "2026-07-21T10:36:02.000Z",
           "updatedAt": "2026-07-27T19:04:42.000Z",
           "resolvedAt": "2026-07-22T02:50:19.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KYJC3TDHZVSQFFPTC8X9RAHC",
+          "title": "We’re seeing elevated latency, timeouts, and interrupted streaming across gpt 5.1 mini model and gpt 4.1 mini",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-27T18:06:39.000Z",
+          "updatedAt": "2026-07-27T20:52:18.000Z",
+          "resolvedAt": "2026-07-27T17:30:00.000Z",
           "summary": "All impacted services have now fully recovered."
         },
         {
@@ -325,7 +325,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-27T20:53:23.534Z",
+      "lastCheckedAt": "2026-07-27T21:21:33.669Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -394,7 +394,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
