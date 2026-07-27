@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-381103444d20da34b2c0",
+    "title": "Why China is giving away its best AI models",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies",
+    "source": "The Verge",
+    "summary": "Silicon Valley has spent much of the past week on red alert, digesting the arrival of Moonshot AI's Kimi K3, a Chinese AI model that can allegedly beat some of the best systems built by US companies at a fraction of the cost. Its performance alone would have been enough to intensify the rivalry between [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T16:51:50.000Z",
+    "discovered_at": "2026-07-27 17:25:44"
+  },
+  {
+    "id": "news-b794a14816d6ea45db9c",
+    "title": "Threads users can now chat with Meta AI in their DMs",
+    "url": "https://techcrunch.com/2026/07/27/threads-users-can-now-chat-with-meta-ai-in-their-dms/",
+    "source": "TechCrunch",
+    "summary": "Meta on Monday said it is rolling out its Meta AI chatbot within Threads' DMs, giving users a way to chat with the AI assistant.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T16:45:24.000Z",
+    "discovered_at": "2026-07-27 17:25:44"
+  },
+  {
+    "id": "news-ec9dddb29c1e413a23ec",
+    "title": "Google&#8217;s AI search is rapidly becoming the default, new data shows",
+    "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/",
+    "source": "TechCrunch",
+    "summary": "Google’s AI Overviews now appear in 43% of searches, underscoring how quickly AI-generated answers are becoming the default way people discover information online.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T15:57:12.000Z",
+    "discovered_at": "2026-07-27 17:25:44"
+  },
+  {
+    "id": "news-5c85807dea6db7ccb0a4",
+    "title": "Power up your AI infrastructure! A first look at the Smart Systems Stage agenda at TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/07/27/power-up-your-ai-infrastructure-a-first-look-at-the-smart-systems-stage-agenda-at-techcrunch-disrupt-2026/",
+    "source": "TechCrunch",
+    "summary": "At TechCrunch Disrupt 2026, the Smart Systems Stage will be where energy, infrastructure, and technology collide, covering everything from fusion breakthroughs to the grid strain AI is putting on the entire economy.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T15:30:00.000Z",
+    "discovered_at": "2026-07-27 17:25:44"
+  },
+  {
     "id": "news-ddb90ba73fe2a1c3c822",
     "title": "This $9 key physically locks your most addictive apps",
     "url": "https://techcrunch.com/2026/07/27/this-9-key-physically-locks-your-most-addictive-apps/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T15:25:37.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-3f1518dce932f93ea8b5",
@@ -21,11 +69,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T15:01:50.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-1c48d2633e580781f7f5",
-    "title": "Enigma raises $70M to make controlling a robot as easy as adjusting the volume",
+    "title": "Enigma raises $71M to make controlling a robot as easy as adjusting the volume",
     "url": "https://techcrunch.com/2026/07/27/enigma-raises-70m-to-make-controlling-a-robot-as-easy-as-adjusting-the-volume/",
     "source": "TechCrunch",
     "summary": "The massive seed round was led by Index Ventures and Ribbit Capital, with participation from Sarah Guo's Conviction Partners.",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T13:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-976a94c246e96f566fc4",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T12:06:22.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-f143efbfe201f0407b0e",
@@ -57,19 +105,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T03:30:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-0ab8893ae8deee952186",
     "title": "Are brain waves the next unlock for physical AI?",
     "url": "https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/",
     "source": "TechCrunch",
-    "summary": "Forget YouTube videos—frontier physical AI models need multiple camera angles, dense annotation, and soon, brain wave readings.",
+    "summary": "Forget YouTube videos — frontier physical AI models need multiple camera angles, dense annotation, and, soon, brain wave readings.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T00:19:14.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-44767f774743d7e186f9",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-26T19:40:57.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-381c0186a6a6feae500a",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-26T16:33:13.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-a43cd096a11acf7bcdf1",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-26T01:30:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-1a6257110409f5d4c4c4",
@@ -117,11 +165,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-25T16:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-ed13e18ec76b799b1c54",
-    "title": "One fallen power line exposed a growing AI data center problem. Here&#8217;s how to fix it.",
+    "title": "One fallen power line exposed a growing AI data center problem — here&#8217;s how to fix it",
     "url": "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/",
     "source": "TechCrunch",
     "summary": "A close call in Northern Virginia revealed just how poorly data centers respond to grid disruptions. Here's how to fix the problem.",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-25T13:05:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-658d80679c4e2857dfef",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-25T00:23:11.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-e887b32468d67bea5de5",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T22:25:58.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-2bbb3806a80ca02930d5",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T19:06:58.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-a91368251778839ab6f1",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T18:07:32.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-e69b66c366714ae66052",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T17:29:48.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-e55b7467c003fc6a65f5",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T17:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-6c939dbf7a8b3002b49b",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T17:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-204fa3eb1ba92a949b85",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T17:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-4000b95c0a6a3a3ab5a6",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T15:51:49.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-983cb962224dc03f0e8e",
@@ -249,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T15:13:57.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
-  },
-  {
-    "id": "news-bdcfabfbbfe74f1fda14",
-    "title": "Midjourney acquired the astrology app Co-Star",
-    "url": "https://techcrunch.com/2026/07/24/midjourney-acquired-the-astrology-app-co-star/",
-    "source": "TechCrunch",
-    "summary": "The AI lab Midjourney continues to expand its purview beyond image and video generation.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-24T15:09:55.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-f808bacb1e9c1b35e63e",
@@ -273,31 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-24T14:43:55.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
-  },
-  {
-    "id": "news-b9480a06f49c0754da9a",
-    "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
-    "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
-    "source": "TechCrunch",
-    "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-24T14:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
-  },
-  {
-    "id": "news-75e11e424e8cfb14b13d",
-    "title": "OpenAI&#8217;s new voice mode makes it to the ChatGPT desktop app",
-    "url": "https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/",
-    "source": "TechCrunch",
-    "summary": "ChatGPT Voice on desktop can work with both ChatGPT Work and Codex to complete tasks and control agents.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-24T13:36:42.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-c6bad60c590297fa2ff2",
@@ -309,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T21:15:06.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-77885ca812d6bc373ed3",
@@ -321,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T19:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-440b0110dc04813fc3c7",
@@ -333,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T18:20:30.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
-  },
-  {
-    "id": "news-cb3c46e4e7150457793c",
-    "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
-    "source": "The Verge",
-    "summary": "OpenAI is rolling out ChatGPT Health to everyone in the US on Thursday, allowing more people to connect their medical records and health-tracking information to the chatbot. During a briefing, Ashley Alexander, OpenAI's vice president of health product, says the company's models \"are now capable of reasoning at levels…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-23T17:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-130e23c4bd2f87cbb00e",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-ce627deb992812dab288",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T00:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:45"
   },
   {
     "id": "news-20b0eb2d5c1499740c7e",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-40359dbf5a246645eb9b",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T00:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-d4ff9ec891b78868c06a",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-3ebda52fc80ebe33165f",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-8fe39edff791751de0c2",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:45"
   },
   {
     "id": "news-eeac6a04af4fa80e7d26",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T07:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-6f16a999c8ddd889e881",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T00:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-1e97faa490facd0c8077",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-ee230258f27f8a0de489",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-15T10:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-92ab1f77dd8ccf54b1a2",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:25"
+    "discovered_at": "2026-07-27 17:25:43"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:45"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:45"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:45"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   },
   {
     "id": "news-d65fb3c703aed844627c",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-27 15:49:26"
+    "discovered_at": "2026-07-27 17:25:44"
   }
 ]
