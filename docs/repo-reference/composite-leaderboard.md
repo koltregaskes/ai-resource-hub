@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 28 Jul 2026, 14:36 UTC
+Generated: 28 Jul 2026, 16:49 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -10,8 +10,8 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Llama 4 Maverick | Meta | 57.6 | 77.0 / 10 | 28% | Coding | $0.20 / $0.80 | 05 Apr 2025 |
 | 2 | DeepSeek V3.2 | DeepSeek | 56.3 | 74.6 / 6 | 21% | General use | $0.27 / $1.12 | 29 Sept 2025 |
-| 3 | GPT-5.2 | OpenAI | 55.1 | 78.5 / 22 | 67% | multilingual | $1.75 / $14.00 | 10 Dec 2025 |
-| 4 | Claude Opus 4.6 | Anthropic | 54.6 | 75.9 / 16 | 49% | Chat | $5.00 / $25.00 | 05 Feb 2026 |
+| 3 | GPT-5.2 | OpenAI | 55.1 | 78.5 / 22 | 67% | multilingual | $0.88 / $7.00 | 10 Dec 2025 |
+| 4 | Claude Opus 4.6 (batch) | Anthropic | 54.6 | 75.9 / 16 | 49% | Chat | $5.00 / $25.00 | 05 Feb 2026 |
 | 5 | Mistral Large | Mistral | 50.4 | 70.6 / 6 | 20% | General use | $2.00 / $6.00 | 01 Jun 2025 |
 | 6 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.10 / $0.30 | 05 Apr 2025 |
 | 7 | Phi-4 Reasoning | Microsoft | 49.2 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
