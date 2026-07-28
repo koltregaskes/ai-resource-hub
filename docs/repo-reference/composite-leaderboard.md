@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 28 Jul 2026, 20:33 UTC
+Generated: 28 Jul 2026, 21:25 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -19,7 +19,7 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 9 | GPT-5.2 Pro | OpenAI | 44.1 | 91.3 / 4 | 16% | Chat | $21.00 / $168.00 | 10 Dec 2025 |
 | 10 | R1 0528 | DeepSeek | 40.8 | 82.4 / 6 | 23% | Chat | $0.50 / $2.15 | 28 May 2025 |
 | 11 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $2.00 / $8.00 | 16 Apr 2025 |
-| 12 | Qwen3 Max | Alibaba | 39.7 | 86.1 / 4 | 15% | Coding | $0.51 / $2.54 | 01 Sept 2025 |
+| 12 | Qwen3 Max | Alibaba | 39.7 | 86.1 / 4 | 15% | Coding | $0.78 / $3.90 | 01 Sept 2025 |
 | 13 | Gemini 2.5 Pro | Google | 38.1 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
 | 14 | Mistral Small 3.1 24B | Mistral | 36.7 | 76.1 / 3 | 9% | Coding | $0.35 / $0.56 | 18 Mar 2025 |
 | 15 | Claude Opus 4 | Anthropic | 36.6 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
