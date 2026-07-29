@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T21:36:21.328Z",
+  "generatedAt": "2026-07-29T22:12:11.880Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,27 +12,27 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-29T21:36:19.783Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
+      "lastCheckedAt": "2026-07-29T22:12:10.132Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "major_outage"
+          "status": "partial_outage"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "major_outage"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Code",
-          "status": "major_outage"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
-          "status": "major_outage"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -50,10 +50,10 @@
           "status": "identified",
           "impact": "critical",
           "startedAt": "2026-07-29T19:49:45.388Z",
-          "updatedAt": "2026-07-29T20:33:45.587Z",
+          "updatedAt": "2026-07-29T21:38:34.220Z",
           "resolvedAt": null,
           "url": "https://stspg.io/p7pqqb00414c",
-          "summary": "We have identified an issue resulting in elevated errors across multiple models, and are working to resolve this. We will provide an update as soon as possible."
+          "summary": "We are continuing to work to fully resolve issues resulting in elevated requests and latency to Claude models. At this time, we are seeing recovery across most models. We will pro..."
         }
       ],
       "recentIncidents": [
@@ -63,10 +63,10 @@
           "status": "identified",
           "impact": "critical",
           "startedAt": "2026-07-29T19:49:45.388Z",
-          "updatedAt": "2026-07-29T20:33:45.587Z",
+          "updatedAt": "2026-07-29T21:38:34.220Z",
           "resolvedAt": null,
           "url": "https://stspg.io/p7pqqb00414c",
-          "summary": "We have identified an issue resulting in elevated errors across multiple models, and are working to resolve this. We will provide an update as soon as possible."
+          "summary": "We are continuing to work to fully resolve issues resulting in elevated requests and latency to Claude models. At this time, we are seeing recovery across most models. We will pro..."
         },
         {
           "id": "rkk5x44tndw9",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-29T21:36:20.463Z",
+      "lastCheckedAt": "2026-07-29T22:12:11.227Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-29T21:36:20.830Z",
+      "lastCheckedAt": "2026-07-29T22:12:11.306Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-29T21:36:21.108Z",
+      "lastCheckedAt": "2026-07-29T22:12:11.783Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-29T21:36:20.111Z",
+      "lastCheckedAt": "2026-07-29T22:12:10.467Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-29T21:36:19.822Z",
+      "lastCheckedAt": "2026-07-29T22:12:10.085Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -337,7 +337,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-29T21:36:21.321Z",
+      "lastCheckedAt": "2026-07-29T22:12:11.874Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -406,7 +406,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
