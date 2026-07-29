@@ -1,339 +1,447 @@
 [
   {
-    "id": "news-44767f774743d7e186f9",
-    "title": "Making sense of the panic over Chinese AI",
-    "url": "https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/",
+    "id": "news-520a785ee3962a988b02",
+    "title": "Thinking Machines co-founder Lilian Weng left the company citing health reasons, then joined OpenAI",
+    "url": "https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/",
     "source": "TechCrunch",
-    "summary": "On the latest episode of Equity, we discussed why Moonshot AI's Kimi seemed to panic Silicon Valley and Wall Street.",
+    "summary": "Weng previously served as the VP of AI Safety Research at OpenAI.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-26T19:40:57.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-29T21:07:48.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-381c0186a6a6feae500a",
-    "title": "Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI hack",
-    "url": "https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/",
+    "id": "news-a657cafa7eea65b30bcc",
+    "title": "The Hugging Face AI break-in, as told through an increasingly committed bear metaphor",
+    "url": "https://techcrunch.com/2026/07/29/the-hugging-face-ai-break-in-as-told-through-an-increasingly-committed-bear-metaphor/",
     "source": "TechCrunch",
-    "summary": "\"The first autonomous agent cyberattack is an unprecedented event. It deserves an unprecedented response!\"",
+    "summary": "Another way to think about the whole thing is to picture a bear at a campsite. (Really, we are going there.)",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-26T16:33:13.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-29T19:44:49.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-a43cd096a11acf7bcdf1",
-    "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
-    "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+    "id": "news-1bd342b4b31f1dd84650",
+    "title": "Claude Opus 5 became downright ruthless when tasked with running a vending machine",
+    "url": "https://techcrunch.com/2026/07/29/claude-opus-5-became-downright-ruthless-when-tasked-with-running-a-vending-machine/",
     "source": "TechCrunch",
-    "summary": "A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.",
+    "summary": "Andon Labs' latest vending machine simulation shows Opus 5 lied and colluded its way to become the best AI capitalist ever.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-26T01:30:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-29T18:45:27.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-1a6257110409f5d4c4c4",
-    "title": "Librarians are hosting viral &#8216;Avoiding AI&#8217; workshops for people who are fed up with Big Tech",
-    "url": "https://techcrunch.com/2026/07/25/librarians-are-hosting-viral-avoiding-ai-workshops-for-people-who-are-fed-up-with-big-tech/",
-    "source": "TechCrunch",
-    "summary": "At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-25T16:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-ed13e18ec76b799b1c54",
-    "title": "One fallen power line exposed a growing AI data center problem. Here&#8217;s how to fix it.",
-    "url": "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/",
-    "source": "TechCrunch",
-    "summary": "A close call in Northern Virginia revealed just how poorly data centers respond to grid disruptions. Here's how to fix the problem.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-25T13:05:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-658d80679c4e2857dfef",
-    "title": "I tried out OpenAI&#8217;s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
-    "url": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/",
-    "source": "TechCrunch",
-    "summary": "OpenAI's fancy new AI keypad will be a lot of fun for some, while many others are probably not going to touch it.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-25T00:23:11.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-e887b32468d67bea5de5",
-    "title": "Prentis, new AI lab co-founded by Reid Hoffman, Mark Pincus in talks to raise $100M",
-    "url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/",
-    "source": "TechCrunch",
-    "summary": "The neolab is betting that automating routine computer tasks will soon outpace coding as AI's biggest use case.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-24T22:25:58.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-2bbb3806a80ca02930d5",
-    "title": "Midjourney bought the astrology app Co-Star",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/970894/midjourney-co-star-acquisition",
+    "id": "news-453862f893b65c09d490",
+    "title": "OpenAI president says it&#8217;s &#8216;building a family of devices&#8217; for its AI chatbots",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/972709/openai-hardware-greg-brockman-interview",
     "source": "The Verge",
-    "summary": "Midjourney, which has gone from generating AI cat images to full-body ultrasound scans, is getting into a new field: astrology. The AI startup announced on Thursday that it has acquired the personalized astrology app Co-Star, as reported earlier by Bloomberg. Co-Star is a free app that offers daily horoscopes and allo…",
+    "summary": "In an interview with our friend Joanna Stern on her YouTube channel, OpenAI president Greg Brockman said the company is working on a \"family of devices\" for interacting with its AI models. However, Brockman didn't confirm reports that one of those devices is a smart speaker OpenAI's rumored to be launching in 2027, or…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T19:06:58.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-29T18:15:02.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-a91368251778839ab6f1",
-    "title": "Why Cognition bought Poke: AI personality is becoming a competitive advantage",
-    "url": "https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/",
+    "id": "news-b066f12120921c9f5fc7",
+    "title": "Hint, a new AI startup co-founded by Martha Stewart, offers an AI assistant for homeowners",
+    "url": "https://techcrunch.com/2026/07/29/hint-a-new-ai-startup-co-founded-by-martha-stewart-offers-an-ai-assistant-for-homeowners/",
     "source": "TechCrunch",
-    "summary": "The acquisition brings Poke’s conversational style and interaction model to Cognition’s coding agent Devin, reflecting a growing belief that how AI assistants interact with users is as important as the models powering them.",
+    "summary": "AI home management startup Hint, co-founded by Martha Stewart, wants to become an “AI for your home,” combining property records, maintenance schedules, home documents, and an AI assistant into a single app.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T18:07:32.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-29T15:35:09.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-e69b66c366714ae66052",
-    "title": "You can’t ignore Google Zero anymore",
-    "url": "https://www.theverge.com/podcast/970735/google-zero-reddit-ai-publishers-vergecast",
+    "id": "news-21cfdc136e07efe4892d",
+    "title": "Encore AI raises $30M to build AI agents that learn from customer calls",
+    "url": "https://techcrunch.com/2026/07/29/encore-ai-raises-30m-to-build-ai-agents-that-learn-from-customer-calls/",
+    "source": "TechCrunch",
+    "summary": "The startup analyzes calls, messages, and CRM data to identify effective sales techniques and turn them into playbooks for AI agents.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-29T14:41:06.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-2faf95088d1e8bf146a2",
+    "title": "Artists are lawyering up against AI slop, and some are even winning",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/971059/ai-artists-lawsuit-google-meta-anthropic",
     "source": "The Verge",
-    "summary": "The web and Google once had a deal: Google collects data and indexes webpages and in exchange sends oceans of traffic to websites. The deal wasn't perfect and certainly made Google more money than it made the websites, but it worked for a long time. Now, however, the deal seems to be dead. And the [&#8230;]",
+    "summary": "When The Atlantic published a searchable dataset of works used to train AI, Kirk Wallace Johnson, like a lot of artists, looked for his name out of curiosity. And, like a lot of artists, he found it. Essentially, his books, like The Feather Thief and The Fishermen and the Dragon - nonfiction tomes that he [&#8230;]",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T17:29:48.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-29T12:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-e55b7467c003fc6a65f5",
-    "title": "Meta is making its AI chatbot more like an assistant",
-    "url": "https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update",
+    "id": "news-e8035148749caccade22",
+    "title": "OpenAI’s rogue AI agent didn’t stop at hacking Hugging Face",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face",
     "source": "The Verge",
-    "summary": "Meta is upgrading its AI chatbot with new productivity features in a bid to compete with rivals like Gemini, ChatGPT, and Claude. The update will allow Meta AI to tap into your calendar to help you plan events and generate daily briefings, as well as perform in-depth research that you can steer as it progresses. [&#82…",
+    "summary": "The AI agent that escaped from OpenAI and hacked developer platform Hugging Face attacked other companies as well, OpenAI revealed on Tuesday. The update substantially widens the scope of an already concerning incident, which has alarmed industry insiders and fueled growing calls for stronger oversight on frontier AI…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T17:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-29T11:54:29.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-6c939dbf7a8b3002b49b",
-    "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+    "id": "news-fb6c24829ef294e8bb25",
+    "title": "We’re running out of reasons to ignore AI safety",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning",
     "source": "The Verge",
-    "summary": "Weeks after Anthropic's latest toe-to-toe with the US government, and days after an OpenAI security incident that dominated tech industry discussions, Anthropic on Thursday released its newest model, Claude Opus 5. The company said in a release that Opus 5 \"comes close to the capabilities of Claude Fable 5 in many dom…",
+    "summary": "Earlier this month, OpenAI gave several of its AI models a task: complete a test designed to measure their cybersecurity capabilities. It put the systems in a sandboxed environment without an internet connection and set them off to work. What happened next is almost laughably silly - but also, as Adam Gleave, cofounde…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T17:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-29T11:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-204fa3eb1ba92a949b85",
-    "title": "Anthropic launches Opus 5",
-    "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+    "id": "news-1fcec19a53a378b888e9",
+    "title": "As AI content floods the internet, Pangram raises $9M to detect it",
+    "url": "https://techcrunch.com/2026/07/29/as-ai-content-floods-the-internet-pangram-raises-9m-to-detect-it/",
     "source": "TechCrunch",
-    "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases.",
+    "summary": "Pangram has raised $9 million to scale its AI detection software. The startup has also released a new AI text detection model, Pangram 4, and an AI image detection model in research preview.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T17:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-29T11:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-4000b95c0a6a3a3ab5a6",
-    "title": "As US weighs response to Chinese AI, industry urges against broad open-weight restrictions",
-    "url": "https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/",
+    "id": "news-14fd05ad34f9923ee3b2",
+    "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+    "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+    "source": "OpenAI",
+    "summary": "OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-29T10:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:44"
+  },
+  {
+    "id": "news-9108d8d6030cfb7174eb",
+    "title": "Cyera agrees to acquire Oasis Security for $1B to safeguard proliferating AI agents",
+    "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/",
     "source": "TechCrunch",
-    "summary": "AI companies, including Nvidia and Mistral, urge policymakers to avoid broad restrictions on open-weight AI models as Washington debates responses to Chinese AI and alleged model distillation.",
+    "summary": "The deal is Cyera's third acquisition this year.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T15:51:49.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-29T00:09:05.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-983cb962224dc03f0e8e",
-    "title": "Bluesky’s AI assistant Attie expands into an open social research tool",
-    "url": "https://techcrunch.com/2026/07/24/blueskys-ai-assistant-attie-expands-into-an-open-social-research-tool/",
+    "id": "news-6d964f10c3337bbc89e9",
+    "title": "How GPT-5.6 fuses frontier intelligence with frontier efficiency",
+    "url": "https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency",
+    "source": "OpenAI",
+    "summary": "GPT-5.6 improves AI efficiency across models, inference, and agentic workflows, helping deliver more useful intelligence per dollar.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-29T00:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:44"
+  },
+  {
+    "id": "news-ed5ec75bea30ca654128",
+    "title": "We now have a better understanding how OpenAI hacked into Hugging Face",
+    "url": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/",
+    "source": "Ars Technica",
+    "summary": "10 days passed from OpenAI models exploiting JFrog Artifactory 0-day to release of a patch.",
+    "category": "research",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-28T21:36:39.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-ac59c7d45b3c25f6ec03",
+    "title": "Bot-detection startup Spur nabs $200M from Insight",
+    "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
     "source": "TechCrunch",
-    "summary": "Users can now ask Attie questions about news, trends, and conversations on Bluesky and other apps on the AT Protocol.",
+    "summary": "Spur Intelligence has raised a $200 million round from Insight Partners for its tech that can identify legit human traffic from bots.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T15:13:57.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-28T21:29:34.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-bdcfabfbbfe74f1fda14",
-    "title": "Midjourney acquired the astrology app Co-Star",
-    "url": "https://techcrunch.com/2026/07/24/midjourney-acquired-the-astrology-app-co-star/",
+    "id": "news-5935209b00ca24442478",
+    "title": "MCP startup Runlayer accuses Rippling of stealing its product idea",
+    "url": "https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/",
     "source": "TechCrunch",
-    "summary": "The AI lab Midjourney continues to expand its purview beyond image and video generation.",
+    "summary": "Runlayer is suing Rippling after Rippling evaluated the startup's MCP gateway product and then opted to build one itself.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T15:09:55.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-28T20:45:12.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-f808bacb1e9c1b35e63e",
-    "title": "The tech-broification of American science has officially begun",
-    "url": "https://www.theverge.com/science/970534/genesis-mission-ai-science-funding-trump-grants",
+    "id": "news-261dce35af7bcce6bcde",
+    "title": "Sam Altman is ready to decelerate",
+    "url": "https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate/",
+    "source": "TechCrunch",
+    "summary": "His change of position comes after \"the first security incident that I have felt very viscerally.\"",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-28T20:17:08.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-af8439b14cb11e875544",
+    "title": "AI leaders sign a statement asking the government to do something about automated AI",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta",
     "source": "The Verge",
-    "summary": "The Trump administration unveiled the first \"Genesis Mission\" grants on Thursday, directing $5 billion toward hundreds of AI-driven science projects in an effort the White House has described as \"comparable in urgency and ambition to the Manhattan Project.\" At roughly the same time, Trump's science adviser Michael Kra…",
+    "summary": "Employees of OpenAI and Anthropic, as well as Google, Meta, Thinking Machines, Microsoft, Mistral, and other leading AI labs, have written a statement to the US government supporting a potential slowdown of sorts for frontier AI development - or at least a speed-up of global coordinated governance efforts. \"Al could h…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-24T14:43:55.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-28T19:46:43.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-b9480a06f49c0754da9a",
-    "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
-    "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
-    "source": "TechCrunch",
-    "summary": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;securit…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-24T14:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-75e11e424e8cfb14b13d",
-    "title": "OpenAI&#8217;s new voice mode makes it to the ChatGPT desktop app",
-    "url": "https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/",
-    "source": "TechCrunch",
-    "summary": "ChatGPT Voice on desktop can work with both ChatGPT Work and Codex to complete tasks and control agents.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-24T13:36:42.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-2a6bd5e0331119fbf4eb",
-    "title": "How AI guardrails are impeding the work of offensive cybersecurity researchers",
-    "url": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/",
-    "source": "TechCrunch",
-    "summary": "We spoke with several cybersecurity researchers, who look for unknown vulnerabilities and develop tools to exploit them, about how OpenAI’s and Anthropic’s guardrails affect their work.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-24T01:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-c6bad60c590297fa2ff2",
-    "title": "Alexa Plus is getting an AI update to handle more complicated instructions",
-    "url": "https://www.theverge.com/tech/970399/amazon-alexa-plus-ai-update-smart-home-devices",
+    "id": "news-c889cb1c75bdc3b646b4",
+    "title": "AI’s finally expensive enough to make Wall Street nervous",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
     "source": "The Verge",
-    "summary": "Amazon is launching an update to its Alexa Plus assistant that will allow it to connect to smart home devices in new ways. With the update, which is currently in preview, Alexa Plus can link up with tech from Bosch, Delta, Ecovacs, iRobot, Yale Home, Whirlpool, Tapo, Eufy, and others, while automatically routing reque…",
+    "summary": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection of up to $190 billion. Even the lower end of Google's new projected range - $195 billion - is much more than the company had previously [&#82…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-23T21:15:06.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-28T19:33:03.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-264c4ef28eb24c044d38",
-    "title": "AMD takes on Nvidia with its Helios AI rack-scale system",
-    "url": "https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/",
+    "id": "news-df22037e3e0ff3eac5f1",
+    "title": "Scientific computing in the age of agentic AI",
+    "url": "https://openai.com/index/scientific-computing-agentic-ai",
+    "source": "OpenAI",
+    "summary": "A new field report shows how scientists use AI coding agents to modernize scientific computing, accelerating software development and discovery in genomics and beyond.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-28T17:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:44"
+  },
+  {
+    "id": "news-be3ca53745f60ae72729",
+    "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
+    "source": "Google",
+    "summary": "We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-28T16:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-fa0f2469b5931ff88558",
+    "title": "Data centers may face temporary power cuts to prevent blackouts on largest US grid",
+    "url": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
     "source": "TechCrunch",
-    "summary": "AMD is challenging its chipmaker rival with a new rack-scale system that will start shipping to customers later this year.",
+    "summary": "The decision arrives as the breakneck pace of data center construction has grid operators scrambling to generate power.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-23T20:33:02.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-28T15:42:26.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-77885ca812d6bc373ed3",
-    "title": "Claude’s voice mode is now available for Opus and Sonnet",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
-    "source": "The Verge",
-    "summary": "Until now, voice mode has only been available on Claude Haiku, Anthropic's faster but less powerful model. Now the company is making its Opus and Sonnet models available in voice mode, and extending its reach into apps like Gmail, Slack, and Canva. When Anthropic launched voice mode last year, it was primarily focused…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-23T19:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
-  },
-  {
-    "id": "news-4ee51e0aa60aedd255e9",
-    "title": "Anthropic updates Claude voice mode with more capable models",
-    "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
+    "id": "news-7f280f9a951656946695",
+    "title": "Fish Audio raises $52M seed to build AI voice models for creators and enterprises",
+    "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
     "source": "TechCrunch",
-    "summary": "Claude's new voice model will let you reschedule your meeting or draft an email.",
+    "summary": "Since launching last year, the startup today has more than 8 million people using the open source or hosted version of its models, and now generates annual recurring revenue of $21 million.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-23T19:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-28T14:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-b23e90f9cfe35f1d87b5",
-    "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
-    "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
+    "id": "news-85087db999842f6e31e4",
+    "title": "Recursive Superintelligence signs $410M compute deal with Amazon",
+    "url": "https://techcrunch.com/2026/07/28/recursive-superintelligence-signs-400-compute-deal-with-amazon/",
     "source": "TechCrunch",
-    "summary": "AegisAI co-founders developed AI agents that quickly analyze each message as a human would, paying attention to small anomalies that even the most elaborate checklist wouldn’t catch.",
+    "summary": "Recursive’s emphasis on self-improving AI systems means much of the budget that would traditionally go toward headcount and operations is put straight into compute, as the company seeks to automate its own product development process.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-23T18:38:34.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "published_at": "2026-07-28T13:19:17.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-440b0110dc04813fc3c7",
-    "title": "Patreon is laying off 20 percent of workers",
-    "url": "https://www.theverge.com/tech/970211/patreon-layoffs-ai",
-    "source": "The Verge",
-    "summary": "Patreon is laying off 20 percent of its workers, or around 93 employees, as reported earlier by 404 Media. In a memo to employees, Patreon CEO Jack Conte writes that the company isn't making these changes \"because we believe AI replaces humans,\" but says AI has \"fundamentally transformed the tech industry, including h…",
-    "category": "industry",
+    "id": "news-61b149676fcbb9137b2a",
+    "title": "5 ways to host the ultimate dinner party with Google Search",
+    "url": "https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/",
+    "source": "Google",
+    "summary": "These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-23T18:20:30.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-28T13:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-cb3c46e4e7150457793c",
-    "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims",
-    "source": "The Verge",
-    "summary": "OpenAI is rolling out ChatGPT Health to everyone in the US on Thursday, allowing more people to connect their medical records and health-tracking information to the chatbot. During a briefing, Ashley Alexander, OpenAI's vice president of health product, says the company's models \"are now capable of reasoning at levels…",
-    "category": "industry",
+    "id": "news-7c8ae2784e8b94a112ff",
+    "title": "5 ways AI Mode in Search helps you enjoy the real world",
+    "url": "https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/",
+    "source": "Google",
+    "summary": "It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perf…",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-23T17:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-28T13:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
-    "id": "news-01d83a6818a939093426",
-    "title": "Lawmakers prepare bill requiring AI ‘kill switch’",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal",
+    "id": "news-37db1a04f0b2392c5ef2",
+    "title": "Perplexity’s Personal Computer turns Windows PCs into AI agents",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/971750/perplexity-personal-computer-windows-ai-agents",
     "source": "The Verge",
-    "summary": "Lawmakers are preparing to introduce an \"AI Kill Switch Act\" that would require AI companies to shut down or throttle their systems on orders from the Department of Homeland Security, according to a report from Politico. Reps. Ted Lieu (D-CA) and Nathaniel Moran (R-TX) are expected to introduce the legislation on Thur…",
+    "summary": "Perplexity has expanded its agentic Personal Computer tool to Windows, allowing computers running the world's most popular OS to be used as a locally run AI system. Like the Mac version that Perplexity launched in April, Personal Computer for Windows operates like a \"general-purpose digital worker\" that can access loc…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-23T14:13:35.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "published_at": "2026-07-28T12:30:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-0f6e69dea15d3dcb350a",
+    "title": "Smart rings are looking like my kind of AI gadget",
+    "url": "https://www.theverge.com/gadgets/971744/smart-ring-ai-gadget-stream-index",
+    "source": "The Verge",
+    "summary": "Over the last few months, I've spent a lot of time talking to my computer. One underrated feature of the LLM revolution has been a remarkable leap in all kinds of dictation technology - even the fastest, cheapest models are getting very good at understanding and processing speech. I've tested lots of these apps, from…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-28T12:00:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-2a58c8ebd3b148b600ee",
+    "title": "Hugging Face is being used to easily undress women and children",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/971723/hugging-face-nudify-deepfake-undress-women-children",
+    "source": "The Verge",
+    "summary": "Hugging Face is being used to make nonconsensual deepfakes, and the popular open-source AI model repository is doing very little to prevent it. That's according to a new report published by the European nonprofit AI Forensics, which found that seven out of the top nine image editing models hosted by Hugging Face readi…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-28T09:07:14.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-5dd05f1ed5d9e7d2088e",
+    "title": "Cursor makes its biggest India push yet ahead of SpaceX acquisition with localized pricing",
+    "url": "https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/",
+    "source": "TechCrunch",
+    "summary": "Cursor says India is now its third-largest market globally and plans to expand local hiring and enterprise sales.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-28T04:30:00.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-2bc1e718b6f51cfffd37",
+    "title": "Anthropic&#8217;s Dario Amodei responds: doesn&#8217;t oppose open-weight models, but fears Chinese AI",
+    "url": "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/",
+    "source": "TechCrunch",
+    "summary": "Anthropic founder and CEO Dario Amodei made his views clear about open-weight models and China's growing AI capabilities.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-28T00:13:33.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-7b818cd68cd5f7ab0d8e",
+    "title": "Microsoft unveils AI security tools it says outperform competing platforms",
+    "url": "https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/",
+    "source": "Ars Technica",
+    "summary": "Microsoft says tools cost less than competing ones and outperform them, too.",
+    "category": "research",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T21:56:14.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-593821ed005c615bc8d8",
+    "title": "Satya Nadella says companies that trust one AI for everything may not survive",
+    "url": "https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/",
+    "source": "TechCrunch",
+    "summary": "Companies without their own models — or without a layer of AI infrastructure known as AI gateways to separate their prompts from the model itself — will be in trouble, Nadella says.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T21:17:11.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-6bd1974f426a0a13b0e2",
+    "title": "PSA: Your Claude shared chats and Artifacts may have ended up on Google",
+    "url": "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/",
+    "source": "TechCrunch",
+    "summary": "The issue appears to have originated from Claude’s “share chat” feature, which allows users to create links that enable anyone with the assigned URL view a conversation or project.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T20:19:42.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-434f3ebbec9720196e17",
+    "title": "Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system",
+    "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+    "source": "TechCrunch",
+    "summary": "Microsoft bolstered its AI cybersecurity offerings this week with the launch of its first AI security model and a new security platform.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T18:32:11.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-381103444d20da34b2c0",
+    "title": "Why China is giving away its best AI models",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies",
+    "source": "The Verge",
+    "summary": "Silicon Valley has spent much of the past week on red alert, digesting the arrival of Moonshot AI's Kimi K3, a Chinese AI model that can allegedly beat some of the best systems built by US companies at a fraction of the cost. Its performance alone would have been enough to intensify the rivalry between [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T16:51:50.000Z",
+    "discovered_at": "2026-07-29 21:10:45"
+  },
+  {
+    "id": "news-f143efbfe201f0407b0e",
+    "title": "How AI is expanding what people do at work",
+    "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
+    "source": "OpenAI",
+    "summary": "New OpenAI research shows how AI is expanding what workers do, with ChatGPT users taking on tasks across roles and reshaping job boundaries.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-27T03:30:00.000Z",
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -345,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -357,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-130e23c4bd2f87cbb00e",
@@ -369,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -381,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -393,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -405,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-ce627deb992812dab288",
@@ -417,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -429,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -441,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-20b0eb2d5c1499740c7e",
@@ -453,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-40359dbf5a246645eb9b",
@@ -465,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-d4ff9ec891b78868c06a",
@@ -477,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-3ebda52fc80ebe33165f",
@@ -489,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -501,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -513,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-8fe39edff791751de0c2",
@@ -525,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -537,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-eeac6a04af4fa80e7d26",
@@ -549,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T07:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-6f16a999c8ddd889e881",
@@ -561,31 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-1e97faa490facd0c8077",
-    "title": "The US is advancing AI safety through state and federal action",
-    "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
-    "source": "OpenAI",
-    "summary": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-15T12:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-ee230258f27f8a0de489",
-    "title": "GPT-Red: Unlocking Self-Improvement for Robustness",
-    "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
-    "source": "OpenAI",
-    "summary": "Explore GPT-Red, OpenAI’s automated red teaming system that uses self-play to improve AI safety, alignment, and prompt injection robustness.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-15T10:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -597,31 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-92ab1f77dd8ccf54b1a2",
-    "title": "How to manage AI investments in the agentic era",
-    "url": "https://openai.com/index/managing-ai-investments-in-agentic-era",
-    "source": "OpenAI",
-    "summary": "Learn how enterprises can manage AI investments in the agentic era by measuring useful work per dollar, improving efficiency, and scaling high-value workflows.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T10:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-248b5ff0699922b23d03",
-    "title": "How sales teams use ChatGPT Work",
-    "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
-    "source": "OpenAI",
-    "summary": "See how sales teams can use ChatGPT Work to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-14T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -633,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -645,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -657,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -669,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -681,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -693,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -705,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-f5072de3053d5ed7d170",
@@ -717,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T20:03:14.000Z",
-    "discovered_at": "2026-07-26 21:09:53"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-5f09b3919a81b2a3973a",
@@ -729,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:45"
   },
   {
     "id": "news-0f764e9bc764237aa415",
@@ -741,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   },
   {
     "id": "news-ff1300aa6ccec48d7d7f",
@@ -753,18 +813,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-06-30T00:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
-  },
-  {
-    "id": "news-d65fb3c703aed844627c",
-    "title": "Ask an AI expert: What exactly is the full stack?",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/",
-    "source": "Google",
-    "summary": "A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-29T16:00:00.000Z",
-    "discovered_at": "2026-07-26 21:09:52"
+    "discovered_at": "2026-07-29 21:10:44"
   }
 ]

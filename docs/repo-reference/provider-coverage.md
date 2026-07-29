@@ -1,16 +1,16 @@
 # Provider Coverage Snapshot
 
-Generated: 26 Jul 2026, 21:10 UTC
+Generated: 29 Jul 2026, 21:10 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
 | Provider | Active | Tracking | Preview | Latest release | Status page | Docs |
 | --- | --- | --- | --- | --- | --- | --- |
-| OpenAI | 25 | 48 | 0 | GPT-5.6 Sol (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
-| Google | 8 | 20 | 0 | Gemini 3.6 Flash (21 Jul 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
+| OpenAI | 25 | 45 | 0 | GPT-5.6 Sol (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
+| Google | 8 | 20 | 0 | Gemini 3.6 Flash (batch) (21 Jul 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 7 | 15 | 1 | Claude Opus 5 (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 4 | 0 | Muse Spark 1.1 (16 Jul 2026) | n/a | [docs](https://llama.meta.com/docs) |
-| Alibaba | 5 | 41 | 0 | Qwen3.7 Plus (3 Jun 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| Alibaba | 5 | 42 | 0 | Qwen3.7 Flash (27 Jul 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | DeepSeek | 4 | 7 | 0 | DeepSeek V4 Pro (24 Apr 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
@@ -38,7 +38,7 @@ This table shows how much of each provider's public model surface is currently r
 | PlayHT | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.play.ht) |
 | Resemble AI | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.resemble.ai) |
 | xAI | 0 | 11 | 0 | Grok 4.5 (8 Jul 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
-| MiniMax | 0 | 8 | 0 | MiniMax M3 (31 May 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
+| MiniMax | 0 | 8 | 0 | MiniMax M2.7 (18 Mar 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | Moonshot AI | 0 | 5 | 0 | Kimi K3 (16 Jul 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | NVIDIA | 0 | 5 | 0 | Nemotron 3 Ultra (4 Jun 2026) | n/a | [docs](https://docs.api.nvidia.com) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
