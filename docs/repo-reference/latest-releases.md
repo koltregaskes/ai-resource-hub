@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 29 Jul 2026, 18:25 UTC
+Generated: 29 Jul 2026, 19:25 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -9,7 +9,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
-| 24 Jul 2026 | Claude Opus 5 | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/news/claude-opus-5) |
+| 24 Jul 2026 | Claude Opus 5 | Anthropic | tracking | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 24 Jul 2026 | Claude Opus 5 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 21 Jul 2026 | Gemini 3.6 Flash (batch) | Google | tracking | high | ready for editor | 0 | 2 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
 | 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | high | ready for editor | 0 | 2 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
