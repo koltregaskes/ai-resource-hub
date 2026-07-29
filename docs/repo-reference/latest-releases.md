@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 29 Jul 2026, 19:40 UTC
+Generated: 29 Jul 2026, 21:10 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -14,7 +14,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 21 Jul 2026 | Gemini 3.6 Flash (batch) | Google | tracking | high | ready for editor | 0 | 1 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
 | 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | high | ready for editor | 0 | 1 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
 | 16 Jul 2026 | Kimi K3 | Moonshot AI | tracking | high | watch only | 0 | 1 | n/a |
-| 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | high | watch only | 0 | 0 | n/a |
+| 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 9 Jul 2026 | GPT-5.6 Sol | OpenAI | tracking | high | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
 | 9 Jul 2026 | GPT-5.6 Terra | OpenAI | tracking | high | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
 | 9 Jul 2026 | GPT-5.6 Luna | OpenAI | tracking | high | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
