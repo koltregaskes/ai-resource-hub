@@ -5,7 +5,7 @@ import test from 'node:test';
 import { assessBenchmarkProvenance } from './benchmark-provenance';
 import {
   benchmarkScoreKey,
-  UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS,
+  UNRESOLVED_BENCHMARK_SCORE_REVIEWS,
   VERIFIED_BENCHMARK_SCORE_EVIDENCE,
   VERIFIED_LABEL_ONLY_REMEDIATION_KEYS,
 } from './benchmark-score-evidence';
@@ -45,24 +45,41 @@ test('verified evidence entries are unique, public, dated, and reflected in the 
   }
 });
 
-test('the full 60-row label-only remediation scope is explicitly resolved or unresolved', () => {
-  const unresolvedKeys = UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS.map((entry) => (
+test('unresolved evidence scope covers label-only rows and generic Arena discovery URLs', () => {
+  const unresolvedKeys = UNRESOLVED_BENCHMARK_SCORE_REVIEWS.map((entry) => (
     benchmarkScoreKey(entry.modelId, entry.benchmarkId)
   ));
-  assert.equal(UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS.length, 46);
-  assert.equal(new Set(unresolvedKeys).size, unresolvedKeys.length);
-  assert.equal(VERIFIED_LABEL_ONLY_REMEDIATION_KEYS.size, 14);
+  const unresolvedKeySet = new Set(unresolvedKeys);
 
-  const fullScope = new Set([...unresolvedKeys, ...VERIFIED_LABEL_ONLY_REMEDIATION_KEYS]);
-  assert.equal(fullScope.size, 60);
+  assert.equal(VERIFIED_BENCHMARK_SCORE_EVIDENCE.length, 41);
+  assert.equal(UNRESOLVED_BENCHMARK_SCORE_REVIEWS.length, 97);
+  assert.equal(unresolvedKeySet.size, unresolvedKeys.length);
+  assert.equal(VERIFIED_LABEL_ONLY_REMEDIATION_KEYS.size, 23);
 
-  for (const review of UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS) {
+  const arenaRows = cachedScores.filter((row) => row.benchmark_id === 'chatbot-arena-elo');
+  assert.equal(arenaRows.length, 51);
+  for (const row of arenaRows) {
+    const key = benchmarkScoreKey(row.model_id, row.benchmark_id);
+    assert.ok(unresolvedKeySet.has(key), `${key} must have an explicit unresolved review`);
+  }
+
+  for (const review of UNRESOLVED_BENCHMARK_SCORE_REVIEWS) {
     const key = benchmarkScoreKey(review.modelId, review.benchmarkId);
     const cached = cacheByKey.get(key);
     assert.ok(cached, `missing unresolved cache row ${key}`);
-    assert.equal(cached.source_url, null, `${key} must remain without invented row-level evidence`);
+    assert.ok(
+      cached.source_url === null || cached.source_url === 'https://chat.lmsys.org',
+      `${key} must remain without invented row-level evidence`,
+    );
     assert.ok(review.reason.length > 20);
-    const assessment = assessBenchmarkProvenance(cached, { id: cached.benchmark_id, url: null });
+
+    const benchmarkUrl = cached.benchmark_id === 'chatbot-arena-elo'
+      ? 'https://chat.lmsys.org'
+      : null;
+    const assessment = assessBenchmarkProvenance(
+      cached,
+      { id: cached.benchmark_id, url: benchmarkUrl },
+    );
     assert.equal(assessment.rankable, false, `${key} must remain non-rankable`);
   }
 });
