@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T07:19:26.593Z",
+  "generatedAt": "2026-07-30T08:31:25.469Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T07:19:25.539Z",
+      "lastCheckedAt": "2026-07-30T08:31:24.271Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -50,10 +50,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-07-30T05:57:43.524Z",
-          "updatedAt": "2026-07-30T06:26:26.774Z",
+          "updatedAt": "2026-07-30T08:06:25.223Z",
           "resolvedAt": null,
           "url": "https://stspg.io/c0fmy7628y3w",
-          "summary": "All models except Opus 5 have recovered. We're working to recover Opus 5 as well."
+          "summary": "As of 8:05 UTC / 1:05 PT, Sonnet 5 errors are back to baseline, but we're seeing an increased error rate on Fable 5."
         }
       ],
       "recentIncidents": [
@@ -63,10 +63,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-07-30T05:57:43.524Z",
-          "updatedAt": "2026-07-30T06:26:26.774Z",
+          "updatedAt": "2026-07-30T08:06:25.223Z",
           "resolvedAt": null,
           "url": "https://stspg.io/c0fmy7628y3w",
-          "summary": "All models except Opus 5 have recovered. We're working to recover Opus 5 as well."
+          "summary": "As of 8:05 UTC / 1:05 PT, Sonnet 5 errors are back to baseline, but we're seeing an increased error rate on Fable 5."
         },
         {
           "id": "q2kg8n613kr3",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T07:19:26.062Z",
+      "lastCheckedAt": "2026-07-30T08:31:24.432Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T07:19:26.338Z",
+      "lastCheckedAt": "2026-07-30T08:31:25.069Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T07:19:26.586Z",
+      "lastCheckedAt": "2026-07-30T08:31:25.443Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T07:19:25.740Z",
+      "lastCheckedAt": "2026-07-30T08:31:24.313Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T07:19:25.513Z",
+      "lastCheckedAt": "2026-07-30T08:31:24.345Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -337,7 +337,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T07:19:26.486Z",
+      "lastCheckedAt": "2026-07-30T08:31:25.463Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
