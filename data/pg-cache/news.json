@@ -1,15 +1,39 @@
 [
   {
+    "id": "news-8c108a2fb2639f79c650",
+    "title": "LinkedIn adds a button to report AI-generated &#8216;slop&#8217;",
+    "url": "https://techcrunch.com/2026/07/30/linkedin-adds-a-button-to-report-ai-generated-slop/",
+    "source": "TechCrunch",
+    "summary": "LinkedIn is introducing new ways to reduce low-quality AI-generated posts, including a “seems like AI slop” reporting option. It's also replacing its own AI writing feature with a proofreading tool.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T18:05:21.000Z",
+    "discovered_at": "2026-07-30 18:42:32"
+  },
+  {
+    "id": "news-286e4f22143861c4d6b1",
+    "title": "Google DeepMind’s new AI model can control a robot’s entire body",
+    "url": "https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body",
+    "source": "The Verge",
+    "summary": "Google DeepMind says the latest version of its Gemini Robotics AI model can \"control entire humanoid robots.\" While the previous model focused on controlling a humanoid robot's upper body, Gemini Robotics 2 now supports \"whole-body motions\" ranging from its feet to fingertips, according to an announcement on Thursday.…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T17:18:45.000Z",
+    "discovered_at": "2026-07-30 18:42:32"
+  },
+  {
     "id": "news-ec12e93eaf42f03db497",
     "title": "Friend re-launches its AI pendant with a speaker that talks to you, for twice the price",
     "url": "https://www.theverge.com/gadgets/973163/friend-re-launches-its-ai-pendant-with-a-speaker-that-talks-to-you-for-twice-the-price",
     "source": "The Verge",
-    "summary": "Do you remember Friend? The Friend that launched an AI pendant, spent $1.8 million of its $2.5 million to acquire friend.com, and plastered the NYC subway with ads promoting artificial companionship? Yeah well, if you didn't remember, Friend is back. And now, it's twice the price. This morning, Friend launched a new a…",
+    "summary": "Do you remember Friend? The Friend that launched an AI pendant, spent $1.8 million of its $2.5 million in funding to acquire friend.com, and plastered the NYC subway with ads promoting artificial companionship? Yeah well, if you didn't remember, Friend is back. And now, it's twice the price. This morning, Friend launc…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T16:33:32.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-25e60d94966027598682",
@@ -21,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T16:09:42.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-13793f9f324905954398",
@@ -33,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:41:16.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-acd1de3b41db29fc5734",
@@ -45,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:19:15.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-0d0a337bbf622224bfb5",
@@ -57,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-daaae50bac373813a82c",
@@ -69,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T14:48:32.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-36667e90d9e50a42010b",
@@ -81,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T14:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-a1b11e2b2bb9c97b9f82",
@@ -93,7 +117,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T13:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
+  },
+  {
+    "id": "news-fc362ba711f59d44f4f1",
+    "title": "Advancing the price-performance frontier with GPT-5.6",
+    "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+    "source": "OpenAI",
+    "summary": "Explore lower GPT‑5.6 pricing for Luna and Terra—and how OpenAI’s more efficient models help enterprises deploy AI workflows at scale.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T10:00:00.000Z",
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-df34ed215123aaa01581",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T00:21:06.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-ad9c3055b763ac156572",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T23:00:11.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-2413ef2608780b2574a2",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T22:46:03.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-39de907ded3d528e78e5",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T22:23:12.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-0434773f642a30262ab3",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T22:17:38.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-c5567c95ea9045955aa2",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T21:48:07.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-ede83952feba6e648c18",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T21:16:39.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-520a785ee3962a988b02",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T21:07:48.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-5fe08d38c090003b3848",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T21:06:52.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-a657cafa7eea65b30bcc",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T19:44:49.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-1bd342b4b31f1dd84650",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T18:45:27.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-453862f893b65c09d490",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T18:15:02.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-b066f12120921c9f5fc7",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T15:35:09.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-cc8e132c619995d199d3",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T15:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-21cfdc136e07efe4892d",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T14:41:06.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-2faf95088d1e8bf146a2",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T12:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-e8035148749caccade22",
@@ -297,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T11:54:29.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-fb6c24829ef294e8bb25",
@@ -309,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T11:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
-  },
-  {
-    "id": "news-1fcec19a53a378b888e9",
-    "title": "As AI content floods the internet, Pangram raises $9M to detect it",
-    "url": "https://techcrunch.com/2026/07/29/as-ai-content-floods-the-internet-pangram-raises-9m-to-detect-it/",
-    "source": "TechCrunch",
-    "summary": "Pangram has raised $9 million to scale its AI detection software. The startup has also released a new AI text detection model, Pangram 4, and an AI image detection model in research preview.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T11:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-14fd05ad34f9923ee3b2",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T10:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-6d964f10c3337bbc89e9",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T00:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -357,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-07-30 16:45:10"
+    "discovered_at": "2026-07-30 18:42:33"
   },
   {
     "id": "news-af8439b14cb11e875544",
@@ -369,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T19:46:43.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
-  },
-  {
-    "id": "news-c889cb1c75bdc3b646b4",
-    "title": "AI’s finally expensive enough to make Wall Street nervous",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
-    "source": "The Verge",
-    "summary": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection of up to $190 billion. Even the lower end of Google's new projected range - $195 billion - is much more than the company had previously [&#82…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T19:33:03.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-df22037e3e0ff3eac5f1",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T17:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-07-30 16:45:10"
+    "discovered_at": "2026-07-30 18:42:33"
   },
   {
     "id": "news-f143efbfe201f0407b0e",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T03:30:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-130e23c4bd2f87cbb00e",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-ce627deb992812dab288",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T00:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-30 16:45:10"
+    "discovered_at": "2026-07-30 18:42:33"
   },
   {
     "id": "news-20b0eb2d5c1499740c7e",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-40359dbf5a246645eb9b",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T00:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-d4ff9ec891b78868c06a",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-3ebda52fc80ebe33165f",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-8fe39edff791751de0c2",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -657,19 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-30 16:45:10"
-  },
-  {
-    "id": "news-eeac6a04af4fa80e7d26",
-    "title": "How Codex became a collaborator for OpenAI’s creative team",
-    "url": "https://openai.com/index/codex-collaborator-creative-team",
-    "source": "OpenAI",
-    "summary": "How OpenAI’s creative team uses Codex to build custom creative tools, accelerate ideation, and prototype faster with context-aware AI.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-16T07:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:08"
+    "discovered_at": "2026-07-30 18:42:33"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-30 16:45:10"
+    "discovered_at": "2026-07-30 18:42:33"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-30 16:45:10"
+    "discovered_at": "2026-07-30 18:42:33"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-30 16:45:09"
+    "discovered_at": "2026-07-30 18:42:32"
   }
 ]
