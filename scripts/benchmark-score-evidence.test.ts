@@ -72,6 +72,7 @@ test('unresolved evidence scope covers label-only rows and generic Arena discove
       `${key} must remain without invented row-level evidence`,
     );
     assert.ok(review.reason.length > 20);
+    if (review.contextUrl) assert.match(review.contextUrl, /^https:\/\//);
 
     const benchmarkUrl = cached.benchmark_id === 'chatbot-arena-elo'
       ? 'https://chat.lmsys.org'
