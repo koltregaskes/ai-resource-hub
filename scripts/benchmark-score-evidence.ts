@@ -407,6 +407,24 @@ export const VERIFIED_BENCHMARK_SCORE_EVIDENCE: readonly VerifiedBenchmarkScoreE
 ];
 
 const unresolvedByBenchmark: Record<string, { models: string[]; reason: string }> = {
+  'chatbot-arena-elo': {
+    models: [
+      'gpt-5.2-pro', 'gemini-3.1-pro', 'gpt-5.2', 'claude-opus-4.6',
+      'gemini-3-pro', 'gpt-5-pro', 'gpt-5', 'claude-opus-4.5',
+      'claude-sonnet-4.6', 'grok-4', 'gemini-2.5-pro', 'claude-sonnet-4.5',
+      'o3', 'o1', 'qwen3-max', 'claude-opus-4', 'grok-3',
+      'deepseek-r1-0528', 'qwen3-235b', 'deepseek-r1', 'claude-sonnet-4',
+      'deepseek-v3.2', 'claude-3.7-sonnet', 'gemini-3-flash', 'grok-4-fast',
+      'o3-mini', 'grok-3-mini', 'gemini-2.5-flash', 'gpt-4.5',
+      'mistral-large-3', 'claude-haiku-4.5', 'llama-4-maverick', 'gpt-4o',
+      'claude-3.5-sonnet', 'gpt-4.1', 'command-a', 'gpt-4.1-mini',
+      'llama-4-scout', 'deepseek-v3', 'grok-2', 'gemini-2.0-flash',
+      'nemotron-70b', 'gemini-1.5-pro', 'claude-haiku-3.5', 'claude-3-opus',
+      'llama-3.1-405b', 'llama-3.3-70b', 'qwen-2.5-72b', 'gpt-4o-mini',
+      'gemini-2.5-flash-lite', 'mistral-small-3.1',
+    ],
+    reason: 'No exact dated public Arena leaderboard snapshot matching the cached model variant, score and measurement date was found; the generic chat entry point is discovery context only.',
+  },
   'aime-2025': {
     models: ['grok-3', 'o3-pro'],
     reason: 'No primary public result matching the cached score and evaluation configuration was found.',
@@ -451,7 +469,7 @@ const unresolvedByBenchmark: Record<string, { models: string[]; reason: string }
   },
 };
 
-export const UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS: readonly UnresolvedBenchmarkScoreReview[] =
+export const UNRESOLVED_BENCHMARK_SCORE_REVIEWS: readonly UnresolvedBenchmarkScoreReview[] =
   Object.entries(unresolvedByBenchmark).flatMap(([benchmarkId, review]) => (
     review.models.map((modelId) => ({
       modelId,
@@ -459,6 +477,14 @@ export const UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS: readonly UnresolvedB
       reason: review.reason,
     }))
   ));
+
+/**
+ * Backwards-compatible alias for the original label-only review surface.
+ * The broader collection now also records generic discovery URLs that are not
+ * evidence for an exact result.
+ */
+export const UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS =
+  UNRESOLVED_BENCHMARK_SCORE_REVIEWS;
 
 export const VERIFIED_LABEL_ONLY_REMEDIATION_KEYS = new Set([
   'deepseek-r1:aime-2025',
