@@ -15,6 +15,7 @@ export interface UnresolvedBenchmarkScoreReview {
 }
 
 const OPENAI_GPT5_URL = 'https://openai.com/index/introducing-gpt-5-for-developers/';
+const OPENAI_GPT5_LAUNCH_URL = 'https://openai.com/index/introducing-gpt-5/';
 const OPENAI_GPT5_SYSTEM_CARD_URL = 'https://cdn.openai.com/gpt-5-system-card.pdf';
 const OPENAI_GPT52_URL = 'https://openai.com/index/introducing-gpt-5-2/';
 const OPENAI_GPT45_URL = 'https://openai.com/index/introducing-gpt-4-5/';
@@ -384,6 +385,25 @@ export const VERIFIED_BENCHMARK_SCORE_EVIDENCE: readonly VerifiedBenchmarkScoreE
     measuredAt: '2026-02-05',
     evidenceNote: 'Anthropic Opus 4.6 system card comparison reports Gemini 3 Pro SWE-bench Verified as 76.2%.',
   },
+
+  {
+    modelId: 'gpt-5-pro',
+    benchmarkId: 'gpqa-diamond',
+    score: 88.4,
+    source: 'OpenAI',
+    sourceUrl: OPENAI_GPT5_LAUNCH_URL,
+    measuredAt: '2025-08-07',
+    evidenceNote: 'OpenAI GPT-5 launch reports GPT-5 Pro GPQA without tools as 88.4%.',
+  },
+  {
+    modelId: 'gpt-5.2-pro',
+    benchmarkId: 'gpqa-diamond',
+    score: 93.2,
+    source: 'OpenAI',
+    sourceUrl: OPENAI_GPT52_URL,
+    measuredAt: '2025-12-11',
+    evidenceNote: 'OpenAI GPT-5.2 launch reports GPT-5.2 Pro GPQA Diamond without tools as 93.2%.',
+  },
 ];
 
 const unresolvedByBenchmark: Record<string, { models: string[]; reason: string }> = {
@@ -462,6 +482,8 @@ export const VERIFIED_LABEL_ONLY_REMEDIATION_KEYS = new Set([
   'claude-sonnet-4.5:swe-bench-verified',
   'gemini-3-pro:gpqa-diamond',
   'gemini-3-pro:swe-bench-verified',
+  'gpt-5-pro:gpqa-diamond',
+  'gpt-5.2-pro:gpqa-diamond',
 ]);
 
 export function benchmarkScoreKey(modelId: string, benchmarkId: string): string {
