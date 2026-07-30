@@ -12,6 +12,7 @@ export interface UnresolvedBenchmarkScoreReview {
   modelId: string;
   benchmarkId: string;
   reason: string;
+  contextUrl?: string;
 }
 
 const OPENAI_GPT5_URL = 'https://openai.com/index/introducing-gpt-5-for-developers/';
@@ -26,6 +27,7 @@ const DEEPSEEK_R1_0528_URL = 'https://huggingface.co/deepseek-ai/DeepSeek-R1-052
 const META_LLAMA4_MAVERICK_URL = 'https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct';
 const MICROSOFT_PHI4_REASONING_URL = 'https://huggingface.co/microsoft/Phi-4-reasoning';
 const ANTHROPIC_OPUS46_SYSTEM_CARD_URL = 'https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf';
+const LMARENA_DATED_ARCHIVE_URL = 'https://huggingface.co/spaces/lmarena/chatbot-arena-leaderboard/tree/main';
 
 /**
  * Exact, row-level public evidence. These entries intentionally replace
@@ -406,7 +408,11 @@ export const VERIFIED_BENCHMARK_SCORE_EVIDENCE: readonly VerifiedBenchmarkScoreE
   },
 ];
 
-const unresolvedByBenchmark: Record<string, { models: string[]; reason: string }> = {
+const unresolvedByBenchmark: Record<string, {
+  models: string[];
+  reason: string;
+  contextUrl?: string;
+}> = {
   'chatbot-arena-elo': {
     models: [
       'gpt-5.2-pro', 'gemini-3.1-pro', 'gpt-5.2', 'claude-opus-4.6',
@@ -423,7 +429,8 @@ const unresolvedByBenchmark: Record<string, { models: string[]; reason: string }
       'llama-3.1-405b', 'llama-3.3-70b', 'qwen-2.5-72b', 'gpt-4o-mini',
       'gemini-2.5-flash-lite', 'mistral-small-3.1',
     ],
-    reason: 'No exact dated public Arena leaderboard snapshot matching the cached model variant, score and measurement date was found; the generic chat entry point is discovery context only.',
+    reason: 'The official dated archive exposes snapshots only through 2025-04-09 and does not prove the later cached model variant, score and measurement date; the generic chat entry point is discovery context only.',
+    contextUrl: LMARENA_DATED_ARCHIVE_URL,
   },
   'aime-2025': {
     models: ['grok-3', 'o3-pro'],
@@ -475,6 +482,7 @@ export const UNRESOLVED_BENCHMARK_SCORE_REVIEWS: readonly UnresolvedBenchmarkSco
       modelId,
       benchmarkId,
       reason: review.reason,
+      contextUrl: review.contextUrl,
     }))
   ));
 
