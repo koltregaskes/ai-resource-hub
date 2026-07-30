@@ -21,6 +21,7 @@ const OPENAI_SIMPLEQA_URL = 'https://cdn.openai.com/papers/simpleqa.pdf';
 const GOOGLE_GEMINI25_URL = 'https://storage.googleapis.com/model-cards/documents/gemini-2.5-pro.pdf';
 const DEEPSEEK_R1_URL = 'https://github.com/deepseek-ai/DeepSeek-R1';
 const DEEPSEEK_R1_0528_URL = 'https://huggingface.co/deepseek-ai/DeepSeek-R1-0528';
+const META_LLAMA4_MAVERICK_URL = 'https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct';
 const MICROSOFT_PHI4_REASONING_URL = 'https://huggingface.co/microsoft/Phi-4-reasoning';
 
 /**
@@ -255,6 +256,15 @@ export const VERIFIED_BENCHMARK_SCORE_EVIDENCE: readonly VerifiedBenchmarkScoreE
     evidenceNote: 'OpenAI SimpleQA paper Table 3 reports GPT-4o correct answers as 38.2.',
   },
   {
+    modelId: 'llama-4-maverick',
+    benchmarkId: 'mgsm',
+    score: 92.3,
+    source: 'Meta',
+    sourceUrl: META_LLAMA4_MAVERICK_URL,
+    measuredAt: '2025-04-05',
+    evidenceNote: 'Meta Llama 4 Maverick model card reports instruction-tuned MGSM 0-shot average exact match as 92.3.',
+  },
+  {
     modelId: 'phi-4-reasoning',
     benchmarkId: 'aime-2025',
     score: 62.9,
@@ -317,7 +327,7 @@ const unresolvedByBenchmark: Record<string, { models: string[]; reason: string }
     reason: 'No exact official MedQA result matching the cached score and model configuration was found.',
   },
   mgsm: {
-    models: ['claude-opus-4', 'gemini-2.5-pro', 'gpt-4o', 'gpt-5.2', 'llama-4-maverick', 'o3'],
+    models: ['claude-opus-4', 'gemini-2.5-pro', 'gpt-4o', 'gpt-5.2', 'o3'],
     reason: 'No exact official MGSM result matching the cached score and model configuration was found.',
   },
   'mmmu-pro': {
@@ -358,6 +368,7 @@ export const VERIFIED_LABEL_ONLY_REMEDIATION_KEYS = new Set([
   'gemini-2.5-pro:simpleqa',
   'gpt-4.5:simpleqa',
   'gpt-4o:simpleqa',
+  'llama-4-maverick:mgsm',
 ]);
 
 export function benchmarkScoreKey(modelId: string, benchmarkId: string): string {

@@ -49,9 +49,9 @@ test('the full 60-row label-only remediation scope is explicitly resolved or unr
   const unresolvedKeys = UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS.map((entry) => (
     benchmarkScoreKey(entry.modelId, entry.benchmarkId)
   ));
-  assert.equal(UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS.length, 49);
+  assert.equal(UNRESOLVED_LABEL_ONLY_BENCHMARK_SCORE_REVIEWS.length, 48);
   assert.equal(new Set(unresolvedKeys).size, unresolvedKeys.length);
-  assert.equal(VERIFIED_LABEL_ONLY_REMEDIATION_KEYS.size, 11);
+  assert.equal(VERIFIED_LABEL_ONLY_REMEDIATION_KEYS.size, 12);
 
   const fullScope = new Set([...unresolvedKeys, ...VERIFIED_LABEL_ONLY_REMEDIATION_KEYS]);
   assert.equal(fullScope.size, 60);

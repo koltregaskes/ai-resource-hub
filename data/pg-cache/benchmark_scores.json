@@ -2355,9 +2355,9 @@
   {
     "model_id": "llama-4-maverick",
     "benchmark_id": "mgsm",
-    "score": 84,
+    "score": 92.3,
     "source": "Meta",
-    "source_url": null,
+    "source_url": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct",
     "measured_at": "2025-04-05",
     "updated_at": "2026-07-30 00:25:24",
     "model_name": "Llama 4 Maverick",
