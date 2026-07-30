@@ -24,6 +24,7 @@ const DEEPSEEK_R1_URL = 'https://github.com/deepseek-ai/DeepSeek-R1';
 const DEEPSEEK_R1_0528_URL = 'https://huggingface.co/deepseek-ai/DeepSeek-R1-0528';
 const META_LLAMA4_MAVERICK_URL = 'https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct';
 const MICROSOFT_PHI4_REASONING_URL = 'https://huggingface.co/microsoft/Phi-4-reasoning';
+const ANTHROPIC_OPUS46_SYSTEM_CARD_URL = 'https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf';
 
 /**
  * Exact, row-level public evidence. These entries intentionally replace
@@ -319,6 +320,70 @@ export const VERIFIED_BENCHMARK_SCORE_EVIDENCE: readonly VerifiedBenchmarkScoreE
     measuredAt: '2025-04-30',
     evidenceNote: 'Microsoft comparative evaluation reports QwQ 32B GPQA Diamond as 59.5.',
   },
+
+  {
+    modelId: 'claude-opus-4.6',
+    benchmarkId: 'swe-bench-verified',
+    score: 80.84,
+    source: 'Anthropic',
+    sourceUrl: ANTHROPIC_OPUS46_SYSTEM_CARD_URL,
+    measuredAt: '2026-02-05',
+    evidenceNote: 'Anthropic Opus 4.6 system card reports SWE-bench Verified as 80.84%, averaged over 25 trials.',
+  },
+  {
+    modelId: 'claude-opus-4.5',
+    benchmarkId: 'gpqa-diamond',
+    score: 87.0,
+    source: 'Anthropic evaluation',
+    sourceUrl: ANTHROPIC_OPUS46_SYSTEM_CARD_URL,
+    measuredAt: '2026-02-05',
+    evidenceNote: 'Anthropic Opus 4.6 system card comparison reports Claude Opus 4.5 GPQA Diamond as 87.0%.',
+  },
+  {
+    modelId: 'claude-opus-4.5',
+    benchmarkId: 'swe-bench-verified',
+    score: 80.9,
+    source: 'Anthropic evaluation',
+    sourceUrl: ANTHROPIC_OPUS46_SYSTEM_CARD_URL,
+    measuredAt: '2026-02-05',
+    evidenceNote: 'Anthropic Opus 4.6 system card comparison reports Claude Opus 4.5 SWE-bench Verified as 80.9%.',
+  },
+  {
+    modelId: 'claude-sonnet-4.5',
+    benchmarkId: 'gpqa-diamond',
+    score: 83.4,
+    source: 'Anthropic evaluation',
+    sourceUrl: ANTHROPIC_OPUS46_SYSTEM_CARD_URL,
+    measuredAt: '2026-02-05',
+    evidenceNote: 'Anthropic Opus 4.6 system card comparison reports Claude Sonnet 4.5 GPQA Diamond as 83.4%.',
+  },
+  {
+    modelId: 'claude-sonnet-4.5',
+    benchmarkId: 'swe-bench-verified',
+    score: 77.2,
+    source: 'Anthropic evaluation',
+    sourceUrl: ANTHROPIC_OPUS46_SYSTEM_CARD_URL,
+    measuredAt: '2026-02-05',
+    evidenceNote: 'Anthropic Opus 4.6 system card comparison reports Claude Sonnet 4.5 SWE-bench Verified as 77.2%.',
+  },
+  {
+    modelId: 'gemini-3-pro',
+    benchmarkId: 'gpqa-diamond',
+    score: 91.9,
+    source: 'Anthropic evaluation',
+    sourceUrl: ANTHROPIC_OPUS46_SYSTEM_CARD_URL,
+    measuredAt: '2026-02-05',
+    evidenceNote: 'Anthropic Opus 4.6 system card comparison reports Gemini 3 Pro GPQA Diamond as 91.9%.',
+  },
+  {
+    modelId: 'gemini-3-pro',
+    benchmarkId: 'swe-bench-verified',
+    score: 76.2,
+    source: 'Anthropic evaluation',
+    sourceUrl: ANTHROPIC_OPUS46_SYSTEM_CARD_URL,
+    measuredAt: '2026-02-05',
+    evidenceNote: 'Anthropic Opus 4.6 system card comparison reports Gemini 3 Pro SWE-bench Verified as 76.2%.',
+  },
 ];
 
 const unresolvedByBenchmark: Record<string, { models: string[]; reason: string }> = {
@@ -390,6 +455,13 @@ export const VERIFIED_LABEL_ONLY_REMEDIATION_KEYS = new Set([
   'gpt-4o:simpleqa',
   'llama-4-maverick:mgsm',
   'o3:simpleqa',
+  'claude-opus-4.6:swe-bench-verified',
+  'claude-opus-4.5:gpqa-diamond',
+  'claude-opus-4.5:swe-bench-verified',
+  'claude-sonnet-4.5:gpqa-diamond',
+  'claude-sonnet-4.5:swe-bench-verified',
+  'gemini-3-pro:gpqa-diamond',
+  'gemini-3-pro:swe-bench-verified',
 ]);
 
 export function benchmarkScoreKey(modelId: string, benchmarkId: string): string {
