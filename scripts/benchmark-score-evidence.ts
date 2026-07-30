@@ -15,6 +15,7 @@ export interface UnresolvedBenchmarkScoreReview {
 }
 
 const OPENAI_GPT5_URL = 'https://openai.com/index/introducing-gpt-5-for-developers/';
+const OPENAI_GPT5_SYSTEM_CARD_URL = 'https://cdn.openai.com/gpt-5-system-card.pdf';
 const OPENAI_GPT52_URL = 'https://openai.com/index/introducing-gpt-5-2/';
 const OPENAI_GPT45_URL = 'https://openai.com/index/introducing-gpt-4-5/';
 const OPENAI_SIMPLEQA_URL = 'https://cdn.openai.com/papers/simpleqa.pdf';
@@ -139,6 +140,15 @@ export const VERIFIED_BENCHMARK_SCORE_EVIDENCE: readonly VerifiedBenchmarkScoreE
     evidenceNote: 'OpenAI GPT-5 developer launch reports SWE-bench Verified as 74.9.',
   },
   {
+    modelId: 'gpt-5',
+    benchmarkId: 'simpleqa',
+    score: 55.0,
+    source: 'OpenAI',
+    sourceUrl: OPENAI_GPT5_SYSTEM_CARD_URL,
+    measuredAt: '2025-08-07',
+    evidenceNote: 'OpenAI GPT-5 system card reports gpt-5-thinking SimpleQA accuracy without web access as 0.55.',
+  },
+  {
     modelId: 'o3',
     benchmarkId: 'aime-2025',
     score: 88.9,
@@ -164,6 +174,15 @@ export const VERIFIED_BENCHMARK_SCORE_EVIDENCE: readonly VerifiedBenchmarkScoreE
     sourceUrl: OPENAI_GPT5_URL,
     measuredAt: '2025-08-07',
     evidenceNote: 'OpenAI GPT-5 benchmark table reports o3 high SWE-bench Verified as 69.1.',
+  },
+  {
+    modelId: 'o3',
+    benchmarkId: 'simpleqa',
+    score: 54.0,
+    source: 'OpenAI',
+    sourceUrl: OPENAI_GPT5_SYSTEM_CARD_URL,
+    measuredAt: '2025-08-07',
+    evidenceNote: 'OpenAI GPT-5 system card reports OpenAI o3 SimpleQA accuracy without web access as 0.54.',
   },
   {
     modelId: 'o4-mini',
@@ -335,7 +354,7 @@ const unresolvedByBenchmark: Record<string, { models: string[]; reason: string }
     reason: 'No exact official MMMU-Pro result matching the cached value was found; published variants use different values or settings.',
   },
   simpleqa: {
-    models: ['claude-opus-4', 'claude-sonnet-4', 'gpt-5', 'gpt-5.2', 'o3'],
+    models: ['claude-opus-4', 'claude-sonnet-4', 'gpt-5.2'],
     reason: 'No exact official SimpleQA result matching the cached score was found.',
   },
   'tau-bench': {
@@ -365,10 +384,12 @@ export const VERIFIED_LABEL_ONLY_REMEDIATION_KEYS = new Set([
   'phi-4-reasoning:aime-2025',
   'qwen-qwq-32b:aime-2025',
   'gpt-5.2:mmmu-pro',
+  'gpt-5:simpleqa',
   'gemini-2.5-pro:simpleqa',
   'gpt-4.5:simpleqa',
   'gpt-4o:simpleqa',
   'llama-4-maverick:mgsm',
+  'o3:simpleqa',
 ]);
 
 export function benchmarkScoreKey(modelId: string, benchmarkId: string): string {
