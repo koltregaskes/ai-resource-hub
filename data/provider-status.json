@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T08:31:25.469Z",
+  "generatedAt": "2026-07-30T09:38:58.272Z",
   "providers": [
     {
       "id": "anthropic",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T08:31:24.271Z",
+      "lastCheckedAt": "2026-07-30T09:38:56.939Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -50,10 +50,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-07-30T05:57:43.524Z",
-          "updatedAt": "2026-07-30T08:06:25.223Z",
+          "updatedAt": "2026-07-30T08:33:35.770Z",
           "resolvedAt": null,
           "url": "https://stspg.io/c0fmy7628y3w",
-          "summary": "As of 8:05 UTC / 1:05 PT, Sonnet 5 errors are back to baseline, but we're seeing an increased error rate on Fable 5."
+          "summary": "As of 01:33 PT / 08:33 UTC we are back to errors across all models."
         }
       ],
       "recentIncidents": [
@@ -63,10 +63,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-07-30T05:57:43.524Z",
-          "updatedAt": "2026-07-30T08:06:25.223Z",
+          "updatedAt": "2026-07-30T08:33:35.770Z",
           "resolvedAt": null,
           "url": "https://stspg.io/c0fmy7628y3w",
-          "summary": "As of 8:05 UTC / 1:05 PT, Sonnet 5 errors are back to baseline, but we're seeing an increased error rate on Fable 5."
+          "summary": "As of 01:33 PT / 08:33 UTC we are back to errors across all models."
         },
         {
           "id": "q2kg8n613kr3",
@@ -114,7 +114,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T08:31:24.432Z",
+      "lastCheckedAt": "2026-07-30T09:38:57.310Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -134,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T08:31:25.069Z",
+      "lastCheckedAt": "2026-07-30T09:38:57.805Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -154,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T08:31:25.443Z",
+      "lastCheckedAt": "2026-07-30T09:38:58.267Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -219,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T08:31:24.313Z",
+      "lastCheckedAt": "2026-07-30T09:38:56.946Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -251,7 +251,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T08:31:24.345Z",
+      "lastCheckedAt": "2026-07-30T09:38:56.961Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -337,7 +337,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-07-30T08:31:25.463Z",
+      "lastCheckedAt": "2026-07-30T09:38:58.248Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -406,7 +406,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
