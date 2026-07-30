@@ -6,6 +6,7 @@ import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './front
 import { getAiResourceHubNewsRoutingDiagnostics } from '../src/data/news-routing';
 import { isPubliclyVerifiedModel } from '../src/data/model-verification';
 import { getRecurringEvents } from '../src/data/research-intel';
+import { getBenchmarkScores } from '../src/db/pg-cache';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
 import {
   getBenchmarkProvenanceGateFailures,
@@ -127,6 +128,7 @@ function main() {
   const cacheModels = loadJson<CacheModel>('models').filter(isPubliclyVerifiedModel);
   const cacheProviders = loadJson<Record<string, unknown>>('providers');
   const cacheBenchmarkScores = loadJson<CacheBenchmarkScore>('benchmark_scores');
+  const publicBenchmarkScores = getBenchmarkScores();
   const cacheBenchmarkDefinitions = loadJson<CacheBenchmarkDefinition>('benchmarks');
   const cacheNews = loadJson<CacheNews>('news');
   const cacheGlossary = loadJson<Record<string, unknown>>('glossary');
@@ -173,7 +175,18 @@ function main() {
     cacheBenchmarkScores,
     cacheBenchmarkDefinitions,
   );
-  failures.push(...getBenchmarkProvenanceGateFailures(benchmarkProvenance));
+  const publicBenchmarkProvenance = summariseBenchmarkProvenance(
+    publicBenchmarkScores,
+    cacheBenchmarkDefinitions,
+  );
+  failures.push(...getBenchmarkProvenanceGateFailures(publicBenchmarkProvenance));
+
+  if (publicBenchmarkScores.length !== benchmarkProvenance.rankable) {
+    failures.push(
+      `Public benchmark selector drift: rendered=${publicBenchmarkScores.length}, `
+      + `policy-rankable=${benchmarkProvenance.rankable}.`,
+    );
+  }
 
   if (cacheGlossary.length === 0) {
     failures.push('Glossary cache contains zero records.');
@@ -305,6 +318,13 @@ function main() {
   // coupling froze the whole site refresh when news routing dried up.
   const warnings: string[] = [];
 
+  if (benchmarkProvenance.unrankable > 0) {
+    warnings.push(
+      `Benchmark quarantine retains ${benchmarkProvenance.unrankable}/${benchmarkProvenance.total} `
+      + 'raw rows for source/date remediation; none are eligible for public ranking.',
+    );
+  }
+
   const latestEventUpdate = cacheEvents
     .map((event) => event.updated_at ? Date.parse(event.updated_at) : NaN)
     .filter(Number.isFinite)
@@ -333,8 +353,8 @@ function main() {
   console.log(`  SQLite source: ${dbAvailable ? dbPath : 'not present; pg-cache is source of truth'}`);
   console.log(`  Providers: ${cacheProviders.length}/${dbCounts.providers}`);
   console.log(`  Models: ${cacheModels.length}/${dbCounts.models}`);
-  console.log(`  Benchmark scores: ${cacheBenchmarkScores.length}/${dbCounts.benchmarkScores}`);
-  console.log(`  Benchmark provenance: ${benchmarkProvenance.rankable}/${benchmarkProvenance.total} rankable`);
+  console.log(`  Benchmark scores: raw=${cacheBenchmarkScores.length}/${dbCounts.benchmarkScores}, public=${publicBenchmarkScores.length}`);
+  console.log(`  Benchmark provenance: ${benchmarkProvenance.rankable}/${benchmarkProvenance.total} rankable, ${benchmarkProvenance.unrankable} quarantined`);
   console.log(`    URL-backed / inherited / label-only / missing: ${benchmarkProvenance.urlBacked} / ${benchmarkProvenance.inheritedTraceable} / ${benchmarkProvenance.labelOnly} / ${benchmarkProvenance.missing}`);
   console.log(`    Current / stale / undated / invalid / future: ${benchmarkProvenance.current} / ${benchmarkProvenance.stale} / ${benchmarkProvenance.undated} / ${benchmarkProvenance.invalidDate} / ${benchmarkProvenance.futureDated}`);
   console.log(`  News items: ${cacheNews.length}`);
@@ -364,7 +384,7 @@ function main() {
     return;
   }
 
-  console.log('\nOK publish cache, public exports, benchmark provenance, status snapshot, and routing checks passed');
+  console.log('\nOK publish cache, public exports, rankable-only benchmark presentation, status snapshot, and routing checks passed');
 }
 
 main();

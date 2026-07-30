@@ -11,6 +11,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { getRenderableCliTools } from '../data/cli-tools';
 import { isPubliclyVerifiedModel } from '../data/model-verification';
+import { assessBenchmarkProvenance } from '../data/benchmark-provenance';
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'pg-cache');
 
@@ -381,7 +382,7 @@ export function getAllBenchmarkIds(): string[] {
   return getBenchmarks().map(b => b.id);
 }
 
-export function getBenchmarkScores(): CachedBenchmarkScore[] {
+export function getAllBenchmarkScores(): CachedBenchmarkScore[] {
   const models = new Map(getModels().map((model) => [model.id, model]));
   return loadCache<CachedBenchmarkScore>('benchmark_scores').map((score) => ({
     ...score,
@@ -390,6 +391,19 @@ export function getBenchmarkScores(): CachedBenchmarkScore[] {
     measured_at: score.measured_at ?? null,
     updated_at: score.updated_at ?? null,
   }));
+}
+
+/**
+ * Public benchmark consumers must only see evidence that is both row-level
+ * source-backed and current under the release policy. The raw cache is retained
+ * for remediation through getAllBenchmarkScores(), but it must never silently
+ * enter a leaderboard, comparison, model page or composite score.
+ */
+export function getBenchmarkScores(): CachedBenchmarkScore[] {
+  const benchmarks = new Map(getBenchmarks().map((benchmark) => [benchmark.id, benchmark]));
+  return getAllBenchmarkScores().filter((score) => (
+    assessBenchmarkProvenance(score, benchmarks.get(score.benchmark_id)).rankable
+  ));
 }
 
 export function getModelBenchmarks(modelId: string): CachedBenchmarkScore[] {

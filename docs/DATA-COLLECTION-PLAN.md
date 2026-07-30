@@ -60,8 +60,11 @@ Important rule:
 - a score is traceable only when it has its own public source URL or can explicitly inherit the owning benchmark's public URL
 - only a current row-level source URL makes a score rankable; inherited benchmark URLs are traceable context for provisional display, not evidence of the exact result
 - a source label by itself is not traceable evidence and must not make a score rankable
+- a generic product, chat or homepage URL is a discovery link, not row-level evidence for an exact score
 - `measured_at` controls evidence age; a cache refresh must not make an old measurement appear current by rewriting `updated_at`
 - benchmark measurements older than 365 days, missing a measurement date, carrying an invalid date, or implausibly future-dated are not rankable until reviewed or refreshed
+- the raw cache may retain unresolved or stale rows for remediation, but every public leaderboard, comparison, model page, reliability calculation and composite score must consume the rankable-only selector
+- quarantined rows must be counted in release evidence and must never be promoted by weakening freshness or provenance rules
 
 ## 3. Speed And Runtime
 

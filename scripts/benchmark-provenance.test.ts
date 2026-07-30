@@ -58,6 +58,24 @@ test('a generic source label without any public URL is not rankable', () => {
   assert.match(result.reasons.join(' '), /no row-level or benchmark-level public URL/i);
 });
 
+test('a generic LMSYS chat entry point is not row-level score evidence', () => {
+  const assessment = assessBenchmarkProvenance(
+    {
+      model_id: 'example-model',
+      benchmark_id: 'chatbot-arena-elo',
+      source: 'LMSYS',
+      source_url: 'https://chat.lmsys.org',
+      measured_at: '2026-02-15',
+    },
+    { id: 'chatbot-arena-elo', url: 'https://lmarena.ai/leaderboard' },
+    { now: new Date('2026-07-30T00:00:00Z') },
+  );
+
+  assert.equal(assessment.traceability, 'inherited-traceable');
+  assert.equal(assessment.rankable, false);
+  assert.match(assessment.reasons.join(' '), /no row-level public source URL/i);
+});
+
 test('a stale measurement is not rescued by a fresh cache updated_at timestamp', () => {
   const result = assessBenchmarkProvenance(
     score({
