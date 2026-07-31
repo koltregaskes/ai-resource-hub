@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-c5ad624a6ffb30ef2698",
+    "title": "Disrupting a Criminal Scam Operation",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+    "source": "OpenAI",
+    "summary": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-04T00:00:00.000Z",
+    "discovered_at": "2026-07-31 17:50:18"
+  },
+  {
+    "id": "news-8f9218ebc14cb91dee77",
+    "title": "Sam Altman isn&#8217;t the only one who wants to pump the brakes on AI",
+    "url": "https://techcrunch.com/video/sam-altman-isnt-the-only-one-who-wants-to-pump-the-brakes-on-ai/",
+    "source": "TechCrunch",
+    "summary": "After years of pushing full speed ahead on AI,&#160;OpenAI CEO&#160;Sam Altman says&#160;maybe it’s&#160;time for the AI industry to “pace” itself. The comments came&#160;just days after one of OpenAI&#8217;s own models broke out of its test environment and got tangled up in&#160;a breach at Hugging Face&#160;—&#160;t…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T17:26:32.000Z",
+    "discovered_at": "2026-07-31 17:50:19"
+  },
+  {
+    "id": "news-43fb41d572518ac7e731",
+    "title": "Snapchat no longer rewards fully AI-generated Spotlight content",
+    "url": "https://techcrunch.com/2026/07/31/snapchat-no-longer-rewards-fully-ai-generated-spotlight-content/",
+    "source": "TechCrunch",
+    "summary": "Snapchat has adjusted its recommendation systems to ensure that only videos created by real people are eligible for Spotlight recommendations, taking a stance against AI slop.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T16:49:08.000Z",
+    "discovered_at": "2026-07-31 17:50:19"
+  },
+  {
+    "id": "news-27e1d6290bc355defe1b",
+    "title": "Siri AI could come with a paywall for power users",
+    "url": "https://techcrunch.com/2026/07/31/siri-ai-could-come-with-a-paywall-for-power-users/",
+    "source": "TechCrunch",
+    "summary": "Apple CEO Tim Cook envisions users being able to buy more compute for Siri AI via Apple's existing iCloud+ subscriptions.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T16:08:18.000Z",
+    "discovered_at": "2026-07-31 17:50:19"
+  },
+  {
     "id": "news-2508e3dc7aad0e139db5",
     "title": "SpaceX won’t remove all of xAI’s unpermitted turbines for another year",
     "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:16:17.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-6e145b017b5af3277f13",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-b86dc435d64acf26bfa3",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-d240f02eb7f1d8511858",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T14:47:11.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-ee70bff51f977b8bdd8b",
@@ -57,7 +105,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T14:03:04.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
+  },
+  {
+    "id": "news-e9b5c38dc7f2da2cd093",
+    "title": "AI labs want to pump the brakes, but Amazon and SpaceX are still blasting off",
+    "url": "https://techcrunch.com/podcast/ai-labs-want-to-pump-the-brakes-but-amazon-and-spacex-are-still-blasting-off/",
+    "source": "TechCrunch",
+    "summary": "After years of pushing full speed ahead on AI,&#160;OpenAI CEO&#160;Sam Altman says&#160;maybe it’s&#160;time for the AI industry to “pace” itself. The comments came&#160;just days after one of OpenAI&#8217;s own models broke out of its test environment and got tangled up in&#160;a breach at Hugging Face&#160;—&#160;t…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T14:00:00.000Z",
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-6da874292559b71ddbb8",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T13:41:17.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-4879819590782b03bb41",
@@ -81,19 +141,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T07:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-16030aac77d6773b9db6",
     "title": "Anthropic says its own AI models breached three companies during security tests",
     "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
     "source": "TechCrunch",
-    "summary": "After OpenAI's models broke into Hugging Face, Anthropic checked its own history and found three similar incidents",
+    "summary": "After OpenAI's models broke into Hugging Face, Anthropic checked its own history and found three similar incidents.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T01:06:54.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-fb1a03f293a244a4afe7",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T23:25:58.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-bada25387033075264e9",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T23:08:58.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-0043e5cf7a4e561c3df4",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T22:41:41.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-ee384203db2a6b56c78d",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T22:29:45.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-2d9d29aee7d37c65deea",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T20:46:25.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-a4b674c64517ef6f89f9",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T20:26:38.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-8cf237c212534c0455db",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T19:44:16.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-e340cb73f930642dbf96",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T18:57:58.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-b5180026e6d189250e49",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T18:43:26.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-8c108a2fb2639f79c650",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T18:05:21.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-286e4f22143861c4d6b1",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T17:18:45.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-ec12e93eaf42f03db497",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T16:33:32.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-25e60d94966027598682",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T16:09:42.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-13793f9f324905954398",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:41:16.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-acd1de3b41db29fc5734",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:19:15.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-0d0a337bbf622224bfb5",
@@ -285,43 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
-  },
-  {
-    "id": "news-daaae50bac373813a82c",
-    "title": "In the Hugging Face breach, OpenAI&#8217;s hacker was noisy and fast — but not unstoppable",
-    "url": "https://techcrunch.com/2026/07/30/in-the-hugging-face-breach-openais-hacker-was-noisy-and-fast-but-not-unstoppable/",
-    "source": "TechCrunch",
-    "summary": "Cybersecurity experts told TechCrunch that one of the biggest lessons to be taken from the OpenAI hack against Hugging Face has nothing to do with AI, but traditional cybersecurity defense.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-30T14:48:32.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
-  },
-  {
-    "id": "news-36667e90d9e50a42010b",
-    "title": "TechCrunch Disrupt 2026’s biggest stage features leaders from Amazon, Replit, Tether, with much more to come",
-    "url": "https://techcrunch.com/2026/07/30/techcrunch-disrupt-2026s-biggest-stage-features-leaders-from-amazon-replit-tether-with-much-more-to-come/",
-    "source": "TechCrunch",
-    "summary": "The Disrupt Stage is where many of the biggest conversations in technology happen, with a legacy that stretches back for more than a decade.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-30T14:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
-  },
-  {
-    "id": "news-a1b11e2b2bb9c97b9f82",
-    "title": "Dili raises $21.7M to bring AI compliance to the infrastructure boom",
-    "url": "https://techcrunch.com/2026/07/30/dili-raises-15-million-to-bring-ai-compliance-to-the-infrastructure-boom/",
-    "source": "TechCrunch",
-    "summary": "The Series A was led by Khosla Ventures, with participation from Allianz, Rebel Fund, Brick and Mortar Ventures’ Darren Bechtel, and Y Combinator’s Garry Tan.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-30T13:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-fc362ba711f59d44f4f1",
@@ -333,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T10:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
-  },
-  {
-    "id": "news-df34ed215123aaa01581",
-    "title": "Microsoft is openly competing with OpenAI, Anthropic more than ever",
-    "url": "https://techcrunch.com/2026/07/29/microsoft-is-openly-competing-with-openai-anthropic-more-than-ever/",
-    "source": "TechCrunch",
-    "summary": "Microsoft pitched its own homegrown AI models, harnesses, and even a Mythos competitor on Wednesday, telling Wall Street it plans for continued growth.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-30T00:21:06.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-9146ff1756af0f60b5f4",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T00:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-0434773f642a30262ab3",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T22:17:38.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-c5567c95ea9045955aa2",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T21:48:07.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-5fe08d38c090003b3848",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T21:06:52.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-cc8e132c619995d199d3",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T15:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-14fd05ad34f9923ee3b2",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T10:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-6d964f10c3337bbc89e9",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T00:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-df22037e3e0ff3eac5f1",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T17:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-f143efbfe201f0407b0e",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T03:30:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-130e23c4bd2f87cbb00e",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-ce627deb992812dab288",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T00:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -621,19 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
-  },
-  {
-    "id": "news-20b0eb2d5c1499740c7e",
-    "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-    "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-    "source": "OpenAI",
-    "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-31 15:27:50"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:18"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -753,18 +753,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
-  },
-  {
-    "id": "news-6fdddf52a2a999da807f",
-    "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
-    "url": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit/",
-    "source": "Google",
-    "summary": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-31 15:27:49"
+    "discovered_at": "2026-07-31 17:50:19"
   }
 ]
