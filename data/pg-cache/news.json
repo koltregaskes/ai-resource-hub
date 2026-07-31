@@ -1,5 +1,17 @@
 [
   {
+    "id": "news-16030aac77d6773b9db6",
+    "title": "Anthropic says its own AI models breached three companies during security tests",
+    "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
+    "source": "TechCrunch",
+    "summary": "After OpenAI's models broke into Hugging Face, Anthropic checked its own history and found three similar incidents",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T01:06:54.000Z",
+    "discovered_at": "2026-07-31 04:36:03"
+  },
+  {
     "id": "news-fb1a03f293a244a4afe7",
     "title": "AI hedge fund Situational Awareness may have sold its public portfolio, but it still has its Anthropic shares",
     "url": "https://techcrunch.com/2026/07/30/ai-hedge-fund-situational-awareness-may-have-sold-its-public-portfolio-but-it-still-has-its-anthropic-shares/",
@@ -9,7 +21,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T23:25:58.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
+  },
+  {
+    "id": "news-bada25387033075264e9",
+    "title": "Reddit reports a solid quarter but shows signs of AI&#8217;s impact",
+    "url": "https://techcrunch.com/2026/07/30/reddit-reports-a-solid-quarter-but-shows-signs-of-ais-impact/",
+    "source": "TechCrunch",
+    "summary": "Reddit's financial situation is looking good but uncertainty about its relationship to Google and the new AI-ified web are stirring market concerns.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T23:08:58.000Z",
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-0043e5cf7a4e561c3df4",
@@ -21,19 +45,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T22:41:41.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
+  },
+  {
+    "id": "news-ee384203db2a6b56c78d",
+    "title": "Tim Cook hints at iCloud Plus tier for AI power users",
+    "url": "https://www.theverge.com/tech/973552/apple-ceo-tim-cook-icloud-plus-ai",
+    "source": "The Verge",
+    "summary": "Apple may allow users to pay to increase their AI usage limits. During an earnings call on Thursday, Apple CEO Tim Cook said that he believes people will want to use Apple Intelligence and the upcoming Siri AI \"a lot,\" adding that \"we will have some kind of upgrade possibilities on iCloud Plus where people [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T22:29:45.000Z",
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-2d9d29aee7d37c65deea",
     "title": "The loss of Situational Awareness",
     "url": "https://www.theverge.com/ai-artificial-intelligence/973467/ai-bet-situational-awareness-oops-stonks",
     "source": "The Verge",
-    "summary": "I am not by any means an expert at finance but I think I do now have some advice for people who are: Do not name your hedge fund anything that will be hilarious if it blows up. Don't use a name like \"Long-Term Capital Management,\" or \"Amaranth Advisors\" (named for the floral symbol for [&#8230;]",
+    "summary": "I am not by any means an expert at finance but I think I do now have some advice for people who are: Do not name your hedge fund anything that will be hilarious if it blows up. Don't use a name like \"Long-Term Capital Management\" or \"Amaranth Advisors\" (named for the floral symbol for [&#8230;]",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T20:46:25.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-a4b674c64517ef6f89f9",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T20:26:38.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-8cf237c212534c0455db",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T19:44:16.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-e340cb73f930642dbf96",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T18:57:58.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-b5180026e6d189250e49",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T18:43:26.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-8c108a2fb2639f79c650",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T18:05:21.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-286e4f22143861c4d6b1",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T17:18:45.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-ec12e93eaf42f03db497",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T16:33:32.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-25e60d94966027598682",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T16:09:42.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-13793f9f324905954398",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:41:16.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-acd1de3b41db29fc5734",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:19:15.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-0d0a337bbf622224bfb5",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T15:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-daaae50bac373813a82c",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T14:48:32.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-36667e90d9e50a42010b",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T14:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-a1b11e2b2bb9c97b9f82",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T13:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-fc362ba711f59d44f4f1",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T10:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-df34ed215123aaa01581",
@@ -225,7 +261,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T00:21:06.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
+  },
+  {
+    "id": "news-9146ff1756af0f60b5f4",
+    "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
+    "url": "https://openai.com/index/avatarin",
+    "source": "OpenAI",
+    "summary": "avatarin uses OpenAI’s GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support. In two weeks, 30,000 people used the agent and 92% of survey responses were positive.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T00:00:00.000Z",
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-ad9c3055b763ac156572",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T23:00:11.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-2413ef2608780b2574a2",
@@ -249,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T22:46:03.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
-  },
-  {
-    "id": "news-39de907ded3d528e78e5",
-    "title": "Zuckerberg says Meta&#8217;s enterprise AI opportunity extends beyond agents",
-    "url": "https://techcrunch.com/2026/07/29/zuckerberg-says-metas-enterprise-ai-opportunity-extends-beyond-agents/",
-    "source": "TechCrunch",
-    "summary": "On the company’s second-quarter earnings call Wednesday, CEO Mark Zuckerberg said Meta sees a “large enterprise opportunity” spanning AI agents, APIs, compute, and internal software.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T22:23:12.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-0434773f642a30262ab3",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T22:17:38.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-c5567c95ea9045955aa2",
@@ -285,19 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T21:48:07.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
-  },
-  {
-    "id": "news-ede83952feba6e648c18",
-    "title": "Discover what&#8217;s next for AI, from the SaaS reckoning to the agent security gap, at TechCrunch Disrupt 2026",
-    "url": "https://techcrunch.com/2026/07/29/discover-whats-next-for-ai-from-the-saas-reckoning-to-the-agent-security-gap-at-techcrunch-disrupt-2026/",
-    "source": "TechCrunch",
-    "summary": "At TechCrunch Disrupt 2026, the AI Stage is back to dig into the single hottest topic in the community for the past few years, presented by Google for Startups.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T21:16:39.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-5fe08d38c090003b3848",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T21:06:52.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-453862f893b65c09d490",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T18:15:02.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-cc8e132c619995d199d3",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T15:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-2faf95088d1e8bf146a2",
@@ -345,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T12:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
-  },
-  {
-    "id": "news-e8035148749caccade22",
-    "title": "OpenAI’s rogue AI agent didn’t stop at hacking Hugging Face",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face",
-    "source": "The Verge",
-    "summary": "The AI agent that escaped from OpenAI and hacked developer platform Hugging Face attacked other companies as well, OpenAI revealed on Tuesday. The update substantially widens the scope of an already concerning incident, which has alarmed industry insiders and fueled growing calls for stronger oversight on frontier AI…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T11:54:29.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-14fd05ad34f9923ee3b2",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T10:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-6d964f10c3337bbc89e9",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T00:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-df22037e3e0ff3eac5f1",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T17:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-f143efbfe201f0407b0e",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T03:30:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-130e23c4bd2f87cbb00e",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-ce627deb992812dab288",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T00:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-d42362617c6408798d23",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-20b0eb2d5c1499740c7e",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-40359dbf5a246645eb9b",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T00:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-d4ff9ec891b78868c06a",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-3ebda52fc80ebe33165f",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -645,19 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
-  },
-  {
-    "id": "news-8fe39edff791751de0c2",
-    "title": "Why teens deserve access to safe AI",
-    "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
-    "source": "OpenAI",
-    "summary": "Learn how OpenAI is making ChatGPT safer for teens with age-appropriate protections, learning tools, parental controls, and expert partnerships.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-31 00:14:02"
+    "discovered_at": "2026-07-31 04:36:03"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-23883e915ab2f2e8753e",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   },
   {
     "id": "news-6fdddf52a2a999da807f",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-31 00:14:01"
+    "discovered_at": "2026-07-31 04:36:02"
   }
 ]
