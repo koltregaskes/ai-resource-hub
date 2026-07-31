@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-31T17:50:28.388Z",
+  "generatedAt": "2026-07-31T19:49:16.702Z",
   "overview": {
-    "generatedAt": "2026-07-31T17:50:28.405Z",
+    "generatedAt": "2026-07-31T19:49:16.718Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
@@ -114,7 +114,7 @@
         "Claude Sonnet 4.5",
         "Claude 3.5 Haiku",
         "Claude 3.7 Sonnet",
-        "Claude Haiku 4.5 (batch)",
+        "Claude Haiku 4.5",
         "Claude 3.5 Sonnet",
         "Claude 3 Opus",
         "Claude Fable 5",
