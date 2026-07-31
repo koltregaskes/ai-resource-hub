@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 30 Jul 2026, 22:17 UTC |
+| Generated | 31 Jul 2026, 00:14 UTC |
 | Providers tracked | 40 |
 | Public models | 318 |
 | Active models | 110 |
@@ -16,10 +16,10 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 64 |
-| Release-desk entries | 56 |
+| Release-desk entries | 55 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 30 Jul 2026, 22:17 UTC |
+| Latest visible refresh | 31 Jul 2026, 00:14 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | Qwen3.7 Flash (27 Jul 2026) |
 
