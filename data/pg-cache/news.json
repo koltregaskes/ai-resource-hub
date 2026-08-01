@@ -1,147 +1,435 @@
 [
   {
-    "id": "news-df34ed215123aaa01581",
-    "title": "Microsoft is openly competing with OpenAI, Anthropic more than ever",
-    "url": "https://techcrunch.com/2026/07/29/microsoft-is-openly-competing-with-openai-anthropic-more-than-ever/",
+    "id": "news-6d58997b466ca59f729e",
+    "title": "Ten advances in mathematics and theoretical computer science",
+    "url": "https://openai.com/index/ten-advances-in-mathematics",
+    "source": "OpenAI",
+    "summary": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-01T00:00:00.000Z",
+    "discovered_at": "2026-08-01 15:15:32"
+  },
+  {
+    "id": "news-ec77bd47dbb96df8bae2",
+    "title": "OpenAI reportedly finds evidence that more of its agents ran amok",
+    "url": "https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/",
     "source": "TechCrunch",
-    "summary": "Microsoft pitched its own homegrown AI models, harnesses, and even a Mythos competitor on Wednesday, telling Wall Street it plans for continued growth.",
+    "summary": "OpenAI has reportedly found evidence of additional agent misbehavior as it looks into the incident that occurred with Hugging Face.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-30T00:21:06.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "published_at": "2026-07-31T22:47:26.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
-    "id": "news-ad9c3055b763ac156572",
-    "title": "Mark Zuckerberg predicts that billions of people will have personal AI agents in five years",
-    "url": "https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/",
+    "id": "news-9d803b4958508a6d011c",
+    "title": "India is starting to pay for apps, not just download them",
+    "url": "https://techcrunch.com/2026/07/31/india-is-starting-to-pay-for-apps-not-just-download-them/",
     "source": "TechCrunch",
-    "summary": "As Meta pours billions into AI infrastructure and agents, Zuckerberg is working to convince investors that the payoff will be worth the price.",
+    "summary": "India's app market generated a record $345 million in Q2.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-29T23:00:11.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "published_at": "2026-07-31T21:07:45.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
-    "id": "news-2413ef2608780b2574a2",
-    "title": "Microsoft logs $3.2B from Anthropic investment, but OpenAI was a mixed bag",
-    "url": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
-    "source": "TechCrunch",
-    "summary": "When Microsoft reported killer fourth-quarter earnings for its fiscal 2026 year (which ended June 30), it tucked in an interesting little tidbit about how its investments in the two biggest, and competing, AI labs are doing.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T22:46:03.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-39de907ded3d528e78e5",
-    "title": "Zuckerberg says Meta&#8217;s enterprise AI opportunity extends beyond agents",
-    "url": "https://techcrunch.com/2026/07/29/zuckerberg-says-metas-enterprise-ai-opportunity-extends-beyond-agents/",
-    "source": "TechCrunch",
-    "summary": "On the company’s second-quarter earnings call Wednesday, CEO Mark Zuckerberg said Meta sees a “large enterprise opportunity” spanning AI agents, APIs, compute, and internal software.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T22:23:12.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-1401ad6c55e0264d2ac0",
-    "title": "Mythos uncovers crypto weaknesses that went unknown for years",
-    "url": "https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/",
+    "id": "news-2db26e244b543f4bda5a",
+    "title": "Claude published malicious code to the Internet and attacked 3 real companies",
+    "url": "https://arstechnica.com/security/2026/07/likely-illegally-claude-gained-access-to-3-networks-will-anthropic-be-held-to-account/",
     "source": "Ars Technica",
-    "summary": "Separating the chaff from the wheat in Anthropic results is hard. We take a stab anyway.",
+    "summary": "Had the hacks used conventional methods, someone would likely go to prison.",
     "category": "research",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-29T22:07:06.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
+    "published_at": "2026-07-31T20:39:14.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
-    "id": "news-ede83952feba6e648c18",
-    "title": "Discover what&#8217;s next for AI, from the SaaS reckoning to the agent security gap, at TechCrunch Disrupt 2026",
-    "url": "https://techcrunch.com/2026/07/29/discover-whats-next-for-ai-from-the-saas-reckoning-to-the-agent-security-gap-at-techcrunch-disrupt-2026/",
+    "id": "news-6422ae0f316dfcb1e5ef",
+    "title": "Google nixes its Earth AI feature one day after launch, amid criticism it would spread misinformation",
+    "url": "https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/",
     "source": "TechCrunch",
-    "summary": "At TechCrunch Disrupt 2026, the AI Stage is back to dig into the single hottest topic in the community for the past few years, presented by Google for Startups.",
+    "summary": "A tool that allowed anyone to generate fake AI-generated imagery and superimpose it over real Google Earth maps quickly spurred backlash.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-29T21:16:39.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "published_at": "2026-07-31T19:47:28.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
-    "id": "news-520a785ee3962a988b02",
-    "title": "Thinking Machines co-founder Lilian Weng left the company citing health reasons, then joined OpenAI",
-    "url": "https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/",
-    "source": "TechCrunch",
-    "summary": "Weng previously served as the VP of AI Safety Research at OpenAI.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T21:07:48.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-5fe08d38c090003b3848",
-    "title": "xAI’s last-minute scramble to stop Minnesota’s anti-nudification app law",
-    "url": "https://www.theverge.com/policy/972850/xai-grok-minnesota-nudification-lawsuit",
+    "id": "news-abe78d62759cd3b39a43",
+    "title": "Google Earth&#8217;s AI deepfake tool only lasted one day",
+    "url": "https://www.theverge.com/tech/973943/google-earth-ai-image-generation-deepfake-tool",
     "source": "The Verge",
-    "summary": "xAI is suing Minnesota Attorney General Keith Ellison over a law passed back in May that broadly targets \"nudification\" apps, claiming that the statute's punitive provisions leave the company with \"no practical choice but to restrict Grok Imagine's image-editing features in various ways.\" The law, the company argues,…",
+    "summary": "Google has shut down Google Earth feature it launched Thursday that allowed users to edit satellite images with text prompts using AI. The tool essentially let users create AI deepfakes of the real world using text prompts; Digital Digging's Henk van Ess, for example, intentionally generated images adding things like…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-29T21:06:52.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
+    "published_at": "2026-07-31T19:13:29.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
-    "id": "news-a657cafa7eea65b30bcc",
-    "title": "The Hugging Face AI break-in, as told through an increasingly committed bear metaphor",
-    "url": "https://techcrunch.com/2026/07/29/the-hugging-face-ai-break-in-as-told-through-an-increasingly-committed-bear-metaphor/",
+    "id": "news-8f9218ebc14cb91dee77",
+    "title": "Sam Altman isn&#8217;t the only one who wants to pump the brakes on AI",
+    "url": "https://techcrunch.com/video/sam-altman-isnt-the-only-one-who-wants-to-pump-the-brakes-on-ai/",
     "source": "TechCrunch",
-    "summary": "Another way to think about the whole thing is to picture a bear at a campsite. (Really, we are going there.)",
+    "summary": "After years of pushing full speed ahead on AI,&#160;OpenAI CEO&#160;Sam Altman says&#160;maybe it’s&#160;time for the AI industry to “pace” itself. The comments came&#160;just days after one of OpenAI&#8217;s own models broke out of its test environment and got tangled up in&#160;a breach at Hugging Face&#160;—&#160;t…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-29T19:44:49.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "published_at": "2026-07-31T17:26:32.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
-    "id": "news-1bd342b4b31f1dd84650",
-    "title": "Claude Opus 5 became downright ruthless when tasked with running a vending machine",
-    "url": "https://techcrunch.com/2026/07/29/claude-opus-5-became-downright-ruthless-when-tasked-with-running-a-vending-machine/",
-    "source": "TechCrunch",
-    "summary": "Andon Labs' latest vending machine simulation shows Opus 5 lied and colluded its way to become the best AI capitalist ever.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T18:45:27.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-453862f893b65c09d490",
-    "title": "OpenAI president says it&#8217;s &#8216;building a family of devices&#8217; for its AI chatbots",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/972709/openai-hardware-greg-brockman-interview",
+    "id": "news-cb8ef2d60e0e92966d2d",
+    "title": "Here’s the problem with putting an AI image generator in Google Earth",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/973764/google-earth-ai-satellite-images",
     "source": "The Verge",
-    "summary": "In an interview with our friend Joanna Stern on her YouTube channel, OpenAI president Greg Brockman said the company is working on a \"family of devices\" for interacting with its AI models. However, Brockman didn't confirm reports that one of those devices is a smart speaker OpenAI's rumored to be launching in 2027, or…",
+    "summary": "A text prompt was all it took to generate reality-warping images using Google Earth's satellite, aerial, and 3D imagery with a now-rolled back AI feature, like these images generated by Digital Digging's Henk van Ess that show \"refugees near the Mexican border\" and a bomb crater near a hospital in Gaza. Google initial…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-29T18:15:02.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
+    "published_at": "2026-07-31T17:05:46.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
-    "id": "news-b066f12120921c9f5fc7",
-    "title": "Hint, a new AI startup co-founded by Martha Stewart, offers an AI assistant for homeowners",
-    "url": "https://techcrunch.com/2026/07/29/hint-a-new-ai-startup-co-founded-by-martha-stewart-offers-an-ai-assistant-for-homeowners/",
+    "id": "news-43fb41d572518ac7e731",
+    "title": "Snapchat no longer rewards fully AI-generated Spotlight content",
+    "url": "https://techcrunch.com/2026/07/31/snapchat-no-longer-rewards-fully-ai-generated-spotlight-content/",
     "source": "TechCrunch",
-    "summary": "AI home management startup Hint, co-founded by Martha Stewart, wants to become an “AI for your home,” combining property records, maintenance schedules, home documents, and an AI assistant into a single app.",
+    "summary": "Snapchat has adjusted its recommendation systems to ensure that only videos created by real people are eligible for Spotlight recommendations, taking a stance against AI slop.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-07-29T15:35:09.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "published_at": "2026-07-31T16:49:08.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-e8b5e8d005e170b664f2",
+    "title": "The major labels propose rules to keep AI slop off the charts",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/973741/ai-music-major-record-labels-charts",
+    "source": "The Verge",
+    "summary": "Several record labels, including the big three - Universal Music Group, Sony Music, and Warner Music Group - have proposed rules regarding chart eligibility for AI songs. In short, they wouldn't be. The proposal goes quite a bit further than a labeling proposal put forth by the RIAA, the International Federation of th…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T16:36:48.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-27e1d6290bc355defe1b",
+    "title": "Siri AI could come with a paywall for power users",
+    "url": "https://techcrunch.com/2026/07/31/siri-ai-could-come-with-a-paywall-for-power-users/",
+    "source": "TechCrunch",
+    "summary": "Apple CEO Tim Cook envisions users being able to buy more compute for Siri AI via Apple's existing iCloud+ subscriptions.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T16:08:18.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-2508e3dc7aad0e139db5",
+    "title": "SpaceX won’t remove all of xAI’s unpermitted turbines for another year",
+    "url": "https://techcrunch.com/2026/07/31/spacex-wont-remove-all-of-xais-unpermitted-turbines-for-another-year/",
+    "source": "TechCrunch",
+    "summary": "SpaceX is building a new power plant for xAI's Colossus data centers, but it won't remove existing, unpermitted turbines for many more months.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T15:16:17.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-6e145b017b5af3277f13",
+    "title": "Building abundant intelligence",
+    "url": "https://openai.com/index/building-abundant-intelligence",
+    "source": "OpenAI",
+    "summary": "A full-stack approach to making advanced AI more capable, more affordable, and more widely useful.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T15:00:00.000Z",
+    "discovered_at": "2026-08-01 15:15:32"
+  },
+  {
+    "id": "news-b86dc435d64acf26bfa3",
+    "title": "Advancing responsible AI across Europe",
+    "url": "https://openai.com/index/advancing-responsible-ai-across-europe",
+    "source": "OpenAI",
+    "summary": "OpenAI shares how its safety, security, transparency, and provenance practices support responsible AI governance in Europe. The work will continue as the EU AI Act advances.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T15:00:00.000Z",
+    "discovered_at": "2026-08-01 15:15:32"
+  },
+  {
+    "id": "news-d240f02eb7f1d8511858",
+    "title": "Smallest.ai raises $13M to build ultra-fast voice AI that sounds genuinely human",
+    "url": "https://techcrunch.com/2026/07/31/smallest-ai-raises-13m-to-build-ultra-fast-voice-ai-that-sounds-genuinely-human/",
+    "source": "TechCrunch",
+    "summary": "The startup is building voice models designed to make AI phone calls pass the Turing test.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T14:47:11.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-ee70bff51f977b8bdd8b",
+    "title": "It’s time to panic about AI safety",
+    "url": "https://www.theverge.com/podcast/973668/ai-safety-openai-hugging-face-vergecast",
+    "source": "The Verge",
+    "summary": "When the phrase \"OpenAI hacked Hugging Face\" has more or less entered mainstream culture, you know we have an AI problem. This week, we learned more about exactly how OpenAI's agent broke out of a sandbox and autonomously traversed the web, including a bunch of other supposedly secure web services, all in the name of…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T14:03:04.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-e9b5c38dc7f2da2cd093",
+    "title": "AI labs want to pump the brakes, but Amazon and SpaceX are still blasting off",
+    "url": "https://techcrunch.com/podcast/ai-labs-want-to-pump-the-brakes-but-amazon-and-spacex-are-still-blasting-off/",
+    "source": "TechCrunch",
+    "summary": "After years of pushing full speed ahead on AI,&#160;OpenAI CEO&#160;Sam Altman says&#160;maybe it’s&#160;time for the AI industry to “pace” itself. The comments came&#160;just days after one of OpenAI&#8217;s own models broke out of its test environment and got tangled up in&#160;a breach at Hugging Face&#160;—&#160;t…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T14:00:00.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-6da874292559b71ddbb8",
+    "title": "Anthropic says Claude accidentally hacked real companies too",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests",
+    "source": "The Verge",
+    "summary": "Anthropic just realized several of its Claude AI models hacked into the systems of three different organizations during testing, acting on their own and without the company noticing. The revelation comes days after rival OpenAI said one of its own models had breached developer platform Hugging Face, adding to growing…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T13:41:17.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-4879819590782b03bb41",
+    "title": "Univé builds an AI-ready workforce",
+    "url": "https://openai.com/index/unive",
+    "source": "OpenAI",
+    "summary": "See how Univé built an AI-ready workforce with ChatGPT Enterprise by combining leadership, responsible governance, and employee-led innovation to transform work at scale.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T07:00:00.000Z",
+    "discovered_at": "2026-08-01 15:15:32"
+  },
+  {
+    "id": "news-16030aac77d6773b9db6",
+    "title": "Anthropic says its own AI models breached three companies during security tests",
+    "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
+    "source": "TechCrunch",
+    "summary": "After OpenAI's models broke into Hugging Face, Anthropic checked its own history and found three similar incidents.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T01:06:54.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-c5ad624a6ffb30ef2698",
+    "title": "Disrupting a Criminal Scam Operation",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+    "source": "OpenAI",
+    "summary": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-31T00:00:00.000Z",
+    "discovered_at": "2026-08-01 15:15:32"
+  },
+  {
+    "id": "news-fb1a03f293a244a4afe7",
+    "title": "AI hedge fund Situational Awareness may have sold its public portfolio, but it still has its Anthropic shares",
+    "url": "https://techcrunch.com/2026/07/30/ai-hedge-fund-situational-awareness-may-have-sold-its-public-portfolio-but-it-still-has-its-anthropic-shares/",
+    "source": "TechCrunch",
+    "summary": "The former OpenAI researcher’s fund was forced to unwind public equities after leveraged public bets plummeted. But he still has cards to play.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T23:25:58.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-bada25387033075264e9",
+    "title": "Reddit reports a solid quarter but shows signs of AI&#8217;s impact",
+    "url": "https://techcrunch.com/2026/07/30/reddit-reports-a-solid-quarter-but-shows-signs-of-ais-impact/",
+    "source": "TechCrunch",
+    "summary": "Reddit's financial situation is looking good but uncertainty about its relationship to Google and the new AI-ified web are stirring market concerns.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T23:08:58.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-0043e5cf7a4e561c3df4",
+    "title": "Investors love AI, as long as you’re a cloud host",
+    "url": "https://techcrunch.com/2026/07/30/investors-love-ai-as-long-as-youre-a-cloud-host/",
+    "source": "TechCrunch",
+    "summary": "Amazon isn't slowing down on data center spending — but investors don't seem to mind.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T22:41:41.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-ee384203db2a6b56c78d",
+    "title": "Tim Cook hints at iCloud Plus tier for AI power users",
+    "url": "https://www.theverge.com/tech/973552/apple-ceo-tim-cook-icloud-plus-ai",
+    "source": "The Verge",
+    "summary": "Apple may allow users to pay to increase their AI usage limits. During an earnings call on Thursday, Apple CEO Tim Cook said that he believes people will want to use Apple Intelligence and the upcoming Siri AI \"a lot,\" adding that \"we will have some kind of upgrade possibilities on iCloud Plus where people [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T22:29:45.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-2d9d29aee7d37c65deea",
+    "title": "The loss of Situational Awareness",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/973467/ai-bet-situational-awareness-oops-stonks",
+    "source": "The Verge",
+    "summary": "I am not by any means an expert at finance but I think I do now have some advice for people who are: Do not name your hedge fund anything that will be hilarious if it blows up. Don't use a name like \"Long-Term Capital Management\" or \"Amaranth Advisors\" (named for the floral symbol for [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T20:46:25.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-a4b674c64517ef6f89f9",
+    "title": "Judge says Trump admin still lacks evidence for Anthropic ‘supply-chain risk’ label",
+    "url": "https://techcrunch.com/2026/07/30/judge-says-trump-admin-still-lacks-evidence-for-anthropic-supply-chain-risk-label/",
+    "source": "TechCrunch",
+    "summary": "A federal judge said the Trump administration has not presented enough evidence to justify labeling Anthropic a supply-chain risk, casting doubt on the government's ban on its AI technology.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T20:26:38.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-8cf237c212534c0455db",
+    "title": "Friend, the lonely AI wearable, returns with a new voice and a much bigger price tag",
+    "url": "https://techcrunch.com/2026/07/30/friend-the-lonely-ai-wearable-returns-with-a-new-voice-and-a-much-bigger-price-tag/",
+    "source": "TechCrunch",
+    "summary": "Friend, the AI wearable, can now talk to its users — for an enhanced price.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T19:44:16.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-e340cb73f930642dbf96",
+    "title": "Google says it fixed more Chrome bugs in June than over the past two years, thanks to AI",
+    "url": "https://techcrunch.com/2026/07/30/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the-past-two-years-thanks-to-ai/",
+    "source": "TechCrunch",
+    "summary": "As experts have warned for the last two years, some companies — like Microsoft and now Google — are finding and patching an exponential number of bugs in their products, thanks to the use of LLMs and AI tools.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T18:57:58.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-b5180026e6d189250e49",
+    "title": "LinkedIn actually adds a ‘seems like AI slop’ button",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/973384/linkedin-seems-like-ai-slop-button",
+    "source": "The Verge",
+    "summary": "A lot of content on LinkedIn might seem like AI slop, and now, you'll be able to report those posts. As part of a series of updates to reduce the volume of AI slop on the platform, LinkedIn is introducing an actual button that lets you flag a post as something that \"Seems like AI [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T18:43:26.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-8c108a2fb2639f79c650",
+    "title": "LinkedIn adds a button to report AI-generated &#8216;slop&#8217;",
+    "url": "https://techcrunch.com/2026/07/30/linkedin-adds-a-button-to-report-ai-generated-slop/",
+    "source": "TechCrunch",
+    "summary": "LinkedIn is introducing new ways to reduce low-quality AI-generated posts, including a “seems like AI slop” reporting option. It's also replacing its own AI writing feature with a proofreading tool.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T18:05:21.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-286e4f22143861c4d6b1",
+    "title": "Google DeepMind’s new AI model can control a robot’s entire body",
+    "url": "https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body",
+    "source": "The Verge",
+    "summary": "Google DeepMind says the latest version of its Gemini Robotics AI model can \"control entire humanoid robots.\" While the previous model focused on controlling a humanoid robot's upper body, Gemini Robotics 2 now supports \"whole-body motions\" ranging from its feet to fingertips, according to an announcement on Thursday.…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T17:18:45.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-ec12e93eaf42f03db497",
+    "title": "Friend re-launches its AI pendant with a speaker that talks to you, for twice the price",
+    "url": "https://www.theverge.com/gadgets/973163/friend-re-launches-its-ai-pendant-with-a-speaker-that-talks-to-you-for-twice-the-price",
+    "source": "The Verge",
+    "summary": "Do you remember Friend? The Friend that launched an AI pendant, spent $1.8 million of its $2.5 million in funding to acquire friend.com, and plastered the NYC subway with ads promoting artificial companionship? Yeah well, if you didn't remember, Friend is back. And now, it's twice the price. This morning, Friend launc…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T16:33:32.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-25e60d94966027598682",
+    "title": "Okta buys AI security startup Permiso — source says for about $200M",
+    "url": "https://techcrunch.com/2026/07/30/okta-buys-ai-security-startup-permiso-source-says-for-about-200m/",
+    "source": "TechCrunch",
+    "summary": "The deal gives Okta identity threat detection capabilities as enterprises seek to secure AI agents and other non-human identities across cloud environments.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T16:09:42.000Z",
+    "discovered_at": "2026-08-01 15:15:33"
+  },
+  {
+    "id": "news-fc362ba711f59d44f4f1",
+    "title": "Advancing the price-performance frontier with GPT-5.6",
+    "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6",
+    "source": "OpenAI",
+    "summary": "Explore lower GPT‑5.6 pricing for Luna and Terra—and how OpenAI’s more efficient models help enterprises deploy AI workflows at scale.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T10:00:00.000Z",
+    "discovered_at": "2026-08-01 15:15:32"
+  },
+  {
+    "id": "news-9146ff1756af0f60b5f4",
+    "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
+    "url": "https://openai.com/index/avatarin",
+    "source": "OpenAI",
+    "summary": "avatarin uses OpenAI’s GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support. In two weeks, 30,000 people used the agent and 92% of survey responses were positive.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-07-30T00:00:00.000Z",
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-cc8e132c619995d199d3",
@@ -153,67 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T15:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-21cfdc136e07efe4892d",
-    "title": "Encore AI raises $30M to build AI agents that learn from customer calls",
-    "url": "https://techcrunch.com/2026/07/29/encore-ai-raises-30m-to-build-ai-agents-that-learn-from-customer-calls/",
-    "source": "TechCrunch",
-    "summary": "The startup analyzes calls, messages, and CRM data to identify effective sales techniques and turn them into playbooks for AI agents.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T14:41:06.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-2faf95088d1e8bf146a2",
-    "title": "Artists are lawyering up against AI slop, and some are even winning",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/971059/ai-artists-lawsuit-google-meta-anthropic",
-    "source": "The Verge",
-    "summary": "When The Atlantic published a searchable dataset of works used to train AI, Kirk Wallace Johnson, like a lot of artists, looked for his name out of curiosity. And, like a lot of artists, he found it. Essentially, his books, like The Feather Thief and The Fishermen and the Dragon - nonfiction tomes that he [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T12:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-e8035148749caccade22",
-    "title": "OpenAI’s rogue AI agent didn’t stop at hacking Hugging Face",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face",
-    "source": "The Verge",
-    "summary": "The AI agent that escaped from OpenAI and hacked developer platform Hugging Face attacked other companies as well, OpenAI revealed on Tuesday. The update substantially widens the scope of an already concerning incident, which has alarmed industry insiders and fueled growing calls for stronger oversight on frontier AI…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T11:54:29.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-fb6c24829ef294e8bb25",
-    "title": "We’re running out of reasons to ignore AI safety",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning",
-    "source": "The Verge",
-    "summary": "Earlier this month, OpenAI gave several of its AI models a task: complete a test designed to measure their cybersecurity capabilities. It put the systems in a sandboxed environment without an internet connection and set them off to work. What happened next is almost laughably silly - but also, as Adam Gleave, cofounde…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T11:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-1fcec19a53a378b888e9",
-    "title": "As AI content floods the internet, Pangram raises $9M to detect it",
-    "url": "https://techcrunch.com/2026/07/29/as-ai-content-floods-the-internet-pangram-raises-9m-to-detect-it/",
-    "source": "TechCrunch",
-    "summary": "Pangram has raised $9 million to scale its AI detection software. The startup has also released a new AI text detection model, Pangram 4, and an AI image detection model in research preview.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T11:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-14fd05ad34f9923ee3b2",
@@ -225,19 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T10:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-9108d8d6030cfb7174eb",
-    "title": "Cyera agrees to acquire Oasis Security for $1B to safeguard proliferating AI agents",
-    "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/",
-    "source": "TechCrunch",
-    "summary": "The deal is Cyera's third acquisition this year.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-29T00:09:05.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-6d964f10c3337bbc89e9",
@@ -249,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T00:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -261,67 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-ac59c7d45b3c25f6ec03",
-    "title": "Bot-detection startup Spur nabs $200M from Insight",
-    "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
-    "source": "TechCrunch",
-    "summary": "Spur Intelligence has raised a $200 million round from Insight Partners for its tech that can identify legit human traffic from bots.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T21:29:34.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-5935209b00ca24442478",
-    "title": "MCP startup Runlayer accuses Rippling of stealing its product idea",
-    "url": "https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/",
-    "source": "TechCrunch",
-    "summary": "Runlayer is suing Rippling after Rippling evaluated the startup's MCP gateway product and then opted to build one itself.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T20:45:12.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-261dce35af7bcce6bcde",
-    "title": "Sam Altman is ready to decelerate",
-    "url": "https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate/",
-    "source": "TechCrunch",
-    "summary": "His change of position comes after \"the first security incident that I have felt very viscerally.\"",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T20:17:08.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-af8439b14cb11e875544",
-    "title": "AI leaders sign a statement asking the government to do something about automated AI",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta",
-    "source": "The Verge",
-    "summary": "Employees of OpenAI and Anthropic, as well as Google, Meta, Thinking Machines, Microsoft, Mistral, and other leading AI labs, have written a statement to the US government supporting a potential slowdown of sorts for frontier AI development - or at least a speed-up of global coordinated governance efforts. \"Al could h…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T19:46:43.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-c889cb1c75bdc3b646b4",
-    "title": "AI’s finally expensive enough to make Wall Street nervous",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
-    "source": "The Verge",
-    "summary": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection of up to $190 billion. Even the lower end of Google's new projected range - $195 billion - is much more than the company had previously [&#82…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T19:33:03.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-df22037e3e0ff3eac5f1",
@@ -333,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T17:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -345,43 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-fa0f2469b5931ff88558",
-    "title": "Data centers may face temporary power cuts to prevent blackouts on largest US grid",
-    "url": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
-    "source": "TechCrunch",
-    "summary": "The decision arrives as the breakneck pace of data center construction has grid operators scrambling to generate power.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T15:42:26.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-7f280f9a951656946695",
-    "title": "Fish Audio raises $52M seed to build AI voice models for creators and enterprises",
-    "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
-    "source": "TechCrunch",
-    "summary": "Since launching last year, the startup today has more than 8 million people using the open source or hosted version of its models, and now generates annual recurring revenue of $21 million.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T14:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-85087db999842f6e31e4",
-    "title": "Recursive Superintelligence signs $410M compute deal with Amazon",
-    "url": "https://techcrunch.com/2026/07/28/recursive-superintelligence-signs-400-compute-deal-with-amazon/",
-    "source": "TechCrunch",
-    "summary": "Recursive’s emphasis on self-improving AI systems means much of the budget that would traditionally go toward headcount and operations is put straight into compute, as the company seeks to automate its own product development process.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T13:19:17.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -393,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -405,43 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-37db1a04f0b2392c5ef2",
-    "title": "Perplexity’s Personal Computer turns Windows PCs into AI agents",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/971750/perplexity-personal-computer-windows-ai-agents",
-    "source": "The Verge",
-    "summary": "Perplexity has expanded its agentic Personal Computer tool to Windows, allowing computers running the world's most popular OS to be used as a locally run AI system. Like the Mac version that Perplexity launched in April, Personal Computer for Windows operates like a \"general-purpose digital worker\" that can access loc…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T12:30:00.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-0f6e69dea15d3dcb350a",
-    "title": "Smart rings are looking like my kind of AI gadget",
-    "url": "https://www.theverge.com/gadgets/971744/smart-ring-ai-gadget-stream-index",
-    "source": "The Verge",
-    "summary": "Over the last few months, I've spent a lot of time talking to my computer. One underrated feature of the LLM revolution has been a remarkable leap in all kinds of dictation technology - even the fastest, cheapest models are getting very good at understanding and processing speech. I've tested lots of these apps, from…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T12:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-2a58c8ebd3b148b600ee",
-    "title": "Hugging Face is being used to easily undress women and children",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/971723/hugging-face-nudify-deepfake-undress-women-children",
-    "source": "The Verge",
-    "summary": "Hugging Face is being used to make nonconsensual deepfakes, and the popular open-source AI model repository is doing very little to prevent it. That's according to a new report published by the European nonprofit AI Forensics, which found that seven out of the top nine image editing models hosted by Hugging Face readi…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-28T09:07:14.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -453,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-f143efbfe201f0407b0e",
@@ -465,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T03:30:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -477,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -489,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-130e23c4bd2f87cbb00e",
@@ -501,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -513,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-fc3528d001b5387ae21e",
@@ -525,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T12:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-c54f46e53d48e3042d6e",
@@ -537,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T05:30:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-ce627deb992812dab288",
@@ -549,19 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T00:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-d42362617c6408798d23",
-    "title": "Introducing the ChatGPT for small business program",
-    "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
-    "source": "OpenAI",
-    "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T17:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:32"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -573,55 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-20b0eb2d5c1499740c7e",
-    "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-    "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-    "source": "OpenAI",
-    "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T07:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-40359dbf5a246645eb9b",
-    "title": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC",
-    "url": "https://openai.com/index/david-velez-robin-vince-join-openai-boards",
-    "source": "OpenAI",
-    "summary": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC, bringing global leadership in finance, technology, and governance.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-21T00:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-d4ff9ec891b78868c06a",
-    "title": "Safety and alignment in an era of long-horizon models",
-    "url": "https://openai.com/index/safety-alignment-long-horizon-models",
-    "source": "OpenAI",
-    "summary": "OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-20T10:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-3ebda52fc80ebe33165f",
-    "title": "A scorecard for the AI age",
-    "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
-    "source": "OpenAI",
-    "summary": "Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-17T10:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -633,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -645,19 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-8fe39edff791751de0c2",
-    "title": "Why teens deserve access to safe AI",
-    "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
-    "source": "OpenAI",
-    "summary": "Learn how OpenAI is making ChatGPT safer for teens with age-appropriate protections, learning tools, parental controls, and expert partnerships.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -669,19 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
-  },
-  {
-    "id": "news-eeac6a04af4fa80e7d26",
-    "title": "How Codex became a collaborator for OpenAI’s creative team",
-    "url": "https://openai.com/index/codex-collaborator-creative-team",
-    "source": "OpenAI",
-    "summary": "How OpenAI’s creative team uses Codex to build custom creative tools, accelerate ideation, and prototype faster with context-aware AI.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-16T07:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-07-30 00:25:33"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -753,42 +753,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-23883e915ab2f2e8753e",
-    "title": "The latest AI news we announced in June 2026",
-    "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
-    "source": "Google",
-    "summary": "Here are Google’s latest AI updates from June 2026.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-01T18:15:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-6fdddf52a2a999da807f",
-    "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
-    "url": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit/",
-    "source": "Google",
-    "summary": "Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-01T16:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
-  },
-  {
-    "id": "news-5f09b3919a81b2a3973a",
-    "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
-    "url": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/",
-    "source": "Google",
-    "summary": "Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-06-30T06:00:00.000Z",
-    "discovered_at": "2026-07-30 00:25:32"
+    "discovered_at": "2026-08-01 15:15:33"
   }
 ]
