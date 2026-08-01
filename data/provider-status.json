@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T22:08:51.307Z",
+  "generatedAt": "2026-08-01T22:38:32.366Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T22:08:50.876Z",
+      "lastCheckedAt": "2026-08-01T22:38:32.119Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-01T18:45:26.000Z",
+          "id": "fireworks-feed-0-2026-08-01T22:34:30.000Z",
           "title": "Service Degradation for Qwen 3.7 Plus",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-01T18:45:26.000Z",
-          "updatedAt": "2026-08-01T18:45:26.000Z",
+          "startedAt": "2026-08-01T22:34:30.000Z",
+          "updatedAt": "2026-08-01T22:34:30.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KYZAAE3935Y035F2MT6VFQ3E",
-          "summary": "Status: Investigating We are seeing impacted performance for Qwen 3.7 Plus. We are actively investigating."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-07-31T20:48:03.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-01T18:45:26.000Z",
+          "id": "fireworks-feed-0-2026-08-01T22:34:30.000Z",
           "title": "Service Degradation for Qwen 3.7 Plus",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-01T18:45:26.000Z",
-          "updatedAt": "2026-08-01T18:45:26.000Z",
+          "startedAt": "2026-08-01T22:34:30.000Z",
+          "updatedAt": "2026-08-01T22:34:30.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KYZAAE3935Y035F2MT6VFQ3E",
-          "summary": "Status: Investigating We are seeing impacted performance for Qwen 3.7 Plus. We are actively investigating."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-07-31T20:48:03.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T22:08:50.440Z",
+      "lastCheckedAt": "2026-08-01T22:38:31.428Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T22:08:49.978Z",
+      "lastCheckedAt": "2026-08-01T22:38:30.780Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T22:08:50.932Z",
+      "lastCheckedAt": "2026-08-01T22:38:31.992Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T22:08:50.244Z",
+      "lastCheckedAt": "2026-08-01T22:38:31.115Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T22:08:50.151Z",
+      "lastCheckedAt": "2026-08-01T22:38:30.967Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T22:08:51.300Z",
+      "lastCheckedAt": "2026-08-01T22:38:32.359Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -417,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
