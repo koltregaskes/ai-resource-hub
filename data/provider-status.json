@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T09:18:02.299Z",
+  "generatedAt": "2026-08-01T10:21:52.999Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T09:18:01.814Z",
+      "lastCheckedAt": "2026-08-01T10:21:52.650Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T09:18:01.106Z",
+      "lastCheckedAt": "2026-08-01T10:21:52.371Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T09:18:00.227Z",
+      "lastCheckedAt": "2026-08-01T10:21:51.875Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T09:18:01.464Z",
+      "lastCheckedAt": "2026-08-01T10:21:52.843Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T09:18:01.025Z",
+      "lastCheckedAt": "2026-08-01T10:21:51.990Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T09:18:00.314Z",
+      "lastCheckedAt": "2026-08-01T10:21:52.016Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T09:18:01.734Z",
+      "lastCheckedAt": "2026-08-01T10:21:52.992Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -357,7 +357,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-07-31T21:50:39.000Z",
+          "id": "together-feed-0-2026-08-01T10:04:05.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-01T10:04:05.000Z",
+          "updatedAt": "2026-08-01T10:04:05.000Z",
+          "resolvedAt": "2026-08-01T10:04:05.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-08-01T09:50:58.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-01T09:50:58.000Z",
+          "updatedAt": "2026-08-01T09:50:58.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-31T21:50:39.000Z",
           "title": "Inkling Small recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -368,7 +390,7 @@
           "summary": "Inkling Small recovered"
         },
         {
-          "id": "together-feed-1-2026-07-31T21:29:38.000Z",
+          "id": "together-feed-3-2026-07-31T21:29:38.000Z",
           "title": "Inkling Small went down",
           "status": "investigating",
           "impact": "major",
@@ -377,28 +399,6 @@
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Inkling Small went down"
-        },
-        {
-          "id": "together-feed-2-2026-07-31T09:27:50.000Z",
-          "title": "Kimi K3 recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-07-31T09:27:50.000Z",
-          "updatedAt": "2026-07-31T09:27:50.000Z",
-          "resolvedAt": "2026-07-31T09:27:50.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K3 recovered"
-        },
-        {
-          "id": "together-feed-3-2026-07-31T08:57:43.000Z",
-          "title": "Kimi K3 went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-07-31T08:57:43.000Z",
-          "updatedAt": "2026-07-31T08:57:43.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Kimi K3 went down"
         }
       ]
     },
@@ -417,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
