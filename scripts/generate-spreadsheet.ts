@@ -111,7 +111,6 @@ function readSqliteSource(): SpreadsheetSource | null {
           WHEN 'retired' THEN 4
           ELSE 5
         END,
-        m.quality_score DESC,
         m.name ASC
     `).all() as ModelRow[];
 
@@ -172,10 +171,6 @@ function readPgCacheSource(): SpreadsheetSource | null {
 
       const rankDiff = statusRank(a.status) - statusRank(b.status);
       if (rankDiff !== 0) return rankDiff;
-
-      const qualityA = Number(a.quality_score ?? 0);
-      const qualityB = Number(b.quality_score ?? 0);
-      if (qualityB !== qualityA) return qualityB - qualityA;
 
       return String(a.name ?? '').localeCompare(String(b.name ?? ''));
     });
@@ -271,11 +266,11 @@ function main() {
 
   // CSV headers
   const headers = [
-    'Model', 'Provider', 'Category', 'Status', 'Quality Score', 'Input Price ($/M tokens)', 'Output Price ($/M tokens)',
+    'Model', 'Provider', 'Category', 'Status', 'Model Quality (not published)', 'Input Price ($/M tokens)', 'Output Price ($/M tokens)',
     'Context Window', 'Max Output', 'Speed (tok/s)', 'TTFT (ms)',
     'Open Source', 'Modality', 'API Available', 'Released',
     ...benchmarkIds.map(b => b.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())),
-    'Value Score', 'Pricing Source', 'Last Updated',
+    'Benchmark Value (not evaluated in this export)', 'Pricing Source', 'Last Updated',
   ];
 
   // Build rows
@@ -287,20 +282,13 @@ function main() {
     const speed = speedMap.get(m.id);
     const inputPrice = toNumber(m.input_price);
     const outputPrice = toNumber(m.output_price);
-    const qualityScore = toNumber(m.quality_score);
-
-    // Calculate value score: quality / cost (higher = better value)
-    const avgCost = ((inputPrice ?? 0) + (outputPrice ?? 0)) / 2;
-    const valueScore = avgCost > 0 && (qualityScore ?? 0) > 0
-      ? Math.round(((qualityScore ?? 0) / avgCost) * 10) / 10
-      : '';
 
     const row = [
       m.name || '',
       m.provider_name || m.provider_id || '',
       m.category || '',
       m.status || '',
-      String(m.quality_score || ''),
+      '',
       String(m.input_price ?? ''),
       String(m.output_price ?? ''),
       String(m.context_window ?? ''),
@@ -312,7 +300,7 @@ function main() {
       toBoolean(m.api_available) === true ? 'Yes' : (toBoolean(m.api_available) === false ? 'No' : ''),
       m.released || '',
       ...benchmarkIds.map(b => scores[b] != null ? String(scores[b]) : ''),
-      String(valueScore),
+      '',
       m.pricing_source || '',
       m.pricing_updated || '',
     ];
@@ -326,7 +314,8 @@ function main() {
       provider: m.provider_name || m.provider_id,
       category: m.category || null,
       status: m.status || null,
-      quality_score: qualityScore,
+      quality_score: null,
+      quality_score_state: 'suppressed_untraceable',
       input_price: inputPrice,
       output_price: outputPrice,
       context_window: m.context_window,
@@ -338,7 +327,7 @@ function main() {
       api_available: toBoolean(m.api_available),
       released: m.released,
       benchmarks: Object.keys(scores).length > 0 ? scores : null,
-      value_score: valueScore || null,
+      value_score: null,
       pricing_source: m.pricing_source,
       last_updated: m.pricing_updated,
     });

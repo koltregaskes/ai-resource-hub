@@ -14,6 +14,7 @@ import {
   type BenchmarkDefinitionProvenanceInput,
   type BenchmarkScoreProvenanceInput,
 } from './benchmark-provenance';
+import { getPublicQualityPolicyFailures } from './public-quality-policy';
 
 const repoRoot = process.cwd();
 const dbPath = getAiResourceHubSqlitePath();
@@ -124,6 +125,7 @@ function matchesRequirement(model: CacheModel, requirement: FrontierModelRequire
 
 function main() {
   const failures: string[] = [];
+  failures.push(...getPublicQualityPolicyFailures(repoRoot));
 
   const cacheModels = loadJson<CacheModel>('models').filter(isPubliclyVerifiedModel);
   const cacheProviders = loadJson<Record<string, unknown>>('providers');

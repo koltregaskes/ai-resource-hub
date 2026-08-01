@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PriceTrendChart from '../../components/PriceTrendChart';
 import { getModelsByCategory, getModelsWithPriceHistory } from '../../db/queries';
+import { getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -89,14 +90,17 @@ const modelsWithTrends = Object.entries(priceHistoryByModel)
   .sort((a, b) => b[1].data.length - a[1].data.length)
   .slice(0, 8);
 
-// Price-to-quality scatter data
+const evaluatedModels = getMetaLeaderboard(250);
+const evaluatedById = new Map(evaluatedModels.map((model) => [model.id, model]));
+
+// Price-to-benchmark scatter data. Unevaluated models are deliberately excluded.
 const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
-const scatterData = safeJson(paidModels.map(m => ({
+const scatterData = safeJson(evaluatedModels.filter(m => m.inputPrice > 0).map(m => ({
   name: m.name,
   provider: m.provider,
   colour: m.providerColour,
   x: Math.log10((m.inputPrice + 3 * m.outputPrice) / 4), // log blended price
-  y: m.qualityScore,
+  y: m.metaScore,
   price: ((m.inputPrice + 3 * m.outputPrice) / 4).toFixed(2),
   id: m.id,
 })));
@@ -236,10 +240,10 @@ const baseJSON = safeJson(base);
       </div>
     </div>
 
-    <!-- Price vs Quality scatter (CSS-based) -->
+    <!-- Price vs evaluated composite scatter (CSS-based) -->
     <div class="mb-10">
-      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Price vs Quality</h2>
-      <p class="text-xs text-(--color-text-muted) mb-4">Each dot represents a model. Higher quality score (Y axis) with lower price (left) = better value.</p>
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Price vs Evaluated Composite</h2>
+      <p class="text-xs text-(--color-text-muted) mb-4">Only models with at least two current, source-backed benchmark rows appear. Higher evaluated composite (Y axis) with lower price (left) indicates stronger benchmark value.</p>
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
         <div class="relative w-full" style="height: 400px;" id="scatter-chart">
           <div class="absolute inset-0 grid grid-cols-4 grid-rows-4" style="pointer-events: none;">
@@ -249,8 +253,8 @@ const baseJSON = safeJson(base);
           </div>
           <div class="absolute bottom-0 left-0 text-[10px] text-(--color-text-muted)">Cheap</div>
           <div class="absolute bottom-0 right-0 text-[10px] text-(--color-text-muted)">Expensive</div>
-          <div class="absolute top-0 left-0 text-[10px] text-(--color-text-muted)">High Quality</div>
-          <div class="absolute bottom-0 left-0 text-[10px] text-(--color-text-muted) mb-3">Low Quality</div>
+          <div class="absolute top-0 left-0 text-[10px] text-(--color-text-muted)">High composite</div>
+          <div class="absolute bottom-0 left-0 text-[10px] text-(--color-text-muted) mb-3">Low composite</div>
         </div>
       </div>
     </div>
@@ -266,7 +270,7 @@ const baseJSON = safeJson(base);
               <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Input $/M</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Output $/M</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Evaluated Composite</th>
             </tr>
           </thead>
           <tbody>
@@ -281,7 +285,9 @@ const baseJSON = safeJson(base);
                 </td>
                 <td class="py-3 px-4 text-right font-mono text-sm text-green-400 font-medium">${m.inputPrice.toFixed(3)}</td>
                 <td class="py-3 px-4 text-right font-mono text-sm text-(--color-text-secondary)">${m.outputPrice.toFixed(3)}</td>
-                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-muted)">{m.qualityScore.toFixed(1)}</td>
+                <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-muted)">
+                  {evaluatedById.get(m.id)?.metaScore ?? 'Not evaluated'}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -331,7 +337,7 @@ const baseJSON = safeJson(base);
         const bottom = ((d.y - minY) / rangeY * 85 + 5);
         dot.className = 'absolute w-3 h-3 rounded-full hover:w-4 hover:h-4 transition-all cursor-pointer group';
         dot.style.cssText = `left: ${left}%; bottom: ${bottom}%; background-color: ${d.colour}; opacity: 0.7; transform: translate(-50%, 50%);`;
-        dot.title = `${d.name} (${d.provider}) — Quality: ${d.y}, Blended: $${d.price}/M`;
+        dot.title = `${d.name} (${d.provider}) - Evaluated composite: ${d.y}, Blended: $${d.price}/M`;
         chart.appendChild(dot);
       });
     }

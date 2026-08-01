@@ -64,6 +64,8 @@ Important rule:
 - `measured_at` controls evidence age; a cache refresh must not make an old measurement appear current by rewriting `updated_at`
 - benchmark measurements older than 365 days, missing a measurement date, carrying an invalid date, or implausibly future-dated are not rankable until reviewed or refreshed
 - the raw cache may retain unresolved or stale rows for remediation, but every public leaderboard, comparison, model page, reliability calculation and composite score must consume the rankable-only selector
+- `models.quality_score` is a legacy remediation field, not a public fact; it must remain suppressed from rankings, displays, exports and value calculations until each model-level value has a documented method, source set and measurement date
+- the evaluated composite requires at least two distinct rankable benchmark rows; zero-evidence models may appear only in explicitly labelled, non-ranked tracking surfaces
 - quarantined rows must be counted in release evidence and must never be promoted by weakening freshness or provenance rules
 
 ## 3. Speed And Runtime
