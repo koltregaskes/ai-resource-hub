@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 31 Jul 2026, 23:14 UTC |
+| Generated | 01 Aug 2026, 03:46 UTC |
 | Providers tracked | 40 |
 | Public models | 317 |
 | Active models | 110 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 57 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 31 Jul 2026, 23:14 UTC |
+| Latest visible refresh | 01 Aug 2026, 03:46 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | DeepSeek V4 Flash 0731 (31 Jul 2026) |
 
