@@ -6,6 +6,7 @@ import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './front
 import { getAiResourceHubNewsRoutingDiagnostics } from '../src/data/news-routing';
 import { isPubliclyVerifiedModel } from '../src/data/model-verification';
 import { getRecurringEvents } from '../src/data/research-intel';
+import { getReleaseStoryMappingFailures } from './release-story-mapping-policy';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
 
 const repoRoot = process.cwd();
@@ -109,6 +110,7 @@ function matchesRequirement(model: CacheModel, requirement: FrontierModelRequire
 
 function main() {
   const failures: string[] = [];
+  failures.push(...getReleaseStoryMappingFailures(repoRoot));
 
   const cacheModels = loadJson<CacheModel>('models').filter(isPubliclyVerifiedModel);
   const cacheProviders = loadJson<Record<string, unknown>>('providers');

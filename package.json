@@ -31,6 +31,8 @@
     "generate:availability": "tsx scripts/generate-model-availability.ts",
     "generate:spreadsheet": "tsx scripts/generate-spreadsheet.ts",
     "generate:release-desk": "tsx scripts/generate-release-desk.ts",
+    "test:release-desk": "tsx --test scripts/release-story-matching.test.ts",
+    "verify:release-stories": "tsx scripts/verify-release-story-mappings.ts",
     "generate:repo-reference": "tsx scripts/generate-repo-reference.ts",
     "scrape:quality": "tsx scripts/scrapers/quality-scores.ts",
     "scrape:creative": "tsx scripts/scrapers/creative-benchmarks.ts",
