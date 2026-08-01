@@ -5,6 +5,10 @@ import path from 'node:path';
 import { routeAiResourceHubNews } from '../src/data/news-routing';
 import { isDiscoveryOnlyModel } from '../src/data/model-verification';
 import { getCatalogModelsById } from './model-catalog';
+import {
+  normaliseReleaseMatchText,
+  scoreReleaseStoryMatch,
+} from './release-story-matching';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
 
 const DB_PATH = getAiResourceHubSqlitePath();
@@ -82,14 +86,6 @@ function slugify(value: string): string {
     .replace(/(^-|-$)/g, '');
 }
 
-function normaliseMatchText(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 function formatTokens(tokens: number): string {
   if (!tokens) return 'N/A';
   if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(tokens % 1_000_000 === 0 ? 0 : 1)}M`;
@@ -118,7 +114,7 @@ function getAliasNeedles(model: ReleaseModelRow, extraAliases: string[]): string
     model.name,
     ...extraAliases,
   ])]
-    .map((value) => normaliseMatchText(value))
+    .map((value) => normaliseReleaseMatchText(value))
     .filter((value) => value.length >= 3);
 }
 
@@ -276,38 +272,12 @@ function scoreRelatedStory(
   aliasNeedles: string[],
   competingAliases: string[],
 ): number {
-  const text = normaliseMatchText(`${story.title} ${story.summary}`);
-  const providerNeedle = normaliseMatchText(model.provider_name);
-  const aliasMatched = aliasNeedles.some((alias) => alias.length >= 4 && text.includes(alias));
-  const providerMatched = Boolean(providerNeedle && text.includes(providerNeedle));
-  const releaseSignal = story.routingTags.some((tag) => (
-    tag === 'model_release'
-    || tag === 'benchmark'
-    || tag === 'evaluation'
-    || tag === 'api_update'
-    || tag === 'pricing_change'
-    || tag === 'open_source'
-    || tag === 'research_paper'
-  ));
-
-  if (!aliasMatched && !(providerMatched && releaseSignal)) {
-    return 0;
-  }
-
-  if (!aliasMatched && competingAliases.some((alias) => alias.length >= 4 && text.includes(alias))) {
-    return 0;
-  }
-
-  let score = 0;
-
-  if (story.sourceTags.length > 0) score += 2;
-  if (story.routingTags.includes('model_release')) score += 3;
-  if (story.routingTags.includes('benchmark') || story.routingTags.includes('evaluation')) score += 2;
-  if (story.routingTags.includes('api_update') || story.routingTags.includes('pricing_change')) score += 1;
-  if (providerMatched) score += 1;
-  if (aliasMatched) score += 4;
-
-  return score;
+  return scoreReleaseStoryMatch({
+    providerName: model.provider_name,
+    story,
+    aliasNeedles,
+    competingAliases,
+  });
 }
 
 function buildDraftMarkdown(entry: {
