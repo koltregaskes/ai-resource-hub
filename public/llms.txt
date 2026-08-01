@@ -8,7 +8,7 @@ This site is a reference resource for comparing AI models across pricing, qualit
 
 - [Model Comparison](/compare/llm/): Compare 139+ AI models by pricing, quality, speed, and context window
 - [Benchmarks](/benchmarks/): MMLU, GPQA, MATH-500, HumanEval, SWE-bench, Arena ELO scores
-- [Leaderboard](/leaderboard/): Models ranked by quality score
+- [Leaderboard](/leaderboard/): Models ranked only when current source-backed benchmark evidence passes the provenance gate
 - [News](/news/): Daily AI news from 74 curated sources
 - [Pricing Trends](/pricing-trends/): How model costs are changing over time
 - [Labs & Providers](/labs/): 34 AI providers with context and history

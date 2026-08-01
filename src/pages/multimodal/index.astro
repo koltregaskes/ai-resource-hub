@@ -15,11 +15,11 @@ const multimodalModels = models
     modalities: m.modality.split(',').map(mod => mod.trim()),
     modalityCount: m.modality.split(',').length,
   }))
-  .sort((a, b) => b.modalityCount - a.modalityCount || b.qualityScore - a.qualityScore);
+  .sort((a, b) => b.modalityCount - a.modalityCount || a.name.localeCompare(b.name));
 
 const textOnlyModels = models
   .filter(m => !m.modality || !m.modality.includes(','))
-  .sort((a, b) => b.qualityScore - a.qualityScore);
+  .sort((a, b) => (b.released ?? '').localeCompare(a.released ?? '') || a.name.localeCompare(b.name));
 
 // Count by modality support
 const supportsImage = multimodalModels.filter(m => m.modalities.includes('image'));
@@ -67,7 +67,7 @@ function formatTokens(n: number): string {
         Multimodal AI Models
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        {multimodalModels.length} LLMs that can process more than just text — vision, audio, video, and more. Ranked by capability breadth and quality.
+        {multimodalModels.length} LLMs that can process more than just text. Listed by declared capability breadth, without an inferred model-level quality rank.
       </p>
     </div>
 
@@ -101,7 +101,7 @@ function formatTokens(n: number): string {
               <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
               <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
               <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Modalities</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality evidence</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Price</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
             </tr>
@@ -132,7 +132,7 @@ function formatTokens(n: number): string {
                   </div>
                 </td>
                 <td class="py-3 px-4 text-right">
-                  <span class="font-mono text-sm text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                  <span class="text-xs text-(--color-text-muted)">Not published</span>
                 </td>
                 <td class="py-3 px-4 text-right hidden sm:table-cell">
                   <span class="font-mono text-xs text-(--color-text-secondary)">
@@ -152,14 +152,14 @@ function formatTokens(n: number): string {
     <!-- Text-only models -->
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Text-Only Models</h2>
-      <p class="text-xs text-(--color-text-muted) mb-3">These models process text input only. Ranked by quality score.</p>
+      <p class="text-xs text-(--color-text-muted) mb-3">These models process text input only. Listed by release date; no model-level quality score is inferred.</p>
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-(--color-border)">
               <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
               <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality evidence</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Price</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Context</th>
             </tr>
@@ -177,7 +177,7 @@ function formatTokens(n: number): string {
                   <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
                 </td>
                 <td class="py-3 px-4 text-right">
-                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                  <span class="text-xs text-(--color-text-muted)">Not published</span>
                 </td>
                 <td class="py-3 px-4 text-right hidden sm:table-cell">
                   <span class="font-mono text-xs text-(--color-text-secondary)">

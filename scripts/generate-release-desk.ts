@@ -27,7 +27,7 @@ type ReleaseModelRow = {
   status: string;
   context_window: number;
   max_output: number;
-  quality_score: number;
+  quality_score: number | null;
   input_price: number;
   output_price: number;
   open_source: number;
@@ -423,7 +423,7 @@ function main() {
     WHERE m.category = 'llm'
       AND m.released IS NOT NULL
       AND m.status IN ('active', 'tracking', 'preview')
-    ORDER BY m.released DESC, m.quality_score DESC
+    ORDER BY m.released DESC, m.name ASC
   `).all() as ReleaseModelRow[];
 
   const benchmarkRows = db.prepare(`
@@ -577,7 +577,8 @@ function main() {
       modality: model.modality,
       contextWindow: model.context_window,
       maxOutput: model.max_output,
-      qualityScore: model.quality_score,
+      qualityScore: null,
+      qualityScoreState: 'suppressed_untraceable' as const,
       inputPrice: model.input_price,
       outputPrice: model.output_price,
       pricingSource: model.pricing_source,
@@ -598,7 +599,7 @@ function main() {
     const priorityOrder = { high: 0, watch: 1, backfill: 2 };
     return priorityOrder[a.priority] - priorityOrder[b.priority]
       || (b.releaseDate ?? '').localeCompare(a.releaseDate ?? '')
-      || b.qualityScore - a.qualityScore;
+      || a.modelName.localeCompare(b.modelName);
   });
 
   fs.mkdirSync(path.dirname(GENERATED_TS_PATH), { recursive: true });

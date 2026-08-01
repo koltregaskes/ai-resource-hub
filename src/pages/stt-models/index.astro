@@ -27,7 +27,7 @@ const models = getModelsByCategory('stt');
               <span class="text-xs font-bold text-(--color-accent)">#{i + 1}</span>
               <h3 class="text-base font-semibold text-(--color-text-primary)">{m.name}</h3>
             </div>
-            <span class="text-sm font-mono font-semibold text-(--color-accent)">{m.qualityScore}/100</span>
+            <span class="text-xs text-(--color-text-muted)">Quality not published</span>
           </div>
           <div class="flex items-center gap-2 mb-3">
             <span class="w-2 h-2 rounded-full" style={`background-color: ${m.providerColour}`}></span>

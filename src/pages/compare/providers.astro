@@ -13,12 +13,8 @@ const providerStats = providers
   .filter(p => p.modelCount > 0)
   .map(p => {
     const models = allLLMs.filter(m => m.provider === p.name);
-    const bestQuality = models.length > 0 ? Math.max(...models.map(m => m.qualityScore)) : 0;
     const cheapestInput = models.filter(m => m.inputPrice > 0).length > 0
       ? Math.min(...models.filter(m => m.inputPrice > 0).map(m => m.inputPrice))
-      : 0;
-    const avgQuality = models.length > 0
-      ? models.reduce((sum, m) => sum + m.qualityScore, 0) / models.length
       : 0;
     const hasOpenSource = models.some(m => m.openSource);
     const maxContext = models.length > 0 ? Math.max(...models.map(m => m.contextWindow)) : 0;
@@ -26,16 +22,14 @@ const providerStats = providers
     return {
       ...p,
       llmCount: models.length,
-      bestQuality,
       cheapestInput,
-      avgQuality,
       hasOpenSource,
       maxContext,
       fastestSpeed,
       models,
     };
   })
-  .sort((a, b) => b.bestQuality - a.bestQuality);
+  .sort((a, b) => b.llmCount - a.llmCount || b.modelCount - a.modelCount || a.name.localeCompare(b.name));
 
 function formatTokens(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
@@ -46,7 +40,7 @@ function formatTokens(n: number): string {
 
 <BaseLayout
   title="Compare AI Providers — The AI Resource Hub"
-  description="Side-by-side comparison of all major AI providers. Compare OpenAI, Anthropic, Google, Meta, and more by model quality, pricing, and capabilities."
+  description="Side-by-side comparison of major AI providers by model coverage, pricing, context windows, speed, and capabilities."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -62,7 +56,7 @@ function formatTokens(n: number): string {
         Compare AI Providers
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        {providerStats.length} AI providers compared by their best model quality, pricing, context windows, speed, and model lineup.
+        {providerStats.length} AI providers compared by model coverage, pricing, context windows, speed, and model lineup. Untraceable model-level quality scores are not used.
       </p>
     </div>
 
@@ -74,7 +68,7 @@ function formatTokens(n: number): string {
             <tr class="border-b border-(--color-border)">
               <th class="text-center py-3 px-2 text-(--color-text-muted) font-medium w-10">#</th>
               <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Provider</th>
-              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Best Quality</th>
+              <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">Quality evidence</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">LLMs</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Total Models</th>
               <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden lg:table-cell">Cheapest Input</th>
@@ -99,9 +93,7 @@ function formatTokens(n: number): string {
                   {p.founded && <span class="text-[10px] text-(--color-text-muted)">Founded {p.founded}</span>}
                 </td>
                 <td class="py-3 px-4 text-right">
-                  <span class={`font-mono font-bold ${p.bestQuality >= 90 ? 'text-green-400' : p.bestQuality >= 80 ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'}`}>
-                    {p.bestQuality.toFixed(1)}
-                  </span>
+                  <span class="text-xs text-(--color-text-muted)">Not aggregated</span>
                 </td>
                 <td class="py-3 px-4 text-right hidden sm:table-cell">
                   <span class="font-mono text-xs text-(--color-text-secondary)">{p.llmCount}</span>
@@ -147,17 +139,14 @@ function formatTokens(n: number): string {
             </div>
             {p.description && <p class="text-xs text-(--color-text-muted) mb-3">{p.description}</p>}
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              {p.models.sort((a, b) => b.qualityScore - a.qualityScore).slice(0, 6).map((m, mi) => (
+              {p.models.sort((a, b) => (b.released ?? '').localeCompare(a.released ?? '') || a.name.localeCompare(b.name)).slice(0, 6).map((m) => (
                 <a href={`${base}models/${m.id}/`} class="flex items-center justify-between gap-2 px-3 py-2 rounded-lg bg-(--color-bg-tertiary) hover:bg-(--color-bg-hover) transition-colors text-xs group">
                   <div class="flex items-center gap-2 min-w-0">
-                    <span class={`font-bold shrink-0 ${mi === 0 ? 'text-amber-400' : 'text-(--color-text-muted)'}`}>
-                      {mi + 1}.
-                    </span>
                     <span class="text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors truncate">{m.name}</span>
                     {m.openSource && <span class="text-[8px] px-1 py-0.5 rounded bg-purple-500/20 text-purple-400 shrink-0">OSS</span>}
                   </div>
                   <div class="flex items-center gap-2 shrink-0">
-                    <span class="font-mono text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                    <span class="text-(--color-text-muted)">Evidence pending</span>
                     <span class="font-mono text-(--color-text-muted)">{m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}</span>
                   </div>
                 </a>

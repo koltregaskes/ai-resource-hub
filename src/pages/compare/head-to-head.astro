@@ -1,12 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPublicModelsByCategory, getModelBenchmarks, getBenchmarks } from '../../db/queries';
+import { getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 const models = getPublicModelsByCategory('llm');
 const allBenchmarks = getBenchmarks();
+const evaluatedByModel = new Map(getMetaLeaderboard(250).map((entry) => [entry.id, entry]));
 
 // Pre-fetch all benchmark scores for all models
 const modelBenchmarks: Record<string, Record<string, number>> = {};
@@ -32,7 +34,7 @@ const modelsJSON = safeJson(models.map(m => ({
   contextWindow: m.contextWindow,
   maxOutput: m.maxOutput,
   speed: m.speed,
-  qualityScore: m.qualityScore,
+  evaluatedComposite: evaluatedByModel.get(m.id)?.metaScore ?? null,
   released: m.released,
   status: m.status,
   openSource: m.openSource,
@@ -89,7 +91,7 @@ const baseJSON = safeJson(base);
         <div>
           <label for="model-sort" class="text-xs text-(--color-text-muted) mb-1 block">Order list by</label>
           <select id="model-sort" class="w-full px-3 py-2.5 rounded-lg bg-(--color-bg-card) border border-(--color-border) text-(--color-text-primary) text-sm focus:outline-none focus:border-(--color-accent)">
-            <option value="quality">Best quality</option>
+            <option value="quality">Evaluated composite</option>
             <option value="name">Alphabetical</option>
             <option value="provider">Lab then model</option>
             <option value="price">Lowest input price</option>
@@ -255,7 +257,7 @@ const baseJSON = safeJson(base);
     let visibleSlots = 2;
 
     function isEvaluatedModel(model) {
-      return model.qualityScore > 0 || Object.keys(benchmarkScores[model.id] ?? {}).length > 0;
+      return model.evaluatedComposite !== null && Object.keys(benchmarkScores[model.id] ?? {}).length >= 2;
     }
 
     function getStatusLabel(model) {
@@ -313,12 +315,12 @@ const baseJSON = safeJson(base);
           case 'provider':
             return a.provider.localeCompare(b.provider) || a.name.localeCompare(b.name);
           case 'price':
-            return a.inputPrice - b.inputPrice || a.outputPrice - b.outputPrice || b.qualityScore - a.qualityScore;
+            return a.inputPrice - b.inputPrice || a.outputPrice - b.outputPrice || a.name.localeCompare(b.name);
           case 'recent':
-            return (b.released || '').localeCompare(a.released || '') || b.qualityScore - a.qualityScore;
+            return (b.released || '').localeCompare(a.released || '') || a.name.localeCompare(b.name);
           case 'quality':
           default:
-            return b.qualityScore - a.qualityScore || (b.released || '').localeCompare(a.released || '') || a.name.localeCompare(b.name);
+            return (b.evaluatedComposite ?? -1) - (a.evaluatedComposite ?? -1) || (b.released || '').localeCompare(a.released || '') || a.name.localeCompare(b.name);
         }
       });
 
@@ -373,8 +375,8 @@ const baseJSON = safeJson(base);
       },
       value: () => {
         const sorted = [...models].filter(m => m.inputPrice > 0 && isEvaluatedModel(m)).sort((a, b) => {
-          const va = a.qualityScore / ((a.inputPrice + 3 * a.outputPrice) / 4);
-          const vb = b.qualityScore / ((b.inputPrice + 3 * b.outputPrice) / 4);
+          const va = a.evaluatedComposite / ((a.inputPrice + 3 * a.outputPrice) / 4);
+          const vb = b.evaluatedComposite / ((b.inputPrice + 3 * b.outputPrice) / 4);
           return vb - va;
         });
         return sorted.slice(0, 4).map(m => m.id);
@@ -388,7 +390,7 @@ const baseJSON = safeJson(base);
         return findModelsByPartial(names);
       },
       opensource: () => {
-        const oss = models.filter(m => m.openSource).sort((a, b) => b.qualityScore - a.qualityScore || (b.released || '').localeCompare(a.released || ''));
+        const oss = models.filter(m => m.openSource).sort((a, b) => (b.evaluatedComposite ?? -1) - (a.evaluatedComposite ?? -1) || (b.released || '').localeCompare(a.released || ''));
         return oss.slice(0, 4).map(m => m.id);
       },
     };
@@ -479,7 +481,7 @@ const baseJSON = safeJson(base);
         const blended = (m.inputPrice + 3 * m.outputPrice) / 4;
         const evaluated = isEvaluatedModel(m);
         const status = getStatusLabel(m);
-        const value = blended > 0 && evaluated ? ((m.qualityScore / blended) * 10).toFixed(1) : '—';
+        const value = blended > 0 && evaluated ? ((m.evaluatedComposite / blended) * 10).toFixed(1) : '&mdash;';
         return `
           <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <div class="flex items-center gap-2 mb-3">
@@ -490,12 +492,12 @@ const baseJSON = safeJson(base);
             ${status ? `<p class="mb-3"><span class="rounded-full border border-(--color-border) bg-(--color-bg-tertiary) px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-(--color-text-secondary)">${status}</span></p>` : ''}
             <div class="grid grid-cols-2 gap-2 text-center">
               <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
-                <p class="text-lg font-bold text-(--color-accent)">${evaluated ? m.qualityScore : '—'}</p>
-                <p class="text-[10px] text-(--color-text-muted)">${evaluated ? 'Quality' : 'Pending eval'}</p>
+                <p class="text-lg font-bold text-(--color-accent)">${evaluated ? m.evaluatedComposite : '&mdash;'}</p>
+                <p class="text-[10px] text-(--color-text-muted)">${evaluated ? 'Evaluated composite' : 'Pending evidence'}</p>
               </div>
               <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
                 <p class="text-lg font-bold text-green-400">${value}</p>
-                <p class="text-[10px] text-(--color-text-muted)">${evaluated ? 'Value' : 'Pending eval'}</p>
+                <p class="text-[10px] text-(--color-text-muted)">${evaluated ? 'Benchmark value' : 'Pending evidence'}</p>
               </div>
             </div>
             <a href="${base}models/${m.id}/" class="block mt-3 text-xs text-(--color-accent) hover:text-(--color-accent-hover) text-center transition-colors">
@@ -547,13 +549,13 @@ const baseJSON = safeJson(base);
       const ctxBest = bestCell(selected.map(m => m.contextWindow), true);
       const outBest = bestCell(selected.map(m => m.maxOutput), true);
       const speedBest = bestCell(selected.map(m => m.speed), true);
-      const qualBest = bestCell(selected.map(m => m.qualityScore), true);
+      const compositeBest = bestCell(selected.map(m => m.evaluatedComposite ?? 0), true);
 
       const rows = [
         ['Context Window', selected.map((m, i) => `<span class="${ctxBest[i]}">${formatTokens(m.contextWindow)}</span>`)],
         ['Max Output', selected.map((m, i) => `<span class="${outBest[i]}">${formatTokens(m.maxOutput)}</span>`)],
         ['Speed', selected.map((m, i) => `<span class="${speedBest[i]}">${m.speed > 0 ? m.speed + ' tok/s' : 'N/A'}</span>`)],
-        ['Quality Score', selected.map((m, i) => isEvaluatedModel(m) ? `<span class="${qualBest[i]}">${m.qualityScore}/100</span>` : '<span class="text-(--color-text-muted)">Awaiting evaluation</span>')],
+        ['Evaluated Composite', selected.map((m, i) => isEvaluatedModel(m) ? `<span class="${compositeBest[i]}">${m.evaluatedComposite}/100</span>` : '<span class="text-(--color-text-muted)">Awaiting evidence</span>')],
         ['Open Source', selected.map(m => m.openSource ? '<span class="text-green-400">Yes</span>' : '<span class="text-(--color-text-muted)">No</span>')],
         ['API Available', selected.map(m => m.apiAvailable ? '<span class="text-green-400">Yes</span>' : '<span class="text-(--color-text-muted)">No</span>')],
         ['Modality', selected.map(m => `<span class="text-xs">${m.modality}</span>`)],
@@ -636,7 +638,7 @@ const baseJSON = safeJson(base);
     function renderVisualBars(selected) {
       const container = document.getElementById('visual-bars');
       const metrics = [
-        { label: 'Quality Score', key: 'qualityScore', max: 100 },
+        { label: 'Evaluated Composite', key: 'evaluatedComposite', max: 100 },
         { label: 'Context Window', key: 'contextWindow', max: Math.max(...selected.map(m => m.contextWindow)) },
         { label: 'Max Output', key: 'maxOutput', max: Math.max(...selected.map(m => m.maxOutput)) },
       ];
@@ -647,9 +649,10 @@ const baseJSON = safeJson(base);
           <div class="space-y-2">
             ${selected.map(m => {
               const val = m[metric.key];
-              const missingQuality = metric.key === 'qualityScore' && !isEvaluatedModel(m);
-              const pct = missingQuality ? 0 : (metric.max > 0 ? (val / metric.max * 100) : 0);
-              const display = missingQuality ? 'Pending' : (metric.key === 'qualityScore' ? val + '/100' : formatTokens(val));
+              const missingComposite = metric.key === 'evaluatedComposite' && !isEvaluatedModel(m);
+              const numericValue = typeof val === 'number' ? val : 0;
+              const pct = missingComposite ? 0 : (metric.max > 0 ? (numericValue / metric.max * 100) : 0);
+              const display = missingComposite ? 'Pending' : (metric.key === 'evaluatedComposite' ? numericValue + '/100' : formatTokens(numericValue));
               return `
                 <div class="flex items-center gap-3">
                   <span class="text-xs text-(--color-text-secondary) w-28 truncate">${m.name}</span>
@@ -668,39 +671,39 @@ const baseJSON = safeJson(base);
     function renderVerdict(selected) {
       const evaluated = selected.filter((model) => isEvaluatedModel(model));
       const pending = selected.filter((model) => !isEvaluatedModel(model));
-      const sorted = [...evaluated].sort((a, b) => b.qualityScore - a.qualityScore);
+      const sorted = [...evaluated].sort((a, b) => b.evaluatedComposite - a.evaluatedComposite);
       const cheapest = [...selected].filter(m => m.inputPrice > 0).sort((a, b) => {
         const ba = (a.inputPrice + 3 * a.outputPrice) / 4;
         const bb = (b.inputPrice + 3 * b.outputPrice) / 4;
         return ba - bb;
       });
       const bestValue = [...evaluated].filter(m => m.inputPrice > 0).sort((a, b) => {
-        const va = a.qualityScore / ((a.inputPrice + 3 * a.outputPrice) / 4);
-        const vb = b.qualityScore / ((b.inputPrice + 3 * b.outputPrice) / 4);
+        const va = a.evaluatedComposite / ((a.inputPrice + 3 * a.outputPrice) / 4);
+        const vb = b.evaluatedComposite / ((b.inputPrice + 3 * b.outputPrice) / 4);
         return vb - va;
       });
 
       let text = '';
       if (sorted.length === 0) {
-        text = 'These releases are visible early, but they are still waiting for enough benchmark and quality coverage to support a confident verdict.';
+        text = 'These releases are visible early, but they are still waiting for enough rankable benchmark evidence to support a verdict.';
       } else {
-        text = `<strong>${sorted[0].name}</strong> leads among the evaluated models (${sorted[0].qualityScore}/100).`;
+        text = `<strong>${sorted[0].name}</strong> leads among the evaluated models (${sorted[0].evaluatedComposite}/100).`;
       }
       if (cheapest.length > 0 && (!sorted[0] || cheapest[0].id !== sorted[0].id)) {
         text += ` <strong>${cheapest[0].name}</strong> is the most affordable option in this group.`;
       }
       if (bestValue.length > 0 && bestValue[0].id !== sorted[0]?.id && bestValue[0].id !== cheapest[0]?.id) {
-        text += ` <strong>${bestValue[0].name}</strong> offers the best quality-per-dollar value among the evaluated models.`;
+        text += ` <strong>${bestValue[0].name}</strong> offers the best benchmark-value ratio among the evaluated models.`;
       }
       if (sorted.length > 1) {
-        const diff = sorted[0].qualityScore - sorted[sorted.length - 1].qualityScore;
+        const diff = sorted[0].evaluatedComposite - sorted[sorted.length - 1].evaluatedComposite;
         if (diff < 5) {
-          text += ` These models are very close in quality — pricing and specific benchmark performance may be the deciding factor.`;
+          text += ` These evaluated composites are close; pricing and individual benchmark performance may be the deciding factor.`;
         }
       }
 
       if (pending.length > 0) {
-        text += ` ${pending.map((model) => `<strong>${model.name}</strong>`).join(', ')} ${pending.length === 1 ? 'is' : 'are'} still tracked without enough public coverage for a fair quality call.`;
+        text += ` ${pending.map((model) => `<strong>${model.name}</strong>`).join(', ')} ${pending.length === 1 ? 'is' : 'are'} still tracked without enough rankable evidence for a public comparison.`;
       }
 
       document.getElementById('verdict-text').innerHTML = text;
