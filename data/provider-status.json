@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T19:53:30.698Z",
+  "generatedAt": "2026-08-02T21:08:06.604Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T19:53:30.367Z",
+      "lastCheckedAt": "2026-08-02T21:08:06.456Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-02T03:19:33.000Z",
+          "id": "fireworks-feed-0-2026-08-02T20:16:53.000Z",
+          "title": "Service Degradation for one of our models on Serverless",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-02T20:16:53.000Z",
+          "updatedAt": "2026-08-02T20:16:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01KZ21QKCRRS22MEQMBGY40W5H",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-02T03:19:33.000Z",
           "title": "Service Degradation for one of our models on Serverless",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-08-02T03:19:33.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZ05D6HEJV819SMGXBA6FDMV",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-02T02:23:39.000Z",
-          "title": "Service Degradation for one of our models on Serverless",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-02T02:23:39.000Z",
-          "updatedAt": "2026-08-02T02:23:39.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KZ043Y6NJGVY6ZXV9F41H6WV",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-02T03:19:33.000Z",
+          "id": "fireworks-feed-0-2026-08-02T20:16:53.000Z",
+          "title": "Service Degradation for one of our models on Serverless",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-02T20:16:53.000Z",
+          "updatedAt": "2026-08-02T20:16:53.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01KZ21QKCRRS22MEQMBGY40W5H",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-02T03:19:33.000Z",
           "title": "Service Degradation for one of our models on Serverless",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-02T02:23:39.000Z",
+          "id": "fireworks-feed-2-2026-08-02T02:23:39.000Z",
           "title": "Service Degradation for one of our models on Serverless",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-08-01T22:34:30.000Z",
+          "id": "fireworks-feed-3-2026-08-01T22:34:30.000Z",
           "title": "Service Degradation for Qwen 3.7 Plus",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-08-01T22:34:30.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KYZAAE3935Y035F2MT6VFQ3E",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-07-31T20:48:03.000Z",
-          "title": "Service Degradation for one of our models on Serverless",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-07-31T20:48:03.000Z",
-          "updatedAt": "2026-07-31T20:48:03.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KYWWT4GQW3B4KJQYNX70YD8C",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T19:53:29.722Z",
+      "lastCheckedAt": "2026-08-02T21:08:05.761Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T19:53:29.418Z",
+      "lastCheckedAt": "2026-08-02T21:08:05.133Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T19:53:30.201Z",
+      "lastCheckedAt": "2026-08-02T21:08:06.154Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T19:53:29.343Z",
+      "lastCheckedAt": "2026-08-02T21:08:05.643Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T19:53:29.387Z",
+      "lastCheckedAt": "2026-08-02T21:08:05.123Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T19:53:30.691Z",
+      "lastCheckedAt": "2026-08-02T21:08:06.597Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -357,45 +357,45 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-08-02T19:37:27.000Z",
+          "id": "together-feed-0-2026-08-02T21:01:36.000Z",
           "title": "Inkling recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-08-02T19:37:27.000Z",
-          "updatedAt": "2026-08-02T19:37:27.000Z",
-          "resolvedAt": "2026-08-02T19:37:27.000Z",
+          "startedAt": "2026-08-02T21:01:36.000Z",
+          "updatedAt": "2026-08-02T21:01:36.000Z",
+          "resolvedAt": "2026-08-02T21:01:36.000Z",
           "url": "https://status.together.ai/",
           "summary": "Inkling recovered"
         },
         {
-          "id": "together-feed-1-2026-08-02T17:19:46.000Z",
+          "id": "together-feed-1-2026-08-02T20:40:34.000Z",
           "title": "Inkling went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-08-02T17:19:46.000Z",
-          "updatedAt": "2026-08-02T17:19:46.000Z",
+          "startedAt": "2026-08-02T20:40:34.000Z",
+          "updatedAt": "2026-08-02T20:40:34.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Inkling went down"
         },
         {
-          "id": "together-feed-2-2026-08-02T16:10:28.000Z",
+          "id": "together-feed-2-2026-08-02T20:07:33.000Z",
           "title": "Inkling recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-08-02T16:10:28.000Z",
-          "updatedAt": "2026-08-02T16:10:28.000Z",
-          "resolvedAt": "2026-08-02T16:10:28.000Z",
+          "startedAt": "2026-08-02T20:07:33.000Z",
+          "updatedAt": "2026-08-02T20:07:33.000Z",
+          "resolvedAt": "2026-08-02T20:07:33.000Z",
           "url": "https://status.together.ai/",
           "summary": "Inkling recovered"
         },
         {
-          "id": "together-feed-3-2026-08-02T14:40:32.000Z",
+          "id": "together-feed-3-2026-08-02T19:49:39.000Z",
           "title": "Inkling went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-08-02T14:40:32.000Z",
-          "updatedAt": "2026-08-02T14:40:32.000Z",
+          "startedAt": "2026-08-02T19:49:39.000Z",
+          "updatedAt": "2026-08-02T19:49:39.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Inkling went down"
@@ -417,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
