@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T14:13:52.458Z",
+  "generatedAt": "2026-08-02T15:16:44.264Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T14:13:52.450Z",
+      "lastCheckedAt": "2026-08-02T15:16:43.643Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T14:13:51.932Z",
+      "lastCheckedAt": "2026-08-02T15:16:43.403Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T14:13:52.411Z",
+      "lastCheckedAt": "2026-08-02T15:16:44.257Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -128,23 +128,23 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "together-feed-0-2026-08-02T11:31:30.000Z",
+          "id": "together-feed-0-2026-08-02T14:40:32.000Z",
           "title": "Inkling went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-08-02T11:31:30.000Z",
-          "updatedAt": "2026-08-02T11:31:30.000Z",
+          "startedAt": "2026-08-02T14:40:32.000Z",
+          "updatedAt": "2026-08-02T14:40:32.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Inkling went down"
         },
         {
-          "id": "together-feed-2-2026-08-02T10:25:30.000Z",
+          "id": "together-feed-2-2026-08-02T11:31:30.000Z",
           "title": "Inkling went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-08-02T10:25:30.000Z",
-          "updatedAt": "2026-08-02T10:25:30.000Z",
+          "startedAt": "2026-08-02T11:31:30.000Z",
+          "updatedAt": "2026-08-02T11:31:30.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Inkling went down"
@@ -152,7 +152,29 @@
       ],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-08-02T11:31:30.000Z",
+          "id": "together-feed-0-2026-08-02T14:40:32.000Z",
+          "title": "Inkling went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-02T14:40:32.000Z",
+          "updatedAt": "2026-08-02T14:40:32.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Inkling went down"
+        },
+        {
+          "id": "together-feed-1-2026-08-02T14:28:30.000Z",
+          "title": "Inkling recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-02T14:28:30.000Z",
+          "updatedAt": "2026-08-02T14:28:30.000Z",
+          "resolvedAt": "2026-08-02T14:28:30.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Inkling recovered"
+        },
+        {
+          "id": "together-feed-2-2026-08-02T11:31:30.000Z",
           "title": "Inkling went down",
           "status": "investigating",
           "impact": "major",
@@ -163,7 +185,7 @@
           "summary": "Inkling went down"
         },
         {
-          "id": "together-feed-1-2026-08-02T10:58:30.000Z",
+          "id": "together-feed-3-2026-08-02T10:58:30.000Z",
           "title": "Inkling recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -172,28 +194,6 @@
           "resolvedAt": "2026-08-02T10:58:30.000Z",
           "url": "https://status.together.ai/",
           "summary": "Inkling recovered"
-        },
-        {
-          "id": "together-feed-2-2026-08-02T10:25:30.000Z",
-          "title": "Inkling went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-02T10:25:30.000Z",
-          "updatedAt": "2026-08-02T10:25:30.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Inkling went down"
-        },
-        {
-          "id": "together-feed-3-2026-08-02T06:56:59.000Z",
-          "title": "Qwen3.5 9B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-02T06:56:59.000Z",
-          "updatedAt": "2026-08-02T06:56:59.000Z",
-          "resolvedAt": "2026-08-02T06:56:59.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B recovered"
         }
       ]
     },
@@ -208,7 +208,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T14:13:51.120Z",
+      "lastCheckedAt": "2026-08-02T15:16:42.729Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -298,7 +298,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T14:13:52.195Z",
+      "lastCheckedAt": "2026-08-02T15:16:43.929Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -318,7 +318,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T14:13:51.530Z",
+      "lastCheckedAt": "2026-08-02T15:16:43.150Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -350,7 +350,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-02T14:13:51.002Z",
+      "lastCheckedAt": "2026-08-02T15:16:42.786Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
