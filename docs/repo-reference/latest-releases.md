@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 03 Aug 2026, 15:12 UTC
+Generated: 03 Aug 2026, 18:02 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,8 +8,9 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 3 Aug 2026 | Qwen3.8 Max | Alibaba | tracking | high | watch only | 0 | 1 | n/a |
 | 31 Jul 2026 | DeepSeek V4 Flash 0731 | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
-| 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | high | watch only | 0 | 1 | n/a |
+| 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 24 Jul 2026 | Claude Opus 5 | Anthropic | tracking | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 24 Jul 2026 | Claude Opus 5 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 21 Jul 2026 | Gemini 3.6 Flash | Google | tracking | high | ready for editor | 0 | 2 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 30 Jun 2026 | Claude Sonnet 5 | Anthropic | tracking | watch | ready for editor | 0 | 4 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
 | 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | watch only | 0 | 3 | n/a |
 | 16 Jun 2026 | GLM 5.2 | Zhipu AI | tracking | watch | watch only | 0 | 0 | n/a |
-| 12 Jun 2026 | Kimi K2.7 Code | Moonshot AI | tracking | watch | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)

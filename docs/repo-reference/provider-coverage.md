@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 03 Aug 2026, 15:12 UTC
+Generated: 03 Aug 2026, 18:02 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -10,7 +10,7 @@ This table shows how much of each provider's public model surface is currently r
 | Google | 8 | 20 | 0 | Gemini 3.6 Flash (21 Jul 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 7 | 15 | 1 | Claude Opus 5 (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 4 | 0 | Muse Spark 1.1 (16 Jul 2026) | n/a | [docs](https://llama.meta.com/docs) |
-| Alibaba | 5 | 42 | 0 | Qwen3.7 Flash (27 Jul 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
+| Alibaba | 5 | 43 | 0 | Qwen3.8 Max (3 Aug 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | DeepSeek | 4 | 8 | 0 | DeepSeek V4 Flash 0731 (31 Jul 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
