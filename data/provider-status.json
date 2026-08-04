@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T15:09:27.941Z",
+  "generatedAt": "2026-08-04T15:33:10.831Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T15:09:27.489Z",
+      "lastCheckedAt": "2026-08-04T15:33:10.696Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,103 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T15:09:26.598Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Conversations",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01KZ6CT9K9Q52S3707W75MNBGB",
-          "title": "Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-04T12:43:44.000Z",
-          "updatedAt": "2026-08-04T12:57:49.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01KZ6CT9K9Q52S3707W75MNBGB",
-          "title": "Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-04T12:43:44.000Z",
-          "updatedAt": "2026-08-04T12:57:49.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01KYVPNEY9736Z04D3X1NSFFF9",
-          "title": "Enterprise & Education Chat Errors",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-07-31T09:04:13.000Z",
-          "updatedAt": "2026-07-31T09:28:52.000Z",
-          "resolvedAt": "2026-07-31T09:28:52.000Z",
-          "summary": "This is now resolved."
-        },
-        {
-          "id": "01KYSQ7PC81PV3PZE3ZEVFK6K5",
-          "title": "Elevated errors affecting ChatGPT conversations",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-30T14:35:41.000Z",
-          "updatedAt": "2026-07-30T16:01:11.000Z",
-          "resolvedAt": "2026-07-30T16:01:11.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KYNNX2TQ3PV0KPJ9PTRRPX6C",
-          "title": "Elevated error rates with the invalid_prompt error code",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-07-29T00:55:27.000Z",
-          "updatedAt": "2026-07-29T02:20:19.000Z",
-          "resolvedAt": "2026-07-29T02:20:19.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "mistral",
       "providerId": "mistral",
       "name": "Mistral",
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T15:09:27.070Z",
+      "lastCheckedAt": "2026-08-04T15:33:10.026Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -205,94 +108,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T15:09:27.687Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [
-        {
-          "id": "together-feed-0-2026-08-04T14:45:46.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-04T14:45:46.000Z",
-          "updatedAt": "2026-08-04T14:45:46.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-08-04T11:53:58.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-04T11:53:58.000Z",
-          "updatedAt": "2026-08-04T11:53:58.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-08-04T14:45:46.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-04T14:45:46.000Z",
-          "updatedAt": "2026-08-04T14:45:46.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-1-2026-08-04T12:25:14.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-04T12:25:14.000Z",
-          "updatedAt": "2026-08-04T12:25:14.000Z",
-          "resolvedAt": "2026-08-04T12:25:14.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-2-2026-08-04T11:53:58.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-04T11:53:58.000Z",
-          "updatedAt": "2026-08-04T11:53:58.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-3-2026-08-04T08:50:10.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-04T08:50:10.000Z",
-          "updatedAt": "2026-08-04T08:50:10.000Z",
-          "resolvedAt": "2026-08-04T08:50:10.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        }
-      ]
     },
     {
       "id": "anthropic",
@@ -305,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T15:09:26.574Z",
+      "lastCheckedAt": "2026-08-04T15:33:09.400Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -395,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T15:09:27.377Z",
+      "lastCheckedAt": "2026-08-04T15:33:10.451Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -415,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T15:09:26.914Z",
+      "lastCheckedAt": "2026-08-04T15:33:09.810Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -437,6 +252,157 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-04T15:33:09.505Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KZ6CT9K9Q52S3707W75MNBGB",
+          "title": "Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-04T12:43:44.000Z",
+          "updatedAt": "2026-08-04T15:25:30.000Z",
+          "resolvedAt": "2026-08-04T15:25:30.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KYVPNEY9736Z04D3X1NSFFF9",
+          "title": "Enterprise & Education Chat Errors",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-07-31T09:04:13.000Z",
+          "updatedAt": "2026-07-31T09:28:52.000Z",
+          "resolvedAt": "2026-07-31T09:28:52.000Z",
+          "summary": "This is now resolved."
+        },
+        {
+          "id": "01KYSQ7PC81PV3PZE3ZEVFK6K5",
+          "title": "Elevated errors affecting ChatGPT conversations",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-30T14:35:41.000Z",
+          "updatedAt": "2026-07-30T16:01:11.000Z",
+          "resolvedAt": "2026-07-30T16:01:11.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KYNNX2TQ3PV0KPJ9PTRRPX6C",
+          "title": "Elevated error rates with the invalid_prompt error code",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-29T00:55:27.000Z",
+          "updatedAt": "2026-07-29T02:20:19.000Z",
+          "resolvedAt": "2026-07-29T02:20:19.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-04T15:33:10.823Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-08-04T15:10:20.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-04T15:10:20.000Z",
+          "updatedAt": "2026-08-04T15:10:20.000Z",
+          "resolvedAt": "2026-08-04T15:10:20.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-1-2026-08-04T14:45:46.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-04T14:45:46.000Z",
+          "updatedAt": "2026-08-04T14:45:46.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-08-04T12:25:14.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-04T12:25:14.000Z",
+          "updatedAt": "2026-08-04T12:25:14.000Z",
+          "resolvedAt": "2026-08-04T12:25:14.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
+        },
+        {
+          "id": "together-feed-3-2026-08-04T11:53:58.000Z",
+          "title": "Google Gemma 4 31B IT went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-04T11:53:58.000Z",
+          "updatedAt": "2026-08-04T11:53:58.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT went down"
+        }
+      ]
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -451,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
