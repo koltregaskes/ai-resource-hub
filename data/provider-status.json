@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T06:38:33.919Z",
+  "generatedAt": "2026-08-04T07:23:33.379Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T06:38:33.912Z",
+      "lastCheckedAt": "2026-08-04T07:23:33.334Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T06:38:33.503Z",
+      "lastCheckedAt": "2026-08-04T07:23:32.796Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,10 +120,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T06:38:32.584Z",
+      "lastCheckedAt": "2026-08-04T07:23:32.484Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -151,30 +151,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "8k9mjhq7wmv3",
-          "title": "Elevated errors on Claude Sonnet 5",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-04T06:16:33.847Z",
-          "updatedAt": "2026-08-04T06:28:24.600Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/f0lj38zvb6qm",
-          "summary": "A fix has been implemented and we are monitoring the results."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "8k9mjhq7wmv3",
           "title": "Elevated errors on Claude Sonnet 5",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-08-04T06:16:33.847Z",
-          "updatedAt": "2026-08-04T06:28:24.600Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-08-04T06:55:43.208Z",
+          "resolvedAt": "2026-08-04T06:55:43.194Z",
           "url": "https://stspg.io/f0lj38zvb6qm",
-          "summary": "A fix has been implemented and we are monitoring the results."
+          "summary": "This incident has been resolved."
         },
         {
           "id": "dnl3q35xkn3s",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T06:38:33.622Z",
+      "lastCheckedAt": "2026-08-04T07:23:33.267Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -242,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T06:38:32.993Z",
+      "lastCheckedAt": "2026-08-04T07:23:32.528Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -274,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T06:38:32.438Z",
+      "lastCheckedAt": "2026-08-04T07:23:32.542Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -360,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-04T06:38:33.714Z",
+      "lastCheckedAt": "2026-08-04T07:23:33.373Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -429,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
