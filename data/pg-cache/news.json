@@ -1,5 +1,65 @@
 [
   {
+    "id": "news-f74b40f6583fa841ff5c",
+    "title": "How an OpenAI influencer trip backfired",
+    "url": "https://www.theverge.com/tech/975173/openai-influencers-brand-trip-ai-backlash-marketing",
+    "source": "The Verge",
+    "summary": "The brand trip is a right of passage for influencers. It's a mark of legitimacy that a sponsor wants to invite them on an all-expenses-paid vacation, often with luxurious freebies and activities. Trips can also spur hard feelings from uninvited influencers, trigger criticism from the public, and project a certain friv…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-04T17:46:41.000Z",
+    "discovered_at": "2026-08-04 18:01:59"
+  },
+  {
+    "id": "news-507e71c13bb9199a455f",
+    "title": "‘Not healthy’ LLM use is more common than you think",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/975180/llm-ai-chatbot-use-not-healthy",
+    "source": "The Verge",
+    "summary": "Hank Green, a popular YouTuber and science communicator, said he is stepping back from production amid intense criticism over his use of AI. Green described his AI usage as \"not healthy,\" but stressed that he used it for finding research sources and not to write scripts. Much of the ensuing firestorm in this corner of…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-04T17:33:46.000Z",
+    "discovered_at": "2026-08-04 18:01:59"
+  },
+  {
+    "id": "news-2fd75f11dd8ee5ed0fac",
+    "title": "Spotify expands AI remix and covers project with Merlin partnership",
+    "url": "https://techcrunch.com/2026/08/04/spotify-adds-merlin-to-its-ai-music-remix-and-covers-effort/",
+    "source": "TechCrunch",
+    "summary": "Spotify says Merlin, which represents more than 30,000 independent labels and distributors, has joined Universal Music Group in backing its upcoming AI-powered remix and covers product. The paid tool will let fans create AI-generated covers and remixes of participating artists’ music while ensuring artists opt in, rec…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-04T15:50:06.000Z",
+    "discovered_at": "2026-08-04 18:01:59"
+  },
+  {
+    "id": "news-a9c0b52c3e5d11a4c93f",
+    "title": "Texas halts new data centers as governor calls for audits",
+    "url": "https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/",
+    "source": "TechCrunch",
+    "summary": "Tech companies and developers have been scouring the U.S. for places to build data centers, and they’ve been drawn to Texas’ loose regulations and seemingly abundant power supply. But even Texas can be pushed to the brink.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-04T15:42:35.000Z",
+    "discovered_at": "2026-08-04 18:01:59"
+  },
+  {
+    "id": "news-67d9c56c5b0cf246bac5",
+    "title": "Texas says data centers must pass an audit before connecting to the grid",
+    "url": "https://www.theverge.com/policy/975071/texas-data-center-audit",
+    "source": "The Verge",
+    "summary": "Texas announced new a audit on data centers that could slow approval for new facilities seeking to connect to the state energy grid. Governor Greg Abbott (R) on Monday directed the Public Utility Commission of Texas (PUCT) and the Electric Reliability Council of Texas (ERCOT) to verify and audit new data center propos…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-04T15:33:21.000Z",
+    "discovered_at": "2026-08-04 18:01:59"
+  },
+  {
     "id": "news-01610e42603b4c005094",
     "title": "Elon Musk spends half his time talking robots and AI on Tesla earnings calls",
     "url": "https://techcrunch.com/2026/08/04/elon-musk-spends-half-his-time-talking-robots-and-ai-on-tesla-earnings-calls/",
@@ -9,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T15:20:06.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-88dfcd64b73b9ae726e6",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T14:03:01.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-acf8eb5bad01d4b0dfef",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T13:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-2a0a276054536ae62f3e",
@@ -45,19 +105,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T13:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-4250ad4d29288acfba08",
     "title": "EON wants to move the data superhighway from ocean fiber to space lasers",
     "url": "https://techcrunch.com/2026/08/04/eon-wants-to-move-the-data-superhighway-from-ocean-fiber-to-space-lasers/",
     "source": "TechCrunch",
-    "summary": "Endeavour Optical Networks is planning to launch the fastest space laser communications system yet built.",
+    "summary": "Endeavor Optical Networks is planning to launch the fastest space laser communications system yet built.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T12:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-421264cc869bfe0eb36b",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T11:27:55.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-71649e07497cf1ff4bed",
@@ -81,7 +141,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T10:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
+  },
+  {
+    "id": "news-b274d6785ee9abb7902c",
+    "title": "New ways to learn and teach with ChatGPT Work and Codex",
+    "url": "https://openai.com/index/learn-teach-chatgpt-work-codex",
+    "source": "OpenAI",
+    "summary": "Explore new education plugins for ChatGPT Work and Codex that help K–12 teachers, college educators, and students learn, teach, research, and build.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-04T00:00:00.000Z",
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-2b53ceafa813fbf77172",
@@ -93,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T23:19:50.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-2163b413300de52f6504",
@@ -105,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T22:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-3a82c94b104868a26d13",
@@ -117,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T20:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-52116e7a3a037e9f3442",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T19:28:57.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-0295a9d611d8b587e35a",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T19:09:56.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-2601dbdbb3ea709843a2",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T18:43:43.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-153c499b04198b0fefa6",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T17:38:45.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-06e62134a24cc6952c02",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T16:40:55.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-928c08785b292a8ecd7d",
@@ -189,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T15:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-92f8a546317f462a627c",
@@ -201,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T11:01:11.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-54eeff2c8d17f4336e8f",
@@ -213,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T10:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-d04cc35bd3ccb8a5aedf",
@@ -225,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T07:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-54e616a32e5ede38b908",
@@ -237,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T00:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-8f42055e53367347c758",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-02T20:54:22.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-59a85518969cac8c7ae1",
@@ -261,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-02T19:36:08.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-92beec8f131be5283601",
@@ -273,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-02T13:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-e1bf53682cbd5ccaabbe",
@@ -285,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-01T20:26:04.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-271ca55a8a1ed18169d8",
@@ -297,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-01T19:45:45.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-4a8975413aaba643953f",
@@ -309,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-01T18:20:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-53ed436cb442501434b7",
@@ -321,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-01T17:07:34.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-e529c7879a4af84c3ae5",
@@ -333,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-01T15:58:17.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-6d58997b466ca59f729e",
@@ -345,31 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-01T00:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
-  },
-  {
-    "id": "news-ec77bd47dbb96df8bae2",
-    "title": "OpenAI reportedly finds evidence that more of its agents ran amok",
-    "url": "https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/",
-    "source": "TechCrunch",
-    "summary": "OpenAI has reportedly found evidence of additional agent misbehavior as it looks into the incident that occurred with Hugging Face.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-31T22:47:26.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
-  },
-  {
-    "id": "news-9d803b4958508a6d011c",
-    "title": "India is starting to pay for apps, not just download them",
-    "url": "https://techcrunch.com/2026/07/31/india-is-starting-to-pay-for-apps-not-just-download-them/",
-    "source": "TechCrunch",
-    "summary": "India's app market generated a record $345 million in Q2.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-31T21:07:45.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-2db26e244b543f4bda5a",
@@ -381,43 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T20:39:14.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
-  },
-  {
-    "id": "news-abe78d62759cd3b39a43",
-    "title": "Google Earth&#8217;s AI deepfake tool only lasted one day",
-    "url": "https://www.theverge.com/tech/973943/google-earth-ai-image-generation-deepfake-tool",
-    "source": "The Verge",
-    "summary": "Google has shut down Google Earth feature it launched Thursday that allowed users to edit satellite images with text prompts using AI. The tool essentially let users create AI deepfakes of the real world using text prompts; Digital Digging's Henk van Ess, for example, intentionally generated images adding things like…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-31T19:13:29.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
-  },
-  {
-    "id": "news-cb8ef2d60e0e92966d2d",
-    "title": "Here’s the problem with putting an AI image generator in Google Earth",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/973764/google-earth-ai-satellite-images",
-    "source": "The Verge",
-    "summary": "A text prompt was all it took to generate reality-warping images using Google Earth's satellite, aerial, and 3D imagery with a now-rolled back AI feature, like these images generated by Digital Digging's Henk van Ess that show \"refugees near the Mexican border\" and a bomb crater near a hospital in Gaza. Google initial…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-31T17:05:46.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
-  },
-  {
-    "id": "news-e8b5e8d005e170b664f2",
-    "title": "The major labels propose rules to keep AI slop off the charts",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/973741/ai-music-major-record-labels-charts",
-    "source": "The Verge",
-    "summary": "Several record labels, including the big three - Universal Music Group, Sony Music, and Warner Music Group - have proposed rules regarding chart eligibility for AI songs. In short, they wouldn't be. The proposal goes quite a bit further than a labeling proposal put forth by the RIAA, the International Federation of th…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-31T16:36:48.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:02:00"
   },
   {
     "id": "news-6e145b017b5af3277f13",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-b86dc435d64acf26bfa3",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-4879819590782b03bb41",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T07:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-c5ad624a6ffb30ef2698",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T00:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-fc362ba711f59d44f4f1",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T10:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-9146ff1756af0f60b5f4",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T00:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-cc8e132c619995d199d3",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T15:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-14fd05ad34f9923ee3b2",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T10:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-6d964f10c3337bbc89e9",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T00:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:02:00"
   },
   {
     "id": "news-df22037e3e0ff3eac5f1",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T17:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:02:00"
   },
   {
     "id": "news-f143efbfe201f0407b0e",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T03:30:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -633,19 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
-  },
-  {
-    "id": "news-130e23c4bd2f87cbb00e",
-    "title": "How news organizations are using AI to advance their vital missions",
-    "url": "https://openai.com/index/how-news-organizations-are-using-ai",
-    "source": "OpenAI",
-    "summary": "News organizations are using AI to strengthen reporting, grow audiences, and improve business operations, with OpenAI tools supporting journalists and publishers worldwide.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-bd6ce42035f550014aca",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:02:00"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:02:00"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:02:00"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:02:00"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-08-04 15:33:08"
+    "discovered_at": "2026-08-04 18:01:59"
   },
   {
     "id": "news-e29d8e31dd5767709c8c",
@@ -777,6 +777,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-06T00:00:00.000Z",
-    "discovered_at": "2026-08-04 15:33:07"
+    "discovered_at": "2026-08-04 18:01:59"
   }
 ]
