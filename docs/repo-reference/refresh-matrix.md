@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 04 Aug 2026, 21:35 UTC
+Generated: 04 Aug 2026, 23:17 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 04 Aug 2026, 21:35 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 04 Aug 2026, 23:17 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 04 Aug 2026, 21:35 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 04 Aug 2026, 21:34 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 04 Aug 2026, 21:34 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 04 Aug 2026, 21:34 UTC |
-| Provider status | Hourly automated refresh | Automated | 04 Aug 2026, 21:34 UTC |
-| Guides and learning | Manual editorial review | Manual | 04 Aug 2026, 21:34 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 04 Aug 2026, 23:17 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 04 Aug 2026, 23:17 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 04 Aug 2026, 23:16 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 04 Aug 2026, 23:17 UTC |
+| Provider status | Hourly automated refresh | Automated | 04 Aug 2026, 23:17 UTC |
+| Guides and learning | Manual editorial review | Manual | 04 Aug 2026, 23:16 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 04 Aug 2026, 21:35 UTC
+- Last refreshed: 04 Aug 2026, 23:17 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -33,8 +33,8 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 22 Aug 2026, 12:00 UTC: Stable Diffusion public release - Next exact anniversary in 18 days. (`/milestones/`)
-- 04 Aug 2026, 21:35 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 22 Aug 2026, 12:00 UTC: Stable Diffusion public release - Next exact anniversary in 17 days. (`/milestones/`)
+- 04 Aug 2026, 23:17 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 04 Aug 2026, 21:35 UTC
+- Last refreshed: 04 Aug 2026, 23:17 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -80,7 +80,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 04 Aug 2026, 21:34 UTC
+- Last refreshed: 04 Aug 2026, 23:17 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 04 Aug 2026, 21:34 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 04 Aug 2026, 21:34 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 04 Aug 2026, 23:16 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 04 Aug 2026, 23:17 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 04 Aug 2026, 21:34 UTC
+- Last refreshed: 04 Aug 2026, 23:16 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,15 +111,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 04 Aug 2026, 21:34 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 04 Aug 2026, 21:34 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 04 Aug 2026, 21:34 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 04 Aug 2026, 23:16 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 04 Aug 2026, 23:16 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 04 Aug 2026, 23:16 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 04 Aug 2026, 21:34 UTC
+- Last refreshed: 04 Aug 2026, 23:17 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -132,14 +132,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 04 Aug 2026, 21:07 UTC: SpaceX has bought $329M worth of Tesla Megapacks so far this year - TechCrunch (industry) ([source](https://techcrunch.com/2026/08/04/spacex-has-bought-329m-worth-of-tesla-megapacks-so-far-this-year/))
-- 04 Aug 2026, 20:57 UTC: AMD&#8217;s datacenter business is booming while gaming takes a backseat - The Verge (industry) ([source](https://www.theverge.com/tech/975381/amd-q2-2026-earnings-ai-gaming-ryzen))
-- 04 Aug 2026, 20:47 UTC: SpaceX has more neocloud revenue - The Verge (industry) ([source](https://www.theverge.com/science/975335/spacex-made-more-money-as-a-neocloud))
+- 04 Aug 2026, 20:57 UTC: AMD&#8217;s data center business is booming while gaming takes a backseat - The Verge (industry) ([source](https://www.theverge.com/tech/975381/amd-q2-2026-earnings-ai-gaming-ryzen))
+- 04 Aug 2026, 20:47 UTC: SpaceX made more revenue as an AI company than a space company - The Verge (industry) ([source](https://www.theverge.com/science/975335/spacex-made-more-money-as-a-neocloud))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 04 Aug 2026, 21:34 UTC
+- Last refreshed: 04 Aug 2026, 23:17 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 04 Aug 2026, 21:34 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
-- 04 Aug 2026, 21:34 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
-- 04 Aug 2026, 21:34 UTC: Together AI - Under maintenance ([source](https://status.together.ai))
+- 04 Aug 2026, 23:17 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
+- 04 Aug 2026, 23:17 UTC: Mistral - Under maintenance ([source](https://status.mistral.ai))
+- 04 Aug 2026, 23:17 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 04 Aug 2026, 21:34 UTC
+- Last refreshed: 04 Aug 2026, 23:16 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 04 Aug 2026, 21:34 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 04 Aug 2026, 21:34 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 04 Aug 2026, 21:34 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 04 Aug 2026, 23:16 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 04 Aug 2026, 23:16 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 04 Aug 2026, 23:16 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
