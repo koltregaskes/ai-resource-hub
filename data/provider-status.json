@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T01:04:37.349Z",
+  "generatedAt": "2026-08-05T03:28:59.449Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T01:04:36.968Z",
+      "lastCheckedAt": "2026-08-05T03:28:59.031Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-04T23:34:46.000Z",
+          "id": "fireworks-feed-0-2026-08-05T02:40:33.000Z",
           "title": "Service Degradation for one of our models on Serverless",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-04T23:34:46.000Z",
-          "updatedAt": "2026-08-04T23:34:46.000Z",
+          "startedAt": "2026-08-05T02:40:33.000Z",
+          "updatedAt": "2026-08-05T02:40:33.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZ7J2BGE4PGVR19W8ZDP49F8",
-          "summary": "Status: Investigating We are seeing impacted performance for one of our models on Serverless. We are actively investigating."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-08-04T20:03:01.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-04T23:34:46.000Z",
+          "id": "fireworks-feed-0-2026-08-05T02:40:33.000Z",
           "title": "Service Degradation for one of our models on Serverless",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-04T23:34:46.000Z",
-          "updatedAt": "2026-08-04T23:34:46.000Z",
+          "startedAt": "2026-08-05T02:40:33.000Z",
+          "updatedAt": "2026-08-05T02:40:33.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZ7J2BGE4PGVR19W8ZDP49F8",
-          "summary": "Status: Investigating We are seeing impacted performance for one of our models on Serverless. We are actively investigating."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-08-04T20:03:01.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T01:04:36.292Z",
+      "lastCheckedAt": "2026-08-05T03:28:58.478Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T01:04:35.941Z",
+      "lastCheckedAt": "2026-08-05T03:28:57.883Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T01:04:36.859Z",
+      "lastCheckedAt": "2026-08-05T03:28:58.893Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T01:04:36.173Z",
+      "lastCheckedAt": "2026-08-05T03:28:58.206Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T01:04:35.962Z",
+      "lastCheckedAt": "2026-08-05T03:28:57.904Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T01:04:37.342Z",
+      "lastCheckedAt": "2026-08-05T03:28:59.444Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -357,7 +357,29 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-08-04T22:04:53.000Z",
+          "id": "together-feed-0-2026-08-05T01:31:18.000Z",
+          "title": "Orpheus TTS recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-05T01:31:18.000Z",
+          "updatedAt": "2026-08-05T01:31:18.000Z",
+          "resolvedAt": "2026-08-05T01:31:18.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS recovered"
+        },
+        {
+          "id": "together-feed-1-2026-08-05T01:19:14.000Z",
+          "title": "Orpheus TTS went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-05T01:19:14.000Z",
+          "updatedAt": "2026-08-05T01:19:14.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS went down"
+        },
+        {
+          "id": "together-feed-2-2026-08-04T22:04:53.000Z",
           "title": "Google Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
@@ -368,34 +390,12 @@
           "summary": "Google Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-1-2026-08-04T20:35:53.000Z",
+          "id": "together-feed-3-2026-08-04T20:35:53.000Z",
           "title": "Google Gemma 4 31B IT went down",
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-08-04T20:35:53.000Z",
           "updatedAt": "2026-08-04T20:35:53.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-08-04T18:09:56.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-04T18:09:56.000Z",
-          "updatedAt": "2026-08-04T18:09:56.000Z",
-          "resolvedAt": "2026-08-04T18:09:56.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-08-04T16:51:54.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-04T16:51:54.000Z",
-          "updatedAt": "2026-08-04T16:51:54.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Google Gemma 4 31B IT went down"
@@ -417,7 +417,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
