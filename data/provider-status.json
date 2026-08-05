@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T15:24:45.350Z",
+  "generatedAt": "2026-08-05T15:49:43.469Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T15:24:44.999Z",
+      "lastCheckedAt": "2026-08-05T15:49:43.218Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T15:24:44.067Z",
+      "lastCheckedAt": "2026-08-05T15:49:42.509Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -135,24 +135,24 @@
         {
           "id": "01KZ96S5HEWX0CX26W2WFYFKE6",
           "title": "Elevated errors with image generation",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-08-05T14:55:59.000Z",
-          "updatedAt": "2026-08-05T14:55:59.000Z",
+          "updatedAt": "2026-08-05T15:28:25.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating elevated errors affecting image generation. Some users may experience failed image generation requests. We are working to reduce the errors and will provide a..."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01KZ96S5HEWX0CX26W2WFYFKE6",
           "title": "Elevated errors with image generation",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-08-05T14:55:59.000Z",
-          "updatedAt": "2026-08-05T14:55:59.000Z",
+          "updatedAt": "2026-08-05T15:28:25.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating elevated errors affecting image generation. Some users may experience failed image generation requests. We are working to reduce the errors and will provide a..."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KZ6CT9K9Q52S3707W75MNBGB",
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T15:24:44.340Z",
+      "lastCheckedAt": "2026-08-05T15:49:42.513Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -217,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T15:24:44.164Z",
+      "lastCheckedAt": "2026-08-05T15:49:42.560Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T15:24:44.835Z",
+      "lastCheckedAt": "2026-08-05T15:49:43.163Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T15:24:44.240Z",
+      "lastCheckedAt": "2026-08-05T15:49:42.427Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T15:24:45.343Z",
+      "lastCheckedAt": "2026-08-05T15:49:43.462Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
