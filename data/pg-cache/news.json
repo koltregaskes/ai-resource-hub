@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-1dc2e64cdf709e722ea1",
+    "title": "Sure seems like Fenix Flexin used AI music generator Treblo",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/975528/fenix-flexin-ai-music-generator-treblo",
+    "source": "The Verge",
+    "summary": "We were pretty sure that Fenix Flexin's \"Rubberz\" was made using AI, but musician Medasin was confident that it was made using Treblo specifically. Now the company and a new detection tool seem to confirm it. On Monday, the company announced the open-source Treblo AI Music Classifier, which detects when a song was gen…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-05T16:57:25.000Z",
+    "discovered_at": "2026-08-05 17:52:23"
+  },
+  {
+    "id": "news-8b1ada3050de97d7a692",
+    "title": "Google just announced a major shakeup of its top AI leadership",
+    "url": "https://www.theverge.com/tech/975677/google-deepmind-ai-demis-hassabis-shakeup",
+    "source": "The Verge",
+    "summary": "Google is making some significant AI leadership changes, including a major shift for Google DeepMind leader Demis Hassabis. Hassabis will become the chair of Google DeepMind and the chief scientist at Alphabet, CEO Sundar Pichai announced on Wednesday. Hassabis will continue to lead Alphabet's Isomorphic Labs, which a…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-05T16:47:23.000Z",
+    "discovered_at": "2026-08-05 17:52:23"
+  },
+  {
+    "id": "news-73d50818e4cc050ec0d7",
+    "title": "SpaceX is barely Space and mostly X",
+    "url": "https://www.theverge.com/science/975545/spacex-x-earnings-ai-data-centers-compute-space",
+    "source": "The Verge",
+    "summary": "Once, I had some questions about why SpaceX, Elon Musk's healthiest company, acquired xAI, his sickliest one. Now I have some questions about why we're calling the whole thing SpaceX. Look, what we have here, by revenue, is primarily a telecom company and a company that rents compute, according to SpaceX's first quart…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-05T16:35:56.000Z",
+    "discovered_at": "2026-08-05 17:52:23"
+  },
+  {
+    "id": "news-32802d2d5eba3af98d96",
+    "title": "Reddit is introducing a new moderator: AI",
+    "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform",
+    "source": "The Verge",
+    "summary": "Reddit is enlisting AI to help moderate new subreddits - and eventually the rest of site. The company is introducing automated moderation tools that rely on LLMs to help mods manage their communities, and it's expanding who can use those tools today ahead of a full launch later this year. The company calls the suite […",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-05T16:00:00.000Z",
+    "discovered_at": "2026-08-05 17:52:23"
+  },
+  {
+    "id": "news-f868c2ae379cb84a5698",
+    "title": "Shopify says AI search is driving more traffic and sales, not replacing Google",
+    "url": "https://techcrunch.com/2026/08/05/shopify-says-ai-search-is-driving-more-traffic-and-sales-not-replacing-google/",
+    "source": "TechCrunch",
+    "summary": "Shopify says AI isn’t cannibalizing search traffic the way it has for publishers. Instead, AI-driven traffic and orders to Shopify stores tripled year over year in Q2.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-05T15:56:14.000Z",
+    "discovered_at": "2026-08-05 17:52:23"
+  },
+  {
+    "id": "news-2c94353a06fda297ddc1",
+    "title": "Hark previews its browser use agent for completing tasks",
+    "url": "https://techcrunch.com/2026/08/05/hark-previews-its-browser-use-agent-for-completing-tasks/",
+    "source": "TechCrunch",
+    "summary": "Hark claims that its browser use agent is faster and cheaper than competition.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-05T15:46:27.000Z",
+    "discovered_at": "2026-08-05 17:52:23"
+  },
+  {
     "id": "news-6cc6646c30716f7680a2",
     "title": "Rogue AI agents created fake online identities in another hacking attempt",
     "url": "https://www.theverge.com/ai-artificial-intelligence/975577/aisi-openai-anthropic-agent-hacking",
@@ -9,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T15:14:57.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-a9586ae9d88cd3d66ed6",
@@ -21,19 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T15:05:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-3b974bc0d486ea9d9ee1",
     "title": "Anthropic is hiring an AI chip design team",
     "url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
     "source": "TechCrunch",
-    "summary": "Anthropic is building a team for designing its own custom AI chips. The Claude-maker said it would co-design hardware and models to help its technology run faster and more efficiently.",
+    "summary": "Anthropic is building a team for designing its own custom AI chips. The Claude maker said it would co-design hardware and models to help its technology run faster and more efficiently.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T14:13:18.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-823827dc08f0cf34f09c",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T12:28:38.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-db62e9447d4150fefee7",
@@ -57,19 +129,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T11:12:50.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-40d8458ed3978a2333d6",
     "title": "AI makes weather prediction better. Can WindBorne make it lucrative?",
     "url": "https://techcrunch.com/2026/08/05/ai-makes-weather-prediction-better-can-windborne-make-it-lucrative/",
     "source": "TechCrunch",
-    "summary": "WindBorne Systems has raised $37 million Series B round to scale its weather balloons and AI forecasts.",
+    "summary": "WindBorne Systems has raised a $37 million Series B round to scale its weather balloons and AI forecasts.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T11:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-1dbe2cc7f0dc2da1cd81",
@@ -81,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T10:29:47.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-bedc6f3c74404ef42e2a",
@@ -93,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T21:07:26.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-4707f42c55fa5de9ecab",
@@ -105,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T20:57:49.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-ed45a6ea532204b9a610",
@@ -117,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T20:47:55.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-9842810604508a2c1689",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T20:05:26.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-ee6239399ce0e6097021",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T19:48:40.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-9964c3e16d1d0909cc63",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T19:34:34.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-5d2add2dbedb4675566e",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T19:28:49.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-977f60f7e5e3c697f2ee",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T19:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-f74b40f6583fa841ff5c",
@@ -189,19 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T17:46:41.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
-  },
-  {
-    "id": "news-507e71c13bb9199a455f",
-    "title": "‘Not healthy’ LLM use is more common than you think",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/975180/llm-ai-chatbot-use-not-healthy",
-    "source": "The Verge",
-    "summary": "Hank Green, a popular YouTuber and science communicator, said he is stepping back from production amid intense criticism over his use of AI. Green described his AI usage as \"not healthy,\" but stressed that he used it for finding research sources and not to write scripts. Much of the ensuing firestorm in this corner of…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T17:33:46.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-2fd75f11dd8ee5ed0fac",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T15:50:06.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-a9c0b52c3e5d11a4c93f",
@@ -225,19 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T15:42:35.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
-  },
-  {
-    "id": "news-67d9c56c5b0cf246bac5",
-    "title": "Texas says data centers must pass an audit before connecting to the grid",
-    "url": "https://www.theverge.com/policy/975071/texas-data-center-audit",
-    "source": "The Verge",
-    "summary": "Texas announced new a audit on data centers that could slow approval for new facilities seeking to connect to the state energy grid. Governor Greg Abbott (R) on Monday directed the Public Utility Commission of Texas (PUCT) and the Electric Reliability Council of Texas (ERCOT) to verify and audit new data center propos…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T15:33:21.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-01610e42603b4c005094",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T15:20:06.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-88dfcd64b73b9ae726e6",
@@ -261,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T14:03:01.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-acf8eb5bad01d4b0dfef",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T13:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-2a0a276054536ae62f3e",
@@ -285,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T13:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-4250ad4d29288acfba08",
@@ -297,31 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T12:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
-  },
-  {
-    "id": "news-421264cc869bfe0eb36b",
-    "title": "OpenAI drags Apple’s lawsuit into the court of public opinion",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/974914/openai-blog-response-apple-lawsuit-messages",
-    "source": "The Verge",
-    "summary": "Apple's legal battle against OpenAI just got messier now that the ChatGPT-maker has publicly aired receipts to counter Apple's version of events. In a blog post published overnight titled \"Apple is getting this wrong,\" OpenAI said that Apple's lawsuit accusing it of stealing trade secrets is \"careless, aggressive, and…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T11:27:55.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
-  },
-  {
-    "id": "news-71649e07497cf1ff4bed",
-    "title": "Can Reddit fend off a new wave of AI SEO spam?",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/973098/reddit-ai-search-seo-marketing-brands-spam",
-    "source": "The Verge",
-    "summary": "Earlier this year, a Reddit user had asked members of a skincare-focused subreddit if anyone had tried a specific hypochlorous acid spray, a product often used for acne. There were dozens of responses; one from a user named Primary-Taro4254 seemed innocuous enough, at least at first. \"I haven't personally tried [that…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T10:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-b274d6785ee9abb7902c",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T00:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-2b53ceafa813fbf77172",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T23:19:50.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-2163b413300de52f6504",
@@ -357,31 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T22:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
-  },
-  {
-    "id": "news-3a82c94b104868a26d13",
-    "title": "AWS is helping vibe-coding startup Superblocks, and the implications are big",
-    "url": "https://techcrunch.com/2026/08/03/aws-is-helping-vibe-coding-startup-superblocks-and-the-implications-are-big/",
-    "source": "TechCrunch",
-    "summary": "AWS now allows vibe-coding tool Superblocks to be embedded into the private clouds of AWS customers. It's another step toward decoupling apps from models.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-03T20:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
-  },
-  {
-    "id": "news-52116e7a3a037e9f3442",
-    "title": "Design Arena creators raise $7.9 million to bring taste to AI models",
-    "url": "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models/",
-    "source": "TechCrunch",
-    "summary": "Design Arena is used by 5.3 million people around the world, providing critical human evaluations to frontier labs.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-03T19:28:57.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-928c08785b292a8ecd7d",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T15:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-d04cc35bd3ccb8a5aedf",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T07:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-54e616a32e5ede38b908",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T00:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-6d58997b466ca59f729e",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-01T00:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-2db26e244b543f4bda5a",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T20:39:14.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-6e145b017b5af3277f13",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-b86dc435d64acf26bfa3",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-4879819590782b03bb41",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T07:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-c5ad624a6ffb30ef2698",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T00:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-fc362ba711f59d44f4f1",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T10:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-9146ff1756af0f60b5f4",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T00:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-cc8e132c619995d199d3",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T15:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-14fd05ad34f9923ee3b2",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T10:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-6d964f10c3337bbc89e9",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T00:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-df22037e3e0ff3eac5f1",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T17:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-f143efbfe201f0407b0e",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T03:30:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:22"
   },
   {
     "id": "news-3df5e390bfb681d30878",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-08T07:00:51.000Z",
-    "discovered_at": "2026-08-05 15:24:43"
+    "discovered_at": "2026-08-05 17:52:23"
   },
   {
     "id": "news-73fd78c4847c47c09723",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-07T08:54:00.000Z",
-    "discovered_at": "2026-08-05 15:24:42"
+    "discovered_at": "2026-08-05 17:52:23"
   }
 ]
