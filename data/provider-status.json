@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T20:14:14.589Z",
+  "generatedAt": "2026-08-05T21:30:43.972Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T20:14:13.939Z",
+      "lastCheckedAt": "2026-08-05T21:30:43.807Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,16 +100,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T20:14:12.740Z",
+      "lastCheckedAt": "2026-08-05T21:30:42.550Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "3 active incidents across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Conversations",
-          "status": "degraded_performance"
-        },
         {
           "name": "Image Generation",
           "status": "degraded_performance"
@@ -129,6 +125,10 @@
         {
           "name": "Codex in ChatGPT Desktop",
           "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
@@ -143,16 +143,6 @@
           "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
-          "id": "01KZ9E7QD8WFJD5DMF73QGVYH8",
-          "title": "Elevated errors in ChatGPT conversations with files",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-05T17:06:16.000Z",
-          "updatedAt": "2026-08-05T17:06:16.000Z",
-          "resolvedAt": null,
-          "summary": "Error rates affecting ChatGPT conversations that use files and images have improved. We have applied the mitigation and are monitoring the recovery."
-        },
-        {
           "id": "01KZ96S5HEWX0CX26W2WFYFKE6",
           "title": "Elevated errors with image generation",
           "status": "monitoring",
@@ -165,6 +155,16 @@
       ],
       "recentIncidents": [
         {
+          "id": "01KZ9E7QD8WFJD5DMF73QGVYH8",
+          "title": "Elevated errors in ChatGPT conversations with files",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-05T17:06:16.000Z",
+          "updatedAt": "2026-08-05T20:19:28.000Z",
+          "resolvedAt": "2026-08-05T20:19:28.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
           "id": "01KZ9DMQD2GJ8JJWDN7572RH78",
           "title": "Issues with Custom GPT actions",
           "status": "monitoring",
@@ -173,16 +173,6 @@
           "updatedAt": "2026-08-05T19:03:27.000Z",
           "resolvedAt": null,
           "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01KZ9E7QD8WFJD5DMF73QGVYH8",
-          "title": "Elevated errors in ChatGPT conversations with files",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-05T17:06:16.000Z",
-          "updatedAt": "2026-08-05T17:06:16.000Z",
-          "resolvedAt": null,
-          "summary": "Error rates affecting ChatGPT conversations that use files and images have improved. We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KZ96S5HEWX0CX26W2WFYFKE6",
@@ -217,7 +207,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T20:14:13.087Z",
+      "lastCheckedAt": "2026-08-05T21:30:43.258Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -237,7 +227,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T20:14:14.583Z",
+      "lastCheckedAt": "2026-08-05T21:30:42.486Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -327,7 +317,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T20:14:13.533Z",
+      "lastCheckedAt": "2026-08-05T21:30:43.474Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -347,7 +337,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T20:14:12.846Z",
+      "lastCheckedAt": "2026-08-05T21:30:42.759Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -379,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-05T20:14:14.096Z",
+      "lastCheckedAt": "2026-08-05T21:30:43.965Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -448,7 +438,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
