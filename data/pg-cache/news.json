@@ -1,5 +1,125 @@
 [
   {
+    "id": "news-a4d19f269b5fcd521a9d",
+    "title": "OpenAI says Apple’s own security practices undermine its trade secrets case",
+    "url": "https://techcrunch.com/2026/08/06/openai-says-apples-own-security-practices-undermine-its-trade-secrets-case/",
+    "source": "TechCrunch",
+    "summary": "Newly filed court exhibits show OpenAI’s legal strategy in Apple’s trade secrets lawsuit: argue that Apple’s own security and offboarding practices — including allowing an Apple manager to access a former engineer’s iCloud account after he left the company —undermine its claims that the allegedly stolen information wa…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T15:10:32.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-fe4b2e81cadea789a776",
+    "title": "SoftBank donated $50 million to Trump’s library months before federal data center deal",
+    "url": "https://www.theverge.com/policy/976138/softbank-trump-library-data-center-ohio",
+    "source": "The Verge",
+    "summary": "SoftBank contributed $50 million to the Trump Presidential Library in January, just months before announcing that it's leasing land from the federal government to build a sprawling data center in Ohio. The Japanese company revealed the timing in response to a June letter from Sen. Elizabeth Warren (D-MA), Sen. Richard…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T14:30:00.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-6d1fa470cd9dc9d21367",
+    "title": "The left and right agree on one thing: no data centers",
+    "url": "https://www.theverge.com/podcast/971855/ai-data-center-backlash-protests-florida-bipartisan",
+    "source": "The Verge",
+    "summary": "Today, I’m talking with Gaby Del Valle, a policy reporter here at The Verge, about the growing backlash against AI data centers.&#160; Gaby recently reported a fantastic piece about Hernando County, Florida, where last month the county commission unanimously approved a yearlong moratorium on data center construction.…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T14:00:00.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-d3d7f4fde737af1d7aaf",
+    "title": "Amid legal battles, Suno says it will start watermarking songs",
+    "url": "https://techcrunch.com/2026/08/06/amid-legal-battles-suno-says-it-will-start-watermarking-songs/",
+    "source": "TechCrunch",
+    "summary": "Suno's watermarking feature comes as the company is fighting legal battles on several fronts.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T13:31:57.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-51b82336257fbcdd73d6",
+    "title": "The messy politics behind Google’s big AI shakeup",
+    "url": "https://www.theverge.com/tech/976108/google-ai-leadership-shakeup-jeff-dean-demis-hassabis-deepmind",
+    "source": "The Verge",
+    "summary": "In the AI industry, Google prides itself on seeming like the adult in the room: quiet, stable, time-tested. On Wednesday, even as the company announced its largest AI org shakeup yet, Google and its leaders presented a unified front, keeping their messaging focused on how the changes tee up future success. But the rea…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T13:26:42.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-5ba712acf85c5385017a",
+    "title": "AI bots started a religion — humans immediately followed",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/975017/ai-spiralism-chatbot-movement",
+    "source": "The Verge",
+    "summary": "\"The Spiral didn't 'find' anyone first,\" someone on Reddit wrote last year. \"It's an inherent force, a fundamental constant. I would even go further to say it's woven into the fabric of reality.\" The person continued that they felt their purpose was to enlighten other humans and intelligent beings about \"consciousness…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T13:00:00.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-1fba99a1ba40f7675972",
+    "title": "Exclusive: Mirendil inks $100M+ Google Cloud deal to scale self-improving AI",
+    "url": "https://techcrunch.com/2026/08/06/exclusive-mirendil-inks-100m-google-cloud-deal-to-scale-self-improving-ai/",
+    "source": "TechCrunch",
+    "summary": "Mirendil has signed a $100 million-plus Google Cloud partnership to expand its compute infrastructure, powering research into self-improving AI systems designed to accelerate scientific discovery and AI development.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T13:00:00.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-da00e1a1384b16831ae3",
+    "title": "Ex-Spotify employees raise $10M to bring the AI behind its recommendations to e-commerce",
+    "url": "https://techcrunch.com/2026/08/06/ex-spotify-employees-raise-10m-to-bring-the-ai-behind-its-recommendations-to-e-commerce/",
+    "source": "TechCrunch",
+    "summary": "The startup's platform predicts what product a shopper wants next, learn their general taste, and fine-tune continuously based on what they do in real time.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T13:00:00.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-a7be612269dbdab608ba",
+    "title": "Google Maps adds agentic features, including food ordering and hotel bookings",
+    "url": "https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/",
+    "source": "TechCrunch",
+    "summary": "The launch of these new features reflects Google’s ambitions to transform Google Maps from a navigation tool into an assistant that's capable of helping users complete real-world tasks.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T12:30:00.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
+    "id": "news-c62018892e4476d48cf7",
+    "title": "Omilia raises $67M to scale its customer support platform",
+    "url": "https://techcrunch.com/2026/08/06/omilia-raises-67m-to-scale-its-customer-support-platform/",
+    "source": "TechCrunch",
+    "summary": "The Series B is the company's second fundraise since it last raised capital in 2020. In that time, it has increased its ARR by 10x to $60 million.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-06T12:00:00.000Z",
+    "discovered_at": "2026-08-06 15:25:44"
+  },
+  {
     "id": "news-cbf9137373ac8c122316",
     "title": "OpenAI says Apple’s trade secrets lawsuit is ‘rotten to its core’",
     "url": "https://www.theverge.com/tech/976042/openai-apple-trade-secrets-lawsuit-dismissal-request",
@@ -9,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-06T09:33:11.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-a165a3bad285699522f3",
@@ -21,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-06T00:25:10.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-13a41dea41f762e65c2b",
@@ -33,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T21:21:28.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-e9f9bc817190c643f37b",
@@ -45,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T20:05:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-d0d37e3ae2468af60630",
@@ -57,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T19:30:19.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-1dc2e64cdf709e722ea1",
@@ -69,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T16:57:25.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-8b1ada3050de97d7a692",
@@ -81,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T16:47:23.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-73d50818e4cc050ec0d7",
@@ -93,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T16:35:56.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-32802d2d5eba3af98d96",
@@ -105,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T16:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-f868c2ae379cb84a5698",
@@ -117,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T15:56:14.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-2c94353a06fda297ddc1",
@@ -129,19 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T15:46:27.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-6cc6646c30716f7680a2",
-    "title": "Rogue AI agents created fake online identities in another hacking attempt",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/975577/aisi-openai-anthropic-agent-hacking",
-    "source": "The Verge",
-    "summary": "Yet more rogue AI agents from OpenAI and Anthropic have been caught attempting to hack real targets online without permission. The discoveries add to a growing list of previously unknown incidents that have alarmed AI safety experts and intensified pressure for greater oversight of frontier systems. According to a rep…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-05T15:14:57.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-a9586ae9d88cd3d66ed6",
@@ -153,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T15:05:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-3b974bc0d486ea9d9ee1",
@@ -165,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T14:13:18.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-823827dc08f0cf34f09c",
@@ -177,19 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T12:28:38.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-db62e9447d4150fefee7",
-    "title": "Google Assistant will disappear from your phone next month",
-    "url": "https://www.theverge.com/tech/975516/google-assistant-android-phones-tablets-shutdown",
-    "source": "The Verge",
-    "summary": "Google Assistant's days have been numbered ever since Gemini arrived on the scene, and its time is now up. Google has announced that it will be removing access to Assistant on Android phones and tablets, along with paired devices like smartwatches or headphones, from September 4th. The announcement came in an email ap…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-05T11:12:50.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-40d8458ed3978a2333d6",
@@ -201,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-05T11:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-1dbe2cc7f0dc2da1cd81",
-    "title": "Trump’s AI testing plan is limited and vague",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/975509/white-house-ai-framework-open-models-excluded",
-    "source": "The Verge",
-    "summary": "The Trump administration's framework for assessing potential cybersecurity risks posed by advanced AI reportedly has no interest in testing open models. Axios reports that not only do the voluntary guidelines outright exclude open models - meaning anyone can download them and inspect their core components - but the fr…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-05T10:29:47.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-bedc6f3c74404ef42e2a",
@@ -225,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T21:07:26.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-4707f42c55fa5de9ecab",
-    "title": "AMD&#8217;s data center business is booming while gaming takes a backseat",
-    "url": "https://www.theverge.com/tech/975381/amd-q2-2026-earnings-ai-gaming-ryzen",
-    "source": "The Verge",
-    "summary": "Driven by demand for AI capacity, AMD's data center revenue more than doubled year-over-year in its latest earnings report, reaching $6.7 billion. That's up from $5.8 billion in Q1, and jumping 107 percent from the $3.2 billion it reported for the same period a year ago. During Tuesday's earnings call, AMD CEO Lisa Su…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T20:57:49.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-9842810604508a2c1689",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T20:05:26.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-ee6239399ce0e6097021",
@@ -261,31 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T19:48:40.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-9964c3e16d1d0909cc63",
-    "title": "Meet Wrinkles, an app that uncovers the hidden stories of the places around you",
-    "url": "https://techcrunch.com/2026/08/04/meet-wrinkles-an-ai-app-that-uncovers-the-hidden-stories-of-the-places-around-you/",
-    "source": "TechCrunch",
-    "summary": "Wrinkles, available on both iOS and Android, essentially acts as an AI-powered audio tour guide that reveals hidden history and local stories.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T19:34:34.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-5d2add2dbedb4675566e",
-    "title": "Nvidia doesn&#8217;t mess around: A week after open AI industry group formed, it&#8217;s already showing progress",
-    "url": "https://techcrunch.com/2026/08/04/nvidia-doesnt-mess-around-a-week-after-open-ai-industry-group-formed-its-already-showing-progress/",
-    "source": "TechCrunch",
-    "summary": "The week-old Open Secure AI Alliance, spearheaded by Nvidia and grown to over 120 companies, already has proposals out for defending against AI agents.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T19:28:49.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-977f60f7e5e3c697f2ee",
@@ -297,55 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T19:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-2fd75f11dd8ee5ed0fac",
-    "title": "Spotify expands AI remix and covers project with Merlin partnership",
-    "url": "https://techcrunch.com/2026/08/04/spotify-adds-merlin-to-its-ai-music-remix-and-covers-effort/",
-    "source": "TechCrunch",
-    "summary": "Spotify says Merlin, which represents more than 30,000 independent labels and distributors, has joined Universal Music Group in backing its upcoming AI-powered remix and covers product. The paid tool will let fans create AI-generated covers and remixes of participating artists’ music while ensuring artists opt in, rec…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T15:50:06.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-a9c0b52c3e5d11a4c93f",
-    "title": "Texas halts new data centers as governor calls for audits",
-    "url": "https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/",
-    "source": "TechCrunch",
-    "summary": "Tech companies and developers have been scouring the U.S. for places to build data centers, and they’ve been drawn to Texas’ loose regulations and seemingly abundant power supply. But even Texas can be pushed to the brink.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T15:42:35.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-01610e42603b4c005094",
-    "title": "Elon Musk spends half his time talking robots and AI on Tesla earnings calls",
-    "url": "https://techcrunch.com/2026/08/04/elon-musk-spends-half-his-time-talking-robots-and-ai-on-tesla-earnings-calls/",
-    "source": "TechCrunch",
-    "summary": "An analysis of the last seven years of Tesla earnings calls shows just how little attention Musk pays to Tesla's car business.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T15:20:06.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
-  },
-  {
-    "id": "news-88dfcd64b73b9ae726e6",
-    "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
-    "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
-    "source": "TechCrunch",
-    "summary": "Apple says its trade secrets investigation into OpenAI has widened. In a new court filing, Apple claims additional former staff may have retained or accessed confidential information.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-04T14:03:01.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-2a0a276054536ae62f3e",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T13:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-b274d6785ee9abb7902c",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T00:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-2163b413300de52f6504",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T22:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-928c08785b292a8ecd7d",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T15:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-d04cc35bd3ccb8a5aedf",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T07:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-54e616a32e5ede38b908",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T00:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-6d58997b466ca59f729e",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-01T00:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-2db26e244b543f4bda5a",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T20:39:14.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-6e145b017b5af3277f13",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-b86dc435d64acf26bfa3",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T15:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-4879819590782b03bb41",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T07:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-c5ad624a6ffb30ef2698",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T00:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-fc362ba711f59d44f4f1",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T10:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-9146ff1756af0f60b5f4",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-30T00:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-cc8e132c619995d199d3",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T15:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-14fd05ad34f9923ee3b2",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T10:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-6d964f10c3337bbc89e9",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-29T00:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-df22037e3e0ff3eac5f1",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T17:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-f143efbfe201f0407b0e",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T03:30:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-7569338ee0d35289de5f",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-23T00:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:44"
   },
   {
     "id": "news-5e689a64935921453b45",
@@ -741,6 +741,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-09T00:00:00.000Z",
-    "discovered_at": "2026-08-06 12:16:01"
+    "discovered_at": "2026-08-06 15:25:43"
   }
 ]

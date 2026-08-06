@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 06 Aug 2026, 12:16 UTC
+Generated: 06 Aug 2026, 15:25 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -10,15 +10,15 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Llama 4 Maverick | Meta | 57.6 | 77.0 / 10 | 28% | Coding | $0.20 / $0.80 | 05 Apr 2025 |
 | 2 | DeepSeek V3.2 | DeepSeek | 56.3 | 74.6 / 6 | 21% | General use | $0.27 / $1.12 | 29 Sept 2025 |
-| 3 | GPT-5.2 | OpenAI | 55.1 | 78.5 / 22 | 67% | multilingual | $1.75 / $14.00 | 10 Dec 2025 |
-| 4 | Claude Opus 4.6 | Anthropic | 52.3 | 75.9 / 16 | 49% | Chat | $5.00 / $25.00 | 05 Feb 2026 |
+| 3 | GPT-5.2 | OpenAI | 55.1 | 78.5 / 22 | 67% | multilingual | $0.88 / $7.00 | 10 Dec 2025 |
+| 4 | Claude Opus 4.6 (batch) | Anthropic | 52.3 | 75.9 / 16 | 49% | Chat | $5.00 / $25.00 | 05 Feb 2026 |
 | 5 | Mistral Large | Mistral | 50.4 | 70.6 / 6 | 20% | General use | $2.00 / $6.00 | 01 Jun 2025 |
 | 6 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.10 / $0.30 | 05 Apr 2025 |
 | 7 | Phi-4 Reasoning | Microsoft | 49.2 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
-| 8 | Claude Sonnet 4.6 | Anthropic | 44.8 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
-| 9 | GPT-5.2 Pro | OpenAI | 44.1 | 91.3 / 4 | 16% | Chat | $21.00 / $168.00 | 10 Dec 2025 |
+| 8 | Claude Sonnet 4.6 (batch) | Anthropic | 44.8 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
+| 9 | GPT-5.2 Pro (batch) | OpenAI | 44.1 | 91.3 / 4 | 16% | Chat | $10.50 / $84.00 | 10 Dec 2025 |
 | 10 | R1 0528 | DeepSeek | 40.8 | 82.4 / 6 | 23% | Chat | $0.50 / $2.15 | 28 May 2025 |
-| 11 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $2.00 / $8.00 | 16 Apr 2025 |
+| 11 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $1.00 / $4.00 | 16 Apr 2025 |
 | 12 | Qwen3 Max | Alibaba | 39.7 | 86.1 / 4 | 15% | Coding | $0.78 / $3.90 | 01 Sept 2025 |
 | 13 | Gemini 2.5 Pro | Google | 38.1 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
 | 14 | Mistral Small 3.1 24B | Mistral | 36.7 | 76.1 / 3 | 9% | Coding | $0.35 / $0.56 | 18 Mar 2025 |
