@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 05 Aug 2026, 23:16 UTC
+Generated: 06 Aug 2026, 03:32 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -25,7 +25,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Jul 2026 | GPT-5.6 Luna Pro | OpenAI | tracking | watch | watch only | 0 | 4 | n/a |
 | 9 Jul 2026 | GPT-5.6 Terra Pro | OpenAI | tracking | watch | watch only | 0 | 4 | n/a |
 | 9 Jul 2026 | GPT-5.6 Sol Pro | OpenAI | tracking | watch | watch only | 0 | 4 | n/a |
-| 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
+| 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 1 | n/a |
 | 30 Jun 2026 | Claude Sonnet 5 | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
 | 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | watch only | 0 | 3 | n/a |
 
