@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T20:55:53.585Z",
+  "generatedAt": "2026-08-07T21:52:52.145Z",
   "sourceType": "curated primary sources",
   "live": 6,
   "errors": 1,
@@ -8,7 +8,7 @@
       "id": "ai4-2026",
       "name": "Ai4 2026",
       "url": "https://ai4.io/",
-      "checkedAt": "2026-08-07T20:55:52.510Z",
+      "checkedAt": "2026-08-07T21:52:51.379Z",
       "state": "error",
       "status": 403,
       "error": "HTTP 403"
@@ -17,7 +17,7 @@
       "id": "kdd-2026",
       "name": "KDD 2026",
       "url": "https://kdd2026.kdd.org/",
-      "checkedAt": "2026-08-07T20:55:52.547Z",
+      "checkedAt": "2026-08-07T21:52:51.417Z",
       "state": "live",
       "status": 200,
       "error": null
@@ -26,7 +26,7 @@
       "id": "world-summit-ai",
       "name": "World Summit AI 2026",
       "url": "https://worldsummit.ai/",
-      "checkedAt": "2026-08-07T20:55:52.548Z",
+      "checkedAt": "2026-08-07T21:52:51.418Z",
       "state": "live",
       "status": 200,
       "error": null
@@ -35,7 +35,7 @@
       "id": "nvidia-gtc-berlin-2026",
       "name": "NVIDIA GTC Berlin 2026",
       "url": "https://www.nvidia.com/en-eu/gtc/",
-      "checkedAt": "2026-08-07T20:55:52.549Z",
+      "checkedAt": "2026-08-07T21:52:51.419Z",
       "state": "live",
       "status": 200,
       "error": null
@@ -44,7 +44,7 @@
       "id": "microsoft-ignite-2026",
       "name": "Microsoft Ignite 2026",
       "url": "https://ignite.microsoft.com/",
-      "checkedAt": "2026-08-07T20:55:52.550Z",
+      "checkedAt": "2026-08-07T21:52:51.420Z",
       "state": "live",
       "status": 200,
       "error": null
@@ -53,7 +53,7 @@
       "id": "aws-reinvent-2026",
       "name": "AWS re:Invent 2026",
       "url": "https://reinvent.awsevents.com/agenda/",
-      "checkedAt": "2026-08-07T20:55:52.551Z",
+      "checkedAt": "2026-08-07T21:52:51.421Z",
       "state": "live",
       "status": 200,
       "error": null
@@ -62,7 +62,7 @@
       "id": "neurips-2026",
       "name": "NeurIPS 2026",
       "url": "https://neurips.cc/Conferences/2026",
-      "checkedAt": "2026-08-07T20:55:52.552Z",
+      "checkedAt": "2026-08-07T21:52:51.422Z",
       "state": "live",
       "status": 200,
       "error": null
