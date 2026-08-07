@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T00:30:36.338Z",
+  "generatedAt": "2026-08-07T03:38:14.175Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-07T00:30:35.717Z",
+      "lastCheckedAt": "2026-08-07T03:38:13.906Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-06T20:17:08.000Z",
+          "id": "fireworks-feed-0-2026-08-07T01:27:24.000Z",
+          "title": "Service Degradation for Kimi K3",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-07T01:27:24.000Z",
+          "updatedAt": "2026-08-07T01:27:24.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01KZCWZW1P910SA9JNECZQEMEX",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-06T20:17:08.000Z",
           "title": "Service Degradation for Minimax M3",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZBG76HYEFJBBXB4PSPY9TNW",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational. Affected components MiniMax M3 (Operational)"
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-06T20:16:23.000Z",
-          "title": "Service Degradation for Minimax M3",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-06T20:16:23.000Z",
-          "updatedAt": "2026-08-06T20:16:23.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KZBKPWVBM7NBYC7MAF1ZMW54",
-          "summary": "Status: Resolved The issue has now been resolved. Affected components MiniMax M3 (Operational)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-06T20:17:08.000Z",
+          "id": "fireworks-feed-0-2026-08-07T01:27:24.000Z",
+          "title": "Service Degradation for Kimi K3",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-07T01:27:24.000Z",
+          "updatedAt": "2026-08-07T01:27:24.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01KZCWZW1P910SA9JNECZQEMEX",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-06T20:17:08.000Z",
           "title": "Service Degradation for Minimax M3",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational. Affected components MiniMax M3 (Operational)"
         },
         {
-          "id": "fireworks-feed-1-2026-08-06T20:16:23.000Z",
+          "id": "fireworks-feed-2-2026-08-06T20:16:23.000Z",
           "title": "Service Degradation for Minimax M3",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved The issue has now been resolved. Affected components MiniMax M3 (Operational)"
         },
         {
-          "id": "fireworks-feed-2-2026-08-05T16:16:05.000Z",
+          "id": "fireworks-feed-3-2026-08-05T16:16:05.000Z",
           "title": "Service Degradation for one of our models on Serverless",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-08-05T16:16:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZ99MQ6FTW8BC7SDZ67DSZDB",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-08-05T09:50:06.000Z",
-          "title": "Service Degradation for one of our models on Serverless",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-05T09:50:06.000Z",
-          "updatedAt": "2026-08-05T09:50:06.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KZ8N0QCS2FCETH7KGPB9NNYM",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-07T00:30:35.445Z",
+      "lastCheckedAt": "2026-08-07T03:38:13.493Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -108,6 +108,94 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-07T03:38:14.168Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-08-07T00:32:32.000Z",
+          "title": "Inkling Small went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-07T00:32:32.000Z",
+          "updatedAt": "2026-08-07T00:32:32.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Inkling Small went down"
+        },
+        {
+          "id": "together-feed-2-2026-08-05T08:07:39.000Z",
+          "title": "Inkling went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-05T08:07:39.000Z",
+          "updatedAt": "2026-08-05T08:07:39.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Inkling went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-08-07T00:32:32.000Z",
+          "title": "Inkling Small went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-07T00:32:32.000Z",
+          "updatedAt": "2026-08-07T00:32:32.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Inkling Small went down"
+        },
+        {
+          "id": "together-feed-1-2026-08-05T08:22:37.000Z",
+          "title": "Inkling recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-05T08:22:37.000Z",
+          "updatedAt": "2026-08-05T08:22:37.000Z",
+          "resolvedAt": "2026-08-05T08:22:37.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Inkling recovered"
+        },
+        {
+          "id": "together-feed-2-2026-08-05T08:07:39.000Z",
+          "title": "Inkling went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-05T08:07:39.000Z",
+          "updatedAt": "2026-08-05T08:07:39.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Inkling went down"
+        },
+        {
+          "id": "together-feed-3-2026-08-05T07:26:37.000Z",
+          "title": "Inkling Small recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-05T07:26:37.000Z",
+          "updatedAt": "2026-08-05T07:26:37.000Z",
+          "resolvedAt": "2026-08-05T07:26:37.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Inkling Small recovered"
+        }
+      ]
     },
     {
       "id": "anthropic",
@@ -120,7 +208,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-07T00:30:36.331Z",
+      "lastCheckedAt": "2026-08-07T03:38:12.778Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +298,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-07T00:30:35.884Z",
+      "lastCheckedAt": "2026-08-07T03:38:13.830Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +318,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-07T00:30:35.149Z",
+      "lastCheckedAt": "2026-08-07T03:38:13.306Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,10 +350,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-07T00:30:34.988Z",
+      "lastCheckedAt": "2026-08-07T03:38:12.783Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -293,29 +381,8 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01KZCQVWTCG3ZDV34F15WT7ASB",
-          "title": "Computer use errors in the ChatGPT desktop app",
-          "status": "identified",
-          "impact": "none",
-          "startedAt": "2026-08-06T23:52:17.000Z",
-          "updatedAt": "2026-08-06T23:52:17.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that some users may be experiencing issues with computer use in the latest ChatGPT desktop app update.\n\nWe are working on implementing a mitigation."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
-        {
-          "id": "01KZCQVWTCG3ZDV34F15WT7ASB",
-          "title": "Computer use errors in the ChatGPT desktop app",
-          "status": "identified",
-          "impact": "none",
-          "startedAt": "2026-08-06T23:52:17.000Z",
-          "updatedAt": "2026-08-06T23:52:17.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that some users may be experiencing issues with computer use in the latest ChatGPT desktop app update.\n\nWe are working on implementing a mitigation."
-        },
         {
           "id": "01KZ96S5HEWX0CX26W2WFYFKE6",
           "title": "Elevated errors with image generation",
@@ -345,71 +412,16 @@
           "updatedAt": "2026-08-05T20:19:28.000Z",
           "resolvedAt": "2026-08-05T20:19:28.000Z",
           "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-07T00:30:36.041Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
+        },
         {
-          "id": "together-feed-0-2026-08-05T08:22:37.000Z",
-          "title": "Inkling recovered",
+          "id": "01KZ6CT9K9Q52S3707W75MNBGB",
+          "title": "Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users",
           "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-05T08:22:37.000Z",
-          "updatedAt": "2026-08-05T08:22:37.000Z",
-          "resolvedAt": "2026-08-05T08:22:37.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Inkling recovered"
-        },
-        {
-          "id": "together-feed-1-2026-08-05T08:07:39.000Z",
-          "title": "Inkling went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-05T08:07:39.000Z",
-          "updatedAt": "2026-08-05T08:07:39.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Inkling went down"
-        },
-        {
-          "id": "together-feed-2-2026-08-05T07:26:37.000Z",
-          "title": "Inkling Small recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-05T07:26:37.000Z",
-          "updatedAt": "2026-08-05T07:26:37.000Z",
-          "resolvedAt": "2026-08-05T07:26:37.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Inkling Small recovered"
-        },
-        {
-          "id": "together-feed-3-2026-08-05T06:14:36.000Z",
-          "title": "Inkling Small went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-05T06:14:36.000Z",
-          "updatedAt": "2026-08-05T06:14:36.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Inkling Small went down"
+          "impact": "minor",
+          "startedAt": "2026-08-04T12:43:44.000Z",
+          "updatedAt": "2026-08-04T15:25:30.000Z",
+          "resolvedAt": "2026-08-04T15:25:30.000Z",
+          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
