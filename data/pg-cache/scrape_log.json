@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 916,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:25",
-    "finished_at": "2026-08-09 08:59:25"
+    "started_at": "2026-08-09 09:53:38",
+    "finished_at": "2026-08-09 09:53:38"
   },
   {
     "id": 10,
@@ -14,8 +14,8 @@
     "status": "success",
     "models_updated": 81,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:21",
-    "finished_at": "2026-08-09 08:59:21"
+    "started_at": "2026-08-09 09:53:34",
+    "finished_at": "2026-08-09 09:53:34"
   },
   {
     "id": 9,
@@ -23,8 +23,8 @@
     "status": "success",
     "models_updated": 126,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:20",
-    "finished_at": "2026-08-09 08:59:20"
+    "started_at": "2026-08-09 09:53:32",
+    "finished_at": "2026-08-09 09:53:32"
   },
   {
     "id": 8,
@@ -32,8 +32,8 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:19",
-    "finished_at": "2026-08-09 08:59:19"
+    "started_at": "2026-08-09 09:53:31",
+    "finished_at": "2026-08-09 09:53:31"
   },
   {
     "id": 7,
@@ -41,17 +41,8 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:18",
-    "finished_at": "2026-08-09 08:59:18"
-  },
-  {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "success",
-    "models_updated": 27,
-    "error_message": null,
-    "started_at": "2026-08-09 08:59:17",
-    "finished_at": "2026-08-09 08:59:17"
+    "started_at": "2026-08-09 09:53:29",
+    "finished_at": "2026-08-09 09:53:29"
   },
   {
     "id": 6,
@@ -59,8 +50,17 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:17",
-    "finished_at": "2026-08-09 08:59:17"
+    "started_at": "2026-08-09 09:53:28",
+    "finished_at": "2026-08-09 09:53:28"
+  },
+  {
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
+    "status": "success",
+    "models_updated": 27,
+    "error_message": null,
+    "started_at": "2026-08-09 09:53:27",
+    "finished_at": "2026-08-09 09:53:27"
   },
   {
     "id": 4,
@@ -68,8 +68,8 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:16",
-    "finished_at": "2026-08-09 08:59:16"
+    "started_at": "2026-08-09 09:53:26",
+    "finished_at": "2026-08-09 09:53:26"
   },
   {
     "id": 2,
@@ -77,8 +77,8 @@
     "status": "success",
     "models_updated": 303,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:15",
-    "finished_at": "2026-08-09 08:59:15"
+    "started_at": "2026-08-09 09:53:25",
+    "finished_at": "2026-08-09 09:53:25"
   },
   {
     "id": 3,
@@ -86,8 +86,8 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:15",
-    "finished_at": "2026-08-09 08:59:15"
+    "started_at": "2026-08-09 09:53:25",
+    "finished_at": "2026-08-09 09:53:25"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-08-09 08:59:14",
-    "finished_at": "2026-08-09 08:59:14"
+    "started_at": "2026-08-09 09:53:24",
+    "finished_at": "2026-08-09 09:53:24"
   }
 ]
