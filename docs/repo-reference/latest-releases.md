@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 08 Aug 2026, 23:42 UTC
+Generated: 09 Aug 2026, 02:26 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -25,7 +25,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
 | 30 Jun 2026 | Claude Sonnet 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
 | 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | watch only | 0 | 2 | n/a |
-| 9 Jun 2026 | Claude Fable 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-fable-5-mythos-5) |
+| 9 Jun 2026 | Claude Fable 5 (batch) | Anthropic | tracking | backfill | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-fable-5-mythos-5) |
 | 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
 | 28 May 2026 | Claude Opus 4.8 (batch) | Anthropic | tracking | backfill | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-4-8) |
 
