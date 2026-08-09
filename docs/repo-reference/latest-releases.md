@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 09 Aug 2026, 14:50 UTC
+Generated: 09 Aug 2026, 15:44 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -14,8 +14,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 24 Jul 2026 | Claude Opus 5 (batch) | Anthropic | tracking | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 24 Jul 2026 | Claude Opus 5 (Fast) | Anthropic | tracking | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |
-| 21 Jul 2026 | Gemini 3.6 Flash (batch) | Google | tracking | high | ready for editor | 0 | 1 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
-| 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | high | ready for editor | 0 | 1 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
+| 21 Jul 2026 | Gemini 3.6 Flash (batch) | Google | tracking | high | needs research | 0 | 0 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
+| 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | high | needs research | 0 | 0 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
 | 16 Jul 2026 | Kimi K3 | Moonshot AI | tracking | watch | watch only | 0 | 0 | n/a |
 | 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
@@ -24,7 +24,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
 | 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
 | 30 Jun 2026 | Claude Sonnet 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
-| 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | watch only | 0 | 2 | n/a |
+| 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | watch only | 0 | 1 | n/a |
 | 9 Jun 2026 | Claude Fable 5 (batch) | Anthropic | tracking | backfill | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-fable-5-mythos-5) |
 | 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
 | 28 May 2026 | Claude Opus 4.8 (batch) | Anthropic | tracking | backfill | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-4-8) |
