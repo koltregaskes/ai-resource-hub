@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 10 Aug 2026, 20:58 UTC |
+| Generated | 10 Aug 2026, 21:55 UTC |
 | Providers tracked | 40 |
-| Public models | 319 |
+| Public models | 320 |
 | Active models | 110 |
-| Tracking models | 208 |
+| Tracking models | 209 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 62 |
-| Release-desk entries | 51 |
+| Release-desk entries | 52 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 10 Aug 2026, 20:58 UTC |
+| Latest visible refresh | 10 Aug 2026, 21:55 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
-| Latest tracked release | Muse Spark 1.2 (5 Aug 2026) |
+| Latest tracked release | Muse Glimmer 30B (9 Aug 2026) |
 
 ## Reference Files
 

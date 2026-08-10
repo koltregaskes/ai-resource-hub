@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 10 Aug 2026, 20:58 UTC
+Generated: 10 Aug 2026, 21:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 9 Aug 2026 | Muse Glimmer 30B | Meta | tracking | high | watch only | 0 | 0 | n/a |
 | 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 3 Aug 2026 | Qwen3.8 Max | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 31 Jul 2026 | DeepSeek V4 Flash 0731 | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 30 Jun 2026 | Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) | Google | tracking | watch | watch only | 0 | 1 | n/a |
 | 9 Jun 2026 | Claude Fable 5 (batch) | Anthropic | tracking | backfill | ready for editor | 0 | 3 | [official](https://www.anthropic.com/news/claude-fable-5-mythos-5) |
 | 3 Jun 2026 | Qwen3.7 Plus | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
-| 28 May 2026 | Claude Opus 4.8 (batch) | Anthropic | tracking | backfill | ready for editor | 0 | 3 | [official](https://www.anthropic.com/news/claude-opus-4-8) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
