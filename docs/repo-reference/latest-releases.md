@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 10 Aug 2026, 13:40 UTC
+Generated: 10 Aug 2026, 15:14 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -20,7 +20,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 16 Jul 2026 | Kimi K3 | Moonshot AI | tracking | watch | watch only | 0 | 0 | n/a |
 | 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 9 Jul 2026 | GPT-5.6 Sol (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
-| 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
+| 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | watch | ready for editor | 0 | 5 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
 | 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
 | 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
 | 30 Jun 2026 | Claude Sonnet 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 3 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
