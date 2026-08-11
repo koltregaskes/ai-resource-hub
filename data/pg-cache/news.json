@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-816ed2f1a2f28b410a1b",
+    "title": "Made by Google 2026: all the Pixel news and announcements",
+    "url": "https://www.theverge.com/tech/977561/made-by-google-2026-pixel-11-news",
+    "source": "The Verge",
+    "summary": "Google is gearing up to reveal a bunch of new Pixel devices on August 12th. A series of leaks leading up to the event suggest that the Pixel 11 lineup will come in an array of colors, with signs pointing to a built-in light coming to Pro models. Teasers from Google also indicate that it [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-11T17:00:00.000Z",
+    "discovered_at": "2026-08-11 17:10:02"
+  },
+  {
+    "id": "news-dbc30e861442f93d6f8e",
+    "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
+    "source": "Google",
+    "summary": "Google introduces AMIE for real-time clinical video consultations in simulated settings.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-11T17:00:00.000Z",
+    "discovered_at": "2026-08-11 17:10:02"
+  },
+  {
+    "id": "news-5570c557a3ab740b8ab2",
+    "title": "An unreleased Anthropic model made progress on one of math&#8217;s biggest unsolved problems",
+    "url": "https://techcrunch.com/2026/08/11/an-unreleased-anthropic-model-made-progress-on-one-of-maths-biggest-unsolved-problems/",
+    "source": "TechCrunch",
+    "summary": "For more than 150 years, the Riemann hypothesis has stood as one of the major unsolved problems in mathematics. Anthropic hasn't solved it — but the company's models made more progress than you might expect.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-11T16:25:20.000Z",
+    "discovered_at": "2026-08-11 17:10:02"
+  },
+  {
+    "id": "news-95bd5da674d923a0fbda",
+    "title": "Apple could help you prove your iPhone photos aren’t deepfakes",
+    "url": "https://www.theverge.com/tech/977921/apple-reference-image-iphone-metadata",
+    "source": "The Verge",
+    "summary": "Apple is seemingly developing an iOS feature that can verify when a photograph was taken using an iPhone camera. 9to5Mac reports that the iOS 27 beta 5 includes code references for an \"Apple Reference Image\" system that can embed provenance metadata into iPhone photographs at the point of capture - enabling users to p…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-11T16:19:15.000Z",
+    "discovered_at": "2026-08-11 17:10:02"
+  },
+  {
     "id": "news-493648df61c532ac8116",
     "title": "‘Zoomsday’ hack uncovered using fewer than 20 AI prompts",
     "url": "https://www.theverge.com/ai-artificial-intelligence/977909/zoom-vulnerability-ai-attack",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T14:45:44.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-a3faa36ed3181d98a42b",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T13:27:20.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-5f3f98dab4f3c20b3be9",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T13:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-606016c2c8653c1aefc7",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T13:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-fe459dc13f2f66648776",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T12:22:20.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-6899735f131adbde112c",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T12:13:47.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-69a3ccd0de5463ffce4e",
@@ -81,7 +129,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T11:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
+  },
+  {
+    "id": "news-de2ca3d7578dd51cbe19",
+    "title": "Testing ads in ChatGPT",
+    "url": "https://openai.com/index/testing-ads-in-chatgpt",
+    "source": "OpenAI",
+    "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-11T10:00:00.000Z",
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-1353da4a7fa7cf9ececa",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T00:03:18.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-c1d381bf28de983c3545",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T23:56:15.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-638db6f13c0db00bb6f1",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T22:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-c457f9f01c60fcd7e737",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T20:53:02.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-f1e480bffee7bd991674",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T20:04:24.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-7a678e9a26d7e264e59b",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T17:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-e7d6356c97dc9ba4e6d5",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T16:20:13.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-38e9f5ee0031f251baa8",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T15:19:05.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-ae2292bf453d4eb7832c",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T14:30:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-4427e8e8b93943d20406",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T14:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-61282b7420ed067525c1",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T14:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-393ea70e1fb7c3c098b1",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T12:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-c7b962b1d9efaa2a9e74",
@@ -237,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T12:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
-  },
-  {
-    "id": "news-2ad030d458ae21d93ab9",
-    "title": "Ford’s new AI assistant can check your fuel levels and tire pressure",
-    "url": "https://www.theverge.com/transportation/976748/ford-ai-assistant-mobile-app",
-    "source": "The Verge",
-    "summary": "Ford is rolling out a new AI-powered assistant that can answer questions about your Ford or Lincoln vehicle, such as how much fuel you'll need for your next road trip or whether your truck can tow that new motor boat. The app is rolling out first to the Ford and Lincoln mobile apps, where it [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-10T11:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-7f776d7829d07edef8a9",
@@ -261,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T10:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-3a8585570cab21df194c",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T10:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-8f3f7b571773b5e822ac",
@@ -285,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T00:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-1ea3eea3d9a52b4c995b",
@@ -297,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T00:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-ee449db47d8dff1954b2",
@@ -309,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T00:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-ec300a62a3dff5d11880",
@@ -321,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-09T20:35:17.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-944255352fede8605584",
@@ -333,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-09T19:20:32.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-9d1b3cc68de3e9d9eb7f",
@@ -345,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-09T15:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-3f7c800bfd24d2d6134f",
@@ -357,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-09T14:30:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
-  },
-  {
-    "id": "news-7c16bfed4c64a0774a08",
-    "title": "AI detectors are creating a new era of distrust",
-    "url": "https://www.theverge.com/column/976690/ai-writing-detectors-suspicion",
-    "source": "The Verge",
-    "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more news about how AI is changing our daily lives, follow Emma Roth. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started Long before ChatGPT became a thing, [&#8230…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-09T12:00:00.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-2b6c4338169a2f45caa6",
@@ -381,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-08T21:24:02.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-c9329978009ef53ba58b",
@@ -393,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-08T19:41:13.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-5655a593c8d3ecb05a44",
@@ -405,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-07T22:48:24.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-0d1fce010906239fd1de",
@@ -417,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-07T21:30:11.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-6a3d740c5113ff5adc8b",
@@ -429,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-07T16:16:09.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-833934ee3b25f4a5a86f",
@@ -441,19 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-07T15:20:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
-  },
-  {
-    "id": "news-883433c49b252abddbd4",
-    "title": "Airbnb says AI is helping it ship features faster as it tests a new search function",
-    "url": "https://techcrunch.com/2026/08/07/airbnb-says-ai-is-helping-it-ship-features-faster-as-it-tests-a-new-search-function/",
-    "source": "TechCrunch",
-    "summary": "Airbnb will debut a new AI-powered search experience with a toggle.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-07T14:22:49.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-2ee94000fec4618b0a17",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-07T09:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-0f0c1961f93e8e0cb939",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-06T10:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-6da5f2d271da214d3526",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-06T06:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-fea9ae47ebf2b0f008c2",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-06T00:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-977f60f7e5e3c697f2ee",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T19:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-2a0a276054536ae62f3e",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T13:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-b274d6785ee9abb7902c",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T00:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-2163b413300de52f6504",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T22:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-928c08785b292a8ecd7d",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T15:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-d04cc35bd3ccb8a5aedf",
@@ -573,19 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T07:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
-  },
-  {
-    "id": "news-54e616a32e5ede38b908",
-    "title": "Circles powers telco personalization with OpenAI technology",
-    "url": "https://openai.com/index/circles",
-    "source": "OpenAI",
-    "summary": "Circles uses the OpenAI API and Codex to power AI-native telco experiences, increasing ARPU by 22%, reducing churn by 9%, and improving development efficiency.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-03T00:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-2db26e244b543f4bda5a",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T20:39:14.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:03"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:03"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:03"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:03"
   },
   {
     "id": "news-0199c9587e0b825a89fe",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-a564401bb829d4c0b46b",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T16:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-eb3c4a36b14daaebb7f1",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-16T15:48:21.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:03"
   },
   {
     "id": "news-4a94e64db0fdd119f9dd",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-14T16:00:00.000Z",
-    "discovered_at": "2026-08-11 15:13:59"
+    "discovered_at": "2026-08-11 17:10:02"
   },
   {
     "id": "news-5b8527aaa26aad5056dc",
@@ -741,6 +753,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-13T15:06:34.000Z",
-    "discovered_at": "2026-08-11 15:14:00"
+    "discovered_at": "2026-08-11 17:10:03"
   }
 ]

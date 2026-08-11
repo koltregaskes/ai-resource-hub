@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 11 Aug 2026, 15:14 UTC
+Generated: 11 Aug 2026, 17:10 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -39,7 +39,7 @@ This table shows how much of each provider's public model surface is currently r
 | Resemble AI | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.resemble.ai) |
 | xAI | 0 | 11 | 0 | Grok 4.5 (8 Jul 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
 | MiniMax | 0 | 8 | 0 | MiniMax M2.7 (18 Mar 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
+| NVIDIA | 0 | 6 | 0 | Nemotron 3.5 Lightning (11 Aug 2026) | n/a | [docs](https://docs.api.nvidia.com) |
 | Moonshot AI | 0 | 5 | 0 | Kimi K3 (16 Jul 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
-| NVIDIA | 0 | 5 | 0 | n/a | n/a | [docs](https://docs.api.nvidia.com) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
 | AI21 Labs | 0 | 3 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |
