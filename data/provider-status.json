@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T17:10:05.253Z",
+  "generatedAt": "2026-08-11T17:40:07.754Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T17:10:05.012Z",
+      "lastCheckedAt": "2026-08-11T17:40:07.685Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-10T18:49:34.000Z",
+          "id": "fireworks-feed-0-2026-08-11T17:15:50.000Z",
+          "title": "Cloud Service Provider Outage",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-11T17:15:50.000Z",
+          "updatedAt": "2026-08-11T17:15:50.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01KZRX5J0AVW5KNZE5WZTS16T5",
+          "summary": "Status: Investigating An CSP outage is currently affecting many of our serverless and dedicated deployments. We are currently investigating. Affected components GLM 5.2 (Partial o..."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-10T18:49:34.000Z",
           "title": "Service Degradation for Kimi K3 US, Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-08-10T18:49:34.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZPEV3BE0FDWJA7HARZ8DWPN",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-10T16:14:35.000Z",
-          "title": "Service Degradation for one of our Serverless models",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-10T16:14:35.000Z",
-          "updatedAt": "2026-08-10T16:14:35.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KZP7132HW7G836W2VPA0WZ36",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-10T18:49:34.000Z",
+          "id": "fireworks-feed-0-2026-08-11T17:15:50.000Z",
+          "title": "Cloud Service Provider Outage",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-11T17:15:50.000Z",
+          "updatedAt": "2026-08-11T17:15:50.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01KZRX5J0AVW5KNZE5WZTS16T5",
+          "summary": "Status: Investigating An CSP outage is currently affecting many of our serverless and dedicated deployments. We are currently investigating. Affected components GLM 5.2 (Partial o..."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-10T18:49:34.000Z",
           "title": "Service Degradation for Kimi K3 US, Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-10T16:14:35.000Z",
+          "id": "fireworks-feed-2-2026-08-10T16:14:35.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-08-10T15:55:10.000Z",
+          "id": "fireworks-feed-3-2026-08-10T15:55:10.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-08-10T15:55:10.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZP5NNNJXH7NNFGG87Y65A2Z",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-08-10T10:31:27.000Z",
-          "title": "Service Degradation for Kimi K2.6",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-10T10:31:27.000Z",
-          "updatedAt": "2026-08-10T10:31:27.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KZNH97XWSWPAJGFB7Y1V2FWW",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T17:10:04.610Z",
+      "lastCheckedAt": "2026-08-11T17:40:06.939Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T17:10:03.862Z",
+      "lastCheckedAt": "2026-08-11T17:40:06.545Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T17:10:05.040Z",
+      "lastCheckedAt": "2026-08-11T17:40:07.552Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T17:10:04.508Z",
+      "lastCheckedAt": "2026-08-11T17:40:06.830Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T17:10:03.890Z",
+      "lastCheckedAt": "2026-08-11T17:40:06.449Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -296,6 +296,16 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01KZRXPE0NGXA12FJNP8WZF8D7",
+          "title": "Users unable to login to ads manager",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-11T17:25:03.000Z",
+          "updatedAt": "2026-08-11T17:28:04.000Z",
+          "resolvedAt": "2026-08-11T17:28:04.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
           "id": "01KZRE6ZA1RE1ZH4HQ111CX1S8",
           "title": "Increased error rates",
           "status": "resolved",
@@ -324,16 +334,6 @@
           "updatedAt": "2026-08-11T02:48:20.000Z",
           "resolvedAt": "2026-08-11T02:48:20.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KZN8RYNZY8T4QQGB3JWMPYRW",
-          "title": "Increased errors for some ChatGPT users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-10T07:21:42.000Z",
-          "updatedAt": "2026-08-10T08:09:19.000Z",
-          "resolvedAt": "2026-08-10T08:09:19.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T17:10:05.246Z",
+      "lastCheckedAt": "2026-08-11T17:40:07.747Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
