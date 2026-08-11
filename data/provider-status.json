@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T19:17:03.371Z",
+  "generatedAt": "2026-08-11T19:45:44.101Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T19:17:03.323Z",
+      "lastCheckedAt": "2026-08-11T19:45:43.774Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,50 +20,50 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-11T18:33:54.000Z",
+          "id": "fireworks-feed-0-2026-08-11T19:43:49.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-11T18:33:54.000Z",
-          "updatedAt": "2026-08-11T18:33:54.000Z",
+          "startedAt": "2026-08-11T19:43:49.000Z",
+          "updatedAt": "2026-08-11T19:43:49.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZS1MGD11KJZ2Z21P0498PAT",
-          "summary": "Status: Investigating We are seeing impacted performance for one of our Serverless models. We are actively investigating."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-11T18:31:38.000Z",
+          "id": "fireworks-feed-1-2026-08-11T19:35:05.000Z",
           "title": "Service Degradation for GLM 5.2",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-11T18:31:38.000Z",
-          "updatedAt": "2026-08-11T18:31:38.000Z",
+          "startedAt": "2026-08-11T19:35:05.000Z",
+          "updatedAt": "2026-08-11T19:35:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZS1GB9KDK18P24D7HDZYDRF",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.2. We are actively investigating. Affected components GLM 5.2 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-11T18:33:54.000Z",
+          "id": "fireworks-feed-0-2026-08-11T19:43:49.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-11T18:33:54.000Z",
-          "updatedAt": "2026-08-11T18:33:54.000Z",
+          "startedAt": "2026-08-11T19:43:49.000Z",
+          "updatedAt": "2026-08-11T19:43:49.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZS1MGD11KJZ2Z21P0498PAT",
-          "summary": "Status: Investigating We are seeing impacted performance for one of our Serverless models. We are actively investigating."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-11T18:31:38.000Z",
+          "id": "fireworks-feed-1-2026-08-11T19:35:05.000Z",
           "title": "Service Degradation for GLM 5.2",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-11T18:31:38.000Z",
-          "updatedAt": "2026-08-11T18:31:38.000Z",
+          "startedAt": "2026-08-11T19:35:05.000Z",
+          "updatedAt": "2026-08-11T19:35:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZS1GB9KDK18P24D7HDZYDRF",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.2. We are actively investigating. Affected components GLM 5.2 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-2-2026-08-11T18:30:01.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T19:17:02.674Z",
+      "lastCheckedAt": "2026-08-11T19:45:43.331Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T19:17:01.667Z",
+      "lastCheckedAt": "2026-08-11T19:45:42.636Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T19:17:02.992Z",
+      "lastCheckedAt": "2026-08-11T19:45:43.714Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T19:17:02.329Z",
+      "lastCheckedAt": "2026-08-11T19:45:43.105Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T19:17:01.681Z",
+      "lastCheckedAt": "2026-08-11T19:45:42.741Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T19:17:03.364Z",
+      "lastCheckedAt": "2026-08-11T19:45:43.996Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
