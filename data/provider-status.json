@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T02:51:37.822Z",
+  "generatedAt": "2026-08-11T04:37:02.034Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T02:51:37.815Z",
+      "lastCheckedAt": "2026-08-11T04:37:01.848Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T02:51:36.823Z",
+      "lastCheckedAt": "2026-08-11T04:37:01.202Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -108,6 +108,94 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-11T04:37:02.028Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [
+        {
+          "id": "together-feed-0-2026-08-11T04:13:11.000Z",
+          "title": "Orpheus TTS went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-11T04:13:11.000Z",
+          "updatedAt": "2026-08-11T04:13:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS went down"
+        },
+        {
+          "id": "together-feed-2-2026-08-10T17:26:31.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-10T17:26:31.000Z",
+          "updatedAt": "2026-08-10T17:26:31.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "together-feed-0-2026-08-11T04:13:11.000Z",
+          "title": "Orpheus TTS went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-11T04:13:11.000Z",
+          "updatedAt": "2026-08-11T04:13:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "Orpheus TTS went down"
+        },
+        {
+          "id": "together-feed-1-2026-08-10T17:38:33.000Z",
+          "title": "OpenAI GPT OSS 120B recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-10T17:38:33.000Z",
+          "updatedAt": "2026-08-10T17:38:33.000Z",
+          "resolvedAt": "2026-08-10T17:38:33.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B recovered"
+        },
+        {
+          "id": "together-feed-2-2026-08-10T17:26:31.000Z",
+          "title": "OpenAI GPT OSS 120B went down",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-10T17:26:31.000Z",
+          "updatedAt": "2026-08-10T17:26:31.000Z",
+          "resolvedAt": null,
+          "url": "https://status.together.ai/",
+          "summary": "OpenAI GPT OSS 120B went down"
+        },
+        {
+          "id": "together-feed-3-2026-08-10T16:22:34.000Z",
+          "title": "Inkling recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-08-10T16:22:34.000Z",
+          "updatedAt": "2026-08-10T16:22:34.000Z",
+          "resolvedAt": "2026-08-10T16:22:34.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Inkling recovered"
+        }
+      ]
     },
     {
       "id": "anthropic",
@@ -120,7 +208,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T02:51:36.250Z",
+      "lastCheckedAt": "2026-08-11T04:37:00.440Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +298,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T02:51:37.168Z",
+      "lastCheckedAt": "2026-08-11T04:37:01.696Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +318,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T02:51:36.618Z",
+      "lastCheckedAt": "2026-08-11T04:37:00.916Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +350,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T02:51:36.311Z",
+      "lastCheckedAt": "2026-08-11T04:37:00.613Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -338,71 +426,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-11T02:51:37.636Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-08-10T17:38:33.000Z",
-          "title": "OpenAI GPT OSS 120B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-10T17:38:33.000Z",
-          "updatedAt": "2026-08-10T17:38:33.000Z",
-          "resolvedAt": "2026-08-10T17:38:33.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 120B recovered"
-        },
-        {
-          "id": "together-feed-1-2026-08-10T17:26:31.000Z",
-          "title": "OpenAI GPT OSS 120B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-10T17:26:31.000Z",
-          "updatedAt": "2026-08-10T17:26:31.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "OpenAI GPT OSS 120B went down"
-        },
-        {
-          "id": "together-feed-2-2026-08-10T16:22:34.000Z",
-          "title": "Inkling recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-10T16:22:34.000Z",
-          "updatedAt": "2026-08-10T16:22:34.000Z",
-          "resolvedAt": "2026-08-10T16:22:34.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Inkling recovered"
-        },
-        {
-          "id": "together-feed-3-2026-08-10T15:55:37.000Z",
-          "title": "Inkling went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-10T15:55:37.000Z",
-          "updatedAt": "2026-08-10T15:55:37.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Inkling went down"
-        }
-      ]
-    },
-    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -417,7 +440,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

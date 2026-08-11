@@ -1,6 +1,6 @@
 # Source Registry Snapshot
 
-Generated: 11 Aug 2026, 02:24 UTC
+Generated: 11 Aug 2026, 04:37 UTC
 
 This is the repo-readable mirror of the shared source registry. It shows where source definitions currently live, how they route into the website estate, and which collection / verification lane each source should use.
 
@@ -13,7 +13,7 @@ Canonical config:
 
 | Metric | Value |
 | --- | --- |
-| Generated | 11 Aug 2026, 02:24 UTC |
+| Generated | 11 Aug 2026, 04:37 UTC |
 | Configured sources | 14 |
 | AI Resource Hub routed sources | 14 |
 | Automated sources | 14 |
