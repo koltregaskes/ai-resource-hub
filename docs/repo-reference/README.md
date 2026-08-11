@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 10 Aug 2026, 23:48 UTC |
+| Generated | 11 Aug 2026, 02:24 UTC |
 | Providers tracked | 40 |
 | Public models | 320 |
 | Active models | 110 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 52 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 10 Aug 2026, 23:48 UTC |
+| Latest visible refresh | 11 Aug 2026, 02:24 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | Muse Glimmer 30B (9 Aug 2026) |
 
