@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 12 Aug 2026, 11:56 UTC |
+| Generated | 12 Aug 2026, 13:42 UTC |
 | Providers tracked | 40 |
 | Public models | 321 |
 | Active models | 110 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 53 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 12 Aug 2026, 11:56 UTC |
+| Latest visible refresh | 12 Aug 2026, 13:42 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | Nemotron 3.5 Lightning (11 Aug 2026) |
 
