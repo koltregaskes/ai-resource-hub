@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T17:10:42.717Z",
+  "generatedAt": "2026-08-12T17:42:14.881Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-12T17:10:42.676Z",
+      "lastCheckedAt": "2026-08-12T17:42:14.507Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-12T17:10:41.237Z",
+      "lastCheckedAt": "2026-08-12T17:42:13.541Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -138,10 +138,10 @@
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-08-12T13:50:28.458Z",
-          "updatedAt": "2026-08-12T16:10:01.527Z",
+          "updatedAt": "2026-08-12T17:28:45.503Z",
           "resolvedAt": null,
           "url": "https://stspg.io/kxwqzpnz52t1",
-          "summary": "We have identified an issue which resulted in errors across multiple models. At this time, errors are primarily impacting Claude Fable 5 and we are working to fully resolve these..."
+          "summary": "We are continuing to work to resolve an issue resulting in slightly elevated errors on requests to Claude Fable 5. We will provide an update as soon as possible."
         }
       ],
       "recentIncidents": [
@@ -151,10 +151,10 @@
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-08-12T13:50:28.458Z",
-          "updatedAt": "2026-08-12T16:10:01.527Z",
+          "updatedAt": "2026-08-12T17:28:45.503Z",
           "resolvedAt": null,
           "url": "https://stspg.io/kxwqzpnz52t1",
-          "summary": "We have identified an issue which resulted in errors across multiple models. At this time, errors are primarily impacting Claude Fable 5 and we are working to fully resolve these..."
+          "summary": "We are continuing to work to resolve an issue resulting in slightly elevated errors on requests to Claude Fable 5. We will provide an update as soon as possible."
         },
         {
           "id": "mgp99sn4ynd4",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-12T17:10:41.983Z",
+      "lastCheckedAt": "2026-08-12T17:42:14.219Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-12T17:10:42.356Z",
+      "lastCheckedAt": "2026-08-12T17:42:14.528Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -242,7 +242,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-12T17:10:41.691Z",
+      "lastCheckedAt": "2026-08-12T17:42:13.695Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -274,7 +274,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-12T17:10:41.297Z",
+      "lastCheckedAt": "2026-08-12T17:42:13.610Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -360,7 +360,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-12T17:10:42.658Z",
+      "lastCheckedAt": "2026-08-12T17:42:14.873Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -429,7 +429,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
