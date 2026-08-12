@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 12 Aug 2026, 16:10 UTC
+Generated: 12 Aug 2026, 17:10 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 12 Aug 2026 | Qwen3.8 2.4T A95B | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | DeepSeek V4 Pro 0813 | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | high | watch only | 0 | 1 | n/a |
 | 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | watch | ready for editor | 0 | 5 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
 | 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
 | 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 1 | n/a |
-| 30 Jun 2026 | Claude Sonnet 5 (batch) | Anthropic | tracking | watch | needs research | 0 | 0 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
