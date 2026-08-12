@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 12 Aug 2026, 21:00 UTC |
+| Generated | 12 Aug 2026, 22:00 UTC |
 | Providers tracked | 40 |
 | Public models | 324 |
 | Active models | 110 |
 | Tracking models | 213 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 62 |
+| News items in cache | 63 |
 | Release-desk entries | 56 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 12 Aug 2026, 21:00 UTC |
+| Latest visible refresh | 12 Aug 2026, 22:00 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | Qwen3.8 2.4T A95B (12 Aug 2026) |
 
