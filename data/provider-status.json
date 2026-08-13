@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T13:42:41.951Z",
+  "generatedAt": "2026-08-13T14:07:37.420Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T13:42:41.539Z",
+      "lastCheckedAt": "2026-08-13T14:07:37.202Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T13:42:40.999Z",
+      "lastCheckedAt": "2026-08-13T14:07:36.786Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T13:42:40.399Z",
+      "lastCheckedAt": "2026-08-13T14:07:36.160Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T13:42:41.480Z",
+      "lastCheckedAt": "2026-08-13T14:07:37.001Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T13:42:40.635Z",
+      "lastCheckedAt": "2026-08-13T14:07:36.335Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,10 +262,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T13:42:40.383Z",
+      "lastCheckedAt": "2026-08-13T14:07:36.168Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -293,8 +293,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
+          "title": "Error while creating custom RBAC roles for Enterprise users",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-08-13T14:03:49.000Z",
+          "updatedAt": "2026-08-13T14:03:49.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue while creating custom RBAC roles for Enterprise users."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
+          "title": "Error while creating custom RBAC roles for Enterprise users",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-08-13T14:03:49.000Z",
+          "updatedAt": "2026-08-13T14:03:49.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue while creating custom RBAC roles for Enterprise users."
+        },
         {
           "id": "01KZSC0T66YTVM57N5T79SV8ZV",
           "title": "Increase in errors on API, Codex and Work Mode",
@@ -324,16 +345,6 @@
           "updatedAt": "2026-08-11T15:01:38.000Z",
           "resolvedAt": "2026-08-11T15:01:38.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KZRJHTR75WDXCMC0ZERX6YJC",
-          "title": "Elevated errors affecting ChatGPT Go conversations",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-11T14:10:18.000Z",
-          "updatedAt": "2026-08-11T14:20:28.000Z",
-          "resolvedAt": "2026-08-11T14:20:28.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -348,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T13:42:41.944Z",
+      "lastCheckedAt": "2026-08-13T14:07:37.415Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
