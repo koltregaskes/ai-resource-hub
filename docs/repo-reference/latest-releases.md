@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 13 Aug 2026, 20:59 UTC
+Generated: 13 Aug 2026, 21:59 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -10,7 +10,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 12 Aug 2026 | Qwen3.8 2.4T A95B | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | DeepSeek V4 Pro 0813 | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
-| 12 Aug 2026 | Grok 4.6 | xAI | tracking | high | watch only | 0 | 1 | n/a |
+| 12 Aug 2026 | Grok 4.6 | xAI | tracking | high | watch only | 0 | 0 | n/a |
 | 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | high | watch only | 0 | 0 | n/a |
 | 9 Aug 2026 | Muse Glimmer 30B | Meta | tracking | high | watch only | 0 | 0 | n/a |
 | 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +27,6 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Jul 2026 | GPT-5.6 Sol (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
 | 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | watch | ready for editor | 0 | 1 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
 | 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | watch | ready for editor | 0 | 2 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
-| 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 1 | n/a |
+| 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
