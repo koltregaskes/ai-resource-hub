@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T14:07:37.420Z",
+  "generatedAt": "2026-08-13T15:12:23.998Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T14:07:37.202Z",
+      "lastCheckedAt": "2026-08-13T15:12:23.992Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,26 +90,6 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T14:07:36.786Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -120,30 +100,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T14:07:36.160Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-08-13T15:12:22.830Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
@@ -151,8 +131,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "j160kkjmm2n1",
+          "title": "Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-13T14:33:45.159Z",
+          "updatedAt": "2026-08-13T14:33:45.315Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/bjkywv98sm8d",
+          "summary": "We are investigating elevated errors on requests to Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5. We will provide an update as soon as possible."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "j160kkjmm2n1",
+          "title": "Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-08-13T14:33:45.159Z",
+          "updatedAt": "2026-08-13T14:33:45.315Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/bjkywv98sm8d",
+          "summary": "We are investigating elevated errors on requests to Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5. We will provide an update as soon as possible."
+        },
         {
           "id": "rk6gkg2gwfny",
           "title": "Degraded performance for multiple models",
@@ -185,19 +188,28 @@
           "resolvedAt": "2026-08-05T14:14:36.006Z",
           "url": "https://stspg.io/s2ysk4zxbyy3",
           "summary": "This incident has been resolved."
-        },
-        {
-          "id": "bdr3fq2rkchr",
-          "title": "Elevated errors across many models",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-08-04T20:48:20.773Z",
-          "updatedAt": "2026-08-04T21:59:29.397Z",
-          "resolvedAt": "2026-08-04T21:59:29.385Z",
-          "url": "https://stspg.io/smnf386prrtx",
-          "summary": "This issue has been resolved."
         }
       ]
+    },
+    {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-13T15:12:23.285Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "cohere",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T14:07:37.001Z",
+      "lastCheckedAt": "2026-08-13T15:12:23.710Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +242,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T14:07:36.335Z",
+      "lastCheckedAt": "2026-08-13T15:12:23.030Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +274,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T14:07:36.168Z",
+      "lastCheckedAt": "2026-08-13T15:12:22.873Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 25 tracked components.",
@@ -297,24 +309,24 @@
         {
           "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
           "title": "Error while creating custom RBAC roles for Enterprise users",
-          "status": "investigating",
+          "status": "identified",
           "impact": "none",
           "startedAt": "2026-08-13T14:03:49.000Z",
-          "updatedAt": "2026-08-13T14:03:49.000Z",
+          "updatedAt": "2026-08-13T14:49:49.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating an issue while creating custom RBAC roles for Enterprise users."
+          "summary": "We are still implementing the mitigation."
         }
       ],
       "recentIncidents": [
         {
           "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
           "title": "Error while creating custom RBAC roles for Enterprise users",
-          "status": "investigating",
+          "status": "identified",
           "impact": "none",
           "startedAt": "2026-08-13T14:03:49.000Z",
-          "updatedAt": "2026-08-13T14:03:49.000Z",
+          "updatedAt": "2026-08-13T14:49:49.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating an issue while creating custom RBAC roles for Enterprise users."
+          "summary": "We are still implementing the mitigation."
         },
         {
           "id": "01KZSC0T66YTVM57N5T79SV8ZV",
@@ -359,7 +371,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T14:07:37.415Z",
+      "lastCheckedAt": "2026-08-13T15:12:23.836Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
