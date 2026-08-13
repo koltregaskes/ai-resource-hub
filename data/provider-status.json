@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T16:35:40.968Z",
+  "generatedAt": "2026-08-13T17:11:09.693Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T16:35:40.822Z",
+      "lastCheckedAt": "2026-08-13T17:11:09.686Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -28,7 +28,7 @@
           "updatedAt": "2026-08-13T15:51:01.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZRX5J0AVW5KNZE5WZTS16T5",
-          "summary": "Status: Resolved All services are now operational. Affected components Kimi K2.7 Code (Operational) MiniMax M3 (Operational) Kimi K3 Fast (Operational) Deepseek V4 Flash 0731 (Ope..."
+          "summary": "Status: Resolved All services are now operational. Affected components GLM 5.2 (Operational) Kimi K3 Fast (Operational) Kimi K3 (Operational) Deepseek V4 Flash 0731 (Operational)..."
         },
         {
           "id": "fireworks-feed-1-2026-08-13T15:27:12.000Z",
@@ -52,7 +52,7 @@
           "updatedAt": "2026-08-13T15:51:01.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZRX5J0AVW5KNZE5WZTS16T5",
-          "summary": "Status: Resolved All services are now operational. Affected components Kimi K2.7 Code (Operational) MiniMax M3 (Operational) Kimi K3 Fast (Operational) Deepseek V4 Flash 0731 (Ope..."
+          "summary": "Status: Resolved All services are now operational. Affected components GLM 5.2 (Operational) Kimi K3 Fast (Operational) Kimi K3 (Operational) Deepseek V4 Flash 0731 (Operational)..."
         },
         {
           "id": "fireworks-feed-1-2026-08-13T15:27:12.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T16:35:39.769Z",
+      "lastCheckedAt": "2026-08-13T17:11:06.466Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T16:35:39.715Z",
+      "lastCheckedAt": "2026-08-13T17:11:06.419Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "2 active incidents across 25 tracked components.",
@@ -225,12 +225,12 @@
         {
           "id": "01KZXVAJQ5XFH7PTM43XVPQWGJ",
           "title": "Elevated errors in ChatGPT conversations for Free users",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-08-13T15:19:50.000Z",
-          "updatedAt": "2026-08-13T15:48:21.000Z",
+          "updatedAt": "2026-08-13T16:54:25.000Z",
           "resolvedAt": null,
-          "summary": "We are still implementing the mitigation."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
@@ -247,12 +247,12 @@
         {
           "id": "01KZXVAJQ5XFH7PTM43XVPQWGJ",
           "title": "Elevated errors in ChatGPT conversations for Free users",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-08-13T15:19:50.000Z",
-          "updatedAt": "2026-08-13T15:48:21.000Z",
+          "updatedAt": "2026-08-13T16:54:25.000Z",
           "resolvedAt": null,
-          "summary": "We are still implementing the mitigation."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
@@ -297,7 +297,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T16:35:40.098Z",
+      "lastCheckedAt": "2026-08-13T17:11:09.331Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -317,7 +317,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T16:35:40.555Z",
+      "lastCheckedAt": "2026-08-13T17:11:09.453Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -337,7 +337,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T16:35:39.972Z",
+      "lastCheckedAt": "2026-08-13T17:11:06.915Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -369,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T16:35:40.961Z",
+      "lastCheckedAt": "2026-08-13T17:11:09.676Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -438,7 +438,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
