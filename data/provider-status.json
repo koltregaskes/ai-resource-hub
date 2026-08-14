@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T23:33:54.606Z",
+  "generatedAt": "2026-08-14T23:58:59.263Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T23:33:54.372Z",
+      "lastCheckedAt": "2026-08-14T23:58:58.973Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,108 @@
       ]
     },
     {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-14T23:58:57.962Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "hdynq1pc0fn8",
+          "title": "Elevated errors for Claude Fable 5",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-08-14T23:57:16.567Z",
+          "updatedAt": "2026-08-14T23:57:16.635Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/vpnnwf2vhdv4",
+          "summary": "We have identified the cause of elevated errors on requests to Claude Fable 5 and are working on a fix. We will provide an update as soon as possible."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "hdynq1pc0fn8",
+          "title": "Elevated errors for Claude Fable 5",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-08-14T23:57:16.567Z",
+          "updatedAt": "2026-08-14T23:57:16.635Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/vpnnwf2vhdv4",
+          "summary": "We have identified the cause of elevated errors on requests to Claude Fable 5 and are working on a fix. We will provide an update as soon as possible."
+        },
+        {
+          "id": "005ym4vzrq2w",
+          "title": "Service disruption on Claude services",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-08-14T20:30:36.289Z",
+          "updatedAt": "2026-08-14T21:58:12.714Z",
+          "resolvedAt": "2026-08-14T21:58:12.691Z",
+          "url": "https://stspg.io/wlcwm73lh5vb",
+          "summary": "The issue affecting the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 20:14 to 20:38 UTC."
+        },
+        {
+          "id": "kmbpgrsszf72",
+          "title": "Issues reaching status.claude.com",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-08-14T07:58:11.620Z",
+          "updatedAt": "2026-08-14T10:53:22.914Z",
+          "resolvedAt": "2026-08-14T10:53:22.898Z",
+          "url": "https://stspg.io/xvp8fkkjmtq0",
+          "summary": "The issue resulting in users being unable to reach status.claude.com has been resolved."
+        },
+        {
+          "id": "whnd2z49x3xf",
+          "title": "Service disruption on Claude Code on the web and related services",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-14T00:36:42.423Z",
+          "updatedAt": "2026-08-14T10:28:21.922Z",
+          "resolvedAt": "2026-08-14T00:51:24.100Z",
+          "url": "https://stspg.io/wftzxt096mrk",
+          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 23:42 to 00:50 UTC."
+        }
+      ]
+    },
+    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -100,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T23:33:53.364Z",
+      "lastCheckedAt": "2026-08-14T23:58:58.136Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -197,7 +299,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T23:33:54.030Z",
+      "lastCheckedAt": "2026-08-14T23:58:58.153Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -205,96 +307,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T23:33:53.281Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "005ym4vzrq2w",
-          "title": "Service disruption on Claude services",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-08-14T20:30:36.289Z",
-          "updatedAt": "2026-08-14T21:58:12.714Z",
-          "resolvedAt": "2026-08-14T21:58:12.691Z",
-          "url": "https://stspg.io/wlcwm73lh5vb",
-          "summary": "The issue affecting the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 20:14 to 20:38 UTC."
-        },
-        {
-          "id": "kmbpgrsszf72",
-          "title": "Issues reaching status.claude.com",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-08-14T07:58:11.620Z",
-          "updatedAt": "2026-08-14T10:53:22.914Z",
-          "resolvedAt": "2026-08-14T10:53:22.898Z",
-          "url": "https://stspg.io/xvp8fkkjmtq0",
-          "summary": "The issue resulting in users being unable to reach status.claude.com has been resolved."
-        },
-        {
-          "id": "whnd2z49x3xf",
-          "title": "Service disruption on Claude Code on the web and related services",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-14T00:36:42.423Z",
-          "updatedAt": "2026-08-14T10:28:21.922Z",
-          "resolvedAt": "2026-08-14T00:51:24.100Z",
-          "url": "https://stspg.io/wftzxt096mrk",
-          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 23:42 to 00:50 UTC."
-        },
-        {
-          "id": "j160kkjmm2n1",
-          "title": "Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-08-13T14:33:45.159Z",
-          "updatedAt": "2026-08-14T10:28:21.995Z",
-          "resolvedAt": "2026-08-13T16:08:35.730Z",
-          "url": "https://stspg.io/pbnrks0mrn4w",
-          "summary": "The issue affecting Claude Mythos 5 and Claude Fable 5 has been resolved."
-        }
-      ]
     },
     {
       "id": "cohere",
@@ -307,7 +319,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T23:33:54.358Z",
+      "lastCheckedAt": "2026-08-14T23:58:58.617Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +339,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T23:33:53.875Z",
+      "lastCheckedAt": "2026-08-14T23:58:58.006Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +371,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T23:33:54.601Z",
+      "lastCheckedAt": "2026-08-14T23:58:59.255Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -383,7 +395,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
