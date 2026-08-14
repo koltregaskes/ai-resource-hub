@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T23:55:30.339Z",
+  "generatedAt": "2026-08-14T00:42:39.961Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T23:55:30.111Z",
+      "lastCheckedAt": "2026-08-14T00:42:39.895Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-13T23:38:58.000Z",
+          "id": "fireworks-feed-0-2026-08-13T23:55:42.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-13T23:38:58.000Z",
-          "updatedAt": "2026-08-13T23:38:58.000Z",
+          "startedAt": "2026-08-13T23:55:42.000Z",
+          "updatedAt": "2026-08-13T23:55:42.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZYQWGRDMP0N064X4FD0DW81",
-          "summary": "Status: Investigating We are seeing impacted performance for one of our Serverless models. We are actively investigating."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-08-13T21:08:29.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-13T23:38:58.000Z",
+          "id": "fireworks-feed-0-2026-08-13T23:55:42.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-13T23:38:58.000Z",
-          "updatedAt": "2026-08-13T23:38:58.000Z",
+          "startedAt": "2026-08-13T23:55:42.000Z",
+          "updatedAt": "2026-08-13T23:55:42.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZYQWGRDMP0N064X4FD0DW81",
-          "summary": "Status: Investigating We are seeing impacted performance for one of our Serverless models. We are actively investigating."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-08-13T21:08:29.000Z",
@@ -74,7 +74,7 @@
           "updatedAt": "2026-08-13T15:51:01.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01KZRX5J0AVW5KNZE5WZTS16T5",
-          "summary": "Status: Resolved All services are now operational. Affected components MiniMax M3 (Operational) Kimi K3 Fast (Operational) Kimi K3 (Operational) Deepseek V4 Flash 0731 (Operationa..."
+          "summary": "Status: Resolved All services are now operational. Affected components GLM 5.2 (Operational) MiniMax M3 (Operational) Kimi K2.6 (Operational) Kimi K2.7 Code (Operational) Kimi K3..."
         },
         {
           "id": "fireworks-feed-3-2026-08-13T02:59:44.000Z",
@@ -90,99 +90,104 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
       "sourceKind": "statuspage_json",
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T23:55:28.583Z",
+      "lastCheckedAt": "2026-08-14T00:42:38.420Z",
       "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "Conversations",
+          "name": "Claude Cowork",
           "status": "degraded_performance"
         },
         {
-          "name": "Images",
+          "name": "claude.ai",
           "status": "operational"
         },
         {
-          "name": "Sites",
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
-          "name": "Responses",
+          "name": "Claude API (api.anthropic.com)",
           "status": "operational"
         },
         {
-          "name": "Codex in ChatGPT Desktop",
+          "name": "Claude Code",
           "status": "operational"
         },
         {
-          "name": "Login",
+          "name": "Claude for Government",
           "status": "operational"
         }
       ],
       "activeIncidents": [
         {
-          "id": "01KZXVAJQ5XFH7PTM43XVPQWGJ",
-          "title": "Elevated errors in ChatGPT conversations for Free users",
-          "status": "monitoring",
+          "id": "whnd2z49x3xf",
+          "title": "Service disruption on Claude Code on the web and related services",
+          "status": "investigating",
           "impact": "minor",
-          "startedAt": "2026-08-13T15:19:50.000Z",
-          "updatedAt": "2026-08-13T22:07:55.000Z",
+          "startedAt": "2026-08-14T00:36:42.423Z",
+          "updatedAt": "2026-08-14T00:36:42.490Z",
           "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring recovery following an issue with a downstream provider."
+          "url": "https://stspg.io/7b3qnvqbdf60",
+          "summary": "We are investigating degraded performance in Claude Code on the Web sessions and related products (Cowork Remote, Routines, Claude Code Mobile)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
-          "title": "Error while creating custom RBAC roles for Enterprise users",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-08-13T14:03:49.000Z",
-          "updatedAt": "2026-08-13T22:26:53.000Z",
-          "resolvedAt": "2026-08-13T22:26:53.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KZXVAJQ5XFH7PTM43XVPQWGJ",
-          "title": "Elevated errors in ChatGPT conversations for Free users",
-          "status": "monitoring",
+          "id": "whnd2z49x3xf",
+          "title": "Service disruption on Claude Code on the web and related services",
+          "status": "investigating",
           "impact": "minor",
-          "startedAt": "2026-08-13T15:19:50.000Z",
-          "updatedAt": "2026-08-13T22:07:55.000Z",
+          "startedAt": "2026-08-14T00:36:42.423Z",
+          "updatedAt": "2026-08-14T00:36:42.490Z",
           "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring recovery following an issue with a downstream provider."
+          "url": "https://stspg.io/7b3qnvqbdf60",
+          "summary": "We are investigating degraded performance in Claude Code on the Web sessions and related products (Cowork Remote, Routines, Claude Code Mobile)"
         },
         {
-          "id": "01KZSC0T66YTVM57N5T79SV8ZV",
-          "title": "Increase in errors on API, Codex and Work Mode",
+          "id": "j160kkjmm2n1",
+          "title": "Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5",
           "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-08-11T21:35:23.000Z",
-          "updatedAt": "2026-08-11T22:42:26.000Z",
-          "resolvedAt": "2026-08-11T22:42:26.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "impact": "major",
+          "startedAt": "2026-08-13T14:33:45.159Z",
+          "updatedAt": "2026-08-13T16:08:35.747Z",
+          "resolvedAt": "2026-08-13T16:08:35.730Z",
+          "url": "https://stspg.io/bjkywv98sm8d",
+          "summary": "The issue affecting Claude Mythos 5 and Claude Fable 5 has been resolved."
         },
         {
-          "id": "01KZRXPE0NGXA12FJNP8WZF8D7",
-          "title": "Users unable to login to ads manager",
+          "id": "rk6gkg2gwfny",
+          "title": "Degraded performance for multiple models",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-08-11T17:25:03.000Z",
-          "updatedAt": "2026-08-11T17:28:04.000Z",
-          "resolvedAt": "2026-08-11T17:28:04.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "startedAt": "2026-08-12T13:50:28.458Z",
+          "updatedAt": "2026-08-12T18:07:11.569Z",
+          "resolvedAt": "2026-08-12T18:07:11.547Z",
+          "url": "https://stspg.io/kxwqzpnz52t1",
+          "summary": "This issue has been resolved."
+        },
+        {
+          "id": "mgp99sn4ynd4",
+          "title": "Degraded performance for Claude Opus 5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-05T13:51:30.287Z",
+          "updatedAt": "2026-08-05T14:34:15.278Z",
+          "resolvedAt": "2026-08-05T14:34:15.264Z",
+          "url": "https://stspg.io/m7w8kkf4tlqg",
+          "summary": "This incident has been resolved."
         }
       ]
     },
@@ -197,7 +202,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T23:55:29.288Z",
+      "lastCheckedAt": "2026-08-14T00:42:39.416Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -217,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T23:55:29.880Z",
+      "lastCheckedAt": "2026-08-14T00:42:39.953Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -295,96 +300,6 @@
       ]
     },
     {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T23:55:28.476Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "j160kkjmm2n1",
-          "title": "Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-08-13T14:33:45.159Z",
-          "updatedAt": "2026-08-13T16:08:35.747Z",
-          "resolvedAt": "2026-08-13T16:08:35.730Z",
-          "url": "https://stspg.io/bjkywv98sm8d",
-          "summary": "The issue affecting Claude Mythos 5 and Claude Fable 5 has been resolved."
-        },
-        {
-          "id": "rk6gkg2gwfny",
-          "title": "Degraded performance for multiple models",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-12T13:50:28.458Z",
-          "updatedAt": "2026-08-12T18:07:11.569Z",
-          "resolvedAt": "2026-08-12T18:07:11.547Z",
-          "url": "https://stspg.io/kxwqzpnz52t1",
-          "summary": "This issue has been resolved."
-        },
-        {
-          "id": "mgp99sn4ynd4",
-          "title": "Degraded performance for Claude Opus 5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-05T13:51:30.287Z",
-          "updatedAt": "2026-08-05T14:34:15.278Z",
-          "resolvedAt": "2026-08-05T14:34:15.264Z",
-          "url": "https://stspg.io/m7w8kkf4tlqg",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "f6gkkq6txl7z",
-          "title": "Degraded performance of multiple models",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-05T07:05:54.000Z",
-          "updatedAt": "2026-08-05T14:14:36.025Z",
-          "resolvedAt": "2026-08-05T14:14:36.006Z",
-          "url": "https://stspg.io/s2ysk4zxbyy3",
-          "summary": "This incident has been resolved."
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -395,7 +310,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T23:55:29.749Z",
+      "lastCheckedAt": "2026-08-14T00:42:39.805Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -415,7 +330,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-13T23:55:29.062Z",
+      "lastCheckedAt": "2026-08-14T00:42:39.013Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -437,6 +352,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-14T00:42:38.434Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KZXVAJQ5XFH7PTM43XVPQWGJ",
+          "title": "Elevated errors in ChatGPT conversations for Free users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-13T15:19:50.000Z",
+          "updatedAt": "2026-08-13T23:58:22.000Z",
+          "resolvedAt": "2026-08-13T23:58:22.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
+          "title": "Error while creating custom RBAC roles for Enterprise users",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-08-13T14:03:49.000Z",
+          "updatedAt": "2026-08-13T22:26:53.000Z",
+          "resolvedAt": "2026-08-13T22:26:53.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KZSC0T66YTVM57N5T79SV8ZV",
+          "title": "Increase in errors on API, Codex and Work Mode",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-08-11T21:35:23.000Z",
+          "updatedAt": "2026-08-11T22:42:26.000Z",
+          "resolvedAt": "2026-08-11T22:42:26.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KZRXPE0NGXA12FJNP8WZF8D7",
+          "title": "Users unable to login to ads manager",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-11T17:25:03.000Z",
+          "updatedAt": "2026-08-11T17:28:04.000Z",
+          "resolvedAt": "2026-08-11T17:28:04.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -451,7 +452,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
