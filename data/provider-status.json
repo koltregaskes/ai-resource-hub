@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T21:58:39.718Z",
+  "generatedAt": "2026-08-14T22:37:10.790Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T21:58:39.710Z",
+      "lastCheckedAt": "2026-08-14T22:37:10.783Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T21:58:38.248Z",
+      "lastCheckedAt": "2026-08-14T22:37:09.430Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "No active incidents across 6 tracked components.",
@@ -180,78 +180,6 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T21:58:38.926Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
-      "id": "cohere",
-      "providerId": "cohere",
-      "name": "Cohere",
-      "colour": "#6366f1",
-      "websiteUrl": "https://cohere.com",
-      "statusPageUrl": "https://status.cohere.io",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T21:58:39.118Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
-      "id": "google",
-      "providerId": "google",
-      "name": "Google",
-      "colour": "#4285f4",
-      "websiteUrl": "https://deepmind.google",
-      "statusPageUrl": "https://status.cloud.google.com",
-      "sourceKind": "google_incidents",
-      "sourceLabel": "Official incident feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T21:58:38.337Z",
-      "overallStatus": "operational",
-      "overallLabel": "No active Gemini or Vertex AI incidents",
-      "summary": "Filtered from the official Google Cloud public incident feed.",
-      "notes": "Filtered to Gemini and Vertex AI related incidents from the public Google Cloud incident feed.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "41E5S3mkTGDfkZuJZH5k",
-          "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-02-27T12:37:00.000Z",
-          "updatedAt": "2026-03-09T05:25:43.000Z",
-          "resolvedAt": "2026-02-27T14:35:00.000Z",
-          "url": "https://status.cloud.google.com",
-          "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
-        }
-      ]
-    },
-    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -262,10 +190,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T21:58:38.313Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "lastCheckedAt": "2026-08-14T22:37:09.376Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -293,8 +221,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01M015X5NF9D6C4MYR6NGR8HAR",
+          "title": "Unexpected GPT-5.6 Terra responses",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-08-14T22:22:28.000Z",
+          "updatedAt": "2026-08-14T22:22:28.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue affecting some customers using GPT-5.6 Terra. Affected requests may intermittently return incomplete or malformed responses, or include unexpected co..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01M015X5NF9D6C4MYR6NGR8HAR",
+          "title": "Unexpected GPT-5.6 Terra responses",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-08-14T22:22:28.000Z",
+          "updatedAt": "2026-08-14T22:22:28.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue affecting some customers using GPT-5.6 Terra. Affected requests may intermittently return incomplete or malformed responses, or include unexpected co..."
+        },
         {
           "id": "01KZXVAJQ5XFH7PTM43XVPQWGJ",
           "title": "Elevated errors in ChatGPT conversations for Free users",
@@ -324,16 +273,78 @@
           "updatedAt": "2026-08-11T22:42:26.000Z",
           "resolvedAt": "2026-08-11T22:42:26.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
+        }
+      ]
+    },
+    {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-14T22:37:10.125Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "cohere",
+      "providerId": "cohere",
+      "name": "Cohere",
+      "colour": "#6366f1",
+      "websiteUrl": "https://cohere.com",
+      "statusPageUrl": "https://status.cohere.io",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-14T22:37:10.441Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "google",
+      "providerId": "google",
+      "name": "Google",
+      "colour": "#4285f4",
+      "websiteUrl": "https://deepmind.google",
+      "statusPageUrl": "https://status.cloud.google.com",
+      "sourceKind": "google_incidents",
+      "sourceLabel": "Official incident feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-14T22:37:09.866Z",
+      "overallStatus": "operational",
+      "overallLabel": "No active Gemini or Vertex AI incidents",
+      "summary": "Filtered from the official Google Cloud public incident feed.",
+      "notes": "Filtered to Gemini and Vertex AI related incidents from the public Google Cloud incident feed.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
         {
-          "id": "01KZRXPE0NGXA12FJNP8WZF8D7",
-          "title": "Users unable to login to ads manager",
+          "id": "41E5S3mkTGDfkZuJZH5k",
+          "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-08-11T17:25:03.000Z",
-          "updatedAt": "2026-08-11T17:28:04.000Z",
-          "resolvedAt": "2026-08-11T17:28:04.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "startedAt": "2026-02-27T12:37:00.000Z",
+          "updatedAt": "2026-03-09T05:25:43.000Z",
+          "resolvedAt": "2026-02-27T14:35:00.000Z",
+          "url": "https://status.cloud.google.com",
+          "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
     },
@@ -348,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-14T21:58:39.536Z",
+      "lastCheckedAt": "2026-08-14T22:37:10.478Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
