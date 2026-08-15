@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T08:42:55.047Z",
+  "generatedAt": "2026-08-15T09:02:09.736Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-15T08:42:55.040Z",
+      "lastCheckedAt": "2026-08-15T09:02:09.729Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,103 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-15T08:42:54.058Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Responses",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M015X5NF9D6C4MYR6NGR8HAR",
-          "title": "Unexpected GPT-5.6 Terra responses",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-08-14T22:22:28.000Z",
-          "updatedAt": "2026-08-14T22:22:28.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating an issue affecting some customers using GPT-5.6 Terra. Affected requests may intermittently return incomplete or malformed responses, or include unexpected co..."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M015X5NF9D6C4MYR6NGR8HAR",
-          "title": "Unexpected GPT-5.6 Terra responses",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-08-14T22:22:28.000Z",
-          "updatedAt": "2026-08-14T22:22:28.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating an issue affecting some customers using GPT-5.6 Terra. Affected requests may intermittently return incomplete or malformed responses, or include unexpected co..."
-        },
-        {
-          "id": "01KZXVAJQ5XFH7PTM43XVPQWGJ",
-          "title": "Elevated errors in ChatGPT conversations for Free users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-13T15:19:50.000Z",
-          "updatedAt": "2026-08-13T23:58:22.000Z",
-          "resolvedAt": "2026-08-13T23:58:22.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
-          "title": "Error while creating custom RBAC roles for Enterprise users",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-08-13T14:03:49.000Z",
-          "updatedAt": "2026-08-13T22:26:53.000Z",
-          "resolvedAt": "2026-08-13T22:26:53.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01KZSC0T66YTVM57N5T79SV8ZV",
-          "title": "Increase in errors on API, Codex and Work Mode",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-08-11T21:35:23.000Z",
-          "updatedAt": "2026-08-11T22:42:26.000Z",
-          "resolvedAt": "2026-08-11T22:42:26.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "mistral",
       "providerId": "mistral",
       "name": "Mistral",
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-15T08:42:54.292Z",
+      "lastCheckedAt": "2026-08-15T09:02:09.237Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -217,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-15T08:42:53.906Z",
+      "lastCheckedAt": "2026-08-15T09:02:08.676Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-15T08:42:54.725Z",
+      "lastCheckedAt": "2026-08-15T09:02:09.542Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-15T08:42:54.026Z",
+      "lastCheckedAt": "2026-08-15T09:02:08.944Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -349,6 +252,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-15T09:02:08.855Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Sites",
+          "status": "operational"
+        },
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KZXVAJQ5XFH7PTM43XVPQWGJ",
+          "title": "Elevated errors in ChatGPT conversations for Free users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-13T15:19:50.000Z",
+          "updatedAt": "2026-08-13T23:58:22.000Z",
+          "resolvedAt": "2026-08-13T23:58:22.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KZXPZD4KHMQQFF09PSNNEZT8",
+          "title": "Error while creating custom RBAC roles for Enterprise users",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-08-13T14:03:49.000Z",
+          "updatedAt": "2026-08-13T22:26:53.000Z",
+          "resolvedAt": "2026-08-13T22:26:53.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KZSC0T66YTVM57N5T79SV8ZV",
+          "title": "Increase in errors on API, Codex and Work Mode",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-08-11T21:35:23.000Z",
+          "updatedAt": "2026-08-11T22:42:26.000Z",
+          "resolvedAt": "2026-08-11T22:42:26.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KZRXPE0NGXA12FJNP8WZF8D7",
+          "title": "Users unable to login to ads manager",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-11T17:25:03.000Z",
+          "updatedAt": "2026-08-11T17:28:04.000Z",
+          "resolvedAt": "2026-08-11T17:28:04.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -359,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-15T08:42:54.971Z",
+      "lastCheckedAt": "2026-08-15T09:02:09.723Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
