@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 15 Aug 2026, 23:32 UTC
+Generated: 16 Aug 2026, 01:55 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -15,8 +15,8 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 5 | Mistral Large | Mistral | 50.4 | 70.6 / 6 | 20% | General use | $2.00 / $6.00 | 01 Jun 2025 |
 | 6 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.10 / $0.30 | 05 Apr 2025 |
 | 7 | Phi-4 Reasoning | Microsoft | 49.2 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
-| 8 | Claude Sonnet 4.6 (batch) | Anthropic | 44.8 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
-| 9 | GPT-5.2 Pro (batch) | OpenAI | 44.1 | 91.3 / 4 | 16% | Chat | $10.50 / $84.00 | 10 Dec 2025 |
+| 8 | GPT-5.2 Pro (batch) | OpenAI | 44.1 | 91.3 / 4 | 16% | Chat | $10.50 / $84.00 | 10 Dec 2025 |
+| 9 | Claude Sonnet 4.6 (batch) | Anthropic | 42.9 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
 | 10 | R1 0528 | DeepSeek | 40.8 | 82.4 / 6 | 23% | Chat | $0.50 / $2.15 | 28 May 2025 |
 | 11 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $1.00 / $4.00 | 16 Apr 2025 |
 | 12 | Qwen3 Max | Alibaba | 39.7 | 86.1 / 4 | 15% | Coding | $0.78 / $3.90 | 01 Sept 2025 |
