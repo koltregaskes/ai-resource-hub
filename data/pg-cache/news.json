@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-78030b55c4faad1f2fa2",
+    "title": "ChatGPT is getting a dedicated mode for teens",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/981333/openai-chatgpt-teen-mode",
+    "source": "The Verge",
+    "summary": "OpenAI is introducing a dedicated ChatGPT mode for teenagers, combining existing youth safeguards and new safety features under one roof. The launch comes amid mounting public scrutiny over how AI tools affect younger users, as other platforms implement their own age checks and teen-specific protections. ChatGPT for T…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-18T11:00:00.000Z",
+    "discovered_at": "2026-08-18 11:36:55"
+  },
+  {
+    "id": "news-9b37fd2d441f7e4575f5",
+    "title": "Elon Musk made flying even worse so Palantir could profit",
+    "url": "https://www.theverge.com/transportation/981194/faa-air-traffic-elon-musk-peter-thiel-palantir",
+    "source": "The Verge",
+    "summary": "On August 6th, the Minneapolis Air Route Traffic Control Center lost radar and communications for around two hours. The outage disrupted more than 1,100 flights across the center's 330,000 square mile, nine-state airspace sector. Two days earlier, on August 4th, President Donald Trump departed the White House inside h…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-18T11:00:00.000Z",
+    "discovered_at": "2026-08-18 11:36:55"
+  },
+  {
+    "id": "news-d80040e4a9ed50c94410",
+    "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
+    "url": "https://openai.com/index/introducing-chatgpt-for-teens",
+    "source": "OpenAI",
+    "summary": "ChatGPT for Teens helps teens learn, think critically, and use AI with confidence, with stronger built-in protections, healthy-use features, and additional controls for parents.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-18T11:00:00.000Z",
+    "discovered_at": "2026-08-18 11:36:54"
+  },
+  {
+    "id": "news-9765648ad527edb666ee",
+    "title": "Partnering with CodeAI to prepare the first AI generation",
+    "url": "https://openai.com/index/partnering-with-codeai",
+    "source": "OpenAI",
+    "summary": "OpenAI and CodeAI are partnering to help students build AI literacy, think critically about AI, and develop the skills to use and shape it responsibly.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-18T11:00:00.000Z",
+    "discovered_at": "2026-08-18 11:36:54"
+  },
+  {
     "id": "news-14640eb10ad8f1f5932f",
     "title": "Apple&#8217;s camera-equipped AirPods appear in leaked video",
     "url": "https://www.theverge.com/tech/981326/apple-airpods-with-cameras-demo-video-leak",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-18T09:00:01.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-dbbfe5994f2dcae5946e",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T23:56:26.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-63576ecb69ad2713ecec",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T21:27:05.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-4802671e550ced502819",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T16:38:44.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-5eb5d533608202319015",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T16:15:12.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-873e13072ba2c8a35dd1",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T15:16:24.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-995014bcc5ad2f287f62",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T13:10:05.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-a9f248df49c3a27710ed",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T11:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-e6c585a846b45f102052",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T10:57:13.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-ef87e3b0ab280005796c",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T08:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-f137d9ea2f9f034dccd0",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T05:30:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-ad5623d5cc7091de096d",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T05:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-96670aeff66e996d93df",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T03:15:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-639f236e7d0f62ec0379",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-16T21:32:56.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-fafd24ceadc9a76f9ffc",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-16T20:57:04.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-832c648f0c9fd1c91bb7",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-16T20:32:01.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-1968340f8ecead8449f5",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-16T16:53:51.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-a1c7d35e071856a8dde3",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-16T14:56:40.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-af2af46d5d3afbf29879",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-16T12:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-49b0a683c25a1fb709b6",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-15T21:29:19.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-10bbeaa8150c3c39863c",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-15T20:45:00.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-447c79c5c7dd7a782dc0",
@@ -261,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-15T18:58:39.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-c2a2d25fa30b61f80a59",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-15T16:30:00.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-94a2ea670170612ff2d6",
@@ -285,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-15T16:10:00.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-8fce1ccaf76f5503d9e4",
@@ -297,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T16:54:16.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
-  },
-  {
-    "id": "news-d469d19d5d596cb8087f",
-    "title": "You can now turn off Google Gemini&#8217;s visible watermarks",
-    "url": "https://www.theverge.com/tech/980416/google-gemini-ai-watermarks-removal",
-    "source": "The Verge",
-    "summary": "Google will now allow you to remove visible watermarks from the images, videos, and music made with AI tools. With the update, you can toggle off a new \"Media watermark\" setting in Gemini and Google's AI video generator, Flow. When toggled off, Google will remove the \"sparkle\" watermark that appears in the bottom-righ…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-14T16:39:32.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-f51202f8724d2bacb926",
@@ -321,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T16:13:40.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-f3fe42a4b3a4708f5bea",
@@ -333,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T15:43:28.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-21c40107424f32b936b0",
@@ -345,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T14:50:11.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-56f28cd3a41a0cfa2518",
@@ -357,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T14:27:14.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-887ae253679fc99ac62b",
@@ -369,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T14:05:00.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-c3418764be1f5d20e500",
@@ -381,19 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T14:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
-  },
-  {
-    "id": "news-a8d30f7063b5cfffd67c",
-    "title": "Apple trained its own AI model for China with help from Alibaba",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/980160/apple-intelligence-china-custom-ai-model-alibaba",
-    "source": "The Verge",
-    "summary": "Apple has reportedly trained a custom AI model for the China market alongside domestic tech giant Alibaba, a rare cross-border partnership that cuts across growing tensions between Beijing and Washington. The China-focused large language model was developed in partnership with Alibaba and trained with the company's su…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-14T09:21:17.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-4cbb438f4fdf5c0b131d",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-13T16:45:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-855fa77e93e122bb47dc",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-13T11:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-6357d7795d215a7fa706",
@@ -429,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-13T10:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-9e022b7caa78cba45b71",
@@ -441,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-13T09:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-80c120873d58c484595f",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-12T21:43:21.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-fb21820d806b1b78d97f",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-12T06:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-cad35e6294feba2f66b3",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-12T00:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-dbc30e861442f93d6f8e",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T17:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-b274e00978a8c0306df3",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T10:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-de2ca3d7578dd51cbe19",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T10:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-7a678e9a26d7e264e59b",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T17:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-ae2292bf453d4eb7832c",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T14:30:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-61282b7420ed067525c1",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T14:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-c7b962b1d9efaa2a9e74",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T12:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-3a8585570cab21df194c",
@@ -573,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T10:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-7f776d7829d07edef8a9",
@@ -585,31 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T10:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
-  },
-  {
-    "id": "news-1ea3eea3d9a52b4c995b",
-    "title": "How Zapier transformed core marketing processes with ChatGPT Work",
-    "url": "https://openai.com/index/zapier",
-    "source": "OpenAI",
-    "summary": "The enterprise marketing team at Zapier uses ChatGPT Work to reduce the number of drop-offs in its lead funnel, build campaign assets, and automate reporting.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-10T00:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
-  },
-  {
-    "id": "news-8f3f7b571773b5e822ac",
-    "title": "Virgin Atlantic sharpens customer journeys with ChatGPT Work",
-    "url": "https://openai.com/index/virgin-atlantic/chatgpt-work",
-    "source": "OpenAI",
-    "summary": "Virgin Atlantic is accelerating research, product planning, and decision-making with ChatGPT Work, helping teams connect signals across the customer journey.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-10T00:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-ee449db47d8dff1954b2",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T00:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:54"
   },
   {
     "id": "news-2a0a276054536ae62f3e",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T13:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-928c08785b292a8ecd7d",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T15:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-2db26e244b543f4bda5a",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-31T20:39:14.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-ed5ec75bea30ca654128",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T21:36:39.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-be3ca53745f60ae72729",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T16:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-61b149676fcbb9137b2a",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-7c8ae2784e8b94a112ff",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-28T13:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-7b818cd68cd5f7ab0d8e",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-27T21:56:14.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-23fca7e7282563139d34",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-22T13:00:00.000Z",
-    "discovered_at": "2026-08-18 10:44:28"
+    "discovered_at": "2026-08-18 11:36:55"
   },
   {
     "id": "news-28ab33062c0aeaab61a6",
@@ -741,6 +741,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-07-21T15:18:23.000Z",
-    "discovered_at": "2026-08-18 10:44:29"
+    "discovered_at": "2026-08-18 11:36:55"
   }
 ]
