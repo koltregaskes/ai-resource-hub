@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T16:02:13.762Z",
+  "generatedAt": "2026-08-18T16:46:12.705Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T16:02:13.336Z",
+      "lastCheckedAt": "2026-08-18T16:46:12.697Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-18T16:01:26.000Z",
+          "id": "fireworks-feed-0-2026-08-18T16:09:28.000Z",
+          "title": "Service Degradation for GLM 5.2 Fast",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-18T16:09:28.000Z",
+          "updatedAt": "2026-08-18T16:09:28.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M0AT5292F1ZTS3WT84KGG7QP",
+          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.2 Fast. We are actively investigating. Affected components GLM 5.2 Fast (Degraded performance)"
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-18T16:01:26.000Z",
           "title": "Service Degradation for GLM 5.2 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M0ASE7RZEZ03SVHWM7YKTPNV",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-18T07:01:15.000Z",
-          "title": "Kimi K3 service disruption",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-18T07:01:15.000Z",
-          "updatedAt": "2026-08-18T07:01:15.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M09PTTHT39S8FNB91DPS5JFN",
-          "summary": "Status: Resolved Kimi K3 availability has recovered and the service is operating normally. We have resolved this incident. Affected components Kimi K3 (Operational)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-18T16:01:26.000Z",
+          "id": "fireworks-feed-0-2026-08-18T16:09:28.000Z",
+          "title": "Service Degradation for GLM 5.2 Fast",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-18T16:09:28.000Z",
+          "updatedAt": "2026-08-18T16:09:28.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M0AT5292F1ZTS3WT84KGG7QP",
+          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.2 Fast. We are actively investigating. Affected components GLM 5.2 Fast (Degraded performance)"
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-18T16:01:26.000Z",
           "title": "Service Degradation for GLM 5.2 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-18T07:01:15.000Z",
+          "id": "fireworks-feed-2-2026-08-18T07:01:15.000Z",
           "title": "Kimi K3 service disruption",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved Kimi K3 availability has recovered and the service is operating normally. We have resolved this incident. Affected components Kimi K3 (Operational)"
         },
         {
-          "id": "fireworks-feed-2-2026-08-18T06:24:50.000Z",
+          "id": "fireworks-feed-3-2026-08-18T06:24:50.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
@@ -75,39 +86,8 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M09NPSY0VR1JC5FT5PG64TH8",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-08-18T01:20:25.000Z",
-          "title": "Service Degradation for GLM 5.2 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-18T01:20:25.000Z",
-          "updatedAt": "2026-08-18T01:20:25.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M095XZET7YNRPZ4QJV10K3N5",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
-    },
-    {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T16:02:12.779Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "anthropic",
@@ -120,30 +100,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T16:02:12.667Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-08-18T16:46:11.394Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Cowork",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
@@ -151,8 +131,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "q7txxvbsftgq",
+          "title": "Degraded performance for multiple models",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-08-18T16:20:22.240Z",
+          "updatedAt": "2026-08-18T16:20:49.569Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/tcsfmtc03xgm",
+          "summary": "We are investigating elevated errors on requests to Claude Mythos 5, Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Haiku 4.5, and other Claude models. We will provide an..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "q7txxvbsftgq",
+          "title": "Degraded performance for multiple models",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-08-18T16:20:22.240Z",
+          "updatedAt": "2026-08-18T16:20:49.569Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/tcsfmtc03xgm",
+          "summary": "We are investigating elevated errors on requests to Claude Mythos 5, Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Haiku 4.5, and other Claude models. We will provide an..."
+        },
         {
           "id": "zhk4v3yv1lsf",
           "title": "Degraded performance for Claude Opus 5, Claude Sonnet 5",
@@ -185,19 +188,28 @@
           "resolvedAt": "2026-08-15T00:27:36.893Z",
           "url": "https://stspg.io/vpnnwf2vhdv4",
           "summary": "The issue affecting Claude services has been resolved. Impact occurred from 20:00 Aug 14, 2026 to 00:11 Aug 15 , 2026 UTC."
-        },
-        {
-          "id": "005ym4vzrq2w",
-          "title": "Service disruption on Claude services",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-08-14T20:30:36.289Z",
-          "updatedAt": "2026-08-14T21:58:12.714Z",
-          "resolvedAt": "2026-08-14T21:58:12.691Z",
-          "url": "https://stspg.io/wlcwm73lh5vb",
-          "summary": "The issue affecting the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 20:14 to 20:38 UTC."
         }
       ]
+    },
+    {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-18T16:46:12.210Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "cohere",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T16:02:13.324Z",
+      "lastCheckedAt": "2026-08-18T16:46:12.513Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +242,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T16:02:12.693Z",
+      "lastCheckedAt": "2026-08-18T16:46:11.958Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +274,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T16:02:12.864Z",
+      "lastCheckedAt": "2026-08-18T16:46:11.391Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +360,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T16:02:13.754Z",
+      "lastCheckedAt": "2026-08-18T16:46:12.643Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
