@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 18 Aug 2026, 18:54 UTC
+Generated: 18 Aug 2026, 19:37 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -26,7 +26,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 16 Jul 2026 | Kimi K3 | Moonshot AI | tracking | watch | watch only | 0 | 0 | n/a |
 | 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | watch | watch only | 0 | 0 | n/a |
 | 9 Jul 2026 | GPT-5.6 Sol (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
-| 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | watch | ready for editor | 0 | 5 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
-| 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | watch | ready for editor | 0 | 5 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
+| 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
+| 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
