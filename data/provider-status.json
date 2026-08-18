@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T06:01:45.735Z",
+  "generatedAt": "2026-08-18T07:00:59.718Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T06:01:45.728Z",
+      "lastCheckedAt": "2026-08-18T07:00:59.616Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,50 +20,50 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-18T05:52:12.000Z",
-          "title": "Kimi K3 service disruption",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-18T05:52:12.000Z",
-          "updatedAt": "2026-08-18T05:52:12.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M09PTTHT39S8FNB91DPS5JFN",
-          "summary": "Status: Investigating Customers may be experiencing elevated errors and degraded availability when using Kimi K3. We are mitigating the impact while we investigate connectivity is..."
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-18T05:32:32.000Z",
+          "id": "fireworks-feed-0-2026-08-18T06:24:50.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-18T05:32:32.000Z",
-          "updatedAt": "2026-08-18T05:32:32.000Z",
+          "startedAt": "2026-08-18T06:24:50.000Z",
+          "updatedAt": "2026-08-18T06:24:50.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M09NPSY0VR1JC5FT5PG64TH8",
-          "summary": "Status: Investigating We are seeing impacted performance for Kimi K3. We are actively investigating. Affected components Kimi K3 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-18T06:23:54.000Z",
+          "title": "Kimi K3 service disruption",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-18T06:23:54.000Z",
+          "updatedAt": "2026-08-18T06:23:54.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M09PTTHT39S8FNB91DPS5JFN",
+          "summary": "Status: Monitoring Kimi K3 availability has recovered and the service is operating normally following the regional connectivity disruption. We will continue monitoring to confirm..."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-18T05:52:12.000Z",
-          "title": "Kimi K3 service disruption",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-18T05:52:12.000Z",
-          "updatedAt": "2026-08-18T05:52:12.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M09PTTHT39S8FNB91DPS5JFN",
-          "summary": "Status: Investigating Customers may be experiencing elevated errors and degraded availability when using Kimi K3. We are mitigating the impact while we investigate connectivity is..."
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-18T05:32:32.000Z",
+          "id": "fireworks-feed-0-2026-08-18T06:24:50.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-18T05:32:32.000Z",
-          "updatedAt": "2026-08-18T05:32:32.000Z",
+          "startedAt": "2026-08-18T06:24:50.000Z",
+          "updatedAt": "2026-08-18T06:24:50.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M09NPSY0VR1JC5FT5PG64TH8",
-          "summary": "Status: Investigating We are seeing impacted performance for Kimi K3. We are actively investigating. Affected components Kimi K3 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-18T06:23:54.000Z",
+          "title": "Kimi K3 service disruption",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-18T06:23:54.000Z",
+          "updatedAt": "2026-08-18T06:23:54.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M09PTTHT39S8FNB91DPS5JFN",
+          "summary": "Status: Monitoring Kimi K3 availability has recovered and the service is operating normally following the regional connectivity disruption. We will continue monitoring to confirm..."
         },
         {
           "id": "fireworks-feed-2-2026-08-18T01:20:25.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T06:01:45.235Z",
+      "lastCheckedAt": "2026-08-18T07:00:59.013Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T06:01:44.516Z",
+      "lastCheckedAt": "2026-08-18T07:00:58.132Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T06:01:45.398Z",
+      "lastCheckedAt": "2026-08-18T07:00:59.319Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T06:01:44.760Z",
+      "lastCheckedAt": "2026-08-18T07:00:58.700Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T06:01:44.654Z",
+      "lastCheckedAt": "2026-08-18T07:00:58.234Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T06:01:45.631Z",
+      "lastCheckedAt": "2026-08-18T07:00:59.710Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -372,7 +372,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
