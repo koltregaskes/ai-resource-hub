@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T18:54:09.279Z",
+  "generatedAt": "2026-08-18T19:15:36.122Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T18:54:09.086Z",
+      "lastCheckedAt": "2026-08-18T19:15:35.803Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T18:54:08.494Z",
+      "lastCheckedAt": "2026-08-18T19:15:35.391Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T18:54:09.274Z",
+      "lastCheckedAt": "2026-08-18T19:15:35.792Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -140,10 +140,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T18:54:07.879Z",
+      "lastCheckedAt": "2026-08-18T19:15:34.627Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -171,30 +171,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "q7txxvbsftgq",
-          "title": "Degraded performance for multiple models",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-18T16:20:22.240Z",
-          "updatedAt": "2026-08-18T18:26:31.188Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/tcsfmtc03xgm",
-          "summary": "A fix has been implemented and we are monitoring the results."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "q7txxvbsftgq",
           "title": "Degraded performance for multiple models",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-08-18T16:20:22.240Z",
-          "updatedAt": "2026-08-18T18:26:31.188Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-08-18T19:01:45.467Z",
+          "resolvedAt": "2026-08-18T19:01:45.447Z",
           "url": "https://stspg.io/tcsfmtc03xgm",
-          "summary": "A fix has been implemented and we are monitoring the results."
+          "summary": "The issue affecting Claude Opus 5 has been resolved. Impact occurred from 16:11 to 18:23 UTC."
         },
         {
           "id": "zhk4v3yv1lsf",
@@ -242,7 +230,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T18:54:08.881Z",
+      "lastCheckedAt": "2026-08-18T19:15:35.718Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -262,7 +250,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T18:54:08.315Z",
+      "lastCheckedAt": "2026-08-18T19:15:35.113Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -294,7 +282,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-18T18:54:08.027Z",
+      "lastCheckedAt": "2026-08-18T19:15:34.685Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
