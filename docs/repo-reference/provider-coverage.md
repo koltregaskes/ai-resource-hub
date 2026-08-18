@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 18 Aug 2026, 20:37 UTC
+Generated: 18 Aug 2026, 21:35 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -30,7 +30,7 @@ This table shows how much of each provider's public model surface is currently r
 | Pika | 2 | 0 | 0 | n/a | n/a | n/a |
 | Suno | 2 | 0 | 0 | n/a | n/a | n/a |
 | Udio | 2 | 0 | 0 | n/a | n/a | n/a |
-| Zhipu AI | 1 | 12 | 0 | GLM 5 Turbo (15 Mar 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
+| Zhipu AI | 1 | 13 | 0 | GLM 5.3 (18 Aug 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | Perplexity | 1 | 4 | 0 | n/a | n/a | [docs](https://docs.perplexity.ai) |
 | Microsoft | 1 | 3 | 0 | n/a | n/a | [docs](https://learn.microsoft.com/azure/ai-foundry/model-inference/concepts/models) |
 | Hailuo AI | 1 | 0 | 0 | n/a | n/a | n/a |
