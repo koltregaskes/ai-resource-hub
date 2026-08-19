@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T11:01:32.676Z",
+  "generatedAt": "2026-08-19T11:36:23.373Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-19T11:01:32.625Z",
+      "lastCheckedAt": "2026-08-19T11:36:23.358Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-19T11:01:32.162Z",
+      "lastCheckedAt": "2026-08-19T11:36:22.718Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,10 +120,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-19T11:01:31.211Z",
+      "lastCheckedAt": "2026-08-19T11:36:22.070Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -151,30 +151,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "hkcw95k7r0f4",
-          "title": "Degraded performance for Claude Opus 5 and Claude Haiku 4.5",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-19T09:42:37.414Z",
-          "updatedAt": "2026-08-19T10:33:56.695Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/zg9tfmjj1th2",
-          "summary": "A fix has been implemented and we are monitoring the results."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "hkcw95k7r0f4",
           "title": "Degraded performance for Claude Opus 5 and Claude Haiku 4.5",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-08-19T09:42:37.414Z",
-          "updatedAt": "2026-08-19T10:33:56.695Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-08-19T11:02:18.277Z",
+          "resolvedAt": "2026-08-19T11:02:18.264Z",
           "url": "https://stspg.io/zg9tfmjj1th2",
-          "summary": "A fix has been implemented and we are monitoring the results."
+          "summary": "This incident has been resolved."
         },
         {
           "id": "q7txxvbsftgq",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-19T11:01:32.513Z",
+      "lastCheckedAt": "2026-08-19T11:36:23.015Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -242,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-19T11:01:31.915Z",
+      "lastCheckedAt": "2026-08-19T11:36:22.455Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -274,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-19T11:01:31.271Z",
+      "lastCheckedAt": "2026-08-19T11:36:22.097Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -360,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-19T11:01:32.669Z",
+      "lastCheckedAt": "2026-08-19T11:36:23.366Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
