@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 19 Aug 2026, 15:44 UTC
+Generated: 19 Aug 2026, 16:44 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -42,4 +42,4 @@ This table shows how much of each provider's public model surface is currently r
 | NVIDIA | 0 | 6 | 0 | Nemotron 3.5 Lightning (11 Aug 2026) | n/a | [docs](https://docs.api.nvidia.com) |
 | Moonshot AI | 0 | 5 | 0 | Kimi K3 (16 Jul 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
-| AI21 Labs | 0 | 3 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |
+| AI21 Labs | 0 | 2 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |
