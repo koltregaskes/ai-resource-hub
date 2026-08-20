@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1009,
     "error_message": null,
-    "started_at": "2026-08-20 07:03:45",
-    "finished_at": "2026-08-20 07:03:45"
+    "started_at": "2026-08-20 07:54:32",
+    "finished_at": "2026-08-20 07:54:32"
   },
   {
     "id": 10,
@@ -14,17 +14,8 @@
     "status": "success",
     "models_updated": 82,
     "error_message": null,
-    "started_at": "2026-08-20 07:03:39",
-    "finished_at": "2026-08-20 07:03:39"
-  },
-  {
-    "id": 8,
-    "scraper": "quality-scores",
-    "status": "computed",
-    "models_updated": 55,
-    "error_message": null,
-    "started_at": "2026-08-20 07:03:37",
-    "finished_at": "2026-08-20 07:03:37"
+    "started_at": "2026-08-20 07:54:28",
+    "finished_at": "2026-08-20 07:54:28"
   },
   {
     "id": 9,
@@ -32,8 +23,8 @@
     "status": "success",
     "models_updated": 126,
     "error_message": null,
-    "started_at": "2026-08-20 07:03:37",
-    "finished_at": "2026-08-20 07:03:37"
+    "started_at": "2026-08-20 07:54:27",
+    "finished_at": "2026-08-20 07:54:27"
   },
   {
     "id": 7,
@@ -41,8 +32,17 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-08-20 07:03:36",
-    "finished_at": "2026-08-20 07:03:36"
+    "started_at": "2026-08-20 07:54:26",
+    "finished_at": "2026-08-20 07:54:26"
+  },
+  {
+    "id": 8,
+    "scraper": "quality-scores",
+    "status": "computed",
+    "models_updated": 55,
+    "error_message": null,
+    "started_at": "2026-08-20 07:54:26",
+    "finished_at": "2026-08-20 07:54:26"
   },
   {
     "id": 6,
@@ -50,8 +50,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-08-20 07:03:35",
-    "finished_at": "2026-08-20 07:03:35"
+    "started_at": "2026-08-20 07:54:25",
+    "finished_at": "2026-08-20 07:54:25"
   },
   {
     "id": 5,
@@ -59,26 +59,8 @@
     "status": "success",
     "models_updated": 27,
     "error_message": null,
-    "started_at": "2026-08-20 07:03:34",
-    "finished_at": "2026-08-20 07:03:34"
-  },
-  {
-    "id": 4,
-    "scraper": "pricing:validator",
-    "status": "success",
-    "models_updated": 0,
-    "error_message": null,
-    "started_at": "2026-08-20 07:03:33",
-    "finished_at": "2026-08-20 07:03:33"
-  },
-  {
-    "id": 2,
-    "scraper": "pricing:openrouter",
-    "status": "success",
-    "models_updated": 310,
-    "error_message": null,
-    "started_at": "2026-08-20 07:03:32",
-    "finished_at": "2026-08-20 07:03:32"
+    "started_at": "2026-08-20 07:54:24",
+    "finished_at": "2026-08-20 07:54:24"
   },
   {
     "id": 3,
@@ -86,8 +68,26 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-08-20 07:03:32",
-    "finished_at": "2026-08-20 07:03:32"
+    "started_at": "2026-08-20 07:54:23",
+    "finished_at": "2026-08-20 07:54:23"
+  },
+  {
+    "id": 4,
+    "scraper": "pricing:validator",
+    "status": "success",
+    "models_updated": 0,
+    "error_message": null,
+    "started_at": "2026-08-20 07:54:23",
+    "finished_at": "2026-08-20 07:54:23"
+  },
+  {
+    "id": 2,
+    "scraper": "pricing:openrouter",
+    "status": "success",
+    "models_updated": 310,
+    "error_message": null,
+    "started_at": "2026-08-20 07:54:22",
+    "finished_at": "2026-08-20 07:54:22"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-08-20 07:03:31",
-    "finished_at": "2026-08-20 07:03:31"
+    "started_at": "2026-08-20 07:54:21",
+    "finished_at": "2026-08-20 07:54:21"
   }
 ]
