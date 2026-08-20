@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T17:42:44.044Z",
+  "generatedAt": "2026-08-20T18:01:57.067Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T17:42:44.037Z",
+      "lastCheckedAt": "2026-08-20T18:01:56.970Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T17:42:43.223Z",
+      "lastCheckedAt": "2026-08-20T18:01:56.296Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T17:42:42.825Z",
+      "lastCheckedAt": "2026-08-20T18:01:55.872Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T17:42:43.643Z",
+      "lastCheckedAt": "2026-08-20T18:01:56.856Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T17:42:43.161Z",
+      "lastCheckedAt": "2026-08-20T18:01:55.977Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,10 +262,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T17:42:42.946Z",
+      "lastCheckedAt": "2026-08-20T18:01:55.876Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -293,28 +293,17 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01M0G1RZER839AZXWMYKSZF3GR",
-          "title": "Elevated Codex API authentication errors",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-20T16:58:53.000Z",
-          "updatedAt": "2026-08-20T17:15:51.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "01M0G1RZER839AZXWMYKSZF3GR",
           "title": "Elevated Codex API authentication errors",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-08-20T16:58:53.000Z",
-          "updatedAt": "2026-08-20T17:15:51.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "updatedAt": "2026-08-20T17:52:16.000Z",
+          "resolvedAt": "2026-08-20T17:52:16.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01M0FQAR3NNH3ANVTQMBRD47DC",
@@ -359,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T17:42:43.721Z",
+      "lastCheckedAt": "2026-08-20T18:01:57.059Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
