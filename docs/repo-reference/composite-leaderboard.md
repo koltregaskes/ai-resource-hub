@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 20 Aug 2026, 01:49 UTC
+Generated: 20 Aug 2026, 03:08 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
