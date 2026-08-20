@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T19:17:59.685Z",
+  "generatedAt": "2026-08-20T19:42:54.673Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T19:17:59.563Z",
+      "lastCheckedAt": "2026-08-20T19:42:54.666Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,26 @@
       ]
     },
     {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-20T19:42:54.098Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,30 +120,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T19:17:58.271Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-08-20T19:42:53.004Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Code",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
           "status": "operational"
         },
         {
@@ -131,30 +151,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "c0ncxxm2wd9r",
-          "title": "Elevated errors on requests to multiple models",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-20T19:16:24.932Z",
-          "updatedAt": "2026-08-20T19:16:25.073Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/w7yghz6hfr72",
-          "summary": "We are investigating elevated errors on requests to some Claude models. We will provide additional updates as soon as possible."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "c0ncxxm2wd9r",
           "title": "Elevated errors on requests to multiple models",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-08-20T19:16:24.932Z",
-          "updatedAt": "2026-08-20T19:16:25.073Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-08-20T19:42:38.708Z",
+          "resolvedAt": "2026-08-20T19:42:38.692Z",
           "url": "https://stspg.io/w7yghz6hfr72",
-          "summary": "We are investigating elevated errors on requests to some Claude models. We will provide additional updates as soon as possible."
+          "summary": "This issue has been resolved."
         },
         {
           "id": "6xskhw7rn4tf",
@@ -192,26 +200,6 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T19:17:59.056Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T19:17:59.589Z",
+      "lastCheckedAt": "2026-08-20T19:42:54.410Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -242,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T19:17:58.750Z",
+      "lastCheckedAt": "2026-08-20T19:42:53.757Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -274,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T19:17:58.383Z",
+      "lastCheckedAt": "2026-08-20T19:42:53.025Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -360,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-20T19:17:59.676Z",
+      "lastCheckedAt": "2026-08-20T19:42:54.582Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -384,7 +372,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
