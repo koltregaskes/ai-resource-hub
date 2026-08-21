@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 21 Aug 2026, 21:36 UTC
+Generated: 21 Aug 2026, 22:38 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -9,7 +9,7 @@ This table shows how much of each provider's public model surface is currently r
 | OpenAI | 25 | 41 | 0 | GPT-5.6 Sol (batch) (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 8 | 21 | 0 | Gemini 3.6 Flash (batch) (21 Jul 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 7 | 15 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
-| Meta | 6 | 6 | 0 | Muse Glimmer 30B (9 Aug 2026) | n/a | [docs](https://llama.meta.com/docs) |
+| Meta | 6 | 7 | 0 | Muse Spark 1.2 Contributor (21 Aug 2026) | n/a | [docs](https://llama.meta.com/docs) |
 | Alibaba | 5 | 45 | 0 | Qwen3.8 27B (14 Aug 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | DeepSeek | 4 | 10 | 0 | DeepSeek V4 Flash Vision Exp (21 Aug 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |

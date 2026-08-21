@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 21 Aug 2026, 21:36 UTC
+Generated: 21 Aug 2026, 22:38 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 21 Aug 2026 | Muse Spark 1.2 Contributor | Meta | tracking | high | watch only | 0 | 0 | n/a |
 | 21 Aug 2026 | DeepSeek V4 Flash Vision Exp | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
 | 18 Aug 2026 | GLM 5.3 | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
 | 14 Aug 2026 | Qwen3.8 27B | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | watch | ready for editor | 0 | 4 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
 | 16 Jul 2026 | Kimi K3 | Moonshot AI | tracking | watch | watch only | 0 | 0 | n/a |
 | 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | watch | watch only | 0 | 0 | n/a |
-| 9 Jul 2026 | GPT-5.6 Sol (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
