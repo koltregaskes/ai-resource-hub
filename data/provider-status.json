@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T23:58:54.719Z",
+  "generatedAt": "2026-08-22T01:47:51.262Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-21T23:58:54.606Z",
+      "lastCheckedAt": "2026-08-22T01:47:51.119Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,31 +20,53 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-21T23:21:54.000Z",
+          "id": "fireworks-feed-0-2026-08-22T01:33:30.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-21T23:21:54.000Z",
-          "updatedAt": "2026-08-21T23:21:54.000Z",
+          "startedAt": "2026-08-22T01:33:30.000Z",
+          "updatedAt": "2026-08-22T01:33:30.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M0K9WK3BH8AP6NZ7PX7XMPBZ",
+          "url": "https://status.fireworks.ai//incidents/01M0KH8M3KH0V22GMC6DFWYZDZ",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-21T22:37:40.000Z",
-          "title": "Service Degradation for Kimi K3 US",
+          "id": "fireworks-feed-1-2026-08-22T01:06:56.000Z",
+          "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-08-21T22:37:40.000Z",
-          "updatedAt": "2026-08-21T22:37:40.000Z",
+          "startedAt": "2026-08-22T01:06:56.000Z",
+          "updatedAt": "2026-08-22T01:06:56.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M0K70WSD8E2C243A774PHS1M",
+          "url": "https://status.fireworks.ai//incidents/01M0KDVJJCBZW8AR3CH3V36HMF",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-21T23:21:54.000Z",
+          "id": "fireworks-feed-0-2026-08-22T01:33:30.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-22T01:33:30.000Z",
+          "updatedAt": "2026-08-22T01:33:30.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M0KH8M3KH0V22GMC6DFWYZDZ",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-22T01:06:56.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-22T01:06:56.000Z",
+          "updatedAt": "2026-08-22T01:06:56.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M0KDVJJCBZW8AR3CH3V36HMF",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-2-2026-08-21T23:21:54.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-21T22:37:40.000Z",
+          "id": "fireworks-feed-3-2026-08-21T22:37:40.000Z",
           "title": "Service Degradation for Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
@@ -63,28 +85,6 @@
           "updatedAt": "2026-08-21T22:37:40.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M0K70WSD8E2C243A774PHS1M",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-2-2026-08-21T21:16:08.000Z",
-          "title": "Service Degradation for Kimi K3 US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-21T21:16:08.000Z",
-          "updatedAt": "2026-08-21T21:16:08.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M0K227Q7QA6DFVQDTFW97P46",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-08-21T20:49:38.000Z",
-          "title": "Service Degradation for Kimi K3 US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-21T20:49:38.000Z",
-          "updatedAt": "2026-08-21T20:49:38.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M0K12Q9NN49HJ4V729G80T7D",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-21T23:58:53.958Z",
+      "lastCheckedAt": "2026-08-22T01:47:50.452Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -108,6 +108,116 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-22T01:47:50.831Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-22T01:47:49.801Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "c0ncxxm2wd9r",
+          "title": "Elevated errors on requests to multiple models",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-08-20T19:16:24.932Z",
+          "updatedAt": "2026-08-20T19:42:38.708Z",
+          "resolvedAt": "2026-08-20T19:42:38.692Z",
+          "url": "https://stspg.io/w7yghz6hfr72",
+          "summary": "This issue has been resolved."
+        },
+        {
+          "id": "6xskhw7rn4tf",
+          "title": "Elevated errors on Google connectors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-20T18:32:13.296Z",
+          "updatedAt": "2026-08-20T19:01:03.861Z",
+          "resolvedAt": "2026-08-20T19:01:03.844Z",
+          "url": "https://stspg.io/lmcgl9dpjxk0",
+          "summary": "This issue has been resolved."
+        },
+        {
+          "id": "hkcw95k7r0f4",
+          "title": "Degraded performance for Claude Opus 5 and Claude Haiku 4.5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-19T09:42:37.414Z",
+          "updatedAt": "2026-08-19T11:02:18.277Z",
+          "resolvedAt": "2026-08-19T11:02:18.264Z",
+          "url": "https://stspg.io/zg9tfmjj1th2",
+          "summary": "This incident has been resolved."
+        },
+        {
+          "id": "q7txxvbsftgq",
+          "title": "Degraded performance for multiple models",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-18T16:20:22.240Z",
+          "updatedAt": "2026-08-18T19:01:45.467Z",
+          "resolvedAt": "2026-08-18T19:01:45.447Z",
+          "url": "https://stspg.io/tcsfmtc03xgm",
+          "summary": "The issue affecting Claude Opus 5 has been resolved. Impact occurred from 16:11 to 18:23 UTC."
+        }
+      ]
     },
     {
       "id": "cohere",
@@ -120,7 +230,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-21T23:58:54.280Z",
+      "lastCheckedAt": "2026-08-22T01:47:50.705Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -140,7 +250,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-21T23:58:53.584Z",
+      "lastCheckedAt": "2026-08-22T01:47:50.270Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -172,7 +282,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-21T23:58:53.449Z",
+      "lastCheckedAt": "2026-08-22T01:47:49.973Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -246,46 +356,6 @@
           "summary": "All impacted services have now fully recovered."
         }
       ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-21T23:58:54.712Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "error",
-      "lastCheckedAt": null,
-      "overallStatus": "unknown",
-      "overallLabel": "Status unavailable",
-      "summary": null,
-      "notes": "HTTP 418 for https://status.claude.com/api/v2/incidents.json",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "deepseek",
