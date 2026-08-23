@@ -11,12 +11,19 @@ env:
 permissions:
   contents: write
 
+concurrency:
+  group: ai-resource-hub-data-writers-main
+  queue: max
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v6
