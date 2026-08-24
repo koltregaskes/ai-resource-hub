@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T09:01:37.093Z",
+  "generatedAt": "2026-08-24T09:29:13.577Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T09:01:37.086Z",
+      "lastCheckedAt": "2026-08-24T09:29:13.568Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-24T04:27:32.000Z",
+          "id": "fireworks-feed-0-2026-08-24T09:28:06.000Z",
+          "title": "Service Degradation for Kimi K2.6",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-24T09:28:06.000Z",
+          "updatedAt": "2026-08-24T09:28:06.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M0SH4AF27S4P18F284DQQAW7",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-24T04:27:32.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-08-24T04:27:32.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M0S04RP51564454P20YYBGCD",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-23T15:27:00.000Z",
-          "title": "Service Degradation for one of our Serverless models",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-23T15:27:00.000Z",
-          "updatedAt": "2026-08-23T15:27:00.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M0QKC9235W4H791N9X4J5BNQ",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-24T04:27:32.000Z",
+          "id": "fireworks-feed-0-2026-08-24T09:28:06.000Z",
+          "title": "Service Degradation for Kimi K2.6",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-24T09:28:06.000Z",
+          "updatedAt": "2026-08-24T09:28:06.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M0SH4AF27S4P18F284DQQAW7",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-24T04:27:32.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-23T15:27:00.000Z",
+          "id": "fireworks-feed-2-2026-08-23T15:27:00.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-08-23T15:10:01.000Z",
+          "id": "fireworks-feed-3-2026-08-23T15:10:01.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-08-23T15:10:01.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M0QH5ZF04DM1HBZAS25RH9GG",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-08-23T12:49:42.000Z",
-          "title": "Service Degradation for one of our Serverless models",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-23T12:49:42.000Z",
-          "updatedAt": "2026-08-23T12:49:42.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M0QA1GF7943719A1F7X2JZ41",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T09:01:36.493Z",
+      "lastCheckedAt": "2026-08-24T09:29:12.642Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T09:01:35.853Z",
+      "lastCheckedAt": "2026-08-24T09:29:12.581Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T09:01:36.880Z",
+      "lastCheckedAt": "2026-08-24T09:29:13.169Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T09:01:36.247Z",
+      "lastCheckedAt": "2026-08-24T09:29:12.511Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T09:01:35.989Z",
+      "lastCheckedAt": "2026-08-24T09:29:12.758Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T09:01:37.046Z",
+      "lastCheckedAt": "2026-08-24T09:29:13.521Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
