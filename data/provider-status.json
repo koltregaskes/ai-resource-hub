@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T07:43:59.700Z",
+  "generatedAt": "2026-08-24T08:25:46.786Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T07:43:59.693Z",
+      "lastCheckedAt": "2026-08-24T08:25:46.754Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T07:43:58.116Z",
+      "lastCheckedAt": "2026-08-24T08:25:45.316Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -138,10 +138,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-08-24T05:06:39.493Z",
-          "updatedAt": "2026-08-24T06:42:37.577Z",
+          "updatedAt": "2026-08-24T07:47:26.961Z",
           "resolvedAt": null,
           "url": "https://stspg.io/5kzdprb1xsbx",
-          "summary": "We are continuing to work to resolve issues causing elevated requests on multiple models. We will provide an update as soon as possible."
+          "summary": "At this time, we have seen errors stabilize on Opus 5 and Fable 5, and are working to fully resolve success rates on all affected models. We will provide an update as soon as poss..."
         }
       ],
       "recentIncidents": [
@@ -151,10 +151,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-08-24T05:06:39.493Z",
-          "updatedAt": "2026-08-24T06:42:37.577Z",
+          "updatedAt": "2026-08-24T07:47:26.961Z",
           "resolvedAt": null,
           "url": "https://stspg.io/5kzdprb1xsbx",
-          "summary": "We are continuing to work to resolve issues causing elevated requests on multiple models. We will provide an update as soon as possible."
+          "summary": "At this time, we have seen errors stabilize on Opus 5 and Fable 5, and are working to fully resolve success rates on all affected models. We will provide an update as soon as poss..."
         },
         {
           "id": "c0ncxxm2wd9r",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T07:43:58.762Z",
+      "lastCheckedAt": "2026-08-24T08:25:45.955Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T07:43:59.199Z",
+      "lastCheckedAt": "2026-08-24T08:25:46.134Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -242,7 +242,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T07:43:58.515Z",
+      "lastCheckedAt": "2026-08-24T08:25:45.575Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -274,7 +274,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T07:43:58.135Z",
+      "lastCheckedAt": "2026-08-24T08:25:45.274Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -360,7 +360,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-24T07:43:59.358Z",
+      "lastCheckedAt": "2026-08-24T08:25:46.778Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
