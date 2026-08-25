@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 25 Aug 2026, 15:01 UTC |
+| Generated | 25 Aug 2026, 15:56 UTC |
 | Providers tracked | 40 |
 | Public models | 330 |
 | Active models | 110 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 53 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 25 Aug 2026, 15:01 UTC |
+| Latest visible refresh | 25 Aug 2026, 15:56 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
 | Latest tracked release | Muse Spark 1.2 Contributor (21 Aug 2026) |
 
