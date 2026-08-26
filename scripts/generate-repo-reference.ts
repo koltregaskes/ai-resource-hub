@@ -407,6 +407,7 @@ function buildSourceRegistryDoc(generatedAt: string): string {
       ['Generated', formatDateTime(generatedAt)],
       ['Configured sources', String(newsPipelineSnapshot.summary.configuredSourceCount)],
       ['AI Resource Hub routed sources', String(aiHubSources.length)],
+      ['Routing lookback', `${newsPipelineSnapshot.summary.lookbackHours} hours`],
       ['Automated sources', String(newsPipelineSnapshot.summary.automatedSourceCount)],
       ['Manual-review-only sources', String(newsPipelineSnapshot.summary.manualReviewSourceCount)],
       ['Official-first verification lanes', String(newsPipelineSnapshot.summary.officialFirstSourceCount)],

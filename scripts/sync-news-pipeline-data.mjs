@@ -1,53 +1,50 @@
 import fs from 'node:fs/promises';
 import fsSync from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const repoRoot = process.cwd();
-function resolveEstateRoot() {
-  const candidates = [
-    process.env.WEBSITES_ESTATE_ROOT,
-    path.resolve(repoRoot, '..', '..'),
+
+export function resolveNewsPipelineInputs({
+  repoRoot: candidateRepoRoot = process.cwd(),
+  env = process.env,
+  existsSync = fsSync.existsSync,
+} = {}) {
+  const estateCandidates = [
+    env.WEBSITES_ESTATE_ROOT,
+    path.resolve(candidateRepoRoot, '..', '..'),
     'W:\\Websites',
     'C:\\Workspaces\\Websites',
   ].filter(Boolean);
+  const estateRoot = estateCandidates.find((candidate) =>
+    existsSync(path.join(candidate, 'estate.yml'))
+  ) ?? path.resolve(candidateRepoRoot, '..', '..');
 
-  for (const candidate of candidates) {
-    const siteFilters = path.join(
-      candidate,
-      'shared',
-      'website-tools',
-      'pipelines',
-      'news',
-      'site-filters.json'
-    );
-    const estateManifest = path.join(candidate, 'estate.yml');
-    if (fsSync.existsSync(siteFilters) && fsSync.existsSync(estateManifest)) {
-      return candidate;
-    }
-  }
+  const newsPipelineCandidates = [
+    env.WEBSITE_NEWS_PIPELINE_ROOT,
+    path.resolve(estateRoot, '..', 'tools', 'internal', 'website-pipelines', 'news'),
+    'W:\\tools\\internal\\website-pipelines\\news',
+  ].filter(Boolean);
+  const newsPipelineRoot = newsPipelineCandidates.find((candidate) =>
+    existsSync(path.join(candidate, 'site-filters.json')) &&
+    existsSync(path.join(candidate, 'config', 'sources.json'))
+  ) ?? newsPipelineCandidates[0];
 
-  return path.resolve(repoRoot, '..', '..');
+  return {
+    estateRoot,
+    newsPipelineRoot,
+    siteFiltersPath: path.join(newsPipelineRoot, 'site-filters.json'),
+    sourcesPath: path.join(newsPipelineRoot, 'config', 'sources.json'),
+    estateManifestPath: path.join(estateRoot, 'estate.yml'),
+  };
 }
 
-const estateRoot = resolveEstateRoot();
-const siteFiltersPath = path.join(
+const {
   estateRoot,
-  'shared',
-  'website-tools',
-  'pipelines',
-  'news',
-  'site-filters.json'
-);
-const sourcesPath = path.join(
-  estateRoot,
-  'shared',
-  'website-tools',
-  'pipelines',
-  'news',
-  'config',
-  'sources.json'
-);
-const estateManifestPath = path.join(estateRoot, 'estate.yml');
+  siteFiltersPath,
+  sourcesPath,
+  estateManifestPath,
+} = resolveNewsPipelineInputs({ repoRoot });
 const outputPath = path.join(repoRoot, 'src', 'data', 'news-pipeline.generated.ts');
 const publicDataDir = path.join(repoRoot, 'public', 'data');
 const publicSourceRegistryPath = path.join(publicDataDir, 'source-registry.json');
@@ -131,21 +128,19 @@ function getHostName(url) {
   }
 }
 
-function toPublicWorkspacePath(value) {
+export function toPublicWorkspacePath(value, candidateEstateRoot = estateRoot) {
   if (!value) return null;
 
   const rawValue = String(value);
-  const windowsEstateRelative = rawValue.replace(
-    /^[A-Za-z]:[\\/]+(?:Workspaces[\\/]+)?Websites[\\/]+/i,
-    ''
-  );
-  if (windowsEstateRelative !== rawValue) {
-    return windowsEstateRelative.replace(/\\/g, '/');
+  const estateRelative = path.relative(candidateEstateRoot, rawValue);
+  if (estateRelative && !estateRelative.startsWith('..') && !path.isAbsolute(estateRelative)) {
+    return estateRelative.replace(/\\/g, '/');
   }
 
-  const relativePath = path.relative(estateRoot, rawValue);
-  if (relativePath && !relativePath.startsWith('..') && !path.isAbsolute(relativePath)) {
-    return relativePath.replace(/\\/g, '/');
+  const workspaceRoot = path.dirname(candidateEstateRoot);
+  const workspaceRelative = path.relative(workspaceRoot, rawValue);
+  if (workspaceRelative && !workspaceRelative.startsWith('..') && !path.isAbsolute(workspaceRelative)) {
+    return workspaceRelative.replace(/\\/g, '/');
   }
 
   return rawValue.replace(/\\/g, '/');
@@ -420,7 +415,7 @@ async function main() {
     ],
     guidance: {
       canonicalHome:
-        'Keep the canonical routing config in shared/website-tools/pipelines/news. Surface it in the hub, but do not fork it silently in multiple workspaces.',
+        'Keep the canonical routing config in tools/internal/website-pipelines/news. Surface it in the hub, but do not fork it silently in multiple workspaces.',
       aiResourceHubPolicy:
         'AI Resource Hub should only show technical AI coverage. Crypto, photography, and off-brief creative items should be blocked at routing time, not hidden later.',
       sourceHandling:
@@ -439,7 +434,13 @@ async function main() {
   console.log(`Wrote ${path.relative(repoRoot, publicSourceRegistryPath)}`);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+const isMainModule = process.argv[1]
+  ? path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+  : false;
+
+if (isMainModule) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
