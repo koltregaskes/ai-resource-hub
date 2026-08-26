@@ -25,6 +25,7 @@
     "import:news": "tsx scripts/import-news-digests.ts",
     "generate:digest": "tsx scripts/generate-digest.ts",
     "sync:news-pipeline": "node scripts/sync-news-pipeline-data.mjs",
+    "test:news-pipeline-sync": "node --test scripts/sync-news-pipeline-data.test.mjs",
     "validate:milestones": "tsx scripts/validate-ai-milestones.ts",
     "sync:milestones": "tsx scripts/sync-ai-milestones.ts",
     "generate:milestones": "tsx scripts/generate-ai-milestones-export.ts",

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-25T15:11:54.247Z",
+  "generatedAt": "2026-08-26T02:20:03.254Z",
   "sourceOfTruth": {
     "estateManifestPath": "estate.yml",
-    "siteFiltersPath": "shared/website-tools/pipelines/news/site-filters.json",
-    "sourcesPath": "shared/website-tools/pipelines/news/config/sources.json"
+    "siteFiltersPath": "tools/internal/website-pipelines/news/site-filters.json",
+    "sourcesPath": "tools/internal/website-pipelines/news/config/sources.json"
   },
   "summary": {
-    "estateSiteCount": 10,
+    "estateSiteCount": 11,
     "activeNewsSiteCount": 8,
     "configuredSourceCount": 14,
     "automatedSourceCount": 14,
@@ -14,7 +14,7 @@
     "officialFirstSourceCount": 4,
     "crossCheckSourceCount": 10,
     "routingTagCount": 67,
-    "lookbackHours": 24,
+    "lookbackHours": 28,
     "sectionCount": 4
   },
   "siteOrder": [
@@ -27,7 +27,8 @@
     "sun-window",
     "gametrackdaily",
     "repo-foundry",
-    "stackscout"
+    "stackscout",
+    "devmode-website"
   ],
   "sections": [
     "Top Stories",
@@ -191,7 +192,7 @@
     {
       "id": "creative_workflow",
       "label": "Creative Workflow",
-      "keywordCount": 4
+      "keywordCount": 2
     },
     {
       "id": "crypto",
@@ -951,6 +952,11 @@
         "crypto_trading",
         "crypto_defi",
         "crypto_regulation",
+        "funding",
+        "acquisition",
+        "policy",
+        "regulation",
+        "industry_move",
         "game_release",
         "game_event",
         "game_review",
@@ -1095,6 +1101,26 @@
         {
           "id": "crypto_regulation",
           "label": "Crypto Regulation"
+        },
+        {
+          "id": "funding",
+          "label": "Funding"
+        },
+        {
+          "id": "acquisition",
+          "label": "Acquisition"
+        },
+        {
+          "id": "policy",
+          "label": "Policy"
+        },
+        {
+          "id": "regulation",
+          "label": "Regulation"
+        },
+        {
+          "id": "industry_move",
+          "label": "Industry Move"
         },
         {
           "id": "game_release",
@@ -1784,6 +1810,25 @@
       "outputFormat": "json_and_markdown",
       "outputPath": "sites/stackscout/data",
       "maxArticlesPerRun": 15,
+      "sourceCoverageCount": 0,
+      "explicitSourceCoverageCount": 0
+    },
+    {
+      "slug": "devmode-website",
+      "name": "Devmode Website",
+      "shortName": "Devmode Website",
+      "role": "estate-site",
+      "description": "No shared news routing description available.",
+      "note": null,
+      "newsEnabled": false,
+      "includeTags": [],
+      "excludeTags": [],
+      "includeLabels": [],
+      "excludeLabels": [],
+      "minImportanceScore": null,
+      "outputFormat": null,
+      "outputPath": null,
+      "maxArticlesPerRun": null,
       "sourceCoverageCount": 0,
       "explicitSourceCoverageCount": 0
     }
@@ -2900,7 +2945,7 @@
     }
   ],
   "guidance": {
-    "canonicalHome": "Keep the canonical routing config in shared/website-tools/pipelines/news. Surface it in the hub, but do not fork it silently in multiple workspaces.",
+    "canonicalHome": "Keep the canonical routing config in tools/internal/website-pipelines/news. Surface it in the hub, but do not fork it silently in multiple workspaces.",
     "aiResourceHubPolicy": "AI Resource Hub should only show technical AI coverage. Crypto, photography, and off-brief creative items should be blocked at routing time, not hidden later.",
     "sourceHandling": "Use the shared pipeline for source discovery and routing. Mirror it into the website and repo for transparency, but keep the source definitions in one canonical place."
   }
