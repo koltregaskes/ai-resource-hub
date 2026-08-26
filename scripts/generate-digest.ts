@@ -72,16 +72,16 @@ function main() {
 
   // New models added this week
   const newModels = db.prepare(`
-    SELECT m.name, m.id, m.quality_score, m.input_price, m.output_price,
+    SELECT m.name, m.id, m.input_price, m.output_price,
            p.name AS provider, p.colour AS colour
     FROM models m
     JOIN providers p ON m.provider_id = p.id
     WHERE m.status = 'active'
       AND m.created_at >= ?
-    ORDER BY m.quality_score DESC
+    ORDER BY m.created_at DESC, m.name ASC
     LIMIT 5
   `).all(weekAgoStr) as Array<{
-    name: string; id: string; quality_score: number;
+    name: string; id: string;
     input_price: number; output_price: number;
     provider: string; colour: string;
   }>;
@@ -178,7 +178,7 @@ function main() {
             <span class="dot" style="background-color: ${m.colour}"></span>
             <a href="${siteUrl}/models/${m.id}/">${m.name}</a>
           </p>
-          <p class="card-meta">${m.provider} &middot; Quality: ${m.quality_score}/100 &middot; $${((m.input_price + 3 * m.output_price) / 4).toFixed(2)}/1M tokens (blended)</p>
+          <p class="card-meta">${m.provider} &middot; Model quality not published without traceable evidence &middot; $${((m.input_price + 3 * m.output_price) / 4).toFixed(2)}/1M tokens (blended)</p>
         </div>
       `).join('')}
     </div>` : ''}

@@ -23,7 +23,7 @@ interface HealthcareModel {
   name: string;
   provider: string;
   colour: string;
-  qualityScore: number;
+  qualityScore: null;
   inputPrice: number;
   outputPrice: number;
   contextWindow: number;
@@ -55,7 +55,7 @@ for (const m of models) {
     name: m.name,
     provider: m.provider,
     colour: m.providerColour,
-    qualityScore: m.qualityScore,
+    qualityScore: null,
     inputPrice: m.inputPrice,
     outputPrice: m.outputPrice,
     contextWindow: m.contextWindow,
@@ -73,7 +73,7 @@ const ranked = healthcareModels
 
 const noScores = healthcareModels
   .filter(m => m.benchmarkCount === 0)
-  .sort((a, b) => b.qualityScore - a.qualityScore)
+  .sort((a, b) => (b.released ?? '').localeCompare(a.released ?? '') || a.name.localeCompare(b.name))
   .slice(0, 10);
 
 const bestOverall = ranked[0];
@@ -188,7 +188,7 @@ const bestOSS = ranked.filter(m => m.openSource)[0];
                   </td>
                 ))}
                 <td class="py-3 px-4 text-right hidden sm:table-cell">
-                  <span class="font-mono text-xs text-(--color-text-secondary)">{m.qualityScore.toFixed(1)}</span>
+                  <span class="font-mono text-xs text-(--color-text-muted)">--</span>
                 </td>
                 <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-secondary)">
                   {m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}` : 'Free'}
@@ -223,7 +223,7 @@ const bestOSS = ranked.filter(m => m.openSource)[0];
               <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${m.colour}`}></span>
               <div class="flex-1 min-w-0">
                 <p class="text-sm font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors truncate">{m.name}</p>
-                <p class="text-[10px] text-(--color-text-muted)">{m.provider} &middot; Quality: {m.qualityScore}</p>
+                <p class="text-[10px] text-(--color-text-muted)">{m.provider} &middot; Awaiting healthcare benchmark evidence</p>
               </div>
             </a>
           ))}

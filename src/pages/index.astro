@@ -30,9 +30,7 @@ type HomeRow = {
   status: string;
   href: string;
   composite: number;
-  realWorld: number;
   benchmarkScore: number;
-  qualityScore: number;
   valueScore: number;
   inputPrice: number;
   outputPrice: number;
@@ -213,7 +211,6 @@ const rows: HomeRow[] = metaLeaderboardAll.map((model, index) => {
   const releasedDays = daysSince(model.released);
   const blendedPrice = (model.inputPrice + 3 * model.outputPrice) / 4;
   const typeKeys = getTypeKeys(model);
-  const realWorld = model.qualityScore;
   const trendKind: HomeRow['trendKind'] = releasedDays !== null && releasedDays <= 14
     ? 'new'
     : model.benchmarkCount > 0
@@ -231,9 +228,7 @@ const rows: HomeRow[] = metaLeaderboardAll.map((model, index) => {
     status: model.status,
     href: `${base}models/${model.id}/`,
     composite: model.metaScore,
-    realWorld,
     benchmarkScore: model.benchmarkScore,
-    qualityScore: model.qualityScore,
     valueScore: model.valueScore,
     inputPrice: model.inputPrice,
     outputPrice: model.outputPrice,

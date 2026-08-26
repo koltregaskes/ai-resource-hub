@@ -55,7 +55,7 @@ function formatTokens(n: number): string {
   return n.toString();
 }
 
-// Find the cheapest and best quality models
+// Find the cheapest and most recently released models.
 const cheapestModel = models.length > 0
   ? models.reduce((prev, curr) => {
       const prevCost = (prev.inputPrice + 3 * prev.outputPrice) / 4;
@@ -64,9 +64,9 @@ const cheapestModel = models.length > 0
     })
   : null;
 
-const bestModel = models.length > 0
-  ? models.reduce((prev, curr) => curr.qualityScore > prev.qualityScore ? curr : prev)
-  : null;
+const latestModel = [...models]
+  .filter((model) => Boolean(model.released))
+  .sort((a, b) => String(b.released).localeCompare(String(a.released)))[0] ?? null;
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -81,7 +81,7 @@ const structuredData = {
 
 <BaseLayout
   title={`${provider.name} — AI Models & Pricing — The AI Resource Hub`}
-  description={`${provider.name} AI models: pricing, benchmarks, and comparisons. ${models.length} models tracked including ${bestModel?.name ?? 'their latest'}.`}
+  description={`${provider.name} AI models: pricing, benchmarks, and comparisons. ${models.length} models tracked including ${latestModel?.name ?? 'their latest'}.`}
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <!-- Breadcrumb -->
@@ -165,10 +165,10 @@ const structuredData = {
             <p class="text-xs text-(--color-text-muted) mt-1">Cheapest (in/out per 1M)</p>
           </div>
         )}
-        {bestModel && (
+        {latestModel && (
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
-            <p class="text-lg font-bold text-(--color-accent)">{bestModel.qualityScore}/100</p>
-            <p class="text-xs text-(--color-text-muted) mt-1">Top Quality Score</p>
+            <p class="text-lg font-bold text-(--color-accent)">{latestModel.name}</p>
+            <p class="text-xs text-(--color-text-muted) mt-1">Latest tracked release</p>
           </div>
         )}
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
@@ -202,7 +202,7 @@ const structuredData = {
                   <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Model</th>
                   <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Input Price</th>
                   <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Output Price</th>
-                  <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Quality</th>
+                  <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Model Quality</th>
                   <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Released</th>
                 </tr>
               </thead>
@@ -223,7 +223,7 @@ const structuredData = {
                     <td class="py-3 px-3 text-right text-(--color-text-primary) font-mono text-xs">{formatPrice(model.inputPrice)}</td>
                     <td class="py-3 px-3 text-right text-(--color-text-primary) font-mono text-xs">{formatPrice(model.outputPrice)}</td>
                     <td class="py-3 px-3 text-right">
-                      <span class="font-semibold text-(--color-accent)">{model.qualityScore}</span>
+                      <span class="text-xs text-(--color-text-muted)">Not published</span>
                     </td>
                     <td class="py-3 px-3 text-right text-(--color-text-muted) text-xs">
                       {model.released

@@ -10,7 +10,7 @@ interface CategoryModel {
   contextWindow: number;
   maxOutput: number;
   speed: number;
-  qualityScore: number;
+  qualityScore: number | null;
   released: string;
   openSource: boolean;
   modality: string;
@@ -68,8 +68,8 @@ function isNewModel(released: string): boolean {
 
 export default function ModelComparisonTable({ models, columns, category, baseUrl = '/', priceLabel, priceUnit }: Props) {
   const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-  const [sortField, setSortField] = useState<keyof CategoryModel>('qualityScore');
-  const [sortDir, setSortDir] = useState<SortDirection>('desc');
+  const [sortField, setSortField] = useState<keyof CategoryModel>('name');
+  const [sortDir, setSortDir] = useState<SortDirection>('asc');
   const [search, setSearch] = useState('');
   const [providerFilter, setProviderFilter] = useState('all');
   const [ossFilter, setOssFilter] = useState(false);
@@ -114,6 +114,9 @@ export default function ModelComparisonTable({ models, columns, category, baseUr
     result.sort((a, b) => {
       const aVal = a[sortField];
       const bVal = b[sortField];
+      if (aVal === null && bVal === null) return a.name.localeCompare(b.name);
+      if (aVal === null) return 1;
+      if (bVal === null) return -1;
       let cmp: number;
       if (typeof aVal === 'string' && typeof bVal === 'string') {
         cmp = aVal.localeCompare(bVal);
@@ -245,6 +248,13 @@ export default function ModelComparisonTable({ models, columns, category, baseUr
 
                   if (isQuality) {
                     const score = model.qualityScore;
+                    if (score === null) {
+                      return (
+                        <td key={String(col.field)} className={`px-4 py-3 whitespace-nowrap text-[var(--color-text-muted)] ${col.align === 'right' ? 'text-right' : ''}`}>
+                          Not published
+                        </td>
+                      );
+                    }
                     let colour = 'var(--color-text-secondary)';
                     if (score >= 90) colour = 'var(--color-success)';
                     else if (score >= 85) colour = 'var(--color-accent)';

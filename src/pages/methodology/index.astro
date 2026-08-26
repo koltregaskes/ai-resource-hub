@@ -92,7 +92,7 @@ const benchmarks = getBenchmarks();
             <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">As published</span>
           </div>
           <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
-            <li><a href="https://lmarena.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">LMSYS Chatbot Arena</a> — crowdsourced Elo ratings from 5M+ human preference votes; informs community consensus factor in quality scores</li>
+            <li><a href="https://lmarena.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">LMSYS Chatbot Arena</a> — preference data used only when a row has current, traceable provenance and a comparable configuration</li>
             <li><a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a> — real-time speed and quality benchmarks; referenced for speed data and Intelligence Index rankings</li>
             <li><a href="https://scale.com/leaderboard" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Scale AI SEAL</a> — expert-driven evaluations and safety benchmarks</li>
           </ul>
@@ -362,60 +362,53 @@ const benchmarks = getBenchmarks();
       </div>
     </div>
 
-    <!-- Quality Score -->
+    <!-- Evaluated composite -->
     <div class="mb-10">
-      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Quality Score</h2>
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Evaluated Composite</h2>
       <p class="text-sm text-(--color-text-secondary) mb-4">
-        Each model receives a <strong>quality score</strong> from 0–100 based on a weighted combination of factors:
+        Public model rankings use only current benchmark rows with a row-level source URL and measurement date.
+        A model needs at least two distinct rankable benchmark rows to enter the evaluated composite. The legacy
+        <code>model.quality_score</code> field is suppressed because it does not yet have traceable model-level
+        method, source and date evidence.
       </p>
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-(--color-border)">
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Factor</th>
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Weight</th>
-              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Source</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Gate</th>
+              <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Public policy</th>
             </tr>
           </thead>
           <tbody>
             <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Benchmark performance (avg across available benchmarks)</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">40%</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">MMLU, GPQA, HumanEval, MATH, etc.</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Row provenance</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Source URL, measurement date and exact benchmark configuration are required.</td>
             </tr>
             <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Capability breadth (modalities, tools, features)</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">20%</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Official documentation</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Minimum coverage</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">At least two distinct rankable benchmark rows for the evaluated composite.</td>
             </tr>
             <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Context window and output capacity</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">15%</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">API specifications</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Composite</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Weighted normalised benchmark performance, adjusted only for evidence coverage.</td>
             </tr>
             <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Community and expert consensus</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">15%</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Arena Elo, community feedback</td>
-            </tr>
-            <tr>
-              <td class="py-3 px-4 text-(--color-text-primary)">Recency and update status</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">10%</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Release date, active status</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Unevaluated models</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">May appear in clearly labelled watchlists, but cannot enter ranked or composite surfaces.</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <!-- Value Score -->
+    <!-- Benchmark value -->
     <div class="mb-10">
-      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Value Score</h2>
+      <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Benchmark Value</h2>
       <p class="text-sm text-(--color-text-secondary) mb-3">
-        The <strong>value score</strong> measures quality-per-dollar — how much capability you get for your money. Calculated as:
+        Benchmark value is calculated only for models that pass the evaluated-composite evidence gate:
       </p>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) font-mono text-sm text-(--color-accent) text-center">
-        Value Score = (Quality Score / Blended Price) &times; 10
+        Benchmark Value = (Rankable Benchmark Average / Blended Price) &times; 10
       </div>
       <p class="text-sm text-(--color-text-secondary) mt-3">
         Where <strong>blended price</strong> uses a 3:1 output-to-input ratio: <code>(input_price + 3 &times; output_price) / 4</code>. This ratio reflects typical API usage patterns where output tokens cost more and represent 75% of total spend.
@@ -458,7 +451,7 @@ const benchmarks = getBenchmarks();
         <li><strong>Pricing changes frequently</strong> — AI model pricing can change without notice. We refresh hourly, but a provider page or upstream cache can still lag briefly before the site catches up.</li>
         <li><strong>Speed data is limited</strong> — we track relative speed ratings rather than real-time latency measurements. For production speed data, we recommend <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a>.</li>
         <li><strong>Coverage is curated</strong> — we focus on models available via API and major consumer products. Some niche or regional models may not be listed.</li>
-        <li><strong>Quality scores are editorial</strong> — while based on benchmark data, final quality scores involve editorial judgement. See our scoring breakdown above for transparency.</li>
+        <li><strong>Legacy model quality is suppressed</strong> — the raw catalogue field is retained for remediation but is not a public fact or ranking input until method, source and date are traceable.</li>
       </ul>
     </div>
 

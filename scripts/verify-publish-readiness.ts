@@ -6,7 +6,17 @@ import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './front
 import { getAiResourceHubNewsRoutingDiagnostics } from '../src/data/news-routing';
 import { isPubliclyVerifiedModel } from '../src/data/model-verification';
 import { getRecurringEvents } from '../src/data/research-intel';
+import { getBenchmarkScores } from '../src/db/pg-cache';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
+import {
+  assessBenchmarkProvenance,
+  getBenchmarkProvenanceGateFailures,
+  summariseBenchmarkProvenance,
+  type BenchmarkDefinitionProvenanceInput,
+  type BenchmarkScoreProvenanceInput,
+} from './benchmark-provenance';
+import { getPublicQualityPolicyFailures } from './public-quality-policy';
+import { findVerifiedBenchmarkScoreEvidence } from './benchmark-score-evidence';
 
 const repoRoot = process.cwd();
 const dbPath = getAiResourceHubSqlitePath();
@@ -15,6 +25,7 @@ const publicDataDir = path.join(repoRoot, 'public', 'data');
 const providerStatusPath = path.join(repoRoot, 'data', 'provider-status.json');
 const eventSourceStatusPath = path.join(repoRoot, 'data', 'events-source-status.json');
 const releaseDeskPath = path.join(publicDataDir, 'model-release-desk.json');
+const generatedReleaseDeskPath = path.join(repoRoot, 'src', 'data', 'model-release-desk.generated.ts');
 interface CacheModel {
   id: string;
   name?: string | null;
@@ -44,6 +55,14 @@ interface CacheEvent {
   updated_at?: string | null;
 }
 
+interface CacheBenchmarkScore extends BenchmarkScoreProvenanceInput {
+  score?: number | string | null;
+}
+
+interface CacheBenchmarkDefinition extends BenchmarkDefinitionProvenanceInput {
+  name?: string | null;
+}
+
 interface EventSourceStatus {
   generatedAt?: string;
   live?: number;
@@ -55,7 +74,24 @@ interface SpreadsheetExport {
   model_count?: number;
   active_model_count?: number;
   tracking_model_count?: number;
-  models?: Array<{ id?: string; status?: string | null }>;
+  benchmark_policy?: {
+    evidence_state?: string;
+    raw_score_count?: number;
+    rankable_score_count?: number;
+    quarantined_score_count?: number;
+  };
+  models?: Array<{
+    id?: string;
+    status?: string | null;
+    benchmarks?: Record<string, unknown> | null;
+    benchmark_evidence?: Record<string, {
+      score?: unknown;
+      source?: string | null;
+      source_url?: string | null;
+      measured_at?: string | null;
+      evidence_state?: string | null;
+    }> | null;
+  }>;
 }
 
 interface ProviderStatusSnapshot {
@@ -75,6 +111,14 @@ interface ReleaseDeskSnapshot {
     draftStatus?: string | null;
     verificationState?: 'official' | 'discovery_only' | 'unverified' | null;
     officialUrl?: string | null;
+    benchmarkHighlights?: Array<{
+      benchmark_id?: string;
+      score?: unknown;
+      source?: string | null;
+      sourceUrl?: string | null;
+      measuredAt?: string | null;
+      evidenceState?: string | null;
+    }>;
   }>;
 }
 
@@ -87,6 +131,21 @@ function loadJson<T>(name: string): T[] {
 function loadJsonFile<T>(filePath: string): T | null {
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
+}
+
+function loadGeneratedReleaseDesk(filePath: string): ReleaseDeskSnapshot | null {
+  if (!fs.existsSync(filePath)) return null;
+  const source = fs.readFileSync(filePath, 'utf8');
+  const match = source.match(
+    /^export const modelReleaseDesk = ([\s\S]*?) as const;\r?\n\r?\nexport type ModelReleaseDesk/,
+  );
+  if (!match) return null;
+
+  try {
+    return JSON.parse(match[1]) as ReleaseDeskSnapshot;
+  } catch {
+    return null;
+  }
 }
 
 function normalise(value: string | null | undefined): string {
@@ -109,10 +168,13 @@ function matchesRequirement(model: CacheModel, requirement: FrontierModelRequire
 
 function main() {
   const failures: string[] = [];
+  failures.push(...getPublicQualityPolicyFailures(repoRoot));
 
   const cacheModels = loadJson<CacheModel>('models').filter(isPubliclyVerifiedModel);
   const cacheProviders = loadJson<Record<string, unknown>>('providers');
-  const cacheBenchmarks = loadJson<Record<string, unknown>>('benchmark_scores');
+  const cacheBenchmarkScores = loadJson<CacheBenchmarkScore>('benchmark_scores');
+  const publicBenchmarkScores = getBenchmarkScores();
+  const cacheBenchmarkDefinitions = loadJson<CacheBenchmarkDefinition>('benchmarks');
   const cacheNews = loadJson<CacheNews>('news');
   const cacheGlossary = loadJson<Record<string, unknown>>('glossary');
   const cacheEvents = loadJson<CacheEvent>('events');
@@ -121,6 +183,7 @@ function main() {
   const latestSpreadsheet = loadJsonFile<SpreadsheetExport>(path.join(publicDataDir, 'models-latest.json'));
   const providerStatus = loadJsonFile<ProviderStatusSnapshot>(providerStatusPath);
   const releaseDesk = loadJsonFile<ReleaseDeskSnapshot>(releaseDeskPath);
+  const generatedReleaseDesk = loadGeneratedReleaseDesk(generatedReleaseDeskPath);
   const eventSourceStatus = loadJsonFile<EventSourceStatus>(eventSourceStatusPath);
   const dbAvailable = fs.existsSync(dbPath);
   const db = dbAvailable ? new Database(dbPath, { readonly: true }) : null;
@@ -139,7 +202,7 @@ function main() {
     : {
         providers: cacheProviders.length,
         models: cacheModels.length,
-        benchmarkScores: cacheBenchmarks.length,
+        benchmarkScores: cacheBenchmarkScores.length,
       };
 
   if (cacheProviders.length < dbCounts.providers) {
@@ -150,9 +213,41 @@ function main() {
     failures.push(`Model cache lagging local DB: cache=${cacheModels.length}, db=${dbCounts.models}`);
   }
 
-  if (cacheBenchmarks.length < dbCounts.benchmarkScores) {
-    failures.push(`Benchmark score cache lagging local DB: cache=${cacheBenchmarks.length}, db=${dbCounts.benchmarkScores}`);
+  if (cacheBenchmarkScores.length < dbCounts.benchmarkScores) {
+    failures.push(`Benchmark score cache lagging local DB: cache=${cacheBenchmarkScores.length}, db=${dbCounts.benchmarkScores}`);
   }
+
+  const benchmarkProvenance = summariseBenchmarkProvenance(
+    cacheBenchmarkScores,
+    cacheBenchmarkDefinitions,
+  );
+  const benchmarkDefinitionsById = new Map(
+    cacheBenchmarkDefinitions.map((benchmark) => [benchmark.id, benchmark]),
+  );
+  const exactRankableBenchmarkScores = cacheBenchmarkScores.filter((score) => (
+    findVerifiedBenchmarkScoreEvidence(score) !== null
+    && assessBenchmarkProvenance(
+      score,
+      benchmarkDefinitionsById.get(score.benchmark_id),
+    ).rankable
+  ));
+  const publicBenchmarkProvenance = summariseBenchmarkProvenance(
+    publicBenchmarkScores,
+    cacheBenchmarkDefinitions,
+  );
+  failures.push(...getBenchmarkProvenanceGateFailures(publicBenchmarkProvenance));
+
+  if (publicBenchmarkScores.length !== exactRankableBenchmarkScores.length) {
+    failures.push(
+      `Public benchmark selector drift: rendered=${publicBenchmarkScores.length}, `
+      + `exact-reviewed-and-current=${exactRankableBenchmarkScores.length}.`,
+    );
+  }
+
+  const publicBenchmarkByKey = new Map(publicBenchmarkScores.map((score) => [
+    `${score.model_id}:${score.benchmark_id}`,
+    score,
+  ]));
 
   if (cacheGlossary.length === 0) {
     failures.push('Glossary cache contains zero records.');
@@ -204,10 +299,71 @@ function main() {
     if ((spreadsheet.models ?? []).some((model) => !model.status)) {
       failures.push('Public model spreadsheet is missing status values on one or more rows.');
     }
+
+    let exportedBenchmarkCount = 0;
+    const spreadsheetModelIds = new Set<string>();
+    for (const model of spreadsheet.models ?? []) {
+      if (!model.id) continue;
+      spreadsheetModelIds.add(model.id);
+      const scores = model.benchmarks ?? {};
+      const evidenceByBenchmark = model.benchmark_evidence ?? {};
+
+      for (const [benchmarkId, score] of Object.entries(scores)) {
+        exportedBenchmarkCount += 1;
+        const evidence = evidenceByBenchmark[benchmarkId];
+        const candidate = {
+          model_id: model.id,
+          benchmark_id: benchmarkId,
+          score,
+          source: evidence?.source,
+          source_url: evidence?.source_url,
+          measured_at: evidence?.measured_at,
+        };
+        const verified = findVerifiedBenchmarkScoreEvidence(candidate);
+        const selected = publicBenchmarkByKey.get(`${model.id}:${benchmarkId}`);
+        if (
+          !verified
+          || !selected
+          || selected.score !== score
+          || evidence?.score !== score
+          || evidence?.evidence_state !== 'verified-row'
+        ) {
+          failures.push(`Public spreadsheet exposes an unverified benchmark cell: ${model.id}:${benchmarkId}`);
+        }
+      }
+
+      for (const benchmarkId of Object.keys(evidenceByBenchmark)) {
+        if (!(benchmarkId in scores)) {
+          failures.push(`Public spreadsheet has orphan benchmark evidence: ${model.id}:${benchmarkId}`);
+        }
+      }
+    }
+
+    const expectedSpreadsheetBenchmarkCount = publicBenchmarkScores.filter((score) => (
+      spreadsheetModelIds.has(score.model_id)
+    )).length;
+    if (exportedBenchmarkCount !== expectedSpreadsheetBenchmarkCount) {
+      failures.push(
+        `Public spreadsheet benchmark set drift: export=${exportedBenchmarkCount}, `
+        + `expected=${expectedSpreadsheetBenchmarkCount}.`,
+      );
+    }
+
+    if (
+      spreadsheet.benchmark_policy?.evidence_state !== 'exact-reviewed-row'
+      || spreadsheet.benchmark_policy?.raw_score_count !== cacheBenchmarkScores.length
+      || spreadsheet.benchmark_policy?.rankable_score_count !== exportedBenchmarkCount
+      || spreadsheet.benchmark_policy?.quarantined_score_count
+        !== cacheBenchmarkScores.length - exportedBenchmarkCount
+    ) {
+      failures.push('Public spreadsheet benchmark policy counts or evidence state are stale.');
+    }
   }
 
   if (!latestSpreadsheet) {
     failures.push('Missing latest model export: public/data/models-latest.json');
+  } else if (spreadsheet && JSON.stringify(latestSpreadsheet) !== JSON.stringify(spreadsheet)) {
+    failures.push('models-latest.json does not match the reviewed spreadsheet export.');
   }
 
   if (!fs.existsSync(path.join(publicDataDir, 'ai-models-comparison.csv'))) {
@@ -253,7 +409,36 @@ function main() {
       if (release.verificationState === 'official' && !release.officialUrl) {
         failures.push(`Official release is missing a model-level source URL: ${release.id ?? 'unknown'}`);
       }
+
+      for (const highlight of release.benchmarkHighlights ?? []) {
+        const benchmarkId = highlight.benchmark_id ?? '';
+        const candidate = {
+          model_id: release.id,
+          benchmark_id: benchmarkId,
+          score: highlight.score,
+          source: highlight.source,
+          source_url: highlight.sourceUrl,
+          measured_at: highlight.measuredAt,
+        };
+        const selected = publicBenchmarkByKey.get(`${release.id}:${benchmarkId}`);
+        if (
+          !release.id
+          || !benchmarkId
+          || !findVerifiedBenchmarkScoreEvidence(candidate)
+          || !selected
+          || selected.score !== highlight.score
+          || highlight.evidenceState !== 'verified-row'
+        ) {
+          failures.push(`Release Desk exposes an unverified benchmark highlight: ${release.id ?? 'unknown'}:${benchmarkId || 'unknown'}`);
+        }
+      }
     }
+  }
+
+  if (!generatedReleaseDesk) {
+    failures.push('Missing or invalid generated Release Desk TypeScript snapshot.');
+  } else if (releaseDesk && JSON.stringify(generatedReleaseDesk) !== JSON.stringify(releaseDesk)) {
+    failures.push('Release Desk JSON and generated TypeScript snapshots do not match.');
   }
 
   const missingFrontier = REQUIRED_FRONTIER_MODELS.filter((requirement) => (
@@ -284,6 +469,14 @@ function main() {
   // coupling froze the whole site refresh when news routing dried up.
   const warnings: string[] = [];
 
+  const quarantinedBenchmarkScores = cacheBenchmarkScores.length - publicBenchmarkScores.length;
+  if (quarantinedBenchmarkScores > 0) {
+    warnings.push(
+      `Benchmark quarantine retains ${quarantinedBenchmarkScores}/${benchmarkProvenance.total} `
+      + 'raw rows for source/date remediation; none are eligible for public ranking.',
+    );
+  }
+
   const latestEventUpdate = cacheEvents
     .map((event) => event.updated_at ? Date.parse(event.updated_at) : NaN)
     .filter(Number.isFinite)
@@ -312,7 +505,11 @@ function main() {
   console.log(`  SQLite source: ${dbAvailable ? dbPath : 'not present; pg-cache is source of truth'}`);
   console.log(`  Providers: ${cacheProviders.length}/${dbCounts.providers}`);
   console.log(`  Models: ${cacheModels.length}/${dbCounts.models}`);
-  console.log(`  Benchmark scores: ${cacheBenchmarks.length}/${dbCounts.benchmarkScores}`);
+  console.log(`  Benchmark scores: raw=${cacheBenchmarkScores.length}/${dbCounts.benchmarkScores}, public=${publicBenchmarkScores.length}`);
+  console.log(`  Benchmark provenance: ${publicBenchmarkScores.length}/${benchmarkProvenance.total} exact reviewed rows public, ${quarantinedBenchmarkScores} quarantined`);
+  console.log(`    URL/date policy alone would admit: ${benchmarkProvenance.rankable}/${benchmarkProvenance.total}`);
+  console.log(`    URL-backed / inherited / label-only / missing: ${benchmarkProvenance.urlBacked} / ${benchmarkProvenance.inheritedTraceable} / ${benchmarkProvenance.labelOnly} / ${benchmarkProvenance.missing}`);
+  console.log(`    Current / stale / undated / invalid / future: ${benchmarkProvenance.current} / ${benchmarkProvenance.stale} / ${benchmarkProvenance.undated} / ${benchmarkProvenance.invalidDate} / ${benchmarkProvenance.futureDated}`);
   console.log(`  News items: ${cacheNews.length}`);
   console.log(`  Glossary terms: ${cacheGlossary.length}`);
   console.log(`  Events: ${renderedEvents.length}/${cacheEvents.length} (${upcomingEvents.length} upcoming)`);
@@ -340,7 +537,7 @@ function main() {
     return;
   }
 
-  console.log('\nOK publish cache, public exports, and status snapshot match local data and pass routing checks');
+  console.log('\nOK publish cache, public exports, rankable-only benchmark presentation, status snapshot, and routing checks passed');
 }
 
 main();

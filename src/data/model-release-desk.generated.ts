@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-08-26T01:56:39.312Z",
+  "generatedAt": "2026-08-26T02:06:45.210Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -11,60 +11,6 @@ export const modelReleaseDesk = {
     "openSource": 1
   },
   "releases": [
-    {
-      "id": "muse-spark-1.2-contributor",
-      "fileSlug": "2026-08-21-muse-spark-1-2-contributor-release-brief",
-      "modelName": "Muse Spark 1.2 Contributor",
-      "providerId": "meta",
-      "providerName": "Meta",
-      "providerColour": "#0a66ff",
-      "releaseDate": "2026-08-21",
-      "releaseDateLabel": "21 Aug 2026",
-      "ageDays": 5,
-      "status": "tracking",
-      "verificationState": "discovery_only",
-      "priority": "high",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://llama.meta.com/docs",
-      "openSource": false,
-      "apiAvailable": true,
-      "modality": "text,vision,audio",
-      "contextWindow": 1048576,
-      "maxOutput": 943718,
-      "qualityScore": 0,
-      "inputPrice": 0.1,
-      "outputPrice": 0.2,
-      "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-08-26 01:56:13",
-      "summary": "Muse Spark 1.2 Contributor is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.10 in / $0.20 out per million tokens. Auto-tracked from OpenRouter discovery (meta/muse-spark-1.2-contributor); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Meta's Muse Spark 1.2 Contributor is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Meta actually launched with Muse Spark 1.2 Contributor, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
-        "Keep the chronology explicit: this release landed on 21 Aug 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-08-21-muse-spark-1-2-contributor-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 0
-    },
     {
       "id": "deepseek-v4-flash-vision-exp",
       "fileSlug": "2026-08-21-deepseek-v4-flash-vision-exp-release-brief",
@@ -87,7 +33,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1048576,
       "maxOutput": 384000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.44,
       "outputPrice": 1.32,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -120,6 +67,61 @@ export const modelReleaseDesk = {
       "sourceCount": 0
     },
     {
+      "id": "muse-spark-1.2-contributor",
+      "fileSlug": "2026-08-21-muse-spark-1-2-contributor-release-brief",
+      "modelName": "Muse Spark 1.2 Contributor",
+      "providerId": "meta",
+      "providerName": "Meta",
+      "providerColour": "#0a66ff",
+      "releaseDate": "2026-08-21",
+      "releaseDateLabel": "21 Aug 2026",
+      "ageDays": 5,
+      "status": "tracking",
+      "verificationState": "discovery_only",
+      "priority": "high",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://llama.meta.com/docs",
+      "openSource": false,
+      "apiAvailable": true,
+      "modality": "text,vision,audio",
+      "contextWindow": 1048576,
+      "maxOutput": 943718,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": 0.1,
+      "outputPrice": 0.2,
+      "pricingSource": "openrouter.ai/api/v1/models",
+      "pricingUpdated": "2026-08-26 01:56:13",
+      "summary": "Muse Spark 1.2 Contributor is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.10 in / $0.20 out per million tokens. Auto-tracked from OpenRouter discovery (meta/muse-spark-1.2-contributor); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Meta's Muse Spark 1.2 Contributor is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Meta actually launched with Muse Spark 1.2 Contributor, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 21 Aug 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-08-21-muse-spark-1-2-contributor-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
       "id": "glm-5.3",
       "fileSlug": "2026-08-18-glm-5-3-release-brief",
       "modelName": "GLM 5.3",
@@ -141,7 +143,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 1048576,
       "maxOutput": 131072,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.4,
       "outputPrice": 4.4,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -195,7 +198,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 131072,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.425,
       "outputPrice": 2.55,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -228,60 +232,6 @@ export const modelReleaseDesk = {
       "sourceCount": 0
     },
     {
-      "id": "qwen3.8-2.4t-a95b",
-      "fileSlug": "2026-08-12-qwen3-8-2-4t-a95b-release-brief",
-      "modelName": "Qwen3.8 2.4T A95B",
-      "providerId": "alibaba",
-      "providerName": "Alibaba",
-      "providerColour": "#ff6a00",
-      "releaseDate": "2026-08-12",
-      "releaseDateLabel": "12 Aug 2026",
-      "ageDays": 14,
-      "status": "tracking",
-      "verificationState": "discovery_only",
-      "priority": "high",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
-      "openSource": false,
-      "apiAvailable": true,
-      "modality": "text",
-      "contextWindow": 1048576,
-      "maxOutput": 131072,
-      "qualityScore": 0,
-      "inputPrice": 2,
-      "outputPrice": 6,
-      "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-08-26 01:56:13",
-      "summary": "Qwen3.8 2.4T A95B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-2.4t-a95b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Alibaba's Qwen3.8 2.4T A95B is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Alibaba actually launched with Qwen3.8 2.4T A95B, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
-        "Keep the chronology explicit: this release landed on 12 Aug 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-08-12-qwen3-8-2-4t-a95b-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 0
-    },
-    {
       "id": "deepseek-v4-pro-0813",
       "fileSlug": "2026-08-12-deepseek-v4-pro-0813-release-brief",
       "modelName": "DeepSeek V4 Pro 0813",
@@ -303,7 +253,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 1048576,
       "maxOutput": 943717,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.122,
       "outputPrice": 3.366,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -357,7 +308,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 500000,
       "maxOutput": 450000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -390,6 +342,61 @@ export const modelReleaseDesk = {
       "sourceCount": 0
     },
     {
+      "id": "qwen3.8-2.4t-a95b",
+      "fileSlug": "2026-08-12-qwen3-8-2-4t-a95b-release-brief",
+      "modelName": "Qwen3.8 2.4T A95B",
+      "providerId": "alibaba",
+      "providerName": "Alibaba",
+      "providerColour": "#ff6a00",
+      "releaseDate": "2026-08-12",
+      "releaseDateLabel": "12 Aug 2026",
+      "ageDays": 14,
+      "status": "tracking",
+      "verificationState": "discovery_only",
+      "priority": "high",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "openSource": false,
+      "apiAvailable": true,
+      "modality": "text",
+      "contextWindow": 1048576,
+      "maxOutput": 131072,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": 2,
+      "outputPrice": 6,
+      "pricingSource": "openrouter.ai/api/v1/models",
+      "pricingUpdated": "2026-08-26 01:56:13",
+      "summary": "Qwen3.8 2.4T A95B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-2.4t-a95b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Alibaba's Qwen3.8 2.4T A95B is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.8 2.4T A95B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 12 Aug 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-08-12-qwen3-8-2-4t-a95b-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
       "id": "nemotron-3.5-lightning",
       "fileSlug": "2026-08-11-nemotron-3-5-lightning-release-brief",
       "modelName": "Nemotron 3.5 Lightning",
@@ -411,7 +418,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 262144,
       "maxOutput": 131072,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.08,
       "outputPrice": 0.2,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -465,7 +473,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 131072,
       "maxOutput": 117964,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.35,
       "outputPrice": 1.5,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -519,7 +528,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision,audio",
       "contextWindow": 1048576,
       "maxOutput": 943718,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.25,
       "outputPrice": 4.25,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -573,7 +583,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 0,
       "maxOutput": 0,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0,
       "outputPrice": 0,
       "pricingSource": null,
@@ -659,7 +670,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 131072,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -713,7 +725,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 1310720,
       "maxOutput": 943718,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.04,
       "outputPrice": 0.08,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -767,7 +780,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 65536,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.03,
       "outputPrice": 0.13,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -821,7 +835,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "Anthropic (official)",
@@ -905,7 +920,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "Anthropic (official)",
@@ -968,106 +984,6 @@ export const modelReleaseDesk = {
       "sourceCount": 3
     },
     {
-      "id": "gemini-3.6-flash",
-      "fileSlug": "2026-07-21-gemini-3-6-flash-batch-release-brief",
-      "modelName": "Gemini 3.6 Flash (batch)",
-      "providerId": "google",
-      "providerName": "Google",
-      "providerColour": "#4285f4",
-      "releaseDate": "2026-07-21",
-      "releaseDateLabel": "21 Jul 2026",
-      "ageDays": 36,
-      "status": "tracking",
-      "verificationState": "official",
-      "priority": "watch",
-      "draftStatus": "ready_for_editor",
-      "officialUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash",
-      "providerStatusUrl": "https://status.cloud.google.com",
-      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
-      "openSource": false,
-      "apiAvailable": true,
-      "modality": "text,vision,audio",
-      "contextWindow": 1048576,
-      "maxOutput": 65536,
-      "qualityScore": 0,
-      "inputPrice": 1.5,
-      "outputPrice": 7.5,
-      "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-08-26 01:56:14",
-      "summary": "Gemini 3.6 Flash (batch) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.6 Flash (batch) is on the release desk with 4 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
-      ],
-      "checklist": [
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini 3.6 Flash (batch), and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
-        "Keep the chronology explicit: this release landed on 21 Jul 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Google Gemini is getting a dedicated student hub",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/982425/google-gemini-student-hub",
-          "source": "The Verge",
-          "date": "2026-08-19",
-          "summary": "As we're gearing up for back-to-school season, Google is rolling out a new dedicated student hub in Gemini. It's a one-stop repository for collecting research in a study notebook, creating flashcards, taking practice quizzes, and more. Google is also enhancing its study notebooks with support for graphs and images. It…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release",
-            "research_paper"
-          ]
-        },
-        {
-          "title": "Get closer to the game with Gemini and Pixel",
-          "url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
-          "source": "Google",
-          "date": "2026-08-17",
-          "summary": "Google Gemini and Pixel partner with five global football clubs to elevate the fan matchday experience through AI and Smartphone Technology.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
-          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
-          "source": "Google",
-          "date": "2026-08-11",
-          "summary": "Google introduces AMIE for real-time clinical video consultations in simulated settings.",
-          "routingTags": [
-            "model_release",
-            "research_paper"
-          ]
-        },
-        {
-          "title": "5 new ways to level up your learning with Search",
-          "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
-          "source": "Google",
-          "date": "2026-08-19",
-          "summary": "Here's how you can use Google Search tools to study for classes and standardized tests.",
-          "routingTags": [
-            "research_paper"
-          ]
-        }
-      ],
-      "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-batch-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
-    },
-    {
       "id": "gemini-3.5-flash-lite",
       "fileSlug": "2026-07-21-gemini-3-5-flash-lite-batch-release-brief",
       "modelName": "Gemini 3.5 Flash Lite (batch)",
@@ -1089,7 +1005,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision,audio",
       "contextWindow": 1048576,
       "maxOutput": 65536,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.3,
       "outputPrice": 2.5,
       "pricingSource": "Google AI (official)",
@@ -1168,6 +1085,107 @@ export const modelReleaseDesk = {
       "sourceCount": 5
     },
     {
+      "id": "gemini-3.6-flash",
+      "fileSlug": "2026-07-21-gemini-3-6-flash-batch-release-brief",
+      "modelName": "Gemini 3.6 Flash (batch)",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": "2026-07-21",
+      "releaseDateLabel": "21 Jul 2026",
+      "ageDays": 36,
+      "status": "tracking",
+      "verificationState": "official",
+      "priority": "watch",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash",
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": false,
+      "apiAvailable": true,
+      "modality": "text,vision,audio",
+      "contextWindow": 1048576,
+      "maxOutput": 65536,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": 1.5,
+      "outputPrice": 7.5,
+      "pricingSource": "Google AI (official)",
+      "pricingUpdated": "2026-08-26 01:56:14",
+      "summary": "Gemini 3.6 Flash (batch) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini 3.6 Flash (batch) is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 3.6 Flash (batch), and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 21 Jul 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Google Gemini is getting a dedicated student hub",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/982425/google-gemini-student-hub",
+          "source": "The Verge",
+          "date": "2026-08-19",
+          "summary": "As we're gearing up for back-to-school season, Google is rolling out a new dedicated student hub in Gemini. It's a one-stop repository for collecting research in a study notebook, creating flashcards, taking practice quizzes, and more. Google is also enhancing its study notebooks with support for graphs and images. It…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release",
+            "research_paper"
+          ]
+        },
+        {
+          "title": "Get closer to the game with Gemini and Pixel",
+          "url": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
+          "source": "Google",
+          "date": "2026-08-17",
+          "summary": "Google Gemini and Pixel partner with five global football clubs to elevate the fan matchday experience through AI and Smartphone Technology.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
+          "source": "Google",
+          "date": "2026-08-11",
+          "summary": "Google introduces AMIE for real-time clinical video consultations in simulated settings.",
+          "routingTags": [
+            "model_release",
+            "research_paper"
+          ]
+        },
+        {
+          "title": "5 new ways to level up your learning with Search",
+          "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+          "source": "Google",
+          "date": "2026-08-19",
+          "summary": "Here's how you can use Google Search tools to study for classes and standardized tests.",
+          "routingTags": [
+            "research_paper"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-batch-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 4,
+      "sourceCount": 5
+    },
+    {
       "id": "kimi-k3",
       "fileSlug": "2026-07-16-kimi-k3-release-brief",
       "modelName": "Kimi K3",
@@ -1189,7 +1207,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1048576,
       "maxOutput": 943718,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 3,
       "outputPrice": 15,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -1243,7 +1262,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision,audio",
       "contextWindow": 1048576,
       "maxOutput": 943718,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.25,
       "outputPrice": 4.25,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -1276,6 +1296,138 @@ export const modelReleaseDesk = {
       "sourceCount": 0
     },
     {
+      "id": "gpt-5.6-luna",
+      "fileSlug": "2026-07-09-gpt-5-6-luna-batch-release-brief",
+      "modelName": "GPT-5.6 Luna (batch)",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": "2026-07-09",
+      "releaseDateLabel": "9 Jul 2026",
+      "ageDays": 48,
+      "status": "tracking",
+      "verificationState": "official",
+      "priority": "watch",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": false,
+      "apiAvailable": true,
+      "modality": "text,vision",
+      "contextWindow": 1050000,
+      "maxOutput": 128000,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": 1,
+      "outputPrice": 6,
+      "pricingSource": "OpenAI (official)",
+      "pricingUpdated": "2026-08-26 01:56:14",
+      "summary": "GPT-5.6 Luna (batch) is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $1.00 in / $6.00 out per million tokens. Fast, cost-efficient GPT-5.6 tier. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "OpenAI's GPT-5.6 Luna (batch) is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-5.6 Luna (batch), and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 9 Jul 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Replit expands access to software creation with GPT-5.6 Luna",
+          "url": "https://openai.com/index/replit",
+          "source": "OpenAI",
+          "date": "2026-08-19",
+          "summary": "Replit introduces Free Mode, powered by GPT-5.6 Luna, so anyone can turn ideas into working software without worrying about token costs.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI and Anthropic in price war as Chinese AI rivals gain ground",
+          "url": "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/",
+          "source": "Ars Technica",
+          "date": "2026-08-14",
+          "summary": "US groups release cheaper models after new challenges to their trillion-dollar ambitions.",
+          "routingTags": [
+            "research_paper",
+            "open_source",
+            "hardware",
+            "policy",
+            "model_release",
+            "pricing_change"
+          ]
+        },
+        {
+          "title": "We now have a better understanding how OpenAI hacked into Hugging Face",
+          "url": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/",
+          "source": "Ars Technica",
+          "date": "2026-07-28",
+          "summary": "10 days passed from OpenAI models exploiting JFrog Artifactory 0-day to release of a patch.",
+          "routingTags": [
+            "research_paper",
+            "open_source",
+            "hardware",
+            "policy",
+            "model_release"
+          ]
+        },
+        {
+          "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
+          "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+          "source": "TechCrunch",
+          "date": "2026-08-25",
+          "summary": "Tested on SemiAnalysis' InferenceX benchmark, Jalapeño registered both more tokens per user and more throughput per kilowatt than the currently available state-of-the art.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "benchmark",
+            "inference",
+            "hardware"
+          ]
+        },
+        {
+          "title": "Introducing AI Futures",
+          "url": "https://openai.com/index/introducing-ai-futures",
+          "source": "OpenAI",
+          "date": "2026-08-20",
+          "summary": "Introducing AI Futures, a new OpenAI blog exploring how transformative AI could reshape power, governance, the economy, and individual freedom.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Strengthening democratic oversight in national security",
+          "url": "https://openai.com/index/strengthening-democratic-oversight-in-national-security",
+          "source": "OpenAI",
+          "date": "2026-08-18",
+          "summary": "OpenAI launches an initiative to strengthen democratic oversight of AI in national security, supporting government institutions with tools, training, and expertise.",
+          "routingTags": [
+            "model_release",
+            "training"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-luna-batch-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 6,
+      "sourceCount": 7
+    },
+    {
       "id": "gpt-5.6-sol",
       "fileSlug": "2026-07-09-gpt-5-6-sol-batch-release-brief",
       "modelName": "GPT-5.6 Sol (batch)",
@@ -1297,7 +1449,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1050000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "OpenAI (official)",
@@ -1429,7 +1582,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1050000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "OpenAI (official)",
@@ -1543,137 +1697,6 @@ export const modelReleaseDesk = {
       "sourceCount": 7
     },
     {
-      "id": "gpt-5.6-luna",
-      "fileSlug": "2026-07-09-gpt-5-6-luna-batch-release-brief",
-      "modelName": "GPT-5.6 Luna (batch)",
-      "providerId": "openai",
-      "providerName": "OpenAI",
-      "providerColour": "#10a37f",
-      "releaseDate": "2026-07-09",
-      "releaseDateLabel": "9 Jul 2026",
-      "ageDays": 48,
-      "status": "tracking",
-      "verificationState": "official",
-      "priority": "watch",
-      "draftStatus": "ready_for_editor",
-      "officialUrl": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
-      "providerStatusUrl": "https://status.openai.com",
-      "providerDocsUrl": "https://platform.openai.com/docs/models",
-      "openSource": false,
-      "apiAvailable": true,
-      "modality": "text,vision",
-      "contextWindow": 1050000,
-      "maxOutput": 128000,
-      "qualityScore": 0,
-      "inputPrice": 1,
-      "outputPrice": 6,
-      "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-08-26 01:56:14",
-      "summary": "GPT-5.6 Luna (batch) is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $1.00 in / $6.00 out per million tokens. Fast, cost-efficient GPT-5.6 tier. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.6 Luna (batch) is on the release desk with 6 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
-      ],
-      "checklist": [
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what OpenAI actually launched with GPT-5.6 Luna (batch), and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
-        "Keep the chronology explicit: this release landed on 9 Jul 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Replit expands access to software creation with GPT-5.6 Luna",
-          "url": "https://openai.com/index/replit",
-          "source": "OpenAI",
-          "date": "2026-08-19",
-          "summary": "Replit introduces Free Mode, powered by GPT-5.6 Luna, so anyone can turn ideas into working software without worrying about token costs.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI and Anthropic in price war as Chinese AI rivals gain ground",
-          "url": "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/",
-          "source": "Ars Technica",
-          "date": "2026-08-14",
-          "summary": "US groups release cheaper models after new challenges to their trillion-dollar ambitions.",
-          "routingTags": [
-            "research_paper",
-            "open_source",
-            "hardware",
-            "policy",
-            "model_release",
-            "pricing_change"
-          ]
-        },
-        {
-          "title": "We now have a better understanding how OpenAI hacked into Hugging Face",
-          "url": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/",
-          "source": "Ars Technica",
-          "date": "2026-07-28",
-          "summary": "10 days passed from OpenAI models exploiting JFrog Artifactory 0-day to release of a patch.",
-          "routingTags": [
-            "research_paper",
-            "open_source",
-            "hardware",
-            "policy",
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
-          "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
-          "source": "TechCrunch",
-          "date": "2026-08-25",
-          "summary": "Tested on SemiAnalysis' InferenceX benchmark, Jalapeño registered both more tokens per user and more throughput per kilowatt than the currently available state-of-the art.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "benchmark",
-            "inference",
-            "hardware"
-          ]
-        },
-        {
-          "title": "Introducing AI Futures",
-          "url": "https://openai.com/index/introducing-ai-futures",
-          "source": "OpenAI",
-          "date": "2026-08-20",
-          "summary": "Introducing AI Futures, a new OpenAI blog exploring how transformative AI could reshape power, governance, the economy, and individual freedom.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Strengthening democratic oversight in national security",
-          "url": "https://openai.com/index/strengthening-democratic-oversight-in-national-security",
-          "source": "OpenAI",
-          "date": "2026-08-18",
-          "summary": "OpenAI launches an initiative to strengthen democratic oversight of AI in national security, supporting government institutions with tools, training, and expertise.",
-          "routingTags": [
-            "model_release",
-            "training"
-          ]
-        }
-      ],
-      "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-luna-batch-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 7
-    },
-    {
       "id": "grok-4.5",
       "fileSlug": "2026-07-08-grok-4-5-release-brief",
       "modelName": "Grok 4.5",
@@ -1695,7 +1718,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 500000,
       "maxOutput": 450000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -1749,7 +1773,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
@@ -1833,7 +1858,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 65536,
       "maxOutput": 58982,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.25,
       "outputPrice": 1.5,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -1934,7 +1960,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "Anthropic (official)",
@@ -2031,7 +2058,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 131072,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.32,
       "outputPrice": 1.28,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2085,7 +2113,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "Anthropic (official)",
@@ -2169,7 +2198,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "Anthropic (official)",
@@ -2253,7 +2283,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 1000000,
       "maxOutput": 131072,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.475,
       "outputPrice": 4.425,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2307,7 +2338,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 256000,
       "maxOutput": 230400,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1,
       "outputPrice": 2,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2361,7 +2393,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision,audio",
       "contextWindow": 1048576,
       "maxOutput": 65536,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.5,
       "outputPrice": 9,
       "pricingSource": "Google AI (official)",
@@ -2461,7 +2494,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 30,
       "outputPrice": 150,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2546,7 +2580,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 400000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2682,7 +2717,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 900000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.25,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2736,7 +2772,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 262144,
       "maxOutput": 209715,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.5,
       "outputPrice": 7.5,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2790,7 +2827,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 262144,
       "maxOutput": 235929,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.1,
       "outputPrice": 0.34,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2893,7 +2931,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 65536,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.325,
       "outputPrice": 1.95,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2946,7 +2985,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 2000000,
       "maxOutput": 1800000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.25,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -2999,7 +3039,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 131072,
       "maxOutput": 100352,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.57,
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -3052,7 +3093,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 204800,
       "maxOutput": 131072,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.3,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -3105,7 +3147,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 202752,
       "maxOutput": 131072,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -3158,7 +3201,8 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1050000,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "OpenAI (official)",
@@ -3293,15 +3337,16 @@ export const modelReleaseDesk = {
       "modality": "text,vision,audio",
       "contextWindow": 1048576,
       "maxOutput": 65536,
-      "qualityScore": 96,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 1,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
       "pricingUpdated": "2026-08-26 01:56:13",
       "summary": "Gemini 3.1 Pro Preview (batch) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.00 in / $6.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.1 Pro Preview (batch) is on the release desk with 4 related stories and 2 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Pro Preview (batch) is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
-        "There are already 2 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
@@ -3313,28 +3358,11 @@ export const modelReleaseDesk = {
       "threadPlan": [
         "Lead with the hook: what Google actually launched with Gemini 3.1 Pro Preview (batch), and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Keep the chronology explicit: this release landed on 19 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
-      "benchmarkHighlights": [
-        {
-          "benchmark_id": "chatbot-arena-elo",
-          "benchmark_name": "Chatbot Arena ELO",
-          "category": "conversational",
-          "score": 1375,
-          "scale_max": 1400,
-          "source": "LMSYS (validated)"
-        },
-        {
-          "benchmark_id": "humanitys-last-exam",
-          "benchmark_name": "Humanity's Last Exam",
-          "category": "reasoning",
-          "score": 25,
-          "scale_max": 100,
-          "source": "Google"
-        }
-      ],
+      "benchmarkHighlights": [],
       "relatedStories": [
         {
           "title": "Google Gemini is getting a dedicated student hub",
@@ -3384,7 +3412,7 @@ export const modelReleaseDesk = {
         }
       ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-preview-batch-release-brief.md",
-      "benchmarkCount": 2,
+      "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 5
     },
@@ -3410,15 +3438,16 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 86,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 3,
       "outputPrice": 15,
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": "2026-08-26 01:56:14",
       "summary": "Claude Sonnet 4.6 (batch) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Sonnet 4.6 (batch) is on the release desk with 2 related stories and 5 benchmark signals to review.",
+      "dek": "Anthropic's Claude Sonnet 4.6 (batch) is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
-        "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
@@ -3430,52 +3459,11 @@ export const modelReleaseDesk = {
       "threadPlan": [
         "Lead with the hook: what Anthropic actually launched with Claude Sonnet 4.6 (batch), and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Keep the chronology explicit: this release landed on 17 Feb 2026 and should be framed against the models it is replacing or competing with."
       ],
-      "benchmarkHighlights": [
-        {
-          "benchmark_id": "chatbot-arena-elo",
-          "benchmark_name": "Chatbot Arena ELO",
-          "category": "conversational",
-          "score": 1350,
-          "scale_max": 1400,
-          "source": "LMSYS (validated)"
-        },
-        {
-          "benchmark_id": "arena-hard",
-          "benchmark_name": "Arena-Hard",
-          "category": "conversational",
-          "score": 86,
-          "scale_max": 100,
-          "source": "Anthropic"
-        },
-        {
-          "benchmark_id": "livebench",
-          "benchmark_name": "LiveBench",
-          "category": "reasoning",
-          "score": 83,
-          "scale_max": 100,
-          "source": "Anthropic"
-        },
-        {
-          "benchmark_id": "aider-polyglot",
-          "benchmark_name": "Aider Polyglot",
-          "category": "coding",
-          "score": 79,
-          "scale_max": 100,
-          "source": "Anthropic"
-        },
-        {
-          "benchmark_id": "swe-bench-verified",
-          "benchmark_name": "SWE-bench Verified",
-          "category": "coding",
-          "score": 72,
-          "scale_max": 100,
-          "source": "Anthropic"
-        }
-      ],
+      "benchmarkHighlights": [],
       "relatedStories": [
         {
           "title": "OpenAI and Anthropic in price war as Chinese AI rivals gain ground",
@@ -3509,7 +3497,7 @@ export const modelReleaseDesk = {
         }
       ],
       "draftPath": "editorial/release-drafts/2026-02-17-claude-sonnet-4-6-batch-release-brief.md",
-      "benchmarkCount": 5,
+      "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 3
     },
@@ -3535,7 +3523,8 @@ export const modelReleaseDesk = {
       "modality": "text",
       "contextWindow": 204800,
       "maxOutput": 128000,
-      "qualityScore": 0,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 0.6,
       "outputPrice": 1.92,
       "pricingSource": "openrouter.ai/api/v1/models",
@@ -3588,15 +3577,16 @@ export const modelReleaseDesk = {
       "modality": "text,vision",
       "contextWindow": 1000000,
       "maxOutput": 128000,
-      "qualityScore": 89,
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": "2026-08-26 01:56:14",
       "summary": "Claude Opus 4.6 (batch) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Opus 4.6 (batch) is on the release desk with 2 related stories and 5 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 4.6 (batch) is on the release desk with 2 related stories and 1 benchmark signal to review.",
       "whyItMatters": [
-        "There are already 5 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
+        "There are already 1 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
@@ -3614,44 +3604,16 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [
         {
-          "benchmark_id": "chatbot-arena-elo",
-          "benchmark_name": "Chatbot Arena ELO",
-          "category": "conversational",
-          "score": 1365,
-          "scale_max": 1400,
-          "source": "LMSYS (validated)"
-        },
-        {
-          "benchmark_id": "mt-bench",
-          "benchmark_name": "MT-Bench",
-          "category": "conversational",
-          "score": 9.4,
-          "scale_max": 10,
-          "source": "Anthropic"
-        },
-        {
-          "benchmark_id": "creative-writing-bench",
-          "benchmark_name": "Creative Writing Bench",
-          "category": "domain",
-          "score": 92,
+          "benchmark_id": "swe-bench-verified",
+          "benchmark_name": "SWE-bench Verified",
+          "category": "coding",
+          "score": 80.84,
           "scale_max": 100,
-          "source": "Anthropic"
-        },
-        {
-          "benchmark_id": "arena-hard",
-          "benchmark_name": "Arena-Hard",
-          "category": "conversational",
-          "score": 90,
-          "scale_max": 100,
-          "source": "Anthropic"
-        },
-        {
-          "benchmark_id": "wildbench-creative",
-          "benchmark_name": "WildBench Creative",
-          "category": "domain",
-          "score": 88,
-          "scale_max": 100,
-          "source": "Anthropic"
+          "source": "Anthropic",
+          "sourceUrl": "https://www-cdn.anthropic.com/0dd865075ad3132672ee0ab40b05a53f14cf5288.pdf",
+          "measuredAt": "2026-02-05",
+          "evidenceNote": "Anthropic Opus 4.6 system card reports SWE-bench Verified as 80.84%, averaged over 25 trials.",
+          "evidenceState": "verified-row"
         }
       ],
       "relatedStories": [
@@ -3687,7 +3649,7 @@ export const modelReleaseDesk = {
         }
       ],
       "draftPath": "editorial/release-drafts/2026-02-05-claude-opus-4-6-batch-release-brief.md",
-      "benchmarkCount": 5,
+      "benchmarkCount": 1,
       "storyCount": 2,
       "sourceCount": 3
     }
