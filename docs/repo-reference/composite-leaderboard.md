@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 25 Aug 2026, 23:35 UTC
+Generated: 26 Aug 2026, 00:55 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -13,7 +13,7 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 3 | GPT-5.2 | OpenAI | 55.1 | 78.5 / 22 | 67% | multilingual | $0.88 / $7.00 | 10 Dec 2025 |
 | 4 | Claude Opus 4.6 (batch) | Anthropic | 52.3 | 75.9 / 16 | 49% | Chat | $5.00 / $25.00 | 05 Feb 2026 |
 | 5 | Mistral Large | Mistral | 50.4 | 70.6 / 6 | 20% | General use | $2.00 / $6.00 | 01 Jun 2025 |
-| 6 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.10 / $0.30 | 05 Apr 2025 |
+| 6 | Llama 4 Scout | Meta | 50.1 | 80.4 / 4 | 13% | Coding | $0.11 / $0.34 | 05 Apr 2025 |
 | 7 | Phi-4 Reasoning | Microsoft | 49.2 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
 | 8 | GPT-5.2 Pro (batch) | OpenAI | 44.1 | 91.3 / 4 | 16% | Chat | $10.50 / $84.00 | 10 Dec 2025 |
 | 9 | Claude Sonnet 4.6 (batch) | Anthropic | 42.9 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
