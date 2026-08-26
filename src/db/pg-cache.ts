@@ -12,6 +12,7 @@ import path from 'node:path';
 import { getRenderableCliTools } from '../data/cli-tools';
 import { isPubliclyVerifiedModel } from '../data/model-verification';
 import { assessBenchmarkProvenance } from '../data/benchmark-provenance';
+import { findVerifiedBenchmarkScoreEvidence } from '../../scripts/benchmark-score-evidence';
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'pg-cache');
 
@@ -414,7 +415,8 @@ export function getAllBenchmarkScores(): CachedBenchmarkScore[] {
 export function getBenchmarkScores(): CachedBenchmarkScore[] {
   const benchmarks = new Map(getBenchmarks().map((benchmark) => [benchmark.id, benchmark]));
   return getAllBenchmarkScores().filter((score) => (
-    assessBenchmarkProvenance(score, benchmarks.get(score.benchmark_id)).rankable
+    findVerifiedBenchmarkScoreEvidence(score) !== null
+    && assessBenchmarkProvenance(score, benchmarks.get(score.benchmark_id)).rankable
   ));
 }
 

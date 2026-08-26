@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T15:43:13.581Z",
+  "generatedAt": "2026-08-26T00:55:33.265Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T15:43:13.574Z",
+      "lastCheckedAt": "2026-08-26T00:55:32.715Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,71 +20,71 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-07-31T20:48:03.000Z",
-          "title": "Service Degradation for one of our models on Serverless",
+          "id": "fireworks-feed-0-2026-08-25T23:00:49.000Z",
+          "title": "Service Degradation for Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-07-31T20:48:03.000Z",
-          "updatedAt": "2026-07-31T20:48:03.000Z",
+          "startedAt": "2026-08-25T23:00:49.000Z",
+          "updatedAt": "2026-08-25T23:00:49.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KYWWT4GQW3B4KJQYNX70YD8C",
+          "url": "https://status.fireworks.ai//incidents/01M0XJ5VV0KJF70RPA7BAYY88V",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-07-31T19:20:05.000Z",
-          "title": "Service Degradation for one of our models on Serverless",
+          "id": "fireworks-feed-1-2026-08-25T10:05:17.000Z",
+          "title": "Service Degradation for Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-07-31T19:20:05.000Z",
-          "updatedAt": "2026-07-31T19:20:05.000Z",
+          "startedAt": "2026-08-25T10:05:17.000Z",
+          "updatedAt": "2026-08-25T10:05:17.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KYWQCYCPSXXQJVVTN1V1ZF4Q",
+          "url": "https://status.fireworks.ai//incidents/01M0W4V26YZMF460XC41W82MH8",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-07-31T20:48:03.000Z",
-          "title": "Service Degradation for one of our models on Serverless",
+          "id": "fireworks-feed-0-2026-08-25T23:00:49.000Z",
+          "title": "Service Degradation for Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-07-31T20:48:03.000Z",
-          "updatedAt": "2026-07-31T20:48:03.000Z",
+          "startedAt": "2026-08-25T23:00:49.000Z",
+          "updatedAt": "2026-08-25T23:00:49.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KYWWT4GQW3B4KJQYNX70YD8C",
+          "url": "https://status.fireworks.ai//incidents/01M0XJ5VV0KJF70RPA7BAYY88V",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-07-31T19:20:05.000Z",
-          "title": "Service Degradation for one of our models on Serverless",
+          "id": "fireworks-feed-1-2026-08-25T10:05:17.000Z",
+          "title": "Service Degradation for Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-07-31T19:20:05.000Z",
-          "updatedAt": "2026-07-31T19:20:05.000Z",
+          "startedAt": "2026-08-25T10:05:17.000Z",
+          "updatedAt": "2026-08-25T10:05:17.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KYWQCYCPSXXQJVVTN1V1ZF4Q",
+          "url": "https://status.fireworks.ai//incidents/01M0W4V26YZMF460XC41W82MH8",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-07-31T08:30:09.000Z",
-          "title": "Service Degradation for one of our models on Serverless",
+          "id": "fireworks-feed-2-2026-08-25T08:54:53.000Z",
+          "title": "Service Degradation for Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-07-31T08:30:09.000Z",
-          "updatedAt": "2026-07-31T08:30:09.000Z",
+          "startedAt": "2026-08-25T08:54:53.000Z",
+          "updatedAt": "2026-08-25T08:54:53.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KYVJW94NQ2YCK43Q55YGZ61H",
+          "url": "https://status.fireworks.ai//incidents/01M0W1NQY4ANAW72KT6Z63XXCN",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-3-2026-07-30T23:21:39.000Z",
-          "title": "Service Degradation for One of our models on Serverless",
+          "id": "fireworks-feed-3-2026-08-25T05:44:48.000Z",
+          "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-07-30T23:21:39.000Z",
-          "updatedAt": "2026-07-30T23:21:39.000Z",
+          "startedAt": "2026-08-25T05:44:48.000Z",
+          "updatedAt": "2026-08-25T05:44:48.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01KYTMHKEPPXF4XT6GJNY3W298",
+          "url": "https://status.fireworks.ai//incidents/01M0VMP31XR0PNE3RP1S9BP1N2",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T15:43:12.828Z",
+      "lastCheckedAt": "2026-08-26T00:55:32.438Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T15:43:12.060Z",
+      "lastCheckedAt": "2026-08-26T00:55:31.386Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -154,47 +154,47 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "jq4x54h69z76",
-          "title": "Degraded performance on Claude Sonnet 5",
+          "id": "n0rlp126qf8g",
+          "title": "Issues logging into Claude.ai",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-07-31T06:18:08.068Z",
-          "updatedAt": "2026-07-31T07:04:49.706Z",
-          "resolvedAt": "2026-07-31T07:04:49.691Z",
-          "url": "https://stspg.io/zxt2fw2t7xqy",
-          "summary": "This incident has been resolved."
+          "startedAt": "2026-08-24T20:11:23.934Z",
+          "updatedAt": "2026-08-24T20:26:21.592Z",
+          "resolvedAt": "2026-08-24T20:26:21.577Z",
+          "url": "https://stspg.io/6211zbpptv0y",
+          "summary": "This issue has been resolved."
         },
         {
-          "id": "kqjy03gs895j",
-          "title": "Degraded performance on Claude Opus 4.8",
+          "id": "w43j3xmngxgj",
+          "title": "Errors logging into Claude.ai",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-07-30T13:43:19.847Z",
-          "updatedAt": "2026-07-30T14:24:12.169Z",
-          "resolvedAt": "2026-07-30T14:24:12.155Z",
-          "url": "https://stspg.io/6qltqbknbcmn",
-          "summary": "This incident has been resolved."
+          "startedAt": "2026-08-24T17:12:42.200Z",
+          "updatedAt": "2026-08-24T17:16:02.924Z",
+          "resolvedAt": "2026-08-24T17:16:02.904Z",
+          "url": "https://stspg.io/kg59rclpfzsz",
+          "summary": "This issue has been resolved."
         },
         {
-          "id": "fsh2zzzl2c4l",
-          "title": "Elevated errors across many models",
+          "id": "vgz5psbjmt1h",
+          "title": "Elevated errors for multiple models",
           "status": "resolved",
           "impact": "major",
-          "startedAt": "2026-07-30T05:57:43.524Z",
-          "updatedAt": "2026-07-30T10:48:56.648Z",
-          "resolvedAt": "2026-07-30T10:48:56.631Z",
-          "url": "https://stspg.io/c0fmy7628y3w",
-          "summary": "This incident has been resolved."
+          "startedAt": "2026-08-24T05:06:39.493Z",
+          "updatedAt": "2026-08-24T08:30:47.634Z",
+          "resolvedAt": "2026-08-24T08:30:47.615Z",
+          "url": "https://stspg.io/5kzdprb1xsbx",
+          "summary": "This issue has been resolved. From 9:50pm PT / 04:50 UTC through 00:36am PT / 07:36 UTC, users saw elevated errors on requests to Claude models, including Claude Opus 5 and Fable..."
         },
         {
-          "id": "q2kg8n613kr3",
-          "title": "Elevated errors across all models",
+          "id": "c0ncxxm2wd9r",
+          "title": "Elevated errors on requests to multiple models",
           "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-07-29T19:49:45.388Z",
-          "updatedAt": "2026-07-29T22:36:20.720Z",
-          "resolvedAt": "2026-07-29T22:36:20.701Z",
-          "url": "https://stspg.io/p7pqqb00414c",
+          "impact": "major",
+          "startedAt": "2026-08-20T19:16:24.932Z",
+          "updatedAt": "2026-08-20T19:42:38.708Z",
+          "resolvedAt": "2026-08-20T19:42:38.692Z",
+          "url": "https://stspg.io/w7yghz6hfr72",
           "summary": "This issue has been resolved."
         }
       ]
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T15:43:13.216Z",
+      "lastCheckedAt": "2026-08-26T00:55:32.574Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T15:43:12.518Z",
+      "lastCheckedAt": "2026-08-26T00:55:32.032Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,22 +262,18 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T15:43:12.164Z",
+      "lastCheckedAt": "2026-08-26T00:55:31.464Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Sites",
-          "status": "operational"
-        },
-        {
           "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
           "status": "operational"
         },
         {
@@ -291,48 +287,52 @@
         {
           "name": "Audio",
           "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
         }
       ],
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "01KYVPNEY9736Z04D3X1NSFFF9",
-          "title": "Enterprise & Education Chat Errors",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-07-31T09:04:13.000Z",
-          "updatedAt": "2026-07-31T09:28:52.000Z",
-          "resolvedAt": "2026-07-31T09:28:52.000Z",
-          "summary": "This is now resolved."
-        },
-        {
-          "id": "01KYSQ7PC81PV3PZE3ZEVFK6K5",
-          "title": "Elevated errors affecting ChatGPT conversations",
+          "id": "01M0JXWD740S0Y50DWJZS7SH75",
+          "title": "Unexpected logouts for some ChatGPT web users",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-07-30T14:35:41.000Z",
-          "updatedAt": "2026-07-30T16:01:11.000Z",
-          "resolvedAt": "2026-07-30T16:01:11.000Z",
+          "startedAt": "2026-08-21T19:48:34.000Z",
+          "updatedAt": "2026-08-21T23:15:09.000Z",
+          "resolvedAt": "2026-08-21T23:15:09.000Z",
+          "summary": "The issue causing some ChatGPT web users to be unexpectedly logged out when refreshing the page has been resolved."
+        },
+        {
+          "id": "01M0G1RZER839AZXWMYKSZF3GR",
+          "title": "Elevated Codex API authentication errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-20T16:58:53.000Z",
+          "updatedAt": "2026-08-20T17:52:16.000Z",
+          "resolvedAt": "2026-08-20T17:52:16.000Z",
           "summary": "All impacted services have now fully recovered."
         },
         {
-          "id": "01KYNNX2TQ3PV0KPJ9PTRRPX6C",
-          "title": "Elevated error rates with the invalid_prompt error code",
+          "id": "01M0FQAR3NNH3ANVTQMBRD47DC",
+          "title": "Elevated Errors for Thinking mode in ChatGPT ",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-07-29T00:55:27.000Z",
-          "updatedAt": "2026-07-29T02:20:19.000Z",
-          "resolvedAt": "2026-07-29T02:20:19.000Z",
+          "startedAt": "2026-08-20T13:56:21.000Z",
+          "updatedAt": "2026-08-20T16:51:51.000Z",
+          "resolvedAt": "2026-08-20T16:51:51.000Z",
           "summary": "All impacted services have now fully recovered."
         },
         {
-          "id": "01KYMJND2XYYBDVCF8DKA5DY3N",
-          "title": "Elevated Image Generation Error Rate in ChatGPT",
+          "id": "01M0E7K87VJNMGW0QTMHPEQQ39",
+          "title": "Chatgpt.com is down - all signups and logins are down as of right now",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-07-28T14:39:36.000Z",
-          "updatedAt": "2026-07-28T15:15:32.000Z",
-          "resolvedAt": "2026-07-28T15:15:32.000Z",
+          "startedAt": "2026-08-20T00:02:08.000Z",
+          "updatedAt": "2026-08-20T00:54:17.000Z",
+          "resolvedAt": "2026-08-20T00:54:17.000Z",
           "summary": "All impacted services have now fully recovered."
         }
       ]
@@ -348,59 +348,14 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-01T15:43:13.236Z",
+      "lastCheckedAt": "2026-08-26T00:55:32.623Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
       "notes": null,
       "components": [],
       "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "together-feed-0-2026-08-01T14:39:52.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-01T14:39:52.000Z",
-          "updatedAt": "2026-08-01T14:39:52.000Z",
-          "resolvedAt": "2026-08-01T14:39:52.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-1-2026-08-01T14:16:04.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-01T14:16:04.000Z",
-          "updatedAt": "2026-08-01T14:16:04.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        },
-        {
-          "id": "together-feed-2-2026-08-01T13:34:52.000Z",
-          "title": "Google Gemma 4 31B IT recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-08-01T13:34:52.000Z",
-          "updatedAt": "2026-08-01T13:34:52.000Z",
-          "resolvedAt": "2026-08-01T13:34:52.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT recovered"
-        },
-        {
-          "id": "together-feed-3-2026-08-01T12:55:56.000Z",
-          "title": "Google Gemma 4 31B IT went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-08-01T12:55:56.000Z",
-          "updatedAt": "2026-08-01T12:55:56.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Google Gemma 4 31B IT went down"
-        }
-      ]
+      "recentIncidents": []
     },
     {
       "id": "deepseek",
@@ -417,7 +372,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

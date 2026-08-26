@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-01T15:15:41.715Z",
+  "generatedAt": "2026-08-26T00:55:39.059Z",
   "overview": {
-    "generatedForLabel": "Saturday, 1 August 2026",
+    "generatedForLabel": "Wednesday, 26 August 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -9,63 +9,14 @@
     "exactDateMilestones": 27,
     "homepageEligibleMilestones": 34,
     "nextMilestone": {
-      "id": "stable-diffusion-public-release",
-      "title": "Stable Diffusion public release",
-      "nextOccurrenceLabel": "22 Aug 2026",
-      "daysUntil": 21
+      "id": "o1-preview-launch",
+      "title": "OpenAI o1-preview launched",
+      "nextOccurrenceLabel": "12 Sept 2026",
+      "daysUntil": 17
     }
   },
   "todayMilestones": [],
   "upcomingMilestones": [
-    {
-      "id": "stable-diffusion-public-release",
-      "slug": "stable-diffusion-public-release",
-      "title": "Stable Diffusion public release",
-      "summary": "Stable Diffusion accelerated open image-generation adoption and made consumer AI image creation a mainstream topic.",
-      "year": 2022,
-      "month": 8,
-      "day": 22,
-      "datePrecision": "day",
-      "category": "model_release",
-      "kind": "launch",
-      "significance": "major",
-      "modelId": "stable-diffusion",
-      "tags": [
-        "image-generation",
-        "open-weights"
-      ],
-      "status": "verified",
-      "confidence": "high",
-      "homepageEligible": true,
-      "calendarEligible": true,
-      "exactAnniversaryEligible": true,
-      "sources": [
-        {
-          "label": "Stability AI",
-          "url": "https://stability.ai/news/stable-diffusion-public-release",
-          "sourceType": "official_news",
-          "role": "canonical"
-        }
-      ],
-      "canonicalSource": {
-        "label": "Stability AI",
-        "url": "https://stability.ai/news/stable-diffusion-public-release",
-        "sourceType": "official_news",
-        "role": "canonical"
-      },
-      "categoryLabel": "Model release",
-      "kindLabel": "Launch",
-      "significanceLabel": "Major",
-      "statusLabel": "Verified",
-      "dateLabel": "22 Aug 2022",
-      "trackingDateLabel": null,
-      "href": "/new/",
-      "sortKey": 1661169600000,
-      "daysUntil": 21,
-      "anniversaryYears": 4,
-      "nextOccurrenceIso": "2026-08-22T12:00:00.000Z",
-      "nextOccurrenceLabel": "22 Aug 2026"
-    },
     {
       "id": "o1-preview-launch",
       "slug": "o1-preview-launch",
@@ -112,7 +63,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1726142400000,
-      "daysUntil": 42,
+      "daysUntil": 17,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-09-12T12:00:00.000Z",
       "nextOccurrenceLabel": "12 Sept 2026"
@@ -165,7 +116,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1695816000000,
-      "daysUntil": 57,
+      "daysUntil": 32,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
       "nextOccurrenceLabel": "27 Sept 2026"
@@ -214,7 +165,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 73,
+      "daysUntil": 48,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -265,7 +216,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 94,
+      "daysUntil": 69,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -315,7 +266,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 121,
+      "daysUntil": 96,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -366,7 +317,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1669809600000,
-      "daysUntil": 121,
+      "daysUntil": 96,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -417,10 +368,61 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1701864000000,
-      "daysUntil": 127,
+      "daysUntil": 102,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-06T12:00:00.000Z",
       "nextOccurrenceLabel": "6 Dec 2026"
+    },
+    {
+      "id": "mixtral-8x7b-launch",
+      "slug": "mixtral-8x7b-launch",
+      "title": "Mixtral 8x7B released",
+      "summary": "Mixtral 8x7B showed that sparse open-weight models could compete far above their active parameter count.",
+      "year": 2023,
+      "month": 12,
+      "day": 11,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "mistral",
+      "modelId": "mixtral-8x7b",
+      "tags": [
+        "mistral",
+        "mixtral",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "Mistral AI",
+          "url": "https://mistral.ai/news/mixtral-of-experts/",
+          "sourceType": "official_news",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "Mistral AI",
+        "url": "https://mistral.ai/news/mixtral-of-experts/",
+        "sourceType": "official_news",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "11 Dec 2023",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1702296000000,
+      "daysUntil": 107,
+      "anniversaryYears": 3,
+      "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
+      "nextOccurrenceLabel": "11 Dec 2026"
     }
   ],
   "latestLaunches": [

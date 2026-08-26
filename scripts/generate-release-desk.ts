@@ -1,13 +1,15 @@
 #!/usr/bin/env npx tsx
-import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
 import { routeAiResourceHubNews } from '../src/data/news-routing';
 import { isDiscoveryOnlyModel } from '../src/data/model-verification';
+import { assessBenchmarkProvenance } from '../src/data/benchmark-provenance';
+import { findVerifiedBenchmarkScoreEvidence } from './benchmark-score-evidence';
 import { getCatalogModelsById } from './model-catalog';
-import { getAiResourceHubSqlitePath } from './sqlite-path';
 
-const DB_PATH = getAiResourceHubSqlitePath();
+const MODEL_CACHE_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'models.json');
+const BENCHMARK_CACHE_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'benchmarks.json');
+const BENCHMARK_SCORE_CACHE_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'benchmark_scores.json');
 const NEWS_CACHE_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'news.json');
 const GENERATED_TS_PATH = path.join(process.cwd(), 'src', 'data', 'model-release-desk.generated.ts');
 const PUBLIC_JSON_PATH = path.join(process.cwd(), 'public', 'data', 'model-release-desk.json');
@@ -25,13 +27,14 @@ type ReleaseModelRow = {
   provider_api_docs_url: string | null;
   released: string | null;
   status: string;
+  category: string;
   context_window: number;
   max_output: number;
   quality_score: number | null;
   input_price: number;
   output_price: number;
-  open_source: number;
-  api_available: number;
+  open_source: boolean | number;
+  api_available: boolean | number;
   modality: string;
   notes: string | null;
   pricing_source: string | null;
@@ -45,8 +48,23 @@ type BenchmarkRow = {
   category: string;
   score: number;
   source: string | null;
+  source_url: string | null;
+  measured_at: string | null;
   higher_is_better: number;
   scale_max: number;
+};
+
+type BenchmarkScoreCacheRow = Omit<
+  BenchmarkRow,
+  'benchmark_name' | 'category' | 'higher_is_better' | 'scale_max'
+>;
+
+type BenchmarkDefinitionRow = {
+  id: string;
+  name: string;
+  category: string;
+  higher_is_better?: boolean | number | null;
+  scale_max?: number | null;
 };
 
 type NewsRow = {
@@ -72,6 +90,19 @@ type RoutedStory = {
   date: string;
   routingTags: string[];
   sourceTags: string[];
+};
+
+type ReleaseBenchmarkHighlight = {
+  benchmark_id: string;
+  benchmark_name: string;
+  category: string;
+  score: number;
+  scale_max: number;
+  source: string;
+  sourceUrl: string;
+  measuredAt: string;
+  evidenceNote: string;
+  evidenceState: 'verified-row';
 };
 
 function slugify(value: string): string {
@@ -183,6 +214,17 @@ function cleanSummaryText(value: string | null | undefined): string {
     .replace(/[\u201C\u201D]/g, '"')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function readRequiredJsonArray<T>(filePath: string, label: string): T[] {
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Missing ${label} cache: ${filePath}`);
+  }
+  const rows = JSON.parse(fs.readFileSync(filePath, 'utf8')) as T[];
+  if (!Array.isArray(rows) || rows.length === 0) {
+    throw new Error(`${label} cache contains no rows: ${filePath}`);
+  }
+  return rows;
 }
 
 function buildWhyItMatters(model: ReleaseModelRow, benchmarkCount: number, relatedStoryCount: number): string[] {
@@ -324,7 +366,7 @@ function buildDraftMarkdown(entry: {
   whyItMatters: string[];
   checklist: string[];
   threadPlan: string[];
-  benchmarkHighlights: Array<{ benchmark_name: string; score: number; scale_max: number; source: string | null }>;
+  benchmarkHighlights: ReleaseBenchmarkHighlight[];
   relatedStories: Array<{ title: string; url: string; source: string; date: string; summary: string; routingTags: string[] }>;
   officialUrl: string | null;
   providerDocsUrl: string | null;
@@ -364,7 +406,7 @@ ${entry.whyItMatters.map((item) => `- ${item}`).join('\n')}
 
 ${entry.benchmarkHighlights.length > 0
     ? entry.benchmarkHighlights.map((highlight) => (
-      `- ${highlight.benchmark_name}: ${highlight.score}${highlight.scale_max > 0 ? ` / ${highlight.scale_max}` : ''}${highlight.source ? ` (${highlight.source})` : ''}`
+      `- [${highlight.benchmark_name}: ${highlight.score}${highlight.scale_max > 0 ? ` / ${highlight.scale_max}` : ''}](${highlight.sourceUrl}) (${highlight.source}, measured ${highlight.measuredAt}; verified row evidence)`
     )).join('\n')
     : '- No benchmark signals are attached yet. Keep the copy honest and label this as launch-stage coverage.'}
 
@@ -394,59 +436,41 @@ function main() {
   const storyCutoff = isoDaysAgo(RELATED_STORY_WINDOW_DAYS, now);
 
   const catalogModels = getCatalogModelsById();
-  const db = new Database(DB_PATH, { readonly: true });
+  const models = readRequiredJsonArray<ReleaseModelRow>(MODEL_CACHE_PATH, 'model')
+    .filter((model) => (
+      model.category === 'llm'
+      && Boolean(model.released)
+      && ['active', 'tracking', 'preview'].includes(model.status)
+    ))
+    .sort((a, b) => (
+      (b.released ?? '').localeCompare(a.released ?? '')
+      || a.name.localeCompare(b.name)
+    ));
 
-  const models = db.prepare(`
-    SELECT
-      m.id,
-      m.name,
-      m.provider_id,
-      p.name AS provider_name,
-      p.colour AS provider_colour,
-      p.status_url AS provider_status_url,
-      p.api_docs_url AS provider_api_docs_url,
-      m.released,
-      m.status,
-      m.context_window,
-      m.max_output,
-      m.quality_score,
-      m.input_price,
-      m.output_price,
-      m.open_source,
-      m.api_available,
-      m.modality,
-      m.notes,
-      m.pricing_source,
-      m.pricing_updated
-    FROM models m
-    JOIN providers p ON p.id = m.provider_id
-    WHERE m.category = 'llm'
-      AND m.released IS NOT NULL
-      AND m.status IN ('active', 'tracking', 'preview')
-    ORDER BY m.released DESC, m.name ASC
-  `).all() as ReleaseModelRow[];
-
-  const benchmarkRows = db.prepare(`
-    SELECT
-      bs.model_id,
-      bs.benchmark_id,
-      b.name AS benchmark_name,
-      b.category,
-      bs.score,
-      bs.source,
-      COALESCE(b.higher_is_better, 1) AS higher_is_better,
-      COALESCE(b.scale_max, 0) AS scale_max
-    FROM benchmark_scores bs
-    JOIN benchmarks b ON b.id = bs.benchmark_id
-  `).all() as BenchmarkRow[];
+  const benchmarkDefinitionById = new Map(
+    readRequiredJsonArray<BenchmarkDefinitionRow>(BENCHMARK_CACHE_PATH, 'benchmark definition')
+      .map((benchmark) => [benchmark.id, benchmark]),
+  );
+  const benchmarkRows = readRequiredJsonArray<BenchmarkScoreCacheRow>(
+    BENCHMARK_SCORE_CACHE_PATH,
+    'benchmark score',
+  ).flatMap((score): BenchmarkRow[] => {
+    const benchmark = benchmarkDefinitionById.get(score.benchmark_id);
+    if (!benchmark) return [];
+    return [{
+      ...score,
+      benchmark_name: benchmark.name,
+      category: benchmark.category,
+      higher_is_better: benchmark.higher_is_better === false || benchmark.higher_is_better === 0 ? 0 : 1,
+      scale_max: Number(benchmark.scale_max ?? 0),
+    }];
+  });
 
   const benchmarkMap = new Map<string, BenchmarkRow[]>();
   for (const row of benchmarkRows) {
     if (!benchmarkMap.has(row.model_id)) benchmarkMap.set(row.model_id, []);
     benchmarkMap.get(row.model_id)!.push(row);
   }
-
-  db.close();
 
   const newsRows = fs.existsSync(NEWS_CACHE_PATH)
     ? JSON.parse(fs.readFileSync(NEWS_CACHE_PATH, 'utf8')) as NewsRow[]
@@ -496,20 +520,34 @@ function main() {
     const competingAliases = (providerAliasMap.get(model.provider_id) ?? [])
       .filter((entry) => entry.modelId !== model.id)
       .flatMap((entry) => entry.aliases);
-    const benchmarkHighlights = [...(benchmarkMap.get(model.id) ?? [])]
+    const benchmarkHighlights: ReleaseBenchmarkHighlight[] = [...(benchmarkMap.get(model.id) ?? [])]
+      .flatMap((row) => {
+        const evidence = findVerifiedBenchmarkScoreEvidence(row);
+        const provenance = assessBenchmarkProvenance(
+          row,
+          { id: row.benchmark_id, url: null },
+        );
+        if (!evidence || !provenance.rankable) return [];
+
+        return [{ row, evidence }];
+      })
       .sort((a, b) => {
-        const aScore = a.scale_max > 0 ? a.score / a.scale_max : a.score;
-        const bScore = b.scale_max > 0 ? b.score / b.scale_max : b.score;
-        return bScore - aScore || a.benchmark_name.localeCompare(b.benchmark_name);
+        const aScore = a.row.scale_max > 0 ? a.row.score / a.row.scale_max : a.row.score;
+        const bScore = b.row.scale_max > 0 ? b.row.score / b.row.scale_max : b.row.score;
+        return bScore - aScore || a.row.benchmark_name.localeCompare(b.row.benchmark_name);
       })
       .slice(0, 5)
-      .map((row) => ({
+      .map(({ row, evidence }) => ({
         benchmark_id: row.benchmark_id,
         benchmark_name: row.benchmark_name,
         category: row.category,
-        score: Number(row.score.toFixed(1)),
+        score: row.score,
         scale_max: row.scale_max,
-        source: row.source,
+        source: evidence.source,
+        sourceUrl: evidence.sourceUrl,
+        measuredAt: evidence.measuredAt,
+        evidenceNote: evidence.evidenceNote,
+        evidenceState: 'verified-row' as const,
       }));
 
     const relatedStories = routedStories

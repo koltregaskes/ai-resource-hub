@@ -15,6 +15,15 @@ export interface UnresolvedBenchmarkScoreReview {
   contextUrl?: string;
 }
 
+export interface BenchmarkScoreEvidenceCandidate {
+  model_id?: unknown;
+  benchmark_id?: unknown;
+  score?: unknown;
+  source?: unknown;
+  source_url?: unknown;
+  measured_at?: unknown;
+}
+
 const OPENAI_GPT5_URL = 'https://openai.com/index/introducing-gpt-5-for-developers/';
 const OPENAI_GPT5_LAUNCH_URL = 'https://openai.com/index/introducing-gpt-5/';
 const OPENAI_GPT5_SYSTEM_CARD_URL = 'https://cdn.openai.com/gpt-5-system-card.pdf';
@@ -522,4 +531,45 @@ export const VERIFIED_LABEL_ONLY_REMEDIATION_KEYS = new Set([
 
 export function benchmarkScoreKey(modelId: string, benchmarkId: string): string {
   return `${modelId}:${benchmarkId}`;
+}
+
+const VERIFIED_BENCHMARK_SCORE_EVIDENCE_BY_KEY = new Map(
+  VERIFIED_BENCHMARK_SCORE_EVIDENCE.map((entry) => [
+    benchmarkScoreKey(entry.modelId, entry.benchmarkId),
+    entry,
+  ]),
+);
+
+function exactEvidenceText(value: unknown): string | null {
+  return typeof value === 'string' && value.trim() ? value.trim() : null;
+}
+
+/**
+ * Public ranking surfaces require an immutable row-level binding. A current
+ * URL alone is not enough: model, benchmark, numeric score, source label, URL
+ * and measurement date must all match the reviewed evidence registry.
+ */
+export function findVerifiedBenchmarkScoreEvidence(
+  candidate: BenchmarkScoreEvidenceCandidate,
+): VerifiedBenchmarkScoreEvidence | null {
+  if (
+    typeof candidate.model_id !== 'string'
+    || typeof candidate.benchmark_id !== 'string'
+    || typeof candidate.score !== 'number'
+    || !Number.isFinite(candidate.score)
+  ) {
+    return null;
+  }
+
+  const evidence = VERIFIED_BENCHMARK_SCORE_EVIDENCE_BY_KEY.get(
+    benchmarkScoreKey(candidate.model_id, candidate.benchmark_id),
+  );
+  if (!evidence) return null;
+
+  return (
+    candidate.score === evidence.score
+    && exactEvidenceText(candidate.source) === evidence.source
+    && exactEvidenceText(candidate.source_url) === evidence.sourceUrl
+    && exactEvidenceText(candidate.measured_at) === evidence.measuredAt
+  ) ? evidence : null;
 }
