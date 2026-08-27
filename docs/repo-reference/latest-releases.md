@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 26 Aug 2026, 23:29 UTC
+Generated: 27 Aug 2026, 00:56 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -19,13 +19,13 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | high | watch only | 0 | 0 | n/a |
 | 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | high | watch only | 0 | 0 | n/a |
 | 9 Aug 2026 | Muse Glimmer 30B | Meta | tracking | high | watch only | 0 | 1 | n/a |
-| 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | high | watch only | 0 | 1 | n/a |
-| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
+| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/glasswing) |
+| 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 3 Aug 2026 | Qwen3.8 Max | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 31 Jul 2026 | DeepSeek V4 Flash 0731 | DeepSeek | tracking | watch | watch only | 0 | 0 | n/a |
 | 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
-| 24 Jul 2026 | Claude Opus 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |
-| 24 Jul 2026 | Claude Opus 5 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |
+| 24 Jul 2026 | Claude Opus 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://www.anthropic.com/news/claude-opus-5) |
+| 24 Jul 2026 | Claude Opus 5 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 21 Jul 2026 | Gemini 3.6 Flash (batch) | Google | tracking | watch | ready for editor | 0 | 5 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
 | 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | watch | ready for editor | 0 | 5 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
 
