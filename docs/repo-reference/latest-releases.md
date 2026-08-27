@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 27 Aug 2026, 05:55 UTC
+Generated: 27 Aug 2026, 06:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -17,7 +17,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 12 Aug 2026 | Qwen3.8 2.4T A95B | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | DeepSeek V4 Pro 0813 | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | high | watch only | 0 | 0 | n/a |
-| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | high | watch only | 0 | 0 | n/a |
+| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | high | watch only | 0 | 1 | n/a |
 | 9 Aug 2026 | Muse Glimmer 30B | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/glasswing) |
 | 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
