@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T10:55:59.533Z",
+  "generatedAt": "2026-08-28T11:55:35.410Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T10:55:59.039Z",
+      "lastCheckedAt": "2026-08-28T11:55:35.325Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-28T07:28:16.000Z",
+          "id": "fireworks-feed-0-2026-08-28T11:47:04.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-28T11:47:04.000Z",
+          "updatedAt": "2026-08-28T11:47:04.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M1414SFW9G421THQQRP111EQ",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-28T07:28:16.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-08-28T07:28:16.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M13KM1S2H84N9S5ZZMZVXS84",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-26T17:31:14.000Z",
-          "title": "Service Degradation for Kimi K3 US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-26T17:31:14.000Z",
-          "updatedAt": "2026-08-26T17:31:14.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M0ZGNC8SB2MZ93P4KT9PHW1F",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-28T07:28:16.000Z",
+          "id": "fireworks-feed-0-2026-08-28T11:47:04.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-28T11:47:04.000Z",
+          "updatedAt": "2026-08-28T11:47:04.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M1414SFW9G421THQQRP111EQ",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-28T07:28:16.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-26T17:31:14.000Z",
+          "id": "fireworks-feed-2-2026-08-26T17:31:14.000Z",
           "title": "Service Degradation for Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-08-25T23:00:49.000Z",
+          "id": "fireworks-feed-3-2026-08-25T23:00:49.000Z",
           "title": "Service Degradation for Kimi K3 US",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-08-25T23:00:49.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M0XJ5VV0KJF70RPA7BAYY88V",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-08-25T10:05:17.000Z",
-          "title": "Service Degradation for Kimi K3 US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-25T10:05:17.000Z",
-          "updatedAt": "2026-08-25T10:05:17.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M0W4V26YZMF460XC41W82MH8",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T10:55:58.439Z",
+      "lastCheckedAt": "2026-08-28T11:55:34.762Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T10:55:58.156Z",
+      "lastCheckedAt": "2026-08-28T11:55:34.249Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T10:55:59.072Z",
+      "lastCheckedAt": "2026-08-28T11:55:35.101Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T10:55:58.368Z",
+      "lastCheckedAt": "2026-08-28T11:55:34.554Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T10:55:58.226Z",
+      "lastCheckedAt": "2026-08-28T11:55:34.309Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -348,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T10:55:59.526Z",
+      "lastCheckedAt": "2026-08-28T11:55:35.403Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -372,7 +372,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
