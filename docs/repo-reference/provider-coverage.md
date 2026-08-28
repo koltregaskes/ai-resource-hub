@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 28 Aug 2026, 18:37 UTC
+Generated: 28 Aug 2026, 19:55 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -30,7 +30,7 @@ This table shows how much of each provider's public model surface is currently r
 | Pika | 2 | 0 | 0 | n/a | n/a | n/a |
 | Suno | 2 | 0 | 0 | n/a | n/a | n/a |
 | Udio | 2 | 0 | 0 | n/a | n/a | n/a |
-| Zhipu AI | 1 | 14 | 0 | GLM 5.3 Flash (26 Aug 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
+| Zhipu AI | 1 | 14 | 0 | GLM 5.3 (18 Aug 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | Perplexity | 1 | 4 | 0 | n/a | n/a | [docs](https://docs.perplexity.ai) |
 | Microsoft | 1 | 3 | 0 | n/a | n/a | [docs](https://learn.microsoft.com/azure/ai-foundry/model-inference/concepts/models) |
 | Hailuo AI | 1 | 0 | 0 | n/a | n/a | n/a |
@@ -40,6 +40,6 @@ This table shows how much of each provider's public model surface is currently r
 | xAI | 0 | 12 | 0 | Grok 4.6 (12 Aug 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
 | MiniMax | 0 | 8 | 0 | MiniMax M2.7 (18 Mar 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | NVIDIA | 0 | 6 | 0 | Nemotron 3.5 Lightning (11 Aug 2026) | n/a | [docs](https://docs.api.nvidia.com) |
-| Moonshot AI | 0 | 5 | 0 | Kimi K3 (16 Jul 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
+| Moonshot AI | 0 | 5 | 0 | Kimi K2.7 Code (12 Jun 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
 | AI21 Labs | 0 | 2 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |

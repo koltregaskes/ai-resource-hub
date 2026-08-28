@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T19:00:51.937Z",
+  "generatedAt": "2026-08-28T19:55:36.970Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T19:00:40.579Z",
+      "lastCheckedAt": "2026-08-28T19:55:36.962Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-28T14:51:17.000Z",
+          "id": "fireworks-feed-0-2026-08-28T19:33:03.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-28T19:33:03.000Z",
+          "updatedAt": "2026-08-28T19:33:03.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M14XA96CFHNRRN6YXRBVXX43",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-28T14:51:17.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-08-28T14:51:17.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M14C665T5QZ5M6TV5333XTHD",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-08-28T12:27:01.000Z",
-          "title": "Service Degradation for Qwen 3.8 Max",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-28T12:27:01.000Z",
-          "updatedAt": "2026-08-28T12:27:01.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M1459VB46SQNMKYYPGQNYEHG",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-08-28T14:51:17.000Z",
+          "id": "fireworks-feed-0-2026-08-28T19:33:03.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-08-28T19:33:03.000Z",
+          "updatedAt": "2026-08-28T19:33:03.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M14XA96CFHNRRN6YXRBVXX43",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-08-28T14:51:17.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-08-28T12:27:01.000Z",
+          "id": "fireworks-feed-2-2026-08-28T12:27:01.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-08-28T11:47:04.000Z",
+          "id": "fireworks-feed-3-2026-08-28T11:47:04.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-08-28T11:47:04.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M1414SFW9G421THQQRP111EQ",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-08-28T07:28:16.000Z",
-          "title": "Service Degradation for Qwen 3.8 Max",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-08-28T07:28:16.000Z",
-          "updatedAt": "2026-08-28T07:28:16.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M13KM1S2H84N9S5ZZMZVXS84",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T19:00:51.930Z",
+      "lastCheckedAt": "2026-08-28T19:55:35.463Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T19:00:40.102Z",
+      "lastCheckedAt": "2026-08-28T19:55:36.123Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T19:00:40.463Z",
+      "lastCheckedAt": "2026-08-28T19:55:36.372Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -242,7 +242,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T19:00:39.792Z",
+      "lastCheckedAt": "2026-08-28T19:55:35.572Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -274,7 +274,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T19:00:39.360Z",
+      "lastCheckedAt": "2026-08-28T19:55:35.452Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -360,7 +360,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-28T19:00:40.909Z",
+      "lastCheckedAt": "2026-08-28T19:55:36.817Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
