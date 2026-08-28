@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 28 Aug 2026, 14:56 UTC
+Generated: 28 Aug 2026, 15:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -14,7 +14,6 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 21 Aug 2026 | DeepSeek V4 Flash Vision Exp | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
 | 18 Aug 2026 | GLM 5.3 | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
 | 14 Aug 2026 | Qwen3.8 27B | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
-| 12 Aug 2026 | Qwen3.8 2.4T A95B | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | DeepSeek V4 Pro 0813 | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | high | watch only | 0 | 0 | n/a |
 | 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | high | watch only | 0 | 1 | n/a |
@@ -28,5 +27,6 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 24 Jul 2026 | Claude Opus 5 (Fast) | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 21 Jul 2026 | Gemini 3.6 Flash (batch) | Google | tracking | watch | ready for editor | 0 | 6 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
 | 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | watch | ready for editor | 0 | 6 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
+| 16 Jul 2026 | Kimi K3 | Moonshot AI | tracking | watch | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
