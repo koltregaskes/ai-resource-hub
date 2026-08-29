@@ -24,6 +24,7 @@
     "check:staleness": "tsx scripts/check-staleness.ts",
     "import:news": "tsx scripts/import-news-digests.ts",
     "generate:digest": "tsx scripts/generate-digest.ts",
+    "generate:homepage-digest": "node scripts/generate-homepage-digest.mjs",
     "sync:news-pipeline": "node scripts/sync-news-pipeline-data.mjs",
     "validate:milestones": "tsx scripts/validate-ai-milestones.ts",
     "sync:milestones": "tsx scripts/sync-ai-milestones.ts",

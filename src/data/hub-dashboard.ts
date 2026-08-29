@@ -7,6 +7,7 @@ import {
   getBenchmarkScores,
   getLastScrapeTime,
   getLLMModelsFromDB,
+  getNews,
   getPublicModelsByCategory,
   getRecentModels,
 } from '../db/queries';
@@ -316,7 +317,7 @@ function parseDigestFile(filePath: string, fileName: string): LatestDigest | nul
 
   const digestDate = fileDateMatch[1];
   const content = readFileSync(filePath, 'utf8');
-  const headerMatch = content.match(/\*\*(\d{4}-\d{2}-\d{2})\*\*\s+\|\s+(\d+)\s+stories\s+\|\s+Auto-generated from\s+(\d+)\s+sources/i);
+  const headerMatch = content.match(/\*\*(\d{4}-\d{2}-\d{2})\*\*\s+\|\s+(\d+)\s+stories?\s+\|\s+Auto-generated from\s+(\d+)\s+(?:sources|recent stories)/i);
 
   const blocks = content.split(/\n---\n/);
   const entries: ParsedDigestEntry[] = [];
@@ -356,7 +357,87 @@ function parseDigestFile(filePath: string, fileName: string): LatestDigest | nul
   };
 }
 
-export function getLatestDigest(): LatestDigest | null {
+function digestFromNewsCache(): LatestDigest | null {
+  const rows = getNews(250) as Array<{
+    id: string;
+    title: string;
+    url: string;
+    source: string;
+    summary?: string | null;
+    tags?: string[] | string | null;
+    importance_score?: number | string | null;
+    published_at?: string | null;
+    discovered_at?: string | null;
+  }>;
+
+  if (!rows.length) return null;
+
+  const dated = rows
+    .map((row) => {
+      const publishedDate = (row.published_at ?? row.discovered_at ?? '').toString().slice(0, 10);
+      return { row, publishedDate };
+    })
+    .filter((item) => /^\d{4}-\d{2}-\d{2}$/.test(item.publishedDate));
+
+  if (!dated.length) return null;
+
+  const digestDate = dated
+    .map((item) => item.publishedDate)
+    .sort()
+    .reverse()[0];
+
+  const dayRows = dated.filter((item) => item.publishedDate === digestDate);
+  const entries: ParsedDigestEntry[] = dayItemsToEntries(dayRows, digestDate);
+
+  if (!entries.length) return null;
+
+  return {
+    digestDate,
+    storyCount: entries.length,
+    sourceCount: new Set(entries.map((entry) => entry.source)).size,
+    entries,
+  };
+}
+
+function dayItemsToEntries(
+  dayRows: Array<{
+    row: {
+      id: string;
+      title: string;
+      url: string;
+      source: string;
+      summary?: string | null;
+      tags?: string[] | string | null;
+      importance_score?: number | string | null;
+    };
+    publishedDate: string;
+  }>,
+  digestDate: string,
+): ParsedDigestEntry[] {
+  return dayRows.slice(0, 20).map((item) => {
+    const tags = Array.isArray(item.row.tags)
+      ? item.row.tags
+      : typeof item.row.tags === 'string'
+        ? item.row.tags.split(',').map((tag) => tag.trim()).filter(Boolean)
+        : [];
+    const score = Number(item.row.importance_score);
+    return {
+      id: item.row.id,
+      title: item.row.title,
+      url: item.row.url,
+      source: item.row.source,
+      summary: (item.row.summary ?? '').trim(),
+      score: Number.isFinite(score) ? score : null,
+      publishedDate: item.publishedDate,
+      digestDate,
+      tags,
+    };
+  });
+}
+
+function latestDigestFromFiles(): LatestDigest | null {
+  const candidates: LatestDigest[] = [];
+
   for (const directory of DIGEST_SEARCH_DIRS) {
     if (!existsSync(directory)) continue;
 
@@ -367,11 +448,26 @@ export function getLatestDigest(): LatestDigest | null {
 
     for (const fileName of files) {
       const parsed = parseDigestFile(path.join(directory, fileName), fileName);
-      if (parsed && parsed.entries.length > 0) return parsed;
+      if (parsed && parsed.entries.length > 0) {
+        candidates.push(parsed);
+        break;
+      }
     }
   }
 
-  return null;
+  if (!candidates.length) return null;
+  return candidates.sort((a, b) => b.digestDate.localeCompare(a.digestDate))[0];
+}
+
+export function getLatestDigest(): LatestDigest | null {
+  const fromNews = digestFromNewsCache();
+  const fromFiles = latestDigestFromFiles();
+
+  if (fromNews && fromFiles) {
+    return fromNews.digestDate >= fromFiles.digestDate ? fromNews : fromFiles;
+  }
+
+  return fromNews ?? fromFiles;
 }
 
 function toModalityList(value: unknown): string[] {
