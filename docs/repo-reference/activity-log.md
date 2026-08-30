@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 30 Aug 2026, 13:55 UTC
+Generated: 30 Aug 2026, 14:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 30 Aug 2026, 13:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 30 Aug 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 30 Aug 2026, 13:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 30 Aug 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 30 Aug 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 30 Aug 2026, 14:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 30 Aug 2026, 14:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 30 Aug 2026, 14:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 30 Aug 2026, 14:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 30 Aug 2026, 14:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 30 Aug 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,139 open roles across 10 tracked companies. | `/jobs/` |
 | 29 Aug 2026, 12:00 UTC | digest | &#8220;We&#8217;re not doing 30 bets a year&#8221;: Vijay Pande on betting small after running $4 billion at a16z | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/) |
 | 29 Aug 2026, 12:00 UTC | digest | Published the 2026-08-29 daily digest | 5 stories captured from 2 sources. | `/news/` |
