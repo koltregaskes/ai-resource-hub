@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 30 Aug 2026, 00:17 UTC
+Generated: 30 Aug 2026, 03:57 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -8,7 +8,7 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 
 | Rank | Model | Provider | Composite | Bench | Coverage | Best for | Price | Released |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Llama 4 Maverick | Meta | 57.6 | 77.0 / 10 | 28% | Coding | $0.20 / $0.70 | 05 Apr 2025 |
+| 1 | Llama 4 Maverick | Meta | 57.6 | 77.0 / 10 | 28% | Coding | $0.20 / $0.80 | 05 Apr 2025 |
 | 2 | DeepSeek V3.2 | DeepSeek | 56.3 | 74.6 / 6 | 21% | General use | $0.25 / $1.00 | 29 Sept 2025 |
 | 3 | GPT-5.2 | OpenAI | 55.1 | 78.5 / 22 | 67% | multilingual | $1.75 / $14.00 | 10 Dec 2025 |
 | 4 | Claude Opus 4.6 (batch) | Anthropic | 52.3 | 75.9 / 16 | 49% | Chat | $5.00 / $25.00 | 05 Feb 2026 |
