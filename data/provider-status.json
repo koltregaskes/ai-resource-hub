@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T20:23:12.755Z",
+  "generatedAt": "2026-08-31T23:48:36.077Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:23:12.714Z",
+      "lastCheckedAt": "2026-08-31T23:48:35.634Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,15 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:23:11.587Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
+      "lastCheckedAt": "2026-08-31T23:48:34.953Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "Responses",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Images",
@@ -133,26 +133,36 @@
       ],
       "activeIncidents": [
         {
-          "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
-          "title": "ChatGPT Work seeing elevated errors and latency",
+          "id": "01M1CYZDD84XD0H56XNEV2PT98",
+          "title": "Elevated latency in the Responses API",
           "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-08-31T15:04:53.000Z",
-          "updatedAt": "2026-08-31T20:01:16.000Z",
+          "impact": "minor",
+          "startedAt": "2026-08-31T22:27:56.000Z",
+          "updatedAt": "2026-08-31T23:13:47.000Z",
           "resolvedAt": null,
           "summary": "We have applied a mitigation and are monitoring recovery."
         }
       ],
       "recentIncidents": [
         {
-          "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
-          "title": "ChatGPT Work seeing elevated errors and latency",
+          "id": "01M1CYZDD84XD0H56XNEV2PT98",
+          "title": "Elevated latency in the Responses API",
           "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-08-31T15:04:53.000Z",
-          "updatedAt": "2026-08-31T20:01:16.000Z",
+          "impact": "minor",
+          "startedAt": "2026-08-31T22:27:56.000Z",
+          "updatedAt": "2026-08-31T23:13:47.000Z",
           "resolvedAt": null,
           "summary": "We have applied a mitigation and are monitoring recovery."
+        },
+        {
+          "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
+          "title": "ChatGPT Work seeing elevated errors and latency",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-08-31T15:04:53.000Z",
+          "updatedAt": "2026-08-31T20:28:40.000Z",
+          "resolvedAt": "2026-08-31T20:28:40.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01M1263309PD7VYV8EF95W2M2P",
@@ -173,18 +183,28 @@
           "updatedAt": "2026-08-21T23:15:09.000Z",
           "resolvedAt": "2026-08-21T23:15:09.000Z",
           "summary": "The issue causing some ChatGPT web users to be unexpectedly logged out when refreshing the page has been resolved."
-        },
-        {
-          "id": "01M0G1RZER839AZXWMYKSZF3GR",
-          "title": "Elevated Codex API authentication errors",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-20T16:58:53.000Z",
-          "updatedAt": "2026-08-20T17:52:16.000Z",
-          "resolvedAt": "2026-08-20T17:52:16.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
+    },
+    {
+      "id": "mistral",
+      "providerId": "mistral",
+      "name": "Mistral",
+      "colour": "#f59e0b",
+      "websiteUrl": "https://mistral.ai",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceLabel": "Official status page",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-08-31T23:48:35.190Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "anthropic",
@@ -197,19 +217,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:23:11.555Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-08-31T23:48:34.762Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Code",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -217,6 +233,10 @@
         },
         {
           "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
           "status": "operational"
         },
         {
@@ -228,30 +248,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "r82kdk0m7vqh",
-          "title": "Degraded performance on claude.ai and Claude Code",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-08-31T19:21:32.139Z",
-          "updatedAt": "2026-08-31T19:21:32.230Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/gny7dn3k231b",
-          "summary": "We are investigating reports of degraded performance affecting Claude in Slack, Claude Code on the web, and Code Review. We will provide an update as soon as possible."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "r82kdk0m7vqh",
           "title": "Degraded performance on claude.ai and Claude Code",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-08-31T19:21:32.139Z",
-          "updatedAt": "2026-08-31T19:21:32.230Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-08-31T20:36:00.316Z",
+          "resolvedAt": "2026-08-31T20:36:00.297Z",
           "url": "https://stspg.io/gny7dn3k231b",
-          "summary": "We are investigating reports of degraded performance affecting Claude in Slack, Claude Code on the web, and Code Review. We will provide an update as soon as possible."
+          "summary": "The issue affecting Claude Code has been resolved. Impact occurred from 16∶55 to 19∶16 UTC."
         },
         {
           "id": "9jrp5rtyzrf6",
@@ -289,26 +297,6 @@
       ]
     },
     {
-      "id": "mistral",
-      "providerId": "mistral",
-      "name": "Mistral",
-      "colour": "#f59e0b",
-      "websiteUrl": "https://mistral.ai",
-      "statusPageUrl": "https://status.mistral.ai",
-      "sourceKind": "checkly_page",
-      "sourceLabel": "Official status page",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:23:12.201Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -319,7 +307,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:23:12.482Z",
+      "lastCheckedAt": "2026-08-31T23:48:35.617Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:23:11.814Z",
+      "lastCheckedAt": "2026-08-31T23:48:34.829Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -371,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:23:12.745Z",
+      "lastCheckedAt": "2026-08-31T23:48:36.071Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -395,7 +383,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
