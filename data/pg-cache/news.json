@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-5714bb72d855259397a8",
+    "title": "Instagram puts new limits on undisclosed AI profiles",
+    "url": "https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/",
+    "source": "TechCrunch",
+    "summary": "As frustration over AI influencers has been growing, Instagram is limiting the reach of undisclosed AI profiles.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-31T19:16:59.000Z",
+    "discovered_at": "2026-08-31 20:00:21"
+  },
+  {
+    "id": "news-84762d7f4362111d631d",
+    "title": "Harvard Law dropout raises $6M for Blue Voice to build a &#8216;Harvey for police officers&#8217;",
+    "url": "https://techcrunch.com/2026/08/31/harvard-law-dropout-raises-6m-for-blue-voice-to-build-a-harvey-for-police-officers/",
+    "source": "TechCrunch",
+    "summary": "Blue Voice is trained on department-specific laws, local ordinances, protocols, and guidelines that general-purpose AI tools can't access on the public internet.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-31T18:35:11.000Z",
+    "discovered_at": "2026-08-31 20:00:21"
+  },
+  {
+    "id": "news-09c8fe5e8ea1eace6f3a",
+    "title": "Clipto uses AI to search terabytes of video and is now valued at $250M",
+    "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
+    "source": "TechCrunch",
+    "summary": "The three-year-old startup says it reached $15 million in ARR and profitability before raising its latest $15 million round.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-31T16:00:00.000Z",
+    "discovered_at": "2026-08-31 20:00:21"
+  },
+  {
+    "id": "news-662ad6a9f4e0a6f1bfc3",
+    "title": "Debian won&#8217;t ban AI code from its Linux distribution",
+    "url": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy",
+    "source": "The Verge",
+    "summary": "Debian voted to allow developers to use AI tools in their contributions to the Linux distribution's \"development, maintenance, [and] documentation.\" The new policy on AI acknowledges that \"responsible\" use of AI can improve developers' productivity, and goes on to say, \"generative AI is neither exempt from nor subject…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-31T15:34:58.000Z",
+    "discovered_at": "2026-08-31 20:00:22"
+  },
+  {
+    "id": "news-3f983827d88c7f879701",
+    "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech&#8217;s AI chip buildout",
+    "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
+    "source": "TechCrunch",
+    "summary": "Nvidia invests $3.5 billion into Taiwanese chipmaker MediaTek. The deal shows how Nvidia plans to stay essential to AI infrastructure as Big Tech begins to build its own AI chips.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-31T15:15:25.000Z",
+    "discovered_at": "2026-08-31 20:00:21"
+  },
+  {
+    "id": "news-2c0ffcd676ea57cfbade",
+    "title": "New York Governor Kathy Hochul thinks AI should be ‘less evil’",
+    "url": "https://www.theverge.com/podcast/986661/ny-gov-kathy-hochul-ai-data-centers-ban-3d-printed-guns-flock-cameras",
+    "source": "The Verge",
+    "summary": "Today, I’m talking with New York Governor Kathy Hochul, and I’ll just warn you — this episode moves really fast. It’s an election year, after all, with a shocking amount of tech policy at stake, and Governor Hochul has taken strong positions on almost every major tech issue there is. For example, Meta just reached [&#…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-31T14:00:00.000Z",
+    "discovered_at": "2026-08-31 20:00:22"
+  },
+  {
     "id": "news-8b9768eab1b143c48687",
     "title": "ChatGPT to face tougher regulation in the EU",
     "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
@@ -9,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-31T13:27:36.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-8051bcd07a89c5fde9b6",
@@ -21,23 +93,35 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-31T13:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-121993fc43fd3c0f754f",
-    "title": "Meeting notetaker Circleback adds a free tier to attract more customers",
+    "title": "Meeting note-taker Circleback adds a free tier to attract more customers",
     "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
     "source": "TechCrunch",
-    "summary": "Circleback is also introducing new pricing plans starting from $14 per month",
+    "summary": "Circleback is also introducing new pricing plans starting from $14 per month.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-31T12:56:46.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
+  },
+  {
+    "id": "news-44f61163770f758b1f0f",
+    "title": "A milestone in expanding access to AI",
+    "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+    "source": "OpenAI",
+    "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-31T04:00:00.000Z",
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-f2a0380f36ec9e4ec4c7",
-    "title": "The U.S. is building barriers around drones and robots, but China has scale to get around them",
+    "title": "The US is building barriers around drones and robots, but China has scale to get around them",
     "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
     "source": "TechCrunch",
     "summary": "The U.S. is shutting out more foreign-made drones and robots. China’s scale means the global competition may simply move elsewhere.",
@@ -45,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-31T02:34:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-a05533f3a7101e0850fe",
@@ -57,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-30T16:54:25.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-4538153b570fcc0ee2cd",
@@ -69,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-30T15:35:10.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-d427202242767fe7923e",
@@ -81,11 +165,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-30T15:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-a07c3116b1cc16211482",
-    "title": "Sony Music, Warner sue Anthropic, alleging a &#8220;brazen campaign&#8221; of intellectual property theft",
+    "title": "Sony Music, Warner sue Anthropic, alleging a &#8216;brazen campaign&#8217; of intellectual property theft",
     "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
     "source": "TechCrunch",
     "summary": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy.",
@@ -93,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-29T18:41:59.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-202512972a826b19fc3b",
@@ -105,11 +189,23 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-29T18:19:53.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
+  },
+  {
+    "id": "news-aa17eb89d5d9d40e5500",
+    "title": "At TechBBQ, Europe&#8217;s AI conversations kept coming back to: Who&#8217;s actually in control?",
+    "url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/",
+    "source": "TechCrunch",
+    "summary": "Investors, founders, and operators from across Europe arrived for the annual Nordic TechBBQ conference to talk about how humans can have agency over AI.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-29T17:51:10.000Z",
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-160a511db123aa08413d",
-    "title": "&#8220;We&#8217;re not doing 30 bets a year&#8221;: Vijay Pande on betting small after running $4 billion at a16z",
+    "title": "&#8216;We&#8217;re not doing 30 bets a year&#8217;: Vijay Pande on betting small after running $4B at a16z",
     "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/",
     "source": "TechCrunch",
     "summary": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"engineering\" one, why clinical trials are still brutally expensive, and why he thinks open, shared datasets (not walled-o…",
@@ -117,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-29T17:36:47.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-dcb10e4dd9846f66244b",
@@ -129,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-29T13:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-143903ddbe912ec91a60",
@@ -141,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-29T12:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-d63f08afee62f90ddfc5",
@@ -153,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T20:24:11.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-09fc2e9c2c2d86c044f8",
@@ -165,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T19:30:38.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-883e80af1d5536a863ec",
@@ -177,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T18:19:40.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-2c0deb26fc847391e510",
@@ -189,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T16:28:40.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-c6fae4a04883d8270728",
@@ -201,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T12:46:12.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-f3970ce5d9ff791ccd67",
@@ -213,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T12:21:06.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-092c8de02e8b135ec330",
@@ -225,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T06:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-9ec4728e0bc5ea7afba8",
@@ -237,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T03:14:06.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-0b00c80d502cc3ab98e0",
@@ -249,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-28T02:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-2f47506cdbcd18a35650",
@@ -261,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T23:16:45.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-9d531c3266a94e6801d5",
-    "title": "Barret Zoph, the Thinking Machines co-founder ousted before joining OpenAI, is now at Google",
-    "url": "https://techcrunch.com/2026/08/27/barret-zoph-the-thinking-machines-co-founder-who-defected-to-openai-is-now-at-google/",
-    "source": "TechCrunch",
-    "summary": "Zoph, who co-founded Thinking Machines Lab alongside Mira Murati and also served as the startup's CTO, led a brief stint at OpenAI and is now at Google.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-27T19:52:52.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-01f0ee112f1e7424c74f",
@@ -285,43 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T19:30:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-9eadc7db28e129d688fb",
-    "title": "OpenAI, Anthropic, Google, and 100 other companies call for action to defend against rogue AI",
-    "url": "https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/",
-    "source": "TechCrunch",
-    "summary": "Some of the world's largest tech companies and AI startups have come together to decry the current state of cybersecurity and to advertise a new solution that they say can ward off a new generation of cyber threats.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-27T17:43:24.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-7529af836f99159a8620",
-    "title": "Jensen Huang says Nvidia achieved AGI, again — not that it matters",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/985597/jensen-huang-says-nvidia-achieved-senseless-agi",
-    "source": "The Verge",
-    "summary": "On Nvidia's earnings call Wednesday, CEO Jensen Huang casually announced the company had \"achieved AGI,\" one of the tech industry's ultimate goals some of its biggest players have spent years chasing. Almost immediately, Huang dismissed the coveted milestone as \"senseless.\" He's right. For the supposed finish line of…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-27T16:15:52.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-6c5141d5d38f91d82f12",
-    "title": "Google&#8217;s AI Mode can now track flight prices, help book hotels, and more",
-    "url": "https://techcrunch.com/2026/08/27/googles-ai-mode-can-now-track-flight-prices-help-book-hotels-and-more/",
-    "source": "TechCrunch",
-    "summary": "The updates indicate that Google is looking to position AI Mode as an AI travel agent of sorts, as it's moving beyond simply helping users find information to actually handling parts of the trip-planning and booking process.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-27T16:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-5a6b85529262921a7e71",
@@ -333,31 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T16:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-740a2542039e858a3140",
-    "title": "Hugging Face is selling a cute $399 open source duck robot, Microduck",
-    "url": "https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/",
-    "source": "TechCrunch",
-    "summary": "Clem Delangue, CEO of Hugging Face, said the Microduck is an “open-source robot you can teach new tricks with reinforcement learning.”",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-27T14:56:52.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-e180fa990e85905b92ce",
-    "title": "AI&#8217;s memory crunch is coming for Android apps",
-    "url": "https://techcrunch.com/2026/08/27/ais-memory-crunch-is-coming-for-android-apps/",
-    "source": "TechCrunch",
-    "summary": "Google is setting new memory-use limits for Android apps as AI data centers contribute to hardware shortages that could leave lower-cost phones with less memory.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-27T14:27:04.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-b0a07733da19ab46afaf",
@@ -369,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T14:01:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-6d40dbd1f0ab4a678e76",
@@ -381,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T14:00:13.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-d9738fe90b0db3caf0e0",
-    "title": "OpenAI&#8217;s executive exodus has one big winner",
-    "url": "https://www.theverge.com/podcast/985332/openai-greg-brockman-sam-altman-leader-executive-exodus",
-    "source": "The Verge",
-    "summary": "Today on Decoder, I’m talking to Verge senior AI reporter Hayden Field about some pure Decoder bait: the seemingly-endless org chart changes at OpenAI, and how all of them seem to consolidate power under cofounder Greg Brockman, the company’s president. While Sam Altman is the CEO and still OpenAI’s most public face,…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-27T14:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-3544561ca68563ba7a9d",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T12:58:59.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-c92e20e633fb44329627",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T12:01:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-3062d8cdad5fdcd904c8",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T09:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-57e276283c193e592689",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T03:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-fbbe9e7cb9c58dc1f0a2",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-26T21:25:27.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-3f482c14d673661bf476",
@@ -465,19 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-26T14:30:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-d6bb1031e66bcecd18dd",
-    "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
-    "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
-    "source": "OpenAI",
-    "summary": "ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI tools, training, and support to over 100,000 more educators and staff.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-26T10:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-cdfc10030b4b066d2f99",
@@ -489,7 +489,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-26T10:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
+  },
+  {
+    "id": "news-d6bb1031e66bcecd18dd",
+    "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
+    "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+    "source": "OpenAI",
+    "summary": "ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI tools, training, and support to over 100,000 more educators and staff.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-08-26T10:00:00.000Z",
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-d34e82eae2f299fc3396",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-26T00:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-504dd1ec950803b896fd",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-26T00:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-5f0b03166bf110740909",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-25T16:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-829e237a888dfb1db7a5",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-25T07:05:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-9ad99bb5f40a3110bd85",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-25T07:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-cfc376addf8c822433f0",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-25T00:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-da55f7d7bd9decaab106",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-25T00:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-df015003760c1205d1ec",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-24T12:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-901b75f2181aea7b9069",
@@ -597,19 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-20T13:00:35.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
-  },
-  {
-    "id": "news-027379c08484bed24af9",
-    "title": "Introducing Intelligence Age",
-    "url": "https://openai.com/index/introducing-ai-futures",
-    "source": "OpenAI",
-    "summary": "Introducing Intelligence Age, a new OpenAI blog exploring how transformative AI could reshape power, governance, the economy, and individual freedom.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-20T07:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-afca402187c86ebe253c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-20T07:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-cb030de2dd9418a32324",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-20T00:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-a874149274891c9d7927",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-19T19:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-ef913e9fdabc01a874a3",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-19T19:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-e2f95ae810b5d581a130",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-19T14:18:12.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-9ac0643f24279d0897e7",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-19T07:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:39"
+    "discovered_at": "2026-08-31 20:00:20"
   },
   {
     "id": "news-ef87e3b0ab280005796c",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-17T08:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-56f28cd3a41a0cfa2518",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T14:27:14.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-8a4a811ddfc4a6b4b51d",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-14T00:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-4cbb438f4fdf5c0b131d",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-13T16:45:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-80c120873d58c484595f",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-12T21:43:21.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:22"
   },
   {
     "id": "news-dbc30e861442f93d6f8e",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-11T17:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-ae2292bf453d4eb7832c",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-10T14:30:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-2a0a276054536ae62f3e",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-04T13:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   },
   {
     "id": "news-928c08785b292a8ecd7d",
@@ -789,6 +789,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-03T15:00:00.000Z",
-    "discovered_at": "2026-08-31 13:40:40"
+    "discovered_at": "2026-08-31 20:00:21"
   }
 ]

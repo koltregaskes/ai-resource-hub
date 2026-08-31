@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 31 Aug 2026, 13:40 UTC
+Generated: 31 Aug 2026, 20:00 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -24,9 +24,9 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 21 Jul 2026 | Gemini 3.6 Flash (batch) | Google | tracking | watch | ready for editor | 0 | 4 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
 | 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | watch | ready for editor | 0 | 4 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
 | 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
-| 9 Jul 2026 | GPT-5.6 Sol | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
-| 9 Jul 2026 | GPT-5.6 Terra | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
-| 9 Jul 2026 | GPT-5.6 Luna | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
-| 9 Jul 2026 | GPT-5.6 Luna Pro | OpenAI | tracking | watch | watch only | 0 | 6 | n/a |
+| 9 Jul 2026 | GPT-5.6 Sol (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
+| 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
+| 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | watch | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
+| 8 Jul 2026 | Grok 4.5 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)

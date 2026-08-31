@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 31 Aug 2026, 13:40 UTC
+Generated: 31 Aug 2026, 20:00 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 31 Aug 2026, 13:40 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 31 Aug 2026, 13:40 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 31 Aug 2026, 13:40 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 31 Aug 2026, 13:40 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 31 Aug 2026, 13:40 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 31 Aug 2026, 12:00 UTC | digest | ChatGPT to face tougher regulation in the EU | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa) |
-| 31 Aug 2026, 12:00 UTC | digest | Instagram cracks down on AI accounts pretending to be human | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/986593/instagram-addresses-fake-ai-profile-slop) |
-| 31 Aug 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,143 open roles across 10 tracked companies. | `/jobs/` |
-| 31 Aug 2026, 12:00 UTC | digest | Meeting notetaker Circleback adds a free tier to attract more customers | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/) |
-| 31 Aug 2026, 12:00 UTC | digest | Published the 2026-08-31 daily digest | 4 stories captured from 2 sources. | `/news/` |
+| 31 Aug 2026, 20:00 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 31 Aug 2026, 20:00 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 31 Aug 2026, 20:00 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 31 Aug 2026, 20:00 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 31 Aug 2026, 20:00 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 31 Aug 2026, 12:00 UTC | digest | Clipto uses AI to search terabytes of video and is now valued at $250M | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/) |
+| 31 Aug 2026, 12:00 UTC | digest | Harvard Law dropout raises $6M for Blue Voice to build a &#8216;Harvey for police officers&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/08/31/harvard-law-dropout-raises-6m-for-blue-voice-to-build-a-harvey-for-police-officers/) |
+| 31 Aug 2026, 12:00 UTC | digest | Instagram puts new limits on undisclosed AI profiles | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/08/31/instagram-puts-new-limits-on-undisclosed-ai-profiles/) |
+| 31 Aug 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,141 open roles across 10 tracked companies. | `/jobs/` |
+| 31 Aug 2026, 12:00 UTC | digest | Published the 2026-08-31 daily digest | 11 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -25,4 +25,4 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 17 Feb 2026, 12:00 UTC | models | Claude Sonnet 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-sonnet-4.6/` |
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
-| 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
+| 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
