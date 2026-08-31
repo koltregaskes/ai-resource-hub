@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T20:00:24.335Z",
+  "generatedAt": "2026-08-31T20:23:12.755Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:00:24.328Z",
+      "lastCheckedAt": "2026-08-31T20:23:12.714Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:00:23.005Z",
+      "lastCheckedAt": "2026-08-31T20:23:11.587Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
       "summary": "1 active incident across 25 tracked components.",
@@ -135,24 +135,24 @@
         {
           "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
           "title": "ChatGPT Work seeing elevated errors and latency",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-08-31T15:04:53.000Z",
-          "updatedAt": "2026-08-31T19:29:27.000Z",
+          "updatedAt": "2026-08-31T20:01:16.000Z",
           "resolvedAt": null,
-          "summary": "User across multiple subscription plans may be unable to start or continue tasks in ChatGPT Work.\n\nWe are continuing work on implementing a mitigation."
+          "summary": "We have applied a mitigation and are monitoring recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
           "title": "ChatGPT Work seeing elevated errors and latency",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-08-31T15:04:53.000Z",
-          "updatedAt": "2026-08-31T19:29:27.000Z",
+          "updatedAt": "2026-08-31T20:01:16.000Z",
           "resolvedAt": null,
-          "summary": "User across multiple subscription plans may be unable to start or continue tasks in ChatGPT Work.\n\nWe are continuing work on implementing a mitigation."
+          "summary": "We have applied a mitigation and are monitoring recovery."
         },
         {
           "id": "01M1263309PD7VYV8EF95W2M2P",
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:00:23.103Z",
+      "lastCheckedAt": "2026-08-31T20:23:11.555Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:00:23.422Z",
+      "lastCheckedAt": "2026-08-31T20:23:12.201Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:00:23.775Z",
+      "lastCheckedAt": "2026-08-31T20:23:12.482Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:00:23.193Z",
+      "lastCheckedAt": "2026-08-31T20:23:11.814Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -371,7 +371,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-08-31T20:00:24.175Z",
+      "lastCheckedAt": "2026-08-31T20:23:12.745Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
