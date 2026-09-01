@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 01 Sept 2026, 13:55 UTC
+Generated: 01 Sept 2026, 14:51 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 01 Sept 2026, 13:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 01 Sept 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 01 Sept 2026, 13:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 01 Sept 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 01 Sept 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 01 Sept 2026, 14:50 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 01 Sept 2026, 14:50 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 01 Sept 2026, 14:50 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 01 Sept 2026, 14:50 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 01 Sept 2026, 14:50 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 01 Sept 2026, 12:00 UTC | digest | Apple shares &#8216;shocking evidence&#8217; against former employee accused of stealing company data for OpenAI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/08/31/apple-shares-shocking-evidence-against-former-employee-accused-of-stealing-company-data-for-openai/) |
-| 01 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,145 open roles across 10 tracked companies. | `/jobs/` |
+| 01 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,146 open roles across 10 tracked companies. | `/jobs/` |
 | 01 Sept 2026, 12:00 UTC | digest | Nvidia&#8217;s controversial DLSS 5 arrives September 3rd and requires serious GPU horsepower | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/986378/nvidia-dlss-5-launch-nba-2k27) |
 | 01 Sept 2026, 12:00 UTC | digest | Published the 2026-09-01 daily digest | 2 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
