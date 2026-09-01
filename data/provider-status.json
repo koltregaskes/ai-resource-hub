@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T18:50:47.461Z",
+  "generatedAt": "2026-09-01T19:55:36.162Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T18:50:47.213Z",
+      "lastCheckedAt": "2026-09-01T19:55:36.155Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,103 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T18:50:45.642Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Responses",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Codex in ChatGPT Desktop",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M1CYZDD84XD0H56XNEV2PT98",
-          "title": "Elevated latency in the Responses API",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-31T22:27:56.000Z",
-          "updatedAt": "2026-09-01T18:09:31.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M1CYZDD84XD0H56XNEV2PT98",
-          "title": "Elevated latency in the Responses API",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-08-31T22:27:56.000Z",
-          "updatedAt": "2026-09-01T18:09:31.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01M1D6E14BQSYQA3R5CNQBB7EB",
-          "title": "Elevated errors in ChatGPT conversations for Free and Go plans",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-01T00:38:15.000Z",
-          "updatedAt": "2026-09-01T01:00:01.000Z",
-          "resolvedAt": "2026-09-01T01:00:01.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
-          "title": "ChatGPT Work seeing elevated errors and latency",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-08-31T15:04:53.000Z",
-          "updatedAt": "2026-08-31T20:28:40.000Z",
-          "resolvedAt": "2026-08-31T20:28:40.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M1263309PD7VYV8EF95W2M2P",
-          "title": "Users may experience an increase in error rates in Workspace Agents and ChatGPT Work on Web and Mobile",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-08-27T18:00:38.000Z",
-          "updatedAt": "2026-08-27T22:14:44.000Z",
-          "resolvedAt": "2026-08-27T22:14:44.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "mistral",
       "providerId": "mistral",
       "name": "Mistral",
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T18:50:46.378Z",
+      "lastCheckedAt": "2026-09-01T19:55:35.084Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -217,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T18:50:47.452Z",
+      "lastCheckedAt": "2026-09-01T19:55:34.932Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T18:50:46.671Z",
+      "lastCheckedAt": "2026-09-01T19:55:35.617Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T18:50:45.924Z",
+      "lastCheckedAt": "2026-09-01T19:55:34.720Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -349,6 +252,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-01T19:55:34.789Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01M1CYZDD84XD0H56XNEV2PT98",
+          "title": "Elevated latency in the Responses API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-31T22:27:56.000Z",
+          "updatedAt": "2026-09-01T19:05:46.000Z",
+          "resolvedAt": "2026-09-01T19:05:46.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M1D6E14BQSYQA3R5CNQBB7EB",
+          "title": "Elevated errors in ChatGPT conversations for Free and Go plans",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-01T00:38:15.000Z",
+          "updatedAt": "2026-09-01T01:00:01.000Z",
+          "resolvedAt": "2026-09-01T01:00:01.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M1C5M4K0WC8PPT0Z175RJA1E",
+          "title": "ChatGPT Work seeing elevated errors and latency",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-08-31T15:04:53.000Z",
+          "updatedAt": "2026-08-31T20:28:40.000Z",
+          "resolvedAt": "2026-08-31T20:28:40.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M1263309PD7VYV8EF95W2M2P",
+          "title": "Users may experience an increase in error rates in Workspace Agents and ChatGPT Work on Web and Mobile",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-08-27T18:00:38.000Z",
+          "updatedAt": "2026-08-27T22:14:44.000Z",
+          "resolvedAt": "2026-08-27T22:14:44.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -359,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T18:50:47.275Z",
+      "lastCheckedAt": "2026-09-01T19:55:35.803Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
