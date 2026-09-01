@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 31 Aug 2026, 23:48 UTC
+Generated: 01 Sept 2026, 05:02 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -19,8 +19,8 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 9 | Claude Sonnet 4.6 (batch) | Anthropic | 42.9 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
 | 10 | R1 0528 | DeepSeek | 40.8 | 82.4 / 6 | 23% | Chat | $0.50 / $2.15 | 28 May 2025 |
 | 11 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $1.00 / $4.00 | 16 Apr 2025 |
-| 12 | Qwen3 Max | Alibaba | 39.7 | 86.1 / 4 | 15% | Coding | $0.78 / $3.90 | 01 Sept 2025 |
-| 13 | Gemini 2.5 Pro | Google | 38.1 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
+| 12 | Gemini 2.5 Pro | Google | 38.1 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
+| 13 | Qwen3 Max | Alibaba | 37.8 | 86.1 / 4 | 15% | Coding | $0.78 / $3.90 | 01 Sept 2025 |
 | 14 | Mistral Small 3.1 24B | Mistral | 36.7 | 76.1 / 3 | 9% | Coding | $0.35 / $0.56 | 18 Mar 2025 |
 | 15 | Claude Opus 4 | Anthropic | 36.6 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
 | 16 | Grok 4 | xAI | 35.2 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
