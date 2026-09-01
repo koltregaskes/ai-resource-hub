@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-01T12:55:39.969Z",
+  "generatedAt": "2026-09-01T13:55:44.417Z",
   "overview": {
-    "generatedAt": "2026-09-01T12:55:39.980Z",
+    "generatedAt": "2026-09-01T13:55:44.430Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
@@ -98,10 +98,10 @@
         "claude-fable-5",
         "claude-mythos-preview",
         "claude-opus-4.7",
-        "claude-opus-4.8-fast",
         "claude-opus-4.8",
-        "claude-opus-5-fast",
+        "claude-opus-4.8-fast",
         "claude-opus-5",
+        "claude-opus-5-fast",
         "claude-sonnet-5"
       ],
       "matchingModelNames": [
@@ -120,10 +120,10 @@
         "Claude Fable 5 (batch)",
         "Claude Mythos Preview",
         "Claude Opus 4.7 (batch)",
-        "Claude Opus 4.8 (Fast)",
         "Claude Opus 4.8 (batch)",
-        "Claude Opus 5 (Fast)",
+        "Claude Opus 4.8 Fast",
         "Claude Opus 5 (batch)",
+        "Claude Opus 5 Fast",
         "Claude Sonnet 5 (batch)"
       ],
       "surfaceLabel": "Web + App"
