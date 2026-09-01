@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 01 Sept 2026, 11:55 UTC
+Generated: 01 Sept 2026, 12:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
+| 01 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 01 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 01 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 01 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 01 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 01 Sept 2026, 12:00 UTC | digest | Apple shares &#8216;shocking evidence&#8217; against former employee accused of stealing company data for OpenAI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/08/31/apple-shares-shocking-evidence-against-former-employee-accused-of-stealing-company-data-for-openai/) |
-| 01 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,139 open roles across 10 tracked companies. | `/jobs/` |
+| 01 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,137 open roles across 10 tracked companies. | `/jobs/` |
 | 01 Sept 2026, 12:00 UTC | digest | Published the 2026-09-01 daily digest | 1 stories captured from 1 sources. | `/news/` |
-| 01 Sept 2026, 11:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 01 Sept 2026, 11:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 01 Sept 2026, 11:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 01 Sept 2026, 11:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 01 Sept 2026, 11:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
