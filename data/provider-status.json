@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T18:38:56.244Z",
+  "generatedAt": "2026-09-02T18:56:56.215Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-02T18:38:56.236Z",
+      "lastCheckedAt": "2026-09-02T18:56:56.169Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-02T18:38:55.692Z",
+      "lastCheckedAt": "2026-09-02T18:56:55.689Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-02T18:38:54.882Z",
+      "lastCheckedAt": "2026-09-02T18:56:54.955Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-02T18:38:55.807Z",
+      "lastCheckedAt": "2026-09-02T18:56:56.060Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-02T18:38:55.269Z",
+      "lastCheckedAt": "2026-09-02T18:56:55.500Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,10 +262,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-02T18:38:53.593Z",
+      "lastCheckedAt": "2026-09-02T18:56:54.923Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -293,28 +293,17 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01M1HN7GRR6FJNWFVX2F8QMA3R",
-          "title": "Elevated errors creating new accounts",
-          "status": "investigating",
-          "impact": "none",
-          "startedAt": "2026-09-02T18:13:48.000Z",
-          "updatedAt": "2026-09-02T18:13:48.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating an issue preventing some users from creating new accounts. We will share updates as we learn more."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "01M1HN7GRR6FJNWFVX2F8QMA3R",
           "title": "Elevated errors creating new accounts",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-09-02T18:13:48.000Z",
-          "updatedAt": "2026-09-02T18:13:48.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating an issue preventing some users from creating new accounts. We will share updates as we learn more."
+          "updatedAt": "2026-09-02T18:45:12.000Z",
+          "resolvedAt": "2026-09-02T18:45:12.000Z",
+          "summary": "The issue affecting new account creation has been resolved."
         },
         {
           "id": "01M1CYZDD84XD0H56XNEV2PT98",
@@ -359,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-02T18:38:56.083Z",
+      "lastCheckedAt": "2026-09-02T18:56:56.210Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
