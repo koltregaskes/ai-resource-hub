@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 02 Sept 2026, 19:55 UTC
+Generated: 02 Sept 2026, 20:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Sept 2026, 19:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 02 Sept 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Sept 2026, 19:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 02 Sept 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Sept 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 02 Sept 2026, 20:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 02 Sept 2026, 20:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 02 Sept 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 02 Sept 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 02 Sept 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Sept 2026, 12:00 UTC | digest | Amazon’s AI assistant can now spot fake emails from the company | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/988518/amazon-alexa-for-shopping-verify-emails) |
-| 02 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,138 open roles across 10 tracked companies. | `/jobs/` |
-| 02 Sept 2026, 12:00 UTC | digest | Pangram&#8217;s Max Spero on why AI detection is harder than &#8216;Real or Fake&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/pangrams-max-spero-on-why-ai-detection-is-harder-than-real-or-fake/) |
-| 02 Sept 2026, 12:00 UTC | digest | Published the 2026-09-02 daily digest | 16 stories captured from 3 sources. | `/news/` |
-| 02 Sept 2026, 12:00 UTC | digest | We&#8217;re ‘dangerously close’ to dead internet theory, says Pangram&#8217;s CEO | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/were-dangerously-close-to-dead-internet-theory-says-pangrams-ceo/) |
+| 02 Sept 2026, 12:00 UTC | digest | Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash) |
+| 02 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,139 open roles across 10 tracked companies. | `/jobs/` |
+| 02 Sept 2026, 12:00 UTC | digest | OpenAI’s new reasoning technique alarms AI safety experts | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/) |
+| 02 Sept 2026, 12:00 UTC | digest | Published the 2026-09-02 daily digest | 18 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
