@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T23:55:42.849Z",
+  "generatedAt": "2026-09-02T00:08:16.091Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T23:55:42.789Z",
+      "lastCheckedAt": "2026-09-02T00:08:16.016Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-01T23:45:40.000Z",
+          "id": "fireworks-feed-0-2026-09-02T00:00:20.000Z",
           "title": "Service Degradation for GLM 5.3 Flash",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-09-01T23:45:40.000Z",
-          "updatedAt": "2026-09-01T23:45:40.000Z",
+          "startedAt": "2026-09-02T00:00:20.000Z",
+          "updatedAt": "2026-09-02T00:00:20.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M1FNTEG55699C8YM9CY1G7PM",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3 Flash. We are actively investigating. Affected components GLM 5.3 Flash (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-09-01T23:20:23.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-01T23:45:40.000Z",
+          "id": "fireworks-feed-0-2026-09-02T00:00:20.000Z",
           "title": "Service Degradation for GLM 5.3 Flash",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-09-01T23:45:40.000Z",
-          "updatedAt": "2026-09-01T23:45:40.000Z",
+          "startedAt": "2026-09-02T00:00:20.000Z",
+          "updatedAt": "2026-09-02T00:00:20.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M1FNTEG55699C8YM9CY1G7PM",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3 Flash. We are actively investigating. Affected components GLM 5.3 Flash (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-09-01T23:20:23.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T23:55:41.966Z",
+      "lastCheckedAt": "2026-09-02T00:08:15.145Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,11 +202,31 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T23:55:42.197Z",
+      "lastCheckedAt": "2026-09-02T00:08:15.546Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
       "notes": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-02T00:08:16.085Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
@@ -222,7 +242,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T23:55:42.741Z",
+      "lastCheckedAt": "2026-09-02T00:08:15.897Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -242,7 +262,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T23:55:41.978Z",
+      "lastCheckedAt": "2026-09-02T00:08:15.255Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -274,7 +294,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T23:55:41.823Z",
+      "lastCheckedAt": "2026-09-02T00:08:15.281Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -350,26 +370,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-01T23:55:42.842Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -384,7 +384,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
