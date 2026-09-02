@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 02 Sept 2026, 05:55 UTC
+Generated: 02 Sept 2026, 06:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,136 open roles across 10 tracked companies. | `/jobs/` |
-| 02 Sept 2026, 05:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 02 Sept 2026, 05:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Sept 2026, 05:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 02 Sept 2026, 05:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Sept 2026, 05:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 02 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,135 open roles across 10 tracked companies. | `/jobs/` |
+| 02 Sept 2026, 06:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 02 Sept 2026, 06:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 02 Sept 2026, 06:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 02 Sept 2026, 06:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 02 Sept 2026, 06:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 01 Sept 2026, 12:00 UTC | digest | AfterQuery reportedly becomes Y Combinator&#8217;s fastest-ever unicorn, now valued at $3.2B | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b/) |
 | 01 Sept 2026, 12:00 UTC | digest | Anthropic launches Claude Fable 5.1 and says it&#8217;s up to 45 percent cheaper for agentic work | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/987830/anthropic-claude-fable-mythos-5-1) |
 | 01 Sept 2026, 12:00 UTC | digest | Google needs Hollywood more than the studios need AI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai) |
