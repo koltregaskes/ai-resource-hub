@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 03 Sept 2026, 17:56 UTC
+Generated: 03 Sept 2026, 18:35 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 03 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 03 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 03 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 03 Sept 2026, 12:00 UTC | digest | Google now lets you chat with Gmail, Docs, and Keep | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini) |
-| 03 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,148 open roles across 10 tracked companies. | `/jobs/` |
-| 03 Sept 2026, 12:00 UTC | digest | Nvidia launches free tool that links idle computers into a personal AI data center | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook) |
-| 03 Sept 2026, 12:00 UTC | digest | Ollie is betting its focus on privacy can help it win the AI assistant race | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/) |
-| 03 Sept 2026, 12:00 UTC | digest | Published the 2026-09-03 daily digest | 8 stories captured from 2 sources. | `/news/` |
+| 03 Sept 2026, 18:35 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 03 Sept 2026, 18:35 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 03 Sept 2026, 18:35 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Sept 2026, 18:35 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Sept 2026, 18:35 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,147 open roles across 10 tracked companies. | `/jobs/` |
+| 03 Sept 2026, 12:00 UTC | digest | Meta is paying to peek at how you use their latest AI model | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/) |
+| 03 Sept 2026, 12:00 UTC | digest | OpenAI launches Astra, its powerful (and controversial) new model | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/) |
+| 03 Sept 2026, 12:00 UTC | digest | OpenAI’s next big AI model has ‘entered the AGI era’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release) |
+| 03 Sept 2026, 12:00 UTC | digest | Published the 2026-09-03 daily digest | 13 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
