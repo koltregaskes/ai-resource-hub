@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 03 Sept 2026, 13:55 UTC
+Generated: 03 Sept 2026, 14:31 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Sept 2026, 13:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 03 Sept 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Sept 2026, 13:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 03 Sept 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 03 Sept 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Sept 2026, 14:31 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 03 Sept 2026, 14:31 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Sept 2026, 14:31 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 03 Sept 2026, 14:31 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Sept 2026, 14:31 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 03 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,138 open roles across 10 tracked companies. | `/jobs/` |
 | 03 Sept 2026, 12:00 UTC | digest | Nvidia confirms it will buy Hugging Face for $12.9 billion | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/) |
 | 03 Sept 2026, 12:00 UTC | digest | Nvidia is buying Hugging Face for almost $13 billion | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/985474/nvidia-buying-hugging-face-deal) |
