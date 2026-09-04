@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 03 Sept 2026, 23:58 UTC
+Generated: 04 Sept 2026, 00:05 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -26,8 +26,8 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 | 16 | Grok 4 | xAI | 35.2 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
 | 17 | DeepSeek R1 | DeepSeek | 34.5 | 70.9 / 19 | 58% | General use | $0.70 / $2.50 | 20 Jan 2025 |
 | 18 | Claude Sonnet 4 | Anthropic | 34.0 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
-| 19 | Command A | Cohere | 32.9 | 82.4 / 3 | 9% | Coding | $2.50 / $10.00 | 13 Mar 2025 |
-| 20 | Grok 3 | xAI | 32.6 | 84.7 / 7 | 24% | General use | $3.00 / $15.00 | 10 Jun 2025 |
+| 19 | Grok 3 | xAI | 32.6 | 84.7 / 7 | 24% | General use | $3.00 / $15.00 | 10 Jun 2025 |
+| 20 | GPT-5 Pro (batch) | OpenAI | 32.5 | 88.5 / 4 | 16% | Chat | $7.50 / $60.00 | 06 Oct 2025 |
 
 Notes:
 
