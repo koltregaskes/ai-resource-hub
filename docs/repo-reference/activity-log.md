@@ -1,20 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 04 Sept 2026, 10:59 UTC
+Generated: 04 Sept 2026, 11:59 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 04 Sept 2026, 12:00 UTC | digest | Crusoe reportedly raises $3B at a $30B valuation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/) |
-| 04 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,160 open roles across 10 tracked companies. | `/jobs/` |
-| 04 Sept 2026, 12:00 UTC | digest | Published the 2026-09-04 daily digest | 2 stories captured from 1 sources. | `/news/` |
-| 04 Sept 2026, 12:00 UTC | digest | The sameness problem behind those unappetizing AI-generated menus | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/) |
-| 04 Sept 2026, 10:59 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 04 Sept 2026, 10:59 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 04 Sept 2026, 10:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 04 Sept 2026, 10:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 04 Sept 2026, 10:59 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 04 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,161 open roles across 10 tracked companies. | `/jobs/` |
+| 04 Sept 2026, 12:00 UTC | digest | Microsoft’s Project Zenith is a ‘distraction-free Windows experience’ for developers | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/news/990051/microsoft-project-zenith-windows-developers) |
+| 04 Sept 2026, 12:00 UTC | digest | Published the 2026-09-04 daily digest | 6 stories captured from 2 sources. | `/news/` |
+| 04 Sept 2026, 12:00 UTC | digest | Sam Altman apologizes for &#8216;messy&#8217; GPT-6 Astra rollout that’s locked out paying users | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout) |
+| 04 Sept 2026, 12:00 UTC | digest | Why AI food looks like that | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/989376/ai-generated-food-why-does-it-look-like-that) |
+| 04 Sept 2026, 11:58 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 04 Sept 2026, 11:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 04 Sept 2026, 11:58 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 04 Sept 2026, 11:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 04 Sept 2026, 11:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -25,4 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
-| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
