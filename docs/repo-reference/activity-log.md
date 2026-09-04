@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 04 Sept 2026, 14:19 UTC
+Generated: 04 Sept 2026, 16:00 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 04 Sept 2026, 14:19 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 04 Sept 2026, 14:19 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 04 Sept 2026, 14:19 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 04 Sept 2026, 14:19 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 04 Sept 2026, 14:19 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 04 Sept 2026, 12:00 UTC | digest | Instagram’s AI detection is a mess (again) | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/989617/instagram-ai-content-label-confusion) |
+| 04 Sept 2026, 15:59 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 04 Sept 2026, 15:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 04 Sept 2026, 15:59 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 04 Sept 2026, 15:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 04 Sept 2026, 15:59 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 04 Sept 2026, 12:00 UTC | digest | Google&#8217;s Gemini Spark can now manage your Google Photos library | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/) |
 | 04 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,161 open roles across 10 tracked companies. | `/jobs/` |
 | 04 Sept 2026, 12:00 UTC | digest | Less than 24 hours to apply for your TechCrunch Disrupt 2026 Side Event | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/04/less-than-24-hours-to-apply-for-your-techcrunch-disrupt-2026-side-event/) |
 | 04 Sept 2026, 12:00 UTC | digest | Published the 2026-09-04 daily digest | 8 stories captured from 2 sources. | `/news/` |
