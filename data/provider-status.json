@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T09:56:34.580Z",
+  "generatedAt": "2026-09-04T10:59:14.243Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-04T09:56:34.237Z",
+      "lastCheckedAt": "2026-09-04T10:59:13.911Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-04T07:56:01.000Z",
+          "id": "fireworks-feed-0-2026-09-04T10:37:00.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-09-04T10:37:00.000Z",
+          "updatedAt": "2026-09-04T10:37:00.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M1NZWGZNEFAKC3VSHAQ10VFT",
+          "summary": "Status: Investigating We are seeing impacted performance for one of our Serverless models. We are actively investigating."
+        },
+        {
+          "id": "fireworks-feed-1-2026-09-04T07:56:01.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-09-04T07:56:01.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M1NNF8MJ8E89XRMY9BW78W2Y",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-09-02T23:05:20.000Z",
-          "title": "Service Degradation for one of our Serverless models",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-09-02T23:05:20.000Z",
-          "updatedAt": "2026-09-02T23:05:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M1J5E1XJT8QTZ20R54AQQG17",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-04T07:56:01.000Z",
+          "id": "fireworks-feed-0-2026-09-04T10:37:00.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-09-04T10:37:00.000Z",
+          "updatedAt": "2026-09-04T10:37:00.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M1NZWGZNEFAKC3VSHAQ10VFT",
+          "summary": "Status: Investigating We are seeing impacted performance for one of our Serverless models. We are actively investigating."
+        },
+        {
+          "id": "fireworks-feed-1-2026-09-04T07:56:01.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-09-02T23:05:20.000Z",
+          "id": "fireworks-feed-2-2026-09-02T23:05:20.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-09-02T16:56:44.000Z",
+          "id": "fireworks-feed-3-2026-09-02T16:56:44.000Z",
           "title": "Service Degradation for GLM 5.2",
           "status": "reported",
           "impact": "unknown",
@@ -75,114 +86,6 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M1HE3K82A0SSY74CF58CRNZQ",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-09-02T00:52:17.000Z",
-          "title": "Service Degradation for one of our Serverless models",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-09-02T00:52:17.000Z",
-          "updatedAt": "2026-09-02T00:52:17.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M1FRXY4VG5CX3E9J8S111DYS",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        }
-      ]
-    },
-    {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-04T09:56:33.463Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Codex Web",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "File uploads",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M1NKFZH5EEYEREC54HNAHY35",
-          "title": "Users in APAC region may face increased error in ChatGPT, Work, image generation, file upload, Voice, and Codex Cloud",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-09-04T07:00:26.000Z",
-          "updatedAt": "2026-09-04T09:47:58.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M1NKFZH5EEYEREC54HNAHY35",
-          "title": "Users in APAC region may face increased error in ChatGPT, Work, image generation, file upload, Voice, and Codex Cloud",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-09-04T07:00:26.000Z",
-          "updatedAt": "2026-09-04T09:47:58.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01M1KWEDH417T2CF44YYHZDFCR",
-          "title": "Elevated errors across ChatGPT and Codex",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-03T14:58:23.000Z",
-          "updatedAt": "2026-09-03T16:55:49.000Z",
-          "resolvedAt": "2026-09-03T16:55:49.000Z",
-          "summary": "The issue causing elevated errors across ChatGPT and Codex has been resolved.\n\nSome Codex remote control users may need to pair their mobile device again following this incident."
-        },
-        {
-          "id": "01M1J99EDCYED5GP2W8GZ3N2NA",
-          "title": "ChatGPT Work Mode High Error Rates",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-09-03T00:04:23.000Z",
-          "updatedAt": "2026-09-03T00:10:45.000Z",
-          "resolvedAt": "2026-09-03T00:10:45.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M1HN7GRR6FJNWFVX2F8QMA3R",
-          "title": "Elevated errors creating new accounts",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-02T18:13:48.000Z",
-          "updatedAt": "2026-09-02T18:45:12.000Z",
-          "resolvedAt": "2026-09-02T18:45:12.000Z",
-          "summary": "The issue affecting new account creation has been resolved."
         }
       ]
     },
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-04T09:56:33.768Z",
+      "lastCheckedAt": "2026-09-04T10:59:13.569Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -217,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-04T09:56:33.394Z",
+      "lastCheckedAt": "2026-09-04T10:59:13.163Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-04T09:56:34.211Z",
+      "lastCheckedAt": "2026-09-04T10:59:13.962Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-04T09:56:33.592Z",
+      "lastCheckedAt": "2026-09-04T10:59:13.374Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -349,6 +252,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-04T10:59:13.173Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Files",
+          "status": "operational"
+        },
+        {
+          "name": "FedRAMP",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01M1NKFZH5EEYEREC54HNAHY35",
+          "title": "Users in APAC region may face increased error in ChatGPT, Work, image generation, file upload, Voice, and Codex Cloud",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-04T07:00:26.000Z",
+          "updatedAt": "2026-09-04T10:46:54.000Z",
+          "resolvedAt": "2026-09-04T10:46:54.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M1KWEDH417T2CF44YYHZDFCR",
+          "title": "Elevated errors across ChatGPT and Codex",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-03T14:58:23.000Z",
+          "updatedAt": "2026-09-03T16:55:49.000Z",
+          "resolvedAt": "2026-09-03T16:55:49.000Z",
+          "summary": "The issue causing elevated errors across ChatGPT and Codex has been resolved.\n\nSome Codex remote control users may need to pair their mobile device again following this incident."
+        },
+        {
+          "id": "01M1J99EDCYED5GP2W8GZ3N2NA",
+          "title": "ChatGPT Work Mode High Error Rates",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-09-03T00:04:23.000Z",
+          "updatedAt": "2026-09-03T00:10:45.000Z",
+          "resolvedAt": "2026-09-03T00:10:45.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M1HN7GRR6FJNWFVX2F8QMA3R",
+          "title": "Elevated errors creating new accounts",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-02T18:13:48.000Z",
+          "updatedAt": "2026-09-02T18:45:12.000Z",
+          "resolvedAt": "2026-09-02T18:45:12.000Z",
+          "summary": "The issue affecting new account creation has been resolved."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -359,7 +348,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-04T09:56:34.573Z",
+      "lastCheckedAt": "2026-09-04T10:59:14.235Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -383,7 +372,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
