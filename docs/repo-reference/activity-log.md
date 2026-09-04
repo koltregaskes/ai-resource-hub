@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 04 Sept 2026, 16:56 UTC
+Generated: 04 Sept 2026, 18:21 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 04 Sept 2026, 16:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 04 Sept 2026, 16:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 04 Sept 2026, 16:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 04 Sept 2026, 16:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 04 Sept 2026, 16:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 04 Sept 2026, 18:21 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 04 Sept 2026, 18:21 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 04 Sept 2026, 18:21 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 04 Sept 2026, 18:21 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 04 Sept 2026, 18:21 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 04 Sept 2026, 12:00 UTC | digest | Another swarm of OpenAI agents reached the open internet without the frontier lab&#8217;s knowledge | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/) |
-| 04 Sept 2026, 12:00 UTC | digest | Apple&#8217;s Ternus era begins as Nvidia bets on the whole AI stack | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/apples-ternus-era-begins-as-nvidia-bets-on-the-whole-ai-stack/) |
-| 04 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,167 open roles across 10 tracked companies. | `/jobs/` |
-| 04 Sept 2026, 12:00 UTC | digest | Microsoft says virtually nobody was grabbing NYT articles through its chatbot | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit) |
-| 04 Sept 2026, 12:00 UTC | digest | Published the 2026-09-04 daily digest | 13 stories captured from 2 sources. | `/news/` |
+| 04 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,165 open roles across 10 tracked companies. | `/jobs/` |
+| 04 Sept 2026, 12:00 UTC | digest | Published the 2026-09-04 daily digest | 15 stories captured from 2 sources. | `/news/` |
+| 04 Sept 2026, 12:00 UTC | digest | Roland is getting into generative AI music with Melody Flip | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/990197/roland-ai-music-melody-flip) |
+| 04 Sept 2026, 12:00 UTC | digest | What will Apple&#8217;s John Ternus era look like? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/what-will-apples-john-ternus-era-look-like/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
