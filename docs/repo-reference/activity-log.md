@@ -1,18 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 06 Sept 2026, 16:56 UTC
+Generated: 06 Sept 2026, 17:00 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 06 Sept 2026, 16:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 06 Sept 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 06 Sept 2026, 16:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 06 Sept 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 06 Sept 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 06 Sept 2026, 17:00 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 06 Sept 2026, 17:00 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 06 Sept 2026, 17:00 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 06 Sept 2026, 17:00 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 06 Sept 2026, 17:00 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 06 Sept 2026, 12:00 UTC | digest | An Alien Mind | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/an-alien-mind) |
 | 06 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,156 open roles across 10 tracked companies. | `/jobs/` |
-| 06 Sept 2026, 12:00 UTC | digest | Published the 2026-09-06 daily digest | 2 stories captured from 2 sources. | `/news/` |
+| 06 Sept 2026, 12:00 UTC | digest | Published the 2026-09-06 daily digest | 3 stories captured from 2 sources. | `/news/` |
 | 06 Sept 2026, 12:00 UTC | digest | Research acceleration: The view inside OpenAI | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/research-acceleration-view-inside-openai) |
 | 06 Sept 2026, 12:00 UTC | digest | Travis Kalanick’s Atoms might be getting into the robotaxi business | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
@@ -25,4 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
-| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
