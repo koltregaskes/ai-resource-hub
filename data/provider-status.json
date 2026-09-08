@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T14:46:35.144Z",
+  "generatedAt": "2026-09-08T15:55:36.437Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-08T14:46:35.044Z",
+      "lastCheckedAt": "2026-09-08T15:55:36.305Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-08T14:46:34.206Z",
+      "lastCheckedAt": "2026-09-08T15:55:35.425Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "2 active incidents across 25 tracked components.",
@@ -133,46 +133,46 @@
       ],
       "activeIncidents": [
         {
-          "id": "01M20QBACYZMK2PRCJQCBSWTYJ",
-          "title": "File uploads are delayed or failing",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-09-08T14:39:27.000Z",
-          "updatedAt": "2026-09-08T14:39:27.000Z",
-          "resolvedAt": null,
-          "summary": "Some file uploads are failing to process. Successful uploads may take longer than usual to become available. We’re investigating and will share another update as we learn more."
-        },
-        {
           "id": "01M20PYYYGRT9303VHAPA7YNT2",
           "title": "Elevated errors for image generation",
           "status": "investigating",
           "impact": "minor",
           "startedAt": "2026-09-08T14:32:42.000Z",
-          "updatedAt": "2026-09-08T14:32:42.000Z",
+          "updatedAt": "2026-09-08T15:38:07.000Z",
           "resolvedAt": null,
-          "summary": "We’re investigating elevated errors affecting image generation in ChatGPT and the Images API. Some requests may fail. We’ll share another update as we learn more."
+          "summary": "> We’re continuing to investigate elevated errors affecting image generation in ChatGPT and the Images API. We saw an increase in failed Images API requests after our last update...."
+        },
+        {
+          "id": "01M20QBACYZMK2PRCJQCBSWTYJ",
+          "title": "File uploads are delayed or failing",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-09-08T14:39:27.000Z",
+          "updatedAt": "2026-09-08T15:37:05.000Z",
+          "resolvedAt": null,
+          "summary": "We’re continuing to investigate file-upload processing failures and delays in ChatGPT. Some files may appear uploaded but remain unavailable while processing; other uploads may fa..."
         }
       ],
       "recentIncidents": [
         {
-          "id": "01M20QBACYZMK2PRCJQCBSWTYJ",
-          "title": "File uploads are delayed or failing",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-09-08T14:39:27.000Z",
-          "updatedAt": "2026-09-08T14:39:27.000Z",
-          "resolvedAt": null,
-          "summary": "Some file uploads are failing to process. Successful uploads may take longer than usual to become available. We’re investigating and will share another update as we learn more."
-        },
-        {
           "id": "01M20PYYYGRT9303VHAPA7YNT2",
           "title": "Elevated errors for image generation",
           "status": "investigating",
           "impact": "minor",
           "startedAt": "2026-09-08T14:32:42.000Z",
-          "updatedAt": "2026-09-08T14:32:42.000Z",
+          "updatedAt": "2026-09-08T15:38:07.000Z",
           "resolvedAt": null,
-          "summary": "We’re investigating elevated errors affecting image generation in ChatGPT and the Images API. Some requests may fail. We’ll share another update as we learn more."
+          "summary": "> We’re continuing to investigate elevated errors affecting image generation in ChatGPT and the Images API. We saw an increase in failed Images API requests after our last update...."
+        },
+        {
+          "id": "01M20QBACYZMK2PRCJQCBSWTYJ",
+          "title": "File uploads are delayed or failing",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-09-08T14:39:27.000Z",
+          "updatedAt": "2026-09-08T15:37:05.000Z",
+          "resolvedAt": null,
+          "summary": "We’re continuing to investigate file-upload processing failures and delays in ChatGPT. Some files may appear uploaded but remain unavailable while processing; other uploads may fa..."
         },
         {
           "id": "01M1NKFZH5EEYEREC54HNAHY35",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-08T14:46:34.550Z",
+      "lastCheckedAt": "2026-09-08T15:55:35.933Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -227,7 +227,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-08T14:46:34.402Z",
+      "lastCheckedAt": "2026-09-08T15:55:35.386Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -317,7 +317,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-08T14:46:34.974Z",
+      "lastCheckedAt": "2026-09-08T15:55:36.322Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -337,7 +337,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-08T14:46:34.766Z",
+      "lastCheckedAt": "2026-09-08T15:55:35.630Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -369,7 +369,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-08T14:46:35.136Z",
+      "lastCheckedAt": "2026-09-08T15:55:36.430Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -393,7 +393,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
