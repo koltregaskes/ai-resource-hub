@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 08 Sept 2026, 12:55 UTC
+Generated: 08 Sept 2026, 13:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 08 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 08 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 08 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 08 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 08 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 08 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,148 open roles across 10 tracked companies. | `/jobs/` |
-| 07 Sept 2026, 12:00 UTC | digest | Opaque recurrence, and other AI terms that you should probably know | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/07/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/) |
-| 07 Sept 2026, 12:00 UTC | digest | Published the 2026-09-07 daily digest | 2 stories captured from 2 sources. | `/news/` |
-| 07 Sept 2026, 12:00 UTC | digest | Supporting independent journalism in Ukraine | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/supporting-independent-journalism-in-ukraine) |
+| 08 Sept 2026, 13:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 08 Sept 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 08 Sept 2026, 13:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 08 Sept 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 08 Sept 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 08 Sept 2026, 12:00 UTC | digest | Adobe is trying to make its AI generators idiot-proof in Premiere | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/991133/adobe-is-trying-to-make-its-ai-generators-idiot-proof-in-premiere) |
+| 08 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,147 open roles across 10 tracked companies. | `/jobs/` |
+| 08 Sept 2026, 12:00 UTC | digest | Published the 2026-09-08 daily digest | 2 stories captured from 2 sources. | `/news/` |
+| 08 Sept 2026, 12:00 UTC | digest | The Work Now Within Reach | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/the-work-now-within-reach) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
