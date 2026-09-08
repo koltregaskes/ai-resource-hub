@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 08 Sept 2026, 18:36 UTC
+Generated: 08 Sept 2026, 19:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 08 Sept 2026, 18:36 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 08 Sept 2026, 18:36 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 08 Sept 2026, 18:36 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 08 Sept 2026, 18:36 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 08 Sept 2026, 18:36 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 08 Sept 2026, 12:00 UTC | digest | A new class action lawsuit questions whether Anthropic broke the law by misleading power users | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/990313/anthropic-class-action-lawsuit-pricing-subscription-plans) |
-| 08 Sept 2026, 12:00 UTC | digest | Google Cloud races to catch up in the AI deployment wars with Accenture deal | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/) |
-| 08 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,146 open roles across 10 tracked companies. | `/jobs/` |
+| 08 Sept 2026, 19:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 08 Sept 2026, 19:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 08 Sept 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 08 Sept 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 08 Sept 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 08 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,147 open roles across 10 tracked companies. | `/jobs/` |
+| 08 Sept 2026, 12:00 UTC | digest | Meta bets on AI agent Muse to catch up in AI race | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race) |
+| 08 Sept 2026, 12:00 UTC | digest | Meta debuts its Muse AI agent. Will consumers trust it? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/) |
 | 08 Sept 2026, 12:00 UTC | digest | OpenAI fought dirty on career-making math problem, says NYU mathematician | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/) |
-| 08 Sept 2026, 12:00 UTC | digest | Published the 2026-09-08 daily digest | 11 stories captured from 3 sources. | `/news/` |
+| 08 Sept 2026, 12:00 UTC | digest | Published the 2026-09-08 daily digest | 15 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
