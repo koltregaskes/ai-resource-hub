@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 08 Sept 2026, 22:55 UTC
+Generated: 08 Sept 2026, 23:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 08 Sept 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 08 Sept 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 08 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 08 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 08 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 08 Sept 2026, 23:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 08 Sept 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 08 Sept 2026, 23:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 08 Sept 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 08 Sept 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 08 Sept 2026, 12:00 UTC | digest | Cognition hits $48B valuation, signaling investors believe AI coding is far from a winner-take-all market | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/) |
-| 08 Sept 2026, 12:00 UTC | digest | Drama swirls around OpenAI’s legendary mathematical milestone | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/991710/openai-navier-stokes-solution) |
 | 08 Sept 2026, 12:00 UTC | digest | Hackers are stealing Claude tokens from subscribers | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/) |
 | 08 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,149 open roles across 10 tracked companies. | `/jobs/` |
-| 08 Sept 2026, 12:00 UTC | digest | Published the 2026-09-08 daily digest | 20 stories captured from 3 sources. | `/news/` |
+| 08 Sept 2026, 12:00 UTC | digest | Published the 2026-09-08 daily digest | 20 stories captured from 4 sources. | `/news/` |
+| 08 Sept 2026, 12:00 UTC | digest | Why this month&#039;s Microsoft patch release is a doozy | Ars Technica featured in the latest daily brief. | [open](https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
