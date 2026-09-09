@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 09 Sept 2026, 21:40 UTC
+Generated: 09 Sept 2026, 22:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 09 Sept 2026, 21:40 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 09 Sept 2026, 21:39 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 09 Sept 2026, 21:39 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Sept 2026, 21:39 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 09 Sept 2026, 21:39 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Sept 2026, 12:00 UTC | digest | Apple Watch&#8217;s new AI features are normalizing the idea that technology is always listening | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/) |
-| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,155 open roles across 10 tracked companies. | `/jobs/` |
-| 09 Sept 2026, 12:00 UTC | digest | OpenAI’s sly mathematical breakthrough sends a chill through academia | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes) |
-| 09 Sept 2026, 12:00 UTC | digest | Published the 2026-09-09 daily digest | 20 stories captured from 4 sources. | `/news/` |
-| 09 Sept 2026, 12:00 UTC | digest | Read the Apple document explaining how new listening features still protect your privacy | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/992919/apple-siri-ai-audio-intelligence-privacy) |
+| 09 Sept 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 09 Sept 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 09 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,156 open roles across 10 tracked companies. | `/jobs/` |
+| 09 Sept 2026, 12:00 UTC | digest | Massachusetts hits data centers with new clean power rules | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/) |
+| 09 Sept 2026, 12:00 UTC | digest | OpenAI adds a prominent AI doomer to its board of directors | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/) |
+| 09 Sept 2026, 12:00 UTC | digest | Published the 2026-09-09 daily digest | 20 stories captured from 5 sources. | `/news/` |
+| 09 Sept 2026, 12:00 UTC | digest | Suno releases its first AI music model made with record industry help | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/991977/suno-releases-its-first-ai-music-model-made-with-record-industry-help) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
