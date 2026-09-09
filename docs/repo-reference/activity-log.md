@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 09 Sept 2026, 11:55 UTC
+Generated: 09 Sept 2026, 12:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,151 open roles across 10 tracked companies. | `/jobs/` |
+| 09 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 09 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 09 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,152 open roles across 10 tracked companies. | `/jobs/` |
 | 09 Sept 2026, 12:00 UTC | digest | Published the 2026-09-09 daily digest | 1 stories captured from 1 sources. | `/news/` |
-| 09 Sept 2026, 12:00 UTC | digest | Worried Anthropic researchers warn that AI &#8216;could kill all humans&#8217; | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/991927/anthropic-ai-kill-all-humans) |
-| 09 Sept 2026, 11:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 09 Sept 2026, 11:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Sept 2026, 11:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 09 Sept 2026, 11:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 09 Sept 2026, 11:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Sept 2026, 12:00 UTC | digest | Suno replaces its AI models with a new one trained on licensed music as copyright suits pile up | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/suno-replaces-its-ai-models-with-a-new-one-trained-on-licensed-music-as-copyright-suits-pile-up/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
