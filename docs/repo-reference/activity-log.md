@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 08 Sept 2026, 23:55 UTC
+Generated: 09 Sept 2026, 00:11 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 08 Sept 2026, 23:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 08 Sept 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 08 Sept 2026, 23:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 08 Sept 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 08 Sept 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,149 open roles across 10 tracked companies. | `/jobs/` |
+| 09 Sept 2026, 00:10 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 09 Sept 2026, 00:10 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 09 Sept 2026, 00:10 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Sept 2026, 00:10 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Sept 2026, 00:10 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 08 Sept 2026, 12:00 UTC | digest | Cognition hits $48B valuation, signaling investors believe AI coding is far from a winner-take-all market | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/) |
 | 08 Sept 2026, 12:00 UTC | digest | Hackers are stealing Claude tokens from subscribers | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/) |
-| 08 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,149 open roles across 10 tracked companies. | `/jobs/` |
 | 08 Sept 2026, 12:00 UTC | digest | Published the 2026-09-08 daily digest | 20 stories captured from 4 sources. | `/news/` |
 | 08 Sept 2026, 12:00 UTC | digest | Why this month&#039;s Microsoft patch release is a doozy | Ars Technica featured in the latest daily brief. | [open](https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
