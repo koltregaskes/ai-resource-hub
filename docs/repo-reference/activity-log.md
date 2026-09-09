@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 09 Sept 2026, 18:32 UTC
+Generated: 09 Sept 2026, 19:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 09 Sept 2026, 18:32 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 09 Sept 2026, 18:32 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Sept 2026, 18:32 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 09 Sept 2026, 18:32 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 09 Sept 2026, 18:32 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Sept 2026, 12:00 UTC | digest | Apple CEO John Ternus says the best AI device is still the iPhone | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/apple-ceo-john-ternus-says-the-best-ai-device-is-still-the-iphone/) |
-| 09 Sept 2026, 12:00 UTC | digest | Apple has a new way prove your iPhone photos aren’t AI slop | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/apple-has-a-new-way-prove-your-iphone-photos-arent-ai-slop/) |
+| 09 Sept 2026, 19:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 09 Sept 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Sept 2026, 19:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 09 Sept 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Sept 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Sept 2026, 12:00 UTC | digest | Apple’s new iPhone camera mode promises to prove your photo isn’t AI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/992766/apple-iphone-18-pro-reference-image) |
 | 09 Sept 2026, 12:00 UTC | digest | Apple&#8217;s revamped Health app will calculate your &#8216;health age&#8217; and readiness score | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/apples-revamped-health-app-will-calculate-your-health-age-and-readiness-score/) |
-| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,155 open roles across 10 tracked companies. | `/jobs/` |
+| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,157 open roles across 10 tracked companies. | `/jobs/` |
 | 09 Sept 2026, 12:00 UTC | digest | Published the 2026-09-09 daily digest | 20 stories captured from 4 sources. | `/news/` |
+| 09 Sept 2026, 12:00 UTC | digest | The hinge for Apple&#8217;s new foldable phone was built with AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/the-hinge-for-apples-new-foldable-phone-was-built-with-ai/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
