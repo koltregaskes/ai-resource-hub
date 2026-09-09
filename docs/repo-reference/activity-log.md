@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 09 Sept 2026, 22:55 UTC
+Generated: 09 Sept 2026, 23:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 09 Sept 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 09 Sept 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 09 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,156 open roles across 10 tracked companies. | `/jobs/` |
+| 09 Sept 2026, 23:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 09 Sept 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Sept 2026, 23:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 09 Sept 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Sept 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,158 open roles across 10 tracked companies. | `/jobs/` |
 | 09 Sept 2026, 12:00 UTC | digest | Massachusetts hits data centers with new clean power rules | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/) |
 | 09 Sept 2026, 12:00 UTC | digest | OpenAI adds a prominent AI doomer to its board of directors | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/) |
 | 09 Sept 2026, 12:00 UTC | digest | Published the 2026-09-09 daily digest | 20 stories captured from 5 sources. | `/news/` |
