@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 10 Sept 2026, 18:24 UTC
+Generated: 10 Sept 2026, 19:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 10 Sept 2026, 18:23 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 10 Sept 2026, 18:23 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 10 Sept 2026, 18:23 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 10 Sept 2026, 18:23 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 10 Sept 2026, 18:23 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 10 Sept 2026, 12:00 UTC | digest | 3 ways to prep for your next big race with Search | Google featured in the latest daily brief. | [open](https://blog.google/products-and-platforms/products/search/running-race-training-tips/) |
+| 10 Sept 2026, 19:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 10 Sept 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Sept 2026, 19:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 10 Sept 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 10 Sept 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 10 Sept 2026, 12:00 UTC | digest | Anthropic reveals rogue AI agents hate CAPTCHAs, just like you | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/) |
-| 10 Sept 2026, 12:00 UTC | digest | India&#8217;s Pocket FM doubles revenue run rate to $500M as AI powers 93% of audio content | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/) |
-| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,163 open roles across 10 tracked companies. | `/jobs/` |
-| 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 14 stories captured from 4 sources. | `/news/` |
+| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,160 open roles across 10 tracked companies. | `/jobs/` |
+| 10 Sept 2026, 12:00 UTC | digest | Meta&#8217;s AI agent Muse is now the No. 2 app in the US | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/) |
+| 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 17 stories captured from 4 sources. | `/news/` |
+| 10 Sept 2026, 12:00 UTC | digest | Schools are catching on to Big Tech’s playbook | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/993308/computer-science-ai-education-coding-kids) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
