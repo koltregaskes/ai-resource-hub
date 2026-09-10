@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 10 Sept 2026, 21:35 UTC
+Generated: 10 Sept 2026, 22:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 10 Sept 2026, 21:35 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 10 Sept 2026, 21:35 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 10 Sept 2026, 21:35 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 10 Sept 2026, 21:35 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 10 Sept 2026, 21:35 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 10 Sept 2026, 12:00 UTC | digest | Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/) |
-| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,160 open roles across 10 tracked companies. | `/jobs/` |
+| 10 Sept 2026, 22:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 10 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 10 Sept 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 10 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 10 Sept 2026, 12:00 UTC | digest | Jensen Huang explains why Nvidia will grow an astounding 70% next year | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/) |
+| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,161 open roles across 10 tracked companies. | `/jobs/` |
 | 10 Sept 2026, 12:00 UTC | digest | Mark Wahlberg is coming to TechCrunch Disrupt 2026, and he wants to talk about your work, not his | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/) |
-| 10 Sept 2026, 12:00 UTC | digest | OpenAI puts Pro subscriptions on hold due to Astra demand | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/) |
 | 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 20 stories captured from 4 sources. | `/news/` |
+| 10 Sept 2026, 12:00 UTC | digest | Slack can now vibe-code interactive charts and reports inside chats | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/989853/slackforce-surfaces-launch) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |

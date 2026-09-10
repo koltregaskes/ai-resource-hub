@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 10 Sept 2026, 21:35 UTC
+Generated: 10 Sept 2026, 22:56 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -25,8 +25,8 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 21 Jul 2026 | Gemini 3.6 Flash (batch) | Google | tracking | watch | ready for editor | 0 | 2 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
 | 21 Jul 2026 | Gemini 3.5 Flash Lite (batch) | Google | tracking | watch | ready for editor | 0 | 2 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite) |
 | 16 Jul 2026 | Muse Spark 1.1 | Meta | tracking | watch | watch only | 0 | 2 | n/a |
-| 9 Jul 2026 | GPT-5.6 Sol (batch) | OpenAI | tracking | backfill | ready for editor | 0 | 6 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
-| 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | backfill | ready for editor | 0 | 5 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
-| 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | backfill | ready for editor | 0 | 5 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
+| 9 Jul 2026 | GPT-5.6 Sol (batch) | OpenAI | tracking | backfill | ready for editor | 0 | 5 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
+| 9 Jul 2026 | GPT-5.6 Terra (batch) | OpenAI | tracking | backfill | ready for editor | 0 | 4 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-terra) |
+| 9 Jul 2026 | GPT-5.6 Luna (batch) | OpenAI | tracking | backfill | ready for editor | 0 | 4 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-luna) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
