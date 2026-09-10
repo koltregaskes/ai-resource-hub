@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 10 Sept 2026, 12:55 UTC
+Generated: 10 Sept 2026, 13:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 10 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 10 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 10 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 10 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 10 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 10 Sept 2026, 13:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 10 Sept 2026, 13:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 10 Sept 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Sept 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 10 Sept 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 10 Sept 2026, 12:00 UTC | digest | AI research startup Listen Labs scrubbed a $1.5B funding round for Salesforce talks | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/) |
-| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,162 open roles across 10 tracked companies. | `/jobs/` |
+| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,161 open roles across 10 tracked companies. | `/jobs/` |
 | 10 Sept 2026, 12:00 UTC | digest | Mathematicians want proof OpenAI didn’t use their work | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/993263/where-does-openai-get-mathematics-training-data) |
 | 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 2 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
